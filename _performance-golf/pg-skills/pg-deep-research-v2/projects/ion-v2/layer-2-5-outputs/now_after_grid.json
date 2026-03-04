@@ -1,0 +1,219 @@
+{
+  "artifact_type": "now_after_grid",
+  "project": "Ion Golf Ball V2",
+  "layer": "2.5",
+  "created_at": "2026-01-20",
+  "framework": "Now->After Transformation Grid",
+  "description": "4-dimension transformation grid showing the customer's state BEFORE Ion and AFTER Ion across HAVE, EXPERIENCE, STATUS, and FEELING dimensions",
+
+  "dimensions": {
+    "HAVE": {
+      "description": "What the golfer possesses/owns - their physical relationship with golf balls",
+      "now": {
+        "premium_user": {
+          "state": "Owns expensive premium balls they're afraid to lose, creating a scarcity mindset that turns each ball into a precious asset rather than consumable equipment",
+          "pain_points": [
+            "Financial anxiety with every lost ball ($4-5 per ball)",
+            "Limited ball supply due to high cost",
+            "Mental burden of cost calculation during rounds",
+            "Hesitation to use 'good' balls on risky shots"
+          ],
+          "supporting_quote": "I could never justify playing them. I could easily lose 3 or 4 balls a round at my old course, so the cost, and my lack of talent combined to make them way too expensive."
+        },
+        "budget_user": {
+          "state": "Owns cheap balls with inconsistent quality, trading performance reliability for affordability and accepting unpredictable results",
+          "pain_points": [
+            "Inconsistent ball-to-ball performance",
+            "Poor durability - balls scuff and degrade quickly",
+            "No confidence in equipment quality",
+            "Settling for less than they deserve"
+          ],
+          "supporting_quote": "While there are not a massive number of bad balls, there is just not much continuity from ball to ball. It is almost as if no two balls are the same and thereby potentially affecting your performance on the course."
+        }
+      },
+      "after": {
+        "state": "Owns premium-quality balls at an accessible price point, enabling abundance mindset and consistent, reliable equipment without financial strain",
+        "benefits": [
+          "Premium performance without premium anxiety",
+          "Abundance mindset - enough balls for any situation",
+          "Consistent, reliable equipment shot after shot",
+          "Financial freedom in golf budget",
+          "Ability to buy in bulk without guilt"
+        ],
+        "supporting_quote": "I bought 6 dozen and it was such a great price I will never go back."
+      },
+      "transformation_headline": "From counting every ball to playing without limits."
+    },
+
+    "EXPERIENCE": {
+      "description": "What the golfer goes through during every round - their moment-to-moment reality on the course",
+      "now": {
+        "premium_user": {
+          "state": "Experiences anxiety over water hazards and risky shots, making tentative swings when protecting expensive balls, with constant mental math disrupting focus",
+          "pain_points": [
+            "Anxiety approaching water hazards and trouble",
+            "Tentative, protective swings on risky shots",
+            "Mental math calculating ball costs mid-round",
+            "Distraction from the game itself"
+          ],
+          "supporting_quote": "Golf is such a mental game that if you are worried about losing balls, you aren't playing your best golf."
+        },
+        "budget_user": {
+          "state": "Experiences frustration when cheap balls scuff, fly differently, or perform inconsistently, never trusting the equipment to do its job",
+          "pain_points": [
+            "Inconsistent ball flight and spin",
+            "Balls that scuff and degrade quickly",
+            "Can't trust the ball on important shots",
+            "Wondering if bad shot was them or the ball"
+          ],
+          "supporting_quote": "I use the Kirkland v3 for hitting into my practice net at home. They're very poor quality golf balls. Cover durability is awful. They breakdown after a few wedge shots."
+        }
+      },
+      "after": {
+        "state": "Experiences carefree play over any hazard with confident, committed swings, consistent ball flight shot to shot, and complete focus on the game rather than the equipment",
+        "benefits": [
+          "Carefree play over water and trouble",
+          "Confident, fully committed swings",
+          "Consistent ball flight every shot",
+          "Complete focus on the game itself",
+          "Trust in equipment performance"
+        ],
+        "supporting_quote": "I was seeing a huge difference in my play when I was concerned about losing balls versus playing and swinging freely."
+      },
+      "transformation_headline": "From anxious protection mode to full commitment on every swing."
+    },
+
+    "STATUS": {
+      "description": "How the golfer is perceived by others and their identity as a golfer",
+      "now": {
+        "premium_user": {
+          "state": "Feels like a 'sucker' paying premium tax to big brands, questioning whether the markup is justified while watching marketing budgets funded by their purchases",
+          "pain_points": [
+            "Paying the 'brand tax' to Titleist/TaylorMade",
+            "Funding expensive tour endorsements and ads",
+            "Questioning if premium price is justified",
+            "Conflicted between value and perception"
+          ],
+          "supporting_quote": "I think the ProV1 is overpriced trash. The cover still wears like crap, even after they redesigned it. Plus, with all the balls Titleist produces, quality control has gone downhill."
+        },
+        "budget_user": {
+          "state": "Labeled as a 'cheap golfer' using inconsistent balls, worried about judgment for ball choice and feeling like they're not playing 'real' golf",
+          "pain_points": [
+            "Perceived as a cheap or casual golfer",
+            "Judgment from playing partners",
+            "Not taken seriously as a golfer",
+            "Missing out on 'proper' equipment"
+          ],
+          "supporting_quote": "As much as I want to play Kirkland because I am cheap, I don't."
+        }
+      },
+      "after": {
+        "state": "Respected as a 'smart golfer' who found the answer - someone who did the research and refuses to overpay for performance, part of an awakened tribe of informed players",
+        "benefits": [
+          "Recognized as an informed, smart golfer",
+          "Respected for value-conscious equipment choices",
+          "Part of the 'awakened golfer' community",
+          "Ambassador for value without compromise",
+          "Leads conversations about ball alternatives"
+        ],
+        "supporting_quote": "Never again will I pay premium prices for a premium ball. I'm a Snell guy now."
+      },
+      "transformation_headline": "From overpaying sucker to smart golfer who cracked the code."
+    },
+
+    "FEELING": {
+      "description": "The golfer's emotional state - how they feel about their equipment and themselves",
+      "now": {
+        "premium_user": {
+          "state": "Feels anxious about losing expensive balls, guilty about the spending, and conflicted between wanting the best and questioning the value",
+          "pain_points": [
+            "Anxiety: 'Will I lose this expensive ball?'",
+            "Guilt: 'Am I wasting money on balls?'",
+            "Conflict: Value vs performance dilemma",
+            "Frustration: Feeling trapped by pricing"
+          ],
+          "supporting_quote": "Do you get more upset when you lose an expensive ball? Yes. For me, it's a net win using a value ball over a Pro V1. I like Pro V1's but in terms of mental game, the cheaper ball wins."
+        },
+        "budget_user": {
+          "state": "Feels frustrated with quality compromises, disappointed in performance, and resigned to accepting less than they deserve because of budget constraints",
+          "pain_points": [
+            "Frustration: Performance compromises",
+            "Disappointment: Settling for less",
+            "Resignation: Budget limits options",
+            "Doubt: Never sure if ball failed or they did"
+          ],
+          "supporting_quote": "I have been playing cheap 2 piece balls the past 2 seasons that were specials on Amazon and while they worked, I'm looking for something better."
+        }
+      },
+      "after": {
+        "state": "Feels liberated from ball cost anxiety, confident that equipment matches premium performance, vindicated for making the smart choice, and free to play their best golf",
+        "benefits": [
+          "Liberated: No worry about ball costs",
+          "Confident: Equipment is as good as premium",
+          "Vindicated: Made the smart choice",
+          "Free: To focus on playing great golf",
+          "Satisfied: Getting premium value at fair price"
+        ],
+        "supporting_quote": "If the Snell ball and the Pro-V ball were the same price, I would still take the Snell ball."
+      },
+      "transformation_headline": "From anxious calculation to liberated confidence."
+    }
+  },
+
+  "master_transformation_narrative": "Before Ion, golfers face an impossible choice. Premium ball buyers live with constant anxiety - every tee shot over water triggers a mental calculation of the $4-5 at risk, leading to tentative swings and protected plays that undermine their game. They watch expensive balls disappear into hazards while funding Titleist's tour sponsorships and marketing campaigns, feeling like suckers paying a 'brand tax' for a small logo on a ball. Budget ball buyers face a different trap - they save money but sacrifice consistency, never trusting their equipment and always wondering if a bad shot was their fault or the ball's. Neither path leads to liberation.\n\nIon transforms this dynamic entirely. The golfer who discovers Ion experiences what can only be described as awakening - the realization that premium performance and reasonable pricing are not mutually exclusive. They become part of a growing community of smart golfers who refuse to overpay, who swing freely over every hazard knowing they're not risking a small fortune, and who finally focus entirely on their game rather than their equipment budget. The mental freedom alone improves their play.\n\nThe transformation is complete when the Ion golfer realizes they would choose this ball even at equal pricing. They're not playing Ion because it's cheaper - they're playing it because it performs. The price is simply the vindication that confirms their wisdom. They've cracked the code that most golfers don't know exists, and they'll never go back to the anxiety of premium pricing or the compromise of budget quality.",
+
+  "copy_blocks": {
+    "before_headline": "Trapped Between Overpriced Premium and Unreliable Budget",
+    "after_headline": "Premium Performance Without the Premium Anxiety",
+    "bridge_statement": "Ion delivers the performance you demand at a price that sets you free - so you can finally stop calculating cost and start playing your best golf.",
+    "alternative_headlines": {
+      "before_options": [
+        "Every Water Hazard Costs You More Than a Ball",
+        "The $4 Anxiety Tax You Pay Every Hole",
+        "Overpaying for the Logo, Underpaying for Your Game"
+      ],
+      "after_options": [
+        "The Ball That Lets You Swing Free",
+        "Premium Performance, Liberated Pricing",
+        "Play Like You Don't Care What You're Playing"
+      ],
+      "bridge_options": [
+        "What if the best ball for your game was also the best ball for your wallet?",
+        "Ion: Where premium performance meets rational pricing.",
+        "Stop funding their marketing. Start funding your game."
+      ]
+    }
+  },
+
+  "research_sources": {
+    "primary_quote_sources": [
+      "GolfWRX Forums - Losing golf balls, the mental game",
+      "GolfWRX Forums - DTC Golf Balls",
+      "Reddit r/golf - Various threads",
+      "MyGolfSpy - Ball reviews and testing",
+      "Amazon Golf Ball Reviews"
+    ],
+    "key_themes_validated": [
+      "Ball loss anxiety directly impacts swing quality",
+      "Premium buyers feel conflicted about value",
+      "Budget buyers sacrifice consistency for savings",
+      "DTC converts report liberation and improved play",
+      "Price-to-performance awakening is transformative"
+    ]
+  },
+
+  "messaging_implications": {
+    "dont_lead_with": [
+      "Pure price savings messaging",
+      "Anti-premium ball attacks",
+      "Quality equivalence claims without proof"
+    ],
+    "lead_with": [
+      "Mental freedom and liberation",
+      "Full commitment on every swing",
+      "Smart golfer identity",
+      "Awakening from the premium ball trap"
+    ],
+    "emotional_arc": "Anxiety/Frustration -> Discovery -> Liberation -> Vindication -> Advocacy"
+  }
+}

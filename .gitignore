@@ -1,0 +1,46 @@
+# ========== DEV BUILD OUTPUTS ==========
+**/node_modules/
+**/.next/
+**/.nuxt/
+**/dist/
+**/build/
+**/.git/
+
+# ========== CLAUDE CODE - LOCAL SETTINGS ==========
+.claude/settings.local.json
+
+# ========== SECURITY - NEVER COMMIT ==========
+.env
+.env.*
+*.pem
+*.key
+**/credentials*.json
+**/secrets*.json
+
+# ========== LARGE FILES / LOGS ==========
+*.log
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# ========== KEYNOTE BACKUPS ==========
+*.key.backup
+
+# ========== LARGE MEDIA (keep repo size manageable) ==========
+*.pdf
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.dmg
+*.pkg
+
+# ========== OS / SYSTEM ==========
+.DS_Store
+Thumbs.db
+*.swp
+*~
+__MACOSX/
+*.textClipping
+*.webloc

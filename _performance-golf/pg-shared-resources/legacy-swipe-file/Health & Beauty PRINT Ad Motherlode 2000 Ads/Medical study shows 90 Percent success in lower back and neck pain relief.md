@@ -1,0 +1,284 @@
+# Medical study shows 90 Percent success in lower back and neck pain relief
+
+**Source File:** Medical study shows 90 Percent success in lower back and neck pain relief.PDF
+**Conversion Method:** Text Extraction
+**Converted:** 1442934394.0
+
+---
+
+# MEDICAL STUDY SHOWS
+
+
+# 90% SUCCESS IN LOWER BACK
+
+
+# AND NECK PAIN RELIEF
+
+
+# THIS UNIQUE LASER CARE FROM NEW ENGLAND SPINE
+
+
+# AND DISC™ OFFERS PROFOUND HEALING RELIEF FROM
+
+
+# CHRONIC PAIN WITH CONNECTICUT’S ONLY NEWLIFE™
+
+
+# HEALING SYSTEM®
+
+INTRODUCING
+Dr. Richard Carpenos, DC
+Areyouinpain?Haveyoutriedeverythingtoalleviateyour
+painwithoutsuccess?Areyoucontemplatingsurgery?Tried
+injections?Hadsurgeryandarestillinpain?Inmanycases,
+theoperationsarenecessaryforproperhealthandrecovery
+fromaninjury.However,wehaveseenhundredsofpatients
+whoreceivedoperationstheydidnotneedandarestillin
+ridiculouspain.OurNewlife™HealingSystemisboth
+high-techandnon-force,andmostimportant,proventobe
+asafeandeffectivealternativetosurgery.Youwillseewe
+havethebesttherapeuticmodalityforadvancedpainrelief
+andexpeditedhealingtimes!OurLiteCure®Laserdelivers
+soothing,deep,penetrating,photonicenergytobringabout
+profoundphysareblockedandthedamagedtissuesbegin
+thephysiologicalprocessofrepair3-5timesfasterthan
+normal.Thisalloccursastheessentialhealingfactorsare
+broughtinandthenon-essentialwastesareremoved,with
+increasedcirculationatthesiteofinjury.Thesetherapeutic
+enhancementsofthecellularchemistryaretriggeredby
+ourLiteCure®Laser,makingitatrulyprofoundhealing
+modalityandexperience!
+Surgeon has PERSONAL Experience!
+Dr.RobertMorrow,awell-known,trustedorthopedic
+surgeonwhohadcompletedover15,000surgeries,said“I
+wassufferingfromshoulderpainfor6monthsstraightwith
+norelief.Iheardaboutlasertreatmentandafterseeingand
+hearingmanyofmypatient’sstories,Ididmoreresearch
+onthetopicandfoundthatthedoctorsandstaffnowusing
+theseLiteCure®Laserspeoplewhothinkthatsurgeryis
+theironlyoption.Iwenttogettreatedandwasamazedthat
+ittookawayallofmypain.After6monthsofmisery,Iwas
+relievedandIamnowPainFree!Iknowthatorthopedic
+surgeonsdon’talwaysfullyunderstandtheavailable
+alternativestosurgeryand,asaresult,manypatientsare
+sentthroughlong,painfulandcostlyprocedures.Thereare
+manyofyouwhohavebeenthroughtheprocessofusing
+prescriptionmedicationsandinjections…withlittleor
+norelief.Physicianswhorecommenddrugsarelimitedby
+theiroptions,fortreatment,sotheycontinuetoprescribe
+medications.IhavefoundthatthisNewlife™Healing
+Systemisveryeffectiveattreatingpatientsthathavenot
+respondedtootherprocedures,eventhosewhohavealready
+triedsurgery.Iconcluded,togivepatientsthebestpossible
+care,thereneedstobereferralsprovidedtochronicpain
+patientssotheycanreceivetheseuniquetherapies.”
+ADVANCED TOOLS for diagnosing and
+providing the best pain relief possible!
+Patientscannotgetamorecompleteexamforthistreatment
+thanthatprovidedatNewlifeLaserClinics.Wearetooled
+withadvanceddiagnosticandcareprotocols,fortheuseof
+spinaldecompressionanddeeptissuelasertechnologiesthat
+arethemostadvancedpain-relievingoptionsinthemarket.
+Wearetooledtoprovideyoucarethatisbreakingthrough
+thebarriersoftraditionalmedicalandchiropractic.Don’t
+undergopainful,costly,needlesssurgerythatoftencanbe
+avoided
+Are PILLS & INJECTIONS long-term
+solutions for pain relief? - NOWAY!
+Untilnow,peoplehavemaskedtheirpainbyfrequently
+takingprescriptionpainpillsorbygettingcortisoneor
+epiduralsteroidinjections.Thistypeofreliefmasksthe
+cause,istemporary,andmoreoftencanleadtoevenmore
+painorworseyet---addictiontodrugs!Somanypeople
+innocentlyfallintoabusingprescriptionpainpillswhile
+initiallyusingthemtoalleviatereal,constantpain.Didyou
+knowthatprescriptionmedicationskillmorepeopleevery
+yearthandoillegaldrugs?Nobodyisimmunetoprescription
+drugabuse,evenradiotalk-showhostRushLimbaugh.His
+prescriptiondrugabusetoamedicationcalledoxycontin
+almostdestroyedhiscareerandendedhislife.The
+medicationwasprescribedbyadoctorforpainrelief!
+InsistontheFDA-ClearedClassIVLaserfor
+FAST, SOOTHING, PAIN RELIEF!
+TheLiteCure®Laserisaninnovative,scientificallybased,
+therapeuticmodality.Thisnewtechnologyoffersadvanced
+painreliefandhighly-expeditedhealingtimesthrougha
+processknownasphotobiostimulation.TheFDA-Cleared
+LiteCure®Laserdeliversdeep-penetrating,photonic
+energytoincreasecirculation,stimulateanincreasedlevel
+oftissuehealing,andcreatedecreasedlevelsofpainand
+inflammation.Thesechangesincellularchemistryare
+triggeredbyouruseoftheLiteCure®LaserTreatment,
+makingitatrulyprofoundhealingmodality.Itdoesnot
+requiretheuseofdrugsorsurgery,andtherearenoknown
+sideeffectsorrisksthatmayoccur,aswithotherformsof
+treatment.Duringthetreatment,thepatientfeelsadeep-
+soothingwarmthandpleasantsensationthatreassuresthe
+patientthatthelaserisactivatingandspeedingupthehealing
+process,fortruelastingrelief!
+Spine and Disc DECOMPRESSION
+AtNewlifeLaserClinicswehaveadvancedmachinesfor
+SpinalDecompression.OurNewlife™HealingSystem
+includesNon-SurgicalSpinalDecompressionmachines
+thatproducegentleseparationofthevertebraeand
+decompressionoftheinter-vertebraldiscs.Decompression
+reliesupontherepeatedunloadingofspinalstressby
+distractingthespine.Thistherapyproducesnegativepressure
+withinthedisctoallowadiscinjurytohealnaturallyby
+replenishingthefluidinthe“cushion-like”disc.Patientsare
+treatedfullyclothedandarefittedwithaharnessthatfits
+aroundtheirbodyorhead,astheylieonacomfortabletable
+andaregentlydecompressed.Thedoctoradjuststhetable
+andtheharnessandusesacomputerizedconsole,wherea
+customizedtreatmentprotocolisenteredintothecomputer
+andtakesabout20minutes.Theaveragetreatmentprotocol
+isapproximately10to25treatmentswithina5to10week
+periodoftime,dependingontheindividual’scase.
+Dr. Richard Carpenos, DC
+New England Spine and Disc
+A Newlife Laser Affiliate
+Ourgoalistoprovide themostexcellent
+healthcarepossibleinthebest facility
+available withthearea’sfriendliest,
+mostcaring,helpfulstaff!
+Ourpurposeistohelppeople get welland
+stay healthywithoutdrugs,surgery or
+aggravation,whilemakinglifetime friends
+alongtheway!
+We Are Accepting New
+Patients! Call Our Friendly
+Staff Now If You Are
+Currently
+Suffering From:
+AcutelyInjuredorChronicPersistentJointPains,
+WhiplashedNeck,MigraineandotherHeadaches
+ChronicShoulder,Elbow,HiporKneePains
+CarpalTunnelPainsandSyndromes,Auto
+AccidentInjuriesandmore
+FailedBack-SurgerySyndromes
+Herniated,Bulgingor‘Slipped’DiscSyndromes
+DiscDegenerationandSpinalStenosis,
+DJD/DDD,Neuropathies,Weakness,Pain,Tingling,
+NumbingExtremities
+BREAKING the standard care MOLD
+AtNewlifeLaserClinicsourreferralnetworksareusing
+toolsthatbreakthemoldindiagnosticcare,withfullX-Ray
+facilities,PhysiologicalandFunctionalRehabilitation
+Protocols,andvariousmanipulationtechniques.Wehave
+practicednaturalandnewmethodsformanyyears.Ournew
+treatmentsarebasedonmethodsdesignedfromdoctors
+ofchiropracticwhohavetreatedthousandsofpatients,
+discoveredsecrets,treatedtheworstconditionsandrescued
+patientsfromrecommendedand/orunneededsurgeries.Our
+doctorshavesparednoexpensefordevelopingandutilizing
+distinctlycutting-edgetechnologies,profoundlyalteringthe
+wayeffectivetreatmentisprovidedandcontributinggreatly
+tochronicpainrelief.
+
+## “Effectively Healing and
+
+
+## Relieving Pain, while
+
+
+## Inspiring a Healthy and
+
+
+## Active Lifestyle”
+
+*90% Success study referenced can be reviewed by
+speakingtotheclinic.*Freevisitcannotbeusedwith
+MedicareorFederalInsurancePlans.
+
+# www.newenglandspineanddisc.com
+
+TESTIMONIALS of
+SMALL MIRACLES
+Adele,Age75“Formanyyears,Ihavesufferedfromlower
+backpainandpainradiatingdownbothofmylegstomy
+feetfromanaccident.EverytimeIexercisedormovedjust
+thewrongwayI’dhavepainthatwouldlastforalongtime.
+Icouldn’tevenrolloutofbedwithoutextremepain.After
+thethirdvisitallofmypainwasgone.Itwasmyownlittle
+miracle.Iwasveryimpressedbythecarebutalsobythefact
+thatthedoctorswereknowledgeableandverypersonable.
+ThestaffwasfriendlyandhelpfulandIwouldrecommend
+theirtreatmenttoeveryonewithneckorbackpain.”
+Jack,Age37“IwasworkingasaPoliceofficerinApril
+whenIwasinjuredonthejob,lostthestrengthinmyleft
+armandhandandhadalotofpaininmyneckandmidback.
+IsawmanyDoctorsfor6monthswithnoresolutionto
+myproblem,whetherPhysicalTherapy,Steroids,Pain
+Medication,orNerveBlock.TheSurgeonwantedtodoa3
+levelfusiononmyneckasthelasttreatmentoption.Isaw
+theadinthepaperanddecidedIdidn’thaveanythingtolose
+andtogiveitatry,butitwasmylastchancebeforegetting
+surgery.AftermysecondvisitIhadregainedallofmy
+strengthinmyleftarmandhandandhadminimalpaininmy
+neck.Mylifehasdrasticallyimproved.”
+Duane,Age77“Iwokeuponeeveningwithseverepain
+goingdownmyrightlegandwenttoaDoctorwhocouldn’t
+tellmewhatwaswrong.Hetoldmetogohome,takea
+hotbathandinaweekifitdidn’tgoawaytocomeback.
+IhadanMRIshowingabulgingdiscinthelowerspine,
+witharthritisandgout.Afamilymembertoldmeaboutthe
+Deep-TissueLaserTreatment®,andafterthefirstsession
+thepainlessenedsignificantly.AttheendofthevisitIcould
+movearoundgreat.Bythe5thor6thvisitIhadnomorepain
+inmylegandlowerback.Iamextremelysatisfied,mylegs
+arestronger,andIamstandingupstraight.Thishasbeena
+fantasticthinganditallhappenedin4to5weeks.IfIcould
+tellyouanythingitwouldbetonottakepainkillersorhave
+surgeryuntilyouexperienceincredibleDeep-TissueLaser
+Therapy”.
+StillwantAGREATERDEGREEOFRELIEF?
+
+# Experience the
+
+
+# Newlife™
+
+
+# Healing System!
+
+Get to Know
+Dr. Richard Carpenos, DC
+Dr.RichardCarpenoshasbeenpracticinghere
+inConnecticutforthelast20plusyears.Hehas
+beennamedBestChiropractorintheAdvocate
+Reader’sPollforthepast16years.Hehasbeen
+afrequentguestontelevisionandradiooverhis
+careerandisapioneerinthenon-surgicalcorrection
+ofdiscandspinerelatedconditions.Hisowndisc
+problemsleadhiminhissearchforanswerswithout
+surgery.Heisexcitedtobetheonlyfacilityinthe
+statetooffertheseservices.Helooksforwardto
+meetingyouandintroducingyoutohiscutting
+edgefacilityhereinOrange.
+
+## Conveniently located at:
+
+
+# 391 Boston Post Rd.
+
+
+# Orange, CT 06477
+
+
+# First 25 Callers
+
+
+# 2 Free Visits
+
+* Includes:
+Diagnostic Exam, Soothing Laser
+Therapy, Decompression Therapy,
+Gentle Chiropractic Care - CALL
+NOW!
+
+# 1-800-PAIN-FREE
+
+
+# 203-799-DISC(3472)
+
+Copyright©2011DynamicConsulting

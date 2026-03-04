@@ -1,0 +1,852 @@
+{
+  "metadata": {
+    "project": "Ion Golf Ball V2",
+    "document_type": "Measurement Framework",
+    "version": "1.0",
+    "created_date": "2025-01-20",
+    "measurement_philosophy": "Balance leading indicators (predictive) with lagging indicators (confirmatory) to enable proactive optimization while measuring true business impact"
+  },
+  "measurement_hierarchy": {
+    "north_star_metric": {
+      "metric": "Profitable Customer Acquisition Rate",
+      "definition": "Number of new customers acquired at or below target CAC",
+      "rationale": "Balances growth ambition with profitability requirement",
+      "target": "Define based on current baseline + growth ambition",
+      "measurement_frequency": "Weekly"
+    },
+    "primary_kpis": [
+      {
+        "kpi": "Customer Acquisition Cost (CAC)",
+        "target": "< $15 per new customer",
+        "measurement": "Weekly",
+        "calculation": "Total marketing spend / New customers acquired"
+      },
+      {
+        "kpi": "Return on Ad Spend (ROAS)",
+        "target": "> 3:1",
+        "measurement": "Weekly",
+        "calculation": "Revenue from attributed customers / Ad spend"
+      },
+      {
+        "kpi": "Customer Lifetime Value (LTV)",
+        "target": "> $75 (3+ purchases)",
+        "measurement": "Monthly (cohort analysis)",
+        "calculation": "Average order value x Purchase frequency x Customer lifespan"
+      },
+      {
+        "kpi": "Brand Awareness (Aided)",
+        "target": "+15% over 12 weeks",
+        "measurement": "Monthly survey",
+        "calculation": "% of target audience recognizing Ion when prompted"
+      }
+    ],
+    "secondary_kpis": [
+      {
+        "kpi": "Conversion Rate",
+        "target": "> 3%",
+        "measurement": "Daily/Weekly"
+      },
+      {
+        "kpi": "Average Order Value",
+        "target": "> $50",
+        "measurement": "Weekly"
+      },
+      {
+        "kpi": "Repeat Purchase Rate",
+        "target": "> 35% within 6 months",
+        "measurement": "Monthly cohort"
+      },
+      {
+        "kpi": "Net Promoter Score",
+        "target": "> 50",
+        "measurement": "Monthly survey"
+      }
+    ]
+  },
+  "leading_indicators": {
+    "description": "Early signals that predict future business outcomes - enable proactive optimization",
+    "awareness_metrics": {
+      "category": "Top of Funnel - Brand Awareness",
+      "metrics": [
+        {
+          "metric": "Branded Search Volume",
+          "definition": "Search queries containing 'Ion golf ball' or variants",
+          "measurement_tool": "Google Search Console, SEMrush",
+          "frequency": "Weekly",
+          "target": "+25% growth over 12 weeks",
+          "leading_indicator_for": "Brand awareness, consideration pipeline",
+          "threshold_alerts": {
+            "green": "> 10% WoW growth",
+            "yellow": "0-10% WoW growth",
+            "red": "Negative WoW growth for 2+ weeks"
+          }
+        },
+        {
+          "metric": "Social Media Reach",
+          "definition": "Unique accounts reached across owned social channels",
+          "measurement_tool": "Native analytics, Sprout Social",
+          "frequency": "Weekly",
+          "target": "+50% growth over 12 weeks",
+          "leading_indicator_for": "Brand awareness, content effectiveness",
+          "threshold_alerts": {
+            "green": "> 5% WoW growth",
+            "yellow": "0-5% WoW growth",
+            "red": "Declining reach for 2+ weeks"
+          }
+        },
+        {
+          "metric": "Share of Voice",
+          "definition": "Ion mentions as % of total golf ball conversation",
+          "measurement_tool": "Social listening tool (Brandwatch, Sprinklr)",
+          "frequency": "Weekly",
+          "target": "> 5% in DTC golf ball category",
+          "leading_indicator_for": "Competitive position, market mindshare",
+          "threshold_alerts": {
+            "green": "Growing SOV",
+            "yellow": "Stable SOV",
+            "red": "Declining SOV for 3+ weeks"
+          }
+        },
+        {
+          "metric": "Earned Media Mentions",
+          "definition": "Unpaid media coverage and influencer mentions",
+          "measurement_tool": "Media monitoring, manual tracking",
+          "frequency": "Weekly",
+          "target": "10+ quality mentions per month",
+          "leading_indicator_for": "Brand credibility, organic awareness",
+          "threshold_alerts": {
+            "green": "> 3 mentions/week",
+            "yellow": "1-3 mentions/week",
+            "red": "< 1 mention/week"
+          }
+        }
+      ]
+    },
+    "engagement_metrics": {
+      "category": "Content and Audience Engagement",
+      "metrics": [
+        {
+          "metric": "Content Engagement Rate",
+          "definition": "Engagements (likes, comments, shares, saves) / Impressions",
+          "measurement_tool": "Social analytics, CMS analytics",
+          "frequency": "Daily/Weekly",
+          "target": "> 3% across platforms",
+          "leading_indicator_for": "Content resonance, audience interest",
+          "threshold_alerts": {
+            "green": "> 4%",
+            "yellow": "2-4%",
+            "red": "< 2%"
+          },
+          "by_content_type": {
+            "video": "> 4%",
+            "static_image": "> 2.5%",
+            "carousel": "> 3.5%",
+            "story": "> 5%"
+          }
+        },
+        {
+          "metric": "Video Completion Rate",
+          "definition": "% of viewers watching to 75%+ of video",
+          "measurement_tool": "Platform analytics",
+          "frequency": "Weekly",
+          "target": "> 25% for ads, > 40% for organic",
+          "leading_indicator_for": "Message resonance, creative effectiveness",
+          "threshold_alerts": {
+            "green": "> target",
+            "yellow": "Within 20% of target",
+            "red": "> 20% below target"
+          }
+        },
+        {
+          "metric": "Email Engagement",
+          "definition": "Open rate and click-through rate",
+          "measurement_tool": "Email platform (Klaviyo, etc.)",
+          "frequency": "Per send, weekly aggregate",
+          "target": "> 25% open rate, > 3% CTR",
+          "leading_indicator_for": "Audience interest, message effectiveness",
+          "threshold_alerts": {
+            "green": "Above target",
+            "yellow": "Within 15% of target",
+            "red": "> 15% below target"
+          }
+        },
+        {
+          "metric": "Time on Site",
+          "definition": "Average session duration on Ion pages",
+          "measurement_tool": "Google Analytics",
+          "frequency": "Weekly",
+          "target": "> 2 minutes",
+          "leading_indicator_for": "Content quality, purchase intent",
+          "threshold_alerts": {
+            "green": "> 2.5 min",
+            "yellow": "1.5-2.5 min",
+            "red": "< 1.5 min"
+          }
+        },
+        {
+          "metric": "Pages Per Session",
+          "definition": "Average pages viewed per website visit",
+          "measurement_tool": "Google Analytics",
+          "frequency": "Weekly",
+          "target": "> 3 pages",
+          "leading_indicator_for": "Product interest, site experience",
+          "threshold_alerts": {
+            "green": "> 3.5",
+            "yellow": "2.5-3.5",
+            "red": "< 2.5"
+          }
+        }
+      ]
+    },
+    "consideration_metrics": {
+      "category": "Purchase Intent and Consideration",
+      "metrics": [
+        {
+          "metric": "Add to Cart Rate",
+          "definition": "Sessions with add-to-cart / Total sessions",
+          "measurement_tool": "E-commerce analytics",
+          "frequency": "Daily",
+          "target": "> 8%",
+          "leading_indicator_for": "Purchase intent, funnel health",
+          "threshold_alerts": {
+            "green": "> 10%",
+            "yellow": "6-10%",
+            "red": "< 6%"
+          }
+        },
+        {
+          "metric": "Cart Abandonment Rate",
+          "definition": "Carts abandoned / Carts created",
+          "measurement_tool": "E-commerce analytics",
+          "frequency": "Daily",
+          "target": "< 70%",
+          "leading_indicator_for": "Purchase friction, price sensitivity",
+          "threshold_alerts": {
+            "green": "< 65%",
+            "yellow": "65-75%",
+            "red": "> 75%"
+          }
+        },
+        {
+          "metric": "Wishlist/Save Rate",
+          "definition": "Products saved or wishlisted",
+          "measurement_tool": "E-commerce analytics",
+          "frequency": "Weekly",
+          "target": "Tracking for trend",
+          "leading_indicator_for": "Future purchase intent"
+        },
+        {
+          "metric": "Sample/Trial Requests",
+          "definition": "Requests for trial offers or samples",
+          "measurement_tool": "CRM, form submissions",
+          "frequency": "Weekly",
+          "target": "Establish baseline, grow 20%",
+          "leading_indicator_for": "Purchase intent among skeptics"
+        },
+        {
+          "metric": "Comparison Page Views",
+          "definition": "Views of Ion vs. competitor comparison content",
+          "measurement_tool": "Google Analytics",
+          "frequency": "Weekly",
+          "target": "Tracking for trend",
+          "leading_indicator_for": "Active consideration, competitive evaluation"
+        }
+      ]
+    },
+    "trial_metrics": {
+      "category": "First Purchase and Trial",
+      "metrics": [
+        {
+          "metric": "New Customer Volume",
+          "definition": "First-time Ion purchasers",
+          "measurement_tool": "E-commerce analytics, CRM",
+          "frequency": "Daily/Weekly",
+          "target": "Define based on growth goals",
+          "leading_indicator_for": "Market penetration, campaign effectiveness",
+          "threshold_alerts": {
+            "green": "> Weekly target",
+            "yellow": "80-100% of target",
+            "red": "< 80% of target"
+          }
+        },
+        {
+          "metric": "First Purchase Source Mix",
+          "definition": "Channel attribution for new customers",
+          "measurement_tool": "Attribution platform, UTM tracking",
+          "frequency": "Weekly",
+          "target": "Diversified mix, no single source > 40%",
+          "leading_indicator_for": "Channel health, risk distribution"
+        },
+        {
+          "metric": "Time to First Purchase",
+          "definition": "Days from first touch to purchase",
+          "measurement_tool": "Attribution platform",
+          "frequency": "Monthly cohort",
+          "target": "Establish baseline, optimize for reduction",
+          "leading_indicator_for": "Funnel efficiency, message effectiveness"
+        },
+        {
+          "metric": "First Order Value",
+          "definition": "Average value of first-time orders",
+          "measurement_tool": "E-commerce analytics",
+          "frequency": "Weekly",
+          "target": "> $40",
+          "leading_indicator_for": "Customer quality, LTV prediction"
+        }
+      ]
+    }
+  },
+  "lagging_indicators": {
+    "description": "Outcome metrics that confirm business impact - measure true success",
+    "sales_metrics": {
+      "category": "Revenue and Sales Performance",
+      "metrics": [
+        {
+          "metric": "Total Revenue",
+          "definition": "Gross revenue from Ion sales",
+          "measurement_tool": "E-commerce platform, financial systems",
+          "frequency": "Daily/Weekly/Monthly",
+          "target": "Define based on business plan",
+          "comparison_benchmarks": {
+            "prior_period": "WoW, MoM, YoY comparison",
+            "forecast": "Actual vs. planned",
+            "market": "Category growth rate"
+          }
+        },
+        {
+          "metric": "Units Sold",
+          "definition": "Total dozens of Ion golf balls sold",
+          "measurement_tool": "Inventory/sales system",
+          "frequency": "Daily/Weekly",
+          "target": "Define based on business plan"
+        },
+        {
+          "metric": "Revenue Per Customer",
+          "definition": "Total revenue / Active customers",
+          "measurement_tool": "CRM, financial analytics",
+          "frequency": "Monthly",
+          "target": "> $75 annually"
+        },
+        {
+          "metric": "Gross Margin",
+          "definition": "(Revenue - COGS) / Revenue",
+          "measurement_tool": "Financial systems",
+          "frequency": "Monthly",
+          "target": "> 50%"
+        }
+      ]
+    },
+    "retention_metrics": {
+      "category": "Customer Retention and Loyalty",
+      "metrics": [
+        {
+          "metric": "Repeat Purchase Rate",
+          "definition": "Customers with 2+ purchases / Total customers",
+          "measurement_tool": "CRM, cohort analysis",
+          "frequency": "Monthly cohort",
+          "target": "> 35% within 6 months",
+          "cohort_tracking": {
+            "30_day": "> 5%",
+            "60_day": "> 15%",
+            "90_day": "> 25%",
+            "180_day": "> 35%"
+          }
+        },
+        {
+          "metric": "Purchase Frequency",
+          "definition": "Average purchases per customer per year",
+          "measurement_tool": "CRM",
+          "frequency": "Quarterly",
+          "target": "> 3x per year"
+        },
+        {
+          "metric": "Customer Retention Rate",
+          "definition": "Customers purchasing again within 12 months",
+          "measurement_tool": "CRM cohort analysis",
+          "frequency": "Monthly cohort",
+          "target": "> 50%"
+        },
+        {
+          "metric": "Customer Churn Rate",
+          "definition": "Customers not purchasing within expected timeframe",
+          "measurement_tool": "CRM",
+          "frequency": "Quarterly",
+          "target": "< 40% annual"
+        },
+        {
+          "metric": "Customer Lifetime Value",
+          "definition": "Predicted total value of customer relationship",
+          "measurement_tool": "Predictive analytics",
+          "frequency": "Quarterly update",
+          "target": "> $75",
+          "calculation": "Average order value x Purchase frequency x Customer lifespan - Acquisition cost"
+        }
+      ]
+    },
+    "advocacy_metrics": {
+      "category": "Customer Advocacy and Word-of-Mouth",
+      "metrics": [
+        {
+          "metric": "Net Promoter Score (NPS)",
+          "definition": "% Promoters - % Detractors",
+          "measurement_tool": "Post-purchase surveys",
+          "frequency": "Monthly",
+          "target": "> 50",
+          "segments": {
+            "promoters_9_10": "> 60%",
+            "passives_7_8": "< 30%",
+            "detractors_0_6": "< 10%"
+          }
+        },
+        {
+          "metric": "Referral Rate",
+          "definition": "Customers who refer others / Total customers",
+          "measurement_tool": "Referral program tracking",
+          "frequency": "Monthly",
+          "target": "> 10%"
+        },
+        {
+          "metric": "Referral Revenue",
+          "definition": "Revenue attributed to customer referrals",
+          "measurement_tool": "Referral program, attribution",
+          "frequency": "Monthly",
+          "target": "> 15% of new customer revenue"
+        },
+        {
+          "metric": "Review Volume and Rating",
+          "definition": "Number and average star rating of reviews",
+          "measurement_tool": "Review platforms, website",
+          "frequency": "Weekly",
+          "target": "> 4.5 stars, 100+ reviews"
+        },
+        {
+          "metric": "User-Generated Content Volume",
+          "definition": "Customer-created content (photos, videos, posts)",
+          "measurement_tool": "Social monitoring, hashtag tracking",
+          "frequency": "Weekly",
+          "target": "10+ pieces per week"
+        }
+      ]
+    },
+    "brand_health_metrics": {
+      "category": "Brand Perception and Health",
+      "metrics": [
+        {
+          "metric": "Brand Awareness (Aided)",
+          "definition": "% recognizing Ion when prompted",
+          "measurement_tool": "Brand tracking survey",
+          "frequency": "Monthly",
+          "target": "+15% over 12 weeks"
+        },
+        {
+          "metric": "Brand Awareness (Unaided)",
+          "definition": "% mentioning Ion unprompted when asked about golf balls",
+          "measurement_tool": "Brand tracking survey",
+          "frequency": "Monthly",
+          "target": "> 5% in target audience"
+        },
+        {
+          "metric": "Brand Consideration",
+          "definition": "% considering Ion for next purchase",
+          "measurement_tool": "Brand tracking survey",
+          "frequency": "Monthly",
+          "target": "> 20% among aware audience"
+        },
+        {
+          "metric": "Brand Preference",
+          "definition": "% preferring Ion over competitors",
+          "measurement_tool": "Brand tracking survey",
+          "frequency": "Monthly",
+          "target": "> 10% in target segment"
+        },
+        {
+          "metric": "Brand Sentiment",
+          "definition": "Positive mentions / Total mentions",
+          "measurement_tool": "Social listening",
+          "frequency": "Weekly",
+          "target": "> 80% positive"
+        },
+        {
+          "metric": "Message Recall",
+          "definition": "% correctly recalling key brand messages",
+          "measurement_tool": "Brand tracking survey",
+          "frequency": "Monthly",
+          "target": "> 40% among exposed audience"
+        }
+      ]
+    }
+  },
+  "benchmark_comparisons": {
+    "internal_benchmarks": {
+      "description": "Compare against Ion/Performance Golf historical performance",
+      "metrics": [
+        {
+          "benchmark": "Prior Period Performance",
+          "comparison_periods": ["Week-over-week", "Month-over-month", "Year-over-year"],
+          "application": "All key metrics",
+          "target": "Consistent improvement trends"
+        },
+        {
+          "benchmark": "Pre-Campaign Baseline",
+          "description": "Performance before new positioning launch",
+          "application": "Measure campaign lift",
+          "target": "Statistically significant improvement"
+        },
+        {
+          "benchmark": "Performance Golf Other Products",
+          "description": "Compare Ion performance to other PG product launches",
+          "application": "Contextualize success",
+          "target": "Meet or exceed comparable launches"
+        }
+      ]
+    },
+    "competitive_benchmarks": {
+      "description": "Compare against competitor performance where measurable",
+      "metrics": [
+        {
+          "benchmark": "Share of Voice vs. Competitors",
+          "competitors": ["Pro V1/Titleist", "Kirkland", "Vice", "Snell"],
+          "measurement": "Social mentions, search volume, media coverage",
+          "target": "Growing share vs. DTC competitors"
+        },
+        {
+          "benchmark": "Sentiment Comparison",
+          "description": "Brand sentiment vs. key competitors",
+          "measurement": "Social listening sentiment analysis",
+          "target": "Higher positive sentiment than Kirkland, Vice"
+        },
+        {
+          "benchmark": "Review Rating Comparison",
+          "description": "Customer ratings vs. competitor products",
+          "measurement": "Review aggregation",
+          "target": "Equal or higher than DTC competitors"
+        },
+        {
+          "benchmark": "Estimated Market Share",
+          "description": "Estimated share of DTC golf ball market",
+          "measurement": "Industry data, revenue estimates",
+          "target": "Growing share quarter-over-quarter"
+        }
+      ]
+    },
+    "industry_benchmarks": {
+      "description": "Compare against industry/category standards",
+      "metrics": [
+        {
+          "benchmark": "E-commerce Conversion Rate",
+          "industry_average": "2-3%",
+          "ion_target": "> 3%",
+          "source": "E-commerce benchmarks (Shopify, BigCommerce reports)"
+        },
+        {
+          "benchmark": "Email Open Rate",
+          "industry_average": "20-25%",
+          "ion_target": "> 25%",
+          "source": "Email marketing benchmarks"
+        },
+        {
+          "benchmark": "Social Engagement Rate",
+          "industry_average": "1-3%",
+          "ion_target": "> 3%",
+          "source": "Social media benchmarks"
+        },
+        {
+          "benchmark": "ROAS",
+          "industry_average": "2-3:1",
+          "ion_target": "> 3:1",
+          "source": "DTC e-commerce benchmarks"
+        },
+        {
+          "benchmark": "NPS",
+          "industry_average": "30-40 (retail)",
+          "ion_target": "> 50",
+          "source": "NPS benchmarks by industry"
+        }
+      ]
+    }
+  },
+  "success_thresholds": {
+    "tier_definitions": {
+      "exceptional": {
+        "description": "Significantly exceeds targets, signals breakout success",
+        "threshold": "> 120% of target",
+        "action": "Accelerate investment, scale quickly"
+      },
+      "successful": {
+        "description": "Meets or exceeds targets, validates strategy",
+        "threshold": "100-120% of target",
+        "action": "Continue execution, optimize"
+      },
+      "acceptable": {
+        "description": "Approaching targets, requires optimization",
+        "threshold": "80-100% of target",
+        "action": "Identify gaps, implement improvements"
+      },
+      "concerning": {
+        "description": "Below targets, requires strategic review",
+        "threshold": "60-80% of target",
+        "action": "Deep analysis, potential strategy pivot"
+      },
+      "failing": {
+        "description": "Significantly below targets, urgent action needed",
+        "threshold": "< 60% of target",
+        "action": "Immediate strategic review, potential campaign pause"
+      }
+    },
+    "kpi_specific_thresholds": {
+      "customer_acquisition_cost": {
+        "exceptional": "< $10",
+        "successful": "$10-15",
+        "acceptable": "$15-20",
+        "concerning": "$20-25",
+        "failing": "> $25"
+      },
+      "roas": {
+        "exceptional": "> 5:1",
+        "successful": "3-5:1",
+        "acceptable": "2-3:1",
+        "concerning": "1.5-2:1",
+        "failing": "< 1.5:1"
+      },
+      "conversion_rate": {
+        "exceptional": "> 5%",
+        "successful": "3-5%",
+        "acceptable": "2-3%",
+        "concerning": "1-2%",
+        "failing": "< 1%"
+      },
+      "repeat_purchase_rate": {
+        "exceptional": "> 45% (6 months)",
+        "successful": "35-45%",
+        "acceptable": "25-35%",
+        "concerning": "15-25%",
+        "failing": "< 15%"
+      },
+      "nps": {
+        "exceptional": "> 70",
+        "successful": "50-70",
+        "acceptable": "30-50",
+        "concerning": "10-30",
+        "failing": "< 10"
+      }
+    },
+    "milestone_thresholds": {
+      "week_4": {
+        "metrics_to_evaluate": ["CAC", "Conversion rate", "Engagement rate"],
+        "minimum_acceptable": "80% of targets",
+        "decision_point": "Continue or adjust messaging"
+      },
+      "week_8": {
+        "metrics_to_evaluate": ["CAC", "ROAS", "Repeat purchase rate (early)", "Brand awareness"],
+        "minimum_acceptable": "85% of targets",
+        "decision_point": "Scale or optimize"
+      },
+      "week_12": {
+        "metrics_to_evaluate": ["All KPIs"],
+        "minimum_acceptable": "90% of targets",
+        "decision_point": "Strategy validation and Q2 planning"
+      }
+    }
+  },
+  "reporting_framework": {
+    "real_time_dashboard": {
+      "description": "Always-on monitoring for operational metrics",
+      "metrics": [
+        "Website traffic",
+        "Conversion rate",
+        "Revenue",
+        "Ad spend and ROAS",
+        "Cart abandonment",
+        "Customer service volume"
+      ],
+      "access": "Marketing team, leadership",
+      "alerts": "Automated for threshold breaches"
+    },
+    "daily_report": {
+      "description": "Quick operational check-in",
+      "metrics": [
+        "Revenue vs. target",
+        "New customers",
+        "Top performing content/ads",
+        "Any issues or alerts"
+      ],
+      "audience": "Marketing team",
+      "format": "Automated email summary"
+    },
+    "weekly_report": {
+      "description": "Comprehensive performance review",
+      "sections": [
+        {
+          "section": "Executive Summary",
+          "content": "Key wins, challenges, decisions needed"
+        },
+        {
+          "section": "Performance Metrics",
+          "content": "All KPIs vs. targets with trends"
+        },
+        {
+          "section": "Campaign Performance",
+          "content": "By channel, by creative, by audience"
+        },
+        {
+          "section": "Customer Insights",
+          "content": "Feedback themes, sentiment, issues"
+        },
+        {
+          "section": "Competitive Update",
+          "content": "Competitor activity, market changes"
+        },
+        {
+          "section": "Next Week Focus",
+          "content": "Priorities, tests, optimizations"
+        }
+      ],
+      "audience": "Marketing team, leadership",
+      "format": "Slide deck or document"
+    },
+    "monthly_report": {
+      "description": "Strategic performance assessment",
+      "sections": [
+        {
+          "section": "Month Overview",
+          "content": "Narrative summary of performance and key events"
+        },
+        {
+          "section": "KPI Scorecard",
+          "content": "All metrics vs. targets with status indicators"
+        },
+        {
+          "section": "Trend Analysis",
+          "content": "12-week trend charts for key metrics"
+        },
+        {
+          "section": "Cohort Analysis",
+          "content": "Customer behavior by acquisition cohort"
+        },
+        {
+          "section": "Brand Health",
+          "content": "Awareness, consideration, sentiment trends"
+        },
+        {
+          "section": "Competitive Landscape",
+          "content": "Market position, competitor activity"
+        },
+        {
+          "section": "Insights and Recommendations",
+          "content": "Key learnings, strategic recommendations"
+        }
+      ],
+      "audience": "Leadership, stakeholders",
+      "format": "Comprehensive presentation"
+    },
+    "quarterly_review": {
+      "description": "Strategic review and planning",
+      "sections": [
+        "Quarter performance vs. plan",
+        "Strategy effectiveness assessment",
+        "Market and competitive analysis",
+        "Customer insights deep dive",
+        "Learnings documentation",
+        "Next quarter strategy and plan"
+      ],
+      "audience": "Executive team",
+      "format": "Executive presentation with appendix"
+    }
+  },
+  "measurement_infrastructure": {
+    "data_sources": {
+      "web_analytics": {
+        "tool": "Google Analytics 4",
+        "purpose": "Website behavior, conversion tracking",
+        "integration": "GTM, e-commerce tracking"
+      },
+      "advertising_platforms": {
+        "tools": ["Meta Ads Manager", "Google Ads", "TikTok Ads"],
+        "purpose": "Campaign performance, attribution",
+        "integration": "Pixel/tag implementation"
+      },
+      "ecommerce_platform": {
+        "tool": "Shopify/BigCommerce",
+        "purpose": "Transaction data, customer records",
+        "integration": "Native analytics, data exports"
+      },
+      "crm": {
+        "tool": "Klaviyo/HubSpot",
+        "purpose": "Customer data, email performance",
+        "integration": "E-commerce sync, segmentation"
+      },
+      "social_media": {
+        "tools": ["Native analytics", "Sprout Social"],
+        "purpose": "Social performance, engagement",
+        "integration": "API connections"
+      },
+      "social_listening": {
+        "tool": "Brandwatch/Sprinklr",
+        "purpose": "Brand mentions, sentiment, SOV",
+        "integration": "Automated monitoring"
+      },
+      "survey_platform": {
+        "tool": "SurveyMonkey/Typeform",
+        "purpose": "NPS, brand tracking, customer feedback",
+        "integration": "Post-purchase triggers"
+      },
+      "attribution_platform": {
+        "tool": "Triple Whale/Northbeam",
+        "purpose": "Multi-touch attribution",
+        "integration": "Cross-platform data collection"
+      }
+    },
+    "data_governance": {
+      "data_quality": {
+        "validation_rules": "Automated data quality checks",
+        "deduplication": "Customer record matching",
+        "source_of_truth": "Defined for each metric"
+      },
+      "privacy_compliance": {
+        "gdpr_ccpa": "Consent management, data rights",
+        "data_retention": "Policy-based retention schedules",
+        "anonymization": "PII protection in analytics"
+      }
+    }
+  },
+  "testing_framework": {
+    "ab_testing_standards": {
+      "minimum_sample_size": "Calculate for 95% confidence, 80% power",
+      "test_duration": "Minimum 7 days, 2 business cycles",
+      "significance_threshold": "p < 0.05",
+      "documentation": "All tests logged with hypothesis and results"
+    },
+    "test_prioritization": {
+      "framework": "ICE Score (Impact x Confidence x Ease)",
+      "review_cadence": "Weekly test planning",
+      "test_velocity_target": "2-3 tests running simultaneously"
+    },
+    "test_types": [
+      {
+        "type": "Message Testing",
+        "purpose": "Validate positioning resonance",
+        "typical_duration": "2-4 weeks"
+      },
+      {
+        "type": "Creative Testing",
+        "purpose": "Optimize visual performance",
+        "typical_duration": "1-2 weeks"
+      },
+      {
+        "type": "Audience Testing",
+        "purpose": "Identify best performing segments",
+        "typical_duration": "2-4 weeks"
+      },
+      {
+        "type": "Landing Page Testing",
+        "purpose": "Improve conversion rate",
+        "typical_duration": "2-4 weeks"
+      },
+      {
+        "type": "Pricing/Offer Testing",
+        "purpose": "Optimize value proposition",
+        "typical_duration": "4-8 weeks"
+      }
+    ]
+  }
+}

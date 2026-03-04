@@ -1,0 +1,440 @@
+# 01 Abdominal fat reducer provided to Hollywood stars
+
+**Source File:** 01 Abdominal fat reducer provided to Hollywood stars.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1420167322.0
+
+---
+
+## 6D
+
+MONDAY, JUNE 13,2011 USA TODAY
+Anadvancedlineofprod-
+uctsproducedbyfamousBev-
+erlyHillsplasticsurgeonDr.
+FrankRyanisnowavailableto
+thepublic.
+Previouslytheseproducts
+hadonlybeenavailabletoDr.
+Ryan’sclientswhichincluded
+OscarwinningHollywoodmovie
+starsandcelebritiesacrossthe
+nation.Theseproductssubstan-
+tiallyimprovepersonalappear-
+ancewithoutplasticsurgery.
+Dr.Ryan,perhapsthemost
+famousHollywoodplasticsur-
+geoninrecenttimes,wasexten-
+sivelyfeaturedontelevision
+andinmagazinesacrossthena-
+tion.Dr.Ryanwasalsooneof
+thefirstprofessionalstaffmem-
+bersofEndlessYouthandLife
+whichprovidesproductsand
+servicesthatmakecelebrities
+lookandperformmanyyears
+youngerthantheirage.
+OnAugust16,2010Dr.Ryan
+diedinatragiccaraccidenton
+thePacificCoastHighwaynear
+hisranchinMalibu.ItwasDr.
+Ryan’s wishes that Endless
+YouthandLifewouldmakehis
+advancednon-surgicalproduct
+lineavailabletothepublicin
+thefuture.EndlessYouthand
+LifeisnowcomplyingwithDr.
+Ryan’swishes.
+Thefirstproductbeingof-
+feredtothepublicisDr.Ryan’s
+mostpopularnon-surgicalper-
+sonalappearanceenhancement
+product,Dr.FrankRyan’sAb-
+dominalFatReducer.
+Abdominalfatisthemost
+stubbornfattoreduceanditis
+alsothemosthazardousfatto
+health.Abdominalfatproduces
+destructivehormonesthatspread
+throughoutthebody.Aclinical
+studyhasshownthatDr.Frank
+Ryan’sAbdominalFatReducer
+canreduceyourpotbellywith-
+outchangingyourdietorphysi-
+calactivity.
+Adoubleblindclinicalstudy
+was conducted on Dr. Frank
+Ryan’sAbdominalFatReducer.
+Thestudywascommissionedby
+AdvancedSupplementResearch
+andusedaresearchgroupwhich
+hasanexpertstaffconsistingof
+morethan32board-certified
+physicianinvestigatorsandmore
+than38ACRPcertifiedclinical
+researchcoordinators.Thisgroup
+conductsclinicalservicesforthe
+majordrugcompanies.
+Thetestsubjectsinthestudy
+lostsignificantweightandre-
+ducedtheirpotbellywithout
+changingtheirdietorphysical
+activity. Peoplewhowerenot
+exercisingordietinglostweight
+andpotbellyaswellasthose
+whowereexercisinganddieting.
+Inaddition,thestudyshowed
+thatDr.FrankRyan’sAbdominal
+FatReducersignificantlyin-
+creasedcalorieburningsothat
+youloseweightfasteroryoucan
+eatmorefoodwithoutgaining
+weight.And,thestudyfoundthat
+theallnaturalDr.FrankRyan’s
+AbdominalFatReducerpillpro-
+ducedweightlosssafely.
+HowdoesDr.FrankRyan’s
+AbdominalFatReducerwork?
+PaulKlingaman,ExecutiveDi-
+rector of EndlessYouth and
+Lifeexplained.
+Klingaman revealed, “It
+wasfoundinanumberofre-
+searchstudiesonlaboratoryan-
+imalsandlaterconfirmedinhu-
+manstudies,thatasubstance
+called Conjugated Linoleic
+Acid(CLA)decreasesabdomi-
+nalbodyfatinthreeways:1.)
+CLAdecreasesabdominalbody
+fat mass by decreasing the
+amountofabdominalfatthatis
+storedaftereating;2.)CLAin-
+creasestherateoffatbreak-
+downinabdominalfatcells;
+and3.)CLAincreasestherate
+ofabdominalfatmetabolism
+whichdecreasesthetotalnum-
+beroffatcells.Youcanthinkof
+CLAasamatchthatlightsthe
+fuseinabdominalfat.Thisfuse
+alsoincreasesmetabolicrate
+thatcanresultinmorefatloss.
+Dr.FrankRyan’sAbdominal
+FatReducercontainstheeffec-
+tivedoseofCLA.
+Klingamansaid,“Thereare
+alsoanumberofotherbenefi-
+cialeffectstoCLAthathelpde-
+creasethefuturestorageoffat.”
+“CLAinterfereswithanen-
+zymecalledlipoproteinlipase
+(LPL).LPLisanenzymethat
+helpsstorefatinthebody. 2 So,
+byinhibitingthisfat-storingen-
+zymeLPL,CLAcanhelpreduce
+there-accumulationoffat.”
+“CLAalsohelpsthebodyuse
+itsexistingabdominalfatforen-
+ergy,therebyincreasingfatoxi-
+dationandenergyexpenditure.”
+Dr.FrankRyan’sAbdomi-
+nalFatReduceralsocontains
+othersuperhighlyadvanced
+all-naturalingredientsthathelp
+reduceabdominalfat.
+StudieshaveshownthatDr.
+FrankRyan’sAbdominalFat
+Reduceringredientsincreasethe
+rateoffatmetabolism,whichre-
+ducesbothsurfaceandintestinal
+abdominalfatandhelpsinhibit
+futureformationoftheseab-
+dominalfats. 3,4,5 Oneofthese
+ingredientsisaveryhighquality
+andpotentextractofgreentea.
+ThisextractisEGCG,whichhas
+beenshowninclinicalstudiesto
+dramaticallyandquicklyin-
+creasecalorieburningwhich
+helpstoquicklyreduceabdomi-
+nalbodyfat. 4 Theseingredients
+startworkingin20minutesto
+increasecalorieburning,which
+isthefirststeptoreducingthe
+potbelly.
+Dr.Ryan’sotherproducts
+includetopicals,whichreduce
+wrinklesandtightensaggyskin
+withoutplasticsurgery.People
+who order Dr. Frank Ryan’s
+AbdominalFatReducerwill
+haveaccesstothesehighlyad-
+vancedproductsusedbythe
+Hollywoodstars.
+Klingamanstated,“Thein-
+gredientsinDr.FrankRyan’s
+Abdominal Fat Reducer are
+veryexpensive.But,foryour
+readerswhowishtoorderDr.
+FrankRyan’sAbdominalFat
+Reducerdirect,weareoffering
+themadiscountiftheyorder
+within10days.”
+Todayreadersofthispubli-
+cationcangetDr.FrankRyan’s
+AbdominalFatReducerata
+majordiscountiftheyorderin
+10daysfromthedateofthis
+publication.Theregularprice
+ofa30-daysupplyofDr.Frank
+Ryan’sAbdominalFatReducer
+is$59plus$3.95shippingand
+handlingforatotalof$62.95.
+But, for this 10-day dis-
+count,readerscanget$20off
+plusfreeshippingandhandling
+andpayonly$39deliveredfor
+Dr.FrankRyan’sAbdominal
+FatReducer. Forreaderswho
+wanttoobtaina30-daysupply
+ofDr.FrankRyan’sAbdominal
+FatReduceratthis10-daydis-
+countprice,pleaseseetheSpe-
+cialReader’sDiscountCoupon
+onthispage.
+Thereisastrictlimitof3
+bottlesatthisdiscountprice–
+noexceptionsplease. Those
+readersorderingafter10days
+fromthedateofthispublication
+mustpaytheregularprice.
+Excessfaton
+outerabdomen
+ABDOMINALAREA
+WITHEXCESSFAT
+Fatintheabdominalareais
+differentthanfatintherest
+ofthebody.Itisdifficultto
+reduceandishazardousto
+health.Abdominalfatpro-
+ducesdestructivehormones
+thatspreadthroughoutthe
+body.Thereare2types,outer
+fatandintestinalfat.
+ABDOMINALAREA
+WITHFATREDUCED
+TOIDEALLEVELS
+Stubbornfat
+aroundintestines
+
+## SPECIALREADER’SDISCOUNTCOUPON
+
+Theregularpriceofa30-daysupplyofDr.FrankRyan’sAb-
+dominalFatReduceris$59plus$3.95shippingandhandling.
+Peoplereadingthispublicationgeta$20discountplusfree
+shippingandhandlingandpayonly$39forDr.FrankRyan’s
+AbdominalFatReducerdeliveredifyouorderwithin10days.
+Thereisastrictlimitof3bottlesatthisdiscountprice-noex-
+ceptionsplease.Dr.Ryan’sotherproductsincludetopicals,
+whichreducewrinklesandtightensaggyskinwithoutplastic
+surgery.PeoplewhoorderDr.FrankRyan’sAbdominalFat
+Reducerwillhaveaccesstothesehighlyadvancedproducts
+usedbytheHollywoodstars.
+• Toorderbyphone,callTOLL-FREE1-800-495-5615
+OfferCodeEYL170.Placeyourorderbyusingyourcredit
+card.OperatorsareondutyMonday-Saturday9am-9pm
+andSundaynoon-4pm,EST.
+• Toorderonline,www.frankryanproducts.comenterOffer
+Code:EYL170.
+• Toorderbymail,filloutandmailinthiscoupon.
+Thisproductcarriesa60-dayguarantee.Ifyouarenottotally
+satisfied,yourpurchasepricewillberefunded.Noquestions
+asked.
+__________________________________________________________________
+NAME
+__________________________________________________________________
+ADDRESS
+__________________________________________________________________
+CITY STATE ZIPCODE
+__________________________________________________________________
+PHONENUMBER
+Numberofbottlesyouwant:______
+CheckBelowtogetdiscount:
+■ IamorderingDr.FrankRyan’sAbdominalFatReducer
+within10daysofthedateofthispublication,thereforeI
+geta$20discountplusfreeshippingandhandlingandmy
+priceisonly$39delivered.
+■ IamorderingDr.FrankRyan’sAbdominalFatReducer
+past10daysofthedateofthispublication,thereforeIpay
+fullpriceof$59plus$3.95shippingandhandling.
+Enclosedis$________in:■Check ■MoneyOrder
+(MakecheckpayabletoEndlessYouthandLife)
+Orchargemy:■VISA ■MasterCard
+■Am.Exp./Optima ■Discover/Novus
+AccountNo._____________________Exp.Date____/____
+Signature_________________________________________
+MAILTO: EndlessYouthandLifeOfferCodeEYL170
+452N.BedfordDr.
+BeverlyHills,CA90210
+ByJohnWhitehead,MediaServices
+Dr.FrankRyan,famousplastic
+surgeontotheHollywoodstars,
+wasfeaturedontelevisionand
+inmagazinesacrossthenation
+onanextensivebasis.Before
+hediedinatragiccaraccident
+onthePacificCoastHighway
+nearhisranchinMalibu,Dr.
+Ryanfulfilledhislifelongdream
+ofdevelopingalineofproducts
+whichwouldsubstantiallyim-
+prove personal appearance
+withoutplasticsurgery.This
+productline,whichincludesan
+advancedabdominalfatreduc-
+erwaspreviouslyonlyavail-
+abletoDr.Ryan’sclients.Ithas
+nowbeenmadeavailabletothe
+public.
+MynameisChristieKuykendall.ThankstoDr.FrankRyan’s
+AbdominalFatReducerIwasabletoloseallofmystubbornpot
+bellywithoutchangingmydietorphysicalactivity.
+I’mJohnnieSmith. IwasonDr.FrankRyan’sAbdominalFat
+Reducerfor30days.Ilost21poundsandlost4inchesoffmy
+waistwithoutanychangestomydietorphysicalactivity.
+
+# BEFORE AFTER
+
+
+# BEFORE AFTER
+
+Dr. Frank Ryan’sAbdominal Fat Reducer
+1 IntJ.Obesity200125:1129-1135
+2 LLP (Lipoprotein Lipase) reference
+Lipids,1997Aug32(8):853-858
+3 AMJClinNuff.1989Jan;49(1):44-50
+4 AMJPhysol.1995Oct:(4pt1):E671-8
+5 Metabolism2000Jan:49:101-7
+•Thesestatementshavenotbeenevaluated
+bytheFoodandDrugAdministration.This
+Productisnotintendedtodiagnose,treat,
+cureorpreventanydisease.
+
+## Scientific Double Blind Clinical Study of
+
+
+## Dr. Frank Ryan’sAbdominal Fat Reducer
+
+CommissionedbyAdvancedSupplementResearchand
+conductedbyaresearchgroupwhichhasanexpertstaff
+consistingofmorethan32board-certifiedphysicianinves-
+tigatorsandmorethan38ACRPcertifiedclinicalresearch
+coordinators.Thisgroupconductsclinicalstudiesforthe
+majordrugcompanies.
+Testsubjectsdidnotexerciseordiet.Weregivendaily
+dosageofDr.FrankRyan’sAbdominalFatReducerorPlacebo.
+Dr.FrankRyan’sAbdominalFatReducergroupexperienced5
+timesreductioninfatmass,4timesreductioninBMIat4
+weeks,4timesgreaterweightlossat4weeks,2timesreduc-
+tioninwaistcircumferenceandnearlya50%decreaseincalo-
+rieandcarbohydrateintake.
+(Toreviewthisclinicalstudy,logontowww.clinicalstudiespublishing.com)
+FatMass
+5
+4
+3
+2
+1
+BodyMass Weight Waist
+Index Loss Circumference
+5
+T
+i
+m
+e
+s
+R
+e
+ud
+c
+t
+i
+o
+n
+4
+T
+i
+m
+e
+s
+R
+e
+u
+d
+c
+t
+i
+o
+n
+a
+t
+W
+e
+e
+k
+4
+4
+T
+i
+m
+e
+s
+G
+r
+e
+a
+t
+e
+r
+a
+t
+W
+ee
+k
+4
+2
+T
+i
+m
+e
+s
+R
+e
+ud
+c
+t
+i
+o
+n
+
+## DR. FRANK RYAN’S ABDOMINAL FAT
+
+
+## REDUCER CLINICAL STUDY RESULTS
+
+©2011MediaServicesS-8894OF23738R-1 Advertisement
+
+# Abdominal fat reducer provided to
+
+
+# Hollywood stars by famous plastic
+
+
+# surgeon now available to public
+
+Fatonouter
+abdomenreduced
+Stubbornfataround
+intestinesreduced
+Advertisement Advertisement Advertisement

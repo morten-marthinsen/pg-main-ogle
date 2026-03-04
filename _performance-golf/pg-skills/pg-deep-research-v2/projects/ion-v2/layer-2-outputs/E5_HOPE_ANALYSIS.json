@@ -1,0 +1,907 @@
+{
+  "analysis_type": "E5 Analysis",
+  "bucket": "HOPE",
+  "project": "Ion Golf Ball V2",
+  "layer": "2",
+  "created_at": "2026-01-20",
+  "total_hope_quotes_analyzed": 227,
+
+  "E1_EXPLICIT_LANGUAGE": {
+    "description": "Exact words, phrases, and expressions golfers use when describing positive outcomes",
+
+    "liberation_theme": {
+      "frequency_rank": 1,
+      "key_phrases": [
+        "I don't worry about",
+        "I don't care about losing",
+        "no more angst",
+        "swinging freely",
+        "play whatever I want",
+        "couldn't be happier",
+        "never looked back",
+        "I don't stress about it",
+        "plenty of ammo",
+        "I can afford to lose",
+        "don't sweat it"
+      ],
+      "transformation_language": {
+        "before": ["worried", "anxious", "stressed", "concerned", "afraid"],
+        "after": ["free", "liberated", "relaxed", "carefree", "unburdened"]
+      },
+      "representative_quotes": [
+        "Plus, at their price, I don't worry about losing a couple on difficult courses!",
+        "I don't worry about dropping them into water or into the poison oak. They are cheap!",
+        "Been there, done that. Switched to used golf balls and never looked back. No more angst about $4 down the drain for a lost ball."
+      ]
+    },
+
+    "smart_identity_theme": {
+      "frequency_rank": 2,
+      "key_phrases": [
+        "not wasting my money",
+        "until I'm on tour",
+        "can't justify",
+        "half the price",
+        "same performance",
+        "no difference at all",
+        "why spend $50",
+        "best value",
+        "it's the player not the equipment",
+        "4x price doesn't equal 4x better",
+        "smart golfer"
+      ],
+      "identity_markers": {
+        "self_descriptors": ["pragmatic", "savvy", "wise", "realistic", "smart"],
+        "value_conscious_language": ["smoking deal", "can't beat the price", "worth every penny", "unbeatable value"]
+      },
+      "representative_quotes": [
+        "I like the pro V but until I'm on tour, I won't be wasting my money on them.",
+        "Very happy with them. I'm sure the premium balls ARE better, but at 4-Times the price they certainly don't make my game 4 times better.",
+        "I play with a group who is very picky about their golf balls, have to be new, soft, etc. Week over week I beat them in score with old golf balls."
+      ]
+    },
+
+    "value_discovery_theme": {
+      "frequency_rank": 3,
+      "key_phrases": [
+        "I switched from... to...",
+        "noticed no difference",
+        "just as good",
+        "couldn't believe",
+        "pleasantly surprised",
+        "found my ball",
+        "the real deal",
+        "equivalent performance",
+        "half the cost"
+      ],
+      "discovery_journey_language": {
+        "search_phase": ["looking for", "trying to find", "searching for"],
+        "discovery_moment": ["I found", "discovered", "stumbled upon", "realized"],
+        "commitment_phase": ["will never go back", "my go-to", "exclusively play", "committed to"]
+      },
+      "representative_quotes": [
+        "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all.",
+        "I bought a box to start the golf season this year. After playing a round with these balls I could not believe just how great they performed.",
+        "I've played with used golf balls of the big brand but was tired of the condition of them. When I tried the SD-01 I was pleasantly surprised with them."
+      ]
+    },
+
+    "confidence_theme": {
+      "frequency_rank": 4,
+      "key_phrases": [
+        "I feel confident",
+        "I know how it performs",
+        "I trust",
+        "proven to me",
+        "validated",
+        "as good as any premium",
+        "10/10",
+        "highly recommend",
+        "the data proves"
+      ],
+      "validation_language": {
+        "personal_validation": ["in my experience", "for my game", "works for me"],
+        "external_validation": ["MGS confirmed", "testing shows", "data proves"],
+        "peer_validation": ["my friends switched too", "everyone I know"]
+      },
+      "representative_quotes": [
+        "As the data proves - there is NO DIFFERENCE.",
+        "They are as good or better than any premium golf ball that I have played.",
+        "In a head to head matchup with the Pro V1 over like 100 swings--The Vice Pro launched higher, spun more, and went further with every club. It was an absolute slaughter."
+      ]
+    },
+
+    "permission_granted_theme": {
+      "frequency_rank": 5,
+      "key_phrases": [
+        "you don't need",
+        "at my skill level",
+        "for my handicap",
+        "it doesn't matter",
+        "stop searching for",
+        "don't worry about",
+        "works fine for my skill level"
+      ],
+      "permission_structures": {
+        "skill_based_permission": ["at your level", "for your game", "unless you're scratch"],
+        "universal_permission": ["most golfers don't need", "average player doesn't need"],
+        "value_based_permission": ["not worth the extra money", "save your money for lessons"]
+      },
+      "representative_quotes": [
+        "Stop searching for the same golf ball Tiger Woods or Nelly Korda plays - it's probably hurting your game more than it's helping.",
+        "I'm a high handicap and can't tell the difference between balls.",
+        "Until you get close to breaking 90, you don't need any better golf ball."
+      ]
+    }
+  },
+
+  "E2_EMOTIONAL_DRIVERS": {
+    "description": "Positive emotions appearing in HOPE quotes, ranked by intensity and frequency",
+
+    "emotion_rankings": [
+      {
+        "rank": 1,
+        "emotion": "RELIEF",
+        "intensity_score": 9.5,
+        "frequency_score": 9.0,
+        "composite_score": 9.25,
+        "manifestation": "Relief from financial anxiety and performance pressure",
+        "trigger_words": ["no more angst", "don't worry", "relief", "finally", "at last"],
+        "physical_expressions": ["swinging freely", "playing relaxed", "no hesitation"],
+        "sample_quotes": [
+          "Been there, done that. Switched to used golf balls and never looked back. No more angst about $4 down the drain for a lost ball.",
+          "Plus, at their price, I don't worry about losing a couple on difficult courses!"
+        ]
+      },
+      {
+        "rank": 2,
+        "emotion": "SATISFACTION",
+        "intensity_score": 9.0,
+        "frequency_score": 9.5,
+        "composite_score": 9.25,
+        "manifestation": "Deep contentment with value received and decision made",
+        "trigger_words": ["couldn't be happier", "love", "perfect", "satisfied", "happy"],
+        "cognitive_expressions": ["right decision", "no regrets", "worth every penny"],
+        "sample_quotes": [
+          "I switched to Maxfli Tour and couldn't be happier with the results.",
+          "I recently compared over a dozen balls and have ended up committing to the Vice Pro for 2023. I really like the feel of these balls."
+        ]
+      },
+      {
+        "rank": 3,
+        "emotion": "VALIDATION",
+        "intensity_score": 8.5,
+        "frequency_score": 8.5,
+        "composite_score": 8.5,
+        "manifestation": "Confirmation that their choice was correct",
+        "trigger_words": ["confirmed", "proves", "exactly what I expected", "as I thought"],
+        "sources_of_validation": ["personal testing", "MGS data", "peer experience", "scores"],
+        "sample_quotes": [
+          "The data collected during this test suggests that the Snell MTB Black and Titleist Pro V1 offer similar performance.",
+          "I played 2-3 rounds with it just to confirm the MGS tests in my game. Well, waddaya know, I played really well with them."
+        ]
+      },
+      {
+        "rank": 4,
+        "emotion": "CONFIDENCE",
+        "intensity_score": 8.0,
+        "frequency_score": 8.0,
+        "composite_score": 8.0,
+        "manifestation": "Certainty in their equipment choice and game",
+        "trigger_words": ["I know", "certain", "confident", "trust", "proven"],
+        "behavioral_expressions": ["committed", "loyal", "won't change"],
+        "sample_quotes": [
+          "If you dont lose balls, its worth paying for. And when you get comfortable with a certain ball, and know how it feels, know how it spins, how it checks up, it really does help your game.",
+          "I have experimented enough to say that playing the right ball for my game can save me 3-4 strokes for 18 holes."
+        ]
+      },
+      {
+        "rank": 5,
+        "emotion": "PRIDE",
+        "intensity_score": 7.5,
+        "frequency_score": 7.0,
+        "composite_score": 7.25,
+        "manifestation": "Pride in smart decision-making and beating the system",
+        "trigger_words": ["beat them", "outsmart", "savvy", "figured out"],
+        "competitive_expressions": ["I beat my buddies", "they can't believe", "laugh at them"],
+        "sample_quotes": [
+          "I play with a group who is very picky about their golf balls, have to be new, soft, etc. Week over week I beat them in score with old golf balls.",
+          "I recently just used a top flite xl 2000 hard as glass beat them by 5 strokes."
+        ]
+      },
+      {
+        "rank": 6,
+        "emotion": "FREEDOM",
+        "intensity_score": 8.5,
+        "frequency_score": 6.5,
+        "composite_score": 7.5,
+        "manifestation": "Liberation from constraints, expectations, and marketing pressure",
+        "trigger_words": ["free", "liberated", "whatever I want", "don't care"],
+        "behavioral_expressions": ["swing freely", "play without thinking", "grab any ball"],
+        "sample_quotes": [
+          "I play whatever 3 piece urethane ball I can find for cheap. Don't care all that much what it says.",
+          "I told the guy I can't tell the difference in golf balls. All kinds, so I can play whatever ball I want to, and I have."
+        ]
+      },
+      {
+        "rank": 7,
+        "emotion": "DISCOVERY/SURPRISE",
+        "intensity_score": 7.0,
+        "frequency_score": 6.0,
+        "composite_score": 6.5,
+        "manifestation": "Pleasant surprise at finding unexpected value",
+        "trigger_words": ["surprised", "didn't expect", "couldn't believe", "amazing"],
+        "discovery_expressions": ["found out", "realized", "discovered"],
+        "sample_quotes": [
+          "I figured I would see a dropoff in performance, but honestly I didn't notice much difference at all.",
+          "I picked up a few dozen Vice Pros when they were on sale at Sam's club, and I've been pleasantly surprised."
+        ]
+      },
+      {
+        "rank": 8,
+        "emotion": "VINDICATION",
+        "intensity_score": 7.5,
+        "frequency_score": 5.0,
+        "composite_score": 6.25,
+        "manifestation": "Feeling proven right against skeptics or premium buyers",
+        "trigger_words": ["proved", "see?", "told you", "just like I said"],
+        "context": "Often appears when data confirms their budget ball choice",
+        "sample_quotes": [
+          "As the data proves - there is NO DIFFERENCE.",
+          "All the reviews I read about the ball weren't very positive. Especially, about the green side performance. I felt the complete opposite."
+        ]
+      }
+    ],
+
+    "emotional_journey_pattern": {
+      "typical_progression": [
+        "Anxiety/Frustration (PAIN bucket origin)",
+        "Curiosity/Search (trying alternatives)",
+        "Surprise/Discovery (finding value works)",
+        "Relief/Satisfaction (confirming it works)",
+        "Confidence/Pride (identity as smart golfer)",
+        "Freedom/Liberation (no longer caring)"
+      ],
+      "transformation_timeline": "Typically 1-3 months from first switch to full confidence"
+    }
+  },
+
+  "E3_EXPERIENCES": {
+    "description": "Specific moments and situations that create positive feelings",
+
+    "transformation_triggers": [
+      {
+        "experience": "THE FIRST SUCCESSFUL ROUND",
+        "frequency": "Very High",
+        "emotional_payload": ["validation", "relief", "excitement"],
+        "typical_narrative": "Golfer tries budget/DTC ball, plays same or better than with premium, realizes they've been overpaying",
+        "representative_quotes": [
+          "The first time I used them I shot great.",
+          "I bought a box to start the golf season this year. After playing a round with these balls I could not believe just how great they performed."
+        ]
+      },
+      {
+        "experience": "THE PRICE COMPARISON MOMENT",
+        "frequency": "Very High",
+        "emotional_payload": ["vindication", "pride", "relief"],
+        "typical_narrative": "Golfer calculates savings and realizes the magnitude of money saved",
+        "representative_quotes": [
+          "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all.",
+          "Vice balls direct. 100 balls with shipping come out to ~$1.50 per ball."
+        ]
+      },
+      {
+        "experience": "LOSING A BALL WITHOUT PAIN",
+        "frequency": "High",
+        "emotional_payload": ["freedom", "relief", "acceptance"],
+        "typical_narrative": "Ball goes in water or woods, golfer shrugs instead of feeling the usual sting",
+        "representative_quotes": [
+          "I don't worry about dropping them into water or into the poison oak. They are cheap!",
+          "It's easier dealing with a $1.50-2.00 lost ball (usually many lost balls) than several $4 lost balls."
+        ]
+      },
+      {
+        "experience": "OUTPLAYING PREMIUM BALL USERS",
+        "frequency": "Medium-High",
+        "emotional_payload": ["pride", "vindication", "satisfaction"],
+        "typical_narrative": "Golfer beats friends/competitors who play expensive balls while using budget balls",
+        "representative_quotes": [
+          "I play with a group who is very picky about their golf balls, have to be new, soft, etc. Week over week I beat them in score with old golf balls.",
+          "I recently just used a top flite xl 2000 hard as glass beat them by 5 strokes and I'm not the longest hitter."
+        ]
+      },
+      {
+        "experience": "DATA VALIDATION MOMENT",
+        "frequency": "Medium-High",
+        "emotional_payload": ["vindication", "confidence", "validation"],
+        "typical_narrative": "Reading MGS or other testing that confirms budget balls perform similarly",
+        "representative_quotes": [
+          "MyGolfSpy confirmed this in testing.",
+          "The data collected during this test suggests that the Snell MTB Black and Titleist Pro V1 offer similar performance."
+        ]
+      },
+      {
+        "experience": "THE BULK PURCHASE SATISFACTION",
+        "frequency": "Medium",
+        "emotional_payload": ["satisfaction", "security", "abundance"],
+        "typical_narrative": "Buying large quantity at great price, feeling set for the season",
+        "representative_quotes": [
+          "I always buy in the 5 doz lots but wait for the Vice specials which can be either an extra doz or free shipping.",
+          "Maxfli Tour and Tour X might be the best value at $109 for a 48 pack."
+        ]
+      },
+      {
+        "experience": "GREENSIDE PERFORMANCE VALIDATION",
+        "frequency": "Medium",
+        "emotional_payload": ["relief", "validation", "confidence"],
+        "typical_narrative": "Specifically confirming that cheap ball still spins and checks around greens",
+        "representative_quotes": [
+          "That's one thing I did not even notice a difference. I scrambled on 3 holes with short chips and noticed no difference.. same check and release I got with a Pro V1.",
+          "Workability and control around the greens is just as good as the Pro V1."
+        ]
+      },
+      {
+        "experience": "FINDING ENOUGH BALLS",
+        "frequency": "Medium",
+        "emotional_payload": ["humor", "satisfaction", "abundance"],
+        "typical_narrative": "Finding more balls than losing, essentially playing for free",
+        "representative_quotes": [
+          "Unless, like me, you find more than you lose... Then it becomes extremely cost effective!",
+          "I find more clean pro v1s on my course than I lose."
+        ]
+      }
+    ],
+
+    "negative_experiences_avoided": [
+      "Watching expensive ball sink in water",
+      "Searching desperately for lost premium ball",
+      "Calculating cost of balls lost that round",
+      "Feeling foolish for overpaying",
+      "Playing tentatively to protect expensive ball"
+    ]
+  },
+
+  "E4_EXPECTATIONS": {
+    "description": "What outcomes satisfied golfers describe hoping for and achieving",
+
+    "primary_expectations": [
+      {
+        "expectation": "EQUIVALENT PERFORMANCE AT LOWER COST",
+        "achievement_rate": "High",
+        "satisfaction_level": "Very High",
+        "evidence": [
+          "I switched from Pro V1's to Maxfli Straight Fly and I honestly like them better.",
+          "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all.",
+          "These are the real deal. Go farther than my ProV's play the same. Long and straight."
+        ]
+      },
+      {
+        "expectation": "MENTAL FREEDOM FROM BALL LOSS ANXIETY",
+        "achievement_rate": "Very High",
+        "satisfaction_level": "Very High",
+        "evidence": [
+          "Plus, at their price, I don't worry about losing a couple on difficult courses!",
+          "Been there, done that. Switched to used golf balls and never looked back. No more angst about $4 down the drain."
+        ]
+      },
+      {
+        "expectation": "VALIDATION THAT PREMIUM ISN'T NECESSARY",
+        "achievement_rate": "High",
+        "satisfaction_level": "High",
+        "evidence": [
+          "You don't need to play a premium golf ball.",
+          "The average golfer doesn't need to spend a ton of money on the high priced balls.",
+          "FACT: You don't need to spend $50 to get a premium ball."
+        ]
+      },
+      {
+        "expectation": "ADEQUATE DURABILITY",
+        "achievement_rate": "Mixed",
+        "satisfaction_level": "Medium",
+        "evidence": [
+          "Durability has drastically improved! Low spin off driver and high spin off my wedges.",
+          "For the price, it's a great deal. I've never had durability issues with prior-generation Kirklands.",
+          "Note: Vice and Kirkland durability remains a concern for some"
+        ]
+      },
+      {
+        "expectation": "CONSISTENT BALL-TO-BALL PERFORMANCE",
+        "achievement_rate": "Varies by brand",
+        "satisfaction_level": "Medium",
+        "notes": "This is where premium brands still have advantage per MGS testing"
+      }
+    ],
+
+    "unexpected_positive_outcomes": [
+      "Better performance than premium (in some cases)",
+      "Forced focus on skill rather than equipment",
+      "Community/identity with smart golfer tribe",
+      "Ability to try multiple ball types without financial penalty",
+      "More enjoyable, pressure-free golf"
+    ],
+
+    "expectations_vs_reality_gaps": {
+      "positive_gaps": [
+        "Performance exceeded expectations for many",
+        "Freedom/relief greater than anticipated",
+        "Social validation from fellow golfers"
+      ],
+      "negative_gaps": [
+        "Durability sometimes worse than expected (Vice, Kirkland)",
+        "Quality inconsistency (especially Kirkland)",
+        "Some sacrifice spin performance for distance"
+      ]
+    }
+  },
+
+  "E5_ENVIRONMENT": {
+    "description": "Where positive discussions happen and what triggers golfers to share success stories",
+
+    "platform_distribution": {
+      "forums": {
+        "percentage": 65,
+        "venues": ["GolfWRX", "GolfMonthly", "TheSandTrap", "Reddit r/golf"],
+        "discussion_type": "Detailed comparisons, personal experiences, advice-seeking"
+      },
+      "reviews": {
+        "percentage": 20,
+        "venues": ["Costco Reviews", "Amazon", "Dick's", "Product Review Sites"],
+        "discussion_type": "Purchase validation, product endorsement"
+      },
+      "social_media": {
+        "percentage": 10,
+        "venues": ["Facebook Golf Groups", "Instagram", "TikTok"],
+        "discussion_type": "Quick endorsements, memes, humor"
+      },
+      "articles": {
+        "percentage": 5,
+        "venues": ["MyGolfSpy", "Practical Golf", "GolfMagic"],
+        "discussion_type": "Expert validation, data-driven analysis"
+      }
+    },
+
+    "trigger_contexts": [
+      {
+        "trigger": "SOMEONE ASKS FOR BALL RECOMMENDATIONS",
+        "frequency": "Very High",
+        "response_pattern": "Immediate recommendation of preferred value ball with personal story",
+        "emotional_tone": "Helpful, enthusiastic, validation-seeking"
+      },
+      {
+        "trigger": "PREMIUM BALL VALUE IS QUESTIONED",
+        "frequency": "Very High",
+        "response_pattern": "Stories of switching and finding no difference",
+        "emotional_tone": "Vindication, sometimes combative"
+      },
+      {
+        "trigger": "KIRKLAND/DTC TESTING RESULTS RELEASED",
+        "frequency": "High",
+        "response_pattern": "Discussion of personal experience vs. data",
+        "emotional_tone": "Analytical, sometimes defensive"
+      },
+      {
+        "trigger": "SOMEONE MENTIONS LOSING EXPENSIVE BALLS",
+        "frequency": "Medium-High",
+        "response_pattern": "Suggestions to switch to cheaper alternatives",
+        "emotional_tone": "Empathetic, advisory"
+      },
+      {
+        "trigger": "SALE OR DEAL DISCOVERED",
+        "frequency": "Medium",
+        "response_pattern": "Sharing deal details, buying in bulk",
+        "emotional_tone": "Excited, community-minded"
+      }
+    ],
+
+    "community_dynamics": {
+      "tribes_identified": [
+        "Value Ball Evangelists - actively convert premium users",
+        "Quiet Switchers - made change, share when asked",
+        "Data-Driven Golfers - cite MGS and testing",
+        "Found Ball Users - don't buy any balls",
+        "DTC Brand Loyalists - Snell, Vice, Maxfli devotees"
+      ],
+      "common_shared_language": [
+        "Half the price",
+        "Same performance",
+        "Can't tell the difference",
+        "Smart golfer",
+        "Not wasting money"
+      ]
+    }
+  },
+
+  "TOP_20_TRANSFORMATION_PHRASES": {
+    "description": "Exact phrases capturing the transformation from pain to hope",
+    "phrases": [
+      {
+        "rank": 1,
+        "phrase": "I couldn't be happier with the results",
+        "theme": "satisfaction",
+        "usage_context": "After switching to value ball"
+      },
+      {
+        "rank": 2,
+        "phrase": "half the price and I noticed no difference at all",
+        "theme": "value_discovery",
+        "usage_context": "Comparing to premium"
+      },
+      {
+        "rank": 3,
+        "phrase": "I don't worry about losing",
+        "theme": "liberation",
+        "usage_context": "Playing with cheap balls"
+      },
+      {
+        "rank": 4,
+        "phrase": "at their price, I don't worry",
+        "theme": "liberation",
+        "usage_context": "Freedom from ball anxiety"
+      },
+      {
+        "rank": 5,
+        "phrase": "just as good as any premium golf ball",
+        "theme": "validation",
+        "usage_context": "Comparing performance"
+      },
+      {
+        "rank": 6,
+        "phrase": "the real deal",
+        "theme": "confidence",
+        "usage_context": "Endorsing value ball"
+      },
+      {
+        "rank": 7,
+        "phrase": "never looked back",
+        "theme": "commitment",
+        "usage_context": "After switching"
+      },
+      {
+        "rank": 8,
+        "phrase": "no more angst about $4 down the drain",
+        "theme": "relief",
+        "usage_context": "After switching to used/cheap balls"
+      },
+      {
+        "rank": 9,
+        "phrase": "can't beat the price",
+        "theme": "value_recognition",
+        "usage_context": "Recommending ball"
+      },
+      {
+        "rank": 10,
+        "phrase": "4-Times the price they certainly don't make my game 4 times better",
+        "theme": "smart_identity",
+        "usage_context": "Justifying value choice"
+      },
+      {
+        "rank": 11,
+        "phrase": "until I'm on tour, I won't be wasting my money",
+        "theme": "smart_identity",
+        "usage_context": "Permission to not play premium"
+      },
+      {
+        "rank": 12,
+        "phrase": "I found my ball",
+        "theme": "discovery",
+        "usage_context": "End of search for right ball"
+      },
+      {
+        "rank": 13,
+        "phrase": "it was an absolute slaughter",
+        "theme": "vindication",
+        "usage_context": "Budget ball beating premium in testing"
+      },
+      {
+        "rank": 14,
+        "phrase": "As the data proves - there is NO DIFFERENCE",
+        "theme": "validation",
+        "usage_context": "Citing test results"
+      },
+      {
+        "rank": 15,
+        "phrase": "Week over week I beat them in score",
+        "theme": "pride",
+        "usage_context": "Outplaying premium ball users"
+      },
+      {
+        "rank": 16,
+        "phrase": "I play whatever I find in the woods",
+        "theme": "ultimate_liberation",
+        "usage_context": "Complete freedom from ball anxiety"
+      },
+      {
+        "rank": 17,
+        "phrase": "for 4 cents a ball they fly into the woods just as good",
+        "theme": "humor_acceptance",
+        "usage_context": "Self-deprecating but free"
+      },
+      {
+        "rank": 18,
+        "phrase": "plays like a Titleist Pro V1 at a little more than half the cost",
+        "theme": "value_discovery",
+        "usage_context": "Endorsing alternative"
+      },
+      {
+        "rank": 19,
+        "phrase": "you don't need to play a premium golf ball",
+        "theme": "permission_granted",
+        "usage_context": "Giving others permission"
+      },
+      {
+        "rank": 20,
+        "phrase": "I shot two of my best rounds with the SuperSoft",
+        "theme": "unexpected_success",
+        "usage_context": "Performance validation"
+      }
+    ]
+  },
+
+  "BEFORE_AFTER_TRANSFORMATION_LANGUAGE": {
+    "before_state": {
+      "financial_language": [
+        "can't justify",
+        "can't afford to lose",
+        "too expensive",
+        "waste of money",
+        "hurts to lose"
+      ],
+      "emotional_language": [
+        "worried",
+        "anxious",
+        "stressed",
+        "frustrated",
+        "hesitant"
+      ],
+      "behavioral_language": [
+        "playing tentatively",
+        "holding back",
+        "protecting the ball",
+        "afraid to swing",
+        "calculating every loss"
+      ]
+    },
+    "after_state": {
+      "financial_language": [
+        "great value",
+        "can afford to lose",
+        "worth it",
+        "smoking deal",
+        "unbeatable price"
+      ],
+      "emotional_language": [
+        "free",
+        "relaxed",
+        "confident",
+        "satisfied",
+        "happy"
+      ],
+      "behavioral_language": [
+        "swinging freely",
+        "playing aggressive",
+        "not thinking about it",
+        "grabbing any ball",
+        "enjoying the game"
+      ]
+    },
+    "transformation_verbs": [
+      "switched",
+      "changed",
+      "discovered",
+      "realized",
+      "found",
+      "committed",
+      "converted"
+    ]
+  },
+
+  "SUCCESS_PATTERN_CATEGORIES": {
+    "pattern_1_the_switcher": {
+      "description": "Golfer who actively switched from premium to value ball",
+      "journey": "Premium -> Research -> Trial -> Validation -> Commitment",
+      "key_emotions": ["curiosity", "relief", "satisfaction", "pride"],
+      "percentage_of_hope_quotes": 45
+    },
+    "pattern_2_the_pragmatist": {
+      "description": "Golfer who never played premium because of cost-benefit analysis",
+      "journey": "Awareness -> Analysis -> Smart Choice -> Validation",
+      "key_emotions": ["confidence", "smugness", "wisdom"],
+      "percentage_of_hope_quotes": 25
+    },
+    "pattern_3_the_liberator": {
+      "description": "Golfer who found freedom by stopping to care about ball choice",
+      "journey": "Anxiety -> Experimentation -> Realization -> Freedom",
+      "key_emotions": ["relief", "freedom", "acceptance"],
+      "percentage_of_hope_quotes": 20
+    },
+    "pattern_4_the_found_ball_user": {
+      "description": "Golfer who plays found balls and finds freedom in abundance",
+      "journey": "Loss -> Discovery -> Abundance -> Liberation",
+      "key_emotions": ["humor", "freedom", "resourcefulness"],
+      "percentage_of_hope_quotes": 10
+    }
+  },
+
+  "TOP_10_HIGHEST_PRIORITY_QUOTES_WITH_ANALYSIS": [
+    {
+      "rank": 1,
+      "quote_id": "H-001",
+      "quote": "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all.",
+      "source": "GolfMonthly Forum",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Complete switch narrative in one sentence",
+        "emotional_payload": ["relief", "validation", "satisfaction"],
+        "marketing_utility": "Perfect testimonial format - premium comparison, price point, no compromise",
+        "themes_present": ["value_discovery", "smart_identity"],
+        "usability_score": 10
+      }
+    },
+    {
+      "rank": 2,
+      "quote_id": "H-005",
+      "quote": "Plus, at their price, I don't worry about losing a couple on difficult courses!",
+      "source": "Seed Golf Reviews",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Liberation from ball loss anxiety",
+        "emotional_payload": ["relief", "freedom", "peace_of_mind"],
+        "marketing_utility": "Directly addresses core pain point of ball loss",
+        "themes_present": ["liberation", "value_discovery"],
+        "usability_score": 10
+      }
+    },
+    {
+      "rank": 3,
+      "quote_id": "H-088",
+      "quote": "Very happy with them. I'm sure the premium balls ARE better, but at 4-Times the price they certainly don't make my game 4 times better or 4 times more enjoyable.",
+      "source": "Facebook - Snell golf balls discussion",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Smart value calculation with acknowledgment",
+        "emotional_payload": ["satisfaction", "wisdom", "liberation"],
+        "marketing_utility": "Honest, relatable math that resonates",
+        "themes_present": ["smart_identity", "value_discovery"],
+        "usability_score": 10
+      }
+    },
+    {
+      "rank": 4,
+      "quote_id": "H-012",
+      "quote": "In a head to head matchup with the Pro V1 over like 100 swings--The Vice Pro launched higher, spun more, and went further with every club. It was an absolute slaughter. This is a very legit ball. For the price IMO it's the best ball on the market.",
+      "source": "GolfWRX Forum",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Data-driven validation with strong emotional language",
+        "emotional_payload": ["vindication", "excitement", "confidence"],
+        "marketing_utility": "Strong competitive positioning with memorable language",
+        "themes_present": ["validation", "confidence"],
+        "usability_score": 9
+      }
+    },
+    {
+      "rank": 5,
+      "quote_id": "H-018",
+      "quote": "I recently just used a top flite xl 2000 hard as glass beat them by 5 strokes and I'm not the longest hitter. I do this every week, they can't believe the golf balls I use. I tell them man it's not the ball, your game sucks.",
+      "source": "MyGolfSpy - Stay Away From This Golf Ball",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Ultimate confidence and competitive pride",
+        "emotional_payload": ["pride", "vindication", "humor"],
+        "marketing_utility": "Edgy, memorable, captures 'smart golfer beats premium' narrative",
+        "themes_present": ["smart_identity", "confidence", "liberation"],
+        "usability_score": 9
+      }
+    },
+    {
+      "rank": 6,
+      "quote_id": "H-014",
+      "quote": "Remember, as soon as you hit that brand new ball off the 1st tee, it's not new anymore. So why waste the money on new balls?",
+      "source": "MyGolfSpy Forum",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Logical reframe that undercuts premium justification",
+        "emotional_payload": ["wisdom", "liberation", "pragmatism"],
+        "marketing_utility": "Thought-provoking logic that creates permission",
+        "themes_present": ["permission_granted", "smart_identity"],
+        "usability_score": 9
+      }
+    },
+    {
+      "rank": 7,
+      "quote_id": "H-029",
+      "quote": "For 4 cents a ball they fly into the woods just as good as pro v1s.",
+      "source": "Reddit r/golf",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Humorous acceptance and ultimate liberation",
+        "emotional_payload": ["humor", "acceptance", "freedom"],
+        "marketing_utility": "Memorable, shareable, self-deprecating humor that resonates",
+        "themes_present": ["liberation", "humor"],
+        "usability_score": 9
+      }
+    },
+    {
+      "rank": 8,
+      "quote_id": "H-090",
+      "quote": "Stop searching for the same golf ball Tiger Woods or Nelly Korda plays - it's probably hurting your game more than it's helping.",
+      "source": "CaddieHQ",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Permission to break from tour player imitation",
+        "emotional_payload": ["liberation", "education"],
+        "marketing_utility": "Strong counter-narrative to premium marketing",
+        "themes_present": ["permission_granted", "smart_identity"],
+        "usability_score": 9
+      }
+    },
+    {
+      "rank": 9,
+      "quote_id": "H-104",
+      "quote": "I suggest trying different sleeves of different balls. Forget reviews. They plain suck including mine. Everybody has a different taste and how they prefer to play.",
+      "source": "GolfWRX Forum",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Permission to trust yourself over experts",
+        "emotional_payload": ["wisdom", "liberation", "independence"],
+        "marketing_utility": "Empowers golfer to experiment and find their own answer",
+        "themes_present": ["permission_granted", "liberation"],
+        "usability_score": 8
+      }
+    },
+    {
+      "rank": 10,
+      "quote_id": "H-139",
+      "quote": "I average one or two lost balls per week, which is four or five rounds, and I still won't pay premium prices for balls. I would if I scored any better with them, but I don't, so it's Callaway Supersoft for me.",
+      "source": "GolfWRX Forum",
+      "priority": "GOLD",
+      "analysis": {
+        "transformation_captured": "Honest assessment with practical conclusion",
+        "emotional_payload": ["honesty", "pragmatism", "confidence"],
+        "marketing_utility": "Relatable frequency of play, honest about performance",
+        "themes_present": ["smart_identity", "liberation"],
+        "usability_score": 8
+      }
+    }
+  ],
+
+  "MARKETING_IMPLICATIONS": {
+    "key_messages_to_amplify": [
+      "You don't need to pay premium to get premium performance",
+      "Freedom from ball loss anxiety is worth more than the savings",
+      "Smart golfers prioritize value over marketing",
+      "The data proves alternatives perform the same",
+      "Your score won't change, but your enjoyment will increase"
+    ],
+    "emotional_buttons_to_push": [
+      "Liberation from financial anxiety",
+      "Validation of smart decision-making",
+      "Pride in beating the system",
+      "Freedom to swing without worry",
+      "Confidence through peer validation"
+    ],
+    "testimonial_archetypes_to_feature": [
+      "The Switcher: 'I used to play Pro V1s, now I play X'",
+      "The Savvy Golfer: 'I knew premium was a waste'",
+      "The Data-Driven: 'I tested them side by side'",
+      "The Liberator: 'I don't even care what ball I play anymore'",
+      "The Winner: 'I beat my friends every week with budget balls'"
+    ],
+    "language_to_use": {
+      "do_use": [
+        "half the price",
+        "same performance",
+        "no difference",
+        "couldn't be happier",
+        "smart golfer",
+        "don't worry about losing",
+        "the real deal"
+      ],
+      "avoid": [
+        "cheap" (use "value" or "affordable"),
+        "good enough" (use "just as good"),
+        "compromise" (never suggest they're settling)"
+      ]
+    }
+  }
+}

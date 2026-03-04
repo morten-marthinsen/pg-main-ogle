@@ -1,0 +1,418 @@
+{
+  "extraction_id": "raw_sf2_batch4",
+  "created": "2026-01-19",
+  "status": "complete",
+  "sources_scraped": 6,
+  "focus": "Infomercial/DTC competitors + SF1 predecessor",
+  "quotes_by_bucket": {
+    "PAIN": [
+      {
+        "id": "P-053",
+        "quote": "I used it and I slice like crazy and the SF1 did absolutely nothing for a slice",
+        "source": "YouTube - SF1 Driver Review Comments",
+        "platform": "youtube",
+        "context": "SF1 skeptic/negative review - did not work for severe slicer"
+      },
+      {
+        "id": "P-054",
+        "quote": "Got paired with a random who had that driver, I can confirm, he was still able to slice it",
+        "source": "Reddit r/golf - SF1 Driver Discussion",
+        "platform": "reddit",
+        "context": "Observed SF1 failure in the wild"
+      },
+      {
+        "id": "P-055",
+        "quote": "Having lost some distance with my driver in recent years as well as a little accuracy as well in my advancing age, I was certainly intrigued",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Aging golfer pain point - distance and accuracy loss"
+      },
+      {
+        "id": "P-056",
+        "quote": "If you're like a lot of casual golfers, your best drive is a lot longer than your average driver distance. And that's because it's hard to be consistent with the driver",
+        "source": "USGolfTV - Teton Hybrid Review",
+        "platform": "review_site",
+        "context": "Inconsistency pain - best vs average drive gap"
+      },
+      {
+        "id": "P-057",
+        "quote": "The shaft is too long to control and there's not enough launch to get a decent carry distance",
+        "source": "USGolfTV - Teton Hybrid Review",
+        "platform": "review_site",
+        "context": "Driver design flaw - shaft length control issue"
+      },
+      {
+        "id": "P-058",
+        "quote": "you have to change your golf swing when you hit your driver. This creates several opportunities to ruin your shot",
+        "source": "USGolfTV - Teton Hybrid Review",
+        "platform": "review_site",
+        "context": "Driver swing complexity causing inconsistency"
+      },
+      {
+        "id": "P-059",
+        "quote": "I had extreme case of bad slice with driver. It was so bad that if I swing as hard as I can without worrying about anything, I could probably send the ball 2 fairways to the right",
+        "source": "GolfWRX - Should I get a draw driver",
+        "platform": "forum",
+        "context": "Extreme slice severity - 2 fairways right"
+      },
+      {
+        "id": "P-060",
+        "quote": "I've got a draw driver but if I get it wrong it still slices",
+        "source": "Golf Monthly Forums - Draw bias driver",
+        "platform": "forum",
+        "context": "Draw driver can still slice - not magic fix"
+      },
+      {
+        "id": "P-061",
+        "quote": "I can still slice it and do once in a while",
+        "source": "MyGolfSpy Forums - Draw biased drivers vs working on swing",
+        "platform": "forum",
+        "context": "Draw driver limitation - still possible to slice"
+      },
+      {
+        "id": "P-062",
+        "quote": "When I hit a ball it felt like I was hitting a wall of cement. Terrible club",
+        "source": "MyGolfSpy - Hammer X Review Comments",
+        "platform": "review_site",
+        "context": "Hammer X negative feel feedback"
+      },
+      {
+        "id": "P-063",
+        "quote": "I bought the Hammer driver and I can honestly say it took 20-30 yards OFF my drives. It is a pure piece of junk",
+        "source": "MyGolfSpy - Hammer X Review Comments",
+        "platform": "review_site",
+        "context": "Hammer X lost distance - opposite of claims"
+      },
+      {
+        "id": "P-064",
+        "quote": "The actual product itself is a horrible sounding/feeling/performing club with next to no redeemable value",
+        "source": "Reddit r/golf - Hammer X Discussion",
+        "platform": "reddit",
+        "context": "Complete Hammer X rejection"
+      }
+    ],
+    "HOPE": [
+      {
+        "id": "H-037",
+        "quote": "If you can be 30 or so yards closer to the center and only a few yards shorter, you could save a lot of strokes",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "Accuracy tradeoff value proposition"
+      },
+      {
+        "id": "H-038",
+        "quote": "I cranked out multiple 280-yard-plus drives with the SF1, a good poke regardless of the driver in hand by my standards",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "SF1 distance validation - 280+ yards possible"
+      },
+      {
+        "id": "H-039",
+        "quote": "On average, the SF1 was only eight yards behind my gamer... that's a huge win",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "SF1 competitive with mainstream driver on distance"
+      },
+      {
+        "id": "H-040",
+        "quote": "if you have a consistent slice that's making golf less fun, this driver really could help you hit drives way closer to the center",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "SF1 can help consistent slicers"
+      },
+      {
+        "id": "H-041",
+        "quote": "My very first tee shot with this club went about 260 yards, a high draw to the left center portion of the fairway. And it was easy to swing",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Teeless instant results - 260 yards, easy swing"
+      },
+      {
+        "id": "H-042",
+        "quote": "I found it difficult to lose it right. Actually, pretty much impossible",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Teeless anti-slice effectiveness"
+      },
+      {
+        "id": "H-043",
+        "quote": "It's certainly a club that gave me confidence",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Confidence boost from Teeless"
+      },
+      {
+        "id": "H-044",
+        "quote": "I hit the fairway almost every time but the ball may roll off due to the slope... for my purposes this club has made my game much more enjoyable",
+        "source": "USGolfTV - Teton Hybrid Review Comments",
+        "platform": "review_site",
+        "context": "Teton user testimonial - accuracy improvement"
+      },
+      {
+        "id": "H-045",
+        "quote": "Distance and accuracy is what I was looking for. The Teton HD has it",
+        "source": "USGolfTV - Teton Hybrid Review Comments",
+        "platform": "review_site",
+        "context": "Teton delivers both distance and accuracy"
+      },
+      {
+        "id": "H-046",
+        "quote": "I was hitting balls pass my target and straight. I normally swing a 3 wood",
+        "source": "USGolfTV - Teton Hybrid Review Comments",
+        "platform": "review_site",
+        "context": "Teton user exceeded expectations"
+      }
+    ],
+    "ROOT_CAUSE": [
+      {
+        "id": "RC-026",
+        "quote": "if you don't have a swing speed of at least 110 mph and hit your driver more than 270 yards, why would you want to play the same equipment that the tour players use?",
+        "source": "GolfPass - Teeless Driver Review (Notah Begay)",
+        "platform": "review_site",
+        "context": "Equipment mismatch - amateurs using pro equipment"
+      },
+      {
+        "id": "RC-027",
+        "quote": "Those tendencies, of course, are to slice the ball, hit it fat and hit it all over the face",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Common amateur tendencies identified"
+      },
+      {
+        "id": "RC-028",
+        "quote": "it is still possible to hit a slice with the SF1 driver. If you visit the product page and believe every word there, you might be tempted to think you've hit your last slice ever",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "Marketing overclaim vs reality gap"
+      },
+      {
+        "id": "RC-029",
+        "quote": "I think the correct title should be 'Burner draw driver hides my slice!' Probably your swingpath is still the same as before",
+        "source": "TheSandTrap - Burner draw driver cured my slice",
+        "platform": "forum",
+        "context": "Draw driver hides not fixes underlying swing issue"
+      },
+      {
+        "id": "RC-030",
+        "quote": "The problem is, as long as there's golf, people will be trying to fix their slice",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "Slice is eternal golf problem"
+      }
+    ],
+    "SOLUTIONS_TRIED": [
+      {
+        "id": "ST-021",
+        "quote": "I decided the draw driver was not for me",
+        "source": "MyGolfSpy Forums - Draw biased drivers vs working on swing",
+        "platform": "forum",
+        "context": "Draw driver rejection after trying"
+      },
+      {
+        "id": "ST-022",
+        "quote": "I tried it at the range and it made a huge difference. It went 15 yards further than my Callaway epic",
+        "source": "MyGolfSpy - Hammer X Review Comments",
+        "platform": "review_site",
+        "context": "Tee height adjustment made Hammer X work for one user"
+      },
+      {
+        "id": "ST-023",
+        "quote": "I removed the 58 wedge and thus, now carry only 4 off the 5300 yard tees about 3x-4x a round",
+        "source": "USGolfTV - Teton Hybrid Review Comments",
+        "platform": "review_site",
+        "context": "Selective use of specialty club"
+      }
+    ],
+    "COMPETITOR_MECHANISM": [
+      {
+        "id": "CM-032",
+        "quote": "The face is narrower, and the clubhead is deeper than a typical driver. It has 13 degrees of loft, not the 9.5-10.5 degrees many amateurs play",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Teeless design differentiators - narrow face, deep head, high loft"
+      },
+      {
+        "id": "CM-033",
+        "quote": "The center of gravity is also located low in the back of the clubhead. By moving the CG back in the head, it effectively makes the entire face hotter",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Teeless CG positioning for forgiveness"
+      },
+      {
+        "id": "CM-034",
+        "quote": "The narrow face combined with something the company calls a 'Ground Control Sole' is also what makes it so incredibly easy to hit off the turf",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Teeless ground contact technology"
+      },
+      {
+        "id": "CM-035",
+        "quote": "The idea was to make a club where you didn't have to fear the ground. So you can hit it like a 7-iron essentially",
+        "source": "GolfPass - Teeless Driver Review (Geurin Rife)",
+        "platform": "review_site",
+        "context": "Teeless design philosophy - no ground fear"
+      },
+      {
+        "id": "CM-036",
+        "quote": "the clubhead of the Teton Hybrid is sized between a traditional hybrid and a conventional driver head. It is essentially an oversized hybrid head",
+        "source": "USGolfTV - Teton Hybrid Review",
+        "platform": "review_site",
+        "context": "Teton hybrid-driver size positioning"
+      },
+      {
+        "id": "CM-037",
+        "quote": "The Teton also features a tall driver face. This creates a higher moment of inertia (MOI) to prevent twisting",
+        "source": "USGolfTV - Teton Hybrid Review",
+        "platform": "review_site",
+        "context": "Teton MOI for stability"
+      },
+      {
+        "id": "CM-038",
+        "quote": "To achieve that higher launch and more impressive carry distance, Boggs designed the Teton with a 14.5-degree loft",
+        "source": "USGolfTV - Teton Hybrid Review",
+        "platform": "review_site",
+        "context": "Teton high loft for launch - 14.5 degrees"
+      },
+      {
+        "id": "CM-039",
+        "quote": "The crown of the SF1 driver is what Performance Golf calls an AeroSquare crown",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "SF1 AeroSquare crown technology"
+      },
+      {
+        "id": "CM-040",
+        "quote": "The Hammer X driver promised to add a whopping 50 yards on all your tee shots",
+        "source": "MyGolfSpy - Hammer X Review",
+        "platform": "review_site",
+        "context": "Hammer X outlandish 50-yard claim"
+      },
+      {
+        "id": "CM-041",
+        "quote": "the TaylorMade M1 bested the Hammer in almost every category... carry advantage of over 25 Yards Longer over The Hammer",
+        "source": "MyGolfSpy - Hammer X Review",
+        "platform": "review_site",
+        "context": "Hammer X failed vs mainstream driver - 25 yards shorter"
+      },
+      {
+        "id": "CM-042",
+        "quote": "The Teeless Driver ($297-$347) promises to make the game way easier for those who aren't scratch or near scratch players",
+        "source": "GolfPass - Teeless Driver Review",
+        "platform": "review_site",
+        "context": "Teeless pricing and positioning"
+      },
+      {
+        "id": "CM-043",
+        "quote": "The Teton Hybrid is currently available for $199. This includes a 60-day money back guarantee",
+        "source": "USGolfTV - Teton Hybrid Review",
+        "platform": "review_site",
+        "context": "Teton pricing and guarantee"
+      },
+      {
+        "id": "CM-044",
+        "quote": "SF1 driver MSRP: $299",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "SF1 pricing"
+      }
+    ],
+    "VILLAIN": [
+      {
+        "id": "V-021",
+        "quote": "I'll clear one thing up right away: it is still possible to hit a slice with the SF1 driver. If you visit the product page and believe every word there, you might be tempted to think you've hit your last slice ever, but don't get too excited",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "SF1 marketing overclaims called out"
+      },
+      {
+        "id": "V-022",
+        "quote": "What sounds like a joke now, actually sold a lot of drivers... Hell, I am willing to bet many of you reading this right now still have one sitting in the garage as a reminder what not to do at 4 AM",
+        "source": "MyGolfSpy - Hammer X Review",
+        "platform": "review_site",
+        "context": "Infomercial buyer's remorse"
+      },
+      {
+        "id": "V-023",
+        "quote": "Not only did the Hammer X fail to live up to a single claim made in the infomercial, it actually performed significantly worse than a mainstream competitor",
+        "source": "MyGolfSpy - Hammer X Review",
+        "platform": "review_site",
+        "context": "Hammer X complete failure vs claims"
+      },
+      {
+        "id": "V-024",
+        "quote": "The Hammer Club is GARBAGE!! The commercial is as phony as it gets... DO NOT BUY THIS CLUB",
+        "source": "MyGolfSpy - Hammer X Review Comments",
+        "platform": "review_site",
+        "context": "Strong anti-Hammer X sentiment"
+      },
+      {
+        "id": "V-025",
+        "quote": "Only a complete idiot, with absolutely ZERO understanding of physics, would have expected the results to have been any different",
+        "source": "MyGolfSpy - Hammer X Review Comments",
+        "platform": "review_site",
+        "context": "Infomercial claims defy physics"
+      },
+      {
+        "id": "V-026",
+        "quote": "if the 50 yard increase was real, you would see tour professionals using this club... There are no tour pros using this club",
+        "source": "MyGolfSpy - Hammer X Review Comments",
+        "platform": "review_site",
+        "context": "No pro validation = red flag"
+      },
+      {
+        "id": "V-027",
+        "quote": "The BBB rating is an F. No wonder the HAMMER is hiding in the mountains of Colorado",
+        "source": "MyGolfSpy - Hammer X Review Comments",
+        "platform": "review_site",
+        "context": "Hammer X company credibility issues"
+      },
+      {
+        "id": "V-028",
+        "quote": "some of the claims and promises that come with the SF1 package are hokey, the club itself is not",
+        "source": "GolfLink - SF1 Driver Review",
+        "platform": "review_site",
+        "context": "SF1 marketing vs product quality disconnect"
+      }
+    ]
+  },
+  "summary_stats": {
+    "total_quotes_extracted": 58,
+    "by_bucket": {
+      "PAIN": 12,
+      "HOPE": 10,
+      "ROOT_CAUSE": 5,
+      "SOLUTIONS_TRIED": 3,
+      "COMPETITOR_MECHANISM": 13,
+      "VILLAIN": 8
+    },
+    "sources_covered": [
+      "GolfLink - SF1 Driver Review",
+      "GolfPass - Teeless Driver Review",
+      "USGolfTV - Teton Hybrid Review",
+      "MyGolfSpy - Hammer X Review",
+      "Reddit r/golf - SF1 Discussion",
+      "GolfWRX Forums - Draw driver threads",
+      "MyGolfSpy Forums - Draw bias threads",
+      "TheSandTrap Forums"
+    ],
+    "high_value_themes_identified": [
+      "SF1 predecessor positioned similarly to SF2 - slice-fixing promise",
+      "SF1 works for some but not severe slicers",
+      "Infomercial competitors (Hammer X, Teeless, Teton) have mixed results",
+      "Hammer X is universally rejected as junk",
+      "Teeless and Teton have positive reviews from credible sources",
+      "Price range for DTC slice-fixers: $199-$347",
+      "Marketing overclaims are a major pain point",
+      "Draw driver hides but doesn't fix underlying swing"
+    ]
+  },
+  "cumulative_totals": {
+    "batch1_quotes": 79,
+    "batch2_quotes": 67,
+    "batch3_quotes": 52,
+    "batch4_quotes": 58,
+    "total_quotes": 256,
+    "quotes_needed_for_minimum": 744,
+    "progress_percentage": "25.6%"
+  }
+}

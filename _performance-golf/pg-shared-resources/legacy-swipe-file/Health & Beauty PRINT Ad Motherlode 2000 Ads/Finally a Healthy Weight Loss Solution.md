@@ -1,0 +1,102 @@
+# Finally a Healthy Weight Loss Solution
+
+**Source File:** Finally a Healthy Weight Loss Solution.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+“Aftermyweightlossconsultation,Isignedupfortheweightlossprogram,andlosta
+totalof50lbs!Whileenrolledintheprogram,ItooktheALCATfoodsensitivitytest.Now
+myjointsandkneesfeelbetter,andIoftenfindmyselfsmiling...IknowexactlywhatI
+havetosmileabout.”
+– Anna C.
+
+## What are patients saying?
+
+Copyright©EpicMarketing2014
+How Does It Work?
+fromamedicalviewpointandunderstandingyour
+personalgoals,yourphysicianwillcreateacustomized,
+individualizedprogramthatwillgiveyoutheresultsyou
+Ourdoctorsareformallytrainedtounderstandthe
+expectwithouttheneedforspecialfoodsupplements,
+variousweightlossoptionsavailabletohelpguideyou
+pre-packagedmealsorothergimmicksthatnon-physi-
+throughaprogramthatishealthyforyoubasedupon
+cianplansoffer.
+yourpersonalgoals,medicalhistory,nutritionalhabits,
+andyourmetabolism.Byunderstandingyourneeds
+Why Choose Us?
+Thereisnofasterwaytosafelyloseweightthanwith
+theguidanceofaphysician.Underthecareofadoctor,
+averageweightlossisabout21poundsin4weeks.
+HereatAlignedMedicalGroupwetailoraweightloss
+programtomeetyourbody’sneeds.Wemakesurethe
+latestprovenmedicalweightlossoptionsareavailable
+toyou.TheseoptionsarebothsafeandhavebeenFDA
+approved.AlignedMedicalGrouplookstomeetyour
+weightlossneedsbyputtingaprogramtogetherthat
+willworkspecificallyforyou.
+“It’sanewyearandifyouwouldliketoloseweight,orifyou
+havetriedandhavebeenunsuccessful,thetimeisnowfor
+youtodroppounds,loseinches,andkeepthemoff.Mygoal
+istohelpyourbodyhealandloseweightnaturallythough
+myphysicianassistedweightlosssystem.Beingoverweight
+affectseverythingthatyoudo,fromworktoplay,toyour
+qualityoflife.Iamheretotellyouthatthereishope.Our
+breakthroughprogramisthemostadvancedandsuccess-
+fulprogramI’veseenforlosingweight.IamofferingaFREE
+consultationand$100OFFafourmonthplummet.Ilook
+forwardtoexplainingyouroptionsforquicklyburningfat
+andkeepingoffthepoundslongterm.Findoutforyourself
+ifwehaveyoursolutiontolosingunwantedfatandweight.
+Getthefigureyou’vealwayswantedquickly,andlearnhow
+tokeepitfortherestofyourlife!”
+–Dr.SheldonLebovitz,DO
+Are “Fad Diets” the Solution to
+Weight Loss? ABSOLUTELY NOT!
+Popular“cookiecutter”one-size-fits-alldietsand
+programsaretypicallyonlyshort-termweightloss
+solutionsanddonothelpyoutoachievepermanent,
+life-longweightloss.Youareunique,andthatis
+whyaphysicianassistedweightlossprogramisthe
+ultimatesolution,becauseit’stailoredtoyourbody.
+Ifotherweightlossmethodshavefailed,youmay
+needhormonebalance,properdieting,exercise,and
+detoxification.Weuseanintegratedweightlosssolu-
+tionbasedonyourfreevisitandwecustom-tailor
+yourpathtoweightlossbasedonyouruniqueneeds.
+What Is The Aligned Medical Group
+Weight Loss Plummet?
+• Physician Supervised Weight Loss
+• FDA Approved Medications
+• Medication Dispensed On-site
+• Computerized Body Fat Analysis
+• Nutritional & Exercise Counseling
+• HCG Therapy*
+*Disclaimer:HCGhasnotbeendemonstratedtobeeffectiveadjunctivetherapyinthetreatmentofobesity.Thereisnosubstantialevidencethatitincreasesweightlossbeyondthatresultingfrom
+caloricrestriction,thatitcausesamoreattractiveor“normal”distributionoffat,orthatitdecreasesthehungeranddiscomfortassociatedwithcalorierestricteddiets.
+
+# Finally, a Healthy Weight Loss Solution
+
+Advertisement Advertisement Advertisement
+Local Doctors Offer NEW Non-Surgical Weight Loss and Wellness Program with Synergy Weight Loss System
+
+# Take Inches Off Quickly & Keep the Pounds Off
+
+Before After
+4IndustrialBlvd.,Suite200
+Paoli,PA19301
+
+# Consultation
+
+
+# Call Today!
+
+
+# 610-719-3834
+
+$100offa4monthPlummet
+
+# FFFRRREEEEEE

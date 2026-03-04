@@ -1,0 +1,638 @@
+{
+  "competitive_landscape": {
+    "market_structure": {
+      "tier_1_direct_competitors": [
+        {
+          "name": "SuperSpeed Golf",
+          "category": "Overspeed Training Systems",
+          "market_position": "Market leader, most recognized name"
+        },
+        {
+          "name": "Stack System",
+          "category": "Overspeed Training Systems",
+          "market_position": "Premium tech-driven alternative"
+        },
+        {
+          "name": "Rypstick",
+          "category": "Overspeed Training Systems",
+          "market_position": "Single-stick convenience option"
+        }
+      ],
+      "tier_2_indirect_competitors": [
+        {
+          "name": "Orange Whip",
+          "category": "Tempo/Rhythm Trainers",
+          "market_position": "Popular warmup/tempo tool, not pure speed trainer"
+        },
+        {
+          "name": "SKLZ Gold Flex",
+          "category": "Tempo/Rhythm Trainers",
+          "market_position": "Budget-friendly warmup tool"
+        },
+        {
+          "name": "Lag Shot",
+          "category": "Swing Feel Trainers",
+          "market_position": "Lag/timing focused trainer"
+        },
+        {
+          "name": "Momentus Power Hitter",
+          "category": "Weighted Swing Trainers",
+          "market_position": "Legacy weighted club option"
+        }
+      ],
+      "tier_3_alternative_solutions": [
+        {
+          "name": "Traditional Weighted Clubs",
+          "category": "DIY/Legacy Methods",
+          "market_position": "Budget alternative, counterproductive for speed"
+        },
+        {
+          "name": "DIY PVC Speed Sticks",
+          "category": "DIY Solutions",
+          "market_position": "Cost-conscious homemade option"
+        },
+        {
+          "name": "YouTube Instruction",
+          "category": "Free Content",
+          "market_position": "Passive learning, no structured training"
+        },
+        {
+          "name": "Golf Lessons",
+          "category": "Professional Instruction",
+          "market_position": "Technique-focused, not speed-specific"
+        },
+        {
+          "name": "Gym Workouts",
+          "category": "General Fitness",
+          "market_position": "Foundation building, slow speed gains"
+        }
+      ]
+    },
+    "competitor_profiles": [
+      {
+        "name": "SuperSpeed Golf",
+        "price": "$149-$199",
+        "mechanism": "Three-club overspeed system with light/medium/heavy weighted shafts",
+        "design": "Three separate weighted shafts without clubheads, 42 inches (7-iron length)",
+        "protocol": "Rotating through all three clubs with specific rep counts and rest periods",
+        "strengths": [
+          "Most trusted name in speed training market",
+          "Used by amateur and professional golfers",
+          "Simplicity - no weight adjustments needed",
+          "Proven overspeed training methodology",
+          "Online training protocols included",
+          "Speed gains documented (5-10 mph typical)"
+        ],
+        "weaknesses": [
+          "Three clubs are bulky to transport and store",
+          "Training sessions take 30+ minutes rotating through each weight",
+          "No app in an age where tracking is expected",
+          "Shorter length (42 inches) doesn't match driver length (45 inches)",
+          "Weight on shaft axis - no clubface for face control training",
+          "Speed gains don't always transfer to course",
+          "Can exacerbate existing swing faults",
+          "14-day return policy limits testing time",
+          "Requires separate purchase of speed measurement device ($150-230)",
+          "Injury risks reported (wrist pain, elbow issues)"
+        ],
+        "quote_evidence": [
+          {
+            "id": "COMP-001",
+            "quote": "I went from a driver swing speed of 104 up to 115 doing a year of SuperSpeed. If I had to start it all over again though I would definitely go with The Stack due to the app.",
+            "sentiment": "mixed"
+          },
+          {
+            "id": "COMP-004",
+            "quote": "My wrist would always bother me during the swings, and I would get a lancinating nerve pain in that same wrist during some of the swings. I stopped and the pain never returned.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "COMP-006",
+            "quote": "Does anyone know if I could use The Stack app with Superspeed sticks? I'm getting very frustrated with Superspeed for not having an app in this day and age.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "COMP-013",
+            "quote": "I have the Supersticks and after 6 weeks have seen a 5 mph increase on the course and roughly 10 yards gain with my driver.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-020",
+            "quote": "I had been using the SSG protocols for almost a year before I went to Par4Success and I had seen little if any change on the golf course.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "COMP-030",
+            "quote": "So I did the SuperSpeed Sticks and followed the protocols for a few months and gained 7 mph from 99 to 106 and retained a solid 4 mph at a 103 average.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-040",
+            "quote": "If you read through the 121 pages of the SSG thread, you'll find lots of guys that followed the SSG protocols and got few if any gains, and others that injured themselves in the process.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "PAIN-001",
+            "quote": "I gained 15 mph with SuperSpeed but my slice got worse. Now I'm hitting it farther into the trees than before.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "PAIN-002",
+            "quote": "Three separate clubs are bulky to transport and store. Nearly impossible to travel with all three clubs.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "PAIN-009",
+            "quote": "I've been doing SuperSpeed for 6 months and my driving distance on the course is the same. Radar says I gained speed but the ball doesn't go any farther.",
+            "sentiment": "negative"
+          }
+        ]
+      },
+      {
+        "name": "Stack System",
+        "price": "$299 + $100/year subscription + $230 for radar",
+        "mechanism": "Single adjustable-weight club with AI-driven app and radar integration",
+        "design": "One club at 42 inches (7-iron length) with interchangeable weight kit",
+        "protocol": "App-guided workouts with enforced rest periods, voice dictation, Grit score tracking",
+        "strengths": [
+          "Best-in-class mobile app with guided workouts",
+          "AI adapts training based on results",
+          "Enforced rest periods prevent overtraining",
+          "Single stick vs three sticks for convenience",
+          "Mevo+ integration for speed tracking",
+          "Age bracket comparisons",
+          "Speed priming warmup protocol",
+          "No opposite hand or kneeling swings required",
+          "Backed by smart people with data-driven approach"
+        ],
+        "weaknesses": [
+          "Highest total cost ($600+ to start)",
+          "Steep learning curve - complicated for beginners",
+          "Requires compatible launch monitor purchase",
+          "Ongoing subscription cost ($100/year)",
+          "Still 42 inches - doesn't match driver length",
+          "Weight adjustment process adds complexity",
+          "Speed gains may plateau quickly on course",
+          "Transfer from Stack speed to iron speeds limited",
+          "Energy/fatigue factor for older golfers"
+        ],
+        "quote_evidence": [
+          {
+            "id": "COMP-002",
+            "quote": "Cost no object, The Stack hands down. Enforced rest periods through Grit score. I'm an impatient person and with the SuperSpeed protocols I never gave myself enough rest between sets.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-008",
+            "quote": "All that being said, the app sold me on the Stack. I've made more progress on the Stack than I did with the Rypstick. The app is a good motivator (grit score) and I really like the forced rest periods.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-017",
+            "quote": "At the end of the day, Stack is better than SuperSpeed because it's one club vs three, the app is pretty good, and you can get the SuperSpeed protocols for free.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-027",
+            "quote": "The Stack combines precision, data-driven customization with cutting-edge app technology. It's designed for serious golfers and professionals, not a beginner or casual golfer. However, it's a lot for most golfers and somewhat of a steep learning curve.",
+            "sentiment": "mixed"
+          },
+          {
+            "id": "COMP-032",
+            "quote": "The Stack is, hands down and bar none, the best platform. That's why there's a link in the sidebar, not because I make $5 or whatever from it.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "GWX-017",
+            "quote": "I personally was a proponent of Stack. The crossover of benefits of Stack training to my actual on course speeds hit a plateau very quickly.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "GWX-018",
+            "quote": "The initial neuromuscular changes that Stack drives just from an intent standpoint added a quick ~5 mph of head speed to my driver. However, I never saw much change in iron head speeds, and I could not seem to progress beyond those initial gains despite over two years of pretty consistent Stack training.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "PAIN-003",
+            "quote": "The Stack System costs $299 plus $230 for the radar plus $100/year subscription. That's over $600 just to start speed training.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "PAIN-006",
+            "quote": "Steep learning curve - complicated for beginners. I spent two weeks just trying to figure out the app.",
+            "sentiment": "negative"
+          }
+        ]
+      },
+      {
+        "name": "Rypstick",
+        "price": "$169-$199",
+        "mechanism": "Single club with adjustable weight system, driver length (45 inches)",
+        "design": "One club at driver length with changeable weight design",
+        "protocol": "Drills and protocols similar to SuperSpeed with personal trainer support available",
+        "strengths": [
+          "Driver length (45 inches) for better transfer",
+          "Single stick convenience vs three-club systems",
+          "Adjustable weights for different strength levels",
+          "40-day money-back guarantee",
+          "Drills included alongside protocol",
+          "Personal trainer consultation available",
+          "Better value than Stack at similar functionality",
+          "Portable - keep in bag for regular use"
+        ],
+        "weaknesses": [
+          "No sophisticated app like Stack",
+          "Still weight-on-shaft design without clubface",
+          "Programming not as guided as Stack",
+          "Less brand recognition than SuperSpeed",
+          "Still requires discipline for self-paced training"
+        ],
+        "quote_evidence": [
+          {
+            "id": "COMP-007",
+            "quote": "Had it. I've gone DIY SuperSpeed sticks -> Rypstick -> The Stack. The Rypstick is a good product. The Rypstick takes the negatives of the SuperSpeed system (multiple sticks) and solves that with the changeable weight design.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-015",
+            "quote": "My ideal training aid is the Rypstick paired with a Stack App.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-025",
+            "quote": "For every MPH of added clubhead speed, you'll gain 3 yards of extra distance. By working the Rypstick into your training routine for just 10 minutes a day, 3x per week, you could see 15-25 yards added to your driving distance.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-028",
+            "quote": "Rypstick is a versatile swing speed trainer designed for golfers who want a single, all-in-one club to increase power and accuracy. With adjustable weights, it allows you to fine-tune resistance.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-029",
+            "quote": "The second reason I think Rypstick is more beneficial is that it's the length of a driver. While the Stack System is 42 inches, closer to a 7-iron. I've never quite understood why The Stack is so much shorter than a standard length driver.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-042",
+            "quote": "I've had one of my mental golf coaching students get started with Rypstick in his early 50s and added nearly 20 mph to his swing! Proving that you're never too old to get started.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "COMP-043",
+            "quote": "SuperSpeed Golf - $149. The Stack System - $299. While Rypstick is slightly more than SuperSpeed, it's still dollar for dollar the best value.",
+            "sentiment": "positive"
+          }
+        ]
+      },
+      {
+        "name": "Orange Whip",
+        "price": "$99-$119",
+        "mechanism": "Flexible shaft with counterweighted orange ball for tempo and rhythm training",
+        "design": "Flexible shaft with weighted ball, multiple lengths available",
+        "protocol": "Primarily warmup and tempo work, no structured speed protocol",
+        "strengths": [
+          "Excellent for warmup before rounds",
+          "Helps develop tempo and rhythm",
+          "Works for all skill levels - won't outgrow it",
+          "Builds core strength and swing stability",
+          "Popular recommendation among golfers",
+          "Daily use encouraged without injury risk"
+        ],
+        "weaknesses": [
+          "Not purely a speed trainer - tempo/rhythm focus",
+          "No structured training protocols",
+          "No data tracking capabilities",
+          "Cannot measure improvement objectively",
+          "Won't deliver significant speed gains",
+          "Different training goal than overspeed systems"
+        ],
+        "quote_evidence": [
+          {
+            "id": "PAIN-010",
+            "quote": "Not purely a speed trainer - more of a tempo/rhythm tool. I wanted to swing faster, not smoother.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "PAIN-011",
+            "quote": "No structured training protocols. No data tracking capabilities. How do I know if I'm improving?",
+            "sentiment": "negative"
+          },
+          {
+            "id": "SOL-010",
+            "quote": "I have built many things as well as purchased many. The only one I would actually recommend would be the Orange Whip. Similar to the Sklz Gold Flex. These are something you can always use no matter what your ability is.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "SOL-015",
+            "quote": "The best training aid above all is the Orange Whip. I use it daily.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "SOL-021",
+            "quote": "Orange Whip fan here, most recent aid is a putting mirror. So simple to use.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "SOL-022",
+            "quote": "Before teeing off my buddies all take turns with my Orange Whip to warm up. I use mine daily and hit it past them regularly.",
+            "sentiment": "positive"
+          }
+        ]
+      },
+      {
+        "name": "SKLZ Gold Flex",
+        "price": "$39-$49",
+        "mechanism": "Flexible weighted shaft for warmup and tempo training",
+        "design": "Flexible shaft with weighted end, available in multiple lengths",
+        "protocol": "Warmup tool with some swing trainer benefits",
+        "strengths": [
+          "Budget-friendly price point",
+          "Good warmup device before rounds",
+          "Can help with swing tempo",
+          "Works as exercise tool",
+          "Recommended for beginners"
+        ],
+        "weaknesses": [
+          "Not a speed trainer",
+          "Limited to tempo/warmup use",
+          "No structured protocols",
+          "No tracking or measurement",
+          "Won't deliver speed gains"
+        ],
+        "quote_evidence": [
+          {
+            "id": "SOL-001",
+            "quote": "Over the years, like a lot of others, I've built a collection of training aids. The one I have recommended is the Sklz Gold Flex. I bought it to use as a warm-up device before a round, and it works well at that. Eventually, I realized that it's a good swing trainer for me.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "SOL-040",
+            "quote": "I also use the Sklz Gold Flex as a warm up, golf swing trainer, and for exercise.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "SOL-029",
+            "quote": "Due to a recent wrist injury I got a sklz smart glove. A bunch of my high handicap friends got it and love it.",
+            "sentiment": "positive"
+          }
+        ]
+      },
+      {
+        "name": "Lag Shot",
+        "price": "$89-$119",
+        "mechanism": "Whippy shaft that exaggerates lag feel in the swing",
+        "design": "Flexible shaft with clubhead designed to teach lag",
+        "protocol": "Swing with the club to feel proper lag position",
+        "strengths": [
+          "Teaches lag feel effectively",
+          "Includes instructional videos",
+          "Has actual clubhead unlike speed sticks"
+        ],
+        "weaknesses": [
+          "Not a speed trainer",
+          "Mixed reviews on effectiveness",
+          "Focus on feel, not speed development",
+          "Jury still out on actual improvement"
+        ],
+        "quote_evidence": [
+          {
+            "id": "SOL-024",
+            "quote": "I like the Lag Shot, really teaches lag.",
+            "sentiment": "positive"
+          },
+          {
+            "id": "SOL-025",
+            "quote": "Jury is still out on this one for me - but I am sticking with it and the videos have been worth the purchase price.",
+            "sentiment": "mixed"
+          },
+          {
+            "id": "VILL-127",
+            "quote": "Jury is still out on this one for me - but I am sticking with it.",
+            "sentiment": "mixed"
+          }
+        ]
+      },
+      {
+        "name": "Traditional Weighted Clubs",
+        "price": "$30-$80",
+        "mechanism": "Heavy clubs/attachments to build strength through weighted swings",
+        "design": "Various - weighted donuts, heavy clubs, lead tape additions",
+        "protocol": "Swing heavy object to build strength",
+        "strengths": [
+          "Low cost",
+          "Simple concept",
+          "Some warmup benefit"
+        ],
+        "weaknesses": [
+          "Counterproductive for speed - trains slow motor patterns",
+          "Objects over 5% heavier than driver train you to swing slower",
+          "Injury risk from swinging heavy objects fast",
+          "Opposite of overspeed training science",
+          "No face control training"
+        ],
+        "quote_evidence": [
+          {
+            "id": "PAIN-052",
+            "quote": "SuperSpeed found that swinging an object over about 5% heavier than a standard driver can actually train that motor pattern to move slower.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "VILL-132",
+            "quote": "Swinging a weighted club is fine, but swinging it as fast as you possibly can, can lead to injury.",
+            "sentiment": "negative"
+          },
+          {
+            "id": "SOL-006",
+            "quote": "gimmicks...a teacher will help more...although the only swing thing I would suggest is a swing weight or those heavy yellow clubs to help you loosen up.",
+            "sentiment": "mixed"
+          },
+          {
+            "id": "SOL-038",
+            "quote": "The only one I would give the nod to, is the momentus power hittier. The weighted clubs help you ingrain a good swing.",
+            "sentiment": "positive"
+          }
+        ]
+      }
+    ],
+    "competitive_white_space": [
+      {
+        "gap": "Speed + Face Control Training",
+        "description": "No competitor trains both speed AND clubface control simultaneously. All speed sticks have weight on shaft axis without clubface.",
+        "evidence": [
+          "PAIN-041: The problem is there's no face on these sticks. How am I supposed to learn to square the clubface when there's no clubface?",
+          "PAIN-042: Every competitor puts weight along the shaft axis. When you spin those in your hands, they rotate perfectly with zero resistance - nothing like a real club."
+        ]
+      },
+      {
+        "gap": "Speed Transfer to Course",
+        "description": "Major complaint across all systems - speed gains on training devices don't transfer to actual driving distance on course.",
+        "evidence": [
+          "PAIN-009: I've been doing SuperSpeed for 6 months and my driving distance on the course is the same. Radar says I gained speed but the ball doesn't go any farther.",
+          "PAIN-034: The reason your speed training gains don't show up on the course is simple - you're training with a stick that feels nothing like a golf club.",
+          "GWX-017: The crossover of benefits of Stack training to my actual on course speeds hit a plateau very quickly."
+        ]
+      },
+      {
+        "gap": "Accuracy Preservation During Speed Gains",
+        "description": "Speed training often amplifies existing swing faults, making slicers slice more and hookers hook more.",
+        "evidence": [
+          "PAIN-001: I gained 15 mph with SuperSpeed but my slice got worse. Now I'm hitting it farther into the trees than before.",
+          "PAIN-004: Some users report it can exacerbate existing swing faults. My hook is now 30 yards left instead of 15.",
+          "PAIN-032: If you slice the ball and start speed training with a traditional speed stick, you're not fixing your slice - you're teaching your body to slice it faster and farther."
+        ]
+      },
+      {
+        "gap": "Driver-Length Training Device",
+        "description": "Stack and SuperSpeed use 42-inch clubs (7-iron length) while drivers are 45 inches. Length mismatch affects transfer.",
+        "evidence": [
+          "PAIN-008: The speed sticks are shorter than a driver at 42 inches vs 45 inches. It's closer to 7-iron length. How is that supposed to transfer?",
+          "COMP-029: The second reason I think Rypstick is more beneficial is that it's the length of a driver. While the Stack System is 42 inches. I've never quite understood why The Stack is so much shorter."
+        ]
+      },
+      {
+        "gap": "Affordable Entry Point with Modern Features",
+        "description": "Stack has the app but costs $600+. SuperSpeed is cheaper but has no app. No option combines affordability with technology.",
+        "evidence": [
+          "PAIN-003: The Stack System costs $299 plus $230 for the radar plus $100/year subscription. That's over $600 just to start speed training.",
+          "COMP-006: I'm getting very frustrated with Superspeed for not having an app in this day and age.",
+          "GWX-028: Does anyone have a good speed training program that is cheaper than Stack/Speedsticks?"
+        ]
+      },
+      {
+        "gap": "Hit Actual Balls During Speed Training",
+        "description": "All major competitors have you swing at air, which doesn't train real-world ball contact at speed.",
+        "evidence": [
+          "GWX-019: I like that you can actually hit a ball so you still have to have some resemblance of technique when doing this vs just ripping max effort swings at air.",
+          "GWX-054: The program will be about gaining big smooth speed for on course use.. without risking injury via swinging at 'air' (speedsticks)-instead you will be hitting balls."
+        ]
+      },
+      {
+        "gap": "Injury Prevention Focus",
+        "description": "Multiple reports of wrist, elbow, and back injuries from overspeed training without proper warm-up protocols.",
+        "evidence": [
+          "COMP-003: Super Speed caused some physical injuries for me.",
+          "COMP-004: My wrist would always bother me during the swings, and I would get a lancinating nerve pain.",
+          "PAIN-043: I'm 55 years old and afraid I'm going to hurt myself swinging these sticks as fast as I can. Where's the warm-up protocol?",
+          "PAIN-044: My back has been sore ever since I started overspeed training."
+        ]
+      },
+      {
+        "gap": "Single-Club Convenience at SuperSpeed Price",
+        "description": "SuperSpeed requires three clubs, Stack requires complex weights. Market wants one simple device.",
+        "evidence": [
+          "COMP-031: My SuperSpeed Stick experience is that it works if you work it but I think I would prefer a one stick system.",
+          "COMP-017: At the end of the day, Stack is better than SuperSpeed because it's one club vs three.",
+          "COMP-002: One stick vs. three. In combination with the Stack's speed priming workout you have a really portable and awesome quick warmup."
+        ]
+      }
+    ],
+    "speedtrac_positioning": {
+      "unique_differentiators": [
+        {
+          "differentiator": "Clubhead Weight Distribution",
+          "description": "Weight in actual clubhead position, not along shaft axis, creating realistic MOI and face rotation feedback",
+          "competitor_gap": "All competitors use shaft-axis weight distribution that creates zero face rotation resistance"
+        },
+        {
+          "differentiator": "Face Control Training",
+          "description": "Integrated face awareness during speed development prevents amplifying existing swing faults",
+          "competitor_gap": "No competitor addresses face control - they train speed in isolation from accuracy"
+        },
+        {
+          "differentiator": "Speed-to-Course Transfer Design",
+          "description": "Feel that matches actual golf club allows motor pattern transfer to real swings",
+          "competitor_gap": "Training device feel differs from driver feel, limiting transfer of gains"
+        },
+        {
+          "differentiator": "Single Device Simplicity",
+          "description": "One training device vs three separate clubs",
+          "competitor_gap": "SuperSpeed requires three clubs; Stack requires weight changes"
+        },
+        {
+          "differentiator": "Accuracy Preservation",
+          "description": "Speed training that doesn't sacrifice (and may improve) accuracy",
+          "competitor_gap": "Speed gains typically come with accuracy loss and wider dispersion"
+        }
+      ],
+      "mechanism_exclusion_registry": [
+        {
+          "excluded_mechanism": "Shaft-axis weight distribution",
+          "reason": "Creates zero face rotation resistance, doesn't train face control",
+          "competitors_using": ["SuperSpeed Golf", "Stack System", "Rypstick", "Speed Sticks"]
+        },
+        {
+          "excluded_mechanism": "Multiple-club systems",
+          "reason": "Bulky, inconvenient, time-consuming to rotate through",
+          "competitors_using": ["SuperSpeed Golf"]
+        },
+        {
+          "excluded_mechanism": "Weighted/heavy club training",
+          "reason": "Objects 5%+ heavier than driver train slower motor patterns",
+          "competitors_using": ["Momentus Power Hitter", "Traditional weighted clubs"]
+        },
+        {
+          "excluded_mechanism": "Tempo/rhythm focus only",
+          "reason": "Doesn't address the neurological speed ceiling - different training goal",
+          "competitors_using": ["Orange Whip", "SKLZ Gold Flex"]
+        },
+        {
+          "excluded_mechanism": "Air-only swinging",
+          "reason": "No ball contact training limits transfer to real-world golf",
+          "competitors_using": ["All overspeed systems"]
+        },
+        {
+          "excluded_mechanism": "Required subscription fees",
+          "reason": "Ongoing costs create friction and buyer resentment",
+          "competitors_using": ["Stack System"]
+        },
+        {
+          "excluded_mechanism": "Required radar/launch monitor purchase",
+          "reason": "Hidden costs inflate true price to $600+",
+          "competitors_using": ["Stack System"]
+        }
+      ]
+    },
+    "market_intelligence_summary": {
+      "total_addressable_pain_points": [
+        "Speed gains don't transfer to course distance",
+        "Training amplifies existing swing faults (slice/hook)",
+        "High total cost with hidden requirements",
+        "Injury risk from aggressive overspeed training",
+        "Multiple clubs are bulky and inconvenient",
+        "No face control training in existing systems",
+        "Accuracy loss during speed development",
+        "Complex apps and steep learning curves",
+        "Time commitment (30+ minutes per session)",
+        "Need to hit balls to maintain strike quality"
+      ],
+      "key_price_reference_points": {
+        "SuperSpeed_Golf": "$149-$199",
+        "Stack_System_total": "$600+ (device + radar + subscription)",
+        "Rypstick": "$169-$199",
+        "Orange_Whip": "$99-$119",
+        "SKLZ_Gold_Flex": "$39-$49",
+        "Lag_Shot": "$89-$119",
+        "DIY_alternatives": "$30-$120"
+      },
+      "typical_speed_gains_claimed": {
+        "SuperSpeed": "5-10 mph with consistent use over 6+ months",
+        "Stack": "5-8 mph in 6-8 weeks",
+        "Rypstick": "3+ mph per week claimed, 15-25 yards total",
+        "Reality_check": "Many users report minimal or zero course transfer"
+      },
+      "common_competitor_complaints": [
+        "Speed doesn't transfer to course",
+        "Slice/hook gets worse",
+        "Too expensive with hidden costs",
+        "Too complicated to use",
+        "Takes too long (30+ minutes)",
+        "Caused injury (wrist, elbow, back)",
+        "Three clubs are bulky",
+        "No app for tracking",
+        "Still same distance on course",
+        "Dispersion got worse"
+      ]
+    }
+  }
+}

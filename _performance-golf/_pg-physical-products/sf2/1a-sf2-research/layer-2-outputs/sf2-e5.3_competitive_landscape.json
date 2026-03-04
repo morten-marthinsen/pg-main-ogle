@@ -1,0 +1,244 @@
+{
+  "analysis_id": "E5.3_competitive_landscape_analysis",
+  "created": "2026-01-19",
+  "methodology": "Extraction and analysis of competitor mentions, mechanism discussions, and positioning statements from verbatim quotes",
+
+  "competitor_categories": {
+    "DRAW_BIAS_PREMIUM": {
+      "description": "Major OEM draw bias/anti-slice models",
+      "competitors": [
+        {
+          "name": "PING G430/G425 SFT",
+          "mention_count": 34,
+          "sentiment": "HIGHLY_POSITIVE",
+          "key_claims": [
+            "as draw bias as you can get",
+            "furthest right he could hit was 25 yards left",
+            "eliminated re-tees and big trouble"
+          ],
+          "user_profile": "Committed slicers seeking maximum correction",
+          "price_perception": "Premium but worth it"
+        },
+        {
+          "name": "PING G430/G425 MAX 10K",
+          "mention_count": 18,
+          "sentiment": "POSITIVE",
+          "key_claims": [
+            "most forgiving ever",
+            "forgiveness without draw bias stigma"
+          ],
+          "user_profile": "Players wanting forgiveness without 'anti-slice' label"
+        },
+        {
+          "name": "Callaway Rogue ST Max D / AI Smoke Max D",
+          "mention_count": 22,
+          "sentiment": "POSITIVE",
+          "key_claims": [
+            "more than just anti-slice",
+            "Max D for seniors",
+            "forgiving with draw"
+          ],
+          "user_profile": "Seniors and high handicappers"
+        },
+        {
+          "name": "TaylorMade Stealth HD",
+          "mention_count": 15,
+          "sentiment": "POSITIVE",
+          "key_claims": [
+            "game changer despite distance loss",
+            "keeping me on the cut stuff"
+          ],
+          "user_profile": "Players prioritizing fairways over distance"
+        },
+        {
+          "name": "TaylorMade Burner Draw",
+          "mention_count": 12,
+          "sentiment": "VERY_POSITIVE",
+          "key_claims": [
+            "slice is gone",
+            "85% straight",
+            "turned slice to draw"
+          ],
+          "user_profile": "Historic success stories"
+        },
+        {
+          "name": "Mizuno ST-X",
+          "mention_count": 11,
+          "sentiment": "POSITIVE",
+          "key_claims": [
+            "best purchase in a long time",
+            "weakness to strength"
+          ],
+          "user_profile": "Players wanting premium Japanese option"
+        }
+      ]
+    },
+
+    "INFOMERCIAL_SPECIALTY": {
+      "description": "Direct response golf equipment",
+      "competitors": [
+        {
+          "name": "GX7 X-Metal",
+          "mention_count": 28,
+          "sentiment": "MIXED_TO_POSITIVE",
+          "key_claims": [
+            "straighter but not driver replacement",
+            "short game saver",
+            "controversial but works for some"
+          ],
+          "user_profile": "Seniors desperate for help",
+          "concerns": ["Not a true driver", "Skepticism about claims"]
+        },
+        {
+          "name": "Teeless Driver / RXS",
+          "mention_count": 19,
+          "sentiment": "MIXED_TO_NEGATIVE",
+          "key_claims": [
+            "BUYER BEWARE",
+            "crown cracked",
+            "quality issues"
+          ],
+          "user_profile": "Infomercial buyers",
+          "concerns": ["Quality failures", "Fulfillment issues", "Durability"]
+        }
+      ]
+    },
+
+    "MINI_DRIVER_ALTERNATIVES": {
+      "description": "Smaller head alternatives to standard drivers",
+      "competitors": [
+        {
+          "name": "TaylorMade SLDR Mini",
+          "mention_count": 14,
+          "sentiment": "POSITIVE",
+          "key_claims": [
+            "zero regrets",
+            "main tee club",
+            "works off deck too"
+          ],
+          "user_profile": "Players who gave up on 460cc"
+        },
+        {
+          "name": "TaylorMade BRNR Mini",
+          "mention_count": 8,
+          "sentiment": "POSITIVE",
+          "key_claims": [
+            "control over distance",
+            "consistent"
+          ]
+        },
+        {
+          "name": "Callaway Big Bertha/Apex Mini",
+          "mention_count": 6,
+          "sentiment": "NEUTRAL_TO_POSITIVE"
+        }
+      ]
+    }
+  },
+
+  "mechanism_analysis": {
+    "DRAW_BIAS_MECHANISMS": {
+      "heel_weighting": {
+        "mention_count": 45,
+        "user_understanding": "Low - many don't know why draw bias works",
+        "effectiveness_perception": "High when paired with right swing"
+      },
+      "closed_face_angle": {
+        "mention_count": 32,
+        "user_understanding": "Medium",
+        "concerns": ["Can cause hooks if swing improves", "Compensating not fixing"]
+      },
+      "offset": {
+        "mention_count": 18,
+        "user_understanding": "Medium",
+        "sentiment": "Positive from older golfers"
+      }
+    },
+    "FORGIVENESS_MECHANISMS": {
+      "high_MOI": {
+        "mention_count": 38,
+        "user_understanding": "Low - few understand what MOI means",
+        "benefit_perception": "Mishits don't go as far offline"
+      },
+      "large_sweet_spot": {
+        "mention_count": 56,
+        "user_understanding": "High",
+        "benefit_perception": "More consistent distance"
+      }
+    },
+    "SHAFT_FITTING": {
+      "mention_count": 134,
+      "perceived_importance": "VERY_HIGH",
+      "key_insight": "Many believe shaft more important than head",
+      "specific_claims": [
+        "wrong shaft flex causes slice",
+        "softer flex = more whip = more distance",
+        "shaft fitting most transformational"
+      ]
+    }
+  },
+
+  "positioning_landscape": {
+    "premium_draw_bias": {
+      "players": ["PING SFT", "Callaway Max D", "TaylorMade HD"],
+      "price_point": "$499-599",
+      "positioning": "Tour-quality technology adapted for slicers",
+      "white_space": "Still perceived as 'crutch' by some"
+    },
+    "forgiving_mainstream": {
+      "players": ["PING MAX 10K", "Callaway Paradym", "TaylorMade Qi10"],
+      "price_point": "$499-599",
+      "positioning": "Forgiveness for everyone",
+      "white_space": "Don't specifically address slice"
+    },
+    "infomercial_specialty": {
+      "players": ["GX7", "Teeless", "Various TV golf products"],
+      "price_point": "$99-299",
+      "positioning": "Miracle solution for desperate golfers",
+      "white_space": "Quality/credibility concerns"
+    },
+    "SF2_OPPORTUNITY": {
+      "price_point": "TBD",
+      "unique_positioning": "Slice-fixing driver that doesn't sacrifice distance",
+      "differentiation": [
+        "Not a 'crutch' but a solution",
+        "Backed by Performance Golf credibility",
+        "Distance AND accuracy"
+      ]
+    }
+  },
+
+  "verbatim_competitive_intel": {
+    "SFT_success_stories": [
+      "H-146: They definitely work but they're not miracle workers. It won't turn a slice into a draw but it will turn one into a fade that's in play",
+      "H-147: I have the SFT, and love it. I can still slice it, and have yet to hit a proper draw after a year of ownership. However, I am rarely 3 off the tee"
+    ],
+    "equipment_skepticism": [
+      "V-116: A club will not fix you. If you want a band aid fix try closing the face of the driver at address",
+      "V-115: I think, long term, it makes it worse by allowing you to get away with it instead of fixing it"
+    ],
+    "fitting_over_equipment": [
+      "RC-109: Most driver heads these days produce similar distance numbers. IMO, the right shaft is more important",
+      "H-168: The 2 things that were far and away the most important were the driver shaft fitting and the iron lie angle adjustment"
+    ]
+  },
+
+  "strategic_implications": {
+    "must_address": [
+      "Skepticism that equipment can fix swing issues",
+      "Concern about becoming dependent on 'crutch'",
+      "Price-value comparison to premium OEMs"
+    ],
+    "leverage_points": [
+      "Performance Golf coaching credibility",
+      "Frustration with premium OEM complexity",
+      "Desire for simple solution that just works",
+      "Infomercial product quality concerns"
+    ],
+    "messaging_angles": [
+      "Not a band-aid - a real solution",
+      "Distance you deserve, fairways you need",
+      "What your swing wants to do naturally"
+    ]
+  }
+}

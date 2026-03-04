@@ -1,0 +1,59 @@
+# Find Out How Easy Looking Younger Can Be 01
+
+**Source File:** Find Out How Easy Looking Younger Can Be 01.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+# FIND OUT HOW EASY
+
+
+# LOOKING YOUNGER CAN BE.
+
+LookingyearsyoungerissimplewithLifestyleLift.Wehavehelpedmorethan100,000
+clientsalloverAmericarecapturetheiryouth.ALifestyleLiftisdoneconfidentiallyin
+oneofournationwidestate-of-the-artcentersusingthelatestmedicaltechnology.That
+meansyoucansaygoodbyetoshorttermsolutionsandregimensthatrequireconstant
+upkeep.WithaLifestyleLiftyougetlastingresultsthatleaveyoulookingnoticeably
+youngerforthelongterm.Allforanaffordableprice.Somakingarealchangeinyour
+lifecanbeassimpleaspickingupthephone.
+Name:CARROLL*Age:61 Actualclient.Noretouching.
+
+# Call today for a FREE Lifestyle Lift brochure
+
+
+# The call is confidential
+
+
+# 1.866.316.2090
+
+•
+FeaturedonABC,CBS,NBC,
+FOXNewsandinmagazinesand
+newspapersnationwide
+• Affordable,quickandconfidential
+everystepoftheway
+• Yougettheexperienceofnearly
+100board-certifiedphysicians
+• Morethan100,000clients
+• Locationsnationwide
+• Customfinancingplansavailable
+BEFORE AFTER
+®
+©2009LifestyleLift ® .*Patienthadoptionalneck-firmingprocedureinadditiontoLifestyleLift ® .TheLifestyleLift ® facial-firmingproceduresusuallytakeapproximatelyonehourtocompleteunderlocalanesthesiabutmayrequire
+moretimetoachievebestpossibleresultsorifadditionalproceduresareperformed.MostLifestyleLift ® patientsundergoingtheprocedure(LifestyleLiftalone)returntoworkandtheiractivitiesinaboutaweek.Somepeoplemay
+needextrahealingtime.Patientswhohaveadditionalproceduresmayalsoneedadditionalrecoverytime.Specificinformationaboutresults,treatments,recoveryandriskscanbeobtainedduringyourfreeconsultationandfromyour
+physician.Thepatientfeaturedinthisadvertisementhasgiventheirpermissiontoappear.Thephotosaregatheredfromvariouslocationsanddoctors;theyshowasamplingoftheresultsandareforillustrativepurposesonly;theydo
+notrepresentanyindividualdoctor'swork.Thestatementsandphotographsinthisadvertisementdonotconstituteapromiseorguaranteeofanyparticularoutcomeoranythingelse.Individualresultsandrecoverywillvary.Lifestyle
+Lift ® performsmedicalproceduresthatinvolveacertainamountofrisk.Durationofhealingtime,painandbruisingisindividualinnature;pleasediscusswithyourLifestyleLift ® physician.AskyourLifestyleLift ® physicianandreview
+consentformstofindoutmoreaboutyourindividualcaseandwhatyoucanexpect.THEPATIENTANDANYOTHERPERSONRESPONSIBLEFORPAYMENTHASARIGHTTOREFUSEPAY,CANCELPAYMENT,ORBEREIMBURSED
+FORPAYMENTFORANYOTHERSERVICE,EXAMINATION,ORTREATMENTTHATISPERFORMEDASARESULTOFANDWITHIN72HOURSOFRESPONDINGTOTHEADVERTISEMENTFORFREE,DISCOUNTEDFEE,
+ORREDUCEDFEESERVICE,EXAMINATION,ORTREATMENT.
+U
+S
+A
+W
+Z
+5120609
+- 301

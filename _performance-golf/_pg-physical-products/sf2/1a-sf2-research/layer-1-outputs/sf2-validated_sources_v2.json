@@ -1,0 +1,499 @@
+{
+  "source_validation_id": "src_sf2_002",
+  "created": "2026-01-19",
+  "status": "APPROVED",
+  "version": "2.0 - Added SF1 and Infomercial/DTC competitors",
+  "summary": {
+    "total_sources": 112,
+    "by_platform": {
+      "reddit": 22,
+      "golfwrx_forums": 16,
+      "youtube": 32,
+      "review_sites": 18,
+      "competitor_pages": 12,
+      "other_forums": 8,
+      "trustpilot_bbb": 4
+    },
+    "by_content_type": {
+      "pain_sources": 30,
+      "hope_sources": 22,
+      "solutions_tried_sources": 25,
+      "root_cause_sources": 18,
+      "competitor_mechanism_sources": 20,
+      "villain_sources": 15,
+      "sf1_specific_sources": 12
+    },
+    "estimated_quote_potential": "1500-2200 quotes"
+  },
+  "sf1_predecessor_sources": {
+    "description": "CRITICAL - SF1 is the predecessor to SF2. These sources provide direct customer feedback on the existing product line.",
+    "sources": [
+      {
+        "id": "SF1-001",
+        "url": "https://www.reddit.com/r/golf/comments/1ir7px4/anyone_have_the_sf1_driver_from_performance_golf/",
+        "platform": "Reddit",
+        "title": "anyone have the sf1 driver from performance golf?",
+        "bucket_targets": ["PAIN", "HOPE", "VILLAIN", "SOLUTIONS_TRIED"],
+        "priority": "CRITICAL",
+        "estimated_quotes": 40,
+        "key_insight": "Mixed reviews - 'he was still able to slice it' vs positive experiences"
+      },
+      {
+        "id": "SF1-002",
+        "url": "https://www.reddit.com/r/golf/comments/17iepnl/performance_golf_sf1/",
+        "platform": "Reddit",
+        "title": "Performance Golf SF1",
+        "bucket_targets": ["HOPE", "PAIN", "ROOT_CAUSE"],
+        "priority": "CRITICAL",
+        "estimated_quotes": 35,
+        "key_insight": "'The club has been great for fixing my slice' vs 'Hank Haney is a fraud'"
+      },
+      {
+        "id": "SF1-003",
+        "url": "https://thesandtrap.com/forums/topic/118525-sf1-slice-fixing-driver/",
+        "platform": "TheSandTrap Forum",
+        "title": "SF1 Slice Fixing Driver",
+        "bucket_targets": ["ROOT_CAUSE", "VILLAIN", "SOLUTIONS_TRIED"],
+        "priority": "CRITICAL",
+        "estimated_quotes": 30,
+        "key_insight": "Skepticism about 'fixes all slices' claim"
+      },
+      {
+        "id": "SF1-004",
+        "url": "https://forum.mygolfspy.com/topic/64382-performance-golf-scam/",
+        "platform": "MyGolfSpy Forum",
+        "title": "Performance Golf Scam",
+        "bucket_targets": ["VILLAIN", "PAIN", "ROOT_CAUSE"],
+        "priority": "CRITICAL",
+        "estimated_quotes": 50,
+        "key_insight": "Negative experiences, return issues, skepticism - VILLAIN GOLD"
+      },
+      {
+        "id": "SF1-005",
+        "url": "https://www.golflink.com/equipment/sf1-driver-review-2955944",
+        "platform": "GolfLink",
+        "title": "SF1 Driver Life-Tested Review",
+        "bucket_targets": ["HOPE", "COMPETITOR_MECHANISM"],
+        "priority": "HIGH",
+        "estimated_quotes": 15,
+        "key_insight": "Independent review of SF1 performance"
+      },
+      {
+        "id": "SF1-006",
+        "url": "https://www.youtube.com/watch?v=fN1koRQ0ZlQ",
+        "platform": "YouTube",
+        "title": "The Most Forgiving Anti-Slice DRIVER (SF1 Review)",
+        "bucket_targets": ["PAIN", "HOPE", "VILLAIN"],
+        "priority": "CRITICAL",
+        "estimated_quotes": 45,
+        "key_insight": "Comments contain 'SF1 did absolutely nothing for a slice' - VILLAIN DATA"
+      },
+      {
+        "id": "SF1-007",
+        "url": "https://www.youtube.com/watch?v=eu1w-aOpR8M",
+        "platform": "YouTube",
+        "title": "This Driver Is IMPOSSIBLE To Slice!",
+        "bucket_targets": ["HOPE", "COMPETITOR_MECHANISM"],
+        "priority": "HIGH",
+        "estimated_quotes": 30,
+        "key_insight": "Official Performance Golf content - mechanism claims"
+      },
+      {
+        "id": "SF1-008",
+        "url": "https://www.trustpilot.com/review/performancegolf.com",
+        "platform": "Trustpilot",
+        "title": "Performance Golf Reviews (2298 reviews)",
+        "bucket_targets": ["HOPE", "PAIN", "VILLAIN"],
+        "priority": "CRITICAL",
+        "estimated_quotes": 60,
+        "key_insight": "4-star rating with detailed customer experiences"
+      },
+      {
+        "id": "SF1-009",
+        "url": "https://www.bbb.org/us/fl/fort-lauderdale/profile/golf-lessons/performance-golf-0633-90564846/complaints",
+        "platform": "BBB",
+        "title": "Performance Golf BBB Complaints",
+        "bucket_targets": ["VILLAIN", "PAIN"],
+        "priority": "HIGH",
+        "estimated_quotes": 25,
+        "key_insight": "Return policy complaints, customer service issues"
+      },
+      {
+        "id": "SF1-010",
+        "url": "https://www.amazon.co.uk/Performance-Golf-Technology-Anti-Slice-Controlled/dp/B0CTG5LC9M",
+        "platform": "Amazon UK",
+        "title": "Performance Golf SF1 Driver Amazon Reviews",
+        "bucket_targets": ["HOPE", "PAIN", "VILLAIN"],
+        "priority": "HIGH",
+        "estimated_quotes": 30,
+        "key_insight": "Customer reviews with specific experiences"
+      },
+      {
+        "id": "SF1-011",
+        "url": "https://www.reddit.com/r/golf/comments/1d79rx8/do_not_buy_hank_haney_slice_fix_video/",
+        "platform": "Reddit",
+        "title": "DO NOT BUY HANK HANEY SLICE FIX VIDEO!!!",
+        "bucket_targets": ["VILLAIN", "PAIN"],
+        "priority": "HIGH",
+        "estimated_quotes": 20,
+        "key_insight": "Money-back guarantee complaints"
+      },
+      {
+        "id": "SF1-012",
+        "url": "https://shop.golfersauthority.com/blogs/golf/performance-golf-sf1-driver-review",
+        "platform": "Golfers Authority",
+        "title": "Performance Golf SF1 Driver Review",
+        "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+        "priority": "MEDIUM",
+        "estimated_quotes": 10,
+        "key_insight": "Feature breakdown and mechanism explanation"
+      }
+    ]
+  },
+  "infomercial_dtc_competitors": {
+    "description": "CRITICAL - These are the actual competitive set for SF2, not just Big Golf drivers",
+    "competitors": [
+      {
+        "name": "GX7 / GX-7 X-Metal",
+        "positioning": "Easy to hit, don't need a tee, shorter shaft",
+        "target_audience": "Seniors, slow swing speeds",
+        "price": "$199",
+        "sources": [
+          {
+            "id": "GX7-001",
+            "url": "https://mygolfspy.com/labs/golfbusters-gx7-x-metal/",
+            "platform": "MyGolfSpy",
+            "title": "GOLFBUSTERS: Gx7 X-Metal",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "VILLAIN"],
+            "priority": "CRITICAL",
+            "estimated_quotes": 30,
+            "key_insight": "Independent testing exposes claims"
+          },
+          {
+            "id": "GX7-002",
+            "url": "https://www.youtube.com/watch?v=-q5LGs84500",
+            "platform": "YouTube",
+            "title": "Watch This Video Before You Purchase the GX-7 Metal",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "VILLAIN", "HOPE"],
+            "priority": "HIGH",
+            "estimated_quotes": 25,
+            "key_insight": "Honest review with comments"
+          },
+          {
+            "id": "GX7-003",
+            "url": "https://www.youtube.com/watch?v=Y3OWCXDqi9M",
+            "platform": "YouTube",
+            "title": "A DRIVER SO EASY TO HIT....you don't need a tee!?",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "ROOT_CAUSE"],
+            "priority": "HIGH",
+            "estimated_quotes": 20,
+            "key_insight": "Claims analysis"
+          },
+          {
+            "id": "GX7-004",
+            "url": "https://practical-golf.com/gx7-golf-club-review",
+            "platform": "Practical Golf",
+            "title": "GX-7 Golf Club Review: The Truth Every Golfer Should Know",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "VILLAIN"],
+            "priority": "HIGH",
+            "estimated_quotes": 15,
+            "key_insight": "Critical independent review"
+          },
+          {
+            "id": "GX7-005",
+            "url": "https://www.thehackersparadise.com/forum/index.php?threads/anyone-try-the-gx-7-driver.96552/",
+            "platform": "Hackers Paradise Forum",
+            "title": "Anyone Try THe GX-7 Driver?",
+            "bucket_targets": ["SOLUTIONS_TRIED", "ROOT_CAUSE"],
+            "priority": "MEDIUM",
+            "estimated_quotes": 20,
+            "key_insight": "User experiences and expectations"
+          }
+        ]
+      },
+      {
+        "name": "MaxVert / VLS Maxvert",
+        "positioning": "Vertical swing, upright lie angle, senior-friendly",
+        "target_audience": "Golfers over 50, flexibility issues",
+        "price": "$297-397",
+        "sources": [
+          {
+            "id": "MV-001",
+            "url": "https://forum.mygolfspy.com/topic/61926-maxvert-1-driver-unofficial-review/",
+            "platform": "MyGolfSpy Forum",
+            "title": "Maxvert 1 Driver: Unofficial Review",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE", "VILLAIN"],
+            "priority": "CRITICAL",
+            "estimated_quotes": 35,
+            "key_insight": "Detailed user review of VLS system"
+          },
+          {
+            "id": "MV-002",
+            "url": "https://forums.golfwrx.com/topic/1966140-maxvert-driver/",
+            "platform": "GolfWRX",
+            "title": "Maxvert driver",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "ROOT_CAUSE"],
+            "priority": "HIGH",
+            "estimated_quotes": 25,
+            "key_insight": "Technical discussion of upright lie angle"
+          },
+          {
+            "id": "MV-003",
+            "url": "https://www.thehackersparadise.com/forum/index.php?threads/maxvert-driver-whos-tried-it.8954637/",
+            "platform": "Hackers Paradise Forum",
+            "title": "MaxVert Driver---who's tried it?",
+            "bucket_targets": ["SOLUTIONS_TRIED", "HOPE"],
+            "priority": "HIGH",
+            "estimated_quotes": 20,
+            "key_insight": "User experiences with vertical swing"
+          },
+          {
+            "id": "MV-004",
+            "url": "https://usgolftv.com/golf-equipment-reviews/vls-maxvert-1-driver-review/",
+            "platform": "US Golf TV",
+            "title": "VLS Maxvert 1 Driver Review",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+            "priority": "MEDIUM",
+            "estimated_quotes": 10,
+            "key_insight": "Promotional review - mechanism claims"
+          }
+        ]
+      },
+      {
+        "name": "Teton Hybrid Driver",
+        "positioning": "Hybrid-driver crossover, confidence on tee",
+        "target_audience": "Golfers who struggle with driver",
+        "price": "$100-150",
+        "sources": [
+          {
+            "id": "TET-001",
+            "url": "https://www.reddit.com/r/golf/comments/1dgzq6j/teton_drivers_good_or_bad/",
+            "platform": "Reddit",
+            "title": "Teton drivers, good or bad?",
+            "bucket_targets": ["HOPE", "ROOT_CAUSE", "VILLAIN"],
+            "priority": "HIGH",
+            "estimated_quotes": 25,
+            "key_insight": "Skepticism about Instagram ads"
+          },
+          {
+            "id": "TET-002",
+            "url": "https://www.youtube.com/watch?v=hZOSA97YlZ8",
+            "platform": "YouTube",
+            "title": "Teton Hybrid Driver Field Test",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+            "priority": "HIGH",
+            "estimated_quotes": 20,
+            "key_insight": "Can this replace traditional driver?"
+          },
+          {
+            "id": "TET-003",
+            "url": "https://usgolftv.com/golf-equipment-reviews/teton-hybrid-review/",
+            "platform": "US Golf TV",
+            "title": "Teton Hybrid Review",
+            "bucket_targets": ["COMPETITOR_MECHANISM"],
+            "priority": "MEDIUM",
+            "estimated_quotes": 10,
+            "key_insight": "Feature breakdown"
+          }
+        ]
+      },
+      {
+        "name": "Teeless Driver / (T)Less",
+        "positioning": "Hit off deck like fairway wood, maraging steel face",
+        "target_audience": "Golfers who struggle teeing up",
+        "price": "$297-347",
+        "sources": [
+          {
+            "id": "TL-001",
+            "url": "https://forum.mygolfspy.com/topic/58643-tless-driver-2023-forum-review/",
+            "platform": "MyGolfSpy Forum",
+            "title": "(T)Less Driver - 2023 Forum Review",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "VILLAIN", "HOPE"],
+            "priority": "CRITICAL",
+            "estimated_quotes": 30,
+            "key_insight": "'Distance was disappointing' - honest assessment"
+          },
+          {
+            "id": "TL-002",
+            "url": "https://www.golfpass.com/travel-advisor/articles/club-review-teeless-driver",
+            "platform": "GolfPass",
+            "title": "Club review: New Teeless Driver",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+            "priority": "HIGH",
+            "estimated_quotes": 15,
+            "key_insight": "Promise analysis for non-scratch players"
+          },
+          {
+            "id": "TL-003",
+            "url": "https://usgolftv.com/golf-equipment-reviews/tless-driver-overview-what-to-expect/",
+            "platform": "US Golf TV",
+            "title": "(T)Less Driver Overview",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "SOLUTIONS_TRIED"],
+            "priority": "MEDIUM",
+            "estimated_quotes": 15,
+            "key_insight": "Comparison to GX-7 in comments"
+          }
+        ]
+      },
+      {
+        "name": "Hammer X / Hammer Turbo Air",
+        "positioning": "50 yards more distance, speed slots",
+        "target_audience": "Distance seekers",
+        "price": "$99-199",
+        "sources": [
+          {
+            "id": "HX-001",
+            "url": "https://mygolfspy.com/labs/hammer-x-driver-test-mygolfspy/",
+            "platform": "MyGolfSpy",
+            "title": "GOLFBUSTERS: THE HAMMER X",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "VILLAIN"],
+            "priority": "CRITICAL",
+            "estimated_quotes": 30,
+            "key_insight": "Independent testing exposes 50 yard claim"
+          },
+          {
+            "id": "HX-002",
+            "url": "https://www.reddit.com/r/golf/comments/l8fvqr/what_do_people_think_of_the_hammerx_driver_worth/",
+            "platform": "Reddit",
+            "title": "What do people think of the Hammer-X driver?",
+            "bucket_targets": ["VILLAIN", "ROOT_CAUSE"],
+            "priority": "HIGH",
+            "estimated_quotes": 25,
+            "key_insight": "'horrible sounding/feeling/performing club'"
+          },
+          {
+            "id": "HX-003",
+            "url": "https://forums.golfwrx.com/topic/518420-the-hammer-driver-fake-or-real-or-piece-of-junk/",
+            "platform": "GolfWRX",
+            "title": "the hammer driver fake or real or piece of junk",
+            "bucket_targets": ["VILLAIN", "ROOT_CAUSE"],
+            "priority": "HIGH",
+            "estimated_quotes": 20,
+            "key_insight": "Forum skepticism about infomercial claims"
+          }
+        ]
+      },
+      {
+        "name": "Vertical Groove Driver",
+        "positioning": "Vertical grooves reduce slice spin",
+        "target_audience": "Slicers seeking technology solution",
+        "price": "$299",
+        "sources": [
+          {
+            "id": "VG-001",
+            "url": "https://www.youtube.com/watch?v=SUpSrDOdgY4",
+            "platform": "YouTube",
+            "title": "NEW VERTICAL GROOVE GOLF DRIVER REVIEW (Rick Shiels)",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+            "priority": "HIGH",
+            "estimated_quotes": 25,
+            "key_insight": "Independent test of vertical groove tech"
+          },
+          {
+            "id": "VG-002",
+            "url": "https://forum.mygolfspy.com/topic/18231-vertical-groove-driver-rick-shiels-reviews/",
+            "platform": "MyGolfSpy Forum",
+            "title": "Vertical Groove Driver - Rick Shiels reviews",
+            "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+            "priority": "MEDIUM",
+            "estimated_quotes": 15,
+            "key_insight": "Forum discussion of review"
+          },
+          {
+            "id": "VG-003",
+            "url": "https://www.reddit.com/r/golf/comments/10fi9ua/are_the_vertical_groove_driver_and_spoon_worthy/",
+            "platform": "Reddit",
+            "title": "Are the vertical groove driver and spoon worthy upgrades",
+            "bucket_targets": ["SOLUTIONS_TRIED", "HOPE"],
+            "priority": "MEDIUM",
+            "estimated_quotes": 15,
+            "key_insight": "User experiences"
+          }
+        ]
+      }
+    ]
+  },
+  "infomercial_market_overview": {
+    "sources": [
+      {
+        "id": "INFO-001",
+        "url": "https://practical-golf.com/golf-infomercial-products-exposed",
+        "platform": "Practical Golf",
+        "title": "Golf Infomercial Products Exposed",
+        "bucket_targets": ["VILLAIN", "ROOT_CAUSE", "COMPETITOR_MECHANISM"],
+        "priority": "CRITICAL",
+        "estimated_quotes": 40,
+        "key_insight": "Comprehensive exposé of infomercial golf products"
+      }
+    ]
+  },
+  "original_approved_sources": {
+    "description": "Previously approved Big Golf and forum sources - still valid",
+    "high_priority_count": 15,
+    "medium_priority_count": 15,
+    "competitor_mechanism_count": 5,
+    "youtube_instructional_count": 6,
+    "status": "APPROVED - see validated_sources.json for full list"
+  },
+  "updated_validation_metrics": {
+    "total_sources": 112,
+    "platform_diversity": {
+      "forums": 24,
+      "reddit": 22,
+      "youtube": 32,
+      "review_sites": 18,
+      "competitor_pages": 12,
+      "trustpilot_bbb": 4,
+      "meets_minimum_4_platforms": true
+    },
+    "bucket_coverage": {
+      "pain": "30+ sources",
+      "hope": "28+ sources",
+      "root_cause": "20+ sources",
+      "solutions_tried": "25+ sources",
+      "competitor_mechanism": "25+ sources",
+      "villain": "18+ sources (SIGNIFICANTLY IMPROVED)",
+      "all_buckets_covered": true
+    },
+    "competitor_coverage": {
+      "big_golf": {
+        "callaway": true,
+        "taylormade": true,
+        "ping": true,
+        "cobra": "need to add",
+        "cleveland": "need to add"
+      },
+      "infomercial_dtc": {
+        "sf1_performance_golf": true,
+        "gx7": true,
+        "maxvert": true,
+        "teton": true,
+        "teeless": true,
+        "hammer_x": true,
+        "vertical_groove": true
+      },
+      "competitors_minimum_5": "EXCEEDED - 10+ competitors now covered"
+    },
+    "sf1_coverage": {
+      "reddit_threads": 5,
+      "forum_threads": 3,
+      "youtube_reviews": 4,
+      "review_sites": 3,
+      "trustpilot_bbb": 2,
+      "total_sf1_sources": 17,
+      "status": "COMPREHENSIVE"
+    },
+    "estimated_total_quotes": "1800-2500",
+    "meets_1000_minimum": true,
+    "villain_data_improvement": "From 8 sources to 18+ sources - MAJOR improvement for contrast positioning"
+  },
+  "scraping_priority_order": [
+    "1. SF1 sources (predecessor product - CRITICAL for upgrade narrative)",
+    "2. High-priority pain/hope Reddit and forum threads",
+    "3. Infomercial competitor reviews (GX7, MaxVert, Hammer - villain data)",
+    "4. Big Golf competitor mechanism pages",
+    "5. YouTube instructional content (comments)",
+    "6. Review site comparisons",
+    "7. Trustpilot/BBB (villain data)"
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "analysis_id": "E5.2_emotional_intensity_mapping",
+  "created": "2026-01-19",
+  "methodology": "Analysis of emotional language markers, intensity amplifiers, and desperation indicators in verbatim quotes",
+
+  "emotion_categories": {
+    "FRUSTRATION": {
+      "intensity_level": "EXTREME",
+      "quote_count": 234,
+      "linguistic_markers": [
+        "nothing works", "tried everything", "so frustrated", "given up",
+        "waste of money", "can't believe", "ridiculous", "infuriating"
+      ],
+      "peak_expressions": [
+        {
+          "quote_id": "P-024",
+          "quote": "Nothing has worked and now I'm just frustrated",
+          "intensity_score": 9,
+          "emotion_type": "EXHAUSTED_FRUSTRATION"
+        },
+        {
+          "quote_id": "P-236",
+          "quote": "I spend so much time researching online how to fix a slice. Then spent weeks trying to fix my out-to-in swing path... Nothing. Still was slicing every drive",
+          "intensity_score": 9,
+          "emotion_type": "WASTED_EFFORT"
+        }
+      ]
+    },
+
+    "SHAME_EMBARRASSMENT": {
+      "intensity_level": "HIGH",
+      "quote_count": 112,
+      "linguistic_markers": [
+        "embarrassed", "fool of myself", "awkward", "uncomfortable",
+        "they could sense it", "people staring", "dreading"
+      ],
+      "peak_expressions": [
+        {
+          "quote_id": "P-251",
+          "quote": "I'm a mini driver user, I make a fool of myself with 460 CC head",
+          "intensity_score": 8,
+          "emotion_type": "SELF_DIRECTED_SHAME"
+        },
+        {
+          "quote_id": "P-225",
+          "quote": "the last couple of outings were very awkward and uncomfortable. People constantly make comments which they think are helpful but in fact have the opposite effect",
+          "intensity_score": 9,
+          "emotion_type": "SOCIAL_DISCOMFORT"
+        }
+      ]
+    },
+
+    "HOPELESSNESS": {
+      "intensity_level": "HIGH",
+      "quote_count": 87,
+      "linguistic_markers": [
+        "never", "lost all", "can't", "impossible", "given up",
+        "nothing will ever", "beyond help"
+      ],
+      "peak_expressions": [
+        {
+          "quote_id": "P-041",
+          "quote": "Im almost to the point where I think I'll never be able to get rid of my slice",
+          "intensity_score": 10,
+          "emotion_type": "RESIGNATION"
+        },
+        {
+          "quote_id": "V-122",
+          "quote": "I need to stop chasing distance that I just may not have the ability to catch any longer",
+          "intensity_score": 8,
+          "emotion_type": "ACCEPTANCE_OF_DEFEAT"
+        }
+      ]
+    },
+
+    "TRANSFORMATION_EUPHORIA": {
+      "intensity_level": "EXTREME_POSITIVE",
+      "quote_count": 98,
+      "linguistic_markers": [
+        "HUUUGE", "game changer", "can't believe", "amazing",
+        "life changing", "best decision", "finally", "at last"
+      ],
+      "peak_expressions": [
+        {
+          "quote_id": "H-164",
+          "quote": "HUUUUUUGE difference to my game",
+          "intensity_score": 10,
+          "emotion_type": "EXUBERANT_JOY"
+        },
+        {
+          "quote_id": "H-169",
+          "quote": "distance - considerably longer and frankly, it was intoxicating",
+          "intensity_score": 9,
+          "emotion_type": "PHYSICAL_PLEASURE"
+        },
+        {
+          "quote_id": "H-159",
+          "quote": "I'm so happy but I'm shocked it was something as simple as that!",
+          "intensity_score": 9,
+          "emotion_type": "SURPRISED_RELIEF"
+        }
+      ]
+    },
+
+    "RELIEF": {
+      "intensity_level": "HIGH_POSITIVE",
+      "quote_count": 76,
+      "linguistic_markers": [
+        "finally", "no more", "never have to", "freed from",
+        "weight lifted", "fun again"
+      ],
+      "peak_expressions": [
+        {
+          "quote_id": "H-147",
+          "quote": "I am rarely 3 off the tee or in real trouble left or right with it",
+          "intensity_score": 8,
+          "emotion_type": "BURDEN_LIFTED"
+        },
+        {
+          "quote_id": "ST-106",
+          "quote": "It's nice not to have to aim 2 fairways to the right, land on the left side of my fairway just to watch it roll off the right hand side",
+          "intensity_score": 8,
+          "emotion_type": "FREEDOM_FROM_COMPENSATION"
+        }
+      ]
+    },
+
+    "NOSTALGIA_LOSS": {
+      "intensity_level": "MEDIUM-HIGH",
+      "quote_count": 65,
+      "linguistic_markers": [
+        "used to", "remember when", "back in the day", "years ago",
+        "wistfully", "miss", "those days"
+      ],
+      "peak_expressions": [
+        {
+          "quote_id": "P-219",
+          "quote": "I long wistfully for the days when I could carry that fairway bunker at 250 yards",
+          "intensity_score": 7,
+          "emotion_type": "MELANCHOLY"
+        },
+        {
+          "quote_id": "P-241",
+          "quote": "distance was gone, I mean G-O-N-E gone",
+          "intensity_score": 9,
+          "emotion_type": "DRAMATIC_LOSS"
+        }
+      ]
+    }
+  },
+
+  "emotional_journey_mapping": {
+    "typical_progression": [
+      {
+        "stage": 1,
+        "emotion": "INITIAL_FRUSTRATION",
+        "trigger": "Slice appears or worsens",
+        "quote_example": "P-022: as most of you slice-happy users know, its NOT THAT EASY!"
+      },
+      {
+        "stage": 2,
+        "emotion": "ACTIVE_PROBLEM_SOLVING",
+        "trigger": "Trying tips, videos, lessons",
+        "quote_example": "P-236: Then spent weeks trying to fix my out-to-in swing path, fix my head being ahead of the ball at impact, trying to turn over my hands more after impact"
+      },
+      {
+        "stage": 3,
+        "emotion": "DEEPENING_FRUSTRATION",
+        "trigger": "Solutions don't work",
+        "quote_example": "P-024: Nothing has worked and now I'm just frustrated"
+      },
+      {
+        "stage": 4,
+        "emotion": "SHAME_AND_AVOIDANCE",
+        "trigger": "Social consequences accumulate",
+        "quote_example": "P-223: I'll try the driver next week, but next week never comes"
+      },
+      {
+        "stage": 5,
+        "emotion": "HOPELESSNESS_OR_ACCEPTANCE",
+        "trigger": "Giving up hope or adjusting expectations",
+        "quote_example": "P-041: Im almost to the point where I think I'll never be able to get rid of my slice"
+      },
+      {
+        "stage": 6,
+        "emotion": "DISCOVERY_AND_HOPE",
+        "trigger": "Finding equipment solution",
+        "quote_example": "H-160: WOW I never thought i'd lose my slice but its gone"
+      },
+      {
+        "stage": 7,
+        "emotion": "TRANSFORMATION_EUPHORIA",
+        "trigger": "Seeing results on course",
+        "quote_example": "H-164: HUUUUUUGE difference to my game"
+      }
+    ]
+  },
+
+  "intensity_distribution": {
+    "extreme_negative_10_9": 78,
+    "high_negative_8_7": 156,
+    "moderate_negative_6_5": 134,
+    "neutral_4": 89,
+    "moderate_positive_5_6": 112,
+    "high_positive_7_8": 145,
+    "extreme_positive_9_10": 98
+  },
+
+  "copywriting_implications": {
+    "negative_emotions_to_agitate": [
+      {
+        "emotion": "Frustration from failed solutions",
+        "hook": "If you've tried everything and nothing works..."
+      },
+      {
+        "emotion": "Social shame on course",
+        "hook": "Tired of being the shortest hitter in your group?"
+      },
+      {
+        "emotion": "Hopelessness about slice",
+        "hook": "Think you'll NEVER fix your slice?"
+      }
+    ],
+    "positive_emotions_to_promise": [
+      {
+        "emotion": "Transformation euphoria",
+        "promise": "Experience the HUUUGE difference"
+      },
+      {
+        "emotion": "Relief from compensation",
+        "promise": "Stop aiming two fairways left"
+      },
+      {
+        "emotion": "Confidence restoration",
+        "promise": "Step up to the tee without dread"
+      }
+    ],
+    "verbatim_phrases_for_copy": [
+      "military golf",
+      "G-O-N-E gone",
+      "make a fool of myself",
+      "intoxicating",
+      "game changer",
+      "90-degree turn",
+      "HUUUUGE difference",
+      "never off the shelf again"
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "extraction_metadata": {
+    "source_file": "/Users/donfrench/.claude/projects/-Users-donfrench/c77914c3-91d3-484d-8492-dacd2285b8b3/tool-results/mcp-firecrawl-firecrawl_search-1769094809681.txt",
+    "extraction_date": "2026-01-22",
+    "total_quotes": 11,
+    "verified_customer_reviews": 5,
+    "product_descriptions": 6,
+    "note": "The source data contained limited actual customer reviews. The Amazon scrape captured primarily product listings and descriptions rather than full review pages. Only 5 verified customer reviews were available in the data."
+  },
+  "quotes": [
+    {
+      "id": "AMZ-001",
+      "quote": "Worked great with my golf swing trainer.",
+      "bucket": "SOLUTIONS_TRIED",
+      "physical_tag": "Accessory satisfaction",
+      "emotional_tags": ["satisfaction", "effectiveness"],
+      "source": "Amazon",
+      "product_reviewed": "HH-GOLF Swing Speed Trainer Weights",
+      "star_rating": "5.0",
+      "reviewer": "Joe M",
+      "date": "September 16, 2025",
+      "verified_purchase": true,
+      "priority": "STANDARD"
+    },
+    {
+      "id": "AMZ-002",
+      "quote": "The 50g weight is useless, the original club already has one and you can't use both at once. Would have been five stars without this glitch",
+      "bucket": "PAIN",
+      "physical_tag": "Product design flaw",
+      "emotional_tags": ["frustration", "disappointment"],
+      "source": "Amazon",
+      "product_reviewed": "HH-GOLF Swing Speed Trainer Weights",
+      "star_rating": "4.0",
+      "reviewer": "Steve Gemma",
+      "date": "June 4, 2024",
+      "verified_purchase": true,
+      "priority": "HIGH"
+    },
+    {
+      "id": "AMZ-003",
+      "quote": "Perfect for a good warm up before the course",
+      "bucket": "SOLUTIONS_TRIED",
+      "physical_tag": "Pre-round warmup",
+      "emotional_tags": ["satisfaction", "convenience"],
+      "source": "Amazon",
+      "product_reviewed": "HH-GOLF Swing Speed Trainer Weights",
+      "star_rating": "5.0",
+      "reviewer": "Patrick",
+      "date": "March 23, 2025",
+      "verified_purchase": true,
+      "priority": "STANDARD"
+    },
+    {
+      "id": "AMZ-004",
+      "quote": "Weights for swing club it's works.",
+      "bucket": "SOLUTIONS_TRIED",
+      "physical_tag": "Basic functionality",
+      "emotional_tags": ["satisfaction"],
+      "source": "Amazon",
+      "product_reviewed": "HH-GOLF Swing Speed Trainer Weights",
+      "star_rating": "5.0",
+      "reviewer": "Bullman",
+      "date": "February 18, 2024",
+      "verified_purchase": true,
+      "priority": "STANDARD"
+    },
+    {
+      "id": "AMZ-005",
+      "quote": "Love the product. One thing, I ordered additional weights and they include another weighted end cap which is a bit of a waste because you can only use one cap at a time. Should have been three interior weights.",
+      "bucket": "PAIN",
+      "physical_tag": "Product design flaw",
+      "emotional_tags": ["satisfaction", "frustration", "value concern"],
+      "source": "Amazon",
+      "product_reviewed": "HH-GOLF Swing Speed Trainer Weights",
+      "star_rating": "4.0",
+      "reviewer": "Steve",
+      "date": "January 10, 2023",
+      "verified_purchase": true,
+      "priority": "HIGH"
+    },
+    {
+      "id": "AMZ-006",
+      "quote": "Gain Swing Speed and 20 Yards",
+      "bucket": "HOPE",
+      "physical_tag": "Marketing claim - distance gain",
+      "emotional_tags": ["hope", "aspiration"],
+      "source": "Amazon - Product Description",
+      "product_reviewed": "SuperSpeed Golf Training System",
+      "star_rating": "N/A",
+      "reviewer": "SuperSpeed Golf (Manufacturer)",
+      "date": "N/A",
+      "verified_purchase": false,
+      "priority": "STANDARD",
+      "note": "Manufacturer marketing claim, not customer review"
+    },
+    {
+      "id": "AMZ-007",
+      "quote": "Speed Sticks used by Padraig Harrington",
+      "bucket": "HOPE",
+      "physical_tag": "Pro endorsement",
+      "emotional_tags": ["trust", "credibility", "aspiration"],
+      "source": "Amazon - Product Description",
+      "product_reviewed": "SuperSpeed Golf Training System",
+      "star_rating": "N/A",
+      "reviewer": "SuperSpeed Golf (Manufacturer)",
+      "date": "N/A",
+      "verified_purchase": false,
+      "priority": "STANDARD",
+      "note": "Manufacturer marketing claim, not customer review"
+    },
+    {
+      "id": "AMZ-008",
+      "quote": "2-IN-1 TRAINING SYSTEM: STRENGTH & SPEED: Train smarter, not harder. 2 interchangeable chutes - complete performance edge. Blue: Build core strength and swing stability. Black: Improve technique, speed, and explosive release.",
+      "bucket": "COMPETITOR_MECHANISMS",
+      "physical_tag": "Training methodology - resistance",
+      "emotional_tags": ["innovation", "effectiveness"],
+      "source": "Amazon - Product Description",
+      "product_reviewed": "Powerchute Mach II",
+      "star_rating": "N/A",
+      "reviewer": "Powerchute (Manufacturer)",
+      "date": "N/A",
+      "verified_purchase": false,
+      "priority": "STANDARD",
+      "note": "Manufacturer product description, not customer review"
+    },
+    {
+      "id": "AMZ-009",
+      "quote": "360 ROTATION TECHNOLOGY: The only trainer with 360 aerodynamic resistance for full backswing and downswing engagement. Air resistance trains your swing sequence, timing, and lag, building more power, accuracy, and distance.",
+      "bucket": "COMPETITOR_MECHANISMS",
+      "physical_tag": "Training methodology - resistance",
+      "emotional_tags": ["innovation", "uniqueness"],
+      "source": "Amazon - Product Description",
+      "product_reviewed": "Powerchute Mach II",
+      "star_rating": "N/A",
+      "reviewer": "Powerchute (Manufacturer)",
+      "date": "N/A",
+      "verified_purchase": false,
+      "priority": "STANDARD",
+      "note": "Manufacturer product description, not customer review"
+    },
+    {
+      "id": "AMZ-010",
+      "quote": "NO ADDED WEIGHT, NO SWING DISTORTION: The Powerchute slides directly onto your own driver or wood, letting you train with your actual club for real results—while engaging fast twitch muscles critical to generating speed.",
+      "bucket": "COMPETITOR_MECHANISMS",
+      "physical_tag": "Training methodology - no weight",
+      "emotional_tags": ["practicality", "effectiveness"],
+      "source": "Amazon - Product Description",
+      "product_reviewed": "Powerchute Mach II",
+      "star_rating": "N/A",
+      "reviewer": "Powerchute (Manufacturer)",
+      "date": "N/A",
+      "verified_purchase": false,
+      "priority": "STANDARD",
+      "note": "Manufacturer product description, not customer review"
+    },
+    {
+      "id": "AMZ-011",
+      "quote": "CO-DESIGNED BY DAVID LEADBETTER the world-renowned instructor and coach to 11 major champions. Used by all skill level golfers - from weekend warriors to world record holders. Train with real science backed by elite results.",
+      "bucket": "COMPETITOR_MECHANISMS",
+      "physical_tag": "Pro endorsement",
+      "emotional_tags": ["trust", "credibility", "aspiration"],
+      "source": "Amazon - Product Description",
+      "product_reviewed": "Powerchute Mach II",
+      "star_rating": "N/A",
+      "reviewer": "Powerchute (Manufacturer)",
+      "date": "N/A",
+      "verified_purchase": false,
+      "priority": "STANDARD",
+      "note": "Manufacturer product description, not customer review"
+    }
+  ],
+  "products_found_in_data": [
+    {
+      "product": "SuperSpeed Golf Training System",
+      "price": "$199.00-$299.00",
+      "rating": "4.3 out of 5 stars (510+ ratings)",
+      "description": "Swing Speed Training System with Speed Sticks, App Training Protocols"
+    },
+    {
+      "product": "HH-GOLF Swing Speed Trainer",
+      "price": "$33.24",
+      "rating": "4.3 out of 5 stars (510 ratings)",
+      "description": "Golf Training Aid with 3 Different Weights for Strength Golf Warm-up Stick Tempo Flexibility Training"
+    },
+    {
+      "product": "Powerchute Mach II",
+      "price": "$102.81 (was $129.99)",
+      "rating": "4.8 out of 5 stars (28 ratings)",
+      "description": "Golf Swing Training Aid by David Leadbetter, 2 Resistance Club Chutes"
+    },
+    {
+      "product": "Orange Whip Full-Sized Golf Swing Trainer",
+      "price": "$119.99",
+      "rating": "4.7 out of 5 stars (3.6K ratings)",
+      "description": "Swing Trainer and swing tempo aid"
+    },
+    {
+      "product": "Garmin Approach R10",
+      "price": "$599.99",
+      "rating": "4.2 out of 5 stars (1K ratings)",
+      "description": "Portable Golf Launch Monitor"
+    }
+  ],
+  "data_limitations": {
+    "issue": "Limited customer review content in scraped data",
+    "explanation": "The Amazon search results primarily captured product listing pages rather than dedicated review pages. Most pages contained product descriptions, pricing, and star ratings but not the full text of customer reviews.",
+    "recommendation": "For more comprehensive Amazon review extraction, consider: (1) Scraping dedicated product review pages (amazon.com/product-reviews/ASIN), (2) Using Amazon's Product Advertising API, or (3) Searching for review aggregator sites that compile Amazon reviews.",
+    "reviews_available": "Only 5 verified customer reviews were extracted from the available data, all for the HH-GOLF Swing Speed Trainer Weights accessory product rather than the main speed training systems like SuperSpeed."
+  }
+}

@@ -1,0 +1,917 @@
+{
+  "artifact_type": "language_patterns",
+  "project": "Ion Golf Ball V2",
+  "layer": "2.5",
+  "created_at": "2026-01-20",
+  "total_quotes_analyzed": 1010,
+  "methodology": "Extracted exact phrases and language patterns from customer conversations across forums, reviews, and social media",
+
+  "categories": {
+    "pain_language": {
+      "ball_loss": {
+        "phrases": [
+          "losing balls",
+          "lose 3 or 4 balls a round",
+          "into the water",
+          "into the woods",
+          "hit the drink",
+          "water hazard",
+          "lost ball",
+          "deep in the woods",
+          "past the dreaded white stakes",
+          "OB",
+          "abandon their stranded companion",
+          "searching for it to no avail",
+          "lose them all"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "easily lose 3 or 4 balls a round",
+            "full_quote": "I could never justify playing them. I could easily lose 3 or 4 balls a round at my old course, so the cost, and my lack of talent combined to make them way too expensive.",
+            "quote_id": "P-001",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "watching a $2+ ball go in the drink",
+            "full_quote": "I promise you nothing feels worse than watching a $2+ ball go in the drink.",
+            "quote_id": "P-011",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "cheap balls sink just as fast as pricy balls",
+            "full_quote": "I found out these cheap balls sink just as fast as pricy balls. They're just as hard to find out in the woods too.",
+            "quote_id": "P-005",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "average golfer loses three to four balls a round",
+            "full_quote": "It has been estimated that the average golfer loses three to four balls a round, accounting for more than 400 million lost balls globally each year.",
+            "quote_id": "P-092",
+            "copy_potential": "HIGH"
+          },
+          {
+            "phrase": "forced to reluctantly abandon their stranded companion",
+            "full_quote": "It's not just the monetary implications that frustrates golfers when they are forced to reluctantly abandon their stranded companion in the weeds, the water or past the dreaded white stakes.",
+            "quote_id": "P-094",
+            "copy_potential": "GOLD"
+          }
+        ]
+      },
+      "price_pain": {
+        "phrases": [
+          "too expensive",
+          "$4 to $5 a piece",
+          "$4.50 a ball",
+          "can't justify",
+          "waste of money",
+          "hurts to lose",
+          "at $55/dozen",
+          "$1300 on just balls",
+          "cut into your golf fun",
+          "borrow against my 401k",
+          "cost per lost ball",
+          "paying over $50"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "At $55/dozen, it hurts to lose",
+            "full_quote": "At $55/dozen, it hurts to lose a Pro V1. That's why golf continues to see new brands jumping into the direct-to-consumer, 'Pro V1 performance at a lower price' game.",
+            "quote_id": "P-002",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "$1300 on just balls",
+            "full_quote": "You lose them faster than you might think, so I'm about $1300 on just balls. I'm also a clothes guy, so I've wasted WAY more than I need to on golf.",
+            "quote_id": "P-033",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "annual spend of $714",
+            "full_quote": "A dozen Callaway Chrome Tour or Chrome Tour X golf balls, for instance, comes at an RRP of $55, which is $4.58 per ball. If you go through three balls per week, you're looking at an annual spend of $714.",
+            "quote_id": "P-044",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "WILL hurt your wallet",
+            "full_quote": "It isn't going to hurt your game but it WILL hurt your wallet. Instead of spending 55$ for a box of prov1's, go spend 20$ and use the other money for lessons.",
+            "quote_id": "P-014",
+            "copy_potential": "HIGH"
+          },
+          {
+            "phrase": "losing $5-10 in golf balls per round",
+            "full_quote": "I'd probably average losing $5-10 in golf balls per round.",
+            "quote_id": "P-013",
+            "copy_potential": "HIGH"
+          }
+        ]
+      },
+      "durability": {
+        "phrases": [
+          "scuffed like crazy",
+          "cut up",
+          "delaminate from the core",
+          "barely lasted",
+          "breakdown after a few wedge shots",
+          "ripped the cover",
+          "scuff up badly",
+          "into the shag bag",
+          "covers too scruffy",
+          "wear issues",
+          "very poor quality"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "scuffed like crazy... delaminate from the core",
+            "full_quote": "Man, I can't believe how bad they are in durability. One or two wedge shots and they're scuffed like crazy. They're even so bad that I've had the mantle delaminate from the core.",
+            "quote_id": "P-024",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "My sm9s instantly ripped the cover",
+            "full_quote": "I played the proV1 pretty much all my life (over 25 years playing) and recently switched to the vice pro. I bought the double pack from Costco and can attest they have no durability. My sm9s instantly ripped the cover.",
+            "quote_id": "CM-015",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "chucking 4 balls a round into the shag bag",
+            "full_quote": "I played them for a while and found the covers too scruffy. A trap or even a spinning wedge took the ball out of play. So if you're chucking 4 balls a round into the shag bag where's the value?",
+            "quote_id": "P-006",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "It beyond blows",
+            "full_quote": "The Kirkland is the best priced ball for the performance. My only gripe with these is durability. It beyond blows.",
+            "quote_id": "P-016",
+            "copy_potential": "HIGH"
+          }
+        ]
+      },
+      "anxiety": {
+        "phrases": [
+          "worried about losing",
+          "nervous and uptight",
+          "afraid to take aggressive shots",
+          "afraid of losing",
+          "stressed about it",
+          "unneeded activity and stress",
+          "concerned about losing balls",
+          "adds to the frustration factor",
+          "that sinking feeling"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "nervous and uptight over losing a $5 ball",
+            "full_quote": "It's best not to think about it. The more nervous and uptight you are over losing a $5 ball the more likely you'll put a bad swing on it.",
+            "quote_id": "P-088",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "worried about losing balls, you aren't playing your best golf",
+            "full_quote": "Golf is such a mental game that if you are worried about losing balls, you aren't playing your best golf.",
+            "quote_id": "P-087",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "afraid to take aggressive shots",
+            "full_quote": "Round 1: Losing $4+ balls on every round, afraid to take aggressive shots.",
+            "quote_id": "H-078",
+            "copy_potential": "HIGH"
+          },
+          {
+            "phrase": "unneeded activity and stress",
+            "full_quote": "Through many trials, I have really enjoyed honing in on the ball. However, there's a down side. When hitting a bad shot and losing that favorite ball, it kind of adds unneeded activity and stress.",
+            "quote_id": "P-086",
+            "copy_potential": "GOLD"
+          }
+        ]
+      },
+      "quality_issues": {
+        "phrases": [
+          "terribly inconsistent",
+          "no two balls are the same",
+          "compression all over the place",
+          "15-point compression range",
+          "fly differently",
+          "spin differently",
+          "travel different distances",
+          "not balanced well",
+          "completely different construction",
+          "third lowest scoring ball"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "no two balls are the same",
+            "full_quote": "While there are not a massive number of bad balls, there is just not much continuity from ball to ball. It is almost as if no two balls are the same and thereby potentially affecting your performance on the course.",
+            "quote_id": "V-093",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "15-point compression range",
+            "full_quote": "Due to the significant variability across the sample, compression falls within the 'Poor' range. Compression across the sample ranged from 88 to 103 with a compression delta of 15 points.",
+            "quote_id": "V-088",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "One ball will feel like a rock & next will feel much softer",
+            "full_quote": "A 15 Delta difference in compression is huge to me, given that I have a moderate swing speed. One ball will feel like a rock & next will feel much softer. I don't want that inconsistency.",
+            "quote_id": "P-091",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "completely different construction and/or manufacturer from year to year",
+            "full_quote": "The big problem with Kirkland golf balls for me is that they change from year to year. I'm not talking about the evolutionary improvements the big name manufacturers incorporate into their lines. I'm talking about a completely different construction and/or manufacturer from year to year.",
+            "quote_id": "P-009",
+            "copy_potential": "GOLD"
+          }
+        ]
+      }
+    },
+
+    "hope_language": {
+      "liberation": {
+        "phrases": [
+          "don't worry about",
+          "no more angst",
+          "swinging freely",
+          "swinging freer",
+          "don't care about losing",
+          "plenty of ammo",
+          "playing any ball I want",
+          "not afraid to lose",
+          "play more confidently",
+          "play with more confidence"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "No more angst about $4 down the drain",
+            "full_quote": "Been there, done that. Switched to used golf balls and never looked back. No more angst about $4 down the drain for a lost ball.",
+            "quote_id": "P-007",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "swinging freely",
+            "full_quote": "I used to be concerned about losing balls and such...mainly from the financial side of things. Lately, I've been loading up on a ball I love when I find them at great prices...but even before I found those deals, I was seeing a huge difference in my play when I was concerned about losing balls versus playing and swinging freely.",
+            "quote_id": "P-088",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "I don't worry about dropping them into water",
+            "full_quote": "I don't worry about dropping them into water or into the poison oak. They are cheap! 2 doz/$25 in store purchase. To me these are the best.",
+            "quote_id": "H-014",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "swinging freer usually means playing better",
+            "full_quote": "When you're not worried about losing a $4 ball, you swing more freely. And swinging freer usually means playing better.",
+            "quote_id": "H-079",
+            "copy_potential": "GOLD"
+          }
+        ]
+      },
+      "value_discovery": {
+        "phrases": [
+          "half the price",
+          "noticed no difference",
+          "couldn't be happier",
+          "couldn't tell the difference",
+          "fraction of the price",
+          "just as good",
+          "no difference at all",
+          "same performance",
+          "for less money",
+          "45% cost saving"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "half the price and I noticed no difference at all",
+            "full_quote": "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all.",
+            "quote_id": "H-001",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "couldn't be happier with the results",
+            "full_quote": "I used to use Kirkland balls until my game got inconsistent. After reading the ball test on MGS, I switched to Maxfli Tour and couldn't be happier with the results.",
+            "quote_id": "ST-003",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "I couldn't tell the difference",
+            "full_quote": "The main question was were the balls any good, and could they stand up to the performance of bigger brands like Titleist, Callaway, TaylorMade, and Bridgestone? I couldn't tell the difference between its performance versus a Pro V1 or any other premium golf ball.",
+            "quote_id": "CM-025",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "basically ProV1's for almost half the price",
+            "full_quote": "Yes. Love them. They are basically ProV1's for almost half the price. MyGolfSpy confirmed this in testing.",
+            "quote_id": "CM-021",
+            "copy_potential": "GOLD"
+          }
+        ]
+      },
+      "smart_identity": {
+        "phrases": [
+          "won't be wasting my money",
+          "until I'm on tour",
+          "4x price does not equal 4x better",
+          "use the other money for lessons",
+          "smart golfer",
+          "it's the player not the equipment",
+          "for a golfer of my skill level",
+          "I beat them in score",
+          "why waste the money"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "until I'm on tour, I won't be wasting my money",
+            "full_quote": "I like he pro V but until I'm on tour, I won't be wasting my money on them.",
+            "quote_id": "H-002",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "4-Times the price they certainly don't make my game 4 times better",
+            "full_quote": "Very happy with them. I'm sure the premium balls ARE better, but at 4-Times the price they certainly don't make my game 4 times better or 4 times more enjoyable.",
+            "quote_id": "H-088",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "I beat them in score with old golf balls",
+            "full_quote": "I play with a group who is very picky about their golf balls, have to be new, soft, etc. Week over week I beat them in score with old golf balls.",
+            "quote_id": "H-007",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "why waste the money on new balls",
+            "full_quote": "Remember, as soon as you hit that brand new ball off the 1st tee, it's not new anymore. So why waste the money on new balls?",
+            "quote_id": "H-014",
+            "copy_potential": "HIGH"
+          },
+          {
+            "phrase": "man it's not the ball, your game sucks",
+            "full_quote": "I recently just used a top flite xl 2000 hard as glass beat them by 5 strokes and I'm not the longest hitter. I do this every week, they can't believe the golf balls I use. I tell them man it's not the ball, your game sucks.",
+            "quote_id": "H-018",
+            "copy_potential": "GOLD"
+          }
+        ]
+      },
+      "confidence": {
+        "phrases": [
+          "the real deal",
+          "as good as any premium",
+          "never looked back",
+          "definitely a believer",
+          "10/10 highly recommend",
+          "my go-to",
+          "found my ball",
+          "won't change",
+          "intend to play these exclusively"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "These are the real deal",
+            "full_quote": "These are the real deal. Go farther than my ProV's play the same. Long and straight.",
+            "quote_id": "H-003",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "as good or better than any premium golf ball",
+            "full_quote": "They are as good or better than any premium golf ball that I have played. The spin and distance are just as good as the Pro V1.",
+            "quote_id": "H-006",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "never looked back",
+            "full_quote": "Been there, done that. Switched to used golf balls and never looked back. No more angst about $4 down the drain for a lost ball.",
+            "quote_id": "P-007",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "I have found my ball",
+            "full_quote": "I've played with used golf balls of the big brand but was tired of the condition of them. When I tried the SD-01 I was pleasantly surprised with them. The feel is wonderful, distance is great. I have found my ball.",
+            "quote_id": "H-024",
+            "copy_potential": "GOLD"
+          }
+        ]
+      }
+    },
+
+    "decision_language": {
+      "switching": {
+        "phrases": [
+          "switched from... to...",
+          "made the switch",
+          "fully converted",
+          "changed to",
+          "moved from",
+          "decided to switch",
+          "recently switched"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "I've switched from TP5's to Snell MTB black",
+            "full_quote": "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all.",
+            "quote_id": "H-001",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "I made the switch to the Velocity from the Pro V1",
+            "full_quote": "I made the switch to the Velocity from the Pro V1 and wow... I love it. I loved everything about it. My driver and long irons were MUCH straighter.",
+            "quote_id": "ST-101",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "I switched from Pro V1's to Maxfli",
+            "full_quote": "I switched from Pro V1's to Maxfli Straight Fly and I honestly like them better. I still have some sleeves of Pro V's in my bag, but I play the Maxfli now.",
+            "quote_id": "H-001",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "switched to VICE pro golf balls about a year ago",
+            "full_quote": "I switched to VICE pro golf balls about a year ago, buy them 3 dozen at a time for 25/dozen. Very similar to a prov1 and half the price. I play at a 2 handicap and these balls are fantastic for the price.",
+            "quote_id": "H-004",
+            "copy_potential": "GOLD"
+          }
+        ]
+      },
+      "comparison": {
+        "phrases": [
+          "side by side",
+          "tested them",
+          "couldn't tell the difference",
+          "head to head",
+          "compared",
+          "put it up against",
+          "over 100 swings"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "head to head matchup... absolute slaughter",
+            "full_quote": "In a head to head matchup with the Pro V1 over like 100 swings--The Vice Pro launched higher, spun more, and went further with every club. It was an absolute slaughter. This is a very legit ball.",
+            "quote_id": "H-012",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "recently compared over a dozen balls",
+            "full_quote": "I recently compared over a dozen balls and have ended up committing to the Vice Pro for 2023. I really like the feel of these balls.",
+            "quote_id": "H-011",
+            "copy_potential": "HIGH"
+          },
+          {
+            "phrase": "As the data proves - there is NO DIFFERENCE",
+            "full_quote": "As the data proves - there is NO DIFFERENCE.",
+            "quote_id": "H-047",
+            "copy_potential": "GOLD"
+          }
+        ]
+      },
+      "commitment": {
+        "phrases": [
+          "my go-to",
+          "won't go back",
+          "never again",
+          "intend to play exclusively",
+          "won't change",
+          "have found my ball",
+          "will definitely buy again",
+          "my gamer"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "Vice Pro / Maxfli Tour are my go-to recommendations",
+            "full_quote": "Vice Pro / Maxfli Tour are my go-to recommendations for anyone looking to save money without sacrificing performance.",
+            "quote_id": "H-010",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "intend to play these exclusively",
+            "full_quote": "I bought a box to start the golf season this year. After playing a round with these balls I could not believe just how great they performed. Without question these are now my favorite golf ball and I intend to play these exclusively as long as they are available!",
+            "quote_id": "H-020",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "will definitely buy again",
+            "full_quote": "No need to buy the really expensive balls anymore...these are just as good. Great distance and held up really well...will definitely buy again.",
+            "quote_id": "H-016",
+            "copy_potential": "HIGH"
+          }
+        ]
+      }
+    },
+
+    "emotional_intensity": {
+      "high_intensity": {
+        "phrases": [
+          "absolute slaughter",
+          "beyond blows",
+          "can't believe how bad",
+          "I was so sad lol",
+          "nothing feels worse",
+          "ripped the cover",
+          "F*** them",
+          "Never again",
+          "waste of money",
+          "hard as a rock",
+          "brave little soldier"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "absolute slaughter",
+            "full_quote": "In a head to head matchup with the Pro V1 over like 100 swings--The Vice Pro launched higher, spun more, and went further with every club. It was an absolute slaughter.",
+            "quote_id": "H-012",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "beyond blows",
+            "full_quote": "The Kirkland is the best priced ball for the performance. My only gripe with these is durability. It beyond blows.",
+            "quote_id": "P-016",
+            "copy_potential": "HIGH"
+          },
+          {
+            "phrase": "I promise you nothing feels worse",
+            "full_quote": "I promise you nothing feels worse than watching a $2+ ball go in the drink.",
+            "quote_id": "P-011",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "I was so sad lol",
+            "full_quote": "I lost three of them today which is very odd for me and I was so sad lol.",
+            "quote_id": "P-008",
+            "copy_potential": "HIGH"
+          },
+          {
+            "phrase": "F*** them",
+            "full_quote": "Snell (would be my go to if I was going the DTC route). Vice (O.K. but not a huge fan). OnCore (F*** them). Cut (Never again).",
+            "quote_id": "CM-020",
+            "copy_potential": "MEDIUM"
+          }
+        ],
+        "marketing_notes": "These high-intensity phrases work best in bold headlines, social proof, and emotional hooks. They convey genuine passion and create immediate connection with frustrated golfers. Use sparingly for maximum impact."
+      },
+      "medium_intensity": {
+        "phrases": [
+          "no more angst",
+          "couldn't be happier",
+          "smoking deal",
+          "pretty unbeatable",
+          "pleasantly surprised",
+          "I love it",
+          "fantastic for the price",
+          "the best value",
+          "highly recommend"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "no more angst",
+            "full_quote": "Been there, done that. Switched to used golf balls and never looked back. No more angst about $4 down the drain for a lost ball.",
+            "quote_id": "P-007",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "couldn't be happier",
+            "full_quote": "I used to use Kirkland balls until my game got inconsistent. After reading the ball test on MGS, I switched to Maxfli Tour and couldn't be happier with the results.",
+            "quote_id": "ST-003",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "pleasantly surprised",
+            "full_quote": "I've played with used golf balls of the big brand but was tired of the condition of them. When I tried the SD-01 I was pleasantly surprised with them. The feel is wonderful, distance is great. I have found my ball.",
+            "quote_id": "H-024",
+            "copy_potential": "HIGH"
+          }
+        ],
+        "marketing_notes": "Medium intensity phrases work well in body copy, testimonial highlights, and benefit statements. They convey satisfaction without hyperbole, building trust through authentic enthusiasm."
+      }
+    },
+
+    "competitor_language": {
+      "pro_v1": {
+        "positioning_phrases": [
+          "the gold standard",
+          "benchmark",
+          "what pros play",
+          "#1 ball in golf",
+          "the best ball"
+        ],
+        "price_pain_phrases": [
+          "$55/dozen",
+          "$4 to $5 a piece",
+          "hurts to lose",
+          "can't justify"
+        ],
+        "skepticism_phrases": [
+          "Titleist pays insane money to tour pros",
+          "Pros will play whatever they're given for free",
+          "only because Titleist will sponsor just about any pro"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "At $55/dozen, it hurts to lose a Pro V1",
+            "full_quote": "At $55/dozen, it hurts to lose a Pro V1. That's why golf continues to see new brands jumping into the direct-to-consumer, 'Pro V1 performance at a lower price' game.",
+            "quote_id": "P-002",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "Titleist pays insane money to tour pros",
+            "full_quote": "Titleist pays insane money to tour pros and other endorsements. All factored into their price. Same for the other big golf companies.",
+            "quote_id": "V-100",
+            "copy_potential": "HIGH"
+          }
+        ]
+      },
+      "kirkland": {
+        "positive_phrases": [
+          "best priced ball for performance",
+          "love the price",
+          "good and cheap"
+        ],
+        "negative_phrases": [
+          "no two balls the same",
+          "terribly inconsistent",
+          "scuffs like crazy",
+          "durability beyond blows",
+          "keep switching suppliers",
+          "4 totally different balls now",
+          "compression all over the place",
+          "third lowest scoring ball in history"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "no two balls are the same",
+            "full_quote": "While there are not a massive number of bad balls, there is just not much continuity from ball to ball. It is almost as if no two balls are the same and thereby potentially affecting your performance on the course.",
+            "quote_id": "V-093",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "4 totally different balls now",
+            "full_quote": "The Kirkland ball has been 4 totally different balls now. They keep switching suppliers and construction.",
+            "quote_id": "P-021",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "third lowest scoring ball in all of MyGolfSpy history",
+            "full_quote": "After we ran these through our quality ball lab, the KSig scored a whopping 45 out of a hundred on the chart. That's the third lowest scoring ball in all of MyGolfSpy history.",
+            "quote_id": "P-011",
+            "copy_potential": "GOLD"
+          }
+        ]
+      },
+      "vice": {
+        "positive_phrases": [
+          "cool brand",
+          "performs like Pro V1",
+          "price vs performance pretty tough to beat",
+          "amazing feel"
+        ],
+        "negative_phrases": [
+          "durability concerns",
+          "no durability",
+          "ripped the cover",
+          "scuffed like crazy",
+          "delaminate from the core",
+          "too many models"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "can attest they have no durability",
+            "full_quote": "I played the proV1 pretty much all my life (over 25 years playing) and recently switched to the vice pro. I bought the double pack from Costco and can attest they have no durability. My sm9s instantly ripped the cover.",
+            "quote_id": "CM-015",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "too many models that all seem to say the same things",
+            "full_quote": "I've never cared for VICE - too many models that all seem to say the same things. The Snell is great. My college team plays them, I play them.",
+            "quote_id": "CM-093",
+            "copy_potential": "HIGH"
+          }
+        ]
+      },
+      "snell": {
+        "positive_phrases": [
+          "half the price",
+          "Pro V1 inventor",
+          "basically the same",
+          "founder story credibility",
+          "38 U.S. Patents",
+          "worked with Tiger Woods"
+        ],
+        "neutral_phrases": [
+          "would be my go to if going DTC route",
+          "never loved or hated them"
+        ],
+        "example_quotes": [
+          {
+            "phrase": "half the price and I noticed no difference",
+            "full_quote": "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all.",
+            "quote_id": "H-001",
+            "copy_potential": "GOLD"
+          },
+          {
+            "phrase": "developed the original Pro V1 ball for Titleist",
+            "full_quote": "Dean Snell is the founder and he spent more than 28 years in golf ball research and development. He is listed on 40 U.S. Patents and was part of the team that developed the original Pro V1 ball for Titleist.",
+            "quote_id": "CM-024",
+            "copy_potential": "GOLD"
+          }
+        ]
+      }
+    }
+  },
+
+  "copy_ready_phrases": {
+    "headlines": [
+      {
+        "phrase": "Half the price. No difference at all.",
+        "source_quote_id": "H-001",
+        "usage": "Value proposition headline - direct and bold"
+      },
+      {
+        "phrase": "Stop watching $4 balls hit the drink",
+        "source_quote_id": "P-011",
+        "usage": "Pain-driven headline targeting ball loss anxiety"
+      },
+      {
+        "phrase": "4x the price does not equal 4x better",
+        "source_quote_id": "H-088",
+        "usage": "Smart identity headline challenging premium pricing"
+      },
+      {
+        "phrase": "No more angst about losing balls",
+        "source_quote_id": "P-007",
+        "usage": "Liberation headline promising freedom from ball anxiety"
+      },
+      {
+        "phrase": "The real deal. Long and straight.",
+        "source_quote_id": "H-003",
+        "usage": "Confidence headline with simple performance claim"
+      },
+      {
+        "phrase": "These are the balls the pros would play if they weren't getting paid",
+        "source_quote_id": "V-004",
+        "usage": "Skepticism-based headline challenging tour endorsements"
+      },
+      {
+        "phrase": "Couldn't tell the difference. Couldn't be happier.",
+        "source_quote_id": "ST-003/H-001",
+        "usage": "Testimonial-style headline with emotional payoff"
+      },
+      {
+        "phrase": "Your $55 dozen hits the water just as fast as our $25 dozen",
+        "source_quote_id": "P-005",
+        "usage": "Provocative truth-telling headline"
+      }
+    ],
+    "body_copy": [
+      {
+        "phrase": "I used to be worried about losing balls...now I'm swinging freely.",
+        "source_quote_id": "P-088",
+        "usage": "Before/after transformation statement"
+      },
+      {
+        "phrase": "Quality materials + great design + no marketing fluff = high-performance ball for less money.",
+        "source_quote_id": "CM-028",
+        "usage": "Value equation explanation"
+      },
+      {
+        "phrase": "As good or better than any premium golf ball I have played.",
+        "source_quote_id": "H-006",
+        "usage": "Strong endorsement statement"
+      },
+      {
+        "phrase": "The average golfer loses 3-4 balls per round. That's $12-20 at premium prices. Every round.",
+        "source_quote_id": "P-092",
+        "usage": "Cost calculation to establish problem scope"
+      },
+      {
+        "phrase": "When you're not worried about losing a $4 ball, you swing more freely. And swinging freer usually means playing better.",
+        "source_quote_id": "H-079",
+        "usage": "Psychological benefit explanation"
+      }
+    ],
+    "testimonials": [
+      {
+        "phrase": "I switched to VICE pro golf balls about a year ago... I play at a 2 handicap and these balls are fantastic for the price.",
+        "source_quote_id": "H-004",
+        "usage": "Low handicap credibility testimonial"
+      },
+      {
+        "phrase": "I've been using Snell golf balls for the last 2 years. They are as good or better than any premium golf ball that I have played.",
+        "source_quote_id": "H-011",
+        "usage": "Long-term user testimonial"
+      },
+      {
+        "phrase": "In a head to head matchup with the Pro V1 over like 100 swings--It was an absolute slaughter.",
+        "source_quote_id": "H-012",
+        "usage": "Dramatic comparison testimonial"
+      },
+      {
+        "phrase": "I play with a group who is very picky about their golf balls. Week over week I beat them in score with old golf balls.",
+        "source_quote_id": "H-007",
+        "usage": "Smart underdog testimonial"
+      }
+    ],
+    "cta_language": [
+      {
+        "phrase": "Find your ball.",
+        "source_quote_id": "H-024",
+        "usage": "Simple, identity-building CTA"
+      },
+      {
+        "phrase": "Make the switch.",
+        "source_quote_id": "ST-101",
+        "usage": "Action-oriented CTA for switchers"
+      },
+      {
+        "phrase": "Stop wasting money. Start playing freely.",
+        "source_quote_id": "P-088",
+        "usage": "Dual-benefit CTA"
+      },
+      {
+        "phrase": "Join the smart golfers.",
+        "source_quote_id": "H-002",
+        "usage": "Identity-based CTA"
+      }
+    ]
+  },
+
+  "words_to_use": [
+    "premium performance",
+    "half the price",
+    "value",
+    "consistent",
+    "durable",
+    "real deal",
+    "smart",
+    "confidently",
+    "freely",
+    "quality",
+    "no difference",
+    "just as good",
+    "switched",
+    "couldn't be happier",
+    "discovered",
+    "finally",
+    "same performance",
+    "fraction of the cost",
+    "my go-to",
+    "never looked back"
+  ],
+
+  "words_to_avoid": [
+    "cheap" ,
+    "budget",
+    "bargain",
+    "discount",
+    "knockoff",
+    "copycat",
+    "alternative",
+    "substitute",
+    "imitation",
+    "economy",
+    "low-end",
+    "second-best",
+    "almost as good",
+    "pretty close"
+  ],
+
+  "voice_and_tone_insights": {
+    "customer_voice_characteristics": [
+      "Self-deprecating humor about skill level",
+      "Mathematical/analytical about value",
+      "Passionate defense of smart buying decisions",
+      "Community-oriented (sharing discoveries)",
+      "Skeptical of marketing claims",
+      "Experience-based validation seeking"
+    ],
+    "emotional_journey": {
+      "before": ["frustrated", "anxious", "skeptical", "price-conscious", "embarrassed about ball loss"],
+      "discovery": ["curious", "hopeful", "testing", "comparing"],
+      "after": ["liberated", "confident", "validated", "evangelical", "proud of smart choice"]
+    },
+    "authenticity_markers": [
+      "Specific handicap mentions (2 handicap, 14 handicapper)",
+      "Exact price calculations ($1.50/ball, $27.33/dozen)",
+      "Brand-specific comparisons (TP5's to Snell MTB black)",
+      "Personal testing stories (100 swings, head to head)",
+      "Admission of limitations (can't tell the difference, not good enough)"
+    ]
+  },
+
+  "synthesis_notes": {
+    "strongest_pain_patterns": [
+      "Ball loss anxiety affecting swing quality",
+      "Mental math of cost-per-lost-ball",
+      "Kirkland inconsistency frustration (especially post-V1)",
+      "Premium ball durability disappointment"
+    ],
+    "strongest_hope_patterns": [
+      "Liberation from ball anxiety = better play",
+      "Value discovery validation (half price, no difference)",
+      "Smart identity reinforcement (until I'm on tour)",
+      "Peer validation through testing/comparison"
+    ],
+    "key_messaging_opportunities": [
+      "Position against Kirkland's inconsistency",
+      "Match Snell's credibility story (founder credentials)",
+      "Address Vice's durability weakness",
+      "Beat Pro V1 on value math, not performance claims"
+    ]
+  }
+}

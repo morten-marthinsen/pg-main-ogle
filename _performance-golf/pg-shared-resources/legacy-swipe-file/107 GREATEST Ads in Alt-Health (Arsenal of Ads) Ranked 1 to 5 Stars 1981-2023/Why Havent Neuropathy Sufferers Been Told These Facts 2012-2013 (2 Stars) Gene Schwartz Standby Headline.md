@@ -1,0 +1,144 @@
+# Why Havent Neuropathy Sufferers Been Told These Facts 2012-2013 (2 Stars) Gene Schwartz Standby Headline
+
+**Source File:** Why Havent Neuropathy Sufferers Been Told These Facts 2012-2013 (2 Stars) Gene Schwartz Standby Headline.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1443749146.0
+
+---
+
+## 495 N. MILWAUKEE AVE., SUITE 102, GURNEE, IL
+
+
+# 847-393-8250
+
+ADVERTISEMENT ADVERTISEMENT
+
+# Why Haven’t Neuropathy Sufferers Been Told These Facts?
+
+
+## Do you have any of the
+
+
+## following symptoms?
+
+
+## • Pins and needles feeling • Numbness in the hands or feet
+
+
+## •Tingling or burning sensations •Weakness in the arms or legs
+
+
+## • Sharp shooting or burning pains
+
+
+# If so, you may have a condition called
+
+
+# peripheral neuropathy.
+
+There’saNEWDruglessSolution
+HelpingNeuropathySufferers.
+Peripheralneuropathy,or“nervedamage,”isoneof
+themostchronicconditionsintheU.S.,affectingover20
+treatment.ButastudyonbackpainintheBritishMedicalJournal
+millionAmericans.
+Neuropathyresultsfrominjurytothenervesinthearms
+andlegs.Thisdisruptsthebody’sabilitytocommunicatewith
+itsmuscles,organsandtissues.Mostpeopledon’trecognize
+neuropathy’ssymptoms,whichare:
+•Pinsandneedlesfeeling
+•Numbnessinthehandsorfeet
+•Tinglingorburningsensations
+•Weaknessinthearmsorlegs
+•Sharpshootingorburningpains
+Theseannoyingproblemsmaycomeandgo...interruptyour
+sleep...orevenmakeyourarmorlegsfeelweakattimes.
+Butevenifyou’vehadneuropathysymptomsforawhile,there
+are3commonmythsIoftenseewiththiscondition.
+Myth#1:ThinkingMorePillsAreTheOnlySolution
+Acommontreatmentformanynerveproblemsisthe‘takesome
+pillsandwaitandsee’method.
+Whilethismaybenecessaryfortemporaryreliefofsevere
+symptoms,usingthemlongtermisnowaytolive.Someof
+themorecommondrugsgivenincludepainpills,anti-seizure
+mediations,andanti-depressants–allofwhichhaveserious
+sideeffects.
+Whynotlookforadruglesssolutioninsteadofjustcovering
+overthepain?
+Myth#2:AssumingNeuropathyisOnlyFound
+inDiabeticPeople
+Diabeticpatientsarenottheonlygrouptosufferwiththis
+condition.Actuallymoreneuropathysufferersarenon-diabeticthan
+are,accordingtoarecent2009study.
+Here’swhatthestudy,donebyTheNeuropathyAssociation,
+revealed...“Neuropathyisoftenmisrepresentedasonlybeing
+diabetesrelated.However,thissurveydemonstratesthatforevery
+diabeticneuropathypatient,thereareatleastsixmorepatients
+sufferingwithvariousneuropathies...”-Dr.ThomasH.Brannagan,
+III,medicaladvisorforTheNeuropathyAssociation.
+Myth#3:BelievingNumbnessandTingling
+willgo awayonitsown.
+Oneofthebiggestmythspeoplebelieveabouttheirnumbness,
+tingling,andpainisthatitgoesawayallbyitself...withoutany
+provedthismythfalse,showingthat75%ofbackpainsufferers
+aconsiderableamountbytakingmeuponthisoffer.
+whodonothingaboutitwillhaveeitherpainordisability
+12monthslater.
+Let’sfaceit,yourneuropathysymptomshaven’tgoneawayby
+nowit’snotlikelytheywilldisappearontheirown.Andit’sbeen
+showninstudiesthatifignored,symptomscanintensifycausing
+lossofsensation,unremittingpain,andevendisability.
+NeuropathyTreatmentSystemRelieves
+Numbness&Pain
+Fortunately,ifyouaresufferingfromanyneuropathypain,
+numbnessortingling,yoursymptomsmayberelievedoreliminated
+byanewtreatment.
+Anewprovenperipheralneuropathytreatmenthasbeen
+developedbyaleadingmedicaldeviceinventor.Thesystemhelps
+thenaturalnervepathwaysbetweenyourspineandfeet(orhands)
+andcanmakeyournervesfunctioningagain.Justlistentowhat
+thisnewtechnologycando...
+Beforeeachimpulseissent,itanalyzesthewaveformofyour
+nerves,determinesanyabnormalities,createstheuniquehealing
+signalnecessary,administersit,andthenre-evaluatestheresult.
+Thisprocesshappens7.83timeseverysecondorthe
+30minutetreatment.
+WillItWorkForYou?
+It’stimeforyoutofindoutifthisnewtreatmentwillbeyour
+neuropathysolution.Useournewpatientspecialonpage4soyou
+cangetaneuropathyevaluationtodetermineifyouqualifyforthis
+newtreatment!
+Whatdoesthisofferinclude?
+Everything.Takealookatwhatyouwillreceive:
+Anin-depthconsultationaboutyourhealthandwell-being
+wherewewilllisten…reallylisten…to thedetailsofyourcase.
+Acompleteneuropathyevaluation.Twospecializedx-raysto
+determineifaspinalproblemiscontributingtoyourpainor
+symptoms…(NOTE:Thesewouldnormallycostyouatleast$100).
+Athoroughanalysisofallyourfindingssowecanstartmapping
+outyourplantobeingpainfree.
+Actnow–thisofferisonlygoodforthenext14dayssoyoucan
+geteverythingI’velistedherefor$37.Thenormalpriceforthistype
+ofevaluationincludingx-raysis$250,soyou’resaving
+Call847-393-8250now.
+WecangetyouscheduledforyourNeuropathyEvaluation
+assoonasthere’sanopeninginourschedule.
+WhatOtherProfessionalsaresayingabout
+thisprogram.
+“TheReBuilderhashelpedourpatientswhohavepainfulside
+effectsfromchemotherapyneuropathysomuch...”
+-CancerTreatmentCentersofAmerica.
+“Previously,treatingperipheralneuropathypatientshasn’tbeen
+reallysuccessful...butI’veneverseenresolutionslikewe’reseeing
+inthesecases.”
+JohnP.Hayes,Jr., DC,DABCO
+Author-“BeatingNeuropathy”
+Find Out If We Can Help
+Your Neuropathy.
+Whilewecannotaccepteverycasethatwalksintoouroffice,
+ifyou’resufferingwithneuropathythereisagoodchanceyoucan
+behelpedbythistreatment.
+Tofindoutifthistreatmentsolutioncouldbetheanswertoyour
+neuropathyconditiongiveusacalltoseeifwecanhelpyou.
+TakeadvantageofourNewPatientSpecialwitha$37.
+Calltoscheduleyourneuropathyevaluation.

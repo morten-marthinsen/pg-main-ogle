@@ -1,0 +1,77 @@
+# I Want To Help You Regain The Feeling In Your Hands And Feet
+
+**Source File:** I Want To Help You Regain The Feeling In Your Hands And Feet.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1454430022.0
+
+---
+
+# I WANT TO HELP YOU REGAIN THE FEELING IN
+
+
+# YOUR HANDS AND FEET!
+
+
+## Do you suffer from peripheral neuropathy?
+
+Ifyousufferfromasingleoneofthesetorturoussymptoms–numbness,
+tingling,burningorsharpnervepain–youMUSTDISCOVERour
+NeuropathyRecoveryProgram!
+Neuropathyaffectseverypartofyourlife-walking,sitting,sleeping,
+socializing,yourabilitytoenjoyrelationshipsandsomuchmore. Ifyou
+havetried“everything”like(Anodynetherapy,physicaltherapy,Lyrica®,
+Neurotin®orothermedications)andyouarenotgettingthelastingresultsyou
+want,thenthismaybethemostimportantinformationyouhaveeverread!
+Thereisasimplereasonthatmosttreatmentsfail...because,atbest,theyonly
+coverupyoursymptomsanddonothealyourdamagednerves.
+Weallknowthatthereisatremendousdifferencebetweencoveringupyour
+symptomsoractuallyfixingtheunderlyingproblem.So,whysettlefor“band-
+aidcare”whenourNeuropathyRecoveryProgramisavailable?
+Doyouhaveanyofthefollowingsymptomsorlackofsleepdueto....
+Pinsandneedlesfeeling
+Numbnessinthehandsorfeet
+Tinglingorburningsensations
+WeaknessintheLegsandToes
+Sharpshootingorburningpains
+Afeelinglikeasockisrolledupunderyourtoes?
+Ifsoyoumayhaveaconditioncalledperipheralneuropathy.
+Ifyouarelikemostpeoplewhosufferfromperipheralneuropathy,you
+haveprobablytriedeverything. Youhaveprobablybeentospecialists,
+triedalternativehealthcareandallofthelatestandgreatestmiraclecures.
+Unfortunately,thereisnogimmick,noquickfixandnopillthatwillever
+makeyourneuropathygoawaypermanently. Whatwedoinourofficeis
+theREALTHING! IamconfidentthatourNeuropathyRecoveryProgramis
+somethingyouhaven’ttriedbeforeandmaybetheansweryouarelookingfor.
+IFYOUARE SERIOUSABOUT GETTING RID
+OFYOUR PERIPHERALNEUROPATHYTHIS
+YEARAND IMPROVINGYOUR HEALTH ONCE
+AND FORALL, DO NOT MISS THIS FREE
+ONE-HOUR SEMINAR!
+Ihavebeenresearching,reading,attendingclassesandconsultingwithexperts
+inthescientificcommunity-alltocreatemyPeripheralNeuropathyTreatment
+Program. ThegoodnewsisthattheprinciplesbehindmyNeuropathy
+RecoveryProgramworkwithbothdiabeticandnon-diabetictypesof
+neuropathy.Ican’twaittoseeifIcanhelpyou!
+InregardstoPeripheralNeuropathy,mygoalthisyearistohelpasmany
+peopleaspossibleregainfeelingintheirextremitiesandimprovetheirquality
+oflife. Willyoubeoneofthem? IfyouhavebeensufferingfromPeripheral
+Neuropathyandthereducedqualityoflifethatgoeswithit,don’twaitanother
+minute. Letmehelpyou. Thisseminarcouldliterallychangeyourlife.
+IfyouaredealingwithPeripheralNeuropathy,Isincerelywanttohelpyou
+getyourlifeback. Areyoufrustratedafterhavingtriedeverythingandstill
+dealingwithneuropathy? Areyousickofhypeandfalsehope?Haveyou
+givenuponriddingyourselfofneuropathy? Ifyouareseriousaboutgetting
+helponceandforall,thencalltoreserveyourseatrightnow.ThisFREE
+one-hourseminarcouldbethebeginningofanewlifeforyou.Don’tmissit!
+Thursday, February 12 at 11:15am
+Chronic Conditions Center in Williamsburg
+www.chronicconditionscenter.com
+SEATING IS LIMITED, SO CALL757-229-6069
+TO RESERVEYOUR SEATTODAY!!
+PS:ThiswillbemybiggestPeripheralNeuropathyseminaroftheyear
+andwillbookupfast. Don’tbeleftout. Callnowtoreserveyourspot.
+Dr.RobKuhnisaChiropracticPhysicianBoardCertifiedinIntegrativeMedicine
+with14yearsofpracticeexperienceandauthorofReturntoHealth.Hehasbeen
+teachingweightlossasafoundationforhispracticesincedayone.Dr.Kuhnhas
+asinceredesiretohelppeoplewhosufferfromweightproblemsduetohow
+damagingitcanbetooverallhealth.

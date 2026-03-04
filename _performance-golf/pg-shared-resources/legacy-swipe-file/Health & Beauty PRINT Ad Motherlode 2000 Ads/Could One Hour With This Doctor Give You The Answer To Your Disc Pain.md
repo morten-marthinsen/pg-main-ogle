@@ -1,0 +1,126 @@
+# Could One Hour With This Doctor Give You The Answer To Your Disc Pain
+
+**Source File:** Could One Hour With This Doctor Give You The Answer To Your Disc Pain.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1442966102.0
+
+---
+
+Ifyou’vehaddiscproblemsforyears,recentlyinjuredyourback,oryou’resuf-
+feringwithsciatica,youmusthearaboutthesenewstudies.
+Scientificstudiestellusthatspinaldiscsareresponsibleformostoftheaches
+andpainspeoplesufferfrom.Discsactlikeacushionbetweenourbackbones
+andallowforaspaceateachlevelsothenervescanexitthespinalcolumn.
+Whenthesediscsgetinjuredorwearoutfrombadposture,theybeginto
+degenerateandcausepain.Bulgingandherniationsbegintoform,pressingon
+thenerveroots.IftheherniationsoccuratL4-L5,theycanseverelycompromise
+thelargesciaticnerve,causingmuscleweakness,tingling,andseverepain.
+Themostcommoninvasivetreatmentfordischerniationsissurgery.Thiscosts
+quiteabitofmoney.Evenwithhealthinsurancethepatientisleftwiththeirown
+portionofthebill,inexcessof$10,000-$15,000,andsometimesmore.Therecov-
+erytimeandmissedworkcanbeanywherefrom3to6months,nottomention
+theobvioussevererisksassociatedwithallsurgery.
+Buthere’sthebiggestproblem…thereisahighfailurerateofbacksurgery.
+Onemedicalstudyfoundthatonaverage,53%ofL5-S1backsurgeriesfailto
+producereliefofsymptoms(InternationalOrthop1987.)
+BeforeYouGoUnderTheKnife
+AndOptForSpinalSurgery…
+BackonTractreatsthelumbarspinebygentlystretchingthespineand
+musclesinthelowerback,hipsandthighs.Thisgentlestretchingandtherapeu-
+ticexercisinghelpsrelievethepainandtensionintheback,increasesmobility
+andflexibility,increasesbloodflowandfluidsbackintothediscsandgetsthe
+pressureoffoftheassociatednervesthatiscausingyourpain.
+BackonTracwillrelievepainandhelpmanageyourbackpainsoyoucanget
+backtodoingthethingsyouenjoydoinginlife.
+TheResearchBehind
+TheseTreatment s
+Newresearchinatreatmentcalledlowlevellasertherapy,orcoldlaser,is
+havingaprofoundeffectonpatientssufferingwithpain.Unlikethecuttingtype
+oflaserseeninmoviesandusedinmedicalprocedures,coldlaserpenetratesthe
+surfaceoftheskinwithnoheatingeffectordamage.
+Coldlasertherapyhasbeentestedfor40years,hadover2000paperspub-
+lishedonit,andbeenshowntoaidindamagedtissueregeneration,decrease
+inflammation,relievepainandboosttheimmunesystem.Thismeansthatthere
+isagoodchancecoldlasertherapycouldbeyourpainsolution,allowingyouto
+liveamoreactivelifestyle.TheseguysusetheColdLaserforonereasononly….
+ItPromotesRapidHealingOfTheInjuredTissues.
+BeforetheFDAwouldclearColdLaserforhumanuse,theywantedtosee
+proofthatitworked.Thisledtotwolandmarkstudies.
+ThefirststudyshowedthatpatientswhohadColdLasertherapyhad53%
+betterimprovementthanthosewhohadaplacebo.Thesecondstudyshowed
+patientswhousedthelasertherapyhadlesspainandmorerangeofmotion
+daysaftertreatment.IfColdLasercanhelpthesepatients,itcanhelpyoutoo.
+FeeltheImprovement–andSay“Yes”toLifeAgain
+Here’sthepointofallthesestudies…BackonTraccombinedwithcoldlaser
+therapyhasahighsuccessratewithhelpingdischerniations,sciatica,andback
+pain.Thismeansinjustamatterofweeksyoucouldbebackonthegolfcourse,
+enjoyingyourlovelife,ortravelingagain.
+Withmy“BackonTrac&LaserEvaluation”we’llbeablefindtheproblemand
+thencorrectit.Thinkofhowyou’llfeelinjustafewshortweeks.Seeandfeel
+yourlifechangeforthebetter.Startyourbodyonthewaytopain-free,normal
+living.Feeltightjointsrest,relax,freeup.Feelmusclestiedinknotsbecomesup-
+pler.Feelstrengthinyourmusclesincrease.
+You’reabletolivelifelikeanormalpersonagain,withoutbackpain–ableto
+playwithyourkids,enjoytimewithfriends,andfinallygetagoodnight’srest.
+TheSingleMostImportantSolutionTo
+YourSciaticaandBackPain
+It’stimeforyoutofindoutifthesetreatmentswillbeyoursciaticandback
+painsolution.Forthefirst25callersonly,I’mrunningaveryspecialofferwhere
+youcanfindoutifyouareacandidateforBackonTraccombinedwithcoldlaser
+therapy.Whatdoesthisofferinclude?
+EverythingInormallydoinmynewpatientevaluation.Justcallandhere’s
+whatyou’llget…
+•Anin-depthconsultationaboutyourhealthandwell-beingwhereIwill
+listen…reallylisten…tothedetailsofyourcase.
+•Acompleteneuromuscularexamination.
+•Athoroughanalysisofyourexamfindingssowecanstartmappingout
+yourplantobeingpainfree.
+•You’llgettoseeeverythingfirsthandandfindoutifthisamazingtreat-
+mentwillbeyourpainsolution,likeithasbeenforsomanyotherpatients.
+Thefirst25callerscangeteverythingI’velistedhereforonly$60.Thenormal
+priceforthistypeofevaluationis$450,soyou’resavingaconsiderableamount
+bytakingmeuponthisoffer.
+Here’swhattodonow:
+Duetotheexpecteddemandforthistreatment,Isuggestcallingmyofficeat
+once.Thephonenumberis970-522-8837.
+Calltodayandwecangetstartedwithyourconsultationandexamassoon
+asthere’sanopeningintheschedule.OurofficeiscalledHillChiropractic,LLC
+andyoucanfindusat207AshSt.inSterling,CO.Tellthereceptionistyou’dliketo
+comeinfortheBackonTrac&ColdLaserEvaluation.
+Sincerely,
+Dr.TeresaC.Hill,D.C.,
+Dipl.Ac,(NCCAOM),DNBHE,
+ChiropracticAcupuncturist
+
+# Could One Hour With This Doctor Give
+
+
+# You The Answer To Your Disc Pain?
+
+Now,inSterling,COonedoctorhaswhatmaybethemostimportantbreakthroughin
+non-surgicalbackpaintreatments.BeforeandafterMRIstudieshaveshowndiscbulges
+shrinkinsize–evenwiththemostpainfulcasesofL4-L5herniations.
+FEDERALANDMEDICARERESTRICTIONSAPPLY.
+
+# Call 970-522-8837 AVAILABLE TO THE FIRST 25 CALLERS
+
+
+# $60CONSULT,EXAM,
+
+
+## ANDONELASERTREATMENT
+
+
+## ($450VALUE)
+
+HillChiropractic,LLC207AshSt.inSterling,CO
+Dr. Teresa C. Hill, D.C., Dipl. Ac., D.P. Sc.
+
+## Have you ever had a hard hit to the head?
+
+(trauma, coma, concussion, knocked out)
+We can help. Call 970-522-8837
+Find out how neurofeedback may be the life-changing therapy you’ve been waiting for.
+207 Ash St. • Sterling • 970-522-8837
+
+## Dr. Teresa C. Hill, D.C., Dipl. Ac., D.P. Sc.

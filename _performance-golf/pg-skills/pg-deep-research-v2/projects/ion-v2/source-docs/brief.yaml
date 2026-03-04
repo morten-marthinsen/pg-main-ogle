@@ -1,0 +1,123 @@
+product:
+  name: Ion Golf Ball
+  category: Golf Balls
+  description: |
+    DTC (direct-to-consumer) premium-quality golf ball competing with Titleist Pro V1,
+    Vice Pro Plus, Kirkland Signature, and other premium/value golf balls.
+    Positioned as providing premium performance at a smart price point.
+  known_benefits:
+    - Premium urethane cover for spin and feel
+    - Competitive performance vs Pro V1 at lower price
+    - Consistent quality (differentiator vs Kirkland/Vice)
+    - Smart value proposition for discerning golfers
+  price_point: ~$25-30/dozen (vs $54+/dozen for Pro V1)
+
+market:
+  mode: B  # New product with emerging marketing
+  existing_marketing: []
+  target_customer: |
+    Primary: Value Converts - Former premium ball buyers who switched to DTC
+    Secondary: Self-Aware Budget Players - Golfers who know their skill level
+    Tertiary: Technical Evaluators - Performance-focused comparison shoppers
+
+constraints:
+  budget: $25
+  timeline: standard
+  focus_areas:
+    - Ball-loss anxiety and liberation
+    - Smart golfer identity vs cheap golfer stigma
+    - Competitor weaknesses (Kirkland inconsistency, Vice durability)
+    - Premium pricing resentment
+    - Skill-appropriate permission messaging
+
+context:
+  why_now: |
+    V1 research had only 83 quotes - well below the 1,000 minimum required by v3.5 system.
+    V2 will execute the full deep research process with proper quote volume and the new
+    Layer 2.5 synthesis validation to ensure complete output.
+  known_gaps:
+    - Need 10x more quotes (1,000+ vs 83)
+    - Need proper two-tier categorization for all quotes
+    - Need transformation pairs and educational pairs
+    - Need full WEB analysis
+    - Need Now→After grid
+  v1_learnings:
+    - Ball-loss liberation is the #1 opportunity (complete white space)
+    - Smart golfer identity is #2 (emerging white space)
+    - Competitor vulnerabilities: Kirkland inconsistency, Vice durability
+    - Premium pricing villain has high quote volume
+    - Platform focus: Reddit (r/golf) is richest source
+    - Also check: GolfWRX, Amazon reviews, MyGolfSpy, Facebook golf groups
+
+research_targets:
+  platforms:
+    - Reddit (r/golf, r/golfequipment, r/GolfGTI)
+    - GolfWRX forums
+    - Amazon reviews (Kirkland, Vice, Snell, Titleist)
+    - MyGolfSpy forums and comments
+    - YouTube comments (golf ball comparisons)
+    - Facebook golf groups
+    - Golf Digest forums
+    - TheSandTrap forums
+  topics:
+    - "golf ball worth it reddit"
+    - "Pro V1 vs Kirkland"
+    - "best value golf ball"
+    - "Vice golf ball review"
+    - "losing expensive golf balls"
+    - "golf ball for high handicapper"
+    - "DTC golf ball comparison"
+    - "Kirkland inconsistency"
+    - "Vice durability problems"
+    - "premium golf ball overrated"
+    - "golf ball doesn't matter"
+    - "can't tell difference golf ball"
+  buckets_to_fill:
+    PAIN:
+      target: 250+ quotes
+      subcategories:
+        - BALL_LOSS_ANXIETY (losing expensive balls)
+        - PRICE_PAIN (cost of premium balls)
+        - QUALITY_INCONSISTENCY (bad balls in value options)
+        - DURABILITY_ISSUES (balls falling apart)
+        - SKILL_MISMATCH (paying for performance they can't use)
+    HOPE:
+      target: 180+ quotes
+      subcategories:
+        - LIBERATION (freedom from ball-loss anxiety)
+        - SMART_IDENTITY (being the golfer who figured it out)
+        - CONSISTENT_VALUE (reliable quality at good price)
+        - PERFORMANCE_MAINTAINED (90% of premium at half price)
+        - PERMISSION_GRANTED (right ball for my skill)
+    ROOT_CAUSE:
+      target: 120+ quotes
+      subcategories:
+        - MARKETING_MYTHS (premium = better belief)
+        - SKILL_DELUSION (thinking they need tour ball)
+        - SUNK_COST (already invested in premium)
+        - SOCIAL_PRESSURE (what others think)
+    SOLUTIONS_TRIED:
+      target: 120+ quotes
+      subcategories:
+        - KIRKLAND (tried, mixed results)
+        - VICE (tried, durability issues)
+        - PREMIUM_DOWNGRADE (switched from Pro V1)
+        - FOUND_BALLS (playing found balls)
+        - CHEAP_BALLS (Noodles, etc)
+    COMPETITOR_MECHANISM:
+      target: 120+ quotes
+      subcategories:
+        - KIRKLAND_VALUE (what works/doesn't)
+        - VICE_POSITIONING (90% performance claim)
+        - SNELL_CREDIBILITY (founder story)
+        - PREMIUM_JUSTIFICATION (why people stay with Pro V1)
+    VILLAIN:
+      target: 130+ quotes
+      subcategories:
+        - PREMIUM_RACKET (Titleist pricing)
+        - GOLF_INDUSTRY_MARKETING (manufacturing desire)
+        - INCONSISTENT_QUALITY (Kirkland/Vice problems)
+        - SKILL_GATEKEEPING (you need premium to be serious)
+
+system_version: "3.5"
+created: "2026-01-20"

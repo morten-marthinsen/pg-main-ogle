@@ -1,0 +1,218 @@
+{
+  "queries_id": "qry_sf2_001",
+  "created": "2026-01-19",
+  "total_queries": 85,
+  "queries_by_topic": {
+    "PT-01_slice_causes": {
+      "topic": "Slice causes and mechanics",
+      "bucket_target": ["ROOT_CAUSE", "PAIN"],
+      "queries": [
+        {"q": "why do I slice the ball with my driver", "platform": "youtube"},
+        {"q": "what causes a slice golf", "platform": "youtube"},
+        {"q": "slice swing path open face", "platform": "forums"},
+        {"q": "can't stop slicing driver", "platform": "reddit"},
+        {"q": "slice vs fade difference", "platform": "forums"},
+        {"q": "why does my driver slice but irons don't", "platform": "reddit"}
+      ]
+    },
+    "PT-02_slice_correction_attempts": {
+      "topic": "Slice correction attempts",
+      "bucket_target": ["SOLUTIONS_TRIED", "PAIN"],
+      "queries": [
+        {"q": "how to fix slice driver", "platform": "youtube"},
+        {"q": "stop slicing driver drill", "platform": "youtube"},
+        {"q": "tried everything still slice", "platform": "reddit"},
+        {"q": "slice fix that doesn't work", "platform": "forums"},
+        {"q": "best drill to fix slice", "platform": "youtube"},
+        {"q": "square the clubface driver", "platform": "youtube"},
+        {"q": "grip change fix slice", "platform": "forums"},
+        {"q": "swing path fix slice", "platform": "youtube"}
+      ]
+    },
+    "PT-03_slice_emotional_impact": {
+      "topic": "Slice emotional impact",
+      "bucket_target": ["PAIN", "ROOT_CAUSE"],
+      "queries": [
+        {"q": "embarrassed by slice", "platform": "reddit"},
+        {"q": "hate my slice golf", "platform": "reddit"},
+        {"q": "slice ruining my golf", "platform": "forums"},
+        {"q": "lost confidence driver", "platform": "reddit"},
+        {"q": "afraid to hit driver", "platform": "reddit"},
+        {"q": "slice making me quit golf", "platform": "forums"},
+        {"q": "losing balls slice", "platform": "reddit"},
+        {"q": "worst slice ever", "platform": "reddit"}
+      ]
+    },
+    "PT-04_driver_distance_desire": {
+      "topic": "Driver distance desire",
+      "bucket_target": ["HOPE", "PAIN"],
+      "queries": [
+        {"q": "want more distance driver", "platform": "reddit"},
+        {"q": "hit driver farther", "platform": "youtube"},
+        {"q": "increase driver distance", "platform": "youtube"},
+        {"q": "jealous of long hitters", "platform": "reddit"},
+        {"q": "outdriven by friends", "platform": "reddit"},
+        {"q": "driver ball speed increase", "platform": "forums"},
+        {"q": "swing speed for distance", "platform": "youtube"}
+      ]
+    },
+    "PT-05_accuracy_vs_distance": {
+      "topic": "Accuracy vs distance tradeoff",
+      "bucket_target": ["ROOT_CAUSE", "HOPE"],
+      "queries": [
+        {"q": "accuracy or distance driver", "platform": "forums"},
+        {"q": "fairways or yards", "platform": "reddit"},
+        {"q": "consistent driver not long", "platform": "forums"},
+        {"q": "sacrifice distance for accuracy", "platform": "forums"},
+        {"q": "can you have both accuracy and distance", "platform": "reddit"},
+        {"q": "draw drivers slow", "platform": "forums"}
+      ]
+    },
+    "PT-06_driver_confidence": {
+      "topic": "Driver confidence and fear",
+      "bucket_target": ["PAIN", "HOPE"],
+      "queries": [
+        {"q": "scared to hit driver", "platform": "reddit"},
+        {"q": "first tee anxiety driver", "platform": "reddit"},
+        {"q": "no confidence in driver", "platform": "forums"},
+        {"q": "driver yips", "platform": "forums"},
+        {"q": "trust my driver", "platform": "reddit"},
+        {"q": "afraid to use driver on course", "platform": "reddit"}
+      ]
+    },
+    "PT-07_equipment_vs_swing": {
+      "topic": "Equipment vs swing debate",
+      "bucket_target": ["ROOT_CAUSE", "SOLUTIONS_TRIED"],
+      "queries": [
+        {"q": "can equipment fix my slice", "platform": "reddit"},
+        {"q": "is it the club or me", "platform": "forums"},
+        {"q": "driver for slicers real or gimmick", "platform": "forums"},
+        {"q": "draw bias driver actually work", "platform": "reddit"},
+        {"q": "equipment compensation vs swing change", "platform": "forums"},
+        {"q": "wrong driver causing slice", "platform": "reddit"}
+      ]
+    },
+    "PT-08_draw_bias_drivers": {
+      "topic": "Draw bias and anti-slice drivers",
+      "bucket_target": ["SOLUTIONS_TRIED", "HOPE", "COMPETITOR_MECHANISM"],
+      "queries": [
+        {"q": "best draw bias driver 2024", "platform": "review_site"},
+        {"q": "draw bias driver review", "platform": "youtube"},
+        {"q": "anti-slice driver comparison", "platform": "review_site"},
+        {"q": "driver for chronic slicer", "platform": "forums"},
+        {"q": "Ping SFT review", "platform": "youtube"},
+        {"q": "Callaway Max D review", "platform": "youtube"},
+        {"q": "TaylorMade HD draw driver", "platform": "youtube"},
+        {"q": "does draw driver work reddit", "platform": "reddit"}
+      ]
+    },
+    "PT-09_ball_flight_control": {
+      "topic": "Ball flight control",
+      "bucket_target": ["HOPE", "SOLUTIONS_TRIED"],
+      "queries": [
+        {"q": "how to hit a draw driver", "platform": "youtube"},
+        {"q": "stop hitting fade", "platform": "youtube"},
+        {"q": "control ball flight driver", "platform": "forums"},
+        {"q": "work the ball driver", "platform": "forums"}
+      ]
+    },
+    "PT-10_driver_fitting": {
+      "topic": "Driver fitting for slice",
+      "bucket_target": ["SOLUTIONS_TRIED", "ROOT_CAUSE"],
+      "queries": [
+        {"q": "driver fitting for slice", "platform": "forums"},
+        {"q": "best driver settings for slicer", "platform": "forums"},
+        {"q": "driver loft help slice", "platform": "reddit"},
+        {"q": "shaft for slicer", "platform": "forums"},
+        {"q": "fitting didn't fix slice", "platform": "reddit"}
+      ]
+    },
+    "PT-11_lessons_instruction": {
+      "topic": "Lessons for slice",
+      "bucket_target": ["SOLUTIONS_TRIED", "PAIN"],
+      "queries": [
+        {"q": "golf lesson didn't fix slice", "platform": "reddit"},
+        {"q": "instructor can't fix my slice", "platform": "forums"},
+        {"q": "tried lessons still slice", "platform": "reddit"},
+        {"q": "money wasted on lessons slice", "platform": "reddit"}
+      ]
+    },
+    "PT-12_tee_strategy": {
+      "topic": "Tee box strategy with slice",
+      "bucket_target": ["PAIN", "ROOT_CAUSE"],
+      "queries": [
+        {"q": "aim left for slice", "platform": "reddit"},
+        {"q": "play for slice course management", "platform": "forums"},
+        {"q": "tee strategy slicer", "platform": "forums"}
+      ]
+    },
+    "PT-14_technology_skepticism": {
+      "topic": "Driver technology skepticism",
+      "bucket_target": ["ROOT_CAUSE", "VILLAIN"],
+      "queries": [
+        {"q": "driver marketing hype", "platform": "reddit"},
+        {"q": "are new drivers really better", "platform": "forums"},
+        {"q": "driver technology gimmick", "platform": "forums"},
+        {"q": "do drivers actually matter", "platform": "reddit"},
+        {"q": "sick of driver marketing", "platform": "reddit"}
+      ]
+    },
+    "PT-15_titanium_vs_carbon": {
+      "topic": "Titanium vs carbon construction",
+      "bucket_target": ["ROOT_CAUSE", "HOPE"],
+      "queries": [
+        {"q": "titanium driver vs carbon", "platform": "forums"},
+        {"q": "is titanium driver better", "platform": "reddit"},
+        {"q": "carbon fiber driver worth it", "platform": "forums"},
+        {"q": "premium driver construction", "platform": "forums"}
+      ]
+    },
+    "ES-01_draw_mechanisms": {
+      "topic": "Draw bias mechanisms",
+      "bucket_target": ["COMPETITOR_MECHANISM"],
+      "queries": [
+        {"q": "how draw bias driver works", "platform": "review_site"},
+        {"q": "heel weighting driver", "platform": "forums"},
+        {"q": "offset face driver", "platform": "forums"},
+        {"q": "draw driver technology explained", "platform": "youtube"}
+      ]
+    },
+    "ES-02_adjustability": {
+      "topic": "Driver adjustability",
+      "bucket_target": ["SOLUTIONS_TRIED", "COMPETITOR_MECHANISM"],
+      "queries": [
+        {"q": "driver settings for slice adjustment", "platform": "youtube"},
+        {"q": "adjustable hosel slice", "platform": "forums"},
+        {"q": "loft up for slice", "platform": "forums"}
+      ]
+    },
+    "COMPETITOR_specific": {
+      "topic": "Specific competitor research",
+      "bucket_target": ["COMPETITOR_MECHANISM", "VILLAIN"],
+      "queries": [
+        {"q": "Callaway Paradym Ai Smoke Max D review", "platform": "youtube"},
+        {"q": "TaylorMade Qi10 Max review slicer", "platform": "youtube"},
+        {"q": "Ping G430 SFT review", "platform": "youtube"},
+        {"q": "Cobra Darkspeed Max review", "platform": "youtube"},
+        {"q": "Cleveland Launcher XL Halo review", "platform": "youtube"},
+        {"q": "best driver for high handicapper 2024", "platform": "review_site"},
+        {"q": "most forgiving driver 2024", "platform": "review_site"},
+        {"q": "disappointed with new driver", "platform": "reddit"},
+        {"q": "wasted money on driver", "platform": "reddit"}
+      ]
+    }
+  },
+  "validation": {
+    "total_queries": 85,
+    "queries_per_topic_min": 3,
+    "pain_targeted": 35,
+    "hope_targeted": 20,
+    "root_cause_targeted": 22,
+    "solutions_tried_targeted": 28,
+    "competitor_mechanism_targeted": 15,
+    "villain_targeted": 8,
+    "emotional_queries_included": true,
+    "instructional_queries_included": true,
+    "meets_minimum_50": true
+  }
+}

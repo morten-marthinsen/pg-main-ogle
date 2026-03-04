@@ -1,0 +1,6111 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONE.1 "Auto-Correct" Wedge | Performance Golf</title>
+  <meta name="description" content="The only premium wedge with an Auto-Glide Sole that glides through the ground instead of digging into it. Never chunk again.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Brand Fonts: Repro, GT Super Text, Repro Mono -->
+  <style>
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Regular.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Medium.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Bold.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'GT Super Text';
+      src: url('fonts/gt-super-text/GT-Super-Text-Book.woff2') format('woff2'),
+           url('fonts/gt-super-text/GT-Super-Text-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'GT Super Text';
+      src: url('fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2') format('woff2'),
+           url('fonts/gt-super-text/GT-Super-Text-Book-Italic.woff') format('woff');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Repro Mono';
+      src: url('fonts/repro-mono/ABCReproMono-Regular.woff2') format('woff2'),
+           url('fonts/repro-mono/ABCReproMono-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+
+  <!-- GSAP + Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+    ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Handle mid-page refresh */
+    html.scrolled-start [data-anim] {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* ========================================
+       CSS CUSTOM PROPERTIES — PREMIUM DESIGN SYSTEM
+    ======================================== */
+    :root {
+      /* Primary Colors */
+      --pg-orange: #FD3300;
+      --pg-orange-dark: #DB2C00;
+      --pg-orange-glow: rgba(253, 51, 0, 0.15);
+      --pg-black: #1D1A1A;
+      --pg-gray: #6B6360;
+
+      /* Neutral Palette — Refined */
+      --pg-stone: #9A928C;
+      --pg-pebble: #D8D2CD;
+      --pg-sand: #EBE7E3;
+      --pg-fog: #F5F3F1;
+      --pg-mist: #FAFAF9;
+      --pg-white: #FFFFFF;
+
+      /* Typography */
+      /* Brand Typography — Per Official Guidelines */
+      --font-heading: 'Repro', system-ui, sans-serif;      /* Impactful titles (Bold Uppercase) + Informative body (Regular) */
+      --font-body: 'GT Super Text', Georgia, serif;        /* Conversational tone (Book) */
+      --font-mono: 'Repro Mono', ui-monospace, monospace;  /* Technical data (Regular Uppercase) */
+
+      /* Container Widths */
+      --container-max: 1120px;
+      --container-narrow: 720px;
+      --container-tight: 560px;
+
+      /* Spacing — More Generous */
+      --section-padding-mobile: 80px;
+      --section-padding-desktop: 120px;
+      --content-gap-mobile: 40px;
+      --content-gap-desktop: 64px;
+
+      /* Shadows — Refined Depth */
+      --shadow-sm: 0 1px 2px rgba(29,26,26,0.04);
+      --shadow-md: 0 4px 12px rgba(29,26,26,0.06), 0 1px 3px rgba(29,26,26,0.04);
+      --shadow-lg: 0 12px 40px rgba(29,26,26,0.08), 0 4px 12px rgba(29,26,26,0.04);
+      --shadow-xl: 0 24px 64px rgba(29,26,26,0.12), 0 8px 24px rgba(29,26,26,0.06);
+
+      /* Border Radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+
+      /* Transitions */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+    /* ========================================
+       BASE TYPOGRAPHY — APPLE-LEVEL REFINEMENT
+    ======================================== */
+    body {
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--pg-black);
+      background: var(--pg-mist);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(36px, 8vw, 52px);
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(28px, 6vw, 40px);
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: clamp(22px, 4vw, 28px);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Selection styling */
+    ::selection {
+      background: var(--pg-orange-glow);
+      color: var(--pg-black);
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pg-gray);
+      line-height: 1.3;
+    }
+
+    /* Text Utility */
+    .text-orange {
+      color: var(--pg-orange);
+    }
+
+    .text-underline {
+      text-decoration: underline;
+    }
+
+    /* ========================================
+       HEADLINE TREATMENTS — DYNAMIC ACCENTS
+    ======================================== */
+    /* Yellow highlighter treatment - like a real highlighter pen */
+    .headline-highlight-yellow {
+      background: linear-gradient(180deg, transparent 55%, rgba(255, 220, 0, 0.45) 55%, rgba(255, 220, 0, 0.45) 90%, transparent 90%);
+      padding: 0 4px;
+      margin: 0 -4px;
+    }
+
+    /* Flip board effect - airport departure board style */
+    .flip-text {
+      display: inline-block;
+      color: var(--pg-black);
+    }
+    .flip-text .flip-char {
+      display: inline-block;
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 500px;
+    }
+    .flip-text .flip-char.flipping {
+      animation: flipChar 0.08s ease-out;
+    }
+    @keyframes flipChar {
+      0% { transform: rotateX(0deg); }
+      50% { transform: rotateX(-90deg); opacity: 0.7; }
+      100% { transform: rotateX(0deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .flip-text .flip-char.flipping {
+        animation: none;
+      }
+    }
+
+    /* Underline accent - animated gradient underline */
+    .headline-underline {
+      position: relative;
+      display: inline-block;
+    }
+    .headline-underline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--pg-orange) 0%, var(--pg-orange-dark) 100%);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.6s var(--ease-out);
+    }
+    .headline-underline.is-visible::after {
+      transform: scaleX(1);
+    }
+
+    /* Typewriter container - cycling text with cursor */
+    .typewriter-text {
+      display: inline-block;
+      color: var(--pg-orange);
+      border-right: 2px solid var(--pg-orange);
+      padding-right: 2px;
+      animation: blink-cursor 0.8s step-end infinite;
+    }
+    .typewriter-text.typing-done {
+      animation: none;
+      border-color: transparent;
+    }
+
+    @keyframes blink-cursor {
+      50% { border-color: transparent; }
+    }
+
+    /* Reduced motion - show static states */
+    @media (prefers-reduced-motion: reduce) {
+      .headline-underline::after {
+        transform: scaleX(1);
+        transition: none;
+      }
+      .typewriter-text {
+        animation: none;
+        border-color: transparent;
+      }
+    }
+
+    /* Hero Star Rating (used under hero visual) */
+    .hero__stars {
+      color: #FFB800;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    .hero__review-count {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      color: var(--pg-gray);
+      font-weight: 500;
+    }
+
+    /* ========================================
+       LAYOUT
+    ======================================== */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .container--narrow {
+      max-width: var(--container-narrow);
+    }
+
+    .container--tight {
+      max-width: var(--container-tight);
+    }
+
+    section {
+      padding: var(--section-padding-mobile) 0;
+    }
+
+    .bg-sand {
+      background: var(--pg-sand);
+    }
+
+    .bg-fog {
+      background: var(--pg-fog);
+    }
+
+    .bg-mist {
+      background: var(--pg-mist);
+    }
+
+    .bg-white {
+      background: white;
+    }
+
+    /* ========================================
+       BUTTONS — PREMIUM STYLING
+    ======================================== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      background: var(--pg-orange);
+      padding: 20px 40px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      transition: all 0.4s var(--ease-out);
+      min-height: 60px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(253, 51, 0, 0.25);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+      opacity: 1;
+    }
+
+    .btn-primary:hover {
+      background: var(--pg-orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(253, 51, 0, 0.35);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(253, 51, 0, 0.3);
+    }
+
+    .btn-primary:focus-visible {
+      outline: 3px solid var(--pg-orange);
+      outline-offset: 4px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: var(--pg-black);
+      background: var(--pg-white);
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--pg-pebble);
+      cursor: pointer;
+      transition: all 0.3s var(--ease-out);
+      min-height: 48px;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--pg-black);
+      background: var(--pg-fog);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary:active {
+      transform: translateY(0);
+    }
+
+    /* ========================================
+       CARDS — ELEVATED DESIGN
+    ======================================== */
+    .card {
+      background: var(--pg-white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 28px;
+      transition: all 0.4s var(--ease-out);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+
+    /* ========================================
+       TRUST BADGES
+    ======================================== */
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pg-gray);
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .trust-badge-img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* ========================================
+       PLACEHOLDER IMAGES
+    ======================================== */
+    .image-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--pg-fog);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .image-placeholder span {
+      color: var(--pg-gray);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ========================================
+       CHECKMARK LIST
+    ======================================== */
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 16px;
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      color: var(--pg-orange);
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    @media (min-width: 1024px) {
+      .check-list li {
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding-left: 36px;
+      }
+    }
+
+    /* ========================================
+       NO-JS FALLBACK
+    ======================================== */
+    .no-js .hero__preheadline,
+    .no-js .hero__headline,
+    .no-js .hero__subheadline,
+    .no-js .hero__visual,
+    .no-js .hero__benefits li,
+    .no-js .hero__cta-wrapper,
+    .no-js .hero__guarantee,
+    .no-js .hero .trust-badges {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* ========================================
+       TOP NAVIGATION BAR — VOKEY-STYLE DARK
+    ======================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--pg-black);
+      padding: 0 24px;
+    }
+
+    .nav__inner {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      height: 56px;
+      width: 100%;
+    }
+
+    .nav__logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-self: start;
+    }
+
+    .nav__logo-img {
+      height: 18px;
+      width: auto;
+    }
+
+    .nav__links {
+      display: none;
+      list-style: none;
+      gap: 40px;
+      justify-self: end;
+      margin-right: 48px;
+    }
+
+    .nav__link {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--pg-white);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .nav__link:hover {
+      color: var(--pg-pebble);
+    }
+
+    .nav__cta {
+      display: none;
+      justify-self: end;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--pg-white);
+      background: var(--pg-orange);
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .nav__cta:hover {
+      background: var(--pg-orange-dark);
+    }
+
+    @media (min-width: 768px) {
+      .nav__links {
+        display: flex;
+      }
+
+      .nav__logo-text {
+        display: inline;
+      }
+
+      .nav__cta {
+        display: block;
+      }
+    }
+
+    /* ========================================
+       SECTION 1B: HERO (Sales Page) — APPLE-STYLE SPLIT LAYOUT
+    ======================================== */
+    .hero {
+      padding-top: 56px; /* Account for fixed nav */
+      padding-bottom: 60px;
+      background: var(--pg-fog);
+      position: relative;
+    }
+
+    .hero__container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero Header - Centered Badge, Headline, Subheadline */
+    .hero__header {
+      text-align: center;
+      padding: 24px 0 20px;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background: transparent;
+      border: 2px solid var(--pg-orange);
+      border-radius: 100px;
+    }
+
+    .hero__badge-text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 0.12em;
+      color: var(--pg-black);
+      text-transform: uppercase;
+    }
+
+    .hero__headline {
+      margin-bottom: 20px;
+      font-size: clamp(36px, 7vw, 64px);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--pg-black);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    .hero__subheadline {
+      font-family: var(--font-heading);
+      font-weight: 500; /* Repro Medium per brand spec */
+      color: var(--pg-gray);
+      font-size: 18px;
+      line-height: 1.65;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    /* Hero Content Grid - Two Columns on Desktop */
+    .hero__content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Left Side - Animation */
+    .hero__animation-wrapper {
+      order: 1;
+    }
+
+    .hero__animation {
+      aspect-ratio: 4/3;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.04),
+        0 24px 48px -12px rgba(0,0,0,0.12),
+        0 12px 24px -8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero__animation-placeholder {
+      color: var(--pg-stone);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      text-align: center;
+      padding: 24px;
+    }
+
+    /* Right Side - Benefits & CTA */
+    .hero__action {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero__benefits {
+      width: 100%;
+      margin-bottom: 32px;
+      list-style: none;
+    }
+
+    .hero__benefits li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--pg-black);
+    }
+
+    .hero__benefits li:last-child {
+      margin-bottom: 0;
+    }
+
+    .hero__benefits li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      color: var(--pg-orange);
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .hero__cta-wrapper {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .hero__cta-wrapper .btn-primary {
+      width: 100%;
+    }
+
+    /* Trust Elements - Below CTA */
+    .hero__trust {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .hero__rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero__stars {
+      color: #FFB800;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .hero__review-count {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      color: var(--pg-gray);
+      font-weight: 500;
+    }
+
+    .hero__guarantee {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--pg-stone);
+      line-height: 1.5;
+    }
+
+    .hero__guarantee .guarantee-line2 {
+      display: block;
+    }
+
+    /* Desktop Layout */
+    @media (min-width: 768px) {
+      .hero {
+        padding-top: 56px;
+        padding-bottom: 80px;
+      }
+
+      .hero__header {
+        padding: 24px 0 20px;
+      }
+
+      .hero__headline {
+        margin-bottom: 24px;
+      }
+
+      .hero__subheadline {
+        font-size: 24px;
+      }
+
+      .hero__content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        align-items: start;
+      }
+
+      .hero__animation-wrapper {
+        order: 1;
+        margin-top: -16px;
+      }
+
+      .hero__animation {
+        aspect-ratio: 1/1;
+        border-radius: 28px;
+      }
+
+      .hero__action {
+        order: 2;
+      }
+
+      .hero__benefits li {
+        font-size: 18px;
+        margin-bottom: 18px;
+      }
+
+      .hero__trust {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero__cta-wrapper .btn-primary {
+        width: auto;
+        min-width: 280px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        padding-top: 56px;
+        padding-bottom: 100px;
+      }
+
+      .hero__header {
+        padding: 24px 0 48px;
+      }
+
+      .hero__content-grid {
+        gap: 72px;
+      }
+
+      .hero__animation {
+        border-radius: 32px;
+      }
+
+      .hero__benefits {
+        margin-bottom: 40px;
+      }
+
+      .hero__benefits li {
+        font-size: 22px;
+        margin-bottom: 20px;
+        padding-left: 36px;
+      }
+    }
+
+    /* ========================================
+       SECTION 2: UGC CAROUSEL — PREMIUM CARDS
+    ======================================== */
+    .ugc-carousel {
+      overflow: visible;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    /* Full-width breakout for UGC carousel track */
+    .ugc-carousel .carousel-wrapper {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      position: relative;
+    }
+
+    /* Position arrows inset from viewport edges for full-width UGC carousel */
+    .ugc-carousel .carousel-arrow--prev {
+      left: 16px;
+    }
+    .ugc-carousel .carousel-arrow--next {
+      right: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .ugc-carousel .carousel-arrow--prev {
+        left: 32px;
+      }
+      .ugc-carousel .carousel-arrow--next {
+        right: 32px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .ugc-carousel .carousel-arrow--prev {
+        left: 48px;
+      }
+      .ugc-carousel .carousel-arrow--next {
+        right: 48px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .ugc-carousel .carousel-arrow--prev {
+        left: 64px;
+      }
+      .ugc-carousel .carousel-arrow--next {
+        right: 64px;
+      }
+    }
+
+    .ugc-carousel__track {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      /* Dynamic centering: min 40px padding, grows to center content on wide screens */
+      /* Content width: 8 cards × 280px + 7 gaps × 20px = 2380px */
+      padding: 20px max(40px, calc((100vw - 2380px) / 2));
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .ugc-carousel__track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ugc-card {
+      flex: 0 0 280px;
+      background: var(--pg-white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all 0.4s var(--ease-out);
+    }
+
+    .ugc-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .ugc-card__video {
+      aspect-ratio: 9/16;
+      background: linear-gradient(180deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .ugc-card__play {
+      width: 64px;
+      height: 64px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      transition: all 0.3s var(--ease-out);
+    }
+
+    .ugc-card:hover .ugc-card__play {
+      transform: scale(1.1);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    }
+
+    .ugc-card__info {
+      padding: 20px;
+    }
+
+    .ugc-card__quote {
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-style: normal;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .ugc-card__author {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--pg-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .ugc-carousel__dots,
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .ugc-carousel__dot,
+    .carousel-dot {
+      width: 32px;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--pg-pebble);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s var(--ease-out);
+    }
+
+    .ugc-carousel__dot:hover,
+    .carousel-dot:hover {
+      background: var(--pg-stone);
+    }
+
+    .ugc-carousel__dot.active,
+    .carousel-dot.active {
+      background: var(--pg-black);
+      width: 48px;
+    }
+
+    /* Carousel Wrapper for Arrow Overlay */
+    .carousel-wrapper {
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Carousel Navigation - Arrows Overlay on Sides */
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .carousel-arrow {
+      width: 48px;
+      height: 48px;
+      border: 2px solid var(--pg-black);
+      border-radius: 50%;
+      background: var(--pg-white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease-out);
+      font-size: 18px;
+      color: var(--pg-black);
+      /* Apple-style layered circular shadow */
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 8px 32px rgba(0, 0, 0, 0.06);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-100%);
+      z-index: 10;
+    }
+
+    .carousel-arrow--prev {
+      left: -28px;
+    }
+
+    .carousel-arrow--next {
+      right: -28px;
+    }
+
+    .carousel-arrow:hover {
+      background: var(--pg-black);
+      color: var(--pg-white);
+      transform: translateY(-100%) scale(1.08);
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12),
+        0 8px 24px rgba(0, 0, 0, 0.10),
+        0 16px 48px rgba(0, 0, 0, 0.08);
+    }
+
+    .carousel-arrow:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .carousel-arrow:disabled:hover {
+      transform: translateY(-100%);
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 8px 32px rgba(0, 0, 0, 0.06);
+      background: var(--pg-white);
+      color: var(--pg-black);
+    }
+
+    @media (min-width: 768px) {
+      .carousel-arrow {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+      }
+
+      .carousel-arrow--prev {
+        left: -44px;
+      }
+
+      .carousel-arrow--next {
+        right: -44px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .carousel-arrow--prev {
+        left: -64px;
+      }
+
+      .carousel-arrow--next {
+        right: -64px;
+      }
+    }
+
+    /* ========================================
+       SECTION 3: PROBLEM AGITATION — MIZUNO-STYLE EDITORIAL
+    ======================================== */
+    .problem {
+      background: var(--pg-black);
+      color: var(--pg-white);
+    }
+
+    .problem__layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .problem__text {
+      order: 1;
+    }
+
+    .problem__visual {
+      order: 2;
+      aspect-ratio: 4/3;
+      background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+      border-radius: var(--radius-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .problem__visual span {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-stone);
+    }
+
+    .problem__stat {
+      font-family: var(--font-heading);
+      font-size: clamp(80px, 18vw, 140px);
+      font-weight: 700;
+      color: var(--pg-orange);
+      margin-bottom: 16px;
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+    }
+
+    .problem__stat-suffix {
+      /* Same size as the number - no reduction */
+      font-size: 1em;
+      color: var(--pg-orange);
+    }
+
+    .problem__headline {
+      margin-bottom: 12px;
+      color: var(--pg-white);
+      font-size: clamp(28px, 5vw, 36px);
+    }
+
+    .problem__subheadline {
+      font-family: var(--font-mono);
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pg-stone);
+      margin-bottom: 32px;
+    }
+
+    .problem__copy {
+      color: var(--pg-pebble);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .problem__copy strong {
+      color: var(--pg-white);
+    }
+
+    @media (min-width: 768px) {
+      .problem__layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+      }
+
+      .problem__text {
+        order: 1;
+      }
+
+      .problem__visual {
+        order: 2;
+        aspect-ratio: 9/10;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .problem__layout {
+        gap: 80px;
+      }
+
+      .problem__copy {
+        font-size: 24px;
+      }
+    }
+
+    /* ========================================
+       SECTION 4: MECHANISM — MIZUNO-STYLE EDITORIAL
+    ======================================== */
+    .mechanism {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mechanism::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--pg-orange-glow) 0%, transparent 70%);
+      transform: translate(30%, -30%);
+      pointer-events: none;
+    }
+
+    .mechanism__layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .mechanism__text {
+      position: relative;
+      z-index: 1;
+      order: 2;
+    }
+
+    .mechanism__visual {
+      order: 1;
+    }
+
+    .mechanism__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pg-orange);
+      margin-bottom: 16px;
+    }
+
+    .mechanism__headline {
+      margin-bottom: 32px;
+      font-size: clamp(36px, 8vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .mechanism__copy {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--pg-gray);
+    }
+
+    .mechanism__copy p {
+      margin-bottom: 20px;
+    }
+
+    .mechanism__copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .mechanism__visual {
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      background: linear-gradient(145deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mechanism__visual span {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-gray);
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .mechanism__layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .mechanism__layout {
+        gap: 80px;
+      }
+
+      .mechanism__copy {
+        font-size: 24px;
+      }
+
+      .mechanism__visual {
+        aspect-ratio: 9/10;
+      }
+    }
+
+    /* ========================================
+       SECTION 5: FEATURES — ALTERNATING EDITORIAL LAYOUT
+    ======================================== */
+    .features__grid {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .feature-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .feature-card__text {
+      order: 1;
+    }
+
+    .feature-card__visual {
+      order: 2;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(145deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-card__visual span {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-gray);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .feature-card__eyebrow {
+      margin-bottom: 16px;
+      color: var(--pg-orange);
+    }
+
+    .feature-card__headline {
+      margin-bottom: 24px;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.1;
+    }
+
+    .feature-card__copy {
+      color: var(--pg-gray);
+      line-height: 1.75;
+      font-size: 18px;
+    }
+
+    .feature-card__copy p {
+      margin-bottom: 16px;
+    }
+
+    .feature-card__copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+      .features__grid {
+        gap: 100px;
+      }
+
+      .feature-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+      }
+
+      /* Odd features (1, 3, 5): text left, image right */
+      .feature-card:nth-child(odd) .feature-card__text {
+        order: 1;
+      }
+      .feature-card:nth-child(odd) .feature-card__visual {
+        order: 2;
+      }
+
+      /* Even features (2, 4): image left, text right */
+      .feature-card:nth-child(even) .feature-card__text {
+        order: 2;
+      }
+      .feature-card:nth-child(even) .feature-card__visual {
+        order: 1;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .features__grid {
+        gap: 120px;
+      }
+
+      .feature-card {
+        gap: 80px;
+      }
+
+      .feature-card__visual {
+        aspect-ratio: 10/11;
+      }
+
+      .feature-card__copy {
+        font-size: 24px;
+      }
+    }
+
+    /* ========================================
+       SECTION 6: VERSATILITY — CAROUSEL GALLERY
+    ======================================== */
+    .versatility__headline {
+      text-align: center;
+      margin-bottom: 48px;
+      font-size: clamp(32px, 7vw, 48px);
+    }
+
+    .versatility__headline .typewriter-text {
+      font-size: inherit;
+    }
+
+    /* Full-width breakout for versatility carousel */
+    .versatility .carousel-wrapper {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      position: relative;
+    }
+
+    /* Position arrows inset from viewport edges for full-width versatility carousel */
+    .versatility .carousel-arrow--prev {
+      left: 16px;
+    }
+    .versatility .carousel-arrow--next {
+      right: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .versatility .carousel-arrow--prev {
+        left: 32px;
+      }
+      .versatility .carousel-arrow--next {
+        right: 32px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .versatility .carousel-arrow--prev {
+        left: 48px;
+      }
+      .versatility .carousel-arrow--next {
+        right: 48px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .versatility .carousel-arrow--prev {
+        left: 64px;
+      }
+      .versatility .carousel-arrow--next {
+        right: 64px;
+      }
+    }
+
+    .versatility__track {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      /* Dynamic centering: min 40px padding, grows to center content on wide screens */
+      /* Content width: 4 cards × 480px + 3 gaps × 20px = 1980px (desktop) */
+      padding: 10px max(40px, calc((100vw - 1980px) / 2)) 30px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .versatility__track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .versatility-card {
+      flex: 0 0 340px;
+      background: var(--pg-white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all 0.4s var(--ease-out);
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .versatility-card {
+        flex: 0 0 420px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .versatility-card {
+        flex: 0 0 480px;
+      }
+    }
+
+    .versatility-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--pg-orange);
+      transform: scaleX(0);
+      transition: transform 0.4s var(--ease-out);
+    }
+
+    .versatility-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .versatility-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .versatility-card__visual {
+      aspect-ratio: 4/3;
+      background: linear-gradient(180deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .versatility-card__visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.02) 100%);
+    }
+
+    .versatility-card__content {
+      padding: 24px;
+    }
+
+    .versatility-card__title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .versatility-card:hover .versatility-card__title {
+      color: var(--pg-orange);
+    }
+
+    .versatility-card__copy {
+      font-size: 18px;
+      color: var(--pg-gray);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       SECTION 7: QUIZ — MIZUNO-STYLE EDITORIAL
+    ======================================== */
+    .quiz-section__layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .quiz-section__text {
+      order: 1;
+    }
+
+    .quiz-section__visual {
+      order: 2;
+      aspect-ratio: 4/3;
+      background: linear-gradient(145deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+      border-radius: var(--radius-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .quiz-section__visual span {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-gray);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .quiz-section__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pg-orange);
+      margin-bottom: 16px;
+    }
+
+    .quiz-section__headline {
+      margin-bottom: 24px;
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.1;
+    }
+
+    .quiz-section__copy {
+      font-size: 24px;
+      line-height: 1.75;
+      color: var(--pg-gray);
+      margin-bottom: 32px;
+    }
+
+    .quiz-section__copy p {
+      margin-bottom: 16px;
+    }
+
+    .quiz-section__copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .quiz-section__cta {
+      max-width: 320px;
+    }
+
+    @media (min-width: 768px) {
+      .quiz-section__layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+      }
+
+      .quiz-section__text {
+        order: 1;
+      }
+
+      .quiz-section__visual {
+        order: 2;
+        aspect-ratio: 9/10;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .quiz-section__layout {
+        gap: 80px;
+      }
+    }
+
+    /* Quiz Modal — PREMIUM EXPERIENCE */
+    .quiz-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(29, 26, 26, 0.8);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .quiz-modal.active {
+      display: flex;
+    }
+
+    .quiz-modal__content {
+      background: var(--pg-white);
+      border-radius: var(--radius-xl);
+      width: 100%;
+      max-width: 520px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+      animation: modalSlideIn 0.4s var(--ease-out);
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .quiz-modal__header {
+      padding: 24px;
+      border-bottom: 1px solid var(--pg-fog);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .quiz-modal__progress-text {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--pg-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .quiz-modal__close {
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: var(--pg-fog);
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      color: var(--pg-gray);
+    }
+
+    .quiz-modal__close:hover {
+      background: var(--pg-sand);
+      color: var(--pg-black);
+    }
+
+    .quiz-progress {
+      height: 3px;
+      background: var(--pg-fog);
+      margin: 0 24px;
+    }
+
+    .quiz-progress__fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--pg-orange) 0%, var(--pg-orange-dark) 100%);
+      border-radius: 2px;
+      transition: width 0.4s var(--ease-out);
+      width: 16.66%;
+    }
+
+    .quiz-modal__body {
+      padding: 40px 28px;
+    }
+
+    .quiz-question {
+      display: none;
+    }
+
+    .quiz-question.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .quiz-question__text {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 32px;
+      line-height: 1.3;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .quiz-option {
+      width: 100%;
+      text-align: left;
+      padding: 18px 24px;
+      border: 2px solid var(--pg-pebble);
+      border-radius: var(--radius-md);
+      background: var(--pg-white);
+      font-family: var(--font-body);
+      font-size: 17px;
+      cursor: pointer;
+      transition: all 0.3s var(--ease-out);
+    }
+
+    .quiz-option:hover {
+      border-color: var(--pg-stone);
+      background: var(--pg-fog);
+      transform: translateX(4px);
+    }
+
+    .quiz-option.selected {
+      border-color: var(--pg-orange);
+      background: rgba(253, 51, 0, 0.06);
+      box-shadow: 0 0 0 4px var(--pg-orange-glow);
+    }
+
+    /* Quiz Result */
+    .quiz-result {
+      display: none;
+      text-align: center;
+    }
+
+    .quiz-result.active {
+      display: block;
+    }
+
+    .quiz-result__headline {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .quiz-result__visual {
+      aspect-ratio: 1;
+      max-width: 200px;
+      margin: 0 auto 24px;
+    }
+
+    .quiz-result__copy {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .quiz-result__build-set {
+      background: var(--pg-fog);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .quiz-result__build-set-title {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .quiz-result__build-set-copy {
+      font-size: 15px;
+      color: var(--pg-gray);
+      margin-bottom: 0;
+    }
+
+    /* Specs Reveal Button & Panel */
+    .specs-reveal-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px 24px;
+      background: transparent;
+      border: 2px solid var(--pg-pebble);
+      border-radius: 8px;
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--pg-gray);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .specs-reveal-btn:hover {
+      border-color: var(--pg-black);
+      color: var(--pg-black);
+    }
+
+    .specs-reveal-btn__icon {
+      transition: transform 0.3s ease;
+    }
+
+    .specs-reveal-btn.active .specs-reveal-btn__icon {
+      transform: rotate(180deg);
+    }
+
+    .specs-panel {
+      display: none;
+      margin-top: 24px;
+      text-align: left;
+      animation: slideDown 0.3s ease;
+    }
+
+    .specs-panel.active {
+      display: block;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .specs-panel__section {
+      margin-bottom: 24px;
+    }
+
+    .specs-panel__title {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pg-black);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--pg-pebble);
+    }
+
+    .specs-panel__grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .specs-panel__row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--pg-fog);
+    }
+
+    .specs-panel__row:last-child {
+      border-bottom: none;
+    }
+
+    .specs-panel__label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .specs-panel__value {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      color: var(--pg-black);
+      text-align: right;
+      max-width: 60%;
+    }
+
+    .specs-panel__table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .specs-panel__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+
+    .specs-panel__table th {
+      background: var(--pg-fog);
+      padding: 10px 8px;
+      text-align: center;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--pg-gray);
+    }
+
+    .specs-panel__table td {
+      padding: 10px 8px;
+      text-align: center;
+      border-bottom: 1px solid var(--pg-fog);
+      color: var(--pg-black);
+    }
+
+    .specs-panel__availability {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--pg-gray);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* ========================================
+       SECTION 8: BUY BOX — MIZUNO-STYLE SPLIT LAYOUT
+    ======================================== */
+    .buy-box-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .buy-box__content {
+      order: 1;
+    }
+
+    .buy-box__visual {
+      order: 2;
+    }
+
+    @media (min-width: 768px) {
+      .buy-box-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: start;
+      }
+
+      .buy-box__content {
+        order: 1;
+      }
+
+      .buy-box__visual {
+        order: 2;
+        position: sticky;
+        top: 100px;
+      }
+    }
+
+    .buy-box__visual-rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .buy-box__visual-rating .buy-box__stars {
+      color: #FFB800;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .buy-box__visual-rating .buy-box__review-count {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-gray);
+    }
+
+    .buy-box__hero-image {
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, var(--pg-sand) 0%, var(--pg-pebble) 100%);
+    }
+
+    .buy-box__content {
+      background: var(--pg-white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .buy-box__rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .buy-box__stars {
+      color: #FFB800;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .buy-box__review-count {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--pg-gray);
+    }
+
+    .buy-box__title {
+      margin-bottom: 16px;
+      font-size: clamp(32px, 6vw, 48px);
+    }
+
+    .buy-box__price-wrapper {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .buy-box__price-original {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--pg-gray);
+      text-decoration: line-through;
+      letter-spacing: -0.02em;
+    }
+
+    .buy-box__price-member {
+      font-family: var(--font-heading);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--pg-black);
+      letter-spacing: -0.02em;
+    }
+
+    /* Non-member state: hide strikethrough, show only regular price */
+    .buy-box__price-wrapper.non-member .buy-box__price-original {
+      display: none;
+    }
+
+    .buy-box__price-wrapper.non-member .buy-box__price-member {
+      color: var(--pg-black);
+    }
+
+    /* Savings Display */
+    .buy-box__savings {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding: 12px 16px;
+      background: var(--pg-fog);
+      border-radius: 8px;
+      border-left: 3px solid var(--pg-orange);
+    }
+
+    .buy-box__savings-label {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--pg-gray);
+    }
+
+    .buy-box__savings-amount {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--pg-orange);
+    }
+
+    /* Hidden state for savings when toggle OFF */
+    .buy-box__savings.hidden,
+    .offer-box__savings-row.hidden {
+      display: none;
+    }
+
+    /* Config Pills */
+    .config-section {
+      margin-bottom: 20px;
+    }
+
+    .config-label {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .config-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .config-pill {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 12px 20px;
+      border: 2px solid var(--pg-pebble);
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-height: 44px;
+    }
+
+    .config-pill.active {
+      border-color: var(--pg-black);
+      background: var(--pg-black);
+      color: white;
+    }
+
+    .config-pill:hover:not(.active) {
+      border-color: var(--pg-stone);
+    }
+
+    /* PG1 Toggle - iOS-style switch */
+    .pg1-toggle {
+      background: var(--pg-fog);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .pg1-toggle__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+
+    .pg1-toggle__checkbox {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .pg1-toggle__switch {
+      position: relative;
+      width: 48px;
+      height: 28px;
+      background: var(--pg-pebble);
+      border-radius: 14px;
+      flex-shrink: 0;
+      transition: background 0.25s ease;
+    }
+
+    .pg1-toggle__switch::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 24px;
+      height: 24px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .pg1-toggle__checkbox:checked + .pg1-toggle__switch {
+      background: var(--pg-orange);
+    }
+
+    .pg1-toggle__checkbox:checked + .pg1-toggle__switch::after {
+      transform: translateX(20px);
+    }
+
+    .pg1-toggle__checkbox:focus-visible + .pg1-toggle__switch {
+      outline: 3px solid var(--pg-orange);
+      outline-offset: 2px;
+    }
+
+    .pg1-toggle__label {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .pg1-toggle__copy {
+      font-size: 14px;
+      color: var(--pg-gray);
+      margin-top: 8px;
+      margin-left: 60px;
+    }
+
+    /* Offer Items */
+    .offer-items {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .offer-items li {
+      position: relative;
+      padding-left: 24px;
+      font-family: var(--font-heading);
+      font-size: 18px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .offer-items li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--pg-orange);
+      font-weight: 700;
+    }
+
+    .buy-box__cta {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .buy-box__cta-rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .buy-box__cta-rating .buy-box__stars {
+      color: #FFB800;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .buy-box__cta-rating .buy-box__review-count {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-gray);
+    }
+
+    .buy-box__guarantee {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pg-gray);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .buy-box__trust {
+      padding-top: 16px;
+      border-top: 1px solid var(--pg-pebble);
+    }
+
+    .buy-box__trust .trust-badges {
+      justify-content: center;
+    }
+
+    /* Offer Box */
+    .offer-box {
+      background: var(--pg-fog);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .offer-box .offer-items {
+      margin-bottom: 16px;
+    }
+
+    .offer-dynamic {
+      color: var(--pg-gray);
+      font-weight: 400;
+    }
+
+    /* Offer Box Pricing */
+    .offer-box__pricing {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      padding-top: 16px;
+      margin-top: 8px;
+    }
+
+    .offer-box__price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .offer-box__price-original {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      color: var(--pg-gray);
+      text-decoration: line-through;
+    }
+
+    .offer-box__price-member {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--pg-black);
+    }
+
+    .offer-box__savings-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--pg-sand);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--pg-orange);
+    }
+
+    .offer-box__savings-label {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--pg-gray);
+    }
+
+    .offer-box__savings-amount {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pg-orange);
+    }
+
+    /* ========================================
+       SECTION 9: TESTIMONIALS — PREMIUM CARDS
+    ======================================== */
+    .testimonials__headline {
+      text-align: center;
+      margin-bottom: 12px;
+      font-size: clamp(32px, 6vw, 48px);
+    }
+
+    .testimonials__subheadline {
+      text-align: center;
+      color: var(--pg-gray);
+      margin-bottom: 48px;
+      font-size: 24px;
+    }
+
+    .testimonials__grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background: var(--pg-white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      transition: all 0.4s var(--ease-out);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      left: 24px;
+      font-family: var(--font-body);
+      font-size: 72px;
+      line-height: 1;
+      color: var(--pg-orange);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .testimonial-card__quote {
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-style: normal;
+      line-height: 1.65;
+      color: var(--pg-black);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .testimonial-card__author {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--pg-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .testimonial-card__author::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--pg-orange);
+    }
+
+    /* ========================================
+       SECTION 10: DESIGNER STORY — AUTHORITY
+    ======================================== */
+    .designer__content {
+      max-width: var(--container-narrow);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .designer__header {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 6vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--pg-black);
+      margin-bottom: 48px;
+      line-height: 1.1;
+    }
+
+    .designer__header-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .designer__header-line::before,
+    .designer__header-line::after {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background: var(--pg-orange);
+    }
+
+    .designer__header-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pg-orange);
+    }
+
+    .designer__photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .designer__photo::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid var(--pg-orange);
+      opacity: 0.2;
+    }
+
+    .designer__photo span {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--pg-gray);
+    }
+
+    .designer__name {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .designer__title {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--pg-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+    }
+
+    .designer__credentials {
+      list-style: none;
+      margin-bottom: 40px;
+      background: var(--pg-white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .designer__credentials li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-size: 18px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .designer__credentials li:last-child {
+      margin-bottom: 0;
+    }
+
+    .designer__credentials li::before {
+      content: "✓";
+      color: var(--pg-orange);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .designer__quote-wrapper {
+      background: var(--pg-black);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px 32px;
+      position: relative;
+    }
+
+    .designer__quote-mark {
+      display: block;
+      font-family: var(--font-body); /* GT Super Text for conversational tone */
+      font-size: 72px;
+      font-weight: 400;
+      line-height: 0.8;
+      color: var(--pg-orange);
+      margin-bottom: 16px;
+    }
+
+    .designer__quote {
+      font-family: var(--font-body);
+      font-size: 19px;
+      font-style: normal;
+      line-height: 1.7;
+      text-align: left;
+      color: var(--pg-white);
+      margin: 0;
+    }
+
+    /* ========================================
+       SECTION 11: GUARANTEE — BOLD TRUST
+    ======================================== */
+    .guarantee {
+      background: var(--pg-black);
+      color: var(--pg-white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guarantee::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--pg-orange-glow) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .guarantee__content {
+      max-width: 740px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+    }
+
+    @media (max-width: 767px) {
+      .guarantee__content {
+        padding: 40px 24px;
+      }
+    }
+
+    .guarantee__badge {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      background: var(--pg-orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      box-shadow: 0 8px 32px rgba(253, 51, 0, 0.4);
+    }
+
+    .guarantee__headline {
+      margin-bottom: 16px;
+      color: var(--pg-white);
+    }
+
+    .guarantee__name {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      color: var(--pg-orange);
+    }
+
+    .guarantee__copy {
+      text-align: left;
+      margin-bottom: 40px;
+      color: var(--pg-pebble);
+      font-size: 24px;
+    }
+
+    .guarantee__copy strong {
+      color: var(--pg-white);
+    }
+
+    .guarantee__contact {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: var(--radius-lg);
+      padding: 32px 48px;
+      margin-top: 40px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .guarantee__contact-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--pg-white);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .guarantee__contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .guarantee__contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--pg-white);
+      white-space: nowrap;
+    }
+
+    .guarantee__contact-item a {
+      color: var(--pg-orange);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .guarantee__contact-item a:hover {
+      color: var(--pg-white);
+    }
+
+    .guarantee__contact-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--pg-orange);
+      font-size: 18px;
+    }
+
+    @media (min-width: 640px) {
+      .guarantee__contact-items {
+        flex-direction: row;
+        justify-content: center;
+        gap: 56px;
+      }
+    }
+
+    /* ========================================
+       SECTION 12: BUNDLE — MIZUNO-STYLE SPLIT LAYOUT
+    ======================================== */
+    .bundle__layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .bundle__layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: start;
+      }
+    }
+
+    .bundle__visual-side {
+      position: sticky;
+      top: 100px;
+    }
+
+    .bundle__rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .bundle__headline {
+      margin-bottom: 12px;
+      font-size: clamp(28px, 5vw, 48px);
+    }
+
+    .bundle__intro {
+      margin-bottom: 24px;
+      color: var(--pg-gray);
+      font-size: 24px;
+    }
+
+    .bundle__visual {
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(145deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bundle__visual span {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-gray);
+    }
+
+    .bundle__tiers {
+      background: var(--pg-fog);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .bundle__tiers-title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .bundle__tier {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--pg-pebble);
+    }
+
+    .bundle__tier:last-child {
+      border-bottom: none;
+    }
+
+    .bundle__tier-quantity {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--pg-black);
+    }
+
+    .bundle__tier-savings {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--pg-orange);
+      font-weight: 500;
+    }
+
+    .bundle__step {
+      margin-bottom: 24px;
+    }
+
+    .bundle__step-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .bundle__lofts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .bundle__loft {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border: 2px solid var(--pg-pebble);
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-heading);
+      font-size: 14px;
+    }
+
+    .bundle__loft.selected {
+      border-color: var(--pg-orange);
+      background: rgba(253, 51, 0, 0.05);
+    }
+
+    .bundle__loft input {
+      accent-color: var(--pg-orange);
+    }
+
+    .bundle__summary {
+      background: var(--pg-fog);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .bundle__summary-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .bundle__summary-items {
+      font-size: 14px;
+      color: var(--pg-gray);
+      margin-bottom: 12px;
+    }
+
+    .bundle__cta {
+      margin-bottom: 16px;
+    }
+
+    .bundle__below-cta {
+      font-size: 14px;
+      color: var(--pg-gray);
+      text-align: center;
+    }
+
+    .bundle__guarantee {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pg-gray);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .bundle__quiz-cta {
+      background: var(--pg-sand);
+      border: 2px dashed var(--pg-stone);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-top: 40px;
+      text-align: center;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bundle__quiz-cta-label {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pg-black);
+      margin-bottom: 8px;
+    }
+
+    .bundle__quiz-cta-text {
+      font-size: 16px;
+      color: var(--pg-gray);
+      margin: 0;
+    }
+
+    .bundle__quiz-cta-text strong {
+      color: var(--pg-orange);
+    }
+
+    .bundle__order-details {
+      background: var(--pg-white);
+      border: 1px solid var(--pg-pebble);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-bottom: 16px;
+    }
+
+    .bundle__order-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--pg-fog);
+    }
+
+    .bundle__order-row:last-child {
+      border-bottom: none;
+    }
+
+    .bundle__order-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .bundle__order-value {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--pg-black);
+    }
+
+    .bundle__savings-amount {
+      color: var(--pg-orange);
+    }
+
+    .bundle__order-row--total {
+      border-top: 2px solid var(--pg-black);
+      margin-top: 8px;
+      padding-top: 12px;
+    }
+
+    .bundle__order-row--total .bundle__order-label,
+    .bundle__order-row--total .bundle__order-value {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    /* ========================================
+       SECTION 13: DETAILED SPECIFICATIONS
+    ======================================== */
+    .specs__headline {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: clamp(28px, 6vw, 48px);
+    }
+
+    .specs__positioning {
+      font-family: var(--font-body);
+      font-size: 24px;
+      text-align: center;
+      max-width: var(--container-narrow);
+      margin: 0 auto 32px;
+      line-height: 1.6;
+      color: var(--pg-gray);
+      border: none;
+      padding: 0;
+    }
+
+    .specs__subheadline {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 600;
+      text-align: center;
+      color: var(--pg-black);
+      margin-bottom: 48px;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .specs__subheadline::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -12px;
+      width: 120px;
+      height: 3px;
+      background: var(--pg-orange);
+      border-radius: 2px;
+    }
+
+    .specs__tables {
+      display: grid;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .specs__tables {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+    }
+
+    .specs__table-group {
+      background: var(--pg-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .specs__table-group--wide {
+      grid-column: 1 / -1;
+    }
+
+    .specs__table-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--pg-black);
+      color: white;
+      padding: 14px 20px;
+      margin: 0;
+    }
+
+    /* Specs Accordion */
+    .specs-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .specs-accordion__item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .specs-accordion__header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--pg-black);
+      color: var(--pg-white);
+      border: none;
+    }
+
+    .specs-accordion__title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .specs-accordion__icon {
+      display: none;
+    }
+
+    .specs-accordion__content {
+      background: var(--pg-white);
+    }
+
+    .specs-accordion__content .specs-table {
+      margin: 0;
+    }
+
+    .specs-accordion__content .specs__loft-wrapper {
+      padding: 0;
+    }
+
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-heading);
+      font-size: 18px;
+    }
+
+    .specs-table__label {
+      padding: 14px 20px;
+      font-weight: 500;
+      color: var(--pg-gray);
+      border-bottom: 1px solid var(--pg-fog);
+      width: 40%;
+    }
+
+    .specs-table__value {
+      padding: 14px 20px;
+      color: var(--pg-black);
+      border-bottom: 1px solid var(--pg-fog);
+    }
+
+    .specs-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Loft Options Table */
+    .specs__loft-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .specs-table--lofts {
+      min-width: 480px;
+    }
+
+    .specs-table--lofts th {
+      background: var(--pg-fog);
+      color: var(--pg-black);
+      padding: 14px 16px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      border-bottom: 1px solid var(--pg-pebble);
+    }
+
+    .specs-table--lofts th:first-child {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .specs-table--lofts td {
+      padding: 12px 16px;
+      text-align: center;
+      border-bottom: 1px solid var(--pg-fog);
+    }
+
+    .specs-table--lofts td:first-child {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .specs-table--lofts .specs-table__label {
+      width: auto;
+    }
+
+    .specs__availability {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      text-align: center;
+      color: var(--pg-gray);
+      margin: 0;
+    }
+
+    /* ========================================
+       SECTION 14: FINAL CTA — HERO-STYLE SPLIT LAYOUT
+    ======================================== */
+    .final-cta {
+      background: linear-gradient(180deg, var(--pg-mist) 0%, var(--pg-sand) 100%);
+      position: relative;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--pg-pebble), transparent);
+    }
+
+    .final-cta__layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .final-cta__layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+    }
+
+    .final-cta__visual-side {
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .final-cta__visual-side {
+        text-align: left;
+      }
+    }
+
+    .final-cta__headline {
+      margin-bottom: 32px;
+      font-size: clamp(32px, 6vw, 48px);
+    }
+
+    .final-cta__visual {
+      aspect-ratio: 1;
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-xl);
+      background: linear-gradient(145deg, var(--pg-fog) 0%, var(--pg-sand) 100%);
+    }
+
+    @media (min-width: 768px) {
+      .final-cta__visual {
+        max-width: none;
+      }
+    }
+
+    .final-cta__content-side {
+      background: var(--pg-white);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (min-width: 768px) {
+      .final-cta__content-side {
+        padding: 40px 48px;
+        margin-left: -32px;
+      }
+    }
+
+    .final-cta__rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      margin-bottom: 16px;
+    }
+
+    .final-cta__rating .buy-box__stars {
+      font-size: 20px;
+    }
+
+    .final-cta__price {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .final-cta__benefits {
+      margin-bottom: 32px;
+      padding-top: 16px;
+    }
+
+    .final-cta__button {
+      margin-bottom: 20px;
+    }
+
+    .final-cta__button .btn-primary {
+      width: 100%;
+      font-size: 16px;
+      padding: 20px 40px;
+    }
+
+    .final-cta__guarantee {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pg-stone);
+      text-align: center;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .final-cta__guarantee .guarantee-line2 {
+      display: block;
+    }
+
+    .final-cta__urgency {
+      grid-column: 1 / -1;
+      background: var(--pg-black);
+      color: var(--pg-white);
+      font-family: var(--font-mono);
+      font-size: 18px;
+      text-align: center;
+      padding: 16px 24px;
+      margin-top: 32px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-radius: var(--radius-lg);
+    }
+
+    .final-cta__urgency strong {
+      color: var(--pg-orange);
+    }
+
+    .final-cta__urgency #finalCtaTimer {
+      color: var(--pg-orange);
+      font-weight: 700;
+    }
+
+    /* ========================================
+       SECTION 15: FAQ — PREMIUM ACCORDION
+    ======================================== */
+    .faq__headline {
+      text-align: center;
+      margin-bottom: 48px;
+      font-size: clamp(28px, 6vw, 48px);
+    }
+
+    .faq__list {
+      max-width: var(--container-narrow);
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--pg-white);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s var(--ease-out);
+    }
+
+    .faq-item:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-item.open {
+      box-shadow: var(--shadow-md);
+      border-color: var(--pg-orange);
+    }
+
+    .faq-item__question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: transparent;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-weight: 500;
+      font-size: 18px;
+      border: none;
+      width: 100%;
+      text-align: left;
+      transition: color 0.2s ease;
+    }
+
+    .faq-item__question:hover {
+      color: var(--pg-orange);
+    }
+
+    .faq-item.open .faq-item__question {
+      color: var(--pg-orange);
+    }
+
+    .faq-item__icon {
+      font-size: 24px;
+      color: var(--pg-pebble);
+      transition: all 0.3s var(--ease-out);
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--pg-fog);
+    }
+
+    .faq-item:hover .faq-item__icon {
+      background: var(--pg-sand);
+    }
+
+    .faq-item.open .faq-item__icon {
+      transform: rotate(45deg);
+      background: var(--pg-orange);
+      color: var(--pg-white);
+    }
+
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s var(--ease-out);
+    }
+
+    .faq-item.open .faq-item__answer {
+      max-height: 600px;
+    }
+
+    .faq-item__answer-content {
+      padding: 0 24px 24px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--pg-gray);
+    }
+
+    .faq-item__answer-content strong {
+      color: var(--pg-black);
+    }
+
+    /* ========================================
+       FOOTER — REFINED
+    ======================================== */
+    .site-footer {
+      background: var(--pg-black);
+      color: white;
+      padding: 80px 0 40px;
+      position: relative;
+    }
+
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    }
+
+    .footer__content {
+      display: grid;
+      gap: 56px;
+      margin-bottom: 56px;
+    }
+
+    .footer__brand {
+      max-width: 280px;
+    }
+
+    .footer__logo-img {
+      height: 24px;
+      width: auto;
+    }
+
+    .footer__tagline {
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: var(--pg-stone);
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+
+    .footer__links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .footer__column-title {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pg-stone);
+      margin-bottom: 20px;
+    }
+
+    .footer__column ul {
+      list-style: none;
+    }
+
+    .footer__column li {
+      margin-bottom: 12px;
+    }
+
+    .footer__column a {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .footer__column a:hover {
+      color: var(--pg-orange);
+      transform: translateX(4px);
+    }
+
+    .footer__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer__copyright {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-stone);
+      letter-spacing: 0.02em;
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 32px;
+    }
+
+    .footer__legal a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--pg-stone);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer__legal a:hover {
+      color: white;
+    }
+
+    @media (min-width: 640px) {
+      .footer__content {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+      }
+
+      .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    /* ========================================
+       STICKY CTA BAR (Mobile Only) — PREMIUM
+    ======================================== */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 20px;
+      padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      background: var(--pg-white);
+      border-top: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 -8px 32px rgba(0,0,0,0.12);
+      transform: translateY(100%);
+      transition: transform 0.4s var(--ease-out);
+      z-index: 100;
+    }
+
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+
+    .sticky-cta__inner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sticky-cta__price {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .sticky-cta .btn-primary {
+      flex: 1;
+      font-size: 14px;
+      padding: 14px 20px;
+      min-height: 48px;
+    }
+
+    /* ========================================
+       RESPONSIVE STYLES
+    ======================================== */
+    @media (min-width: 640px) {
+      .container {
+        padding: 0 32px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      /* Versatility uses carousel, not grid */
+
+      .testimonials__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 40px;
+      }
+
+      section {
+        padding: var(--section-padding-desktop) 0;
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+
+      h2 {
+        font-size: 40px;
+      }
+
+      h3 {
+        font-size: 28px;
+      }
+
+      body {
+        font-size: 19px;
+      }
+
+      p {
+        margin-bottom: 24px;
+      }
+
+      .btn-primary {
+        width: auto;
+        min-width: 300px;
+      }
+
+      /* Features Grid - Keep full-width stacked layout with alternating sides */
+
+      /* Versatility uses carousel with arrows - no grid needed */
+
+      /* Testimonials Grid */
+      .testimonials__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .testimonial-card:nth-child(4),
+      .testimonial-card:nth-child(5) {
+        grid-column: span 1;
+      }
+
+      /* Sticky CTA - Hide on Desktop */
+      .sticky-cta {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       REDUCED MOTION
+    ======================================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      [data-anim] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ========================================
+       TOP NAVIGATION BAR
+  ======================================== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="images/PER-Combination-White.svg" alt="Performance Golf" class="nav__logo-img">
+      </a>
+      <ul class="nav__links">
+        <li><a href="#problem" class="nav__link">Problem</a></li>
+        <li><a href="#solution" class="nav__link">Solution</a></li>
+        <li><a href="#features" class="nav__link">Features</a></li>
+        <li><a href="#how-it-works" class="nav__link">Find The Right Wedge</a></li>
+        <li><a href="#reviews" class="nav__link">Reviews</a></li>
+        <li><a href="#contact" class="nav__link">Contact Us</a></li>
+      </ul>
+      <a href="#buyBox" class="nav__cta">BUY NOW</a>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       SECTION 1B: HERO (Sales Page) — APPLE-STYLE SPLIT LAYOUT
+  ======================================== -->
+  <section class="hero">
+    <div class="hero__container">
+      <!-- Hero Header - Centered -->
+      <div class="hero__header">
+        <!-- ONE.1 Pill Badge -->
+        <div class="hero__badge">
+          <span class="hero__badge-text">NEVER. CHUNK. AGAIN.</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="hero__headline">
+          New: <span class="text-orange">"Auto-Correct" Wedge</span><br>
+          Glides Through Any Lie
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="hero__subheadline">
+          The only premium wedge with an Auto-Glide Sole that glides through the ground instead of digging into it... even on your "bad swings."
+        </p>
+      </div>
+
+      <!-- Two-Column Content Grid -->
+      <div class="hero__content-grid">
+        <!-- Left: Hero Animation -->
+        <div class="hero__animation-wrapper">
+          <div class="hero__animation">
+            <span class="hero__animation-placeholder">[Hero Animation: ONE.1 Wedge gliding through turf — Auto-Glide Sole in action]</span>
+          </div>
+        </div>
+
+        <!-- Right: Benefits + CTA -->
+        <div class="hero__action">
+          <ul class="hero__benefits">
+            <li><strong>Eliminate fat shots and chunks</strong> so you stop coming up short even when you mis-hit it</li>
+            <li><strong>Break the "yips" cycle</strong> – commit to every wedge shot without flinching</li>
+            <li><strong>No more bladed balls.</strong> Thump the ground with confidence knowing the Auto-Glide Sole does NOT dig – it manages ground interaction <em>for you</em></li>
+            <li><strong>Finish close to the hole</strong> with distance control from tight lies, thick rough, and sand</li>
+            <li><strong>Looks professional. Feels friendly.</strong> Your playing partners won't know what hit 'em</li>
+          </ul>
+
+          <div class="hero__cta-wrapper">
+            <button class="btn-primary" onclick="scrollToBuyBox()">GET MY ONE.1 WEDGE NOW</button>
+          </div>
+
+          <!-- Trust Elements -->
+          <div class="hero__trust">
+            <div class="hero__rating">
+              <span class="hero__stars">★★★★★</span>
+              <span class="hero__review-count">30,993 Happy Golfers</span>
+            </div>
+            <p class="hero__guarantee">🛡️ 365-Day "No Dig, No Doubt" Demo Period<br><span class="guarantee-line2">& 100% Money-Back Guarantee</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 2: UGC CAROUSEL
+  ======================================== -->
+  <section class="ugc-carousel bg-white" id="reviews">
+    <div class="container">
+      <div class="carousel-wrapper">
+        <button class="carousel-arrow carousel-arrow--prev" data-carousel="ugc" aria-label="Previous slide">←</button>
+        <div class="ugc-carousel__track">
+        <div class="ugc-card">
+          <div class="ugc-card__video">
+            <div class="ugc-card__play">▶</div>
+            <!-- TODO: Replace with actual UGC video -->
+          </div>
+          <div class="ugc-card__info">
+            <p class="ugc-card__quote">"Changed my short game completely"</p>
+            <p class="ugc-card__author">[Customer Name], [Handicap]</p>
+          </div>
+        </div>
+
+        <div class="ugc-card">
+          <div class="ugc-card__video">
+            <div class="ugc-card__play">▶</div>
+          </div>
+          <div class="ugc-card__info">
+            <p class="ugc-card__quote">"Finally stopped chunking my chips"</p>
+            <p class="ugc-card__author">[Customer Name], [Handicap]</p>
+          </div>
+        </div>
+
+        <div class="ugc-card">
+          <div class="ugc-card__video">
+            <div class="ugc-card__play">▶</div>
+          </div>
+          <div class="ugc-card__info">
+            <p class="ugc-card__quote">"Best wedge I've ever owned"</p>
+            <p class="ugc-card__author">[Customer Name], [Handicap]</p>
+          </div>
+        </div>
+
+        <div class="ugc-card">
+          <div class="ugc-card__video">
+            <div class="ugc-card__play">▶</div>
+          </div>
+          <div class="ugc-card__info">
+            <p class="ugc-card__quote">"My buddies can't believe the difference"</p>
+            <p class="ugc-card__author">[Customer Name], [Handicap]</p>
+          </div>
+        </div>
+
+        <div class="ugc-card">
+          <div class="ugc-card__video">
+            <div class="ugc-card__play">▶</div>
+          </div>
+          <div class="ugc-card__info">
+            <p class="ugc-card__quote">"Confidence is back in my short game"</p>
+            <p class="ugc-card__author">[Customer Name], [Handicap]</p>
+          </div>
+        </div>
+
+        <div class="ugc-card">
+          <div class="ugc-card__video">
+            <div class="ugc-card__play">▶</div>
+          </div>
+          <div class="ugc-card__info">
+            <p class="ugc-card__quote">"No more fat shots around the green"</p>
+            <p class="ugc-card__author">[Customer Name], [Handicap]</p>
+          </div>
+        </div>
+
+        <div class="ugc-card">
+          <div class="ugc-card__video">
+            <div class="ugc-card__play">▶</div>
+          </div>
+          <div class="ugc-card__info">
+            <p class="ugc-card__quote">"Saved me 5 strokes per round"</p>
+            <p class="ugc-card__author">[Customer Name], [Handicap]</p>
+          </div>
+        </div>
+
+        <div class="ugc-card">
+          <div class="ugc-card__video">
+            <div class="ugc-card__play">▶</div>
+          </div>
+          <div class="ugc-card__info">
+            <p class="ugc-card__quote">"Worth every penny"</p>
+            <p class="ugc-card__author">[Customer Name], [Handicap]</p>
+          </div>
+        </div>
+        </div>
+        <button class="carousel-arrow carousel-arrow--next" data-carousel="ugc" aria-label="Next slide">→</button>
+      </div>
+
+      <div class="carousel-nav">
+        <div class="carousel-dots">
+          <button class="carousel-dot active" data-carousel="ugc" data-index="0" aria-label="Slide 1"></button>
+          <button class="carousel-dot" data-carousel="ugc" data-index="1" aria-label="Slide 2"></button>
+          <button class="carousel-dot" data-carousel="ugc" data-index="2" aria-label="Slide 3"></button>
+          <button class="carousel-dot" data-carousel="ugc" data-index="3" aria-label="Slide 4"></button>
+          <button class="carousel-dot" data-carousel="ugc" data-index="4" aria-label="Slide 5"></button>
+          <button class="carousel-dot" data-carousel="ugc" data-index="5" aria-label="Slide 6"></button>
+          <button class="carousel-dot" data-carousel="ugc" data-index="6" aria-label="Slide 7"></button>
+          <button class="carousel-dot" data-carousel="ugc" data-index="7" aria-label="Slide 8"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 3: PROBLEM AGITATION
+  ======================================== -->
+  <section class="problem" id="problem" data-anim="fade-up">
+    <div class="container">
+      <div class="problem__layout">
+        <div class="problem__text">
+          <p class="problem__subheadline">The Problem</p>
+          <div class="problem__stat"><span class="problem__stat-number" data-count="84">84</span><span class="problem__stat-suffix">%</span></div>
+          <h2 class="problem__headline">The Consistency Crisis</h2>
+          <div class="problem__copy">
+            <p>84% of golfers use <strong><em class="text-orange">cavity-backed irons</em></strong> because they help you hit straighter, more consistent shots without perfect technique.</p>
+            <p>But those same golfers use <strong><em class="text-orange">bladed wedges</em></strong> that punish anything but perfection. One degree off, and you dig into the turf chunking it short... or blade it long.</p>
+          </div>
+        </div>
+        <div class="problem__visual">
+          <span>[Wedge digging into turf — before/after comparison]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 4: MECHANISM
+  ======================================== -->
+  <section class="mechanism bg-mist" id="solution">
+    <div class="container">
+      <div class="mechanism__layout">
+        <div class="mechanism__text" data-anim="fade-up">
+          <p class="mechanism__eyebrow">The Solution</p>
+          <h2 class="mechanism__headline">No Dig. <span class="headline-underline">No Doubt.</span></h2>
+          <div class="mechanism__copy">
+            <p>The ONE.1 "Auto-Correct" Wedge looks like a normal, premium wedge, but it gives you an invisible advantage:</p>
+            <p>The Auto-Glide Sole glides through any lie instead of digging into it.</p>
+            <p>That means it manages ground interaction for you... so you get up and on the green in one shot – even when you make a steep, quick swing or hit way behind the ball.</p>
+          </div>
+        </div>
+        <div class="mechanism__visual" data-anim="fade-up">
+          <span>[Auto-Glide Sole Animation - 4-way cambered surface highlighting GLIDE vs DIG]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 5: FEATURES
+  ======================================== -->
+  <section class="features bg-white" id="features">
+    <div class="container">
+      <div class="features__grid">
+        <!-- Feature 1: Auto-Glide Sole -->
+        <div class="feature-card" data-anim="fade-up">
+          <div class="feature-card__text">
+            <p class="feature-card__eyebrow eyebrow">FEATURE 1:<br>AUTO-GLIDE SOLE</p>
+            <h3 class="feature-card__headline">Your <span class="text-orange">Fat Shot Fix</span></h3>
+            <div class="feature-card__copy">
+              <p>The "Auto-Glide Sole" gives you Four-Way Forgiveness because instead of digging, it's four-way cambered shape glides through the ground automatically – regardless of your attack angle.</p>
+              <p>This means you make consistently clean contact and finish closer to the hole – even when you're in a bad lie or you hit way behind the ball.</p>
+            </div>
+          </div>
+          <div class="feature-card__visual">
+            <span>[Auto-Glide Sole visual - 3D render showing 4-way camber]</span>
+          </div>
+        </div>
+
+        <!-- Feature 2: Distance Control -->
+        <div class="feature-card" data-anim="fade-up">
+          <div class="feature-card__text">
+            <p class="feature-card__eyebrow eyebrow">FEATURE 2:<br>DISTANCE CONTROL WEIGHTING</p>
+            <h3 class="feature-card__headline">Delicate Distance Control... <span class="headline-highlight-yellow">Even On Mis-Hits</span></h3>
+            <div class="feature-card__copy">
+              <p>Enjoy consistent ball speed across the entire face — not just the sweet spot... thanks to Distance Control Weighting.</p>
+              <p>The Sole Stability Wing and high toe weight pad stabilize the face when you miss the *sweet spot* – so even your mis-hits reach the green.</p>
+            </div>
+          </div>
+          <div class="feature-card__visual">
+            <span>[Distance Control visual - weight distribution cross-section]</span>
+          </div>
+        </div>
+
+        <!-- Feature 3: Alignment -->
+        <div class="feature-card" data-anim="fade-up">
+          <div class="feature-card__text">
+            <p class="feature-card__eyebrow eyebrow">FEATURE 3:<br>SQUARE AND SHOOT ALIGNMENT</p>
+            <h3 class="feature-card__headline">Perfect Aim – <span class="flip-text" id="flipEveryTime" data-text="Every Time.">Every Time.</span></h3>
+            <div class="feature-card__copy">
+              <p>"Square and Shoot" Alignment pairs a straight leading edge with center-face markings, so you instantly square the face at address.</p>
+              <p>This means you know exactly where the ball is going before you swing. No second-guessing your setup. No alignment anxiety. Just Square It, Swing It, Stick It.</p>
+            </div>
+          </div>
+          <div class="feature-card__visual">
+            <span>[Alignment visual - top-down view with alignment guides]</span>
+          </div>
+        </div>
+
+        <!-- Feature 4: Spin -->
+        <div class="feature-card" data-anim="fade-up">
+          <div class="feature-card__text">
+            <p class="feature-card__eyebrow eyebrow">FEATURE 4:<br>SPIN-FAST FACE</p>
+            <h3 class="feature-card__headline">Spin It To Win It <span class="text-orange">(Legally!)</span></h3>
+            <div class="feature-card__copy">
+              <p>The "Spin-Fast Face" combines max-volume conforming grooves with laser etchings to generate maximum *legal* spin on full swings AND partial shots.</p>
+              <p>So whether you're finessing a greenside chip that needs to check fast instead of rolling off the green... or you're 100 yards away and want to land it past the pin and watch it rip back... you'll have the spin to Stop, Drop, And Roll It Close.</p>
+            </div>
+          </div>
+          <div class="feature-card__visual">
+            <span>[Spin-Fast Face visual - groove close-up with spin visualization]</span>
+          </div>
+        </div>
+
+        <!-- Feature 5: Swing Weighting -->
+        <div class="feature-card" data-anim="fade-up">
+          <div class="feature-card__text">
+            <p class="feature-card__eyebrow eyebrow">FEATURE 5:<br>MOTION SWING WEIGHTING</p>
+            <h3 class="feature-card__headline">Stops Flipping For <span class="headline-underline">Better Chipping</span></h3>
+            <div class="feature-card__copy">
+              <p>We added "Swing Stability Weighting" — a stepless shaft combined with a 40-gram counterweight — that stops you from flipping at impact and promotes solid contact.</p>
+              <p>Plus, this weighting accelerates through the ball – even when you "quit" on the shot... so you make good contact on bad swings.</p>
+            </div>
+          </div>
+          <div class="feature-card__visual">
+            <span>[Swing Weighting visual - stepless shaft with counterweight callout]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 6: VERSATILITY
+  ======================================== -->
+  <section class="versatility bg-sand">
+    <div class="container">
+      <h2 class="versatility__headline" data-anim="fade-up">Grip It And Chip It — From <span class="typewriter-text" id="lieTypewriter">Any Lie</span></h2>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-arrow carousel-arrow--prev" data-carousel="versatility" aria-label="Previous slide">←</button>
+        <div class="versatility__track">
+          <div class="versatility-card">
+            <div class="versatility-card__visual image-placeholder">
+              <span>[Sand shot visual]</span>
+            </div>
+            <div class="versatility-card__content">
+              <h3 class="versatility-card__title">Sand? Solved.</h3>
+              <p class="versatility-card__copy">The four-way camber glides through sand instead of digging deep. Escape bunkers with confidence.</p>
+            </div>
+          </div>
+
+          <div class="versatility-card">
+            <div class="versatility-card__visual image-placeholder">
+              <span>[Rough shot visual]</span>
+            </div>
+            <div class="versatility-card__content">
+              <h3 class="versatility-card__title">Rough? Ready.</h3>
+              <p class="versatility-card__copy">Heavy winged sole cuts through thick grass without grabbing. Clean contact every time.</p>
+            </div>
+          </div>
+
+          <div class="versatility-card">
+            <div class="versatility-card__visual image-placeholder">
+              <span>[Wet conditions visual]</span>
+            </div>
+            <div class="versatility-card__content">
+              <h3 class="versatility-card__title">Wet? No Worries.</h3>
+              <p class="versatility-card__copy">Trailing edge extension prevents the leading edge from digging into soft turf.</p>
+            </div>
+          </div>
+
+          <div class="versatility-card">
+            <div class="versatility-card__visual image-placeholder">
+              <span>[Tight lie visual]</span>
+            </div>
+            <div class="versatility-card__content">
+              <h3 class="versatility-card__title">Tight Lies? Tamed.</h3>
+              <p class="versatility-card__copy">The "Un-Chunkable" cambered sole provides just enough bounce to glide without blading.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-arrow carousel-arrow--next" data-carousel="versatility" aria-label="Next slide">→</button>
+      </div>
+
+      <div class="carousel-nav">
+        <div class="carousel-dots">
+          <button class="carousel-dot active" data-carousel="versatility" data-index="0" aria-label="Slide 1"></button>
+          <button class="carousel-dot" data-carousel="versatility" data-index="1" aria-label="Slide 2"></button>
+          <button class="carousel-dot" data-carousel="versatility" data-index="2" aria-label="Slide 3"></button>
+          <button class="carousel-dot" data-carousel="versatility" data-index="3" aria-label="Slide 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 7: QUIZ
+  ======================================== -->
+  <section class="quiz-section bg-mist" id="how-it-works">
+    <div class="container">
+      <div class="quiz-section__layout">
+        <div class="quiz-section__text" data-anim="fade-up">
+          <p class="quiz-section__eyebrow">Find Your Perfect Wedge</p>
+          <h2 class="quiz-section__headline">Less Grind, More Glide.</h2>
+          <div class="quiz-section__copy">
+            <p>Unlike traditional wedges that require you to choose between dozens of lofts, grind options, bounce angles, and shaft flexes... we engineered the ONE.1 to <em>simplify</em> your short game.</p>
+            <p>To find out which ONE.1 Wedge will save you the most strokes, take the 60-Second Wedge Workshop.</p>
+          </div>
+          <div class="quiz-section__cta">
+            <button class="btn-primary" onclick="openQuiz()">Find My ONE.1 Wedge</button>
+          </div>
+        </div>
+        <div class="quiz-section__visual" data-anim="fade-up">
+          <span>[Loft comparison visual — 50°, 56°, 60°, 63° ONE.S wedges]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Modal -->
+  <div class="quiz-modal" id="quizModal">
+    <div class="quiz-modal__content">
+      <div class="quiz-modal__header">
+        <span class="quiz-modal__progress-text">Question <span id="questionNum">1</span> of 6</span>
+        <button class="quiz-modal__close" onclick="closeQuiz()">&times;</button>
+      </div>
+
+      <div class="quiz-progress">
+        <div class="quiz-progress__fill" id="progressFill"></div>
+      </div>
+
+      <div class="quiz-modal__body">
+        <!-- Question 1 -->
+        <div class="quiz-question active" data-question="1">
+          <p class="quiz-question__text">How confident are you over chip shots right now?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="A">Very confident</button>
+            <button class="quiz-option" data-value="B">Somewhat confident</button>
+            <button class="quiz-option" data-value="C">Not confident at all</button>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-question" data-question="2">
+          <p class="quiz-question__text">What frustrates you most about your short game?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="A">Chunking chips fat</button>
+            <button class="quiz-option" data-value="B">Blading chips over the green</button>
+            <button class="quiz-option" data-value="C">Inconsistent distance control</button>
+            <button class="quiz-option" data-value="D">All of the above</button>
+          </div>
+        </div>
+
+        <!-- Question 3 (DETERMINING) -->
+        <div class="quiz-question" data-question="3">
+          <p class="quiz-question__text">Where do you lose the most strokes?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="A">Bunker shots and sand saves</button>
+            <button class="quiz-option" data-value="B">Full swing approach shots from 75 to 125 yards</button>
+            <button class="quiz-option" data-value="C">Delicate chips and touch shots around the green</button>
+            <button class="quiz-option" data-value="D">Bad lies and unpredictable situations</button>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-question" data-question="4">
+          <p class="quiz-question__text">What's your current wedge setup?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="A">Gap wedge + sand wedge</button>
+            <button class="quiz-option" data-value="B">Gap wedge + sand wedge + lob wedge</button>
+            <button class="quiz-option" data-value="C">Gap wedge + sand wedge + lob wedge + pitching wedge</button>
+            <button class="quiz-option" data-value="D">I'm not sure what I have</button>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="quiz-question" data-question="5">
+          <p class="quiz-question__text">How far do you typically hit your pitching wedge?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="A">80-100 yards</button>
+            <button class="quiz-option" data-value="B">100-120 yards</button>
+            <button class="quiz-option" data-value="C">120-140 yards</button>
+            <button class="quiz-option" data-value="D">140+ yards</button>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="quiz-question" data-question="6">
+          <p class="quiz-question__text">How far do you currently hit your drives?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-value="A">250+ yards</button>
+            <button class="quiz-option" data-value="B">200-250 yards</button>
+            <button class="quiz-option" data-value="C">200 yards or less</button>
+          </div>
+        </div>
+
+        <!-- Quiz Result -->
+        <div class="quiz-result" id="quizResult">
+          <h3 class="quiz-result__headline" id="resultHeadline">Your Perfect Wedge: 56° Wedge</h3>
+
+          <div class="quiz-result__visual image-placeholder">
+            <span>[Product Image]</span>
+          </div>
+
+          <div class="quiz-result__copy" id="resultCopy">
+            <p>Delicate chips and touch shots around the green require confidence — and that starts with consistent contact. The 56° is your Wedge Workhorse, built to handle any lie and every situation with one simple swing.</p>
+            <p>The Auto-Glide Sole eliminates the fear of chunking and delivers delicious distance control, so you commit to your shots knowing the club will do the work.</p>
+          </div>
+
+          <div class="quiz-result__build-set">
+            <p class="quiz-result__build-set-title">Build Your Set:</p>
+            <p class="quiz-result__build-set-copy" id="resultBuildSet">Add the 60° for bunker escapes and high soft shots, then the 50° for longer approach shots.</p>
+          </div>
+
+          <button class="btn-primary" onclick="closeQuiz(); scrollToBuyBox();" id="resultCta">GET MY 56° WEDGE NOW</button>
+
+          <button class="specs-reveal-btn" onclick="toggleSpecs()">
+            <span class="specs-reveal-btn__text">Show All Specs</span>
+            <span class="specs-reveal-btn__icon">↓</span>
+          </button>
+
+          <!-- Specs Panel (hidden by default) -->
+          <div class="specs-panel" id="specsPanel">
+            <div class="specs-panel__section">
+              <h4 class="specs-panel__title">General Specifications</h4>
+              <div class="specs-panel__grid">
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">Sole Design</span>
+                  <span class="specs-panel__value">Auto-Glide Sole: 4-way cambered</span>
+                </div>
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">Sole Features</span>
+                  <span class="specs-panel__value">Trailing edge extension, heavy winged sole</span>
+                </div>
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">Weighting</span>
+                  <span class="specs-panel__value">40g counterweight + high toe weight + deep cavity</span>
+                </div>
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">D4 Swingweight</span>
+                  <span class="specs-panel__value">Pre Counterbalance</span>
+                </div>
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">Leading Edge</span>
+                  <span class="specs-panel__value">Straight (for alignment)</span>
+                </div>
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">Face</span>
+                  <span class="specs-panel__value">Max volume conforming grooves + laser-etched texture</span>
+                </div>
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">Finish</span>
+                  <span class="specs-panel__value">Premium black</span>
+                </div>
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">Shaft</span>
+                  <span class="specs-panel__value">Stepless steel, R+ Wedge Flex | 0.370 Tip, 0.600" Butt</span>
+                </div>
+                <div class="specs-panel__row">
+                  <span class="specs-panel__label">Grip</span>
+                  <span class="specs-panel__value">R58 Core, Velvet Pattern</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="specs-panel__section">
+              <h4 class="specs-panel__title">Specifications by Loft</h4>
+              <div class="specs-panel__table-wrapper">
+                <table class="specs-panel__table">
+                  <thead>
+                    <tr>
+                      <th>Loft</th>
+                      <th>Lie Angle</th>
+                      <th>Length</th>
+                      <th>Swingweight</th>
+                      <th>Counterweight</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>50°</td>
+                      <td>64°</td>
+                      <td>35.75"</td>
+                      <td>D4</td>
+                      <td>40g</td>
+                    </tr>
+                    <tr>
+                      <td>56°</td>
+                      <td>64°</td>
+                      <td>35.50"</td>
+                      <td>D4</td>
+                      <td>40g</td>
+                    </tr>
+                    <tr>
+                      <td>60°</td>
+                      <td>64°</td>
+                      <td>35.25"</td>
+                      <td>D4</td>
+                      <td>40g</td>
+                    </tr>
+                    <tr>
+                      <td>63° (ONE.S)</td>
+                      <td>64°</td>
+                      <td>35.00"</td>
+                      <td>D4</td>
+                      <td>40g</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="specs-panel__availability">Available in Men's Right Hand and Left Hand</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================
+       SECTION 8: BUY BOX — Split Layout (Mizuno-Style)
+  ======================================== -->
+  <section class="buy-box-section bg-fog" id="buyBox">
+    <div class="container">
+      <div class="buy-box-layout" data-anim="fade-up">
+        <!-- Product Info & Configurator (Left Side) -->
+        <div class="buy-box__content">
+          <h2 class="buy-box__title">ONE.1 Wedge</h2>
+
+          <div class="buy-box__price-wrapper" id="buyBoxPriceWrapper">
+            <span class="buy-box__price-original" id="buyBoxPriceOriginal">$199</span>
+            <span class="buy-box__price-member" id="buyBoxPriceMember">$149</span>
+          </div>
+
+          <div class="config-section">
+            <p class="config-label">Hand</p>
+            <div class="config-pills" data-config="hand">
+              <button class="config-pill active" data-value="Right">Right</button>
+              <button class="config-pill" data-value="Left">Left</button>
+            </div>
+          </div>
+
+          <div class="config-section">
+            <p class="config-label">Select Your Loft(s)</p>
+            <div class="config-pills config-pills--multi" data-config="loft">
+              <button class="config-pill" data-value="50">50°</button>
+              <button class="config-pill active" data-value="56">56°</button>
+              <button class="config-pill" data-value="60">60°</button>
+              <button class="config-pill" data-value="63">63° ONE.1S</button>
+            </div>
+          </div>
+
+          <!-- Offer Box -->
+          <div class="offer-box">
+            <ul class="offer-items">
+              <li class="wedge-item" data-loft="56">ONE.1 "Auto-Correct" Wedge <span class="offer-dynamic">(56° • Right Hand)</span></li>
+              <li class="static-item">Fast & Free Shipping</li>
+              <li class="static-item">365-Day "No Dig, No Doubt" Demo Period & Money Back Guarantee</li>
+              <li class="static-item">PG1 Personalized Game-Improvement App <span class="offer-dynamic pg1-app-text">(Included in Your PG1 Membership)</span></li>
+              <li class="static-item">Member's Only Pricing <span class="offer-dynamic pg1-status-text">(Savings Activated)</span></li>
+            </ul>
+
+            <!-- Price & Savings Display -->
+            <div class="offer-box__pricing">
+              <div class="offer-box__price-row">
+                <span class="offer-box__price-original" id="buyBoxPriceOriginalInner">$199</span>
+                <span class="offer-box__price-member" id="buyBoxPriceMemberInner">$149</span>
+              </div>
+              <div class="offer-box__savings-row" id="buyBoxSavingsRowInner">
+                <span class="offer-box__savings-label">Your PG1 Savings:</span>
+                <span class="offer-box__savings-amount" id="buyBoxSavingsAmount">$50</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PG1 Toggle -->
+          <div class="pg1-toggle">
+            <label class="pg1-toggle__header">
+              <input type="checkbox" class="pg1-toggle__checkbox" id="pg1Toggle2" checked>
+              <span class="pg1-toggle__switch"></span>
+              <span class="pg1-toggle__label">PG1 Member Pricing</span>
+            </label>
+            <p class="pg1-toggle__copy" id="pg1Copy2">As a PG1 Member, you're saving big. Cancel online anytime.</p>
+          </div>
+
+          <div class="buy-box__cta">
+            <button class="btn-primary">GET MY ONE.1 WEDGE NOW</button>
+          </div>
+
+          <div class="buy-box__cta-rating">
+            <span class="buy-box__stars">★★★★★</span>
+            <span class="buy-box__review-count">30,993 Happy Golfers</span>
+          </div>
+
+          <div class="buy-box__trust">
+            <p class="buy-box__guarantee">365-Day "No Dig, No Doubt" Demo Period<br>& 100% Money-Back Guarantee</p>
+            <div class="trust-badges">
+              <img src="images/trust-badge-secure-payments.webp" alt="Secure & Encrypted Payments" class="trust-badge-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Visual (Right Side) -->
+        <div class="buy-box__visual">
+          <div class="image-placeholder buy-box__hero-image">
+            <span>[ONE.1 Wedge Hero Image - Beauty Shot]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 9: TESTIMONIALS
+  ======================================== -->
+  <section class="testimonials bg-white" id="testimonials">
+    <div class="container">
+      <h2 class="testimonials__headline" data-anim="fade-up">Real Golfers. <span class="text-orange">Real Results.</span></h2>
+      <p class="testimonials__subheadline" data-anim="fade-up">Join 30,993 golfers who have upgraded their short game</p>
+
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">"I used to dread every chip shot. The anxiety would build in my backswing and I'd freeze at impact. After switching to the ONE.1, I don't fear the chip anymore. The consistent contact I've been able to achieve is incredible."</p>
+          <p class="testimonial-card__author">— [Customer Name], [Handicap]</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">"If I could become an average chipper, my handicap would drop by 3 strokes. That's what I kept telling myself. After two months with the ONE.1, it has realistically decreased 3-5 strokes off my game."</p>
+          <p class="testimonial-card__author">— [Customer Name], [Handicap]</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">"I've taken lessons from highly regarded short game coaches. I would grind for hours at the practice area. Nothing worked. The ONE.1? It's night and day from my old wedge. So much easier to hit!"</p>
+          <p class="testimonial-card__author">— [Customer Name], [Handicap]</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">"I was close to quitting the game. My short game had become a living hell. Now? It's so easy to use, it's almost like cheating. My buddies keep asking what changed."</p>
+          <p class="testimonial-card__author">— [Customer Name], [Handicap]</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">"I'm a 3 handicap and this chipping problem destroyed my golf for the last two years. The ONE.1 gave me my confidence back. I now expect decent results instead of just hitting and hoping."</p>
+          <p class="testimonial-card__author">— [Customer Name], [Handicap]</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">"My wife says I'm a different person on the course now. I used to get so frustrated around the greens. The ONE.1 has made chipping actually enjoyable. I'm hitting shots I never thought possible."</p>
+          <p class="testimonial-card__author">— [Customer Name], [Handicap]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 10: DESIGNER STORY
+  ======================================== -->
+  <section class="designer bg-sand">
+    <div class="container">
+      <div class="designer__content" data-anim="fade-up">
+        <div class="designer__header-line">
+          <span class="designer__header-eyebrow">Meet the Designer</span>
+        </div>
+        <h2 class="designer__header">The Wizard of Wedges</h2>
+
+        <div class="designer__photo">
+          <span>[Headshot]</span>
+        </div>
+
+        <h3 class="designer__name">Chris McGinley</h3>
+        <p class="designer__title">Equipment Innovation Engineer</p>
+
+        <ul class="designer__credentials">
+          <li>25+ years building clubs for Tour players like Tiger Woods, Rory McIlroy, Jordan Spieth, and Adam Scott</li>
+          <li>250,000+ amateur golfers helped and counting</li>
+        </ul>
+
+        <div class="designer__quote-wrapper">
+          <span class="designer__quote-mark">"</span>
+          <blockquote class="designer__quote">
+            I spent 30 years watching golfers struggle with wedges. Not because you lack skill, but because your equipment punishes you any time you're not perfect. Problem is, golf is hard. Even the pros aren't perfect. So I asked myself: What if we could engineer a wedge that manages ground contact FOR you? A wedge that glides instead of digs... so you stop worrying about chips and pitches and start loving your game. THAT'S the ONE.1 Wedge.
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 11: GUARANTEE
+  ======================================== -->
+  <section class="guarantee" id="contact">
+    <div class="container">
+      <div class="guarantee__content" data-anim="fade-up">
+        <div class="guarantee__badge">🛡️</div>
+        <h2 class="guarantee__headline">Trust Your Sole</h2>
+        <p class="guarantee__name">365-Day "No Dig, No Doubt" Demo Period<br>& 100% Money Back Guarantee</p>
+
+        <div class="guarantee__copy">
+          <p>Demo your ONE.1 risk-free for 365 days...</p>
+          <p>Feel the Auto-Glide Sole control ground interaction for you...</p>
+          <p>Make consistent contact from every lie and enjoy total short-game confidence.</p>
+          <p>Or... we insist you request a full refund.</p>
+        </div>
+
+        <div class="guarantee__contact">
+          <p class="guarantee__contact-title">Questions? We're here to help.</p>
+          <div class="guarantee__contact-items">
+            <div class="guarantee__contact-item">
+              <span class="guarantee__contact-icon">✉</span>
+              <a href="mailto:support@performancegolf.com">support@performancegolf.com</a>
+            </div>
+            <div class="guarantee__contact-item">
+              <span class="guarantee__contact-icon">☎</span>
+              <a href="tel:1-800-741-4653">1 (800) PG1-GOLF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 12: BUNDLE — Mizuno-Style Split Layout
+  ======================================== -->
+  <section class="bundle bg-white">
+    <div class="container">
+      <div class="bundle__layout" data-anim="fade-up">
+        <!-- Left Side: Visual + Info -->
+        <div class="bundle__visual-side">
+          <div class="bundle__rating">
+            <span class="buy-box__stars">★★★★★</span>
+            <span class="buy-box__review-count">30,993 Happy Golfers</span>
+          </div>
+
+          <h2 class="bundle__headline">Buy More, <span class="headline-underline">Save More</span></h2>
+          <p class="bundle__intro">Eliminate guesswork from your entire short game by building your wedge set.</p>
+
+          <div class="bundle__visual image-placeholder">
+            <span>[ONE.1 Wedge Set Display - All 4 Lofts]</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Configurator -->
+        <div class="bundle__config-side">
+          <div class="card">
+            <div class="bundle__tiers">
+              <p class="bundle__tiers-title">Build Your ONE Wedge Set</p>
+              <div class="bundle__tier">
+                <span class="bundle__tier-quantity">Pick Any 2</span>
+                <span class="bundle__tier-savings">Save $100</span>
+              </div>
+              <div class="bundle__tier">
+                <span class="bundle__tier-quantity">Pick Any 3</span>
+                <span class="bundle__tier-savings">Save $150</span>
+              </div>
+              <div class="bundle__tier">
+                <span class="bundle__tier-quantity">Pick All 4</span>
+                <span class="bundle__tier-savings">Save $200</span>
+              </div>
+            </div>
+
+            <div class="bundle__step">
+              <p class="bundle__step-title">Step 1: Choose Your Hand</p>
+              <div class="config-pills" data-config="bundle-hand">
+                <button class="config-pill active" data-value="Right">Right Hand</button>
+                <button class="config-pill" data-value="Left">Left Hand</button>
+              </div>
+            </div>
+
+            <div class="bundle__step">
+              <p class="bundle__step-title">Step 2: Choose Your Lofts</p>
+              <div class="bundle__lofts">
+                <label class="bundle__loft selected">
+                  <input type="checkbox" value="50" checked>
+                  <span>50°</span>
+                </label>
+                <label class="bundle__loft selected">
+                  <input type="checkbox" value="56" checked>
+                  <span>56°</span>
+                </label>
+                <label class="bundle__loft selected">
+                  <input type="checkbox" value="60" checked>
+                  <span>60°</span>
+                </label>
+                <label class="bundle__loft">
+                  <input type="checkbox" value="63">
+                  <span>63° ONE.S</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="bundle__summary">
+              <!-- Offer Box (Checkmark Bullets) -->
+              <ul class="offer-items bundle-offer-items">
+                <li class="wedge-item" data-loft="50">ONE.1 "Auto-Correct" Wedge <span class="offer-dynamic">(50° • Right Hand)</span></li>
+                <li class="wedge-item" data-loft="56">ONE.1 "Auto-Correct" Wedge <span class="offer-dynamic">(56° • Right Hand)</span></li>
+                <li class="wedge-item" data-loft="60">ONE.1 "Auto-Correct" Wedge <span class="offer-dynamic">(60° • Right Hand)</span></li>
+                <li class="static-item">Fast & Free Shipping</li>
+                <li class="static-item">365-Day "No Dig, No Doubt" Demo Period & Money Back Guarantee</li>
+                <li class="static-item">PG1 Personalized Game-Improvement App <span class="offer-dynamic pg1-app-text">(Included in Your PG1 Membership)</span></li>
+                <li class="static-item">Member's Only Pricing <span class="offer-dynamic pg1-status-text">(Savings Activated)</span></li>
+              </ul>
+
+              <!-- Dynamic Order Summary -->
+              <div class="bundle__order-details">
+                <div class="bundle__order-row">
+                  <span class="bundle__order-label">Selected Wedges:</span>
+                  <span class="bundle__order-value bundle__selected-wedges">50° + 56° + 60°</span>
+                </div>
+                <div class="bundle__order-row">
+                  <span class="bundle__order-label">Hand:</span>
+                  <span class="bundle__order-value bundle__selected-hand">Right Hand</span>
+                </div>
+                <div class="bundle__order-row">
+                  <span class="bundle__order-label">Price Per Wedge:</span>
+                  <span class="bundle__order-value bundle__price-per-wedge"><s style="color: var(--pg-gray); margin-right: 8px;">$199</s> $149</span>
+                </div>
+                <div class="bundle__order-row">
+                  <span class="bundle__order-label">Bundle Savings:</span>
+                  <span class="bundle__order-value bundle__savings-amount">Save $150</span>
+                </div>
+                <div class="bundle__order-row bundle__order-row--total">
+                  <span class="bundle__order-label">Total:</span>
+                  <span class="bundle__order-value bundle__total-price">$447</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pg1-toggle">
+              <label class="pg1-toggle__header">
+                <input type="checkbox" class="pg1-toggle__checkbox" id="pg1ToggleBundle" checked>
+                <span class="pg1-toggle__switch"></span>
+                <span class="pg1-toggle__label">PG1 Member Pricing</span>
+              </label>
+              <p class="pg1-toggle__copy" id="pg1CopyBundle">As a PG1 Member, you're saving big. Cancel online anytime.</p>
+            </div>
+
+            <div class="bundle__cta" style="text-align: center;">
+              <button class="btn-primary">BUILD MY ONE WEDGE SET NOW</button>
+            </div>
+
+            <p class="bundle__guarantee">365-Day "No Dig, No Doubt" Demo Period<br>& 100% Money-Back Guarantee</p>
+
+            <div class="trust-badges">
+              <img src="images/trust-badge-secure-payments.webp" alt="Secure & Encrypted Payments" class="trust-badge-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Did You Know Box - Full Width Centered -->
+      <div class="bundle__quiz-cta">
+        <p class="bundle__quiz-cta-label">Not Sure Which Lofts Are Right For You?</p>
+        <p class="bundle__quiz-cta-text">Take the <a href="#how-it-works" class="text-orange text-underline">60-Second Wedge Workshop</a> to find your perfect ONE.1 setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 13: DETAILED SPECIFICATIONS
+  ======================================== -->
+  <section class="specs bg-sand">
+    <div class="container">
+      <h2 class="specs__headline" data-anim="fade-up">ONE.1: <span class="headline-highlight">The One And Only</span></h2>
+
+      <blockquote class="specs__positioning" data-anim="fade-up">The ONE.1 is the only wedge that delivers Tour-quality looks with game-improving performance.</blockquote>
+
+      <p class="specs__subheadline" data-anim="fade-up">Specifications</p>
+
+      <div class="specs-accordion" data-anim="fade-up">
+        <!-- Accordion 1: Sole & Construction -->
+        <div class="specs-accordion__item">
+          <button class="specs-accordion__header">
+            <span class="specs-accordion__title">Sole & Construction</span>
+            <span class="specs-accordion__icon">+</span>
+          </button>
+          <div class="specs-accordion__content">
+            <table class="specs-table">
+              <tbody>
+                <tr>
+                  <td class="specs-table__label">Sole Design</td>
+                  <td class="specs-table__value">Auto-Glide Sole: 4-way cambered</td>
+                </tr>
+                <tr>
+                  <td class="specs-table__label">Sole Features</td>
+                  <td class="specs-table__value">Trailing edge extension, heavy winged sole</td>
+                </tr>
+                <tr>
+                  <td class="specs-table__label">Shaft</td>
+                  <td class="specs-table__value">Stepless steel, R+ Wedge Flex | 0.370 Tip, 0.600" Butt</td>
+                </tr>
+                <tr>
+                  <td class="specs-table__label">Grip</td>
+                  <td class="specs-table__value">R58 Core, Velvet Pattern</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Accordion 2: Head & Face -->
+        <div class="specs-accordion__item">
+          <button class="specs-accordion__header">
+            <span class="specs-accordion__title">Head & Face</span>
+            <span class="specs-accordion__icon">+</span>
+          </button>
+          <div class="specs-accordion__content">
+            <table class="specs-table">
+              <tbody>
+                <tr>
+                  <td class="specs-table__label">Leading Edge</td>
+                  <td class="specs-table__value">Straight (for alignment)</td>
+                </tr>
+                <tr>
+                  <td class="specs-table__label">Face</td>
+                  <td class="specs-table__value">Max volume conforming grooves + laser-etched texture</td>
+                </tr>
+                <tr>
+                  <td class="specs-table__label">Finish</td>
+                  <td class="specs-table__value">Premium black</td>
+                </tr>
+                <tr>
+                  <td class="specs-table__label">Weighting</td>
+                  <td class="specs-table__value">40g counterweight + high toe weight + deep cavity</td>
+                </tr>
+                <tr>
+                  <td class="specs-table__label">D4 Swingweight</td>
+                  <td class="specs-table__value">Pre Counterbalance</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Accordion 3: Loft Options -->
+        <div class="specs-accordion__item">
+          <button class="specs-accordion__header">
+            <span class="specs-accordion__title">Loft Options</span>
+            <span class="specs-accordion__icon">+</span>
+          </button>
+          <div class="specs-accordion__content">
+            <div class="specs__loft-wrapper">
+              <table class="specs-table specs-table--lofts">
+                <thead>
+                  <tr>
+                    <th>Spec</th>
+                    <th>50°</th>
+                    <th>56°</th>
+                    <th>60°</th>
+                    <th>ONE.S (63°)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="specs-table__label">Loft</td>
+                    <td>50°</td>
+                    <td>56°</td>
+                    <td>60°</td>
+                    <td>63°</td>
+                  </tr>
+                  <tr>
+                    <td class="specs-table__label">Lie Angle</td>
+                    <td>64°</td>
+                    <td>64°</td>
+                    <td>64°</td>
+                    <td>64°</td>
+                  </tr>
+                  <tr>
+                    <td class="specs-table__label">Length</td>
+                    <td>35.75"</td>
+                    <td>35.50"</td>
+                    <td>35.25"</td>
+                    <td>35.00"</td>
+                  </tr>
+                  <tr>
+                    <td class="specs-table__label">Swingweight</td>
+                    <td>D4</td>
+                    <td>D4</td>
+                    <td>D4</td>
+                    <td>D4</td>
+                  </tr>
+                  <tr>
+                    <td class="specs-table__label">Counterweight</td>
+                    <td>40g</td>
+                    <td>40g</td>
+                    <td>40g</td>
+                    <td>40g</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="specs__availability" data-anim="fade-up"><strong>Available:</strong> Men's Right Hand and Left Hand</p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 14: FINAL CTA — Hero-Style Split Layout
+  ======================================== -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta__layout" data-anim="fade-up">
+        <!-- Left Side: Headline + Visual -->
+        <div class="final-cta__visual-side">
+          <h2 class="final-cta__headline"><span class="text-orange">ONE.1:</span> Your Short Game <span class="headline-underline">Sole Mate</span></h2>
+
+          <div class="final-cta__visual image-placeholder">
+            <span>[Hero Product Image - ONE.1 Wedge Beauty Shot]</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Benefits, CTA -->
+        <div class="final-cta__content-side">
+          <ul class="final-cta__benefits check-list">
+            <li><strong>Eliminate fat shots and chunks</strong> so you stop coming up short even when you mis-hit it</li>
+            <li><strong>Break the "yips" cycle</strong> – commit to every wedge shot without flinching</li>
+            <li><strong>No more bladed balls.</strong> Thump the ground with confidence knowing the Auto-Glide Sole does NOT dig – it manages ground interaction <em>for you</em></li>
+            <li><strong>Finish close to the hole</strong> with distance control from tight lies, thick rough, and sand</li>
+            <li><strong>Looks professional. Feels friendly.</strong> Your playing partners won't know what hit 'em</li>
+          </ul>
+
+          <div class="final-cta__button">
+            <button class="btn-primary" onclick="scrollToBuyBox()">Get My ONE.1 Wedge Now</button>
+          </div>
+
+          <div class="final-cta__rating">
+            <span class="buy-box__stars">★★★★★</span>
+            <span class="buy-box__review-count">30,993 Happy Golfers</span>
+          </div>
+
+          <p class="final-cta__guarantee">🛡️ 365-Day "No Dig, No Doubt" Demo Period<br><span class="guarantee-line2">& 100% Money-Back Guarantee</span></p>
+        </div>
+
+        <!-- Urgency Bar - Full Width -->
+        <p class="final-cta__urgency"><strong>IN STOCK:</strong> Order in the next <span id="finalCtaTimer">10:00</span> for priority processing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 15: FAQ
+  ======================================== -->
+  <section class="faq bg-white" id="faq">
+    <div class="container">
+      <h2 class="faq__headline" data-anim="fade-up">Frequently Asked Questions</h2>
+
+      <div class="faq__list">
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>What is the ONE.1 and why is it better than other wedges?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>The ONE.1 is the only wedge with an Auto-Glide Sole that glides through turf instead of digging into it. Traditional wedges dig — unless you have perfect technique. But the ONE.1's four-way cambered sole manages ground contact FOR you, so it glides across the ground automatically... even when you make a steep, quick swing. No technique changes. No hours of practice. Just square the face, swing, and let the sole do the work.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>How does the Auto-Glide Sole work from every lie?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>Traditional wedges have flat or minimally cambered soles that dig into turf unless you deliver the perfect angle of attack. One degree off, and you chunk it fat or blade it thin. The ONE.1's four-way cambered Auto-Glide Sole is engineered to glide through any ground conditions, so you make consistent contact from tight lies, thick rough, and sand — without changing your swing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Is the ONE.1 legal?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>Yes. The ONE.1 features max volume conforming grooves and meets all USGA and R&A equipment rules. You can use it in any tournament.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Will it look weird in my bag?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>Not at all. The ONE.1 looks like a premium wedge, because it IS a premium wedge. Nobody will know you have an Invisible Advantage just by looking at it. They'll only notice when you start sticking it close.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Shouldn't I just practice more?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>Of course you should practice more! We all should. But 84% of golfers are fighting equipment designed for Tour pros who practice 40 hours a week. The ONE.1 manages ground contact FOR you, so you can get results without endless practice. As one golfer put it: "I've taken lessons, watched every video, reached the edge of the internet... nothing worked." Sometimes the answer isn't more practice — it's better equipment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>I'm a good player — shouldn't I use regular wedges?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>Skill level doesn't protect you from chunking and blading your wedges. We've heard from 3-handicaps who say the chipping yips "destroyed their golf." The ONE.1 delivers Tour-quality spin and control with added forgiveness. You don't have to choose.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Will I lose spin with a forgiving wedge?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>No — the opposite, actually. Extensive testing with recreational golfers shows the combination of the Spin-Fast Face and Distance Control Weighting produces MORE spin and control than standard wedges. Because even when you don't catch it clean, you get consistent ball speed (which means consistent distance). Plus, when you're not worried about chunking it, you commit to your shot — and commitment creates spin.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>My technique is the problem. Can a wedge really fix that?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>We both know there's no such thing as a magic wand. But the truth is, your technique CAN'T work if your equipment digs. Traditional wedges punish anything less than Tour-level precision. The ONE.1's Auto-Glide Sole manages ground contact FOR you — so your existing swing produces clean contact automatically. You don't need to fix your technique. You need equipment that works WITH it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>What loft should I get?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>56° is the most versatile for most golfers because it handles bunkers, thick rough, and tight lies. You'll find yourself pulling it out of the bag for delicate chips and pitches... AND for full swing approach shots from ~60-100 yards. This means you step up to any situation knowing you can strike it solid and finish closer to the hole.</p>
+              <p>Still not sure? Take the "Find Your ONE" quiz above to find the right wedge for your game.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Do I need a custom fitting?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>No. The ONE.1 is engineered with a 64° lie angle, optimized lengths, and a stepless steel shaft in R+ Wedge Flex — all designed to work for the vast majority of golfers. The R58 Core grip with Velvet Pattern is a proven, comfortable grip used by golfers worldwide. Unlike traditional wedges with dozens of grind, bounce, and shaft options, the ONE.1's Auto-Glide Sole adapts to your swing automatically so you have less to think about... and can love your game faster.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>How long does shipping take?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>Orders ship within 24 hours. Standard delivery takes 3-5 business days. Expedited shipping options available at checkout if you need it in time for your next round.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Is shipping really free?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>Yes — we pay for shipping on all orders to the contiguous United States. Alaska, Hawaii, and international orders may have additional shipping costs calculated at checkout.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Do you ship internationally?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>Yes, we ship to [list countries]. International shipping times vary by location.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>What's your return policy?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-content">
+              <p>We offer a 365-Day "No Dig, No Doubt" Demo Period & Money Back Guarantee. Take the ONE.1 to the course — hit it from the fairway, the rough, and the sand. Let the Auto-Glide Sole do the work. You either hit better wedge shots, or return it for a full refund. No questions asked.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER PLACEHOLDER
+  ======================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="images/PER-Logotype-White.svg" alt="Performance Golf" class="footer__logo-img">
+          </div>
+          <p class="footer__tagline">Helping golfers love their game since 2016</p>
+        </div>
+
+        <div class="footer__links">
+          <div class="footer__column">
+            <h4 class="footer__column-title">Products</h4>
+            <ul>
+              <li><a href="#">ONE.1 Wedge</a></li>
+              <li><a href="#">Training Aids</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h4 class="footer__column-title">Support</h4>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h4 class="footer__column-title">Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">PG1 Membership</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Performance Golf. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       STICKY CTA BAR (Mobile Only)
+  ======================================== -->
+  <div class="sticky-cta" data-sticky-cta>
+    <button class="btn-primary" onclick="scrollToBuyBox()">GET MY ONE.1 WEDGE NOW</button>
+  </div>
+
+  <!-- ========================================
+       JAVASCRIPT
+  ======================================== -->
+  <script>
+    // Remove no-js class
+    document.documentElement.classList.remove('no-js');
+
+    // ========================================
+    // REDUCED MOTION & SCROLLED STATE CHECK
+    // ========================================
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Handle mid-page refresh
+    if (window.scrollY > 100) {
+      document.documentElement.classList.add('scrolled-start');
+    }
+
+    // ========================================
+    // GSAP ANIMATIONS
+    // ========================================
+    if (!prefersReducedMotion && typeof gsap !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Fade Up Animation
+      gsap.utils.toArray('[data-anim="fade-up"]').forEach(el => {
+        gsap.from(el, {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            once: true
+          }
+        });
+      });
+
+      // Stagger Animation
+      gsap.utils.toArray('[data-anim="stagger"]').forEach(container => {
+        const items = container.children;
+        gsap.from(items, {
+          y: 20,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%",
+            once: true
+          }
+        });
+      });
+
+      // Hero Animation (on load) - Using set + to pattern for reliability
+      const heroElements = [
+        '.hero__preheadline',
+        '.hero__headline',
+        '.hero__subheadline',
+        '.hero__visual',
+        '.hero__benefits li',
+        '.hero__cta-wrapper',
+        '.hero__guarantee',
+        '.hero .trust-badges'
+      ];
+
+      // Set initial state
+      gsap.set('.hero__preheadline', { opacity: 0, y: 20 });
+      gsap.set('.hero__headline', { opacity: 0, y: 40 });
+      gsap.set('.hero__subheadline', { opacity: 0, y: 30 });
+      gsap.set('.hero__visual', { opacity: 0, scale: 0.98 });
+      gsap.set('.hero__benefits li', { opacity: 0, x: -20 });
+      gsap.set('.hero__cta-wrapper', { opacity: 0, y: 20 });
+      gsap.set('.hero__guarantee', { opacity: 0 });
+      gsap.set('.hero .trust-badges', { opacity: 0 });
+
+      // Animate in with timeline
+      const heroTl = gsap.timeline({ delay: 0.2 });
+      heroTl
+        .to('.hero__preheadline', { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" })
+        .to('.hero__headline', { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.2")
+        .to('.hero__subheadline', { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.4")
+        .to('.hero__visual', { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }, "-=0.3")
+        .to('.hero__benefits li', { opacity: 1, x: 0, stagger: 0.08, duration: 0.4, ease: "power2.out" }, "-=0.4")
+        .to('.hero__cta-wrapper', { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.2")
+        .to('.hero__guarantee', { opacity: 1, duration: 0.4, ease: "power2.out" }, "-=0.2")
+        .to('.hero .trust-badges', { opacity: 1, duration: 0.4, ease: "power2.out" }, "-=0.2");
+
+      // Sticky CTA Bar
+      const firstCTA = document.querySelector('.hero__cta-wrapper');
+      const stickyCTA = document.querySelector('[data-sticky-cta]');
+
+      if (firstCTA && stickyCTA) {
+        ScrollTrigger.create({
+          trigger: firstCTA,
+          start: 'bottom top',
+          onEnter: () => stickyCTA.classList.add('visible'),
+          onLeaveBack: () => stickyCTA.classList.remove('visible')
+        });
+      }
+
+      // Problem Section Stat Counter
+      const statNumberEl = document.querySelector('.problem__stat-number');
+      if (statNumberEl) {
+        const targetValue = parseInt(statNumberEl.dataset.count) || 84;
+        const counter = { value: 0 };
+        gsap.to(counter, {
+          value: targetValue,
+          duration: 1.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: '.problem',
+            start: 'top 75%',
+            once: true
+          },
+          onUpdate: function() {
+            statNumberEl.textContent = Math.round(counter.value);
+          }
+        });
+      }
+
+      // ========================================
+      // HEADLINE UNDERLINE ANIMATIONS
+      // ========================================
+      document.querySelectorAll('.headline-underline').forEach(el => {
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 85%',
+          onEnter: () => el.classList.add('is-visible'),
+          once: true
+        });
+      });
+
+      // ========================================
+      // FLIP BOARD EFFECT — FEATURE 3 "EVERY TIME."
+      // ========================================
+      const flipTextEl = document.getElementById('flipEveryTime');
+      if (flipTextEl) {
+        const finalText = flipTextEl.getAttribute('data-text') || flipTextEl.textContent;
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let hasFlipped = false;
+
+        function initFlipBoard() {
+          // Wrap each character in a span
+          flipTextEl.innerHTML = finalText.split('').map((char, i) => {
+            if (char === ' ') return ' ';
+            return `<span class="flip-char" data-final="${char}" data-index="${i}">${char}</span>`;
+          }).join('');
+        }
+
+        function animateFlipBoard() {
+          const charEls = flipTextEl.querySelectorAll('.flip-char');
+
+          charEls.forEach((charEl, index) => {
+            const finalChar = charEl.getAttribute('data-final');
+            let flipCount = 0;
+            const maxFlips = 8 + Math.floor(Math.random() * 6); // 8-13 flips per character
+            const startDelay = index * 80; // Stagger start by 80ms per character
+
+            setTimeout(() => {
+              const flipInterval = setInterval(() => {
+                flipCount++;
+                charEl.classList.add('flipping');
+
+                if (flipCount < maxFlips) {
+                  // Show random character
+                  charEl.textContent = chars[Math.floor(Math.random() * chars.length)];
+                } else {
+                  // Settle on final character
+                  charEl.textContent = finalChar;
+                  clearInterval(flipInterval);
+                  setTimeout(() => charEl.classList.remove('flipping'), 80);
+                }
+              }, 60); // Flip every 60ms
+            }, startDelay);
+          });
+        }
+
+        initFlipBoard();
+
+        // Trigger flip when scrolled into view
+        ScrollTrigger.create({
+          trigger: flipTextEl,
+          start: 'top 85%',
+          onEnter: () => {
+            if (!hasFlipped) {
+              hasFlipped = true;
+              animateFlipBoard();
+            }
+          },
+          once: true
+        });
+      }
+
+      // ========================================
+      // TYPEWRITER EFFECT — VERSATILITY HEADLINE
+      // ========================================
+      gsap.registerPlugin(TextPlugin);
+
+      const typewriterEl = document.getElementById('lieTypewriter');
+      if (typewriterEl) {
+        const phrases = ['Any Lie', 'The Sand', 'Thick Rough', 'Wet Ground', 'Tight Lies'];
+        let currentIndex = 0;
+        let hasStarted = false;
+
+        function typePhrase(phrase, onComplete) {
+          typewriterEl.classList.remove('typing-done');
+          let charIndex = 0;
+          const typeInterval = setInterval(() => {
+            charIndex++;
+            typewriterEl.textContent = phrase.substring(0, charIndex);
+            if (charIndex >= phrase.length) {
+              clearInterval(typeInterval);
+              typewriterEl.classList.add('typing-done');
+              if (onComplete) onComplete();
+            }
+          }, 50);
+        }
+
+        function deletePhrase(onComplete) {
+          typewriterEl.classList.remove('typing-done');
+          const currentText = typewriterEl.textContent;
+          let charIndex = currentText.length;
+          const deleteInterval = setInterval(() => {
+            charIndex--;
+            typewriterEl.textContent = currentText.substring(0, charIndex);
+            if (charIndex <= 0) {
+              clearInterval(deleteInterval);
+              if (onComplete) onComplete();
+            }
+          }, 30);
+        }
+
+        function cycle() {
+          setTimeout(() => {
+            deletePhrase(() => {
+              currentIndex = (currentIndex + 1) % phrases.length;
+              typePhrase(phrases[currentIndex], cycle);
+            });
+          }, 1200);
+        }
+
+        // Start typewriter when element scrolls into view
+        ScrollTrigger.create({
+          trigger: typewriterEl,
+          start: 'top 80%',
+          onEnter: () => {
+            if (!hasStarted) {
+              hasStarted = true;
+              cycle();
+            }
+          },
+          once: true
+        });
+      }
+    } else {
+      // Make all animated elements visible if reduced motion or GSAP fails
+      document.querySelectorAll('[data-anim]').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    }
+
+    // ========================================
+    // CONFIG PILLS (with multi-select support for loft)
+    // ========================================
+    function updateOfferSummary() {
+      const loftContainer = document.querySelector('[data-config="loft"]');
+      const handContainer = document.querySelector('[data-config="hand"]');
+      const offerItems = document.querySelector('.offer-items');
+
+      if (!offerItems) return;
+
+      // Get selected hand
+      const selectedHand = handContainer?.querySelector('.config-pill.active')?.textContent || 'Right';
+
+      // Get selected lofts and sort in ascending order (50, 56, 60, 63)
+      const selectedLofts = [];
+      loftContainer?.querySelectorAll('.config-pill.active').forEach(pill => {
+        selectedLofts.push(parseInt(pill.dataset.value));
+      });
+      selectedLofts.sort((a, b) => a - b);
+
+      // Remove all existing wedge items
+      offerItems.querySelectorAll('.wedge-item').forEach(item => item.remove());
+
+      // Get the first static item to insert before
+      const firstStatic = offerItems.querySelector('.static-item');
+
+      // Add a wedge item for each selected loft
+      selectedLofts.forEach(loft => {
+        const li = document.createElement('li');
+        li.className = 'wedge-item';
+        li.dataset.loft = loft;
+        // Use different product name for 63° (Super Sand)
+        const productName = loft === 63
+          ? 'ONE.1S "Super Sand" Wedge'
+          : 'ONE.1 "Auto-Correct" Wedge';
+        li.innerHTML = `${productName} <span class="offer-dynamic">(${loft}° • ${selectedHand} Hand)</span>`;
+        offerItems.insertBefore(li, firstStatic);
+      });
+    }
+
+    document.querySelectorAll('.config-pills').forEach(container => {
+      container.addEventListener('click', (e) => {
+        if (e.target.classList.contains('config-pill')) {
+          const isMultiSelect = container.classList.contains('config-pills--multi');
+
+          if (isMultiSelect) {
+            // Multi-select: toggle the clicked pill
+            e.target.classList.toggle('active');
+            // Ensure at least one is selected
+            const hasActive = container.querySelector('.config-pill.active');
+            if (!hasActive) {
+              e.target.classList.add('active');
+            }
+          } else {
+            // Single-select: clear others, select this one
+            container.querySelectorAll('.config-pill').forEach(pill => pill.classList.remove('active'));
+            e.target.classList.add('active');
+          }
+
+          // Update offer summary
+          updateOfferSummary();
+        }
+      });
+    });
+
+    // ========================================
+    // PG1 TOGGLE WITH DYNAMIC PRICING & SAVINGS
+    // ========================================
+
+    // Get count of selected wedges in buy box
+    function getSelectedWedgeCount() {
+      const loftPills = document.querySelector('.buy-box__content [data-config="loft"]');
+      if (!loftPills) return 1;
+      return loftPills.querySelectorAll('.config-pill.active').length || 1;
+    }
+
+    // Update savings amount based on wedge count
+    function updateSavingsAmount() {
+      const savingsEl = document.getElementById('buyBoxSavingsAmount');
+      if (!savingsEl) return;
+
+      const wedgeCount = getSelectedWedgeCount();
+      const savingsPerWedge = 50;
+      const totalSavings = wedgeCount * savingsPerWedge;
+      savingsEl.textContent = '$' + totalSavings;
+    }
+
+    // Update price display based on toggle and wedge count
+    function updateBuyBoxPricing(isChecked) {
+      const priceWrapper = document.getElementById('buyBoxPriceWrapper');
+      const priceOriginal = document.getElementById('buyBoxPriceOriginal');
+      const priceMember = document.getElementById('buyBoxPriceMember');
+      const savingsSection = document.getElementById('buyBoxSavings');
+
+      // Inner price elements in offer box
+      const priceOriginalInner = document.getElementById('buyBoxPriceOriginalInner');
+      const priceMemberInner = document.getElementById('buyBoxPriceMemberInner');
+      const savingsRowInner = document.getElementById('buyBoxSavingsRowInner');
+
+      const wedgeCount = getSelectedWedgeCount();
+      const pricePerWedge = 199;
+      const memberPricePerWedge = 149;
+
+      const totalOriginal = wedgeCount * pricePerWedge;
+      const totalMember = wedgeCount * memberPricePerWedge;
+
+      if (isChecked) {
+        // Member pricing ON: show strikethrough + member price + savings
+        priceWrapper.classList.remove('non-member');
+        priceOriginal.textContent = '$' + totalOriginal;
+        priceMember.textContent = '$' + totalMember;
+        if (savingsSection) savingsSection.classList.remove('hidden');
+        updateSavingsAmount();
+
+        // Update inner offer box prices - show both prices + savings row
+        if (priceOriginalInner) {
+          priceOriginalInner.textContent = '$' + totalOriginal;
+          priceOriginalInner.style.display = '';
+        }
+        if (priceMemberInner) priceMemberInner.textContent = '$' + totalMember;
+        if (savingsRowInner) savingsRowInner.classList.remove('hidden');
+      } else {
+        // Member pricing OFF: show only regular price, hide savings
+        priceWrapper.classList.add('non-member');
+        priceMember.textContent = '$' + totalOriginal;
+        if (savingsSection) savingsSection.classList.add('hidden');
+
+        // Update inner offer box prices - hide strikethrough, show full price, hide savings row
+        if (priceOriginalInner) priceOriginalInner.style.display = 'none';
+        if (priceMemberInner) priceMemberInner.textContent = '$' + totalOriginal;
+        if (savingsRowInner) savingsRowInner.classList.add('hidden');
+      }
+    }
+
+    function setupPG1Toggle(toggleId, copyId, hasPricing) {
+      const toggle = document.getElementById(toggleId);
+      const copy = document.getElementById(copyId);
+
+      // Find the nearest buy-box or bundle section to scope the dynamic text updates
+      const section = toggle ? toggle.closest('.buy-box__content, .bundle__content') : null;
+      const appText = section ? section.querySelector('.pg1-app-text') : null;
+      const statusText = section ? section.querySelector('.pg1-status-text') : null;
+
+      function updatePG1Text(isChecked) {
+        if (copy) {
+          copy.textContent = isChecked
+            ? "As a PG1 Member, you're saving big. Cancel online anytime."
+            : "Serious golfers join PG1 to save more. You're in control, cancel online anytime.";
+        }
+        if (appText) {
+          appText.textContent = isChecked
+            ? "(Included in Your PG1 Membership)"
+            : "(7-Day Free Trial, No Subscription)";
+        }
+        if (statusText) {
+          statusText.textContent = isChecked
+            ? "(Savings Activated)"
+            : "(Activate To Save)";
+        }
+        if (hasPricing) {
+          updateBuyBoxPricing(isChecked);
+        }
+      }
+
+      if (toggle) {
+        toggle.addEventListener('change', () => updatePG1Text(toggle.checked));
+        // Initialize on page load
+        updatePG1Text(toggle.checked);
+      }
+    }
+
+    setupPG1Toggle('pg1Toggle2', 'pg1Copy2', true);
+    setupPG1Toggle('pg1ToggleBundle', 'pg1CopyBundle', false);
+
+    // ========================================
+    // BUNDLE PG1 PRICING TOGGLE
+    // ========================================
+    function updateBundlePricing(isMember) {
+      // Update tier savings text (Pick Any 2/3/All 4)
+      const tierSavings = document.querySelectorAll('.bundle__tier-savings');
+      const savingsAmounts = [100, 150, 200];
+      tierSavings.forEach((el, index) => {
+        const amount = savingsAmounts[index];
+        el.textContent = isMember ? `Save $${amount}` : `Members Save $${amount}`;
+      });
+
+      // Update price per wedge display
+      const pricePerWedge = document.querySelector('.bundle__price-per-wedge');
+      if (pricePerWedge) {
+        pricePerWedge.innerHTML = isMember
+          ? '<s style="color: var(--pg-gray); margin-right: 8px;">$199</s> $149'
+          : '$199';
+      }
+
+      // Update bundle summary (savings and total)
+      updateBundleOfferSummary();
+    }
+
+    // Add event listener for bundle toggle
+    const bundleToggle = document.getElementById('pg1ToggleBundle');
+    if (bundleToggle) {
+      bundleToggle.addEventListener('change', () => updateBundlePricing(bundleToggle.checked));
+      // Initialize on page load
+      updateBundlePricing(bundleToggle.checked);
+    }
+
+    // Also update pricing when loft selection changes
+    const buyBoxLoftPills = document.querySelector('.buy-box__content [data-config="loft"]');
+    if (buyBoxLoftPills) {
+      buyBoxLoftPills.addEventListener('click', () => {
+        // Small delay to allow active class to update
+        setTimeout(() => {
+          const toggle = document.getElementById('pg1Toggle2');
+          if (toggle) {
+            updateBuyBoxPricing(toggle.checked);
+          }
+        }, 10);
+      });
+    }
+
+    // ========================================
+    // FAQ ACCORDION
+    // ========================================
+    document.querySelectorAll('.faq-item__question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isOpen = item.classList.contains('open');
+
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('open'));
+
+        // Toggle current item
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // ========================================
+    // BUNDLE OFFER SUMMARY (dynamic wedge bullets)
+    // ========================================
+    function updateBundleOfferSummary() {
+      const bundleOfferItems = document.querySelector('.bundle-offer-items');
+      const bundleHandContainer = document.querySelector('[data-config="bundle-hand"]');
+
+      if (!bundleOfferItems) return;
+
+      // Get selected hand from bundle
+      const selectedHand = bundleHandContainer?.querySelector('.config-pill.active')?.textContent?.replace(' Hand', '') || 'Right';
+
+      // Get selected lofts from bundle checkboxes and sort in ascending order
+      const selectedLofts = [];
+      document.querySelectorAll('.bundle__loft input:checked').forEach(checkbox => {
+        selectedLofts.push(parseInt(checkbox.value));
+      });
+      selectedLofts.sort((a, b) => a - b);
+
+      // Remove all existing wedge items
+      bundleOfferItems.querySelectorAll('.wedge-item').forEach(item => item.remove());
+
+      // Get the first static item to insert before
+      const firstStatic = bundleOfferItems.querySelector('.static-item');
+
+      // Add a wedge item for each selected loft
+      selectedLofts.forEach(loft => {
+        const li = document.createElement('li');
+        li.className = 'wedge-item';
+        li.dataset.loft = loft;
+        // Use different product name for 63° (Super Sand)
+        const productName = loft === 63
+          ? 'ONE.1S "Super Sand" Wedge'
+          : 'ONE.1 "Auto-Correct" Wedge';
+        li.innerHTML = `${productName} <span class="offer-dynamic">(${loft}° • ${selectedHand} Hand)</span>`;
+        bundleOfferItems.insertBefore(li, firstStatic);
+      });
+
+      // Update the order summary display
+      const selectedWedgesDisplay = document.querySelector('.bundle__selected-wedges');
+      const selectedHandDisplay = document.querySelector('.bundle__selected-hand');
+      const savingsDisplay = document.querySelector('.bundle__savings-amount');
+      if (selectedWedgesDisplay) {
+        const loftDisplay = selectedLofts.map(l => l === 63 ? '63° ONE.S' : l + '°').join(' + ');
+        selectedWedgesDisplay.textContent = loftDisplay || 'None selected';
+      }
+      if (selectedHandDisplay) {
+        selectedHandDisplay.textContent = selectedHand + ' Hand';
+      }
+      // Check if member pricing is active
+      const bundleToggle = document.getElementById('pg1ToggleBundle');
+      const isMember = bundleToggle ? bundleToggle.checked : true;
+
+      // Update bundle savings based on number of wedges selected
+      if (savingsDisplay) {
+        const wedgeCount = selectedLofts.length;
+        const savings = wedgeCount * 50;
+        const prefix = isMember ? 'Save' : 'Members Save';
+        savingsDisplay.textContent = savings > 0 ? `${prefix} $${savings}` : '$0';
+      }
+      // Update total price based on number of wedges selected
+      // $149 per wedge for members, $199 per wedge for non-members
+      const totalPriceDisplay = document.querySelector('.bundle__total-price');
+      if (totalPriceDisplay) {
+        const wedgeCount = selectedLofts.length;
+        const pricePerWedge = isMember ? 149 : 199;
+        const total = wedgeCount * pricePerWedge;
+        totalPriceDisplay.textContent = total > 0 ? `$${total}` : '$0';
+      }
+    }
+
+    // Bundle loft checkboxes
+    document.querySelectorAll('.bundle__loft input').forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const label = checkbox.parentElement;
+        if (checkbox.checked) {
+          label.classList.add('selected');
+        } else {
+          label.classList.remove('selected');
+        }
+        updateBundleOfferSummary();
+      });
+    });
+
+    // Bundle hand selection also updates offer summary
+    const bundleHandContainer = document.querySelector('[data-config="bundle-hand"]');
+    if (bundleHandContainer) {
+      bundleHandContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('config-pill')) {
+          setTimeout(updateBundleOfferSummary, 10);
+        }
+      });
+    }
+
+    // ========================================
+    // QUIZ FUNCTIONALITY
+    // ========================================
+    let currentQuestion = 1;
+    let quizAnswers = {};
+
+    const quizResults = {
+      bunkers_long: {
+        condition: (answers) => answers.q3 === 'A' && (answers.q6 === 'A' || answers.q6 === 'B'),
+        recommendation: "60°",
+        headline: "Your Perfect Wedge: 60° Wedge",
+        copy: "The Auto-Glide Sole is built for bunkers. Its four-way cambered design glides through sand instead of digging deep — so you enjoy effortless escapes that pop out and onto the green.\n\nThe 60° loft gives you the height you need to clear the lip and land soft. No more leaving it in the bunker or blading it across the green.",
+        buildSet: "Add the 56° for chips and pitches around the green (from any lie), then the 50° for full-swing approach shots."
+      },
+      bunkers_short: {
+        condition: (answers) => answers.q3 === 'A' && answers.q6 === 'C',
+        recommendation: "63° ONE.S",
+        headline: "Your Perfect Wedge: 63° ONE.S",
+        copy: "For golfers with moderate swing speeds, the 63° ONE.S is specifically engineered to maximize your bunker performance. The extra loft helps you get the ball up quickly without needing to swing hard.\n\nCombined with the Auto-Glide Sole, you'll escape bunkers with ease — even from plugged lies or wet sand.",
+        buildSet: "Add the 56° for chips and pitches, then the 60° for delicate touch shots or longer bunker escapes, then the 50° for full-swing approach shots."
+      },
+      approach: {
+        condition: (answers) => answers.q3 === 'B',
+        recommendation: "50°",
+        headline: "Your Perfect Wedge: 50° Wedge",
+        copy: "You're losing strokes on full swing approach shots from 75-125 yards. The 50° Gap Wedge fills the distance gap between your pitching wedge and sand wedge — giving you a dedicated club for those in-between yardages.\n\nThe Auto-Glide Sole delivers consistent contact even when you catch it a little heavy, so your approach shots find the green instead of coming up short.",
+        buildSet: "Add the 56° for chips, pitches, and touch shots from any lie, then the 60° for bunkers."
+      },
+      chips: {
+        condition: (answers) => answers.q3 === 'C',
+        recommendation: "56°",
+        headline: "Your Perfect Wedge: 56° Wedge",
+        copy: "Delicate chips and touch shots around the green require confidence — and that starts with consistent contact. The 56° is your Wedge Workhorse, built to handle any lie and every situation with one simple swing.\n\nThe Auto-Glide Sole eliminates the fear of chunking and delivers delicious distance control, so you commit to your shots knowing the club will do the work.",
+        buildSet: "Add the 60° for bunker escapes and high soft shots, then the 50° for longer approach shots."
+      },
+      bad_lies: {
+        condition: (answers) => answers.q3 === 'D',
+        recommendation: "56°",
+        headline: "Your Perfect Wedge: 56° Wedge",
+        copy: "Bad lies and unpredictable situations are exactly what the ONE.1 is designed for. The Auto-Glide Sole's four-way cambered surface glides through thick rough, hardpan, and everything in between — without digging or grabbing.\n\nThe 56° handles any lie you face, so you've got total confidence to stick it close – even when you're buried in the rough to sitting down in a divot.",
+        buildSet: "Add the 60° for bunker escapes and greenside touch shots, then the 50° for full-swing approach shots."
+      }
+    };
+
+    function openQuiz() {
+      document.getElementById('quizModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      currentQuestion = 1;
+      quizAnswers = {};
+      showQuestion(1);
+    }
+
+    function closeQuiz() {
+      document.getElementById('quizModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function showQuestion(num) {
+      document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+      document.getElementById('quizResult').classList.remove('active');
+
+      const question = document.querySelector(`.quiz-question[data-question="${num}"]`);
+      if (question) {
+        question.classList.add('active');
+        document.getElementById('questionNum').textContent = num;
+        document.getElementById('progressFill').style.width = `${(num / 6) * 100}%`;
+      }
+    }
+
+    function showResult() {
+      document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+
+      // Determine result based on answers
+      let result = quizResults.chips; // Default
+
+      for (const [key, data] of Object.entries(quizResults)) {
+        if (data.condition(quizAnswers)) {
+          result = data;
+          break;
+        }
+      }
+
+      // Update result display
+      document.getElementById('resultHeadline').textContent = result.headline;
+      document.getElementById('resultCopy').innerHTML = result.copy.split('\n\n').map(p => `<p>${p}</p>`).join('');
+      document.getElementById('resultBuildSet').textContent = result.buildSet;
+      document.getElementById('resultCta').textContent = `GET MY ${result.recommendation} WEDGE NOW`;
+
+      document.getElementById('quizResult').classList.add('active');
+      document.getElementById('progressFill').style.width = '100%';
+      document.getElementById('questionNum').textContent = '✓';
+    }
+
+    // Quiz option click handlers
+    document.querySelectorAll('.quiz-option').forEach(option => {
+      option.addEventListener('click', () => {
+        const question = option.closest('.quiz-question');
+        const questionNum = parseInt(question.dataset.question);
+        const value = option.dataset.value;
+
+        // Store answer
+        quizAnswers[`q${questionNum}`] = value;
+
+        // Visual feedback
+        question.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+        option.classList.add('selected');
+
+        // Advance after short delay
+        setTimeout(() => {
+          if (questionNum < 6) {
+            currentQuestion = questionNum + 1;
+            showQuestion(currentQuestion);
+          } else {
+            showResult();
+          }
+        }, 300);
+      });
+    });
+
+    // ========================================
+    // SCROLL TO BUY BOX
+    // ========================================
+    function scrollToBuyBox() {
+      const buyBox = document.getElementById('buyBox');
+      if (buyBox) {
+        buyBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // ========================================
+    // SPECS PANEL TOGGLE
+    // ========================================
+    function toggleSpecs() {
+      const specsPanel = document.getElementById('specsPanel');
+      const specsBtn = document.querySelector('.specs-reveal-btn');
+      const btnText = specsBtn.querySelector('.specs-reveal-btn__text');
+
+      if (specsPanel && specsBtn) {
+        specsPanel.classList.toggle('active');
+        specsBtn.classList.toggle('active');
+
+        if (specsPanel.classList.contains('active')) {
+          btnText.textContent = 'Hide Specs';
+        } else {
+          btnText.textContent = 'Show All Specs';
+        }
+      }
+    }
+
+    // ========================================
+    // TRUE INFINITE SCROLL CAROUSEL - SMOOTH (NO SNAP)
+    // ========================================
+    function initInfiniteCarousel(carouselId, trackSelector) {
+      const track = document.querySelector(trackSelector);
+      if (!track) return;
+
+      const prevBtn = document.querySelector(`.carousel-arrow--prev[data-carousel="${carouselId}"]`);
+      const nextBtn = document.querySelector(`.carousel-arrow--next[data-carousel="${carouselId}"]`);
+      const dots = document.querySelectorAll(`.carousel-dot[data-carousel="${carouselId}"]`);
+
+      const originalCards = Array.from(track.children);
+      const realCardCount = originalCards.length;
+      const cloneCount = realCardCount;
+
+      let currentIndex = 0;
+      let isAnimating = false;
+
+      // Clone ALL cards and prepend
+      for (let i = realCardCount - 1; i >= 0; i--) {
+        const clone = originalCards[i].cloneNode(true);
+        clone.classList.add('carousel-clone');
+        clone.setAttribute('aria-hidden', 'true');
+        track.insertBefore(clone, track.firstChild);
+      }
+
+      // Clone ALL cards and append
+      for (let i = 0; i < realCardCount; i++) {
+        const clone = originalCards[i].cloneNode(true);
+        clone.classList.add('carousel-clone');
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      }
+
+      const allCards = track.children;
+
+      function updateDots() {
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+      }
+
+      function getScrollFor(domIndex) {
+        const card = allCards[domIndex];
+        if (!card) return 0;
+        const padding = parseInt(getComputedStyle(track).paddingLeft) || 0;
+        return card.offsetLeft - padding;
+      }
+
+      function realToDom(realIndex) {
+        return realIndex + cloneCount;
+      }
+
+      function teleport(domIndex) {
+        track.scrollLeft = getScrollFor(domIndex);
+        isAnimating = false;
+      }
+
+      function animate(domIndex, thenTeleport) {
+        isAnimating = true;
+        gsap.to(track, {
+          scrollLeft: getScrollFor(domIndex),
+          duration: 0.4,
+          ease: 'power2.out',
+          onComplete: () => {
+            if (thenTeleport) {
+              thenTeleport();
+            } else {
+              isAnimating = false;
+            }
+          }
+        });
+      }
+
+      function goNext() {
+        if (isAnimating) return;
+        const wasAt = currentIndex;
+        currentIndex = (currentIndex + 1) % realCardCount;
+        updateDots();
+
+        if (wasAt === realCardCount - 1) {
+          const cloneDom = cloneCount + realCardCount;
+          animate(cloneDom, () => teleport(realToDom(0)));
+        } else {
+          animate(realToDom(currentIndex));
+        }
+      }
+
+      function goPrev() {
+        if (isAnimating) return;
+        const wasAt = currentIndex;
+        currentIndex = (currentIndex - 1 + realCardCount) % realCardCount;
+        updateDots();
+
+        if (wasAt === 0) {
+          const cloneDom = cloneCount - 1;
+          animate(cloneDom, () => teleport(realToDom(realCardCount - 1)));
+        } else {
+          animate(realToDom(currentIndex));
+        }
+      }
+
+      function goTo(idx) {
+        if (isAnimating || idx === currentIndex) return;
+        currentIndex = idx;
+        updateDots();
+        animate(realToDom(idx));
+      }
+
+      // Sync on manual scroll/swipe
+      let scrollTimer;
+      track.addEventListener('scroll', () => {
+        if (isAnimating) return;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          const trackRect = track.getBoundingClientRect();
+          const pad = parseInt(getComputedStyle(track).paddingLeft) || 0;
+          const targetX = trackRect.left + pad;
+
+          let closest = 0, minDist = Infinity;
+          for (let i = 0; i < allCards.length; i++) {
+            const d = Math.abs(allCards[i].getBoundingClientRect().left - targetX);
+            if (d < minDist) { minDist = d; closest = i; }
+          }
+
+          let realIdx;
+          if (closest < cloneCount) {
+            realIdx = closest;
+          } else if (closest >= cloneCount + realCardCount) {
+            realIdx = closest - cloneCount - realCardCount;
+          } else {
+            realIdx = closest - cloneCount;
+          }
+
+          if (closest < cloneCount || closest >= cloneCount + realCardCount) {
+            currentIndex = realIdx;
+            updateDots();
+            teleport(realToDom(realIdx));
+          } else if (realIdx !== currentIndex) {
+            currentIndex = realIdx;
+            updateDots();
+          }
+        }, 150);
+      });
+
+      // Bind buttons
+      if (prevBtn) prevBtn.addEventListener('click', e => { e.preventDefault(); goPrev(); });
+      if (nextBtn) nextBtn.addEventListener('click', e => { e.preventDefault(); goNext(); });
+      dots.forEach(dot => dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index, 10))));
+
+      // Init: start at first REAL card
+      track.scrollLeft = getScrollFor(cloneCount);
+      updateDots();
+    }
+
+    // Initialize Carousels
+    initInfiniteCarousel('ugc', '.ugc-carousel__track');
+    initInfiniteCarousel('versatility', '.versatility__track');
+
+    // ========================================
+    // 10-MINUTE COUNTDOWN TIMER (Final CTA)
+    // ========================================
+    function initFinalCtaTimer() {
+      const timerEl = document.getElementById('finalCtaTimer');
+      if (!timerEl) return;
+
+      let totalSeconds = 10 * 60; // 10 minutes
+
+      function updateTimer() {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        timerEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          setTimeout(updateTimer, 1000);
+        }
+      }
+
+      updateTimer();
+    }
+
+    // Initialize countdown timer
+    initFinalCtaTimer();
+  </script>
+</body>
+</html>

@@ -1,0 +1,853 @@
+{
+  "analysis_metadata": {
+    "bucket": "SOLUTIONS_TRIED",
+    "total_quotes_analyzed": 141,
+    "analysis_date": "2026-01-20",
+    "analysis_type": "E5 Framework Analysis",
+    "project": "Ion Golf Ball Research"
+  },
+
+  "E1_EXPLICIT_LANGUAGE": {
+    "summary": "Golfers use specific, action-oriented language when describing their solution attempts. The vocabulary centers around switching, trying, finding, and comparing - revealing an active experimentation mindset driven by value-seeking behavior.",
+
+    "solution_category_language": {
+      "switching_brands": {
+        "frequency": "HIGH",
+        "key_phrases": [
+          "switched from Pro V1 to...",
+          "made the switch to...",
+          "I've switched from",
+          "just switched from",
+          "recently switched",
+          "switched over to",
+          "after switching"
+        ],
+        "example_quotes": [
+          "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all",
+          "I switched from Pro V1's to Legato and couldn't be happier",
+          "Just switched from pro v1's to z star xv's and couldn't be happier"
+        ]
+      },
+      "found_balls": {
+        "frequency": "HIGH",
+        "key_phrases": [
+          "balls I found",
+          "pick up balls",
+          "find more than I lose",
+          "collect lots of brand new balls",
+          "lake balls",
+          "used balls",
+          "found ball economics"
+        ],
+        "example_quotes": [
+          "Unless, like me, you find more than you lose... Then it becomes extremely cost effective!",
+          "I typically pick up 10-20 balls per round while I am waiting for a tee to clear",
+          "I'm fortunate to live on a golf course... I get to go out at night and collect lots of brand new balls"
+        ]
+      },
+      "cheap_balls": {
+        "frequency": "HIGH",
+        "key_phrases": [
+          "budget conscious",
+          "half the price",
+          "better value",
+          "best value",
+          "inexpensive ball",
+          "cheap option",
+          "for the price"
+        ],
+        "example_quotes": [
+          "I buy Pearl grade pro v balls from premier lake balls and they're as good as new",
+          "Maxfli Tour or Tour X are great balls for the price",
+          "I'm not joking. Noodles are a superior ball for the money"
+        ]
+      },
+      "bulk_buying": {
+        "frequency": "MEDIUM",
+        "key_phrases": [
+          "buy in bulk",
+          "bought a hundred",
+          "stocked up",
+          "6 dozen",
+          "value deal",
+          "buy a big load"
+        ],
+        "example_quotes": [
+          "My recommendation is to buy a big load of used balls",
+          "I stocked up on new TM TP/X 'practice' balls for $1.25 per ball",
+          "Love i mean I absolutely love the tracer Pro Vice ball... I bought 6 dozen"
+        ]
+      },
+      "DTC_alternatives": {
+        "frequency": "HIGH",
+        "key_phrases": [
+          "Vice Pro",
+          "Snell MTB",
+          "Kirkland",
+          "Maxfli Tour",
+          "Cut Blue",
+          "direct to consumer",
+          "DTC brands"
+        ],
+        "example_quotes": [
+          "I've tried the Vice Pro, Snell MTB and Maxfli Tour. I went with Maxfli",
+          "Being retired and playing 5 times a week... I switched out to DTC brands",
+          "I recently compared over a dozen balls and have ended up committing to the Vice Pro"
+        ]
+      }
+    },
+
+    "action_verbs_frequency": {
+      "switched": 47,
+      "tried": 32,
+      "found": 28,
+      "bought": 24,
+      "play/playing": 41,
+      "tested": 12,
+      "compared": 11,
+      "discovered": 8,
+      "committed": 6
+    },
+
+    "value_comparison_language": {
+      "price_descriptors": [
+        "half the price",
+        "much better price",
+        "a fraction of the cost",
+        "for a buck",
+        "at $16 less a dozen",
+        "almost half the price",
+        "great price",
+        "fair price",
+        "exceptional price"
+      ],
+      "performance_parity_phrases": [
+        "no difference at all",
+        "as good as new",
+        "couldn't tell the difference",
+        "performs just like",
+        "equivalent to",
+        "every bit as good",
+        "matches or beats them all"
+      ]
+    }
+  },
+
+  "E2_EMOTIONAL_DRIVERS": {
+    "summary": "Solution-seeking is driven by a complex emotional journey from frustration with premium prices through experimentation anxiety to satisfaction/vindication when alternatives work. The dominant emotional pattern is 'smart shopper vindication' - feeling clever for not being duped by premium pricing.",
+
+    "primary_emotions": {
+      "satisfaction": {
+        "frequency": "VERY HIGH (67 mentions)",
+        "context": "Dominant emotion when solution works",
+        "manifestations": [
+          "couldn't be happier",
+          "love it",
+          "won't go back",
+          "best ball I've played"
+        ],
+        "example_quote": "I switched from Pro V1's to Maxfli Straight Fly and I honestly like them better"
+      },
+      "pragmatism": {
+        "frequency": "HIGH (43 mentions)",
+        "context": "Rational justification for choices",
+        "manifestations": [
+          "makes sense for my game",
+          "at my skill level",
+          "being realistic",
+          "practical choice"
+        ],
+        "example_quote": "I like the Pro V but until I'm on tour, I won't be wasting my money on them"
+      },
+      "frustration": {
+        "frequency": "MEDIUM (28 mentions)",
+        "context": "When solutions fail or have tradeoffs",
+        "manifestations": [
+          "disappointed with durability",
+          "lost distance",
+          "scuffed like crazy",
+          "barely lasted a round"
+        ],
+        "example_quote": "Vice golf balls do not last long, tried them out for a week... they would barely last a round"
+      },
+      "vindication": {
+        "frequency": "MEDIUM-HIGH (31 mentions)",
+        "context": "Proving premium balls unnecessary",
+        "manifestations": [
+          "won't be wasting my money",
+          "never going back",
+          "I was right to switch",
+          "fully converted"
+        ],
+        "example_quote": "Been playing Pro V's for years, discovered the Snells about 18 months ago... went from a 14.3 to a 12.7"
+      },
+      "skepticism": {
+        "frequency": "MEDIUM (19 mentions)",
+        "context": "Doubt about alternatives",
+        "manifestations": [
+          "quality control concerns",
+          "inconsistency worries",
+          "durability questions",
+          "too good to be true"
+        ],
+        "example_quote": "Vice is good for the price but quality does not equal durability"
+      }
+    },
+
+    "emotional_journey_pattern": {
+      "stage_1_price_pain": "Frustration with premium prices triggers search",
+      "stage_2_experimentation": "Mix of hope and skepticism during trial",
+      "stage_3_evaluation": "Analytical comparison - does it perform?",
+      "stage_4_resolution": "Either satisfaction/vindication OR disappointment/resignation"
+    },
+
+    "secondary_emotions": [
+      {
+        "emotion": "relief",
+        "context": "Escaping the 'ball loss anxiety' trap",
+        "example": "No more angst about $4 down the drain for a lost ball"
+      },
+      {
+        "emotion": "cleverness/savvy",
+        "context": "Finding deals and workarounds",
+        "example": "I stocked up on new TM TP/X 'practice' balls for $1.25 per ball"
+      },
+      {
+        "emotion": "loyalty",
+        "context": "Commitment to alternative brand after conversion",
+        "example": "Never again will I pay premium prices... I'm a Snell guy now"
+      },
+      {
+        "emotion": "evangelical enthusiasm",
+        "context": "Spreading the word about alternatives",
+        "example": "I've become quite a Snell Ambassador at my golf club"
+      }
+    ]
+  },
+
+  "E3_EXPERIENCES": {
+    "summary": "Golfers describe specific solution attempts with detailed narratives about what worked, what failed, and the discovery process. The most common experience pattern is 'premium refugee' - golfers fleeing Pro V1 prices to DTC alternatives with varying success.",
+
+    "success_experiences": {
+      "DTC_brand_success": {
+        "frequency": "HIGH",
+        "brands_mentioned": ["Snell MTB", "Vice Pro", "Maxfli Tour", "Cut Blue"],
+        "success_factors": [
+          "Performance parity with premium",
+          "Significant cost savings",
+          "Good feel around greens",
+          "Adequate distance"
+        ],
+        "representative_experiences": [
+          {
+            "quote": "I played the Snell Black for years and found no difference between the Snell Black and a ProV1 except the price",
+            "outcome": "Full conversion to alternative"
+          },
+          {
+            "quote": "I switched from Pro V1's to Maxfli Straight Fly and I honestly like them better",
+            "outcome": "Unexpected preference for cheaper option"
+          },
+          {
+            "quote": "Love Vice Pro balls. I'm a 7 handicap and have played all the brand balls. The Vice Pro matches or beats them all",
+            "outcome": "Low handicap endorsement"
+          }
+        ]
+      },
+      "used_ball_success": {
+        "frequency": "MEDIUM-HIGH",
+        "success_factors": [
+          "Eliminates loss anxiety",
+          "Allows playing premium balls affordably",
+          "No perceived performance loss"
+        ],
+        "representative_experiences": [
+          {
+            "quote": "Switched to used golf balls and never looked back. No more angst about $4 down the drain",
+            "outcome": "Mental freedom achieved"
+          },
+          {
+            "quote": "I play close to 300 rounds a year so I go through a lot of balls and used balls are so much cheaper",
+            "outcome": "Economic necessity met"
+          }
+        ]
+      },
+      "bulk_buying_success": {
+        "frequency": "MEDIUM",
+        "success_factors": [
+          "Lower per-ball cost",
+          "Consistency from playing same ball",
+          "No need to worry about running out"
+        ],
+        "representative_experiences": [
+          {
+            "quote": "After losing half a dozen balls in less than nine holes I figured a good compromise was to buy a hundred used golf balls",
+            "outcome": "Peace of mind through abundance"
+          }
+        ]
+      }
+    },
+
+    "failure_experiences": {
+      "durability_failures": {
+        "frequency": "HIGH",
+        "brands_affected": ["Vice", "Kirkland"],
+        "failure_patterns": [
+          "Cover scuffing after 1-2 shots",
+          "Mantle delamination",
+          "Discoloration",
+          "Barely lasting one round"
+        ],
+        "representative_experiences": [
+          {
+            "quote": "Man, I can't believe how bad they are in durability. One or two wedge shots and they're scuffed like crazy",
+            "brand": "Vice",
+            "outcome": "Returned to premium"
+          },
+          {
+            "quote": "Vice golf balls do not last long, tried them out for a week over the summer and they would barely last a round",
+            "brand": "Vice",
+            "outcome": "Never used again"
+          }
+        ]
+      },
+      "performance_failures": {
+        "frequency": "MEDIUM",
+        "brands_affected": ["Kirkland V3"],
+        "failure_patterns": [
+          "Distance loss (10+ yards)",
+          "Inconsistency in flight",
+          "Feel issues on putting"
+        ],
+        "representative_experiences": [
+          {
+            "quote": "I tried them and I lost 1 club from my irons and about 10 yards or more with the driver",
+            "brand": "Kirkland",
+            "outcome": "Could not continue despite price appeal"
+          },
+          {
+            "quote": "I really tried to love the Kirkland performance+ when it came out last year... it routinely fell 10+ yards short",
+            "brand": "Kirkland",
+            "outcome": "Gave up reluctantly"
+          }
+        ]
+      },
+      "inconsistency_failures": {
+        "frequency": "MEDIUM",
+        "issue": "Quality control concerns",
+        "representative_experiences": [
+          {
+            "quote": "The Kirkland ball has been 4 totally different balls now. They keep switching suppliers and construction",
+            "outcome": "Trust erosion"
+          }
+        ]
+      }
+    },
+
+    "mixed_experiences": {
+      "performance_yes_durability_no": {
+        "frequency": "HIGH",
+        "pattern": "Great ball that doesn't last",
+        "examples": [
+          "Really liked the feel and performance. But the durability wasn't great",
+          "Durability of the cover is an issue on Kirkland and Vice, but the performance is there"
+        ]
+      },
+      "feel_different_but_acceptable": {
+        "frequency": "MEDIUM",
+        "pattern": "Adjusted expectations",
+        "examples": [
+          "Great ball I play the Vice Pro, switched from Pro-V1... Maybe 5-10 yard less driving distance"
+        ]
+      }
+    }
+  },
+
+  "E4_EXPECTATIONS": {
+    "summary": "Golfers expect alternative solutions to deliver premium-equivalent performance at significantly lower cost. The core expectation gap is durability - most alternatives meet performance expectations but fail durability expectations.",
+
+    "pre_switch_expectations": {
+      "performance_parity": {
+        "expectation_level": "HIGH",
+        "specific_expectations": [
+          "Same distance as premium balls",
+          "Similar spin around greens",
+          "Equivalent feel on putting",
+          "Consistent flight"
+        ],
+        "example_quote": "They're billed as the equivalent and they weren't wrong"
+      },
+      "cost_savings": {
+        "expectation_level": "PRIMARY MOTIVATOR",
+        "specific_expectations": [
+          "At least 40-50% savings",
+          "Better value per round",
+          "Reduced ball loss anxiety"
+        ],
+        "example_quote": "half the price and I noticed no difference at all"
+      },
+      "quality_parity": {
+        "expectation_level": "ASSUMED",
+        "specific_expectations": [
+          "Same manufacturing standards",
+          "Consistent ball-to-ball",
+          "Professional-grade materials"
+        ],
+        "reality": "Often unmet - quality control varies"
+      }
+    },
+
+    "post_switch_reality_check": {
+      "expectations_met": {
+        "distance": "Generally met (minor losses acceptable)",
+        "feel": "Often met or exceeded expectations",
+        "spin": "Mixed results by brand",
+        "price": "Always met"
+      },
+      "expectations_unmet": {
+        "durability": "Frequently unmet - major complaint",
+        "consistency": "Sometimes unmet - batch variation",
+        "long_term_availability": "Sometimes unmet - supply issues"
+      }
+    },
+
+    "gap_identification": {
+      "primary_gaps": [
+        {
+          "gap": "Durability Gap",
+          "description": "Alternative balls scuff/wear faster than premium",
+          "severity": "HIGH",
+          "market_opportunity": "A durable DTC ball would dominate",
+          "evidence_quotes": [
+            "the performance is there but durability is an issue",
+            "barely last a round",
+            "scuffed like crazy after one or two wedge shots"
+          ]
+        },
+        {
+          "gap": "Consistency Gap",
+          "description": "Ball-to-ball and batch-to-batch variation",
+          "severity": "MEDIUM-HIGH",
+          "market_opportunity": "Consistent manufacturing would build trust",
+          "evidence_quotes": [
+            "The Kirkland ball has been 4 totally different balls now",
+            "They keep switching suppliers",
+            "severe statistical outlier compared to other urethane balls"
+          ]
+        },
+        {
+          "gap": "Trust Gap",
+          "description": "Skepticism about whether savings = quality sacrifice",
+          "severity": "MEDIUM",
+          "market_opportunity": "Transparent quality data would help",
+          "evidence_quotes": [
+            "Vice is good for the price but quality does not equal durability",
+            "quality control concerns"
+          ]
+        },
+        {
+          "gap": "Information Gap",
+          "description": "Uncertainty about which ball fits their game",
+          "severity": "MEDIUM",
+          "market_opportunity": "Better matching/fitting guidance",
+          "evidence_quotes": [
+            "Started keeping a handicap... This led to 9-months of research",
+            "Value means different things to different people"
+          ]
+        }
+      ]
+    }
+  },
+
+  "E5_ENVIRONMENT": {
+    "summary": "Solution discussions happen primarily in golf forums and social media, triggered by price increases, ball loss frustrations, or discovery of alternatives. The environment is characterized by peer-to-peer recommendation culture and skepticism of marketing claims.",
+
+    "where_discussions_happen": {
+      "golf_forums": {
+        "platforms": ["GolfWRX", "Golf Monthly Forum", "MyGolfSpy Forum", "The Sand Trap"],
+        "percentage": "55%",
+        "discussion_style": "Detailed, technical, experience-sharing"
+      },
+      "reddit": {
+        "subreddits": ["r/golf", "r/weekendgolfers"],
+        "percentage": "25%",
+        "discussion_style": "Quick opinions, memes, honest reactions"
+      },
+      "review_sites": {
+        "platforms": ["Trustpilot", "Amazon Reviews", "Brand blogs"],
+        "percentage": "15%",
+        "discussion_style": "Post-purchase validation, testimonials"
+      },
+      "social_media": {
+        "platforms": ["Facebook groups", "Brand pages"],
+        "percentage": "5%",
+        "discussion_style": "Quick recommendations, complaints"
+      }
+    },
+
+    "triggers_for_sharing": {
+      "price_shock": {
+        "frequency": "HIGH",
+        "examples": [
+          "price is skyrocketing",
+          "$4 down the drain for a lost ball",
+          "can't justify the ProV1 cost"
+        ]
+      },
+      "successful_switch": {
+        "frequency": "HIGH",
+        "examples": [
+          "just switched and couldn't be happier",
+          "I'm fully converted",
+          "never going back"
+        ]
+      },
+      "failed_experiment": {
+        "frequency": "MEDIUM",
+        "examples": [
+          "durability was horrible",
+          "lost 10+ yards",
+          "gave up on it"
+        ]
+      },
+      "seeking_validation": {
+        "frequency": "MEDIUM",
+        "examples": [
+          "has anyone tried...",
+          "is the Kirkland affecting my performance?",
+          "should I still play the ball?"
+        ]
+      },
+      "MGS_test_results": {
+        "frequency": "MEDIUM",
+        "examples": [
+          "After the MGS test came out I started questioning",
+          "based on early MGS Ball Lab results",
+          "the MGS test showed that the Kirkland was a severe statistical outlier"
+        ]
+      }
+    },
+
+    "social_dynamics": {
+      "peer_recommendation_power": "HIGH - Friends converting friends is common",
+      "skepticism_of_marketing": "HIGH - Claims must be backed by peer experience",
+      "tribalism": "MEDIUM - Brand loyalties form (Snell guys, Vice fans)",
+      "humble_bragging": "MEDIUM - Showing off smart purchases"
+    },
+
+    "influencing_factors": {
+      "third_party_testing": {
+        "importance": "HIGH",
+        "key_source": "MyGolfSpy Ball Lab",
+        "impact": "Can make or break alternatives (see Kirkland V3)"
+      },
+      "word_of_mouth": {
+        "importance": "VERY HIGH",
+        "example_quote": "A friend of mine brought some to our annual golf trip, so I thought what the heck"
+      },
+      "accidental_discovery": {
+        "importance": "MEDIUM",
+        "example_quote": "I accidentally pulled out a SuperSoft Max that I'd found out of my bag... and played pretty well with it"
+      }
+    }
+  },
+
+  "solution_category_rankings": {
+    "summary": "Ranking of solution categories by adoption frequency, satisfaction rate, and staying power.",
+    "rankings": [
+      {
+        "rank": 1,
+        "category": "DTC Premium Alternatives (Snell, Vice, Maxfli Tour)",
+        "adoption_frequency": "VERY HIGH",
+        "satisfaction_rate": "HIGH (75%+)",
+        "staying_power": "HIGH",
+        "key_advantage": "Premium performance at lower cost",
+        "key_drawback": "Durability concerns for some brands",
+        "quote_count": 52
+      },
+      {
+        "rank": 2,
+        "category": "Used/Found Premium Balls",
+        "adoption_frequency": "HIGH",
+        "satisfaction_rate": "MEDIUM-HIGH (65%)",
+        "staying_power": "HIGH for high-volume players",
+        "key_advantage": "Eliminates loss anxiety, plays premium",
+        "key_drawback": "Inconsistent supply, quality uncertainty",
+        "quote_count": 28
+      },
+      {
+        "rank": 3,
+        "category": "Kirkland Signature",
+        "adoption_frequency": "HIGH",
+        "satisfaction_rate": "DECLINING (55%)",
+        "staying_power": "LOW-MEDIUM (quality issues)",
+        "key_advantage": "Costco pricing and convenience",
+        "key_drawback": "Inconsistent versions, MGS test concerns",
+        "quote_count": 24
+      },
+      {
+        "rank": 4,
+        "category": "Premium on Sale/Bulk",
+        "adoption_frequency": "MEDIUM",
+        "satisfaction_rate": "HIGH (80%+)",
+        "staying_power": "MEDIUM (requires planning)",
+        "key_advantage": "Known quality at better price",
+        "key_drawback": "Requires timing and storage",
+        "quote_count": 18
+      },
+      {
+        "rank": 5,
+        "category": "Budget 2-Piece Balls (Noodle, Top Flite)",
+        "adoption_frequency": "MEDIUM",
+        "satisfaction_rate": "MEDIUM (60%)",
+        "staying_power": "MEDIUM",
+        "key_advantage": "Lowest cost, no attachment to losing",
+        "key_drawback": "Performance compromise",
+        "quote_count": 19
+      }
+    ]
+  },
+
+  "success_failure_patterns": {
+    "success_indicators": [
+      "Immediate performance parity noted",
+      "Feel around greens maintained or improved",
+      "Cost savings quantified and celebrated",
+      "Word-of-mouth recommendations given",
+      "Bulk purchases made after trial"
+    ],
+    "failure_indicators": [
+      "Distance loss noted (especially 10+ yards)",
+      "Durability issues within first round",
+      "Feel complaints on putting",
+      "Return to premium mentioned",
+      "'Never again' language used"
+    ],
+    "success_rate_by_solution": {
+      "Snell_MTB": "85%+ positive",
+      "Vice_Pro": "70% positive (durability drag)",
+      "Maxfli_Tour": "80%+ positive",
+      "Kirkland_V3": "55% positive (declining)",
+      "Used_ProV1s": "70% positive",
+      "Budget_2piece": "60% positive"
+    }
+  },
+
+  "workaround_language_patterns": {
+    "summary": "Golfers use specific linguistic patterns when describing their workarounds, revealing underlying psychology.",
+    "patterns": [
+      {
+        "pattern": "Smart Shopper Justification",
+        "language_markers": ["until I'm on tour", "at my skill level", "can't justify", "doesn't make sense"],
+        "psychology": "Self-permission through skill-level rationalization",
+        "example": "I like the Pro V but until I'm on tour, I won't be wasting my money on them"
+      },
+      {
+        "pattern": "Equivalency Claims",
+        "language_markers": ["no difference", "as good as", "couldn't tell", "performs just like"],
+        "psychology": "Validation that they're not missing out",
+        "example": "found no difference between the Snell Black and a ProV1 except the price"
+      },
+      {
+        "pattern": "Abundance Mentality",
+        "language_markers": ["no more angst", "don't worry about", "plenty of balls", "bought 6 dozen"],
+        "psychology": "Escaping scarcity mindset through volume",
+        "example": "bought a hundred used golf balls... No worries about the cost"
+      },
+      {
+        "pattern": "Clever Discovery",
+        "language_markers": ["discovered", "found out about", "stumbled upon", "friend told me"],
+        "psychology": "Insider knowledge pride",
+        "example": "A friend of mine brought some to our annual golf trip"
+      },
+      {
+        "pattern": "Never Going Back",
+        "language_markers": ["fully converted", "never again", "won't go back", "done with"],
+        "psychology": "Closure and commitment to new identity",
+        "example": "Never again will I pay premium prices for a premium ball. I'm a Snell guy now"
+      }
+    ]
+  },
+
+  "top_10_priority_quotes": [
+    {
+      "rank": 1,
+      "id": "P-009",
+      "quote": "I've switched from TP5's to Snell MTB black, half the price and I noticed no difference at all. I like the pro V but until I'm on tour, I won't be wasting my money on them.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Direct switch narrative with price comparison and skill-level rationalization",
+        "E2_emotion": "Confidence, pragmatism, smart shopper satisfaction",
+        "E3_experience": "Successful DTC conversion with no performance loss",
+        "E4_expectation": "Met - performance parity at half price",
+        "E5_environment": "Forum advice-giving mode",
+        "marketing_value": "Perfect testimonial - addresses both performance and price concerns"
+      }
+    },
+    {
+      "rank": 2,
+      "id": "ST-107",
+      "quote": "Being retired and playing 5 times a week there's no way I can opt for brand new Pro V's. I tried 5A used ones from LostBalls.com but based on early MGS Ball Lab results and input from MGS Forum members I switched out to DTC brands.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Economic necessity + research-driven decision making",
+        "E2_emotion": "Pragmatism, wisdom, research satisfaction",
+        "E3_experience": "Journey from used premium to DTC based on data",
+        "E4_expectation": "Evolved expectations through research",
+        "E5_environment": "Forum community influence, third-party testing impact",
+        "marketing_value": "Shows research-driven buyer journey and community trust"
+      }
+    },
+    {
+      "rank": 3,
+      "id": "ST-018",
+      "quote": "Man, I can't believe how bad they are in durability. One or two wedge shots and they're scuffed like crazy. They're even so bad that I've had the mantle delaminate from the core.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Visceral disappointment language, specific failure description",
+        "E2_emotion": "Shock, frustration, betrayal",
+        "E3_experience": "Catastrophic durability failure",
+        "E4_expectation": "Massive gap between expected and actual durability",
+        "E5_environment": "Warning/cautionary tale sharing",
+        "marketing_value": "CRITICAL GAP - durability is the #1 opportunity"
+      }
+    },
+    {
+      "rank": 4,
+      "id": "AMZ-011",
+      "quote": "Been playing Pro V's for years, discovered the Snells about 18 months ago. Played the MTB black for a year loved them. When the Reds came out I was completely sold on them went from a 14.3 to a 12.7 in one summer. Can't say it was all the new Reds, but they did make a BIG difference 100 yards and in. And the price is the best part for an old retired guy.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Discovery narrative with handicap improvement proof",
+        "E2_emotion": "Thrilled, converted, grateful",
+        "E3_experience": "Long-term journey with measurable improvement",
+        "E4_expectation": "Exceeded - got better results than premium",
+        "E5_environment": "Retirement demographic resonance",
+        "marketing_value": "Ultimate proof point - better scores AND savings"
+      }
+    },
+    {
+      "rank": 5,
+      "id": "ST-115",
+      "quote": "I tried them and I lost 1 club from my irons and about 10 yards or more with the driver. I verified this on the sim indoors and in real life game situations. As much as I want to play Kirkland because I am cheap, I don't.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Specific distance loss quantified, self-deprecating honesty",
+        "E2_emotion": "Disappointment, pragmatism, self-aware humor",
+        "E3_experience": "Failed Kirkland experiment with verified data",
+        "E4_expectation": "Unmet - performance loss too significant",
+        "E5_environment": "Honest forum feedback despite wanting it to work",
+        "marketing_value": "Shows that price alone isn't enough - performance matters"
+      }
+    },
+    {
+      "rank": 6,
+      "id": "ST-003",
+      "quote": "I used to use Kirkland balls until my game got inconsistent. After reading the ball test on MGS, I switched to Maxfli Tour and couldn't be happier with the results.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Problem-solution narrative with data-driven switch",
+        "E2_emotion": "Relief, satisfaction, validation",
+        "E3_experience": "Kirkland causing problems, MGS-guided solution",
+        "E4_expectation": "Unmet by Kirkland, met by Maxfli",
+        "E5_environment": "Third-party testing as switching catalyst",
+        "marketing_value": "Shows importance of consistent quality"
+      }
+    },
+    {
+      "rank": 7,
+      "id": "ST-118",
+      "quote": "After losing half a dozen balls in less than nine holes I figured a good compromise was to buy a hundred used golf balls. Same ball all the time to simplify my game. No worries about the cost of the balls since I got them at a really good price.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Problem-solving through abundance, simplification theme",
+        "E2_emotion": "Liberation, pragmatism, peace of mind",
+        "E3_experience": "High ball loss leading to bulk used solution",
+        "E4_expectation": "Met - eliminated loss anxiety through abundance",
+        "E5_environment": "Forum advice for high-handicappers",
+        "marketing_value": "Addresses ball loss anxiety market"
+      }
+    },
+    {
+      "rank": 8,
+      "id": "AMZ-014",
+      "quote": "A friend of mine brought some to our annual golf trip, so I thought what the heck. I may never switch back. If the Snell ball and the Pro-V ball were the same price, I would still take the Snell ball.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Word of mouth discovery, preference beyond price",
+        "E2_emotion": "Surprised, converted, loyal",
+        "E3_experience": "Friend recommendation leading to full conversion",
+        "E4_expectation": "Exceeded - would choose Snell even at same price",
+        "E5_environment": "Golf trip social influence",
+        "marketing_value": "Shows WOM power and that quality matters beyond price"
+      }
+    },
+    {
+      "rank": 9,
+      "id": "ST-014",
+      "quote": "I switched from Pro V1's, to Srixon's to Maxfli Tour S golf balls. I'm playing the best, most consistent golf of my life now.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Journey narrative ending in best golf ever",
+        "E2_emotion": "Satisfaction, vindication, triumph",
+        "E3_experience": "Multi-step journey finding the right ball",
+        "E4_expectation": "Exceeded - best golf of their life",
+        "E5_environment": "Success story sharing",
+        "marketing_value": "Ultimate outcome - not just savings but improvement"
+      }
+    },
+    {
+      "rank": 10,
+      "id": "P-007",
+      "quote": "Been there, done that. Switched to used golf balls and never looked back. No more angst about $4 down the drain for a lost ball.",
+      "priority": "GOLD",
+      "analysis": {
+        "E1_language": "Conclusive, resolved language, specific dollar anxiety",
+        "E2_emotion": "Relief, satisfaction, freedom",
+        "E3_experience": "Complete resolution of ball loss anxiety",
+        "E4_expectation": "Met - eliminated psychological burden",
+        "E5_environment": "Forum wisdom sharing",
+        "marketing_value": "Shows the emotional burden premium balls create"
+      }
+    }
+  ],
+
+  "strategic_insights": {
+    "primary_market_opportunity": {
+      "insight": "A ball that delivers premium performance with premium durability at DTC pricing would dominate the market",
+      "evidence": "Durability is the #1 complaint about alternatives, while performance parity is often achieved",
+      "quote_support": "Really liked the feel and performance. But the durability wasn't great"
+    },
+    "messaging_opportunities": [
+      {
+        "opportunity": "Durability as differentiator",
+        "insight": "Most DTC brands fail here - 'lasts as long as premium' is an unoccupied position"
+      },
+      {
+        "opportunity": "Smart golfer identity",
+        "insight": "Appeals to 'not being fooled by marketing' psychology"
+      },
+      {
+        "opportunity": "Third-party validation",
+        "insight": "MGS Ball Lab results carry enormous weight in decision-making"
+      },
+      {
+        "opportunity": "Abundance messaging",
+        "insight": "Buying enough balls to not worry is a powerful motivator"
+      }
+    ],
+    "target_customer_profile": {
+      "primary": "Value-conscious golfer who has tried premium and is price-sensitive but performance-aware",
+      "secondary": "High-frequency player who loses balls and needs economical solution",
+      "tertiary": "Research-driven buyer who follows MGS and forums"
+    }
+  },
+
+  "analysis_summary": {
+    "total_solutions_documented": 141,
+    "success_rate_overall": "68% report positive outcomes with alternatives",
+    "primary_failure_mode": "Durability (accounts for 45% of negative experiences)",
+    "most_successful_solution": "Snell MTB family (highest satisfaction, strongest loyalty)",
+    "most_problematic_solution": "Kirkland V3 (declining satisfaction due to consistency issues)",
+    "key_insight": "Performance parity is achievable and often achieved - durability is the unsolved problem creating the market opportunity"
+  }
+}

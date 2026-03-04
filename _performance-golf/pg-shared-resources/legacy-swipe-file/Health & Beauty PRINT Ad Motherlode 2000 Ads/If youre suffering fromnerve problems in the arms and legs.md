@@ -1,0 +1,173 @@
+# If youre suffering fromnerve problems in the arms and legs
+
+**Source File:** If youre suffering fromnerve problems in the arms and legs.PDF
+**Conversion Method:** Text Extraction
+**Converted:** 1443751410.0
+
+---
+
+MorePillsAreNotTheSolution
+TheLikelyCauseOfYourProblem
+CouldThisBeYourSolution?
+
+## CALL TODAY TO
+
+
+## SCHEDULE YOUR
+
+
+# $
+
+
+# 35
+
+
+# $
+
+
+# 35
+
+FederalamdMedicarerestrictionsmayapply.
+
+## NERVE
+
+EVALUATION
+($250 VALUE) AVAILABLE UNTIL AUGUST 26, 2013!
+
+# 5 8 6 - 7 2 6 - 9 8 6 0
+
+Itmaycomeandgo...interruptsyoursleep...andevenmakesyourarmorlegsfeelweakattimes.Maybe
+you’veevenbeentootherdoctorsandtheyclaimallthetestsindicateyoushouldfeelfine.
+YoucangeteverythingI’velistedhereforonly$35.Thenormalpriceforthistypeofevalua-
+tionincludingx-raysis$250,soyou’resavingaconsiderableamountbytakingmeuponthis
+offer.Call586-726-9860now.
+Acommontreatmentformanynerveproblemsisthe‘takesomepillsandwaitandsee’method.
+Whilethismaybenecessaryfortemporaryreliefofseveresymptoms,usingthemlongtermisnowaytolive.
+Someofthemorecommondrugsgivenincludepainpills,anti-seizuremedications,andanti-depressants--all
+ofwhichhaveserioussideeffects.
+Whatthesestudiesmeanisthatyoucouldsoonbeenjoying
+life...withoutthoseaggravatingnerveproblems.
+It’stimeforyoutofindoutifchiropracticwillbeyourneu-
+ropathysolution.For10daysonly,$35willgetyouallthe
+servicesInormallychargenewpatients$250for!
+Whatdoesthisofferinclude?Everything.Takealookatwhat
+youwillreceive:
+MynameisDr.RoyJ.Picard,D.C.We’vebeenhelpingpeoplewithneuropathyandnerveproblemsfor23
+years.Oftenneuropathyiscausedbyadegeneratingspinepressingonthenerveroots.Thiscanhappenin
+anyofthevertebraljointsfromtheneckallthewaydowntothetailbone.
+Thegoodnewsisthatchiropractictreatmentshaveproveneffectiveinhelpingtoremovethepressureonthe
+nerves.Byusinggentletechniques,I’mabletoreleasethepressurethathasbuiltuponthenerve.Thisallows
+thenervetohealandthesymptomstogoaway.
+Forexample,numerousstudieshaveprovenchiropractic’seffectivenessinhelpingnerveconditions.
+
+# If you’re suffering from nerve
+
+
+# problems in the arms and legs,
+
+
+# you must read about a clinical
+
+
+# study that showed...
+
+
+# How
+
+
+# 85%
+
+
+# Of Patients
+
+
+# Eliminated Numbness,
+
+
+# Tingling, or Sharp Pains
+
+Numbness, tingling,
+and pain is an extremely
+annoying problem.
+If You Read Nothing
+Else, Read This:
+Morethan20millionAmericanssufferfrom
+peripheralneuropathy,aproblemcausedby
+damagetothenervesthatsupplyyourarms
+andlegs.
+Thispainfulconditioninterfereswithyour
+body’sabilitytotransmitmessagestoyour
+muscles,skin,joints,orinternalorgans.If
+ignoredormistreated,neuropathycanlead
+toirreversiblehealthconditions.
+Whynotgethelpbythosetrainedtocorrect
+themajorcauseofperipheralneuropathy.
+Readthefullfactsonthispage.
+Patientsshowedan85.5%resolutionofthenervesymptomsafteronly9chiropractictreatments.-
+JournalofChiropracticMedicine2008
+Withchiropracticcare,patientshad“significantimprovementinperceivedcomfortandfunction,
+nerveconductionandfingersensationoverall.”–JMPT1998
+“Significantincreaseingripstrengthandnormalizationofmotorandsensorylatencieswerenoted.
+Orthopedictestswerenegative.Symptomsdissipated.”–JMPT1994
+•Anin-depthconsultationaboutyourhealthandwell-beingwhereIwilllisten…reallylisten…
+tothedetailsofyourcase.
+•Acompleteneuromuscularexamination.
+•Afullsetofspecializedx-raystodetermineifaspinalproblemiscontributingtoyourpainorsymptoms.
+•Athoroughanalysisofyourexamandx-rayfindingssowecanstartmappingoutyourplantobeingpainfree.
+•I’llansweryourmostprobingquestionsaboutnerveproblemsandhowchiropracticcanhelp.
+“Iwasdiagnosedwithbreastcancerandwent
+throughchemotherapyandradiation.Aftermyfourth
+roundofchemo,mylegsstartedhurtingsobadthat
+IcouldhardlywalkandIendedupintheemergency
+room.AfterthreevisitswithDr.Picard,Inoticeda
+hugeimprovement.Iwent
+shoppingwithmysonand
+walkedhalfway acrossahuge
+store.Werealizedthenhow
+muchbetterIwas.”
+Regina—Eastpointe
+Here’s What Patients Say...
+Finally,YouHaveAnOption
+OtherThanDrugsorSurgery
+Newresearchinatreatmentcalledlowlevellasertherapy,or
+coldlaser,ishavingaprofoundeffectonpatientssuffering
+withnumbness.Unlikethecuttingtypeoflaserseeninmov-
+iesandusedinmedicalprocedures,thecoldlaserpenetrates
+thesurfaceoftheskinwithnoheatingeffectordamage.Cold
+lasertherapyhasbeentestedfor40years,hadover2000pa-
+perspublishedonit,andbeenshowntoaidindamagedtissue
+regeneration,decreaseinflammation,relievepainandboostthe
+immunesystem.Thismeansthatthereisagoodchancecold
+lasertherapycouldbeyournumbnesssolution,allowingyouto
+liveamoreactivelifestyle.
+ProfessionalathleteslikeTigerWoodsandteammembersof
+theNewEnglandPatriotsrelyuponcoldlasertherapytotreat
+thesports-relatedinjuries.Theseguysusethecoldlaserforone
+reasononly...
+ItPromotesRapidHealingOfTheInjuredTissues
+BeforetheFDAwouldclearthecoldlaserforhumanuse,they
+wantedtoseeproofthatitworked.Thisleadtotwolandmark
+studies.
+ANON-SURGICAL,NON-INVASIVENEUROPATHY
+TREATMENT-NOWAVAILABLE!
+Thefirststudyshowedthatpatientswhohadcoldlasertherapy
+had53%betterimprovementthanthosewhohadaplacebo.The
+secondstudyshowedpatientswhousedthelasertherapyhad
+lesspainandmorerangeofmotiondaysaftertreatment.Ifthe
+coldlasercanhelpthesepatients,itcanhelpyoutoo.
+Wecangetyouscheduledforyourconsultation,examandx-ray
+assoonasthere’sanopening.Ourofficeislocatedat 50258Van
+DykeRd,Ste.E,inShelbyTownship,MI .Whenyoucall,telltherecep-
+tionistyou’dliketocomeinfortheNerveEvaluationsowecan
+getyouonthescheduleandmakesureyoureceivepropercredit
+forthisspecialoffer.
+Sincerely,
+RoyJ.Picard,D.C.
+P.S.Callnowtoreserveanappointmentatthissignificantdis-
+count.Whysufferforyearsinmisery?That’snowaytolive,not
+whentherecouldbeaneasysolutiontoyourproblem.P.P.S.
+Nothing’sworsethanfeelinggreatmentally,butphysicallyfeeling
+heldbackfromlifebecauseyourarmsorlegshurt–andthepain
+justwon’tgoaway!
+Takemeuponmyofferandcalltoday
+586-726-9860.

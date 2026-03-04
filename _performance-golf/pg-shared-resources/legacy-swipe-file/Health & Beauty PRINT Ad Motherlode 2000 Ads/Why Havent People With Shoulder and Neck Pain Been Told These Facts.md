@@ -1,0 +1,212 @@
+# Why Havent People With Shoulder and Neck Pain Been Told These Facts
+
+**Source File:** Why Havent People With Shoulder and Neck Pain Been Told These Facts.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1443117434.0
+
+---
+
+# Why Haven’t People With
+
+
+# Shoulder & Neck Pain
+
+
+# Been Told These Facts?
+
+Ifyou’reovertheageof30andhaverotatorcuffproblems,frozenshoulder,neckpainor
+arthritis,thereishope.Twolocaldoctorsarehelpingpatientsincreaseshoulderstrength,
+improvemotion,andeliminateshoulder&neckpain.Finally,youcanbepainfreeagain–
+evenifyou’vegotthemostexcruciatingshoulderpainyouhaveeverfelt.
+Shoulder&NeckPainIsNotJust‘OldAge’
+HaveADoctorEvaluateYourShoulder&
+NeckForOnly
+$49
+BeOneoftheFirst25Callersandhere’swhatyou’ll
+get…
+Do You Have Any of the
+Following Conditions?
+Noquestion…ifyouarehavingshoulderandneckpain
+thensomethingiswrong.It’snotnormalagingtohurt
+allthetime.Paininyourshoulderandneckisn’tjust
+a‘signofoldage’.Ifthatwastrueall360jointsinyour
+bodywouldhurtsinceyourwholebodyisthesameage.
+Painisyourbody’swarningsigntellingyousomething
+iswrong.Findingtheproblemandfixingithasgottobe
+atoppriority!
+AcromioclavicularJoint
+Acromion
+Humerus
+Axillaryn.
+PosteriorCircumflex
+Humerala.
+QuadrangularSpace
+DeepBrachiala.
+Radialn.
+TricepsBraciim.
+Suprascapulara.andn.
+Supraspinatusm.
+ScapularSpine
+Deltoid(reflected)
+Infraspinatusm.
+TeresMinorm.
+TeresMajorm.
+Clavicle
+Scapula
+•Frozenshoulder–oneofthe
+worstmaladiesknownto
+man(andwoman!)
+•Adhesivecapsulitis
+•Rotatorcuffinjuries
+•Arthritis
+•Bursitis
+•Tendonitis
+•Muscleweakness
+•Sharp,radiatingpain
+•Numbnessandtingling
+•Anin-depthconsultationaboutyourshoulderwherewe
+willlisten…reallylisten.
+•Acompletenerve,muscleandspinalexamtofindthe
+“cause”ofyourproblem.
+•Athoroughanalysisofyourexamfindingssowecanfix
+theproblem.
+•Twotreatments
+•X-raysare$50extraifdeemednecessary
+We’llanswerallyourmostprobingquestionaboutour
+painfreeshoulderevaluationandwhatitcandoforyou.
+Youwon’tbesittinginawaitingroomalldayeither.
+Totakeusuponthisspecialoffer,youmustcall
+720-897-7222andtellthereceptionistyou’dliketocome
+infortheSpecialComprehensiveExam+2Treatments.
+Look,youhaveverylittletoriskandalottogain.Call
+todayandwecangetstartedwithyourconsultationand
+examassoonasthere’sanopeningintheschedule.Our
+officeisAquariusFunctionalNeurology,Metabolic,and
+LaserClinic,LLCandyoucanfindusat5277Manhattan
+Circle,Suite200,Boulder,CO.
+Whywaitandletitgetsobadsurgerybecomesyouronlyoption?
+That’snowaytolive.Call720-897-7222today.Wemaybeable
+tohelpyouliveanormal,pain-freelifeagain.
+Sincerely,
+Drs.CharlesandVickiKelsey,D.C.s
+P.S.WhySufferWithYearsOfMisery?
+Doesyourshoulderpainbuildupwhenyou
+moveitwrongorisitasuddensharppain
+shootingfromyourneckintoyourarm?
+Doyouhavedifficultyjustwashingyourhair
+orevenscratchingyourback?Haveyouhadto
+giveupgolfbecauseofyourshoulderpain?
+Nothing’sworsethanfeelinggreatmentally,
+butphysicallyfeelingheldbackfromlife
+becauseyourshoulderandneckhurtandthe
+painjustwon’tgoaway!
+WeareDrs.CharlesandVickiKelsey,D.C.s
+ofAquariusFunctionalNeurology.Overthe
+pastthirty-threeyearswe’veseenhundredsof
+peoplewithshoulderpain,frozenshoulder,
+neckpainandrotatorcuffproblemsleavethe
+officepainfree.
+Finally,YouHaveAnOption
+OtherThanDrugsorSurgery
+Newresearchinatreatmentcalledlow
+levellasertherapy,orColdLaser,ishaving
+aprofoundeffectonpatientssufferingwith
+painunlikethecuttingtypeoflaserseenin
+moviesandusedinmedicalprocedures,Cold
+Laserpenetratesthesurfaceoftheskinwithno
+heatingeffectordamage.
+ColdLasertherapyhasbeentestedfor40
+years,hadover2000paperspublishedon
+it,andbeenshowntoaidindamagedtissue
+regeneration,decreaseinflammation,relieve
+painandboosttheimmunesystem.Thismeans
+thatthereisagoodchanceColdLasertherapy
+couldbeyourpainsolution,allowingyouto
+liveamoreactivelifestyle.
+ProfessionalathleteslikeTigerWoodsand
+teammembersoftheNewEnglandPatriots
+relyuponcoldlasertherapytotreatsports-
+relatedinjuries.TheseguysusetheColdLaser
+foronereasononly….
+ItPromotesRapidHealing
+OfTheInjuredTissues
+BeforetheFDAwouldclearColdLaserfor
+humanuse,theywantedtoseeproofthatit
+worked.Thisledtotwolandmarkstudies.
+Thefirststudyshowedthatpatientswho
+hadColdLasertherapyhad53%better
+improvementthanthosewhohadaplacebo.
+Thesecondstudyshowedpatientswhoused
+thelasertherapyhadlesspainandmorerange
+ofmotiondaysaftertreatment.IfColdLaser
+canhelpthesepatients,itcanhelpyoutoo.
+PainPillsCouldBeMaking
+YourShoulderWorse
+Ifyou’retakingpainpillsforyourshoulder,
+youarelikelymakingyourproblemworse.
+Painpills,evenover-the-countermedications,
+justmasktheproblem,anddon’tfixyour
+shoulder.
+Painisyourbody’swarningsigntellingyou
+totakeiteasy.Ifyoumaskthepainwithpills,
+youarelikelytodothingsthatcanprevent
+yourshoulderfromhealing–maybeeven
+damageitfurther.Nottomentionmanyofthe
+painmedicationsavailablearequiteaddicting
+andhavedrasticsideeffects.
+WhySurgeryMayNotBe
+YourOnlyOption
+Wecertainlycan’tsayforsureuntilwemeet
+you,butsurgerymaynotbeyouronlyoption.
+Ifyougothroughwithsurgery,you’relooking
+attimeofffromwork,weekstomonthsof
+rehab,andquiteabitofexpense.Whynot
+exhaustallnatural,non-invasiveoptionsbefore
+consideringmoredrasticmeasures?
+
+## OurPatientsSayItBest…
+
+After2weeksoflasertreatmentmy
+shoulderpainis90%better.Icannow
+sleepwithoutpain.Icanmovemyarm
+muchbetterthanbefore.
+
+# -Sharon T.
+
+
+# $
+
+
+# 4
+
+
+# 9
+
+
+# CALL TODAY TO
+
+
+# SCHEDULE YOUR
+
+
+# $49
+
+
+# Comprehensive
+
+
+# Exam + 2Treatments
+
+
+# 5277 Manhattan
+
+
+# Circle, Suite 200,
+
+
+# Boulder, CO
+
+
+# 720-897-7222
+
+AVAILABLETOTHEFIRST25CALLERS!

@@ -1,0 +1,24 @@
+# Fearing Shoulder Surgery
+
+**Source File:** Fearing Shoulder Surgery.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+# FFFFeeeeaaaarrrriiiinnnngggg
+
+
+# SSSShhhhoooouuuullllddddeeeerrrr
+
+
+# SSSSuuuurrrrggggeeeerrrryyyy????
+
+RRRRoooottttaaaattttoooorrrr CCCCuuuuffffffff PPPPaaaaiiiinnnn •••• AAAArrrrtttthhhhrrrriiiittttiiiissss •••• IIIInnnnjjjjuuuurrrriiiieeeessss
+DDDDiiiissssccccoooovvvveeeerrrrhhhhoooowwwwLLLLaaaasssseeeerrrrRRRReeeehhhhaaaabbbbmmmmaaaayyyyhhhheeeellllppppyyyyoooouuuuggggeeeettttrrrreeeeaaaallll
+rrrreeeelllliiiieeeeffffwwwwiiiitttthhhhoooouuuuttttppppiiiillllllllssss,,,,sssshhhhoooottttssss,,,,oooorrrrssssuuuurrrrggggeeeerrrryyyy....
+FFFFRRRREEEEEEEEIIIInnnnffffoooorrrrmmmmaaaattttiiiioooonnnnppppaaaacccckkkkaaaaggggeeeeaaaavvvvaaaaiiiillllaaaabbbblllleeeebbbbyyyymmmmaaaaiiiillllrrrreeeevvvveeeeaaaallllsssshhhhoooowwwwLLLLaaaasssseeeerrrr
+RRRReeeehhhhaaaabbbbwwwwoooorrrrkkkkssssaaaannnnddddhhhhoooowwwwiiiittttmmmmaaaayyyyhhhheeeellllppppyyyyoooouuuuggggeeeettttrrrreeeelllliiiieeeeffffffffaaaasssstttt!!!!GGGGeeeettttyyyyoooouuuurrrrssss
+ttttooooddddaaaayyyybbbbyyyyccccaaaalllllllliiiinnnnggggttttoooollllllllffffrrrreeeeeeee22224444hhhhrrrr....rrrreeeeccccoooorrrrddddeeeeddddmmmmeeeessssssssaaaaggggeeeeaaaatttt
+1111----888800000000----222255552222----4444555511119999oooorrrroooonnnnlllliiiinnnneeeeaaaattttwwwwwwwwwwww....TTTThhhheeeeSSSShhhhoooouuuullllddddeeeerrrrDDDDrrrr....ccccoooommmm
+DDDDrrrr....RRRRoooossssssssHHHHaaaannnnssssoooonnnn,,,,DDDDCCCC––––CCCChhhhiiiirrrroooopppprrrraaaaccccttttoooorrrriiiinnnnSSSSttttiiiillllllllwwwwaaaatttteeeerrrr,,,,MMMMNNNN

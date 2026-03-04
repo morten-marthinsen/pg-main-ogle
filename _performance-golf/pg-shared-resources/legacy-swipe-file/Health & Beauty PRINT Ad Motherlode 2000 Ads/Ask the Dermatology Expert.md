@@ -1,0 +1,65 @@
+# Ask the Dermatology Expert
+
+**Source File:** Ask the Dermatology Expert.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+## Surgery-freetreatment
+
+
+## forskincancer
+
+Q:Whataresomeoftheless-invasive
+waystotreatskincancer?
+A:Recentdataestimates40to50
+percentofAmericanswilldevelopskin
+canceratleastonceintheirlifetime
+bytheir65thbirthday.Skincanceris
+largelypreventablethroughuseofsun-
+screenandself-skinchecks.
+Whiletheriskforskincanceris
+high,moderntechnologyisproviding
+saferandsometimesevenpainless
+optionsfortreatment,suchasSuperfi-
+cialRadiotherapy,orSRT.Thetherapy
+isacosmeticallyattractivealterna-
+tivetosurgeryforselectednon-mela-
+nomacancersandpatientpopulations.
+SRTisalsoagreattreatmentoptionfor
+patientswhoareconsideredhigh-risk
+forsurgicalprocedures.
+SRTusessafe,low-energyradio-
+therapythatpenetratesonlyashortdis-
+tancebelowthesurfaceoftheskin.It
+canbeusedforlesionsonthearms,legs
+andback,butitisespeciallywell-suited
+forskincancersoftheheadandneck
+regionsthatwouldotherwiseleadtoa
+lessthandesirablecosmeticoutcome.
+Eachtreatmentlastsaround90sec-
+onds,andmayrequiremultiplesessions
+dependingonyourdoctor’srecommen-
+dations.Oncetheareaoftreatment
+ishealed,newandhealthyskinwill
+developinitsplace.
+Consultyourdermatologistifyou
+thinkSuperficialRadiotherapymaybe
+rightforyou.
+ChrisD.Collins,M.D.isthefounderandmedicaldirectorof
+CollinsAdvancedDermatologyInstituteinRoundRockand
+Leander.Collinsspecializesinallaspectsofdermatolo-
+gyfromsurgicaltocosmetic.Hispracticeoffersthelatest
+skincancertreatmentsandtherapies,includingMohsSur-
+gery,SuperficialRadiationandPhotodynamicTherapy.
+CollinsAdvancedDermatology
+Institute
+Leander:311S.Hwy183
+RoundRock:4112LinksLane,Suite205
+512.379.6090
+info@collinsadi.com
+CallorbookonlineatCollinsADI.com
+ASKTHEDERMATOLOGYEXPERT
+Dr.Chris
+Collins

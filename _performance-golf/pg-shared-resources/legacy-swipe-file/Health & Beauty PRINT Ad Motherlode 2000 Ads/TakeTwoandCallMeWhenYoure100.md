@@ -1,0 +1,216 @@
+# TakeTwoandCallMeWhenYoure100
+
+**Source File:** TakeTwoandCallMeWhenYoure100.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1430672640.0
+
+---
+
+# HARVARD SCIENTISTS DISCOVER HOW TO “Switch On” LONGEVITY GENE!
+
+
+# America’s #1 Integrative Cardiologist ® Recommends
+
+
+# “Take Two and Call Me When You’re 100!”
+
+
+## Doctor’s “Little Red Pill” naturally improves blood pressure, cholesterol,
+
+
+## energy and brain health; users report results in just weeks!
+
+ThesestatementshavenotbeenevaluatedbytheUSFoodandDrugAdministration. Thisproductisnotintendedtodiagnose,treat,cure,orpreventanydisease.
+*Individualresultsvary.OmegaQPlusResveratrolhelpssupportoverallcardiovascularhealth.
+Areyousuddenly“feelingyourage”
+andstrugglingtomaintainhealthy
+bloodpressure,cholesterollevels,and
+relieffromachesandpains?Doyou
+experiencealackofenergythroughout
+thedayandhaveahardtimefocusing?
+Ifyousaidyestooneorallofthese,
+thenthere’sgoodnews.
+Dr.StephenSinatrasaysitmayfinallybe
+insulinsensitivity,helpskeepbraincells
+younger,andboosts bloodflow.How
+couldINOTaddittomyformula?”The
+resultisOmegaQPlusResveratrol.
+Doctor’s5-in-1Formula
+OneofthekeybenefitsofOmegaQPlus
+Resveratrolisthatitcombinesthepurest
+omega-3,CoQ10,andresveratrolalong
+possibletoenjoyhealthyaging,evenup
+toage100bytaking2smallpillsaday.
+Readon...
+Dr.Sinatra,acardiologistformore
+than30years,andbestsellinghealth
+author,wasfamousforhisheart-healthy
+vitamincocktailcalledOmegaQ
+Plus—the“littleredpill”.Itkepthis
+patientshealthyfordecades.Thenhe
+addedResveratroltohistried-and-true
+formula...why?
+“ByaddingthisnutrienttoOmegaQ
+Plus,Ibelievewehavecreatedthesingle
+greatestanti-agingvitaminever,”he
+claims.
+Switch“On”YourLongevityGene
+Harvardscientistshavetestedthousands
+ofnutrientstotryandactivatetheanti-
+agingprocess.Itwasn’tuntiltheytested
+resveratrol(foundinredgrapes)that
+theysawthelongevitygenelightuplike
+aChristmastree.
+“Ispent12monthsreviewingallthe
+researchstudies.Thisnutrientnot
+onlystimulatesthelongevitygene
+butitalsoworksinsideyourarteries,
+preventscholesteroloxidation,improves
+withL-CarnitineandafullcomplexofB
+morenitricoxideinaslittleas24hours
+whenexposedtoresveratrol.Thatmeans
+bettercirculationthroughoutyourentire
+bodyinaslittleas24hours!
+Dr.Sinatra’sformulahasaprofessional
+leveldoseofresveratroltoenhance
+bloodvesselhealth,bloodpressure,
+andbloodflow.Andit’sinthetrans
+vitamins.Thesefivenutrientsareatthe
+topofthelistformostanti-agingdoctors
+recommendingnaturalnutritionfora
+healthyheartandbody.
+BetterBloodFlow,Cholesterol&
+SugarLevels
+Numerousstudiesconfirmresveratrolis
+apotentantioxidantthatinhibits“sticky
+platelets”insidethearterieswhilepre-
+ventingbadcholesterolfromoxidizing
+(rusting)inthebloodstream.Addition-
+ally,ithelpsimproveinsulinsensitivity
+tohelpkeepbloodsugarlevelssteady.
+“Itakeitmyselfbecauseitis8times
+betterforhealthybloodpressure,”says
+Dr.Sinatra.
+GermanStudyConfirms
+ImprovementInTotalBody
+Circulation
+Nitricoxideisthegasnaturallypro-
+ducedbythebodythatkeepsarteries
+wideandflexibleformaximumblood
+flowtothewholebody.According
+toastudyfromJohannesGuttenburg
+UniversityinGermany,asampleof
+cellsthatlinethearteries—knownas
+endothelialcells—startedproducing
+resveratrolformbelievedtobesuper-
+bioavailable.
+NoticeableResultsinJustWeeks
+Onesatisfiedcustomerreports,“My
+husband’sbloodtestscamebackper-
+fect.Within2weeksInoticedimprove-
+ments.I’mwalkingbetterandfeeling
+morehealthy.”*
+“Iwastakingalloftheseingredients
+separately...thenIfoundthemall
+togetherinOmegaQPlusResveratrol!
+Ilovetheease.Mybloodpressureis
+good,jointmovementeasyandfree,
+andIfeelgreat,”confirmsMr.Sliz*. Dr.Sinatra’suniqueformulareplaces
+traditionalfishoilwitharareformof
+SayGoodbyetoDozensofPills
+omega-3fromcalamari(squid)that
+The“LittleRedPill”savesyouhundreds
+eliminatestheodorandtoxinsofregu-
+ofdollarsayearbycombiningthese
+larfishoil.Thisallowsyoutogetthe
+nutrientsintooneformulaandcomes
+inflammation-reducingeffectsandjoint
+witha90-dayguaranteesoyoucan
+soothingbenefitsofomega-3without
+experiencenoticeableresultsworryfree.
+theunpleasant“fishburps”ofother
+Thousandscallmonthlytoordermore.
+formulas.
+Florenceagrees,“Ihavemoreenergy
+GeorgiaresidentRachelW.discovered
+andstamina.Iwalkfurther.Itake2cap-
+ahappysurpriseaftertryingOmega
+sulesandnoticeabigdifference.”*
+QPlus,“Istartedtakingittohelpmy
+MoreEnergyEqualsBetterHealth knees.Iwasabletomoveeasier...Ihad
+OmegaQPlusResveratrolisaheart moreenergyandthenInoticedbetter
+healthformulabutyoumaynoticethe cholesterol...Iwouldrecommendthis
+rapidincreaseinenergyfirst.Thisis producttoanyone.”*
+becausetheHydroQ-Sorb®formof
+“Ourmindsaremuchclearer...there’sno
+CoQ10passesthroughthecellularmem-
+burpingfishtaste...it’sverypure,”says
+branesandfeedsyourmitrochondria—
+WilW.,OR.*
+thefundamentalenergyfurnaceoflife.
+Withindays,thisCoQ10coulddouble “Dr.Sinatrahascreatedthedecade’s
+oreventripleyourenergylevels! mosteffectiveanti-agingcocktail,”says
+clinicalnutritionist,BillGottlieb.*
+“It’sLikePouringLighterFluid
+onaCampfire” Whenaskedwhatimprovementsshe
+Dr.Sinatracomparestheeffectsof noticedsincetakingOmegaQPlus,
+CoQ10oncellsbysaying,“your LindaT.saidnotonlyhadsheseena
+mitochondriainstantlyigniteandyour healthydecreaseinherbloodpressure
+energylevelssoar.” andcholesterollevels,shealsoreport-
+edasurgeofenergy“rightaway—2
+“ByfarthebestsupplementIhaveever
+taken—helpseverything—circulation,
+physicalenergy,mentalenergyand
+brainactivity...”Mr.Billet*
+NourishesHealthy,FlexibleJoints
+Aspartofhisanti-agingformula,
+Dr.Sinatramadesuretoincludea
+significantamountofomega-3,highin
+DHAandEPAforbetterheart,brain
+andjointhealth.
+or3daysaftertakingit...Iabsolutely
+Withover10millionbottlessoldinthe
+U.S.,theeffectivenessiswellproven.
+“Theresultsaresoprofoundcustomers
+don’twanttorunout,”continuesBill
+Gottlieb.
+ProvenResultsYouCanFeel
+• Improvecirculation
+• Boostbrainpower
+• Promoteall-dayenergy
+• Superiorhearthealth
+• Balancebloodpressure
+• Bettercholesterol
+• Lubricatejoints
+2BonusBottlesofDoctor-
+Recommended5-in-1Formula
+Callthetoll-freenumberforyourfree
+bonus60-daysupplyofthesamefor-
+mulausedbyDr.Sinatra’spatients.
+Beoneofthefirst500callersand
+geta30-daysupplyofVitaminD3
+freewithyourorder.Alsobesureto
+askhowyoucanreceivefreecopies
+oftheshockinghealthreportson
+MentalClarity,WeightLossandHeart
+Health—a$35valuefree!
+The2bonusbottlesofOmega-QPlus
+Resveratrol,thefreereportsandfree
+bonusgiftareyourstokeepnomatter
+loveit!”
+whatyoudecide.
+Dr.Sinatraweighsin,“WithOmegaQPlusResveratrolyouareget-
+tingeverynutrientyouneedtoimmediatelyfixyourenergylevels
+andmakesurethatyournextbloodtestisthebestyou’vehadin
+years—guaranteedorit’sfree!”
+
+## Call Today for Free Shipping!
+
+
+# 1-800-963-3635
+
+ADVERTISEMENT
+
+## Call Today for Free Shipping!
+
+ADVERTISEMENT ADVERTISEMENT

@@ -1,0 +1,192 @@
+# Gold Medal Olympic Athletes Reveal
+
+**Source File:** Gold Medal Olympic Athletes Reveal.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1454507834.0
+
+---
+
+Atraditionallyunpopularvegetableisbecominga21stcenturysuper
+food that helps support healthy blood pressure, better circulation,
+increasedoxygentomuscles,morestamina,clearerthinking,andbetter
+digestion-allwhileprovidingsuperantioxidantsandimmunesystem
+nutrients.Theredbeethasbeendubbeda“performanceenhancing
+vegetable”byOlympiansandscientists.Butthehassleandexpenseof
+juicingbeetseverymorninghaskeptmanyfromexperiencingwhat
+somesayare“miraculousbenefits.”Readontodiscoverhowyoucan
+accomplish your “Olympic-like” tasks throughout the day
+WITHOUThavingtoguzzledownthejuiceitself!
+Olympic“Stamina-Juice”BoostsCirculationToo!
+Studieshaveshownthatcyclistswhoingestedhalfaliterofbeet
+juicebeforea2.5mileora10-miletimetrialwerealmost3%faster
+thanwhentheydidn’tdrinkbeetjuice.IntheOlympic world—a
+3%improvementcanmeanthedifferencebetweenthesilverand
+goldmedal!Nowondertheseathletesare“juicedup”aboutbeets!
+“BeetJuiceBottle”ProvesExpensiveAlternative
+Beveragecompanieshavebeenquicktorespondtothedemandfor
+beet juice by offering concentrated pre-made beet juice in bottles.
+CarolynPierini,microbiologistandfunctionalfoodexpertchimesin,
+“Theproblemisthattheyareexpensiveandtheactualheatingprocess
+to make the beet juice often diminishes the nutritional value.”
+Inaddition,manyconsumersjustdon’tlikethetasteofbeetjuice.
+NowThere’sSomethingBetterThanBeetJuice!
+ThankstothepioneeringeffortsofNeogenisLabs,youneverhave
+todrinkbeetjuicebutyoucangetallthebenefitswiththeirorganic
+SuperBeets TM formula.Thissmallcanisterpacksthenutritionalpower
+of3organicbeetsperservingandeasilymixeswithwater-thetaste
+hasbeencomparedto“tartraspberry”inflavor.Unlikepowderedbeet
+supplementssoldinstores,SuperBeets TM hasbeentransformedinto
+vibrantpurplecrystalswithouttheuseofchemicalsorextremeheat.
+WhatmakesSuperBeets TM sodifferentthananythingonthemarketis
+thatNeogenisLabscontrolstheirbeetcropintheUS,teststhebeets
+forhighdietarynitratesandusesapatenteddryingprocesstopreserve
+thenaturalnutrientsandnitricoxideboostingpower.
+NewBookReveals“BeetSecret”
+“Beetsareabreakthroughinanti-agingnotonlybecausethey
+contain circulation and oxygen enhancing nutrients, antioxidants,
+vitamins,minerals,aminoacidsanddigestiveaidsbuttheyalsoprovide
+thehighestlevelofnitricoxideboostingpotentialofanyvegetable.
+SuperBeets TM makesgettingthisnutritioneasyandtheuniquepurple
+crystalsaresoconcentratedthatanyonecanseeaboostintheirN-O
+levelsevenafterthefirstglass,”saysDr.NathanBryan,whoauthored
+abookonbeetnutritioncalledBeetTheOdds,isattheforefrontof
+research on Nitric Oxide and worked with twoof the Nobel Prize
+winningscientiststhatdiscoveredtheincrediblehealthbenefitsof
+NitricOxide.
+TestYourN-OLevelsFree!
+LowN-Olevelscanaffectenergyandstaminalevels,physical
+performance,bloodpressure,circulation,inflammation,andeven
+theabilitytothinkclearly.Youcandeterminehowlowyourown
+N-Olevelsaresimplybyusingapatentpendingsalivaindicator
+strip. SpecialN-OsalivaindicatorstripsrevealhowmuchN-Oyou
+haveinthebodybeforeandafterusingSuperBeets TM .(Obtaina
+freecopyofBeetTheOdd sandFreeN-OTestStripsbycalling
+1-888-XXX-XXXX.)
+Circulation-BoostingCocktail
+Beetjuicehasbecomeasuperfoodbothfor
+itsrichnutrientprofileandalsobecauseofits
+abilitytoboostNitricOxide(N-O)inthebody
+quickly. Properly grown beets contain high
+dietary nitrates which help create N-O. This
+activatestotalbodycirculation.SuperBeets TM
+powderedcrystalsaredesignedtodelivertheNi-
+tricOxidepotentialboostingpowerof3whole
+organicbeets;makingitmoreeffective,lessex-
+pensiveandmorepleasurabletodrinkthanor-
+dinary beet juice. One glass of this
+circulation-boostingcocktailcannaturallyboost
+bloodflowinthebodyinaslittleas25minutes.
+Increasedenergyandstaminaareadirectresult.
+DoctorRecommended
+Thejuiceofredbeets,whenhighindietarynitrates,producesnitric
+oxideinthebodyleadingtowiderbloodvesselsandmoreoxygendelivery,
+whichactivatestotalbodycirculation.“NitricOxidepromoteshealthy
+bloodpressureandcirculation,improvesmentalfocusandsharpness,
+increasesstaminaandenergyandprotectseverycellinthebody.Itis
+essentialtoanti-aging.Mostpeoplewillexperienceadropinthier
+NitricOxidelevelsaftertheageof40duetonormalagingoreven
+simplyfromalackofsleep.Thispatentedformulamakesiteasyto
+boostN-Olevelsnaturally.,”continuesDr.Bryan.
+TheSuperBeets TM formulaissopureandhighindietarynitrates,many
+canexperienceresultsthefirsttimetheydrinkit.
+ThemographicImagingShows
+HowYourBodyLightsUp
+Like AChristmasTree!
+BetterBloodPressureNaturally!
+“Iwasshocked.IcravedSuperBeets TM daily.Ittastessogoodand
+itreallyhelpswithmybloodpressure,circulationandstamina,”claims
+ChrisP,salonownerinAustin,TX.
+TheEmergingScienceBehind“HealthyBeetSecret”
+AccordingtoarecentstudypublishedinNutritionJournal,drinkingan
+8ozglassofbeetjuicehelpedlowerbloodpressure over24hoursof
+drinkingit.Beetjuiceloweredsystolicbloodpressurebyanaverageof
+4-5points. One4ozservingof SuperBeets TM istheN-Oequivalentto
+drinking16ouncesofbeetjuice.
+BoostStaminaandPerformanceUpto16%
+PublishedintheJournalofAppliedPhysiology,500mlofbeet
+juice has been shown to increase exercise capacity by 16% in
+athletes and non-athletes. SuperBeets TM allows you to get the
+equivalentNitricOxidepotentialas500mlofbeetjuice.
+“My enduranceleveltripled.Iwentfrom20minutesto45and
+withintwoweeksIwasuptoanhourontheellipticalmachineat
+themostdifficultsetting,”saysPhyllisM.,FL.
+SharpenMemory&FocusWith1GlassADay!
+TheJournalNaturalNewsreportedthatscientistsdiscovereddrinking
+beetjuicecanincreasebloodflowtothebrain,helpingwithmentalfatigue,
+focusandalertness.SuperBeets TM startsworkinginabout25minutes.
+NaturalResultsYouCanFeel
+“Itisamazingthatyoucanactuallyseethatitisdoingwhatitsays
+itdoesinthebody.Andevenmoreamazingthatyoucanfeelchanges
+inyourhealthinjustafewdays,”agreesstayathomemominTX
+MichelleS.
+“Icouldn’tbelievethatone4ozglassislikedrinkingthejuiceof3
+wholebeets.Ittastesgreat...andmyenergyandstaminawentthrough
+theroof,”sayslongdistancerunnerJohnO,PA.
+“IneversleepbetterthanwhenIdrinkSuperBeetsduringtheday.
+Ithasreallychangedmyhealthsoquickly.I nevereatvegetablesbutI
+drinkSuperBeetseveryday,”writesMAnative,TomF.
+10-DaySuperBeets TM TasteTestChallenge
+NeogenisLabsissoconfidentinthequalityandnutritionalintegrity
+oftheirSuperBeets TM formulathattheyarewillingtoguaranteeresults.
+NeogenisLabsprovidesFreeNitricOxideSalivaIndicatorStripsso
+youcantestyourN-OlevelsbeforeandafterdrinkingSuperBeets TM .
+TaketheSuperBeets TM TasteTestChallengeandtryitfor10-daysto
+experiencethedifference.Ifyoudon’tlovethetasteandfeelbetter-
+youdon’tpay!
+FreeSupplytoAllReaders
+Nowyoucannaturallysupporthealthybloodpressure,mental
+focus,increasedenergyandstaminawhileboostingN-Olevelswith
+justone4oz glassofthisgreattasting“circulation-boosting”drink
+daily. With your first order of SuperBeets you’ll receive a bonus
+30-daycanisterofSuperBeets TM free.
+FreeBonusGiftsForTryingSuperBeets TM Today!
+Yourfirstorderalsocomeswith3bonusfreegiftsyourstokeepno
+matterwhatyoudecide:afreeOn-The-Go10-Pack,freeNitricOxide
+SalivaIndicatorStripsandafreecopyofDr.NathanBryan’sacclaimed
+book,BeetTheOdds.Your entireorderisbackedbyasatisfaction
+guarantee.Socallnow.
+
+## Call Toll-Free
+
+
+# 1-888-XXX-XXXX
+
+CIrCuLAtIo(cid:9) A(cid:9)D CArDIo BreA(cid:13)t(cid:14)roug(cid:14)
+*Thisproductisnotintendedtodiagnose,treat,cureorpreventanydisease.ThesestatementshavenotbeenevaluatedbytheFDA.Individualresultsmayvary.Dr.NathanBryan,MariaWatson,andCarolynPieriniallworkforNeogenisLabs.
+Dr.NathanS.Bryan,
+PhD,lecturesaroundthe
+worldaboutNitricOxide
+anditshealthbenefits.
+Heistheleadformulator
+ofthenewbeetroot
+crystalformula,
+SuperBeets TM ,that
+makesiteasytoincrease
+N-Olevelsinthebody.
+
+# Gold Medal Olympic Athletes Reveal
+
+
+# Performance-Enhancing Vegetable Secret!
+
+
+# Noticeable Results in Circulation, Stamina, Mental Focus and Digestion in as little as 10-Days!
+
+Da(cid:17)k(cid:19)(cid:17)=D(cid:19)c(cid:17)(cid:19)as(cid:19)d
+Bl(cid:25)(cid:25)dFl(cid:25)w
+B(cid:19)f(cid:25)(cid:17)(cid:19)
+TheeffectsofmoreN-Ointhebodycanbemeasuredundera
+special thermographic camera. Actual Thermographic Imaging
+showscirculationinthebodybeforeandafter. OntheLeft,thefoot
+andtoesaredarkerduetoreducedbloodflowandtemperature.
+OntheRight,lightercoloredareasshowincreasedbloodflowafter
+only25minutesofdrinkingSuperBeets TM .
+Af(cid:29)(cid:19)(cid:17)
+25Minutes
+4 D(cid:19)(cid:31)(cid:17)(cid:19)(cid:19)s Wa(cid:17)m(cid:19)(cid:17)
+L i (cid:31)h (cid:29) (cid:19) (cid:17) = I n c (cid:17) (cid:19)as(cid:19) d
+B l (cid:25) (cid:25) dF l (cid:25) w
+
+# 1-888-604-5158
+
+1-888-604-5158.)

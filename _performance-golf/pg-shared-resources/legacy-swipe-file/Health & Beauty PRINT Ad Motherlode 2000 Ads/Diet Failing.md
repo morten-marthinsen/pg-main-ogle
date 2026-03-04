@@ -1,0 +1,86 @@
+# Diet Failing
+
+**Source File:** Diet Failing.PDF
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+# DIET FAILING?
+
+
+## Local Obesity Expert Received the 2014 Prestigious
+
+
+## National Award As Having the Best Weight Control
+
+
+## Practice In The Country. HE CAN HELP YOU!
+
+MildredOakleyofNewHavenLost350lbs.
+Ifinallyrealizedthatafter10plusfailingdiets,that“gainyourweightback”
+dietprograms,protein,points,pills,shakesandsurgeryproduce
+NOpermanentlongtermresults.ThatiswhyLessack’sindividualized
+weightlossprogramisdifferentthananyweightlossprograminthe
+countryandgoingonanydietorjoiningaweightlossprogrambecause
+hedevelopedwaystouncover,correctand/oreliminatemypsychological
+andemotionalovereatingtriggersandnegativelifestylepatternandbad
+habitsthatcontributedtomyoverweightstateinthefirstplace.Healso
+scientificallyhelpedmyslowmetabolismandpostmenopausalhormonal
+changesthatledtoslowweightlossinthepast.Theweightlosspartof
+programwaswithrealsupermarketfoodandfast,funandwithouthunger.
+IwishIknewofDr.Lessackyearsago.
+TheweeklydrivefromNYCwasworthitbecauseitwastheonlyprogram
+IcouldfindintheU.S.thatgavemetheindividualizedcounselingtocorrect
+andeliminatemyemotionalandpsychologicalovereatingtriggersandbad
+eatinghabits,andlearnnecessaryskillstocontrolmyeatingurgesthat
+causemyoverweightstateinthefirstplace
+SusanMcDonald
+lost100lbs.
+ConnieMaloneofCanton
+Lost60lbs.
+AftermenopausemyhormonesslowedmymetabolismsoIcouldnolongerloseweighton
+anydiet.Heresolvedtheproblemscientificallywithhisexpertiseinthescienceoffoods,
+hefocusedonfoodsthatshutdownmybellyfatcellsfromexceptingfat.Heusedfood
+combinationswhichhelpeddeliverfattothebloodforfatburningandhormonalstabilization.
+YoualwayshearofthisprocessontheDr.Ozshow.Andlookatmenow!Remember,
+Dr.Lessackhasthemostreverednutritioncredentialinthecountry,CNS.
+ForarecentinterviewhedidwithFaithMiddletononCTPublicRadioon
+“PsychologyofWeightLoss”gotofirstpageofwebsite:drlessack.com
+Specializinginrealfoodweightlosseatingplandesign
+–compulsive&emotionalovereating–yo-yodieting–stoppingplateaus
+–food&sugaraddiction–sluggishmetabolism
+–permanentweightloss–individualizedexerciseRx
+–scientificbellyfatreduction
+–stoppingweightgainafterweightlosssurgery
+–diabetesandheartattackprevention
+–vegan–glutenfree–one-on-onecounseling
+Dr.LessackisformerprogramdirectorofHeartAttackPreventionandRehabilitationatRoutersMedicalSchool.Hereceived
+theOutstandingYoungManinAmericaforhispioneeringworkinpermanentweightlossandsportsmedicine.Youhaveseen
+himmanytimesasanexpertguestonchannels3and8.ABCTVNews(affiliate),reportedonthe6:00newsthatDr.Lessack’s
+approachwasthemostindividualizedandcomprehensiveinthecountrycomparedtoseveralprogramsinthestateand
+country.AlsoalocalTVprograminterviewedDr.Lessackon“TheBestWeightLossPrograminCT”(postedonYouTube).Ina
+CTMagazinearticletheytitledit“TheBestWaytoLoseWeightinCT”.
+Special
+FEE REDUCTION for
+CITY and STATE
+EMPLOYEES and their
+families
+P.S.PleasenotethatDr.Lessackisnotinvolvedinthosenutritionallydangerous,gainyourweightback,proteindiets.
+
+# Paul Lessack, Ph.D.
+
+Office Hours: Mon.-Sat. 8 to 8
+Gotowww.DrLessack.comformoreinfo.
+SuccessfullyworkingintheNewhavenareawithmen,women,
+seniors&children,8to380lbs.overweight,forover20years
+Dr.Lessackworkingwith Dr.Lessackworkingwithformer
+formerUCONNBasketballstar UCONNBasketballstarRayAllen
+KaraWolters,ona onanindividualizedprogram.
+SpecialOlympicprogram.
+IT ALL STARTS WITH A LOW COST INITIAL CONSULTATION
+
+# Call
+
+
+# 203-758-9305

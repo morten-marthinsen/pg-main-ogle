@@ -1,0 +1,177 @@
+# I Cant Live with Excruciating Foot And Leg Pain
+
+**Source File:** I Cant Live with Excruciating Foot And Leg Pain.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1442936496.0
+
+---
+
+# I Can’t Live with
+
+
+# Excruciating Foot
+
+
+# And Leg Pain
+
+
+# Announcing A New High Tech Method For
+
+
+# The Treatment of Peripheral Neuropathy
+
+
+# and Type II Diabetes Symptoms...
+
+“Doc,Ican’tlivewiththisexcruciating
+footandlegpain!”
+Whenyouhearthisfromapatientitgetsyour
+attention.Typically,Igettheworstoftheworstpain
+patientsbutwhenIrecentlyheardthisexclamation,
+myattentionwasparticularlypeaked. Let’scallthis
+patientBob.Bobis62yearsoldwithneuropathyin
+hishandsandfeet.Hehadpoorlycontrolled
+TypeIIDiabetesandhislifewasliterallyashe
+describedit“alivinghell.” Clearlyhewascoming
+totheendofhisrope. Thenervesinhislegsand
+feetweredamagedandhewasinHORRIBLE
+CONSTANTPAIN
+“ICan’tSleepatNight!”
+Hecomplainedtome,“Ican’tsleepatnightbecause
+mylegsfeelliketheyarebeingeatenbylittlebugs
+orchewedonbysmallanimals.”
+Duringtheday,hecouldhardlywalkandevery
+stepsentshootingpainlikelightningfromhistoes
+anduphislegsupalmosttohisknees. Hehad
+numbnessinhisfeetandcouldn’tfeelhisfeetvery
+wellandhadterriblebalanceproblems. Hewas
+worriedhemightfallandinjurehimself.
+Hetoldmethathecouldnotgoonlivingwiththis
+constant,debilitatingpainthathadmadeeveryday
+atragedy.
+Ihadtohelpthisman!
+afewtreatmentsandwaschanging
+thelivesofpatientswithseveredebilitatingpainin
+officesacrossthenation.
+Basedontheresearchaboutthisnewtypeof
+technologyandbecauseofthealmostimmediate
+typeofpainrelief,Ihadtohaveoneofthesedeep
+tissuetreatmentsinmyfacilitynomatterwhatthe
+cost.
+3yearsagoIwasfortunateenoughto discover
+anon-invasiveandnon-drugtreatmentfor
+severeandconstantfootandlegpaincausedby
+neuropathy.
+Ilearnedaboutanewtypeofnon-surgicaland
+painless,hightechtreatmentthatwasworking
+wonderswithsevere,constantchronicpain,
+includingpaincausedbyNeuropathy.
+Ithadtheabilitytoquicklyincreasecirculationto
+anarea(muchneededinaneuropathypatient).
+Itcouldreduceand/oreliminatepaininaslittleas
+Weareabletoreduceoreveneliminate
+neuropathypainoftheworstkind.
+Sotoalleviateanyunduestress,Itellthemthis,
+“Haveatreatmentortwoonme,untilyougetsome
+painrelief.”
+Usingthelatestandmostrecenttech-nologies,I
+nowofferanon-invasive,nonsurgicalandpainless
+neuropathypaintreatment. Ihelppatientsreduce
+oreveneliminatetheirneuropathypainusing
+nutritionaltherapies,deeptissuesuper-pulsed
+treatments,combinedwithspecificnon-surgical,
+non-invasive,relaxingre-integrationand
+stimulationtreatmentsofperipheralnervesusing
+wholebodyvibration toincreasetheirfunction
+quickly.
+Inmyoffice,
+Iseepatients
+whosufferfrom
+excruciating
+pain,throbbing,
+burning,
+stabbingand/or
+tinglingintheir
+feetandlegs
+Thesepatientshaveusuallybeentoldthatthereis
+nothingthatcanbedoneforthem,ortheyhave
+beengiven
+drugtherapy,
+whichhasn’t
+helpedthem.
+Typically,these
+patientscome
+tomevery
+skepticalthatI
+canevenhelp
+them.
+Here’swhatsomepatientshavesaidabout
+thetreatments:
+“Iwason14medicationsandmydoctorshadtold
+meImayneedtohavemyfootamputated. Ihadn’t
+beenabletowearshoesotherthansandalsforyears
+becauseofmyswollenandpainfulfeet. Aftergoing
+throughthisprogramI’velostweightandmyfoot
+painisgone. Icannowwearnormalshoes.”
+Patient,N.S.,
+Age58
+“I drove120
+milestogetthis
+treatmentbecause
+Ihadnotbeen
+abletofeelmy
+feetfor15years.
+Iworkonafarm
+andIwouldstumbleandfallbecauseIcouldnot
+feelthegroundundermyfeet. I’mgettingolderand
+Ican’taffordtofallandbreaksomething. Afterthe
+treatments,Iwasabletofeelmyfeetandtoesagain.
+NowforthefirsttimeinoveradecadeIhavefeelings
+inmyfeet.“PatientM.H.,Age 85
+SojusthowcanyouseeifDr.Kremer’s
+NeuropathyPainRelieftreatmentwill
+helpyoutoreduceoreliminateyour
+footorlegpain?
+WEGETRESULTS…PERIOD!
+Foralimitednumberofcallers(wearelimiting
+thistothefirst27callersduetotheresponsetothis
+typeofoffer),weareveryseriouswhenitcomesto
+helpingyou…Ourtrackrecordspeaksforitself…
+
+## FREE Leg & Foot
+
+
+## Neuropathy Evaluation
+
+
+## & Treatment
+
+Ifyousufferfrom:
+–BurningPain
+–LegCramping
+–SharpElectrical-LikePain
+–PainwhenyouWalk
+–DifficultySleepingfromlegAndFoot
+Discomfort
+–PricklingorTinglingoftheFeet
+orHands
+ThenI’dliketopersonallyinviteyouintomy
+officeforaFREETREATMENT
+Onceyou’vebeenevaluatedfullyand
+completelywithourverythorough
+NeuropathyTreatmentEvaluation,wewill
+knowifyouareacandidateforthisnew
+painlessandeffectiveNeuropathyPainRelief
+Program.
+Callourofficerightawaytoqualifyfor
+oneofthe27FreeNeuropathyEvaluation
+Appointments!
+
+# CALL TODAY
+
+ForFREEEvaluation
+(530) 513-6546
+Dr.RyanKremerDC
+SolutionsHealth,
+111MissionRanchBlvdSte150,
+Chico,CA95926

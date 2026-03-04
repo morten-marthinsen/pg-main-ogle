@@ -1,0 +1,306 @@
+# FDA-Approved Knee Pain Treatment
+
+**Source File:** FDA-Approved Knee Pain Treatment.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+MINNEAPOLIS,MINNESOTA—Accord-
+ingtotheAmericanAcademyofOrthopaedic
+Surgeons,osteoarthritis(OA)ofthekneeisone
+ofthefiveleadingcausesofdisabilityaffecting
+millionsofAmericanseachyear.Infact,therisk
+fordisabilityfromOAofthekneeisasgreatas
+theriskforcardiovasculardiseasewhichisthe
+leadingcauseofdeathamongallAmericans.
+Untilrecentyearssolutionsforosteoarthritisof
+thekneehavebeenlimitedandoftenresultin
+painfulsurgicalproceduresfollowedbymonths
+oryearsoftherapyandrehabilitation.However,
+advancesinFDA-approvednon-surgicalmedi-
+caltreatmentshavebeenhelpingpeoplerelieve
+osteoarthritisofthekneeandprolongoreven
+eliminatetheneedforsurgery.
+Thisisaccomplishedbyusingadvancedstateof
+thearttechnologyandtreatmentprotocols.To
+thepatienttheprocessseemssimple,butbehind
+thescenesacustomizedtreatmentprogramis
+formulateddependingontheseverityofthe
+condition,allowingforthebestpossibleresult.
+AftervisitingMinnesotaArthritisCenterand
+talkingwithsomeofthepatients,it’sclearto
+seethatoutcomeshavebeennothingshortof
+miraculous.Here’swhatoneofthepatientshas
+tosay.
+“BeforeIcametoMinnesotaArthritisCenter,
+IhadbeentoldIwouldneverhaverelieffrom
+theexcruciatingpaininmykneeswithoutknee
+replacement.Butafterthetreatmentandphysi-
+caltherapyatMinnesotaArthritisCenterIcan
+nowwalknormally
+andwithoutpain!I
+climbedstairslast
+weekforthefirst
+timeinayear.Iam
+nolongerusingthe
+handicapparking
+spaces.Ihavea
+normallifewith-
+outpainevery
+timeIstandup
+orwalk.Thank
+you!Thank
+you!Minnesota
+ArthritisCenter
+hasgivenmenew
+life.”
+—Marsha E.
+Alloftheelementsofeffec-
+tivetreatmentcanbefound
+atthemedicalofficesof
+MinnesotaArthritisCenter.
+Theypossessacombination
+oftechnologyandexperi-
+encethatensurescomfortable
+treatmentandeffectivereliefof
+yourpain.
+Aftertreatingthousandsofpatients,
+thedoctorsofMinnesotaArthritis
+Centerhaveagreatunderstanding
+ofeachconditionandtheyunder-
+standwhattreatmentswillworkbesttorelieve
+yourpain.
+Forthosewhohavequestionsabouttheprogram
+orwanttomakesurethatit’srightfortheircon-
+dition,afreescreeningisbeingoffered.Some
+commonquestionsarelistedbelow.
+Whatisosteoarthritis(OA)?
+Osteoarthritis,alsoknownasdegenerativejoint
+disease,isthemostcommontypeofarthritis.
+HealthykneesarenaturallyfilledwithSynovial
+fluidthathelpslubricateandprovidecushion-
+ing.Inosteorathritistheamountofsynovial
+fluidisdiminishedandthejointspacebecomes
+morecompressed.Thiscausesthebonestorub
+togetherresultinginpain,swelling,andlossof
+motionofthejoint.Althoughinsomepeople
+itprogressesquickly,inmostindividualsjoint
+damagedevelopsgraduallyoveryears.
+WhohasOA?
+condition,typicallyasaresultofajointinjury,
+ajointmalformation,orageneticdefectinthe
+jointcartilage.Itisalsomorelikelytooccurin
+peoplewhoareoverweightandthosewithjobs
+thatstressparticularjoints.
+Osteoarthritisismostcommoninolderpeople.
+However,youngerpeoplecanalsodevelopthe
+WhatcausesOsteoarthritis?
+Thenumberonecauseofosteoarthritisishe-
+reditary. Ifyourparentshadosteoarthritisthere
+isagoodchanceyoumayhaveitalso.Because
+ofthis,earlytreatmentishighlyrecommended
+toprolongkneejointhealth.
+Otherfactorsthatmightcauseosteoarthritis
+includethefollowing:
+• Beingoverweight
+• Gettingolder(wearandtear)
+• Jointinjury
+• Jointsthatarenotproperlyformed(align-
+ment/imbalanceproblems)
+• Ageneticdefectinthejointcartilage
+• Stressesonthejointsfromcertainactivities
+includingsports,workandleisureactivities
+Howdoesourtreatmentwork?
+AftercarefulstudyandseveraltrialstheFDA
+approvedanewtreatmentaimedathelpingthose
+withkneepain.
+Theeffectivenessofthis proventreatmentis
+improvedbystateofthearttechnologyutilizedat
+MinnesotaArthritisCenter.ThedoctorsatMin-
+nesotaArthritisCentercanpinpointthelocation
+inthekneewherethereisthegreatestdamage.
+FDAapprovedHyalgan ® gelisthen
+addedtothekneejointandtheheal-
+ingprocessbegins.Hyalgan ® gel
+bondswithnaturallyoccurring
+jointfluidtocreatealubricat-
+ingandcushioninglayerin
+theknee.Thisreducespain,
+inflammation,andswelling
+ofthejoint.
+Hyalgan ® treatmentsare
+visuallyguidedbylivemo-
+tionimagingfluoroscopyto
+ensurecomfortandmaximal
+injectionaccuracy.Mostpatients
+reportlittlepainordiscomfort.
+Hyalgan ® gelissimilar
+tosubstancesthatoccur
+naturallyinyourjoint.
+Theoutsideofthejoint
+(jointcapsule)iscom-
+prisedofasturdyfibrous
+tissue.Theliningofthe
+jointcapsulecontains
+synovialfluidwhichacts
+asashockabsorberinside
+thejoint.
+Theeasiestwaytothinkof
+Hyalgan ® geltreatmentsis
+thattheytopupthejoint’snaturalfluid,which
+hasbeenlostbecauseofosteoarthritis.Itis
+similartoaddingoiltoyourcar’sengine.Ifyour
+carweretorunlowonoilyouwouldhavesome
+seriouswearandtearonthemovingparts.More
+oilwouldbenecessarytoremedythesituation.
+WhenwillIfeelresults?
+Mostpatientsfeelimprovementquicklyandcan
+begintoenjoyeverydayactivitiesagain.
+HowdoIknowthatthisisright
+forme?
+Afreescreeningisthebestwaytodetermineif
+treatmentisright.MinnesotaArthritisCenter
+canonlyacceptalimitednumberofpatientsper
+weekintothisprogram.Peoplecanschedule
+theirfreescreeningatanytimebuttheremaybe
+a1-2weekdelayforadmittanceintotheprogram
+forqualifiedindividuals.
+Areyouagoodcandidate
+forthistreatment?
+• Doyouwakeupwithkneepain?
+• Doesyourkneepainkeepyoufrom
+certainactivities?
+• Haveyoubeentoldyouneedaknee
+replacement?
+• Areyouactiveandsometimessufferfrom
+soreknees?
+• Doyoutakemedicationsforkneepain?
+• Doyouhavedifficultygoingupanddown
+stairsduetokneepain?
+• Areyouconsideringsurgerytoalleviate
+kneepain?
+• Haveyoutriedeverythingtogetridofknee
+painwithnosuccess?
+• Ifyouansweredyestoanyofthesequestions
+youmaybeacandidatefortreatment.
+AboutMinnesotaArthritisCenter
+DoctorsatMinnesotaArthritisCenterhave
+decadesofexperienceandtheyhavecontinu-
+ouslyinvestedinthemostadvancedmedical
+treatmentsavailable.Severalhightechmedical
+optionsareavailablethatcan’tbefoundany-
+whereelseinMinnesota.Wheremostdoctors
+runoutofanswers,MinnesotaArthritisCenter
+offershopeandhealing.
+Ourspecialtydoctorswhohaveyearsofexperi-
+enceinFDAapprovednon-surgicaltreatments,
+havesuccessfullytreatedthousandsofpatients,
+andwillcustomizeatreatmentplanthatisright
+foryou.Everythingisdoneinonecenterso
+thereisnoneedtotraveltoseeotherdoctors
+orspecialists.
+Coveredbymostmajorinsurances
+includingMedicare!
+
+## Whatarethebenefitsoftreatmentcomparedtosurgery?
+
+
+# Woman avoids surgery through new
+
+
+# innovative knee treatment.
+
+“AftercompletingtreatmentatMinnesotaArthritisCenter,Icameaway
+feelingrelief.WhenIstartedthereIwaslimpingbadlyduetopain
+inmyknees.OverthecourseofmytreatmentIhaveexperienceda
+markedimprovementinthepainlevelandflexibility.Thephysicalther-
+apywasextremelybeneficial.Thestaffwerehelpfulandprofessional
+andansweredallmyquestions.Thereisnodoubtinmymindthatthe
+treatmentwasbeneficialandhasimprovedmyqualityoflife.”
+—PatriciaH.
+Disclaimer:DuetoFederalLawsomeexclusionsmayapply. Copyright©EpicMarketing 2015
+• Coveredbymostinsurance
+companiesincludingMedicare
+• TreatmentisSafe,Easyand
+requiresNOsurgery
+• Calltodayifyouexperienceany
+degreeofkneepainordiscomfort
+• Startlivingyourlifepainfree!
+
+# SPACE IS LIMITED!
+
+
+# CALL TODAY TO SCHEDULE YOUR FREE SCREENING!
+
+
+## CALLTODAY! 651-967-7589
+
+2785WhiteBearAvenue,Suite108B,Maplewood,MN55109
+ADVERTISEMENT
+
+# FDA-Approved Knee Pain Treatment
+
+
+# Helps Thousands Avoid Surgery
+
+Minnesota Arthritis Center is
+now accepting new patients.
+Most insurances accepted—
+including Medicare.
+
+# Minnesota Health Daily
+
+• Coveredbymostinsurance
+companiesincluding Medicare
+• Treatmentis Safe,Easyand
+requiresNOsurgery
+StartlivingyourlifePAINFREE!
+•AlliedTeamofHealthProfessionals
+•YearsofExperience
+•PhysicalMedicineRehab
+•LatestFDA-ClearedTreatments
+Aftertreatingthousandsofpatients,
+thedoctorshaveagreatunderstand-
+ingofeachconditionandtheyknow
+whatprotocolstoincludeforsuc-
+cessfultreatment.
+Minnesota Arthritis Center
+
+# Knowledge
+
+
+# & Experience
+
+Surgery
+Cost Deductible,co-pay,medications,
+timeoffwork,etc.
+Risk Complications,pooroutcome,
+addictiontopainmedications
+Pain Canbesevereformonths
+Recovery Months/years
+NonSurgicalTreatmentat
+MinnesotaArthritisCenter
+Coveredbymostinsurance
+plansincludingMedicare
+Noknownsideeffects
+Littletonone
+Immediate
+WornCartilage
+BoneErosion
+ReducedSpace
+BetweenJoints
+Cushoning
+Medicine
+RelievesPain
+Increased
+JointSpace
+Reduces
+Friction
+caltherapyatMinnesotaArthritisCenterIcan
+nowwalknormally,
+andwithoutpain!I
+ARTHRITIC
+KNEE
+AFTER HYALGAN ®
+GEL TREATMENT

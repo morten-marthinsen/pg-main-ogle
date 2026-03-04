@@ -1,0 +1,238 @@
+# Got Knee Pain
+
+**Source File:** Got Knee Pain.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+# A8
+
+MONDAY, DECEMBER 10, 2012 LEXINGTON HERALD-LEADER | KENTUCKY.COM
+ADVERTISEMENT
+
+# GOT KNEE PAIN?
+
+There is a safe, non-surgical FDAcleared treatment now available locally that has been proven to effectively reduce
+and even eliminate knee pain. . .and the best part is It’s Covered By Most Insurance Including Medicare!
+LexingtonKY
+OnehundredyearsagotheaverageAmeri-
+canlivedtoabout50yearsofage.Todaythe
+averageAmericanlivestonearly80yearsofage.
+Whilethatfactaloneisastonishingevenmore
+soisthattoday’s’populationremainsactivewell
+intotheir70’sand80’s.Itisnolongeruncom-
+montoseetheseventyyearoldplayingtennis
+ortheeightyyearoldshootingaroundofgolf
+withfriends.Howeverfortheestimated50million
+adultsintheUnitedStatesthatreportbeingtold
+byadoctorthattheyhavesomeformofarthritis
+theimageofanactivelifestylemayseemallbuta
+distantmemory,thatisuntilrecently.
+Arevolutionarynewnon-surgicaltreatment
+calledViscosupplementationTherapyisprovid-
+inghopeandreliefformanykneepainsufferers.
+OfferedlocallybyDr.PCraigMD,thisprocedure
+isminimallyinvasive,requiresno-surgery,can
+provideimmediateresults,andhaslittletono
+recoverytime.
+ButbeforewediscussViscosupplementa-
+tionTherapyfurtherlets’considerthefactssur-
+roundingjointpainandarthritis...
+Clearlyarthritisandkneepainhavealready
+reachedepidemicproportionsintheUnitedStates.
+Ifyouareexperiencinganyofthefollowingsymp-
+tomsinyourkneeorjointschancesareyourpain
+isduetoaconditioncalledOsteoarthritisandyou
+maybeacandidateforcare:
+•Pain:Yourjointsmayache,orthepainmay
+feelburningorsharp.Forsomepeople,thepain
+maycomeandgo.Constantpainorpainwhile
+yousleepmaybeasignthatyourarthritisisget-
+tingworse.
+•Stiffness:Whenyouhavearthritis,gettingup
+inthemorningcanbehard.Yourjointsmayfeel
+stiffandcreakyforashorttime,untilyouget
+moving.Youmayalsogetstifffromsitting.
+•Muscleweakness:Themusclesaroundthe
+jointmaygetweaker.Thishappensalotwith
+arthritisintheknee.
+•Swelling:Arthritiscancauseswellinginjoints,
+makingthemfeeltenderandsore.
+•Deformedjoints:Jointscanstarttolooklike
+theyarethewrongshape.
+•Reducedrangeofmotionandlossofuseof
+thejoint:Asyourarthritisgetsworse,youmay
+notbeabletofullybend,flex,orextendyour
+joints.Oryoumaynotbeabletousethematall.
+•Crackingandcreaking:Yourjointsmaymake
+crunching,creakingsounds.
+Ifyouareexperiencinganyoftheabove
+mentionedsymptoms,don’tworry,thereishope.
+ManythathaveundergoneViscosupplementation
+Therapyreporttheseverysymptoms,onlytosee
+themreducedandeveneliminatedafterreceiving
+care.
+Haveyoulosthopeorbeentoldhatsurgery
+isyouronlyoption?Don’tacceptanultimatum!If
+youoralovedonehasbeengivenanultimatum
+byanotherdoctordon’tworryyoudohaveoptions,
+feelfreetocallanytimeat859-449-4668 andask
+foryourfreesecond,third,orfourthopinion.
+Untilrecently,theonlyadviceformanysuffering
+fromkneeandjointpainwasto:
+•Tryexercising •Tryphysicaltherapy
+•Trypainpills •Trymusclerelaxers
+•Trypainshots •Trydangeroussurgery
+
+# Consider The Facts. . .
+
+Degenerative joint conditions impact
+over 100 million people in the United
+States.
+Roughly 25% of all visits to primary
+care physicians are attributed to these
+conditions.
+Half of all anti-inflammatory drug
+prescriptions written in the United
+States are for joint pain.
+One in five adults (22%) in the United
+States report having doctor diag-
+nosed arthritis.
+In 2007-2009, 50% of adults 65 years
+or older reported an arthritis
+diagnosis.
+By 2030, an estimated 67 million
+Americans ages 18 years or older are
+projected to have doctor diagnosed
+arthritis.
+Treatmentwith
+Dr.Craig Surgery
+Cost Coveredby
+mostinsurance
+plansincluding
+Medicare
+Risk Noknownside
+affects
+Pain Littletonone
+Recovery
+Considerthesefactsbeforesurgery:
+Deductible,
+Co-Pay,Meds,
+timeoffwork,etc.
+Complications,poor
+outcomes,addiction
+topainmedications
+Canbesevereand
+lastformonths
+Immediate Months/Years
+
+# OSTEO RELIEF
+
+
+# INSTITUTE
+
+1019 Majestic Drive, Suite 160
+Lexington
+
+# 859-449-4668
+
+Ifyouaretiredoftryingtreatmentsthatdon’t
+providelastingrelief,orifyouareafraidtotryany
+ofthesetreatments,don’tworrythereisanother
+option.Ifyouhavetriedanyofthesetreatments
+andexperiencelittletonoreliefyoumaystillbea
+candidateforViscosupplementationTherapy.Call
+859-449-4668andscheduleanocostscreening
+today!Youhavenothingtolosebutyourpain!
+HowDoesThisTherapyWork?
+Dr.Craiguseshightechmedicalequipment
+anddecadesofexperiencetopinpointproblem
+areaswithextremeaccuracy.Viscosupplementa-
+tionistheninjectedintothekneeandbondswith
+naturallyoccurringjointfluidtocreatealubricating
+andcushioninglayer.Italsoreducespain,inflam-
+mation,andswellingofthejoint.Mostpatients
+comparethetreatmenttogettingaflushotand
+reportlittlepainordiscomfort.
+Whatisinjectedintotheknee?
+HyaluronicAcid(Hyalgan)isanatural
+substanceextractedfromroostercombsand
+purifiedtomimicthelubricatingsubstancesthat
+occurnaturallyinthejointcalledsynovialfluid.In
+patientswithosteoarthritissynovialfluid“driesup”
+allowingthecartilageofthejointtorubagainst
+itselfandothersurfacescausingpain,inflamma-
+tion,andinmostcasesdamagetothejoint.Think
+ofthistreatmentlikeoilingasqueakingdoorhinge,
+onceappliedthesqueakingstopsandthedoor
+movesmorefreely.
+WhenwillIfeelresults?
+Mostfeelanimmediatereductioninpain
+andreturntonormalactivitiesinweeks.
+ConsideringSurgery?
+Peoplewhosufferfromkneepaintypically
+trysupplementsorpainmedicationsbeforeseek-
+inghelpfromadoctor.Whenallelsefailsandthe
+painistoomuch,somefeelsurgeryistheonly
+option.
+Willmyinsurancecoverthistreatment?
+Yes,mostmajorinsurancesandMedicare
+willpayforthistreatment
+HowdoIknowthatthisisrightforme?
+willgiveyouanhonestandfairevaluationofyour
+particularkneepain.Toaccommodatedemandwe
+haveopenedourscheduletothefirst30callersto
+receivea“nocost”screening.
+RealPatients,RealStories,RealRelief!
+“Iwasexperiencingsomepainandstiffness
+inbothmyknees.Myprimarydoctorprescribed
+naproxinandsaidthatIwasagoodcandidate
+forkneereplacementsurgery.Notlongafterthat
+IheardaboutanewFDAapprovedtreatment
+forOsteoarthritisbeingusedattheOsteoRelief
+Institute.
+Thetherapistswereverypatientand
+encouragingandafterashorttimeIwasableto
+seeamarkedimprovementinmypostureandin
+thewayIwalked.Aftertheinjectionsandtherapy
+IcanhonestlysayI’minbettershapethanever.
+Thankstotheexcellentandcaringstaffmyquality
+oflifehasbeenrestored.”
+“Mykneefeelsgreat.Iwasabitskeptical
+whenIfirstreadabouttheprograminthepaper
+butfromthemomentIwalkedthroughthedoorI
+knewthatthisprogramwasgoingtobedifferent.
+Theentireatmospherefromtheattitudeofthe
+stafftotheofficeitselfputmeatease.Ihadal-
+readyhadatotalkneereplacementandwantedto
+trysomethingratherthangothroughanotherpain-
+fulsurgery.Aftercompletingtheprogrammyinitial
+impressionwascorrect.Icannowdanceagain
+whichIhavenotdoneinyears,andmylifestyleis
+onitswaybacktonormal.ThankyouOsteoRelief
+Institute!”
+Sothereyouhaveit,surgeryisnolonger
+youronlyoption,hopedoesexist,andthistherapy
+hashelpedotherslikeyou.Sowhatareyouwait-
+ingfor?Pickupthephoneandcallustodayto
+scheduleyourrisk-free,no-obligation,screeningat
+no-costtoyou.Call859-449-4668.
+Butonelastthing,eversinceaddingthis
+medicalbreakthroughtoourpracticethephone
+hasbeenringingoffthehook.Weaddedextra
+linestotryandaccommodatethetraffic,but
+sometimesitisjusttoomuchtohandle.Forthat
+reasonifyoucallandthelineisbusy,orifyoure-
+ceivevoicemail,keepcallingback.Thepossibility
+oflivingpainfreeagainandgettingyourlifeback
+iswellworththetimeandeffortitmaytaketoget
+aholdofussothatwecanscheduleyourno-cost
+screening.Sokeepcalling,helpisonlyaphone
+callaway...859-449-4668.
+Wearealsoseeinggreatsuccesswith
+shoulderpainandarthritis.Call859-449-4668.
+TheAmericanAcademyofRheumatology
+recommendstheuseofHyalganfortreatmentof
+Osteoarthritisoftheknee.Inmostcasesifyou
+havekneepainthisisagreatsolution.Dr.Craig

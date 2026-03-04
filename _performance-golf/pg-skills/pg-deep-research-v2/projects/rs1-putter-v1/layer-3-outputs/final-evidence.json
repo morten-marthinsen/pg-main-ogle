@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "project": "RS1 Putter Research",
+    "created": "2026-01-27",
+    "verified_quote_count": 37,
+    "source_count": 10,
+    "prd_compliance": {
+      "minimum_quotes_required": 1000,
+      "actual_quotes": 37,
+      "status": "BELOW_MINIMUM",
+      "note": "Additional research rounds needed to meet PRD quota"
+    }
+  },
+  "bucket_tallies": {
+    "PAIN": {
+      "count": 14,
+      "required": 300,
+      "status": "below_minimum",
+      "top_themes": [
+        "Short putt misses (pulls/pushes)",
+        "Three-putting frequency",
+        "Yips and involuntary movements",
+        "Confidence loss"
+      ]
+    },
+    "ROOT_CAUSE": {
+      "count": 13,
+      "required": 200,
+      "status": "below_minimum",
+      "top_themes": [
+        "Face control issues (opening/closing)",
+        "Stroke mechanics problems",
+        "Alignment/setup errors",
+        "Mental/overthinking factors"
+      ]
+    },
+    "SOLUTIONS_TRIED": {
+      "count": 7,
+      "required": 150,
+      "status": "below_minimum",
+      "top_themes": [
+        "Grip changes",
+        "Equipment cycling",
+        "Stroke modifications"
+      ]
+    },
+    "COMPETITOR_MECHANISMS": {
+      "count": 3,
+      "required": 100,
+      "status": "below_minimum",
+      "top_themes": [
+        "LAB Golf DF3 experiences",
+        "Aesthetic concerns with tech putters"
+      ]
+    },
+    "HOPE": {
+      "count": 1,
+      "required": 250,
+      "status": "below_minimum",
+      "top_themes": [
+        "Recovery stories from yips"
+      ]
+    },
+    "VILLAIN": {
+      "count": 0,
+      "required": 50,
+      "status": "below_minimum",
+      "note": "Villain themes identified in ROOT_CAUSE quotes"
+    }
+  },
+  "verified_sources": [
+    {
+      "url": "https://forums.golfwrx.com/topic/1893666-problem-with-missing-short-putts-in-competition/",
+      "platform": "GolfWRX",
+      "quotes_extracted": 10,
+      "topic": "Short putt misses in competition"
+    },
+    {
+      "url": "https://forums.golfwrx.com/topic/2001256-putting-yips-all-advice-welcome/",
+      "platform": "GolfWRX",
+      "quotes_extracted": 4,
+      "topic": "Putting yips advice"
+    },
+    {
+      "url": "https://forums.golfwrx.com/topic/2001118-lab-df3-ruined-putters-for-me/",
+      "platform": "GolfWRX",
+      "quotes_extracted": 3,
+      "topic": "LAB DF3 user experiences"
+    },
+    {
+      "url": "https://forums.golfwrx.com/topic/327744-zero-confidence-with-putter/",
+      "platform": "GolfWRX",
+      "quotes_extracted": 5,
+      "topic": "Putting confidence issues"
+    },
+    {
+      "url": "https://thesandtrap.com/forums/topic/27684-putting-is-killing-me-rant-and-plea-for-help/",
+      "platform": "TheSandTrap",
+      "quotes_extracted": 5,
+      "topic": "Chronic putting problems"
+    },
+    {
+      "url": "https://forums.golfwrx.com/topic/1840782-anyone-really-cure-putting-yips/",
+      "platform": "GolfWRX",
+      "quotes_extracted": 9,
+      "topic": "Yips cure experiences"
+    },
+    {
+      "url": "https://forums.golfwrx.com/topic/1911786-putter-stroke-toe-hang-or-face-balance/",
+      "platform": "GolfWRX",
+      "quotes_extracted": 0,
+      "topic": "Putter balance discussion",
+      "note": "Scraped but not yet processed"
+    },
+    {
+      "url": "https://forum.mygolfspy.com/topic/64035-lab-df3-putters-2024-forum-review/",
+      "platform": "MyGolfSpy",
+      "quotes_extracted": 0,
+      "topic": "LAB DF3 forum review",
+      "note": "Scraped but not yet processed"
+    },
+    {
+      "url": "https://forums.golfwrx.com/topic/2028207-what-is-the-best-way-to-learn-putting-distance-control/",
+      "platform": "GolfWRX",
+      "quotes_extracted": 0,
+      "topic": "Distance control",
+      "note": "Scraped but not yet processed"
+    },
+    {
+      "url": "https://forums.golfwrx.com/topic/1934562-most-overrated-and-underrated-putter-brands/",
+      "platform": "GolfWRX",
+      "quotes_extracted": 0,
+      "topic": "Putter brand opinions",
+      "note": "Scraped but not yet processed"
+    }
+  ],
+  "key_insights_for_copywriting": {
+    "primary_pain_point": {
+      "theme": "Face drift causes pulls/pushes on short putts",
+      "evidence_strength": "strong",
+      "quote_example": "I start missing 2-4 footers, usually by pulling them and once it starts, it continues",
+      "emotional_intensity": "high"
+    },
+    "rs1_mechanism_match": {
+      "problem": "Traditional putter CG behind shaft causes face to open",
+      "solution": "RS1's Forward Axis Balance keeps face square through stroke",
+      "differentiation": "Face-down orientation (not just face-balanced or lie-angle balanced)"
+    },
+    "competitor_vulnerability": {
+      "LAB_Golf": "Works well but aesthetic concerns - 'not something I like to hold and look at'",
+      "opportunity": "RS1 can position as technology that works AND looks good"
+    },
+    "emotional_transformation": {
+      "before": "Frustration, self-doubt, almost quit golf",
+      "after": "Confidence, trust, enjoyment",
+      "mechanism": "Consistent face angle removes uncertainty"
+    }
+  },
+  "research_gaps": {
+    "need_more_quotes": true,
+    "areas_needing_depth": [
+      "HOPE bucket - success stories",
+      "Premium buyer psychology - what triggers $400+ purchase",
+      "Specific LAB Golf complaints",
+      "Scotty Cameron user migration stories"
+    ],
+    "recommended_next_sources": [
+      "Reddit r/golf LAB Golf threads",
+      "YouTube LAB Golf review comments",
+      "Amazon putter reviews (premium models)",
+      "Facebook golf groups"
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+# Ask The Dermatology Expert Shine Free Summer
+
+**Source File:** Ask The Dermatology Expert Shine Free Summer.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+## Shine-freesummer
+
+Q:What’sthebestwaytocombatoily
+skinthissummer?
+A:Theheatandhumidityofsummer
+createtheperfectformulaforoilyskin.
+Thereisarangeofwaystocorrect
+excessoil,fromat-homeremediesto
+focusedtreatments.Let’sstartsimple.
+Firstandforemost,makesure
+yourskiniscleanandstaysclean.Try
+switchingtoacleanserthatisoil-free
+andcontainsSalicylicAcid.Salicylic
+Acid,aBeta-HydroxyAcid(BHA),isa
+highlyeffectiveoilreducerandpore
+cleanser.
+Also,applysunscreeneveryday
+beforeheadingoutintothesummer
+heat,evenifyouareonlygoingout-
+doorsbriefly.Remember,sunscreen
+needstobere-appliedeverytwohours
+tobeeffective.Next,limityourmakeup
+duringthehottermonths.Heavyfoun-
+dationsthatseepintoyourskinwillclog
+poresandcausemakeuptomelt.Irec-
+ommendusingamineral-basedfounda-
+tion,likegloMineralsmakeup.
+Ifday-to-dayremediesaren’tdoing
+thetrick,aBetaHydroxyPeelisan
+option. AlsoutilizingSalicylicAcid,the
+gentle,rejuvenatingtreatmentwillnot
+onlyimproveoilyskinandreduceacne
+inflammation,butitcanalsosoften
+wrinklesandfinelineswhileimproving
+textureandclarity.Contactyourdoctor
+toseeifaBetaHydroxyPeelistheright
+choiceforyou.
+ChrisD.Collins,M.D.,FAADandMohsSurgeonisthefound-
+erandmedicaldirectorofCollinsAdvancedDermatolo-
+gyInstituteinRoundRockandLeander.Dr.Collinsandhis
+teamofexpertsofferthelatesttreatmentsinmedical,sur-
+gicalandcosmeticdermatology,includingSuperficialRa-
+diationTreatment,PhotodynamicTherapy,injectables
+andmicrodermabrasion.
+CollinsAdvancedDermatology
+Institute
+Leander:311S.Hwy183
+RoundRock:4112LinksLane,Suite205
+512.379.6090
+info@collinsadi.com
+CallorbookonlineatCollinsADI.com
+ASKTHEDERMATOLOGYEXPERT
+Dr.Chris
+Collins

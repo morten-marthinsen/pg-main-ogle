@@ -1,0 +1,143 @@
+# Why Havent People With Shoulder Pain Been Told These Facts (Gene Schwartz Swipe)
+
+**Source File:** Why Havent People With Shoulder Pain Been Told These Facts (Gene Schwartz Swipe).pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1443751098.0
+
+---
+
+•Frozenshoulder–oneofthe •Bursitis
+worstmaladiesknowntoman •Tendonitis
+(andwomen!) •Muscleweakness
+•Adhesivecapsulitis •Sharp,radiatingpain
+•Rotatorcuffinjuries •Numbnessandtingling
+•Arthritis
+SHOULDER
+PAIN
+EVALUATION
+Doesyourshoulderpainbuildupwhenyoumoveitwrongorisitasuddensharppainshootingfrom
+yourneckintoyourarm?Doyouhavedifficultyjustwashingyourhairorevenscratchingyourback?
+Haveyouhadtogiveupgolfbecauseofyourshoulderpain?Nothing’sworsethanfeelinggreatmen-
+tally,butphysicallyfeelingheldbackfromlifebecauseyourshoulderhurtsandthepainjustwon’tgo
+away!
+MynameisDr.RobertKuhn,ofChronicConditionsCenter.Overthepasteightyearssincewe’veopened
+thedoors,we’veseenhundredsofpeoplewithshoulderpain,frozenshoulderandrotatorcuffproblems
+leavetheofficepainfree.
+Ifyouaresufferingfromanyoftheseproblems,thisshoulder
+treatmentprotocolmaycompletelyeliminateallthepain.
+
+# W H Y H AV E N’ T P E O P L E W I T H
+
+
+# S H O U L D E R PA I N B E E N
+
+
+# TO L D T H E S E FAC T S?
+
+Ifyou’reovertheageof30andhave rotatorcuffproblems,frozenshoulder,
+orarthritis,thereishope.
+Onelocaldoctorishelpingpatientsincreaseshoulderstrength,improvemotion,
+andeliminateshoulderpain.
+Finally,youcanbepainfreeagain–evenifyou’vegotthemostexcruciating
+shoulderpainyouhaveeverfelt.
+WhySurgeryMayNotBeYourOnlyOption.
+Wecertainlycan'tsayforsureuntilImeetyou,butsurgerymaynotbeyouronlyoption.Ifyougothroughwith
+surgery,you’relookingattimeofffromwork,weekstomonthsofrehab,andquiteabitofexpense.Whynot
+exhaustallnatural,non-invasiveoptionsbeforeconsideringmoredrasticmeasures?
+ShoulderPainIsNotJust‘OldAge’
+Noquestion…ifyouarehavingshoulderpainthensomethingiswrong.It’snotnormalagingtohurtallthe
+time.Paininyourshoulderisn’tjusta‘signofoldage’,ifthatwastrueall360jointsinyourbodywouldhurtsince
+yourwholebodyisthesameage.Painisyourbody’swarningsigntellingyousomethingiswrong.Findingthe
+problemandfixingithasgottobeatoppriority!
+HaveADoctorEvaluateYourShoulderForOnly$49
+Justbeoneofthefirst25callersandhere’swhatyou’llget…
+•Anin-depthconsultationaboutyourshoulderwherewewilllisten…reallylisten.
+•Acompletenerve,muscleandspinalexamtofindthe“cause”ofyourproblem.
+•Afullsetofspecializedx-raystolookforjointdegeneration(arthritis)…(NOTE:Thesewouldnormallycost
+youatleast$100).
+•Athoroughanalysisofyourexamandx-rayfindingssowecanfixtheproblem.
+We’llanswerallyourmostprobingquestionaboutourpainfreeshoulderevaluationandwhatitcandofor
+you.Theappointmentwillnottakelongatallandyouwon’tbesittinginawaitingroomalldayeither.
+Totakemeuponthisspecialoffer,youmustcall757-229-6069.CallandtellRebeccayou’dliketocomein
+fortheSpecialShoulderEvaluation.
+Look,youhaveverylittletoriskandalottogain.Calltodayandwecangetstartedwithyour
+consultation,examandx-raysassoonasthere’sanopeningintheschedule.Ourofficeiscalled
+ChronicCondtionsCenterandyoucanfindusat3709StrawberryPlainsRd.,Ste.D,inWilliamsburg,VA.
+Sincerely,
+Dr.RobertKuhn,D.C.
+P.S.WhySufferWithYearsOfMisery?
+Whywaitandletitgetsobadsurgerybecomesyouronlyoption?That’snowaytolive.
+Call757-229-6069today.Imaybeabletohelpyouliveanormal,pain-freelifeagain.
+AcromioclavicularJoint
+Acromion
+Suprascapulara.andn.
+Clavicle
+Supraspinatusm.
+ScapularSpine
+Humerus
+Scapula Deltoid(reflected)
+Axillaryn.
+Infraspinatusm.
+TeresMinorm. PosteriorCircumflex
+Humerala.
+TeresMajorm. QuadrangularSpace
+DeepBrachiala.
+Radialn.
+TricepsBraciim.
+Finally,YouHaveAnOptionOtherThanDrugsorSurgery
+Newresearchinatreatmentcalledlowlevellasertherapy,orColdLaser,ishavingaprofoundeffectonpatientssuffering
+withpain.Unlikethecuttingtypeoflaserseeninmoviesandusedinmedicalprocedures,ColdLaserpenetratesthesurface
+oftheskinwithnoheatingeffectordamage.
+ColdLasertherapyhasbeentestedfor40years,hadover2000paperspublishedonit,andbeenshowntoaidindam-
+agedtissueregeneration,decreaseinflammation,relievepainandboosttheimmunesystem.Thismeansthatthereisagood
+chanceColdLasertherapycouldbeyourpainsolution,allowingyoutoliveamoreactivelifestyle.
+ProfessionalathleteslikeTigerWoodsandteammembersoftheNewEnglandPatriotsrelyuponcoldlasertherapyto
+treatthesports-relatedinjuries.TheseguysusetheColdLaserforonereasononly….
+Ihadbothofmyshouldersoperated
+“Ihave notbeenabletomovemyarms,
+onmorethantwentyyearsago.I
+evenuptomyshoulders,foryears. After
+havenotbeenableto
+onlyonetreatment,Dr.Kuhnhadme
+touchmyelbowsand
+reachingupovermyhead,andIcanstill
+handstogethersince.
+doit.” -R.Walsh
+SinceDr.Kuhnworked
+onme,Ihavebeenable
+totouchthemtogether
+withease,andwithoutpain.
+-D.Shreve
+CALL TODAY TO
+SCHEDULE YOUR
+
+# $
+
+
+# 49
+
+FederalandMedicarerestrictionsmayapply.
+($250VALUE)AVAILABLEFORTHEFIRST25CALLERS!
+www.ChronicConditionsCenter.com|
+
+## 757-229-6069
+
+DoYouHaveAnyoftheFollowingConditions?
+
+## Here Are Some of Our Patients Results...
+
+AFTER
+BEFORE AFTER
+ItPromotesRapidHealingOfTheInjuredTissues.
+BeforetheFDAwouldclearColdLaserforhumanuse,theywantedtoseeproofthatitworked.Thisledtotwolandmark
+studies.ThefirststudyshowedthatpatientswhohadColdLasertherapyhad53%betterimprovementthanthosewho
+hadaplacebo.Thesecondstudyshowedpatientswhousedthelasertherapyhadlesspainandmorerangeofmotiondays
+aftertreatment.IfColdLasercanhelpthesepatients,itcanhelpyoutoo.
+PainPillsCouldBeMakingYourShoulderWorse
+Ifyou’retakingpainpillsforyourshoulder,youarelikelymakingyourproblemworse.Painpills,evenover-the-counter
+medications,justmasktheproblem,anddon’tfixyourshoulder.
+Painisyourbody’swarningsigntellingyoutotakeiteasy.Ifyoumaskthepainwithpills,youarelikelytodothings
+thatcanpreventyourshoulderfromhealing–maybeevendamageitfurther.Nottomentionmanyofthepainmedica-
+tionsavailablearequiteaddictingandhavedrasticsideeffects.
+“It’sbeenyearssinceIcouldliftmyleftarmovermyheadandnowIcandoitwithout
+pain.”-DebraH.

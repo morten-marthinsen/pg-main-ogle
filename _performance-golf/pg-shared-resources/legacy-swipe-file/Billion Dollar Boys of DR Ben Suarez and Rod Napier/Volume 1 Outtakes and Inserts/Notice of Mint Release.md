@@ -1,0 +1,85 @@
+# Notice of Mint Release
+
+**Source File:** Notice of Mint Release.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1311796114.0
+
+---
+
+# NEW OAR, SPORT/UTILITY & TRUCK BUYER'S BUIOE
+
+SPECIAL MEDIA SERVICES ADVERTISING FEATURE SPECIAL MEDIA SERVICES ADVERTISING FEATURE SPECIAL MEDIA SERVICES ADVERTISING FEATURE
+
+# NOTICE OF U.S. MINT RELEASE
+
+
+## IMPORTANT BULLETIN:
+
+11 ,'' II" Ml
+200
+1.) THE U.S. MINT .-.AS ANNOUNCED THE RELEASE I
+
+## OF THE XE;: KENTUCKY STATE QUARTER. TO !
+
+
+## INSURE EQUAL NATIO!7/:iDE COVERAGE, YOU j
+
+CAN RECEIVE AIs UNCIRCULATED KENTUCKY |
+QUARTER FREE. j
+_ _„„ „_, I
+QUARTERS HAS DRAMATICALLY INCREASED IN |
+''AL.UE. UNCIRCULATED QUARTERS ARE THE j
+ONLY ONES THAT HAVE ALREADY IMC? EASED i
+IH VALUE 415% AND YOU CAN NOT FIND THESE ,
+QUARTERS 115 YOU? CHAXGE. THAT IS ~.vHY THIS j
+FREE DISTRIBUTION IS BEING NuADE TO THE
+(
+GE1TERA
+
+## FREE PUBLIC RELEASE TO CONSIST OF:
+
+3.) YOU DC NO. HAVE TO
+UK-CIRCULATED QUARTER. >.TT.-: PARTICIPATION
+GALLERY DISPLAY CASE.
+CURRENT TTNCIRCtTIATBD
+06-06-01 08:52 AM
+Delaware Quarter
+Pennsylvania Quarter
+New Jersey Quarter
+To be shipped from;
+
+## UNITED STATES Coi5|iMORATivE GALLERY
+
+
+## i.)
+
+AUTHORIZATION SEALS:
+5 0 0 .;
+AUTHORIZED DELIVERY RELEASE HETUHN TTffS FOfM MW7
+SrtP
+BY CKTE.
+1.MOmCWnOMOFDELIVERY: FUS U.S. COCT
+TOO will receive tb« new Kentucky State Quarter in
+brilliant uncirculated condition, protected in our Official
+United State* COMheMorativ* Gallery Display Ca»e. Tbis
+will guarantee that you will be aatoog the first to get
+to* Kentucky State Quarter in uncirculated condition-
+2.DONOT9EMDMOMCT! The United States Conxnetnoratrye Gate'y ** only accept
+pfrrliQt «am)3&. cftUCnfe Galy^Iiua* Fifs, Giais ^Ootage avW vs n'oiOe uic
+erwvlape you use » return the FREE Com Form Ptease no deaters to ensure one
+free con per household.
+FFK
+NAME I, ADDRESS BELOW.
+Hw;
+for:
+SMet
+c«y _
+su**_
+5. INCLUDE 3 LOOSE POSTAGE STAMPS
+WTTW TUB FORM M AM ENVELOPE
+ADDRESSED TO:
+U S COMMEMORATIVE GALLERY
+- FREE CCHN. DEPT 5638
+NATIONAL PROCESSING CENTER
+7800 WHIPPLE AVE NW
+CANTON OH 44711-0970

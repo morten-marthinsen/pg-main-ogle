@@ -1,0 +1,177 @@
+# Treatment of Knee Osteoarthritis is Revealed
+
+**Source File:** Treatment of Knee Osteoarthritis is Revealed.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+# Treatment of Knee
+
+
+# Osteoarthritis is Revealed
+
+Osteoarthritis(alsoknownasOA)isthemostcommontype
+ofarthritisandoneofthemostcommoncausesofkneepain.
+IntheU.S.alone,morethan27millionpeopleareestimated
+tohaveosteoarthritisinoneorbothknees.Ifyousufferfrom
+kneeosteoarthritis,thenyouunderstandkneepainaffects
+almosteverythingyoudothatrequiresmobility,including
+thosethingsmostofushaveusuallytakenforgranted.For
+manykneepainmakesitdifficulttowalk,stand,getoutofa
+chair,ortogoupordownstairs.Theimageofanactive
+lifestylemayseemallbutadistantmemory,untilnow...
+Arevolutionarynewnon-surgicaltreatmentcalled
+Viscosupplernentation(YS)Therapyisprovidinghopeand
+reliefformanykneepainsufferers.OfferedlocallybyThe
+AtlanticSpine&JointInstitute,thisprocedureisminimally
+invasive,requiresnosurgery,canprovideIMMEDIATE
+relief,andhaslittletonorecoverytime.
+Ifyouareexperiencinganyofthefollowingsymptomsin
+yourkneeorjoints,chancesareyourpainisduetoa
+conditioncalledosteoarthritis,andyoumaybea
+candidateforcare:
+•Earlyoninthedisease,oftennopainexists
+•Asthediseaseprocessaffectsmoreofthe
+jointthepatientmayexperiencereduced/
+limitedrangesofmotion
+•Achingjointpain
+•Morningstiffness
+•Red,swollenandinflamedkneejoint
+•Difficultywalkingandclimbingstairs
+Howdoesthistherapywork?
+TheAtlanticSpine&JointInstituteuseshightechmedical
+equipmentanddecadesofexperiencetopinpointproblem
+areaswithextremeaccuracy.Viscosupplementationisthen
+injectedintothekneejointandbondswithnaturally
+occurringjointfluidtocreatealubricatingandcushioning
+layer.Thisreducespain,inflammation,andswellingofthe
+joint.Mostpatientscomparethetreatmenttogettingaflu
+shotandreportlittlepainordiscomfort.
+Whatisinjectedintotheknee?
+Hyaluronicacid(Hyalgan)isanaturalsubstanceextracted
+fromroostercombsandpurifiedtomimicthelubricating
+substance(synovialfluid)thatoccursnaturallyinthejoint.
+Inpatientswithosteoarthritissynovialfluid“driesup,”
+allowingthecartilageofthejointtorubagainstitselfand
+othersurfacescausingpain,inflammation,andinmost
+casesdamagetothejoint.Thinkofthistreatmentlike
+oilingasqueakydoorhinge.Onceapplied,thesqueaking
+stopsandthedoormovesmorefreely.
+WhenwillIfeelresults?
+Mostfeelanimmediatereductioninpainandreturnto
+normalactivitiesinweeks.
+Consideringsurgery?
+Peoplewhosufferfromkneepaintypicallytry
+supplementsorpainmedicationsbeforeseekinghelpfrom
+adoctor.Whenallelsefailsandthepainistoomuch,
+somefeelsurgeryistheonlyoption.
+HowdoIknowthatthisisrightforme?
+TheAmericanAcademyofRheumatologyrecommendthe
+useofHyalganfortreatmentofosteoarthritisoftheknee.
+AtTheAtlanticSpine&JointInstitutewewillgiveyouan
+honestandfairevaluationofyourparticularkneepain.To
+accommodatedemand,wehaveopenedourscheduleto
+provide“nocost”screenings.
+RealPatients,RealStories,RealRelief!
+“Mykneefeelsgreat.IwasabitskepticalwhenIfirst
+readabouttheprograminthepaperbutfromthemoment
+IwalkedthroughthedoorIknewthatthisprogramwas
+goingtobedifferent.Theentireatmospherefromthe
+attitudeofthestafftotheofficeitselfputmeatease.I
+hadalreadyhadatotalkneereplacementandwantedto
+trysomethingratherthangothroughanotherpainful
+surgery.Aftercompletingtheprogrammyinitial
+impressionwascorrect.IcannowdanceagainwhichI
+havenotdoneinyears,andmylifestyleisonitsway
+backtonormal!”
+-ElizabethB.
+Sowhatareyouwaitingfor?Pickupthephoneandcall
+ustodaytoscheduleyourrisk-free,no-obligation,
+screeningatnocosttoyou.Sinceaddingthismedical
+breakthroughtoourpractice,theresponsehasbeenover-
+whelming.Sowe’veaddedextralinestoaccommodate
+yourcalls.Ifourlinesarebusy,orifyouarere-directed
+tovoicemail,pleaseleaveamessageorcallback.Living
+painfreeandgettingyourlifebackiswellworththetime
+andeffortitmighttaketogetaholdofussothatwecan
+scheduleyourno-costscreening.Sokeepcalling-help
+isonlyaphonecallaway...(856)899-5557.Whileyou
+aretryingtoreachus,pleasefeelfreetovisit
+www.YourPainStopsNow.comwhereyoucanlearnmore
+aboutViscosupplernentationTherapyandhowitmaybe
+therightsolutiontorelieveyourkneepain.
+NEW,FDAAPPROVEDTREATMENTPROVENTO
+PROVIDERELIEFFROMKNEEARTHRITIS
+ISNOWAVAILABLELOCALLY
+T
+HE
+A
+TLANTIC
+S
+PINE
+&J
+OINT
+I
+NSTITUTE
+D
+R
+.R
+OBERT
+M
+C
+G
+RATH
+,D.O.
+654W
+EST
+C
+UTHBERT
+B
+LVD
+.
+H
+ADON
+T
+OWNSHIP
+,NJ08108
+
+## (856) 899-5557
+
+If you have never had joint injections
+before, you may be wondering how this
+treatment works and whether it can truly
+make a difference. Below are answers
+to three of your most frequently asked
+questions:
+Howdojointinjectionswork?
+Our bodies naturally create a solution to
+keepourkneesandotherjointslubricated.
+Osteoarthritis reduces the ability of this
+naturallubricanttoprotectyourknees.
+Consequently,youmayexperiencereduced
+mobilityandincreasedpain.Ourinjections
+use the FDA-approved treatment known
+as Hyalgan. This is a solution comprised
+of highly purified sodium hyaluronate. In
+addition,thistreatmentiscoveredbymost
+insurances,includingMedicare.
+When injected into the knee, the Hyalgan Whataretherisksassociatedwiththe
+solutionhelpstocushionandlubricatethe Hyalgantreatment?
+knee joint, nourishing knee cartilage for
+natural pain management. The solution The most common side effects are minor,
+helps to restore normal function to the andincludemildbruising,swellingorpain
+joint,includingitsnaturallubrication. attheinjectionsite.Inextremelyrarecases
+Patients experience less pain and are able of avian (bird) allergies a reaction may
+toenjoyamoreactivelifestyle. occur. A rash, hives, itching and difficulty
+breathingcharacterizeanallergicreaction.
+Forthisreasonweperformathorough60
+minute screening to determine candidacy
+forcareandtoruleoutcontra-indications.
+Asaresultourpatientstypicallyexperience
+littletonosideeffectsfromtreatment.
+WhenwillIfeelresults?
+Thoughresultsmayvary,mostpatientsfeel
+animmediatereductioninpainandreturn
+tonormalactivitiesinweeks.
+ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT

@@ -1,0 +1,291 @@
+# ELIMINATE YOUR KNEE PAIN ONCE AND FOR ALL
+
+**Source File:** ELIMINATE YOUR KNEE PAIN ONCE AND FOR ALL.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+# Health & Wellness
+
+JIM BREWER - J44BREWER@GMAIL.COM
+PAIDADVERTISEMENT PAIDADVERTISEMENT
+
+# ELIMINATE YOUR KNEE PAIN ONCE AND FOR ALL...
+
+
+# WITHOUT DRUGS, SHOTS, OR SURGERY
+
+Living with knee pain can feel like a crippling experience. Nothing’s
+worsethanfeelinggreatmentally,butphysicallyfeelingheldbackfrom
+lifebecauseyourkneehurtsandthepainjustwon’tgoaway!
+MynameisDr.KeithLynch.I’vebeeninprivatepracticeinCharlottesville
+forover15years. I’veseenhundredsofpeoplewithjointproblemsleave
+myoficepainfree.
+If you do, a new breakthrough in medical technology may completely
+eliminateyourpainandhelprestorenormalfunctiontoyourknees.
+YouHaveAnOptionOtherThanDrugsorSurgery
+I’vebeenstudyingcoldlaserandusingcoldlasereffectivelyinmyofice
+since2006andhaveexperiencedmiraculousresultsformany! There
+arejustsomanyamazingapplicationsforhelpingpeoplehealwithcold
+laser! Itisveryexciting!
+A treatment called low level laser therapy, or cold laser, is having a
+profoundeffectonpatientssufferingwithkneepain.Unlikethecutting
+typeoflaserseeninmoviesandusedinmedicalprocedures,thecold
+laserpenetratesthesurfaceoftheskinwithnoheatingeffectordamage.
+Coldlasertherapyhasbeentestedfor40years,hadover2000papers
+publishedonit,andbeenshowntoaidindamagedtissueregeneration,
+decreaseinlammation,relievepainandboosttheimmunesystem.This
+meansthatthereisagoodchancecoldlasertherapycouldbeyourknee
+painsolution,allowingyoutoliveamoreactivelifestyle.
+CouldThisNon-Invasive,NaturalTreatmentBe
+TheAnswerToYourKneePain?
+Professionalathletes likeLanceArmstrongandteammembersofthe
+NewEnglandPatriotsrelyuponcoldlasertherapytotreattheirsports-
+relatedinjuries.Theseguysusethecoldlaserforonereasononly…
+ItPromotesRapidHealingofInjuredTissues.
+considerableamountbytakingmeuponthisoffer.
+Whatarepatientssaying?
+“Therelieffrompainhasallowedmetostayonmyfeetallday.Ican
+restatnight. Ifeellikeanewperson.” NormaD.
+“Iwasstartingtohaveseverepainsinmyknee. Iwashavingalot
+ofinlammation,swellingattimes,painwhenwalkingandaftera
+courseoftreatmentsonthelasermachine,Irecentlymadeatwo
+weektripoutofthecountryhikingmileseveryday!” DanielC.
+Rememberwhatitwaslikebeforeyouhadkneeproblems?Whenyou
+For15daysonly,I’mrunningaveryspecialoffersoyoucanindoutifyou werepainfreeandcouldenjoyeverythinglifehadtooffer?Maybeitcan
+areacandidateforColdLaser. bethatwayagain.Don’tneglectyourproblemanylonger–don’twait
+untilit’stoolate.
+Whatdoesthisofferinclude? EverythingInormallydoinmy“KneePain
+Evaluation”.Here’swhatyou’llget…
+• Anin-depthconsultationaboutyourproblemwhereIwilllisten…
+reallylisten…tothedetailsofyourcase.
+• Acompleteneuromuscularexamination.
+• Specializedx-rays.
+• Athoroughanalysisofyourexamandx-rayindingssowecan
+startmappingoutyourplantobeingpainfree.
+• TwoFreeTreatmentssoyoucanseeeverythingirsthandandind
+outifthisamazingtreatmentcouldbeyourpainlesspainsolution,
+likeithasbeenforsomanyothers.
+Call before June 30, 2014 to get everything I’ve listed here for only
+$77.Thenormalpriceforalltheseservicesis$620,soyou’resavinga
+Here’s what to do now:
+Duetotheexpecteddemandforthisspecialoffer,Iurgeyoutocall
+our ofice at once at 434.245.8456. Call today for your Knee
+PainEvaluation. FindouthowyoucanbepainfreeAND…Let’sget
+startedrightaway!
+Sincerely,
+Dr. Keith Lynch, D. PSc
+Lynch Neurology & Laser
+1410IncarnationDrive,Suite202C
+Charlottesville,VA 22901
+(434)245.8456 (off29NbehindToysRUs)
+
+## Don’twaitandletyourkneeproblemsgetworse,disablingyouforlife. Call434.245.8456byJune30th. Takemeuponmyofer.
+
+
+## Scheduleyour$77.00KneePainEvaluaion($620.00value)NOW!
+
+Servicesprovidedtomembersonly.
+
+## DoYouHaveAnyoftheFollowingConditions?
+
+•Arthritis•Kneepain•Cartilagedamage
+•‘Bone-on-bone’•Tendonitis•Bursitis•Tendonitis
+•MaxedYourInjectionsandStillHaveYourPain?
+•FacingaKneeReplacementorHadOneandStillHaveYourPain?
+CHARLOTTESVILLE BUSINESS JOURNAL B2 MONDAY,JUNE16,2014
+
+# P
+
+atrickSiewert,aformer
+LouisaCountySheriff’s
+Officedetective,recently
+openedProfessionalDigital
+ForensicConsulting,adigital
+forensicexaminationbusiness.
+Innon-techieterms,that
+basicallymeansSiewerthelps
+lawfirms,corporateclientsand
+governmentalorganizations
+investigate,recover,reviewand
+conveyinformationinelec-
+tronicformats.
+“Ifthere’sacrimeorinci-
+dentthatoccursinvolvingan
+electronicdevice…veryoften
+afterthefact,youneedsome-
+onetocomeinanduncover
+thatevidencetofindoutwhat
+wasgoingon,”Siewertsaid.His
+work,heexplained,giveslaw
+firmsandcorporateclientsan
+“unobstructeddigitalviewof
+what’sbeengoingon.”
+FreeWi-Fiboostsbusiness
+happierthancandy,wateror
+magazines.Thesurveyfound
+that55percentofbusinesses
+saidofferingWi-Fiattracted
+newcustomersandresultedin
+highersalespercustomervisit.
+Thatshouldn’t
+comeasasur-
+prise.Forbetter
+orworse,it’sbe- librariesandmore—wantto
+comesecondna- attractandretainvisitorsto
+turetoburyour theirlocationandgiveemploy-
+nosesinadigital eesthetoolstheyneedtobe
+screenwhenwe moreproductive.Wi-Ficanbe
+haveamoment criticalonbothfronts,andthis
+ofdowntime,soprovidingcus- devicecanhelpmakethateasy
+tomersawaytoengageonline tomanage,”JohnGuillaume,
+whilelingeringonyourprem- vicepresidentofproduct
+isesisclearlyasmartbusiness developmentforComcast
+move.Comcastisattempting Business,saidinarecentan-
+tocapitalizeonthisfindingby nouncement.
+introducingawirelessservice
+targetedtowardsmallandme-
+diumbusinessesthatwilloffer
+publicWi-Fiforcustomersand
+privateWi-Fiforemployees
+ArecentsurveybyBredinRe- fromasingledevice.
+search,sponsoredbyComcast “Manydifferenttypesof
+Business,foundthatoffering customers—coffeeshops,law
+freeWi-Fikeepscustomers firms,realestateoffices,gyms,
+NewstoreatFashionSquare
+locations,hasanexpanded
+men’sselection.Headquartered
+inPittsburgh,thecompanyhas
+about1,000storesin47states
+andgivescustomers“accessto
+thefashion-forwardstylesthey
+crave,”accordingtoRue21’s
+website.
+Ahiringfairisscheduledfor
+10a.m.to4p.m.Saturdayat
+FashionSquare.Employeesin-
+terestedinamanagementposi-
+tionforthislocationshould
+applyonline,thepostingsaid.
+Rue21isslatedtoopensoon
+atFashionSquareinAlbemarle
+County,accordingtoasign
+postedatamallstorefrontnear
+JCPenney.
+Thecompanysellsclothing
+andaccessories,andinselect
+BMWdealerexpands
+Finally,BMWofCharlot-
+tesvillerecentlycompleteda
+15,000-square-footexpansion,
+KristiGriggs,aspokeswoman
+forthedealership’sparent
+company,AsburyAutomotive,
+recentlyconfirmed.Locatedon
+RichmondRoadinAlbemarle
+County,employeeswereslated
+tomoveintothefacility,which
+has11addedservicebays,this
+pastweekend.
+ndelesline@dailyprogress.com|978-7243
+Wednesday
+ChamberMinorityBusinessCoun-
+cil.12:30to2p.m.JeffersonSchool
+AfricanAmericanHeritageCenter,233
+FourthSt.NW.295-3141.
+Thursday
+BetterBusinessChallengeAwards
+Night.5:30to8p.m.ParamountThe-
+aterontheDowntownMall.$25.www.
+cvillebetterbiz.org.466-5157.
+ChamberBusinessWomen’sRound
+Tableluncheon.Noonto1:30p.m.
+BrookvilleRestaurant,225W.MainSt.
+295-3141.
+OrangeCountyBusinessExpoTrade
+Show.4to6p.m.HornetSportsCen-
+ter,200HornetDrive,Orange.(540)
+672-1238.
+June23
+HowtoStartaBusinessworkshop.
+3to4:30p.m.PresentedbytheCen-
+tralVirginiaPartnershipforEconomic
+Development,2211HydraulicRoad.
+Advanceregistrationrequiredatwww.
+centralvirginia.org.295-8198.
+June24
+CelebrationofBusinessDiversity
+gala.5to8:30p.m.Presentation
+oftheChuckLewisPassionAward,
+keynoteaddressbyCharlottesvilleCity
+CouncilorKathyGalvin.ThePara-
+mountTheaterontheDowntownMall.
+$30.Passesmustbepurchasedby
+Sundayatwww.forwardvirginia.com.
+Nodoorpurchases.960-4037.
+EstatePlanningSeminar.10a.m.to
+noonandagainfrom6to8p.m.Vitt
+LawOffices,880-ARioEastCourt.
+www.vittlaw.com.971-3025.
+June25
+JeffersonAreaBoardforAging
+annualpublichearingandbudget
+presentation.10to11a.m.JABA’s
+FluvannaResourceCenterforHealthy
+Aging,5275JamesMadisonHighway,
+ForkUnion.817-5222.
+June26
+CharlottesvilleBusinessInnova-
+tionCouncilannualmeetingand
+TechNighTakeover.“Manufacturing
+inCharlottesville,MakeitLocal.”4:15
+p.m.RelayFoods,1317CarltonAve.
+RSVPinadvanceatwww.cvillebic.com.
+817-6300.
+
+# Daybook InsideBiz
+
+Nate
+Delesline III
+HowtogetlistedinCBJ:
+Itemsforpublicationin
+DaybookorBriefcaseshould
+befaxedto978-7252ormailed
+to:CharlottesvilleBusiness
+Journal,TheDailyProgress,
+P.O.Box9030,Charlottesville,
+VA22906.Itemsmayalso
+beemailedtondelesline@
+dailyprogress.com.
+
+# Ex-detective opens forensics company
+
+Siewert
+»CentralVirginiaChartered
+PropertyCasualtyUnderwriter
+Societyhasqualifiedforthe
+goldlevelofthenational
+Society’sCircleofExcellence willberecognizedduring
+RecognitionProgram.The aleadershipsummitin
+programrecognizeschapters Phoenix.
+fortheireffortstoachieve »AT&Thasreopened
+specificbenchmarksin itsstoreat973N.Emmet
+chapterperformance.The St.followinganextensive
+CentralVirginiachapter renovation,makingita“store
+ofthefuture.”Thelayoutof
+thestorehasbeenupgraded
+toaddressthecomplete
+mobileexperienceforAT&T
+wirelesscustomerswith
+learningtablesthatintroduce
+newtechnology,upgraded
+point-of-saleterminalsand
+theabilityforcustomers
+tomakeappointmentsfor
+servicesbycalling242-8900.
+
+# Briefcase
+
+
+# Visit us on the Web at www.DailyProgress.com

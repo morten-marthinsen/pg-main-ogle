@@ -1,0 +1,115 @@
+product:
+  name: SpeedTrac
+  category: Golf Speed Training / Swing Trainer
+  description: |
+    SpeedTrac is the only speed training system that combines overspeed/overload protocols
+    with simultaneous face-control training through off-axis weight positioning. Unlike
+    traditional speed trainers (SuperSpeed, Stack, Rypstick) that use on-axis weight like
+    a baseball bat, SpeedTrac positions weight in the clubhead offset from the shaft axis,
+    creating real driver-like dynamic forces. This trains golfers to control the clubface
+    at higher speeds, preventing the "fast inconsistency" problem where speed training
+    makes slices/hooks worse.
+  known_benefits:
+    - Y-Trac Weight System with 15 configurations (3 positions x 5 weights)
+    - Non-axial CG mimics real driver dynamics (off-axis weight positioning)
+    - Speed Spoon mini-driver head with visual face awareness
+    - Complete overspeed/overload protocol (145g-255g) in one club
+    - Fixes swing faults while building speed (anti-slice heel position, anti-hook toe position)
+    - Zip & Flip Weight System for tool-free adjustment in seconds
+    - Replaces need for 3 separate clubs (like SuperSpeed system)
+    - Trains speed AND face control simultaneously in every rep
+  price_point: TBD (competitive with SuperSpeed $129-199 and Stack $299-499)
+
+market:
+  mode: B  # New product entering market with no existing marketing history
+  existing_marketing: null
+  target_customer: |
+    Golfers seeking distance gains who are frustrated that pure speed training makes their
+    slice/hook worse. These are golfers who:
+    - Have tried SuperSpeed, Stack, or other speed trainers with disappointing results
+    - Gained swing speed but lost accuracy (more fairways missed)
+    - Slice or hook the ball and fear speed training will amplify their fault
+    - Want both distance AND accuracy, not a trade-off
+    - Are skeptical of speed training because gains don't transfer to course
+
+constraints:
+  budget: $25  # Default scraping budget
+  timeline: standard
+  focus_areas:
+    - Speed training market pain points (SuperSpeed, Stack, Rypstick complaints)
+    - Face control / accuracy problems at higher speeds
+    - Distance vs accuracy trade-off frustration
+    - Swing fault amplification from pure speed training
+    - "Fast inconsistency" problem (longer but wilder)
+    - Transfer gap (training gains not showing up on course)
+    - Golfer psychology around speed vs control
+    - Price sensitivity in speed training market
+
+context:
+  why_now: |
+    Speed training market is mature with established players (SuperSpeed pioneered, Stack
+    premium, Rypstick budget). All use same fundamental design (on-axis weight). SpeedTrac
+    introduces first genuine innovation in years with off-axis weight positioning. Need to
+    validate that "fast inconsistency" is a real, widespread problem and that face control
+    training resonates with target audience.
+  known_gaps:
+    - How prevalent is the "speed made my slice worse" complaint?
+    - Do golfers consciously connect speed training to accuracy loss?
+    - What specific language do frustrated speed trainers use?
+    - Is there awareness of on-axis vs off-axis weight difference?
+    - What do golfers wish their speed trainer did differently?
+    - Price sensitivity for premium speed trainer with innovation
+  concept_doc: null
+
+competitors:
+  primary:
+    - name: SuperSpeed Golf Training System
+      price: $129-199
+      mechanism: 3-club overspeed system, on-axis weight
+      weakness: No face control training, requires 3 separate clubs
+    - name: The Stack System
+      price: $299-499
+      mechanism: Premium speed training with app/data, on-axis weight
+      weakness: Expensive, steep learning curve, no face control
+    - name: Rypstick
+      price: ~$100
+      mechanism: Single adjustable club, on-axis weight
+      weakness: Budget option, no face control, limited configurations
+  secondary:
+    - name: Orange Whip LightSpeed
+      mechanism: Counterweighted for tempo + speed
+    - name: Speed Toad
+      mechanism: Interchangeable weight pods
+    - name: The One Club
+      mechanism: Weighted training club
+    - name: Momentus Speed Whoosh
+      mechanism: Resistance/audible feedback trainer
+    - name: SwingRite
+      mechanism: Audible click timing trainer
+
+research_topics:
+  pain_areas:
+    - "Speed training made my slice/hook worse"
+    - "Gained yards but miss more fairways"
+    - "Training stick speed doesn't transfer to driver"
+    - "SuperSpeed/Stack disappointing results"
+    - "Longer drives but higher scores"
+    - "Can't control club at higher speeds"
+    - "Speed training feels nothing like real golf"
+  hope_areas:
+    - "Want distance AND accuracy"
+    - "Speed that actually helps scores"
+    - "Fix my slice while gaining speed"
+    - "One system that does everything"
+    - "Training that transfers to course"
+  root_cause_beliefs:
+    - "Speed sticks don't feel like golf clubs"
+    - "You have to sacrifice accuracy for distance"
+    - "Speed training is for young/athletic golfers only"
+    - "The slice is a swing problem, not a training problem"
+  villain_targets:
+    - "Gimmicky speed training products"
+    - "One-size-fits-all approach"
+    - "Speed sticks that feel like baseball bats"
+    - "Having to buy 3 separate clubs"
+    - "Complex training protocols"

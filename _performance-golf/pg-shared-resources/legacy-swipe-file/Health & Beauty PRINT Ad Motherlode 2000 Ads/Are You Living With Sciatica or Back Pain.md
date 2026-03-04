@@ -1,0 +1,133 @@
+# Are You Living With Sciatica or Back Pain
+
+**Source File:** Are You Living With Sciatica or Back Pain.PDF
+**Conversion Method:** Text Extraction
+**Converted:** 1442957744.0
+
+---
+
+Havingbackandsciaticpainisamiserable–even
+crippling–condition.
+Youmightnotbeabletoplaygolf,work,oreven
+sitinthecarfora30-minutedrive.It’salmost
+impossibleforanyonearoundyoutounderstand
+howyoufeel.Youcan’trememberthelasttimeyou
+evenhadarestfulnight’ssleep.
+Youmayhaveaconditioncalled“Sciatica”ifyou’re
+sufferingfromanyoftheseannoyingconditions.
+Sciaticaisacompressionofthesciaticnerve,usually
+byanL4orL5discherniations.
+Nothing’sworsethanfeelinggreatmentally,but
+physicallyfeelingheldbackfromlifebecauseyour
+backorsciaticahurtsandthepainjustwon’tgo
+away!
+DoYouHaveAnyoftheFollowing?
+❏ ✘ Sharppainsinthebackoftheleg
+❏ ✘ LowerBackPain
+❏ ✘ Herniated/bulgingdiscs
+❏ ✘ Numbnessorsorenessinyourlegs
+❏ ✘ Shootinghiporthighpain
+❏ ✘ Musclespasm,sprains&strains
+Fortunately,ifyouaresufferingfromanyofthese
+problems,theymayberelievedoreliminatedwith
+chiropracticadjustments.
+“What’sTheChanceThisWillWorkForMe?”
+Chiropractichasbeenaroundforoverahundred
+years,andhasbeenusedtohelpeveryonefromtiny
+babiestotheelderly.
+Eventopsportsstarandentertainers…likeTiger
+Woods,EmmittSmith,TonyRobbins,JoeMontana,
+LanceArmstrong,Gov.ArnoldSchwarzeneggerand
+JackNicholson.
+Theseprofessionalathleteshavethemoneytohire
+anykindofdoctorstheywant,yettheychooseto
+haveachiropractorontheirteam.
+Here’swhatsomeofthetopmedicalresearchershad
+tosayaboutchiropractic…
+“Manipulation[chiropracticadjustments],withor
+withoutexercise,improvedsymptomsmorethan
+medicalcaredidafterboth3and12months.”–
+BritishMedicalJournal
+“Chiropractor’smanipulationofthespinewasmore
+helpfulthananyofthefollowing: traction,massage,
+biofeedback,acupuncture,injectionofsteroids
+intothespineandbackcorsets,andultrasound.”--
+StanleyBigos,MD,ProfessorofOrthopedicSurgery
+Thismeansinjustamatterofweeksyoucouldbe
+backonthegolfcourse,enjoyingyourlovelife,or
+travelingagain.
+FeeltheImprovement–and
+Say“Yes”toLifeAgain
+Withmy“BackPainAndSciaticaEvaluation”we’ll
+beablefindtheproblemandthencorrectit.
+Thinkofhowyou’llfeelinjustafewshortweeks.
+Seeandfeelyourlifechangeforthebetter.Start
+yourbodyonthewaytopain-free,normalliving.
+Feeltightjointsrest,relax,freeup.Feelmusclestied
+inknotsbecomemoresupple.Feelstrengthinyour
+musclesincrease.
+Asyoubegintoseemotionreturningtoyourjoints,
+you’repreventingandreducingchancesofdisability
+andacripplingfuture.
+TheSingleMostImportantSolutionToYour
+SciaticaandBackPain
+It’stimeforyoutofindoutifchiropracticwillbe
+yoursciaticandbackpainsolution.
+For14daysonly,$27willgetyoualltheservicesI
+normallychargenewpatients$257for!
+Whatdoesthisofferinclude? EverythingInormally
+doinmynewpatientevaluation.
+❏ ✘ Anin-depthconsultationaboutyourhealth
+andwell-beingwhereIwilllisten…really
+listen…tothedetailsofyourcase.
+❏ ✘ Acompleteneuromuscularexamination.
+❏ ✘ Upto2x-raysifneeded(NOTE:Thesewould
+normallycostyouatleast$100).
+❏ ✘ Athoroughanalysisofyourexamandx-ray
+findingssowecanstartmappingoutyourplan
+tobeingpainfree.
+❏ ✘ I’llprovideanswerstoyourquestions,like…
+…shouldIuseiceorheatonmypain?.
+…whichposition,mattress,andpillowyoushould
+useforagoodnight’srest.
+…aretheresomeactivitiesthatcanmakethisworse
+andothersthatcanhelp?.
+…howtoexercisetherightwaysoyouaren’tmaking
+yourpainworse.
+Don’tLetYourSciaticaGetWorse
+TimMick,DC,anassociateprofessorandchair
+oftheDepartmentofRadiologyatNorthwestern
+HealthSciencesUniversitysays…
+“Untreated,sciaticacanleadtoalossofmuscle
+strengthandmusclesizethatmaybeirreversible.
+Eventually,therecanbeproblemswithgait.”
+Sciaticacanbesuccessfullytreated.Youcanrecover.
+Healthy,pain-freelivingshouldbeyours.
+Calltodayandwecangetstartedwithyour
+consultation,examandx-raysassoonasthere’san
+openingintheschedule.
+OurofficeiscalledMainStreetChiropracticandyou
+canfindusat5157MainStSuite200inDowntown
+DownersGrove.(aboveBallydoyle’s)
+Tellthereceptionistyou’dliketocomeinforthe
+BackPainAndSciaticaEvaluationbeforeMarch
+14th.
+Ilookforwardtohelpingyougetridofyourpainso
+youcanstartlivingahealthier,morejoyfullife.
+Sincerely,
+DrMikeDeCubellis,D.C.
+P.S.You’vegottoomanydreamsleftundone.Too
+manyspecialmomentswaitingtobeexperienced.
+Lifeistooshorttoletpainslowyoudown.
+Don’tliveanotherdaylikethis.Callandschedulefor
+yourevaluation630-435-6461.
+
+# Are You Living With Sciatica Or Back Pain
+
+
+# ...When There May be A Solution?
+
+PaidAdvertisement
+PainShouldn’tHoldYouBack
+FromtheImportantThingsinLife
+*Doesnotapplytopeoplewithmedicareormedicaid

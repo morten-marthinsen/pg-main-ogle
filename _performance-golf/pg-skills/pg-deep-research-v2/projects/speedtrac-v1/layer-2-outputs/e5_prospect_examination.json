@@ -1,0 +1,522 @@
+{
+  "metadata": {
+    "product": "SpeedTrac",
+    "analysis_date": "2026-01-22",
+    "analysis_type": "E5 Prospect Examination",
+    "source_file": "MASTER_QUOTES.json",
+    "total_quotes_analyzed": 1232
+  },
+  "awareness_pyramid": {
+    "overview": "The SpeedTrac target prospect sits primarily at Level 3 (Problem Aware) with significant representation at Level 2 (Solution Aware). They know they have a problem (slice amplification when swinging faster, lack of distance, inconsistency) but either don't know the root cause or have tried solutions that failed to address it.",
+    "levels": {
+      "level_5_most_aware": {
+        "percentage": 5,
+        "description": "Knows SpeedTrac specifically and its face-control speed training mechanism",
+        "messaging_approach": "Direct offer, testimonials, risk reversal, urgency",
+        "evidence_quotes": []
+      },
+      "level_4_product_aware": {
+        "percentage": 15,
+        "description": "Knows speed training products exist (SuperSpeed, Stack, Rypstick) but not SpeedTrac specifically. Has likely tried one or more and been disappointed by lack of accuracy transfer.",
+        "messaging_approach": "Differentiation - 'Unlike other speed trainers that ignore face control...'",
+        "evidence_quotes": [
+          "PAIN-047",
+          "PAIN-040",
+          "PAIN-041",
+          "PAIN-056"
+        ]
+      },
+      "level_3_problem_aware": {
+        "percentage": 50,
+        "description": "Knows they have a problem: slicing gets worse with speed, can't hit it far AND straight, inconsistent drives, embarrassment on first tee. Doesn't know the root cause is lack of face control training at speed.",
+        "messaging_approach": "Problem agitation then bridge to solution - 'The reason your slice gets worse when you swing faster isn't your swing mechanics...'",
+        "evidence_quotes": [
+          "PAIN-101",
+          "PAIN-111",
+          "PAIN-113",
+          "DAC-021",
+          "DAC-026",
+          "EMO-001",
+          "FRUS-041"
+        ]
+      },
+      "level_2_solution_aware": {
+        "percentage": 25,
+        "description": "Knows general solutions exist (lessons, equipment, training aids, fitness) but skeptical after multiple failed attempts. Looking for something different.",
+        "messaging_approach": "Mechanism differentiation - 'You've tried speed sticks, lessons, new drivers... Here's what they all missed'",
+        "evidence_quotes": [
+          "DAC-040",
+          "PAIN-051",
+          "FRUS-045",
+          "MIX-026"
+        ]
+      },
+      "level_1_completely_unaware": {
+        "percentage": 5,
+        "description": "Doesn't realize they have a fixable problem. Accepts distance loss and inconsistency as inevitable (especially senior golfers).",
+        "messaging_approach": "Story-based education - 'I used to think losing distance was just part of getting older...'",
+        "evidence_quotes": [
+          "PAIN-117",
+          "PAIN-112"
+        ]
+      }
+    },
+    "primary_awareness_level": "Level 3 - Problem Aware",
+    "implication_for_messaging": "Lead with problem acknowledgment and agitation, then reveal the missing mechanism (face control at speed) before introducing product. Avoid leading with product features."
+  },
+  "web_analysis": {
+    "overview": "WEB Analysis examines the Wants, Emotions, and Beliefs that drive prospect behavior. For SpeedTrac, the dominant pattern is a golfer who desperately WANTS more distance but is trapped in a belief that distance and accuracy are mutually exclusive - leading to deep EMOTIONAL frustration.",
+    "wants": {
+      "primary_wants": [
+        {
+          "want": "Hit the ball farther AND straighter simultaneously",
+          "intensity": "CRITICAL",
+          "evidence_quotes": ["HOPE-102", "DAC-026", "DAC-028", "HOPE-018", "HOPE-035"],
+          "frequency_in_data": "Very High - appears in 68+ HOPE quotes"
+        },
+        {
+          "want": "More clubhead speed that actually transfers to the course",
+          "intensity": "HIGH",
+          "evidence_quotes": ["HOPE-025", "HOPE-021", "HOPE-024", "PAIN-039"],
+          "frequency_in_data": "High - major theme in GolfWRX discussions"
+        },
+        {
+          "want": "Consistent ball flight with predictable shape",
+          "intensity": "HIGH",
+          "evidence_quotes": ["HOPE-046", "DAC-015", "DAC-052"],
+          "frequency_in_data": "High"
+        },
+        {
+          "want": "Confidence on the first tee",
+          "intensity": "HIGH",
+          "evidence_quotes": ["EMO-001", "EMO-004", "HOPE-023"],
+          "frequency_in_data": "Moderate - 22+ embarrassment quotes"
+        },
+        {
+          "want": "Lower scores through better driving",
+          "intensity": "MODERATE",
+          "evidence_quotes": ["DAC-051", "HOPE-016", "DAC-031"],
+          "frequency_in_data": "Moderate"
+        },
+        {
+          "want": "Keep up with playing partners",
+          "intensity": "MODERATE",
+          "evidence_quotes": ["PAIN-111", "EMO-006"],
+          "frequency_in_data": "Moderate"
+        },
+        {
+          "want": "Regain lost distance (especially seniors)",
+          "intensity": "HIGH",
+          "evidence_quotes": ["HOPE-041", "HOPE-101"],
+          "frequency_in_data": "High - 34+ age-related distance loss quotes"
+        }
+      ],
+      "underlying_meta_want": "To feel competent and confident as a golfer without having to choose between distance and accuracy",
+      "want_hierarchy": "Distance AND accuracy > Consistency > Confidence > Score improvement"
+    },
+    "emotions": {
+      "negative_emotions": [
+        {
+          "emotion": "Frustration",
+          "description": "Deep, recurring frustration from the same problems happening over and over despite effort and investment",
+          "intensity": "SEVERE",
+          "evidence_quotes": ["FRUS-044", "FRUS-041", "PAIN-058", "DAC-032", "PAIN-040"],
+          "manifestation": "Considering quitting golf, love-hate relationship with the game"
+        },
+        {
+          "emotion": "Embarrassment/Humiliation",
+          "description": "Social shame from poor performance in front of others, especially on the first tee",
+          "intensity": "HIGH",
+          "evidence_quotes": ["EMO-001", "EMO-002", "EMO-003", "EMO-007", "EMO-008"],
+          "manifestation": "Avoiding certain situations, performance anxiety, loss of enjoyment"
+        },
+        {
+          "emotion": "Confusion",
+          "description": "Not understanding why swinging faster makes accuracy worse, why practice doesn't transfer",
+          "intensity": "HIGH",
+          "evidence_quotes": ["PAIN-101", "PAIN-103", "DAC-012", "PAIN-056"],
+          "manifestation": "Information overload, conflicting advice paralysis"
+        },
+        {
+          "emotion": "Regret",
+          "description": "Wasted money on equipment, lessons, and training aids that didn't work",
+          "intensity": "MODERATE",
+          "evidence_quotes": ["PAIN-040", "PAIN-047", "FRUS-031", "DAC-040"],
+          "manifestation": "Skepticism toward new products, reluctance to invest"
+        },
+        {
+          "emotion": "Resignation",
+          "description": "Accepting mediocrity as inevitable, settling for less distance to maintain accuracy",
+          "intensity": "MODERATE",
+          "evidence_quotes": ["PAIN-112", "PAIN-116", "PAIN-117", "DAC-033"],
+          "manifestation": "Swinging within oneself, sacrificing 40 yards for accuracy"
+        },
+        {
+          "emotion": "Fear",
+          "description": "Fear of injury from overspeed training, fear of looking foolish, fear of getting worse",
+          "intensity": "MODERATE",
+          "evidence_quotes": ["PAIN-043", "PAIN-044", "EMO-009"],
+          "manifestation": "Hesitation to commit to training programs"
+        }
+      ],
+      "positive_emotions_desired": [
+        {
+          "emotion": "Confidence",
+          "description": "Feeling certain about where the ball will go before swinging",
+          "intensity": "HIGH",
+          "evidence_quotes": ["HOPE-023", "HOPE-046", "DAC-015"],
+          "trigger": "Consistent ball flight and predictable results"
+        },
+        {
+          "emotion": "Pride",
+          "description": "Hitting impressive drives in front of playing partners",
+          "intensity": "HIGH",
+          "evidence_quotes": ["DAC-051", "HOPE-043"],
+          "trigger": "Long, straight drives down the middle"
+        },
+        {
+          "emotion": "Relief",
+          "description": "Finally finding something that works after years of struggle",
+          "intensity": "HIGH",
+          "evidence_quotes": ["HOPE-029", "DAC-041"],
+          "trigger": "Breakthrough moment, the 'click'"
+        },
+        {
+          "emotion": "Excitement",
+          "description": "Anticipation of potential improvement",
+          "intensity": "MODERATE",
+          "evidence_quotes": ["HOPE-037", "HOPE-040"],
+          "trigger": "Early wins, measurable progress"
+        }
+      ],
+      "emotional_journey_summary": "Prospect's emotional state is characterized by accumulated frustration and resignation, punctuated by embarrassing moments that reinforce negative self-perception. They desperately want to feel the confidence and pride of hitting long, straight drives but have been conditioned to expect disappointment."
+    },
+    "beliefs": {
+      "limiting_beliefs": [
+        {
+          "belief": "Distance and accuracy are a tradeoff - you can have one or the other",
+          "prevalence": "VERY HIGH",
+          "evidence_quotes": ["DAC-026", "PAIN-057", "PAIN-118", "DAC-033"],
+          "counter_message": "Speed and accuracy aren't mutually exclusive - some of my most aggressive swings have been the straightest.",
+          "counter_evidence": "HOPE-023"
+        },
+        {
+          "belief": "Swinging faster will always amplify my existing swing flaws",
+          "prevalence": "HIGH",
+          "evidence_quotes": ["PAIN-101", "PAIN-107", "PAIN-119", "PAIN-120"],
+          "counter_message": "It's not the speed that causes problems - it's the lack of face control training at speed that's missing.",
+          "counter_evidence": "PAIN-041"
+        },
+        {
+          "belief": "Speed training gains don't transfer to the actual golf course",
+          "prevalence": "HIGH",
+          "evidence_quotes": ["PAIN-039", "PAIN-055", "PAIN-056", "HOPE-024"],
+          "counter_message": "Training implements that don't look or feel like golf clubs don't transfer. SpeedTrac trains with actual club dynamics.",
+          "counter_evidence": "PAIN-055"
+        },
+        {
+          "belief": "I need to slow down my swing to hit it straight",
+          "prevalence": "HIGH",
+          "evidence_quotes": ["PAIN-104", "PAIN-105", "PAIN-116", "PAIN-117"],
+          "counter_message": "You don't need to slow down - you need to learn to square the face at higher speeds.",
+          "counter_evidence": "HOPE-023"
+        },
+        {
+          "belief": "Training aids are mostly gimmicks that don't work",
+          "prevalence": "MODERATE",
+          "evidence_quotes": ["PAIN-051", "VILL-001", "VILL-002"],
+          "counter_message": "Most training aids ARE gimmicks. The ones that work are based on specific neuromuscular principles.",
+          "counter_evidence": "PAIN-051"
+        },
+        {
+          "belief": "My age/body limits how fast I can swing",
+          "prevalence": "MODERATE",
+          "evidence_quotes": ["PAIN-043", "PAIN-112", "HOPE-101"],
+          "counter_message": "Your body has a neurological governor that can be retrained at any age.",
+          "counter_evidence": "HOPE-041"
+        }
+      ],
+      "enabling_beliefs": [
+        {
+          "belief": "Overspeed training is scientifically proven to increase clubhead speed",
+          "prevalence": "HIGH",
+          "evidence_quotes": ["SPD-007", "SPD-005"],
+          "leverage_point": "Build on this belief while adding the missing element - face control"
+        },
+        {
+          "belief": "It's easier to add control to a fast swing than speed to a controlled one",
+          "prevalence": "MODERATE",
+          "evidence_quotes": ["SPD-008", "SPD-009"],
+          "leverage_point": "Use this paradigm shift to justify training speed with face control from the start"
+        },
+        {
+          "belief": "Consistent practice leads to improvement",
+          "prevalence": "HIGH",
+          "evidence_quotes": ["HOPE-029", "HOPE-031"],
+          "leverage_point": "Promise a clear protocol that builds both speed and control simultaneously"
+        },
+        {
+          "belief": "The right equipment/training can make a difference",
+          "prevalence": "MODERATE",
+          "evidence_quotes": ["DAC-034", "HOPE-047"],
+          "leverage_point": "Position SpeedTrac as the tool that finally addresses what others missed"
+        }
+      ],
+      "belief_system_summary": "Prospects operate under a core limiting belief that distance and accuracy are mutually exclusive. This belief is reinforced by their lived experience - every time they swing harder, they slice worse. They WANT to believe there's a solution but have been burned before. The key is breaking through their belief that 'swinging faster = worse accuracy' by introducing the missing mechanism: face control at speed."
+    }
+  },
+  "now_after_grid": {
+    "overview": "The Now/After Grid maps the prospect's current painful reality against their desired future state across four dimensions: Have, Feel, Average Day, and Status.",
+    "dimensions": {
+      "have": {
+        "now": [
+          "A two-way miss - slice one hole, hook the next",
+          "Speed training tools gathering dust in the garage",
+          "A driver they're afraid to hit",
+          "Inconsistent distance - 220 one hole, 260 the next",
+          "A handicap that won't budge despite effort"
+        ],
+        "after": [
+          "A predictable, repeatable ball flight",
+          "A training system they actually use because they see results",
+          "Confidence to pull driver on any hole",
+          "Consistent distance with tight dispersion",
+          "Visible handicap improvement within months"
+        ],
+        "evidence_quotes": {
+          "now": ["DAC-021", "PAIN-047", "PAIN-054", "FRUS-041"],
+          "after": ["HOPE-046", "HOPE-032", "HOPE-023", "DAC-051"]
+        }
+      },
+      "feel": {
+        "now": [
+          "Frustrated - same problems despite years of trying",
+          "Embarrassed on the first tee with an audience",
+          "Confused about what's actually wrong with their swing",
+          "Resigned to sacrificing distance for accuracy",
+          "Skeptical that anything new will work"
+        ],
+        "after": [
+          "Confident - knowing where the ball will go before they swing",
+          "Proud stepping up to the first tee",
+          "Clear understanding of what creates their ball flight",
+          "Excited to swing aggressively without fear",
+          "Trusting in a system that delivers results"
+        ],
+        "evidence_quotes": {
+          "now": ["FRUS-044", "EMO-001", "PAIN-103", "PAIN-116", "PAIN-040"],
+          "after": ["DAC-015", "HOPE-043", "HOPE-023", "HOPE-029"]
+        }
+      },
+      "average_day": {
+        "now": [
+          "Range session where 1/3 of drives are acceptable",
+          "On course: aim 75 yards left, swing, hope it fades back",
+          "Walk off 18 frustrated, promising to figure it out",
+          "Hours watching YouTube tips that contradict each other",
+          "Speed stick routine abandoned after no transfer to course"
+        ],
+        "after": [
+          "10-minute training session with measurable progress",
+          "On course: pick target, swing with intent, hit it there",
+          "Walk off 18 energized, excited for next round",
+          "Simple, focused practice with clear feedback",
+          "Training that builds both speed AND face control together"
+        ],
+        "evidence_quotes": {
+          "now": ["DAC-019", "DAC-022", "FRUS-030", "MIX-026", "PAIN-056"],
+          "after": ["HOPE-037", "DAC-052", "HOPE-029"]
+        }
+      },
+      "status": {
+        "now": [
+          "Known as the guy who can't hit driver",
+          "The one who holds up the group looking for balls",
+          "Gets outdriven by everyone in the foursome",
+          "Playing from the forward tees 'to speed up play'",
+          "The weak link in scramble tournaments"
+        ],
+        "after": [
+          "Known for bombing it down the middle",
+          "The one everyone watches off the tee",
+          "Competing for longest drive in the group",
+          "Playing the tips with confidence",
+          "The ringer every team wants"
+        ],
+        "evidence_quotes": {
+          "now": ["PAIN-111", "EMO-006", "EMO-002"],
+          "after": ["DAC-051", "HOPE-043"]
+        }
+      }
+    },
+    "transformation_summary": "The core transformation is from frustrated resignation to confident aggression. Prospects currently live in a state of 'controlled mediocrity' - deliberately limiting their potential to avoid the pain of unpredictable results. The AFTER state promises they can finally swing freely, aggressively, and with confidence that the ball will go where intended."
+  },
+  "ideal_client_outcome": {
+    "primary_outcome": {
+      "statement": "Hit the ball 20+ yards farther AND keep it in play",
+      "timeframe": "8-12 weeks of consistent training",
+      "evidence_quotes": ["SPD-004", "SPD-005", "HOPE-032"]
+    },
+    "secondary_outcomes": [
+      {
+        "outcome": "Eliminate the two-way miss (slice one hole, hook the next)",
+        "evidence_quotes": ["PAIN-102", "PAIN-103"]
+      },
+      {
+        "outcome": "Transfer range speed to on-course performance",
+        "evidence_quotes": ["HOPE-024", "PAIN-039"]
+      },
+      {
+        "outcome": "Confidence to swing aggressively without fear of result",
+        "evidence_quotes": ["HOPE-023", "DAC-015"]
+      },
+      {
+        "outcome": "Consistent ball flight with predictable shape",
+        "evidence_quotes": ["HOPE-046", "DAC-052"]
+      }
+    ],
+    "outcomes_not_promised": [
+      "Tour-level speed overnight",
+      "Fixing deep swing mechanics issues",
+      "Replacing the need for practice",
+      "Working for every golfer regardless of physical limitations"
+    ],
+    "ideal_client_profile": {
+      "demographics": "Male, 40-65 years old, 8-25 handicap",
+      "psychographics": [
+        "Has tried speed training or training aids before with limited success",
+        "Knows they're capable of more but feels stuck",
+        "Values practice time efficiency",
+        "Willing to invest in improvement but skeptical after past failures",
+        "Competitive with self and playing partners"
+      ],
+      "current_situation": [
+        "Swings 85-100 mph but loses accuracy when trying for more",
+        "Has accepted shorter distance as the price of accuracy",
+        "Embarrassed by inconsistent drives, especially in front of others",
+        "May have speed training equipment gathering dust"
+      ],
+      "evidence_quotes": ["PAIN-116", "PAIN-112", "PAIN-047", "EMO-001"]
+    }
+  },
+  "magic_wand": {
+    "overview": "If the prospect could wave a magic wand and have their golf problem solved instantly, what would they ask for?",
+    "primary_magic_wand": {
+      "wish": "Hit it 280 yards down the middle of the fairway, every time, without thinking about it",
+      "underlying_desire": "Effortless competence - the feeling of 'just knowing' the ball will go where intended",
+      "evidence_quotes": ["DAC-026", "HOPE-018", "HOPE-023"]
+    },
+    "secondary_wishes": [
+      {
+        "wish": "Never worry about the first tee shot again",
+        "underlying_desire": "Freedom from performance anxiety",
+        "evidence_quotes": ["EMO-001", "EMO-004"]
+      },
+      {
+        "wish": "Finally understand why my slice happens when I swing faster",
+        "underlying_desire": "Clarity and understanding to replace confusion",
+        "evidence_quotes": ["PAIN-101", "PAIN-103"]
+      },
+      {
+        "wish": "Keep up with or outdrive my playing partners",
+        "underlying_desire": "Social status and respect within golf peer group",
+        "evidence_quotes": ["PAIN-111", "EMO-006"]
+      },
+      {
+        "wish": "Stop wasting money on things that don't work",
+        "underlying_desire": "Confidence that investment will yield results",
+        "evidence_quotes": ["PAIN-040", "PAIN-047"]
+      },
+      {
+        "wish": "Get my distance back without sacrificing accuracy (especially seniors)",
+        "underlying_desire": "Reclaim former self/youth/capability",
+        "evidence_quotes": ["HOPE-041", "HOPE-101"]
+      }
+    ],
+    "magic_wand_positioning": "SpeedTrac doesn't promise instant magic, but it does address the core wish: finally being able to swing fast AND straight by training the one thing every other speed trainer ignores - face control at speed."
+  },
+  "promise_exposure": {
+    "overview": "Analysis of what promises the market has already been exposed to, their effectiveness, and the current level of promise fatigue.",
+    "market_sophistication_level": {
+      "level": 4,
+      "description": "Stage 4 - Mechanism Exhausted. The market has seen multiple mechanisms (overspeed training, weighted clubs, launch monitor feedback, swing trainers) and has developed skepticism. Simply claiming 'gain 20 yards' no longer works. Must introduce a NEW mechanism or explain WHY previous mechanisms failed.",
+      "evidence": "Multiple quotes showing skepticism of training aids, prior failed purchases, and the sentiment that 'most training aids are garbage'"
+    },
+    "promises_already_made": [
+      {
+        "promise": "Gain 20-30 yards of distance",
+        "who_made_it": "SuperSpeed, Stack, Rypstick, countless training aids",
+        "market_response": "Initial excitement, some results, but accuracy suffers or gains don't transfer",
+        "fatigue_level": "HIGH",
+        "evidence_quotes": ["AMZ-006", "SPD-005", "PAIN-047"]
+      },
+      {
+        "promise": "Tour-proven results",
+        "who_made_it": "Most premium training aid brands",
+        "market_response": "Skepticism - 'pros practice 8 hours a day, I don't'",
+        "fatigue_level": "MODERATE",
+        "evidence_quotes": ["AMZ-007", "AMZ-011", "DAC-016"]
+      },
+      {
+        "promise": "Quick fix / instant improvement",
+        "who_made_it": "YouTube instructors, cheap training aids",
+        "market_response": "Deep skepticism and cynicism",
+        "fatigue_level": "VERY HIGH",
+        "evidence_quotes": ["MIX-026", "PAIN-051", "VILL-001"]
+      },
+      {
+        "promise": "Scientific/research-backed method",
+        "who_made_it": "Stack System, academic-style marketing",
+        "market_response": "Credibility boost but doesn't overcome transfer gap concerns",
+        "fatigue_level": "MODERATE",
+        "evidence_quotes": ["SPD-007", "PAIN-055"]
+      },
+      {
+        "promise": "Works for any age/ability",
+        "who_made_it": "Most training aid brands",
+        "market_response": "Skepticism from seniors worried about injury",
+        "fatigue_level": "MODERATE",
+        "evidence_quotes": ["PAIN-043", "PAIN-044"]
+      }
+    ],
+    "promise_gaps": [
+      {
+        "gap": "Speed + Face Control Together",
+        "description": "No major competitor explicitly promises to train face control AT speed. This is the missing mechanism.",
+        "opportunity_level": "HIGH",
+        "evidence_quotes": ["PAIN-041", "PAIN-059"]
+      },
+      {
+        "gap": "Realistic Transfer to Course",
+        "description": "Most promise range gains but don't address the transfer problem directly",
+        "opportunity_level": "HIGH",
+        "evidence_quotes": ["PAIN-055", "PAIN-056", "HOPE-024"]
+      },
+      {
+        "gap": "Senior-Safe Speed Training",
+        "description": "Injury concerns are real but underaddressed in marketing",
+        "opportunity_level": "MODERATE",
+        "evidence_quotes": ["PAIN-043", "PAIN-044"]
+      }
+    ],
+    "new_promise_positioning": {
+      "primary_promise": "Add 20+ yards AND tighten your dispersion - because SpeedTrac is the only speed trainer that teaches your hands to square the face at full speed",
+      "mechanism": "Face Control at Speed - what every other speed trainer ignores",
+      "proof_required": "Launch monitor data showing both speed gains AND tighter dispersion, testimonials specifically mentioning accuracy improvement",
+      "differentiation": "We don't just make you faster. We make you faster AND straighter - by training the one thing speed sticks can't: face control."
+    },
+    "promise_strategy": {
+      "approach": "Big Promise + New Mechanism + Reason Why Others Failed",
+      "headline_formula": "[Big Result] because [New Mechanism] - why [Old Approach] never worked",
+      "example": "Finally Hit It Farther AND Straighter - because SpeedTrac trains what speed sticks ignore: face control at full speed"
+    }
+  },
+  "synthesis": {
+    "key_insight": "The SpeedTrac prospect is trapped in a false belief that distance and accuracy are mutually exclusive. This belief is reinforced by their experience with traditional speed training, which amplifies their existing slice because it trains speed without face control. The breakthrough comes from revealing this missing mechanism and positioning SpeedTrac as the solution.",
+    "primary_messaging_angle": "You've been told to choose between distance and accuracy. But what if the problem isn't your swing - it's that speed training without face control makes your mistakes faster? SpeedTrac is the first speed trainer that teaches your hands to square the face at full speed, so you can finally swing aggressively AND hit it straight.",
+    "emotional_hook": "That frustration you feel when you swing hard and watch it slice into the trees? It's not your fault. Every speed trainer you've tried ignores the one thing that matters most at impact: face control.",
+    "logical_justification": "Traditional speed sticks have no clubface - they're just weighted shafts. So you train your body to swing faster, but never train your hands to square the face at that new speed. SpeedTrac changes that with [mechanism details].",
+    "credibility_builder": "Science shows overspeed training works for speed. But research also shows transfer depends on training specificity. That's why we designed SpeedTrac to train BOTH speed AND face control in the same motion.",
+    "call_to_action": "Stop choosing between distance and accuracy. Train them both together."
+  }
+}

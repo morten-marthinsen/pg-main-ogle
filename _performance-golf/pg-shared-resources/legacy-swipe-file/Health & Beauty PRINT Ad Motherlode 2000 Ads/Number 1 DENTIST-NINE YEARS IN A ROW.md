@@ -1,0 +1,47 @@
+# Number 1 DENTIST-NINE YEARS IN A ROW
+
+**Source File:** Number 1 DENTIST-NINE YEARS IN A ROW.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+NW-CN13311928
+Servicesweofferinclude:
+Bonding,torepairsmallchipsorcracks
+Crowns&Bridgework,toreplacelargeamountsof
+losttoothstructureand/ormissingteeth
+DentalImplants,forthelongest-lastingtooth
+replacementavailabletoday
+Fillings,tomakeyourteethstrongandhealthy
+OralCancerScreenings,todetectdiseaseata
+curablestage
+Periodontal(Gum)DiseaseTherapy,toprevent
+toothloss
+ProfessionalTeethCleanings,tomaintaingood
+oralhealth
+RemovableDentures,tohelpyousmileagain
+RootCanalTreatment,tosaveaninfectedtooth
+Sealants,toprotectchildren’steethfromdecay
+TeethWhitening,tobrightenafadedordiscolored
+smile
+ToothExtractions,whenatoothishopelessly
+damagedordecayed
+
+# #1 DENTIST-NINE YEARS IN A ROW!
+
+AtMackDentalourphilosophyistoprovidetreatmenttothewholeperson-with
+aspecialfocusonyourteethandgums,asitrelatestoyourtotalbodyhealth.
+Wewantyoutobeconfidentthatyoursmileachievesyourgoalsforcomfort,
+functionandappearance.
+We’reheretomakethathappen.
+Wealsounderstandthatchoosingadentistisanimportantdecision.Afterall,
+yoursmileisyourgreatestassetandsaysalotaboutyouroverall,health.From
+themomentyouwalkinthedoor,you’llbewelcomedbyacaringstaff ina
+relaxed,stress-freeenvironmentwherethewholefamilycanfeelatease.
+MackDentaloffersafullrangeof general&cosmeticdentaltreatmentsatour
+officetohelpyouachieveyourperfectsmile.
+Dr. Mack
+Visit our
+new website:
+www.mackdental.com

@@ -1,0 +1,64 @@
+# Ask the Dermatology Expert Breakouts
+
+**Source File:** Ask the Dermatology Expert Breakouts.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+## Back-to-schoolskincare
+
+Q:What’sthebestwaytotreatand
+preventbreakouts?
+A:Eightoutoftenteenagerswill
+experienceacne.Whileit’scommon,it
+stillisn’teasytocopewith—especially
+whenyouarestartinganewschool
+year.Therearesomesimplethingsyou
+candotohelpminimizeoreliminate
+blemishes:
+First,makesureyourfaceisclean
+andstaysclean.Washyourfacetwice
+aday,onceinthemorningandonce
+atnight.Useagentlefacewash,like
+NeoStrata’sAnti-BacterialCleanser,
+whichwashesawaythedirt,oiland
+germsthatcauseblemishes.Youcan
+alsousecleanserscontainingSali-
+cylicacidorbenzoylperoxidetotreat
+existingbreakouts.
+Whileitmaybetemptingtopick
+pimples,especiallyiftheyhaveawhite
+head,don’tdoit.Thedirtfromyour
+fingertipswillonlyfurtherirritatethe
+lesionandmaycausescarring.
+Ifyouarewearingsunscreen,and
+youshoulddaily,makesuretochoose
+anon-porecloggingbrandlikeEltaMD
+SPF46. Ifyouplantousemakeupto
+coverupblemishes,purchaseaminer-
+al-basedfoundationlikegloMinerals.
+Usemakeupsparingly,andmakesure
+allmakeupiswashedoffbeforepartici-
+patinginsportsorexercise.
+Ifyouareprescribedanoralmed-
+icationlikeIsotretinoin,previously
+knownasAccutane,makesureyou
+takethemedicationconsistentlyandas
+directed.
+ChrisD.Collins,M.D.isthefounderandmedicaldirectorof
+CollinsAdvancedDermatologyInstituteinRoundRockand
+Leander.Collinsspecializesinallaspectsofdermatolo-
+gyfromsurgicaltocosmetic.Hispracticeoffersthelatest
+skincancertreatmentsandtherapies,includingMohsSur-
+gery,SuperficialRadiationandPhotodynamicTherapy.
+CollinsAdvancedDermatology
+Institute
+Leander:311S.Hwy183
+RoundRock:4112LinksLane,Suite205
+512.379.6090
+info@collinsadi.com
+CallorbookonlineatCollinsADI.com
+ASKTHEDERMATOLOGYEXPERT
+Dr.Chris
+Collins

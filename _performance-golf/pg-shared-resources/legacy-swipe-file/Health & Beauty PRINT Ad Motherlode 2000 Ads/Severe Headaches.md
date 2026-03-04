@@ -1,0 +1,50 @@
+# Severe Headaches
+
+**Source File:** Severe Headaches.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1443107122.0
+
+---
+
+Livingwithheadachesistough.
+Dayafterdayofbeingmiserable,irritable,andlookingalotolderthanyoureallyare.
+Thefrustrationofknowingthatyourfriendsandfamilydon’tunderstandwhatyou’re
+goingthrough.
+Addthistodoctors’visits,MRI’sandCTscans--whichonlycomebackwith
+“normal”results.
+Andthat’snotall…tryingonemedicationafteranother,feelinglikeyou’reona
+merry-go-roundofdrugs.
+Allthisisenoughtomakeanyonewanttoscream!
+MynameisDr.TylerSmardzewski,andI’vebeenhelpingpatientswithnecktension,
+headachesandmigraineslivepainfreeforyearsnow.
+EveryweekIhearhowwomensufferfromsevereheadaches–statementslike…
+• “Ifeellikemyheadisinavice.”
+• “MyeyeshurtandIfeelsodrowsy.”
+• “Ihavetolaydown.”
+• “I’vehadmigrainessincechildhood.”
+• “Muscletensionintheneckandpainintotheshoulders.”
+“Myneckpainandheadacheswereaconstantissue,nowafterchiropracticcaremy
+painisgone.Idon’thavetoschedulethedayaroundmyheadachesanymore.”-N.P.
+“IonlywishedIhadfoundyousooner”
+Ihearthissooften,Idecidedtodosomethingaboutitandrunthisad.I’mrunninga
+special14-dayofferforthosesufferingwithheadaches.UntilJune21,$30willget
+youalltheservicesInormallychargenewpatients$257for!
+JustcallbeforeJune21andhere’swhatyou’llget…
+• Anin-depthconsultationaboutyourheadacheswhereIwilllisten…
+reallylisten...tothedetailsofyouruniquesituation.
+• Acompleteneuromuscularandskeletalexaminationoftheheadand
+necksowecanfindtheproblem.
+• Athoroughanalysisofyourexamwherewe’llmapouthowyoucan
+getridofyourheadachesonceandforall.
+• Aspecialreportcomplementingyourrecommendationsthatrevealsthe
+foodsyoushouldnever,evereatwhensufferingfromchronicheadaches.
+Imaginebeingabletolivelifelikeanormalpersonagain,painfreeandwithout
+headaches--beingabletoplaywithyourkids,enjoytimewithfriends,andnothave
+toworrythatyourheadachewillhityouatjustthewrongtime.
+Calltoday.Imaybeabletohelpyouliveanormal,pain-freelifeagain.
+Call(443)345-4731.
+
+# Severe Headaches?
+
+2129PulaskiHighwaySuite103•HavredeGrace,MD.21078
+Summitchiromd.com

@@ -1,0 +1,309 @@
+{
+  "expansion_id": "ctx_sf2_001",
+  "status": "complete",
+  "product": {
+    "name": "SF2 Driver",
+    "category": "Drivers"
+  },
+  "context": {
+    "domain": "Driving / Tee Shots / Slice Correction",
+    "description": "All aspects of driver performance and tee shot execution, with specific focus on slice correction, ball flight control, and the relationship between accuracy and distance off the tee"
+  },
+  "research_topics": {
+    "primary": [
+      {
+        "topic_id": "PT-01",
+        "topic": "Slice causes and mechanics",
+        "keywords": ["why do I slice", "slice swing path", "open clubface slice", "what causes a slice", "slice vs fade"],
+        "emotional_angle": "Frustration with not understanding the root cause, feeling stuck",
+        "source_types": ["instructional_video", "forum_discussion", "reddit_thread"]
+      },
+      {
+        "topic_id": "PT-02",
+        "topic": "Slice correction attempts (swing changes)",
+        "keywords": ["how to fix slice", "stop slicing driver", "slice cure", "anti-slice drill", "square the face"],
+        "emotional_angle": "Exhaustion from trying everything, hopelessness when fixes don't stick",
+        "source_types": ["instructional_video", "forum_discussion", "reddit_thread"]
+      },
+      {
+        "topic_id": "PT-03",
+        "topic": "Slice emotional impact and embarrassment",
+        "keywords": ["embarrassed slice", "hate my slice", "slice ruining golf", "losing balls slice", "afraid to hit driver"],
+        "emotional_angle": "Deep shame, social embarrassment, avoiding clubs/rounds",
+        "source_types": ["forum_discussion", "reddit_thread"]
+      },
+      {
+        "topic_id": "PT-04",
+        "topic": "Driver distance desire",
+        "keywords": ["hit driver farther", "more driver distance", "driver ball speed", "swing speed increase", "distance off tee"],
+        "emotional_angle": "Envy of long hitters, ego tied to distance, frustration with falling behind",
+        "source_types": ["instructional_video", "forum_discussion", "reddit_thread", "review_site"]
+      },
+      {
+        "topic_id": "PT-05",
+        "topic": "Driver accuracy vs distance tradeoff",
+        "keywords": ["accuracy or distance", "driver control vs distance", "fairways vs yards", "consistent driver", "reliable tee shot"],
+        "emotional_angle": "Feeling forced to choose, resentment that others have both",
+        "source_types": ["forum_discussion", "reddit_thread"]
+      },
+      {
+        "topic_id": "PT-06",
+        "topic": "Driver confidence and fear",
+        "keywords": ["scared to hit driver", "driver confidence", "afraid of first tee", "tee shot anxiety", "no trust in driver"],
+        "emotional_angle": "First tee dread, avoidance behavior, loss of identity as golfer",
+        "source_types": ["forum_discussion", "reddit_thread", "psychology_content"]
+      },
+      {
+        "topic_id": "PT-07",
+        "topic": "Equipment vs swing debate",
+        "keywords": ["can equipment fix slice", "is it me or the club", "driver forgiveness", "right driver for slice", "equipment compensation"],
+        "emotional_angle": "Skepticism, fear of wasting money, hope that equipment can help",
+        "source_types": ["forum_discussion", "reddit_thread", "review_site"]
+      },
+      {
+        "topic_id": "PT-08",
+        "topic": "Draw bias and anti-slice drivers",
+        "keywords": ["draw bias driver", "anti-slice driver", "offset driver", "draw driver review", "driver for slicers"],
+        "emotional_angle": "Hope mixed with skepticism, past disappointments with similar products",
+        "source_types": ["review_site", "forum_discussion", "reddit_thread", "youtube_review"]
+      },
+      {
+        "topic_id": "PT-09",
+        "topic": "Ball flight control and shot shaping",
+        "keywords": ["hit a draw", "how to draw driver", "stop hitting fade", "control ball flight", "work the ball"],
+        "emotional_angle": "Desire for skill mastery, frustration with limited shot repertoire",
+        "source_types": ["instructional_video", "forum_discussion"]
+      },
+      {
+        "topic_id": "PT-10",
+        "topic": "Driver fitting and customization",
+        "keywords": ["driver fitting", "best driver settings for slice", "driver loft for slice", "shaft for slice", "driver setup"],
+        "emotional_angle": "Confusion about technical options, hope that fitting solves problems",
+        "source_types": ["forum_discussion", "fitting_content", "review_site"]
+      },
+      {
+        "topic_id": "PT-11",
+        "topic": "Lessons and instruction for slice",
+        "keywords": ["slice lesson", "instructor fix slice", "golf lesson slice", "coach couldn't fix slice", "tried everything"],
+        "emotional_angle": "Disappointment with instruction, feeling like a lost cause",
+        "source_types": ["forum_discussion", "reddit_thread"]
+      },
+      {
+        "topic_id": "PT-12",
+        "topic": "Tee box strategy and course management",
+        "keywords": ["aim left slice", "play for slice", "tee strategy slice", "course management slice", "compensate for slice"],
+        "emotional_angle": "Resignation, defensive play, not enjoying the game",
+        "source_types": ["forum_discussion", "reddit_thread"]
+      },
+      {
+        "topic_id": "PT-13",
+        "topic": "Practice and improvement with driver",
+        "keywords": ["driver practice", "improve driver", "driving range tips", "driver drills", "practice slice"],
+        "emotional_angle": "Hope for improvement, frustration that practice doesn't translate",
+        "source_types": ["instructional_video", "forum_discussion"]
+      },
+      {
+        "topic_id": "PT-14",
+        "topic": "Driver technology and marketing claims",
+        "keywords": ["driver technology", "driver marketing hype", "do drivers matter", "driver differences", "driver gimmicks"],
+        "emotional_angle": "Cynicism about marketing, skepticism about claims, wanting truth",
+        "source_types": ["forum_discussion", "reddit_thread", "review_site"]
+      },
+      {
+        "topic_id": "PT-15",
+        "topic": "Titanium vs carbon fiber drivers",
+        "keywords": ["titanium driver", "carbon fiber driver", "titanium vs carbon", "driver materials", "premium driver construction"],
+        "emotional_angle": "Confusion about materials, wondering if premium is worth it",
+        "source_types": ["review_site", "forum_discussion"]
+      }
+    ],
+    "equipment_specific": [
+      {
+        "topic_id": "ES-01",
+        "topic": "Draw bias driver mechanisms",
+        "keywords": ["how draw bias works", "heel weighting driver", "offset driver face", "draw driver technology"],
+        "source_types": ["review_site", "forum_discussion", "competitor_page"]
+      },
+      {
+        "topic_id": "ES-02",
+        "topic": "Driver adjustability and settings",
+        "keywords": ["driver settings slice", "driver weights", "adjustable hosel", "loft up for slice", "neutral vs draw settings"],
+        "source_types": ["review_site", "forum_discussion", "fitting_content"]
+      },
+      {
+        "topic_id": "ES-03",
+        "topic": "Driver shaft characteristics",
+        "keywords": ["shaft for slice", "active tip shaft", "counterbalanced shaft", "shaft weight slice"],
+        "source_types": ["forum_discussion", "fitting_content"]
+      },
+      {
+        "topic_id": "ES-04",
+        "topic": "Driver head size and MOI",
+        "keywords": ["driver head size", "460cc vs smaller", "MOI driver", "forgiveness driver head"],
+        "source_types": ["review_site", "forum_discussion"]
+      },
+      {
+        "topic_id": "ES-05",
+        "topic": "Face angle and closed face drivers",
+        "keywords": ["closed face driver", "face angle driver", "hook face driver", "pre-set face angle"],
+        "source_types": ["review_site", "forum_discussion", "competitor_page"]
+      },
+      {
+        "topic_id": "ES-06",
+        "topic": "CG placement and weight distribution",
+        "keywords": ["low CG driver", "back weighted driver", "heel weight driver", "CG location driver"],
+        "source_types": ["review_site", "competitor_page"]
+      },
+      {
+        "topic_id": "ES-07",
+        "topic": "Driver aerodynamics and speed",
+        "keywords": ["aerodynamic driver", "driver speed", "fast driver head", "clubhead speed driver"],
+        "source_types": ["review_site", "competitor_page"]
+      },
+      {
+        "topic_id": "ES-08",
+        "topic": "Face technology and ball speed",
+        "keywords": ["driver face technology", "hot face driver", "COR limit", "ball speed driver", "face flex driver"],
+        "source_types": ["review_site", "competitor_page", "forum_discussion"]
+      }
+    ],
+    "competitor_context": [
+      {
+        "competitor": "Callaway",
+        "products": ["Paradym Ai Smoke Max D", "Big Bertha 2023", "Rogue ST Max D"],
+        "research_focus": "AI face optimization claims, draw bias positioning, distance + forgiveness narrative"
+      },
+      {
+        "competitor": "TaylorMade",
+        "products": ["Qi10 Max", "Stealth 2 HD", "SIM 2 Max D"],
+        "research_focus": "Carbon face technology, twist face, high draw bias models"
+      },
+      {
+        "competitor": "Cobra",
+        "products": ["Darkspeed Max", "LTDx Max", "Air-X 2"],
+        "research_focus": "PWR-COR weighting, offset designs, game improvement focus"
+      },
+      {
+        "competitor": "Ping",
+        "products": ["G430 Max", "G430 SFT", "G425 SFT"],
+        "research_focus": "SFT (Straight Flight Technology), tungsten weighting, forgiveness focus"
+      },
+      {
+        "competitor": "Cleveland/Srixon",
+        "products": ["Launcher XL Halo", "Launcher XL Lite", "ZX5 MKII LS"],
+        "research_focus": "High launch, draw bias, lightweight options"
+      },
+      {
+        "competitor": "Tour Edge",
+        "products": ["Hot Launch E523", "Exotics C723", "Exotics E723"],
+        "research_focus": "Value positioning, draw bias at lower price point, senior/game improvement focus"
+      },
+      {
+        "competitor": "Wilson",
+        "products": ["Dynapower Carbon", "Launch Pad 2"],
+        "research_focus": "Carbon construction, game improvement, value positioning"
+      },
+      {
+        "competitor": "Titleist",
+        "products": ["TSR2", "TSR1"],
+        "research_focus": "Premium positioning, less draw-bias focused but high forgiveness models"
+      }
+    ]
+  },
+  "source_type_requirements": {
+    "instructional_video": {
+      "description": "YouTube videos teaching slice fixes - comments reveal pain points and failed attempts",
+      "platforms": ["YouTube"],
+      "priority": "high",
+      "query_types": ["how to fix slice", "stop slicing driver", "slice cure", "draw the ball"]
+    },
+    "forum_discussion": {
+      "description": "Long-form discussions with multiple perspectives and experiences",
+      "platforms": ["GolfWRX", "TheSandTrap", "MyGolfSpy Forums"],
+      "priority": "high",
+      "query_types": ["slice help thread", "draw driver recommendations", "equipment for slice", "driver purchase advice"]
+    },
+    "reddit_thread": {
+      "description": "Authentic amateur voices, unfiltered honest opinions, emotional sharing",
+      "platforms": ["r/golf", "r/GolfSwing"],
+      "priority": "high",
+      "query_types": ["slice rant", "driver recommendations", "equipment help", "slice frustration"]
+    },
+    "review_site": {
+      "description": "Professional reviews with technical analysis of draw drivers",
+      "platforms": ["Plugged In Golf", "MyGolfSpy", "Golf Digest", "Today's Golfer", "Golf Monthly"],
+      "priority": "medium",
+      "query_types": ["draw driver review", "best driver for slice", "anti-slice driver test"]
+    },
+    "competitor_page": {
+      "description": "Competitor product pages for mechanism and claim mapping",
+      "platforms": ["Callaway.com", "TaylorMadeGolf.com", "Cobra.com", "Ping.com", "ClevelandGolf.com", "TourEdge.com"],
+      "priority": "medium",
+      "query_types": ["[product] technology", "[product] features"]
+    },
+    "competitor_ad": {
+      "description": "Competitor advertising for positioning analysis",
+      "platforms": ["Facebook Ads Library", "YouTube Ads", "Google Display"],
+      "priority": "medium",
+      "query_types": ["driver ad", "[brand] driver commercial"]
+    },
+    "youtube_review": {
+      "description": "Golf influencer reviews with user comments",
+      "platforms": ["YouTube - Rick Shiels", "YouTube - TXG", "YouTube - Crossfield", "YouTube - Golf Sidekick"],
+      "priority": "high",
+      "query_types": ["[product] review", "draw driver test", "slice driver comparison"]
+    },
+    "fitting_content": {
+      "description": "Fitting videos and content about driver setup for slicers",
+      "platforms": ["YouTube - Club Champion", "YouTube - TXG", "YouTube - 2nd Swing"],
+      "priority": "medium",
+      "query_types": ["driver fitting slice", "settings for slice", "shaft for slicer"]
+    }
+  },
+  "validation": {
+    "primary_topics_count": 15,
+    "equipment_topics_count": 8,
+    "competitors_identified": 8,
+    "source_types_count": 8,
+    "emotional_angles_present": true,
+    "instructional_content_included": true,
+    "psychological_topics_included": true,
+    "forum_sources_included": true,
+    "video_sources_included": true,
+    "all_minimums_met": true
+  },
+  "special_sf2_considerations": {
+    "upgrade_narrative_research": {
+      "description": "SF2 is positioned as upgrade to SF1 - need to understand 'distance sacrifice' perception",
+      "topics": [
+        "Do draw bias drivers sacrifice distance?",
+        "Can you have accuracy AND distance?",
+        "Premium titanium vs standard construction",
+        "Are anti-slice drivers slow?"
+      ]
+    },
+    "equipment_belief_research": {
+      "description": "Core SF2 thesis is 'equipment can fix slice without swing change' - validate this belief structure",
+      "topics": [
+        "Can equipment fix swing flaws?",
+        "Is slice an equipment or swing problem?",
+        "Do draw drivers actually work?",
+        "Skepticism about anti-slice marketing"
+      ]
+    },
+    "price_sensitivity_research": {
+      "description": "SF2 will be premium priced (titanium) - need to understand value perception",
+      "topics": [
+        "Is premium driver worth it?",
+        "Titanium vs cheaper construction",
+        "Value of accuracy vs cost",
+        "Direct-to-consumer vs big brands"
+      ]
+    }
+  },
+  "metadata": {
+    "created": "2026-01-19",
+    "skill_version": "1.0-A",
+    "prd_reference": "Section 2"
+  }
+}

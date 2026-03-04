@@ -1,0 +1,196 @@
+{
+  "analysis_id": "E5.4_demographic_segmentation",
+  "created": "2026-01-19",
+  "methodology": "Extraction of demographic identifiers and behavioral patterns from verbatim quotes",
+
+  "primary_segments": {
+    "SEGMENT_1_FRUSTRATED_SENIOR": {
+      "segment_name": "The Distance-Depleted Senior",
+      "estimated_size": "35% of quote corpus",
+      "demographic_markers": {
+        "age_range": "55-75+",
+        "indicators_found": [
+          "65 years old", "71-year-old", "60+", "79 years old",
+          "senior golfer", "after retirement", "50+", "70+"
+        ]
+      },
+      "behavioral_patterns": [
+        "Used to hit 250+, now struggling for 200",
+        "Considering senior tees",
+        "Back/knee/physical limitations mentioned",
+        "Nostalgic for former ability"
+      ],
+      "key_pain_points": [
+        "Age-related distance loss",
+        "Slice getting worse with age",
+        "Can't keep up with playing partners",
+        "Equipment chase never ending"
+      ],
+      "emotional_profile": "Nostalgic, accepting decline, seeking solutions to stay competitive",
+      "representative_quotes": [
+        "P-243: it seems once I hit like 40 my distance took a hit, 45 a bigger hit and 50 a pretty damn big one",
+        "P-219: I long wistfully for the days when I could carry that fairway bunker at 250 yards",
+        "H-154: For a 70+ yr old, that's a real game changer"
+      ],
+      "sf2_messaging_angle": "Get back the distance you lost - without swinging harder",
+      "price_sensitivity": "MEDIUM - Will pay for solutions that work"
+    },
+
+    "SEGMENT_2_CONFIDENCE_COLLAPSED": {
+      "segment_name": "The Yips-Afflicted Driver",
+      "estimated_size": "25% of quote corpus",
+      "demographic_markers": {
+        "age_range": "35-60",
+        "skill_level": "Mid handicap (10-20)",
+        "indicators_found": [
+          "rest of game is fine", "hit irons well", "only driver struggles",
+          "used to hit driver", "suddenly lost it"
+        ]
+      },
+      "behavioral_patterns": [
+        "Irons and wedges are strong",
+        "Only driver/woods problematic",
+        "May avoid driver entirely",
+        "Practice swing fine, real swing disaster"
+      ],
+      "key_pain_points": [
+        "Mental block with driver",
+        "Practice doesn't translate",
+        "Sudden onset of problem",
+        "Can't enjoy the game"
+      ],
+      "emotional_profile": "Frustrated, confused, approaching desperation",
+      "representative_quotes": [
+        "P-046: mentally I am prepared to hit a bad shot before I even step up to the ball",
+        "V-109: I can easily feel a nice swing during my practice swings with the driver/woods but put me over a ball and well........disaster",
+        "P-044: My crazy slice only happens with my driver, 3 and 5 woods"
+      ],
+      "sf2_messaging_angle": "Step up to the tee with confidence again",
+      "price_sensitivity": "LOW - Desperate for solution"
+    },
+
+    "SEGMENT_3_SERIAL_SLICER": {
+      "segment_name": "The Chronic Slicer",
+      "estimated_size": "30% of quote corpus",
+      "demographic_markers": {
+        "age_range": "25-55",
+        "skill_level": "High handicap (15-30+)",
+        "indicators_found": [
+          "always sliced", "can't stop slicing", "tried everything",
+          "military golf", "2 fairways right"
+        ]
+      },
+      "behavioral_patterns": [
+        "Slice has always been the problem",
+        "Tried multiple fixes without success",
+        "May have given up on fixing swing",
+        "Compensates by aiming left"
+      ],
+      "key_pain_points": [
+        "Slice is permanent fixture",
+        "Nothing has fixed it",
+        "Embarrassment in groups",
+        "Money wasted on lessons/equipment"
+      ],
+      "emotional_profile": "Exhausted, skeptical but still hoping",
+      "representative_quotes": [
+        "P-021: if I swing as hard as I can, I could probably send the ball 2 fairways to the right",
+        "P-236: I spend so much time researching online how to fix a slice...Nothing. Still was slicing every drive",
+        "P-041: Im almost to the point where I think I'll never be able to get rid of my slice"
+      ],
+      "sf2_messaging_angle": "Your slice isn't a swing problem - it's an equipment problem",
+      "price_sensitivity": "MEDIUM-LOW - Skeptical but will try"
+    },
+
+    "SEGMENT_4_EQUIPMENT_OPTIMIZER": {
+      "segment_name": "The Gear-Obsessed Fitter",
+      "estimated_size": "10% of quote corpus",
+      "demographic_markers": {
+        "age_range": "30-60",
+        "skill_level": "Low-mid handicap (5-15)",
+        "indicators_found": [
+          "fitted", "shaft flex", "launch angle", "spin rate",
+          "Trackman", "MOI", "swing speed"
+        ]
+      },
+      "behavioral_patterns": [
+        "Understands equipment technology",
+        "Has been fitted multiple times",
+        "Knows their numbers",
+        "Seeks optimization"
+      ],
+      "key_pain_points": [
+        "Already done fitting, still not satisfied",
+        "Diminishing returns on equipment changes",
+        "Wants that extra 5-10 yards"
+      ],
+      "emotional_profile": "Analytical, skeptical of claims, data-driven",
+      "representative_quotes": [
+        "RC-109: Most driver heads these days produce similar distance numbers. IMO, the right shaft is more important",
+        "ST-117: I got on trackman and found out what my issue was"
+      ],
+      "sf2_messaging_angle": "The engineering your swing has been waiting for",
+      "price_sensitivity": "LOW - Will pay for proven performance"
+    }
+  },
+
+  "cross_segment_insights": {
+    "universal_pain_points": [
+      "Slice causing fairway misses",
+      "Loss of distance (real or perceived)",
+      "Money/time wasted on ineffective solutions",
+      "Social embarrassment on course"
+    ],
+    "universal_desires": [
+      "Hit fairways consistently",
+      "Feel confident on tee",
+      "Keep up with playing partners",
+      "Enjoy golf again"
+    ],
+    "universal_skepticism": [
+      "Equipment can't fix bad swing",
+      "Claims are exaggerated",
+      "Just a band-aid solution"
+    ]
+  },
+
+  "segment_prioritization": {
+    "primary_target": {
+      "segment": "SEGMENT_3_SERIAL_SLICER",
+      "rationale": "Largest addressable market, direct SF2 benefit alignment, emotionally motivated"
+    },
+    "secondary_target": {
+      "segment": "SEGMENT_1_FRUSTRATED_SENIOR",
+      "rationale": "Significant market size, high disposable income, active equipment buyers"
+    },
+    "tertiary_target": {
+      "segment": "SEGMENT_2_CONFIDENCE_COLLAPSED",
+      "rationale": "Highly motivated, will pay any price, but smaller segment"
+    }
+  },
+
+  "messaging_matrix": {
+    "by_segment": {
+      "FRUSTRATED_SENIOR": {
+        "headline_angle": "Get Back Your Distance",
+        "proof_points": ["70+ year old testimonials", "Distance regained without more effort"],
+        "emotional_trigger": "Nostalgia and competitive drive"
+      },
+      "CONFIDENCE_COLLAPSED": {
+        "headline_angle": "Trust Your Driver Again",
+        "proof_points": ["Mental game improvement", "Practice swing = real swing"],
+        "emotional_trigger": "Relief and restoration"
+      },
+      "SERIAL_SLICER": {
+        "headline_angle": "Finally Fix Your Slice",
+        "proof_points": ["85% straight", "From military golf to fairways"],
+        "emotional_trigger": "Hope after exhaustion"
+      },
+      "EQUIPMENT_OPTIMIZER": {
+        "headline_angle": "The Engineering Edge",
+        "proof_points": ["Launch optimization", "Spin reduction data"],
+        "emotional_trigger": "Technical superiority"
+      }
+    }
+  }
+}

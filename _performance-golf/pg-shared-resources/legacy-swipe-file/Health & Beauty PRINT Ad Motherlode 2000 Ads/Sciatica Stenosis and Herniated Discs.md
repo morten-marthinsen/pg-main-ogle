@@ -1,0 +1,168 @@
+# Sciatica Stenosis and Herniated Discs
+
+**Source File:** Sciatica Stenosis and Herniated Discs.PDF
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+## Considering Back Surgery?
+
+
+# Sciatica, Stenosis and Herniated Discs May
+
+
+# Be to Blame for Pain and Numbness In Legs
+
+LOCAL CLINIC OFFERS FREE CONSULTATION TO THOSE SUFFERING FROM BACK AND NECK PAIN
+Shelton Medical Center
+9 Cots Street, Suite 2c Shelton, CT 06484
+
+# C A L L T O D A Y !
+
+
+# 2 0 3 . 5 6 7 . 4 6 0 0
+
+w w w . c t d i s c c e n t e r s . c o m
+CONNECTICUTHEALTHNEWSTODAY
+Non-SurgicalTreatment Surgery
+atConnecticutDiscand
+LaserTherapyCenters
+Risk NoSideEffects Complications
+poor
+outcomes
+highrisk
+Pain CompletelyPainFree Canlingerfor
+TreatmentOptions months
+Recovery Days/Weeks Monthsor
+Years,
+perhaps
+never?
+IsSurgerytheAnswer?
+Manyofourpatientsweretoldthattheyneededsurgery.
+Itistruethatsurgerymaybetheanswerforcertaintypes
+ofbackinjuries. However,wehavefoundsuccesswith
+manyofthesepatients,duetoourmixoftreatmentsand
+experienceindealingwithbackandneckpain. When
+consideringyouroptions,askyourselfthisquestion: IF
+THEREISASOLUTIONTOBACKPAINTHATDOESN’T
+REQUIRESURGERY,ISN’TITWORTHEXPLORING?
+WillMyPainGoAwayOverTime?
+Manypeopletrytowaittheirbackpainoutonlytofindthat
+itkeepsgettingworse. Theybuynewmattresses,try
+differentstretchingexercises,learnnewtechniquesfor
+sittingandstanding,etc.,onlytofindthattheircondition
+doesn’timprove. Ifit’satruediscproblem,waitingwill
+onlymakeitworse.
+Whysufferlongerthanyouneedto? Ifyouare
+consideringextrememeasures,visitConnecticutDiscand
+LaserTherapyCentersfirst! Ifyouareexperiencing
+severebackorneckpain,takeactionnow! DON’T
+CONTINUETOLETPAINCONTROLYOURLIFE!
+TheSolution:ConnecticutDiscAndLaser
+TherapyCentersMethods
+ConnecticutDiscandLaserTherapyCentersofferssome
+ofthemostadvancednon-surgicalproceduresand
+therapiesforrelievingchronicandsevereback/neck
+Didyouknowthat30millionAmericanssufferfromback
+paineveryday? Ifyousufferwithlowerback,neckorleg
+pain,weinviteyoutotryournon-surgicalsolutions. This
+painaffectseverythingthatyoudo,fromworktoplay,and
+ultimatelyyourqualityoflife. Weareheretotellyouthat
+thereishope. Wecanhelpyougetyourlifeback. At
+ConnecticutDiscandLaserTherapyCenters,wehave
+helpedthousandsofbacksufferersjustlikeyou. Weonly
+offerthemostadvancednon-surgicaltreatmentsand
+therapies. Wearesoconfidentthatwecanhelp,thatwe
+areofferingyouafreeevaluation. Thereisnoobligation
+andtheonlythingyouhavetoloseisthepain.
+Therearemanycausesofbackpain. Somepeople
+developitovertime,whileothersareinjuredinsports,work,
+orautoaccidents. Nomatterthecause,peoplecopewith
+paindifferently.
+pain.Manyclinicsacrossthecountryhaveapartof
+thesolution,butConnecticutDiscandLaser
+TherapyCentersuseseveraltreatmentoptions
+foundoveryearsofexperienceandtrainingin
+ordertooffertheultimateinpainrelief.
+Wefindthatmanypeoplehaveseenafamily
+doctor,chiropractor,ortherapist,andevena
+surgeon,butarestilldealingwiththesamepain.
+Weareabletohelpmanyofthesepeoplebecause
+ofourdiverseteamandourexperienceindealing
+withpain.Ourteamwillevaluateyourpainand
+needs,thendetermineifyouareacandidatefor
+theConnecticutDiscandLaserTherapymethod.
+TheConnecticutDisc&Laser
+TherapyCentersMethodAllows
+BackandNeckPaintoHeal...
+NATURALLY
+Manybackpainconditionsthatweseecanbe
+helpedbyourstate-of-the-artdecompression
+tables,deeptissuehighpowerlasertherapyand
+ourtreatmentprograms.Decompressionrelieves
+pressurethatbuildsuponthediscsandnerves.
+Thetaskofrelievingpaincomesaboutasaresult
+ofdrawingtheleakinggelofaherniateddiscback
+intoplace.Decompressionachievesthisby
+creatingnegativepressurewithinthedisc,referred
+toasnegativeintradiscalpressure.Thisessentially
+createsavacuumtodrawthebulgingand
+herniateddiscmaterialbackintothediscspace
+andrelievespressure.Thisprocessofnon-surgical
+decompressioncombinedwithacustomized
+rehabilitationprogramallowthebodytohealitself
+naturally.
+WhyConnecticutDisc&Laser
+TherapyCenters?
+TheConnecticutDisc&LaserTherapyCenters
+teamhasyearsofexperienceandtheyhave
+continuouslyinvestedinadvancedtreatments.
+Ourinnovativeapproachofferssolutions,where
+mostdoctorsrunoutofanswers.ConnecticutDisc
+&LaserTherapyCenters’successisfromtailoring
+customtreatmentprogramsbasedonyour
+diagnosisandneeds.
+Weofferacompleteapproachtopaintreatment
+andmanagement.Ourteamwillworktogetherto
+developthemosteffectivetreatmentplan.Weoffer
+anumberofsolutionstohelppain,includingtrue
+computerizeddiscdecompression,deeptissue
+lasertherapy,andotherhabitandlifestylechanges
+thatpromotelongtermspinalhealth.
+ConnecticutDisc&LaserTherapyCentershas
+helpedthousandsofpeopletolivepainfree!
+WhoisaCandidate?
+Ourspinaldecompressionsystemhasbeenfound
+torelievethepainassociatedwithdisc
+degeneration,herniatedandbulgingdiscs,facet
+syndrome,andsciatica.Spinaldecompressionisa
+greatoptionbecausebacksurgeryissorisky.
+YouDon’tHavetoWait
+Weareconfidentthatwecanhelpyoufindreliefat
+ConnecticutDisc&LaserTherapyCenters. You
+willhaveaone-on-oneconsultationwithoneofour
+doctorswhowillevaluateyourconditionand
+determineifyouwouldbeacandidateforthis
+treatment.CALLTODAYtoscheduleyourFREE
+consultation.
+If you suffer from any degree of back
+pain, change your life today by being
+one of the first 25 callers!
+Inthebeforepictureyoucanseetheherniateddisc(black)protrudinginto
+thespinalcolumn(white,centerofMRI). Aftertreatment,theMRIshows
+theherniateddiscisnolongerbulgingintothespinalcord.
+
+# SPACE IS LIMITED TO THE FIRST 25 CALLERS!
+
+CALL TODAY TO SCHEDULE YOUR FREE EVALUATION!
+FREE CONSULT
+$249 VALUE
+What Connecticut Disc & Laser Therapy Centers’Patients Are Saying…
+“Duringthe11/2yearsofhavingconstantdailylowerbackpainandspasms,Itookanti-inflammatory
+andpainmedication,butnothinghelpedlessenthepain.WhenanMRIshowedthatIhadtwo
+degenerativediscs,Iwentthroughaseriesoflumbarepiduralinjectionswithoutsuccess.Theonly
+thingthatmadethepainandspasmsgoawaywasSpinalDecompressionandLasertreatmentsat
+ConnecticutDisc&LaserTherapyCenters.FouryearslaterandIamstillpain-free!”
+-LisaB.
+DuetoFederalLawsomeexclusionsmayapply.

@@ -1,0 +1,65 @@
+# Ask The Dermatology Expert Clear Skin
+
+**Source File:** Ask The Dermatology Expert Clear Skin.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+## Clearskinforthe
+
+
+## newschoolyear
+
+Q:Ihavetriedeveryproductonthe
+shelfforacne,butstillhavebreakouts.
+WhatshouldIdo?
+A:Morethan90percentofado-
+lescentswillexperienceatleastmild
+acne,andwithback-to-schoolseason
+uponus,thepressuretohaveclearskin
+canbuild.Whileusingcleansersand
+topicalproductstotreatbreakoutsis
+important,bluelightlasertherapycan
+helpclearupblemishesandrestore
+skin.
+TheScitonBlueLightacnetreatment
+isoneofthemosteffectiveandnon-in-
+vasiveacnetreatmentsavailable.Blue
+lightlasertherapyusesdual-lamptech-
+nologytotargetsebaceousglands,acne
+pustulesandacnecyststokillthebac-
+teriathatcausespimples.Thetreat-
+mentalsodiminishesfurtheroutbreaks,
+allowstheskintohealmorequicklyand
+hasbeenfoundtoreducetheneedfor
+oralmedications.Thebluelightlaser
+treatmentissafeifyouareusingpre-
+scriptionmedications.
+Treatmentscanbeperformedoneor
+twotimesaweek.Manypatientsseesig-
+nificantimprovementintheiracneafter
+twotofourweeklytreatmentsessions
+ofbluelighttherapy.
+ScitonBlueLightacnetreatmentalso
+workswellonadultacnepatients. In
+additiontobluelighttherapy,make
+sureyoucleanseyourfacetwiceaday
+andwearlimitedmakeup,especially
+duringhottermonths.
+ChrisD.Collins,M.D.isthefounderandmedicaldirectorof
+CollinsAdvancedDermatologyInstituteinRoundRockand
+Leander.Collinsspecializesinallaspectsofdermatolo-
+gyfromsurgicaltocosmetic.Hispracticeoffersthelatest
+skincancertreatmentsandtherapies,includingMohsSur-
+gery,SuperficialRadiationandPhotodynamicTherapy.
+CollinsAdvancedDermatology
+Institute
+Leander:311S.Hwy183
+RoundRock:4112LinksLane,Suite205
+512.379.6090
+info@collinsadi.com
+CallorbookonlineatCollinsADI.com
+ASKTHEDERMATOLOGYEXPERT
+Dr.Chris
+Collins

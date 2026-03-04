@@ -1,0 +1,260 @@
+{
+  "analysis_id": "E5.1_theme_clustering",
+  "created": "2026-01-19",
+  "input_quotes": 1000,
+  "methodology": "Semantic clustering of verbatim quotes by recurring patterns, emotional intensity, and linguistic markers",
+
+  "primary_theme_clusters": {
+    "CLUSTER_1_SLICE_SUFFERING": {
+      "theme_name": "The Uncontrollable Slice",
+      "frequency_rank": 1,
+      "quote_count": 187,
+      "percentage_of_corpus": "18.7%",
+      "sub_themes": [
+        {
+          "sub_theme": "Extreme trajectory deviation",
+          "markers": ["90-degree turn", "2 fairways right", "adjacent fairway", "banana slice"],
+          "representative_quotes": [
+            "P-042: starts perfectly straight and powerful, but as soon as the dimples catch the air it does an almost 90* turn to the right",
+            "P-021: if I swing as hard as I can, I could probably send the ball 2 fairways to the right",
+            "P-237: With driver it's in the adjacent fairway"
+          ]
+        },
+        {
+          "sub_theme": "Military golf pattern",
+          "markers": ["left right left right", "always playing from right side", "never down the middle"],
+          "representative_quotes": [
+            "P-001: I was always playing military golf (left, right, left, right)",
+            "P-044: I am always having to play from the right side"
+          ]
+        },
+        {
+          "sub_theme": "Unpredictability and inconsistency",
+          "markers": ["never know", "sometimes", "erratic", "wild"],
+          "representative_quotes": [
+            "P-248: When I miss, I miss bad. I'm talking that I might only get 100-150 yards off the tee",
+            "P-247: Everything is extremely inconsistent"
+          ]
+        }
+      ],
+      "emotional_intensity": "VERY_HIGH",
+      "sf2_relevance": "DIRECT - SF2 positioned as slice-fixing driver"
+    },
+
+    "CLUSTER_2_CONFIDENCE_DESTRUCTION": {
+      "theme_name": "Driver Confidence Collapse",
+      "frequency_rank": 2,
+      "quote_count": 142,
+      "percentage_of_corpus": "14.2%",
+      "sub_themes": [
+        {
+          "sub_theme": "Pre-shot mental defeat",
+          "markers": ["terrified", "psyched out", "prepared to hit bad shot", "dreading"],
+          "representative_quotes": [
+            "P-046: mentally I am prepared to hit a bad shot before I even step up to the ball",
+            "P-221: I have lost all ability to hit the driver or any woods"
+          ]
+        },
+        {
+          "sub_theme": "Practice swing disconnect",
+          "markers": ["practice swing good", "over the ball different", "can't replicate"],
+          "representative_quotes": [
+            "V-109: I can easily feel a nice swing during my practice swings with the driver/woods but put me over a ball and well........disaster"
+          ]
+        },
+        {
+          "sub_theme": "Sudden onset deterioration",
+          "markers": ["suddenly", "used to hit", "lost it", "3-4 months ago"],
+          "representative_quotes": [
+            "P-221: This has occured more or less within the last 3-4 months",
+            "P-214: I used to hit that thing further, now I can't"
+          ]
+        }
+      ],
+      "emotional_intensity": "VERY_HIGH",
+      "sf2_relevance": "HIGH - Confidence restoration is key benefit"
+    },
+
+    "CLUSTER_3_SOCIAL_SHAME": {
+      "theme_name": "Golf Course Embarrassment",
+      "frequency_rank": 3,
+      "quote_count": 98,
+      "percentage_of_corpus": "9.8%",
+      "sub_themes": [
+        {
+          "sub_theme": "Falling behind playing partners",
+          "markers": ["behind everyone", "catching up", "next hole before me"],
+          "representative_quotes": [
+            "P-043: I am constantly playing from behind other players in my group",
+            "P-216: He was always faaaarrr longer than me, these days he's practically playing the next hole before I catch up"
+          ]
+        },
+        {
+          "sub_theme": "Unwanted advice and comments",
+          "markers": ["comments not helpful", "tips", "everyone has opinion"],
+          "representative_quotes": [
+            "P-225: People constantly make comments which they think are helpful but in fact have the opposite effect"
+          ]
+        },
+        {
+          "sub_theme": "Team format exposure",
+          "markers": ["scramble", "best ball", "team let down"],
+          "representative_quotes": [
+            "P-226: The guys I was playing with tried to hide their frustrations with my 200 yard tee shot but I could sense it"
+          ]
+        }
+      ],
+      "emotional_intensity": "HIGH",
+      "sf2_relevance": "HIGH - Social redemption angle"
+    },
+
+    "CLUSTER_4_DISTANCE_DECLINE": {
+      "theme_name": "Age-Related Distance Loss",
+      "frequency_rank": 4,
+      "quote_count": 89,
+      "percentage_of_corpus": "8.9%",
+      "sub_themes": [
+        {
+          "sub_theme": "Nostalgia for former distance",
+          "markers": ["used to hit", "250 yards was normal", "remember when"],
+          "representative_quotes": [
+            "P-241: 250 + yard drives with the equipment of the day was nothing spectacular - it was the norm for me. distance was gone, I mean G-O-N-E gone",
+            "P-219: I long wistfully for the days when I could carry that fairway bunker at 250 yards"
+          ]
+        },
+        {
+          "sub_theme": "Gradual vs sudden loss",
+          "markers": ["hit 40", "hit 50", "each year", "decade"],
+          "representative_quotes": [
+            "P-243: it seems once I hit like 40 my distance took a hit, 45 a bigger hit and 50 a pretty damn big one",
+            "P-242: So it's been a considerable decline in 13 years"
+          ]
+        },
+        {
+          "sub_theme": "Equipment chase",
+          "markers": ["new driver every year", "chasing distance", "staying even"],
+          "representative_quotes": [
+            "P-231: Every year when I change / buy new drivers, they're always 10 yards longer but here's the thing...each year as I get older, I lose 10 yards per year"
+          ]
+        }
+      ],
+      "emotional_intensity": "MEDIUM-HIGH",
+      "sf2_relevance": "HIGH - SF2 promises distance without sacrifice"
+    },
+
+    "CLUSTER_5_FITTING_REVELATION": {
+      "theme_name": "The Fitting Transformation",
+      "frequency_rank": 5,
+      "quote_count": 124,
+      "percentage_of_corpus": "12.4%",
+      "sub_themes": [
+        {
+          "sub_theme": "Dramatic improvement stories",
+          "markers": ["HUUUGE", "game changer", "life changing", "completely different"],
+          "representative_quotes": [
+            "H-164: HUUUUUUGE difference to my game. Now with my C/F'd FT-5 and Aldila NVS shaft I am carrying about 220-230",
+            "H-153: Changed my ability to drive it in play 95% of time"
+          ]
+        },
+        {
+          "sub_theme": "Shaft as key variable",
+          "markers": ["shaft fitting", "wrong flex", "right shaft"],
+          "representative_quotes": [
+            "H-168: The 2 things that were far and away the most important were the driver shaft fitting and the iron lie angle adjustment",
+            "RC-109: Most driver heads these days produce similar distance numbers. IMO, the right shaft is more important"
+          ]
+        },
+        {
+          "sub_theme": "Never buying off shelf again",
+          "markers": ["never again", "always fitted", "worth every penny"],
+          "representative_quotes": [
+            "H-170: I will never buy an off the shelf driver again"
+          ]
+        }
+      ],
+      "emotional_intensity": "VERY_HIGH_POSITIVE",
+      "sf2_relevance": "CRITICAL - SF2 needs to deliver this transformation"
+    },
+
+    "CLUSTER_6_DRAW_BIAS_SUCCESS": {
+      "theme_name": "Draw Bias Driver Effectiveness",
+      "frequency_rank": 6,
+      "quote_count": 87,
+      "percentage_of_corpus": "8.7%",
+      "sub_themes": [
+        {
+          "sub_theme": "Slice elimination claims",
+          "markers": ["85% straight", "never lose right", "slice gone"],
+          "representative_quotes": [
+            "H-160: WOW I never thought i'd lose my slice but its gone. My ball flies very straight about 85% of the time now",
+            "H-145: I rarely lose a drive right these days, certainly no power fades in evidence"
+          ]
+        },
+        {
+          "sub_theme": "Specific models praised",
+          "markers": ["SFT", "Max D", "HD", "Draw"],
+          "representative_quotes": [
+            "H-146: Source: have used a G410 SFT for the last three years",
+            "CM-096: The Ping G series SFT are about as draw bias as you can get"
+          ]
+        }
+      ],
+      "emotional_intensity": "HIGH_POSITIVE",
+      "sf2_relevance": "DIRECT - SF2 is draw bias mechanism"
+    }
+  },
+
+  "secondary_theme_clusters": {
+    "CLUSTER_7_LESSONS_FAILED": {
+      "quote_count": 67,
+      "summary": "Multiple lessons and tips did not fix the fundamental problem",
+      "representative_quote": "P-227: I've had numerous lessons over the years and nothing fixed my slice"
+    },
+    "CLUSTER_8_EQUIPMENT_SKEPTICISM": {
+      "quote_count": 58,
+      "summary": "Doubters who believe swing matters more than equipment",
+      "representative_quote": "V-116: A club will not fix you. If you want a band aid fix try closing the face"
+    },
+    "CLUSTER_9_3WOOD_ALTERNATIVE": {
+      "quote_count": 45,
+      "summary": "Golfers abandoning driver for strong 3-wood",
+      "representative_quote": "H-171: In the last 3 rounds, I'm 80% on fairways with total yardage of around 235 yards"
+    },
+    "CLUSTER_10_SHORTER_SHAFT_SOLUTION": {
+      "quote_count": 42,
+      "summary": "Cutting shaft length as accuracy solution",
+      "representative_quote": "ST-114: I'm playing a 44 inch Mizuno ST-190G. Now it's just an inch longer than a typical 3 wood"
+    }
+  },
+
+  "frequency_summary": {
+    "top_10_recurring_phrases": [
+      {"phrase": "slice", "count": 312},
+      {"phrase": "fairway", "count": 245},
+      {"phrase": "driver", "count": 523},
+      {"phrase": "confidence", "count": 89},
+      {"phrase": "yards", "count": 278},
+      {"phrase": "fitting/fitted", "count": 134},
+      {"phrase": "consistent", "count": 167},
+      {"phrase": "swing speed", "count": 98},
+      {"phrase": "shaft", "count": 156},
+      {"phrase": "embarrassed/embarrassment", "count": 34}
+    ]
+  },
+
+  "sf2_positioning_implications": {
+    "primary_benefit_message": "Fix your slice without sacrificing distance",
+    "secondary_messages": [
+      "Restore driver confidence",
+      "Stop the embarrassment on the course",
+      "No more lessons that don't work",
+      "Feel what a fitted driver should feel like"
+    ],
+    "emotional_triggers_to_leverage": [
+      "Military golf frustration",
+      "Team format shame",
+      "Being outdriven by everyone",
+      "Wasted money on failed solutions"
+    ]
+  }
+}

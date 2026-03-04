@@ -1,0 +1,118 @@
+# Facing Prostate Cancer
+
+**Source File:** Facing Prostate Cancer.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+# When it’s your prostate,
+
+
+# the precision of robotic-assisted surgery
+
+
+# is exactly what you want.
+
+Vista Health System brings you the benefits of robotic-assisted surgery. This
+technology allows surgeons to perform delicate and complex procedures for the
+treatment of many urological diseases with greater control, accuracy and precision.
+For many men, that may mean less pain, less scar tissue, fewer side effects and a
+VisitVistaHealth.com .
+quickerreturntoanactivelife.* tolearnmore
+*Beforeyoudecideonsurgery,discusstreatmentoptionswithyourdoctor.Understandingtherisksandbenefitsofeachtreatmentcanhelpyoumakethebestdecisionsforyourindividualsittuation.
+Theprostateisawalnut-sizedgland
+that’sanessentialpartof themale
+reproductivesystem.Butwhenma-
+lignantcellsforminsidetheprostate,
+itcreatesthesecondmostcommon
+cancerintheworldformenafterlung
+cancer.
+Thegoodnewsisthatthankstowide-
+spreadscreening,earlydetectionand
+improvedtreatment,thesurvivalrates
+forprostatecancerhavegoneup.In
+fact,whenit’sfoundwhilelocalizedor
+stillcontainedinthegland,thefive-
+yearsurvivalapproaches100percent.
+Treatmentoptionsforprostatecan-
+cermayincluderadiating,burningor
+freezingtheprostate.However,the
+onlytreatmentthatactuallyremoves
+thecancerousprostatefromthebodyis
+aradicalprostatectomy–whichisthe
+surgicalremovalof theprostategland.
+Andif theprostatecancerisdetect-
+Allprostatecancertreatmentscanaf-
+fecturinarycontinence,aswellassex-
+ualpotencyandfunction.That’swhy
+it’simportantformentotalktotheir
+doctoraboutallavailabletreatment
+optionsandwhattoexpectbefore,
+duringandaftertreatment.
+Untilrecently,prostatectomywas
+usuallyperformedusingan8”-10”
+incision.Thisapproachcommonly
+resultedinsubstantialbloodlossand
+alengthyanduncomfortablerecovery.
+PatientsatVistaMedicalCenterEast
+inWaukegan,however,canchoosea
+minimallyinvasiveoptionusingthe
+mostnewest,mostadvancedrobot-
+ic-assistedsurgicalsystemintheworld.
+Vista’shighlytrainedandexperienced
+surgeonsareusingthelatestinrobot-
+icstoperformcomplexprocedures
+throughjustafewtinyopenings.As
+edearly,radicalprostatectomyoffers
+patientsapotentialcure.
+aresult,patientstypicallyareableto
+comparedtotraditionalsurgery.The • Excellentcancercontrol
+• Fasterreturnof urinary
+systemhasbeenusedsuccessfullyto
+continence
+dateinhundredsof thousandsof pro-
+• Fasterreturnof sexualfunction
+ceduresaroundtheworld.
+• Shorterhospitalstay
+• Lowlevelof pain
+Robotic-assistedsurgeryprovides
+• Lessbloodlossandtransfusions
+surgeonswithenhancedcapabilities, • Lowerriskof infection,
+includinghigh-definition3Dvision
+complications
+• Fasterrecoveryandreturnto
+andalargelymagnifiedviewof the
+normalactivities
+surgicalarea.Thesystemalsoprovides
+thesurgeonwithexceptionallyrespon- Inaddition,comparedtoradiation
+sivecontrolsoverallof theinstruments
+treatment,prostatectomyoffersmen
+withlocalizedprostatecancerim-
+usingsmaller,precisemovementsof
+provedsurvivalrates.Aswithanysur-
+tinyinstrumentsinsidethebody.
+gicalprocedure,thesebenefitscannot
+Manyof thementodaywhoare beguaranteedaseverysurgerycan
+diagnosedwithprostatecancermight bespecifictoboththepatientandthe
+becandidatesforthiskindof highly
+procedure.
+effective,minimallyinvasiveprocedure.
+Menshouldspeaktotheirfamilyphy-
+Formostpatients,robotic-assisted
+sicianorurologistabouttreatmentsfor
+surgeryatVistaMedicalCenterEast
+prostatecancer.Formoreinformation
+getbacktonormalactivitiesfaster
+offersnumerouspotentialbenefitsover aboutthelatestinrobotic-assisted,
+withshorter,lesspainfulrecoveries opensurgeryincluding: visitVistaHealth.com/daVinci.
+
+# Facing Prostate Cancer?
+
+
+# Robotic surgery at Vista may be your best treatment option
+
+PaidAdvertisement
+A
+PAGE 6
+SECTION6DAILYHERALD MONDAY,SEPTEMBER19,2016

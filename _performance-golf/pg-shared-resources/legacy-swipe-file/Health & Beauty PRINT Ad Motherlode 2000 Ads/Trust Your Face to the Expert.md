@@ -1,0 +1,37 @@
+# Trust Your Face to the Expert
+
+**Source File:** Trust Your Face to the Expert.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+DDPP--66999933555555
+••DDrr..SSmmiitthhiissDDoouubblleeBBooaarrddCCeerrttiififieedd,,ssppeecciiaalliizzeessiinn
+ccoossmmeettiiccpprroocceedduurreessoofftthheeffaacceeaannddnneecckk,,aanndd
+hhaassbbeeeenniinnpprraaccttiicceeffoorrmmoorreetthhaann2200yyeeaarrss..
+••MMoorreetthhaann1100,,000000ffaacciiaallccoossmmeettiiccpprroocceedduurreess
+ppeerrffoorrmmeedd
+••AAllllpprroocceedduurreessaarreeppeerrffoorrmmeedduunnddeerrllooccaall
+aanneesstthheessiiaawwiitthhsseeddaattiioonn
+••RReecceeiivveeNNAATTUURRAALLRREESSUULLTTSS--nnoo““wwiinnddttuunnnneell””oorr
+““ooppeerraatteedd””llooookk
+••UUnniiqquueeRRaappiiddRReeccoovveerryyPPrrooggrraammaavvaaiillaabbllee
+EEaacchhpprroocceedduurreewwiillllbbeeaassuunniiqquueeaassyyoouuaarreeaannddwwiillllbbee
+ccuussttoommiizzeeddttoofifittyyoouurrddeessiirreessaannddbbuuddggeett..IInniittiiaallccoonnssuullttaattiioonniiss
+FFRREEEEaannddCCOOMMPPUUTTEERRIIMMAAGGIINNGGiissuusseeddttoorreevveeaallppootteennttiiaallrreessuullttss..
+AAsskkuusshhoowwwwee’’rreeddiiffffeerreenntttthhaanntthhee““ffrraanncchhiisseelliiffttss””
+330033..774411..22221111
+wwwwww..ssmmiitthhccoossmmeettiiccssuurrggeerryy..ccoomm
+BBrreennttJJ..SSmmiitthh,,MM..DD..
+BBeeffoorree AAfftteerr
+BBeeffoorree AAfftteerr
+AAccttuuaallDDrr..SSmmiitthhPPaattiieenntt
+6655YYeeaarrssOOlldd
+
+# TTrruusstt YYoouurr FFaaccee ttoo tthhee EExxppeerrtt!!
+
+S
+2255YYeeaarrssooffAArrttiissttiiccEExxcceelllleennccee
+SSMMIITTHH CCOOSSMMEETTIICC SSUURRGGEERRYY
+BBRREENNTT JJ.. SSMMIITTHH,, MMDD

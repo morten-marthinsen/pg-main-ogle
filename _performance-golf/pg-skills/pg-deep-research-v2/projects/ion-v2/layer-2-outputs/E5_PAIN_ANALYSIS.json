@@ -1,0 +1,862 @@
+{
+  "analysis_metadata": {
+    "analysis_type": "E5_PAIN_ANALYSIS",
+    "project": "Ion Golf Ball",
+    "bucket_analyzed": "PAIN",
+    "total_quotes_analyzed": 241,
+    "analysis_date": "2026-01-20",
+    "framework": "E5 Analysis (Explicit Language, Emotional Drivers, Experiences, Expectations, Environment)"
+  },
+
+  "E1_EXPLICIT_LANGUAGE": {
+    "description": "Exact words, phrases, and expressions golfers use when describing their pain points",
+
+    "top_20_phrases_by_frequency": [
+      {
+        "rank": 1,
+        "phrase": "too expensive",
+        "frequency": 47,
+        "context": "Used to describe premium ball pricing, particularly Pro V1 at $55+/dozen"
+      },
+      {
+        "rank": 2,
+        "phrase": "losing balls",
+        "frequency": 43,
+        "context": "The act of losing golf balls to water hazards, woods, or OB"
+      },
+      {
+        "rank": 3,
+        "phrase": "water hazard",
+        "frequency": 38,
+        "context": "Specific trigger point for ball loss anxiety"
+      },
+      {
+        "rank": 4,
+        "phrase": "can't justify",
+        "frequency": 31,
+        "context": "Unable to rationalize spending on premium balls given skill level"
+      },
+      {
+        "rank": 5,
+        "phrase": "$55 a dozen",
+        "frequency": 28,
+        "context": "Specific price point that triggers outrage"
+      },
+      {
+        "rank": 6,
+        "phrase": "scuffed/scuffing",
+        "frequency": 26,
+        "context": "Durability complaints about urethane covers"
+      },
+      {
+        "rank": 7,
+        "phrase": "not worth it",
+        "frequency": 24,
+        "context": "Value assessment of premium balls vs performance received"
+      },
+      {
+        "rank": 8,
+        "phrase": "$5 ball / $4.50 a ball",
+        "frequency": 23,
+        "context": "Per-ball cost calculation that triggers pain"
+      },
+      {
+        "rank": 9,
+        "phrase": "waste of money",
+        "frequency": 21,
+        "context": "Judgment about premium ball purchases"
+      },
+      {
+        "rank": 10,
+        "phrase": "swing harder",
+        "frequency": 19,
+        "context": "Anxiety-driven behavior over water hazards"
+      },
+      {
+        "rank": 11,
+        "phrase": "mental game",
+        "frequency": 18,
+        "context": "The psychological impact of ball cost on performance"
+      },
+      {
+        "rank": 12,
+        "phrase": "hurts/painful",
+        "frequency": 17,
+        "context": "Emotional response to losing expensive balls"
+      },
+      {
+        "rank": 13,
+        "phrase": "inconsistent/inconsistency",
+        "frequency": 16,
+        "context": "Quality control issues with budget balls"
+      },
+      {
+        "rank": 14,
+        "phrase": "durability issues",
+        "frequency": 15,
+        "context": "Cover wear problems after wedge shots"
+      },
+      {
+        "rank": 15,
+        "phrase": "worried about",
+        "frequency": 14,
+        "context": "Anxiety state while playing"
+      },
+      {
+        "rank": 16,
+        "phrase": "price increase",
+        "frequency": 13,
+        "context": "Reaction to escalating golf ball costs"
+      },
+      {
+        "rank": 17,
+        "phrase": "afraid of losing",
+        "frequency": 12,
+        "context": "Fear-based decision making"
+      },
+      {
+        "rank": 18,
+        "phrase": "bad swing",
+        "frequency": 11,
+        "context": "Connection between anxiety and poor execution"
+      },
+      {
+        "rank": 19,
+        "phrase": "insane/crazy",
+        "frequency": 10,
+        "context": "Disbelief at premium ball pricing"
+      },
+      {
+        "rank": 20,
+        "phrase": "cut up/torn",
+        "frequency": 9,
+        "context": "Durability failure descriptions"
+      }
+    ],
+
+    "language_grouped_by_theme": {
+      "BALL_LOSS_ANXIETY": {
+        "high_frequency_phrases": [
+          "losing balls",
+          "water hazard",
+          "swing harder",
+          "mental game",
+          "worried about",
+          "afraid of losing",
+          "bad swing",
+          "nervous/uptight",
+          "self-fulfilling prophecy",
+          "gremlin in my head"
+        ],
+        "emotional_intensity": "HIGH",
+        "sample_quotes": [
+          "The more nervous and uptight you are over losing a $5 ball the more likely you'll put a bad swing on it",
+          "Golf is such a mental game that if you are worried about losing balls, you aren't playing your best golf",
+          "There's a gremlin that gets into my head when I'm looking across a body of water"
+        ]
+      },
+      "PRICE_PAIN": {
+        "high_frequency_phrases": [
+          "too expensive",
+          "$55 a dozen",
+          "can't justify",
+          "not worth it",
+          "$5 ball",
+          "waste of money",
+          "price increase",
+          "insane/crazy",
+          "hurts",
+          "brainwashed"
+        ],
+        "emotional_intensity": "HIGH",
+        "sample_quotes": [
+          "$4.50 a golf ball is insane. bout to start calling these hot n ready prices. 1 prov = dinner for 3",
+          "Those top line balls are $55 dollars a dozen today and $60 is coming",
+          "It's Titleist they know people will buy them regardless of Price"
+        ]
+      },
+      "DURABILITY_ISSUES": {
+        "high_frequency_phrases": [
+          "scuffed/scuffing",
+          "cut up",
+          "torn/tearing",
+          "cover split",
+          "delaminate",
+          "peeling",
+          "one wedge shot",
+          "few holes",
+          "not durable"
+        ],
+        "emotional_intensity": "MEDIUM-HIGH",
+        "sample_quotes": [
+          "One or two wedge shots and they're scuffed like crazy",
+          "The mantle delaminate from the core",
+          "Not even nine holes and they were cut up and peeling"
+        ]
+      },
+      "QUALITY_INCONSISTENCY": {
+        "high_frequency_phrases": [
+          "inconsistent",
+          "quality control",
+          "ball to ball variation",
+          "compression all over the place",
+          "different variations in same box",
+          "feels like a rock",
+          "no two balls the same"
+        ],
+        "emotional_intensity": "MEDIUM",
+        "sample_quotes": [
+          "Compression being 'all over the place' and sizing inconsistencies",
+          "It is almost as if no two balls are the same",
+          "A 15 Delta difference in compression is huge to me"
+        ]
+      },
+      "SKILL_MISMATCH": {
+        "high_frequency_phrases": [
+          "can't tell the difference",
+          "not good enough",
+          "high handicapper",
+          "don't need premium",
+          "wasting money",
+          "overkill for my game"
+        ],
+        "emotional_intensity": "MEDIUM",
+        "sample_quotes": [
+          "If you can't tell the difference between playing with a cheaper golf ball and your current model after trying both for nine holes, then you don't need to spend the money",
+          "The ball has toooooo much spin, a high handicap golfer will have more trouble"
+        ]
+      }
+    }
+  },
+
+  "E2_EMOTIONAL_DRIVERS": {
+    "description": "Emotions appearing most frequently, ranked by intensity and frequency",
+
+    "emotion_rankings": [
+      {
+        "rank": 1,
+        "emotion": "ANXIETY",
+        "intensity_score": 9.5,
+        "frequency_score": 9.2,
+        "combined_score": 9.35,
+        "manifestations": [
+          "Nervous over water hazards",
+          "Uptight when teeing up expensive ball",
+          "Worry about losing balls affecting swing",
+          "Mental block over must-carry shots"
+        ],
+        "representative_quote": "Golf is such a mental game that if you are worried about losing balls, you aren't playing your best golf"
+      },
+      {
+        "rank": 2,
+        "emotion": "FRUSTRATION",
+        "intensity_score": 9.0,
+        "frequency_score": 9.5,
+        "combined_score": 9.25,
+        "manifestations": [
+          "Anger at premium pricing",
+          "Irritation at durability failures",
+          "Exasperation at inconsistent quality",
+          "Annoyance at having to budget balls"
+        ],
+        "representative_quote": "It's Titleist they know people will buy them regardless of Price. That's the reason you will NEVER see me play that brand"
+      },
+      {
+        "rank": 3,
+        "emotion": "REGRET",
+        "intensity_score": 8.5,
+        "frequency_score": 8.0,
+        "combined_score": 8.25,
+        "manifestations": [
+          "Pain when losing expensive ball",
+          "Wishing hadn't bought premium balls",
+          "Remorse over shanked shots with good balls"
+        ],
+        "representative_quote": "Even though my minimum wage days are long behind me, it still hurts to launch a brand new $5 Titleist deep into the woods"
+      },
+      {
+        "rank": 4,
+        "emotion": "GUILT",
+        "intensity_score": 8.0,
+        "frequency_score": 7.5,
+        "combined_score": 7.75,
+        "manifestations": [
+          "Feeling bad about wasting money",
+          "Shame at not being good enough for premium balls",
+          "Self-judgment for ball loss"
+        ],
+        "representative_quote": "it would be nice to get a high quality ball that costs less than the top brands so I don't feel bad when I shank it into the woods"
+      },
+      {
+        "rank": 5,
+        "emotion": "FEAR",
+        "intensity_score": 8.5,
+        "frequency_score": 7.0,
+        "combined_score": 7.75,
+        "manifestations": [
+          "Dread of water hazards",
+          "Fear of losing balls",
+          "Apprehension before risky shots"
+        ],
+        "representative_quote": "A lost ball is like a dog that bites... Once it bites odds are much higher that it will bite again"
+      },
+      {
+        "rank": 6,
+        "emotion": "DISAPPOINTMENT",
+        "intensity_score": 7.5,
+        "frequency_score": 8.0,
+        "combined_score": 7.75,
+        "manifestations": [
+          "Letdown when budget balls fail",
+          "Dissatisfaction with durability",
+          "Dismay at quality control issues"
+        ],
+        "representative_quote": "I got a sleeve from a buddy about two weeks or so and maybe they were the old balls but the durability wasn't there! Not even nine holes and they were cut up and peeling!"
+      },
+      {
+        "rank": 7,
+        "emotion": "RESIGNATION",
+        "intensity_score": 7.0,
+        "frequency_score": 7.5,
+        "combined_score": 7.25,
+        "manifestations": [
+          "Acceptance of high prices as inevitable",
+          "Giving up on finding value",
+          "Settling for less than desired"
+        ],
+        "representative_quote": "In the end. You usually get what you pay for"
+      },
+      {
+        "rank": 8,
+        "emotion": "OUTRAGE/SHOCK",
+        "intensity_score": 9.0,
+        "frequency_score": 6.0,
+        "combined_score": 7.5,
+        "manifestations": [
+          "Disbelief at price increases",
+          "Incredulity at cost per ball",
+          "Shock at premium pricing"
+        ],
+        "representative_quote": "$55 a dozen? Damn I had no idea you guys were spending that much. It hurts every time I lose a Nitro lol"
+      },
+      {
+        "rank": 9,
+        "emotion": "SELF-DOUBT",
+        "intensity_score": 7.5,
+        "frequency_score": 6.5,
+        "combined_score": 7.0,
+        "manifestations": [
+          "Questioning if skill justifies premium balls",
+          "Uncertainty about ball selection",
+          "Second-guessing purchase decisions"
+        ],
+        "representative_quote": "I could never justify playing them. I could easily lose 3 or 4 balls a round at my old course, so the cost, and my lack of talent combined to make them way too expensive"
+      },
+      {
+        "rank": 10,
+        "emotion": "HELPLESSNESS",
+        "intensity_score": 7.0,
+        "frequency_score": 6.0,
+        "combined_score": 6.5,
+        "manifestations": [
+          "Feeling trapped by pricing",
+          "Unable to control ball loss",
+          "Powerless against price increases"
+        ],
+        "representative_quote": "Just a price adjustment across the board. Surprised me it took this long since everything else has been increasing... But yet most of our paychecks haven't adjusted"
+      }
+    ],
+
+    "emotional_intensity_matrix": {
+      "by_physical_tag": {
+        "BALL_LOSS_ANXIETY": {
+          "primary_emotions": ["anxiety", "fear", "frustration"],
+          "average_intensity": 8.8
+        },
+        "PRICE_PAIN": {
+          "primary_emotions": ["frustration", "outrage", "resignation"],
+          "average_intensity": 8.5
+        },
+        "DURABILITY_ISSUES": {
+          "primary_emotions": ["disappointment", "frustration", "anger"],
+          "average_intensity": 7.5
+        },
+        "QUALITY_INCONSISTENCY": {
+          "primary_emotions": ["concern", "doubt", "frustration"],
+          "average_intensity": 7.0
+        },
+        "SKILL_MISMATCH": {
+          "primary_emotions": ["self-doubt", "confusion", "pragmatism"],
+          "average_intensity": 6.5
+        }
+      }
+    }
+  },
+
+  "E3_EXPERIENCES": {
+    "description": "Specific situations that trigger these pain points",
+
+    "experience_patterns": [
+      {
+        "trigger": "Water hazard tee shot",
+        "frequency": "VERY HIGH",
+        "emotional_cascade": [
+          "1. See water hazard",
+          "2. Calculate ball cost in head",
+          "3. Anxiety builds",
+          "4. Grip tightens, tempo speeds up",
+          "5. Try to swing harder to ensure carry",
+          "6. Mishit into water",
+          "7. Feel frustrated, regretful, embarrassed"
+        ],
+        "representative_quotes": [
+          "There's a gremlin that gets into my head when I'm looking across a body of water that automatically makes me want to swing that much harder 'just' in case",
+          "When you are saying 'don't hit it in the water' your brain is thinking water and guess where the ball will probably go? Water!!!"
+        ]
+      },
+      {
+        "trigger": "Price increase announcement",
+        "frequency": "HIGH",
+        "emotional_cascade": [
+          "1. Learn of $5+ price increase",
+          "2. Calculate new per-ball cost",
+          "3. Compare to other life expenses",
+          "4. Feel outraged and trapped",
+          "5. Consider switching brands or downgrading"
+        ],
+        "representative_quotes": [
+          "2 weeks ago they were $50 a dozen, and they arguably aren't making NEW 2021 provs since the 2023 provs come out tomorrow. Which I heard are being priced at $55 a dozen. So what is the basis behind bumping a ball that will stop being produced up $3?",
+          "$4.50 a golf ball is insane. bout to start calling these hot n ready prices. 1 prov = dinner for 3"
+        ]
+      },
+      {
+        "trigger": "Losing first ball of round",
+        "frequency": "HIGH",
+        "emotional_cascade": [
+          "1. Lose new ball early in round",
+          "2. Regret and frustration spike",
+          "3. Consider switching to cheaper ball",
+          "4. Internal conflict about commitment",
+          "5. Anxiety increases for remaining round"
+        ],
+        "representative_quotes": [
+          "He will start out with a Pro V1 and if he loses one he will reach in the bag and pull out some POS ball cause he is afraid of losing another one",
+          "A lost ball is like a dog that bites... Once it bites odds are much higher that it will bite again"
+        ]
+      },
+      {
+        "trigger": "Wedge shot ruins cover",
+        "frequency": "MEDIUM-HIGH",
+        "emotional_cascade": [
+          "1. Hit full wedge shot",
+          "2. Notice scuff/cut on ball",
+          "3. Evaluate if ball is still playable",
+          "4. Feel frustrated about durability",
+          "5. Question value of ball"
+        ],
+        "representative_quotes": [
+          "One or two wedge shots and they're scuffed like crazy",
+          "Full wedge shots created significant scuffing, to the point where there were small frays to the urethane cover after an 18-hole round"
+        ]
+      },
+      {
+        "trigger": "Comparing ball to food/other purchases",
+        "frequency": "MEDIUM",
+        "emotional_cascade": [
+          "1. Calculate ball cost",
+          "2. Compare to everyday purchases",
+          "3. Feel absurdity of golf ball pricing",
+          "4. Experience cognitive dissonance",
+          "5. Question hobby priorities"
+        ],
+        "representative_quotes": [
+          "1 prov = dinner for 3",
+          "When I was a kid, top line golf balls cost $15.00 dollars a dozen. I was making $1.50 an hour minimum wage at my job. So I had to work 10 hours to afford a dozen balls"
+        ]
+      },
+      {
+        "trigger": "Inconsistent ball performance",
+        "frequency": "MEDIUM",
+        "emotional_cascade": [
+          "1. Notice ball flying differently",
+          "2. Question if it's swing or ball",
+          "3. Examine ball for defects",
+          "4. Feel frustrated and confused",
+          "5. Lose confidence in equipment"
+        ],
+        "representative_quotes": [
+          "I have the yellow ones and they seem to scuff up badly after only a few hits. I feel my swing is pretty consistent and every ball I hit seems to fly differently, almost like they are not balanced well",
+          "A 15 Delta difference in compression is huge to me, given that I have a moderate swing speed. One ball will feel like a rock & next will feel much softer"
+        ]
+      },
+      {
+        "trigger": "Ball swapping before hazard",
+        "frequency": "MEDIUM",
+        "emotional_cascade": [
+          "1. Approach challenging hole",
+          "2. Remember past losses",
+          "3. Debate switching to old ball",
+          "4. Feel conflicted about strategy",
+          "5. Either switch (and feel defeated) or don't (and feel anxious)"
+        ],
+        "representative_quotes": [
+          "Some guys I know will swap out their golf balls when a water hazard is involved. They usually put their tee shots into the water hazard so it becomes a self fulfilling prophecy for them",
+          "If mentally you feel you're going to hit trouble again why lose a new good ball, when you can lose an old crap one"
+        ]
+      }
+    ]
+  },
+
+  "E4_EXPECTATIONS": {
+    "description": "What golfers expect vs what expectations are NOT being met",
+
+    "expectations_vs_reality": [
+      {
+        "category": "VALUE",
+        "expectation": "Premium price should deliver proportionally premium performance",
+        "reality": "Many golfers can't perceive or utilize the performance difference",
+        "gap_severity": "HIGH",
+        "supporting_evidence": [
+          "If you can't tell the difference between playing with a cheaper golf ball and your current model after trying both for nine holes, then you don't need to spend the money",
+          "The likes of AD333 and Supersofts are under half the price of ProV1s, which is a crazy difference. I'm not sure the ball is that good..."
+        ]
+      },
+      {
+        "category": "DURABILITY",
+        "expectation": "Urethane-covered balls should last multiple rounds",
+        "reality": "Many value/DTC balls scuff or tear within a few holes",
+        "gap_severity": "HIGH",
+        "supporting_evidence": [
+          "Not even nine holes and they were cut up and peeling",
+          "K-sigs are good balls but can be lacking in durability. If you blade one they tend to get scuffed"
+        ]
+      },
+      {
+        "category": "CONSISTENCY",
+        "expectation": "Every ball in a dozen should perform identically",
+        "reality": "Budget balls show significant ball-to-ball variation",
+        "gap_severity": "MEDIUM-HIGH",
+        "supporting_evidence": [
+          "Compression being 'all over the place' and sizing inconsistencies rated the Kirkland ball well below average",
+          "I've seen 2 different variations in the same box"
+        ]
+      },
+      {
+        "category": "MENTAL PEACE",
+        "expectation": "Should be able to play without thinking about ball cost",
+        "reality": "Cost awareness creates anxiety that affects performance",
+        "gap_severity": "HIGH",
+        "supporting_evidence": [
+          "Golf is such a mental game that if you are worried about losing balls, you aren't playing your best golf",
+          "The more nervous and uptight you are over losing a $5 ball the more likely you'll put a bad swing on it"
+        ]
+      },
+      {
+        "category": "PRICE STABILITY",
+        "expectation": "Prices should remain relatively stable or increase with inflation",
+        "reality": "Prices have outpaced inflation, with $5+ jumps per generation",
+        "gap_severity": "MEDIUM-HIGH",
+        "supporting_evidence": [
+          "Those top line balls are $55 dollars a dozen today and $60 is coming",
+          "My dad was paying $50 a dozen for balls back in 03. Now you have... I understand more people got into golf, inflation is high, but damn"
+        ]
+      },
+      {
+        "category": "SKILL MATCHING",
+        "expectation": "Should easily know what ball matches skill level",
+        "reality": "Marketing confuses the decision, leading to overspending or mismatch",
+        "gap_severity": "MEDIUM",
+        "supporting_evidence": [
+          "There is little doubt that we amateurs are overwhelmed by the constant barrage of advertising touting which ball is best for our game",
+          "The ball has toooooo much spin, a high handicap golfer will have more trouble as the Kirkland ball will exaggerate bad swings"
+        ]
+      }
+    ],
+
+    "unmet_expectations_list": [
+      "Affordable premium performance",
+      "Durable urethane covers at value prices",
+      "Consistent quality control across all price points",
+      "Freedom from ball-cost anxiety during play",
+      "Price transparency and stability",
+      "Clear guidance on skill-appropriate ball selection",
+      "Value that scales with golfer ability",
+      "Premium feel without premium worry",
+      "Confidence on hazard shots regardless of ball cost",
+      "Long-term durability without performance sacrifice"
+    ]
+  },
+
+  "E5_ENVIRONMENT": {
+    "description": "Where discussions happen and what context triggers these conversations",
+
+    "discussion_platforms": {
+      "forums": {
+        "platforms": ["GolfWRX", "The Sand Trap", "Golf Monthly Forum", "MyGolfSpy Forum"],
+        "discussion_triggers": [
+          "Price increase announcements",
+          "New ball model releases",
+          "Test/review results",
+          "Kirkland availability"
+        ],
+        "tone": "Technical, comparative, value-focused",
+        "percentage_of_quotes": "45%"
+      },
+      "social_media": {
+        "platforms": ["Reddit r/golf", "Facebook Golf Groups", "TikTok"],
+        "discussion_triggers": [
+          "Viral price complaints",
+          "Personal loss stories",
+          "Value ball discoveries",
+          "Memes about ball cost"
+        ],
+        "tone": "Casual, emotional, commiserating",
+        "percentage_of_quotes": "35%"
+      },
+      "review_sites": {
+        "platforms": ["MyGolfSpy", "Golf Monthly", "Golf Digest", "Practical Golf"],
+        "discussion_triggers": [
+          "New ball tests",
+          "Value ball comparisons",
+          "Durability assessments"
+        ],
+        "tone": "Analytical, educational, recommendations",
+        "percentage_of_quotes": "20%"
+      }
+    },
+
+    "contextual_triggers": [
+      {
+        "trigger_type": "Seasonal",
+        "description": "Price discussions spike in spring/early season when golfers restock",
+        "intensity": "HIGH"
+      },
+      {
+        "trigger_type": "News Event",
+        "description": "Price increases or new model releases spark immediate discussion",
+        "intensity": "VERY HIGH"
+      },
+      {
+        "trigger_type": "Personal Experience",
+        "description": "Losing balls on course leads to venting online",
+        "intensity": "HIGH"
+      },
+      {
+        "trigger_type": "Economic Climate",
+        "description": "Inflation/economic concerns amplify price sensitivity",
+        "intensity": "MEDIUM-HIGH"
+      },
+      {
+        "trigger_type": "Competitive Alternative",
+        "description": "New DTC ball or Kirkland release sparks comparison discussions",
+        "intensity": "HIGH"
+      }
+    ]
+  },
+
+  "TOP_10_HIGHEST_PRIORITY_QUOTES": [
+    {
+      "rank": 1,
+      "id": "P-217",
+      "quote": "It's best not to think about it. The more nervous and uptight you are over losing a $5 ball the more likely you'll put a bad swing on it.",
+      "priority": "GOLD",
+      "physical_tag": "BALL_LOSS_ANXIETY",
+      "analysis": {
+        "why_important": "Perfectly captures the psychological trap - anxiety about cost directly causes the behavior that leads to loss",
+        "emotional_drivers": ["anxiety", "nervousness", "self-awareness"],
+        "marketing_implications": "Position Ion as the ball that removes this psychological barrier",
+        "copy_potential": "HIGH - speaks directly to the internal voice every golfer has"
+      }
+    },
+    {
+      "rank": 2,
+      "id": "P-205",
+      "quote": "$4.50 a golf ball is insane. bout to start calling these hot n ready prices. 1 prov = dinner for 3",
+      "priority": "GOLD",
+      "physical_tag": "PRICE_PAIN",
+      "analysis": {
+        "why_important": "Vivid comparison makes abstract cost concrete and relatable",
+        "emotional_drivers": ["shock", "disbelief", "humor"],
+        "marketing_implications": "Use similar comparisons to contextualize Ion's value",
+        "copy_potential": "HIGH - viral-worthy phrasing"
+      }
+    },
+    {
+      "rank": 3,
+      "id": "P-211",
+      "quote": "Golf is such a mental game that if you are worried about losing balls, you aren't playing your best golf.",
+      "priority": "GOLD",
+      "physical_tag": "BALL_LOSS_ANXIETY",
+      "analysis": {
+        "why_important": "Establishes direct link between ball cost anxiety and performance degradation",
+        "emotional_drivers": ["anxiety", "pressure"],
+        "marketing_implications": "Ion can promise better golf through mental freedom",
+        "copy_potential": "HIGH - universal truth that validates the problem"
+      }
+    },
+    {
+      "rank": 4,
+      "id": "P-201",
+      "quote": "Waving farewell to a brand new ball as it sails into a water hazard or someone's back garden is all the more painful when you realize that brave, short-lived, dimpled little soldier cost more than $4.50 a pop.",
+      "priority": "GOLD",
+      "physical_tag": "BALL_LOSS_ANXIETY",
+      "analysis": {
+        "why_important": "Beautifully written, emotionally resonant, humanizes the ball loss experience",
+        "emotional_drivers": ["pain", "regret", "humor"],
+        "marketing_implications": "Tone template for emotionally intelligent marketing",
+        "copy_potential": "VERY HIGH - could inspire ad creative"
+      }
+    },
+    {
+      "rank": 5,
+      "id": "P-225",
+      "quote": "There's a gremlin that gets into my head when I'm looking across a body of water that automatically makes me want to swing that much harder 'just' in case. It's a mental thing.",
+      "priority": "GOLD",
+      "physical_tag": "BALL_LOSS_ANXIETY",
+      "analysis": {
+        "why_important": "Personifies the anxiety as an external force - relatable and vivid",
+        "emotional_drivers": ["anxiety", "fear", "helplessness"],
+        "marketing_implications": "Ion can be positioned as the 'gremlin killer'",
+        "copy_potential": "HIGH - creative imagery"
+      }
+    },
+    {
+      "rank": 6,
+      "id": "P-215",
+      "quote": "The rule of golf balls is to play the best match and quality ball that you can stomach losing.",
+      "priority": "GOLD",
+      "physical_tag": "BALL_LOSS_ANXIETY",
+      "analysis": {
+        "why_important": "Encapsulates the current compromise golfers make - settling for less",
+        "emotional_drivers": ["resignation", "pragmatism"],
+        "marketing_implications": "Ion breaks this rule - you don't have to settle",
+        "copy_potential": "HIGH - challenges conventional wisdom"
+      }
+    },
+    {
+      "rank": 7,
+      "id": "P-226",
+      "quote": "Man, I can't believe how bad they are in durability. One or two wedge shots and they're scuffed like crazy. They're even so bad that I've had the mantle delaminate from the core.",
+      "priority": "GOLD",
+      "physical_tag": "DURABILITY_ISSUES",
+      "analysis": {
+        "why_important": "Detailed durability complaint shows the real-world failure of budget balls",
+        "emotional_drivers": ["disappointment", "frustration", "disbelief"],
+        "marketing_implications": "Ion must prove durability to differentiate from failed alternatives",
+        "copy_potential": "MEDIUM - good for comparison messaging"
+      }
+    },
+    {
+      "rank": 8,
+      "id": "P-237",
+      "quote": "We keep reading how golf is in trouble, dying even. And the top three reasons cited are: takes too long, too hard, and too expensive. Now someone comes along to attack one of the top three problems. HOW CAN THAT BE NOT SUPPORTING GOLF?!?!",
+      "priority": "GOLD",
+      "physical_tag": "PRICE_PAIN",
+      "analysis": {
+        "why_important": "Connects ball pricing to golf's existential challenges - bigger mission",
+        "emotional_drivers": ["passion", "frustration", "vindication"],
+        "marketing_implications": "Position Ion as supporting golf's future, not just saving money",
+        "copy_potential": "HIGH - brand mission potential"
+      }
+    },
+    {
+      "rank": 9,
+      "id": "P-218",
+      "quote": "He will start out with a Pro V1 and if he loses one he will reach in the bag and pull out some POS ball cause he is afraid of losing another one... I keep asking him 'what are you saving the Pro V's for?'",
+      "priority": "GOLD",
+      "physical_tag": "BALL_LOSS_ANXIETY",
+      "analysis": {
+        "why_important": "Shows the absurd behavior pattern that ball anxiety creates",
+        "emotional_drivers": ["fear", "anxiety", "irrationality"],
+        "marketing_implications": "Ion lets you play your best ball all the time",
+        "copy_potential": "HIGH - relatable story format"
+      }
+    },
+    {
+      "rank": 10,
+      "id": "P-239",
+      "quote": "Do you get more upset when you lose an expensive ball? Yes. For me, it's a net win using a value ball over a Pro V1. I like Pro V1's but in terms of mental game, the cheaper ball wins.",
+      "priority": "GOLD",
+      "physical_tag": "BALL_LOSS_ANXIETY",
+      "analysis": {
+        "why_important": "Rational conclusion that mental benefit outweighs performance benefit",
+        "emotional_drivers": ["frustration", "pragmatism", "self-awareness"],
+        "marketing_implications": "Ion offers both - performance AND mental freedom",
+        "copy_potential": "HIGH - testimonial structure"
+      }
+    }
+  ],
+
+  "PAIN_BUCKET_SUMMARY": {
+    "total_distribution_by_physical_tag": {
+      "BALL_LOSS_ANXIETY": {
+        "count": 87,
+        "percentage": "36.1%",
+        "key_insight": "The largest pain category - anxiety about losing expensive balls directly affects swing mechanics and enjoyment"
+      },
+      "PRICE_PAIN": {
+        "count": 78,
+        "percentage": "32.4%",
+        "key_insight": "Second largest - raw frustration at golf ball inflation and premium pricing"
+      },
+      "DURABILITY_ISSUES": {
+        "count": 32,
+        "percentage": "13.3%",
+        "key_insight": "Significant complaint about budget/DTC ball covers failing quickly"
+      },
+      "QUALITY_INCONSISTENCY": {
+        "count": 28,
+        "percentage": "11.6%",
+        "key_insight": "Ball-to-ball variation in budget options undermines confidence"
+      },
+      "SKILL_MISMATCH": {
+        "count": 12,
+        "percentage": "5.0%",
+        "key_insight": "Confusion about whether skill level warrants premium ball"
+      },
+      "CONFUSION": {
+        "count": 4,
+        "percentage": "1.7%",
+        "key_insight": "General market confusion about ball selection"
+      }
+    },
+
+    "key_strategic_insights": [
+      {
+        "insight": "Ball loss anxiety is the dominant pain - more than price itself",
+        "implication": "Ion marketing should lead with mental freedom, not just price",
+        "priority": "CRITICAL"
+      },
+      {
+        "insight": "Price pain intensifies when combined with ball loss",
+        "implication": "The $5 ball into water creates compound emotional damage",
+        "priority": "HIGH"
+      },
+      {
+        "insight": "Durability failures of alternatives create skepticism",
+        "implication": "Ion must prove durability to overcome 'too good to be true' objection",
+        "priority": "HIGH"
+      },
+      {
+        "insight": "Quality inconsistency undermines value propositions",
+        "implication": "Ion must demonstrate ball-to-ball consistency as key differentiator",
+        "priority": "HIGH"
+      },
+      {
+        "insight": "Golfers recognize the irrationality but can't escape it",
+        "implication": "Ion gives permission to play freely - validates what they want to believe",
+        "priority": "CRITICAL"
+      }
+    ],
+
+    "ion_positioning_opportunities": [
+      "The ball that kills the water hazard gremlin",
+      "Premium performance without premium anxiety",
+      "Play your best ball on every shot - finally",
+      "The ball that lets you swing freely again",
+      "Stop settling, start playing",
+      "What if losing a ball only cost you a stroke, not your mood?",
+      "The ball smart golfers have been waiting for"
+    ]
+  }
+}

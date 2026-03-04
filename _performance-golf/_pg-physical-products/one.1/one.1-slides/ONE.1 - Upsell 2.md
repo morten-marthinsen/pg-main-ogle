@@ -1,0 +1,482 @@
+**Upsell 2 \- ONE.S WEDGE** 
+
+**(Evergreen Version)**
+
+Hey, Martin here again...
+
+There's something CRITICAL I need to show you.
+
+Now, pay close attention…
+
+Because what I'm about to share with you is my secret weapon…
+
+Something I've personally relied on for the past 15 years…
+
+To save over 50,000 senior golfers from MASSIVE embarrassment on the course.
+
+And this is your chance to get your hands on it and have us ship it over to you ASAP. 
+
+Because whether you purchased the 56-degree ONE.1 Wedge...
+
+Or you went all-in with your complete ONE.1 Player's Set...
+
+You made an incredible decision that can improve your wedge game beyond anything you likely even realize.
+
+No more chunks or skulls.
+
+Just crisp, confident contact from anywhere inside 110 yards.
+
+But listen...
+
+There's ONE overlooked shot on the course that wrecks rounds faster than three-putts, chunks, or even slices off the tee.
+
+And if you don't address it NOW...
+
+You're likely gonna TENSE UP the SECOND your ball hits the trap.
+
+That's right, I'm talking about greenside bunkers.
+
+And THAT is exactly why I'm holding THIS in my hands right now.
+
+\[Martin holds up the ONE.S\]
+
+This... is the ONE.S.
+
+The world's FIRST Super Sand Wedge for Seniors.
+
+And when I tell you this club is about to change how you feel when you’re standing over any bunker shot for the rest of your life...
+
+I mean it.
+
+Now, before I reveal what makes this club so extraordinary...
+
+Let me make sure you understand WHY greenside bunkers cost senior golfers MORE strokes than any other hazard on the course...
+
+You see: Most seniors treat greenside bunkers as an afterthought...
+
+BIG mistake.
+
+Because these tricky bunker shots require MUCH more than skill or swing technique...
+
+See: shots from the deep sand demand committed speed, precise contact, and acceleration through sand...
+
+With very little margin of error.
+
+Just think about the last round you played well...
+
+You're hitting greens.
+
+Making pars.
+
+But eventually, an approach shot catches the lip of the greenside bunker.
+
+And the SECOND your ball settles into the sand...
+
+That sinking feeling hits your gut. You know what I’m talking about.
+
+So, what happens next?
+
+Well, you step into the bunker.
+
+Take your stance on uneven footing.
+
+And you're already thinking about your SECOND swing... before you've even made the first one.
+
+Because you KNOW what's most likely coming.
+
+Either you'll dig too deep and the ball burrows further...
+
+Or you'll try to pick it clean and blade it across the green, possibly into another bunker.
+
+So you take a swing.
+
+And likely another.
+
+Eventually… finally, you escape.
+
+Walking off with a double or triple bogey \-- when it should have been an easy tap in par for you.
+
+And, there it is… with that one shot you just blew-up your score. 
+
+Now let me be clear…,
+
+This is a common experience for lots of senior golfers...
+
+And, fact is, here's WHY it keeps happening...
+
+Because, you see, these pesky greenside bunker shots demand three things most seniors struggle with.
+
+First, you have to strike BEHIND the ball in the right spot.
+
+Second, the club has to keep MOVING through resistance.
+
+And, third, you must generate enough height to lift the ball up and out.
+
+All in one, simple motion.
+
+And when ANY part of that fails or breaks down or is even a little off the mark...
+
+Your club sticks…
+
+The ball buries...
+
+And you need multiple swings to get out.
+
+Not too mention, since swing speed decreases as you age...
+
+Your natural instinct is to hesitate and overthink it...
+
+So, you can likely even FEEL yourself decelerate.
+
+And before you know it... one poor swing leads to another.
+
+Which is why greenside bunkers are one of most stressful and costly spots on the course for senior golfers.
+
+But, here's what most seniors don't realize...
+
+Slower swing speed and deceleration don't HAVE to ruin your bunker game.
+
+Because the REAL problem...
+
+Isn't that you've lost swing speed or aggressive acceleration through the sand...
+
+It's that your current sand wedge DEMANDS speed you’ve lost.
+
+Let me quickly explain...
+
+See: Traditional sand wedges, even great ones from Callaway, Titleist, and Ping...
+
+Are built for younger golfers with faster swings....
+
+The Tour Pros, college players...
+
+Guys who can swing hard and accelerate through impact effortlessly...
+
+But for seniors?
+
+Those traditional sand wedges PUNISH you…
+
+Because the design of a traditional sand wedge requires MORE effort and force to keep it moving through sand…
+
+Which assumes you… as a senior golfer… can still swing hard, with full acceleration, and strike the sand precisely behind the ball…
+
+While any hesitation outside of this causes the leading edge of a traditional sand wedge to dig and stall.
+
+So, if you don't make perfect contact...
+
+You'll hit bunker shots too heavy or slightly thin...
+
+Which results in failed escapes…
+
+Or balls blasted long over the green into even worse trouble.
+
+So the problem isn't YOU.
+
+The problem is that traditional sand wedges demand physical traits and swing characteristics...
+
+That most senior golfers simply don't have anymore.
+
+Which means, for your game not to get blown-up by greenside bunker shots anymore, you need a wedge engineered a completely different way...
+
+Because to reliably escape greenside bunkers...
+
+Your club must be designed so it does MOST of the work for you.
+
+See: When swing speed is slower and the margin of error is small...
+
+Success cannot depend on extra effort, perfect timing, or aggressive acceleration. Not for senior golfers.
+
+Instead, for you… your wedge must do three things AUTOMATICALLY:
+
+First, **automatically glide** through the sand...
+
+So the club keeps moving forward even when you hesitate...
+
+Second, the club must continue through impact and exit cleanly… instead of digging or stalling...
+
+**And, third, it must get easy lift** without extra effort...
+
+So you don't have to swing harder or try to manipulate the face to get the ball up.
+
+In other words, the club needs to generate height on its own...
+
+So the ball comes out reliably and lands safely on the green for you.
+
+Plus, your wedge needs **forgiveness** on imperfect contact...
+
+Because bunker shots are rarely struck perfectly, especially on uneven footing.
+
+You see: When the clubhead remains stable and maintains speed on slightly heavy or off-center contact...
+
+The ball pops up and out predictably...
+
+So, when you have this automatic glide, built-in lift, and forgiveness working together...
+
+You'll approach bunker shots with confidence rather than hesitation.
+
+That's the difference between hoping to escape...
+
+And knowing that you’ll get out and close to the pin in one swing.
+
+And that's exactly why we created an entirely NEW category of wedge...
+
+Specifically for senior golfers.
+
+What you're looking at right here...
+
+Is the ONE.S… the world's FIRST Super Sand Wedge for Seniors.
+
+Built on what we call ONE Super Sand Technology™.
+
+And as you’ll see, this isn't a traditional sand wedge with some tweaks….
+
+The ONE.S is engineered from the ground up to deliver automatic glide, easy lift, and consistent bunker escapes...
+
+In one easy, normal swing.
+
+And, instead of assuming speed, strength, and constant acceleration...
+
+ONE Super Sand Technology™ keeps the club moving forward through sand...
+
+Generates height without aggressive effort...
+
+And remains stable when contact is not perfect.
+
+Here, let me show you why the ONE.S is so reliable and so effective when it comes to getting you up and out of greenside bunkers in one swing. 
+
+\[Martin waggles the club\]
+
+It starts with the **Auto-Glide Sand Sole™.**
+
+See this large, uniquely shaped sole with the extended trailing edge?
+
+\[Martin points to the sole\]
+
+This is why the club glides through sand instead of digging. 
+
+And it keeps the club moving forward... even if you don't swing hard... or catch it a little heavy.
+
+See: By preventing the club from sticking in the sand...
+
+It keeps the clubhead moving through impact...
+
+And pops the ball out cleanly instead of leaving it behind.
+
+Meaning: You literally can’t dig with this sole. 
+
+Even when you're nervous… or catch it a little heavy…
+
+One simple swing.
+
+And you're out clean.
+
+Next is the **Easy-Lift Sand Head™.**
+
+\[Martin shows the clubface\]
+
+See that face angle? That’s 63 degrees of loft… higher than the majority of wedges on the market.
+
+With the weight strategically positioned to ensure the ball gets up fast, and comes out high and soft for you... without you trying to swing any harder.
+
+So, with the **Easy-Lift Sand Head™,** you don't have to try to manipulate the face or aim left or do any of that complicated stuff.
+
+Simply aim at the target.
+
+Swing.
+
+And the ONE.S does the lifting for you.
+
+And then there's the Anti-Deceleration Weighting™.
+
+\[Martin waggles the club again\]
+
+This counterbalance in the grip keeps the club moving through the sand...
+
+Even when your brain is screaming at you to slow down.
+
+You know that moment when you FEEL yourself decelerate...
+
+And you KNOW you just left it in the bunker?
+
+The Anti-Deceleration Weighting prevents that. And makes deceleration almost impossible.
+
+So the club keeps moving for you… 
+
+And comes out clean. So you get out… every time.
+
+Plus there’s the **Square-Set Sand Alignment™**...
+
+A perfectly straight leading edge with alignment marks and visual cues...
+
+This lets you set up square to your target... like any other shot. So you just aim where you want the ball to go. 
+
+No adjustments. No complicated setup. No second-guessing your alignment.
+
+So you're not standing over the ball second-guessing yourself. Because you can step in, commit, and swing with confidence… knowing exactly where the ball is going before you swing.
+
+And the last piece of why the ONE.S is so reliable and so effective when it comes to getting you up and out of greenside bunkers in one swing… 
+
+**Full-Face Sand Spin™.**
+
+\[Martin points to the grooves\]
+
+Now, because bunker shots are rarely struck center-face...
+
+We extended the grooves across the ENTIRE face.
+
+So, high, low, toe, heel... doesn't matter…
+
+The ball still comes out clean… with spin and control.  
+
+Which means you can walk into any bunker...
+
+Buried lie, soft sand, wet sand, doesn't matter...
+
+Set up square... aim at the flag… make one smooth swing...
+
+And watch the ball pop out, land soft, and stay on the green.
+
+So what does this mean for you and your golf game?
+
+Simple: When you add the ONE.S to your ONE.1 wedge game…
+
+You're not just improving your bunker shots.
+
+You're completing your entire short game transformation.
+
+Picture it...
+
+You're playing your usual Saturday game with the guys.
+
+Your approach on the 12th finds the greenside bunker.
+
+Without the ONE.S…
+
+That's an automatic bogey.
+
+Maybe worse.
+
+But, now, with your ONE.S…
+
+One smooth swing…
+
+Ball pops up…
+
+Stops within a few feet of the pin…
+
+And you drain the putt for par.
+
+And your buddy — who's been beating you for 3 years straight — just shakes his head in disbelief.
+
+Just imagine how many strokes you'll save around the green now.
+
+With the ONE.S…
+
+One simple, automatic swing that glides effortlessly through the sand.
+
+No crazy set-up or adjustments…
+
+No intense swing speed required…
+
+No Tour-level precision needed…
+
+Just easy, predictable escapes from greenside bunkers... like the Pros.
+
+That's exactly what the ONE.S does for you.
+
+So, no more dread when you see sand.
+
+And no more embarrassment of triple swinging in front of your buddies...
+
+Instead, with the ONE.S, you'll be the guy in your group who ATTACKS the ball from anywhere.
+
+The player everyone wants in their foursome...
+
+Because you're the senior who proves age is just a number.
+
+So, here’s the deal:
+
+The ONE.S normally sells for $199.
+
+Compared to specialty sand wedges from Callaway or Ping at $180 to $220… which don’t have ONE Super Sand Technology™...
+
+And you can agree, $199 is more than fair for the ONE.S. 
+
+But right now... on this page only... for ONE.1 customers like yourself...
+
+The ONE.S is only $129. 
+
+129 bucks, that’s it.  
+
+Why the discount?
+
+Because I want YOU to experience what a complete short game transformation feels like.
+
+Not just better from the turf.
+
+Confidence from EVERYWHERE.
+
+There's just one catch...
+
+This offer is ONLY available right now, on this page.
+
+At $129, our margins are paper-thin.
+
+So, if you leave and come back later, you’ll like see the price at $199. Maybe even more. 
+
+And that’s if we haven’t sold out…
+
+Because… this is brand new. So we're not mass-producing the ONE.S yet.
+
+Which is why we’re also only extending this exclusive discount pricing to the very first wave of new ONE.1 customers. 
+
+That’s you. 
+
+So once this inventory is gone... it's gone.
+
+Meaning: This is your shot… right here, right now… to get the ONE.S… the world's FIRST Super Sand Wedge for Seniors… for only $129.
+
+And, just like everything else you’ve purchased from us at Performance Golf…
+
+The ONE.S is protected by our 365-day money-back guarantee.
+
+So you can take it to the course…
+
+Hit bunker shots for a full year…
+
+And you're either blown away by how easily you’re getting out of bunkers… how often and reliably you’re landing on the green from the sand… 
+
+Or you can get a full 100% refund. No questions asked. 
+
+So, you have nothing to lose and everything to gain.
+
+Which is why you should click the button below.
+
+And grab your ONE.S right now for only $129.
+
+As soon as you do, you'll never have to dread a greenside bunker shot again. Because, now, with the ONE.S, you'll finally have a bunker club that works WITH your senior swing... not against it. So you'll stop giving away strokes every time your ball lands in the sand. 
+
+So, go ahead…
+
+Click the button below to add the ONE.S to your order…
+
+When it arrives... when you take it to the course...
+
+You will be a different golfer.
+
+The guy who ATTACKS from bunkers.
+
+The player who strikes fear from anywhere.
+
+The senior who proves age is just a number.
+
+This is your chance...
+
+Click the button now.
+
+Get up, get out, get on.
+
+I'm Martin Chuck... and I cannot WAIT to hear your stories.
+
+**\[Button: ADD ONE.S TO MY ORDER FOR JUST $129\]**
+

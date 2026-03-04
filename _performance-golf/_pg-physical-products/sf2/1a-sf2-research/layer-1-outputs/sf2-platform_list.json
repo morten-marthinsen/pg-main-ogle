@@ -1,0 +1,175 @@
+{
+  "platform_list_id": "plt_sf2_001",
+  "created": "2026-01-19",
+  "platforms": {
+    "forums": [
+      {
+        "name": "GolfWRX",
+        "url": "https://forums.golfwrx.com",
+        "priority": "high",
+        "search_method": "site:forums.golfwrx.com",
+        "content_type": "forum_discussion",
+        "audience": "Equipment-focused golfers, gear enthusiasts, high awareness level"
+      },
+      {
+        "name": "TheSandTrap",
+        "url": "https://thesandtrap.com/forums",
+        "priority": "high",
+        "search_method": "site:thesandtrap.com",
+        "content_type": "forum_discussion",
+        "audience": "Instruction-focused golfers, technique discussions"
+      },
+      {
+        "name": "MyGolfSpy Forums",
+        "url": "https://forum.mygolfspy.com",
+        "priority": "medium",
+        "search_method": "site:forum.mygolfspy.com",
+        "content_type": "forum_discussion",
+        "audience": "Equipment testers, data-driven golfers"
+      }
+    ],
+    "reddit": [
+      {
+        "name": "r/golf",
+        "url": "https://reddit.com/r/golf",
+        "priority": "high",
+        "search_method": "site:reddit.com/r/golf",
+        "content_type": "reddit_thread",
+        "audience": "Broad amateur golfer community, emotional and authentic"
+      },
+      {
+        "name": "r/GolfSwing",
+        "url": "https://reddit.com/r/GolfSwing",
+        "priority": "medium",
+        "search_method": "site:reddit.com/r/GolfSwing",
+        "content_type": "reddit_thread",
+        "audience": "Swing improvement seekers, technique-focused"
+      }
+    ],
+    "youtube": [
+      {
+        "name": "YouTube Instructional",
+        "priority": "high",
+        "search_method": "site:youtube.com",
+        "content_type": "instructional_video",
+        "key_channels": ["Rick Shiels Golf", "MeAndMyGolf", "Danny Maude", "Chris Ryan Golf", "Athletic Motion Golf"],
+        "focus": "Slice fix videos - comments contain pain quotes"
+      },
+      {
+        "name": "YouTube Equipment Reviews",
+        "priority": "high",
+        "search_method": "site:youtube.com",
+        "content_type": "youtube_review",
+        "key_channels": ["TXG", "Rick Shiels", "Crossfield", "Golfholics", "2nd Swing Golf"],
+        "focus": "Draw driver reviews - comments contain hope and skepticism quotes"
+      }
+    ],
+    "review_sites": [
+      {
+        "name": "Plugged In Golf",
+        "url": "https://pluggedingolf.com",
+        "priority": "medium",
+        "search_method": "site:pluggedingolf.com",
+        "content_type": "review_site",
+        "focus": "In-depth equipment reviews"
+      },
+      {
+        "name": "MyGolfSpy",
+        "url": "https://mygolfspy.com",
+        "priority": "medium",
+        "search_method": "site:mygolfspy.com",
+        "content_type": "review_site",
+        "focus": "Independent equipment testing"
+      },
+      {
+        "name": "Golf Digest",
+        "url": "https://golfdigest.com",
+        "priority": "low",
+        "search_method": "site:golfdigest.com",
+        "content_type": "review_site",
+        "focus": "Mainstream equipment coverage"
+      },
+      {
+        "name": "Today's Golfer",
+        "url": "https://todaysgolfer.co.uk",
+        "priority": "medium",
+        "search_method": "site:todaysgolfer.co.uk",
+        "content_type": "review_site",
+        "focus": "UK perspective on equipment"
+      }
+    ],
+    "competitor_pages": [
+      {
+        "name": "Callaway Golf",
+        "url": "https://www.callawaygolf.com",
+        "priority": "high",
+        "products": ["Paradym Ai Smoke Max D", "Big Bertha"],
+        "content_type": "competitor_page"
+      },
+      {
+        "name": "TaylorMade Golf",
+        "url": "https://www.taylormadegolf.com",
+        "priority": "high",
+        "products": ["Qi10 Max", "Stealth 2 HD"],
+        "content_type": "competitor_page"
+      },
+      {
+        "name": "Ping",
+        "url": "https://ping.com",
+        "priority": "high",
+        "products": ["G430 SFT", "G430 Max"],
+        "content_type": "competitor_page"
+      },
+      {
+        "name": "Cobra Golf",
+        "url": "https://www.cobragolf.com",
+        "priority": "medium",
+        "products": ["Darkspeed Max", "Air-X"],
+        "content_type": "competitor_page"
+      },
+      {
+        "name": "Cleveland Golf",
+        "url": "https://www.clevelandgolf.com",
+        "priority": "medium",
+        "products": ["Launcher XL Halo"],
+        "content_type": "competitor_page"
+      },
+      {
+        "name": "Tour Edge",
+        "url": "https://www.touredge.com",
+        "priority": "medium",
+        "products": ["Hot Launch", "Exotics"],
+        "content_type": "competitor_page"
+      }
+    ],
+    "ads_library": [
+      {
+        "name": "Meta Ads Library",
+        "url": "https://www.facebook.com/ads/library",
+        "priority": "medium",
+        "content_type": "competitor_ad",
+        "search_terms": ["Callaway driver", "TaylorMade driver", "draw bias driver", "slice fix driver"]
+      }
+    ],
+    "amazon_reviews": [
+      {
+        "name": "Amazon Golf",
+        "url": "https://www.amazon.com",
+        "priority": "medium",
+        "search_method": "site:amazon.com",
+        "content_type": "review_site",
+        "focus": "Customer reviews on draw/anti-slice drivers"
+      }
+    ]
+  },
+  "platform_counts": {
+    "forums": 3,
+    "reddit": 2,
+    "youtube": 2,
+    "review_sites": 4,
+    "competitor_pages": 6,
+    "ads_library": 1,
+    "amazon": 1,
+    "total": 19
+  }
+}

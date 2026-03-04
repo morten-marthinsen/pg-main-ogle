@@ -1,0 +1,197 @@
+# Worried about the market
+
+**Source File:** Worried about the market.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1471791698.0
+
+---
+
+# worried about
+
+
+# the MARKET?
+
+
+# Let Babson·s Guide you for the
+
+
+# Next Two Months for only
+
+
+# ss
+
+Here is a great opportunity to check your investmenl slralegy wilh Babson's
+-one of the counlry's oldest and largest independent investment advisory
+organizations.
+Every Monday morning for two full months you will get professional invest·
+ment advice on lhe markel-buy. hold and sell advice on slacks on the
+news-industries on lhe move. All tor only $5 - half the regular lee.
+
+## PLUS - • BUY - SELL - HOLD ADVICE ON:
+
+
+## 100 MAJOR STOCKS
+
+GM OCCIDENTAL PET.
+EXXON FIRESTONE
+AT&T DOW
+FORD McDONNELL· D.
+CHRYSLER PHILLIPS PET.
+GE XEROX
+TEXACO W.R. GRACE
+MOBIL CORP. BEATRICE FOODS
+IBM LOCKHEED
+I T & T MONSANTO
+GULF OIL GEN. FOODS
+STD. OIL CA. U.S. STEEL ·
+SHELL OIL WESTINGHOUSE
+GOODYEAR STD. OIL IND.
+RCA DU PONT
+CONT. OIL GEN. TEL.
+I. HARVESTER CONT. GROUP
+LTV SINGER
+BETH. STEEL R. PURINA
+KODAK HONEYWELL
+AT. RICHFIELD ARMCO STEEL
+ESMARK REYNOLDS IND.
+U. CARBIDE INT. PAPER
+TENNECO WEYERHAEUSER
+ROCKWELL SUN CO.
+BENDIX
+GEORGIA PAC. INLAND STEEL
+CHAMPION INT. NCR
+COLGATE-PALM. AM. HOME PROD.
+AMERICAN CAN LITION
+TRW BORDEN
+ALCOA U. OIL CAL.
+DEERE 3M
+P&G SEARS
+KRAFTCO AMC
+GREYHOUND GOODRICH
+BOEING FMC
+CATERPILLAR SIGNAL CO.
+COCA-COLA PHILIP MORRIS
+NAT. STEEL PEPSICO
+BURL. IND. WARNER-LAMB.
+UNIROYAL ALLIED CHEM.
+REP. STEEL GEN. DYNAMICS
+UNITED BRANDS WHIRLPOOL
+ASHLAND OIL U.S. IND.
+CITIES SERVICE JOHNSON & J .
+GULF & WEST. CELANESE
+AMERADA HESS FED. DEPT. ST.
+CPC INT. RAPID AM.
+AM. BRANDS UAL
+TEXTRON PENN. CENTRAL
+OWENS-ILL.
+
+## • 30 LOW-PRICED STOCKS
+
+AM. STERILIZER CULBRO
+AVCO G. P. CEMENT
+BRUNSWICK GREYHOUND
+CARRIER HOUDAILLE
+CHAMP. SP. PL. INSILCO
+SEARLE
+SKIL
+CLARK OIL HSE. OF FABRICS
+NARCO SC.
+POTOMAC EL.
+QUESTOR
+RAMADA INNS
+RTE CORP.
+SANDERS ASSOC.
+SUN
+SCM
+CHEM.
+THIOKOL
+TRAN SAM.
+UNIROYAL
+WANG LABS.
+WEATHER HD
+DELMARVA P & L LUDLOW
+FEDDERS MEDUSA
+FOREMOST-MC.
+SCOVILL
+
+## • 30 DEPRESSED STOCKS
+
+We believe some of lhe best opportunilies today may be among
+lhese depressed issues.
+ADORESS·MULTI. CHRYSLER LIGGETI GROUP SIMPL. PATN.
+AETNA LIFE DR. PEPPER McDONNELL D. SOUTHERN CO.
+AM. AIRLINES GILLETIE MOTOROLA UPJOHN
+AVON PROD. HELLER INT'L MOUNTAIN FUEL WESTERN U.
+BELL & HOWELL HOUGHTON MIFF. PENNEY (J.C.) WESTINGHSE
+BOISE CASCADE HOUSTON IND. POLAROID XEROX
+CHASE MAN. HOWARD JOHN. READ. & BATES ZENITH
+LEAR SIEGLER SEARS
+
+## • 25 UTILITIES
+
+AM. EL. PWR. CITIZENS U. IDAHO POWER OHIO ED.
+ARIZ. P. SERV. COL. & SO. 0. INDIANAP. P. & L. OKLA. G. & E.
+ATL. CITY EL. DUQUESNE LT. KY. UTILITIES PHILA. ELEC.
+CAROLINA P. & L. FLA. POWER LONG ISL. L TG. SOUTHERN CO.
+CENT. LA. EL. FLA. PWR. & LT. N.E. GAS & EL TEXAS UTIL
+CENT. & SW. GEN. PUBLIC U. NIAGARA MO.
+HOUSTON IND. NO. STATES PWR.
+
+## • RETIREMENT PORTFOLIO
+
+PLUS-
+A 2-MONTH TRIAL TO BABSON'S REPORTS with
+buy. hold, or sell opinion on dozens more vital stocks.
+GUARANTEE - If at any lime you are nol enlirely satisfied. we will
+send you a full relund.
+Simply mail lhis coupon - all reports by 1st-class mail.
+
+# • - -8
+
+
+# babSOn's reports inc. :.-:-•
+
+
+# I
+
+Wellesley Hills, Mass. 02181
+
+# I
+
+
+# I
+
+FOUNDED IN 1904 BY ROGER w BABSON
+
+# I
+
+
+# I
+
+I wish to take advantage of Babson s half·price trial offer -
+
+# I
+
+2 monlhs lo' only SS 00 Paymenl enclosed
+
+# I
+
+Name
+
+# I
+
+
+# I
+
+Street & No
+
+# I
+
+
+# I
+
+C1ly Slale Zop
+
+# I
+
+•-This subscription ~·II not be assigned - - - - - - - - - •

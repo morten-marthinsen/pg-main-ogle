@@ -1,0 +1,841 @@
+{
+  "metadata": {
+    "project": "Ion Golf Ball V2",
+    "document_type": "Action Sequence Timeline",
+    "version": "1.0",
+    "created_date": "2025-01-20",
+    "total_duration": "12 weeks",
+    "review_cadence": "Weekly status, bi-weekly strategy review"
+  },
+  "phase_1_immediate": {
+    "timeframe": "Week 1-2",
+    "phase_name": "Foundation and Quick Wins",
+    "objectives": [
+      "Establish foundational messaging framework",
+      "Launch quick-win content leveraging existing insights",
+      "Set up measurement infrastructure",
+      "Align internal teams on positioning"
+    ],
+    "week_1": {
+      "theme": "Foundation Setting",
+      "actions": [
+        {
+          "action_id": "W1-001",
+          "action": "Finalize Core Messaging Framework",
+          "description": "Complete messaging hierarchy document with primary (Smart Value), secondary (Consistency), and tertiary (Freedom) positioning",
+          "owner": "Marketing Strategy",
+          "deliverables": [
+            "Messaging hierarchy document",
+            "Key message matrix by audience segment",
+            "Proof point library",
+            "Competitive response guidelines"
+          ],
+          "dependencies": [],
+          "success_criteria": "Approved by leadership, distributed to all content creators"
+        },
+        {
+          "action_id": "W1-002",
+          "action": "Launch 'Smart Golfer' Social Content Series",
+          "description": "Begin organic social content positioning Ion buyers as informed, savvy golfers",
+          "owner": "Social Media Team",
+          "deliverables": [
+            "10 social posts scheduled",
+            "3 short-form videos",
+            "Engagement response playbook"
+          ],
+          "dependencies": ["W1-001"],
+          "success_criteria": "Content live across all channels, engagement tracking active"
+        },
+        {
+          "action_id": "W1-003",
+          "action": "Implement Quality Guarantee Messaging",
+          "description": "Add prominent satisfaction guarantee to all customer touchpoints",
+          "owner": "E-commerce Team",
+          "deliverables": [
+            "Updated product pages",
+            "Guarantee badge/icon",
+            "FAQ updates",
+            "Customer service scripts"
+          ],
+          "dependencies": [],
+          "success_criteria": "Guarantee visible on all purchase paths, CS team trained"
+        },
+        {
+          "action_id": "W1-004",
+          "action": "Set Up Measurement Dashboard",
+          "description": "Configure analytics dashboard for campaign tracking",
+          "owner": "Analytics Team",
+          "deliverables": [
+            "Real-time dashboard",
+            "Automated reporting",
+            "Alert thresholds configured",
+            "Baseline metrics documented"
+          ],
+          "dependencies": [],
+          "success_criteria": "Dashboard live and accessible to stakeholders"
+        },
+        {
+          "action_id": "W1-005",
+          "action": "Brief Creative Partners",
+          "description": "Comprehensive creative brief to agencies and internal teams",
+          "owner": "Creative Director",
+          "deliverables": [
+            "Creative brief document",
+            "Visual style guide updates",
+            "Tone of voice guidelines",
+            "Do's and don'ts document"
+          ],
+          "dependencies": ["W1-001"],
+          "success_criteria": "All creative partners aligned, Q&A session completed"
+        },
+        {
+          "action_id": "W1-006",
+          "action": "Competitor Monitoring Setup",
+          "description": "Establish systematic competitor tracking for Titleist, Kirkland, Vice, Snell",
+          "owner": "Competitive Intelligence",
+          "deliverables": [
+            "Monitoring tool configuration",
+            "Alert parameters set",
+            "Weekly reporting template",
+            "Response protocol document"
+          ],
+          "dependencies": [],
+          "success_criteria": "Automated monitoring active, first report generated"
+        }
+      ],
+      "quick_wins": [
+        {
+          "win_id": "QW1-001",
+          "action": "Publish 'Real Cost of Pro V1' Calculator",
+          "description": "Interactive tool showing annual savings switching to Ion",
+          "expected_impact": "High engagement, shareable, supports value positioning",
+          "effort_level": "Low (can use existing templates)"
+        },
+        {
+          "win_id": "QW1-002",
+          "action": "Update Email Welcome Series",
+          "description": "Revise welcome emails to incorporate new positioning themes",
+          "expected_impact": "Improved new customer engagement and conversion",
+          "effort_level": "Low"
+        },
+        {
+          "win_id": "QW1-003",
+          "action": "Add Consistency Messaging to Product Page",
+          "description": "Prominent consistency claims on main product page",
+          "expected_impact": "Improved conversion, differentiation from Kirkland",
+          "effort_level": "Low"
+        }
+      ]
+    },
+    "week_2": {
+      "theme": "Content Velocity and Testing",
+      "actions": [
+        {
+          "action_id": "W2-001",
+          "action": "Launch A/B Message Testing",
+          "description": "Begin systematic testing of emotional vs. rational value propositions",
+          "owner": "Growth Marketing",
+          "deliverables": [
+            "5 emotional message variants",
+            "5 rational message variants",
+            "Testing protocol",
+            "Statistical significance calculator"
+          ],
+          "dependencies": ["W1-001", "W1-004"],
+          "success_criteria": "Tests running, daily data collection active"
+        },
+        {
+          "action_id": "W2-002",
+          "action": "Create Consistency Comparison Content",
+          "description": "Develop content addressing Kirkland QC issues (indirect comparison)",
+          "owner": "Content Team",
+          "deliverables": [
+            "Blog post on ball consistency importance",
+            "Social content series on QC",
+            "Infographic on consistency factors"
+          ],
+          "dependencies": ["W1-001"],
+          "success_criteria": "Content published and promoted"
+        },
+        {
+          "action_id": "W2-003",
+          "action": "Identify and Brief Influencer Partners",
+          "description": "Select 5-10 golf influencers for smart golfer positioning",
+          "owner": "Influencer Marketing",
+          "deliverables": [
+            "Influencer shortlist with rationale",
+            "Outreach templates",
+            "Partnership terms",
+            "Content guidelines"
+          ],
+          "dependencies": ["W1-001"],
+          "success_criteria": "3+ influencers confirmed for partnership"
+        },
+        {
+          "action_id": "W2-004",
+          "action": "Develop Customer Testimonial Program",
+          "description": "Create system for collecting and featuring customer stories",
+          "owner": "Customer Marketing",
+          "deliverables": [
+            "Testimonial request automation",
+            "Story submission portal",
+            "Review incentive program",
+            "Content release forms"
+          ],
+          "dependencies": [],
+          "success_criteria": "System live, first testimonials collected"
+        },
+        {
+          "action_id": "W2-005",
+          "action": "Commission Third-Party Performance Testing",
+          "description": "Engage independent testing facility for Ion vs. competitor comparison",
+          "owner": "Product Marketing",
+          "deliverables": [
+            "Testing protocol defined",
+            "Testing partner contracted",
+            "Timeline established"
+          ],
+          "dependencies": [],
+          "success_criteria": "Testing underway, results expected by Week 6"
+        },
+        {
+          "action_id": "W2-006",
+          "action": "Optimize Retargeting Campaigns",
+          "description": "Update retargeting creative with new positioning themes",
+          "owner": "Paid Media Team",
+          "deliverables": [
+            "Updated retargeting creative",
+            "Audience segment refinement",
+            "Frequency cap adjustments"
+          ],
+          "dependencies": ["W1-001", "W1-005"],
+          "success_criteria": "New creative live, baseline metrics established"
+        }
+      ],
+      "quick_wins": [
+        {
+          "win_id": "QW2-001",
+          "action": "Social Poll: 'What do you pay for golf balls?'",
+          "description": "Engagement-driving content that surfaces price sensitivity data",
+          "expected_impact": "High engagement, valuable audience insights",
+          "effort_level": "Very Low"
+        },
+        {
+          "win_id": "QW2-002",
+          "action": "UGC Collection Campaign Launch",
+          "description": "Begin collecting user-generated content with hashtag campaign",
+          "expected_impact": "Content library building, community engagement",
+          "effort_level": "Low"
+        }
+      ]
+    },
+    "phase_1_checkpoint": {
+      "timing": "End of Week 2",
+      "review_items": [
+        "Message testing initial results",
+        "Content engagement metrics",
+        "Influencer partnership status",
+        "Measurement infrastructure validation",
+        "Team alignment assessment"
+      ],
+      "go_no_go_criteria": [
+        "Core messaging framework approved and distributed",
+        "Measurement dashboard operational",
+        "At least 2 influencer partnerships confirmed",
+        "No major quality or customer service issues"
+      ],
+      "pivot_triggers": [
+        "A/B tests showing clear winner requiring strategy adjustment",
+        "Unexpected competitor activity requiring response",
+        "Customer feedback indicating positioning misalignment"
+      ]
+    }
+  },
+  "phase_2_short_term": {
+    "timeframe": "Week 3-6",
+    "phase_name": "Campaign Development and Launch",
+    "objectives": [
+      "Launch primary marketing campaign",
+      "Scale successful messaging",
+      "Build content library depth",
+      "Establish influencer partnerships"
+    ],
+    "week_3_4": {
+      "theme": "Campaign Launch",
+      "actions": [
+        {
+          "action_id": "W3-001",
+          "action": "Launch 'Smart Choice' Campaign",
+          "description": "Primary campaign launch across paid and organic channels",
+          "owner": "Marketing Director",
+          "deliverables": [
+            "Campaign creative suite (video, static, carousel)",
+            "Landing page optimized for campaign",
+            "Email campaign supporting launch",
+            "Social content calendar"
+          ],
+          "dependencies": ["W1-001", "W2-001", "W1-005"],
+          "success_criteria": "Campaign live, first 48-hour metrics reviewed"
+        },
+        {
+          "action_id": "W3-002",
+          "action": "Activate Influencer Partnerships",
+          "description": "First wave of influencer content goes live",
+          "owner": "Influencer Marketing",
+          "deliverables": [
+            "5+ influencer posts/videos",
+            "Tracking links active",
+            "Engagement monitoring"
+          ],
+          "dependencies": ["W2-003"],
+          "success_criteria": "Content live, tracking showing attribution"
+        },
+        {
+          "action_id": "W3-003",
+          "action": "Launch Consistency Content Series",
+          "description": "Multi-part content series on golf ball consistency",
+          "owner": "Content Team",
+          "deliverables": [
+            "4-part blog series",
+            "Corresponding social content",
+            "Email nurture sequence",
+            "Video content"
+          ],
+          "dependencies": ["W2-002"],
+          "success_criteria": "Series live, engagement tracking active"
+        },
+        {
+          "action_id": "W3-004",
+          "action": "Implement Conversion Rate Optimization",
+          "description": "A/B test landing page elements based on campaign learnings",
+          "owner": "CRO Team",
+          "deliverables": [
+            "Landing page variants",
+            "Testing protocol",
+            "Hypothesis documentation"
+          ],
+          "dependencies": ["W3-001"],
+          "success_criteria": "Tests running, statistical significance tracking"
+        },
+        {
+          "action_id": "W4-001",
+          "action": "Scale Winning Ad Creative",
+          "description": "Increase spend on best-performing creative based on Week 3 data",
+          "owner": "Paid Media Team",
+          "deliverables": [
+            "Budget reallocation plan",
+            "Creative iteration brief",
+            "Audience expansion targets"
+          ],
+          "dependencies": ["W3-001"],
+          "success_criteria": "Budget optimized, performance improving"
+        },
+        {
+          "action_id": "W4-002",
+          "action": "Launch Customer Story Campaign",
+          "description": "Feature collected testimonials in dedicated campaign",
+          "owner": "Customer Marketing",
+          "deliverables": [
+            "5+ customer story videos/posts",
+            "Testimonial landing page",
+            "Social proof integration on product pages"
+          ],
+          "dependencies": ["W2-004"],
+          "success_criteria": "Customer content live, engagement metrics positive"
+        },
+        {
+          "action_id": "W4-003",
+          "action": "PR Outreach Initiative",
+          "description": "Proactive media outreach with performance testing story",
+          "owner": "PR/Communications",
+          "deliverables": [
+            "Press release",
+            "Media kit",
+            "Journalist outreach list",
+            "Interview preparation"
+          ],
+          "dependencies": ["W2-005"],
+          "success_criteria": "Media coverage secured or in pipeline"
+        }
+      ]
+    },
+    "week_5_6": {
+      "theme": "Optimization and Expansion",
+      "actions": [
+        {
+          "action_id": "W5-001",
+          "action": "Launch Secondary Campaign Track",
+          "description": "Introduce 'Liberation/Freedom' messaging as secondary campaign",
+          "owner": "Marketing Director",
+          "deliverables": [
+            "Liberation campaign creative",
+            "Audience targeting for emotional messaging",
+            "A/B test against rational messaging"
+          ],
+          "dependencies": ["W3-001", "Phase 1 learnings"],
+          "success_criteria": "Secondary campaign live, comparison metrics tracking"
+        },
+        {
+          "action_id": "W5-002",
+          "action": "Publish Independent Testing Results",
+          "description": "Create content around third-party performance test results",
+          "owner": "Product Marketing",
+          "deliverables": [
+            "Test results summary",
+            "Infographics and comparison charts",
+            "Blog post deep dive",
+            "Social content series"
+          ],
+          "dependencies": ["W2-005"],
+          "success_criteria": "Results published, content performing"
+        },
+        {
+          "action_id": "W5-003",
+          "action": "Expand Retargeting Funnel",
+          "description": "Develop middle-funnel content for educated prospects",
+          "owner": "Growth Marketing",
+          "deliverables": [
+            "Consideration-stage content",
+            "Comparison guides",
+            "FAQ content",
+            "Objection-handling creative"
+          ],
+          "dependencies": ["W3-001", "W4-001"],
+          "success_criteria": "Full-funnel content live, funnel metrics improving"
+        },
+        {
+          "action_id": "W5-004",
+          "action": "Launch Referral Program Enhancement",
+          "description": "Enhance referral program with smart golfer positioning",
+          "owner": "Customer Marketing",
+          "deliverables": [
+            "Updated referral messaging",
+            "Increased incentive structure",
+            "Referral tracking improvements"
+          ],
+          "dependencies": [],
+          "success_criteria": "Referral rate improvement, new referral volume"
+        },
+        {
+          "action_id": "W6-001",
+          "action": "Email Segmentation Enhancement",
+          "description": "Implement advanced segmentation based on messaging response",
+          "owner": "Email Marketing",
+          "deliverables": [
+            "Segment definitions",
+            "Tailored content tracks",
+            "Automation rules"
+          ],
+          "dependencies": ["W3-001", "W5-001"],
+          "success_criteria": "Improved email engagement metrics"
+        },
+        {
+          "action_id": "W6-002",
+          "action": "Launch Subscription/Multi-Pack Offers",
+          "description": "Introduce value-enhancing bundle and subscription options",
+          "owner": "E-commerce Team",
+          "deliverables": [
+            "Subscription program structure",
+            "Multi-pack pricing",
+            "Marketing materials",
+            "System implementation"
+          ],
+          "dependencies": [],
+          "success_criteria": "Programs live, initial adoption metrics"
+        },
+        {
+          "action_id": "W6-003",
+          "action": "Competitive Response Assessment",
+          "description": "Comprehensive review of competitor reactions and market response",
+          "owner": "Competitive Intelligence",
+          "deliverables": [
+            "Competitor activity report",
+            "Market response analysis",
+            "Strategy recommendations"
+          ],
+          "dependencies": [],
+          "success_criteria": "Report delivered, strategy adjusted if needed"
+        }
+      ]
+    },
+    "phase_2_checkpoint": {
+      "timing": "End of Week 6",
+      "review_items": [
+        "Campaign performance vs. KPIs",
+        "Message testing conclusions",
+        "Influencer partnership ROI",
+        "Competitive landscape changes",
+        "Customer acquisition cost trends",
+        "Customer feedback themes"
+      ],
+      "go_no_go_criteria": [
+        "Campaign ROAS meets or exceeds targets",
+        "Customer acquisition cost within acceptable range",
+        "Brand perception metrics stable or improving",
+        "No major competitive threats emerged"
+      ],
+      "strategy_decisions": [
+        "Primary messaging confirmation or pivot",
+        "Budget allocation for Phase 3",
+        "Expansion channel decisions",
+        "Content investment priorities"
+      ]
+    }
+  },
+  "phase_3_medium_term": {
+    "timeframe": "Week 7-12",
+    "phase_name": "Optimization and Expansion",
+    "objectives": [
+      "Optimize campaigns based on learnings",
+      "Expand successful initiatives",
+      "Build community and loyalty programs",
+      "Establish sustainable competitive position"
+    ],
+    "week_7_8": {
+      "theme": "Deep Optimization",
+      "actions": [
+        {
+          "action_id": "W7-001",
+          "action": "Implement Dynamic Creative Optimization",
+          "description": "Deploy AI-driven creative optimization based on 6 weeks of data",
+          "owner": "Paid Media Team",
+          "deliverables": [
+            "DCO implementation",
+            "Creative variant library",
+            "Performance monitoring"
+          ],
+          "dependencies": ["Phase 2 campaign data"],
+          "success_criteria": "Improved creative performance, reduced CPA"
+        },
+        {
+          "action_id": "W7-002",
+          "action": "Launch 'Smart Golfer Community'",
+          "description": "Create community hub for Ion customers and smart value golfers",
+          "owner": "Community Manager",
+          "deliverables": [
+            "Community platform selection",
+            "Launch content and programming",
+            "Moderation guidelines",
+            "Engagement incentives"
+          ],
+          "dependencies": [],
+          "success_criteria": "Community launched, initial membership growing"
+        },
+        {
+          "action_id": "W7-003",
+          "action": "Advanced Audience Modeling",
+          "description": "Build lookalike and predictive audiences from best customers",
+          "owner": "Data Science Team",
+          "deliverables": [
+            "Customer value analysis",
+            "Lookalike audience segments",
+            "Predictive scoring model"
+          ],
+          "dependencies": ["6 weeks customer data"],
+          "success_criteria": "New audiences deployed, performance testing"
+        },
+        {
+          "action_id": "W8-001",
+          "action": "Launch Mental Game Content Series",
+          "description": "Introduce mental game optimization messaging to engaged audience",
+          "owner": "Content Team",
+          "deliverables": [
+            "Mental game content series",
+            "Expert partnership content",
+            "Integration with Performance Golf instruction"
+          ],
+          "dependencies": ["Phase 2 audience building"],
+          "success_criteria": "Content engagement, audience response positive"
+        },
+        {
+          "action_id": "W8-002",
+          "action": "Seasonal Campaign Planning",
+          "description": "Develop seasonal campaign calendar (spring golf season, holidays)",
+          "owner": "Marketing Director",
+          "deliverables": [
+            "Seasonal campaign briefs",
+            "Promotional calendar",
+            "Creative development timeline"
+          ],
+          "dependencies": [],
+          "success_criteria": "Campaigns planned through Q2"
+        }
+      ]
+    },
+    "week_9_10": {
+      "theme": "Channel Expansion",
+      "actions": [
+        {
+          "action_id": "W9-001",
+          "action": "Evaluate New Channel Opportunities",
+          "description": "Test expansion into additional marketing channels",
+          "owner": "Growth Marketing",
+          "deliverables": [
+            "Channel opportunity assessment",
+            "Test campaign plans",
+            "Budget allocation recommendations"
+          ],
+          "potential_channels": [
+            "Podcast advertising",
+            "Golf forum partnerships",
+            "YouTube creator partnerships",
+            "Golf app integrations"
+          ],
+          "dependencies": ["Phase 2 performance data"],
+          "success_criteria": "2+ new channels in testing"
+        },
+        {
+          "action_id": "W9-002",
+          "action": "Launch Loyalty Program",
+          "description": "Implement customer loyalty program with smart golfer positioning",
+          "owner": "Customer Marketing",
+          "deliverables": [
+            "Loyalty program structure",
+            "Points/rewards system",
+            "Member benefits",
+            "Program marketing"
+          ],
+          "dependencies": [],
+          "success_criteria": "Program launched, enrollment growing"
+        },
+        {
+          "action_id": "W9-003",
+          "action": "Strategic Pro Shop Seeding",
+          "description": "Begin selective placement in high-end pro shops for credibility",
+          "owner": "Business Development",
+          "deliverables": [
+            "Target pro shop list",
+            "Partnership terms",
+            "Initial placements"
+          ],
+          "dependencies": [],
+          "success_criteria": "5+ pro shop partnerships established"
+        },
+        {
+          "action_id": "W10-001",
+          "action": "Content Personalization Implementation",
+          "description": "Deploy personalized content experiences based on user behavior",
+          "owner": "Marketing Technology",
+          "deliverables": [
+            "Personalization engine configuration",
+            "Content variants by segment",
+            "Performance tracking"
+          ],
+          "dependencies": ["Audience data from W7-003"],
+          "success_criteria": "Personalization live, engagement improvements"
+        },
+        {
+          "action_id": "W10-002",
+          "action": "Launch Second Influencer Wave",
+          "description": "Expand influencer partnerships based on first wave learnings",
+          "owner": "Influencer Marketing",
+          "deliverables": [
+            "Expanded influencer roster",
+            "Optimized partnership terms",
+            "Content calendar"
+          ],
+          "dependencies": ["W3-002 performance data"],
+          "success_criteria": "10+ active influencer partnerships"
+        }
+      ]
+    },
+    "week_11_12": {
+      "theme": "Sustainability and Planning",
+      "actions": [
+        {
+          "action_id": "W11-001",
+          "action": "Comprehensive Performance Review",
+          "description": "Full analysis of 12-week campaign performance",
+          "owner": "Analytics Team",
+          "deliverables": [
+            "Performance report",
+            "ROI analysis",
+            "Learnings documentation",
+            "Recommendations"
+          ],
+          "dependencies": ["All phase data"],
+          "success_criteria": "Report delivered, insights actionable"
+        },
+        {
+          "action_id": "W11-002",
+          "action": "Brand Health Assessment",
+          "description": "Comprehensive brand perception and health study",
+          "owner": "Brand Marketing",
+          "deliverables": [
+            "Brand tracking study",
+            "Competitive perception analysis",
+            "Positioning effectiveness assessment"
+          ],
+          "dependencies": [],
+          "success_criteria": "Study complete, results inform strategy"
+        },
+        {
+          "action_id": "W11-003",
+          "action": "Q2 Strategy Development",
+          "description": "Develop marketing strategy for Q2 based on learnings",
+          "owner": "Marketing Director",
+          "deliverables": [
+            "Q2 marketing strategy",
+            "Budget recommendations",
+            "Campaign calendar",
+            "Resource requirements"
+          ],
+          "dependencies": ["W11-001", "W11-002"],
+          "success_criteria": "Strategy approved, resources allocated"
+        },
+        {
+          "action_id": "W12-001",
+          "action": "Evergreen Content Optimization",
+          "description": "Optimize best-performing content for long-term value",
+          "owner": "Content Team",
+          "deliverables": [
+            "Evergreen content library",
+            "SEO optimization",
+            "Content refresh schedule"
+          ],
+          "dependencies": [],
+          "success_criteria": "Evergreen content performing sustainably"
+        },
+        {
+          "action_id": "W12-002",
+          "action": "Team and Process Review",
+          "description": "Assess team capabilities and process improvements",
+          "owner": "Marketing Operations",
+          "deliverables": [
+            "Process audit",
+            "Capability assessment",
+            "Improvement recommendations",
+            "Training needs"
+          ],
+          "dependencies": [],
+          "success_criteria": "Improvements identified and planned"
+        },
+        {
+          "action_id": "W12-003",
+          "action": "Competitive Strategy Update",
+          "description": "Update competitive strategy based on market response",
+          "owner": "Competitive Intelligence",
+          "deliverables": [
+            "Updated competitive analysis",
+            "Response playbook updates",
+            "Ongoing monitoring plan"
+          ],
+          "dependencies": [],
+          "success_criteria": "Strategy updated, team aligned"
+        }
+      ]
+    },
+    "phase_3_checkpoint": {
+      "timing": "End of Week 12",
+      "review_items": [
+        "Overall program ROI",
+        "Market position achieved",
+        "Customer acquisition and retention metrics",
+        "Brand health metrics",
+        "Competitive landscape",
+        "Team and capability assessment"
+      ],
+      "success_criteria": [
+        "CAC within target range",
+        "ROAS meets or exceeds goals",
+        "Brand awareness increased by target %",
+        "Market share growth achieved",
+        "Customer satisfaction scores maintained"
+      ],
+      "next_phase_planning": [
+        "Scale successful initiatives",
+        "Address underperforming areas",
+        "Expand to new channels and audiences",
+        "Product line expansion considerations"
+      ]
+    }
+  },
+  "cross_phase_workstreams": {
+    "content_development": {
+      "description": "Continuous content creation and optimization",
+      "weekly_cadence": {
+        "social_posts": "15-20 per week",
+        "blog_articles": "2 per week",
+        "video_content": "3-5 per week",
+        "email_content": "3-4 per week"
+      },
+      "quality_standards": [
+        "All content aligns with messaging framework",
+        "Performance metrics reviewed weekly",
+        "Underperforming content revised or retired",
+        "Evergreen content refreshed monthly"
+      ]
+    },
+    "performance_optimization": {
+      "description": "Continuous testing and optimization",
+      "activities": [
+        "Weekly creative A/B testing",
+        "Bi-weekly landing page optimization",
+        "Monthly audience refinement",
+        "Quarterly strategy review"
+      ]
+    },
+    "customer_feedback_loop": {
+      "description": "Continuous customer insight collection",
+      "activities": [
+        "Daily review of customer service inquiries",
+        "Weekly NPS/satisfaction surveys",
+        "Monthly customer interviews",
+        "Quarterly deep-dive research"
+      ]
+    },
+    "competitive_monitoring": {
+      "description": "Ongoing competitive intelligence",
+      "activities": [
+        "Daily social/news monitoring",
+        "Weekly competitor content analysis",
+        "Monthly market share assessment",
+        "Quarterly competitive strategy review"
+      ]
+    }
+  },
+  "resource_requirements": {
+    "team_roles": {
+      "marketing_director": "Strategy owner, cross-functional coordination",
+      "content_team": "Content creation, optimization",
+      "paid_media_team": "Campaign management, optimization",
+      "social_media_team": "Organic social, community engagement",
+      "analytics_team": "Measurement, reporting, insights",
+      "creative_team": "Visual design, video production",
+      "email_marketing": "Email campaigns, automation",
+      "influencer_marketing": "Partnership management",
+      "customer_marketing": "Testimonials, loyalty, referrals"
+    },
+    "external_resources": {
+      "creative_agency": "Campaign creative development",
+      "testing_partner": "Third-party performance testing",
+      "research_partner": "Brand tracking, customer research",
+      "pr_agency": "Media relations, coverage"
+    },
+    "budget_allocation_guidance": {
+      "paid_media": "50-60%",
+      "content_production": "15-20%",
+      "influencer_partnerships": "10-15%",
+      "research_and_testing": "5-10%",
+      "tools_and_technology": "5-10%"
+    }
+  },
+  "risk_mitigation_touchpoints": {
+    "weekly": [
+      "Customer feedback review",
+      "Performance metrics review",
+      "Competitive activity check",
+      "Quality monitoring"
+    ],
+    "bi_weekly": [
+      "Strategy alignment check",
+      "Resource assessment",
+      "Risk register review"
+    ],
+    "monthly": [
+      "Comprehensive performance review",
+      "Competitive strategy update",
+      "Budget reallocation assessment"
+    ]
+  }
+}

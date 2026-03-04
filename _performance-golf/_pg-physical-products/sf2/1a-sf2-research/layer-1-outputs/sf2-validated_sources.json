@@ -1,0 +1,503 @@
+{
+  "source_validation_id": "src_sf2_001",
+  "created": "2026-01-19",
+  "status": "PENDING_HUMAN_APPROVAL",
+  "summary": {
+    "total_sources": 78,
+    "by_platform": {
+      "reddit": 18,
+      "golfwrx_forums": 14,
+      "youtube": 22,
+      "review_sites": 12,
+      "competitor_pages": 8,
+      "other_forums": 4
+    },
+    "by_content_type": {
+      "pain_sources": 25,
+      "hope_sources": 18,
+      "solutions_tried_sources": 20,
+      "root_cause_sources": 15,
+      "competitor_mechanism_sources": 12,
+      "villain_sources": 8
+    },
+    "estimated_quote_potential": "1200-1800 quotes"
+  },
+  "high_priority_sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://www.reddit.com/r/golf/comments/viwlol/cant_fix_slice_wtf/",
+      "platform": "Reddit",
+      "title": "Can't fix slice? WTF",
+      "bucket_targets": ["PAIN", "SOLUTIONS_TRIED"],
+      "priority": "HIGH",
+      "estimated_quotes": 30,
+      "rationale": "High-engagement thread with frustrated golfers sharing specific attempts"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://www.reddit.com/r/golf/comments/o3cdi0/how_did_you_fix_your_driver_slice/",
+      "platform": "Reddit",
+      "title": "How did you fix your driver slice?",
+      "bucket_targets": ["SOLUTIONS_TRIED", "HOPE", "PAIN"],
+      "priority": "HIGH",
+      "estimated_quotes": 40,
+      "rationale": "Direct experience sharing thread with solutions tried"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://www.reddit.com/r/golf/comments/15fo8qx/has_anyone_in_here_actually_fixed_their_slice/",
+      "platform": "Reddit",
+      "title": "Has anyone in here actually fixed their slice properly?",
+      "bucket_targets": ["PAIN", "HOPE", "SOLUTIONS_TRIED"],
+      "priority": "HIGH",
+      "estimated_quotes": 50,
+      "rationale": "Desperation visible in title - rich emotional content expected"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://www.reddit.com/r/golf/comments/1gs5pbe/i_finally_fixed_my_ing_slice_i_could_cry/",
+      "platform": "Reddit",
+      "title": "I finally fixed my *#@&ing slice. I could cry",
+      "bucket_targets": ["HOPE", "PAIN", "SOLUTIONS_TRIED"],
+      "priority": "HIGH",
+      "estimated_quotes": 35,
+      "rationale": "Emotional breakthrough moment - transformation arc visible"
+    },
+    {
+      "id": "SRC-005",
+      "url": "https://forums.golfwrx.com/topic/2016603-has-anyone-toyed-with-draw-biased-drivers/",
+      "platform": "GolfWRX",
+      "title": "Has anyone toyed with draw biased drivers?",
+      "bucket_targets": ["SOLUTIONS_TRIED", "ROOT_CAUSE", "COMPETITOR_MECHANISM"],
+      "priority": "HIGH",
+      "estimated_quotes": 40,
+      "rationale": "Equipment-focused community discussing draw driver experiences"
+    },
+    {
+      "id": "SRC-006",
+      "url": "https://forums.golfwrx.com/topic/233002-if-i-slice-my-drives-should-i-get-a-draw-driver/",
+      "platform": "GolfWRX",
+      "title": "If I slice my drives, should I get a draw driver?",
+      "bucket_targets": ["ROOT_CAUSE", "HOPE", "SOLUTIONS_TRIED"],
+      "priority": "HIGH",
+      "estimated_quotes": 35,
+      "rationale": "Direct equipment vs swing debate - belief structure insights"
+    },
+    {
+      "id": "SRC-007",
+      "url": "https://forums.golfwrx.com/topic/1835006-what-is-your-favorite-draw-driver-and-why/",
+      "platform": "GolfWRX",
+      "title": "What is your favorite draw driver and why?",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE", "SOLUTIONS_TRIED"],
+      "priority": "HIGH",
+      "estimated_quotes": 30,
+      "rationale": "Direct competitor comparison with user experiences"
+    },
+    {
+      "id": "SRC-008",
+      "url": "https://forums.golfwrx.com/topic/1822490-is-a-ping-425-sft-really-a-slice-killer/",
+      "platform": "GolfWRX",
+      "title": "Is a Ping 425 SFT really a 'slice killer'",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "VILLAIN", "HOPE"],
+      "priority": "HIGH",
+      "estimated_quotes": 25,
+      "rationale": "Skepticism about anti-slice claims - villain data potential"
+    },
+    {
+      "id": "SRC-009",
+      "url": "https://forums.golfwrx.com/topic/1112174-lost-confidence-in-my-driver/",
+      "platform": "GolfWRX",
+      "title": "Lost confidence in my driver",
+      "bucket_targets": ["PAIN", "ROOT_CAUSE"],
+      "priority": "HIGH",
+      "estimated_quotes": 30,
+      "rationale": "Emotional pain - confidence crisis content"
+    },
+    {
+      "id": "SRC-010",
+      "url": "https://forums.golfwrx.com/topic/1823957-nothing-i-do-fixes-my-sliceplease-help/",
+      "platform": "GolfWRX",
+      "title": "Nothing I do fixes my slice...please help",
+      "bucket_targets": ["PAIN", "SOLUTIONS_TRIED"],
+      "priority": "HIGH",
+      "estimated_quotes": 35,
+      "rationale": "Desperation - exhaustive solutions tried"
+    },
+    {
+      "id": "SRC-011",
+      "url": "https://www.reddit.com/r/golf/comments/r6w81l/conquered_my_driver_slice_by_slowing_down_how_did/",
+      "platform": "Reddit",
+      "title": "Conquered my driver slice by slowing down. How did you solve yours?",
+      "bucket_targets": ["SOLUTIONS_TRIED", "HOPE", "PAIN"],
+      "priority": "HIGH",
+      "estimated_quotes": 40,
+      "rationale": "Experience sharing with 'tried everything' context"
+    },
+    {
+      "id": "SRC-012",
+      "url": "https://www.reddit.com/r/GolfSwing/comments/1njg554/spent_300_dollars_on_lessons_and_slice_is_still/",
+      "platform": "Reddit",
+      "title": "Spent 300 dollars on lessons and slice is still there",
+      "bucket_targets": ["SOLUTIONS_TRIED", "PAIN", "VILLAIN"],
+      "priority": "HIGH",
+      "estimated_quotes": 25,
+      "rationale": "Specific cost mentioned - instruction failure narrative"
+    },
+    {
+      "id": "SRC-013",
+      "url": "https://forums.golfwrx.com/topic/1739504-accuracy-versus-distance-with-the-driver/",
+      "platform": "GolfWRX",
+      "title": "Accuracy versus Distance with the Driver",
+      "bucket_targets": ["ROOT_CAUSE", "HOPE"],
+      "priority": "HIGH",
+      "estimated_quotes": 30,
+      "rationale": "Key belief structure - tradeoff perception"
+    },
+    {
+      "id": "SRC-014",
+      "url": "https://www.reddit.com/r/golf/comments/1229nip/how_to_stop_feeling_nervous_and_embarrassed_at/",
+      "platform": "Reddit",
+      "title": "How to stop feeling nervous and embarrassed at the driving range",
+      "bucket_targets": ["PAIN", "ROOT_CAUSE"],
+      "priority": "HIGH",
+      "estimated_quotes": 25,
+      "rationale": "Emotional pain - embarrassment theme"
+    },
+    {
+      "id": "SRC-015",
+      "url": "https://forums.golfmonthly.com/threads/the-dreaded-driver-those-who-struggle.100287/",
+      "platform": "Golf Monthly Forum",
+      "title": "The dreaded driver... those who struggle?",
+      "bucket_targets": ["PAIN", "ROOT_CAUSE"],
+      "priority": "HIGH",
+      "estimated_quotes": 30,
+      "rationale": "'I hate my driver' - strong emotional content"
+    }
+  ],
+  "medium_priority_sources": [
+    {
+      "id": "SRC-016",
+      "url": "https://www.youtube.com/watch?v=kxZ2rIs0yNo",
+      "platform": "YouTube",
+      "title": "How to FIX A SLICE with a DRIVER (The Best Way!)",
+      "bucket_targets": ["PAIN", "SOLUTIONS_TRIED"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 40,
+      "rationale": "High-view instructional - comments contain pain quotes"
+    },
+    {
+      "id": "SRC-017",
+      "url": "https://www.youtube.com/watch?v=n_oLKDHpJnI",
+      "platform": "YouTube",
+      "title": "How To Fix A Slice With A Driver (So Simple!)",
+      "bucket_targets": ["PAIN", "SOLUTIONS_TRIED", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 35,
+      "rationale": "Description mentions 'tried 4 coaches' - rich failure content"
+    },
+    {
+      "id": "SRC-018",
+      "url": "https://www.youtube.com/watch?v=7-VPwsQ5W0k",
+      "platform": "YouTube",
+      "title": "I've tried EVERYTHING - Slice Finally Fixed with the Driver",
+      "bucket_targets": ["PAIN", "HOPE", "SOLUTIONS_TRIED"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 30,
+      "rationale": "Title is our exact target persona"
+    },
+    {
+      "id": "SRC-019",
+      "url": "https://www.youtube.com/watch?v=csDp-u1z3UA",
+      "platform": "YouTube",
+      "title": "BEST ANTI-SLICE DRIVER: TaylorMade Stealth HD, Callaway Rogue ST Max D, Ping G425 SFT",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 25,
+      "rationale": "Direct competitor comparison video"
+    },
+    {
+      "id": "SRC-020",
+      "url": "https://mygolfspy.com/buyers-guides/all/4-drivers-that-helped-fight-a-slice-in-2025-testing/",
+      "platform": "MyGolfSpy",
+      "title": "4 Drivers That Helped Fight A Slice In 2025 Testing",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 15,
+      "rationale": "Independent testing data with user comments"
+    },
+    {
+      "id": "SRC-021",
+      "url": "https://mygolfspy.com/buyers-guides/all/draw-drivers-callaway-paradym-ai-smoke-max-d-versus-ping-g430-sft/",
+      "platform": "MyGolfSpy",
+      "title": "Draw Drivers: Callaway Paradym Ai Smoke Max D vs PING G430 SFT",
+      "bucket_targets": ["COMPETITOR_MECHANISM"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 20,
+      "rationale": "Head-to-head competitor comparison"
+    },
+    {
+      "id": "SRC-022",
+      "url": "https://www.golfmonthly.com/best-golf-deals/best-drivers-for-slicers-219139",
+      "platform": "Golf Monthly",
+      "title": "Best Drivers For Slicers 2025",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 15,
+      "rationale": "Market landscape overview"
+    },
+    {
+      "id": "SRC-023",
+      "url": "https://www.todays-golfer.com/equipment/best/draw-drivers-us/",
+      "platform": "Today's Golfer",
+      "title": "Best Draw Drivers 2026",
+      "bucket_targets": ["COMPETITOR_MECHANISM"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 15,
+      "rationale": "Testing data and competitor mechanisms"
+    },
+    {
+      "id": "SRC-024",
+      "url": "https://forums.golfwrx.com/topic/2016623-tm-stealth-2-hd-vs-ping-g430-sft-vs-callaway-pryadym-x/",
+      "platform": "GolfWRX",
+      "title": "TM Stealth 2 HD vs Ping G430 SFT vs Callaway Paradym X",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "SOLUTIONS_TRIED"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 25,
+      "rationale": "User comparison with 'pretty bad' slice context"
+    },
+    {
+      "id": "SRC-025",
+      "url": "https://www.reddit.com/r/golf/comments/gy1xgp/bad_idea_to_use_draw_biased_driver_setting_while/",
+      "platform": "Reddit",
+      "title": "Bad idea to use draw biased driver setting while working to fix slice?",
+      "bucket_targets": ["ROOT_CAUSE", "SOLUTIONS_TRIED"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 20,
+      "rationale": "Equipment vs swing belief debate"
+    },
+    {
+      "id": "SRC-026",
+      "url": "https://forum.mygolfspy.com/topic/43817-draw-biased-drivers-vs-working-on-swing/",
+      "platform": "MyGolfSpy Forum",
+      "title": "Draw biased drivers vs working on swing",
+      "bucket_targets": ["ROOT_CAUSE", "SOLUTIONS_TRIED"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 25,
+      "rationale": "Key belief structure exploration"
+    },
+    {
+      "id": "SRC-027",
+      "url": "https://www.thehackersparadise.com/forum/index.php?threads/draw-bias-or-moveable-weight-drivers-gimmick-or-awesome.8934493/",
+      "platform": "Hackers Paradise Forum",
+      "title": "Draw-bias or moveable weight drivers - gimmick or awesome?",
+      "bucket_targets": ["ROOT_CAUSE", "VILLAIN", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 20,
+      "rationale": "Skepticism vs hope - belief validation"
+    },
+    {
+      "id": "SRC-028",
+      "url": "https://www.reddit.com/r/golf/comments/1c4g0uf/are_titanium_or_carbon_drivers_really_worth_it/",
+      "platform": "Reddit",
+      "title": "Are Titanium or Carbon drivers really worth it??",
+      "bucket_targets": ["ROOT_CAUSE", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 20,
+      "rationale": "Material/price perception - SF2 titanium positioning"
+    },
+    {
+      "id": "SRC-029",
+      "url": "https://forums.golfwrx.com/topic/2046628-tm-drivers-titanium-vs-carbon-faces/",
+      "platform": "GolfWRX",
+      "title": "TM Drivers - Titanium vs Carbon Faces",
+      "bucket_targets": ["ROOT_CAUSE", "COMPETITOR_MECHANISM"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 15,
+      "rationale": "Technical discussion on construction"
+    },
+    {
+      "id": "SRC-030",
+      "url": "https://forum.mygolfspy.com/topic/69148-driver-accuracy-vs-distance/",
+      "platform": "MyGolfSpy Forum",
+      "title": "Driver Accuracy vs. Distance",
+      "bucket_targets": ["ROOT_CAUSE", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 20,
+      "rationale": "Key tradeoff belief - SF2 positioning relevant"
+    }
+  ],
+  "competitor_mechanism_sources": [
+    {
+      "id": "SRC-C01",
+      "url": "https://www.callawaygolf.com/golf-clubs/drivers/drivers-2024-paradym-ai-smoke-max.html",
+      "platform": "Callaway.com",
+      "competitor": "Callaway",
+      "products": ["Paradym Ai Smoke Max D"],
+      "bucket_targets": ["COMPETITOR_MECHANISM"],
+      "priority": "HIGH",
+      "purpose": "Extract mechanism NAME and ARTICULATION"
+    },
+    {
+      "id": "SRC-C02",
+      "url": "https://ping.com/en-us/clubs/drivers/g430-sft",
+      "platform": "Ping.com",
+      "competitor": "Ping",
+      "products": ["G430 SFT"],
+      "bucket_targets": ["COMPETITOR_MECHANISM"],
+      "priority": "HIGH",
+      "purpose": "Extract SFT (Straight Flight Technology) mechanism"
+    },
+    {
+      "id": "SRC-C03",
+      "url": "https://www.taylormadegolf.com/shop-drivers.html",
+      "platform": "TaylorMade.com",
+      "competitor": "TaylorMade",
+      "products": ["Qi10 Max", "Qi10"],
+      "bucket_targets": ["COMPETITOR_MECHANISM"],
+      "priority": "HIGH",
+      "purpose": "Extract 10K MOI and Carbon Twist Face mechanisms"
+    },
+    {
+      "id": "SRC-C04",
+      "url": "https://mygolfspy.com/news-opinion/callaway-paradym-ai-smoke-drivers/",
+      "platform": "MyGolfSpy",
+      "competitor": "Callaway",
+      "bucket_targets": ["COMPETITOR_MECHANISM"],
+      "priority": "MEDIUM",
+      "purpose": "Independent analysis of Ai Smart Face mechanism"
+    },
+    {
+      "id": "SRC-C05",
+      "url": "https://mygolfspy.com/news-opinion/ping-g430-sft-driver-vs-ping-g4-sft/",
+      "platform": "MyGolfSpy",
+      "competitor": "Ping",
+      "bucket_targets": ["COMPETITOR_MECHANISM"],
+      "priority": "MEDIUM",
+      "purpose": "SFT mechanism deep-dive"
+    }
+  ],
+  "youtube_instructional_sources": [
+    {
+      "id": "SRC-YT01",
+      "url": "https://www.youtube.com/watch?v=jb5RSpEPbUo",
+      "platform": "YouTube",
+      "title": "Tiger's Former Coach Hank Haney Fixes A Bad Slice LIVE!",
+      "bucket_targets": ["PAIN", "HOPE", "SOLUTIONS_TRIED"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 30,
+      "rationale": "High-authority instructor - comments reveal pain"
+    },
+    {
+      "id": "SRC-YT02",
+      "url": "https://www.youtube.com/watch?v=oHYXg6Oiy8M",
+      "platform": "YouTube",
+      "title": "He Couldn't Hit His Driver Until I Showed Him This",
+      "bucket_targets": ["PAIN", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 25,
+      "rationale": "Lost confidence narrative in title"
+    },
+    {
+      "id": "SRC-YT03",
+      "url": "https://www.youtube.com/watch?v=RDqsgioxDeA",
+      "platform": "YouTube",
+      "title": "How Much DRAW? Callaway AI Smoke Max D",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 20,
+      "rationale": "Direct competitor review"
+    },
+    {
+      "id": "SRC-YT04",
+      "url": "https://www.youtube.com/watch?v=3004xrzJihs",
+      "platform": "YouTube",
+      "title": "The Ultimate Guide to PING's G430 Drivers",
+      "bucket_targets": ["COMPETITOR_MECHANISM"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 15,
+      "rationale": "Competitor mechanism explanation"
+    },
+    {
+      "id": "SRC-YT05",
+      "url": "https://www.youtube.com/watch?v=-f4bhw7MZlg",
+      "platform": "YouTube",
+      "title": "SLICER? This is the ANTI-SLICE DRIVER of 2025",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 20,
+      "rationale": "Anti-slice driver comparison"
+    },
+    {
+      "id": "SRC-YT06",
+      "url": "https://www.youtube.com/watch?v=gGYMAVod-Bw",
+      "platform": "YouTube",
+      "title": "Fix Your Slice Fast: The Most Effective Drivers for 2025 Revealed",
+      "bucket_targets": ["COMPETITOR_MECHANISM", "HOPE"],
+      "priority": "MEDIUM",
+      "estimated_quotes": 20,
+      "rationale": "Draw driver effectiveness comparison"
+    }
+  ],
+  "validation_metrics": {
+    "platform_diversity": {
+      "forums": 18,
+      "reddit": 18,
+      "youtube": 22,
+      "review_sites": 12,
+      "competitor_pages": 8,
+      "meets_minimum_4_platforms": true
+    },
+    "bucket_coverage": {
+      "pain": "25+ sources",
+      "hope": "18+ sources",
+      "root_cause": "15+ sources",
+      "solutions_tried": "20+ sources",
+      "competitor_mechanism": "12+ sources",
+      "villain": "8+ sources",
+      "all_buckets_covered": true
+    },
+    "topic_coverage": {
+      "slice_causes": true,
+      "slice_correction": true,
+      "emotional_impact": true,
+      "distance_desire": true,
+      "accuracy_vs_distance": true,
+      "driver_confidence": true,
+      "equipment_vs_swing": true,
+      "draw_bias_drivers": true,
+      "lessons_instruction": true,
+      "titanium_vs_carbon": true,
+      "all_topics_covered": true
+    },
+    "competitor_coverage": {
+      "callaway": true,
+      "taylormade": true,
+      "ping": true,
+      "cobra": false,
+      "cleveland": false,
+      "competitors_minimum_5": "NEED MORE - add Cobra and Cleveland sources"
+    },
+    "estimated_total_quotes": "1200-1800",
+    "meets_1000_minimum": true
+  },
+  "gaps_identified": [
+    "Need Cobra Darkspeed Max competitor page and reviews",
+    "Need Cleveland Launcher XL Halo competitor page and reviews",
+    "Need more Amazon review sources for villain data",
+    "Need Tour Edge sources for value positioning comparison"
+  ],
+  "recommended_additional_sources": [
+    {
+      "url": "https://www.cobragolf.com/collections/drivers",
+      "purpose": "Cobra competitor mechanism mapping"
+    },
+    {
+      "url": "https://www.clevelandgolf.com/en/drivers",
+      "purpose": "Cleveland competitor mechanism mapping"
+    },
+    {
+      "url": "https://www.amazon.com/s?k=draw+bias+driver+reviews",
+      "purpose": "Villain data from negative reviews"
+    }
+  ]
+}

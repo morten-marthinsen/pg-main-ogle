@@ -1,0 +1,142 @@
+# Sharing Coconut Coffes Story
+
+**Source File:** Sharing Coconut Coffes Story.pdf
+**Conversion Method:** Text Extraction
+**Converted:** 1580759414.0
+
+---
+
+Itriedyour
+coffeeforthe
+firsttimeinside
+aSam’sclub.
+Whentherep
+wasexplaining
+thebenefitsI
+Around9
+monthsagoI
+startedtohavea
+problem
+swallowingand
+wasskeptical,
+butthecoffee
+tastedgoodand
+Ifiguredit
+wouldbeanice
+treat.Withinthe
+firstweek,Ibecameregular,Usingtherestrooma
+fewtimesaday,versesafewtimesaweek.My
+hairbecamesoft,andmyskinwasn’tsodry.I
+didn’tputitalltogetheruntilthefollowingweek
+whenIsteppedonthescale.IntotalIhavelost
+almost30pounds.Ihaveenergyandmystomach
+feelsgreat.Iamsogladmyhusbandtalkedme
+intobuyingthiscoffee.Ihavealreadypurchased
+sometogiveawaytofriendandfamily.Itnotonly
+tasteamazing,butthebenefitsarejustoutofthis
+world.Thisproductisjustwaycool.
+retainingfood.I
+sawyour
+coconuttea
+insideCostcoin
+Arizonaandjust
+thoughtit
+soundedtasty.I
+starteddrinking2or3cupsofthecoconutteaa
+dayandInoticedveryquicklymystomachwas
+hurtinglessandless.AtthispointIhadlostover
+30lbsandwasverysick.Istartedtobeabletoeat
+andholditinInoticedonlyifIhaddrankthetea
+withinanhourorsoofeating.SincethenIhave
+regainedhalftheweightwhichisperfectformy
+bodytype.Ialsofeelthatmyskinhasn'tlooked
+andfeltthisyoungforyears.Thankyouforyour
+amazingproduct.I'mnotcertain,butItruly
+believeyousavedmylife!Thankyousomuch.
+Amelia Boosalis Casey Lewis
+Lost 30 lbs Coconut Tea Saved My Life!
+Malia Owen
+Lost 12.5 lbs
+Ourfansigniteuswiththepassionand
+inspirationtoproducethebestcoconut
+coffeeseriesavailable.Welovesharingour
+productswithyouandwe’dloveforyouto
+shareyourstorywithus.Ifourcoconut
+coffeeandteaseriesbenefitsyourmetabo-
+lism,skin,hair,nails,bowelmovements,and
+weightcontrol,pleasetellusyourstory.
+PleaseemailusatShareStory@cacafe.com
+www.CAcafe.com / 1(844)808-9888
+ShareYour Story
+Whyisevery-
+onegoingcrazy
+forcoconuts?
+Because,they
+aresuperfoods
+withsuper
+antioxidants
+thatfightfree
+radicaldamage
+causedbythe
+environment.
+What'safree
+radical?It'samean,littleuglyvillainthatcauses
+prematureaginganddegenerativediseases,like
+cancer.Whyisitimportanttofightfreeradicals
+withantioxidants?Becauseit'sthesecretto
+anti-agingandlongevity.Coconutactuallyhelps
+hydratetheskinfromtheinsideout,andstimulates
+collagen,whichisthesecrettoyouthful,glowing
+skin.Addcoconuttocoffee,tea,orcocoaandyou
+getadoublewhammyofaction-packedantioxi-
+dants -becausecoffee,tea,andcocoahave
+antioxidants,too.Greatimmuneboosterthatpacks
+apowerfulpunchofwholesomegoodnessand
+taste.
+Bella Dalili - Nutritionist, CA
+Lisa Richmond
+My Cancer Experience...Coconut
+Tea Keeps Me Strong!
+ADVERTISEMENT
+
+# Sharing Coconut Coffee’s Story
+
+WhenIchoseto
+undergochemo-
+therapyand
+radiationto
+removethe
+cancerous
+cells,Ifound
+thecoconuttea
+insidea
+Wal-mart...andI
+creditCAcafecoconut
+teaforkeepingmestrong
+before,during,andaftermy
+cancerexperience.IamproudtosaythatCAcafe
+coconutteaplaysamajorroleinmylife,keeping
+mehealthy,happyandstrong.Ittrulyisoneof
+nature'sbestkeptsecrets,andIhopethatitcan
+touchotherpeople'sliveslikeittouchedmine".
+Iboughtthe
+coconutcoffee
+insideacostco.
+Ihavelost12.5
+lbs.Ilovethe
+CAcafecoconut
+coffee,Itisnot
+onlytastegreat
+butalsohas
+manyhealth
+benefits.Ifeel
+anincredible
+energyboostafterthecoconutcoffee,andIalso
+feellesshungry.Whilethefatandcaloriesmight
+seemlikealotinthecoconutcoffee,thinkabout
+this,nocream,lesseatingoverall,nobinge
+snacking...Idrinkmainlywaterandcoconut
+coffee.Iwalkabout2milesaday,4timesaweek
+.Iwisheveryoneluckwiththeirefforts.Idothink
+CAcafecoconutcoffeecanplayavaluablerolein
+yourplan.
