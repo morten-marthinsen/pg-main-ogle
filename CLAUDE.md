@@ -77,19 +77,10 @@ npx tsc --noEmit  # Type-check
 
 ## Universal Rules
 
-### iCloud Drive Safety (MANDATORY)
+### Shared vs. Local Config (MANDATORY)
 
-This project lives inside iCloud Drive. Terminal file operations can corrupt iCloud sync metadata.
+This repo is shared across multiple contributors via GitHub. Everything in `.claude/` is committed and shared by default so everyone benefits from the same settings, agents, hooks, skills, and rules — including `mcp.json`, which defines shared MCP server connections. One file is gitignored because it contains machine-specific config that would be incorrect on another person's machine: `settings.local.json` (personal permissions). Never commit this file. Never add machine-specific values (localhost URLs, file paths, personal tokens) to any shared config file. If a new config file contains machine-specific values, add it to `.gitignore` before committing.
 
-- **NEVER rename or move directories via terminal (`mv`).** Propose the plan and let the user execute in Finder.
-- **NEVER create directories that reuse names iCloud has previously tracked.** This triggers sync conflict loops.
-- **Creating/editing files via terminal is safe.** Only directory-level restructuring causes problems.
-- **`.nosync` pattern** for heavy-write directories: rename to `<dir>.nosync/`, create symlink `<dir>` → `<dir>.nosync`. iCloud skips `.nosync` directories entirely.
-- If files become invisible in Finder: `chflags -R nohidden <path>`
-
-### iCloud Git Guard
-
-Before/after git write commands: `ls -la .git/index*` — if `index 2` exists, run `mv ".git/index 2" .git/index`.
 
 ### Data Integrity
 
