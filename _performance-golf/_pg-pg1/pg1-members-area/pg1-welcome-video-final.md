@@ -9,17 +9,21 @@
 
 ---
 
-## Intro 1 — New Customers
-
 Hey, it's Brixton Albert.
 
 Welcome to PG1... the smartest way for YOU to learn golf.
 
 Because every single part of PG1 is customized to your swing, your schedule, and your goals.
 
-Let me walk you through it right now.
+Let me walk you through your PG1 Pulse Smart Path right now.
 
-Right here at the top is Learn.
+It all starts with 
+
+
+
+🚨Action🚨 -  where to include course training videos?
+
+You'll find your course training videos under "Watch Your Course" right here at the top... and in the section called "Learn" below.
 
 These recommended videos are the most important videos from your course...
 
