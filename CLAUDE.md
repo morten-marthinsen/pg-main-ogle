@@ -105,3 +105,37 @@ For Veda and Tess dashboard:
 3. `npm run build` — clean build (Veda)
 
 No `--no-verify`. If any gate fails, halt and fix first.
+
+## Copywriting Heuristics (Learned From Draft → Final Edits)
+
+These rules apply to all spoken-word scripts, voiceover copy, and video walkthroughs across any offer. They were extracted by comparing AI-generated drafts against human-edited finals.
+
+### 1. One Thought Per Line
+Break compound sentences into individual beats. Each line gets one idea the speaker can land before moving on. If a sentence has a comma followed by a new idea, it's probably two lines.
+
+### 2. Name What They're Looking At — Immediately
+Don't open with philosophy or setup. Tell the viewer what they're seeing in the first 3 seconds. Orientation before persuasion.
+
+### 3. Kill Stage Directions
+Don't lean on `[brackets]` as a crutch. The script should read as speakable copy, not a screenplay. Only include a visual note when referencing a specific asset (a link, a file, a demo). Transitions should BE the copy: "Let me show you how this works" — not `[Transition to screen share]`.
+
+### 4. Break Complex Ideas Into Tiny Sequential Beats
+If a concept needs explanation, break it into 3–5 short lines that build on each other. Each line is a setup for the next. The listener absorbs one piece, then the next. Dense paragraphs don't land in spoken copy.
+
+### 5. Use Punctuation for Spoken Rhythm
+Ellipses create pauses. Italics create emphasis. Dashes create beats. These aren't decorative — they're delivery instructions. Write the way a speaker breathes.
+
+### 6. Branch for the Viewer
+If the viewer could be in two different situations, address both: "If you've already done X... / If you need to do X..." This is especially critical for less tech-savvy audiences who freeze when instructions don't match their exact state.
+
+### 7. Add a Safety Net
+After any action step, add one line that removes fear of getting stuck: "If you run into any issues, we'll get you sorted." Reducing anxiety is as important as the instruction itself.
+
+### 8. Close With Emotion, Not Logistics
+The last line should be the feeling, not the feature. "You're one step away from the best version of this experience" beats "Click submit and you'll receive a response within 48 hours." End on what it means, not what it does.
+
+### 9. Shorter Sentences = More Authority
+In spoken copy, short declarative sentences land harder than compound ones. "Then, give you the smartest way to fix it — FAST." has more punch than a longer version saying the same thing.
+
+### 10. Conversational Connectors Over Structural Headers
+"And here's the cool part" beats `**NEXT SECTION**`. In a walkthrough, the speaker's voice IS the structure. Use natural transitions that a person would actually say while showing someone a screen.

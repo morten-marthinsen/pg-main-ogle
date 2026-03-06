@@ -13,19 +13,19 @@
 
 [Modal video player — Brixton's voice, warm and confident]
 
-Hey Performance Golfers, Brixton Albert here, CEO and Founder for Performance Golf.
+Hey — I'm Brixton, and I want to welcome you to Performance Golf.
 
-I'd like to welcome you to PG1, the world's smartest way to get better at golf fast. 
+You just did something most golfers never do. Instead of grabbing another random tip and hoping something sticks, you decided to actually get serious about improving. That matters more than you think.
 
-In this video, I want to show you how to get the best results with PG1. 
+Here's what I want to show you.
 
 [Screen shows PG1 Pulse Smart Path dashboard]
 
-First, this is your PG1 Pulse Smart Path.
+This is your PG1 Pulse Smart Path.
 
 It's not another library of videos. It's not 47 random tips fighting each other in your head while you're standing over the ball.
 
-This is one personalized path — built around YOUR swing, YOUR game, and the one part of your game you want to work on first.
+This is one personalized path — built around YOUR swing, YOUR tendencies, and the one part of your game that needs attention first.
 
 Here's how it works. We start by identifying your root swing flaw — the one thing holding you back more than anything else. The lead domino. Fix that, and three or four other problems start fixing themselves.
 

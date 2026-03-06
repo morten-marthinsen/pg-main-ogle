@@ -1,0 +1,3 @@
+Speaker 1 (00:00:00 -> 00:00:42)
+
+So here's a simple way to film your golf swing. You take your golf bag and you set it 12 feet directly behind your golf ball on the driving range. You then pull out your iPhone, okay? And I'm gonna press the record button on a video, and I'm simply gonna take my golf towel. I'm gonna put it here where my woods are, and I'm gonna put my phone in. So right now I am filming myself. I then walk up to the ball, you hit a shot, walk back. Simple way to film your swing without anyone else's help.
