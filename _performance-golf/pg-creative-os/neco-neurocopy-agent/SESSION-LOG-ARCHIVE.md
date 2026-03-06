@@ -1,6 +1,6 @@
 # Neco — Session Log Archive
 
-> Compressed archive of Neco sessions 001-026. For recent sessions, see `SESSION-LOG.md`.
+> Compressed archive of Neco sessions 001-036. For recent sessions, see `SESSION-LOG.md`.
 
 ---
 
@@ -35,6 +35,16 @@
 | 024 | 2026-02-16 | SF2 ad scripts — SF1 source extraction | Phase 1: $574K winner → sf2-0001, $100K/119% ROAS gifting → sf2-0003. Cut-down relationship discovered. |
 | 025 | 2026-02-16 | SF2 ad scripts — swap table + root angles | Phase 2: 18-row swap table, root angles assigned, sf2-0001-PLAN.md created. Session log compressed. |
 | 026 | 2026-02-16 | SF2 ad scripts — sf2-0001 long-form v1 | Phases 3+4: 14 beats, ~196s VO. All 18 swap rows applied. 3-gate quality pass. |
+| 027 | 2026-02-16 | SF2 three-column reformat + GDoc prep | sf2-0001-long-v1.md reformatted to three-column production format. Google Doc MCP limitation confirmed. |
+| 028 | 2026-02-16 | SF2 Christopher GDoc final sync | sf2-0001-long-v1.md → v2 (Christopher's GDoc final). Session ID convention established. |
+| 029 | 2026-02-16 | SF2-0003 Brand Values Commercial v1 | SF1-0003 adapted for SF2. Root angle "Best Gift"→"Brand Values". All 4 quality gates pass. |
+| 030 | 2026-02-16 | SF2-0003 compression + v2 start | Session log compressed 582→~170 lines. |
+| 031 | 2026-02-17 | SF2 hooks + matrix + persona library | Persona x Value Driver Matrix (9×10). 5 hooks written (three production tracks). PG-wide buyer persona library created. |
+| 032 | 2026-02-17 | SF2-0003 read-through + v3 | sf2-0003 v1→v2→v3. Three values: Balance/Reliability/Speed. 5 hooks DRAFT. Body LOCKED. |
+| 033 | 2026-02-18 | PGB VSL final read-through + teleprompter | V7→V8 edits. Teleprompter export created. PGB Shortened VSL project COMPLETE. |
+| 034 | 2026-02-18 | CLST Influencer Brief V1 | 13 concepts (7 pain / 5 desire / 1 bonus) + 3 women-specific angles from $3.7M ad data. |
+| 035 | 2026-02-18 | CLST Persona Library + Matrix | 8 CLST-specific DEEP profiles built. Brief restructure agreed. |
+| 036 | 2026-02-19 | SPD Video Ad Angle Library V1 | Autonomous pipeline test. 32 angles, 5 segments, 3 concepts, 10 hook variations. 825-line output. |
 
 ---
 
@@ -140,6 +150,34 @@
 - **Gifting pitch removed from sf2-0001** — belongs to sf2-0003's angle (S026)
 - **Quality gate fixes** (S026): removed "revolutionary" (banned word), added "3-piece" to titanium, added "20-30 yards" specificity
 
+### SF2 Three-Column Format + GDoc Sync (S027-S028)
+- **Three-column production format** (Section | Ad Script | Editor Notes) established as standard for all Neco scripts (S027)
+- **Session ID convention formalized**: `Neco-{DATE}-v{VERSION}-S{NUMBER}-{PROJECT}-{DESCRIPTION}` — three version concepts documented: agent version (Christopher-controlled), session number (auto-increment), script version (document revision) (S028)
+
+### SF2-0003 Brand Values Commercial (S029-S032)
+- **Root angle changed**: "Best Gift" → "Brand Values" (S029)
+- **F1/racing → Aerospace/SR-71 Blackbird** metaphor (per SF2 VSL borrowed-authority) (S029)
+- **Three values finalized**: Balance / Reliability / Speed (S032)
+- **sf2-0003 body LOCKED**, 5 hooks DRAFT (S032)
+
+### SF2 Hook Architecture + Persona Library (S031)
+- **Voice architecture: 3 production tracks** — Christopher on-cam, AIVO+B-roll, motion graphics (S031)
+- **AIVO → Christopher body transition**: documentary-style handoff with 1.5-2s visual bridge (S031)
+- **PG-wide buyer persona library** created: `_reference/buyer-personas.md` — 5 DEEP + 4 BASELINE profiles (S031)
+- **Editor notes rule (Non-Negotiable #10)**: concise bullets, not paragraphs. 3-5 per section max. (S031)
+
+### PGB VSL Completion (S033)
+- **PGB Shortened VSL project COMPLETE**. V7→V8 final read-through edits. Teleprompter export created. (S033)
+
+### CLST Influencer Brief + Personas (S034-S035)
+- **8 CLST-specific personas**: CP1 Range Rat, CP2 Gadget Guy, CP3 Overthinker, CP4 Flippy Caster, CP5 Busy Dad, CP6 Slow Learner, CP7 DIY Golfer, CP8 Women's Power Gap (S035)
+- **Vindication arc** = unique CLST persona section (not in SF2 personas) (S035)
+
+### SPD Video Ad Angles (S036)
+- **Autonomous pipeline test SUCCESSFUL**: Context Gatherer → Audience Intelligence → Ad Angle Ideation without phase-stop checkpoints (S036)
+- **5 target segments**: Age-Decline Griever (35%), Plateau Prisoner, Speed-Accuracy Skeptic, Competitor Refugee, Distance-Anxious Peer Comparer (S036)
+- **Top 3 concept directions**: "Fast AND Straight" (10/10), "I Absolutely Sprayed The Ball" (9/10), "Where Did The Speed Go?" (9/10) (S036)
+
 ### Implementation Decisions (S009-S010)
 - **Brand Thread tagging = metadata only** — Sub-Agent #3 has light thread awareness during ideation, Sub-Agents #4/#5 go deep into psychology unconstrained, thread tag applied post-generation (S009)
 - **Product briefs (Phase 3) deferred** — focus on structural improvements first (S009)
@@ -149,7 +187,7 @@
 
 ---
 
-## Changelog (Sessions 001-026)
+## Changelog (Sessions 001-036)
 
 | Date | Session | Change |
 |------|---------|--------|
@@ -180,3 +218,13 @@
 | 2026-02-07 | 003 | Phase 4A draft (NOT saved — file write rejected). Source material loaded. |
 | 2026-02-07 | 002 | Phases 1-3: CLAUDE.md, NECO-PRD.md, NECO-MASTER-AGENT.md created. Checkpoint count 2→3. |
 | 2026-02-07 | 001 | Architecture planning: 8 sub-agents, 3 layers, hub-and-spoke, Six-Axis, plan approved. |
+| 2026-02-19 | 036 | SPD: SpeedTrac Video Ad Angle Library V1 (autonomous test). 32 angles, 5 segments, 3 concepts, 10 hooks. 825-line output. |
+| 2026-02-18 | 035 | CLST: 8 CLST-specific persona profiles built. Brief restructure agreed (persona-led pain + angle-led desire). |
+| 2026-02-18 | 034 | CLST: Influencer Brief V1. 13 concepts + 3 women-specific angles from $3.7M ad data. |
+| 2026-02-18 | 033 | PGB VSL project COMPLETE. V7→V8 final edits. Teleprompter export created. |
+| 2026-02-17 | 032 | SF2-0003: v1→v2→v3. Three values finalized (Balance/Reliability/Speed). Body LOCKED, 5 hooks DRAFT. |
+| 2026-02-17 | 031 | SF2: Persona×Value Driver Matrix (9×10). 5 hooks written. PG-wide buyer persona library. Editor notes trim rule. |
+| 2026-02-16 | 030 | Session log compressed 582→~170 lines. |
+| 2026-02-16 | 029 | SF2-0003: Source replaced, root angle "Best Gift"→"Brand Values". Commercial v1 written. 4 quality gates pass. |
+| 2026-02-16 | 028 | sf2-0001 → v2 (Christopher's GDoc final). Session ID convention established. |
+| 2026-02-16 | 027 | sf2-0001 reformatted to three-column production format. Google Doc MCP limitation confirmed. |

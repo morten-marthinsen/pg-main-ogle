@@ -1,0 +1,127 @@
+# Neco Project State — Machine-readable state for autonomous runner
+# Updated at end of each Neco session (interactive or autonomous)
+# Source of truth for: what's locked, what's in-progress, what's next
+#
+# STATUS VALUES:
+#   LOCKED      — Final version approved. No further work needed.
+#   DRAFTED     — Draft exists, awaiting human review.
+#   IN_PROGRESS — Active work underway (specify next_step).
+#   NOT_STARTED — ClickUp task exists but no Neco output yet.
+#
+# BLOCKED_BY VALUES:
+#   human_review    — Waiting for Christopher's read-through/approval
+#   dependency      — Blocked by another project or external input
+#   null            — Not blocked, eligible for autonomous work
+
+projects:
+
+  clst-influencer-brief:
+    product: "Click Stick (CLST)"
+    status: DRAFTED
+    version: v1
+    last_session: S034
+    deliverables:
+      - type: influencer-brief
+        file: "_projects/influencer-briefs/clst-influencer-creative-brief.md"
+        status: DRAFTED
+    next_step: "Christopher review → V2 edits (if any) → lock"
+    blocked_by: human_review
+    notes: "13 concepts (7 pain / 5 desire / 1 bonus) + 3 women-specific angles. SSP template structure. All angles from proven ad data. Template: ssp-influencer-creative-brief-template.md"
+
+  pgb-shortened-vsl:
+    product: "PGB (Performance Golf Ball)"
+    status: LOCKED
+    version: v8
+    last_session: S033
+    deliverables:
+      - type: vsl
+        file: "_projects/pgb-shortened-vsl/PGB-SHORTENED-VSL-SCRIPT-DRAFT.md"
+        status: LOCKED
+      - type: teleprompter
+        file: "_projects/pgb-shortened-vsl/PGB-VSL-V7-TELEPROMPTER.md"
+        status: LOCKED
+    next_step: null
+    blocked_by: null
+    notes: "PROJECT COMPLETE. V8 final (Christopher's final read-through). Teleprompter exported. GDoc transfer is manual."
+
+  sf2-0001:
+    product: "SF2 Driver"
+    status: LOCKED
+    version: v2
+    last_session: S029
+    deliverables:
+      - type: long-form-ad
+        file: "_projects/sf2-0001/sf2-0001-long-v1.md"
+        status: LOCKED
+    next_step: null
+    blocked_by: null
+    notes: "Pre-launch long-form video ad copy. V2 locked."
+
+  sf2-0002:
+    product: "SF2 Driver"
+    status: IN_PROGRESS
+    version: v4
+    last_session: S031
+    deliverables:
+      - type: body-copy
+        file: "_projects/sf2-0002/sf2-0002-body-v4-LOCKED.md"
+        status: LOCKED
+      - type: hooks
+        file: null  # Full copy not yet written
+        status: IN_PROGRESS
+    next_step: "Write 5 full hooks + editor notes into sf2-0002 (H1+H2 locked, H3+H4+H5 refined — full write pending). Voice: H1+H2=Christopher, H3+H4=ElevenLabs AIVO, H5=visual-only."
+    blocked_by: human_review
+    notes: "Body v4 LOCKED. 5 hooks approved from Persona x Value Driver Matrix. H1+H2 locked, H3+H4+H5 refined. Full copy write pending."
+
+  sf2-0003:
+    product: "SF2 Driver"
+    status: DRAFTED
+    version: v1
+    last_session: S029
+    deliverables:
+      - type: commercial
+        file: "_projects/sf2-0003/sf2-0003-commercial-v1.md"
+        status: DRAFTED
+    next_step: "Christopher beat-by-beat read-through of v1 → v2"
+    blocked_by: human_review
+    notes: "Brand Values commercial. V1 drafted, all 4 gates pass. Adapted from SF1-0003."
+
+  sf2-cross-reference:
+    product: "SF2 Driver"
+    status: NOT_STARTED
+    version: null
+    last_session: S031
+    deliverables: []
+    next_step: "Cross-reference audit (all 3 ads vs VSL + Andromeda coverage map)"
+    blocked_by: dependency  # Depends on sf2-0002 hooks + sf2-0003 v2
+    notes: "Planned in S031 but not started. Depends on sf2-0002 and sf2-0003 completion."
+
+  spd-video-ads:
+    product: "SpeedTrac (SPD)"
+    status: IN_PROGRESS
+    version: v1
+    last_session: S040
+    deliverables:
+      - type: angle-library
+        file: "_projects/spd-video-ads/spd-video-ad-angles.md"
+        status: REFERENCE_ONLY
+      - type: persona-workshop
+        file: "_projects/spd-video-ads/spd-persona-workshop.md"
+        status: LOCKED
+      - type: video-ad-scripts
+        file: null
+        status: NOT_STARTED
+    next_step: "Figma MCP integration (visual persona cards) → write 3 scripts x 5 hooks each"
+    blocked_by: null
+    notes: "5/5 personas LOCKED (Comeback King, Skeptical Equipment Veteran, First from the Fairway, The Plateau Prisoner, Accurate But Two Clubs Back). 3 body angles LOCKED: Category Killer, Strategic Intelligence (NEW), Age-Decline Reclamation. Script structure: 3 scripts x 5 persona hooks each. Figma MCP = P0 before scripts."
+
+# Shared assets (not projects, but referenced by runner for context)
+shared_assets:
+  - name: "SF2 Persona x Value Driver Matrix"
+    file: "_projects/sf2-persona-value-driver-matrix.md"
+    created: S031
+    notes: "9 personas, 10 value drivers. Reusable for all SF2 creative."
+  - name: "PG Buyer Persona Library"
+    file: "_reference/buyer-personas.md"
+    created: S031
+    notes: "5 DEEP personas, 4 BASELINE. Used across all products."
