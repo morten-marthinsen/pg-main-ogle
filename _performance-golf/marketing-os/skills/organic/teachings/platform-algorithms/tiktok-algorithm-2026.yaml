@@ -1,0 +1,186 @@
+# TIKTOK ALGORITHM TEACHING FILE
+# Extracted from 180 validated documents
+# Source: TikTok Agent Master Knowledge Base
+# Last Updated: March 2026
+
+meta:
+  platform: tiktok
+  document_count: 180
+  top_frameworks:
+    - Offer Stack (59 occurrences)
+    - 3-Second Hook (42 occurrences)
+    - Packaging (37 occurrences)
+    - Trend Adaptation (22 occurrences)
+    - Retention Curve (17 occurrences)
+    - Loop Ending (13 occurrences)
+  high_signal_sources:
+    - Social Media Marketing Strategy - TikTok Algorithm (score: 85.5)
+    - High Ticket TikTok Traffic - How to Go Viral (score: 74.05)
+    - Think Media 21 Video Tips (score: 69.75)
+    - 60-Second Short Form Video Framework (score: 69.1)
+
+algorithm_priorities:
+  primary_metric: watch_time_and_completion
+  core_principle: "TikTok tests content with small batches, promotes what performs"
+
+  ranking_signals:
+    tier_1_critical:
+      - watch_completion_rate:
+          weight: highest
+          description: "Percentage of video watched"
+          benchmark: "70%+ completion for viral potential"
+      - rewatch_rate:
+          weight: highest
+          description: "How many viewers loop the video"
+          benchmark: "Any significant rewatch = strong signal"
+      - share_rate:
+          weight: highest
+          description: "Shares to DMs, other platforms"
+          optimization: "Create 'tag a friend' moments"
+
+    tier_2_important:
+      - comment_rate:
+          weight: high
+          description: "Comments per view"
+          strategy: "Controversial takes, questions, incomplete info"
+      - like_rate:
+          weight: high
+          description: "Likes per view"
+          strategy: "Value delivery, emotional moments"
+      - follow_rate:
+          weight: medium_high
+          description: "New followers from video"
+          strategy: "Niche-specific value, authority positioning"
+
+    tier_3_supporting:
+      - profile_visits:
+          weight: medium
+          description: "Users clicking to profile"
+      - duet_stitch_use:
+          weight: medium
+          description: "Others using your content"
+      - save_rate:
+          weight: medium
+          description: "Bookmarks for later"
+
+distribution_mechanics:
+  for_you_page:
+    description: "Primary discovery mechanism"
+    batch_testing:
+      initial_batch: "200-500 users in your niche"
+      evaluation_metrics: "Watch time, shares, comments"
+      expansion: "If metrics strong, 1K, 10K, 100K+ batches"
+      timeline: "Can happen in hours or days"
+
+  content_pool:
+    new_accounts: "Equal opportunity in initial batches"
+    established_accounts: "Larger initial batches but same testing"
+    key_insight: "Every video is judged independently"
+
+  timing_patterns:
+    algorithm_activity: "Tests content in waves, not continuously"
+    patience_required: "Videos can resurface days later"
+    posting_frequency: "2-3x daily optimal for testing"
+
+content_optimization:
+  three_second_hook:
+    principle: "If you don't hook in 3 seconds, you've lost them"
+    hook_types:
+      pattern_interrupt: "Something unexpected visually/audibly"
+      curiosity_gap: "Open a question that demands an answer"
+      controversy: "Bold claim that triggers reaction"
+      transformation_tease: "Before/after preview"
+      direct_call: "'Stop scrolling if [you have X problem]'"
+
+    anti_patterns:
+      - "Long intros or greetings"
+      - "Explaining what you're about to say"
+      - "Slow build-up to the point"
+      - "Generic openers ('Hey guys')"
+
+  loop_ending:
+    principle: "Last frame connects to first, encourages rewatch"
+    techniques:
+      - "Visual loop (end position = start position)"
+      - "Audio loop (sentence continues)"
+      - "Question that sends back to start"
+      - "Abrupt cut that feels incomplete"
+
+  trend_adaptation:
+    principle: "Ride trends but add unique value"
+    execution:
+      - "Find trending sounds within first 48 hours"
+      - "Apply trend to your niche specifically"
+      - "Add unique twist or perspective"
+      - "Don't copy, translate to your audience"
+
+    trend_sources:
+      - "Discover page trending sounds"
+      - "Creative Center for business"
+      - "Competitor accounts"
+      - "Trending hashtags (use sparingly)"
+
+format_optimization:
+  video_specs:
+    aspect_ratio: "9:16 vertical only"
+    length_optimal: "15-30 seconds (sweet spot)"
+    length_max: "60 seconds for FYP eligibility"
+    resolution: "1080p minimum"
+
+  captions:
+    on_screen_text: "Essential for sound-off viewing"
+    font: "Large, high contrast"
+    timing: "Sync with speech, keep readable"
+
+  hashtags:
+    quantity: "3-5 targeted hashtags"
+    strategy: "Mix of niche + broad + trending"
+    avoid: "#fyp #foryou (no longer effective)"
+
+virality_patterns:
+  what_goes_viral:
+    - "Emotional triggers (humor, shock, inspiration)"
+    - "Relatable content ('this is so me')"
+    - "Educational in entertainment format"
+    - "Trend participation with twist"
+    - "Controversy or hot takes"
+    - "Satisfying or mesmerizing content"
+
+  viral_hook_patterns:
+    - "POV: [relatable situation]"
+    - "Things [experts] won't tell you about [topic]"
+    - "Watch until the end for [payoff]"
+    - "I've never told anyone this but..."
+    - "The [thing] that changed my [outcome]"
+    - "Reply to [comment] - [answer]"
+
+account_strategy:
+  new_account_optimization:
+    - "Complete profile with clear niche"
+    - "First 10 videos establish content type for algorithm"
+    - "Post 2-3x daily for first month"
+    - "Engage heavily in comments"
+    - "Don't cross-post with watermarks"
+
+  growth_tactics:
+    - "Comment strategy on larger accounts"
+    - "Duet/stitch trending content in niche"
+    - "Reply to comments with videos"
+    - "Collaborate with similar-sized accounts"
+
+anti_patterns:
+  what_kills_tiktoks:
+    - "Slow hooks (lost in first 3 seconds)"
+    - "Overproduced content (feels inauthentic)"
+    - "Cross-posting Instagram Reels with watermark"
+    - "Posting once a day or less (algorithm forgets)"
+    - "Ignoring trends entirely"
+    - "Talking at camera without visual interest"
+
+application_to_engine:
+  skill_mappings:
+    S02_platform_strategy: "Plan for 2-3x daily posting cadence"
+    S06_virality_scoring: "Weight hook strength and loop potential"
+    S09_short_form_script: "Apply 3-second hook framework"
+    S15_scheduling: "Batch testing timing considerations"
+    S18_repurpose: "TikTok-first then adapt to other platforms"

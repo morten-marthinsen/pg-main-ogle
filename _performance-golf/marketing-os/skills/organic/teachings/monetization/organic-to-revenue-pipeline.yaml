@@ -1,0 +1,1261 @@
+# =============================================================================
+# ORGANIC-TO-REVENUE PIPELINE — SYNTHESIS TEACHING FILE
+# =============================================================================
+# Source Authorities:
+#   - Alex Hormozi ($100M Leads + $100M Offers + $100M Money Models)
+#   - Russell Brunson (Traffic Secrets + DotCom Secrets)
+#   - Sabri Suby (Sell Like Crazy)
+#
+# Purpose: Complete system architecture for converting organic content into
+#          predictable, scalable revenue without paid advertising
+#
+# Cross-references:
+#   - hormozi-100m-leads.yaml (Core Four, warm outreach, lead magnets)
+#   - hormozi-100m-offers.yaml (Value Equation, Grand Slam Offers)
+#   - hormozi-100m-money-models.yaml (offer sequencing, money models)
+#   - brunson-traffic-secrets.yaml (Dream 100, traffic types, platform strategy)
+#   - brunson-dotcom-secrets.yaml (Value Ladder, Attractive Character, funnels)
+#   - suby-sell-like-crazy.yaml (SELL System, dream buyer, Godfather Offer)
+#   - content-funnel-framework.yaml (TOFU/MOFU/BOFU stage mapping)
+# =============================================================================
+
+meta:
+  id: organic-to-revenue-pipeline
+  title: "Organic-to-Revenue Pipeline"
+  type: synthesis
+  source_authorities: [Hormozi, Brunson, Suby]
+  source_books:
+    - "$100M Leads by Alex Hormozi"
+    - "$100M Offers by Alex Hormozi"
+    - "$100M Money Models by Alex Hormozi"
+    - "Traffic Secrets by Russell Brunson"
+    - "DotCom Secrets by Russell Brunson"
+    - "Sell Like Crazy by Sabri Suby"
+  version: "1.0"
+  created: "2026-03-04"
+  skill_mappings: [S04, S07, S14, S21, S24]
+  core_thesis: >
+    Organic content is not a brand-building exercise — it is an acquisition
+    engine. Every post is an ad you do not pay for. The system works when
+    content creates leads, leads enter a value ladder, the value ladder
+    ascends them through offers engineered with the Value Equation, and
+    each rung funds the next. Hormozi provides the offer architecture and
+    lead mechanics. Brunson provides the funnel sequencing and traffic
+    ownership model. Suby provides the dream buyer targeting and the
+    psychological selling phases. Together they form a single pipeline:
+    Content → Lead → Offer → Sale → Retention → Referral → Compound Growth.
+
+# =============================================================================
+# SECTION 1: FRAMEWORKS — THE ORGANIC REVENUE ARCHITECTURE
+# =============================================================================
+
+frameworks:
+
+  # ---------------------------------------------------------------------------
+  # F1: THE ORGANIC REVENUE ARCHITECTURE (Master Framework)
+  # ---------------------------------------------------------------------------
+  organic_revenue_architecture:
+    name: "The Organic Revenue Architecture"
+    synthesis: "Hormozi Core Four + Brunson Value Ladder + Suby SELL System"
+    principle: >
+      Revenue from organic content follows a predictable architecture with
+      seven stages. Skip a stage and the pipeline leaks. Optimize each
+      stage sequentially — upstream fixes solve downstream problems.
+
+    seven_stages:
+      stage_1_attention:
+        label: "Capture Attention"
+        source_authority: "Suby — Phase 1 (Understand & Identify Dream Buyer)"
+        function: "Stop the scroll for the RIGHT people"
+        organic_mechanism: "Hook-optimized content targeting dream buyer pain points"
+        key_metric: "Qualified impressions (reach among ICP, not vanity reach)"
+        content_types:
+          - "Pattern-interrupt hooks addressing specific pain"
+          - "Contrarian takes that filter for your market"
+          - "Trend-jacking with niche relevance"
+          - "Curiosity-gap headlines from Suby's Halo Strategy"
+        hormozi_alignment: "Hook component of Hook-Retain-Reward"
+        brunson_alignment: "Dream 100 earned media — appearing where your audience congregates"
+        suby_alignment: "Phase 2 — Catch attention with high-value content, Halo Strategy"
+
+      stage_2_engagement:
+        label: "Earn Engagement"
+        source_authority: "Hormozi — Retain component + Give:Ask ratio"
+        function: "Convert passive viewers into active engagers"
+        organic_mechanism: "Value-dense content that earns saves, shares, comments, follows"
+        key_metric: "Engagement rate among new audience (not existing followers)"
+        content_types:
+          - "Educational frameworks they screenshot or save"
+          - "Stories that trigger mirror neuron identification"
+          - "Polarizing positions that force a stance"
+          - "Series content that builds return-viewing habits"
+        hormozi_alignment: "Give phase of Give:Ask ratio (3.5:1 minimum, 10:1 ideal)"
+        brunson_alignment: "Attractive Character origin story and belief-building"
+        suby_alignment: "Phase 3 — Capture leads with Godfather Offer positioning"
+
+      stage_3_lead_capture:
+        label: "Capture the Lead"
+        source_authority: "Hormozi — Lead Magnets 7-Step Framework"
+        function: "Move followers from rented platform to owned audience"
+        organic_mechanism: "Lead magnets promoted through content CTAs"
+        key_metric: "Lead capture rate (leads per 1,000 followers)"
+        content_types:
+          - "Content that demonstrates expertise, then offers deeper resource"
+          - "DM-trigger posts (comment keyword for automation)"
+          - "Story-based CTAs linking to lead magnets"
+          - "Bio link funnels converting profile visitors"
+        hormozi_alignment: "Lead magnet solves narrow problem completely, quality test: would they pay for it"
+        brunson_alignment: "Front-end funnel — free + shipping, squeeze page, or tripwire"
+        suby_alignment: "Phase 3 — Godfather Offer as irresistible lead magnet"
+
+      stage_4_nurture:
+        label: "Nurture to Trust"
+        source_authority: "Brunson — Attractive Character + Soap Opera Sequence"
+        function: "Build relationship and buying belief before the offer"
+        organic_mechanism: "Email sequences + continued organic content creating omnipresence"
+        key_metric: "Email open rate, reply rate, content-to-email cross-engagement"
+        content_types:
+          - "Email: Soap Opera Sequence (5-email narrative arc)"
+          - "Email: Seinfeld Sequence (ongoing entertainment + value)"
+          - "Organic: Behind-the-scenes and vulnerability content"
+          - "Organic: Case studies and proof stacking"
+        hormozi_alignment: "Perceived Likelihood driver — proof compounds trust over time"
+        brunson_alignment: "Attractive Character backstory, parables, character flaws, polarity"
+        suby_alignment: "Phase 4 — Godfather Offer + Phase 5 — Magic Lantern Technique"
+
+      stage_5_conversion:
+        label: "Present the Offer"
+        source_authority: "Hormozi — Value Equation + Grand Slam Offer"
+        function: "Convert nurtured leads into paying customers"
+        organic_mechanism: "Offer content that makes buying the obvious next step"
+        key_metric: "Conversion rate from engaged lead to customer"
+        content_types:
+          - "Direct offer posts with full Value Equation stack"
+          - "Case study content proving the dream outcome"
+          - "Testimonial and transformation content"
+          - "Scarcity and urgency content (enrollment windows, cohort caps)"
+        hormozi_alignment: "Grand Slam Offer — category of one, price-to-value discrepancy so large buying is obvious"
+        brunson_alignment: "Stack Slide — enumerate all value, then reveal price"
+        suby_alignment: "Phase 6 — Convert with Intimate Selling + Phase 7 — Double lifetime value"
+
+      stage_6_ascension:
+        label: "Ascend Through Value Ladder"
+        source_authority: "Brunson — Value Ladder + Hormozi Money Models"
+        function: "Increase customer lifetime value through sequential offers"
+        organic_mechanism: "Content creates desire for next-level transformation"
+        key_metric: "Average revenue per customer (ARPC) and ascension rate"
+        content_types:
+          - "Content showing results only achievable at next tier"
+          - "Student/client spotlight at premium level"
+          - "Behind-the-scenes of premium experience"
+          - "Waitlist and application content for high-ticket"
+        hormozi_alignment: "Money Model — make more from one customer than it costs to acquire many"
+        brunson_alignment: "Value Ladder rungs: free → front-end → middle → back-end → continuity"
+        suby_alignment: "Phase 7 — Increase lifetime value, Phase 8 — Referral multiplier"
+
+      stage_7_referral_compound:
+        label: "Activate Referral Engine"
+        source_authority: "Hormozi — Lead Getters + Brunson Dream 100"
+        function: "Customers become lead generators — growth compounds"
+        organic_mechanism: "Customer content, testimonials, and referral programs"
+        key_metric: "Referrals per customer and viral coefficient"
+        content_types:
+          - "Customer-generated content and testimonials"
+          - "Referral program announcements and incentives"
+          - "Community showcase content"
+          - "Co-created content with successful customers"
+        hormozi_alignment: "Referral Growth Equation — referrals must exceed churn"
+        brunson_alignment: "Dream 100 — your best customers become your Dream 100"
+        suby_alignment: "Phase 8 — Automate and multiply through systematic referral"
+
+    pipeline_math:
+      example_scenario:
+        monthly_content_pieces: 60
+        average_reach_per_piece: 5000
+        total_impressions: 300000
+        qualified_impression_rate: "30% (ICP match)"
+        qualified_impressions: 90000
+        engagement_rate: "5% of qualified"
+        engagers: 4500
+        follow_rate: "10% of engagers"
+        new_followers: 450
+        lead_capture_rate: "8% of new followers"
+        leads_captured: 36
+        nurture_to_offer_rate: "40%"
+        leads_seeing_offer: 14
+        conversion_rate: "15%"
+        new_customers: 2
+        average_order_value: "$997"
+        monthly_organic_revenue: "$1,994"
+        with_ascension_and_retention: "$3,500-$6,000"
+      scaling_note: >
+        These are conservative first-90-day numbers. Content compounds.
+        At 12 months with consistent output, multiply qualified impressions
+        by 5-10x as back-catalog continues generating reach. $20K-$60K+
+        monthly organic revenue becomes achievable without any paid spend.
+
+  # ---------------------------------------------------------------------------
+  # F2: CONTENT-TO-LEAD CONVERSION FRAMEWORK
+  # ---------------------------------------------------------------------------
+  content_to_lead_conversion:
+    name: "Content-to-Lead Conversion Framework"
+    synthesis: "Hormozi Hook-Retain-Reward + Suby Halo Strategy + Brunson Squeeze Funnel"
+    principle: >
+      Every piece of organic content has a conversion job. That job is NOT
+      always to generate a lead directly. Most content earns the right to
+      ask by giving value first. The framework maps each content type to
+      its conversion function and the mechanism that turns attention into
+      a contact you own.
+
+    three_conversion_pathways:
+      pathway_1_direct_capture:
+        description: "Content that directly asks for the lead"
+        frequency: "10-15% of content"
+        mechanism: "CTA to lead magnet, DM keyword trigger, bio link"
+        hormozi_method: "Integrated ask — weave offer naturally into content"
+        brunson_method: "Squeeze page — single page, single action, single focus"
+        suby_method: "Godfather Offer — value so high refusal feels foolish"
+        content_examples:
+          - "Post teaching 3 of 7 steps, CTA for full framework PDF"
+          - "Carousel ending with 'Comment SYSTEM for the complete playbook'"
+          - "Reel demonstrating result, CTA to free training that shows how"
+        optimization_levers:
+          - "Specificity of promise in CTA"
+          - "Perceived effort to claim (lower is better)"
+          - "Value demonstration before the ask"
+          - "Social proof adjacent to CTA (testimonials in comments)"
+
+      pathway_2_indirect_capture:
+        description: "Content that builds desire, then the bio/profile converts"
+        frequency: "40-50% of content"
+        mechanism: "Viewer visits profile after valuable content, bio link converts"
+        hormozi_method: "Give phase — pure value that compounds authority"
+        brunson_method: "Attractive Character — content makes them want more of YOU"
+        suby_method: "Halo Strategy — becoming omnipresent thought leader in niche"
+        content_examples:
+          - "Deep educational content with no explicit CTA"
+          - "Contrarian take that sparks conversation"
+          - "Personal story that builds parasocial connection"
+        optimization_levers:
+          - "Profile/bio optimization (clear offer, single link)"
+          - "Pinned content that converts profile visitors"
+          - "Content quality that triggers profile visits"
+
+      pathway_3_community_capture:
+        description: "Content that builds community, community generates leads"
+        frequency: "20-30% of content"
+        mechanism: "Engagement creates conversations, conversations become leads"
+        hormozi_method: "Warm outreach — content engagers are warm leads"
+        brunson_method: "Earned traffic — community members share with their audience"
+        suby_method: "Dream buyer congregation — gathering your people"
+        content_examples:
+          - "Question-based posts that generate comment discussions"
+          - "Polls and debates that reveal buyer intent"
+          - "Challenge or series content that creates cohort effect"
+        optimization_levers:
+          - "Response speed to comments (within 60 minutes)"
+          - "DM follow-up with engaged commenters"
+          - "Content that identifies buyer intent (asking questions about problems you solve)"
+
+    lead_quality_hierarchy:
+      tier_1_highest:
+        source: "DM conversations initiated by the lead"
+        conversion_rate: "25-40%"
+        reason: "Self-selected interest, personal connection established"
+      tier_2_high:
+        source: "Comment keyword triggers (lead requests resource)"
+        conversion_rate: "15-25%"
+        reason: "Active engagement, public commitment to interest"
+      tier_3_medium:
+        source: "Bio link clicks from content"
+        conversion_rate: "8-15%"
+        reason: "Passive interest, less commitment"
+      tier_4_standard:
+        source: "Landing page opt-in from external link"
+        conversion_rate: "3-8%"
+        reason: "Platform transition friction, lower trust"
+
+  # ---------------------------------------------------------------------------
+  # F3: THE ORGANIC VALUE LADDER
+  # ---------------------------------------------------------------------------
+  organic_value_ladder:
+    name: "The Organic Value Ladder"
+    synthesis: "Brunson Value Ladder + Hormozi Money Model + Suby Lifetime Value Maximization"
+    principle: >
+      The value ladder is the revenue backbone. Each rung solves a progressively
+      deeper problem at a progressively higher price. Organic content exists to
+      move people UP the ladder — never to sell a single product in isolation.
+      The ladder must be designed so that the front-end funds acquisition and
+      the back-end generates profit. Brunson's architecture, Hormozi's pricing
+      psychology, and Suby's lifetime value multiplication combine into one system.
+
+    five_rungs:
+      rung_1_free_content:
+        price: "$0"
+        purpose: "Demonstrate expertise, build trust, generate leads"
+        value_delivered: "Education, entertainment, identity, connection"
+        content_function: "Proves you can help — creates desire for more"
+        examples:
+          - "Social media posts (educational frameworks)"
+          - "YouTube videos (deep-dive tutorials)"
+          - "Podcast episodes (stories + methodology)"
+          - "Blog articles (SEO-driven evergreen content)"
+        ascension_trigger: >
+          Content consistently delivers value until the viewer thinks:
+          "If the free stuff is this good, the paid stuff must be incredible."
+        hormozi_note: "This is the Give phase — 3.5:1 to 10:1 give-to-ask ratio"
+        brunson_note: "Attractive Character content — backstory, parables, flaws, polarity"
+        suby_note: "Halo Strategy — become the most visible, valuable voice in your niche"
+
+      rung_2_lead_magnet:
+        price: "$0 (exchange: email/phone)"
+        purpose: "Capture contact info, prove capability, create first micro-commitment"
+        value_delivered: "Specific solution to narrow problem — quick win"
+        content_function: "Bridge between free content and paid offer"
+        examples:
+          - "PDF cheatsheet or checklist"
+          - "Free mini-course (3-5 video lessons)"
+          - "Assessment or quiz with personalized results"
+          - "Template or swipe file"
+          - "Free chapter or book excerpt"
+        ascension_trigger: >
+          Lead magnet solves one problem so well they realize they have
+          a bigger problem that requires the core offer.
+        hormozi_note: "Complete solution to narrow problem — would they pay for it? If yes, it qualifies"
+        brunson_note: "Free + shipping offer or squeeze page — single action, no distractions"
+        suby_note: "Godfather Offer — so valuable refusal is irrational"
+
+      rung_3_core_offer:
+        price: "$97-$997"
+        purpose: "Primary revenue generator, comprehensive transformation"
+        value_delivered: "Complete system or solution to their central problem"
+        content_function: "Offer content demonstrates the transformation gap"
+        examples:
+          - "Digital course ($197-$497)"
+          - "Group program ($497-$997)"
+          - "Book + upsell bundle ($27 + $197 order bump)"
+          - "Workshop or intensive ($97-$497)"
+        ascension_trigger: >
+          Core offer delivers results that reveal the need for
+          personalized guidance or done-with-you support.
+        hormozi_note: "Grand Slam Offer — Value Equation maximized, guarantee stacked, bonuses eclipse core value"
+        brunson_note: "Mid-tier Value Ladder rung — this is the funnel's primary monetization point"
+        suby_note: "Phase 6 conversion — intimate selling through demonstration of value"
+
+      rung_4_premium:
+        price: "$2,000-$25,000+"
+        purpose: "Deep transformation, high-touch, maximum revenue per customer"
+        value_delivered: "Done-with-you or done-for-you — personalized results"
+        content_function: "Showcase premium client results, application-based scarcity"
+        examples:
+          - "1:1 coaching ($2,000-$10,000)"
+          - "Mastermind ($5,000-$25,000)"
+          - "Done-for-you service ($3,000-$50,000)"
+          - "VIP intensive ($2,000-$10,000)"
+        ascension_trigger: >
+          Premium results create advocates who generate referrals
+          and content proof for the entire ladder.
+        hormozi_note: "Charge premium — clients who pay more get better results, require less support, refer more"
+        brunson_note: "Back-end of Value Ladder — where real profit lives"
+        suby_note: "Phase 7 — maximize lifetime value through premium offerings"
+
+      rung_5_continuity:
+        price: "$29-$497/month"
+        purpose: "Predictable recurring revenue, ongoing relationship, compounding LTV"
+        value_delivered: "Community, ongoing support, updated resources, accountability"
+        content_function: "Content shows community wins, creates belonging desire"
+        examples:
+          - "Membership community ($29-$97/month)"
+          - "Subscription toolkit ($19-$49/month)"
+          - "Ongoing coaching group ($197-$497/month)"
+          - "SaaS or software ($29-$299/month)"
+        ascension_trigger: >
+          Continuity creates long-term relationship where cross-sells,
+          event invitations, and referral programs compound lifetime value.
+        hormozi_note: "Money Model — 30-day payback period; continuity must fund acquisition within first month"
+        brunson_note: "Continuity programs are the secret to business valuation — predictable recurring revenue"
+        suby_note: "Phase 7 and 8 — ongoing value creates referral multiplication"
+
+    ladder_economics:
+      principle: "Front-end breaks even on acquisition. Back-end is pure profit."
+      example:
+        lead_magnet_cost: "$0 (organic content = free distribution)"
+        core_offer_revenue: "$297"
+        cost_of_content_per_customer: "$50 (time invested in content that acquired them)"
+        front_end_profit: "$247"
+        ascension_rate_to_premium: "10-15%"
+        premium_revenue_per_ascender: "$5,000"
+        continuity_ltv_12_months: "$564"
+        blended_revenue_per_customer: "$1,250-$2,000"
+        organic_advantage: "Zero ad spend means front-end is already profitable"
+
+  # ---------------------------------------------------------------------------
+  # F4: LEAD MAGNET ENGINEERING FOR ORGANIC
+  # ---------------------------------------------------------------------------
+  lead_magnet_engineering:
+    name: "Lead Magnet Engineering for Organic Distribution"
+    synthesis: "Hormozi 7-Step Lead Magnet + Brunson Squeeze Funnel + Suby Godfather Offer"
+    principle: >
+      Lead magnets distributed organically face different constraints than
+      paid-traffic lead magnets. There is no landing page cold traffic hits.
+      Instead, the content itself must create desire for the lead magnet,
+      and the delivery mechanism must feel native to the platform. The best
+      organic lead magnets are extensions of content the audience already values.
+
+    design_criteria:
+      criterion_1_content_congruent:
+        rule: "The lead magnet must be the logical next step from your best-performing content"
+        method: "Audit top 10 performing posts. Identify the theme. Build a lead magnet that goes deeper."
+        hormozi_source: "Solve a narrow problem completely"
+        example: "Top posts are about email subject lines → Lead magnet: '50 Proven Subject Lines That Get 40%+ Open Rates'"
+
+      criterion_2_platform_native_delivery:
+        rule: "Deliver through the platform whenever possible — minimize friction"
+        methods:
+          dm_delivery: "Comment keyword → Auto-DM with resource link"
+          story_delivery: "Story link sticker → Direct to hosted resource"
+          bio_link: "Optimized link-in-bio with single clear CTA"
+          carousel_itself: "The carousel IS the lead magnet — save/share as the action"
+        friction_hierarchy:
+          lowest: "DM automation (stays in-platform)"
+          low: "Story link (one tap)"
+          medium: "Bio link (navigate to profile, then click)"
+          highest: "External landing page (leave platform entirely)"
+
+      criterion_3_instant_value:
+        rule: "Value must be experienced within 5 minutes of claiming"
+        suby_source: "Godfather Offer — the value must be so immediate and obvious refusal is irrational"
+        bad_examples:
+          - "10-module course (too much commitment before value)"
+          - "60-page ebook (nobody reads them)"
+          - "Webinar replay (requires 60+ minutes)"
+        good_examples:
+          - "1-page cheatsheet (scans in 30 seconds)"
+          - "5-step checklist (actionable immediately)"
+          - "Calculator or quiz (instant personalized result)"
+          - "3-minute video showing the exact process"
+
+      criterion_4_creates_problem_awareness:
+        rule: "The lead magnet should reveal a problem only your paid offer solves"
+        hormozi_source: "Three types — reveal problems, samples/trials, one step of multi-step"
+        brunson_source: "Front-end of Value Ladder — creates desire for the next rung"
+        implementation: >
+          The lead magnet gives them a win AND shows them the gap between
+          where they are and where they could be. The paid offer closes that gap.
+
+    organic_lead_magnet_types:
+      type_1_framework_extract:
+        description: "Pull one framework from your paid offer, give it free"
+        organic_promotion: "Teach the framework in content, offer downloadable version"
+        conversion_mechanism: "They use framework, get partial result, want the full system"
+        example: "Content teaches 'The 3-Part Hook Formula' → Lead magnet is the complete Hook Swipe File"
+
+      type_2_diagnostic:
+        description: "Quiz, assessment, or audit that reveals their current state"
+        organic_promotion: "Post results and patterns you see ('80% of creators make this mistake...')"
+        conversion_mechanism: "Results reveal gap, paid offer is the bridge"
+        example: "Social Media Revenue Readiness Quiz → Score reveals what to fix → Paid course fixes it"
+
+      type_3_resource_library:
+        description: "Curated collection of templates, swipes, or tools"
+        organic_promotion: "Share individual templates in content, CTA for full library"
+        conversion_mechanism: "Library proves depth of expertise, creates reciprocity"
+        example: "'Comment SWIPE for my 200+ caption templates library'"
+
+      type_4_mini_training:
+        description: "3-5 short videos solving one specific problem"
+        organic_promotion: "Share clips and results from the training"
+        conversion_mechanism: "Training delivers win, final video presents core offer"
+        example: "3-Day DM Sales Challenge (video 1: mindset, video 2: scripts, video 3: follow-up → core offer)"
+
+      type_5_community_access:
+        description: "Free entry to private community with gated premium"
+        organic_promotion: "Share community wins and discussions publicly"
+        conversion_mechanism: "Community creates belonging, premium tier becomes obvious upgrade"
+        example: "Free Slack/Discord community → Premium channel with weekly coaching calls"
+
+  # ---------------------------------------------------------------------------
+  # F5: CONTENT FUNNEL MAPPING
+  # ---------------------------------------------------------------------------
+  content_funnel_mapping:
+    name: "Content Funnel Mapping — TOFU/MOFU/BOFU to Revenue"
+    synthesis: "Brunson Funnel Architecture + Hormozi Give:Ask + Suby SELL Phases"
+    principle: >
+      Every piece of content serves one of three funnel positions. The ratio
+      between positions determines revenue efficiency. Too much TOFU creates
+      audience without buyers. Too much BOFU creates sales pressure without
+      trust. The balance drives predictable revenue.
+
+    funnel_positions:
+      tofu_top_of_funnel:
+        purpose: "Attract new qualified audience"
+        content_ratio: "40-50% of total output"
+        suby_sell_phase: "Phase 1-2 (Identify Dream Buyer + Capture Attention)"
+        brunson_traffic_type: "Earned traffic — new eyeballs discovering you"
+        hormozi_function: "Hook — stop the scroll for the right people"
+        content_characteristics:
+          - "Broad appeal within niche (accessible to beginners)"
+          - "High shareability (others share to look smart or helpful)"
+          - "Algorithm-optimized (trending formats, sounds, structures)"
+          - "Identity-based (viewer self-selects: 'this is for me')"
+        content_formats:
+          - "Trend-jacked reels with niche perspective"
+          - "Controversial or contrarian takes"
+          - "List posts ('7 things nobody tells you about X')"
+          - "Story-based content with universal emotional hooks"
+          - "Quick tips and hacks (high save rate)"
+        success_metrics:
+          - "Reach and impressions"
+          - "New follower rate"
+          - "Profile visit rate"
+          - "Share rate"
+        revenue_function: "Fills the top of the pipeline — no direct revenue, feeds everything below"
+
+      mofu_middle_of_funnel:
+        purpose: "Deepen relationship, build trust, create buying belief"
+        content_ratio: "30-40% of total output"
+        suby_sell_phase: "Phase 3-5 (Capture Leads + Godfather Offer + Magic Lantern)"
+        brunson_traffic_type: "Controlled traffic — followers you can reach consistently"
+        hormozi_function: "Retain + Reward — keep attention and deliver dense value"
+        content_characteristics:
+          - "Deeper education (frameworks, processes, methodologies)"
+          - "Proof stacking (case studies, behind-the-scenes, results)"
+          - "Personality-driven (Attractive Character elements)"
+          - "Relationship-building (vulnerability, stories, Q&A)"
+        content_formats:
+          - "Educational carousels with proprietary frameworks"
+          - "Long-form YouTube or podcast content"
+          - "Story sequences showing daily operations"
+          - "Live sessions and Q&A"
+          - "Detailed case study breakdowns"
+        success_metrics:
+          - "Save rate (indicates perceived value)"
+          - "Comment depth (thoughtful responses vs. emoji)"
+          - "DM volume (relationship indicator)"
+          - "Email list growth (lead capture)"
+          - "Return viewer rate"
+        revenue_function: "Converts strangers to leads and leads to believers — the trust engine"
+
+      bofu_bottom_of_funnel:
+        purpose: "Convert believers into buyers"
+        content_ratio: "10-20% of total output"
+        suby_sell_phase: "Phase 6-7 (Convert + Maximize Lifetime Value)"
+        brunson_traffic_type: "Owned traffic — email list, community, past buyers"
+        hormozi_function: "Ask phase — clear CTA with stacked value"
+        content_characteristics:
+          - "Direct offer presentation with Value Equation"
+          - "Objection handling through content"
+          - "Social proof heavy (testimonials, transformation)"
+          - "Scarcity and urgency elements"
+          - "Clear, specific call-to-action"
+        content_formats:
+          - "Offer announcement posts with full value stack"
+          - "Testimonial compilations"
+          - "Before/after transformation content"
+          - "FAQ content addressing buying objections"
+          - "Enrollment/launch content with deadlines"
+          - "DM conversation starters for sales"
+        success_metrics:
+          - "Click-through rate to offer"
+          - "DM inquiries about offer"
+          - "Application or booking rate"
+          - "Conversion rate"
+          - "Revenue attributed to content"
+        revenue_function: "Direct revenue generation — the monetization layer"
+
+    weekly_content_calendar:
+      monday: "MOFU — Framework or methodology post (builds authority)"
+      tuesday: "TOFU — Trend-responsive or shareable content (reaches new people)"
+      wednesday: "MOFU — Case study or proof content (deepens trust)"
+      thursday: "TOFU — Contrarian or opinion content (attracts attention)"
+      friday: "BOFU — Offer or CTA content (captures revenue)"
+      saturday: "MOFU — Personal story or community content (builds connection)"
+      sunday: "TOFU — Big idea or thought leadership (builds brand)"
+
+# =============================================================================
+# SECTION 2: MECHANISMS — HOW THE PIPELINE WORKS
+# =============================================================================
+
+mechanisms:
+
+  # ---------------------------------------------------------------------------
+  # M1: WARM AUDIENCE MONETIZATION
+  # ---------------------------------------------------------------------------
+  warm_audience_monetization:
+    name: "Warm Audience Monetization Engine"
+    synthesis: "Hormozi Warm Outreach + Brunson Attractive Character + Suby Intimate Selling"
+    principle: >
+      Your organic audience is NOT cold traffic. They have consumed your
+      content, formed opinions about you, and built parasocial trust. Selling
+      to warm audiences requires different mechanics than cold traffic funnels.
+      The sale often happens in DMs, comments, or replies — not landing pages.
+
+    warm_vs_cold_selling:
+      cold_traffic_approach:
+        trust_level: "Zero — must establish everything from scratch"
+        mechanism: "Long-form sales page, VSL, webinar funnel"
+        timeline: "Hours to days in a funnel"
+        conversion_rate: "1-3% typical"
+        cost: "Paid — ad spend per lead"
+
+      warm_audience_approach:
+        trust_level: "Pre-built through content consumption"
+        mechanism: "Content → DM conversation → offer → sale"
+        timeline: "Minutes to hours (trust already exists)"
+        conversion_rate: "5-25% of engaged leads"
+        cost: "Free — content is the acquisition engine"
+
+    five_warm_monetization_methods:
+      method_1_content_to_dm_pipeline:
+        description: "Content creates interest, DM conversation closes the sale"
+        process:
+          step_1: "Post content that demonstrates expertise and results"
+          step_2: "Include CTA that invites DM engagement ('DM me X for...')"
+          step_3: "Qualified leads self-select by initiating conversation"
+          step_4: "Use ACA framework (Acknowledge, Compliment, Ask) to open"
+          step_5: "Diagnose their situation, present offer as solution"
+          step_6: "Handle objections, close or schedule call"
+        hormozi_alignment: "Warm outreach 10-step system applied to content engagers"
+        conversion_benchmark: "15-25% of DM conversations to sale"
+
+      method_2_launch_sequence:
+        description: "Build anticipation through content, open enrollment window"
+        process:
+          step_1: "Seed phase (2-4 weeks) — content around the problem your offer solves"
+          step_2: "Tease phase (1-2 weeks) — reveal you have something coming"
+          step_3: "Launch phase (3-7 days) — open enrollment with scarcity"
+          step_4: "Close phase (24-48 hours) — urgency and final push"
+        brunson_alignment: "Product launch funnel — whisper, tease, shout sequence"
+        suby_alignment: "Phase 6 — converting with intimate selling through content"
+        conversion_benchmark: "2-5% of followers during launch window"
+
+      method_3_evergreen_content_funnel:
+        description: "Always-on content that continuously feeds leads to an offer"
+        process:
+          step_1: "Create pillar content (long-form, evergreen, SEO-optimized)"
+          step_2: "Each piece includes CTA to lead magnet"
+          step_3: "Lead magnet triggers email nurture sequence"
+          step_4: "Nurture sequence presents core offer"
+          step_5: "Retargeting content keeps offer visible to leads"
+        brunson_alignment: "Evergreen funnel — always running, always converting"
+        conversion_benchmark: "1-3% of content viewers to lead, 5-15% of leads to customer"
+
+      method_4_story_selling:
+        description: "Using Instagram/Facebook Stories as a daily selling mechanism"
+        process:
+          step_1: "Daily story sequence: lifestyle → lesson → proof → CTA"
+          step_2: "Create reply triggers (polls, questions, sliders)"
+          step_3: "Reply-to-DM flow — story replies become sales conversations"
+          step_4: "Link stickers to offers during key moments"
+        suby_alignment: "Magic Lantern Technique — sequential content that builds buying desire"
+        conversion_benchmark: "3-8% of story viewers engage, 10-20% of engagers convert"
+
+      method_5_community_monetization:
+        description: "Free community generates leads, premium tier generates revenue"
+        process:
+          step_1: "Build free community (Discord, Facebook Group, Skool)"
+          step_2: "Deliver genuine value — Q&A, resources, peer support"
+          step_3: "Premium tier for deeper access, coaching, accountability"
+          step_4: "Community members become affiliates and referral sources"
+        hormozi_alignment: "Lead Getter model — community members refer others"
+        conversion_benchmark: "5-15% of free community upgrades to paid"
+
+  # ---------------------------------------------------------------------------
+  # M2: OFFER-CONTENT ALIGNMENT
+  # ---------------------------------------------------------------------------
+  offer_content_alignment:
+    name: "Offer-Content Alignment Matrix"
+    synthesis: "Hormozi Value Equation + Brunson Attractive Character + Suby Dream Buyer"
+    principle: >
+      Content and offers must share the same DNA. If your content teaches
+      productivity but your offer is about marketing, conversion collapses.
+      The content must make the offer feel like the inevitable next step,
+      not a pivot. Alignment happens across four dimensions.
+
+    four_alignment_dimensions:
+      dimension_1_problem_alignment:
+        rule: "Content discusses the SAME problems your offer solves"
+        bad_example: "Content about mindset, offer about Facebook ads"
+        good_example: "Content about getting clients, offer is a client acquisition system"
+        implementation: >
+          List every problem your offer solves. Each week, create content
+          about one of those problems. The content shows the problem exists
+          and hints at the solution. The offer IS the complete solution.
+
+      dimension_2_identity_alignment:
+        rule: "Content attracts the SAME identity as your buyer avatar"
+        brunson_source: "Attractive Character must appeal to dream customer"
+        suby_source: "Dream Buyer avatar — content must speak their language"
+        implementation: >
+          Define your dream buyer's self-image. Create content that
+          reinforces that identity. People buy from those who understand
+          who they are and who they want to become.
+
+      dimension_3_methodology_alignment:
+        rule: "Content demonstrates the SAME methodology your offer teaches in full"
+        hormozi_source: "One step of multi-step — give step 1 free, sell the remaining steps"
+        implementation: >
+          Your content teaches individual principles from your methodology.
+          Your offer is the complete methodology with implementation support.
+          Each content piece is a sample of the paid experience.
+
+      dimension_4_proof_alignment:
+        rule: "Content proof and offer proof reinforce each other"
+        implementation: >
+          Case studies in content should feature clients who used your offer.
+          Results shown in content should match results promised by your offer.
+          Testimonials should bridge between free content value and paid offer value.
+
+    content_theme_to_offer_mapping:
+      framework_content:
+        content_theme: "Teaching proprietary frameworks"
+        aligned_offer: "Course or program that implements the full framework"
+        cta_bridge: "'I teach the first 3 steps here. The full 12-step system is in [offer].'"
+
+      problem_agitation_content:
+        content_theme: "Identifying and agitating a specific problem"
+        aligned_offer: "Solution product that eliminates the problem"
+        cta_bridge: "'This is why most fail. Here is exactly how to fix it → [offer].'"
+
+      behind_the_scenes_content:
+        content_theme: "Showing your process, tools, results"
+        aligned_offer: "Done-with-you or coaching where they get your process"
+        cta_bridge: "'Want me to build this for you? [offer] is how we work together.'"
+
+      transformation_content:
+        content_theme: "Before/after stories, client results"
+        aligned_offer: "The program or service that created the transformation"
+        cta_bridge: "'[Client name] got these results in [timeframe]. Applications open for [offer].'"
+
+  # ---------------------------------------------------------------------------
+  # M3: DM STRATEGY & DIRECT RESPONSE
+  # ---------------------------------------------------------------------------
+  dm_strategy:
+    name: "Organic DM Sales System"
+    synthesis: "Hormozi ACA Framework + Brunson Micro-Commitment + Suby Intimate Selling"
+    principle: >
+      For organic audiences, the DM is the highest-converting sales channel.
+      It combines the trust of content consumption with the personalization
+      of 1:1 conversation. DM selling is not cold outreach — it is warm
+      conversation initiated by content engagement signals.
+
+    dm_funnel_architecture:
+      trigger_layer:
+        purpose: "Identify warm leads through engagement signals"
+        signals:
+          high_intent:
+            - "DMs you a question about your offer"
+            - "Comments asking about pricing or availability"
+            - "Saves multiple posts in your offer category"
+            - "Replies to stories about your product/service"
+          medium_intent:
+            - "Comments consistently on educational content"
+            - "Shares your content to their audience"
+            - "Engages with testimonial/case study content"
+          low_intent:
+            - "Likes posts regularly"
+            - "Views stories consistently"
+            - "New follower from relevant niche"
+
+      conversation_layer:
+        purpose: "Turn engagement signal into sales conversation"
+        hormozi_aca_framework:
+          acknowledge: "Reference their specific engagement ('Saw your comment on my post about X...')"
+          compliment: "Genuine recognition ('Your content on Y is really solid...')"
+          ask: "Open-ended question that reveals their situation ('What are you working on right now?')"
+        conversation_flow:
+          step_1_open: "ACA framework — warm, personal, not salesy"
+          step_2_diagnose: "Ask about their goals, challenges, current situation"
+          step_3_identify_gap: "Help them see the gap between where they are and where they want to be"
+          step_4_present_bridge: "Position your offer as the bridge across that gap"
+          step_5_handle_objections: "Address concerns with proof and guarantees"
+          step_6_close_or_advance: "Clear next step — buy, apply, or book a call"
+
+      automation_layer:
+        purpose: "Scale DM conversations without losing personalization"
+        dm_keyword_triggers:
+          setup: "Post includes CTA: 'Comment [KEYWORD] and I will send you [resource]'"
+          automation: "ManyChat or similar tool sends automated first message with resource"
+          human_handoff: "After resource delivery, follow up personally within 24 hours"
+        story_reply_funnels:
+          setup: "Use polls, questions, and sliders in stories"
+          automation: "Replies trigger automated response with resource or question"
+          human_handoff: "Qualify through automation, close through conversation"
+
+    dm_scripts:
+      opener_for_comment_engager: >
+        Hey [Name]! I noticed your comment on my post about [topic] —
+        great point about [specific thing they said]. What made that
+        resonate with you? Are you working on something similar?
+
+      opener_for_story_replier: >
+        Thanks for the reply on my story, [Name]! Sounds like [topic]
+        is something you're focused on. What is your biggest challenge
+        with it right now?
+
+      transition_to_offer: >
+        Based on what you have shared, it sounds like [restate their
+        situation]. I actually built [offer name] to solve exactly
+        that. Would it be helpful if I shared how it works?
+
+      objection_handler_price: >
+        I totally get it. Here is how I think about it: [offer] is
+        designed to [specific result] within [timeframe]. If you
+        achieve even half of that, the ROI is [X]x. Plus, there is
+        [guarantee] so there is zero risk. Would that change things?
+
+      objection_handler_timing: >
+        Makes sense. Quick question though — where will you be with
+        [their problem] in 6 months if nothing changes? The reason
+        I ask is that [offer] is specifically designed for people
+        in your exact situation, and [scarcity element].
+
+  # ---------------------------------------------------------------------------
+  # M4: REVENUE ATTRIBUTION FOR ORGANIC
+  # ---------------------------------------------------------------------------
+  revenue_attribution:
+    name: "Revenue Attribution System for Organic Content"
+    principle: >
+      Organic revenue attribution is harder than paid because there is no
+      pixel or click-through tracking by default. But without attribution,
+      you cannot optimize. The solution is a multi-layer tracking system
+      that captures both direct and assisted conversions.
+
+    attribution_layers:
+      layer_1_direct_tracking:
+        methods:
+          utm_parameters: "Unique UTM on every link in bio, stories, and posts"
+          unique_links: "Different landing pages or codes per platform and content type"
+          dm_keyword_tracking: "Track which keyword triggers generate the most revenue"
+          coupon_codes: "Platform-specific or content-specific discount codes"
+        tools:
+          - "Google Analytics 4 with UTM tracking"
+          - "Link-in-bio tools with analytics (Stan Store, Beacons)"
+          - "CRM with source tracking (HubSpot, GoHighLevel)"
+          - "ManyChat analytics for DM funnels"
+
+      layer_2_survey_attribution:
+        methods:
+          purchase_survey: "'How did you first hear about us?' on checkout"
+          onboarding_question: "'What content of ours made you decide to buy?'"
+          win_back_survey: "Ask churned leads what content they remember"
+        implementation: >
+          Add a mandatory 'attribution question' to every purchase flow.
+          Keep it simple: dropdown with options + free text. Track monthly.
+          Cross-reference with direct tracking for full picture.
+
+      layer_3_content_correlation:
+        methods:
+          revenue_calendar_overlay: "Map revenue spikes to content published 1-7 days prior"
+          content_type_analysis: "Which content categories precede purchase decisions"
+          engagement_to_revenue_lag: "Measure time from first engagement to purchase"
+        implementation: >
+          Build a simple spreadsheet: Date | Content Posted | Revenue That Day |
+          Revenue Next 7 Days. Over 90 days, patterns emerge showing which
+          content types and topics correlate with revenue.
+
+    content_roi_calculation:
+      formula: "Content ROI = (Revenue Attributed to Content - Content Creation Cost) / Content Creation Cost"
+      content_creation_cost:
+        time_invested: "Hours per piece x your hourly rate (or team cost)"
+        tools: "Software, subscriptions, equipment amortized"
+        opportunity_cost: "What else could that time produce"
+      benchmark:
+        minimum_viable: "3:1 ROI (every $1 of content effort generates $3 revenue)"
+        good: "10:1 ROI"
+        great: "50:1+ ROI (content compounds — one piece generating revenue for months)"
+
+# =============================================================================
+# SECTION 3: APPLICATIONS — IMPLEMENTATION SYSTEMS
+# =============================================================================
+
+applications:
+
+  # ---------------------------------------------------------------------------
+  # A1: THE 90-DAY ORGANIC REVENUE SPRINT
+  # ---------------------------------------------------------------------------
+  ninety_day_sprint:
+    name: "90-Day Organic Revenue Sprint"
+    principle: >
+      The organic pipeline takes 90 days to build and activate. This sprint
+      provides the exact weekly actions to go from zero organic revenue to
+      a functioning pipeline. Based on Hormozi's Rule of 100 and Brunson's
+      one-funnel-away philosophy.
+
+    phase_1_foundation:
+      duration: "Weeks 1-4"
+      focus: "Build the ladder and the lead magnet"
+      weekly_actions:
+        week_1:
+          - "Define dream buyer avatar using Suby's 17-question deep dive"
+          - "Audit existing content — identify what already works"
+          - "Design Value Ladder (5 rungs, even if only rung 1-3 exist)"
+          - "Choose ONE platform to master first"
+        week_2:
+          - "Build lead magnet using Hormozi's 7-step framework"
+          - "Create DM automation (keyword trigger → resource delivery)"
+          - "Optimize profile/bio for conversion (single CTA, clear offer)"
+          - "Write Soap Opera email sequence (5 emails)"
+        week_3:
+          - "Begin daily content — minimum 1 post + 3-5 stories"
+          - "Start 40/30/20/10 funnel balance (TOFU/MOFU/BOFU/conversion)"
+          - "Engage 100 people daily in your niche (Hormozi Rule of 100)"
+          - "Track: reach, engagement, profile visits, link clicks"
+        week_4:
+          - "Review week 3 data — identify top-performing content type"
+          - "Double down on what works (Hormozi More-Better-New)"
+          - "Create first offer content piece (case study or testimonial)"
+          - "Begin warm DM outreach to engaged followers"
+
+    phase_2_activation:
+      duration: "Weeks 5-8"
+      focus: "Generate first leads and sales"
+      weekly_actions:
+        week_5:
+          - "Launch lead magnet with content campaign (5 posts promoting it)"
+          - "Implement DM sales system for lead magnet claimers"
+          - "Create content-to-offer bridge (show gap between free and paid)"
+          - "Track: leads captured, DM conversations, response rate"
+        week_6:
+          - "First soft launch of core offer (to warm list only)"
+          - "Testimonial or case study content daily during launch"
+          - "DM every lead magnet claimer with personalized follow-up"
+          - "Collect feedback and objections — refine offer"
+        week_7:
+          - "Iterate offer based on feedback"
+          - "Scale content volume (2 posts/day if capacity allows)"
+          - "Begin content repurposing across format types"
+          - "Track: conversion rate, revenue, objections"
+        week_8:
+          - "Full pipeline audit — where is the biggest leak?"
+          - "Fix the constraint (Hormozi constraint concept)"
+          - "Begin building proof stack (testimonials, case studies)"
+          - "Set up attribution tracking (UTMs, survey, correlation)"
+
+    phase_3_optimization:
+      duration: "Weeks 9-12"
+      focus: "Optimize for predictable revenue"
+      weekly_actions:
+        week_9:
+          - "Analyze attribution data — which content drives revenue"
+          - "Create more of top-performing content categories"
+          - "Implement evergreen content funnel (always-on lead generation)"
+          - "Begin warm audience launch sequence for core offer"
+        week_10:
+          - "Full launch sequence (seed → tease → launch → close)"
+          - "Daily BOFU content during launch window"
+          - "DM every engaged person during launch"
+          - "Track: launch revenue, conversion rate, CAC"
+        week_11:
+          - "Post-launch analysis — what worked, what to change"
+          - "Transition to evergreen offer (always available or rolling cohorts)"
+          - "Begin building next Value Ladder rung (premium or continuity)"
+          - "Implement referral ask for all new customers"
+        week_12:
+          - "Full pipeline review — 90-day retrospective"
+          - "Calculate: total revenue, ARPC, CAC, content ROI"
+          - "Document winning formulas (content types, scripts, sequences)"
+          - "Plan next 90 days with proven playbook"
+
+    expected_outcomes:
+      conservative:
+        followers_gained: "500-1,500"
+        leads_captured: "100-300"
+        customers_acquired: "5-15"
+        revenue_generated: "$2,000-$15,000"
+      aggressive:
+        followers_gained: "2,000-5,000"
+        leads_captured: "300-800"
+        customers_acquired: "15-40"
+        revenue_generated: "$15,000-$50,000"
+      note: "Aggressive assumes 2+ posts/day, 100+ daily engagements, strong existing expertise/proof"
+
+  # ---------------------------------------------------------------------------
+  # A2: METRICS & KPIs — THE ORGANIC REVENUE DASHBOARD
+  # ---------------------------------------------------------------------------
+  metrics_and_kpis:
+    name: "Organic Revenue Pipeline Dashboard"
+    principle: >
+      Measure what matters at each stage. Vanity metrics (likes, followers)
+      only matter if they predict revenue metrics (leads, sales, LTV).
+      Build a weekly dashboard that connects content activity to revenue.
+
+    stage_1_attention_metrics:
+      primary: "Qualified Reach (impressions among ICP)"
+      secondary:
+        - "Total reach per post"
+        - "New account reach percentage"
+        - "Content-to-profile-visit rate"
+      benchmark:
+        good: "10% of reach = new accounts"
+        great: "30%+ of reach = new accounts"
+      tracking_frequency: "Daily"
+
+    stage_2_engagement_metrics:
+      primary: "Engagement Rate (interactions / reach)"
+      secondary:
+        - "Save rate (save / reach)"
+        - "Share rate (share / reach)"
+        - "Comment rate and depth"
+        - "Story reply rate"
+      benchmark:
+        good: "3-5% engagement rate"
+        great: "8%+ engagement rate"
+        save_rate_target: "2%+ indicates high-value content"
+      tracking_frequency: "Daily"
+
+    stage_3_lead_metrics:
+      primary: "Leads Captured Per Week"
+      secondary:
+        - "Lead capture rate (leads / followers)"
+        - "Lead source breakdown (DM vs. bio vs. story)"
+        - "Lead magnet claim rate"
+        - "Cost per lead (content hours / leads)"
+      benchmark:
+        good: "10-30 leads per 1,000 followers per month"
+        great: "50+ leads per 1,000 followers per month"
+      tracking_frequency: "Weekly"
+
+    stage_4_nurture_metrics:
+      primary: "Email Open Rate and Click Rate"
+      secondary:
+        - "Email reply rate"
+        - "Unsubscribe rate"
+        - "Sequence completion rate"
+        - "Content-to-email cross-engagement"
+      benchmark:
+        open_rate_good: "30-40%"
+        open_rate_great: "50%+"
+        click_rate_good: "3-5%"
+        click_rate_great: "8%+"
+      tracking_frequency: "Weekly"
+
+    stage_5_conversion_metrics:
+      primary: "Customer Conversion Rate (customers / leads)"
+      secondary:
+        - "Revenue per lead"
+        - "DM-to-sale conversion rate"
+        - "Time from lead to customer (days)"
+        - "Objection frequency by type"
+      benchmark:
+        good: "3-5% of total leads become customers"
+        great: "10%+ of total leads become customers"
+        dm_conversion_good: "10-15% of DM conversations"
+        dm_conversion_great: "20%+ of DM conversations"
+      tracking_frequency: "Weekly"
+
+    stage_6_revenue_metrics:
+      primary: "Monthly Organic Revenue"
+      secondary:
+        - "Average order value (AOV)"
+        - "Revenue per follower (total revenue / total followers)"
+        - "Customer acquisition cost (CAC = content hours x hourly rate / customers)"
+        - "Content ROI (revenue / content cost)"
+      benchmark:
+        revenue_per_follower_good: "$0.50-$2.00/year per follower"
+        revenue_per_follower_great: "$5.00+/year per follower"
+        content_roi_good: "5:1"
+        content_roi_great: "20:1+"
+      tracking_frequency: "Monthly"
+
+    stage_7_lifetime_metrics:
+      primary: "Customer Lifetime Value (LTV)"
+      secondary:
+        - "Ascension rate (% moving up Value Ladder)"
+        - "Retention rate (continuity programs)"
+        - "Referral rate (referrals per customer)"
+        - "LTGP:CAC ratio"
+      benchmark:
+        ltv_to_cac_good: "5:1"
+        ltv_to_cac_great: "10:1+"
+        referral_rate_good: "15% of customers refer at least one person"
+        referral_rate_great: "40%+ of customers refer"
+      tracking_frequency: "Monthly"
+
+    compound_metrics:
+      organic_revenue_velocity:
+        formula: "Monthly Revenue Growth Rate from Organic Sources"
+        target: "15-30% month-over-month for first 12 months"
+
+      content_payback_period:
+        formula: "Days from content publish to first attributed dollar"
+        target: "Under 30 days for BOFU content, under 90 days for MOFU"
+
+      audience_monetization_efficiency:
+        formula: "Annual Revenue / Total Audience Size"
+        target: "$2-$10+ per follower annually"
+
+      pipeline_health_score:
+        formula: "(Lead Capture Rate x Conversion Rate x AOV x Referral Rate) / CAC"
+        interpretation: "Above 1.0 = growing. Above 3.0 = scaling. Above 10.0 = compounding."
+
+  # ---------------------------------------------------------------------------
+  # A3: COMMON PIPELINE FAILURES AND FIXES
+  # ---------------------------------------------------------------------------
+  pipeline_failures:
+    name: "Organic Revenue Pipeline Diagnostic"
+    principle: >
+      When revenue stalls, the fix is ALWAYS at a specific pipeline stage.
+      Diagnose where the leak is. Fix ONLY that stage. Then find the
+      next constraint. Hormozi's constraint concept applied to organic revenue.
+
+    failure_1_high_reach_low_leads:
+      symptom: "Getting views but nobody opts in"
+      diagnosis: "Content attracts attention but does not convert to leads"
+      root_causes:
+        - "No clear CTA in content (all give, no ask)"
+        - "Lead magnet does not align with content topic"
+        - "Profile/bio not optimized for conversion"
+        - "Lead magnet friction too high (too many steps)"
+      fixes:
+        - "Add integrated CTAs to 10-15% of content"
+        - "Build lead magnet that is logical next step from top content"
+        - "Simplify bio to one clear offer and one clear CTA"
+        - "Switch to DM-based delivery (lowest friction)"
+
+    failure_2_leads_but_no_sales:
+      symptom: "Email list growing but nobody buys"
+      diagnosis: "Trust gap between lead capture and offer presentation"
+      root_causes:
+        - "Nurture sequence is weak or nonexistent"
+        - "Offer does not solve the problem content promises"
+        - "Offer price exceeds trust level built by content"
+        - "No urgency or reason to buy now"
+      fixes:
+        - "Implement Brunson's Soap Opera Sequence (5-email narrative)"
+        - "Align offer directly to lead magnet promise"
+        - "Add low-ticket entry offer ($7-$47) to build buying habit"
+        - "Create enrollment windows with deadlines"
+
+    failure_3_sales_but_low_ltv:
+      symptom: "Acquiring customers but lifetime value is too low"
+      diagnosis: "No ascension mechanism — single-product business"
+      root_causes:
+        - "Only one offer available (no Value Ladder)"
+        - "No continuity or recurring revenue"
+        - "Poor onboarding killing retention"
+        - "No referral system in place"
+      fixes:
+        - "Build next Value Ladder rung (premium or continuity)"
+        - "Add order bump, upsell, or cross-sell to purchase flow"
+        - "Implement 14-day onboarding sequence with quick wins"
+        - "Systematize referral ask (Hormozi 7 ways to ask)"
+
+    failure_4_inconsistent_revenue:
+      symptom: "Revenue spikes during launches, flatlines between"
+      diagnosis: "Launch-dependent model without evergreen engine"
+      root_causes:
+        - "Only selling during launch windows"
+        - "No evergreen funnel running between launches"
+        - "Content inconsistency between launch periods"
+        - "No automated lead nurture system"
+      fixes:
+        - "Build always-on content-to-lead-to-sale funnel"
+        - "Maintain consistent content calendar regardless of launch timing"
+        - "Implement automated email sequence that sells between launches"
+        - "Add rolling cohort model instead of fixed launch dates"
+
+    failure_5_audience_fatigue:
+      symptom: "Engagement declining, unfollows increasing"
+      diagnosis: "Give:Ask ratio inverted — too much selling, not enough value"
+      root_causes:
+        - "More than 20% of content is BOFU"
+        - "Every post has a sales CTA"
+        - "Content quality declining as quantity increases"
+        - "No variety in content format or topic"
+      fixes:
+        - "Return to 40/30/20/10 funnel ratio"
+        - "10 value posts for every 1 sales post"
+        - "Batch high-quality content instead of rushing daily"
+        - "Introduce new content formats and topic angles"
+
+# =============================================================================
+# SECTION 4: KEY PRINCIPLES — CROSS-AUTHORITY SYNTHESIS
+# =============================================================================
+
+key_principles:
+
+  principle_1_content_is_free_advertising:
+    hormozi: "Posting free content is one of the Core Four — it is advertising, not branding"
+    brunson: "Every piece of content is a funnel entry point — it must lead somewhere"
+    suby: "The Halo Strategy turns content into an omnipresence machine that warms the market"
+    synthesis: >
+      Content is not a cost center. It is your primary acquisition channel.
+      Treat every post like an ad you do not pay for. Measure it like an ad.
+      Optimize it like an ad. Retire underperformers like ads.
+
+  principle_2_own_the_traffic:
+    hormozi: "Warm audience on platforms is rented — move them to email and phone"
+    brunson: "Three types of traffic: earned, controlled, owned. Only owned traffic is an asset."
+    suby: "Build the list. The list is the business. Everything else is a feeder."
+    synthesis: >
+      Every follower is a rented lead on a platform you do not control.
+      The pipeline's critical conversion is NOT follower-to-customer. It
+      is follower-to-email-subscriber. Once they are on your list, you
+      own the relationship regardless of algorithm changes.
+
+  principle_3_value_before_ask:
+    hormozi: "Give:Ask ratio minimum 3.5:1. Better: give until they ask."
+    brunson: "Jab, jab, jab, right hook. Earn the right to sell through value."
+    suby: "The Godfather Offer works because the value is so disproportionate refusal is irrational"
+    synthesis: >
+      The organic pipeline is trust-based. Every premature ask erodes
+      the trust balance. Deposit value consistently, then make a withdrawal
+      (the sale) that is small relative to the balance. The bigger the
+      trust balance, the bigger the ask you can make.
+
+  principle_4_solve_then_sell:
+    hormozi: "Lead magnet is a complete solution to a narrow problem. Offer solves the big problem."
+    brunson: "Free content solves 'what.' Paid content solves 'how.'"
+    suby: "Phase 5 Magic Lantern — demonstrate the solution in content, sell the implementation"
+    synthesis: >
+      Content solves the WHAT and WHY. It identifies the problem, explains
+      why it matters, and shows that a solution exists. The paid offer
+      solves the HOW — implementation, accountability, speed, personalization.
+      Never give away the full HOW in content. Give enough for them to
+      see the gap between knowing and doing.
+
+  principle_5_compound_over_campaign:
+    hormozi: "Content compounds — one piece can generate leads forever. This is the organic advantage."
+    brunson: "Evergreen funnels run 24/7. Launches spike; evergreen compounds."
+    suby: "Build the machine once, let it run forever. Phase 8 automate and multiply."
+    synthesis: >
+      Launches generate spikes. Evergreen content generates compound curves.
+      The pipeline must include both: launches for momentum and urgency,
+      evergreen for baseline revenue. Over 12 months, the evergreen
+      component should exceed launch revenue as content library grows
+      and back-catalog continues generating leads.
+
+key_quotes:
+  hormozi:
+    - "Advertising always works. It is only a matter of efficiency."
+    - "A lead magnet must be so good they would pay for it."
+    - "Do more of what works before doing anything new."
+    - "The longer you delay the ask, the bigger the ask you can make."
+  brunson:
+    - "You are one funnel away."
+    - "Attractive Characters are not born — they are created through story."
+    - "All traffic you do not own is traffic that can disappear overnight."
+    - "The value ladder is the most important concept in business."
+  suby:
+    - "Most businesses starve because nobody knows about them."
+    - "Engineer an environment where buying is the obvious, inevitable choice."
+    - "The Godfather Offer: make them an offer so good they cannot refuse."
+    - "Phase by phase, turn strangers into raving fans who buy everything."
+
+related_teachings:
+  direct_sources:
+    - "hormozi-100m-leads.yaml"
+    - "hormozi-100m-offers.yaml"
+    - "hormozi-100m-money-models.yaml"
+    - "brunson-traffic-secrets.yaml"
+    - "brunson-dotcom-secrets.yaml"
+    - "suby-sell-like-crazy.yaml"
+  complementary:
+    - "content-funnel-framework.yaml"
+    - "hormozi-content-to-leads.yaml"
+    - "vaynerchuk-jjjrh-ratio.yaml"
+    - "flynn-superfans.yaml"
+    - "godin-this-is-marketing.yaml"
+    - "cialdini-influence-principles.yaml"
+    - "schwartz-awareness-levels.yaml"

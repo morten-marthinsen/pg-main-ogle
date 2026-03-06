@@ -1,0 +1,7 @@
+# Project outputs (per-run artifacts, not engine code)
+outputs/*/
+!outputs/.gitkeep
+
+# Test results
+tests/results/
+!tests/.gitkeep

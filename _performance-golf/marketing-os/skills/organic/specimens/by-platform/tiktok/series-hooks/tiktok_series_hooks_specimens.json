@@ -1,0 +1,642 @@
+[
+  {
+    "id": "SH-001",
+    "platform": "tiktok",
+    "series_name": "Storytime: The Worst Date",
+    "creator": "@elysemyers",
+    "creator_niche": "comedy_storytime",
+    "parts_count": 4,
+    "hook_pattern": "I went on a date with a man who took me to Taco Bell... it gets worse. Part 1.",
+    "continuation_trigger": {
+      "type": "mid_sentence_cut",
+      "description": "Each part ends mid-sentence at peak tension — she literally stops talking at the most dramatic moment, forcing viewers to seek the next part",
+      "trigger_text": "And then he said—"
+    },
+    "total_series_views": 85000000,
+    "individual_part_performance": {
+      "part_1": {"views": 15000000, "likes": 2100000, "comments": 180000, "shares": 450000},
+      "part_2": {"views": 28000000, "likes": 3800000, "comments": 310000, "shares": 820000},
+      "part_3": {"views": 25000000, "likes": 3200000, "comments": 280000, "shares": 690000},
+      "part_4": {"views": 17000000, "likes": 2400000, "comments": 420000, "shares": 380000}
+    },
+    "why_series_works": "The date story is inherently multi-part because the absurdity escalates with each new detail. Part 2 outperforms Part 1 because the Zeigarnik Effect drives returning viewers who bring new viewers with them. The specific restaurant (Taco Bell) grounds an outrageous story in relatable specificity. Comments section becomes a community speculating about what happens next.",
+    "series_architecture": {
+      "part_1_function": "Establish premise + first shocking detail + hard cliffhanger",
+      "middle_parts_function": "Escalate absurdity while maintaining narrative thread",
+      "final_part_function": "Resolution + reflection + what I learned (emotional payoff)"
+    },
+    "teaching_alignment": {
+      "berger": "Social Currency — sharing an unfolding story makes sharer feel like insider",
+      "heath": "Stories + Unexpected — narrative transport with escalating surprises",
+      "kane": "Cliffhanger architecture — each part is a hook for the next"
+    }
+  },
+  {
+    "id": "SH-002",
+    "platform": "tiktok",
+    "series_name": "Trying to Make It in NYC",
+    "creator": "@axelwebber",
+    "creator_niche": "lifestyle_aspiration",
+    "parts_count": 50,
+    "hook_pattern": "Day [X] of trying to make it in New York City",
+    "continuation_trigger": {
+      "type": "daily_chronicle",
+      "description": "Daily format creates habit loop — audience checks in like watching a daily show. Real-time progression feels authentic and unscripted.",
+      "trigger_text": "See you tomorrow."
+    },
+    "total_series_views": 500000000,
+    "individual_part_performance": {
+      "day_1": {"views": 2000000, "likes": 280000, "comments": 45000, "shares": 120000},
+      "day_15": {"views": 8000000, "likes": 1100000, "comments": 180000, "shares": 450000},
+      "day_30_breakout": {"views": 45000000, "likes": 6200000, "comments": 820000, "shares": 2100000},
+      "day_50": {"views": 12000000, "likes": 1800000, "comments": 290000, "shares": 520000}
+    },
+    "why_series_works": "The hero's journey unfolding in real time. Audience doesn't just watch — they feel invested in the outcome. The daily format creates a parasocial relationship where followers feel like they're on the journey WITH him. Breakout moments (day 30) happen when a single day's content resonates broadly, pulling the entire series into mainstream discovery. Setbacks and failures are as engaging as wins because the audience is rooting for him.",
+    "series_architecture": {
+      "part_1_function": "Establish the dream + the gap between reality and aspiration",
+      "middle_parts_function": "Daily struggles, small wins, setbacks — the honest journey",
+      "final_part_function": "Ongoing — there is no planned end, which creates infinite anticipation"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — audience roots for underdog. High-arousal hope and anxiety.",
+      "heath": "Stories — classic hero's journey structure, unfolding daily",
+      "kane": "Authenticity premium — real life cannot be faked, earning trust"
+    }
+  },
+  {
+    "id": "SH-003",
+    "platform": "tiktok",
+    "series_name": "Unpopular Opinions",
+    "creator": "@reikiricardo",
+    "creator_niche": "commentary_opinion",
+    "parts_count": 12,
+    "hook_pattern": "Unpopular opinion that will make you unfollow me. Part [X].",
+    "continuation_trigger": {
+      "type": "audience_dare",
+      "description": "The unfollow threat is reverse psychology. Dares viewers to stay through increasingly controversial takes. Each escalation tests loyalty.",
+      "trigger_text": "Part [X+1] is even worse. You've been warned."
+    },
+    "total_series_views": 45000000,
+    "individual_part_performance": {
+      "part_1": {"views": 5000000, "likes": 680000, "comments": 210000, "shares": 180000},
+      "part_5": {"views": 4200000, "likes": 520000, "comments": 280000, "shares": 150000},
+      "part_8": {"views": 3800000, "likes": 480000, "comments": 320000, "shares": 120000},
+      "part_12": {"views": 3000000, "likes": 410000, "comments": 350000, "shares": 95000}
+    },
+    "why_series_works": "Binary opinion format guarantees engagement — viewers either agree passionately or disagree aggressively, both of which the algorithm rewards equally. The 'unfollow' dare creates a loyalty test dynamic where staying becomes an identity statement. Comment-to-view ratio is the highest of any series type because opinions demand response.",
+    "series_architecture": {
+      "part_1_function": "Mild unpopular opinion to establish the format and invite disagreement",
+      "middle_parts_function": "Escalating controversy — each opinion more divisive than the last",
+      "final_part_function": "Most extreme opinion saved for last — the opinion that actually might cause unfollows"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — anger and agreement are both high-arousal emotions that drive sharing",
+      "heath": "Unexpected — each opinion violates expectations",
+      "kane": "Provocation hook — controversy is the most reliable attention mechanism"
+    }
+  },
+  {
+    "id": "SH-004",
+    "platform": "tiktok",
+    "series_name": "My Mother's Stories",
+    "creator": "@thekoreanvegan",
+    "creator_niche": "storytime_cooking",
+    "parts_count": 8,
+    "hook_pattern": "My mother came to America with nothing. This is what she taught me about [topic]. Part [X].",
+    "continuation_trigger": {
+      "type": "revelation_promise",
+      "description": "Each part reveals one lesson, but the overarching immigration narrative deepens with each installment. The full picture of the mother's journey requires all parts.",
+      "trigger_text": "But the hardest lesson was still to come."
+    },
+    "total_series_views": 62000000,
+    "individual_part_performance": {
+      "part_1": {"views": 12000000, "likes": 1800000, "comments": 145000, "shares": 480000},
+      "part_3": {"views": 9500000, "likes": 1400000, "comments": 125000, "shares": 380000},
+      "part_5": {"views": 7800000, "likes": 1100000, "comments": 110000, "shares": 320000},
+      "part_8": {"views": 6200000, "likes": 980000, "comments": 185000, "shares": 290000}
+    },
+    "why_series_works": "Each part works as a standalone emotional story while contributing to a larger immigration narrative. Cooking visuals provide aesthetic anchor while voiceover delivers emotional payload. The mother figure becomes a character the audience grows to love across parts. Cultural specificity (Korean immigrant experience) paradoxically broadens appeal because universal themes of sacrifice and love transcend cultural boundaries.",
+    "series_architecture": {
+      "part_1_function": "Establish mother as character + first lesson + cooking visual identity",
+      "middle_parts_function": "Deepen understanding of mother through specific life lessons, each paired with a recipe",
+      "final_part_function": "Most vulnerable revelation + gratitude + recipe that ties the series together"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — deep resonance through vulnerability and cultural storytelling",
+      "heath": "Stories + Emotional — narrative transport through personal history",
+      "kane": "Emotional disruption — vulnerability cuts through algorithmic noise"
+    }
+  },
+  {
+    "id": "SH-005",
+    "platform": "tiktok",
+    "series_name": "History They Didn't Teach You",
+    "creator": "@theclosethistorian",
+    "creator_niche": "education_history",
+    "parts_count": 20,
+    "hook_pattern": "Part [X] of history they didn't teach you in school",
+    "continuation_trigger": {
+      "type": "escalation_tease",
+      "description": "Forbidden knowledge framing — 'they didn't teach you' implies there's an entire hidden curriculum the viewer is missing. Each part stands alone but the series title implies a much larger hidden archive worth following for.",
+      "trigger_text": "And this is just the beginning of what they left out."
+    },
+    "total_series_views": 38000000,
+    "individual_part_performance": {
+      "part_1": {"views": 3200000, "likes": 420000, "comments": 85000, "shares": 210000},
+      "part_5": {"views": 2800000, "likes": 380000, "comments": 72000, "shares": 190000},
+      "part_10": {"views": 2100000, "likes": 310000, "comments": 65000, "shares": 165000},
+      "part_20": {"views": 1500000, "likes": 220000, "comments": 48000, "shares": 120000}
+    },
+    "why_series_works": "The 'hidden knowledge' framing creates an adversarial relationship between the viewer and 'the system' — the educational establishment that withheld this information. This activates tribal identity (people who know vs people who don't). Each fact is independently shareable but the series promises a comprehensive counter-education. High save rate because viewers want to 'collect' all the hidden facts.",
+    "series_architecture": {
+      "part_1_function": "Most shocking/accessible hidden fact to establish credibility and format",
+      "middle_parts_function": "Mix of well-known gaps and truly obscure history, maintaining variety",
+      "final_part_function": "No true final part — open-ended by design to maintain follow incentive"
+    },
+    "teaching_alignment": {
+      "berger": "Social Currency — sharing 'secret' knowledge makes sharer seem educated and aware",
+      "heath": "Unexpected — each fact violates what viewer thought they knew",
+      "kane": "Authority + accessibility combination as hook point"
+    }
+  },
+  {
+    "id": "SH-006",
+    "platform": "tiktok",
+    "series_name": "Rating Every Chain Restaurant",
+    "creator": "@callmebelly",
+    "creator_niche": "food_review",
+    "parts_count": 30,
+    "hook_pattern": "Rating every chain restaurant in America. Part [X]: [Restaurant Name]",
+    "continuation_trigger": {
+      "type": "comment_driven",
+      "description": "Audience requests drive installment selection. Comments section is a voting mechanism. Community co-creates the series progression.",
+      "trigger_text": "Comment which restaurant I should rate next."
+    },
+    "total_series_views": 120000000,
+    "individual_part_performance": {
+      "part_1_mcdonalds": {"views": 8000000, "likes": 1100000, "comments": 320000, "shares": 280000},
+      "part_8_chickfila": {"views": 12000000, "likes": 1800000, "comments": 480000, "shares": 420000},
+      "part_15_olivegarden": {"views": 6500000, "likes": 890000, "comments": 250000, "shares": 190000},
+      "part_25_wendys": {"views": 4200000, "likes": 580000, "comments": 180000, "shares": 140000}
+    },
+    "why_series_works": "Every viewer has a restaurant they feel strongly about, creating personal investment in the series. The rating format creates binary engagement (agree/disagree). Comment-driven progression gives audience ownership, converting passive viewers into active community members. Restaurant brands sometimes respond, creating amplification events.",
+    "series_architecture": {
+      "part_1_function": "Start with most universally known restaurant (McDonald's) for maximum initial reach",
+      "middle_parts_function": "Alternate between beloved and controversial restaurants to maintain engagement variance",
+      "final_part_function": "Save most requested/controversial restaurant for final parts to maximize anticipation"
+    },
+    "teaching_alignment": {
+      "berger": "Triggers — restaurants are encountered daily, triggering series recall",
+      "heath": "Concrete — specific brands, specific items, specific ratings",
+      "kane": "Community co-creation as engagement mechanism"
+    }
+  },
+  {
+    "id": "SH-007",
+    "platform": "tiktok",
+    "series_name": "Things That Just Make Sense",
+    "creator": "@thefoggygroggy",
+    "creator_niche": "commentary_lifestyle",
+    "parts_count": 15,
+    "hook_pattern": "Part [X] of things that just make sense but nobody does them",
+    "continuation_trigger": {
+      "type": "escalation_tease",
+      "description": "Universal agreement hook. Each entry validates viewer's existing frustration. The series promises to articulate every unspoken common-sense frustration the viewer has.",
+      "trigger_text": "The next one is going to make you say 'FINALLY someone said it.'"
+    },
+    "total_series_views": 28000000,
+    "individual_part_performance": {
+      "part_1": {"views": 3500000, "likes": 480000, "comments": 95000, "shares": 220000},
+      "part_5": {"views": 2800000, "likes": 390000, "comments": 78000, "shares": 180000},
+      "part_10": {"views": 1800000, "likes": 250000, "comments": 52000, "shares": 120000},
+      "part_15": {"views": 1200000, "likes": 170000, "comments": 38000, "shares": 85000}
+    },
+    "why_series_works": "Validation is one of the most powerful emotional triggers on social media. When someone articulates a frustration you've felt but never voiced, it creates a 'finally someone said it' dopamine hit. Each entry confirms the viewer's worldview, which builds trust and affinity. Low controversy (common sense = safe agreement) means high share-to-engagement ratio.",
+    "series_architecture": {
+      "part_1_function": "Most universally relatable common-sense item for maximum agreement",
+      "middle_parts_function": "Mix of practical (design, infrastructure) and social (behavior, norms)",
+      "final_part_function": "Most niche/specific item that rewards loyal followers with a deep cut"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — validation of existing beliefs feels rewarding",
+      "heath": "Simple + Concrete — each item is immediately understood",
+      "kane": "Agreement hook — lowest friction engagement mechanism"
+    }
+  },
+  {
+    "id": "SH-008",
+    "platform": "tiktok",
+    "series_name": "Magic Tricks Explained",
+    "creator": "@zachking",
+    "creator_niche": "entertainment_magic",
+    "parts_count": 6,
+    "hook_pattern": "How I actually did that magic trick. Part [X].",
+    "continuation_trigger": {
+      "type": "revelation_promise",
+      "description": "Behind-the-curtain reveal of most viral illusions. Each reveal satisfies a curiosity gap from a previous standalone viral post while creating desire to see the next reveal.",
+      "trigger_text": "But the one you've ALL been asking about... that's Part [X+1]."
+    },
+    "total_series_views": 95000000,
+    "individual_part_performance": {
+      "part_1": {"views": 22000000, "likes": 2800000, "comments": 380000, "shares": 920000},
+      "part_3": {"views": 18000000, "likes": 2200000, "comments": 310000, "shares": 780000},
+      "part_6": {"views": 15000000, "likes": 1900000, "comments": 420000, "shares": 650000}
+    },
+    "why_series_works": "The explain-it series is meta-content that monetizes existing viral content a second time. Every viral magic trick created a curiosity gap that remained unresolved. The series resolves those gaps sequentially, ensuring each part has a pre-built audience who needs to see that specific reveal. The final part saves the most-requested trick, creating maximum anticipation.",
+    "series_architecture": {
+      "part_1_function": "Reveal behind a moderately popular trick to establish the format",
+      "middle_parts_function": "Escalate to more viral/impressive tricks",
+      "final_part_function": "Reveal the most-asked-about trick with emotional reflection on craft"
+    },
+    "teaching_alignment": {
+      "berger": "Social Currency — insider knowledge of how magic works",
+      "heath": "Unexpected — seeing the simple solution behind the impossible",
+      "kane": "Pre-built audience leverage — using existing viral content as series foundation"
+    }
+  },
+  {
+    "id": "SH-009",
+    "platform": "tiktok",
+    "series_name": "Cases That Were Never Solved",
+    "creator": "@crimejunkie",
+    "creator_niche": "true_crime",
+    "parts_count": 25,
+    "hook_pattern": "Part [X] of cases that were never solved. This one will haunt you.",
+    "continuation_trigger": {
+      "type": "escalation_tease",
+      "description": "True crime creates permanent curiosity gaps because unsolved cases have NO resolution. The audience cannot ever get closure, which creates endless return visits. 'Will haunt you' promises emotional impact.",
+      "trigger_text": "But the next case is the one I've been too scared to cover."
+    },
+    "total_series_views": 180000000,
+    "individual_part_performance": {
+      "part_1": {"views": 12000000, "likes": 1600000, "comments": 280000, "shares": 520000},
+      "part_10": {"views": 8500000, "likes": 1200000, "comments": 210000, "shares": 380000},
+      "part_20": {"views": 6000000, "likes": 850000, "comments": 180000, "shares": 290000},
+      "part_25": {"views": 5500000, "likes": 780000, "comments": 320000, "shares": 260000}
+    },
+    "why_series_works": "True crime is the most reliable long-form series genre on TikTok. Unsolved cases create a permanent open loop in the viewer's mind. The genre attracts a passionate community that watches, discusses, and theorizes. Each case is independently compelling but the series promise of 'the next one is worse' creates compounding anticipation. Comments become theory forums which drive extreme engagement metrics.",
+    "series_architecture": {
+      "part_1_function": "Well-known unsolved case to establish credibility and format recognition",
+      "middle_parts_function": "Alternate between famous and obscure cases — obscure cases feel like insider knowledge",
+      "final_part_function": "Ongoing series — no planned end. Each part teases the next as 'worse'"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — fear, fascination, and morbid curiosity are high-arousal emotions",
+      "heath": "Stories + Unexpected — narrative structure with genuinely unresolved endings",
+      "kane": "Genre audience targeting — true crime community is one of TikTok's largest"
+    }
+  },
+  {
+    "id": "SH-010",
+    "platform": "tiktok",
+    "series_name": "Things I Wish I Knew Before 30",
+    "creator": "@sidneyraz",
+    "creator_niche": "education_lifestyle",
+    "parts_count": 40,
+    "hook_pattern": "Here's something I didn't know before I was in my 30s. Part [X].",
+    "continuation_trigger": {
+      "type": "revelation_promise",
+      "description": "Evergreen life wisdom format where each installment is independently valuable but the series promises comprehensive life education. The 'before 30' framing creates urgency for younger viewers and validation for older ones.",
+      "trigger_text": "Follow for the one thing I wish someone told me about [topic]."
+    },
+    "total_series_views": 210000000,
+    "individual_part_performance": {
+      "part_1": {"views": 8000000, "likes": 1100000, "comments": 145000, "shares": 380000},
+      "part_10": {"views": 12000000, "likes": 1800000, "comments": 210000, "shares": 520000},
+      "part_20": {"views": 6500000, "likes": 920000, "comments": 125000, "shares": 310000},
+      "part_40": {"views": 4800000, "likes": 680000, "comments": 95000, "shares": 240000}
+    },
+    "why_series_works": "The age-gated wisdom format works because it creates two simultaneous audiences: younger viewers who want to get ahead, and older viewers who want validation that they're not alone in learning late. Each installment is independently bookmarkable (high save rate) but the series format promises a complete life manual if you follow. The format is infinitely extensible — there's always another thing he didn't know.",
+    "series_architecture": {
+      "part_1_function": "Most universally surprising/useful life hack for maximum initial reach",
+      "middle_parts_function": "Diverse topics — financial, social, health, practical — to reach different audiences",
+      "final_part_function": "No planned end — infinite format. Most successful parts become their own sub-topics"
+    },
+    "teaching_alignment": {
+      "berger": "Practical Value — pure utility that viewers share to help others",
+      "heath": "Simple + Concrete + Unexpected — one clear lesson that surprises",
+      "kane": "Age-gap hook creates instant curiosity regardless of viewer's age"
+    }
+  },
+  {
+    "id": "SH-011",
+    "platform": "tiktok",
+    "series_name": "Testing Viral Life Hacks",
+    "creator": "@shoesonloose",
+    "creator_niche": "experiment_testing",
+    "parts_count": 20,
+    "hook_pattern": "Testing viral life hacks so you don't have to. Part [X].",
+    "continuation_trigger": {
+      "type": "preview_promise",
+      "description": "Service framing — the creator suffers so you don't have to. Each test creates binary suspense (works vs doesn't). Preview of next test's absurdity drives return visits.",
+      "trigger_text": "Part [X+1] tests one that actually scared me."
+    },
+    "total_series_views": 75000000,
+    "individual_part_performance": {
+      "part_1": {"views": 5500000, "likes": 720000, "comments": 135000, "shares": 280000},
+      "part_7": {"views": 4800000, "likes": 640000, "comments": 118000, "shares": 245000},
+      "part_15": {"views": 3200000, "likes": 440000, "comments": 85000, "shares": 170000},
+      "part_20": {"views": 2800000, "likes": 380000, "comments": 72000, "shares": 145000}
+    },
+    "why_series_works": "Every viewer has seen viral life hacks and wondered if they actually work. This series resolves that universal curiosity gap at scale. The 'so you don't have to' framing positions the creator as a public servant of truth. Binary outcomes (works/doesn't) create satisfying resolution per video while the series format promises to test EVERY hack worth knowing about.",
+    "series_architecture": {
+      "part_1_function": "Test the most viral/well-known hack for maximum recognition and reach",
+      "middle_parts_function": "Alternate between hacks that work (satisfying) and hacks that fail (funny)",
+      "final_part_function": "Compile the 'actually works' list — ultimate practical value"
+    },
+    "teaching_alignment": {
+      "berger": "Practical Value — definitive testing saves viewer time and risk",
+      "heath": "Concrete (real test results) + Unexpected (many don't work)",
+      "kane": "Service positioning — creator as viewer's proxy"
+    }
+  },
+  {
+    "id": "SH-012",
+    "platform": "tiktok",
+    "series_name": "Reading Ingredients",
+    "creator": "@nutritionbabe",
+    "creator_niche": "health_nutrition",
+    "parts_count": 18,
+    "hook_pattern": "Part [X] of reading the ingredients in popular foods. This one shocked me.",
+    "continuation_trigger": {
+      "type": "escalation_tease",
+      "description": "Each food product is something the viewer likely consumes. 'Shocked me' promises an emotional reaction. The next product teased is always one the audience is consuming right now.",
+      "trigger_text": "Wait until you see what's in the one you eat for breakfast."
+    },
+    "total_series_views": 55000000,
+    "individual_part_performance": {
+      "part_1": {"views": 5200000, "likes": 680000, "comments": 195000, "shares": 380000},
+      "part_6": {"views": 4500000, "likes": 590000, "comments": 175000, "shares": 340000},
+      "part_12": {"views": 3200000, "likes": 420000, "comments": 140000, "shares": 260000},
+      "part_18": {"views": 2100000, "likes": 280000, "comments": 95000, "shares": 180000}
+    },
+    "why_series_works": "Health anxiety combined with consumer distrust creates a potent engagement cocktail. Each product is personally relevant — the viewer probably has it in their kitchen right now. The expert authority (nutritionist) adds credibility that pure fear-mongering lacks. Save rate is extremely high because viewers treat each part as a reference document for grocery shopping.",
+    "series_architecture": {
+      "part_1_function": "Most universally consumed product (Coca-Cola, Cheerios) for maximum personal relevance",
+      "middle_parts_function": "Escalate from well-known products to 'healthy' products that are actually unhealthy (maximum surprise)",
+      "final_part_function": "Compile a 'safe list' of approved alternatives — practical value capstone"
+    },
+    "teaching_alignment": {
+      "berger": "Practical Value (health protection) + Social Currency (informed consumer)",
+      "heath": "Concrete (specific products) + Unexpected (hidden ingredients)",
+      "kane": "Personal stakes hook — the danger is in YOUR kitchen"
+    }
+  },
+  {
+    "id": "SH-013",
+    "platform": "tiktok",
+    "series_name": "100 Days of Rejection",
+    "creator": "@claireabyssmith",
+    "creator_niche": "social_experiment",
+    "parts_count": 100,
+    "hook_pattern": "Day [X] of asking strangers for unreasonable things",
+    "continuation_trigger": {
+      "type": "countdown",
+      "description": "Fixed 100-day endpoint creates countdown anticipation. Each day's request is unpredictable. The viewer knows exactly where they are in the journey. Building toward the 'impossible' request on Day 100.",
+      "trigger_text": "Only [100-X] days left. Tomorrow's request is the one I've been dreading."
+    },
+    "total_series_views": 150000000,
+    "individual_part_performance": {
+      "day_1": {"views": 1200000, "likes": 165000, "comments": 32000, "shares": 85000},
+      "day_25": {"views": 3800000, "likes": 520000, "comments": 95000, "shares": 220000},
+      "day_50": {"views": 5500000, "likes": 750000, "comments": 140000, "shares": 310000},
+      "day_75": {"views": 4200000, "likes": 580000, "comments": 120000, "shares": 260000},
+      "day_100": {"views": 8000000, "likes": 1100000, "comments": 280000, "shares": 480000}
+    },
+    "why_series_works": "The fixed endpoint creates a TV-season structure — viewers know there's a finale. Each day's request is unpredictable, maintaining novelty. Social experiments tap into universal social anxiety — viewers live vicariously through the creator's boldness. The escalating difficulty of requests creates a natural narrative arc. Community suggestions for requests create co-ownership.",
+    "series_architecture": {
+      "part_1_function": "Simple, low-stakes request to establish format and build courage narrative",
+      "middle_parts_function": "Escalating difficulty and absurdity of requests",
+      "final_part_function": "Day 100 — the ultimate request that the entire series has been building toward"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — vicarious anxiety, pride, and humor",
+      "heath": "Unexpected (stranger reactions) + Stories (courage journey)",
+      "kane": "Countdown mechanism as attention architecture"
+    }
+  },
+  {
+    "id": "SH-014",
+    "platform": "tiktok",
+    "series_name": "Photographing Strangers",
+    "creator": "@isaiahphoto",
+    "creator_niche": "photography_human_interest",
+    "parts_count": 30,
+    "hook_pattern": "Part [X] of asking strangers if I can take their photo. This one made me cry.",
+    "continuation_trigger": {
+      "type": "escalation_tease",
+      "description": "Each encounter is unique and genuinely unpredictable. 'Made me cry' promises emotional impact. Before/after photo reveal creates a mini-transformation in each video.",
+      "trigger_text": "The next person's story is one I'll never forget."
+    },
+    "total_series_views": 85000000,
+    "individual_part_performance": {
+      "part_1": {"views": 4200000, "likes": 580000, "comments": 95000, "shares": 280000},
+      "part_10": {"views": 5500000, "likes": 780000, "comments": 125000, "shares": 350000},
+      "part_20": {"views": 3800000, "likes": 520000, "comments": 88000, "shares": 240000},
+      "part_30": {"views": 2500000, "likes": 350000, "comments": 72000, "shares": 180000}
+    },
+    "why_series_works": "Human connection content is the most universally shareable genre. Each stranger is a new character with a unique story. The photography skill adds production value and creates before/after transformation (casual snapshot vs professional portrait). Emotional moments are unscripted and genuine, which the audience can feel. The series format promises infinite unique encounters.",
+    "series_architecture": {
+      "part_1_function": "Emotionally impactful encounter to establish the format's potential",
+      "middle_parts_function": "Diverse strangers — variety in age, background, story ensures broad audience reach",
+      "final_part_function": "Ongoing — no planned end. Compilation episodes drive revisits"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — genuine human connection triggers warmth and empathy sharing",
+      "heath": "Stories + Concrete — real people, real portraits, real reactions",
+      "kane": "Authenticity as pattern interrupt — you cannot fake genuine human moments"
+    }
+  },
+  {
+    "id": "SH-015",
+    "platform": "tiktok",
+    "series_name": "Ads That Tricked Your Brain",
+    "creator": "@stuffaboutadvertising",
+    "creator_niche": "education_marketing",
+    "parts_count": 12,
+    "hook_pattern": "Part [X] of ads that tricked your brain without you knowing",
+    "continuation_trigger": {
+      "type": "revelation_promise",
+      "description": "Meta-awareness hook — revealing manipulation creates a protective intelligence feeling. Each reveal makes the viewer feel smarter and more media-literate. The promise is that Part X+1 covers an even sneakier trick.",
+      "trigger_text": "But the next one is the technique that gets EVERYONE. Even me."
+    },
+    "total_series_views": 35000000,
+    "individual_part_performance": {
+      "part_1": {"views": 4800000, "likes": 640000, "comments": 115000, "shares": 320000},
+      "part_4": {"views": 3900000, "likes": 520000, "comments": 95000, "shares": 270000},
+      "part_8": {"views": 2800000, "likes": 380000, "comments": 72000, "shares": 195000},
+      "part_12": {"views": 2200000, "likes": 300000, "comments": 58000, "shares": 155000}
+    },
+    "why_series_works": "Everyone has been exposed to advertising, making this universally relevant. The 'tricked your brain' framing creates a self-defense motivation — viewers share to protect their network. Each technique revealed makes the viewer feel upgraded in media literacy. Marketing professionals share for different reasons than consumers, creating dual audience streams.",
+    "series_architecture": {
+      "part_1_function": "Most common, most recognizable manipulation technique for maximum 'I knew it!' response",
+      "middle_parts_function": "Escalate from obvious to subtle techniques",
+      "final_part_function": "The technique that the creator himself falls for — vulnerability + expertise"
+    },
+    "teaching_alignment": {
+      "berger": "Social Currency — media literacy as social signaling",
+      "heath": "Unexpected — seeing familiar ads through manipulation lens",
+      "kane": "Behind-the-curtain framing as hook mechanism"
+    }
+  },
+  {
+    "id": "SH-016",
+    "platform": "tiktok",
+    "series_name": "Dermatologist Reacts to Skincare",
+    "creator": "@doctorly",
+    "creator_niche": "health_skincare",
+    "parts_count": 30,
+    "hook_pattern": "Part [X] of reacting to your skincare routines. This one hurt to watch.",
+    "continuation_trigger": {
+      "type": "comment_driven",
+      "description": "Audience submits their own routines for expert review. Each video could feature the viewer's own submission. Community participation drives series ownership.",
+      "trigger_text": "Send me your routine — you might be next."
+    },
+    "total_series_views": 110000000,
+    "individual_part_performance": {
+      "part_1": {"views": 6500000, "likes": 880000, "comments": 210000, "shares": 380000},
+      "part_10": {"views": 5200000, "likes": 720000, "comments": 185000, "shares": 310000},
+      "part_20": {"views": 3800000, "likes": 520000, "comments": 145000, "shares": 240000},
+      "part_30": {"views": 3200000, "likes": 440000, "comments": 125000, "shares": 195000}
+    },
+    "why_series_works": "Expert reaction to audience-submitted content is the most engagement-dense series format. Every viewer who submits becomes invested. Every viewer who watches imagines their own routine being judged. The medical authority adds practical value (actual skincare advice) on top of entertainment (cringe reactions). Submissions create an infinite content supply that requires zero original ideation.",
+    "series_architecture": {
+      "part_1_function": "React to a clearly problematic routine for maximum dramatic value",
+      "middle_parts_function": "Mix of good and bad routines — positive reinforcement keeps submissions flowing",
+      "final_part_function": "Ongoing — audience submissions ensure infinite content. Occasionally compile 'worst ever' episodes"
+    },
+    "teaching_alignment": {
+      "berger": "Practical Value + Social Currency — learning from others' mistakes",
+      "heath": "Credible (medical authority) + Concrete (specific products)",
+      "kane": "Audience co-creation as infinite content engine"
+    }
+  },
+  {
+    "id": "SH-017",
+    "platform": "tiktok",
+    "series_name": "Songs That Sound Like Other Songs",
+    "creator": "@bentellect",
+    "creator_niche": "music_entertainment",
+    "parts_count": 20,
+    "hook_pattern": "Part [X] of songs that sound EXACTLY like other songs. I can't unhear this.",
+    "continuation_trigger": {
+      "type": "escalation_tease",
+      "description": "Musical pattern recognition is addictive once activated. 'Can't unhear' means the viewer's perception is permanently changed. Each comparison demands sharing because the friend NEEDS to hear this too.",
+      "trigger_text": "Wait until you hear Part [X+1]. This one ruined my favorite song."
+    },
+    "total_series_views": 90000000,
+    "individual_part_performance": {
+      "part_1": {"views": 8500000, "likes": 1200000, "comments": 280000, "shares": 580000},
+      "part_5": {"views": 6200000, "likes": 860000, "comments": 195000, "shares": 420000},
+      "part_12": {"views": 4500000, "likes": 620000, "comments": 145000, "shares": 310000},
+      "part_20": {"views": 3200000, "likes": 440000, "comments": 105000, "shares": 225000}
+    },
+    "why_series_works": "Once a listener hears the similarity, they genuinely cannot unhear it — this creates a 'perception upgrade' that demands sharing. Each comparison activates the Trigger principle (every time the viewer hears either song, they remember the video). Music is emotional, so the comparison carries emotional weight. The series format promises to systematically reveal hidden connections across the viewer's entire music library.",
+    "series_architecture": {
+      "part_1_function": "Most famous, most obvious song similarity for maximum recognition",
+      "middle_parts_function": "Mix of genres and eras — surprise connections across unexpected songs",
+      "final_part_function": "The comparison that even music experts miss — ultimate credibility + share moment"
+    },
+    "teaching_alignment": {
+      "berger": "Social Currency (musical knowledge) + Triggers (hearing songs = remembering the video)",
+      "heath": "Concrete (side-by-side audio) + Unexpected (hidden similarities)",
+      "kane": "Perception-change hook — permanently alters how viewer experiences familiar content"
+    }
+  },
+  {
+    "id": "SH-018",
+    "platform": "tiktok",
+    "series_name": "Texting My Crush",
+    "creator": "@spencewuah",
+    "creator_niche": "comedy_romance",
+    "parts_count": 8,
+    "hook_pattern": "Day [X] of texting my crush. They still don't know.",
+    "continuation_trigger": {
+      "type": "mid_sentence_cut",
+      "description": "Romantic suspense serialized. Each part ends on a text that could go either way. The audience is emotionally invested in whether the crush reciprocates. 'They still don't know' creates dramatic irony.",
+      "trigger_text": "[Screenshot of ambiguous text from crush] ...Part [X+1] tomorrow."
+    },
+    "total_series_views": 65000000,
+    "individual_part_performance": {
+      "part_1": {"views": 5500000, "likes": 780000, "comments": 185000, "shares": 280000},
+      "part_3": {"views": 9200000, "likes": 1300000, "comments": 310000, "shares": 480000},
+      "part_5": {"views": 12000000, "likes": 1800000, "comments": 420000, "shares": 620000},
+      "part_8": {"views": 8500000, "likes": 1200000, "comments": 580000, "shares": 380000}
+    },
+    "why_series_works": "Romance is the most universally compelling narrative genre. Real-time unfolding creates soap opera mechanics where the audience feels genuinely uncertain about the outcome. 'They still don't know' creates dramatic irony — the audience knows something the crush doesn't, creating a voyeuristic investment. Comment sections become advisory boards, driving massive engagement.",
+    "series_architecture": {
+      "part_1_function": "Establish the crush, the context, and the first bold text",
+      "middle_parts_function": "Escalating vulnerability — each text is bolder, responses more ambiguous",
+      "final_part_function": "Confession or revelation — the resolution that the entire audience has been waiting for"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — romantic tension and hope are high-arousal emotions",
+      "heath": "Stories — romance arc is the oldest story structure in human history",
+      "kane": "Real-time narrative as engagement architecture"
+    }
+  },
+  {
+    "id": "SH-019",
+    "platform": "tiktok",
+    "series_name": "Cooking Reactions",
+    "creator": "@cookingwithlynja",
+    "creator_niche": "food_comedy",
+    "parts_count": 40,
+    "hook_pattern": "I tried making [viral recipe] and... Part [X]",
+    "continuation_trigger": {
+      "type": "preview_promise",
+      "description": "Suspense in the ellipsis. The 'and...' creates a gap between attempt and result. Each video's success or failure is genuinely uncertain, maintaining authentic suspense across all parts.",
+      "trigger_text": "Next time I'm trying [extreme recipe]. This might not end well."
+    },
+    "total_series_views": 95000000,
+    "individual_part_performance": {
+      "part_1": {"views": 3800000, "likes": 520000, "comments": 98000, "shares": 210000},
+      "part_10": {"views": 4500000, "likes": 620000, "comments": 115000, "shares": 250000},
+      "part_25": {"views": 2800000, "likes": 380000, "comments": 78000, "shares": 165000},
+      "part_40": {"views": 2100000, "likes": 290000, "comments": 62000, "shares": 130000}
+    },
+    "why_series_works": "The generational contrast (older creator attempting trendy recipes) creates endearing content that appeals across demographics. Success is genuinely uncertain — some attempts work beautifully, others fail spectacularly. Both outcomes are equally entertaining. The warmth and humor of the creator builds a parasocial relationship that transcends cooking content. Audience feels protective and supportive.",
+    "series_architecture": {
+      "part_1_function": "Attempt a currently viral recipe for maximum timeliness and recognition",
+      "middle_parts_function": "Alternate between trendy and classic recipes — show range while maintaining charm",
+      "final_part_function": "Ongoing — audience suggestions drive recipe selection. Periodic 'best of' compilations"
+    },
+    "teaching_alignment": {
+      "berger": "Emotion — warmth and joy from watching genuine effort and personality",
+      "heath": "Stories + Unexpected — each attempt is a mini-narrative with uncertain outcome",
+      "kane": "Personality as the hook — the recipe is secondary to the creator"
+    }
+  },
+  {
+    "id": "SH-020",
+    "platform": "tiktok",
+    "series_name": "Red Flags in Famous Movies",
+    "creator": "@audreypierre",
+    "creator_niche": "commentary_film",
+    "parts_count": 15,
+    "hook_pattern": "Part [X] of red flags in movies we all ignored. This one's bad.",
+    "continuation_trigger": {
+      "type": "escalation_tease",
+      "description": "Pop culture reanalysis through modern psychological lens. Each movie is familiar but the red flag reframe makes it new. 'We all ignored' implies collective blind spot being corrected.",
+      "trigger_text": "The next movie is one everyone calls 'romantic.' It's not."
+    },
+    "total_series_views": 40000000,
+    "individual_part_performance": {
+      "part_1": {"views": 4800000, "likes": 650000, "comments": 185000, "shares": 310000},
+      "part_5": {"views": 3500000, "likes": 480000, "comments": 140000, "shares": 230000},
+      "part_10": {"views": 2800000, "likes": 380000, "comments": 115000, "shares": 185000},
+      "part_15": {"views": 2200000, "likes": 300000, "comments": 95000, "shares": 150000}
+    },
+    "why_series_works": "Familiar movies reframed through contemporary relationship psychology creates a 'how did I not see this?' revelation in every part. The 'red flag' framework is TikTok-native language that the audience already understands. Movies are universal cultural touchpoints — everyone has seen these films. Comments become debates about whether the behavior actually IS a red flag, driving massive engagement.",
+    "series_architecture": {
+      "part_1_function": "Most beloved romantic movie with most obvious red flag for maximum engagement",
+      "middle_parts_function": "Escalate to movies where the red flag is genuinely disturbing but widely overlooked",
+      "final_part_function": "A children's movie — the most 'innocent' context with the most hidden red flags"
+    },
+    "teaching_alignment": {
+      "berger": "Social Currency — media literacy and relationship intelligence signaling",
+      "heath": "Unexpected — familiar content seen through completely new lens",
+      "kane": "Reframe hook — same content, new interpretation"
+    }
+  }
+]

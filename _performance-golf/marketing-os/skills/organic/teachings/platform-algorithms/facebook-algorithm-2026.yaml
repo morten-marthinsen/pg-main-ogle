@@ -1,0 +1,211 @@
+# FACEBOOK ALGORITHM TEACHING FILE
+# Extracted from 1,842 validated documents
+# Source: Facebook Agent Master Knowledge Base
+# Last Updated: March 2026
+
+meta:
+  platform: facebook
+  document_count: 1842
+  top_frameworks:
+    - Save-Share Trigger (843 occurrences)
+    - Offer Stack (682 occurrences)
+    - Packaging (423 occurrences)
+    - Feed Narrative (298 occurrences)
+    - 3-Second Hook (223 occurrences)
+    - Retention Curve (117 occurrences)
+  high_signal_sources:
+    - 16 Types of Video That Sells (score: 90.75)
+    - GeekOut Barcelona Scott Seward (score: 86.35)
+    - CXL Advanced LinkedIn Ads (crossover) (score: 84.9)
+    - $50k FB Group Masterclass (score: 82.35)
+
+algorithm_priorities:
+  primary_metric: meaningful_interactions
+  core_principle: "Facebook prioritizes content that sparks conversations between people"
+
+  ranking_signals:
+    tier_1_critical:
+      - meaningful_interactions:
+          weight: highest
+          description: "Comments, shares, reactions from friends/family"
+          benchmark: "Conversations > passive consumption"
+          strategy: "Create content that sparks discussion"
+      - share_rate:
+          weight: highest
+          description: "Shares to feed, groups, messenger"
+          strategy: "Shareable = useful, controversial, or emotional"
+      - engagement_velocity:
+          weight: highest
+          description: "Speed of engagement after posting"
+          strategy: "Seed engagement in first hour"
+
+    tier_2_important:
+      - comment_length:
+          weight: high
+          description: "Longer comments = more meaningful"
+          strategy: "Ask open-ended questions"
+      - video_watch_time:
+          weight: high
+          description: "For video content"
+          benchmark: "3+ seconds counts as view, aim for 60%+ retention"
+      - group_engagement:
+          weight: medium_high
+          description: "Groups are prioritized over pages"
+
+    tier_3_supporting:
+      - reactions:
+          weight: medium
+          description: "Love, haha, wow > simple likes"
+      - saves:
+          weight: medium
+          description: "Bookmarks indicate value"
+      - clicks:
+          weight: medium
+          description: "Clicks to links, profiles"
+
+distribution_mechanics:
+  content_hierarchy:
+    friends_and_family: "Highest priority"
+    groups: "Strong priority"
+    pages_organic: "Lowest priority (pay to play)"
+
+  feed_ranking:
+    inventory: "All available content from connections"
+    signals: "Engagement predictions, relationship strength"
+    predictions: "How likely is meaningful interaction"
+    score: "Combined relevance score"
+
+  groups_vs_pages:
+    groups:
+      organic_reach: "10-30%+ of members"
+      engagement: "Higher due to community"
+      strategy: "Build owned community"
+
+    pages:
+      organic_reach: "1-5% of followers"
+      engagement: "Lower, more broadcast feel"
+      strategy: "Use for ads, pixel, official presence"
+
+content_optimization:
+  feed_narrative:
+    principle: "Content should feel native to social feed, not broadcast"
+
+    native_formats:
+      - "Personal story with lesson"
+      - "Question to community"
+      - "Behind-the-scenes"
+      - "User-generated content reshares"
+
+    avoid:
+      - "Overtly promotional posts"
+      - "External link dumps"
+      - "Engagement bait ('like if you agree')"
+
+  video_optimization:
+    watch_time_priority:
+      - "Hook in first 3 seconds"
+      - "Caption/subtitles for sound-off viewing"
+      - "Square or vertical format for mobile"
+      - "Native upload (not YouTube links)"
+
+    reels_on_facebook:
+      - "Cross-posted from Instagram Reels"
+      - "Same optimization principles"
+      - "Growing distribution on Facebook"
+
+    live_video:
+      - "Highest organic reach of any format"
+      - "Algorithm notifies followers"
+      - "Engagement during live boosts distribution"
+
+  post_formats:
+    text_only:
+      reach: "Can perform well if sparks conversation"
+      best_for: "Questions, hot takes, personal stories"
+
+    photo_posts:
+      reach: "Moderate"
+      best_for: "Behind-the-scenes, user content"
+
+    video_native:
+      reach: "Strong"
+      best_for: "Educational, entertaining, hooks"
+
+    link_posts:
+      reach: "Reduced (FB wants users on platform)"
+      strategy: "Put link in comments instead"
+
+    carousels:
+      reach: "Strong on mobile"
+      best_for: "Educational content, stories"
+
+group_strategy:
+  building_groups:
+    positioning: "Specific problem/interest based"
+    naming: "Clear value proposition"
+    rules: "Establish early, enforce consistently"
+
+  engagement_in_groups:
+    welcome_new_members: "Personalized welcome increases engagement"
+    questions: "Ask regularly, respond to all"
+    content_mix: "Value posts, questions, wins, polls"
+
+  monetization_from_groups:
+    trust_building: "Provide value first"
+    soft_sells: "Share wins, results"
+    offer_introduction: "Natural progression from free value"
+
+  group_engagement_hacks:
+    - "Welcome new members with question"
+    - "Daily themes (Motivation Monday, Win Wednesday)"
+    - "Featured member spotlights"
+    - "Polls and decisions"
+    - "Live Q&As in group"
+
+virality_patterns:
+  what_goes_viral:
+    - "Emotional stories (inspiration, outrage)"
+    - "Controversial opinions"
+    - "Useful content worth sharing"
+    - "Funny/relatable content"
+    - "Live video events"
+
+  share_triggers:
+    - "This changed my perspective on..."
+    - "Everyone needs to see this"
+    - "Tag someone who needs this"
+    - "Save this for later"
+
+ads_integration:
+  organic_to_paid:
+    - "Test content organically first"
+    - "Boost top-performing organic posts"
+    - "Build audiences from engagement"
+
+  pixel_strategy:
+    - "Pixel on all owned properties"
+    - "Build custom audiences from engagement"
+    - "Lookalike audiences from converters"
+
+  creative_best_practices:
+    - "Native feel (not over-produced)"
+    - "Hook in first 3 seconds"
+    - "Clear call to action"
+    - "Test multiple creatives"
+
+anti_patterns:
+  what_kills_facebook:
+    - "Engagement bait (explicitly penalized)"
+    - "Clickbait headlines"
+    - "External links in main post"
+    - "Posting only promotional content"
+    - "Ignoring comments"
+    - "Inconsistent group management"
+
+application_to_engine:
+  skill_mappings:
+    S02_platform_strategy: "Groups strategy vs Page strategy"
+    S06_virality_scoring: "Weight shareability heavily"
+    S08_long_form: "Feed narrative for native content"
+    S16_engagement_protocol: "First hour seeding critical"
+    S17_network_amplification: "Group cross-promotion tactics"

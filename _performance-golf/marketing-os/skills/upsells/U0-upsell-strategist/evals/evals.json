@@ -1,0 +1,31 @@
+[
+  {
+    "id": "u0-mode-a-supplement-stack",
+    "prompt": "Design the upsell strategy for a supplement launch. The front-end product is 'FlexiJoint Pro' (joint health, $49). Available upsell products: 'FlexiJoint Pro 3-Pack' ($119), 'Mobility Masterclass' (digital course, $27), and 'Recovery Shake Mix' (complementary product, $39). Skills 07 and 09 outputs are available with the mechanism 'Synovial Restoration Protocol.' Produce the complete upsell strategy.",
+    "expected_output": "Complete upsell-strategy.yaml with position mapping (order bump, upsell 1, downsell 1), pricing cascade following descending commitment rule, congruence thread connecting each offer to the Synovial Restoration Protocol mechanism, and narrative arc across the sequence.",
+    "files": [],
+    "assertions": [
+      "Every upsell position is mapped with specific product assignment",
+      "Pricing cascade follows descending commitment / ascending value rule",
+      "Congruence thread references 'Synovial Restoration Protocol' mechanism",
+      "Narrative arc connects across the full sequence",
+      "Order bump position is assigned with rationale",
+      "Downsell is a genuine alternative angle, not just cheaper",
+      "Handoff specs for U1, U2, U3 are defined"
+    ]
+  },
+  {
+    "id": "u0-mode-b-digital-course",
+    "prompt": "I'm selling a digital course called 'The Draw Fix' for $47 to golfers who want to fix their slice. I have two potential upsells: a video analysis service ($97) and a practice plan PDF ($17). Design the upsell strategy from this brief alone — no upstream skills were run.",
+    "expected_output": "Upsell strategy produced in Mode B (standalone) with position mapping, pricing cascade, congruence mapping using the user-provided context, and a flag noting Mode B limitations.",
+    "files": [],
+    "assertions": [
+      "Mode B (standalone) is correctly identified and flagged",
+      "Position mapping assigns both available products to upsell positions",
+      "Pricing cascade is logical given the $47 front-end",
+      "Congruence thread connects to the slice-fixing mechanism",
+      "Mode B limitation flag is present in the output",
+      "Handoff specs for downstream skills are provided"
+    ]
+  }
+]

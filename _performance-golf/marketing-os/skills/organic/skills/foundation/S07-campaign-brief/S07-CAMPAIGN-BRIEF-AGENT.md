@@ -1,0 +1,180 @@
+# S07: Campaign Brief — Master Agent
+
+**Version:** 1.0
+**Skill:** S07-campaign-brief
+**Position:** Foundation, Step 7 (The Master Key)
+**Type:** Synthesis + Planning (Leaf Skill)
+**Dependencies:** S01-S06 outputs
+**Output:** CBF (Campaign Brief File)
+
+---
+
+## Pre-Execution Requirements
+
+**BEFORE any S07 execution, complete these steps:**
+
+1. **READ** `S07-CAMPAIGN-BRIEF-ANTI-DEGRADATION.md` — mandatory
+2. **VALIDATE** all upstream inputs exist (S01-S06 output files)
+3. **CREATE** project infrastructure:
+   - `[campaign]/S07-campaign-brief/PROJECT-STATE.md`
+   - `[campaign]/S07-campaign-brief/PROGRESS-LOG.md`
+   - `[campaign]/S07-campaign-brief/checkpoints/` directory
+4. **DELETE** any stale artifacts from previous failed attempts
+5. **ONLY THEN** begin Layer 0
+
+### Model Assignment Table (Binding)
+
+| Layer | Task | Model | Rationale |
+|-------|------|-------|-----------|
+| Pre | Infrastructure setup | haiku | File creation only |
+| 0 | Input validation + foundation loading | haiku | Simple validation |
+| 1 | Synthesis + planning (6 phases) | opus | Strategic synthesis and calendar planning |
+| 4 | Output packaging | sonnet | Assembly from existing content |
+
+---
+
+## Purpose
+
+Synthesize ALL foundation work (S01-S06) into a single, actionable Campaign Brief. The CBF is **THE MASTER KEY** that unlocks all production skills.
+
+Without the CBF, no content is created. With the CBF, S08-S14 production skills can execute.
+
+**Success Criteria:**
+- All 6 foundation outputs synthesized
+- Campaign objectives clear and measurable
+- Content calendar planned (minimum 30 days)
+- Platform execution strategy defined
+- Voice and hook strategy documented
+- Virality targets established
+
+---
+
+## Identity Boundaries
+
+**This skill IS:**
+- Synthesis of all foundation insights
+- Strategic planning document
+- Content calendar creation
+- Production roadmap
+- The gateway to execution
+
+**This skill IS NOT:**
+- Content creation (that's S08-S13)
+- Platform strategy development (that's S02)
+- Hook creation (that's S05)
+- Performance tracking (that's S19-S20)
+
+---
+
+## Layer Map
+
+```
+Layer 0: Input Validation + Foundation Loading
+├── 0.1 Input Validator
+├── 0.2 Foundation Loader
+├── 0.3 CopywritingEngine Loader (optional)
+└── 0.4 Upstream Synthesis
+
+Layer 1: Campaign Brief Development
+├── 1.1 Foundation Synthesis
+├── 1.2 Objective Crystallization
+├── 1.3 Content Calendar Planner
+├── 1.4 Platform Execution Plan
+├── 1.5 Voice & Hook Strategy
+└── 1.6 Quality & Distribution Strategy
+
+Layer 4: Output Packaging
+├── 4.1 CBF Assembler
+└── 4.2 Execution Log
+```
+
+---
+
+## Positional Reinforcement
+
+### BEFORE Layer 1
+You have completed input validation. All S01-S06 outputs are loaded. Foundation context is synthesized.
+
+**YOUR TASK NOW:** Extract the KEY INSIGHTS from each foundation file and synthesize them into actionable campaign strategy. Build a minimum 30-day content calendar with specific daily assignments.
+
+**DO NOT:** Copy-paste entire foundation files. Do not create vague calendar entries like "post educational content." Be specific.
+
+### BEFORE Layer 4
+You have completed campaign brief development. All 6 phases are complete. Calendar is planned with 30+ days of specific content.
+
+**YOUR TASK NOW:** Package the complete CBF output file. Verify all required fields are populated. This file MUST be comprehensive enough to hand to a production team and have them execute without clarification.
+
+**DO NOT:** Skip any CBF template sections. Do not omit the content calendar.
+
+---
+
+## Output Requirements
+
+**File:** `outputs/[campaign-name]-CBF.yaml`
+
+**Minimum Content:**
+- Campaign objective (specific, measurable)
+- Success metrics with baselines and targets
+- Audience summary (from AIF synthesis)
+- Platform plan with posting cadence
+- Voice summary with key phrases
+- Content calendar (minimum 30 days, daily assignments)
+- Hook strategy (3-5 approved hook types)
+- Virality targets (from VSF)
+- Distribution strategy
+
+---
+
+## Gate G07 Criteria
+
+**PASS if:**
+- All 6 foundation files loaded and synthesized
+- Campaign objective is measurable
+- Content calendar has ≥30 days planned
+- Platform plan defines posting cadence
+- Hook strategy lists ≥3 hook types
+- Virality targets set from VSF
+- All required CBF fields populated
+
+**FAIL if:**
+- Any foundation file missing or not synthesized
+- Objective is vague or unmeasurable
+- Content calendar <30 days
+- Platform cadence not defined
+- Hook strategy incomplete
+- Virality targets not set
+
+On FAIL: Return to incomplete microskills for remediation.
+
+---
+
+## Downstream Handoff
+
+CBF unlocks **ALL PRODUCTION SKILLS** (S08-S14) via Gate G07:
+- S08: Script Writing
+- S09: Caption Writing
+- S10: Carousel Design
+- S11: Thread Writing
+- S12: Visual Direction
+- S13: Arena Generation
+- S14: Content Assembly
+
+**The strategy phase is complete. Content creation begins.**
+
+---
+
+## Special Mode: CopywritingEngine Downstream
+
+If campaign was generated by CopywritingEngine Skill 09 (Campaign Brief), S07 can operate in **Mode A: Downstream Integration**.
+
+In this mode:
+- Load `campaign-brief-package.json` from CopywritingEngine
+- Extract product, mechanism, promise, big idea
+- Adapt long-form campaign strategy to organic content
+- Map copywriting campaign to organic content pillars
+
+This creates a seamless pipeline from CopywritingEngine → Organic Engine.
+
+---
+
+*Version 1.0 — Foundation skill, no Arena layer*

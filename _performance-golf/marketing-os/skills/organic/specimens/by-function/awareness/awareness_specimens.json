@@ -1,0 +1,733 @@
+{
+  "meta": {
+    "function": "awareness",
+    "definition": "Content whose primary function is reaching new audiences who have never encountered the creator. Optimized for algorithmic distribution, explore/FYP placement, and share-driven virality. The content acts as a top-of-funnel magnet — it trades depth for breadth, specificity for universality.",
+    "primary_metrics": [
+      "reach",
+      "impressions",
+      "new_followers",
+      "share_rate",
+      "explore_page_appearances",
+      "profile_visits_from_non_followers"
+    ],
+    "secondary_metrics": [
+      "watch_time_from_non_followers",
+      "follower_conversion_rate",
+      "hashtag_reach",
+      "sound_page_views"
+    ],
+    "schwartz_awareness_levels": ["unaware", "problem_aware"],
+    "version": "1.0",
+    "last_updated": "2026-03-04"
+  },
+
+  "function_analysis": {
+    "what_makes_awareness_different": "Awareness content sacrifices depth for universal resonance. It speaks to the widest possible audience within a niche, using emotions and situations that require zero context. The viewer does not need to know who the creator is, what they sell, or what they stand for. The content stands alone as a self-contained unit of value or entertainment.",
+    "algorithm_alignment": {
+      "instagram_reels": "Instagram prioritizes content with high share-to-reach ratio and watch-through rate from non-followers. Awareness content triggers the 'send to friend' impulse, which is the single strongest signal for Explore distribution.",
+      "tiktok_fyp": "TikTok's recommendation engine rewards completion rate, rewatch rate, and early engagement velocity. Awareness content hooks in the first 0.5 seconds and delivers a payoff that makes viewers watch again.",
+      "youtube_shorts": "YouTube Shorts algorithm weighs click-through rate from browse features and average percentage viewed. Awareness content uses pattern interrupts in thumbnails and opening frames.",
+      "linkedin_feed": "LinkedIn rewards dwell time and comment-to-impression ratio. Awareness content on LinkedIn uses contrarian opinions or surprising data to stop the scroll.",
+      "twitter_x": "X rewards quote-tweet velocity and reply chains. Awareness content provides a strong opinion or framework that others want to react to publicly."
+    },
+    "content_characteristics": [
+      "Requires zero context about the creator",
+      "Emotionally resonant within 1-3 seconds",
+      "Highly shareable — viewer wants someone else to see it",
+      "Universal themes dressed in niche-specific language",
+      "Low commitment ask — no CTA beyond follow/share",
+      "Pattern interrupt in opening hook",
+      "Payoff that exceeds the setup",
+      "Rewatch or re-read value"
+    ],
+    "anti_patterns": [
+      "Referencing past content or inside knowledge",
+      "Leading with credentials or authority",
+      "Complex multi-step explanations",
+      "Heavy CTA to buy or sign up",
+      "Niche jargon without translation",
+      "Assuming the viewer cares about you"
+    ]
+  },
+
+  "specimens": [
+    {
+      "id": "AW-001",
+      "creator": "Alex Hormozi",
+      "platform": "instagram_reels",
+      "format": "talking_head_reel",
+      "hook": "Stop saying 'I can't afford it.' You can't afford NOT to invest in yourself.",
+      "body_summary": "Reframes the cost objection as a mindset problem, uses personal story of being broke and investing last dollars into a course that returned 100x.",
+      "metrics_estimate": { "views": "12M+", "shares": "340K", "new_followers_driven": "80K+" },
+      "awareness_mechanism": "Universal pain point (feeling broke) + identity challenge (calling out a behavior the viewer recognizes in themselves). High share rate because viewers tag friends who complain about money.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Social Currency + Emotion",
+          "application": "Sharing this makes the sharer look ambitious and growth-minded. The emotional charge of being called out drives impulsive sharing."
+        },
+        "kane_hook_point": {
+          "principle": "3-Second Hook",
+          "application": "Opens with a direct command ('Stop saying') that creates instant tension. Viewer must resolve the cognitive dissonance."
+        },
+        "gladwell_connectors": {
+          "principle": "Stickiness Factor",
+          "application": "The reframe ('can't afford NOT to') is a sticky inversion that lodges in memory and gets repeated in conversation."
+        }
+      }
+    },
+    {
+      "id": "AW-002",
+      "creator": "Chris Do",
+      "platform": "tiktok",
+      "format": "text_overlay_reel",
+      "hook": "You're not charging too much. Your clients are too broke.",
+      "body_summary": "Explains the difference between a pricing problem and a targeting problem. Uses whiteboard to show that premium pricing requires premium audience, not better persuasion.",
+      "metrics_estimate": { "views": "8M+", "shares": "210K", "new_followers_driven": "45K+" },
+      "awareness_mechanism": "Contrarian opinion that validates an insecurity most freelancers/entrepreneurs carry. The provocative framing triggers comment debates, which fuel algorithmic distribution.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Controversy (Emotion) + Practical Value",
+          "application": "The hot take generates emotional reactions while the underlying advice is genuinely useful. Dual engine for sharing."
+        },
+        "kane_hook_point": {
+          "principle": "Pattern Interrupt",
+          "application": "Reverses the expected advice ('lower your prices') with the opposite ('your clients are too broke'). Forces a cognitive double-take."
+        },
+        "gladwell_connectors": {
+          "principle": "Maven behavior",
+          "application": "Viewers who share this position themselves as pricing-savvy experts among their peers."
+        }
+      }
+    },
+    {
+      "id": "AW-003",
+      "creator": "Sahil Bloom",
+      "platform": "twitter_x",
+      "format": "thread",
+      "hook": "I studied 100 billionaires' morning routines. Here's what they actually do (it's not what you think):",
+      "body_summary": "Debunks the 5am wake-up myth, reveals that most ultra-successful people optimize for energy management not time management. Lists specific, surprising habits with sources.",
+      "metrics_estimate": { "views": "15M+", "retweets": "48K", "new_followers_driven": "35K+" },
+      "awareness_mechanism": "Curiosity gap ('not what you think') combined with aspirational social proof ('100 billionaires'). The thread format creates multiple share-worthy individual tweets that each drive independent distribution.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Social Currency + Stories",
+          "application": "Sharing this thread makes the sharer look well-researched and contrarian. The narrative structure (myth → reality) is inherently shareable."
+        },
+        "kane_hook_point": {
+          "principle": "Curiosity Gap",
+          "application": "The parenthetical '(it's not what you think)' creates an information gap the brain is compelled to close."
+        },
+        "gladwell_connectors": {
+          "principle": "Connector distribution",
+          "application": "Appeal to self-improvement audience is so broad that connectors across many niches share it into their respective networks."
+        }
+      }
+    },
+    {
+      "id": "AW-004",
+      "creator": "Rudy Mawer",
+      "platform": "instagram_reels",
+      "format": "b_roll_with_voiceover",
+      "hook": "I made $10M before I turned 30. Here are 3 things school never taught me.",
+      "body_summary": "Lifestyle B-roll with voiceover listing: leverage (money working for you), positioning (perception beats skill), and speed (done beats perfect). Each point illustrated with quick visual cuts.",
+      "metrics_estimate": { "views": "6M+", "shares": "180K", "new_followers_driven": "55K+" },
+      "awareness_mechanism": "Aspirational result + contrarian education take. The anti-school framing resonates across demographics and age groups. Luxury B-roll triggers aspirational sharing.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Social Currency + Triggers",
+          "application": "The luxury visuals create aspirational social currency. 'School never taught me' is a cultural trigger phrase that activates shared frustration."
+        },
+        "kane_hook_point": {
+          "principle": "Result-First Hook",
+          "application": "Leading with the $10M result establishes authority instantly and creates a credibility bridge for the advice."
+        },
+        "gladwell_connectors": {
+          "principle": "Stickiness through simplicity",
+          "application": "Three simple lessons are memorable enough to repeat in conversation, extending organic reach beyond the platform."
+        }
+      }
+    },
+    {
+      "id": "AW-005",
+      "creator": "Jaspreet Singh",
+      "platform": "youtube_shorts",
+      "format": "direct_to_camera",
+      "hook": "If you make $60K a year, you're in the top 1% of the world. But you're broke. Here's why.",
+      "body_summary": "Explains lifestyle inflation, comparison culture, and the gap between income and wealth. Uses simple math to show how someone earning top-1% global income can still be paycheck-to-paycheck.",
+      "metrics_estimate": { "views": "9M+", "shares": "290K", "new_followers_driven": "70K+" },
+      "awareness_mechanism": "Cognitive dissonance between being 'top 1%' and 'broke' creates irresistible curiosity. The stat is surprising enough to share as a conversation starter. Universal relevance — most viewers earn around this range.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Practical Value + Emotion (awe)",
+          "application": "The surprising statistic creates an awe response. The practical explanation of why provides share-worthy value."
+        },
+        "kane_hook_point": {
+          "principle": "Tension through Contradiction",
+          "application": "Two contradictory statements in one hook ('top 1%' + 'broke') create unresolvable tension that demands an explanation."
+        },
+        "gladwell_connectors": {
+          "principle": "Tipping point through universality",
+          "application": "The insight applies to nearly everyone in developed countries, giving it cross-demographic appeal."
+        }
+      }
+    },
+    {
+      "id": "AW-006",
+      "creator": "Codie Sanchez",
+      "platform": "tiktok",
+      "format": "green_screen_with_article",
+      "hook": "Nobody's talking about this: boring businesses are creating more millionaires than tech startups.",
+      "body_summary": "Shows data on laundromat, car wash, and vending machine businesses outperforming VC-backed startups on owner returns. Breaks down the math of a boring business doing $500K/year.",
+      "metrics_estimate": { "views": "11M+", "shares": "420K", "new_followers_driven": "90K+" },
+      "awareness_mechanism": "Contrarian reframe of what 'entrepreneurship' looks like. Appeals to people exhausted by tech-bro culture. The 'boring' framing is itself a pattern interrupt against hustle content.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Social Currency (insider knowledge) + Practical Value",
+          "application": "Sharing this makes the viewer look like they have access to secret wealth-building knowledge that mainstream media ignores."
+        },
+        "kane_hook_point": {
+          "principle": "Contrarian Positioning",
+          "application": "'Nobody's talking about this' frames the creator as a lone truth-teller, creating immediate authority and curiosity."
+        },
+        "gladwell_connectors": {
+          "principle": "Maven information sharing",
+          "application": "Mavens share this because it positions them as having discovered a hidden opportunity before the crowd."
+        }
+      }
+    },
+    {
+      "id": "AW-007",
+      "creator": "Mark Tilbury",
+      "platform": "youtube_shorts",
+      "format": "prop_demonstration",
+      "hook": "[Holds up a dollar bill] This dollar is worth $1 today. In 10 years, it'll be worth 63 cents. Here's how to stop losing money in your sleep.",
+      "body_summary": "Physical demonstration of inflation using props. Cuts dollar bill to show purchasing power erosion. Transitions to three inflation-beating strategies accessible to beginners.",
+      "metrics_estimate": { "views": "14M+", "shares": "380K", "new_followers_driven": "65K+" },
+      "awareness_mechanism": "Physical prop creates visual pattern interrupt in a sea of talking heads. The tangible demonstration of an abstract concept (inflation) makes it viscerally shareable. Parents share to teach kids.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Public (visibility) + Practical Value",
+          "application": "The physical demonstration is visually distinctive and memorable. The practical advice provides genuine utility that justifies sharing."
+        },
+        "kane_hook_point": {
+          "principle": "Visual Pattern Interrupt",
+          "application": "A physical prop in the first frame breaks the pattern of standard talking-head content and stops the scroll."
+        },
+        "gladwell_connectors": {
+          "principle": "Stickiness through tangibility",
+          "application": "Abstract concepts made physical are dramatically more memorable and repeatable in conversation."
+        }
+      }
+    },
+    {
+      "id": "AW-008",
+      "creator": "Gary Vaynerchuk",
+      "platform": "tiktok",
+      "format": "conference_clip",
+      "hook": "You're not patient enough. You want to be a millionaire at 27 but won't work for free at 22.",
+      "body_summary": "Conference stage clip where Gary challenges the audience's timeline expectations. Compares current generation's impatience to his own decade-long grind before Wine Library TV took off.",
+      "metrics_estimate": { "views": "18M+", "shares": "520K", "new_followers_driven": "45K+" },
+      "awareness_mechanism": "Emotional provocation that splits audience into agreement and disagreement camps. Both reactions drive comments. Conference energy and audience reactions add social proof. The quote format is screenshot-worthy.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Emotion (anger/inspiration) + Social Currency",
+          "application": "The provocative statement triggers either defensive anger or motivated agreement. Both emotions drive sharing. Sharing positions the sharer as 'someone who gets it.'"
+        },
+        "kane_hook_point": {
+          "principle": "Identity Challenge",
+          "application": "Directly challenges the viewer's self-perception of their work ethic, creating personal stakes in the content."
+        },
+        "gladwell_connectors": {
+          "principle": "Salesman persuasion",
+          "application": "Gary's stage presence and conviction operate as Gladwell's Salesman archetype — infectious certainty that compels adoption of the idea."
+        }
+      }
+    },
+    {
+      "id": "AW-009",
+      "creator": "Ali Abdaal",
+      "platform": "youtube_shorts",
+      "format": "screen_recording_tutorial",
+      "hook": "The $0 tool that replaced my $500/month tech stack.",
+      "body_summary": "Screen recording showing Notion setup that replaces project management, CRM, content calendar, and notes tools. Quick walkthrough of templates with results.",
+      "metrics_estimate": { "views": "7M+", "shares": "310K", "new_followers_driven": "50K+" },
+      "awareness_mechanism": "Money-saving hook has universal appeal. Specific dollar amounts create concreteness that generic 'free tool' hooks lack. Screen recordings feel like insider access to someone's actual workflow.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Practical Value (saving money) + Social Currency (insider tool)",
+          "application": "Dual sharing engine — viewers share both to help friends save money AND to look resourceful and tech-savvy."
+        },
+        "kane_hook_point": {
+          "principle": "Specificity Creates Credibility",
+          "application": "The specific '$500/month' figure signals real experience versus theoretical advice. Specific numbers outperform vague claims."
+        },
+        "gladwell_connectors": {
+          "principle": "Maven toolsharing",
+          "application": "Tool recommendations are peak Maven behavior. Mavens gain social capital by sharing discoveries."
+        }
+      }
+    },
+    {
+      "id": "AW-010",
+      "creator": "Vanessa Lau",
+      "platform": "instagram_reels",
+      "format": "transition_reel",
+      "hook": "What people think running an online business looks like vs. what it actually looks like.",
+      "body_summary": "Expectation vs. reality format. Glamorous laptop-on-beach shot transitions to messy desk at 2am, Slack notifications overflowing, imposter syndrome Google searches. Ends with 'but I wouldn't trade it.'",
+      "metrics_estimate": { "views": "5M+", "shares": "240K", "new_followers_driven": "38K+" },
+      "awareness_mechanism": "Relatability-driven virality. Every online entrepreneur has experienced this gap. The format is inherently shareable because viewers want to validate their own struggles by showing others 'see, it's not just me.'",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Emotion (validation) + Social Currency (insider status)",
+          "application": "Sharing this signals 'I'm an entrepreneur too' while also providing emotional relief through shared experience."
+        },
+        "kane_hook_point": {
+          "principle": "Expectation Violation",
+          "application": "The gap between expectation and reality creates surprise, which is one of the most reliable attention-capture mechanisms."
+        },
+        "gladwell_connectors": {
+          "principle": "Context-dependent virality",
+          "application": "This content thrives in communities where entrepreneurship identity is valued. The context shapes the sharing behavior."
+        }
+      }
+    },
+    {
+      "id": "AW-011",
+      "creator": "Daniel Priestley",
+      "platform": "linkedin",
+      "format": "text_post_with_image",
+      "hook": "I've hired 300+ people. The #1 predictor of success wasn't their resume. It was this one trait.",
+      "body_summary": "Reveals that 'speed of implementation' — how fast someone acts on new information — beats credentials, experience, and interview performance. Backs up with specific hiring examples and retention data.",
+      "metrics_estimate": { "views": "4M+", "shares": "85K", "comments": "12K", "new_followers_driven": "25K+" },
+      "awareness_mechanism": "LinkedIn's algorithm rewards posts with high comment velocity in the first hour. The curiosity gap plus controversial claim ('not their resume') generates immediate debate. Hiring managers share to signal their own hiring philosophy.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Social Currency + Practical Value",
+          "application": "Sharing this positions you as a thoughtful leader. The practical insight about 'speed of implementation' is genuinely useful for anyone building a team."
+        },
+        "kane_hook_point": {
+          "principle": "Authority + Curiosity Gap",
+          "application": "The specific number (300+ people) establishes authority. 'This one trait' creates an information gap."
+        },
+        "gladwell_connectors": {
+          "principle": "Connector amplification",
+          "application": "HR professionals, founders, and managers all share this into their respective networks, creating multi-network distribution."
+        }
+      }
+    },
+    {
+      "id": "AW-012",
+      "creator": "Iman Gadzhi",
+      "platform": "tiktok",
+      "format": "car_vlog",
+      "hook": "I dropped out of school at 17. At 21, I'm worth $30M. Here's the uncomfortable truth about education.",
+      "body_summary": "Car monologue contrasting formal education with self-education through execution. Not anti-school but anti-passive-learning. Emphasizes that the skill stack of sales, marketing, and leverage isn't taught in any classroom.",
+      "metrics_estimate": { "views": "22M+", "shares": "680K", "new_followers_driven": "120K+" },
+      "awareness_mechanism": "Aspirational result combined with controversial education take. Targets the largest demographic on TikTok (16-24) with a message that validates their frustrations. The luxury car setting adds aspirational visual fuel.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Emotion (inspiration + frustration) + Stories",
+          "application": "The personal narrative triggers both inspiration ('he did it') and frustration ('why wasn't I taught this'). Both emotions are high-arousal and drive sharing."
+        },
+        "kane_hook_point": {
+          "principle": "Result-First Credibility",
+          "application": "Leading with specific results ($30M at 21) creates an authority bridge that makes the subsequent advice credible."
+        },
+        "gladwell_connectors": {
+          "principle": "Mavens in education-alternative space",
+          "application": "Content is amplified by mavens in the alternative education movement who use it as evidence for their worldview."
+        }
+      }
+    },
+    {
+      "id": "AW-013",
+      "creator": "Jay Clouse",
+      "platform": "twitter_x",
+      "format": "single_tweet_with_image",
+      "hook": "Every creator's career follows this exact curve. Most quit at the red dot. [Attached: graph showing exponential growth with a marked 'quit point' in the flat section]",
+      "body_summary": "Simple graph visualization showing the 'valley of death' in creator growth — the long flat period before exponential takeoff. The red dot marks where 95% of creators quit.",
+      "metrics_estimate": { "views": "8M+", "retweets": "92K", "new_followers_driven": "30K+" },
+      "awareness_mechanism": "Visual content outperforms text-only on X by 3-5x. The graph is immediately understandable and personally relevant to every creator. The 'red dot' creates a self-assessment moment — 'am I about to quit at the wrong time?'",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Public (visual shareability) + Emotion (hope + fear)",
+          "application": "The image is self-contained — shareable without context. The emotional response oscillates between fear ('am I quitting?') and hope ('the growth is coming')."
+        },
+        "kane_hook_point": {
+          "principle": "Visual Metaphor",
+          "application": "Complex concept (non-linear growth) compressed into a single image that communicates in under 1 second."
+        },
+        "gladwell_connectors": {
+          "principle": "Stickiness through visualization",
+          "application": "Visual representations of data are 6x more memorable than text descriptions of the same data."
+        }
+      }
+    },
+    {
+      "id": "AW-014",
+      "creator": "Leila Hormozi",
+      "platform": "instagram_reels",
+      "format": "podcast_clip",
+      "hook": "The fastest way to build a $100M company? Stop trying to be original.",
+      "body_summary": "Podcast clip explaining that the best business strategies are borrowed, not invented. Walks through how Acquisition.com studies competitors' winning plays and deploys them with better execution.",
+      "metrics_estimate": { "views": "7M+", "shares": "195K", "new_followers_driven": "42K+" },
+      "awareness_mechanism": "Counterintuitive advice from a credible source. The 'stop being original' message violates the hustle-culture narrative of innovation, creating cognitive friction that demands engagement.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Social Currency (contrarian insight) + Practical Value",
+          "application": "Sharing contrarian-but-true insights signals intelligence. The practical framework (study competitors, execute better) is immediately actionable."
+        },
+        "kane_hook_point": {
+          "principle": "Contrarian Hook",
+          "application": "Directly contradicts the dominant narrative ('be original'). Contrarian hooks outperform agreeable hooks by 3-7x on engagement."
+        },
+        "gladwell_connectors": {
+          "principle": "Salesman conviction",
+          "application": "Leila's delivery combines authority with casualness that makes contrarian ideas feel like common sense."
+        }
+      }
+    },
+    {
+      "id": "AW-015",
+      "creator": "Steven Bartlett",
+      "platform": "tiktok",
+      "format": "interview_clip",
+      "hook": "The guest said something that made the entire room go silent.",
+      "body_summary": "Diary of a CEO clip where a guest reveals a deeply personal insight about success and loneliness. The emotional weight of the moment is captured in the host's reaction and the studio silence.",
+      "metrics_estimate": { "views": "25M+", "shares": "780K", "new_followers_driven": "95K+" },
+      "awareness_mechanism": "Emotional peak moment extracted from long-form content. The 'room went silent' framing creates anticipation. Raw emotional moments outperform polished content because they feel authentic and rare.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Emotion (high arousal) + Stories",
+          "application": "High-arousal emotional moments (awe, surprise, sadness) are shared 3x more than low-arousal content. The narrative context amplifies the emotional impact."
+        },
+        "kane_hook_point": {
+          "principle": "Social Proof + Anticipation",
+          "application": "'The entire room' going silent provides social proof that the moment is significant before the viewer even hears it."
+        },
+        "gladwell_connectors": {
+          "principle": "Emotional contagion",
+          "application": "Visible emotional reactions (host's face, room's silence) create mirror-neuron activation in viewers, making the emotion feel personal."
+        }
+      }
+    },
+    {
+      "id": "AW-016",
+      "creator": "Naval Ravikant",
+      "platform": "twitter_x",
+      "format": "single_tweet",
+      "hook": "Specific knowledge is found by pursuing your genuine curiosity and passion rather than whatever is hot right now.",
+      "body_summary": "Standalone aphorism that reframes career strategy from trend-chasing to curiosity-following. No thread, no elaboration — the compression IS the value.",
+      "metrics_estimate": { "views": "12M+", "retweets": "110K", "new_followers_driven": "20K+" },
+      "awareness_mechanism": "Aphoristic format is the most screenshot-and-share format on the internet. The insight is compressed enough to fit on an Instagram story, a notebook page, or a text message. It travels far because it travels light.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Social Currency (wisdom signaling)",
+          "application": "Sharing Naval quotes is a identity signal — it marks the sharer as someone who values deep thinking over surface hustle."
+        },
+        "kane_hook_point": {
+          "principle": "Compression Elegance",
+          "application": "Maximum insight per word. No waste. The constraint of the tweet format forces the idea into its most potent form."
+        },
+        "gladwell_connectors": {
+          "principle": "Memetic fitness",
+          "application": "The quote survives being screenshotted, paraphrased, and embedded in other content without losing its power."
+        }
+      }
+    },
+    {
+      "id": "AW-017",
+      "creator": "MrBeast",
+      "platform": "youtube_shorts",
+      "format": "challenge_clip",
+      "hook": "I gave a stranger $10,000 if they could do ONE pushup. Watch what happens.",
+      "body_summary": "Quick challenge format with a surprising twist — the 'one pushup' has an unexpected condition (on a moving platform, blindfolded, etc.). The payoff subverts expectations.",
+      "metrics_estimate": { "views": "85M+", "shares": "2.1M", "new_followers_driven": "200K+" },
+      "awareness_mechanism": "Curiosity gap + money + human unpredictability. The brain cannot scroll past 'watch what happens' combined with a large dollar amount. The twist ending drives rewatches and shares.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Emotion (surprise) + Public (visual spectacle)",
+          "application": "Surprise is the highest-sharing emotion. The visual spectacle makes it impossible to describe — you have to show it."
+        },
+        "kane_hook_point": {
+          "principle": "Unresolved Tension",
+          "application": "The setup creates a question ('will they do it?') that can only be resolved by watching. The brain treats unresolved questions as threats."
+        },
+        "gladwell_connectors": {
+          "principle": "Context-proof content",
+          "application": "This content works regardless of who shares it, what platform it's on, or what context surrounds it. Maximum portability."
+        }
+      }
+    },
+    {
+      "id": "AW-018",
+      "creator": "Shaan Puri",
+      "platform": "twitter_x",
+      "format": "thread",
+      "hook": "The most underrated business model of 2026: 'Pick a boring industry. Add software. Print money.' Here are 7 founders doing exactly this:",
+      "body_summary": "Thread profiling founders who built software for unglamorous industries (septic tank scheduling, veterinary inventory, church management) and are quietly making $5-50M/year.",
+      "metrics_estimate": { "views": "6M+", "retweets": "45K", "new_followers_driven": "28K+" },
+      "awareness_mechanism": "Listicle format with specific case studies. Each example in the thread is independently shareable. The 'boring industry + software' framework is simple enough to become a meme and repeat in conversation.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Practical Value + Social Currency (hidden opportunities)",
+          "application": "Each case study is a potential business idea. Sharing positions the sharer as someone who spots opportunities others miss."
+        },
+        "kane_hook_point": {
+          "principle": "Framework + Proof",
+          "application": "Simple framework ('boring + software = money') backed by 7 proof points. The framework is memorable; the examples are convincing."
+        },
+        "gladwell_connectors": {
+          "principle": "Maven curation",
+          "application": "Curated lists of examples are peak Maven content — they save others hours of research."
+        }
+      }
+    },
+    {
+      "id": "AW-019",
+      "creator": "Hormozi / Various",
+      "platform": "instagram_reels",
+      "format": "duet_reaction",
+      "hook": "[Reacting to someone saying 'passive income doesn't exist'] Actually, you're right. But here's what rich people actually mean when they say 'passive income.'",
+      "body_summary": "Duet/stitch format where the creator agrees with a viral hot take but then adds nuance that reframes the entire discussion. Bridges the gap between cynicism and sophisticated understanding.",
+      "metrics_estimate": { "views": "9M+", "shares": "260K", "new_followers_driven": "55K+" },
+      "awareness_mechanism": "Parasitic distribution — the original viral video's audience becomes the awareness funnel. The 'actually you're right, BUT' format satisfies both sides of a debate, creating share-appeal across opposing camps.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Public (riding existing virality) + Practical Value",
+          "application": "Stitching viral content gives you distribution access to that content's audience. The nuanced take adds practical value that the original lacked."
+        },
+        "kane_hook_point": {
+          "principle": "Agreement-Pivot",
+          "application": "Agreeing first disarms the viewer's defenses. The pivot ('but here's what they actually mean') reframes without creating antagonism."
+        },
+        "gladwell_connectors": {
+          "principle": "Connector behavior",
+          "application": "Bridges two opposing viewpoints, making it shareable by both camps. Connectors love content that bridges communities."
+        }
+      }
+    },
+    {
+      "id": "AW-020",
+      "creator": "Justin Welsh",
+      "platform": "linkedin",
+      "format": "text_post",
+      "hook": "I quit my $1.2M/year job 5 years ago. People thought I was crazy. Here's what happened:",
+      "body_summary": "Career narrative arc: high-paying executive role, burnout, leap to solopreneurship, first year struggles, current $5M+/year solo business. Each paragraph is a chapter with specific numbers.",
+      "metrics_estimate": { "views": "6M+", "shares": "72K", "comments": "8K", "new_followers_driven": "40K+" },
+      "awareness_mechanism": "Origin story format is the most reliable awareness content type on LinkedIn. The specific salary figures create concreteness. The narrative arc (success → crisis → transformation → greater success) follows the hero's journey template the brain is wired to track.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Stories + Emotion (inspiration)",
+          "application": "Personal transformation stories trigger aspirational identification. Readers project themselves into the narrative and share to signal their own ambitions."
+        },
+        "kane_hook_point": {
+          "principle": "Stakes + Specificity",
+          "application": "Quitting $1.2M/year establishes high stakes. 'People thought I was crazy' adds social tension. Both elements are specific enough to feel real."
+        },
+        "gladwell_connectors": {
+          "principle": "Power of context",
+          "application": "On LinkedIn (professional context), career transformation stories carry extra weight because the audience is actively thinking about their own career trajectory."
+        }
+      }
+    },
+    {
+      "id": "AW-021",
+      "creator": "Pat Flynn",
+      "platform": "youtube_shorts",
+      "format": "whiteboard_explainer",
+      "hook": "Every successful creator I know has exactly 3 income streams. Not 7. Not 12. Three.",
+      "body_summary": "Whiteboard breakdown of the 'Creator Revenue Triangle': content monetization (ads/sponsors), products (courses/books), and services (coaching/consulting). Argues that more than three creates complexity that kills growth.",
+      "metrics_estimate": { "views": "4M+", "shares": "165K", "new_followers_driven": "32K+" },
+      "awareness_mechanism": "Counterintuitive simplification. In a culture obsessed with 'multiple streams of income,' arguing for FEWER is a pattern interrupt. The visual framework (triangle) is screenshot-worthy and becomes a reference tool people save and share.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Practical Value + Social Currency (simplification authority)",
+          "application": "Simplification of complex topics is peak practical value. The viewer who shares this looks like someone who cuts through noise."
+        },
+        "kane_hook_point": {
+          "principle": "Specific Number Contradiction",
+          "application": "'Not 7. Not 12. Three.' — the specific rejection of expected numbers creates a rhythm that is inherently memorable and quotable."
+        },
+        "gladwell_connectors": {
+          "principle": "Rule of the Few through framework",
+          "application": "Simple frameworks get adopted by influential early adopters who then teach them to their own audiences, creating cascading distribution."
+        }
+      }
+    },
+    {
+      "id": "AW-022",
+      "creator": "Desi Perkins",
+      "platform": "tiktok",
+      "format": "get_ready_with_me",
+      "hook": "Get ready with me while I tell you the business lesson that changed my entire career. [Starts applying makeup]",
+      "body_summary": "GRWM format delivering business advice while doing a beauty routine. The juxtaposition of casual beauty content with serious business insight creates novelty. The lesson: 'your audience doesn't buy your product, they buy the transformation.'",
+      "metrics_estimate": { "views": "6M+", "shares": "190K", "new_followers_driven": "48K+" },
+      "awareness_mechanism": "Format mashup creates novelty that algorithms reward. Beauty audience gets exposed to business content; business audience gets exposed to beauty content. Cross-pollination of audiences drives awareness in new demographics.",
+      "teaching_alignment": {
+        "berger_stepps": {
+          "principle": "Triggers (GRWM format) + Practical Value",
+          "application": "The GRWM format is a familiar trigger that lowers defenses. The unexpected business content inside a comfort format creates memorable contrast."
+        },
+        "kane_hook_point": {
+          "principle": "Format Subversion",
+          "application": "Using an entertainment format to deliver educational content. The mismatch between container (beauty) and content (business) creates novelty."
+        },
+        "gladwell_connectors": {
+          "principle": "Connector cross-pollination",
+          "application": "Connectors who exist in both beauty and business communities share this as evidence that the two worlds overlap."
+        }
+      }
+    }
+  ],
+
+  "content_patterns": {
+    "universal_awareness_patterns": [
+      {
+        "pattern": "Contrarian Reframe",
+        "description": "Take a widely accepted belief and argue the opposite with evidence. The cognitive friction between established belief and new argument forces engagement.",
+        "example_hooks": [
+          "Stop waking up at 5am. Here's what actually works.",
+          "Hustle culture is a scam. Here's proof.",
+          "The best marketing strategy? Stop marketing."
+        ],
+        "why_it_works": "The brain treats contradictions as unresolved threats. It cannot scroll past information that challenges existing mental models."
+      },
+      {
+        "pattern": "Aspirational Origin Story",
+        "description": "Personal narrative from struggle to success with specific numbers and timelines. Hero's journey compressed into 30-90 seconds.",
+        "example_hooks": [
+          "3 years ago I was $50K in debt. Today I run a $2M business.",
+          "I got fired on a Tuesday. By Friday I had my first client.",
+          "From food stamps to Forbes. Here's exactly how."
+        ],
+        "why_it_works": "Narrative transportation — the brain processes stories differently from arguments. Stories bypass critical analysis and create emotional identification."
+      },
+      {
+        "pattern": "Surprising Statistic",
+        "description": "Lead with a data point that violates expectations. The surprise creates a knowledge gap the viewer must close.",
+        "example_hooks": [
+          "80% of millionaires are first-generation rich.",
+          "The average CEO reads 60 books a year. The average person reads 4.",
+          "You will spend 13 years of your life at work. Most people never optimize for it."
+        ],
+        "why_it_works": "Surprising statistics trigger the 'information gap' response — the brain is compelled to understand WHY the stat is true."
+      },
+      {
+        "pattern": "Expectation vs. Reality",
+        "description": "Show the glamorous expectation alongside the messy reality. Validation-driven sharing — viewers share to show 'it's not just me.'",
+        "example_hooks": [
+          "What people think working from home looks like vs. reality.",
+          "Instagram vs. real life running a business.",
+          "How I thought my first launch would go vs. how it actually went."
+        ],
+        "why_it_works": "Relatability creates parasocial intimacy. The viewer feels understood, which triggers the belonging response and drives follows."
+      },
+      {
+        "pattern": "Format Mashup",
+        "description": "Deliver unexpected content inside a familiar format. Beauty routine + business advice. Cooking + psychology. Workout + productivity.",
+        "example_hooks": [
+          "Making my morning coffee while explaining the 80/20 rule.",
+          "Folding laundry and dropping the best career advice you'll hear today.",
+          "Walking my dog and telling you why your business isn't growing."
+        ],
+        "why_it_works": "Familiar formats lower the cognitive barrier to entry. Unexpected content inside familiar containers creates memorability through contrast."
+      },
+      {
+        "pattern": "Simple Framework",
+        "description": "Compress complex knowledge into a 2-4 step framework with a memorable name. Frameworks are the most saved and shared content type.",
+        "example_hooks": [
+          "The 3-3-3 rule that changed how I work.",
+          "The ONE framework every creator needs: the Content Flywheel.",
+          "The 5-minute test that tells you if your business idea will work."
+        ],
+        "why_it_works": "Frameworks reduce cognitive load. The brain prefers organized information over scattered insights. Named frameworks become social currency."
+      }
+    ]
+  },
+
+  "schwartz_mapping": {
+    "unaware_stage": {
+      "definition": "The prospect doesn't know they have a problem. They're not looking for a solution.",
+      "content_approach": "Entertainment-first, education-second. The content must be valuable even if the viewer never buys anything. Awareness content at the Unaware stage looks like viral entertainment or surprising information — not marketing.",
+      "content_types": [
+        "Viral challenges and trends with brand voice",
+        "Surprising statistics that reframe their worldview",
+        "Entertainment content that subtly introduces a problem",
+        "Relatable humor about a pain they haven't named yet",
+        "Aspirational lifestyle content that creates desire"
+      ],
+      "transition_to_problem_aware": "The goal is to name a problem the viewer didn't know they had. Once they recognize the problem, they move to Problem Aware and become receptive to engagement content."
+    },
+    "problem_aware_stage": {
+      "definition": "The prospect knows they have a problem but doesn't know solutions exist.",
+      "content_approach": "Validate and agitate the problem. Make the viewer feel understood and then intensify the urgency. Awareness content at this stage names the pain and amplifies it.",
+      "content_types": [
+        "Problem-identification content ('Is this happening to you?')",
+        "Pain amplification ('This is costing you more than you think')",
+        "Social proof of the problem ('87% of people struggle with this')",
+        "Contrarian reframes of the problem ('You don't have a motivation problem, you have a systems problem')",
+        "Enemy identification ('Here's who benefits from you staying stuck')"
+      ],
+      "transition_to_solution_aware": "Once the problem is clearly articulated and urgent, engagement content takes over to introduce solutions."
+    }
+  },
+
+  "playbook": {
+    "when_to_deploy": [
+      "Starting a new platform (first 30 days should be 70%+ awareness content)",
+      "After algorithm changes that reward new-audience reach",
+      "During platform-specific events (TikTok trends, Twitter/X moments, LinkedIn newsletter launches)",
+      "When follower growth has plateaued and you need fresh audience injection",
+      "When launching in a new niche or sub-niche",
+      "Quarterly 'awareness sprints' to refill the top of funnel"
+    ],
+    "optimal_content_mix_ratio": {
+      "growth_phase": "60% awareness, 25% engagement, 10% conversion, 5% community",
+      "established_phase": "30% awareness, 35% engagement, 20% conversion, 15% community",
+      "monetization_phase": "20% awareness, 25% engagement, 35% conversion, 20% community"
+    },
+    "platform_specific_tactics": {
+      "instagram_reels": {
+        "optimal_length": "7-15 seconds for maximum reach, 30-60 seconds for qualified reach",
+        "key_signal": "Share-to-reach ratio above 5% triggers Explore page distribution",
+        "best_formats": ["transition_reels", "talking_head_with_text_overlay", "duet_reactions"],
+        "posting_time": "Tuesday-Thursday 11am-1pm and 7pm-9pm EST for maximum non-follower reach"
+      },
+      "tiktok": {
+        "optimal_length": "15-30 seconds for awareness, 60+ seconds for depth",
+        "key_signal": "Completion rate above 70% triggers FYP distribution to broader audiences",
+        "best_formats": ["green_screen", "stitch_reply", "trending_sound_with_original_spin"],
+        "posting_time": "Consistent posting matters more than specific times. 3-5x/day during growth phase."
+      },
+      "youtube_shorts": {
+        "optimal_length": "30-45 seconds (YouTube rewards slightly longer shorts than TikTok)",
+        "key_signal": "Click-through rate from browse features above 8%",
+        "best_formats": ["screen_recordings", "prop_demonstrations", "rapid_fire_tips"],
+        "posting_time": "Align with YouTube Analytics 'when your viewers are online' data"
+      },
+      "linkedin": {
+        "optimal_length": "150-300 words for text posts, under 60 seconds for video",
+        "key_signal": "Comment-to-impression ratio above 2% triggers algorithm boost",
+        "best_formats": ["origin_stories", "contrarian_text_posts", "data_visualizations"],
+        "posting_time": "Tuesday-Thursday 7am-9am EST for maximum professional audience reach"
+      },
+      "twitter_x": {
+        "optimal_length": "Single tweet: under 100 characters. Thread: 5-12 tweets.",
+        "key_signal": "Quote tweet velocity in first 30 minutes determines distribution ceiling",
+        "best_formats": ["aphorisms", "numbered_lists", "threads_with_images", "single_tweet_frameworks"],
+        "posting_time": "Weekdays 8am-10am and 5pm-7pm EST for maximum engagement"
+      }
+    },
+    "measurement_framework": {
+      "primary_kpi": "New followers per awareness post (target: 0.5-2% of reach converts to follow)",
+      "secondary_kpis": [
+        "Non-follower reach percentage (target: 60%+ of total reach)",
+        "Share rate (target: 3-8% of views result in shares)",
+        "Profile visit rate from non-followers (target: 5-10% of non-follower views)",
+        "Explore/FYP appearance rate (target: 40%+ of awareness posts)"
+      ],
+      "optimization_loop": "Post → Measure non-follower reach → Analyze top-performing hooks → Extract pattern → Replicate pattern with variation → Repeat"
+    }
+  }
+}
