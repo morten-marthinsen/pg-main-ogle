@@ -362,7 +362,7 @@ In Standalone Mode:
 ## FILE STRUCTURE
 
 ```
-LandingPageEngine/
+landing-page-engine/
 ├── landing-page-engine-master-prd.md          (this file)
 ├── landing-page-engine-master-blueprint.md    (architecture overview)
 ├── CLAUDE.md                                   (execution constraints)

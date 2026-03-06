@@ -642,7 +642,7 @@ U1 + U2 + U3 → U4 (Assembler) → U5 (Editorial)
 
 ## Landing Page Engine (LP-00 to LP-18) {#landing-page-engine}
 
-**Master Document:** `LandingPageEngine/CLAUDE.md` (router → subfiles)
+**Master Document:** `landing-page-engine/CLAUDE.md` (router → subfiles)
 
 ### 19-Skill Architecture
 
@@ -682,12 +682,12 @@ U1 + U2 + U3 → U4 (Assembler) → U5 (Editorial)
 
 | File | Purpose |
 |------|---------|
-| `LandingPageEngine/landing-page-engine-master-prd.md` | 19-skill architecture source of truth |
-| `LandingPageEngine/landing-page-engine-master-blueprint.md` | Section flows, proof density, CTA optimization |
-| `LandingPageEngine/conversion-data-reference.md` | Unbounce benchmarks, industry-specific rates |
-| `LandingPageEngine/element-taxonomy.md` | 64 element types, 8 categories, frequency data |
-| `LandingPageEngine/specimens/specimen-index.md` | 11 specimen files indexed |
-| `LandingPageEngine/specimens/cross-page-pattern-analysis.md` | Cross-page synthesis |
+| `landing-page-engine/landing-page-engine-master-prd.md` | 19-skill architecture source of truth |
+| `landing-page-engine/landing-page-engine-master-blueprint.md` | Section flows, proof density, CTA optimization |
+| `landing-page-engine/conversion-data-reference.md` | Unbounce benchmarks, industry-specific rates |
+| `landing-page-engine/element-taxonomy.md` | 64 element types, 8 categories, frequency data |
+| `landing-page-engine/specimens/specimen-index.md` | 11 specimen files indexed |
+| `landing-page-engine/specimens/cross-page-pattern-analysis.md` | Cross-page synthesis |
 
 ### CopywritingEngine Integration
 
@@ -698,7 +698,7 @@ LP-00 has **Downstream Mode** (consumes CopywritingEngine packages) and **Standa
 
 ### When Executing
 
-1. READ `LandingPageEngine/CLAUDE.md` (router)
+1. READ `landing-page-engine/CLAUDE.md` (router)
 2. READ the skill's ANTI-DEGRADATION.md
 3. READ the skill's AGENT.md
 4. READ each microskill .md spec BEFORE executing

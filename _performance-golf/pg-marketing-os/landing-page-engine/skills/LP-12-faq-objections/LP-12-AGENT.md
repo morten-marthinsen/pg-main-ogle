@@ -382,13 +382,13 @@ Before any generation, load FAQ specimens by page type and vertical:
 **Type A — Long-Form:**
 - Load 1-2 FAQ sections from comparable long-form sales pages
 - Note: info product FAQs tend to focus on access, time commitment, results timeline
-- Source: `LandingPageEngine/specimens/raw/richmond-dinh-tiny-challenge-raw.md` (info product FAQ example)
+- Source: `landing-page-engine/specimens/raw/richmond-dinh-tiny-challenge-raw.md` (info product FAQ example)
 
 **Type B — Ecomm/PDP:**
 - Load 2-3 FAQ sections from comparable DTC product pages
 - Note: supplement/physical product FAQs include dosing, ingredients, interactions, shipping
-- Source: `LandingPageEngine/specimens/raw/bioptimizers-magnesium-trial-raw.md` (supplement FAQ — 10+ items)
-- Source: `LandingPageEngine/specimens/raw/lmnt-electrolyte-pdp-raw.md` (DTC FAQ — includes radical transparency DIY recipe)
+- Source: `landing-page-engine/specimens/raw/bioptimizers-magnesium-trial-raw.md` (supplement FAQ — 10+ items)
+- Source: `landing-page-engine/specimens/raw/lmnt-electrolyte-pdp-raw.md` (DTC FAQ — includes radical transparency DIY recipe)
 
 **If specimen directory is sparse:** Reference the relevant brand examples from swipe-vault-index.md.
 

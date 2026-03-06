@@ -63,12 +63,12 @@ The engine stays unified. A new **Vertical Profile** system adds three layers:
 
 ### 1. Vertical Profile System
 
-**New directory:** `CopywritingEngine/verticals/`
+**New directory:** `marketing-os/verticals/`
 
 Each vertical gets a profile file:
 
 ```
-CopywritingEngine/
+marketing-os/
   verticals/
     golf.md          # Golf/Sports vertical profile
     health.md        # Health/Supplements vertical profile
@@ -126,10 +126,10 @@ vertical_anti_slop:
 
 ### 2. Per-Vertical Specimen Libraries
 
-**New directory:** `CopywritingEngine/skills/vertical-specimens/`
+**New directory:** `marketing-os/skills/vertical-specimens/`
 
 ```
-CopywritingEngine/skills/
+marketing-os/skills/
   vertical-specimens/
     golf/
       system-1/                    # Skill-specific gold specimens (replaces/supplements 0.2.6)
@@ -181,7 +181,7 @@ CopywritingEngine/skills/
 **New persona file structure:**
 
 ```
-CopywritingEngine/skills/
+marketing-os/skills/
   persona-registry/
     makepeace.md       # Moved from inline in ARENA-PERSONA-PANEL.md
     halbert.md
