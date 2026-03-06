@@ -77,19 +77,10 @@ npx tsc --noEmit  # Type-check
 
 ## Universal Rules
 
-### iCloud Drive Safety (MANDATORY)
+### Shared vs. Local Config (MANDATORY)
 
-This project lives inside iCloud Drive. Terminal file operations can corrupt iCloud sync metadata.
+This repo is shared across multiple contributors via GitHub. Everything in `.claude/` is committed and shared by default so everyone benefits from the same settings, agents, hooks, skills, and rules — including `mcp.json`, which defines shared MCP server connections. One file is gitignored because it contains machine-specific config that would be incorrect on another person's machine: `settings.local.json` (personal permissions). Never commit this file. Never add machine-specific values (localhost URLs, file paths, personal tokens) to any shared config file. If a new config file contains machine-specific values, add it to `.gitignore` before committing.
 
-- **NEVER rename or move directories via terminal (`mv`).** Propose the plan and let the user execute in Finder.
-- **NEVER create directories that reuse names iCloud has previously tracked.** This triggers sync conflict loops.
-- **Creating/editing files via terminal is safe.** Only directory-level restructuring causes problems.
-- **`.nosync` pattern** for heavy-write directories: rename to `<dir>.nosync/`, create symlink `<dir>` → `<dir>.nosync`. iCloud skips `.nosync` directories entirely.
-- If files become invisible in Finder: `chflags -R nohidden <path>`
-
-### iCloud Git Guard
-
-Before/after git write commands: `ls -la .git/index*` — if `index 2` exists, run `mv ".git/index 2" .git/index`.
 
 ### Data Integrity
 
@@ -114,3 +105,37 @@ For Veda and Tess dashboard:
 3. `npm run build` — clean build (Veda)
 
 No `--no-verify`. If any gate fails, halt and fix first.
+
+## Copywriting Heuristics (Learned From Draft → Final Edits)
+
+These rules apply to all spoken-word scripts, voiceover copy, and video walkthroughs across any offer. They were extracted by comparing AI-generated drafts against human-edited finals.
+
+### 1. One Thought Per Line
+Break compound sentences into individual beats. Each line gets one idea the speaker can land before moving on. If a sentence has a comma followed by a new idea, it's probably two lines.
+
+### 2. Name What They're Looking At — Immediately
+Don't open with philosophy or setup. Tell the viewer what they're seeing in the first 3 seconds. Orientation before persuasion.
+
+### 3. Kill Stage Directions
+Don't lean on `[brackets]` as a crutch. The script should read as speakable copy, not a screenplay. Only include a visual note when referencing a specific asset (a link, a file, a demo). Transitions should BE the copy: "Let me show you how this works" — not `[Transition to screen share]`.
+
+### 4. Break Complex Ideas Into Tiny Sequential Beats
+If a concept needs explanation, break it into 3–5 short lines that build on each other. Each line is a setup for the next. The listener absorbs one piece, then the next. Dense paragraphs don't land in spoken copy.
+
+### 5. Use Punctuation for Spoken Rhythm
+Ellipses create pauses. Italics create emphasis. Dashes create beats. These aren't decorative — they're delivery instructions. Write the way a speaker breathes.
+
+### 6. Branch for the Viewer
+If the viewer could be in two different situations, address both: "If you've already done X... / If you need to do X..." This is especially critical for less tech-savvy audiences who freeze when instructions don't match their exact state.
+
+### 7. Add a Safety Net
+After any action step, add one line that removes fear of getting stuck: "If you run into any issues, we'll get you sorted." Reducing anxiety is as important as the instruction itself.
+
+### 8. Close With Emotion, Not Logistics
+The last line should be the feeling, not the feature. "You're one step away from the best version of this experience" beats "Click submit and you'll receive a response within 48 hours." End on what it means, not what it does.
+
+### 9. Shorter Sentences = More Authority
+In spoken copy, short declarative sentences land harder than compound ones. "Then, give you the smartest way to fix it — FAST." has more punch than a longer version saying the same thing.
+
+### 10. Conversational Connectors Over Structural Headers
+"And here's the cool part" beats `**NEXT SECTION**`. In a walkthrough, the speaker's voice IS the structure. Use natural transitions that a person would actually say while showing someone a screen.

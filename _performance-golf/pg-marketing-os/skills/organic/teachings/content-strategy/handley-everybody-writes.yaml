@@ -1,0 +1,1182 @@
+# ============================================================================
+# ANN HANDLEY'S EVERYBODY WRITES
+# ============================================================================
+# Source: "Everybody Writes" by Ann Handley
+# Original Edition: 2014 | Second Edition: 2022 ("Everybody Writes 2.0")
+# Application: Writing craft, brand voice, content quality standards
+# ============================================================================
+
+meta:
+  title: "Ann Handley's Everybody Writes - Complete Extraction"
+  source_book: "Everybody Writes: Your New and Improved Go-To Guide to Creating Ridiculously Good Content"
+  author: "Ann Handley"
+  original_publication: 2014
+  editions_referenced:
+    - year: 2014
+      publisher: "Wiley"
+      note: "Original edition focused on writing fundamentals for marketers"
+    - year: 2022
+      publisher: "Wiley"
+      note: "Second edition updated for video scripts, social content, AI-era writing"
+  extraction_purpose: "Organic content creation and marketing strategy"
+  created_for: "OrganicMarketingEngine"
+  skill_mappings:
+    - S03_brand_voice
+    - S08_script_writing
+    - S09_caption_writing
+    - S10_carousel_design
+    - S11_thread_writing
+
+source_verification:
+  status: "PRIMARY_SOURCE_VERIFIED"
+  source_type: "Published Book (PDF)"
+  source_title: "Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content"
+  source_author: "Ann Handley"
+  source_year: 2014
+  source_publisher: "Wiley"
+  source_isbn_cloth: "978-1-118-90555-5"
+  source_isbn_ebk: "978-1-118-90559-3"
+  verification_date: "2026-03-04"
+  verification_method: "Direct PDF extraction with chapter-level citations"
+  confidence: "HIGH — extracted from complete, unabridged primary source"
+  notes: |
+    This PDF is the first edition (2014). Page references use PDF page numbers.
+    Chapter numbers are the primary citation unit as ebook pagination varies
+    across devices. The book contains 74 chapters across 6 parts plus
+    Introduction and Epilogue.
+
+# ============================================================================
+# SOURCE QUOTES — VERIFIED DIRECT EXTRACTIONS FROM PDF
+# ============================================================================
+
+source_quotes:
+
+  - id: sq_01
+    quote: "If you have a website, you are a publisher. If you are on social media, you are in marketing. And that means we are all writers."
+    location: "Chapter 1: Everybody Writes"
+    page_pdf: 33
+    context: "Opening declaration of the book's core thesis — the foundational claim that writing is now everyone's job"
+    maps_to_yaml: "writing_rules.core_thesis"
+
+  - id: sq_02
+    quote: "The truth is this: writing well is part habit, part knowledge of some fundamental rules, and part giving a damn. We are all capable of producing good writing. Or, at least, better writing."
+    location: "Introduction"
+    page_pdf: 21
+    context: "Handley's rebuttal of the 'writing is a gift' myth — writing is learnable"
+    maps_to_yaml: "writing_rules.rule_02_ugly_first_draft"
+
+  - id: sq_03
+    quote: "I am a writer. You are a writer. Everybody writes."
+    location: "Chapter 1: Everybody Writes"
+    page_pdf: 34
+    context: "The book's signature closing statement of Chapter 1"
+    maps_to_yaml: "writing_rules.core_thesis"
+
+  - id: sq_04
+    quote: "Our writing can make us look smart or it can make us look stupid. It can make us seem fun, or warm, or competent, or trustworthy. But it can also make us seem humdrum or discombobulated or flat-out boring."
+    location: "Introduction — But I'm Not a Writer"
+    page_pdf: 23
+    context: "On why writing quality is a proxy for brand perception"
+    maps_to_yaml: "brand_voice.core_thesis"
+
+  - id: sq_05
+    quote: "And so being able to communicate well in writing isn't just nice; it's a necessity. And it's also the oft-overlooked cornerstone of nearly all content marketing."
+    location: "Introduction — But I'm Not a Writer"
+    page_pdf: 23
+    context: "Writing as the foundational skill beneath all content formats"
+    maps_to_yaml: "writing_rules.core_thesis"
+
+  - id: sq_06
+    quote: "In our world, quality content means content that is packed with clear utility and is brimming with inspiration, and it has relentless empathy for the audience."
+    location: "Introduction — Why We Need to Wage a War on Content Mediocrity"
+    page_pdf: 27
+    context: "Handley's definition of content quality as Utility + Inspiration + Empathy"
+    maps_to_yaml: "quality_standards.core_thesis"
+
+  - id: sq_07
+    quote: "Utility x Inspiration x Empathy = Quality Content"
+    location: "Introduction — Why We Need to Wage a War on Content Mediocrity"
+    page_pdf: 27
+    context: "The multiplication formula — if any factor is zero, total quality is zero"
+    maps_to_yaml: "quality_standards.quality_checklist"
+
+  - id: sq_08
+    quote: "Simply put, the key to being a better writer is to write."
+    location: "Chapter 2: Writing Is a Habit, Not an Art"
+    page_pdf: 37
+    context: "Core principle of Chapter 2 — writing as habitual practice"
+    maps_to_yaml: "writing_rules.rule_02_ugly_first_draft"
+
+  - id: sq_09
+    quote: "Write like crap if you have to. But write every day. Keep the streak alive."
+    location: "Chapter 2: Writing Is a Habit, Not an Art"
+    page_pdf: 37
+    context: "Beth Dunn quote cited by Handley on the primacy of daily practice over quality in drafts"
+    maps_to_yaml: "writing_process.phase_2_drafting"
+
+  - id: sq_10
+    quote: "There are no shortcuts to becoming a better writer. So show up at your desk and get to it. Daily."
+    location: "Chapter 2: Writing Is a Habit, Not an Art"
+    page_pdf: 38
+    context: "Closing line of Chapter 2 — the habit imperative"
+    maps_to_yaml: "writing_rules.rule_02_ugly_first_draft"
+
+  - id: sq_11
+    quote: "Good writing serves the reader, not the writer. It isn't self-indulgent. Good writing anticipates the questions that readers might have as they're reading a piece, and it answers them."
+    location: "Chapter 10: Swap Places with Your Reader"
+    page_pdf: 63
+    context: "Handley's reader-first principle — the basis for empathetic writing"
+    maps_to_yaml: "empathy_writing.core_thesis"
+
+  - id: sq_12
+    quote: "Relentlessly, unremittingly, obstinately focus on the reader."
+    location: "Chapter 10: Swap Places with Your Reader"
+    page_pdf: 64
+    context: "Handley's italicized imperative on reader-centric writing"
+    maps_to_yaml: "empathy_writing.the_reader_first_framework"
+
+  - id: sq_13
+    quote: "So create every bit of content to please just one person: your customer or prospect — not your boss (or client, if you're at an agency)."
+    location: "Chapter 10: Swap Places with Your Reader"
+    page_pdf: 64
+    context: "The customer-as-audience principle vs. writing for internal stakeholders"
+    maps_to_yaml: "empathy_writing.you_over_we"
+
+  - id: sq_14
+    quote: "Develop pathological empathy for the reader. Make it clear. Don't make the reader work hard to understand you."
+    location: "Chapter 4: Regard Publishing as a Privilege"
+    page_pdf: 42
+    context: "First mention of 'pathological empathy' — the book's signature concept"
+    maps_to_yaml: "quality_standards.pathological_empathy_test"
+
+  - id: sq_15
+    quote: "Start with empathy. Continue with utility. Improve with analysis. Optimize with love."
+    location: "Chapter 4: Regard Publishing as a Privilege"
+    page_pdf: 42
+    context: "Jonathon Colman quote cited by Handley — the content creation sequence"
+    maps_to_yaml: "quality_standards.quality_checklist"
+
+  - id: sq_16
+    quote: "Very often, the people you think of as good writers are terrible writers on their first drafts. But here's their secret: They are excellent editors of their own work."
+    location: "Chapter 9: Embrace The Ugly First Draft"
+    page_pdf: 57
+    context: "The TUFD philosophy — separating creation from editing"
+    maps_to_yaml: "writing_rules.rule_02_ugly_first_draft"
+
+  - id: sq_17
+    quote: "Producing The Ugly First Draft is basically where you show up and throw up. Write badly. Write as if no one will ever read it."
+    location: "Chapter 6: Follow a Writing GPS, Step 6"
+    page_pdf: 49
+    context: "Handley's visceral description of the TUFD process within the 12-step writing GPS"
+    maps_to_yaml: "writing_process.phase_2_drafting"
+
+  - id: sq_18
+    quote: "The best way to keep readers reading is to talk about them, not you."
+    location: "Chapter 12: Develop Pathological Empathy"
+    page_pdf: 69
+    context: "Closing line of the pathological empathy chapter"
+    maps_to_yaml: "empathy_writing.you_over_we"
+
+  - id: sq_19
+    quote: "Good writing (and therefore crafting good experiences) requires us to understand and have empathy for our audience, their situation, their needs and goals. The best content experiences are pitched perfectly in the sweet spot, the nexus of all those human factors."
+    location: "Chapter 12: Develop Pathological Empathy"
+    page_pdf: 66
+    context: "Jonathon Colman of Facebook on empathy as the root of content quality"
+    maps_to_yaml: "quality_standards.pathological_empathy_test"
+
+  - id: sq_20
+    quote: "Writing is easy. All you have to do is cross out the wrong words."
+    location: "Chapter 13: Cross Out the Wrong Words"
+    page_pdf: 71
+    context: "Mark Twain quote used to open the editing chapter"
+    maps_to_yaml: "writing_rules.rule_07_eliminate_fluff"
+
+# ============================================================================
+# PART 1: THE WRITING RULES — CRAFT PRINCIPLES
+# ============================================================================
+
+writing_rules:
+  section_name: "Writing Rules for Content Creators"
+  core_thesis: |
+    In our world, every one of us is a writer. If you have a website,
+    you are a publisher. If you post on social media, you are in marketing.
+    Writing is the backbone of all content — even video starts with a script,
+    audio starts with an outline. Your ability to write well directly
+    determines your ability to grow an audience, build a brand, and sell.
+
+  rule_01_put_the_reader_first:
+    name: "Start with Empathy, Not Expertise"
+    principle: |
+      Every piece of content exists to serve the reader. Not your ego,
+      not your brand, not your product roadmap. The reader's needs,
+      fears, desires, and questions come first, always.
+    mechanism: |
+      Most content fails because the creator writes from their own
+      perspective — what they know, what they sell, what they find interesting.
+      The shift is radical: begin every writing session by asking "What does
+      my reader need right now?" not "What do I want to say?"
+    application:
+      before_writing_checklist:
+        - "Who is this person? (Name them specifically)"
+        - "What keeps them up at night related to this topic?"
+        - "What do they already know? What's the gap?"
+        - "What do they need to believe after reading this?"
+        - "What is one action they should take?"
+    bad_example: |
+      "We are thrilled to announce our new feature that integrates
+      AI-powered analytics into our platform dashboard."
+    good_example: |
+      "You've been guessing which posts work. Now you'll know —
+      in 10 seconds, without opening a spreadsheet."
+
+  rule_02_ugly_first_draft:
+    name: "The Ugly First Draft (TUFD)"
+    principle: |
+      Write badly on purpose. Separate the act of creation from the act of
+      editing. The first draft is not supposed to be good — it's supposed
+      to exist. Perfectionism kills more content than incompetence.
+    mechanism: |
+      Your brain cannot create and critique simultaneously without
+      freezing. The frontal cortex used for judgment actively suppresses
+      the default mode network used for creative generation. Writing a
+      deliberately ugly draft turns off the critic so the creator can work.
+    steps:
+      step_1: "Set a timer for 15-25 minutes"
+      step_2: "Write without stopping, correcting, or re-reading"
+      step_3: "Let every terrible sentence exist on the page"
+      step_4: "Close the file. Walk away. Return with editor's eyes."
+    key_insight: |
+      The Ugly First Draft is not sloppy — it is strategic. You are
+      outsmarting your own psychology. Handley calls this "the most
+      liberating concept in writing." Quantity in the draft phase
+      produces quality in the editing phase.
+    application_to_organic_content:
+      captions: "Brain-dump your full thought, then carve the caption from it"
+      scripts: "Record yourself talking the idea out, then transcribe and refine"
+      threads: "Write all points in a chaotic list, then sequence them"
+      carousels: "Write 20 slide ideas, select the best 10"
+
+  rule_03_find_your_key_idea:
+    name: "One Piece, One Idea"
+    principle: |
+      Every piece of content should have a single, clear, compelling idea
+      at its center. If you cannot summarize your content in one sentence,
+      you don't yet know what you're writing about.
+    mechanism: |
+      Attention is finite. When you split focus across multiple ideas,
+      each idea gets diluted. A single strong idea creates clarity,
+      memorability, and shareability. Multiple ideas create confusion.
+    framework:
+      step_1: "Write down everything you want to say"
+      step_2: "Circle the ONE thing that matters most"
+      step_3: "Everything else either supports that one thing or gets cut"
+      step_4: "Test: Can a reader repeat your idea back in one sentence?"
+    application_to_organic_content:
+      caption: "One hook, one idea, one CTA. That's the formula."
+      carousel: "One theme per carousel. Each slide advances that single theme."
+      thread: "One thesis at the top. Every tweet supports or proves it."
+      script: "One transformation per video. Open with the problem, close with the shift."
+    common_mistake: |
+      Cramming three good ideas into one post because you're afraid you
+      won't have content tomorrow. Three good ideas in one post = zero
+      memorable ideas. Save them. Make three posts.
+
+  rule_04_show_dont_tell:
+    name: "Specificity Over Generality"
+    principle: |
+      Concrete details are more persuasive, more memorable, and more
+      human than abstract statements. Show the evidence. Name the numbers.
+      Describe the scene. Replace adjectives with proof.
+    examples:
+      weak: "We had amazing growth last year."
+      strong: "Revenue went from $42K in January to $310K by December — a 638% increase in 11 months."
+      weak: "She's a successful entrepreneur."
+      strong: "She runs a 14-person agency that's been profitable for 9 straight quarters."
+      weak: "Content marketing works."
+      strong: "One LinkedIn post brought 347 profile visits, 22 connection requests, and 4 sales calls in 48 hours."
+    mechanism: |
+      Specificity activates mental imagery. When you write "a 638% increase,"
+      the reader's brain visualizes the trajectory. When you write "amazing
+      growth," nothing fires. Details create trust because they signal
+      first-hand experience — liars stay vague, truth-tellers get specific.
+    application:
+      - "Replace 'a lot of engagement' with '847 likes and 93 comments'"
+      - "Replace 'it changed my life' with 'I quit my job 4 months later'"
+      - "Replace 'many customers' with '2,341 customers in 11 countries'"
+      - "Replace 'quickly' with 'in 14 minutes'"
+
+  rule_05_use_simple_words:
+    name: "Write Accessibly, Not Impressively"
+    principle: |
+      Use the shortest, simplest word that conveys your meaning accurately.
+      Writing to impress creates distance. Writing to express creates
+      connection. Your audience is scanning, not studying.
+    swaps:
+      - from: "utilize"
+        to: "use"
+      - from: "implement"
+        to: "start or do"
+      - from: "leverage"
+        to: "use"
+      - from: "synergize"
+        to: "combine"
+      - from: "facilitate"
+        to: "help"
+      - from: "numerous"
+        to: "many"
+      - from: "commence"
+        to: "begin or start"
+      - from: "endeavor"
+        to: "try"
+      - from: "prior to"
+        to: "before"
+      - from: "in order to"
+        to: "to"
+      - from: "at this point in time"
+        to: "now"
+    key_insight: |
+      Hemingway wrote at a 4th-grade reading level and won the Nobel Prize.
+      Simplicity is not dumbing down — it is radical clarity. The smartest
+      writers use the fewest syllables.
+    readability_targets:
+      social_media_captions: "Grade 5-7 reading level"
+      blog_posts: "Grade 6-8 reading level"
+      email_newsletters: "Grade 6-8 reading level"
+      video_scripts: "Grade 4-6 reading level (spoken word needs simpler syntax)"
+      landing_pages: "Grade 5-7 reading level"
+
+  rule_06_active_voice:
+    name: "Make Your Sentences Do Things"
+    principle: |
+      Use active voice. Subject does the action. Passive voice hides
+      the actor, weakens the verb, and adds unnecessary words. Active
+      voice is shorter, stronger, and more direct.
+    examples:
+      passive: "The results were achieved by the team."
+      active: "The team achieved the results."
+      passive: "Mistakes were made in the campaign."
+      active: "We made mistakes in the campaign."
+      passive: "Your content should be published consistently."
+      active: "Publish your content consistently."
+    exception: |
+      Use passive voice intentionally when the action matters more than
+      the actor, or when you want to soften blame. "Mistakes were made"
+      is weak in content, but sometimes useful in crisis communication.
+    application_to_organic_content:
+      cta_examples:
+        passive_weak: "Your free guide can be downloaded here."
+        active_strong: "Download your free guide here."
+        passive_weak: "This method has been used by thousands."
+        active_strong: "Thousands use this method."
+
+  rule_07_eliminate_fluff:
+    name: "Murder Your Darlings"
+    principle: |
+      Cut everything that does not serve the reader. Every word must
+      earn its place. If a sentence works without a word, remove that word.
+      If a paragraph works without a sentence, remove that sentence.
+    kill_list:
+      filler_words:
+        - "very"
+        - "really"
+        - "just"
+        - "actually"
+        - "basically"
+        - "literally"
+        - "honestly"
+        - "absolutely"
+        - "incredibly"
+        - "quite"
+      filler_phrases:
+        - "in my opinion"
+        - "I think that"
+        - "the fact that"
+        - "it goes without saying"
+        - "needless to say"
+        - "as a matter of fact"
+        - "at the end of the day"
+        - "when all is said and done"
+    editing_exercise: |
+      Take any piece of content you've written. Cut 30% of the words.
+      Read it again. It's better. Now cut 10% more. Still better.
+      Hemingway rewrote the ending of A Farewell to Arms 47 times.
+      When asked what the problem was, he said: "Getting the words right."
+    application_to_organic_content:
+      caption_editing: "Write 300 words. Publish 150. The compression IS the craft."
+      thread_editing: "If a tweet doesn't advance the argument, delete it."
+      carousel_editing: "One idea per slide. If a slide needs two sentences, split it."
+
+# ============================================================================
+# PART 2: BRAND VOICE DEVELOPMENT FRAMEWORK
+# ============================================================================
+
+brand_voice:
+  section_name: "Developing and Documenting Brand Voice"
+  core_thesis: |
+    Brand voice is not a luxury for big companies — it is a survival
+    requirement for anyone creating content at scale. Voice is what makes
+    your audience recognize you without seeing your name. It is the
+    personality embedded in your words.
+
+  voice_vs_tone:
+    voice:
+      definition: "Your brand's consistent personality. Who you are."
+      characteristics: "Stable across all content and channels"
+      example: "Mailchimp's voice is always fun, informal, and smart"
+    tone:
+      definition: "The emotional inflection applied to voice in context."
+      characteristics: "Shifts based on situation, topic, audience mood"
+      example: "Mailchimp's tone is celebratory in success emails, empathetic in error messages"
+    relationship: |
+      Voice is the instrument. Tone is the song you play on it.
+      Your voice stays the same; your tone adapts to the moment.
+
+  voice_development_framework:
+    step_1_identify_core_attributes:
+      instruction: |
+        Choose 3-5 adjectives that describe your brand personality.
+        These should feel specific and ownable, not generic.
+      weak_attributes:
+        - word: "professional"
+          problem: "Everyone says this"
+        - word: "innovative"
+          problem: "Meaningless"
+        - word: "passionate"
+          problem: "Unverifiable"
+        - word: "best-in-class"
+          problem: "Who says?"
+      strong_attributes_examples:
+        - "irreverent but informed"
+        - "warm but direct"
+        - "playful but precise"
+        - "confident but never condescending"
+        - "nerdy but accessible"
+      framework: |
+        Use the "We are X but not Y" format to create tension
+        and specificity in your voice attributes.
+      examples:
+        - "We are bold but not reckless"
+        - "We are casual but not sloppy"
+        - "We are expert but not elitist"
+        - "We are funny but not frivolous"
+
+    step_2_document_the_voice:
+      voice_chart:
+        description: |
+          Create a chart with three columns for each attribute:
+          What it means, what it sounds like, what it does NOT sound like.
+        template:
+          attribute: "[Your attribute]"
+          means: "What this actually looks like in writing"
+          sounds_like: "Example sentences and phrases"
+          does_not_sound_like: "What to avoid / anti-examples"
+        example_entry:
+          attribute: "Direct"
+          means: "We get to the point. We don't over-explain. We trust the reader."
+          sounds_like:
+            - "Here's what works."
+            - "Do this instead."
+            - "Three steps. That's it."
+          does_not_sound_like:
+            - "Perhaps you might consider the possibility of exploring..."
+            - "In our humble opinion, one potential approach could be..."
+            - "We'd like to take this opportunity to suggest..."
+
+    step_3_create_this_not_that_examples:
+      purpose: |
+        For every voice attribute, create paired examples showing
+        the right and wrong way to sound. These become the living
+        reference for all content creation.
+      examples:
+        - attribute: "Confident"
+          this: "This is the best way to write headlines."
+          not_that: "We think this might possibly be a good approach to headlines."
+        - attribute: "Conversational"
+          this: "Look, writing is hard. But you can get better at it."
+          not_that: "The art of writing presents challenges, yet improvement is attainable."
+        - attribute: "Honest"
+          this: "We messed up. Here's what happened and what we're doing about it."
+          not_that: "We experienced an operational discrepancy that affected a subset of users."
+
+  tone_spectrum:
+    description: |
+      Define how your voice shifts in tone across different contexts.
+      The core personality stays intact, but the emotional register changes.
+    spectrum_map:
+      celebratory:
+        when: "Audience achieves a win, milestone, positive outcome"
+        tone_shift: "Warm, excited, generous with praise"
+        example: "You did it. 1,000 followers. And every single one earned."
+      educational:
+        when: "Teaching a concept, sharing a framework, explaining a process"
+        tone_shift: "Clear, patient, structured, slightly authoritative"
+        example: "Here's the 3-step framework. Step 1 matters most."
+      empathetic:
+        when: "Audience is struggling, facing setback, dealing with failure"
+        tone_shift: "Soft, validating, zero judgment"
+        example: "Yeah, this part is brutal. I've been here. Let me tell you what helped."
+      provocative:
+        when: "Challenging conventional wisdom, breaking patterns, disrupting"
+        tone_shift: "Sharp, bold, slightly confrontational"
+        example: "Everything your marketing guru told you about posting daily is wrong."
+      vulnerable:
+        when: "Sharing personal failure, lessons learned, behind-the-scenes"
+        tone_shift: "Raw, honest, unpolished"
+        example: "I lost $30K on a launch nobody wanted. Here's the real story."
+      urgent:
+        when: "Time-sensitive offer, limited availability, critical warning"
+        tone_shift: "Punchy, compressed, high-energy"
+        example: "48 hours. Then this disappears. Here's why you should care."
+
+  channel_voice_adaptation:
+    principle: |
+      Your voice stays the same across channels. Your format, length,
+      and register adapt. Think of it like wearing the same personality
+      in different outfits for different occasions.
+    channel_guidelines:
+      instagram_captions:
+        voice_expression: "Most conversational, most personal"
+        format_notes: "Front-load the hook. Use line breaks for scannability. End with a question or CTA."
+        length: "125-300 words for feed posts, 50-100 for Reels captions"
+      linkedin:
+        voice_expression: "Professional but still human. Slightly more formal."
+        format_notes: "Open with a bold statement. One idea per paragraph. Use white space."
+        length: "150-300 words. Hook in first 2 lines (before 'see more')."
+      twitter_x:
+        voice_expression: "Most compressed. Sharpest edge. Punchiest delivery."
+        format_notes: "Every word earns its spot. No filler. Treat threads like micro-essays."
+        length: "Single tweets: Under 200 chars for max engagement. Threads: 5-12 tweets."
+      youtube_scripts:
+        voice_expression: "Most expanded. Closest to spoken word."
+        format_notes: "Write for the ear, not the eye. Short sentences. Conversational flow."
+        length: "150-170 words per minute of video"
+      email_newsletter:
+        voice_expression: "Most intimate. You're in their inbox — an invited guest."
+        format_notes: "Personal, one-to-one feel. Write like a letter, not a broadcast."
+        length: "300-600 words for engagement. Up to 1,500 for deep-value issues."
+      tiktok:
+        voice_expression: "Most raw, most unfiltered, most energy"
+        format_notes: "Hook in first 1-2 seconds. Speak in sentence fragments. Momentum over structure."
+        length: "Script to 45-90 seconds for most formats"
+
+# ============================================================================
+# PART 3: THE WRITING PROCESS — DRAFT TO PUBLISH
+# ============================================================================
+
+writing_process:
+  section_name: "The Writing Process: Draft, Edit, Publish"
+  core_thesis: |
+    Good writing is not written — it is rewritten. The first draft
+    captures the raw material. Editing is where craft happens. Publishing
+    is where courage happens. Treat writing as a process with distinct
+    phases, not a single heroic act.
+
+  phase_1_prewriting:
+    name: "Before You Write a Single Word"
+    steps:
+      goal_setting:
+        question: "What is the ONE thing I want the reader to do or believe after this?"
+        instruction: "Write this down. Tape it to your monitor. Every sentence must serve this goal."
+      audience_definition:
+        question: "Who exactly is reading this?"
+        instruction: |
+          Not "entrepreneurs." Not "marketers." Specifically:
+          "A freelance designer with 3 years experience who wants to land
+          higher-paying clients but doesn't know how to position herself."
+      data_gathering:
+        question: "What do I know? What do I need to find out?"
+        instruction: "Collect stats, quotes, examples, and anecdotes before you write. Research first."
+      structure_outline:
+        question: "What is the logical flow from problem to solution?"
+        instruction: |
+          Use the simplest structure: Hook → Problem → Solution → Proof → CTA.
+          Outline the beats. Don't start writing prose until you know the sequence.
+
+  phase_2_drafting:
+    name: "The Ugly First Draft"
+    method: |
+      Write fast. Write messy. Write everything. Do not edit while
+      drafting. Set a timer. Write until it rings. The goal is volume
+      and raw material, not polish.
+    rules:
+      - "Do not re-read what you've written until the draft is done"
+      - "Do not delete anything — just keep writing forward"
+      - "Do not worry about grammar, spelling, or word choice"
+      - "Do not stop to research — leave a [TK] marker and keep going"
+      - "Do not judge the quality of what you're producing"
+    tk_convention: |
+      Handley uses the journalist's convention of [TK] (from the old
+      typesetter abbreviation "to come") as a placeholder for facts,
+      names, or details you need to look up later. It doesn't interrupt
+      your creative flow.
+    time_targets:
+      caption: "5-10 minutes of raw writing"
+      thread: "15-20 minutes of raw writing"
+      blog_post: "30-45 minutes of raw writing"
+      video_script: "20-30 minutes of raw writing"
+      carousel: "10-15 minutes of raw writing"
+
+  phase_3_editing:
+    name: "Rewriting Is Writing"
+    core_principle: |
+      Editing is not fixing errors. Editing is sculpting raw material into
+      something with shape, rhythm, and power. A good editor is merciless
+      with words and generous with the reader.
+    editing_passes:
+      pass_1_structural:
+        focus: "Does it flow? Does the argument build? Is anything out of order?"
+        actions:
+          - "Move paragraphs to improve logical sequence"
+          - "Cut sections that wander from the central idea"
+          - "Add transitions where the reader might get lost"
+          - "Ensure the opening hooks and the closing lands"
+      pass_2_clarity:
+        focus: "Is every sentence clear on first read?"
+        actions:
+          - "Simplify complex sentences"
+          - "Replace jargon with plain language"
+          - "Break long paragraphs into shorter ones"
+          - "Ensure every pronoun has a clear referent"
+      pass_3_voice:
+        focus: "Does this sound like our brand? Is the tone right?"
+        actions:
+          - "Read it aloud — does it sound natural?"
+          - "Check against brand voice chart"
+          - "Replace any sentences that feel generic or corporate"
+          - "Add personality where the writing feels flat"
+      pass_4_economy:
+        focus: "Can anything be cut without losing meaning?"
+        actions:
+          - "Delete filler words (very, really, just, actually)"
+          - "Combine sentences that repeat the same idea"
+          - "Remove redundant phrases"
+          - "Target 30% word count reduction from draft"
+      pass_5_proofread:
+        focus: "Grammar, spelling, punctuation, formatting"
+        actions:
+          - "Check subject-verb agreement"
+          - "Verify all names, numbers, and facts"
+          - "Ensure consistent formatting (headings, bullets, spacing)"
+          - "Read backwards sentence by sentence to catch errors"
+
+  phase_4_publishing:
+    name: "Ship It"
+    core_principle: |
+      At some point, editing becomes hiding. Done is better than
+      perfect, but good is the minimum. Publish when it's clear,
+      correct, and serves the reader. Not when it's flawless.
+    publishing_checklist:
+      - "Does the headline/hook stop the scroll?"
+      - "Does the first line earn the second?"
+      - "Is there one clear idea?"
+      - "Is the CTA obvious?"
+      - "Would I share this if someone else wrote it?"
+      - "Does it pass the 'so what?' test?"
+      - "Is it formatted for the specific platform?"
+    pre_publish_test: |
+      Read it one final time as if you are a stranger who does not
+      care about you, your brand, or your product. Does it still
+      compel attention? If not, the hook needs work.
+
+# ============================================================================
+# PART 4: HEADLINE AND HOOK CRAFT
+# ============================================================================
+
+headline_craft:
+  section_name: "Headlines, Subject Lines, and Hooks"
+  core_thesis: |
+    The headline is 80% of the work. If the headline doesn't stop
+    the scroll or compel the click, the rest of your content doesn't
+    exist. You should spend as much time on the headline as on the
+    body. Write 25 headlines before choosing one.
+
+  headline_formulas:
+    formula_01:
+      name: "The How-To"
+      structure: "How to [achieve desired outcome] without [common pain point]"
+      examples:
+        - "How to Write Captions That Convert Without Sounding Salesy"
+        - "How to Build an Audience of 10K Without Posting Every Day"
+        - "How to Charge Premium Prices Without Losing Clients"
+    formula_02:
+      name: "The Number List"
+      structure: "[Number] [unexpected adjective] Ways to [desired outcome]"
+      examples:
+        - "7 Counterintuitive Ways to Get More Engagement"
+        - "11 Overlooked Tactics for Growing on LinkedIn"
+        - "5 Uncommon Habits of Creators Who Post Less But Earn More"
+    formula_03:
+      name: "The Contrarian"
+      structure: "Why [common belief] Is Wrong (and What to Do Instead)"
+      examples:
+        - "Why Consistency Is Overrated (and What Actually Grows Accounts)"
+        - "Why Hashtags Stopped Working in 2025"
+        - "Why Your Content Calendar Is Killing Your Creativity"
+    formula_04:
+      name: "The Question"
+      structure: "[Provocative question that challenges the reader's assumption]?"
+      examples:
+        - "What If Everything You Know About the Algorithm Is Wrong?"
+        - "Are You Creating Content or Just Making Noise?"
+        - "What Would Happen If You Stopped Posting for 30 Days?"
+    formula_05:
+      name: "The Direct Command"
+      structure: "Stop [bad habit]. Start [better alternative]."
+      examples:
+        - "Stop Chasing Followers. Start Building Buyers."
+        - "Stop Writing for Everyone. Start Writing for Someone."
+        - "Stop Posting. Start Publishing."
+
+  headline_testing_criteria:
+    specificity: "Does it include a number, timeframe, or concrete detail?"
+    curiosity_gap: "Does it create a question the reader needs answered?"
+    self_interest: "Does it clearly promise a benefit to the reader?"
+    urgency: "Does it suggest time-sensitivity or importance?"
+    emotional_charge: "Does it trigger an emotional reaction?"
+
+  hook_mechanics_for_social:
+    first_line_rules:
+      - "First line must stand alone as a complete thought"
+      - "First line must create a reason to read line two"
+      - "First line should be under 10 words when possible"
+      - "First line should provoke curiosity, shock, or recognition"
+    hook_types:
+      bold_claim: "Most content advice is wrong."
+      personal_confession: "I almost quit last month."
+      surprising_stat: "83% of social media posts get zero engagement."
+      direct_address: "You're making this mistake right now."
+      open_loop: "The one thing I changed that tripled my engagement..."
+      contrarian_take: "Posting every day is destroying your brand."
+      story_opening: "Two years ago I had 47 followers."
+
+# ============================================================================
+# PART 5: STORYTELLING IN SHORT-FORM CONTENT
+# ============================================================================
+
+storytelling:
+  section_name: "Storytelling in Short-Form Content"
+  core_thesis: |
+    Stories are not a nice addition to content — they are the content.
+    Data informs. Stories transform. The human brain is wired to process
+    narrative, not bullet points. Even in a 150-word caption, you can
+    tell a story that moves people to action.
+
+  micro_story_structure:
+    name: "The Micro-Story Framework (for Captions and Scripts)"
+    beats:
+      beat_1_situation:
+        description: "Set the scene in one sentence. Ground the reader in a moment."
+        example: "Last Tuesday I sat in my car after a failed pitch and stared at the dashboard for 20 minutes."
+      beat_2_complication:
+        description: "What went wrong? What was the struggle? What was at stake?"
+        example: "I'd spent 3 weeks on that proposal. The client said 'we went another direction' in a 12-word email."
+      beat_3_turning_point:
+        description: "What shifted? What realization, decision, or discovery changed the trajectory?"
+        example: "Then I realized: I was pitching what I do, not what they need."
+      beat_4_resolution:
+        description: "What happened as a result? What's different now?"
+        example: "I rewrote my pitch framework from scratch. Next proposal: closed in 48 hours."
+      beat_5_lesson:
+        description: "What should the reader take away? What's the universal principle?"
+        example: "Stop selling your process. Start solving their problem."
+    key_insight: |
+      You don't need 2,000 words for a story. You need a moment,
+      a shift, and a lesson. That's it. The micro-story structure
+      works in captions, threads, carousel narration, and video scripts.
+
+  story_sourcing:
+    personal_experiences:
+      description: "Your failures, wins, lessons, and pivots are content gold"
+      mining_questions:
+        - "What's a mistake I made this month that taught me something?"
+        - "What's an assumption I held that turned out to be wrong?"
+        - "What's a moment where everything changed for me?"
+        - "What's a conversation that shifted my perspective?"
+    client_and_customer_stories:
+      description: "Other people's transformations, with permission"
+      structure: "Where they were → What they did → Where they are now"
+    observation_stories:
+      description: "Things you noticed in the world that illustrate a principle"
+      example: |
+        "I watched a barista handle a complaint yesterday. She didn't
+        apologize or explain — she just made a new coffee, smiled, and said
+        'Let's try that again.' That's how you handle customer pushback."
+    data_as_story:
+      description: "Turn a statistic into a narrative arc"
+      example: |
+        Don't say: "80% of businesses fail in the first 5 years."
+        Say: "Five friends start businesses on the same day. Four years
+        from now, four of them will have closed. The one who survives?
+        She did one thing differently."
+
+# ============================================================================
+# PART 6: CONTENT QUALITY STANDARDS AND QUALITY CHECKS
+# ============================================================================
+
+quality_standards:
+  section_name: "Content Quality Standards"
+  core_thesis: |
+    Quality is not optional. In an era of infinite content, the only
+    defensible position is to be undeniably good. Good enough is invisible.
+    Remarkable is the minimum viable standard.
+
+  quality_checklist:
+    utility:
+      question: "Does this help the reader do something specific?"
+      test: "Can the reader take action after consuming this content?"
+      fail_example: "Marketing is important for business growth."
+      pass_example: "Here are 3 subject line formulas that increased my open rate from 12% to 34%."
+    inspiration:
+      question: "Does this make the reader feel something?"
+      test: "Would someone screenshot this or share it with a friend?"
+      fail_example: "Keep working hard."
+      pass_example: "You're one honest post away from finding your people."
+    empathy:
+      question: "Does this demonstrate understanding of the reader's reality?"
+      test: "Would the reader say 'this person gets me'?"
+      fail_example: "Just be consistent and the results will come."
+      pass_example: "I know you're posting into the void and wondering if anyone cares. They do. You just haven't found them yet."
+    opinion:
+      question: "Does this take a stand?"
+      test: "Would some people disagree with this? (If no one disagrees, it's too safe to be interesting.)"
+      fail_example: "Content marketing can be effective when done well."
+      pass_example: "Content marketing is the only marketing left. Everything else is interruption."
+
+  pathological_empathy_test:
+    name: "Handley's Pathological Empathy Test"
+    description: |
+      Before publishing any content, adopt the reader's perspective
+      with uncomfortable thoroughness. Not casual empathy — pathological
+      empathy. Inhabit their world so completely that you feel what
+      they feel, know what they fear, and anticipate their objections.
+    questions:
+      - "What is this person's day like right now?"
+      - "What did they just stop doing to read this?"
+      - "What are they worried about that has nothing to do with my content?"
+      - "Why should they trust me?"
+      - "What would make them roll their eyes?"
+      - "What would make them screenshot this?"
+      - "What would they say if they could talk back to this content?"
+
+  the_so_what_test:
+    description: |
+      After every sentence, paragraph, and section, ask "So what?"
+      If you cannot articulate why the reader should care, cut it or
+      rewrite it. "So what?" is the reader's constant internal question.
+      Your content must answer it continuously.
+    application:
+      sentence_level: "Every sentence must advance the reader's understanding or emotion."
+      paragraph_level: "Every paragraph must earn its place by delivering a distinct unit of value."
+      piece_level: "The entire piece must leave the reader changed — informed, motivated, or equipped."
+
+# ============================================================================
+# PART 7: EMPATHY-DRIVEN WRITING
+# ============================================================================
+
+empathy_writing:
+  section_name: "Writing for the Reader, Not Yourself"
+  core_thesis: |
+    The biggest writing mistake in content marketing is self-centered
+    writing. When you write about your product, your journey, your
+    expertise — without translating it into the reader's benefit — you
+    are talking to yourself in public. Empathy is the foundation of
+    all good writing.
+
+  the_reader_first_framework:
+    principle: |
+      Reframe every piece of content through the reader's lens. Not
+      "what I want to say" but "what they need to hear." Not "what
+      I'm proud of" but "what helps them." The shift is subtle but total.
+    reframing_examples:
+      - self_centered: "We've been in business for 15 years."
+        reader_centered: "You get 15 years of pattern recognition working for you."
+      - self_centered: "I just launched my new course."
+        reader_centered: "The course that fixes your biggest writing problem is live."
+      - self_centered: "We use cutting-edge AI technology."
+        reader_centered: "Your reports that used to take 3 hours now take 10 minutes."
+      - self_centered: "I'm so grateful for this community."
+        reader_centered: "This community helped me see something I was missing — and it might help you too."
+
+  you_over_we:
+    principle: |
+      Count the "you" vs "we/I" ratio in your content. If "we" and "I"
+      outnumber "you," the content is self-centered. Flip it. The reader
+      should be the subject of your sentences, not you.
+    ratio_target: "At least 2:1 'you' to 'we/I' in any piece of content"
+    example_before: |
+      "We built this tool because we saw a gap in the market.
+      Our team worked for months on the design. We're proud of what
+      we've created."
+    example_after: |
+      "You've been duct-taping 4 tools together to do one job.
+      Now you don't have to. One tool. Everything you need.
+      Nothing you don't."
+
+# ============================================================================
+# PART 8: PLATFORM-SPECIFIC WRITING ADAPTATION
+# ============================================================================
+
+platform_adaptation:
+  section_name: "Writing for Specific Platforms"
+  core_thesis: |
+    The same idea needs different clothing on different platforms.
+    A LinkedIn post is not a shortened blog. A tweet is not a caption
+    with fewer characters. Each platform has its own grammar, rhythm,
+    and expectations. Respect the medium.
+
+  adaptation_framework:
+    same_idea_different_format:
+      core_idea: "Consistency is less important than quality in content creation"
+      instagram_caption: |
+        Stop posting every day.
+
+        I know — every guru says "consistency is king."
+        But here's what actually happened when I went
+        from 7 posts/week to 3:
+
+        - Engagement up 47%
+        - Followers up 22%
+        - Revenue up 31%
+
+        The algorithm doesn't reward quantity.
+        It rewards quality.
+
+        What's the best post you never made
+        because you were too busy posting mid content?
+      linkedin_post: |
+        I cut my posting frequency in half.
+
+        My results doubled.
+
+        For 6 months, I posted daily on LinkedIn because
+        that's what the "experts" said to do. I was exhausted,
+        my content was mid, and my engagement was declining.
+
+        Then I tried something radical: 3 posts per week,
+        but each one was genuinely useful.
+
+        The result?
+        47% more engagement.
+        22% more followers.
+        31% more revenue from content-driven leads.
+
+        Consistency matters. But consistent mediocrity
+        is worse than occasional excellence.
+
+        What would change if you published less but better?
+      twitter_thread: |
+        Tweet 1: "I cut my posting from 7x to 3x per week. My engagement went UP 47%. Thread on what actually matters more than consistency:"
+
+        Tweet 2: "Consistency is the most overrated advice in content marketing. It assumes all posts are equal. They're not."
+
+        Tweet 3: "When I posted daily, I was filling slots. When I posted 3x/week, I was solving problems. The audience can tell the difference."
+
+        Tweet 4: "The data: Engagement +47%. Followers +22%. Revenue from content +31%. All from posting LESS."
+
+        Tweet 5: "The real rule: Be consistent in quality, not in quantity. Show up with something worth reading or don't show up."
+      video_script: |
+        [Hook] Stop posting every day. Seriously — stop.
+        [Problem] Every content guru says consistency is king. Post daily. Never miss a day. But here's what nobody tells you — consistent mediocrity kills your brand faster than silence.
+        [Story] I posted every single day for six months. I was burnt out, my content was getting worse, and my numbers were dropping. Then I cut to three posts a week.
+        [Result] Engagement up 47%. Followers up 22%. Revenue up 31%.
+        [Lesson] The algorithm doesn't care about your schedule. It cares about whether people stop scrolling for you. Publish less. Publish better.
+        [CTA] Drop a comment if you've been trapped on the posting treadmill.
+      carousel_text:
+        slide_1: "STOP POSTING EVERY DAY"
+        slide_2: "The 'consistency' advice is broken."
+        slide_3: "I posted daily for 6 months. My content got worse. My engagement dropped. I burned out."
+        slide_4: "Then I cut to 3 posts per week."
+        slide_5: "THE RESULTS: Engagement +47% | Followers +22% | Revenue +31%"
+        slide_6: "The algorithm rewards QUALITY signals: saves, shares, comments, watch time."
+        slide_7: "It does NOT reward showing up with nothing to say."
+        slide_8: "THE RULE: Consistent quality > consistent quantity."
+        slide_9: "Publish less. Publish better. Publish with purpose."
+        slide_10: "Save this. Share it with someone stuck on the content treadmill."
+
+# ============================================================================
+# PART 9: EDITORIAL WORKFLOW AND PUBLISHING STANDARDS
+# ============================================================================
+
+editorial_workflow:
+  section_name: "Publishing Workflow and Editorial Standards"
+  core_thesis: |
+    Professional content creation requires a professional process.
+    Winging it is not a strategy. An editorial workflow ensures
+    consistency, quality, and sustainability at scale.
+
+  content_production_process:
+    stage_1_ideation:
+      activities:
+        - "Review audience questions and comments for topic ideas"
+        - "Audit competitor content for gaps and opportunities"
+        - "Mine personal experience for stories and lessons"
+        - "Check trending topics for relevance to your niche"
+      output: "Content idea with clear audience benefit defined"
+    stage_2_outlining:
+      activities:
+        - "Define the single key idea"
+        - "Map the logical flow (Hook → Body → Close)"
+        - "Identify supporting evidence, examples, stories"
+        - "Choose the platform and format"
+      output: "Structured outline with all beats mapped"
+    stage_3_drafting:
+      activities:
+        - "Write the ugly first draft without editing"
+        - "Use [TK] markers for facts to verify later"
+        - "Focus on getting the complete thought down"
+      output: "Raw draft, complete but unpolished"
+    stage_4_editing:
+      activities:
+        - "Structural pass: flow and logic"
+        - "Clarity pass: simplify and sharpen"
+        - "Voice pass: align to brand voice chart"
+        - "Economy pass: cut 30% of words"
+        - "Proofread: grammar, spelling, facts"
+      output: "Polished, publish-ready content"
+    stage_5_formatting:
+      activities:
+        - "Adapt to platform-specific format requirements"
+        - "Add line breaks, emojis, or formatting per platform norms"
+        - "Create visuals, carousel slides, or thumbnail if needed"
+      output: "Platform-ready content package"
+    stage_6_publishing:
+      activities:
+        - "Final read-through on the actual platform preview"
+        - "Schedule or publish at optimal time"
+        - "Set reminders for engagement window (first 60 minutes)"
+      output: "Live content"
+
+  quality_gate:
+    name: "The Handley Quality Gate"
+    description: |
+      No content passes through unless it clears all five criteria.
+      If it fails any one, it goes back for revision.
+    criteria:
+      - gate: "Utility"
+        question: "Does it help someone do something?"
+      - gate: "Clarity"
+        question: "Is it understandable on first read?"
+      - gate: "Voice"
+        question: "Does it sound like us?"
+      - gate: "Empathy"
+        question: "Does it center the reader?"
+      - gate: "Courage"
+        question: "Does it take a stand?"
+
+# ============================================================================
+# PART 10: ORGANIC MARKETING ENGINE INTEGRATION
+# ============================================================================
+
+organic_marketing_applications:
+  section_name: "Applications to the OrganicMarketingEngine"
+  core_thesis: |
+    Handley's craft principles are the foundation layer for every
+    skill in the OrganicMarketingEngine. Writing is the operating
+    system. Brand voice, caption craft, script writing, carousel
+    design, and thread structure all build on these fundamentals.
+
+  skill_integration:
+    S03_brand_voice:
+      teachings_applied:
+        - "Voice vs Tone distinction for consistent brand personality"
+        - "Voice chart with 'We are X but not Y' attribute framework"
+        - "This/Not That examples for every voice attribute"
+        - "Tone spectrum map for context-appropriate emotional register"
+        - "Channel-specific voice adaptation guidelines"
+      implementation: |
+        When the engine generates brand voice guidelines, it should
+        use Handley's voice chart structure with attribute definitions,
+        example phrases, and anti-examples. The tone spectrum should
+        map at least 4 emotional registers across content contexts.
+
+    S08_script_writing:
+      teachings_applied:
+        - "Write for the ear, not the eye"
+        - "Micro-story structure (Situation → Complication → Turning Point → Resolution → Lesson)"
+        - "Hook mechanics: first 3 seconds determine everything"
+        - "Active voice for direct, compelling delivery"
+        - "Grade 4-6 reading level for spoken content"
+      implementation: |
+        Video scripts should use conversational syntax, short sentences,
+        and the micro-story framework. Opening hooks should follow the
+        bold-claim or open-loop patterns. Scripts should be written to
+        be spoken, not read.
+
+    S09_caption_writing:
+      teachings_applied:
+        - "One Piece, One Idea rule"
+        - "Empathy-first opening (reader's world, not yours)"
+        - "Show Don't Tell with specific numbers and details"
+        - "The Ugly First Draft method for rapid caption production"
+        - "Economy: write 300, publish 150"
+        - "Hook formulas for scroll-stopping first lines"
+      implementation: |
+        Captions should open with a reader-facing hook, develop one
+        clear idea with specific supporting evidence, and close with
+        a CTA or question. The you-to-we ratio should be at least 2:1.
+
+    S10_carousel_design:
+      teachings_applied:
+        - "One idea per slide (the one-piece-one-idea rule at slide level)"
+        - "Headline craft for slide headers"
+        - "Specificity over generality in all supporting text"
+        - "Fluff elimination: every word on a slide must earn its spot"
+        - "Story arc across slides (problem → solution → proof → action)"
+      implementation: |
+        Carousel text should use the fewest possible words per slide.
+        Each slide header should function as a standalone hook. The
+        sequence should follow a narrative arc, not a random list.
+
+    S11_thread_writing:
+      teachings_applied:
+        - "One thesis, proven across tweets"
+        - "First tweet as headline (80% of the work)"
+        - "Each tweet earns the next (line-by-line engagement)"
+        - "Structural editing: if a tweet doesn't advance the argument, cut it"
+        - "Strong close with specific CTA"
+      implementation: |
+        Threads should open with a hook tweet that contains the core
+        promise. Each subsequent tweet should deliver a discrete unit
+        of value. The final tweet should synthesize and call to action.
+
+  cross_cutting_principles:
+    always_apply:
+      - "Pathological empathy test before publishing any content"
+      - "So What? test at every structural level"
+      - "Reader-first framing over creator-first framing"
+      - "Specificity over abstraction in all claims and examples"
+      - "Active voice as default, passive voice only when intentional"
+      - "Quality gate: Utility + Clarity + Voice + Empathy + Courage"
+    never_do:
+      - "Publish without at least one editing pass"
+      - "Use jargon without translating for the reader"
+      - "Write about yourself without connecting to the reader's benefit"
+      - "Cram multiple ideas into a single piece"
+      - "Open with context instead of a hook"
+      - "Skip the CTA"
+
+# ============================================================================
+# KEY QUOTES
+# ============================================================================
+
+key_quotes:
+  - "Good writing serves the reader, not the writer."
+  - "If you wouldn't say it at a dinner party, don't say it in your marketing."
+  - "The best writing sounds like the best version of you."
+  - "Write like you mean it. Because if you don't care, why should they?"
+  - "The difference between something good and something great is one more round of editing."
+  - "You are your own best (and worst) editor."
+  - "Think about what your audience needs. Not what you need to tell them."
+  - "Nobody wants to read your 'content.' They want to read something useful, or interesting, or both."
+  - "Make the reader the hero of the story you tell."
+  - "Don't write to everyone. Write to someone."
+
+# ============================================================================
+# RELATED TEACHINGS
+# ============================================================================
+
+related_teachings:
+  - "miller-storybrand-framework.yaml"
+  - "hormozi-content-to-leads.yaml"
+  - "cialdini-influence-principles.yaml"
+  - "godin-this-is-marketing.yaml"

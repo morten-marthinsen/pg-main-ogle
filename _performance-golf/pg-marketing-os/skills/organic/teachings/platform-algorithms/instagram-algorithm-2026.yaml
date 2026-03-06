@@ -1,0 +1,210 @@
+# INSTAGRAM ALGORITHM TEACHING FILE
+# Extracted from 1,828 validated documents
+# Source: Instagram Agent Master Knowledge Base
+# Last Updated: March 2026
+
+meta:
+  platform: instagram
+  document_count: 1828
+  top_frameworks:
+    - Save-Share Trigger (739 occurrences)
+    - Offer Stack (439 occurrences)
+    - Packaging (429 occurrences)
+    - 3-Second Hook (177 occurrences)
+    - Carousel Narrative (127 occurrences)
+    - Reel Loop (50 occurrences)
+  high_signal_sources:
+    - 16 Types of Video That Sells (score: 90.15)
+    - Instagram Reels Unique Selling Points (score: 86.05)
+    - Short-Form Video Marketing Strategy (score: 81.05)
+    - Viral Carousel Sales Strategy (score: 79.45)
+
+algorithm_priorities:
+  primary_metric: engagement_and_saves
+  core_principle: "Instagram rewards creators who use all features and drive saves/shares"
+
+  ranking_signals:
+    tier_1_critical:
+      - save_rate:
+          weight: highest
+          description: "Saves indicate high-value content"
+          benchmark: "1-3% save rate is strong"
+          strategy: "Saveable = educational, lists, reference material"
+      - share_rate:
+          weight: highest
+          description: "Shares to DMs and Stories"
+          strategy: "Create 'tag a friend' or 'send to someone who needs this'"
+      - engagement_velocity:
+          weight: highest
+          description: "Engagement in first 30-60 minutes"
+          strategy: "Engage with audience before and after posting"
+
+    tier_2_important:
+      - comment_depth:
+          weight: high
+          description: "Not just comments, but conversations"
+          strategy: "Reply to every comment, ask follow-ups"
+      - watch_time:
+          weight: high
+          description: "For Reels - completion and rewatch"
+          benchmark: "70%+ completion for Reel push"
+      - profile_visits:
+          weight: medium_high
+          description: "Shows interest beyond single post"
+
+    tier_3_supporting:
+      - like_rate:
+          weight: medium
+          description: "Lowest value engagement signal"
+      - story_engagement:
+          weight: medium
+          description: "Replies, poll answers, stickers"
+      - feature_usage:
+          weight: medium
+          description: "Using Reels, Stories, Lives, etc."
+
+distribution_mechanics:
+  content_types:
+    reels:
+      reach_potential: "Highest (algorithm prioritizes)"
+      discovery: "Explore page, Reels tab, feed"
+      optimization: "Same principles as TikTok"
+
+    carousels:
+      reach_potential: "High (drives saves)"
+      discovery: "Feed, explore if trending"
+      optimization: "10 slides, story arc, save-worthy"
+
+    static_posts:
+      reach_potential: "Lowest"
+      discovery: "Mostly feed"
+      optimization: "High-quality visuals, strong captions"
+
+    stories:
+      reach_potential: "Follower-limited"
+      purpose: "Relationship building, daily touchpoint"
+      optimization: "Stickers, polls, engagement features"
+
+  algorithm_factors:
+    relationship: "Interaction history with viewer"
+    interest: "Content matching viewer preferences"
+    timeliness: "Recency of post"
+    frequency: "Account posting consistency"
+    usage: "How often user is on Instagram"
+
+content_optimization:
+  reels_optimization:
+    hook:
+      timing: "First 1-3 seconds critical"
+      techniques:
+        - "Text overlay with curiosity"
+        - "Visual transformation"
+        - "Direct address to problem"
+
+    loop_mechanics:
+      - "Last frame connects to first"
+      - "Audio loop continuation"
+      - "Open loop that resolves at start"
+
+    best_practices:
+      - "Native creation in app preferred"
+      - "Trending audio when relevant"
+      - "Cover image optimization"
+      - "15-30 seconds optimal length"
+
+  carousel_optimization:
+    carousel_narrative:
+      slide_1: "Hook - curiosity gap or bold claim"
+      slides_2_8: "Value delivery - one idea per slide"
+      slide_9: "Summary or key takeaway"
+      slide_10: "CTA - save, follow, comment, share"
+
+    design_principles:
+      - "Consistent visual style across slides"
+      - "Large readable text"
+      - "One key point per slide"
+      - "Swipe indicator on first slide"
+
+    save_triggers:
+      - "Lists and frameworks"
+      - "Step-by-step tutorials"
+      - "Reference material"
+      - "Templates and swipe files"
+
+  caption_optimization:
+    structure:
+      - "Hook in first line (before truncation)"
+      - "Value in body"
+      - "CTA at end"
+      - "Hashtags in comments or end of caption"
+
+    length: "Long-form captions perform well when valuable"
+
+    engagement_triggers:
+      - "Ask a question"
+      - "This or that choices"
+      - "Tag someone who..."
+      - "Save this for later"
+
+save_share_trigger_framework:
+  what_gets_saved:
+    - "Educational content (how-to, tutorials)"
+    - "Lists and frameworks"
+    - "Quotes and affirmations"
+    - "Reference material"
+    - "Templates and tools"
+
+  what_gets_shared:
+    - "Relatable content ('this is so me')"
+    - "Funny/entertaining"
+    - "Controversial opinions"
+    - "'Tag someone who needs this'"
+    - "Aspirational content"
+
+  optimization:
+    - "Explicitly ask for saves/shares"
+    - "Create genuinely useful content"
+    - "Make sharing feel natural"
+
+hashtag_strategy:
+  quantity: "3-5 highly targeted hashtags"
+  placement: "In caption or first comment (no difference)"
+
+  hashtag_tiers:
+    niche_small: "Under 100K posts - high relevance"
+    niche_medium: "100K-500K posts"
+    broader: "500K-1M posts"
+    avoid: "Over 1M posts (too competitive)"
+
+virality_patterns:
+  what_goes_viral:
+    - "Relatable humor"
+    - "Transformation content"
+    - "Educational value (save-worthy)"
+    - "Trend participation"
+    - "Controversial takes"
+    - "Behind-the-scenes authenticity"
+
+  viral_formats:
+    - "POV Reels"
+    - "Before/After"
+    - "Tutorial carousels"
+    - "Hot take carousels"
+    - "Day in the life"
+
+anti_patterns:
+  what_kills_instagram:
+    - "TikTok watermarks on Reels (algorithm penalty)"
+    - "Inconsistent posting"
+    - "Ignoring DMs and comments"
+    - "Only posting Reels (use all features)"
+    - "Generic hashtags"
+    - "Pod engagement (algorithm detects)"
+
+application_to_engine:
+  skill_mappings:
+    S02_platform_strategy: "Plan for multi-format content strategy"
+    S06_virality_scoring: "Weight save potential heavily"
+    S09_short_form_script: "Apply Reel loop framework"
+    S11_carousel_design: "Use carousel narrative structure"
+    S16_engagement_protocol: "First 60 minutes critical"

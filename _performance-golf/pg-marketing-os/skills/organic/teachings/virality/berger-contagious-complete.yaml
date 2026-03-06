@@ -1,0 +1,611 @@
+# BERGER CONTAGIOUS COMPLETE TEACHING FILE
+# Extracted from: Contagious: Why Things Catch On by Jonah Berger
+# Full STEPPS Framework Extraction
+# Last Updated: March 3, 2026
+
+meta:
+  source: "Contagious: Why Things Catch On"
+  author: "Jonah Berger"
+  framework_name: "STEPPS Framework"
+  core_thesis: "Virality isn't born, it's made. Products and ideas catch on through six key principles."
+  research_base: "Analysis of 7,000+ New York Times articles, BzzAgent campaign data, academic studies"
+  key_statistic: "Word of mouth is 10x more effective than traditional advertising. Only 7% of WOM happens online."
+
+stepps_framework:
+  overview:
+    acronym: "STEPPS"
+    principles:
+      - social_currency
+      - triggers
+      - emotion
+      - public
+      - practical_value
+      - stories
+
+    core_insight: "The same six principles drive all social epidemics. Whether getting people to save paper, see a documentary, try a service, or vote for a candidate."
+
+    application_checklist:
+      social_currency: "Does talking about your product make people look good?"
+      triggers: "What cues make people think about your product? How can you grow the habitat?"
+      emotion: "Does talking about it generate emotion? How can you kindle the fire?"
+      public: "Can people see when others are using it? Can you make the private public?"
+      practical_value: "Does sharing it help people help others?"
+      stories: "Is your product embedded in a narrative people want to share?"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRINCIPLE 1: SOCIAL CURRENCY
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  social_currency:
+    core_principle: "We share things that make us look good."
+
+    psychology:
+      harvard_study: "Sharing information about ourselves activates the same brain areas as food and money rewards"
+      driver: "People want to be seen as clever, entertaining, knowledgeable, and in-the-know"
+      mechanism: "40% of what people talk about is their experiences and personal relationships"
+
+    three_tactics:
+      1_inner_remarkability:
+        definition: "Finding what makes something interesting, surprising, or novel"
+        principle: "Remarkable things are worthy of remark - worthy of mention"
+
+        examples:
+          blendtec: "Will It Blend? - showing a blender destroying iPhones reveals inner remarkability"
+          snapple_facts: "Trivia under bottle caps creates shareable social currency"
+          please_dont_tell: "Secret bar hidden behind hot dog shop phone booth"
+          barclay_prime: "$100 cheesesteak breaks pattern expectations"
+
+        tactics:
+          - "Break patterns people expect"
+          - "Make product do something unexpected"
+          - "Create mystery or controversy"
+          - "Find what's surprising about mundane products"
+
+        key_insight: "Remarkable things make the people who talk about them seem remarkable"
+
+      2_game_mechanics:
+        definition: "Using rules, feedback loops, and status to make things compelling"
+
+        psychology:
+          internal_motivation: "Tangible evidence of progress makes us feel good"
+          social_comparison: "People care about their performance relative to others"
+          status_display: "What good is status if no one knows you have it?"
+
+        elements:
+          - points: "Quantifiable measures of achievement"
+          - levels: "Progression markers (bronze, silver, gold)"
+          - leaderboards: "Social comparison rankings"
+          - badges: "Visual symbols of achievement"
+
+        examples:
+          airlines: "Frequent flier miles and status tiers"
+          foursquare: "Mayorships and badges"
+          burberry: "User photo contests for Art of the Trench"
+
+        design_principles:
+          - "Status systems must be easy to understand"
+          - "Use intuitive hierarchies (gold, silver, bronze)"
+          - "Make achievements visible to others"
+          - "Don't require monetary incentives - social incentives work better long-term"
+
+      3_insider_feeling:
+        definition: "Making people feel like they have exclusive access or knowledge"
+
+        two_mechanisms:
+          scarcity:
+            definition: "Limited availability due to high demand, limited production, or time restrictions"
+            examples:
+              - "Please Don't Tell - only 45 seats"
+              - "Rue La La - 24-hour flash sales"
+              - "Disney Vault - limited movie releases"
+              - "McRib - only available at certain times/locations"
+
+          exclusivity:
+            definition: "Access restricted to people who meet certain criteria"
+            examples:
+              - "Invitation-only membership"
+              - "Knowledge-based access (knowing the secret)"
+              - "VIP programs"
+
+        psychology: "If something is difficult to obtain, people assume it must be worth the effort"
+
+        smartbargains_vs_ruelala:
+          insight: "Same products, different framing. Rue La La's invitation-only model created insider feeling that drove $350M sale"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRINCIPLE 2: TRIGGERS
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  triggers:
+    core_principle: "Top of mind means tip of tongue."
+
+    key_insight: "Cheerios gets more word of mouth than Disney World because triggers keep it top of mind"
+
+    psychology:
+      accessible_thoughts: "Stimuli in the environment determine which thoughts are top of mind"
+      trigger_types:
+        - "Sights, smells, sounds"
+        - "Product usage"
+        - "Environmental cues"
+        - "Time-based cues (days, seasons)"
+
+      research_finding: "Frequently triggered products get 15% more word of mouth"
+
+    immediate_vs_ongoing:
+      immediate_wom: "Passing on details soon after experience occurs"
+      ongoing_wom: "Conversations in weeks and months that follow"
+
+      finding: "Interesting products get more immediate WOM but not more ongoing WOM"
+      implication: "Triggers, not just interest, sustain word of mouth over time"
+
+    real_world_evidence:
+      mars_bars: "Sales spiked during NASA's Mars Pathfinder mission - planet triggered candy bar"
+      rebecca_black: "'Friday' searches spike every Friday - song title is its own trigger"
+      cheerios_twitter: "Mentions spike at breakfast time (7:30-8am), shift later on weekends"
+      french_music_study: "French music playing in store increased French wine sales"
+      voting_study: "Voting in schools increased support for school funding initiatives by 10,000+ votes"
+
+    growing_the_habitat:
+      definition: "Creating new links between your product and prevalent environmental stimuli"
+
+      kit_kat_and_coffee:
+        problem: "Kit Kat brand had lost momentum, sales declining 5% annually"
+        solution: "Repeatedly paired Kit Kat with coffee - 'a break's best friend'"
+        result: "Sales up 8% by year end, then 33% growth. Brand grew from $300M to $500M"
+
+        why_coffee_not_chocolate: "Coffee is consumed year-round; hot chocolate only in winter"
+
+      boston_market:
+        tactic: "Paired restaurant with dinner: 'Thinking about dinner? Think about Boston Market'"
+        result: "20% increase in word of mouth among people who previously associated brand only with lunch"
+
+    effective_trigger_principles:
+      frequency: "How often does the stimulus occur? Weekly beats yearly. Daily beats weekly."
+      link_strength: "The more things a cue is associated with, the weaker any single association"
+      proximity: "Trigger should happen near where desired behavior takes place"
+
+      bad_example:
+        bath_mat_psa: "Showed shower slip dangers - but can't buy bath mat in bathroom"
+
+      good_example:
+        soda_fat_video: "Showed fat pouring from soda can - triggered at moment of soda consumption"
+
+    poison_parasite_strategy:
+      definition: "Make rival's message trigger your own"
+      example: "Marlboro cowboy ad spoofed with 'Bob, I've got emphysema' - now Marlboro triggers anti-smoking message"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRINCIPLE 3: EMOTION
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  emotion:
+    core_principle: "When we care, we share."
+
+    nyt_most_emailed_research:
+      dataset: "7,000 New York Times articles over 6 months"
+      methodology: "Web crawler captured articles every 15 minutes, tracked Most E-Mailed list"
+
+      findings:
+        useful_articles: "30% more likely to make Most E-Mailed list"
+        interesting_articles: "25% more likely to make Most E-Mailed list"
+        awe_inspiring: "30% more likely to make Most E-Mailed list"
+        positive_articles: "13% more likely to be shared than negative"
+        sadness: "16% LESS likely to be shared"
+        anger_and_anxiety: "MORE likely to be shared"
+
+    science_articles_puzzle:
+      observation: "Science articles made Most E-Mailed list more than politics, fashion, or business"
+      reason: "They evoked AWE - sense of wonder and amazement"
+      example: "Denise Grady's cough article - schlieren photography made invisible visible"
+
+    the_awe_factor:
+      definition: "Sense of wonder and amazement when inspired by great knowledge, beauty, sublimity, or might"
+      psychology: "Expands frame of reference, drives self-transcendence, encompasses admiration and inspiration"
+
+      examples:
+        - "Grand Canyon vista"
+        - "Susan Boyle's Britain's Got Talent performance (100M views in 9 days)"
+        - "Scientific discoveries that reveal hidden phenomena"
+
+    arousal_framework:
+      key_insight: "It's not positive vs negative - it's HIGH AROUSAL vs LOW AROUSAL"
+
+      definition: "Arousal is a state of activation and readiness for action. Heart beats faster, blood pressure rises."
+
+      emotion_matrix:
+        high_arousal_positive:
+          - awe
+          - excitement
+          - amusement
+          - humor
+        high_arousal_negative:
+          - anger
+          - anxiety
+        low_arousal_positive:
+          - contentment
+        low_arousal_negative:
+          - sadness
+
+      mechanism: "Arousal kindles the fire. When aroused, we DO things. We share, we act."
+
+      research: "Changing story details to evoke more anger or more humor led to more sharing"
+
+    united_breaks_guitars:
+      story: "Dave Carroll's $3,500 guitar smashed by baggage handlers, 9 months of runaround"
+      response: "Wrote song, posted on YouTube"
+      result: "1.3M views in 4 days, 3M+ views in 10 days"
+      business_impact: "United stock fell 10% ($180M) within 4 days"
+
+      lesson: "Anger is high-arousal emotion that drives sharing"
+
+    focus_on_feelings:
+      mistake: "Marketing messages focus on information and features"
+      insight: "People need something more than information. They need emotion."
+
+      three_whys_technique:
+        step_1: "Why is your product important?"
+        step_2: "Why is THAT important?"
+        step_3: "Why is THAT important?"
+        result: "Drill down to emotional core"
+
+        example:
+          product: "Online search"
+          why_1: "Find information quickly"
+          why_2: "Get answers to questions"
+          why_3: "Connect with people, achieve goals, fulfill dreams"
+          insight: "Now you've found the emotional hook"
+
+    google_parisian_love:
+      challenge: "Search engines seem emotionally dead - all about algorithms and features"
+      solution: "Tell love story through search queries - study abroad, translate 'you are cute', impress French girl, job hunting Paris, churches, assemble crib"
+      result: "Went viral internally, became public hit"
+      key: "Humanized interface, built emotional connection without showing people"
+
+    exercise_and_sharing:
+      research: "Students who jogged in place were 2x more likely to share an article than those who relaxed"
+      implication: "ANY arousal, even physical, boosts sharing"
+
+      applications:
+        - "Ads after exciting TV moments get more discussion"
+        - "Gym ads may get shared more due to aroused state"
+        - "Aroused states can lead to oversharing"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRINCIPLE 4: PUBLIC
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  public:
+    core_principle: "Built to show, built to grow."
+
+    key_insight: "If something is hard to see, it's hard to imitate"
+
+    apple_logo_story:
+      problem: "PowerBook logo faced user when closed, but was upside-down to others when open"
+      question: "Which is more important - right for user before opening, or right for world when in use?"
+      decision: "Flipped logo to face outward - observability trumped user orientation"
+      reason: "Seeing others do something makes people more likely to do it themselves"
+
+    psychology_of_imitation:
+      social_proof: "People assume if others are doing something, it must be good"
+      uncertainty_resolution: "We look to others to resolve uncertainty about what's right"
+
+      examples:
+        restaurant_choice: "Empty restaurant vs full one - we choose full"
+        tip_jars: "Bartenders seed with bills to suggest tipping is normal"
+        kidney_refusals: "97.1% of offers refused - partly because others' refusals suggest low quality"
+        halal_cart_paradox: "Identical food carts across street - one has long line (social proof), other doesn't"
+        mba_career_herding: "Students enter with diverse interests, graduate 66%+ wanting banking/consulting"
+
+    behavior_is_public_thoughts_are_private:
+      college_drinking:
+        problem: "Most students uncomfortable with binge drinking but drank heavily anyway"
+        why: "They saw others drinking (public) but couldn't see others' discomfort (private)"
+        solution: "Ads stating true norm: '69% have 4 or fewer drinks when they party'"
+        result: "Heavy drinking decreased 30%"
+
+      powerpoint_example: "No one asks questions because no one sees others are confused too"
+
+    observability_research:
+      car_purchases: "1 in 8 car purchases influenced by seeing what neighbors drive"
+      visibility_effect: "Social influence stronger in LA (car commutes) than NYC (subway), Miami (sunny) than Seattle (rainy)"
+
+    making_private_public:
+      movember:
+        problem: "Cancer donation is private - no visible social proof"
+        solution: "Men grow moustaches in November as visible symbol"
+        mechanism: "Walking, talking billboards that prompt conversation"
+        result: "$174M+ raised worldwide"
+
+      shirts_vs_socks: "Shirts are observable and create imitation; socks are private and don't"
+
+    products_that_advertise_themselves:
+      hotmail: "Every email included 'Get Your Private, Free E-mail from Hotmail'"
+      result: "8.5M subscribers in first year, sold for $400M"
+
+      iphone_signature: "'Sent from my iPhone' - users can change but most don't"
+
+      ipod_white_headphones:
+        insight: "When Apple launched, most headphones were black"
+        mechanism: "White cords were visible social proof of iPod adoption"
+
+      distinctive_signals:
+        - "Pringles unique tube shape"
+        - "Windows startup sound"
+        - "Louboutin red soles"
+        - "Lululemon reusable shopping bags"
+
+    behavioral_residue:
+      definition: "Physical traces or remnants that actions leave behind"
+
+      livestrong_wristband:
+        backstory: "Nike's Scott MacEachern choosing between cross-country bike ride vs wristband"
+        insight: "'The bike ride doesn't live on. But the wristband does.'"
+        decision: "Made wristbands YELLOW - stands out against anything, not gender-specific"
+        result: "85+ million wristbands sold"
+
+      examples:
+        - "I Voted stickers make private voting public"
+        - "Tiffany/Victoria's Secret shopping bags get reused"
+        - "Online reviews and posts as permanent residue"
+        - "Spotify auto-posting what you're listening to"
+
+    anti_drug_ads_warning:
+      finding: "Anti-drug PSAs actually INCREASED drug use"
+
+      why: "Ads said drugs are bad BUT also showed others doing them"
+      mechanism: "Made drug use more public, providing social proof"
+
+      solution: "Highlight what people SHOULD do, not what others are doing wrong"
+
+      petrified_wood_study:
+        bad_sign: "'Many visitors have removed wood' - doubled theft"
+        good_sign: "'Please don't remove wood to preserve forest' - reduced theft"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRINCIPLE 5: PRACTICAL VALUE
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  practical_value:
+    core_principle: "News you can use."
+
+    key_insight: "If Social Currency is about the sender, Practical Value is about the receiver"
+
+    ken_craig_corn_video:
+      story: "86-year-old shares trick for getting clean corn without silk"
+      tactic: "Microwave 4 min/ear, cut off bottom, shake out clean corn"
+      result: "5M+ views, topped charts for 55+ demographic"
+      why: "Pure practical value drives sharing across generations"
+
+    barn_raising_metaphor:
+      concept: "Sharing useful info is like modern barn raising - helping others"
+      psychology: "Strengthens social bonds, shows we know and care about others"
+      dynamic: "Sharing is caring"
+
+    psychology_of_deals:
+      prospect_theory:
+        source: "Kahneman & Tversky Nobel Prize research"
+        core_idea: "People evaluate things relative to reference points, not absolute terms"
+
+        bbq_grill_experiment:
+          scenario_a: "$350 marked down to $250 (seems great)"
+          scenario_b: "$255 marked down to $240 (seems meh)"
+          finding: "75% would buy A, only 22% would buy B - even though B is cheaper"
+          lesson: "Reference point matters more than final price"
+
+        applications:
+          - "Infomercials set high reference ('You might expect to pay $200...')"
+          - "Retailers show 'regular price' to make sale price look better"
+          - "'But wait, there's more!' adds quantity to same reference price"
+
+      diminishing_sensitivity:
+        definition: "Same change has smaller impact further from reference point"
+
+        clock_radio_vs_tv:
+          scenario_a: "Drive 20 min to save $10 on $35 radio - 83% say yes"
+          scenario_b: "Drive 20 min to save $10 on $650 TV - only 13% say yes"
+
+        implication: "Same $10 feels different at different price points"
+
+      sale_label_power:
+        experiment: "Labeled items 'on sale' without changing price"
+        result: "Demand increased 50%+"
+
+    highlighting_incredible_value:
+      exceeding_expectations: "Deals that seem surprising or surpass expectations get shared"
+
+      restrictions_increase_value:
+        time_limits: "'Available this weekend only' creates urgency"
+        quantity_limits: "'Limit 3 per customer' suggests deal is so good store might run out"
+        research: "Quantity limits increase sales 50%+"
+        access_restrictions: "Members-only deals feel more special"
+
+    rule_of_100:
+      principle: "How to frame discounts for maximum perceived value"
+
+      under_100: "Use percentage off (20% off $25 shirt = seems better than $5 off)"
+      over_100: "Use dollar amount ($200 off $2,000 laptop = seems better than 10% off)"
+
+    practical_value_visibility:
+      problem: "Shopper discount card savings hidden in receipt - not observable"
+      solutions:
+        - "Ring bell when someone saves $25+"
+        - "Display savings on screen for others to see"
+        - "Make practical value public"
+
+    useful_content_packaging:
+      vanguard_newsletter:
+        format: "Short, 1-page email with key header and 3-4 links"
+        content: "Homeowner's insurance tips, tracking personal finances"
+        result: "Readers forward to friends who need specific advice"
+
+      viral_article_structure: "5 ways to X, 10 tips for Y - scannable lists"
+
+    narrow_vs_broad_audiences:
+      counterintuitive_finding: "Narrower content may be MORE likely to be shared"
+
+      why: "Ethiopian restaurant review reminds you of ONE specific friend"
+      mechanism: "That specificity compels you to send it to them"
+      contrast: "American restaurant review - everyone likes it, no one specific comes to mind"
+
+    truth_warning:
+      vaccines_autism_example: "False info spread because people wanted to help"
+      lesson: "Practical value drive is so powerful it can make false ideas succeed"
+      advice: "Verify independently before passing on 'miracle cures' or health warnings"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRINCIPLE 6: STORIES
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  stories:
+    core_principle: "Information travels under the guise of idle chatter."
+
+    trojan_horse_metaphor:
+      surface: "Outward shell of story grabs attention and engages interest"
+      hidden_cargo: "Lesson, moral, information, take-home message"
+      mechanism: "People don't think in terms of information. They think in terms of narratives."
+
+    why_stories_work:
+      narrative_engagement: "Beginning, middle, end - if people get sucked in early, they stay for conclusion"
+      cultural_learning: "Stories help us make sense of the world and learn rules/standards"
+      proof_by_analogy: "If it happened to someone like me, probably will happen to me"
+      resistance_bypass: "Hard to argue against personal stories - we're too engaged to disagree"
+
+    subway_jared_example:
+      story: "College student lost 245 pounds eating Subway sandwiches"
+      hook: "Pants from 60 inches to 34 inches eating fast food"
+
+      information_carried:
+        - "Subway has healthy options"
+        - "Healthy enough to lose weight eating them"
+        - "A LOT of weight"
+        - "Tasty enough to eat for 3 months straight"
+
+      key_insight: "People share for Jared's story, but Subway benefits"
+
+    lands_end_story:
+      narrative: "Cousin broke coat zipper mid-winter, called expecting runaround"
+      twist: "'We'll send you a new one free, two-day mail'"
+
+      embedded_information:
+        - "Topcoats aren't warm enough for East Coast winter"
+        - "Down coats look bulky but keep you warm"
+        - "Lands' End makes warm winter coat"
+        - "Outstanding customer service"
+        - "They fix problems without hassle"
+
+    building_your_trojan_horse:
+      dove_evolution:
+        concept: "Time-lapse of model transformation - makeup, styling, Photoshop"
+        message: "No wonder our perception of beauty is distorted"
+        emotional_hook: "Addresses unrealistic beauty norms"
+
+        brand_integration: "Part of Dove's Campaign for Real Beauty"
+
+        results:
+          - "16M+ views"
+          - "Cost ~$100K to make"
+          - "Hundreds of millions in exposure"
+          - "3x website traffic vs Super Bowl ad"
+          - "Double-digit sales growth"
+
+        why_it_worked: "Let people air grievances about beauty norms, brand smuggled in"
+
+    valuable_virality:
+      problem: "Big difference between talking about content and talking about the company behind it"
+
+      failures:
+        evian_roller_babies:
+          views: "50M+ views, Guinness most-viewed ad"
+          result: "Sales dropped 25%, lost market share"
+          why: "Roller-skating babies have nothing to do with water"
+
+        golden_palace_olympics:
+          stunt: "Man belly-flopped into Olympic pool wearing brand on chest"
+          buzz: "Huge media coverage, millions watching"
+          result: "People talked about stunt, not casino"
+          why: "Polka dot tights and tutus unrelated to gambling"
+
+      key_principle: "Virality is only valuable when brand is INTEGRAL to story"
+
+    panda_cheese_example:
+      format: "Man in panda suit appears when someone says no to Panda cheese"
+      reaction: "Panda destroys shopping cart, office, clinic"
+      tagline: "Never say no to Panda"
+
+      why_it_works:
+        - "Hilarious execution"
+        - "Can't tell story without mentioning panda"
+        - "Brand name IS the punchline"
+        - "Best part of story and brand perfectly intertwined"
+
+    blendtec_success:
+      mechanism: "Can't describe iPhone being destroyed without mentioning blender"
+      embedded_message: "Blendtec blenders are incredibly powerful"
+      valuable_virality: "Story and brand benefit perfectly aligned"
+
+    critical_vs_extraneous_details:
+      telephone_game_research:
+        finding: "70% of story details lost in first 5-6 transmissions"
+        pattern: "Critical details retained, extraneous details dropped"
+
+      implication: "If your brand is extraneous to the narrative, it will be dropped"
+
+      solution: "Make your brand/message so embedded that story doesn't make sense without it"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# APPLICATION FRAMEWORK
+# ═══════════════════════════════════════════════════════════════════════════
+
+application:
+  anyone_can_use:
+    insight: "Framework doesn't require huge ad budget, marketing genius, or creativity gene"
+    evidence: "Blendtec, Ken Craig, and others were regular people with regular products"
+    key: "Follow one or more STEPPS and products become more contagious"
+
+  forest_fire_analogy:
+    source: "Duncan Watts"
+    concept: "Big forest fires aren't caused by big sparks. Lots of individual trees have to catch fire."
+    implication: "It's not about finding influencers - it's about making content shareable"
+
+  checklist_for_content:
+    social_currency:
+      - "Does it make people look good?"
+      - "Does it have inner remarkability?"
+      - "Can you add game mechanics?"
+      - "Does it make people feel like insiders?"
+
+    triggers:
+      - "What environmental cues link to your product?"
+      - "Are triggers frequent enough?"
+      - "Can you grow the habitat with new associations?"
+
+    emotion:
+      - "Does it generate HIGH-AROUSAL emotion?"
+      - "Awe, excitement, humor, anger, anxiety - not sadness or contentment"
+      - "Can you kindle the fire?"
+
+    public:
+      - "Does your product advertise itself?"
+      - "Can people see when others use it?"
+      - "What behavioral residue does it leave?"
+      - "Can you make the private public?"
+
+    practical_value:
+      - "Does sharing help people help others?"
+      - "Is the value obvious and exceeds expectations?"
+      - "Is it packaged for easy consumption?"
+
+    stories:
+      - "What's your Trojan Horse narrative?"
+      - "Is the brand INTEGRAL to the story?"
+      - "Would the story still make sense without your brand?"
+
+skill_mappings:
+  S01_audience_intelligence: "Use STEPPS to understand what audience will share"
+  S05_hook_library: "Social Currency's remarkability principles for hook design"
+  S06_virality_scoring: "Score content against all six STEPPS"
+  S08_script_writing: "Build stories that carry brand as critical detail"
+  S09_caption_writing: "Embed practical value and triggers"
+  S10_carousel_design: "Create observable, shareable visual content"
+  S11_thread_writing: "Use narrative structure for information delivery"
+  S16_engagement_protocol: "Leverage emotion and social proof in community"

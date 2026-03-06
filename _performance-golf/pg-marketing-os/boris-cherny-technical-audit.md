@@ -1,0 +1,773 @@
+# Universal Skill: Boris Cherny-Claude Code Technical Audit
+
+**Skill Type:** Universal (applies to ALL workflows and processes)
+**Trigger:** End of every iteration, process update, or workflow modification
+**Perspective:** Boris Cherny / Claude Code Team Lead
+**Version:** 1.0
+**Classification:** MANDATORY - Cannot be skipped
+
+---
+
+## PHILOSOPHY
+
+This audit embodies the engineering excellence of the Claude Code team. It is not a checklist—it is a **forensic technical investigation** that assumes:
+
+1. **Errors exist until proven otherwise** - Claude does not catch everything on first pass
+2. **Edge cases will occur** - Production environments are hostile
+3. **Context windows are finite** - Large operations will fail without chunking
+4. **External services fail** - No single point of failure is acceptable
+5. **Hallucination is possible** - Validation must verify authenticity, not just structure
+6. **Future maintainers exist** - Code must be readable by humans and AI alike
+
+**Core Principle:** The audit's job is to find what went wrong, what WILL go wrong, and what COULD be better—not to validate that things look okay.
+
+---
+
+## WHEN TO TRIGGER
+
+```yaml
+mandatory_triggers:
+  - After ANY skill file is created or modified
+  - After ANY workflow/process is updated
+  - After ANY master agent file changes
+  - Before ANY production/live execution
+  - After ANY failure or unexpected behavior
+  - At end of every iteration cycle
+
+optional_triggers:
+  - Upon user request ("run technical audit")
+  - Before major architectural decisions
+  - When performance degrades
+  - When debugging complex issues
+```
+
+---
+
+## AUDIT FRAMEWORK
+
+### PHASE 1: STRUCTURAL INTEGRITY ANALYSIS
+
+**Purpose:** Verify the architecture is sound and complete
+
+#### 1.1 Dependency Graph Validation
+
+```yaml
+check_items:
+  - Every skill lists its dependencies explicitly
+  - No circular dependencies exist
+  - Dependency files actually exist at specified paths
+  - Version compatibility between dependent skills
+  - No orphaned skills (skills nothing depends on AND don't produce final output)
+
+methodology:
+  1. Extract all [[skill-reference]] links from every file
+  2. Build directed dependency graph
+  3. Detect cycles (CRITICAL if found)
+  4. Verify each referenced file exists
+  5. Check version numbers are compatible
+  6. Identify dead-end skills
+
+output:
+  dependency_graph: visual or text representation
+  cycles_found: []
+  missing_files: []
+  version_conflicts: []
+  orphaned_skills: []
+```
+
+#### 1.2 Input/Output Contract Verification
+
+```yaml
+check_items:
+  - Every skill defines explicit Input schema
+  - Every skill defines explicit Output schema
+  - Output of skill A matches expected Input of skill B (when A→B)
+  - No implicit dependencies (data expected but not declared)
+  - All required fields are marked required
+  - Optional fields have sensible defaults
+
+methodology:
+  1. Parse Input/Output sections from each skill
+  2. For each dependency pair, verify schema compatibility
+  3. Flag any field in Input not provided by predecessor's Output
+  4. Flag any "magic" data that appears without source
+
+output:
+  contract_violations: []
+  implicit_dependencies: []
+  schema_mismatches: []
+```
+
+#### 1.3 File Path Consistency
+
+```yaml
+check_items:
+  - All file paths use consistent format (absolute vs relative)
+  - Directory structure is defined in one canonical location
+  - No hardcoded paths that vary between skills
+  - All referenced directories are created before use
+  - No path collisions between skills
+
+methodology:
+  1. Extract all file paths from all skills
+  2. Categorize as input paths, output paths, temp paths
+  3. Verify consistency of path format
+  4. Check for collision (same path, different purposes)
+  5. Verify directory creation logic exists
+
+output:
+  path_inconsistencies: []
+  missing_directory_creation: []
+  path_collisions: []
+```
+
+---
+
+### PHASE 2: FAILURE MODE ANALYSIS
+
+**Purpose:** Identify every way the system can fail
+
+#### 2.1 External Service Dependencies
+
+```yaml
+check_items:
+  - Every external tool/API has fallback chain defined
+  - Rate limiting strategy exists for each service
+  - Timeout values are specified and reasonable
+  - Error responses are handled (not just success paths)
+  - Service outage doesn't halt entire pipeline
+
+methodology:
+  1. Identify all external tool calls (mcp__*, API calls, web fetches)
+  2. For each, verify:
+     - Fallback exists
+     - Timeout specified
+     - Error handling defined
+     - Rate limit awareness
+  3. Simulate: "What happens if X fails?"
+
+external_services_to_audit:
+  - Firecrawl (scrape, search, map, crawl)
+  - Apify (all actors)
+  - Exa (search, crawl, research)
+  - WebFetch
+  - Any API endpoints
+  - File system operations
+  - Network operations
+
+output:
+  services_without_fallback: []
+  missing_timeout_handling: []
+  missing_error_handlers: []
+  single_points_of_failure: []
+```
+
+#### 2.2 Context Window Exhaustion Analysis
+
+```yaml
+check_items:
+  - Operations processing >100 items have chunking strategy
+  - Large file reads have pagination
+  - Aggregation operations don't load everything at once
+  - State is persisted to files, not held in context
+  - Summary strategies exist for large outputs
+
+methodology:
+  1. Identify all operations that iterate over collections
+  2. Estimate token usage for typical and worst-case scenarios
+  3. Flag any operation that could exceed 50K tokens
+  4. Verify chunking/batching is implemented
+  5. Check for streaming output to files
+
+token_estimation:
+  average_quote: 200 tokens
+  json_overhead: 50 tokens per item
+  skill_instructions: 2000-5000 tokens
+  system_prompt: 3000 tokens
+  safe_working_context: 100K tokens (conservative)
+
+output:
+  potential_overflow_operations: []
+  missing_chunking_strategies: []
+  unbounded_iterations: []
+```
+
+#### 2.3 Data Integrity Failure Modes
+
+```yaml
+check_items:
+  - All data has source attribution
+  - Raw data is preserved (never modified after creation)
+  - Hash verification exists for critical data
+  - Cross-reference validation exists (not just structure checks)
+  - Fabrication/hallucination detection mechanisms exist
+
+methodology:
+  1. Trace data from source to final output
+  2. Verify each transformation preserves source reference
+  3. Check for raw data preservation protocol
+  4. Verify authenticity validation exists
+  5. Test: "Could fake data pass validation?"
+
+output:
+  data_without_source: []
+  missing_raw_preservation: []
+  validation_gaps: []
+  fabrication_risks: []
+```
+
+#### 2.4 State and Recovery Analysis
+
+```yaml
+check_items:
+  - Checkpoint mechanism exists
+  - Session can resume from interruption
+  - Partial progress is not lost on failure
+  - Clear recovery protocol for each failure type
+  - Human intervention points are defined
+
+methodology:
+  1. Simulate session interruption at each skill
+  2. Verify checkpoint would exist
+  3. Verify resume logic is defined
+  4. Check for data loss scenarios
+  5. Identify where human must intervene
+
+output:
+  skills_without_checkpoints: []
+  unrecoverable_states: []
+  data_loss_scenarios: []
+  unclear_recovery_paths: []
+```
+
+---
+
+### PHASE 3: EFFICIENCY AND PERFORMANCE ANALYSIS
+
+**Purpose:** Identify optimization opportunities
+
+#### 3.1 Parallelization Opportunities
+
+```yaml
+check_items:
+  - Independent operations are marked for parallel execution
+  - Dependencies correctly prevent premature parallel execution
+  - Resource contention is avoided in parallel operations
+  - Parallel operations have individual error handling
+
+methodology:
+  1. Analyze dependency graph for parallel-eligible operations
+  2. Verify parallel markers exist where appropriate
+  3. Check for resource conflicts (same file writes, API limits)
+  4. Verify parallel failures don't corrupt shared state
+
+output:
+  missed_parallel_opportunities: []
+  unsafe_parallel_operations: []
+  resource_contentions: []
+```
+
+#### 3.2 Redundant Operations
+
+```yaml
+check_items:
+  - No duplicate data fetching
+  - No redundant validation passes
+  - No unnecessary file reads/writes
+  - Caching is used where appropriate
+  - Previous results are reused when valid
+
+methodology:
+  1. Trace all I/O operations
+  2. Identify duplicate reads of same data
+  3. Identify recalculations of same values
+  4. Flag operations that could be cached
+  5. Check for unnecessary intermediate files
+
+output:
+  redundant_operations: []
+  caching_opportunities: []
+  unnecessary_io: []
+```
+
+#### 3.3 Tool Selection Optimization
+
+```yaml
+check_items:
+  - Most appropriate tool is used for each task
+  - Platform-specific tools used where available
+  - General tools not used when specific tools exist
+  - Tool capabilities are fully utilized
+
+methodology:
+  1. For each external operation, list available tools
+  2. Verify optimal tool is selected
+  3. Check if tool features are underutilized
+  4. Identify where specialized tools would improve results
+
+tool_selection_matrix:
+  reddit_scraping: apify/reddit-scraper > firecrawl > generic
+  youtube_data: apify/youtube-scraper > firecrawl
+  amazon_reviews: apify/amazon-reviews-scraper > firecrawl
+  general_web: firecrawl > exa > webfetch
+  search: exa > firecrawl_search > websearch
+  deep_research: exa_deep_researcher > manual search
+
+output:
+  suboptimal_tool_choices: []
+  underutilized_features: []
+  missing_specialized_tools: []
+```
+
+---
+
+### PHASE 4: QUALITY AND ROBUSTNESS ANALYSIS
+
+**Purpose:** Ensure output quality meets the highest standards
+
+#### 4.1 Validation Completeness
+
+```yaml
+check_items:
+  - Every output has validation
+  - Validation checks content, not just structure
+  - Edge cases are handled (empty, null, malformed)
+  - Thresholds are defined and enforced
+  - Validation failures trigger appropriate responses
+
+methodology:
+  1. For each skill output, identify validation steps
+  2. Categorize: structural vs content vs authenticity
+  3. Verify edge case handling exists
+  4. Check threshold enforcement
+  5. Verify failure protocols are defined
+
+validation_levels:
+  structural: "Does the JSON parse? Are required fields present?"
+  content: "Is the content meaningful? Not placeholder?"
+  authenticity: "Did this data come from real sources?"
+  quality: "Does this meet quality thresholds?"
+  business: "Does this serve the intended purpose?"
+
+output:
+  unvalidated_outputs: []
+  structural_only_validation: []
+  missing_authenticity_checks: []
+  undefined_thresholds: []
+```
+
+#### 4.2 Error Message Quality
+
+```yaml
+check_items:
+  - Error messages are specific and actionable
+  - Errors include context (what was being attempted)
+  - Errors suggest remediation steps
+  - Errors are logged for debugging
+  - Error severity is classified
+
+methodology:
+  1. Extract all error handling blocks
+  2. Evaluate message quality
+  3. Check for generic errors ("An error occurred")
+  4. Verify context is preserved in errors
+  5. Check logging mechanism exists
+
+good_error_example: |
+  ERROR [1.4-A Forum Scraper] Rate limit exceeded
+  Context: Scraping GolfWRX thread 12345
+  Attempted: 3 retries over 45 seconds
+  Fallback: Switching to Apify reddit-scraper
+  Recovery: Will retry original source in 5 minutes
+
+bad_error_example: |
+  Error: Request failed
+
+output:
+  generic_errors: []
+  missing_context: []
+  no_remediation_suggestion: []
+  unlogged_errors: []
+```
+
+#### 4.3 Documentation Completeness
+
+```yaml
+check_items:
+  - Every skill has clear purpose statement
+  - Input/Output are fully documented
+  - Edge cases are documented
+  - Failure modes are documented
+  - Examples are provided where helpful
+
+methodology:
+  1. Check each skill for required sections
+  2. Verify documentation matches implementation
+  3. Flag undocumented edge cases
+  4. Check for stale documentation
+
+required_sections:
+  - Purpose/Description
+  - Dependencies
+  - Input schema
+  - Output schema
+  - Error handling
+  - Quality criteria
+
+output:
+  missing_documentation: []
+  stale_documentation: []
+  undocumented_behaviors: []
+```
+
+---
+
+### PHASE 5: SECURITY AND SAFETY ANALYSIS
+
+**Purpose:** Ensure no harmful behaviors or vulnerabilities
+
+#### 5.1 Data Handling Safety
+
+```yaml
+check_items:
+  - PII is identified and handled appropriately
+  - Credentials are not logged or exposed
+  - Sensitive data has appropriate access controls
+  - Data retention policies are defined
+  - GDPR/privacy considerations addressed
+
+methodology:
+  1. Identify all data being collected
+  2. Classify sensitivity levels
+  3. Verify handling matches sensitivity
+  4. Check for credential exposure in logs
+  5. Review data retention
+
+output:
+  pii_handling_gaps: []
+  credential_exposure_risks: []
+  retention_policy_missing: []
+```
+
+#### 5.2 Resource Safety
+
+```yaml
+check_items:
+  - Budget limits are enforced
+  - Runaway processes can be stopped
+  - Resource usage is monitored
+  - No unbounded loops
+  - Human checkpoints for expensive operations
+
+methodology:
+  1. Identify all cost-incurring operations
+  2. Verify budget tracking exists
+  3. Check for loop termination conditions
+  4. Verify kill switches exist
+  5. Identify operations needing human approval
+
+output:
+  unbounded_cost_risks: []
+  missing_budget_controls: []
+  runaway_loop_risks: []
+  missing_human_checkpoints: []
+```
+
+---
+
+### PHASE 6: IMPROVEMENT OPPORTUNITIES
+
+**Purpose:** Identify ways to make the system better
+
+#### 6.1 Depth Improvements
+
+```yaml
+analysis_areas:
+  - Can we gather more data without more cost?
+  - Are we extracting all available value from sources?
+  - Could analysis go deeper with same inputs?
+  - Are there unexplored data sources?
+  - Could output be more actionable?
+
+output:
+  depth_opportunities: []
+  underutilized_sources: []
+  analysis_expansion_options: []
+```
+
+#### 6.2 Reliability Improvements
+
+```yaml
+analysis_areas:
+  - Where are the remaining single points of failure?
+  - What additional fallbacks could be added?
+  - How can recovery be made smoother?
+  - What monitoring would help detect issues earlier?
+  - How can validation be strengthened?
+
+output:
+  reliability_improvements: []
+  additional_fallbacks_possible: []
+  monitoring_suggestions: []
+```
+
+#### 6.3 User Experience Improvements
+
+```yaml
+analysis_areas:
+  - Are progress updates clear and frequent?
+  - Is human intervention minimized appropriately?
+  - Are outputs easy to understand and use?
+  - Is the system predictable?
+  - Are errors communicated clearly?
+
+output:
+  ux_improvements: []
+  communication_gaps: []
+  predictability_issues: []
+```
+
+---
+
+## OUTPUT FORMAT
+
+### Audit Report Structure
+
+```json
+{
+  "audit_metadata": {
+    "audit_id": "audit_20260117_001",
+    "timestamp": "2026-01-17T15:30:00Z",
+    "auditor": "Boris Cherny / Claude Code Team",
+    "target": "pg-deep-research-v2",
+    "trigger": "post-iteration",
+    "version_audited": "3.3"
+  },
+
+  "executive_summary": {
+    "overall_status": "PASS_WITH_WARNINGS | PASS | FAIL | CRITICAL_FAIL",
+    "critical_issues": 0,
+    "high_issues": 2,
+    "medium_issues": 5,
+    "low_issues": 8,
+    "improvements_identified": 12,
+    "estimated_reliability": "85%",
+    "ready_for_production": true | false
+  },
+
+  "findings": {
+    "critical": [],
+    "high": [],
+    "medium": [],
+    "low": [],
+    "improvements": []
+  },
+
+  "phase_results": {
+    "structural_integrity": { "status": "PASS", "issues": [] },
+    "failure_modes": { "status": "WARN", "issues": [] },
+    "efficiency": { "status": "PASS", "issues": [] },
+    "quality": { "status": "PASS", "issues": [] },
+    "security": { "status": "PASS", "issues": [] },
+    "improvements": { "opportunities": [] }
+  },
+
+  "recommended_actions": {
+    "immediate": [],
+    "before_next_run": [],
+    "next_iteration": [],
+    "future_consideration": []
+  },
+
+  "sign_off": {
+    "auditor_confidence": "HIGH | MEDIUM | LOW",
+    "notes": "Additional context or caveats",
+    "next_audit_trigger": "After implementing recommended actions"
+  }
+}
+```
+
+### Issue Format
+
+```json
+{
+  "id": "CRITICAL-001",
+  "severity": "CRITICAL | HIGH | MEDIUM | LOW",
+  "category": "structural | failure_mode | efficiency | quality | security",
+  "location": "skill file or component path",
+  "title": "Brief description",
+  "description": "Detailed explanation of the issue",
+  "impact": "What happens if not fixed",
+  "evidence": "Specific code/config that demonstrates issue",
+  "fix_required": "Specific fix needed",
+  "fix_complexity": "trivial | moderate | complex",
+  "related_issues": ["OTHER-001"]
+}
+```
+
+### Improvement Format
+
+```json
+{
+  "id": "IMP-001",
+  "category": "depth | reliability | efficiency | ux",
+  "title": "Brief description",
+  "current_state": "How it works now",
+  "proposed_state": "How it could work",
+  "benefit": "What improves",
+  "effort": "low | medium | high",
+  "priority": "recommended | optional | future"
+}
+```
+
+---
+
+## EXECUTION PROTOCOL
+
+### Step 1: Scope Definition
+
+```yaml
+actions:
+  1. Identify all files in scope
+  2. Load current versions of all skills
+  3. Note recent changes (if post-iteration audit)
+  4. Define specific focus areas if any
+```
+
+### Step 2: Phase Execution
+
+```yaml
+actions:
+  1. Execute Phase 1 (Structural Integrity)
+  2. Execute Phase 2 (Failure Modes)
+  3. Execute Phase 3 (Efficiency)
+  4. Execute Phase 4 (Quality)
+  5. Execute Phase 5 (Security)
+  6. Execute Phase 6 (Improvements)
+
+note: Each phase must complete before final report
+```
+
+### Step 3: Finding Classification
+
+```yaml
+severity_criteria:
+  CRITICAL:
+    - Will cause system failure in production
+    - Data integrity at risk
+    - No workaround exists
+    - Must fix before any execution
+
+  HIGH:
+    - Significant quality degradation
+    - Workaround exists but unreliable
+    - Should fix before production
+    - Acceptable for testing only
+
+  MEDIUM:
+    - Reduces reliability or efficiency
+    - Workaround is reliable
+    - Should fix soon
+    - Acceptable for limited production
+
+  LOW:
+    - Best practice improvement
+    - No immediate impact
+    - Fix when convenient
+    - Cosmetic or minor
+```
+
+### Step 4: Report Generation
+
+```yaml
+actions:
+  1. Compile all findings
+  2. Calculate overall status
+  3. Prioritize recommended actions
+  4. Generate executive summary
+  5. Save to execution/audit_report_{timestamp}.json
+  6. Present summary to human
+```
+
+### Step 5: Human Review
+
+```yaml
+required_human_actions:
+  - Review critical findings
+  - Approve/modify recommended actions
+  - Decide: proceed, fix first, or investigate
+  - Sign off on audit completeness
+```
+
+---
+
+## INTEGRATION POINTS
+
+### With Master Agent
+
+```yaml
+integration:
+  trigger_point: "After iteration complete, before declaring success"
+  blocking: true for CRITICAL findings
+  output_location: "execution/audit_reports/"
+
+master_agent_addition: |
+  ## Post-Iteration Technical Audit
+
+  After completing any iteration or process update:
+  1. MANDATORY: Execute Boris Cherny Technical Audit
+  2. Review all CRITICAL and HIGH findings
+  3. Address CRITICAL findings before proceeding
+  4. Document accepted risks for HIGH findings
+  5. Log improvements for future iterations
+```
+
+### With Workflow Processes
+
+```yaml
+universal_integration:
+  - Every workflow should reference this audit
+  - Audit runs at workflow completion
+  - Audit findings feed into next iteration
+  - Improvement backlog maintained across iterations
+```
+
+---
+
+## QUALITY STANDARDS
+
+This audit upholds the following non-negotiable standards:
+
+1. **No Shortcuts** - Every phase must complete; no skipping
+2. **Evidence-Based** - Every finding must cite specific evidence
+3. **Actionable Output** - Every issue must have clear fix path
+4. **Honest Assessment** - No minimizing issues to look better
+5. **Comprehensive** - Check everything, assume nothing works
+6. **Forward-Looking** - Identify problems before they manifest
+7. **Improvement-Oriented** - Always find ways to be better
+
+---
+
+## NOTES
+
+- This audit is designed to be run by Claude with human oversight
+- The audit itself should be audited periodically (meta-audit)
+- Findings should be tracked across iterations to verify fixes
+- This document should evolve as new failure modes are discovered
+- The goal is production-grade reliability, not perfection theater
+
+---
+
+## VERSION HISTORY
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-01-17 | Initial creation based on pg-deep-research-v2 audit |
+
+---
+
+## ATTRIBUTION
+
+This audit framework was developed through analysis of real production failures, specifically the Ion Golf Ball research incident where data fabrication went undetected. It embodies lessons learned and best practices from the Claude Code engineering team's approach to building reliable AI systems.
+
+**Remember:** The purpose of this audit is not to find everything wrong—it's to ensure nothing critical is missed. A thorough audit that finds issues is more valuable than a superficial audit that finds none.

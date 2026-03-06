@@ -1,0 +1,180 @@
+# YOUTUBE ALGORITHM TEACHING FILE
+# Extracted from 3,784 validated documents
+# Source: YouTube Agent Master Knowledge Base
+# Last Updated: March 2026
+
+meta:
+  platform: youtube
+  document_count: 3784
+  top_frameworks:
+    - Offer Stack (1346 occurrences)
+    - Retention Curve (211 occurrences)
+    - Title-Thumbnail Fit (65 occurrences)
+    - Content Pillars (56 occurrences)
+    - Content Flywheel (49 occurrences)
+  high_signal_sources:
+    - Jason Cooperson Creator Accelerator (score: 111.65)
+    - Creator College YouTube Glossary (score: 110.85)
+    - Bryan Ng Freelance Scriptwriter Playbook (score: 110.6)
+    - MagnatesMedia YouTube Magnates (score: 106.3)
+
+algorithm_priorities:
+  primary_metric: viewer_satisfaction
+  core_principle: "YouTube optimizes for keeping users on the platform longer to show more ads"
+
+  ranking_signals:
+    tier_1_critical:
+      - click_through_rate:
+          weight: highest
+          description: "Ratio of impressions to clicks. Title + Thumbnail = CTR"
+          benchmark: "2-10% depending on niche, aim for top of range"
+      - average_view_duration:
+          weight: highest
+          description: "How long viewers watch before leaving"
+          benchmark: "50%+ of video length is strong"
+      - retention_curve:
+          weight: highest
+          description: "Pattern of audience drop-off throughout video"
+          optimization: "Front-load value, pattern interrupts, open loops"
+
+    tier_2_important:
+      - watch_time:
+          weight: high
+          description: "Total minutes watched across all views"
+          strategy: "Longer videos CAN work if retention stays high"
+      - engagement_velocity:
+          weight: high
+          description: "Likes, comments, shares in first hours"
+          strategy: "Ask questions, create controversy, trigger emotion"
+      - session_time:
+          weight: medium_high
+          description: "Does your video lead to more watching?"
+          strategy: "End screens, suggested videos, playlists"
+
+    tier_3_supporting:
+      - subscriber_conversion:
+          weight: medium
+          description: "New subscribers from video"
+      - share_rate:
+          weight: medium
+          description: "External sharing signals value"
+      - search_relevance:
+          weight: medium
+          description: "Title, description, tags matching search queries"
+
+distribution_mechanics:
+  traffic_sources:
+    browse_features:
+      percentage: "40-60% for established channels"
+      description: "Homepage and subscription feed"
+      optimization: "Consistent posting, high CTR thumbnails"
+
+    suggested_videos:
+      percentage: "20-40%"
+      description: "Sidebar and end screen recommendations"
+      optimization: "Related content, series, playlists"
+
+    youtube_search:
+      percentage: "10-30%"
+      description: "Direct search results"
+      optimization: "SEO, searchable titles, tags, descriptions"
+
+    shorts_feed:
+      percentage: "Variable"
+      description: "Separate algorithm for <60s vertical video"
+      optimization: "Loop endings, fast hooks, trend participation"
+
+  algorithm_testing_phases:
+    phase_1: "Initial push to small sample (100-500 impressions)"
+    phase_2: "Expanded if CTR + AVD strong (1K-10K)"
+    phase_3: "Viral push if metrics maintain (10K-100K+)"
+    phase_4: "Evergreen indexing for continued discovery"
+
+content_optimization:
+  title_thumbnail_fit:
+    principle: "Title and thumbnail must work together, not repeat each other"
+    thumbnail_rules:
+      - "3 elements max on thumbnail"
+      - "Faces with emotion outperform"
+      - "Contrast and brightness for mobile visibility"
+      - "Text if needed: 3 words max, large font"
+    title_rules:
+      - "Front-load curiosity or benefit"
+      - "Include searchable keywords naturally"
+      - "Under 60 characters for full display"
+      - "Numbers and lists often perform well"
+
+  retention_optimization:
+    first_30_seconds:
+      - "Deliver promise immediately"
+      - "State what viewer will learn/get"
+      - "Pattern interrupt if needed"
+      - "Never say 'in this video I will...'"
+
+    mid_video:
+      - "Open loops to keep watching"
+      - "Pattern interrupts every 30-60 seconds"
+      - "B-roll and visual changes"
+      - "Preview upcoming value"
+
+    end_of_video:
+      - "Strong CTA for engagement"
+      - "Tease next video"
+      - "End screens for session time"
+
+shorts_algorithm:
+  key_differences:
+    - "Separate recommendation system from long-form"
+    - "Loop completion rate is primary metric"
+    - "Speed to value even more critical (<3 seconds)"
+    - "Rewatch rate highly weighted"
+
+  optimization:
+    - "Hook in first second"
+    - "Loop ending (last frame connects to first)"
+    - "Trending sounds when relevant"
+    - "Vertical 9:16 mandatory"
+    - "Under 60 seconds (15-30 often optimal)"
+
+monetization_impact:
+  partner_program_requirements:
+    watch_hours: 4000
+    subscribers: 1000
+    timeframe: "12 months"
+
+  rpm_factors:
+    - "Niche (finance, tech, business = higher)"
+    - "Audience geography (US, UK = higher)"
+    - "Video length (8+ mins = mid-roll ads)"
+    - "Content type (advertiser friendly)"
+
+virality_patterns:
+  what_goes_viral:
+    - "High emotional charge (anger, awe, humor)"
+    - "Contrarian takes on popular topics"
+    - "Transformation/before-after"
+    - "Secrets revealed format"
+    - "Trend participation with unique angle"
+
+  viral_title_patterns:
+    - "I [did X] for [time period]. Here's what happened."
+    - "Why [common belief] is wrong"
+    - "[Number] [thing] that [benefit]"
+    - "The [adjective] reason why [outcome]"
+    - "How [person] [achieved result]"
+
+anti_patterns:
+  what_kills_videos:
+    - "Clickbait without delivery (drops retention)"
+    - "Slow intros (loses audience before value)"
+    - "Inconsistent posting (algorithm forgets you)"
+    - "Ignoring analytics (flying blind)"
+    - "Copying without adaptation (no unique angle)"
+
+application_to_engine:
+  skill_mappings:
+    S02_platform_strategy: "Use traffic source data to set realistic goals"
+    S06_virality_scoring: "Weight CTR potential and retention hook heavily"
+    S08_video_script: "Apply retention optimization framework"
+    S10_thumbnail_visual: "Follow title-thumbnail fit rules"
+    S15_scheduling: "Optimize for browse features timing"

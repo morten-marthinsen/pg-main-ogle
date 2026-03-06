@@ -1,0 +1,125 @@
+{
+  "learning_log": {
+    "skill": "06-big-idea",
+    "version": "4.3",
+    "entries": [
+      {
+        "run_id": "upwellness-ltv-2026-02-03",
+        "timestamp": "2026-02-03T23:59:00Z",
+        "project": "upwellness-ltv",
+        "niche": "health_supplements_hydration",
+        "schwartz_stage": 4,
+
+        "critical_feedback": [
+          {
+            "feedback_id": "FB-001",
+            "severity": "MEDIUM",
+            "type": "hybrid_direction_pattern",
+            "title": "Human directed Makepeace x Bencivenga hybrid — combining villain architecture with belief-gap specificity",
+            "description": "After Arena Round 1, human selected a hybrid combining Makepeace's 4-phase villain architecture with Bencivenga's 'still dehydrated' validation and 'THIS molecule' specificity. The human-directed headline reformulated the Big Idea as a real-reason reveal with embedded curiosity ('You Need THIS Molecule for All 4').",
+            "key_elements_from_makepeace": "4-phase framework as organizing principle, industry villain (Phase 2 limitation), competitor naming, temporal weight (20 years), phase numbering",
+            "key_elements_from_bencivenga": "'Still dehydrated' frustration validation, 'one molecule' specificity, belief-gap closing, maximum proof embedding",
+            "pattern_identified": "VILLAIN-FRAMEWORK + BELIEF-GAP SPECIFICITY: The strongest Big Idea for this niche combined a structural villain (industry limitation) with molecular specificity (taurine). The framework (4 phases) does the structural work. The molecule does the specificity work. Neither alone was sufficient — the framework without the molecule is too abstract, the molecule without the framework lacks the villain architecture.",
+            "learning": "For health supplement Big Ideas with split awareness (familiar market + novel mechanism): COMBINE a structural framework that reframes the category (Makepeace-style villain architecture) WITH molecular/biological specificity that closes belief gaps (Bencivenga-style proof embedding). The framework creates the 'aha' structure. The specificity creates the 'this is real' credibility."
+          },
+          {
+            "feedback_id": "FB-002",
+            "severity": "MEDIUM",
+            "type": "arena_persona_differentiation",
+            "title": "Arena personas generated genuinely distinct Big Ideas — no category confusion observed",
+            "description": "Unlike the Promise skill (where Arena Round 1 generated big ideas instead of promises), the Big Idea Arena correctly stayed in-lane. All 6 personas generated actual Big Ideas with appropriate type classification. Makepeace generated an enemy Big Idea. Bencivenga generated a belief-architecture Big Idea. Halbert generated a visceral mechanism Big Idea. No persona defaulted to generating promises, mechanisms, or root cause reveals instead of Big Ideas.",
+            "root_cause_of_success": "The Big Idea skill is the most natural fit for the Arena personas — each persona's default mode (villain architecture, visceral hook, research credibility, etc.) naturally produces a Big Idea variant. Unlike the Promise skill where personas had to be constrained to outcome language, Big Ideas are inherently multi-modal.",
+            "learning": "ARENA PERFORMS BEST ON BIG IDEAS. The persona-based generation system is most effective when the skill output naturally matches the personas' default creative modes. Big Ideas are the widest-aperture skill — enemy, mechanism, discovery, identity types all emerge naturally from different persona perspectives. For narrower skills (Promise, Root Cause), stronger guardrails are needed."
+          },
+          {
+            "feedback_id": "FB-003",
+            "severity": "LOW",
+            "type": "schema_distance_calibration",
+            "title": "Genuinely novel claims naturally score in elevated/high SDS zone — this is correct behavior",
+            "description": "The hybrid Big Idea scored Calibrated SDS 6.90 (elevated zone). Initial concern: 'Is this too high?' Analysis: No — the 4-phase framework IS genuinely novel (CNI 9.0, zero competitors). The elevated zone correctly identifies that this claim requires strong anchoring. The product HAS that anchoring (Columbia/Science, 34 RCTs, proof ceiling 88.5/100). The SDS calculator is working as designed — it flags claims that need proof support, not claims that should be weakened.",
+            "learning": "HIGH SDS IS NOT A FAILURE STATE. For genuinely novel Big Ideas with strong proof inventories, elevated SDS (5.7-7.0) is the correct zone. The response is not to weaken the claim but to ensure the proof architecture is deployed aggressively. The ADR calculation should guide proof density in copy execution, not discourage bold claims."
+          },
+          {
+            "feedback_id": "FB-004",
+            "severity": "LOW",
+            "type": "adr_formula_observation",
+            "title": "Normalized ADR formula creates structurally impossible targets for elevated SDS candidates",
+            "description": "The normalized ADR formula (Total_Anchoring / (Calibrated_SDS * 10)) produces values below the optimal range (1.2-2.0) for any elevated-SDS candidate, even with maximum anchoring scores. With SDS 6.90, achieving ADR 1.2 would require Total_Anchoring = 82.8, but maximum possible is 50 (5 dimensions * 10). This means NO elevated-SDS candidate can ever achieve 'optimal' normalized ADR.",
+            "recommended_fix": "For elevated-zone candidates, use zone-specific requirements check (minimum total, per-dimension minimums) as the primary anchoring assessment instead of normalized ADR. The normalized ADR is useful for optimal-zone candidates but structurally breaks for elevated+ candidates. Consider adding a zone-adjusted normalization or switching to unnormalized ADR (Total / SDS) with zone-specific interpretation tables.",
+            "learning": "THE ADR NORMALIZATION FORMULA NEEDS ZONE-ADJUSTED INTERPRETATION. The current formula works for optimal-zone SDS (3.6-5.6) but creates impossible targets for elevated+ zones. Use zone requirements check as primary gate for elevated candidates."
+          }
+        ],
+
+        "arena_results": {
+          "round_1": {
+            "status": "COMPLETE — genuine Big Ideas generated by all personas",
+            "top_3": [
+              {"persona": "Makepeace", "score": 8.55, "output": "Phase 2 Industry villain + 4-phase framework", "type": "enemy"},
+              {"persona": "Bencivenga", "score": 8.40, "output": "Taurine problem reframe + belief-gap architecture", "type": "mechanism"},
+              {"persona": "Halbert", "score": 8.30, "output": "3-pound organ visceral hook + sieve metaphor", "type": "mechanism"}
+            ]
+          },
+          "human_selection": {
+            "type": "hybrid_directed",
+            "sources": ["Makepeace (villain architecture + 4-phase framework)", "Bencivenga (belief-gap + molecule specificity)"],
+            "selected_headline": "The Real Reason Why You're Still Dehydrated Is That Industry Leading Electrolytes ONLY Support 1 or 2 of the 4 Phases of Hydration. (You Need THIS Molecule for All 4).",
+            "composite_score": 8.48
+          }
+        },
+
+        "validation_results": {
+          "volume": "PASS",
+          "quantification": "PASS",
+          "defensibility": "PASS",
+          "actionability": "PASS",
+          "anti_slop": "PASS",
+          "overall": "PASS (5/5)",
+          "schema_distance": {
+            "calibrated_sds": 6.90,
+            "zone": "elevated",
+            "cni": 9.0,
+            "bci": 5.0,
+            "lni": 6.7,
+            "igc": 5.0,
+            "anchoring_total": 37.0,
+            "zone_requirements_met": true,
+            "resolution_accessibility": 7.5
+          }
+        },
+
+        "system_improvement_recommendations": [
+          {
+            "id": "SYS-001",
+            "target": "06-big-idea/skills/layer-3/3.8-anchor-distance-ratio.md",
+            "recommendation": "Add zone-adjusted ADR normalization. Current formula creates impossible targets for elevated+ SDS candidates. Either: (a) add zone-specific interpretation tables, or (b) use zone requirements check as primary assessment for elevated+ candidates with normalized ADR as secondary metric.",
+            "priority": "MEDIUM"
+          },
+          {
+            "id": "SYS-002",
+            "target": "06-big-idea/ARENA-LAYER.md",
+            "recommendation": "Document the hybrid direction pattern observed: when human directs a hybrid, the system should construct a complete Big Idea package (statement, headline, lead, villain, mechanism, proof architecture) from the specified source personas. Add a hybrid construction protocol to the Arena spec.",
+            "priority": "LOW"
+          },
+          {
+            "id": "SYS-003",
+            "target": "06-big-idea/skills/layer-1/1.1-pattern-analyzer.md",
+            "recommendation": "Add Learning #59 from Ultra Liver project: Big Idea names must include category/niche word. For this project, 'Hydration' in 'Fourth Phase Hydration' and 'Phases of Hydration' already satisfy this rule. Document as validation check.",
+            "priority": "LOW"
+          }
+        ],
+
+        "big_idea_pattern_entry": {
+          "niche": "health_supplements_hydration",
+          "schwartz_stage": 4,
+          "big_idea_type": "enemy_mechanism_hybrid",
+          "emotional_frame": "frustrated_curiosity_plus_betrayal_relief",
+          "primary_score": 8.48,
+          "schema_distance": 6.90,
+          "pattern": "VILLAIN-FRAMEWORK + BELIEF-GAP SPECIFICITY: [Real reason / still problem] + [industry only does X of Y] + [numbered framework] + [You need THIS molecule for all Y]",
+          "example": "The Real Reason Why You're Still Dehydrated Is That Industry Leading Electrolytes ONLY Support 1 or 2 of the 4 Phases of Hydration. (You Need THIS Molecule for All 4).",
+          "learning": "For Stage 4 health markets with split awareness and strong proof inventory: combine a structural villain framework (reframes the entire category) with molecular specificity (closes belief gaps). The framework creates the 'aha.' The molecule creates the 'this is real.' Deploy proof aggressively — elevated SDS requires it."
+        }
+      }
+    ]
+  }
+}

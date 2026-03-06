@@ -1,0 +1,45 @@
+[
+  {
+    "id": "a01-initial-scan-health",
+    "prompt": "Run a full A01 Ad Intelligence Initial Scan for a women's health supplement brand selling a gut health powder. The brand is called 'BellyBliss' and competes against AG1, Seed, and Ritual. Focus on Meta and TikTok. Produce the complete AD-INTELLIGENCE-HANDOFF.md.",
+    "expected_output": "A comprehensive AD-INTELLIGENCE-HANDOFF.md with 500+ scraped ads classified by hook type (32-type taxonomy), format analysis, visual style mapping, top 20 winning specimens with verbatim copy, and opportunity gap identification across Meta and TikTok for the gut health supplement vertical.",
+    "files": [],
+    "assertions": [
+      "Output contains AD-INTELLIGENCE-HANDOFF.md or equivalent handoff document",
+      "At least 10 competitor brands are analyzed",
+      "Ads are classified using the 32-type hook taxonomy",
+      "Top winning specimens include verbatim ad copy transcriptions",
+      "Opportunity gaps are identified with specific underused hook types",
+      "Both Meta and TikTok platforms are covered",
+      "Format distribution analysis is included (video vs static vs carousel ratios)",
+      "Visual style analysis is present (UGC vs polished vs text-heavy)"
+    ]
+  },
+  {
+    "id": "a01-tool-assisted-golf",
+    "prompt": "I have pre-scraped data from Meta Ad Spy for Performance Golf competitors. Run A01 in Tool-Assisted Scan mode for a golf instruction brand. Competitors include Me And My Golf, Rick Shiels, and Titleist Performance Institute. Classify everything and produce the intelligence handoff.",
+    "expected_output": "AD-INTELLIGENCE-HANDOFF.md produced from pre-scraped data import, with full classification of all imported ads by hook type, format, visual style, and duration. Golf vertical-specific opportunity gaps identified.",
+    "files": [],
+    "assertions": [
+      "Tool-Assisted Scan mode is correctly identified and executed",
+      "Pre-scraped data import process is described or executed",
+      "Hook type classification covers all imported ads",
+      "Golf vertical-specific insights are present",
+      "Opportunity gaps reference golf-specific messaging whitespace",
+      "Output follows the 10-section handoff structure"
+    ]
+  },
+  {
+    "id": "a01-continuous-monitor",
+    "prompt": "This is a bi-weekly Continuous Monitor run for an active campaign. The previous AD-INTELLIGENCE-HANDOFF.md was produced 2 weeks ago for a men's health testosterone supplement brand. Scan for new competitor ads and produce an INTELLIGENCE-UPDATE.md with deltas.",
+    "expected_output": "INTELLIGENCE-UPDATE.md containing only delta changes since the last scan — new competitor ads, new hook types appearing, format shifts, and emerging trends in the testosterone supplement ad landscape.",
+    "files": [],
+    "assertions": [
+      "Continuous Monitor mode is correctly identified",
+      "Output is an INTELLIGENCE-UPDATE.md (not full handoff)",
+      "Delta analysis is present (new ads since last scan)",
+      "New trends or shifts are identified",
+      "Reference to previous scan baseline is included"
+    ]
+  }
+]

@@ -1,0 +1,614 @@
+# The Boron Letters â€” Chapter 17
+**Source:** https://www.thegaryhalbertletter.com/Boron/TChapter17.htm
+**Author:** Gary Halbert
+**Type:** Verbatim specimen for persona voice loading
+
+---
+
+The Boron Letters - Chapter 17
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Thursday, 10:31 AM
+
+ 
+
+June 28, 1984
+
+ 
+
+Â 
+
+ 
+
+Dear Bond, 
+
+ 
+
+Yesterday, the last thing I wrote about was how I want you 
+ to take the Tova “facelift ad” and copy it in your 
+ handwriting. I also said you should do this just as you 
+ would if you were going to take it to a secretarial service 
+ and have it typed.
+
+ 
+
+Here’s more: From now on, for the next 4 or 5 months I want 
+ you to do this same thing with other ads and DM pieces. But 
+ I don’t want you to just copy any old ad or DM piece. I want 
+ you to copy only the best.
+
+ 
+
+Now, here’s why I want you to do all this: You see, what 
+ happens when you actually write out a good ad in your own 
+ handwriting is that the words and the flow and the sentence 
+ structure and the sequence of information and everything 
+ else about the writing of that ad becomes a part of you.
+
+ 
+
+This isn’t just an empty 
+ experience. This is a way of 
+ internally imprinting on your mind and body, the process of 
+ good writing. If you do this often enough you will soon have 
+ a deep “inside out” understanding of what it takes and what 
+ it feels like to write a good piece of copy. Now, in the 
+ beginning I want you to allow me and Blade to pick which ads 
+ and DM pieces for you to copy. And, of course, the ones we 
+ will select for you to write out in your own handwriting 
+ will be those that we already know to be the cream of the 
+ crop. Ads and DM pieces that are proven winners. Ones that 
+ have brought in millions and even tons of dollars.
+
+ 
+
+It is important to do this. It is one of the many 
+ disciplines that other lazy “would be” marketing geniuses 
+ will not suffer. That’s too bad for them and good for us. I 
+ love that my so called “competition” is so lazy. I love it 
+ that so many people in advertising and marketing are too 
+ sophisticated, too “above” this sort of thing.
+
+ 
+
+Let me tell you a little tale about a man I very much 
+ respect who was not above doing this sort of thing. He 
+ wanted to become a great writer (he was!) and so what he did 
+ was take great books and copy them (in a sense he was 
+ actually writing them) in his own handwriting just as I am 
+ instructing you to do. He did this for a long time. Now here 
+ is something else he took the trouble to do: Since one of 
+ the books he wanted to write involved what it was like to 
+ cross the ocean under horrible conditions, what he did was 
+ travel the ocean himself in the bowels of rusty old 
+ freighters. 
+
+ 
+
+Well, naturally, before he was finished he had an internal 
+ deep rooted “cellular” knowledge of the process of writing a 
+ good book and he also knew what it was like to travel the 
+ ocean in misery.
+
+ 
+
+Did all of this pay off? You bet is did. This man’s name is 
+ Arthur Haley and his book “Roots” is one of the best sellers 
+ of all time.
+
+ 
+
+End of sermon. Do it. Here is a short list of “killer” 
+ promotions to get you started.
+
+ 
+
+Â 
+
+ 
+
+
+ Tova Ad
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+
+ How To Burn Off
+
+ 
+
+
+ Body Fat Hour By Hour
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+
+ The Beverly Hills Diamond Ad
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+
+ The Original
+
+ 
+
+
+ Family Coat-Of-Arms
+
+ 
+
+
+ Letter
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+
+ How To Collect
+
+ 
+
+
+ From Social Security
+
+ 
+
+
+ At Any Age
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+
+ How To Get What
+
+ 
+
+
+ The U.S. Government
+
+ 
+
+
+ Owes You
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+
+ The Famous Dollar Bill Letter
+
+ 
+
+
+ From The Robert Collier
+
+ 
+
+
+ Letter Book
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+
+ The Amazing Blackjack Secret
+
+ 
+
+
+ Of A Las Vegas Mystery Man
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+
+ The Original
+
+ 
+
+
+ Astrology Today Ad
+
+ 
+
+
+ Written By Ben Suarez
+
+ 
+
+Â 
+
+ 
+
+Â 
+
+ 
+
+There’s more. But the above (at the rate of one per week) 
+ will keep you busy for a couple of months.
+
+ 
+
+Now, here are a few other tips on how to write good copy or 
+ , as a matter of fact, “good anything”. Use simple common 
+ everyday words. Use “get” instead of “procure.” Write short 
+ sentences and short paragraphs. Use “transition” words and 
+ phrases to make your writing flow smoothly. Do you notice 
+ how I use transition words and phrases such as the 
+ following?
+
+ 
+
+
+ Well, as a matter of fact, I first blah...
+
+ 
+
+
+ Now, naturally, we don’t want to blah, blah...
+
+ 
+
+
+ And, of course, here is what she said blah, blah, 
+ blah...
+
+ 
+
+Now, here’s a few more great ideas: Ask questions once in a 
+ while and then answer them yourself. Like this:
+
+ 
+
+
+ Bond, do you understand what I am saying? You do. Good, then 
+ let’s go on. Etc.
+
+ 
+
+
+ How do we get the benefits? The answer is simple. All we 
+ have to do is etc., etc.
+
+ 
+
+
+ Can you imagine that? I know it seems unbelievable but facts 
+ are facts! Etc., etc., etc.
+
+ 
+
+And so on. God I love to write “And so on.” Kurt Vonnegut 
+ uses it quite often and he is one of the best writers I’ve 
+ read.
+
+ 
+
+What is a good writer? Well, in my opinion a good writer is 
+ one who makes things perfectly clear. He makes it easy for 
+ the reader. Easy-to-understand what he is saying, easy to 
+ keep reading. And, if you want a treat, if you want to read 
+ an entertaining book written with great clarity, then read 
+ Vonnegut’s “Breakfast of Champions.” 
+
+ 
+
+Now, don’t get me wrong. I said the book was written 
+ clearly, I did not say it was written by a sane person. 
+
+ 
+
+
+ Onward.
+
+ 
+
+By the way, do you notice how little one word transition 
+ sentences like “onward.” keep the flow going? You say you do 
+ notice? O.k., smarty, see if you can answer this question:
+
+ 
+
+Question:
+ What is the best way of becoming a 
+ good writer?
+
+ 
+
+
+ Aha! You’re not absolutely certain about this one, are you? 
+
+ 
+
+
+ Here is the answer:
+
+ 
+
+Â 
+
+ 
+
+
+ The Best Way To Become
+
+ 
+
+
+ A Good Writer... Is By...
+
+ 
+
+
+ Writing Good Writing! 
+
+ 
+
+Â 
+
+ 
+
+And, of course, that’s what the subject of this entire 
+ letter is all about. Don’t worry about developing a “style.” 
+ Your own peculiarities will emerge soon enough.
+
+ 
+
+But remember this. (Ran out of ink) The very best writing 
+ goes unnoticed. That’s right. You don’t want someone to read 
+ one of your ads and say “Gosh, that advertisement was sure 
+ well written!” 
+
+ 
+
+No. What you really want is for the reader to 
+ order from 
+ your ad. Listen up dummy. “If you are writing for applause... 
+ you will go home with empty pockets!” 
+
+ 
+
+Write for 
+ money!
+
+ 
+
+Here is something else to keep in mind: It is a good idea to 
+ know “word pictures” that will help your reader vicariously 
+ experience the wonderful benefits of owning your product or 
+ service. Like this: 
+
+ 
+
+
+ “And, just wait till you step into that warm inviting 
+ jacuzzi that comes with every apartment. Man oh man! The 
+ feel of that soothing bubbling water against your bare skin 
+ is just plain heaven.”
+
+ 
+
+
+ “You’ve heard of the expression about how you won’t believe 
+ your eyes? Well, this is one time you won’t believe your 
+ eyes. No kidding. The delightful aroma of these charcoal 
+ broiled steaks will remind you how good it feels to be 
+ genuinely hungry” 
+
+ 
+
+
+ “Wow! When I first felt her tongue going around and around 
+ on my skin I thought I was going to scream!”
+
+ 
+
+Etc. (I’m tired. These are not great examples but they’ll do 
+ for now.)
+
+ 
+
+I’ve got 4 minutes to go. What can I teach you in that 
+ amount of time?
+
+ 
+
+Here’s a little something: You can make your copy easier to 
+ read by the judicious use of parentheses. For example, if 
+ you want to tell people that your offer is good anywhere in 
+ the U.S. (except Alaska) the proper use of parentheses, as I 
+ just did, makes the copy easier-to-read, easier to 
+ understand and provides a little “eye relief” for your 
+ reader.
+
+ 
+
+That’s it.
+
+ 
+
+I Love You and Good Luck!
+
+ 
+
+Dad
+
+ 
+
+ 
+ 
+ 
+ 
+
+Â 
+
+ 
+ 
+ Â 
+ Â 
+ 
+ 
+
+ 
+ Â 
+ Â 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ Click 
+ Here To View
+
+ Our Newsletter Archive
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ Click 
+ Here If You Want 
+
+ To Be On My Newsletter
+
+ Announcement List
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ Reserved.

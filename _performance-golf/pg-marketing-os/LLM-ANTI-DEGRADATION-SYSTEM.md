@@ -8,6 +8,28 @@
 
 ---
 
+## TABLE OF CONTENTS
+
+- [Executive Summary](#executive-summary)
+- [Part 1: The Problem — LLM Execution Degradation](#part-1-the-problem--llm-execution-degradation)
+- [Part 2: Why Instructions Fail](#part-2-why-instructions-fail)
+- [Part 3: The Metacognitive Protocol](#part-3-the-metacognitive-protocol)
+- [Part 4: Context Load Management](#part-4-context-load-management)
+- [Part 5: Simulated Type 1 Signals](#part-5-simulated-type-1-signals)
+- [Part 6: Structural Enforcement Mechanisms](#part-6-structural-enforcement-mechanisms)
+- [Part 7: Forbidden Rationalizations](#part-7-forbidden-rationalizations)
+- [Part 8: Minimum Quantifiable Thresholds](#part-8-minimum-quantifiable-thresholds)
+- [Part 9: Context Resume Protocol](#part-9-context-resume-protocol)
+- [Part 10: Session Continuity](#part-10-session-continuity)
+- [Part 11: Anti-Degradation File Template](#part-11-anti-degradation-file-template)
+- [Part 12: Key Learnings](#part-12-key-learnings)
+- [Part 13: Summary — The Anti-Degradation Stack](#part-13-summary--the-anti-degradation-stack)
+- [Appendix A: Quick Reference Card](#appendix-a-quick-reference-card)
+- [Appendix B: Checkpoint File Templates](#appendix-b-checkpoint-file-templates)
+- [Version History](#version-history)
+
+---
+
 ## Executive Summary
 
 This document consolidates everything we've learned about preventing LLM execution degradation — the tendency for AI systems to rush, skip steps, find loopholes, and produce incomplete outputs as context windows fill up.
