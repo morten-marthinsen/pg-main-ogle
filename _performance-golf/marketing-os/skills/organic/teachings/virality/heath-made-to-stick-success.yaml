@@ -1,0 +1,292 @@
+# TEACHING: Heath Brothers SUCCESs Framework
+# Source: Made to Stick (2007)
+# Application: Creating memorable, sticky messages
+
+framework_name: "SUCCESs"
+author: "Chip Heath & Dan Heath"
+source: "Made to Stick: Why Some Ideas Survive and Others Die"
+core_thesis: |
+  Sticky ideas share six common traits. These traits are not random —
+  they can be systematically engineered into any message. The SUCCESs
+  framework provides a checklist for making any idea more memorable,
+  believable, and actionable.
+
+principles:
+
+  S_simple:
+    name: "Simple"
+    definition: |
+      Find the core of the idea. Strip away everything that isn't
+      essential until you're left with the most important thing.
+      Simple = core + compact. Not dumbed down — prioritized.
+
+    key_insight: |
+      If you say three things, you say nothing. Commander's Intent:
+      What is the single most important thing someone must know?
+
+    tactics:
+      - Lead with the core message
+      - Use analogies to compact complex ideas
+      - Prioritize ruthlessly — what's the ONE thing?
+      - Use generative analogies (schemas that keep giving)
+
+    anti_patterns:
+      - Burying the lead
+      - Trying to say everything
+      - Complexity for complexity's sake
+      - Assuming they'll figure out the priority
+
+    application_to_content:
+      - Open with the one core insight
+      - Use simple/familiar comparisons for new concepts
+      - "The Uber of X" — compact, schema-activating
+      - Cut everything that doesn't serve the core
+
+    questions_to_ask:
+      - "What is the single most important thing?"
+      - "If they remember only one thing, what must it be?"
+      - "What's the 'Commander's Intent' of this content?"
+
+    example:
+      weak: "Our comprehensive learning platform features AI-powered
+             personalization, social learning communities, gamification
+             elements, and enterprise integrations..."
+      strong: "Learn any skill in half the time. AI finds your gaps
+              and fills them."
+
+  U_unexpected:
+    name: "Unexpected"
+    definition: |
+      Break the pattern. Violate expectations. Surprise captures
+      attention, but interest sustains it. Create curiosity gaps
+      that must be filled.
+
+    key_insight: |
+      Surprise gets attention. Mystery retains it. Create knowledge
+      gaps people feel compelled to close.
+
+    tactics:
+      - Lead with the counterintuitive
+      - Create mystery — don't reveal everything immediately
+      - Violate mental schemas (pattern interrupts)
+      - Use the "curiosity gap" — open loops that need closure
+
+    anti_patterns:
+      - Predictable structures
+      - Giving away the punchline first
+      - Being unexpected for its own sake (no payoff)
+      - Closed loops with no mystery
+
+    application_to_content:
+      - Start with the unexpected angle
+      - Open curiosity loops in hooks
+      - Challenge conventional wisdom
+      - Save revelations for strategic moments
+
+    questions_to_ask:
+      - "What would surprise my audience about this?"
+      - "What conventional wisdom can I challenge?"
+      - "What mystery can I create that demands resolution?"
+
+    example:
+      weak: "Here are 5 tips for better sleep."
+      strong: "The sleep advice you've been following is making
+              you more tired. Here's what actually works."
+
+  C_concrete:
+    name: "Concrete"
+    definition: |
+      Make it tangible. Abstract ideas fade; concrete images stick.
+      The more sensory and specific, the more memorable.
+
+    key_insight: |
+      Abstraction is the enemy of stickiness. Use sensory language,
+      specific examples, and tangible details.
+
+    tactics:
+      - Use specific numbers over vague quantities
+      - Create mental images with sensory language
+      - Give examples, not explanations
+      - Make the abstract tangible
+
+    anti_patterns:
+      - Abstract language ("synergy," "leverage," "optimize")
+      - Vague quantities ("a lot," "many," "significant")
+      - Concept-heavy, example-light
+      - Generic descriptions
+
+    application_to_content:
+      - "$50,000" not "significant revenue"
+      - "3:47 AM" not "early morning"
+      - Show the specific example, not the category
+      - Paint pictures they can see
+
+    questions_to_ask:
+      - "Can they picture this in their mind?"
+      - "What specific example makes this real?"
+      - "Is this tangible or abstract?"
+
+    example:
+      weak: "He made a lot of money quickly."
+      strong: "He went from $0 to $47,000/month in 90 days."
+
+  C_credible:
+    name: "Credible"
+    definition: |
+      Make it believable. Ideas need credibility to take root.
+      Credibility can come from authorities, details, statistics,
+      or the audience themselves testing the idea.
+
+    key_insight: |
+      External credibility (authorities, data) helps, but internal
+      credibility (testable claims, vivid details) often works better.
+
+    tactics:
+      - Use authorities and anti-authorities
+      - Add vivid, verifiable details
+      - Use statistics that pass the "human-scale" test
+      - Make claims testable — invite verification
+
+    anti_patterns:
+      - Unverifiable claims
+      - Statistics that don't land (too big, no context)
+      - Missing the proof
+      - Authority without relevance
+
+    application_to_content:
+      - Include specific results with context
+      - Use the "Sinatra Test" — one example that proves capability
+      - Make statistics relatable (human scale)
+      - Invite them to verify ("Go test this yourself")
+
+    questions_to_ask:
+      - "Why should they believe this?"
+      - "What's the proof point?"
+      - "Can they verify this themselves?"
+
+    example:
+      weak: "This method is scientifically proven."
+      strong: "Harvard researchers tracked 1,200 people for 10 years.
+              The ones who did this lived 7 years longer on average."
+
+  E_emotional:
+    name: "Emotional"
+    definition: |
+      Make them feel something. For people to take action, they
+      must feel something. Statistics inform, but emotions drive
+      behavior.
+
+    key_insight: |
+      People remember how you made them feel. Appeal to self-interest
+      (including identity) and tap into core human emotions.
+
+    tactics:
+      - Connect to individual stories, not statistics
+      - Appeal to identity ("What kind of person does this?")
+      - Use the power of association
+      - Create self-interest by appealing to aspirations
+
+    anti_patterns:
+      - Data without emotion
+      - Generic appeals
+      - Missing the "so what" for the individual
+      - Assuming logic alone motivates
+
+    application_to_content:
+      - Lead with story, support with data
+      - Appeal to who they want to become
+      - Make them feel the transformation possibility
+      - Connect abstract benefits to emotional outcomes
+
+    questions_to_ask:
+      - "What will they FEEL when they see this?"
+      - "Does this connect to who they want to be?"
+      - "Is there emotional stakes for them personally?"
+
+    example:
+      weak: "Marketing automation saves time."
+      strong: "Imagine never missing your kid's soccer game because
+              you're stuck doing repetitive work. That's what this
+              gives you."
+
+  S_stories:
+    name: "Stories"
+    definition: |
+      Wrap it in narrative. Stories are simulations — they let
+      people mentally rehearse situations. Stories inspire action
+      in ways that commands cannot.
+
+    key_insight: |
+      Stories are flight simulators for the brain. They let people
+      experience the lesson without living it.
+
+    tactics:
+      - Use the three basic story plots (Challenge, Connection, Creativity)
+      - Create heroes the audience can relate to
+      - Build tension and resolution
+      - Make the message inseparable from the story
+
+    story_types:
+      challenge_plot: |
+        Obstacles overcome. David vs. Goliath. Underdog prevails.
+        Inspires courage and persistence.
+      connection_plot: |
+        Relationship across divides. Tolerance, love, community.
+        Inspires empathy and connection.
+      creativity_plot: |
+        Problem solved in novel way. Breakthrough. Innovation.
+        Inspires creativity and thinking differently.
+
+    anti_patterns:
+      - Stories where the message is removable
+      - Too much context, too little tension
+      - No relatable character
+      - Resolution without stakes
+
+    application_to_content:
+      - Transform case studies into hero journeys
+      - Create before/after transformation arcs
+      - Build tension before revealing the lesson
+      - Make yourself or customers the character
+
+    questions_to_ask:
+      - "Who is the hero of this story?"
+      - "What obstacle did they overcome?"
+      - "Is the message woven in or tacked on?"
+
+    example:
+      weak: "Our software improved their efficiency by 40%."
+      strong: "Sarah was working 80-hour weeks, missing her
+              daughter's milestones. After implementing this,
+              she cut to 40 hours and landed 3 new clients.
+              Last week she made it to every one of Emma's
+              volleyball games."
+
+integration_with_virality:
+  how_success_amplifies_stepps:
+    simple: "Makes Social Currency easier to share"
+    unexpected: "Amplifies Emotion through surprise"
+    concrete: "Strengthens Practical Value (specific > vague)"
+    credible: "Increases Social Currency (sharer looks smart)"
+    emotional: "Directly amplifies STEPPS Emotion"
+    stories: "Aligns with STEPPS Stories perfectly"
+
+checklist:
+  pre_publish_questions:
+    - "[ ] Is the core message clear (Simple)?"
+    - "[ ] Does it challenge expectations (Unexpected)?"
+    - "[ ] Are there specific, tangible details (Concrete)?"
+    - "[ ] Is it believable with proof (Credible)?"
+    - "[ ] Will they feel something (Emotional)?"
+    - "[ ] Is there a narrative structure (Stories)?"
+
+key_quotes:
+  - "If you say three things, you say nothing."
+  - "Abstraction is the enemy of memorability."
+  - "Belief counts for a lot, but belief isn't enough. For people to take action, they have to care."
+  - "Stories are like flight simulators for the brain."
+
+related_teachings:
+  - "berger-stepps-framework.yaml"
+  - "miller-storybrand.yaml"
+  - "cialdini-influence-principles.yaml"

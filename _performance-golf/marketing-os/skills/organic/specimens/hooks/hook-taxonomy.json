@@ -1,0 +1,465 @@
+{
+  "hook_taxonomy": {
+    "version": "1.0",
+    "created": "2026-03",
+    "total_types": 30,
+    "description": "Master taxonomy of hook types for organic content across all platforms"
+  },
+  "categories": {
+    "curiosity_hooks": {
+      "description": "Create an open loop that must be closed",
+      "types": [
+        {
+          "name": "Curiosity Gap",
+          "pattern": "Promise information, withhold delivery",
+          "examples": [
+            "The reason most people fail at {X} is...",
+            "What nobody tells you about {X}...",
+            "The {X} mistake that cost me {Y}..."
+          ],
+          "best_for": ["educational", "story", "value"],
+          "platforms": ["all"],
+          "emotion_triggered": "curiosity",
+          "strength": 9
+        },
+        {
+          "name": "Secret Reveal",
+          "pattern": "Promise insider/exclusive information",
+          "examples": [
+            "The secret {industry} doesn't want you to know...",
+            "After {experience}, I learned what they don't teach...",
+            "Inside information from {authority source}..."
+          ],
+          "best_for": ["authority", "educational"],
+          "platforms": ["YouTube", "LinkedIn", "TikTok"],
+          "emotion_triggered": "intrigue",
+          "strength": 8
+        },
+        {
+          "name": "Incomplete Loop",
+          "pattern": "Start a story without resolution",
+          "examples": [
+            "I was about to give up when...",
+            "Something happened yesterday that changed everything...",
+            "Three weeks ago I made a decision..."
+          ],
+          "best_for": ["story", "personal"],
+          "platforms": ["Instagram", "TikTok", "YouTube"],
+          "emotion_triggered": "anticipation",
+          "strength": 8
+        },
+        {
+          "name": "Number Reveal",
+          "pattern": "Tease specific number/result",
+          "examples": [
+            "How I went from {X} to {Y} in {time}...",
+            "The {number}-step process that {result}...",
+            "{$X} in {time} with this strategy..."
+          ],
+          "best_for": ["results", "educational"],
+          "platforms": ["all"],
+          "emotion_triggered": "curiosity",
+          "strength": 8
+        }
+      ]
+    },
+    "controversy_hooks": {
+      "description": "Challenge beliefs or create productive tension",
+      "types": [
+        {
+          "name": "Contrarian Take",
+          "pattern": "Disagree with common belief",
+          "examples": [
+            "Unpopular opinion: {X} is actually {opposite}...",
+            "Everyone says {X}. Here's why they're wrong...",
+            "The {industry} lie everyone believes..."
+          ],
+          "best_for": ["thought leadership", "debate"],
+          "platforms": ["LinkedIn", "X", "YouTube"],
+          "emotion_triggered": "intrigue",
+          "strength": 9
+        },
+        {
+          "name": "Myth Buster",
+          "pattern": "Promise to disprove common assumption",
+          "examples": [
+            "Stop doing {common practice}. Here's why...",
+            "The {X} myth is costing you {Y}...",
+            "{Common advice} is actually terrible advice..."
+          ],
+          "best_for": ["educational", "authority"],
+          "platforms": ["all"],
+          "emotion_triggered": "surprise",
+          "strength": 8
+        },
+        {
+          "name": "Call Out",
+          "pattern": "Direct challenge to behavior/belief",
+          "examples": [
+            "If you're still doing {X}, you're leaving money on the table...",
+            "This is why your {X} isn't working...",
+            "I'm tired of seeing {common mistake}..."
+          ],
+          "best_for": ["educational", "authority"],
+          "platforms": ["Instagram", "TikTok", "LinkedIn"],
+          "emotion_triggered": "defensiveness_then_curiosity",
+          "strength": 8
+        }
+      ]
+    },
+    "story_hooks": {
+      "description": "Begin a narrative that demands completion",
+      "types": [
+        {
+          "name": "In Media Res",
+          "pattern": "Start in the middle of action",
+          "examples": [
+            "I was standing in line when...",
+            "The email came at 3am...",
+            "My phone rang. It was {person}..."
+          ],
+          "best_for": ["personal", "story"],
+          "platforms": ["Instagram", "TikTok", "YouTube"],
+          "emotion_triggered": "engagement",
+          "strength": 9
+        },
+        {
+          "name": "Transformation Start",
+          "pattern": "Begin at the low point",
+          "examples": [
+            "Two years ago I was {bad state}...",
+            "I hit rock bottom when...",
+            "Before I figured this out, I was {struggle}..."
+          ],
+          "best_for": ["transformation", "inspiration"],
+          "platforms": ["all"],
+          "emotion_triggered": "empathy",
+          "strength": 8
+        },
+        {
+          "name": "Time Stamp",
+          "pattern": "Anchor to specific moment",
+          "examples": [
+            "At 27, I realized...",
+            "On March 15th, everything changed...",
+            "Three hours before the launch..."
+          ],
+          "best_for": ["story", "personal"],
+          "platforms": ["all"],
+          "emotion_triggered": "specificity_trust",
+          "strength": 7
+        }
+      ]
+    },
+    "shock_hooks": {
+      "description": "Pattern interrupt through surprise",
+      "types": [
+        {
+          "name": "Bold Claim",
+          "pattern": "Make statement that demands attention",
+          "examples": [
+            "{Extreme result} in {short time}...",
+            "I {unexpected action} and here's what happened...",
+            "This changed my entire {area}..."
+          ],
+          "best_for": ["results", "transformation"],
+          "platforms": ["TikTok", "Instagram", "YouTube"],
+          "emotion_triggered": "shock",
+          "strength": 9
+        },
+        {
+          "name": "Visual Interrupt",
+          "pattern": "Unexpected visual in first frame",
+          "examples": [
+            "[Unusual image/scene that doesn't match expectation]",
+            "[Before/after that seems impossible]",
+            "[Action mid-motion that captures attention]"
+          ],
+          "best_for": ["visual content", "transformation"],
+          "platforms": ["TikTok", "Instagram", "YouTube"],
+          "emotion_triggered": "surprise",
+          "strength": 9
+        },
+        {
+          "name": "Confession",
+          "pattern": "Admit something unexpected",
+          "examples": [
+            "I lied about {X}...",
+            "I've been hiding this...",
+            "Nobody knows this, but..."
+          ],
+          "best_for": ["personal", "authenticity"],
+          "platforms": ["all"],
+          "emotion_triggered": "intrigue",
+          "strength": 8
+        }
+      ]
+    },
+    "authority_hooks": {
+      "description": "Establish credibility quickly",
+      "types": [
+        {
+          "name": "Credential Lead",
+          "pattern": "Lead with proof of expertise",
+          "examples": [
+            "After {impressive credential}, here's what I know...",
+            "I've {authority builder} and this is what works...",
+            "As someone who {experience}..."
+          ],
+          "best_for": ["educational", "authority"],
+          "platforms": ["LinkedIn", "YouTube"],
+          "emotion_triggered": "trust",
+          "strength": 7
+        },
+        {
+          "name": "Results Proof",
+          "pattern": "Lead with specific outcomes",
+          "examples": [
+            "This generated {$X} in {time}...",
+            "I went from {A} to {B} using this...",
+            "{X} clients have used this to {result}..."
+          ],
+          "best_for": ["case study", "educational"],
+          "platforms": ["all"],
+          "emotion_triggered": "trust_plus_desire",
+          "strength": 8
+        },
+        {
+          "name": "Social Proof",
+          "pattern": "Reference others' success/endorsement",
+          "examples": [
+            "{Famous person/company} uses this...",
+            "This is how {X} built their {Y}...",
+            "The strategy behind {successful example}..."
+          ],
+          "best_for": ["educational", "aspirational"],
+          "platforms": ["all"],
+          "emotion_triggered": "aspiration",
+          "strength": 7
+        }
+      ]
+    },
+    "value_hooks": {
+      "description": "Promise direct utility",
+      "types": [
+        {
+          "name": "How-To Promise",
+          "pattern": "Clear outcome from watching/reading",
+          "examples": [
+            "How to {desired outcome} in {time}...",
+            "The exact steps to {goal}...",
+            "{Number} ways to {benefit}..."
+          ],
+          "best_for": ["educational", "tutorial"],
+          "platforms": ["YouTube", "Instagram", "LinkedIn"],
+          "emotion_triggered": "anticipation",
+          "strength": 7
+        },
+        {
+          "name": "Free Value",
+          "pattern": "Promise valuable info/resource",
+          "examples": [
+            "Free {resource} that {benefit}...",
+            "I'm giving away my {valuable thing}...",
+            "Save this for later..."
+          ],
+          "best_for": ["lead gen", "saves"],
+          "platforms": ["Instagram", "TikTok"],
+          "emotion_triggered": "gratitude",
+          "strength": 7
+        },
+        {
+          "name": "Shortcut Promise",
+          "pattern": "Faster/easier path to goal",
+          "examples": [
+            "Skip {hard thing} and do this instead...",
+            "The {time} shortcut to {result}...",
+            "Stop wasting time on {X}, try {Y}..."
+          ],
+          "best_for": ["educational", "productivity"],
+          "platforms": ["all"],
+          "emotion_triggered": "relief",
+          "strength": 8
+        }
+      ]
+    },
+    "emotional_hooks": {
+      "description": "Trigger strong emotional response",
+      "types": [
+        {
+          "name": "Pain Point",
+          "pattern": "Speak directly to struggle",
+          "examples": [
+            "If you're struggling with {X}...",
+            "Tired of {frustration}?",
+            "I know how it feels when {pain}..."
+          ],
+          "best_for": ["empathy", "solution content"],
+          "platforms": ["all"],
+          "emotion_triggered": "recognition",
+          "strength": 8
+        },
+        {
+          "name": "Aspiration",
+          "pattern": "Paint desired future state",
+          "examples": [
+            "Imagine {ideal outcome}...",
+            "What if you could {dream result}...",
+            "This is what {goal} actually looks like..."
+          ],
+          "best_for": ["inspirational", "lifestyle"],
+          "platforms": ["Instagram", "YouTube"],
+          "emotion_triggered": "desire",
+          "strength": 7
+        },
+        {
+          "name": "Fear/Urgency",
+          "pattern": "Highlight risk of inaction",
+          "examples": [
+            "If you're not doing {X}, you're falling behind...",
+            "The window for {opportunity} is closing...",
+            "This is costing you more than you think..."
+          ],
+          "best_for": ["conversion", "action"],
+          "platforms": ["all"],
+          "emotion_triggered": "urgency",
+          "strength": 8
+        }
+      ]
+    },
+    "social_hooks": {
+      "description": "Leverage social dynamics",
+      "types": [
+        {
+          "name": "Tribe Signal",
+          "pattern": "Speak to in-group identity",
+          "examples": [
+            "If you're a {identity}, you need to see this...",
+            "{Group} people understand this...",
+            "This is for the {tribe}..."
+          ],
+          "best_for": ["community", "identity"],
+          "platforms": ["all"],
+          "emotion_triggered": "belonging",
+          "strength": 7
+        },
+        {
+          "name": "FOMO Trigger",
+          "pattern": "Others know/have something you don't",
+          "examples": [
+            "Everyone's talking about {X}...",
+            "You're probably the last to know this...",
+            "While you were sleeping, {X} happened..."
+          ],
+          "best_for": ["trends", "news"],
+          "platforms": ["TikTok", "X", "Instagram"],
+          "emotion_triggered": "FOMO",
+          "strength": 8
+        },
+        {
+          "name": "Us vs Them",
+          "pattern": "Create division that defines identity",
+          "examples": [
+            "{Our way} vs {their way}...",
+            "Most people do {X}. Winners do {Y}...",
+            "There are two types of {people}..."
+          ],
+          "best_for": ["positioning", "identity"],
+          "platforms": ["all"],
+          "emotion_triggered": "identity",
+          "strength": 8
+        }
+      ]
+    },
+    "question_hooks": {
+      "description": "Engage through direct questions",
+      "types": [
+        {
+          "name": "Challenging Question",
+          "pattern": "Question that makes them think",
+          "examples": [
+            "Why do you think {X}?",
+            "Have you ever considered that {Y}?",
+            "What if everything you knew about {X} was wrong?"
+          ],
+          "best_for": ["thought leadership", "engagement"],
+          "platforms": ["LinkedIn", "X"],
+          "emotion_triggered": "reflection",
+          "strength": 7
+        },
+        {
+          "name": "Relatable Question",
+          "pattern": "Question they'll say 'yes' to",
+          "examples": [
+            "Ever feel like {common experience}?",
+            "You know that moment when {relatable situation}?",
+            "Does anyone else {shared experience}?"
+          ],
+          "best_for": ["community", "relatability"],
+          "platforms": ["Instagram", "TikTok"],
+          "emotion_triggered": "connection",
+          "strength": 7
+        }
+      ]
+    },
+    "platform_native_hooks": {
+      "description": "Hooks optimized for specific platforms",
+      "types": [
+        {
+          "name": "TikTok Native",
+          "pattern": "Fast, casual, trend-aware",
+          "examples": [
+            "[Uses trending sound with immediate visual hook]",
+            "POV: {relatable scenario}",
+            "Things that make me {emotion}:"
+          ],
+          "best_for": ["viral", "relatable"],
+          "platforms": ["TikTok"],
+          "emotion_triggered": "varies",
+          "strength": 8
+        },
+        {
+          "name": "LinkedIn Native",
+          "pattern": "Professional, insight-driven",
+          "examples": [
+            "I made a mistake at {company}...",
+            "After {years} in {industry}, I learned...",
+            "Controversial take:"
+          ],
+          "best_for": ["B2B", "professional"],
+          "platforms": ["LinkedIn"],
+          "emotion_triggered": "professional_curiosity",
+          "strength": 7
+        },
+        {
+          "name": "YouTube Native",
+          "pattern": "Thumbnail + title synergy",
+          "examples": [
+            "[Shocking thumbnail face] + 'I Can't Believe This Worked'",
+            "[Before/After visual] + 'The Transformation That Changed Everything'",
+            "[Mystery object] + 'Why Everyone's Talking About This'"
+          ],
+          "best_for": ["CTR optimization", "long-form"],
+          "platforms": ["YouTube"],
+          "emotion_triggered": "click_compulsion",
+          "strength": 9
+        }
+      ]
+    }
+  },
+  "hook_selection_guide": {
+    "by_content_function": {
+      "awareness": ["curiosity_hooks", "shock_hooks", "social_hooks"],
+      "engagement": ["question_hooks", "emotional_hooks", "story_hooks"],
+      "conversion": ["authority_hooks", "value_hooks", "emotional_hooks"],
+      "community": ["social_hooks", "question_hooks", "story_hooks"]
+    },
+    "by_platform": {
+      "TikTok": ["shock_hooks", "platform_native_hooks", "curiosity_hooks"],
+      "Instagram": ["visual_hooks", "story_hooks", "value_hooks"],
+      "YouTube": ["curiosity_hooks", "platform_native_hooks", "authority_hooks"],
+      "LinkedIn": ["authority_hooks", "controversy_hooks", "platform_native_hooks"],
+      "X": ["controversy_hooks", "question_hooks", "social_hooks"]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "s01-fitness-influencer",
+    "prompt": "Build complete audience intelligence for a fitness influencer targeting men aged 30-45 who want to build muscle while managing busy professional schedules. The influencer sells online coaching programs and is active on Instagram and YouTube. Produce the full AIF.",
+    "expected_output": "A complete Audience Intelligence File (AIF) with demographics, psychographics, platform behavior analysis for Instagram and YouTube, language mining with exact phrases from the target audience, competitor audience analysis of 5+ fitness influencers, and pain/desire mapping with surface, deeper, and root pain layers.",
+    "files": [],
+    "assertions": [
+      "Demographics section populated with age range, gender split, location",
+      "Psychographics include values, interests, lifestyle, and worldview",
+      "Platform behavior covers at least Instagram and YouTube",
+      "Language mining contains specific words and phrases the audience uses",
+      "Pain expressions include how-they-describe-problems with 3+ entries",
+      "Competitor analysis covers 3+ competing fitness accounts",
+      "Desire mapping includes stated, unstated, and identity desires",
+      "Output follows YAML structure of the AIF template"
+    ]
+  },
+  {
+    "id": "s01-b2b-saas",
+    "prompt": "Produce audience intelligence for a B2B SaaS company selling project management software to marketing agencies with 10-50 employees. They want to build organic content on LinkedIn and Twitter/X. The main competitors are Monday.com, Asana, and ClickUp.",
+    "expected_output": "AIF tailored to B2B audience with professional context emphasis, LinkedIn and X platform behavior analysis, B2B-specific language mining (industry jargon, pain expressions around agency operations), and competitor audience analysis of Monday.com, Asana, and ClickUp content audiences.",
+    "files": [],
+    "assertions": [
+      "Professional context section is detailed (agency industry, job levels)",
+      "Platform behavior covers LinkedIn and X/Twitter specifically",
+      "Language mining captures B2B/agency-specific terminology",
+      "Pain mapping reflects agency operational challenges",
+      "Competitor analysis covers Monday.com, Asana, and ClickUp",
+      "Content consumption patterns reflect B2B buying behavior",
+      "Best posting times consider business hours"
+    ]
+  }
+]

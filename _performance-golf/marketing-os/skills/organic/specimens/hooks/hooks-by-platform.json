@@ -1,0 +1,425 @@
+{
+  "hooks_by_platform": {
+    "version": "1.0",
+    "created": "2026-03",
+    "source": "Derived from hook-taxonomy.json + platform algorithm YAMLs",
+    "description": "Hook types organized by platform, ranked by effectiveness, with platform-specific adaptation notes"
+  },
+  "platforms": {
+    "instagram": {
+      "algorithm_context": "Prioritizes saves, shares, watch-through rate (Reels), and time-on-content (carousels/stories). Early engagement velocity matters most.",
+      "primary_format_hooks": {
+        "reels": {
+          "optimal_hook_window": "0-1.5 seconds",
+          "top_hooks": [
+            {
+              "type": "Visual Interrupt",
+              "category": "shock_hooks",
+              "effectiveness_score": 9,
+              "why_works": "Pattern interrupt in the scroll stops the thumb. Instagram Reels algorithm heavily weights first 1-3 seconds retention.",
+              "adaptation": "First frame must be visually arresting — movement, unusual angle, text overlay with incomplete thought, or face with strong emotion"
+            },
+            {
+              "type": "In Media Res",
+              "category": "story_hooks",
+              "effectiveness_score": 9,
+              "why_works": "Starts in action, bypasses the 'should I watch?' decision. Creates immediate narrative investment.",
+              "adaptation": "Open mid-sentence or mid-action. Never use intros, logos, or 'hey guys' openings"
+            },
+            {
+              "type": "Bold Claim",
+              "category": "shock_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Creates 'wait what?' reaction that extends watch time past the critical 3-second mark.",
+              "adaptation": "Pair with text overlay that reinforces the claim. Deliver proof within 15 seconds"
+            },
+            {
+              "type": "Curiosity Gap",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Drives watch-through to completion (algorithm signal). Creates saves for 'watch later'.",
+              "adaptation": "Text overlay with '...' or cut-off sentence. Payoff must come at end to maximize retention"
+            },
+            {
+              "type": "Transformation Start",
+              "category": "story_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Before/after hooks drive saves and shares. Instagram algorithm loves save-worthy content.",
+              "adaptation": "Show the 'before' state first — the transformation creates natural watch-through"
+            }
+          ],
+          "hooks_to_avoid": ["Credential Lead (too slow)", "Challenging Question (not visual enough)", "LinkedIn Native (wrong energy)"]
+        },
+        "carousels": {
+          "optimal_hook_window": "First slide — 0.5 seconds",
+          "top_hooks": [
+            {
+              "type": "Curiosity Gap",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 9,
+              "why_works": "Drives swipe-through (key algorithm signal). Each slide can deepen the gap before closing it.",
+              "adaptation": "Slide 1: Hook with incomplete thought. Slide 2-9: Progressive reveal. Slide 10: Payoff + CTA"
+            },
+            {
+              "type": "How-To Promise",
+              "category": "value_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Carousels are the highest-save format on Instagram. How-to content drives saves (bookmark for later).",
+              "adaptation": "Slide 1: Clear outcome promise. Subsequent slides: One step per slide"
+            },
+            {
+              "type": "Number Reveal",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 8,
+              "why_works": "'{Number} ways to...' creates expectation of completeness that drives full swipe-through.",
+              "adaptation": "One item per slide. Include 'swipe for #X' on each slide"
+            },
+            {
+              "type": "Contrarian Take",
+              "category": "controversy_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Drives comments and shares (debate). Controversy = engagement velocity.",
+              "adaptation": "Slide 1: Contrarian statement. Slides 2-5: Evidence. Slides 6-9: Implications. Slide 10: CTA"
+            },
+            {
+              "type": "Pain Point",
+              "category": "emotional_hooks",
+              "effectiveness_score": 7,
+              "why_works": "Creates 'me too' recognition that drives saves and shares with caption 'this is so true'.",
+              "adaptation": "Slide 1: Describe the pain. Remaining slides: Solution steps"
+            }
+          ],
+          "hooks_to_avoid": ["Visual Interrupt (text-heavy format)", "TikTok Native (wrong platform energy)"]
+        },
+        "stories": {
+          "optimal_hook_window": "0-2 seconds",
+          "top_hooks": [
+            {
+              "type": "FOMO Trigger",
+              "category": "social_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Stories are ephemeral — FOMO is native to the format. 24-hour window creates natural urgency.",
+              "adaptation": "Quick, casual, behind-the-scenes. Poll stickers and question stickers amplify engagement"
+            },
+            {
+              "type": "Relatable Question",
+              "category": "question_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Stories poll/question stickers create interactive engagement signals the algorithm loves.",
+              "adaptation": "Use native interactive elements (polls, sliders, questions) to boost engagement rate"
+            },
+            {
+              "type": "Free Value",
+              "category": "value_hooks",
+              "effectiveness_score": 7,
+              "why_works": "Stories with value hooks drive profile visits and link clicks — direct conversion pathway.",
+              "adaptation": "'Swipe up' or 'Link in bio' CTA pairs naturally with value hooks"
+            }
+          ]
+        }
+      },
+      "platform_principles": [
+        "Visual-first: The image/video must hook before any text",
+        "Save signal: Content people bookmark performs best algorithmically",
+        "Share signal: Content people send via DM gets highest distribution",
+        "Engagement velocity: First 30-60 minutes of engagement determine reach",
+        "Consistency > virality: Regular posting builds distribution advantage"
+      ]
+    },
+    "tiktok": {
+      "algorithm_context": "Watch-through rate is the #1 signal. Loop rate (replays) is #2. Shares to DM/text drive distribution. Comments boost but less than watch metrics.",
+      "primary_format_hooks": {
+        "short_form_video": {
+          "optimal_hook_window": "0-1 second",
+          "top_hooks": [
+            {
+              "type": "TikTok Native",
+              "category": "platform_native_hooks",
+              "effectiveness_score": 9,
+              "why_works": "Platform-native hooks blend with user's feed expectations. Trend-aware content gets algorithmic boost.",
+              "adaptation": "Use trending sounds, POV format, fast cuts, casual energy. Never look/feel like a commercial"
+            },
+            {
+              "type": "Bold Claim",
+              "category": "shock_hooks",
+              "effectiveness_score": 9,
+              "why_works": "TikTok's For You Page rewards pattern interrupts. Bold claims create immediate stop-scroll.",
+              "adaptation": "Deliver claim in first second. Speak directly to camera. High energy. Prove claim within 15 seconds"
+            },
+            {
+              "type": "Visual Interrupt",
+              "category": "shock_hooks",
+              "effectiveness_score": 9,
+              "why_works": "The scroll is fastest on TikTok. Visual interrupts are the only reliable scroll-stopper.",
+              "adaptation": "First frame must be maximally different from typical content. Movement, unusual framing, text+visual combo"
+            },
+            {
+              "type": "FOMO Trigger",
+              "category": "social_hooks",
+              "effectiveness_score": 8,
+              "why_works": "TikTok's trend culture makes FOMO hooks extremely effective. Users fear being out of the loop.",
+              "adaptation": "Reference trends, current events, or 'everyone's doing this' social proof"
+            },
+            {
+              "type": "Confession",
+              "category": "shock_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Authenticity is TikTok's currency. Confessions feel raw and real — they outperform polished content.",
+              "adaptation": "Casual setting, no editing, direct to camera. The rawer it looks, the better it performs"
+            },
+            {
+              "type": "Call Out",
+              "category": "controversy_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Creates comment section debates that boost engagement metrics. Stitch/duet amplification.",
+              "adaptation": "Call out a common behavior, not a person. Enable stitches/duets for response content"
+            }
+          ],
+          "hooks_to_avoid": ["Credential Lead (too formal)", "LinkedIn Native (wrong energy entirely)", "Long preambles"]
+        }
+      },
+      "platform_principles": [
+        "Authenticity > production value: Raw outperforms polished",
+        "Sound-on default: Audio hooks matter as much as visual",
+        "Loop architecture: Videos that seamlessly loop get replayed (algorithm gold)",
+        "Comment bait: Controversial or incomplete content drives comments",
+        "Trend-riding: Using trending sounds/formats gets algorithmic distribution boost"
+      ]
+    },
+    "youtube": {
+      "algorithm_context": "Click-through rate (thumbnail + title) is the #1 factor. Then average view duration. Then session time (does your video lead to more YouTube watching?).",
+      "primary_format_hooks": {
+        "long_form": {
+          "optimal_hook_window": "0-30 seconds (but title+thumbnail is pre-hook)",
+          "top_hooks": [
+            {
+              "type": "YouTube Native",
+              "category": "platform_native_hooks",
+              "effectiveness_score": 9,
+              "why_works": "Thumbnail + title synergy is the primary hook on YouTube. The video hook is secondary to CTR.",
+              "adaptation": "Thumbnail: emotion face + curiosity element. Title: Open loop + keyword. First 30s: Payoff promise"
+            },
+            {
+              "type": "Curiosity Gap",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 9,
+              "why_works": "YouTube rewards average view duration. Curiosity gaps that take 10+ minutes to close maximize this metric.",
+              "adaptation": "Title creates the gap. Intro promises the payoff. Content delivers incrementally. Best hooks delay the biggest reveal"
+            },
+            {
+              "type": "Results Proof",
+              "category": "authority_hooks",
+              "effectiveness_score": 8,
+              "why_works": "YouTube viewers actively search for solutions. Results proof in title/thumbnail drives CTR from search.",
+              "adaptation": "Specific numbers in title. Before/after in thumbnail. First 30s: Social proof + roadmap of video"
+            },
+            {
+              "type": "Secret Reveal",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 8,
+              "why_works": "YouTube's long-form format allows extended secret reveals that maximize watch time.",
+              "adaptation": "'What they don't tell you about...' format. Chapters that progressively reveal deeper secrets"
+            },
+            {
+              "type": "Number Reveal",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 8,
+              "why_works": "List-format videos (7 mistakes, 5 strategies) create clear structure that retains viewers through each item.",
+              "adaptation": "Countdown format (start from least impactful, build to #1). Viewers stay to see what's #1"
+            }
+          ],
+          "hooks_to_avoid": ["Tribe Signal (too niche for discovery)", "TikTok Native (wrong pacing)"]
+        },
+        "shorts": {
+          "optimal_hook_window": "0-1 second",
+          "top_hooks": [
+            {
+              "type": "Bold Claim",
+              "category": "shock_hooks",
+              "effectiveness_score": 9,
+              "why_works": "YouTube Shorts compete with TikTok/Reels. Same scroll-stop dynamics apply.",
+              "adaptation": "Identical to TikTok approach. Fast, bold, visual, under 60 seconds"
+            },
+            {
+              "type": "How-To Promise",
+              "category": "value_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Shorts funnel viewers to long-form content. How-to hooks create demand for the deeper video.",
+              "adaptation": "Quick tip format with 'full video on my channel' CTA"
+            }
+          ]
+        }
+      },
+      "platform_principles": [
+        "CTR is king: Thumbnail and title do 80% of the hook work",
+        "First 30 seconds: Must hook, establish credibility, and promise value",
+        "Retention curves: YouTube tracks second-by-second retention — every dip loses viewers permanently",
+        "Session time: Videos that lead to more watching get recommended more",
+        "Search + Browse: Optimize for both intent-based (search) and discovery (suggested)"
+      ]
+    },
+    "linkedin": {
+      "algorithm_context": "Dwell time (time spent reading) is the #1 signal. Comments boost distribution more than likes. Shares to feed create cascading reach. First hour engagement is critical.",
+      "primary_format_hooks": {
+        "text_posts": {
+          "optimal_hook_window": "First 2 lines (before 'see more')",
+          "top_hooks": [
+            {
+              "type": "LinkedIn Native",
+              "category": "platform_native_hooks",
+              "effectiveness_score": 8,
+              "why_works": "LinkedIn's culture rewards professional vulnerability and hard-won insight. Native hooks match this energy.",
+              "adaptation": "First line: Personal story or contrarian insight. Second line: Stakes or tension. Then 'see more' break"
+            },
+            {
+              "type": "Contrarian Take",
+              "category": "controversy_hooks",
+              "effectiveness_score": 9,
+              "why_works": "LinkedIn's comment culture rewards debate. Contrarian posts generate the longest comment threads.",
+              "adaptation": "Challenge industry convention. Be specific ('Stop using {specific tool/practice}'). Provide alternative"
+            },
+            {
+              "type": "Credential Lead",
+              "category": "authority_hooks",
+              "effectiveness_score": 8,
+              "why_works": "LinkedIn is the one platform where credentials enhance rather than hinder hook performance.",
+              "adaptation": "'After 15 years in {industry}...' format works. Lead with years/results, then insight"
+            },
+            {
+              "type": "Transformation Start",
+              "category": "story_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Career transformation stories are LinkedIn's highest-performing content type. Professional vulnerability drives engagement.",
+              "adaptation": "Career failure → lesson learned format. 'I was fired/failed/rejected' hooks outperform success stories"
+            },
+            {
+              "type": "Challenging Question",
+              "category": "question_hooks",
+              "effectiveness_score": 7,
+              "why_works": "Questions drive comments, which is LinkedIn's highest-weighted engagement signal.",
+              "adaptation": "End with a genuine question that invites professional perspective. Avoid yes/no questions"
+            }
+          ],
+          "hooks_to_avoid": ["FOMO Trigger (feels inauthentic)", "TikTok Native (wrong platform)", "Visual Interrupt (text-focused platform)"]
+        },
+        "carousels_documents": {
+          "optimal_hook_window": "First slide title",
+          "top_hooks": [
+            {
+              "type": "How-To Promise",
+              "category": "value_hooks",
+              "effectiveness_score": 8,
+              "why_works": "LinkedIn carousels (document format) drive saves and shares. How-to frameworks are the #1 saved content type.",
+              "adaptation": "Slide 1: Clear framework name + benefit. 8-12 slides total. One concept per slide"
+            },
+            {
+              "type": "Number Reveal",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 8,
+              "why_works": "'{Number} lessons from...' format drives swipe-through and saves on LinkedIn.",
+              "adaptation": "Professional framing. Include your credential on slide 1. Framework-style presentation"
+            }
+          ]
+        }
+      },
+      "platform_principles": [
+        "Text-first platform: Written hooks outperform visual hooks",
+        "Professional vulnerability: Career struggles + lessons > humble brags",
+        "Comment quality: Thoughtful comments boost distribution more than emoji reactions",
+        "Dwell time: Long posts that hold attention outperform short posts",
+        "First 2 lines: Everything before 'see more' determines whether the post gets read"
+      ]
+    },
+    "x_twitter": {
+      "algorithm_context": "Replies and quote tweets are the #1 engagement signals. Bookmark rate is emerging. Thread retention (reading full thread) matters. Algorithmic timeline favors accounts with consistent engagement.",
+      "primary_format_hooks": {
+        "single_tweets": {
+          "optimal_hook_window": "First line (280 char limit forces compression)",
+          "top_hooks": [
+            {
+              "type": "Contrarian Take",
+              "category": "controversy_hooks",
+              "effectiveness_score": 9,
+              "why_works": "X/Twitter's culture is built on hot takes. Contrarian hooks drive quote tweets (highest distribution signal).",
+              "adaptation": "One sentence, maximum compression. Bold claim. No hedging. Thread with evidence if needed"
+            },
+            {
+              "type": "Us vs Them",
+              "category": "social_hooks",
+              "effectiveness_score": 8,
+              "why_works": "X thrives on tribal dynamics. Us-vs-them hooks create instant engagement from both sides.",
+              "adaptation": "Simple binary framing. Let both sides argue in replies. Engagement from both sides boosts distribution"
+            },
+            {
+              "type": "Challenging Question",
+              "category": "question_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Questions drive replies, which is X's primary engagement signal. Provoke thought, get answers.",
+              "adaptation": "Short, punchy question. Avoid multi-part questions. One provocative line"
+            },
+            {
+              "type": "Bold Claim",
+              "category": "shock_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Compressed format amplifies bold claims. The constraint of 280 characters creates natural punch.",
+              "adaptation": "Maximum compression. Every word must earn its place. No filler"
+            }
+          ],
+          "hooks_to_avoid": ["How-To Promise (too long for single tweet)", "Visual Interrupt (text-first platform)", "Free Value (better for threads)"]
+        },
+        "threads": {
+          "optimal_hook_window": "First tweet of thread",
+          "top_hooks": [
+            {
+              "type": "Number Reveal",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 9,
+              "why_works": "'{Number} things I learned from...' threads are the highest-saved content type on X. Creates read-through expectation.",
+              "adaptation": "Tweet 1: Hook with number + promise. Each subsequent tweet: One point. Final tweet: Summary + CTA"
+            },
+            {
+              "type": "Curiosity Gap",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Thread format naturally creates open loops. Each tweet is a mini-hook for the next.",
+              "adaptation": "End each tweet with a hook into the next. Last tweet: Deliver the payoff + 'RT the first tweet'"
+            },
+            {
+              "type": "Secret Reveal",
+              "category": "curiosity_hooks",
+              "effectiveness_score": 8,
+              "why_works": "Insider knowledge threads drive massive bookmarks and quote tweets on X.",
+              "adaptation": "'Behind the scenes of how {company/person} did {impressive thing}' format"
+            }
+          ]
+        }
+      },
+      "platform_principles": [
+        "Compression is power: Fewer words = more impact on X",
+        "Quote tweets > likes: Content that gets quote tweeted reaches new networks",
+        "Thread retention: Each tweet must hook independently while building the thread",
+        "Hot take culture: Bold opinions outperform balanced analysis",
+        "Bookmark signal: Emerging algorithm signal — value content that gets saved"
+      ]
+    }
+  },
+  "cross_platform_hook_strategy": {
+    "universal_hooks": {
+      "description": "Hook types that work on ALL platforms with minor adaptation",
+      "hooks": ["Curiosity Gap", "Bold Claim", "Pain Point", "Us vs Them", "Number Reveal"],
+      "note": "These 5 hooks are the minimum viable hook library for any brand"
+    },
+    "platform_exclusive_hooks": {
+      "tiktok_only": ["TikTok Native (trending sound hooks)"],
+      "youtube_only": ["YouTube Native (thumbnail+title synergy)"],
+      "linkedin_only": ["LinkedIn Native (professional vulnerability)"],
+      "note": "These hooks should NEVER be used on other platforms — they'll feel inauthentic"
+    },
+    "repurpose_adaptation_guide": {
+      "reel_to_tiktok": "Direct repurpose works. Adjust sound to trending TikTok audio. Remove Instagram-specific CTAs",
+      "thread_to_carousel": "Each tweet becomes a slide. Add visual design. Expand compressed points",
+      "linkedin_to_thread": "Decompress. Break long paragraphs into single-point tweets. Add more direct hook per tweet",
+      "youtube_to_shorts": "Extract the single most compelling 60 seconds. Lead with the hook, not the buildup"
+    }
+  }
+}

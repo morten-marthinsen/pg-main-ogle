@@ -1,0 +1,215 @@
+# LINKEDIN ALGORITHM TEACHING FILE
+# Extracted from 2,547 validated documents
+# Source: LinkedIn Agent Master Knowledge Base
+# Last Updated: March 2026
+
+meta:
+  platform: linkedin
+  document_count: 2547
+  top_frameworks:
+    - Save-Share Trigger (primary)
+    - Offer Stack (primary)
+    - Comment Ladder (101+ occurrences)
+    - Packaging
+    - Authority Positioning
+    - Conversation Loop
+    - Post Narrative
+  high_signal_sources:
+    - CXL LinkedIn Experimentation (score: 81.7)
+    - Content Marketing & LinkedIn (score: 80.2)
+    - Advanced LinkedIn Ads (score: 80.1)
+
+algorithm_priorities:
+  primary_metric: professional_engagement_and_dwell_time
+  core_principle: "LinkedIn rewards content that sparks professional conversations and keeps users on platform"
+
+  ranking_signals:
+    tier_1_critical:
+      - dwell_time:
+          weight: highest
+          description: "Time spent reading post"
+          benchmark: "Longer = better, aim for 3+ seconds"
+          strategy: "Long-form posts, stories, detailed content"
+      - comment_rate:
+          weight: highest
+          description: "Comments drive algorithmic push"
+          strategy: "End with questions, controversial takes"
+      - engagement_velocity:
+          weight: highest
+          description: "First hour engagement critical"
+          strategy: "Engage with network before/after posting"
+
+    tier_2_important:
+      - comment_length:
+          weight: high
+          description: "Longer comments signal quality discussion"
+          strategy: "Encourage detailed responses"
+      - share_rate:
+          weight: high
+          description: "Reposts to network"
+          strategy: "Create sharable insights, frameworks"
+      - save_rate:
+          weight: medium_high
+          description: "Bookmarks for reference"
+          strategy: "Frameworks, lists, tactical content"
+
+    tier_3_supporting:
+      - reactions:
+          weight: medium
+          description: "Celebrate, insightful, love > like"
+      - profile_views:
+          weight: medium
+          description: "Content driving profile visits"
+      - connection_requests:
+          weight: medium
+          description: "Content driving new connections"
+
+distribution_mechanics:
+  content_testing:
+    initial_push: "First shown to subset of connections"
+    evaluation: "Engagement rate determines expansion"
+    expansion: "Strong performers shown to 2nd connections, then broader"
+    timeline: "Can take 24-48 hours for full distribution"
+
+  feed_ranking:
+    creator_signals: "Your posting history and engagement"
+    content_signals: "Format, text, engagement predictions"
+    member_signals: "Viewer's interests and engagement history"
+
+  viral_mechanics:
+    first_degree: "Your connections see it"
+    second_degree: "Friends of people who engage see it"
+    topic_feeds: "Hashtag and interest-based distribution"
+
+content_optimization:
+  post_narrative:
+    principle: "LinkedIn posts are micro-stories"
+
+    structure:
+      line_1: "Hook - curiosity gap or bold statement"
+      lines_2_3: "Context setup"
+      body: "Story + value delivery"
+      closing: "Takeaway + question"
+
+    formatting:
+      - "Short paragraphs (1-2 sentences)"
+      - "Line breaks between ideas"
+      - "Use 'See more' fold strategically"
+      - "No walls of text"
+
+  comment_ladder:
+    principle: "Build visibility through strategic commenting"
+
+    execution:
+      tier_1: "Comment on larger accounts in your space"
+      tier_2: "Add genuine value, not 'Great post!'"
+      tier_3: "Be early to posts (first hour)"
+      tier_4: "Reply to comments on your comments"
+
+    visibility_mechanics:
+      - "Comments surface your name to their network"
+      - "Engaged commenters get notified of new posts"
+      - "Comment engagement boosts your content"
+
+  authority_positioning:
+    principle: "Position as expert through consistent value"
+
+    content_mix:
+      thought_leadership: "40% - insights, predictions, opinions"
+      tactical_value: "30% - how-to, frameworks, lists"
+      personal_stories: "20% - lessons, failures, wins"
+      engagement: "10% - questions, polls, discussions"
+
+    consistency:
+      posting_frequency: "Daily minimum, 2x daily optimal"
+      topic_focus: "Stay in your lane"
+      voice: "Professional but human"
+
+format_optimization:
+  text_posts:
+    length: "1,300-3,000 characters optimal"
+    structure: "Story format with clear sections"
+    hook: "First line before 'See more' critical"
+
+  document_posts:
+    format: "PDF carousel"
+    length: "5-15 slides"
+    optimization: "One idea per slide, visual consistency"
+    engagement: "High save rate format"
+
+  video:
+    native: "Upload directly, not YouTube links"
+    length: "Under 3 minutes optimal"
+    captions: "Essential for feed viewing"
+    vertical: "Increasingly preferred"
+
+  polls:
+    engagement: "High participation format"
+    strategy: "Use to start conversations"
+    follow_up: "Post results with insights"
+
+  newsletters:
+    distribution: "Direct to subscriber inbox"
+    growth: "Subscribers notified of new articles"
+    strategy: "Long-form thought leadership"
+
+conversation_loop:
+  principle: "Keep conversations going to maximize reach"
+
+  execution:
+    - "Reply to every comment within 2 hours"
+    - "Ask follow-up questions"
+    - "Tag relevant people to expand reach"
+    - "Reply to comments with new insights"
+
+  benefits:
+    - "Each reply triggers notifications"
+    - "Active comments boost post in algorithm"
+    - "Builds relationships with commenters"
+
+virality_patterns:
+  what_goes_viral:
+    - "Contrarian business takes"
+    - "Personal failure to success stories"
+    - "Industry insights and predictions"
+    - "Frameworks and mental models"
+    - "Humble brags done well"
+    - "Behind-the-scenes of success"
+
+  viral_post_patterns:
+    - "I was [situation]. Then [turning point]. Here's what I learned:"
+    - "Unpopular opinion: [contrarian take]"
+    - "[Number] things I wish I knew about [topic]:"
+    - "I've [achieved X]. Here's the actual playbook:"
+    - "Everyone talks about [popular thing]. Nobody talks about [insight]."
+    - "The [role/industry] playbook that actually works:"
+
+timing_optimization:
+  best_posting_times:
+    weekdays: "7-8am, 12pm, 5-6pm (local time)"
+    peak_days: "Tuesday, Wednesday, Thursday"
+    avoid: "Weekends, Monday morning, Friday afternoon"
+
+  engagement_windows:
+    pre_post: "Engage with network 30 mins before posting"
+    post_post: "Stay active 1-2 hours after posting"
+    throughout_day: "Respond to comments quickly"
+
+anti_patterns:
+  what_kills_linkedin:
+    - "Link in main post (reduced reach)"
+    - "Over-automation (engagement pods)"
+    - "Generic engagement ('Congrats!')"
+    - "Only promotional content"
+    - "Ignoring comments"
+    - "Inconsistent posting"
+    - "Off-topic personal content"
+
+application_to_engine:
+  skill_mappings:
+    S02_platform_strategy: "Plan for professional audience positioning"
+    S03_brand_voice: "Authority positioning calibration"
+    S06_virality_scoring: "Weight comment and dwell potential"
+    S08_long_form: "Post narrative framework"
+    S11_carousel_design: "Document post optimization"
+    S16_engagement_protocol: "Comment ladder and conversation loop"

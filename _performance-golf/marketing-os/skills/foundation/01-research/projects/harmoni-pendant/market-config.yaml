@@ -1,0 +1,281 @@
+# market_config.yaml
+# Auto-generated from research brief
+# Project: Harmoni Pendant Deep Research
+
+project:
+  name: harmoni-pendant
+  created: 2026-01-30
+  market_mode: A  # Existing product with marketing history
+
+terminology:
+  customer:
+    primary: "health-conscious consumer"
+    plural: "health-conscious consumers"
+    adjective: "wellness-focused"
+    alternatives:
+      - "biohacker"
+      - "EMF-sensitive individual"
+      - "wellness enthusiast"
+      - "holistic health seeker"
+
+  problem:
+    primary: "EMF stress and disruption"
+    category: "electromagnetic sensitivity / stress / energy depletion"
+    alternatives:
+      - "biofield disruption"
+      - "electromagnetic hypersensitivity"
+      - "chronic stress"
+      - "sleep problems"
+      - "energy issues"
+      - "nervous system dysregulation"
+
+  product:
+    type: "pendant"
+    solution: "EMF protection device"
+    alternatives:
+      - "EMF harmonizer"
+      - "biofield coherence device"
+      - "wearable EMF protection"
+      - "stress mitigation pendant"
+
+platforms:
+  tier_1:
+    - name: Reddit
+      type: forum
+      tool: firecrawl
+      priority: critical
+      subreddits:
+        - r/EMF
+        - r/Biohackers
+        - r/Supplements
+        - r/AlternativeHealth
+        - r/ChronicIllness
+        - r/sleep
+        - r/EMFSensitivity
+        - r/QuantifiedSelf
+    - name: Amazon Reviews
+      type: review
+      tool: firecrawl
+      priority: critical
+      note: "Competitor EMF products"
+    - name: YouTube
+      type: video
+      tool: apify
+      priority: critical
+      note: "EMF protection reviews, biohacking content"
+
+  tier_2:
+    - name: Trustpilot
+      type: review
+      tool: firecrawl
+      priority: high
+    - name: Facebook Groups
+      type: social
+      tool: apify
+      priority: high
+      groups:
+        - "EMF Awareness"
+        - "Biohacking"
+        - "Holistic Health"
+        - "Chronic Illness Support"
+    - name: Health Forums
+      type: forum
+      tool: firecrawl
+      priority: high
+      sites:
+        - "curezone.org"
+        - "inspire.com"
+        - "patient.info"
+
+  tier_3:
+    - name: Quora
+      type: forum
+      tool: firecrawl
+      priority: moderate
+    - name: Twitter/X
+      type: social
+      tool: apify
+      priority: moderate
+    - name: Wellness Blogs
+      type: content
+      tool: firecrawl
+      priority: moderate
+
+  blocked:
+    - name: None identified
+      reason: N/A
+      alternative: N/A
+
+aspects:
+  - name: EMF Concern
+    definition: "Fear, anxiety, or concern about electromagnetic radiation exposure"
+    example_terms:
+      - "5G"
+      - "WiFi radiation"
+      - "cell phone radiation"
+      - "EMF exposure"
+      - "electromagnetic sensitivity"
+      - "electrosmog"
+
+  - name: Stress & Energy
+    definition: "Chronic stress, fatigue, energy depletion, nervous system issues"
+    example_terms:
+      - "chronic fatigue"
+      - "always tired"
+      - "stressed out"
+      - "can't relax"
+      - "nervous system"
+      - "fight or flight"
+
+  - name: Sleep Issues
+    definition: "Sleep quality problems, insomnia, not feeling rested"
+    example_terms:
+      - "can't sleep"
+      - "wake up tired"
+      - "insomnia"
+      - "sleep quality"
+      - "restless nights"
+
+  - name: Skepticism & Trust
+    definition: "Doubt about EMF products, skepticism about claims, trust barriers"
+    example_terms:
+      - "scam"
+      - "does it work"
+      - "snake oil"
+      - "pseudoscience"
+      - "proof"
+      - "evidence"
+
+  - name: Holistic Solutions
+    definition: "Interest in alternative, natural, holistic approaches to health"
+    example_terms:
+      - "natural solution"
+      - "holistic"
+      - "alternative medicine"
+      - "energy healing"
+      - "biofield"
+
+competitors:
+  known:
+    - name: "DefenderShield"
+      type: direct
+      positioning: "Science-backed EMF protection"
+    - name: "Aires Tech"
+      type: direct
+      positioning: "Patented EMF modulation technology"
+    - name: "SafeSleeve"
+      type: direct
+      positioning: "EMF radiation protection cases"
+    - name: "Somavedic"
+      type: direct
+      positioning: "Structured water and EMF harmonization"
+    - name: "Aulterra"
+      type: direct
+      positioning: "Neutralizer EMF products"
+    - name: "Blushield"
+      type: direct
+      positioning: "Active EMF protection technology"
+    - name: "Q-Link"
+      type: direct
+      positioning: "Sympathetic Resonance Technology"
+    - name: "BioElectric Shield"
+      type: direct
+      positioning: "Personal energy protection"
+
+  terminology:
+    comparison_phrases:
+      - "best EMF protection"
+      - "EMF pendant review"
+      - "[competitor] vs"
+      - "does [product] work"
+      - "[product] scam"
+    category_terms:
+      - "EMF protection devices"
+      - "EMF shielding"
+      - "EMF harmonizers"
+      - "biofield devices"
+
+emotional_context:
+  fears:
+    - "EMF is silently damaging my health"
+    - "5G and WiFi are making me sick"
+    - "Technology is harming my family"
+    - "I can't escape electromagnetic radiation"
+    - "My symptoms are real but doctors don't believe me"
+    - "I'm sensitive to something invisible"
+
+  frustrations:
+    - "Products claim to work but don't"
+    - "No one takes EMF concerns seriously"
+    - "Skeptics dismiss my experience"
+    - "Hard to know what really works"
+    - "Expensive products with no proof"
+    - "Always tired, can't figure out why"
+
+  hopes:
+    - "Find something that actually helps"
+    - "Feel better and have more energy"
+    - "Sleep through the night"
+    - "Protect my family from EMF"
+    - "Reduce stress and feel calm"
+    - "Validate that my sensitivity is real"
+
+  identity:
+    current: "Overwhelmed, stressed, health-conscious but struggling"
+    aspirational: "Protected, energized, in control of my health"
+    anti_identity: "Victim of invisible forces, helpless against technology"
+
+query_patterns:
+  pain_queries:
+    - "EMF sensitivity symptoms"
+    - "WiFi making me sick"
+    - "5G health effects"
+    - "always tired chronic fatigue EMF"
+    - "can't sleep near router"
+    - "electromagnetic hypersensitivity"
+    - "EMF anxiety"
+    - "technology stress symptoms"
+
+  hope_queries:
+    - "how to protect from EMF"
+    - "best EMF protection devices"
+    - "does EMF protection work"
+    - "reduce EMF exposure naturally"
+    - "biohacking EMF protection"
+    - "how to sleep better with WiFi"
+
+  competitor_queries:
+    - "harmoni pendant review"
+    - "defenderShield review"
+    - "aires tech review"
+    - "somavedic review"
+    - "EMF pendant comparison"
+    - "best EMF protection pendant 2026"
+    - "[competitor] scam OR legit"
+
+  root_cause_queries:
+    - "why EMF affects health"
+    - "EMF sensitivity real or fake"
+    - "science behind EMF protection"
+    - "do EMF pendants actually work"
+
+research_parameters:
+  budget: 25
+  timeline: standard
+  quote_target: 1000+
+
+  hypotheses_to_test:
+    - "Better offer/page structure needed"
+    - "Page needs new elements for conversion"
+    - "Trust is the primary barrier to conversion"
+
+  additional_questions:
+    - "What price points do competitors use?"
+    - "How do customers talk about specific features?"
+    - "How to position for Dr Joe Dispenza's audience?"
+    - "What objections appear most frequently?"
+
+  exploration_emphasis:
+    - "Improved offer structure or presentation"
+    - "Best channels for growth"
+    - "Emotions of the market for messaging"

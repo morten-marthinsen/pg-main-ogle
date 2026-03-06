@@ -1,0 +1,1216 @@
+# =============================================================================
+# CROSS-PLATFORM AMPLIFICATION FRAMEWORK
+# Synthesis Teaching File — Combines insights from multiple authorities
+# into a unified, actionable cross-platform distribution system.
+#
+# Source Authorities:
+#   - Gary Vaynerchuk (Day Trading Attention, Jab Jab Jab Right Hook)
+#   - Brendan Kane (One Million Followers, Hook Point)
+#   - Platform algorithm docs (Instagram, TikTok, YouTube, LinkedIn,
+#     X/Twitter, Facebook — existing YAMLs in this directory)
+#
+# Last Updated: March 2026
+# =============================================================================
+
+meta:
+  id: cross-platform-amplification
+  title: "Cross-Platform Amplification Framework"
+  type: synthesis
+  source_authorities:
+    - name: "Gary Vaynerchuk"
+      works:
+        - "Day Trading Attention (2024)"
+        - "Jab, Jab, Jab, Right Hook (2013)"
+      contributions:
+        - "Underpriced attention arbitrage model"
+        - "Platform-native content philosophy"
+        - "Content atomization workflow"
+        - "The $1.80 engagement strategy"
+        - "Pillar content repurposing system"
+        - "Relevance x Reach framework"
+    - name: "Brendan Kane"
+      works:
+        - "One Million Followers (2018)"
+        - "Hook Point (2022)"
+      contributions:
+        - "3-second hook architecture"
+        - "Format testing across platforms"
+        - "Pattern interrupt mechanics"
+        - "Hook Point scoring for multi-platform content"
+        - "Content shareability engineering"
+        - "Platform-specific format optimization"
+    - name: "Platform Algorithm Documentation"
+      works:
+        - "instagram-algorithm-2026.yaml"
+        - "tiktok-algorithm-2026.yaml"
+        - "youtube-algorithm-2026.yaml"
+        - "linkedin-algorithm-2026.yaml"
+        - "x-twitter-algorithm-2026.yaml"
+        - "facebook-algorithm-2026.yaml"
+      contributions:
+        - "Real-time algorithm signal weighting per platform"
+        - "Anti-pattern avoidance per platform"
+        - "Format-specific optimization benchmarks"
+  version: "1.0"
+  created: "2026-03-04"
+  skill_mappings: [S02, S15, S16, S17, S18]
+
+# =============================================================================
+# SECTION 1: FRAMEWORKS
+# =============================================================================
+
+frameworks:
+
+  # ---------------------------------------------------------------------------
+  # 1.1 CROSS-PLATFORM CONTENT STRATEGY
+  # ---------------------------------------------------------------------------
+  cross_platform_content_strategy:
+    title: "One Core Idea, Six Native Executions"
+    source_synthesis:
+      vaynerchuk: "Platform-native content — same idea, different execution per platform"
+      kane: "Hook Point — every platform has a different attention threshold"
+    core_principle: |
+      Every piece of content starts as a single core idea. That idea is then
+      translated — not copy-pasted — into the native language of each platform.
+      Copy-pasting is the single most common cross-platform mistake. Each
+      platform has its own culture, format expectations, algorithm signals,
+      and consumption context. The creator who wins is the one who respects
+      each platform while maintaining a consistent underlying message.
+
+    the_content_nucleus:
+      definition: "The irreducible core of your content — one idea, one insight, one story"
+      requirements:
+        - "Must be expressible in a single sentence"
+        - "Must contain an inherent hook (curiosity, controversy, utility, or emotion)"
+        - "Must be relevant to your audience across platforms"
+        - "Must survive format translation without losing meaning"
+      examples:
+        weak_nucleus: "Social media tips for businesses"
+        strong_nucleus: "The one metric every platform algorithm actually cares about — and it is not followers"
+        why: "Strong nucleus has built-in curiosity gap, specificity, and contrarian framing"
+
+    platform_translation_rules:
+      tiktok:
+        culture: "Raw, fast, entertaining, trend-aware"
+        translation: "Turn the nucleus into a 15-30 second visual story with immediate hook"
+        format: "Vertical video, on-screen text, trending sound when relevant"
+        tone: "Conversational, slightly chaotic energy, authentic"
+        hook_window: "1-3 seconds"
+      instagram:
+        culture: "Aspirational, aesthetic, community-driven"
+        translation: "Turn the nucleus into a visually polished Reel or save-worthy carousel"
+        format: "Reel (15-30s) or Carousel (10 slides) or Story sequence"
+        tone: "Polished but personal, educational with design sensibility"
+        hook_window: "0.5-3 seconds for Reels, first slide for carousels"
+      youtube_shorts:
+        culture: "Educational-entertainment hybrid, trend participation"
+        translation: "Turn the nucleus into a punchy vertical clip with loop ending"
+        format: "Vertical video under 60 seconds, strong first frame"
+        tone: "Energetic, value-dense, with personality"
+        hook_window: "1 second"
+      youtube_long_form:
+        culture: "Deep, searchable, evergreen, high production value"
+        translation: "Turn the nucleus into a comprehensive 8-20 minute exploration"
+        format: "Horizontal video with optimized thumbnail and title"
+        tone: "Authoritative, structured, with retention patterns"
+        hook_window: "First 30 seconds"
+      linkedin:
+        culture: "Professional, insight-driven, narrative, thought leadership"
+        translation: "Turn the nucleus into a text post with personal story and business lesson"
+        format: "Text post (1300-3000 chars) or document carousel (8-12 slides)"
+        tone: "Professional but human, vulnerable when appropriate, actionable"
+        hook_window: "First line before See More fold"
+      x_twitter:
+        culture: "Sharp, opinionated, fast, conversational"
+        translation: "Turn the nucleus into a thread or punchy single tweet"
+        format: "Thread (7-15 tweets) or single tweet with image"
+        tone: "Concise, witty, direct, slightly provocative"
+        hook_window: "First 10 words"
+      facebook:
+        culture: "Community-oriented, emotional, shareable, group-centric"
+        translation: "Turn the nucleus into a conversation-starting post or native video"
+        format: "Native video (1-3 min) or text post with question, or group post"
+        tone: "Warm, relatable, discussion-oriented"
+        hook_window: "First 3 seconds for video, first sentence for text"
+
+    organic_marketing_application:
+      S02_platform_strategy: "Use platform translation rules to adapt content nucleus per platform"
+      S18_repurpose: "Nucleus extraction is the first step in the repurposing waterfall"
+
+  # ---------------------------------------------------------------------------
+  # 1.2 CONTENT REPURPOSING WATERFALL
+  # ---------------------------------------------------------------------------
+  content_repurposing_waterfall:
+    title: "The Waterfall — Long-Form to Micro in Systematic Steps"
+    source_synthesis:
+      vaynerchuk: "Content atomization — one pillar yields 30+ pieces"
+      kane: "Format testing — each format variant is a new shot on goal"
+
+    production_workflow:
+      step_1_pillar_creation:
+        name: "Create Pillar Content"
+        description: "Produce one substantial long-form piece"
+        formats:
+          - "30-60 minute podcast or video recording"
+          - "2000+ word written article or essay"
+          - "60-minute live stream or workshop"
+          - "30-minute interview or conversation"
+        output: "One long-form master asset"
+        time_investment: "1-3 hours creation time"
+
+      step_2_primary_extraction:
+        name: "Primary Content Extraction"
+        description: "Break the pillar into platform-native mid-form pieces"
+        outputs:
+          youtube_long_form:
+            count: 1
+            format: "Full edited video (8-20 minutes)"
+            process: "Edit pillar recording with retention optimization"
+          blog_post:
+            count: 1
+            format: "1500-2500 word article"
+            process: "Transcribe, restructure for reading, add headers and CTAs"
+          email_newsletter:
+            count: "1-2"
+            format: "800-1200 word email"
+            process: "Extract key insights, add personal commentary, end with CTA"
+          linkedin_articles:
+            count: 1
+            format: "1000-2000 word LinkedIn article or newsletter"
+            process: "Reframe for professional audience, add industry context"
+
+      step_3_short_form_clips:
+        name: "Short-Form Clip Extraction"
+        description: "Cut the pillar into vertical short-form pieces"
+        outputs:
+          tiktok_clips:
+            count: "5-10"
+            format: "15-60 second vertical videos"
+            process: "Find peak moments, add text overlays, optimize hooks"
+          instagram_reels:
+            count: "5-10"
+            format: "15-30 second polished vertical videos"
+            process: "Same clips as TikTok but remove TikTok watermark, add IG-native elements"
+          youtube_shorts:
+            count: "5-10"
+            format: "Under 60 second vertical videos"
+            process: "Prioritize educational moments, loop endings"
+          facebook_reels:
+            count: "3-5"
+            format: "15-30 second vertical videos"
+            process: "Cross-post from Instagram Reels or create native"
+        clip_selection_criteria:
+          - "Contains a complete thought (stand-alone value)"
+          - "Opens with a natural hook (curiosity, controversy, emotion)"
+          - "Has visual or vocal energy"
+          - "Delivers a clear takeaway in under 60 seconds"
+          - "Ends with implicit loop or explicit CTA"
+
+      step_4_micro_content:
+        name: "Micro Content Derivatives"
+        description: "Create text, image, and carousel content from the pillar"
+        outputs:
+          linkedin_posts:
+            count: "5-10"
+            format: "Text posts, 1300-3000 characters each"
+            process: "One key insight per post, personal story framing"
+          twitter_threads:
+            count: "2-3"
+            format: "7-15 tweet threads"
+            process: "Break frameworks into numbered tweets, each standalone"
+          twitter_single_tweets:
+            count: "15-30"
+            format: "Single tweets, 280 characters"
+            process: "Extract quotable lines, hot takes, one-liners"
+          instagram_carousels:
+            count: "2-3"
+            format: "10-slide carousels"
+            process: "Frameworks, lists, step-by-step breakdowns from pillar"
+          instagram_stories:
+            count: "10-20"
+            format: "Story slides with polls, questions, engagement stickers"
+            process: "Behind-the-scenes of creation, quick tips, audience questions"
+          quote_graphics:
+            count: "3-5"
+            format: "Branded image with quotable text"
+            process: "Pull strongest one-liners, overlay on brand template"
+          audiograms:
+            count: "3-5"
+            format: "Audio waveform clips with text"
+            process: "Best audio moments with visual waveform"
+
+      step_5_engagement_content:
+        name: "Engagement Amplification Layer"
+        description: "Create response and interaction content that feeds the algorithm"
+        outputs:
+          comment_response_videos:
+            format: "TikTok/Reels reply-to-comment videos"
+            process: "Respond to best comments on original clips with new video"
+          poll_and_question_posts:
+            format: "Polls on LinkedIn, X, Instagram Stories"
+            process: "Ask audience which insight resonated most"
+          duets_and_stitches:
+            format: "TikTok duets/stitches with your own or others' content"
+            process: "Add commentary to viral content in your niche"
+
+    total_output_from_one_pillar:
+      minimum: "30 content pieces"
+      optimal: "50-80 content pieces"
+      maximum: "100+ content pieces"
+      coverage: "All 6 major platforms, multiple formats per platform"
+
+    organic_marketing_application:
+      S02_platform_strategy: "Waterfall ensures every platform gets native content from single session"
+      S15_scheduling: "Batch waterfall outputs into 2-4 weeks of scheduled content"
+      S18_repurpose: "This IS the repurposing system — execute top to bottom"
+
+  # ---------------------------------------------------------------------------
+  # 1.3 ALGORITHM ALIGNMENT MATRIX
+  # ---------------------------------------------------------------------------
+  algorithm_alignment_matrix:
+    title: "What Each Algorithm Rewards and Punishes"
+    source_synthesis:
+      vaynerchuk: "Day trade attention — know what each platform values right now"
+      kane: "Hook Point — algorithms are gatekeepers; pass their test first, then reach humans"
+      platform_yamls: "Tier 1/2/3 signal weighting from each platform file"
+
+    platform_signals_comparison:
+      tiktok:
+        primary_metric: "Watch completion rate + rewatch rate"
+        rewards:
+          - signal: "High completion rate (70%+)"
+            weight: "Critical"
+          - signal: "Rewatch/loop behavior"
+            weight: "Critical"
+          - signal: "Shares to DMs"
+            weight: "Critical"
+          - signal: "Comments and replies"
+            weight: "High"
+          - signal: "Trend participation within 48 hours"
+            weight: "High"
+        punishes:
+          - "Slow hooks — lost in first 3 seconds"
+          - "Cross-platform watermarks"
+          - "Overproduced, inauthentic content"
+          - "Posting once a day or less"
+          - "Ignoring comments"
+        batch_testing: "200-500 initial users, expands in waves if metrics hold"
+
+      instagram:
+        primary_metric: "Save rate + share rate + engagement velocity"
+        rewards:
+          - signal: "Saves (reference-worthy content)"
+            weight: "Critical"
+          - signal: "DM shares"
+            weight: "Critical"
+          - signal: "Engagement in first 30-60 minutes"
+            weight: "Critical"
+          - signal: "Comment depth (conversations, not emoji)"
+            weight: "High"
+          - signal: "Using all features (Reels, Stories, Feed, Live)"
+            weight: "Medium"
+        punishes:
+          - "TikTok watermarks on Reels"
+          - "Only posting one content type"
+          - "Ignoring DMs and comments"
+          - "Pod engagement (detected and penalized)"
+          - "Inconsistent posting cadence"
+        evaluation_window: "First 30-60 minutes determine distribution ceiling"
+
+      youtube_long_form:
+        primary_metric: "CTR + average view duration + session time"
+        rewards:
+          - signal: "High click-through rate (5-10%)"
+            weight: "Critical"
+          - signal: "Average view duration 50%+"
+            weight: "Critical"
+          - signal: "Session time (viewer watches more after your video)"
+            weight: "High"
+          - signal: "Engagement velocity in first hours"
+            weight: "High"
+          - signal: "Subscriber conversion from video"
+            weight: "Medium"
+        punishes:
+          - "Clickbait without delivery (retention drops)"
+          - "Slow intros that lose audience"
+          - "Inconsistent posting schedule"
+          - "Ignoring thumbnail and title optimization"
+          - "No end screens or cards"
+        testing_phases: "100-500 impressions initial, expands through 4 phases"
+
+      youtube_shorts:
+        primary_metric: "Loop completion rate + rewatch rate"
+        rewards:
+          - signal: "Watch completion and loop"
+            weight: "Critical"
+          - signal: "Engagement rate (likes, comments, shares)"
+            weight: "High"
+          - signal: "Subscribe rate from Short"
+            weight: "High"
+        punishes:
+          - "Swipe-away rate (quick exits)"
+          - "No hook in first frame"
+          - "Horizontal or letterboxed format"
+        note: "Separate algorithm from long-form YouTube"
+
+      linkedin:
+        primary_metric: "Dwell time + comment rate + engagement velocity"
+        rewards:
+          - signal: "Time spent reading post"
+            weight: "Critical"
+          - signal: "Comment rate (especially long, meaningful comments)"
+            weight: "Critical"
+          - signal: "First-hour engagement"
+            weight: "Critical"
+          - signal: "Shares/reposts to network"
+            weight: "High"
+          - signal: "Saves/bookmarks"
+            weight: "Medium-High"
+        punishes:
+          - "External links in post body"
+          - "Editing post after publishing"
+          - "Engagement bait"
+          - "Off-topic personal content"
+          - "Inconsistent posting"
+        distribution: "1st connections first, expands to 2nd, then topic feeds"
+
+      x_twitter:
+        primary_metric: "Reply rate + retweet rate + engagement velocity"
+        rewards:
+          - signal: "Replies (conversation value)"
+            weight: "Critical"
+          - signal: "Retweets and reposts"
+            weight: "Critical"
+          - signal: "Speed of engagement in first hour"
+            weight: "Critical"
+          - signal: "Quote tweets (added commentary)"
+            weight: "High"
+          - signal: "Bookmarks (save for later)"
+            weight: "High"
+        punishes:
+          - "Engagement pods"
+          - "Posting links without context"
+          - "Generic replies"
+          - "Broadcasting without conversing"
+          - "Inconsistent posting"
+        feed_ranking: "For You feed weighted by engagement from similar accounts"
+
+      facebook:
+        primary_metric: "Meaningful interactions (comments, shares between people)"
+        rewards:
+          - signal: "Comments, especially long ones with replies"
+            weight: "Critical"
+          - signal: "Shares to feed, groups, Messenger"
+            weight: "Critical"
+          - signal: "Engagement velocity after posting"
+            weight: "Critical"
+          - signal: "Reactions (Love, Haha, Wow > Like)"
+            weight: "Medium-High"
+          - signal: "Group engagement (higher priority than Page)"
+            weight: "Medium-High"
+        punishes:
+          - "Engagement bait (explicitly penalized by name)"
+          - "Clickbait headlines"
+          - "External links in main post body"
+          - "Promotional-only content"
+          - "Ignoring comments"
+        organic_reach: "Pages: 1-5% of followers. Groups: 10-30%+ of members."
+
+    cross_platform_insight: |
+      Every algorithm ultimately optimizes for the same thing: keeping users
+      on the platform longer. The signal they use to measure this differs:
+      TikTok uses watch time. YouTube uses session time. LinkedIn uses dwell
+      time. Facebook uses meaningful interactions. X uses conversation depth.
+      Instagram uses saves and shares. But the underlying question is identical:
+      "Did this content make someone stay?" Create content that makes people
+      stay, and every algorithm will reward you.
+
+    organic_marketing_application:
+      S02_platform_strategy: "Use matrix to prioritize which signals to optimize per platform"
+      S06_virality_scoring: "Weight signals according to each platform's tier 1 priorities"
+
+  # ---------------------------------------------------------------------------
+  # 1.4 POSTING CADENCE OPTIMIZATION
+  # ---------------------------------------------------------------------------
+  posting_cadence_optimization:
+    title: "Optimal Frequency, Timing, and Consistency Per Platform"
+    source_synthesis:
+      vaynerchuk: "Volume is underrated — most creators post too little, not too much"
+      kane: "Each post is a test — more tests means faster learning and more surface area"
+
+    optimal_frequency:
+      tiktok:
+        minimum: "1-2 posts per day"
+        optimal: "3-5 posts per day"
+        aggressive_growth: "5-7 posts per day"
+        rationale: "Algorithm tests each video independently — more posts means more lottery tickets"
+        best_times:
+          - "6-9 AM (morning scroll)"
+          - "12-3 PM (lunch break)"
+          - "7-11 PM (evening wind-down)"
+
+      instagram:
+        reels:
+          minimum: "4-5 per week"
+          optimal: "1-2 per day"
+        stories:
+          minimum: "3 per day"
+          optimal: "5-7 per day"
+        feed_posts:
+          minimum: "3 per week"
+          optimal: "5 per week"
+        carousels:
+          minimum: "2 per week"
+          optimal: "4-5 per week"
+        best_times:
+          weekdays: "7-9 AM, 12-2 PM, 7-9 PM"
+          weekends: "9-11 AM, 7-9 PM"
+
+      youtube:
+        long_form:
+          minimum: "1 per week"
+          optimal: "2-3 per week"
+          consistency_rule: "Same days and times each week — train the algorithm and audience"
+        shorts:
+          minimum: "3-5 per week"
+          optimal: "1-3 per day"
+        best_times:
+          long_form: "Weekend mornings, weekday evenings"
+          shorts: "Anytime — algorithm-driven discovery"
+
+      linkedin:
+        minimum: "3-5 posts per week"
+        optimal: "1-2 per day"
+        maximum: "2 per day (diminishing returns beyond this)"
+        best_times:
+          peak_days: "Tuesday, Wednesday, Thursday"
+          peak_hours: "7-8 AM, 12 PM, 5-6 PM"
+          avoid: "Weekends, Monday morning, Friday afternoon"
+
+      x_twitter:
+        tweets:
+          minimum: "3-5 per day"
+          optimal: "5-10 per day"
+        threads:
+          minimum: "1 per week"
+          optimal: "2-3 per week"
+        replies:
+          minimum: "10 per day"
+          optimal: "20+ meaningful replies per day"
+        best_times:
+          - "8-10 AM weekdays"
+          - "12-1 PM lunch"
+          - "5-6 PM commute"
+          - "8-10 PM evening scroll"
+
+      facebook:
+        page:
+          minimum: "3-5 per week"
+          optimal: "1-2 per day"
+        groups:
+          minimum: "1 per day"
+          optimal: "1-3 per day"
+        reels:
+          minimum: "3 per week"
+          optimal: "1 per day"
+        best_times:
+          - "9 AM - 2 PM weekdays"
+          - "7-9 PM evenings"
+
+    total_weekly_output_targets:
+      solo_creator:
+        total_pieces: "30-50 per week"
+        breakdown:
+          tiktok: "7-14"
+          instagram_reels: "5-10"
+          instagram_stories: "21-49"
+          instagram_carousels: "2-4"
+          youtube_shorts: "5-10"
+          youtube_long_form: "1-2"
+          linkedin: "5-10"
+          x_twitter: "21-50 tweets + 1-2 threads"
+          facebook: "5-10"
+        note: "Achievable through waterfall repurposing from 1-2 pillar pieces per week"
+
+      team_supported:
+        total_pieces: "80-150 per week"
+        breakdown:
+          tiktok: "21-35"
+          instagram_reels: "7-14"
+          instagram_stories: "35-49"
+          instagram_carousels: "4-5"
+          youtube_shorts: "7-21"
+          youtube_long_form: "2-3"
+          linkedin: "7-14"
+          x_twitter: "35-70 tweets + 2-3 threads"
+          facebook: "7-14"
+
+    consistency_rules:
+      - "Consistency beats intensity — posting daily for 6 months beats posting 10x/day for 2 weeks"
+      - "Never go dark — algorithms penalize gaps and reward streaks"
+      - "Batch create — one production day can fuel an entire week"
+      - "Schedule ahead — use native scheduling or tools to maintain cadence during busy periods"
+      - "Track what you actually post — planned cadence means nothing if execution drops"
+
+    organic_marketing_application:
+      S15_scheduling: "Use these cadence targets as scheduling system input parameters"
+      S02_platform_strategy: "Match platform cadence to capacity — better to be consistent on 3 platforms than inconsistent on 6"
+
+  # ---------------------------------------------------------------------------
+  # 1.5 CONTENT PILLAR MAPPING ACROSS PLATFORMS
+  # ---------------------------------------------------------------------------
+  content_pillar_mapping:
+    title: "Distributing Content Pillars Strategically Across Platforms"
+    source_synthesis:
+      vaynerchuk: "Content pillars — 3-5 core themes, rotated, multi-format"
+      kane: "Hook Point — different pillars perform differently per platform"
+
+    pillar_definitions:
+      educational:
+        description: "Teach your audience something actionable"
+        allocation: "40% of total content"
+        best_platforms: ["YouTube (long + shorts)", "LinkedIn", "Instagram carousels", "TikTok"]
+        formats: ["How-to videos", "Step-by-step carousels", "Framework threads", "Tutorial Reels"]
+      inspirational:
+        description: "Motivate through story, vision, or transformation"
+        allocation: "20% of total content"
+        best_platforms: ["Instagram Reels", "LinkedIn", "Facebook", "TikTok"]
+        formats: ["Personal story posts", "Transformation Reels", "Quote graphics", "Narrative threads"]
+      entertaining:
+        description: "Engage through humor, relatability, or surprise"
+        allocation: "20% of total content"
+        best_platforms: ["TikTok", "Instagram Reels", "YouTube Shorts", "X/Twitter"]
+        formats: ["Trend participation", "POV videos", "Relatable memes", "Hot takes"]
+      personal:
+        description: "Build connection through authenticity and behind-the-scenes"
+        allocation: "15% of total content"
+        best_platforms: ["Instagram Stories", "LinkedIn", "Facebook Groups", "TikTok"]
+        formats: ["Day-in-the-life", "Behind-the-scenes", "Personal lessons", "Failure stories"]
+      promotional:
+        description: "Direct offers, launches, and business content"
+        allocation: "5% of total content"
+        best_platforms: ["Instagram Stories", "Email", "Facebook Groups", "LinkedIn"]
+        formats: ["Product announcements", "Testimonial posts", "Launch sequences", "Offer posts"]
+
+    platform_pillar_emphasis:
+      tiktok:
+        primary: "Entertaining (40%), Educational (35%)"
+        secondary: "Inspirational (15%), Personal (10%)"
+        avoid: "Promotional content performs poorly on TikTok"
+      instagram:
+        primary: "Educational (35%), Inspirational (25%)"
+        secondary: "Entertaining (20%), Personal (15%), Promotional (5%)"
+        note: "Stories handle promotional better than Feed or Reels"
+      youtube:
+        primary: "Educational (50%), Entertaining (25%)"
+        secondary: "Inspirational (15%), Personal (10%)"
+        note: "YouTube rewards depth — educational content has longest shelf life"
+      linkedin:
+        primary: "Educational (40%), Personal (30%)"
+        secondary: "Inspirational (20%), Entertaining (10%)"
+        note: "Personal stories with business lessons outperform pure education"
+      x_twitter:
+        primary: "Educational (35%), Entertaining (30%)"
+        secondary: "Personal (20%), Inspirational (15%)"
+        note: "Hot takes and frameworks are the dominant winning formats"
+      facebook:
+        primary: "Personal (30%), Entertaining (25%), Educational (25%)"
+        secondary: "Inspirational (15%), Promotional (5%)"
+        note: "Groups reward community-oriented content over broadcast"
+
+    organic_marketing_application:
+      S02_platform_strategy: "Map pillars to platforms during content planning phase"
+      S18_repurpose: "Pillar type determines which platforms get priority distribution"
+
+# =============================================================================
+# SECTION 2: MECHANISMS
+# =============================================================================
+
+mechanisms:
+
+  # ---------------------------------------------------------------------------
+  # 2.1 FORMAT x PLATFORM MATRIX
+  # ---------------------------------------------------------------------------
+  format_platform_matrix:
+    title: "Which Formats Perform Best on Which Platforms"
+    source_synthesis:
+      vaynerchuk: "Respect the platform — each has format expectations"
+      kane: "Format is the first filter — wrong format means zero reach regardless of content quality"
+
+    format_performance_grid:
+      short_form_vertical_video:
+        definition: "Under 60 seconds, 9:16 aspect ratio"
+        performance_by_platform:
+          tiktok:
+            rating: "Dominant"
+            optimal_length: "15-30 seconds"
+            notes: "This is the native format. Raw, authentic aesthetic wins."
+          instagram_reels:
+            rating: "Dominant"
+            optimal_length: "15-30 seconds"
+            notes: "Highest reach format on Instagram. No TikTok watermarks."
+          youtube_shorts:
+            rating: "Dominant"
+            optimal_length: "30-45 seconds"
+            notes: "Separate algorithm from long-form. Loop endings critical."
+          facebook_reels:
+            rating: "Strong"
+            optimal_length: "15-30 seconds"
+            notes: "Growing feature with bonus distribution."
+          linkedin:
+            rating: "Moderate"
+            optimal_length: "Under 60 seconds"
+            notes: "Increasingly supported but text posts still outperform."
+          x_twitter:
+            rating: "Moderate"
+            optimal_length: "Under 60 seconds"
+            notes: "Native video outperforms links. Captions essential."
+
+      long_form_video:
+        definition: "5-60 minutes, 16:9 aspect ratio"
+        performance_by_platform:
+          youtube:
+            rating: "Dominant"
+            optimal_length: "8-20 minutes"
+            notes: "Primary format. Retention optimization is everything."
+          facebook:
+            rating: "Moderate"
+            optimal_length: "1-3 minutes"
+            notes: "Native upload only. Shorter than YouTube optimal."
+          linkedin:
+            rating: "Low-Moderate"
+            optimal_length: "Under 3 minutes"
+            notes: "Vertical or square preferred. Captions mandatory."
+          tiktok:
+            rating: "Emerging"
+            optimal_length: "1-10 minutes"
+            notes: "TikTok expanding to longer content but still short-form dominant."
+
+      carousels_and_documents:
+        definition: "Multi-slide visual content"
+        performance_by_platform:
+          instagram:
+            rating: "Dominant"
+            optimal_slides: "10 slides"
+            notes: "Highest save rate format. Educational carousels dominate."
+          linkedin:
+            rating: "Dominant"
+            optimal_slides: "8-12 slides"
+            notes: "PDF document posts. Clean, professional, one idea per slide."
+          facebook:
+            rating: "Strong"
+            optimal_slides: "5-10 slides"
+            notes: "Carousel ads strong, organic carousels growing."
+          x_twitter:
+            rating: "Weak"
+            notes: "Multi-image tweets exist but threads outperform carousels."
+          tiktok:
+            rating: "Emerging"
+            notes: "Photo carousels now supported, growing format."
+
+      text_posts:
+        definition: "Written content without media"
+        performance_by_platform:
+          linkedin:
+            rating: "Dominant"
+            optimal_length: "1300-3000 characters"
+            notes: "Highest performing format when formatted well."
+          x_twitter:
+            rating: "Strong"
+            optimal_length: "280 characters (full use)"
+            notes: "Single tweets and threads are text-native formats."
+          facebook:
+            rating: "Moderate"
+            optimal_length: "100-300 words"
+            notes: "Questions and stories work. No links in body."
+          instagram:
+            rating: "Weak"
+            notes: "Text lives in captions, not standalone posts."
+
+      threads_and_long_text:
+        definition: "Multi-part connected text posts"
+        performance_by_platform:
+          x_twitter:
+            rating: "Dominant"
+            optimal_length: "7-15 tweets"
+            notes: "Primary deep-content format. Each tweet standalone."
+          linkedin:
+            rating: "Strong"
+            format: "Single long post or article/newsletter"
+            notes: "LinkedIn articles for subscriber notification."
+          facebook:
+            rating: "Moderate"
+            format: "Long-form Facebook post or Note"
+            notes: "Personal stories perform well as long posts."
+
+      live_video:
+        definition: "Real-time broadcast"
+        performance_by_platform:
+          facebook:
+            rating: "Strong"
+            notes: "Highest organic reach format on Facebook. Notifications sent."
+          instagram:
+            rating: "Strong"
+            notes: "Lives boost account visibility. Can save as IGTV/Reel."
+          youtube:
+            rating: "Strong"
+            notes: "Live streams, premieres. Strong for community."
+          tiktok:
+            rating: "Moderate"
+            notes: "TikTok Lives require 1000+ followers. Monetizable."
+          linkedin:
+            rating: "Moderate"
+            notes: "LinkedIn Live available to some creators. Professional format."
+
+      stories:
+        definition: "Ephemeral 24-hour content"
+        performance_by_platform:
+          instagram:
+            rating: "Dominant"
+            optimal_frequency: "5-7 per day"
+            notes: "Core relationship-building format. Stickers drive engagement."
+          facebook:
+            rating: "Moderate"
+            notes: "Cross-posts from Instagram. Lower engagement."
+          linkedin:
+            rating: "Weak"
+            notes: "Rarely used. Not a primary format."
+
+    format_selection_decision_tree:
+      step_1: "What is the core idea? (educational, story, opinion, how-to)"
+      step_2: "What is the ideal consumption time? (5 seconds, 30 seconds, 10 minutes)"
+      step_3: "Which platform is this primarily for?"
+      step_4: "What is the dominant format on that platform for this content type?"
+      step_5: "Adapt the idea to that format. Then reverse-engineer adaptations for other platforms."
+
+    organic_marketing_application:
+      S02_platform_strategy: "Use format grid to select right format per platform during planning"
+      S18_repurpose: "Format translation guides determine how to adapt each piece"
+
+  # ---------------------------------------------------------------------------
+  # 2.2 CROSS-POLLINATION TACTICS
+  # ---------------------------------------------------------------------------
+  cross_pollination_tactics:
+    title: "Driving Audience Between Platforms Without Algorithm Penalty"
+    source_synthesis:
+      vaynerchuk: "Build audience everywhere, deepen relationship on owned channels"
+      kane: "Each platform is a distribution channel feeding into your ecosystem"
+
+    core_principle: |
+      Cross-pollination is NOT posting "follow me on Instagram" on TikTok.
+      That gets penalized. Cross-pollination is creating platform-native content
+      that makes your other platforms irresistible to discover. The goal is not
+      to drain audience from one platform — it is to compound audience across
+      all platforms so each reinforces the others.
+
+    tactics_by_direction:
+      tiktok_to_youtube:
+        method: "Use TikTok for discovery, YouTube for depth"
+        execution:
+          - "Create TikTok clips from YouTube long-form content"
+          - "End TikToks with 'I made a full breakdown of this' (without naming YouTube — let bio do the work)"
+          - "Put YouTube link in TikTok bio"
+          - "Use pinned comment: 'Full version link in bio'"
+        what_to_avoid: "Never say 'go to YouTube' in TikTok audio — algorithm deprioritizes"
+
+      youtube_shorts_to_long_form:
+        method: "Shorts as trailers for long-form"
+        execution:
+          - "Extract most intriguing 30 seconds from long-form video"
+          - "End Short with natural curiosity gap that the long-form resolves"
+          - "YouTube's own system can suggest the long-form video to Shorts viewers"
+          - "Pin comment linking to full video"
+        advantage: "Same platform — no algorithm penalty for self-referencing"
+
+      instagram_to_email_list:
+        method: "Stories and DMs as email capture mechanisms"
+        execution:
+          - "Use link sticker in Stories to landing page"
+          - "Create lead magnet referenced in carousel CTAs"
+          - "DM automation: 'Comment GUIDE and I will DM you the link'"
+          - "Broadcast channel for direct subscriber communication"
+        what_to_avoid: "Never put links in feed post captions — put in bio or comments"
+
+      linkedin_to_newsletter:
+        method: "LinkedIn posts as newsletter previews"
+        execution:
+          - "End posts with 'I go deeper on this in my newsletter — link in comments'"
+          - "Use LinkedIn's native newsletter feature for direct inbox delivery"
+          - "Share newsletter highlights as standalone posts"
+        advantage: "LinkedIn newsletter subscribers get email notifications — built-in cross-pollination"
+
+      x_twitter_to_long_form:
+        method: "Threads as content previews"
+        execution:
+          - "Tweet thread summarizing blog/video key points"
+          - "Final tweet links to full piece"
+          - "Pin best-performing thread with link"
+          - "Quote tweet old threads when relevant"
+
+      all_platforms_to_owned:
+        method: "Every platform feeds into owned channels (email, community, product)"
+        execution:
+          - "Bio links on every platform point to link-in-bio page"
+          - "Lead magnets referenced in content CTAs"
+          - "Free community (Discord, Skool, etc.) as middle-funnel"
+          - "Content naturally demonstrates expertise that drives product interest"
+        priority_order:
+          1: "Social platform audience"
+          2: "Email list"
+          3: "Free community"
+          4: "Paid product/service"
+
+    anti_patterns:
+      - "Saying 'follow me on X' on platform Y — algorithms detect and penalize"
+      - "Posting the same content with watermarks across platforms"
+      - "Linking to external platforms in post body on LinkedIn or Facebook"
+      - "Making content feel like an ad for another platform"
+      - "Neglecting native content in favor of cross-promotion"
+
+    organic_marketing_application:
+      S17_network_amplification: "Cross-pollination tactics expand total addressable audience"
+      S16_engagement_protocol: "Platform-native engagement prevents algorithm penalties"
+
+  # ---------------------------------------------------------------------------
+  # 2.3 HOOK ARCHITECTURE FOR MULTI-PLATFORM CONTENT
+  # ---------------------------------------------------------------------------
+  hook_architecture:
+    title: "Adapting Hooks to Each Platform's Attention Threshold"
+    source_synthesis:
+      vaynerchuk: "The first 3 seconds are everything — if they scroll, nothing else matters"
+      kane: "Hook Point — you have 3 seconds to capture attention in a world of infinite scroll"
+
+    hook_windows_by_platform:
+      tiktok: "1-3 seconds (visual + text + audio simultaneously)"
+      instagram_reels: "0.5-3 seconds (first frame must stop scroll)"
+      youtube_shorts: "1 second (first frame or lose them)"
+      youtube_long_form: "First 30 seconds (but hook in first 5)"
+      linkedin: "First line of text (before See More fold)"
+      x_twitter: "First 10 words of tweet"
+      facebook: "First 3 seconds for video, first sentence for text"
+
+    universal_hook_types:
+      curiosity_gap:
+        definition: "Open a question that demands an answer"
+        examples:
+          - "The one thing every viral creator does that you don't"
+          - "I stopped doing X and everything changed"
+          - "Nobody is talking about this"
+        best_platforms: ["All — universal human psychology"]
+
+      pattern_interrupt:
+        definition: "Something unexpected that breaks the scroll autopilot"
+        examples:
+          - "Unexpected visual in first frame"
+          - "Counter-intuitive opening statement"
+          - "Unusual sound or silence"
+        best_platforms: ["TikTok", "Instagram Reels", "YouTube Shorts"]
+
+      direct_address:
+        definition: "Call out the specific viewer"
+        examples:
+          - "Stop scrolling if you are a [target audience]"
+          - "This is for the person who [specific situation]"
+          - "If you [pain point], read this"
+        best_platforms: ["TikTok", "Instagram", "LinkedIn", "X/Twitter"]
+
+      controversy_and_hot_take:
+        definition: "Bold claim that triggers emotional response"
+        examples:
+          - "Unpopular opinion: [contrarian take]"
+          - "Everyone is wrong about [common belief]"
+          - "I am going to get hate for this but..."
+        best_platforms: ["X/Twitter", "LinkedIn", "TikTok"]
+
+      transformation_tease:
+        definition: "Show the result before the process"
+        examples:
+          - "Before vs After"
+          - "I went from X to Y in Z time. Here is how."
+          - "This one change produced [specific result]"
+        best_platforms: ["YouTube", "Instagram", "TikTok", "LinkedIn"]
+
+      utility_promise:
+        definition: "Promise specific, actionable value"
+        examples:
+          - "Save this — you will need it"
+          - "The exact framework I use to [outcome]"
+          - "3 steps to [desired result]"
+        best_platforms: ["Instagram carousels", "LinkedIn", "YouTube", "X/Twitter threads"]
+
+    platform_specific_hook_adaptations:
+      same_idea_six_hooks:
+        core_idea: "Most creators fail because they optimize for followers instead of engagement rate"
+        tiktok_hook: "Stop chasing followers. Here is the metric that actually matters."
+        instagram_reel_hook: "[Text overlay] 'The metric you are ignoring is killing your growth'"
+        youtube_short_hook: "What if I told you followers don't matter?"
+        linkedin_hook: "I hit 100K followers and my revenue didn't change. Then I discovered one metric that changed everything."
+        x_twitter_hook: "Hot take: Follower count is a vanity metric. Here is what actually drives revenue (thread):"
+        facebook_hook: "Can I be honest? Chasing followers almost ruined my business. Here is what I wish someone told me..."
+
+    organic_marketing_application:
+      S06_virality_scoring: "Hook strength is the #1 predictor of distribution on every platform"
+      S09_short_form_script: "Apply platform-specific hook window and type selection"
+
+# =============================================================================
+# SECTION 3: APPLICATIONS
+# =============================================================================
+
+applications:
+
+  # ---------------------------------------------------------------------------
+  # 3.1 THE WEEKLY CROSS-PLATFORM PRODUCTION SYSTEM
+  # ---------------------------------------------------------------------------
+  weekly_production_system:
+    title: "The Weekly Engine — From One Session to Full Platform Coverage"
+    description: |
+      A complete weekly workflow that turns one production session into enough
+      content to maintain optimal cadence across all platforms. This is the
+      operational layer that makes cross-platform amplification sustainable.
+
+    weekly_schedule:
+      day_1_production:
+        name: "Pillar Day"
+        duration: "3-4 hours"
+        activities:
+          - "Record 1-2 pillar content pieces (podcast, video, or live)"
+          - "Document key quotes, frameworks, and moments during recording"
+          - "Capture behind-the-scenes Stories/TikToks during session"
+        output: "1-2 raw pillar recordings + 5-10 BTS clips"
+
+      day_2_extraction:
+        name: "Extraction Day"
+        duration: "2-3 hours"
+        activities:
+          - "Edit pillar into YouTube long-form"
+          - "Cut 5-10 short-form clips (TikTok/Reels/Shorts)"
+          - "Create 2-3 carousel frameworks from key insights"
+          - "Write 5-10 LinkedIn text posts from pillar talking points"
+          - "Draft 2 Twitter threads from frameworks discussed"
+        output: "30-50 content pieces across all formats"
+
+      day_3_4_5_distribution:
+        name: "Distribution Days"
+        duration: "1-2 hours per day"
+        activities:
+          - "Publish scheduled content per platform cadence"
+          - "Engage in first-hour window after each post"
+          - "Execute $1.80 strategy (meaningful comments on 10 posts, twice daily)"
+          - "Respond to all comments and DMs"
+          - "Monitor performance and note winners"
+        output: "Consistent daily publishing + community engagement"
+
+      day_6_analysis:
+        name: "Analysis Day"
+        duration: "1 hour"
+        activities:
+          - "Review performance across all platforms"
+          - "Identify top performers per platform"
+          - "Double down: repurpose winners into new formats"
+          - "Identify content gaps and underperforming pillars"
+          - "Plan next week's pillar topic based on audience signals"
+        output: "Performance report + next week's pillar topic"
+
+      day_7_rest:
+        name: "Rest Day"
+        activities: "Scheduled content publishes automatically. No active creation."
+        note: "Sustainability requires recovery. Pre-scheduled content handles this day."
+
+    organic_marketing_application:
+      S02_platform_strategy: "Weekly system operationalizes the strategy into repeatable actions"
+      S15_scheduling: "Schedule 80% of content in advance on extraction day"
+      S16_engagement_protocol: "Distribution days include engagement as core activity, not afterthought"
+      S18_repurpose: "Extraction day is the repurposing waterfall in action"
+
+  # ---------------------------------------------------------------------------
+  # 3.2 PLATFORM PRIORITY DECISION FRAMEWORK
+  # ---------------------------------------------------------------------------
+  platform_priority_framework:
+    title: "Choosing Your Primary, Secondary, and Tertiary Platforms"
+    description: |
+      Not every creator should be on every platform. Priority depends on
+      audience demographics, content format strengths, and capacity.
+
+    decision_criteria:
+      factor_1_audience:
+        question: "Where does your target audience spend the most time?"
+        weight: "40%"
+        data_points:
+          - "Age demographics by platform"
+          - "Industry/niche presence by platform"
+          - "Competitor audience distribution"
+      factor_2_format_strength:
+        question: "What content format are you best at creating?"
+        weight: "30%"
+        mapping:
+          video_native: "TikTok, YouTube, Instagram Reels"
+          writer: "LinkedIn, X/Twitter, Blog"
+          visual_designer: "Instagram, Pinterest"
+          speaker_educator: "YouTube, Podcast, LinkedIn"
+      factor_3_attention_arbitrage:
+        question: "Where is attention currently underpriced for your niche?"
+        weight: "20%"
+        current_opportunities_2026:
+          underpriced: ["TikTok organic", "YouTube Shorts", "LinkedIn organic"]
+          fairly_priced: ["Instagram Reels", "X/Twitter"]
+          overpriced: ["Facebook organic pages", "Instagram feed posts"]
+      factor_4_capacity:
+        question: "How many platforms can you realistically maintain at optimal cadence?"
+        weight: "10%"
+        tiers:
+          solo_starting: "1-2 platforms"
+          solo_established: "2-3 platforms"
+          small_team: "3-4 platforms"
+          full_team: "5-6 platforms"
+
+    recommended_platform_stacks:
+      creator_educator:
+        primary: "YouTube (long-form authority building)"
+        secondary: "LinkedIn (professional distribution)"
+        tertiary: "Instagram (community + visual brand)"
+        rationale: "Educational content has longest shelf life on YouTube, highest per-impression value on LinkedIn"
+
+      personal_brand:
+        primary: "Instagram (visual brand + community)"
+        secondary: "TikTok (discovery + virality)"
+        tertiary: "YouTube (evergreen depth)"
+        rationale: "Instagram builds the deepest brand relationship, TikTok provides maximum discovery"
+
+      b2b_thought_leader:
+        primary: "LinkedIn (direct professional audience)"
+        secondary: "X/Twitter (real-time influence)"
+        tertiary: "YouTube (searchable authority)"
+        rationale: "LinkedIn has the highest per-impression value for B2B, X builds real-time influence"
+
+      entertainment_creator:
+        primary: "TikTok (maximum virality potential)"
+        secondary: "YouTube Shorts (secondary discovery)"
+        tertiary: "Instagram Reels (brand + monetization)"
+        rationale: "TikTok's algorithm gives the most shots at viral reach regardless of follower count"
+
+    organic_marketing_application:
+      S02_platform_strategy: "Use decision criteria to select and prioritize platform stack"
+      S15_scheduling: "Allocate cadence proportional to platform priority tier"
+
+  # ---------------------------------------------------------------------------
+  # 3.3 CONTENT PERFORMANCE FEEDBACK LOOP
+  # ---------------------------------------------------------------------------
+  content_performance_feedback_loop:
+    title: "Using Cross-Platform Data to Continuously Improve Content"
+    description: |
+      Performance data from one platform informs content strategy on all
+      platforms. A topic that goes viral on TikTok should become a YouTube
+      video, a LinkedIn post, and a carousel. This is how you compound wins.
+
+    feedback_signals:
+      viral_signal:
+        threshold: "3x+ above your average engagement rate"
+        action: "Immediately repurpose into every other format and platform"
+        execution:
+          - "Make a YouTube long-form video on the topic"
+          - "Write a LinkedIn post exploring the idea deeper"
+          - "Create an Instagram carousel with the framework"
+          - "Thread the idea on X/Twitter"
+          - "Record a follow-up TikTok responding to comments"
+        rationale: "If the audience told you they want this, give them more in every format"
+
+      steady_performer:
+        threshold: "1-2x your average engagement rate"
+        action: "Add to content rotation — revisit quarterly"
+        execution:
+          - "Include in content pillar rotation"
+          - "Test variations of angle, hook, and format"
+          - "Repurpose to platforms where it hasn't been posted yet"
+
+      underperformer:
+        threshold: "Below 50% of average engagement rate"
+        action: "Diagnose — was it the topic, the hook, or the format?"
+        diagnosis:
+          topic_problem: "Low engagement across all formats — audience doesn't care"
+          hook_problem: "Low impressions but high engagement rate — hook failed, content was strong"
+          format_problem: "Worked on one platform, failed on another — format mismatch"
+
+    cross_platform_intelligence:
+      tiktok_as_testing_ground:
+        principle: "TikTok gives the fastest feedback — use it to test ideas cheaply"
+        process:
+          - "Post idea as 30-second TikTok"
+          - "If it performs well, expand into YouTube long-form"
+          - "If it performs moderately, test a different hook"
+          - "If it fails, move to next idea"
+        advantage: "TikTok tests each video independently — no penalty for experimentation"
+
+      youtube_analytics_as_depth_signal:
+        principle: "YouTube retention data shows exactly where content loses people"
+        process:
+          - "Review retention curve for every video"
+          - "Identify drop-off points — those are weak spots in your content structure"
+          - "Apply retention learnings to scripts for all platforms"
+
+      linkedin_comments_as_market_research:
+        principle: "LinkedIn comments reveal what professionals actually think and need"
+        process:
+          - "Read every comment for pain points and questions"
+          - "Turn common questions into new content topics"
+          - "Use comment language in future hooks (their words, not yours)"
+
+    organic_marketing_application:
+      S02_platform_strategy: "Feedback loop continuously refines platform strategy"
+      S06_virality_scoring: "Historical performance data improves virality predictions"
+      S17_network_amplification: "Viral wins on one platform seed distribution on all others"
+      S18_repurpose: "Winners get priority repurposing — losers get diagnosed, not repeated"
+
+  # ---------------------------------------------------------------------------
+  # 3.4 ANTI-PATTERNS — CROSS-PLATFORM MISTAKES THAT KILL REACH
+  # ---------------------------------------------------------------------------
+  cross_platform_anti_patterns:
+    title: "The Mistakes That Destroy Cross-Platform Reach"
+    source_synthesis:
+      vaynerchuk: "Respecting the platform is non-negotiable — lazy repurposing is worse than not posting"
+      kane: "Format mismatch is the #1 reason good content gets zero reach"
+
+    critical_mistakes:
+      copy_paste_syndrome:
+        description: "Posting the exact same content on every platform without adaptation"
+        why_it_fails: "Each platform has different culture, format, and algorithm expectations"
+        fix: "Same idea, native execution — translate, don't copy"
+
+      watermark_contamination:
+        description: "Posting TikTok watermarked content on Instagram Reels or vice versa"
+        why_it_fails: "Instagram explicitly deprioritizes content with TikTok watermarks"
+        fix: "Download without watermark or create natively on each platform"
+
+      link_in_post_body:
+        description: "Putting external URLs in LinkedIn posts, Facebook posts, or tweet bodies"
+        why_it_fails: "LinkedIn and Facebook reduce reach for posts with external links — they want users to stay"
+        fix: "Put links in first comment (LinkedIn/Facebook) or bio (Instagram, TikTok)"
+
+      platform_cannibalism:
+        description: "Telling your TikTok audience to follow you on Instagram during a TikTok"
+        why_it_fails: "Platforms detect cross-promotion and deprioritize — they want to keep users"
+        fix: "Let bio links do the work. Never mention other platforms in content audio or text."
+
+      inconsistency_gaps:
+        description: "Posting aggressively for 2 weeks, then going dark for a month"
+        why_it_fails: "Every algorithm penalizes gaps and rewards consistent cadence"
+        fix: "Batch create and schedule. Sustainable cadence beats sporadic bursts every time."
+
+      engagement_neglect:
+        description: "Posting content but never responding to comments or DMs"
+        why_it_fails: "Algorithms track creator engagement. Ignoring comments reduces future distribution."
+        fix: "First-hour engagement is critical on every platform. Reply to every comment."
+
+      over_promotion:
+        description: "Every post is a sales pitch or CTA"
+        why_it_fails: "Audiences and algorithms both penalize constant promotion"
+        fix: "The 95/5 rule — 95% value, 5% promotion. Jab, jab, jab, right hook."
+
+      wrong_format_forcing:
+        description: "Posting horizontal video on TikTok, or long text on a visual platform"
+        why_it_fails: "Format mismatch triggers algorithmic deprioritization"
+        fix: "Check the format-platform matrix before publishing anything"
+
+    organic_marketing_application:
+      S02_platform_strategy: "Anti-pattern awareness prevents strategic mistakes during planning"
+      S18_repurpose: "Repurposing checklist must include anti-pattern validation before publishing"
+      S16_engagement_protocol: "Engagement neglect is the most common and most damaging anti-pattern"

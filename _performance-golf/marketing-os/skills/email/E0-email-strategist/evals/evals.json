@@ -1,0 +1,46 @@
+[
+  {
+    "id": "e0-mode-a-supplement-launch",
+    "prompt": "Design an email campaign strategy for a supplement launch promotion. Skills 01-09 are complete. The product is a joint health supplement called 'FlexiJoint Pro' with a named mechanism called 'Synovial Restoration Protocol.' The campaign runs for 10 days with a hard deadline. Produce the campaign-blueprint.yaml.",
+    "expected_output": "A complete campaign-blueprint.yaml with campaign type selection, email-by-email sequence with body type assignments (from 7 types: CT, QO, TM, QA, LB, ST, NR), emotional arc across the sequence, urgency escalation plan, content-to-pitch ratios per email, and body type variety enforcement.",
+    "files": [],
+    "assertions": [
+      "Campaign type is selected with justification",
+      "Email sequence contains specific per-email body type assignments",
+      "Body types come from the 7-type system (CT, QO, TM, QA, LB, ST, NR)",
+      "No same body type appears twice in a row",
+      "Emotional arc is planned across the full sequence",
+      "Urgency escalation is calibrated to campaign deadline",
+      "Content-to-pitch ratio is specified per email",
+      "Output format is YAML (campaign-blueprint.yaml)"
+    ]
+  },
+  {
+    "id": "e0-mode-b-standalone-brief",
+    "prompt": "I need an email campaign for a golf instruction digital course called 'The Draw Fix.' It teaches golfers how to fix their slice. Price is $47 with a 60-day guarantee. I want to send 7 emails over 5 days. No upstream skills were run — just work from this brief.",
+    "expected_output": "A campaign-blueprint.yaml produced in Mode B (standalone) with 7 emails across 5 days, body type assignments, emotional arc, and a flag noting that Mode B output is inherently less rich than Mode A.",
+    "files": [],
+    "assertions": [
+      "Mode B (standalone) is correctly identified",
+      "7 emails are planned across 5 days",
+      "Each email has a body type assignment",
+      "Mode B limitation is flagged in the output",
+      "Urgency escalation is present for the 5-day window",
+      "Campaign type is selected and justified"
+    ]
+  },
+  {
+    "id": "e0-evergreen-nurture",
+    "prompt": "Design an evergreen nurture email sequence for a personal development coaching brand. The goal is to warm cold leads over 14 days and convert them to book a discovery call. No hard deadline — this runs continuously. Skills 01-09 outputs are available.",
+    "expected_output": "A campaign-blueprint.yaml for an evergreen nurture sequence with appropriate campaign type selection (evergreen), body type variety across 14 days, softer urgency escalation appropriate for nurture, and CTA focused on discovery call booking.",
+    "files": [],
+    "assertions": [
+      "Campaign type reflects evergreen/nurture nature",
+      "Sequence spans 14 days with appropriate cadence",
+      "Body type variety is maintained",
+      "Urgency approach differs from deadline campaigns",
+      "CTA structure targets discovery call booking",
+      "Emotional arc is designed for relationship building over time"
+    ]
+  }
+]
