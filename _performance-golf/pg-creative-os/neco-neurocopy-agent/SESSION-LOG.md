@@ -1,10 +1,10 @@
 # Neco — The NeuroCopy Agent — Session Log
 
-session_id: Neco-2026-02-22-v2.0-S038-SF2-Influencer-Brief-Cleanup
-session_number: 038
+session_id: Neco-2026-03-06-v2.0-S041-SPD-Obsidian-Migration
+session_number: 041
 owner: Christopher Ogle
 started: 2026-02-07
-last_updated: 2026-02-22
+last_updated: 2026-03-06
 version: "2.0"
 
 ## Build State (per-project)
@@ -51,16 +51,62 @@ version: "2.0"
 - **Next**: Run DQFE persona selection workshop, then concept alignment pass.
 
 ### SpeedTrac Video Ads
-- **Status**: ANGLE LIBRARY V1 COMPLETE — Awaiting Christopher review
-- **Last touched**: S036
-- **File**: `_projects/spd-video-ads/spd-video-ad-angles.md`
-- **Summary**: Autonomous pipeline test. Exa delegated SpeedTrac video ad copy (3 variations, due Feb 27) to Neco per daily briefing recommendation. Neco ran full Context Gatherer → Audience Intelligence → Ad Angle Ideation pipeline autonomously. Ingested 92 SpeedTrack research files from `_pg-physical-products/spd/` (3,355 verbatim quotes, competitor analysis, proof elements, audience maps). Generated 32 raw angles (16 wound, 16 desire), scored and ranked. 5 audience segments profiled (FATE + Behavior Compass). 3 full video ad concept directions with 5 hook variations each. 10 hook variation training hooks.
-- **Top 3 Concepts**: (1) "Fast AND Straight" — category killer, Solution/Product Aware. (2) "I Absolutely Sprayed The Ball" — competitor wound, Product Aware. (3) "Where Did The Speed Go?" — age-decline reclamation, Problem Aware.
-- **Review items**: 5 flagged items (segment priority, angle ranking, concept selection, competitor naming legality, testimonial numbers). 5 claims to verify. 4 audience segment questions. 3 core angle approvals needed before script writing.
-- **Next**: Christopher review → approve/modify Top 3 concepts → approve core angles → proceed to full script writing (Sub-Agent #5).
+- **Status**: PERSONAS LOCKED + ANGLES LOCKED — Ready for hero persona selection → script writing
+- **Last touched**: S041 (migration); S040 (last creative work)
+- **Files**:
+  - `_projects/spd-video-ads/spd-video-ad-angles.md` (S036 angle library — REFERENCE ONLY)
+  - `_projects/spd-video-ads/spd-persona-workshop.md` (S039-S040 — 5/5 LOCKED)
+  - `_projects/spd-video-ads/SPEEDTRAC-FIGMA-HANDOFF.md` (S039 — research inventory + Figma board structure)
+- **5 Locked Personas**: Comeback King, Skeptical Equipment Veteran, First from the Fairway, The Plateau Prisoner, Accurate But Two Clubs Back
+- **3 Locked Body Angles**: (1) "Fast AND Straight" (Category Killer), (2) "The Smartest Way to Add Distance" (Strategic Intelligence — NEW), (3) "Where Did The Speed Go?" (Age-Decline Reclamation)
+- **Script structure**: 3 scripts × 5 persona hooks each. 90-120s long-form social format.
+- **Figma MCP**: Configured but not connected. Skipped for now — scripts first, Figma board later.
+- **S041 migration**: Recovered 3 files from Obsidian vault (persona workshop, Figma handoff, project-state.yaml). Reconciled SESSION-LOG-ARCHIVE.md (S027-S036 entries added).
+- **Next**: Christopher selects hero persona → write Script 1 (Sub-Agent #5).
 
-> **For history**: Sessions 001-026 archived in `SESSION-LOG-ARCHIVE.md`.
+> **For history**: Sessions 001-036 archived in `SESSION-LOG-ARCHIVE.md`.
 > **Note**: S023 happened (resolved 3 sf2-0002 decisions, locked body v4) but was not logged. sf2-0002-body-v4-LOCKED.md confirms.
+> **Note**: S039-S040 happened in Obsidian vault (persona workshop + Figma handoff). Migrated to GitHub in S041.
+
+---
+
+## Session 041 — 2026-03-06 (SPD Obsidian Migration + Script Prep)
+
+```yaml
+session_041:
+  date: 2026-03-06
+  session_id: Neco-2026-03-06-v2.0-S041-SPD-Obsidian-Migration
+  status: COMPLETE
+
+  context: |
+    GitHub migration left 3 critical SPD files behind in Obsidian vault.
+    Christopher requested audit of SPD/Figma project state, recovery of
+    missing files, and preparation for script writing.
+
+  phases:
+    phase_1_audit: |
+      Searched repo and Obsidian vault for all SPD and Figma content.
+      Identified 3 missing files: SPEEDTRAC-FIGMA-HANDOFF.md (S039),
+      spd-persona-workshop.md (S039-S040), project-state.yaml.
+      Also identified SESSION-LOG-ARCHIVE.md divergence (S027-S036 missing from repo).
+
+    phase_2_migration: |
+      Copied 3 files from Obsidian vault to repo.
+      Updated SESSION-LOG-ARCHIVE.md with missing S027-S036 entries
+      (session index, critical decisions, changelog).
+      Committed: b71f1150.
+
+    phase_3_script_prep: |
+      Tested Figma MCP — configured but not connected (server not active).
+      Christopher chose to skip Figma, proceed to scripts.
+      Read Sub-Agent #5 spec, copy constraints, style library.
+      Christopher requested hero persona selection deferred to next session.
+      Format confirmed: 90-120s long-form social.
+
+  outcome: |
+    All SPD/Figma context recovered and committed to repo.
+    Project ready for hero persona selection + Script 1 writing in S042.
+```
 
 ---
 

@@ -100,7 +100,7 @@ projects:
     product: "SpeedTrac (SPD)"
     status: IN_PROGRESS
     version: v1
-    last_session: S040
+    last_session: S041
     deliverables:
       - type: angle-library
         file: "_projects/spd-video-ads/spd-video-ad-angles.md"
@@ -108,12 +108,15 @@ projects:
       - type: persona-workshop
         file: "_projects/spd-video-ads/spd-persona-workshop.md"
         status: LOCKED
+      - type: figma-handoff
+        file: "_projects/spd-video-ads/SPEEDTRAC-FIGMA-HANDOFF.md"
+        status: REFERENCE_ONLY
       - type: video-ad-scripts
         file: null
         status: NOT_STARTED
-    next_step: "Figma MCP integration (visual persona cards) → write 3 scripts x 5 hooks each"
-    blocked_by: null
-    notes: "5/5 personas LOCKED (Comeback King, Skeptical Equipment Veteran, First from the Fairway, The Plateau Prisoner, Accurate But Two Clubs Back). 3 body angles LOCKED: Category Killer, Strategic Intelligence (NEW), Age-Decline Reclamation. Script structure: 3 scripts x 5 persona hooks each. Figma MCP = P0 before scripts."
+    next_step: "Christopher selects hero persona → write Script 1 (Sub-Agent #5). 90-120s long-form social. Figma board deferred."
+    blocked_by: human_review
+    notes: "5/5 personas LOCKED. 3 body angles LOCKED: Category Killer, Strategic Intelligence (NEW), Age-Decline Reclamation. Script structure: 3 scripts x 5 persona hooks each. Figma MCP configured but not connected — scripts first. S041: migrated missing files from Obsidian vault."
 
 # Shared assets (not projects, but referenced by runner for context)
 shared_assets:
