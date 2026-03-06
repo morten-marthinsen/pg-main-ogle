@@ -109,7 +109,7 @@ git checkout <commit> -- CopywritingEngine/skills/foundation/01-research/specifi
 
 After every CopywritingEngine session involving failures or significant learning:
 
-1. Update `/CopywritingEngine/learning-log/YYYY-MM-DD-[topic].md`
+1. Update `learning-log/YYYY-MM-DD-[topic].md`
 2. Add new failure patterns to CLAUDE-HISTORY.md
 3. Update affected agent files with new constraints
 4. **Propagate learnings in the SAME session** (HARD RULE)

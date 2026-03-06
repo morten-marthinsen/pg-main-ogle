@@ -444,13 +444,13 @@ Before any generation, load specimens by page type and vertical:
 - Load 2-3 value stack examples from the same vertical
 - Load 1-2 "If all it did was" framework examples (cross-vertical acceptable)
 - Load 1-2 price reveal sequences
-- Source: `LandingPageEngine/specimens/` + CopywritingEngine TIER1 vault if available
+- Source: `landing-page-engine/specimens/` + CopywritingEngine TIER1 vault if available
 
 **Type B — Ecomm/PDP:**
 - Load 2-3 pricing tier displays from similar DTC brands
 - Load 1-2 subscription/bundle pricing examples
 - Load 1 savings callout example
-- Source: `LandingPageEngine/specimens/raw/` — prioritize: `bioptimizers-magnesium-trial-raw.md`, `lmnt-electrolyte-pdp-raw.md`, `native-build-your-pack-raw.md`
+- Source: `landing-page-engine/specimens/raw/` — prioritize: `bioptimizers-magnesium-trial-raw.md`, `lmnt-electrolyte-pdp-raw.md`, `native-build-your-pack-raw.md`
 
 **If specimen directory is sparse:** Reference pricing patterns from the MASTER-PRD and SWIPE-VAULT-INDEX.
 

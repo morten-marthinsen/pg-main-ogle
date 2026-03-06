@@ -510,12 +510,12 @@ Before any generation, load specimens by page type and vertical:
 **Type A — Long-Form:**
 - Load 2–3 headlines from the same vertical (health supplement DR, info product, financial)
 - Load 1–2 lead openings from the same lead type selected in Layer 1
-- Source: `LandingPageEngine/specimens/long-form-sales-pages/[vertical]/`
+- Source: `landing-page-engine/specimens/long-form-sales-pages/[vertical]/`
 
 **Type B — Ecomm/PDP:**
 - Load 2–3 product titles and short descriptions from comparable DTC brands
 - Load 1–2 key benefits bullet examples from similar category
-- Source: `LandingPageEngine/specimens/ecomm-pdp/[vertical]/`
+- Source: `landing-page-engine/specimens/ecomm-pdp/[vertical]/`
 
 **If specimen directory is empty (early build):** Load specimens from the Trello swipe vault index. Reference the relevant brand examples from MASTER-PRD.md SWIPE VAULT INDEX.
 

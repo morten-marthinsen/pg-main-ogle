@@ -736,4 +736,4 @@ FOR EACH section in assembled draft:
 
 ---
 
-*This registry follows the pattern established by `ad-engine-schema-registry.md` (v1.1). For Ad Engine handoffs, see that file. For Upsell Engine handoffs, see `skills/upsells/UPSELL-ENGINE-CLAUDE.md`. For Landing Page Engine handoffs, see `LandingPageEngine/CLAUDE.md`.*
+*This registry follows the pattern established by `ad-engine-schema-registry.md` (v1.1). For Ad Engine handoffs, see that file. For Upsell Engine handoffs, see `skills/upsells/UPSELL-ENGINE-CLAUDE.md`. For Landing Page Engine handoffs, see `landing-page-engine/CLAUDE.md`.*
