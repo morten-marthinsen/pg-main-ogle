@@ -19,9 +19,11 @@
 
 ## The 5 Personas
 
-### 1. THE COMEBACK KING
+### 1. THE FADING COMPETITOR
 
-**Demographic**: Male, 52-65, 12-20 handicap, retired or semi-retired, plays 2-3x/week
+**Renamed from**: The Comeback King (S042). "Comeback" implied returning from absence; 95% of the research corpus are active regular golfers who never stopped playing. "Fading" captures the real-time, gradual erosion they experience while still competing. "Competitor" captures their identity — even casual golfers think of themselves as competitors. Both words are research-sourced (transformation pairs TP-010/TP-020 + golfer identity language).
+
+**Demographic**: Male, 45-65, 12-20 handicap, plays 1-3x/week, active and physically engaged
 **Value System**: Identity and emotional connection to the game. Golf is who he IS, not what he does. Every round is a measurement of the man he used to be vs. the man he's becoming.
 
 **Wound**: The slow-motion erosion of physical capability that golf makes public and measurable. He remembers carrying it 250. Now it's 210 and dropping. Every round quantifies the decline. Every buddy who outdrives him confirms it. This isn't about golf — it's about watching himself become less.
@@ -39,6 +41,8 @@
 **Creative Direction**: Warm, grounded, slightly nostalgic. This is NOT a hype ad. Tone = a conversation between two men at the range who've both felt it. Visuals: real men 55+, on-course, the moment the launch monitor shows a number they haven't seen in years. Music: understated, builds. The transformation IS the story.
 
 **S036 Overlap**: Draws from Segment A (Age-Decline Griever) and Segment E (Distance-Anxious Peer Comparer), but the driving force is IDENTITY RECLAMATION, not just the problem.
+
+**Name history**: The Comeback King (S039-S040) → The Fading Competitor (S042). Renamed after deep research analysis showed 95% of corpus are active golfers, not comeback players. "Fading" sourced from transformation pairs TP-010 ("Fading Power") and TP-020 ("Fading Yards"). "Competitor" sourced from golfer identity language ("I want to compete, not be pitied").
 
 ---
 
@@ -154,7 +158,7 @@
 
 | Persona | Core Value System | Primary Wound | Desire | Awareness | Best Mechanism Lead |
 |---------|-------------------|---------------|--------|-----------|---------------------|
-| 1. The Comeback King | Identity / Emotion | Measurable physical erosion | Reclamation — "be who I was" | Problem Aware | SpeedTrac Stack (progressive rebuilding) |
+| 1. The Fading Competitor | Identity / Emotion | Measurable physical erosion | Reclamation — "be who I was" | Problem Aware | SpeedTrac Stack (progressive rebuilding) |
 | 2. The Skeptical Equipment Veteran | Evidence / Analysis | Wasted investment in training aids | Permission to believe (with proof) | Product Aware | Non-Axial CG Engine (physics argument) |
 | 3. First from the Fairway | Social Status / Hierarchy | Outdriven publicly by peers | Foursome dominance restored | Problem Aware | SpeedTrac Stack (speed gains = distance) |
 | 4. The Plateau Prisoner | Process / Systems | Plateau despite effort | Breakthrough via new mechanism | Solution Aware | Y-Trac off-axis (second adaptation axis) |
@@ -166,7 +170,7 @@
 
 | S036 Segment | What It Organized By | Persona It Maps To | What Changed |
 |-------------|---------------------|---------------------|-------------|
-| A: Age-Decline Griever | Problem (age decline) | Comeback King + First from the Fairway | Split by VALUE SYSTEM — identity reclamation vs. social standing |
+| A: Age-Decline Griever | Problem (age decline) | The Fading Competitor + First from the Fairway | Split by VALUE SYSTEM — identity reclamation vs. social standing |
 | B: Plateau Prisoner | Problem (plateau) | The Plateau Prisoner | Refined to focus on SYSTEM TRUST, not just frustration |
 | C: Speed-Accuracy Skeptic | Objection (skepticism) | Skeptical Equipment Veteran + Accurate But Two Clubs Back | Split by WHY — burned before (Veteran) vs. accuracy-first strategy ceiling (Accurate But Two Clubs Back) |
 | D: Competitor Refugee | Problem (competitor experience) | Skeptical Equipment Veteran + The Plateau Prisoner | Absorbed into value-system personas — competitor experience is context, not identity |
@@ -175,16 +179,21 @@
 
 ---
 
-## Hero Persona Recommendation
+## Hero Persona Selection (S042 — LOCKED)
 
-**My recommendation: The Comeback King as hero persona.**
+**Hero Persona: First from the Fairway**
+**Selected by**: Christopher Ogle (S042, 2026-03-06)
 
-Why:
-- **Largest addressable audience** — 35% of the corpus is age-decline language, and this persona captures the emotional core of it
-- **Highest emotional resonance** — the identity wound ("I used to be that guy") is universal among male golfers 50+, which is PG's core demographic
-- **Strongest narrative arc** — reclamation is the most compelling story structure for a 90-120 second video ad (loss → discovery → restoration)
-- **SpeedTrac's binary frame lands perfectly** — "Fast AND Straight" resolves his dual fear (losing speed AND losing accuracy)
-- **Sets the tone for the product** — launching with identity/emotion establishes SpeedTrac as a product that UNDERSTANDS its buyer, not just a mechanism showcase
+Why First from the Fairway over The Fading Competitor:
+- **Matches actual buyer behavior** — 95% of the corpus are active regular golfers who play weekly in groups. First from the Fairway is the ONLY persona that requires the social context the dominant buyer lives in.
+- **Social wound is the #1 purchase trigger** — research recommends leading with "Are you the shortest hitter in your foursome?" Despite low explicit quote volume (~5-6%), the market narrative identifies peer comparison as the primary emotional catalyst that converts passive frustration into active buying.
+- **Best "Fast AND Straight" fit** — gaining speed that sprays sideways makes the social wound WORSE. He needs speed he can show off on the first tee. "Fast AND Straight" is his exact promise.
+- **Strongest 90-120s narrative arc** — the foursome gives you visual entry (hook), the mechanism addresses his fear (body), and the drive sailing past everyone closes the ad (CTA). Other personas lead to a man alone at a range with a launch monitor.
+- **All personas appear in every script** — First from the Fairway leads the hook, The Fading Competitor's identity wound powers the body, Skeptical Equipment Veteran's objections are addressed in the mechanism section.
+
+Why The Fading Competitor is NOT hero (but critical):
+- Christopher's key insight: "Most golfers we're talking to are active, regular players looking to gain speed — not making a comeback." The Fading Competitor's wound is real but the social/competitive context of First from the Fairway better matches how these golfers EXPERIENCE the wound (in foursomes, not alone).
+- The Fading Competitor's identity-erosion psychology IS the deeper layer that powers the body of every ad. He's the emotional engine; First from the Fairway is the entry point.
 
 ---
 

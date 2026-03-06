@@ -3,27 +3,30 @@
 ## Build State
 
 ```yaml
-version: 4.2
-last_session: 049
-last_date: 2026-02-23
-status: DONE — CREATIVE-OS-PRD.md updated to v1.1 (brand architecture, feedback loop, persona architecture, Figma board visual, terminology locked). Slack bot still needs live Slack verification + git commit+push (P0 from S048 still open).
+version: 4.4
+last_session: 051
+last_date: 2026-03-06
+status: "S051 DONE — Session log compressed (S032-S047 archived, 618→118 lines). Daily Brief Intelligence Upgrade plan approved. Next session: implement plan — 5 phases, start with triage_intelligence.py core."
 
 # 30/60/90 Status
-day_count: 12
+day_count: 25
 next_checkpoint: Day 30 (~2026-03-11)
 russ_exit: "~2026-02-19 (Wed) — DONE"
 
 # Ops Status
-daily_briefing: "v1.2.0 — 13/13 modules LIVE. M12 Calendar OAuth done + verified (S044). base.py retry-with-backoff for 429s (S042). M9 inter-call delay 65s + max_tokens 2000 + truncated JSON repair (S042). M0 persistent actions (S041). M1/M2/M6/M7 enhanced (S039). StartInterval 300s + idempotency guard."
-persistent_actions: "LIVE — M0 reads KB + .kb-manual-items.json, groups by owner, overdue/stale flags. 22 items seeded from Feb 20 transcripts. H2 heading, first in report."
-transcript_intelligence: "LIVE + VERIFIED — KB bootstrapped: 72 items (28 actions, 17 decisions, 27 topics, 15 people, 3 recommendations) from 3 transcripts. 28 transcripts queued (~10 days to clear at 3/day). M10 producing real scorecard gap analysis. M11 detecting 5 recurring meeting series."
-transcript_sync: "LIVE — ClickUp API, auto-sync 30 min, 73 Christopher-attended transcripts."
-kb_delegation: "LIVE — apply_overrides supports dict-style overrides for delegation (status + delegated_to + delegated_date). kb_stats tracks delegated_action_items count."
+daily_briefing: "v1.3.0 — 15/15 modules LIVE. Pipeline migrated to pg-main-ogle repo (S050). Secrets symlinked from old Obsidian path. launchd plist updated. Reports gitignored (local-only). Daily report at 8:00 AM via StartCalendarInterval. Idempotency guard active."
+persistent_actions: "LIVE — M0 reads KB + .kb-manual-items.json, groups by owner, overdue/stale flags."
+transcript_intelligence: "LIVE + VERIFIED — KB: 1136 items, 21 open actions, 335 active topics, 46 people tracked."
+transcript_sync: "LIVE — ClickUp API, auto-sync 30 min."
+kb_delegation: "LIVE — apply_overrides supports dict-style overrides."
 neco_autonomous: "LIVE v1.0 — nightly 10pm, quality gates working."
 gmail_oauth: DONE
 slack_bot: "DONE — read-only OAuth, M4/M5 live."
-slack_interface: "BOT RUNNING (S048) — App A0AH9B47PCY, Socket Mode, bot_user_id U0AGF3DKKMY. Multi-turn thread history + 6 product intel cards + knowledge priority. 6 intel + 45 ad angles + 57 influencer angles loaded. NOT YET COMMITTED. Next: [P0] live Slack verification (5 tests) → git commit+push."
-google_calendar_mcp: "LIVE (interactive via @cocal/google-calendar-mcp v2.4.1). Pipeline integration: M12 LIVE (S044), uses google-api-python-client Calendar API v3 with own OAuth token. 13/13 pipeline verified."
+slack_interface: "BOT RUNNING (S048) — NOT YET COMMITTED. P0 from S048 still open."
+google_calendar_mcp: "LIVE — M12 LIVE, Calendar API v3 with own OAuth token."
+
+# Next Session (P0)
+next_session: "Implement Daily Brief Intelligence Upgrade — plan approved at ~/.claude/plans/crispy-munching-ladybug.md. Five phases: (1) triage_intelligence.py core ~300 lines, (2) daily_briefing.py Phase 1.5 pre-fetch, (3) m0b integration, (4) transcript_kb.py decision recording, (5) config.yaml. Start with Phase 1."
 
 # Active Challenges
 unresolved_block: []

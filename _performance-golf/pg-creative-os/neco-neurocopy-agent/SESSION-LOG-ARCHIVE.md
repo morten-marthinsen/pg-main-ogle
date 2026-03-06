@@ -1,6 +1,6 @@
 # Neco — Session Log Archive
 
-> Compressed archive of Neco sessions 001-036. For recent sessions, see `SESSION-LOG.md`.
+> Compressed archive of Neco sessions 001-036. For recent sessions (037+), see `SESSION-LOG.md`.
 
 ---
 

@@ -2,7 +2,7 @@
 
 > Compressed historical sessions. For recent sessions, see `SESSION-LOG.md`.
 > Archive created: Session 013 (2026-02-09). Sessions 001-009 moved here.
-> Last updated: Session 035 (2026-02-19). Sessions 020-031 archived.
+> Last updated: Session 051 (2026-03-06). Sessions 032-047 archived.
 
 ---
 
@@ -42,6 +42,22 @@
 | 029 | 2026-02-17 | M1 action steps + "live" exclusion + M7 date fix | v0.7.0 — 3 targeted fixes. 16,277 chars |
 | 030 | 2026-02-17 | Neco Autonomous Vision (planning only) | Architecture plan written, OPEN QUESTION raised on project state awareness |
 | 031 | 2026-02-17 | Neco Autonomous Runner v1 build | 6 files created, dry-run tested (15 tasks, 2 LOCKED skipped, 13 queued) |
+| 032 | 2026-02-17 | Neco Autonomous — live API test + launchd | Live test passed (quality gate worked), launchd 10pm nightly, Neco handoff protocol updated |
+| 033 | 2026-02-18 | Morning ops — transcript sync fix + briefing reschedule | ClickUp sync fixed (FDA issue), briefing → 5:00 AM, Feb 18 report generated |
+| 034 | 2026-02-18 | M9 Transcript PRD Recommender + Liv response | M9 LIVE (7/9 modules), 46 transcripts seeded, Liv security response drafted |
+| 035 | 2026-02-19 | Session log compression + briefing automation fix | S020-031 archived (63%), StartInterval 300s + idempotency guard |
+| 036 | 2026-02-20 | Exa audit & optimization (6 phases) | 4 files → EXA-REFERENCE.md, Build State in CLAUDE.md, zero-read session start |
+| 037 | 2026-02-21 | Slack Monitor M4/M5 OAuth | Slack app "Exa Daily Briefing" created, OAuth via webhook.site, 9/9 modules LIVE |
+| 038 | 2026-02-21 | Transcript Intelligence Layer (partial) | transcript_kb.py, scorecard_context.py, new m9_transcript_intelligence.py (3/5 files) |
+| 039 | 2026-02-21 | Daily briefing enhancement (5 improvements) | M1 cross-ref, M2 email balance, M6 URLs, M7 ClickUp comments, clickup_helper comments |
+| 040 | 2026-02-21 | Transcript Intelligence complete | M10 KB Analyzer + M11 Meeting Prep created, old M9 replaced, 11/11 LIVE |
+| 041 | 2026-02-21 | Persistent Actions + KB delegation + Romeo onboarding | M0 created (22 manual items), KB dict overrides, Romeo checklist, Monday prep. 12/12 LIVE |
+| 042 | 2026-02-21 | M9 rate limit + JSON parse fixes | base.py retry/backoff, M9 inter-call delay + JSON repair, KB bootstrapped (72 items). 12/12 LIVE |
+| 043 | 2026-02-21 | Google Calendar M12 implementation | calendar_auth.py, calendar_helper.py, m12_daily_schedule.py. 13 modules registered |
+| 044 | 2026-02-22 | Calendar OAuth + full pipeline verified | OAuth flow complete, 13/13 LIVE, zero failures |
+| 045 | 2026-02-22 | Slack interface plan + GitHub repo scaffold | "Exa — PG Creative Intel" architecture, private repo created, project scaffolded |
+| 046 | 2026-02-22 | Slack bot Phase 1 MVP code | app.py, product_resolver, knowledge_loader, AI layer, message_handler, data sync |
+| 047 | 2026-02-22 | Slack app setup + workspace install | Slack app created at api.slack.com, Socket Mode, manifest, OAuth, .env configured |
 
 ---
 
@@ -161,6 +177,40 @@
 - **Configurable status exclusion**: `clickup.exclude_statuses` in config.yaml (approved, closed, done, complete).
 - **Titled handoff format**: `HANDOFF PROMPT — Exa S{N} · {Focus}` (matching Neco pattern).
 
+### Session 032-034 — Neco Autonomous Live + Daily Briefing M9
+- **Quality gate validation**: Anthropic API correctly refused vague ClickUp tasks — most need richer descriptions for autonomous generation.
+- **launchd FDA issue**: `/usr/bin/python3` (Xcode) lacks Full Disk Access under launchd. Fix: bash wrapper → user python3.
+- **Briefing schedule**: StartCalendarInterval unreliable (doesn't fire during sleep). S035 switched to StartInterval 300s + idempotency guard.
+- **M9 state tracking**: File-based `.m9-state.json` (not timestamp). 46 pre-existing transcripts seeded. Max 3 per run.
+
+### Session 036 — Exa Audit
+- **File consolidation**: 4 governance files → single `EXA-REFERENCE.md` (464 lines, 1953 removed).
+- **Zero-read session start**: Build State in CLAUDE.md auto-loads. No file reads needed on entry.
+- **SESSION-LOG.md becomes append-only**: No longer contains Build State.
+
+### Session 037 — Slack OAuth Pattern
+- **webhook.site workaround**: Slack rejects localhost; Playwright can't reach user machine. OAuth code captured via webhook.site redirect, exchanged for token via Python.
+- **User Token Scopes**: `channels:read`, `channels:history`, `im:read`, `im:history`, `users:read`, `users:read.email`.
+
+### Session 038-042 — Transcript Intelligence Layer
+- **Three-module architecture**: M9 (structured extraction → KB) → M10 (pattern detection + scorecard gaps) → M11 (meeting prep). Shared persistent KB (`.transcript-kb.json`).
+- **KB schema**: 5 collections (action_items, decisions, topics, people, recommendations). CRUD with atomic writes, fuzzy merge, dedup, pruning.
+- **Scorecard context**: `scorecard_context.py` with DAY_ONE constant, checkpoint awareness (Day X of 90).
+- **Rate limit handling**: base.py retry with exponential backoff (65s/130s/195s) for Anthropic 429s.
+- **M0 Persistent Actions**: Non-AI module. Reads KB + `.kb-manual-items.json`, groups by owner, overdue/stale flags.
+- **KB delegation**: `apply_overrides()` supports dict-style overrides (status, delegated_to, delegated_date).
+
+### Session 043-044 — Google Calendar Integration
+- **M12 architecture**: Mirrors gmail pattern. calendar_auth.py reuses GCP project. Focus blocks (>=60min gaps), back-to-back warnings, week load bar chart, AI schedule coaching.
+- **Pipeline milestone**: 13/13 modules LIVE, zero failures.
+
+### Session 045-047 — Slack Bot Architecture
+- **Identity decision**: SlackBot is Exa's Slack interface, not a new agent. One brain, two surfaces (CLI + Slack).
+- **Deployment**: Railway (cloud, always-on). Socket Mode.
+- **Knowledge**: Hybrid — static at startup (ad angles, influencer angles, product intel) + live Tess SSS via Google Sheets API.
+- **Product resolver**: 80+ aliases mapping natural language → 12 PG product codes. Longest-match-first.
+- **Private repo**: `github.com/christophero90/exa-pg-creative-intel`.
+
 ### Session 030-031 — Neco Autonomous Architecture
 - **Hybrid project state approach**: `project-state.yaml` in Neco root (machine-readable). Runner reads 3 sources: ClickUp tasks + project-state.yaml + reference files.
 - **Smart evaluation logic**: 5 scenarios — new work, LOCKED (skip), human_review (skip), IN_PROGRESS (continue), dependency-blocked (skip).
@@ -204,6 +254,22 @@
 | 029 | — | m1, m7 modules, clickup_helper.py, config.yaml |
 | 030 | ~/.claude/plans/delightful-stirring-stearns.md | — |
 | 031 | neco project-state.yaml, _ops/neco-autonomous/ (config, context, prompts, runner, shell wrapper) | — |
+| 032 | com.performancegolf.neco-autonomous.plist, live test output + morning report | neco CLAUDE.md (handoff step 3) |
+| 033 | _ops/meetings/scripts/run-clickup-sync.sh | clickup-sync.plist, exa.plist (5am), run-exa-daily.sh |
+| 034 | m9_transcript_prd_recommender.py, .m9-state.json, Liv security response | __init__.py, config.yaml (M9) |
+| 035 | — | run-exa-daily.sh (idempotency), exa.plist (StartInterval 300), SESSION-LOG-ARCHIVE.md |
+| 036 | EXA-REFERENCE.md (consolidated), _reference/key-intel.md | CLAUDE.md (full rewrite), SESSION-LOG.md (Build State removed) |
+| 037 | auth/slack_token.json, localhost certs | slack_auth.py, .env (Slack vars) |
+| 038 | transcript_kb.py, scorecard_context.py, m9_transcript_intelligence.py | — |
+| 039 | — | clickup_helper.py, m1, m2, m6, m7 modules |
+| 040 | m10_kb_analyzer.py, m11_meeting_prep.py | __init__.py, config.yaml (M9→M9/M10/M11) |
+| 041 | m0_persistent_actions.py, .kb-manual-items.json, romeo checklist, monday prep | __init__.py, config.yaml, transcript_kb.py, m10 |
+| 042 | — | base.py (retry/backoff), m9 (delay + JSON repair) |
+| 043 | calendar_auth.py, calendar_helper.py, m12_daily_schedule.py | __init__.py, config.yaml, .env |
+| 044 | auth/calendar_token.json | — |
+| 045 | slack-bot/ directory structure, .gitignore, .env.example, requirements.txt | plan file |
+| 046 | app.py, config.py, Procfile, ai/, handlers/, knowledge/, utils/ modules, data/sync.sh | — |
+| 047 | slack-bot/.env | — |
 
 ---
 
@@ -228,3 +294,11 @@
 | Daily Briefing actionability | S027 | S029 | 5-change plan: PRD context, URLs, due-dates, action steps, Neco seed. v0.7.0. |
 | Neco Autonomous Runner | S030 | S032 | v1.0 LIVE — launchd 10pm nightly, quality gates working, project-state.yaml pattern. |
 | Session log compression (2nd) | S023 | S023 | S010-S019 archived, 559→~210 lines (63%). |
+| M9 Transcript PRD Recommender | S033 | S034 | LIVE. Replaced by Transcript Intelligence Layer in S038-S040. |
+| Briefing automation (sleep issue) | S033 | S035 | StartInterval 300s + idempotency guard. Self-healing on wake. |
+| Exa audit & optimization | S036 | S036 | 4 files → EXA-REFERENCE.md. Build State in CLAUDE.md. Zero-read start. |
+| Slack OAuth (M4/M5) | S037 | S037 | 9/9 modules LIVE. webhook.site workaround for Slack OAuth. |
+| Transcript Intelligence Layer | S038 | S042 | M9+M10+M11 + persistent KB. 12/12 → 13/13 LIVE (with M12). |
+| Google Calendar M12 | S043 | S044 | OAuth complete, 13/13 LIVE. |
+| Slack bot Phase 1 MVP | S045 | S048 | Architecture → code → Slack app → multi-turn + product intel. Bot running. |
+| Session log compression (3rd) | S051 | S051 | S032-S047 archived. |

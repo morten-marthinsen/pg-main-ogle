@@ -1,10 +1,10 @@
 # SpeedTrac Figma Board + Video Ad Scripts — Session Handoff
 
-**Date**: 2026-02-27
-**Deadline**: Video ad scripts due 2026-02-28 (tomorrow)
+**Date**: 2026-02-27 (created) | 2026-03-06 (last updated S043)
 **Owner**: Christopher Ogle
 **Agents**: Neco (personas + copy), COS root (Figma board)
-**Next Neco Session**: S039
+
+> **Current State (S043)**: Persona workshop COMPLETE (5/5 locked). Hero persona LOCKED (First from the Fairway). 3 body angles LOCKED. Comeback King renamed to The Fading Competitor (S042). Script writing IN PROGRESS — sourcing from VSL body first. Figma board DEFERRED until scripts are drafted. This doc is the Figma board's source of truth — updated to reflect all S039-S043 decisions.
 
 ---
 
@@ -197,65 +197,74 @@ SPEEDTRAC FIGMA BOARD
 
 ---
 
-## Phased Work Plan
+## Hero Persona Selection (S042 — LOCKED)
 
-### Phase 1: SpeedTrac Persona Workshop (TODAY — Priority)
-- Read remaining research (features file chunks, proof doc completion)
-- Build 3-5 product-level personas from research (NOT from Neco's S036 segments — rebuild deliberately)
-- Use Christopher's "comeback king" vs. "skeptical equipment veteran" framing as a north star
-- Each persona gets: name, demographic, psychographic wound, desire, internal dialogue, mechanism fit, visual direction
-- **Human checkpoint**: Christopher approves persona set + selects hero persona
+**Hero Persona**: First from the Fairway
+**Selected by**: Christopher Ogle (S042, 2026-03-06)
 
-### Phase 2: Figma Board Creation (TODAY)
-- Create new SpeedTrac Figma file via MCP
-- Build board structure per PRD Section 3.4
-- Populate: product overview, brand thread alignment, approved personas, ad set grid skeleton
-- Mood board / look & feel section (placeholder for visual inspiration)
+**Why**: Social wound (being outdriven publicly) is the #1 purchase trigger in the research corpus. 95% of buyers are active regular golfers who play in groups — First from the Fairway is the only persona that requires the social context the dominant buyer lives in. Best "Fast AND Straight" fit: gaining speed that sprays sideways makes the social wound WORSE.
 
-### Phase 3: Video Ad Script Writing (TODAY/TONIGHT — Deadline Tomorrow)
-- With approved personas, select 3-5 angles that map to personas
-- Write video ad scripts per Neco Sub-Agent #5 protocol
-- Each script: hook variations (5 per concept), body, CTA
-- Tie each script to one angle x one persona (or hero persona x multiple angles)
-- **Format**: Production-ready, copy-paste into Google Docs
+**All 5 personas appear in every script** — First from the Fairway leads hooks, other personas power different sections of the body.
 
-### Phase 4: Figma Board Finalization (AFTER scripts)
-- Populate ad set grid with script assignments
-- Add talent direction per persona
-- Add expansion testing map
-- Share with JoJo for collaborative review
+Full rationale: see `spd-persona-workshop.md` > Hero Persona Selection.
 
 ---
 
-## Gaps / Blockers
+## Ad Set Testing Grid (3 Angles x 5 Personas)
+
+This is the grid that maps directly to the Figma board's Ad Set Testing section (Section 4 in board structure above).
+
+| | First from the Fairway (HERO) | The Fading Competitor | Skeptical Equipment Veteran | The Plateau Prisoner | Accurate But Two Clubs Back |
+|---|---|---|---|---|---|
+| **Script 1: "Fast AND Straight"** (Category Killer) | Hook 1 (social wound) | Hook 2 (identity erosion) | Hook 3 (mechanism skepticism) | Hook 4 (system plateau) | Hook 5 (strategy ceiling) |
+| **Script 2: "The Smartest Way to Add Distance"** (Strategic Intelligence) | Hook 1 | Hook 2 | Hook 3 | Hook 4 | Hook 5 |
+| **Script 3: "Where Did The Speed Go?"** (Age-Decline Reclamation) | Hook 1 | Hook 2 | Hook 3 | Hook 4 | Hook 5 |
+
+**Structure**: Each cell = one persona-specific hook that enters a shared script body. 3 scripts x 5 hooks = 15 hook variants total. Bodies are shared per script (not per persona).
+
+**Format**: 90-120s long-form social. Three-column production format (Timecode | Visual/Talent Direction | Copy/VO).
+
+---
+
+## Persona Layer Model (How Personas Stack Within Each Script)
+
+Not every persona gets their own script. Instead, personas play ROLES within each script:
+
+| Script Section | Persona Role | Why |
+|---------------|-------------|-----|
+| **Hook** (0-8s) | All 5 personas get separate hooks (tested independently) | Persona at hook level = audience targeting. Each hook enters the same body. |
+| **Body — Wound/Problem** (8-30s) | The Fading Competitor | Identity-erosion psychology is the deepest emotional layer. Powers the "why this matters" section. |
+| **Body — Mechanism/Proof** (30-80s) | Skeptical Equipment Veteran | Analytical skepticism demands physics-level explanation. If it convinces HIM, it convinces everyone. |
+| **Body — Ceiling/Reframe** (variable) | Accurate But Two Clubs Back + The Plateau Prisoner | Strategic ceiling and system plateau provide the "even if you've tried everything" objection handling. |
+| **CTA** (80-120s) | First from the Fairway | Return to the social wound — the drive sailing past everyone. Visual resolution of the hook's tension. |
+
+This means the Figma board's talent direction should map talent to persona ROLES, not just persona demographics.
+
+---
+
+## Phased Work Plan (Updated S043)
+
+### Phase 1: SpeedTrac Persona Workshop — COMPLETE (S039-S042)
+- 5/5 personas locked. Hero persona selected. 3 body angles locked.
+- See `spd-persona-workshop.md` for all decisions.
+
+### Phase 2: Video Ad Script Writing — IN PROGRESS (S043+)
+- **Step 1**: Source body copy from existing SpeedTrac VSL (Christopher directive — write ads from the VSL first)
+- **Step 2**: Write Script 1 — "Fast AND Straight" (Category Killer), 5 persona hooks, three-column production format
+- **Step 3**: Write Script 2 — "The Smartest Way to Add Distance" (Strategic Intelligence)
+- **Step 4**: Write Script 3 — "Where Did The Speed Go?" (Age-Decline Reclamation)
+
+### Phase 3: Figma Board Creation — DEFERRED
+- Build after scripts are drafted. Scripts populate the ad set grid.
+- Board structure defined above (Section 1-7). Persona cards, ad set grid, talent direction all feed from completed scripts.
+- Share with JoJo for collaborative review before presenting to John.
+
+---
+
+## Remaining Gaps
 
 | # | Gap | Impact | Resolution |
 |---|-----|--------|------------|
-| 1 | Features file unreadable (84K tokens in 22 lines) | Missing granular feature details | Chunk-read or grep specific features as needed — main copy doc covers the 5 hero mechanisms sufficiently |
-| 2 | Product Innovation PDF unreadable | Missing visual/engineering context | `brew install poppler` or Christopher provides key details verbally |
-| 3 | Figma MCP untested | Unknown if MCP connection works end-to-end with Pro plan | Test immediately on session resume — create a test file first |
-| 4 | Number of video ad scripts needed | Determines scope of Phase 3 | Christopher to specify: how many scripts, which formats (long-form VSL, short-form social, hook stacks?) |
-| 5 | Persona approval checkpoint | Blocks Phase 2 and 3 | Persona workshop is Phase 1 — get approval before anything else |
-
----
-
-## Handoff Prompt (For Next Session)
-
-```
-Resume SpeedTrac Figma + Video Ads project. Read this file first:
-_projects/spd-video-ads/SPEEDTRAC-FIGMA-HANDOFF.md
-
-Last session: Ingested all SpeedTrac research files, installed Figma MCP,
-extracted transcript intelligence, wrote comprehensive handoff.
-
-PICK UP HERE:
-1. Test Figma MCP connection (create test file, verify read/write)
-2. Start Phase 1: SpeedTrac Persona Workshop — build 3-5 product-level
-   personas from research. Present to Christopher for approval + hero selection.
-3. After persona approval → Phase 3: Video ad scripts (due Feb 28)
-4. Figma board population happens in parallel / after scripts
-
-Note: Christopher specified personas FIRST, then angles. Do NOT skip to
-angle/script work without persona approval. Neco S036 angle library is
-reference only — not the driving structure.
-```
+| 1 | Features file unreadable (84K tokens in 22 lines) | Missing granular feature details | Main copy doc covers 5 hero mechanisms sufficiently |
+| 2 | Product Innovation PDF unreadable | Missing visual/engineering context | Christopher provides key details verbally as needed |
+| 3 | Figma MCP untested | Unknown if MCP works end-to-end | Test when Phase 3 begins — not blocking scripts |

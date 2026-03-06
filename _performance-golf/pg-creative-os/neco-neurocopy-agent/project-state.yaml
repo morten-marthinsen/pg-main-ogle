@@ -100,7 +100,8 @@ projects:
     product: "SpeedTrac (SPD)"
     status: IN_PROGRESS
     version: v1
-    last_session: S041
+    last_session: S043
+    hero_persona: "First from the Fairway"
     deliverables:
       - type: angle-library
         file: "_projects/spd-video-ads/spd-video-ad-angles.md"
@@ -110,13 +111,22 @@ projects:
         status: LOCKED
       - type: figma-handoff
         file: "_projects/spd-video-ads/SPEEDTRAC-FIGMA-HANDOFF.md"
-        status: REFERENCE_ONLY
-      - type: video-ad-scripts
+        status: CURRENT
+      - type: video-ad-script-1
+        file: null
+        status: IN_PROGRESS
+        script_name: "Fast AND Straight (Category Killer)"
+      - type: video-ad-script-2
         file: null
         status: NOT_STARTED
-    next_step: "Christopher selects hero persona → write Script 1 (Sub-Agent #5). 90-120s long-form social. Figma board deferred."
-    blocked_by: human_review
-    notes: "5/5 personas LOCKED. 3 body angles LOCKED: Category Killer, Strategic Intelligence (NEW), Age-Decline Reclamation. Script structure: 3 scripts x 5 persona hooks each. Figma MCP configured but not connected — scripts first. S041: migrated missing files from Obsidian vault."
+        script_name: "The Smartest Way to Add Distance (Strategic Intelligence)"
+      - type: video-ad-script-3
+        file: null
+        status: NOT_STARTED
+        script_name: "Where Did The Speed Go? (Age-Decline Reclamation)"
+    next_step: "Write Script 1 — Fast AND Straight (Category Killer). Source body from SPD VSL first, then write 5 persona hooks. 90-120s long-form social, three-column production format."
+    blocked_by: null
+    notes: "S042: Hero persona LOCKED (First from the Fairway). Comeback King renamed → The Fading Competitor. S043: Documentation updated, 5 hooks drafted. Persona layer model: First from the Fairway (hook) → Fading Competitor (body identity) → Skeptical Equipment Veteran (mechanism/objection). Next: source VSL body copy before writing scripts."
 
 # Shared assets (not projects, but referenced by runner for context)
 shared_assets:
