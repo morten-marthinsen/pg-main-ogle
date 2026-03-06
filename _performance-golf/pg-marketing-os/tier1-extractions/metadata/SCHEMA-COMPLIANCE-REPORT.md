@@ -1,7 +1,7 @@
 # TIER1 Schema Compliance Report
 
 **Generated:** 2026-02-21
-**Reference Schema:** `CopywritingEngine/VAULT_V3_SCHEMA.md`
+**Reference Schema:** `tier1-extractions/VAULT_V3_SCHEMA.md`
 
 ---
 

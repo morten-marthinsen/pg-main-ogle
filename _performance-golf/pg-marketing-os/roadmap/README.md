@@ -11,7 +11,7 @@
 ### Generation Mechanics
 | # | Document | Core Insight |
 |---|----------|--------------|
-| 01 | [How Examples Shape Generation](CopywritingEngine/ROADMAP/01-HOW-EXAMPLES-SHAPE-GENERATION.md) | Verbatim examples reshape token probability distributions — they're statistical attractors, not just references |
+| 01 | [How Examples Shape Generation](roadmap/01-HOW-EXAMPLES-SHAPE-GENERATION.md) | Verbatim examples reshape token probability distributions — they're statistical attractors, not just references |
 
 ### RSF Framework (TBD)
 | # | Document | Core Insight |
@@ -44,8 +44,8 @@
 - Teaching content that would benefit future development or training
 
 **Don't add:**
-- Operational procedures (those go in CopywritingEngine/Skills)
-- Session logs (those go in CopywritingEngine/SESSION-LOGS)
+- Operational procedures (those go in skills/)
+- Session logs (those go in learning-log/)
 - Project-specific outputs (those go in project folders)
 
 **Naming convention:** `##-PRINCIPLE-NAME.md` (numbered for reading order, not priority)

@@ -3,8 +3,8 @@
 **Version:** 2.0
 **Date:** 2026-03-01
 **Total Specimens:** 20 (11 pre-existing + 9 impression-validated)
-**Location:** `LandingPageEngine/specimens/raw/`
-**Index:** `LandingPageEngine/specimens/specimen-index.md`
+**Location:** `landing-page-engine/specimens/raw/`
+**Index:** `landing-page-engine/specimens/specimen-index.md`
 
 ---
 
