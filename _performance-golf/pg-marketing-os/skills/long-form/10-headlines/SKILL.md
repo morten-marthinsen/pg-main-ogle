@@ -28,6 +28,12 @@ Every headline is scored against proven criteria and ranked for testing priority
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `HEADLINE-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## LAYER ARCHITECTURE
 
 - **Layer 0:** Vertical profile loading, persona voice loading, specimen decomposition

@@ -7,6 +7,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: A12-PERFORMANCE-LEARNING-ANTI-DEGRADATION.md v1.1
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Generate learnings from aggregate-level data without element-level attribution (vanity metrics), skip prediction-reality gap analysis when A10 predictions exist, or hold learnings in conversation context without propagating them back to A01/A02/A06/A10 engine files.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**

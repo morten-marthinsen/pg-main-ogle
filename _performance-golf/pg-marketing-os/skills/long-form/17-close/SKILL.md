@@ -25,3 +25,9 @@ promise, story — into a decisive moment that compels the reader to act now.
 
 **Output:** Close section copy with CTA
 **Requires:** Campaign Brief (Skill 09), Offer Copy (Skill 16)
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `CLOSE-ANTI-DEGRADATION.md` before execution — structural enforcement rules

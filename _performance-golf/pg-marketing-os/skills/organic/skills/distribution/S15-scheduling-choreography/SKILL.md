@@ -28,6 +28,13 @@ This skill transforms assembled content into a precisely timed, cross-platform d
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `S15-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
+---
+
 ## SKILL IDENTITY
 
 ```yaml

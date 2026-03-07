@@ -8,6 +8,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: ROOT-CAUSE-ANTI-DEGRADATION.md v3.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Synthesize root cause from memory instead of deriving through analysis, accept fewer than 3 candidates, or skip the Arena layer.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**
@@ -725,6 +738,42 @@ Skipping derivation means producing generic root causes that don't shift worldvi
 
 ---
 
+## STRUCTURAL FIX 15: SEMI-FORMAL REASONING FOR LAYER 3 VALIDATION
+
+### The Problem
+Root cause validation (Layer 3) produces analytical conclusions — truth validation scores, mechanism alignment scores, proof availability assessments. Without structured reasoning, these conclusions can be pattern-matched from skill names rather than derived from evidence.
+
+### The Fix
+
+**Reference:** `skills/protocols/SEMI-FORMAL-REASONING-PROTOCOL.md`
+
+**Layer 3 microskills (3.1-3.5) MUST use the Semi-Formal Reasoning Template:**
+
+Each validation output must include:
+- **PREMISES** — Sourced from research FINAL_HANDOFF, proof FINAL_HANDOFF, and upstream packages
+- **EVIDENCE CHAIN** — Traceable logical path from premises to validation score
+- **CONCLUSION** — The validation score with specific justification
+- **COUNTEREXAMPLE CHECK** — What evidence would produce the opposite score? Why doesn't it apply?
+- **CONFIDENCE ASSESSMENT** — High/Medium/Low with reasoning
+
+**Specifically for Truth Validation (3.1):**
+- Counterexample check MUST address: "If this root cause were FALSE, what evidence would exist? Does that evidence exist?"
+- This prevents accepting root causes that merely sound plausible without testing falsifiability
+
+**MC-CHECK Addition:**
+
+Add to RC-MC-CHECK at Layer 3:
+
+```yaml
+reasoning_quality_check:
+  semi_formal_template_used: [Y/N]
+  premises_sourced: [Y/N]
+  counterexample_included: [Y/N]
+  if_any_no: "HALT — Layer 3 validation requires semi-formal reasoning per SEMI-FORMAL-REASONING-PROTOCOL.md"
+```
+
+---
+
 ## Per-Microskill Output Protocol (v3.2)
 
 **Added:** 2026-02-12
@@ -791,6 +840,7 @@ Each microskill entry in execution-log.md MUST include:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 3.2 | 2026-03-06 | SEMI-FORMAL REASONING: Added Structural Fix 15 — Semi-Formal Reasoning Template required for Layer 3 validation (microskills 3.1-3.5). Premises, Evidence Chain, Counterexample Check mandatory. Truth validation falsifiability check. MC-CHECK enhanced with reasoning_quality_check. Reference: `skills/protocols/SEMI-FORMAL-REASONING-PROTOCOL.md`. |
 | 3.1 | 2026-02-23 | EXPRESSION ANCHORING PROTOCOL: Added 0.2.8-tier1-expression-reference (2KB min) and 2.8-expression-anchoring-scores (3KB min) to per-microskill output table. Shared protocol: Skills/protocols/EXPRESSION-ANCHORING-PROTOCOL.md. Scores expression variants against audience research quotes (40%), TIER1 patterns (30%), and FSSIT echo (30%). Adds quote-first generation to Phase B. |
 | 3.0 | 2026-02-14 | CONCEPT/NAMING SEPARATION + SOUL.MD: Added STRUCTURAL FIX 12 (Concept Checkpoint Gate) — Phase B Expression cannot execute without CONCEPT_APPROVED.yaml. Includes gate file format, 6 concept-specific forbidden rationalizations. Added STRUCTURAL FIX 13 (Soul.md Loading Gate) — mandatory Soul.md check at pre-execution with voice/energy/anti-voice extraction. MC-CHECK enhanced with soul_md_check block. Implementation checklist restructured: Layer 1 → "Phase A (Concept Discovery)", new CONCEPT CHECKPOINT section with 6 items, Layer 2 → "Phase B (Expression — approved concepts only)", Soul.md loading added to pre-execution and Layer 0. Checkpoint progression updated to include CONCEPT_APPROVED.yaml between LAYER_1 and LAYER_2. Old Fix 12 (Anti-Degradation Mandatory Read) renumbered to Fix 14. |
 | 2.1 | 2026-02-12 | Added Per-Microskill Output Protocol (v3.2) — complete output file table for all 26 microskills across Layers 0, 1, 2, 3, and 4. Layer gate enhancement, execution log enhancement, forbidden behaviors. |

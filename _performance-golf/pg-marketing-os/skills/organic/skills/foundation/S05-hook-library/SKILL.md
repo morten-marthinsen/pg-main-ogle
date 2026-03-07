@@ -25,6 +25,11 @@ This skill builds a campaign-specific library of hooks calibrated to audience, p
 **Output:** Hook Library File (HLF)
 **Unlocks:** S06: Virality Scoring (via Gate G05)
 
+## ANTI-DEGRADATION
+
+- Read `S05-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

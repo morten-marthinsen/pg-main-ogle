@@ -11,6 +11,19 @@ Prevent degradation in network coordination: personas breaking character, engage
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: S23 Network Coordination — Anti-Degradation Protocol v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Allow personas to break character or use voice inconsistent with their Bible. Create coordination patterns that appear artificial with simultaneous engagement or identical language. Breach the brand firewall by revealing network connections between personas.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## Fix 1: Project Infrastructure Requirements
 
 ### Required Files at Project Start

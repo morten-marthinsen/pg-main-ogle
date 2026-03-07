@@ -24,6 +24,11 @@ This skill produces scroll-stopping, engagement-driving captions for any platfor
 **Output:** Platform-ready captions
 **Prerequisite:** Campaign Brief File (CBF) required
 
+## ANTI-DEGRADATION
+
+- Read `S09-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

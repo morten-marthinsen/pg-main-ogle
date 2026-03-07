@@ -26,3 +26,9 @@ believe the solution can actually work for them.
 
 **Output:** Mechanism narrative section copy
 **Requires:** Campaign Brief (Skill 09), Root Cause Narrative (Skill 13), Mechanism Package (Skill 04)
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `MECHANISM-NARRATIVE-ANTI-DEGRADATION.md` before execution — structural enforcement rules

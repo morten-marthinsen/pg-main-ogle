@@ -39,6 +39,12 @@ promise level the proof can support.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `PROOF-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## OUTPUT LOCATION
 
 Save to: `outputs/[project-name]/proof-inventory-output.json`

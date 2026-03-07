@@ -26,3 +26,9 @@ identification — the reader sees themselves in the story.
 
 **Output:** Story section copy
 **Requires:** Campaign Brief (Skill 09), Lead (Skill 11)
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `STORY-ANTI-DEGRADATION.md` before execution — structural enforcement rules

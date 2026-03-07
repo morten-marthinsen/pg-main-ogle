@@ -27,6 +27,13 @@ This skill transforms passive content publishing into active community building.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `S16-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
+---
+
 ## SKILL IDENTITY
 
 ```yaml

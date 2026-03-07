@@ -25,6 +25,11 @@ This skill builds a calibrated scoring framework to predict content performance 
 **Output:** Virality Scoring Framework (VSF)
 **Unlocks:** S07: Campaign Brief (via Gate G06)
 
+## ANTI-DEGRADATION
+
+- Read `S06-VIRALITY-SCORING-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

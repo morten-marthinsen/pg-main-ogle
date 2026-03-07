@@ -98,7 +98,7 @@ critique:
 
 **This is NOT optional. NOT a flag. 3 rounds DEFAULT. Every Arena runs 3 rounds.**
 
-### Round 1: Initial Generation + Critique + Revision
+### Round 1: Initial Generation + Diversity Audit + Critique + Revision
 
 ```
 ROUND 1:
@@ -106,6 +106,11 @@ ROUND 1:
       - All 7 produce complete outputs per skill requirements
       - The Architect generates an integrated output (not synthesis of others)
       - Load specimens per skill's specimen injection protocol
+
+  1A.1: Variant Diversity Audit (ARENA-DIVERSITY-PROTOCOL.md)
+      - Classify all 7 outputs by: emotional frame, structural approach, entry angle, differentiating phrase
+      - Pairwise convergence check (21 pairs)
+      - If >3 convergent pairs: trigger Divergence Protocol (3 most-similar regenerate with differentiation constraint)
 
   1B: Adversarial Critique
       - The Critic evaluates ALL 7 outputs
@@ -120,15 +125,21 @@ ROUND 1:
       - Maximum scope: targeted fix, not full rewrite
 
   1D: Scoring
-      - Revised outputs scored against 7 skill-specific criteria
+      - Revised outputs scored against 7 skill-specific criteria + 2 diversity dimensions
+      - Competitive Distance (10% weight): How different from what competitors run?
+      - Pattern Break Bonus (5% weight): Does it violate category conventions?
       - Scores 1-10 per criterion with evidence
-      - Weighted total calculated per skill's weights
+      - Weighted total calculated per skill's weights (existing weights redistributed proportionally)
+
+  1D.1: Memorability Test
+      - Recall one phrase per variant WITHOUT re-reading
+      - Flag variants where no phrase is recalled as "forgettable" (informational)
 
   1E: Ranking
       - All 7 ranked by weighted score
       - Strengths and weaknesses documented per competitor
 
-  1F: Learning Brief Generated
+  1F: Learning Brief Generated (includes diversity and memorability notes)
       - Winner's techniques extracted
       - What the winner did that others didn't
       - Persona-specific feedback for each non-winner
@@ -149,7 +160,7 @@ COMPRESS (to summaries):
   - Persona generation rationale → key decisions only
 ```
 
-### Round 2: Learning-Informed Regeneration + Critique + Revision
+### Round 2: Learning-Informed Regeneration + Diversity Audit + Critique + Revision
 
 ```
 ROUND 2:
@@ -164,6 +175,11 @@ ROUND 2:
       - NOT revision of Round 1 output — NEW generation
       - Persona voice MAINTAINED while integrating winner techniques
       - The Architect has additional advantage: saw all 7 Round 1 outputs
+
+  2B.1: Variant Diversity Audit (ARENA-DIVERSITY-PROTOCOL.md)
+      - Re-classify all 7 outputs (learning integration can cause convergence)
+      - Pairwise convergence check
+      - If >3 convergent pairs: trigger Divergence Protocol
 
   2C: Adversarial Critique
       - Same protocol as Round 1
@@ -199,7 +215,7 @@ COMPRESS:
   - Round 1 scores → keep totals only
 ```
 
-### Round 3: FINAL Generation + Critique + Revision
+### Round 3: FINAL Generation + Diversity Audit + Critique + Revision
 
 ```
 ROUND 3:
@@ -212,6 +228,11 @@ ROUND 3:
       - Best possible output incorporating all learnings
       - Full persona voice with integrated techniques
       - This is the FINAL competitive output
+
+  3B.1: Variant Diversity Audit (ARENA-DIVERSITY-PROTOCOL.md)
+      - FINAL diversity check — most critical round for convergence risk
+      - Pairwise convergence check
+      - If >3 convergent pairs: trigger Divergence Protocol (even in final round)
 
   3C: Adversarial Critique
       - Highest standard — this is the final check
@@ -748,6 +769,7 @@ Before producing ANY output token, persona agents must use extended thinking to:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.1 | 2026-03-06 | DIVERSITY ENFORCEMENT: Added Variant Diversity Audit step (1A.1/2B.1/3B.1) between generation and critique in each round — classifies outputs, pairwise convergence check, Divergence Protocol if >3 convergent pairs. Added Competitive Distance (10% weight) and Pattern Break Bonus (5% weight) as new evaluation dimensions. Added Memorability Test (1D.1) post-scoring. Reference: `skills/protocols/ARENA-DIVERSITY-PROTOCOL.md`. |
 | 2.0 | 2026-02-05 | AGENT TEAMS + EFFORT PROTOCOL: Added Agent Team Execution Mode (team architecture with 7 persona teammates + Critic + Judge as separate agents, persona agent prompt package spec, agent team round flow, context compression elimination in team mode, single-context fallback). Added Effort Protocol Integration (arena-specific effort mapping, what max effort means for generation with 6-point pre-generation checklist). Addresses three root quality constraints: persona contamination, no extended reasoning during generation, context pressure degradation. |
 | 1.0 | 2026-02-05 | Initial creation: 3-round mandatory competition, adversarial critique-revise protocol, Synthesizer-as-Competitor (7th competitor), learning brief specification, persona identity preservation rule, context compression protocol, MC-CHECK integration (8 checkpoints), arena modes (strategic/generative_full_draft/editorial_revision), emergency protocols, output schemas, forbidden behaviors |
 

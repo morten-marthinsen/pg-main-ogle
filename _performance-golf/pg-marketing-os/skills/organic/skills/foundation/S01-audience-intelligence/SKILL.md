@@ -25,6 +25,11 @@ This skill produces a comprehensive understanding of WHO we're creating content 
 **Output:** Audience Intelligence File (AIF)
 **Unlocks:** S02: Platform Strategy (via Gate G01)
 
+## ANTI-DEGRADATION
+
+- Read `S01-AUDIENCE-INTELLIGENCE-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

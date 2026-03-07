@@ -6,6 +6,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: S09 Caption Writing — ANTI-DEGRADATION PROTOCOL v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Write generic captions that work across all platforms instead of platform-specific versions. Skip Arena for short content or claim it can be bypassed. Bury the hook after the truncation point or treat character counts as approximate.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## EXECUTIVE SUMMARY
 
 This protocol prevents 9 failure modes that have degraded caption quality across organic marketing campaigns. Every agent executing S09 MUST read this file before beginning work.

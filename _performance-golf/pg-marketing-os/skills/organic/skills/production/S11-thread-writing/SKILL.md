@@ -24,6 +24,11 @@ This skill produces viral-worthy threads for X/Twitter and LinkedIn. Threads are
 **Output:** Complete thread with all tweets/posts
 **Prerequisite:** Campaign Brief File (CBF) required
 
+## ANTI-DEGRADATION
+
+- Read `S11-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

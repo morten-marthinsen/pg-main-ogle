@@ -25,3 +25,9 @@ packages the final polished piece ready for production.
 
 **Output:** Final polished copy + editorial report
 **Requires:** Complete proof-woven copy from Skill 18
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `EDITORIAL-ANTI-DEGRADATION.md` before execution — structural enforcement rules

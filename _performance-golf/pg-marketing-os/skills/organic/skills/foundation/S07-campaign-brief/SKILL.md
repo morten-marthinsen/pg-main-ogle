@@ -25,6 +25,11 @@ This skill synthesizes ALL foundation work (S01-S06) into a single, actionable C
 **Output:** Campaign Brief File (CBF)
 **Unlocks:** ALL Production Skills (S08-S14) via Gate G07
 
+## ANTI-DEGRADATION
+
+- Read `S07-CAMPAIGN-BRIEF-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

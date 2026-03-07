@@ -420,6 +420,21 @@ These protocols are loaded at Layer 0 based on skill requirements:
 **Full protocol:** `skills/protocols/LEARNING-CAPTURE-PROTOCOL.md`
 **Key rule:** Every skill execution ends with LEARN sub-step
 
+### Arena Diversity Protocol (v1.0)
+**Full protocol:** `skills/protocols/ARENA-DIVERSITY-PROTOCOL.md`
+**Applied to:** All Arena executions (Skills 03-20)
+**Key rule:** Variant Diversity Audit between generation and scoring each round. Competitive Distance (10%) + Pattern Break (5%) added to evaluation criteria. Memorability Test post-scoring.
+
+### Semi-Formal Reasoning Protocol (v1.0)
+**Full protocol:** `skills/protocols/SEMI-FORMAL-REASONING-PROTOCOL.md`
+**Applied to:** Any microskill producing analytical conclusions (Skills 03, 04, 05, 06, Arena winner selection)
+**Key rule:** Premises → Evidence Chain → Conclusion → Counterexample Check → Confidence Assessment. Steel Man Gate mandatory before final winner selection.
+
+### Brainstorm Diversity Protocol (v1.0)
+**Full protocol:** `skills/protocols/BRAINSTORM-DIVERSITY-PROTOCOL.md`
+**Applied to:** Skills generating multiple candidates (10 Headlines, 05 Promise, 06 Big Idea, A02 Hooks, E2 Subject Lines)
+**Key rule:** Minimum category spread per skill, 40% cluster threshold triggers additive generation, specimen-anchored divergence across generation passes.
+
 ---
 
 ## FORBIDDEN BEHAVIORS
@@ -522,19 +537,25 @@ When context grows large:
 
 ## ANTI-DEGRADATION ENFORCEMENT FILES
 
-**All 37 CopywritingEngine skills have dedicated anti-degradation files.** These contain STRUCTURAL enforcement that CANNOT be bypassed. Each file has EQUAL authority to this CLAUDE-CORE.md.
+**Every skill across all engines has a dedicated ANTI-DEGRADATION.md file.** These contain STRUCTURAL enforcement that CANNOT be bypassed. Each file has EQUAL authority to this CLAUDE-CORE.md.
+
+### Universal Enforcement Protocol
+
+**`skills/protocols/EXECUTION-GUARDRAILS.md`** — Defines the mandatory read declaration, GATE_0 proof standard, and pre-flight/post-execution checklists. Every skill execution must include the mandatory read declaration in the first output file.
 
 ### Quick Reference: When to Read Which File
 
 | If You're Executing... | READ THIS FIRST |
 |------------------------|-----------------|
-| Any skill | This CLAUDE-CORE.md (you're here) |
+| Any skill | This CLAUDE-CORE.md + skill's ANTI-DEGRADATION.md (write declaration to first output) |
 | Arena skills (03-20) | CLAUDE-ARENA.md + skill's ANTI-DEGRADATION.md |
 | Generative skills (10-20) | CLAUDE-SPECIMENS.md + CLAUDE-ARENA.md + skill's ANTI-DEGRADATION.md |
 | Skill-specific protocol | CLAUDE-SKILL-INDEX.md (relevant section only) |
 | Research (01) or Proof (02) | CLAUDE-SKILL-INDEX.md + skill's ANTI-DEGRADATION.md (detailed enforcement) |
 | Email Engine (E0-E4) | `skills/email/EMAIL-ENGINE-CLAUDE.md` + skill's ANTI-DEGRADATION.md |
 | Ad Engine (A01-A12) | `skills/ads/AD-ENGINE-CLAUDE.md` + skill's ANTI-DEGRADATION.md |
+| Organic Engine (S01-S24) | `skills/organic/ORGANIC-ENGINE-CLAUDE.md` + skill's ANTI-DEGRADATION.md |
+| Upsell Engine (U0-U5) | Skill's ANTI-DEGRADATION.md (declaration is mandatory) |
 
 ---
 
@@ -544,10 +565,12 @@ If you are an LLM reading this file at the start of a CopywritingEngine session:
 
 **You are expected to:**
 1. Read this CLAUDE-CORE.md file
-2. Read the appropriate companion files for your skill type
-3. Execute with full discipline regardless of context size
-4. Produce COMPLETE outputs with ALL required files
-5. Never claim completion without verification
-6. Write SESSION-STATE.md before ending ANY session
+2. Read the skill's ANTI-DEGRADATION.md file
+3. Write the MANDATORY READ DECLARATION to your first output file
+4. Read the appropriate companion files for your skill type
+5. Execute with full discipline regardless of context size
+6. Produce COMPLETE outputs with ALL required files
+7. Never claim completion without verification
+8. Write SESSION-STATE.md before ending ANY session
 
 **Failure to follow these protocols has caused real problems. Do not repeat them.**

@@ -41,6 +41,12 @@ This skill has 16 microskills across 5 layers:
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `CAMPAIGN-BRIEF-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## UPSTREAM REQUIREMENTS (All Required)
 
 | Skill | Output File |
