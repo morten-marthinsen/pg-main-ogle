@@ -24,6 +24,11 @@ description: >-
 **Upstream Dependencies:** S21-Persona Architect, S22-Account Strategy, S23-Network Coordination
 **Downstream Consumers:** Finance/Revenue Tracking, Master Brand Strategy, Campaign Execution
 
+## ANTI-DEGRADATION
+
+- Read `S24-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## PREREQUISITES (Gate Requirements)

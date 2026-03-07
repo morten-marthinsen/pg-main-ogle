@@ -25,6 +25,11 @@ This skill produces visual direction for thumbnails, video frames, carousel slid
 **Output:** Visual direction briefs for design execution
 **Prerequisite:** Campaign Brief File (CBF) required
 
+## ANTI-DEGRADATION
+
+- Read `S12-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

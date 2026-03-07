@@ -25,6 +25,11 @@ This skill designs the structural framework for all content. Pillars, series, fo
 **Output:** Content Architecture File (CAF)
 **Unlocks:** S05: Hook Library (via Gate G04)
 
+## ANTI-DEGRADATION
+
+- Read `S04-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

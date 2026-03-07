@@ -24,6 +24,11 @@ This skill determines WHERE to focus and HOW to optimize for each platform's alg
 **Output:** Platform Strategy File (PSF)
 **Unlocks:** S03: Brand Voice (via Gate G02)
 
+## ANTI-DEGRADATION
+
+- Read `S02-PLATFORM-STRATEGY-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

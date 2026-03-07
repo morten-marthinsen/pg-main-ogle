@@ -26,3 +26,9 @@ and feel that it is the natural, inevitable solution.
 
 **Output:** Product introduction section copy
 **Requires:** Campaign Brief (Skill 09), Mechanism Narrative (Skill 14)
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `PRODUCT-INTRODUCTION-ANTI-DEGRADATION.md` before execution — structural enforcement rules

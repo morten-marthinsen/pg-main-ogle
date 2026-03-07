@@ -11,6 +11,19 @@ Prevent degradation in monetization strategy: premature monetization before audi
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: S24 Monetization Engine — Anti-Degradation Protocol v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Plan monetization before audience readiness criteria are met. Apply identical revenue models across >70% of personas. Set pricing without value analysis, competitive research, and audience purchasing power assessment.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## Fix 1: Project Infrastructure Requirements
 
 ### Required Files at Project Start

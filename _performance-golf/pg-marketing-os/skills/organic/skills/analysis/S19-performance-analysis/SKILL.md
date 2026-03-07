@@ -33,6 +33,11 @@ Convert platform analytics into calibrated performance assessments, identifying 
 - **Downstream:** Feeds insights to S20-learning-capture for system-level improvements
 - **Lateral:** References S05-virality-scoring for prediction calibration
 
+## ANTI-DEGRADATION
+
+- Read `S19-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## PREREQUISITES

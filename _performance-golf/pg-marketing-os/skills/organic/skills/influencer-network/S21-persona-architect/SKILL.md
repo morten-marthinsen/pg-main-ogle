@@ -24,6 +24,11 @@ description: >-
 **Upstream Dependencies:** Network Strategy Definition, Brand Voice Guidelines
 **Downstream Consumers:** S22-Account Strategy, S23-Network Coordination, S24-Monetization Engine
 
+## ANTI-DEGRADATION
+
+- Read `S21-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## PREREQUISITES (Gate Requirements)

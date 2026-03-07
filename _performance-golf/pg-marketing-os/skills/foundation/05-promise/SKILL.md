@@ -34,6 +34,12 @@ skepticism. Too timid = ignored.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `PROMISE-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## OUTPUT LOCATION
 
 Save to: `outputs/[project-name]/promise-output.json`

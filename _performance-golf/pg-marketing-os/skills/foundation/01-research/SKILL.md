@@ -38,6 +38,7 @@ This skill is decomposed into 4 companion files (load only what you need):
 2. `research-layer-specs.md` — per-layer execution specs (load relevant layer only)
 3. `research-subagent-templates.md` — model selection, personas, context templates
 4. `research-output-protocol.md` — output structure, checkpoints, session recap
+5. `RESEARCH-ANTI-DEGRADATION.md` — structural enforcement rules
 
 ---
 

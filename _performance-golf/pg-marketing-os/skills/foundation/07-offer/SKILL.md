@@ -34,6 +34,12 @@ desire; the offer converts it.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `OFFER-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## OUTPUT LOCATION
 
 Save to: `outputs/[project-name]/offer-package.json`

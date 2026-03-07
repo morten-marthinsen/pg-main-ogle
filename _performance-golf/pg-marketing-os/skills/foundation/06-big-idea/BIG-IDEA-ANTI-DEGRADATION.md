@@ -8,6 +8,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: BIG-IDEA-ANTI-DEGRADATION.md v2.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Generate fewer than 9 candidates (3x3 matrix), skip schema distance calibration, or skip FSSIT validation.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**
@@ -590,6 +603,42 @@ NEVER begin big idea execution without reading this anti-degradation file first.
 
 ---
 
+## STRUCTURAL FIX 11: SEMI-FORMAL REASONING FOR SCHEMA DISTANCE VALIDATION
+
+### The Problem
+Schema distance calibration (Layer 3, microskill 3.7-3.8) produces analytical conclusions about whether a Big Idea is too familiar or too alien. Without structured reasoning, schema distance scores can be pattern-matched ("health supplement = medium distance") rather than derived from competitive landscape evidence.
+
+### The Fix
+
+**Reference:** `skills/protocols/SEMI-FORMAL-REASONING-PROTOCOL.md`
+
+**Schema distance validation (3.7-3.8) MUST use the Semi-Formal Reasoning Template:**
+
+Each schema distance output must include:
+- **PREMISES** — Sourced from saturation mapper (1.2), gap identifier (1.3), and competitive landscape data
+- **EVIDENCE CHAIN** — Why this Big Idea lands at THIS specific schema distance, with competitive evidence
+- **CONCLUSION** — The schema distance score with specific justification
+- **COUNTEREXAMPLE CHECK** — "If this Big Idea were actually at distance [N-2], what market evidence would support that? Does it exist?"
+- **CONFIDENCE ASSESSMENT** — Based on quality of competitive data, not gut feel
+
+**Specifically for Defensibility Validation (3.3):**
+- Steel Man Gate applies: Before accepting defensibility score >= 7.0, articulate the strongest challenge to the Big Idea's defensibility
+- If the challenge cannot be defeated: flag for human review
+
+**MC-CHECK Addition:**
+
+Add to BIGIDEA-MC-CHECK at Layer 3:
+
+```yaml
+reasoning_quality_check:
+  semi_formal_template_used_for_schema: [Y/N]
+  counterexample_included: [Y/N]
+  defensibility_steel_man_completed: [Y/N]
+  if_any_no: "HALT — Schema distance and defensibility validation require semi-formal reasoning per SEMI-FORMAL-REASONING-PROTOCOL.md"
+```
+
+---
+
 ## Per-Microskill Output Protocol (v3.2)
 
 **Added:** 2026-02-12
@@ -661,6 +710,7 @@ Each microskill entry in execution-log.md MUST include:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.2 | 2026-03-06 | SEMI-FORMAL REASONING: Added Structural Fix 11 — Semi-Formal Reasoning Template required for schema distance validation (3.7-3.8) and defensibility validation (3.3). Steel Man Gate for defensibility scoring. MC-CHECK enhanced with reasoning_quality_check. Reference: `skills/protocols/SEMI-FORMAL-REASONING-PROTOCOL.md`. |
 | 2.1 | 2026-02-23 | EXPRESSION ANCHORING PROTOCOL: Added 0.2.8-tier1-expression-reference (2KB min) and 3.9-expression-anchoring-scores (3KB min) to per-microskill output table. Shared protocol: Skills/protocols/EXPRESSION-ANCHORING-PROTOCOL.md. 4-dimension scoring: Quote Penetration (30%), TIER1 Pattern Match (20%), FSSIT Echo (30%), Schema Distance × Anchoring Interaction (20%). Validates creative wrapping preserved FSSIT resonance. |
 | 2.0 | 2026-02-14 | CONCEPT/NAMING SEPARATION + SOUL.MD: Added STRUCTURAL FIX 8 (Concept Checkpoint Gate) — Layer 2B Creative Wrapping cannot execute without CONCEPT_APPROVED.yaml. Includes gate file format with FSSIT anchors, 6 concept-specific forbidden rationalizations. Added STRUCTURAL FIX 9 (Soul.md Loading Gate) — mandatory Soul.md check at pre-execution with voice/energy/anti-voice extraction, creative wrapper voice-matching constraint. Added STRUCTURAL FIX 10 (Anti-Degradation Mandatory Read) — session startup protocol. BIGIDEA-MC-CHECK enhanced with concept_checkpoint_verification block (6 checks) and soul_md_check block (3 checks). Implementation checklist restructured: added PRE-EXECUTION section with Soul.md check, Layer 2 split into "Layer 2A / Phase A (Concept Generation)" and "Layer 2B / Phase B (Creative Wrapping)", new CONCEPT CHECKPOINT section with 7 items, added POST-EXECUTION section, Soul.md loading in Layer 0. Checkpoint progression updated to include CONCEPT_APPROVED.yaml between LAYER_2A and LAYER_2B. |
 | 1.2 | 2026-02-12 | PER-MICROSKILL OUTPUT PROTOCOL: Added per-microskill output table (31 microskills across Layers 0-4) with minimum file size thresholds. Layer gate enhancement, execution log enhancement, forbidden behaviors for per-microskill outputs. |

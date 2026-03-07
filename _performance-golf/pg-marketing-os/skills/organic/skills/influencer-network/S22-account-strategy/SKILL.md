@@ -23,6 +23,11 @@ description: >-
 **Upstream Dependencies:** S21-Persona Architect (Persona Bibles required)
 **Downstream Consumers:** S23-Network Coordination, S24-Monetization Engine, Content Production Teams
 
+## ANTI-DEGRADATION
+
+- Read `S22-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## PREREQUISITES (Gate Requirements)

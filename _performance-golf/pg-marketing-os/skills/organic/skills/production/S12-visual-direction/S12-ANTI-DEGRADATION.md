@@ -17,6 +17,19 @@ This document contains the accumulated failure modes and enforcement protocols f
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: S12: Visual Direction Anti-Degradation System v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Provide generic visual direction like "make it look good" instead of specific composition, color, and typography specs. Use vague dimensions like "square" or "landscape" instead of exact pixel dimensions. Skip text-safe zone specification for any visual with text overlay.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## The 9 Core Fixes
 
 ### Fix 1: Project Infrastructure (MANDATORY)

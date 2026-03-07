@@ -24,6 +24,11 @@ description: >-
 **Upstream Dependencies:** S21-Persona Architect (Persona Bibles), S22-Account Strategy (Individual strategies)
 **Downstream Consumers:** S24-Monetization Engine, Campaign Execution Teams
 
+## ANTI-DEGRADATION
+
+- Read `S23-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## PREREQUISITES (Gate Requirements)

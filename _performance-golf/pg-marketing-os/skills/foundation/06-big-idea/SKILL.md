@@ -36,6 +36,12 @@ orbit around it.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `BIG-IDEA-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## OUTPUT LOCATION
 
 Save to: `outputs/[project-name]/big-idea-output.json`

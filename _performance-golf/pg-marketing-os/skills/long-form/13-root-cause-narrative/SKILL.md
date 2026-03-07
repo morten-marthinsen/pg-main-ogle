@@ -26,3 +26,9 @@ feel that they finally understand why they have been stuck.
 
 **Output:** Root cause narrative section copy
 **Requires:** Campaign Brief (Skill 09), Story (Skill 12), Root Cause Package (Skill 03)
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `ROOT-CAUSE-NARRATIVE-ANTI-DEGRADATION.md` before execution — structural enforcement rules

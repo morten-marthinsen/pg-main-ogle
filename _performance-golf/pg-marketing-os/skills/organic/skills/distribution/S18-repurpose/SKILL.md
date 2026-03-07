@@ -28,6 +28,13 @@ This skill transforms a single piece of content into maximum distribution value.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `S18-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
+---
+
 ## SKILL IDENTITY
 
 ```yaml

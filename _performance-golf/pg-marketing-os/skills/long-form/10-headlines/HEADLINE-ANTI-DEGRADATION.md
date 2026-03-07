@@ -8,6 +8,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: HEADLINE-ANTI-DEGRADATION.md v2.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Skip Arena rounds, synthesize headlines from summaries instead of specimens, or reduce candidate count below minimums.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**
@@ -510,10 +523,71 @@ Each microskill entry in execution-log.md MUST include:
 
 ---
 
+## STRUCTURAL FIX 11: CATEGORY SPREAD + DIVERSITY ENFORCEMENT
+
+### The Problem
+Headline generation tends to cluster around one approach — typically formula-based curiosity headlines. When 8 of 12 candidates use the same archetype, the Arena scores variations of one pattern instead of evaluating genuinely different approaches.
+
+### The Fix
+
+**Reference:** `skills/protocols/BRAINSTORM-DIVERSITY-PROTOCOL.md`
+
+**1. Minimum Category Spread:**
+
+Headline candidates MUST cover 4+ archetypes:
+
+| Archetype | Source Microskill | What It Means |
+|-----------|------------------|--------------|
+| **Formula-based** | 2.1 | Proven formula patterns (How-to, Number, Question, etc.) |
+| **Vault-inspired** | 2.2 | Modeled on specific gold specimen patterns |
+| **Schema-violation** | 2.3 | Deliberately breaking category expectations |
+| **Format-adapted** | 2.4 | Adapted for specific formats (email, social, VSL) |
+
+```yaml
+category_spread_check:
+  total_candidates: [number]
+  archetypes_represented: [number]
+  IF archetypes_represented < 4:
+    HALT — "Need candidates from all 4 archetypes. Missing: [list]"
+```
+
+**2. Similarity De-duplication:**
+
+After generation, before Arena entry:
+- Group candidates by dominant frame (emotional + structural)
+- If any group contains >40% of total candidates: flag as "cluster-heavy"
+- When cluster-heavy: generate 3-5 additional candidates OUTSIDE the overrepresented frame
+- This is additive — does not delete existing candidates
+
+**3. Specimen-Anchored Divergence:**
+
+Each generation pass (2.1-2.4) already anchors to different approaches. Additionally:
+- Each pass must use a DIFFERENT specimen anchor from the vault
+- Mix classic and modern specimens
+- Mix verticals where available
+
+**MC-CHECK Addition:**
+
+Add to HEADLINE-MC-CHECK:
+
+```yaml
+diversity_verification:
+  archetypes_represented: [number]
+  if_under_4: "HALT — Need all 4 headline archetypes"
+  cluster_heavy_detected: [Y/N]
+  if_yes_additional_generated: [Y/N]
+  if_cluster_heavy_and_no_additional: "HALT — Generate 3-5 candidates outside overrepresented frame"
+  specimen_anchors_diverse: [Y/N]
+  if_no: "HALT — Each generation pass needs different specimen anchor"
+```
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.1 | 2026-03-06 | CATEGORY SPREAD + DIVERSITY: Added Structural Fix 11 — 4+ headline archetypes required, 40% cluster threshold triggers additive generation, specimen-anchored divergence. MC-CHECK enhanced with diversity_verification. Reference: `skills/protocols/BRAINSTORM-DIVERSITY-PROTOCOL.md`. |
 | 2.0 | 2026-02-14 | STRUCTURAL ENFORCEMENT PROPAGATION: Added 4 structural fixes from Skills 01-04 propagation pattern. Fix 7: Mandatory project infrastructure. Fix 8: Binary gate enforcement with forbidden statuses. Fix 9: Stale artifact cleanup. Fix 10: Anti-degradation mandatory read. Implementation checklist expanded with PRE-EXECUTION and POST-EXECUTION sections. |
 | 1.2 | 2026-02-12 | PER-MICROSKILL OUTPUT PROTOCOL: Added v3.2 per-microskill output table with 23 required output files across 5 layers. Layer gate enhancement, execution log enhancement, forbidden behaviors for per-microskill compliance. |
 | 1.1 | 2026-02-06 | ARENA MANDATORY ENFORCEMENT: Added structural fix for Arena Layer (2.5) — cannot be skipped. ARENA_COMPLETE.yaml checkpoint required before Layer 3. Added Arena-specific forbidden rationalizations. Updated checkpoint progression and implementation checklist. |
