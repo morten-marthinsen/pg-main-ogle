@@ -240,7 +240,7 @@ The Creative OS PRD is the **organization-level vision document** for Performanc
 - **Structure:** TBD (will be refined as PRD is built)
 
 ### 7.4 Challenger Function
-- Every sub-agent (e.g. Bravo, Exa) must have a **challenger skill/sub-agent** that challenges the human operator so work stays aligned with the Creative OS PRD.
+- Every sub-agent (e.g. Bravo, Orion) must have a **challenger skill/sub-agent** that challenges the human operator so work stays aligned with the Creative OS PRD.
 - Must be **token-efficient**: automated where useful but not burning context every session. (See Recommendations below.)
 
 ### 7.5 Multiple Product Launches

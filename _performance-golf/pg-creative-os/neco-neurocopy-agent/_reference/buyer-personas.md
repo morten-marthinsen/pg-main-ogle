@@ -16,7 +16,7 @@
 | **Neco** | Copy generation — pulls wound, internal dialogue, suggestibility seed, voice direction for hooks and scripts |
 | **Tess** | Targeting — maps personas to audience segments, tracks performance per persona, feeds conversion data back to validate/update profiles |
 | **Veda** | Production — visual identity and color palette guide footage selection, B-roll sourcing, and color grading |
-| **Exa** | Strategy — persona coverage gaps inform creative roadmap and Andromeda diversity scoring |
+| **Orion** | Strategy — persona coverage gaps inform creative roadmap and Andromeda diversity scoring |
 
 ---
 

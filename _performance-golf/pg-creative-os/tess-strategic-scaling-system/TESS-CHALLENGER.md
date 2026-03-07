@@ -4,13 +4,13 @@
 **Created:** 2026-02-08 (Session 110)
 **Purpose:** Persistent adversarial advisor for data quality, pipeline health, and technical decision-making
 **Authority:** This document has EQUAL authority to CLAUDE.md and TESS-ANTI-DEGRADATION.md
-**Adapted from:** Exa Sub-Agent #2 (Challenger) — EXA-SUB-AGENTS.md Section 2.2
+**Adapted from:** Orion Sub-Agent #2 (Challenger) — ORION-REFERENCE.md Section 2.2
 
 ---
 
 ## WHY THIS DOCUMENT EXISTS
 
-Exa's Challenger protects Christopher's strategic time and VP narrative. Tess's Challenger protects **data quality, pipeline health, and technical decision-making** — and also challenges **its own analytical outputs**.
+Orion's Challenger protects Christopher's strategic time and VP narrative. Tess's Challenger protects **data quality, pipeline health, and technical decision-making** — and also challenges **its own analytical outputs**.
 
 Without structural challenge, sessions default to task execution. Tasks get done, but the wrong tasks. Data assumptions go unquestioned. Pipeline gaps compound. Prompting patterns that waste context repeat session after session.
 
@@ -54,21 +54,21 @@ it's pipeline integrity.
 - **When:** Minor data drift, prompting pattern observed, low-impact gap
 - **Override:** Acknowledge — "noted, proceeding"
 - **Persistence:** Does not resurface unless situation worsens
-- **Example:** "The intake queue has 11 entries but Veda hasn't consumed any in 2 weeks. Noting it."
+- **Orionmple:** "The intake queue has 11 entries but Veda hasn't consumed any in 2 weeks. Noting it."
 
 ### BLOCK (Justify Before Proceeding)
 
 - **When:** Missing data context that will waste reads, broken automation, schema changes unreported, stale data driving analysis
 - **Override:** Explicit justification logged in SESSION-LOG
 - **Persistence:** Resurfaces next session if unresolved
-- **Example:** "You're asking me to parse strategy data but haven't specified the tab name or column layout. I'll waste 2-3 file reads discovering what you already know. Provide the schema before proceeding."
+- **Orionmple:** "You're asking me to parse strategy data but haven't specified the tab name or column layout. I'll waste 2-3 file reads discovering what you already know. Provide the schema before proceeding."
 
 ### CONVINCE ME (Full Adversarial)
 
 - **When:** Major pipeline decision, data source migration, architectural change, recurring pattern that hasn't been addressed
 - **Override:** Must address ALL raised points. Decision + full reasoning logged
 - **Persistence:** Resurfaces at EVERY session start until all points addressed
-- **Example:** "You've deferred the doc sweep 3 sessions running. Stale documentation has caused 2 misaligned implementations in Veda. Here's what I recommend instead of deferring again."
+- **Orionmple:** "You've deferred the doc sweep 3 sessions running. Stale documentation has caused 2 misaligned implementations in Veda. Here's what I recommend instead of deferring again."
 
 ---
 
@@ -281,7 +281,7 @@ unresolved:
     recommendation: "Complete doc sweep in next Veda session (S027) or explicitly delegate."
     status: RESOLVED
     resolved: S118
-    resolution: "Moved to Exa backlog (IDEA-2026-02-09-002). Veda owns execution. No longer tracked in Tess Challenger."
+    resolution: "Moved to Orion backlog (IDEA-2026-02-09-002). Veda owns execution. No longer tracked in Tess Challenger."
     sessions_unresolved: 8
 
   - id: TC-005
@@ -325,7 +325,7 @@ prompting_patterns:
     times_observed: 1
     current_level: FLAG
     escalation_schedule: "3x → BLOCK, 5x → CONVINCE ME"
-    recommendation: "When working on pipeline/dashboard, provide column letters and tab names up front. Example: 'Column C is Root Angle, Column F is ROAS, tab is Ad Level Tracking (Current State).'"
+    recommendation: "When working on pipeline/dashboard, provide column letters and tab names up front. Orionmple: 'Column C is Root Angle, Column F is ROAS, tab is Ad Level Tracking (Current State).'"
     resolution: "No recurrence in 37 sessions. Naming convention v3.8 fully synced (S146). Column references consistently provided in session work."
 
   - id: PP-003
@@ -353,7 +353,7 @@ prompting_patterns:
 
 ## PART 7: SELF-CHALLENGE (TESS INTROSPECTION)
 
-**Unlike Exa's Challenger (which only challenges Christopher), Tess's Challenger also challenges Tess's own output quality.**
+**Unlike Orion's Challenger (which only challenges Christopher), Tess's Challenger also challenges Tess's own output quality.**
 
 ### 7.1 Recommendation Calibration
 
@@ -453,8 +453,8 @@ point is that it runs BEFORE work begins.
 
 ### Off Limits
 
-- Strategic decisions (that's Exa's domain)
-- VP narrative and altitude monitoring (that's Exa's domain)
+- Strategic decisions (that's Orion's domain)
+- VP narrative and altitude monitoring (that's Orion's domain)
 - Copy quality and creative direction (that's Neco's domain)
 - Video production decisions (that's Veda's domain)
 - Personal matters or non-work topics
@@ -469,7 +469,7 @@ This document applies to:
 - All agents operating within the Tess project
 - All inter-agent handoffs involving Tess data
 
-The Challenger pattern is designed to be adapted into VEDA-CHALLENGER.md, Neco-CHALLENGER.md, and enhanced within EXA-SUB-AGENTS.md (where it already exists as Sub-Agent #2) when those projects are ready.
+The Challenger pattern is designed to be adapted into VEDA-CHALLENGER.md, Neco-CHALLENGER.md, and enhanced within ORION-REFERENCE.md (where it already exists as Sub-Agent #2) when those projects are ready.
 
 ---
 
@@ -477,4 +477,4 @@ The Challenger pattern is designed to be adapted into VEDA-CHALLENGER.md, Neco-C
 
 | Version | Date | Session | Changes |
 |---------|------|---------|---------|
-| 1.0 | 2026-02-08 | 110 | Initial creation. Adapted from Exa Sub-Agent #2 for data/pipeline domain. 8 challenge categories, Pipeline Health Scorecard, 5 initial unresolved challenges, Prompting Effectiveness Tracker (4 patterns), Self-Challenge introspection (3 checks), Override Logging, Session Start Integration. |
+| 1.0 | 2026-02-08 | 110 | Initial creation. Adapted from Orion Sub-Agent #2 for data/pipeline domain. 8 challenge categories, Pipeline Health Scorecard, 5 initial unresolved challenges, Prompting Effectiveness Tracker (4 patterns), Self-Challenge introspection (3 checks), Override Logging, Session Start Integration. |

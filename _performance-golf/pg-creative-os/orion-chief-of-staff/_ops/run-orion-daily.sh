@@ -1,16 +1,16 @@
 #!/bin/bash
 # =============================================================================
-# Exa Daily Executive Briefing — Automation Wrapper
+# Orion Daily Executive Briefing — Automation Wrapper
 # =============================================================================
 # Runs daily at 05:00 via launchd
 # Executes daily_briefing.py, logs output, sends notifications
 #
 # Setup:
 #   1. Configure API keys in _ops/daily-briefing/.env
-#   2. Run: launchctl load ~/Library/LaunchAgents/com.performancegolf.exa.plist
+#   2. Run: launchctl load ~/Library/LaunchAgents/com.performancegolf.orion.plist
 #
 # Manual run:
-#   ./_ops/run-exa-daily.sh
+#   ./_ops/run-orion-daily.sh
 # =============================================================================
 
 # NOTE: No 'set -e' — we handle errors explicitly on the critical Python call.
@@ -20,7 +20,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BRIEFING_DIR="$SCRIPT_DIR/daily-briefing"
 LOG_DIR="$BRIEFING_DIR/logs"
-LOG_FILE="$LOG_DIR/exa-$(date +%Y%m%d-%H%M%S).log"
+LOG_FILE="$LOG_DIR/orion-$(date +%Y%m%d-%H%M%S).log"
 FAIL_COUNTER="$LOG_DIR/.consecutive-failures"
 
 # Create logs directory if it doesn't exist
@@ -74,7 +74,7 @@ send_slack() {
                 \"attachments\": [{
                     \"color\": \"$color\",
                     \"text\": \"$message\",
-                    \"footer\": \"Exa Daily Briefing\",
+                    \"footer\": \"Orion Daily Briefing\",
                     \"ts\": $(date +%s)
                 }]
             }" \
@@ -100,25 +100,25 @@ notify_success() {
     local failed="$4"
     local duration="$5"
 
-    local message="*Exa Daily Briefing Complete*\n"
+    local message="*Orion Daily Briefing Complete*\n"
     message+="- Modules: $active active / $total total ($failed failed)\n"
     message+="- Duration: $duration\n"
     message+="- Report: $report_path"
 
     send_slack "$message" "good"
-    send_email "[Exa] Daily Briefing Ready" "$message"
+    send_email "[Orion] Daily Briefing Ready" "$message"
 }
 
 notify_failure() {
     local error="$1"
 
-    local message="*Exa Daily Briefing FAILED*\n"
+    local message="*Orion Daily Briefing FAILED*\n"
     message+="Error: $error\n"
     message+="Log file: $LOG_FILE\n"
     message+="Please investigate."
 
     send_slack "$message" "danger"
-    send_email "[Exa] Daily Briefing FAILED" "$message"
+    send_email "[Orion] Daily Briefing FAILED" "$message"
 }
 
 # =============================================================================
@@ -126,7 +126,7 @@ notify_failure() {
 # =============================================================================
 
 log "=========================================="
-log "EXA DAILY BRIEFING — Starting"
+log "ORION DAILY BRIEFING — Starting"
 log "=========================================="
 log "Script directory: $SCRIPT_DIR"
 log "Briefing directory: $BRIEFING_DIR"
@@ -199,6 +199,6 @@ else
 fi
 
 # Clean up old logs (keep last 30 days)
-find "$LOG_DIR" -name "exa-*.log" -mtime +30 -delete 2>/dev/null || true
+find "$LOG_DIR" -name "orion-*.log" -mtime +30 -delete 2>/dev/null || true
 
 log "Done."

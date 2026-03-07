@@ -5,7 +5,7 @@ automatically (Sauce Vault copy/page standards, pg-creative-os agent routing).
 
 **Active for this session**: Instructions in THIS file + research tool guidelines from ~/.claude/CLAUDE.md.
 **Deprioritize**: Headline/copy/page-architecture content from parent files (for Neco only).
-**Deprioritize**: Routing rules for Exa, Veda, Neco in parent files (not relevant to pipeline work).
+**Deprioritize**: Routing rules for Orion, Veda, Neco in parent files (not relevant to pipeline work).
 Apply parent content ONLY if it directly relates to Tess pipeline operations, API work, or data integrity.
 
 ---

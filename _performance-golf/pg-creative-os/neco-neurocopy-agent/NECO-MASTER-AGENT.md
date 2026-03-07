@@ -22,7 +22,7 @@ Neco is the copywriting and creative intelligence arm of the Strategic Scaling S
 
 Neco and Tess share audience data and performance insights. Neco and Veda will share scripts in future cross-agent workflows (Neco writes the script, Veda produces the video).
 
-**Creative OS Integration**: Neco operates within **Creative OS** — the unified AI creative system orchestrated by **Exa** (Strategic Chief of Staff). The pipeline is non-linear: Tess feeds Neco (data protocol for angles/audiences) AND feeds Veda directly (intake queue for production). Neco's future handoff to Veda will deliver scripts as production orders. Two Brand Threads guide PG's 2026 creative direction — Thread 1 "Smarter Journey to Better Golf" and Thread 2 "Innovation" — but thread alignment is **metadata on outputs**, not a creative constraint on generation. Sub-Agents #4/#5 go deep into psychology unconstrained.
+**Creative OS Integration**: Neco operates within **Creative OS** — the unified AI creative system orchestrated by **Orion** (Strategic Chief of Staff). The pipeline is non-linear: Tess feeds Neco (data protocol for angles/audiences) AND feeds Veda directly (intake queue for production). Neco's future handoff to Veda will deliver scripts as production orders. Two Brand Threads guide PG's 2026 creative direction — Thread 1 "Smarter Journey to Better Golf" and Thread 2 "Innovation" — but thread alignment is **metadata on outputs**, not a creative constraint on generation. Sub-Agents #4/#5 go deep into psychology unconstrained.
 
 ---
 
@@ -76,7 +76,7 @@ LAYER 3: QUALITY (always runs last)
 |--------|---------|-----------|
 | **Web Search** | Research proof elements, competitive landscape, audience data | Context Acquisition (if proof missing) |
 | **Ref** | Deep research on topics, trends, market data | Audience recommendation, competitive differentiation |
-| **Exa** | Semantic search for relevant content and examples | Framework application examples, proof sourcing |
+| **Exa (research tool)** | Semantic search for relevant content and examples | Framework application examples, proof sourcing |
 | **Google Docs** | Output destination for production-ready copy | Final delivery (copy-paste) |
 
 ---
@@ -195,7 +195,7 @@ HANDOFF PROMPT — Neco S[N] · [PROJECT-SLUG]
 
 NECO S[N+1] — Session Resume · [Project Name]
 
-PROJECT PATH: /Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/neco-neurocopy-agent/
+PROJECT PATH: _performance-golf/pg-creative-os/neco-neurocopy-agent/
 
 SESSION LOG: Read SESSION-LOG.md — Build State section for [Project Name] + Session [N] entry.
 
@@ -390,7 +390,7 @@ attribution:
   audience: "[Target audience segment]"
   angle: "[Core angle name]"
   style: "[Style from style library]"
-  brand_thread: "Thread 1 | Thread 2 | Both"  # Post-generation metadata for Exa scorecard
+  brand_thread: "Thread 1 | Thread 2 | Both"  # Post-generation metadata for Orion scorecard
   verified: true | false  # Gate 3 passed?
 ```
 

@@ -2,7 +2,7 @@
 
 > **Version**: 1.0
 > **Created**: 2026-02-08 (Creative OS S002)
-> **Purpose**: Standardized checklist for bootstrapping a new agent within the PG Creative OS. Based on the Exa S001 bootstrap pattern.
+> **Purpose**: Standardized checklist for bootstrapping a new agent within the PG Creative OS. Based on the Orion S001 bootstrap pattern.
 
 ---
 
@@ -36,7 +36,7 @@ Gather these BEFORE the first session. The agent bootstraps by analyzing these:
 | Role definition / meeting agenda | | _The doc that defines what this person does_ |
 | Strategic vision doc (Spark Book, etc.) | | _What the CEO/CMO expects_ |
 | Meeting transcripts (if any) | | _Recent 1:1s, syncs, planning sessions_ |
-| Existing agent specs to learn from | _Exa, Veda, Neco patterns_ | _Always include — establishes Creative OS conventions_ |
+| Existing agent specs to learn from | _Orion, Veda, Neco patterns_ | _Always include — establishes Creative OS conventions_ |
 | Brand guidelines | `pg-skills/pg-brand-guidelines/` | _Standard for all agents_ |
 | Quality standards | `pg-skills/QUALITY-STANDARDS.md` | _Standard for all agents_ |
 
@@ -72,10 +72,10 @@ Define these in discussion with the person (intent alignment session):
 
 | Field | Value |
 |-------|-------|
-| **Agent name** | _Short, memorable (e.g., "Exa", "Veda", "Neco")_ |
+| **Agent name** | _Short, memorable (e.g., "Orion", "Veda", "Neco")_ |
 | **Agent role** | _One sentence: what does this agent DO?_ |
 | **Agent metaphor** | _"the strategist", "the brain", "the hands", "the voice"_ |
-| **Folder name** | _`{name}-{role-slug}/` (e.g., `exa-chief-of-staff/`)_ |
+| **Folder name** | _`{name}-{role-slug}/` (e.g., `orion-chief-of-staff/`)_ |
 | **Runtime** | _Advisory (docs only) / Python / Node.js+TypeScript / Other_ |
 | **Core principle** | _The one rule that governs all decisions (e.g., Strategic Leverage Principle, Root Angle Principle, Six-Axis Discipline)_ |
 | **Execution modes** | _List the modes this agent operates in (e.g., Strategic Review, Prep Mode, etc.)_ |
@@ -83,7 +83,7 @@ Define these in discussion with the person (intent alignment session):
 
 ### Gap Alignment Process
 
-Run an intent alignment session (modeled on Exa S001's 11-gap process):
+Run an intent alignment session (modeled on Orion S001's 11-gap process):
 
 1. Start with the role definition doc — identify what the agent IS and IS NOT
 2. Surface gaps between what the person needs and what the doc says
@@ -100,10 +100,10 @@ Each file follows the "document trinity" pattern established by Veda:
 | # | Document | Purpose | Template Source |
 |---|----------|---------|----------------|
 | 1 | `CLAUDE.md` | Auto-loaded agent config — identity, phase-stop, non-negotiables, session protocol, context budget | Any existing agent's `CLAUDE.md` |
-| 2 | `{AGENT}-PRD.md` | Full product requirements — scope, architecture, scorecard, protocols, constraints | `EXA-PRD.md` or `VEDA-PHASE-2-PLAN.md` |
-| 3 | `{AGENT}-MASTER-AGENT.md` | Master agent spec — execution modes, sub-agent architecture, decision protocols | `EXA-MASTER-AGENT.md` or `VEDA-MASTER-AGENT.md` |
+| 2 | `{AGENT}-PRD.md` | Full product requirements — scope, architecture, scorecard, protocols, constraints | `ORION-REFERENCE.md` or `VEDA-PHASE-2-PLAN.md` |
+| 3 | `{AGENT}-MASTER-AGENT.md` | Master agent spec — execution modes, sub-agent architecture, decision protocols | `ORION-REFERENCE.md` or `VEDA-MASTER-AGENT.md` |
 | 4 | `{AGENT}-SUB-AGENTS.md` | Sub-agent specifications — each sub-agent's scope, inputs, outputs, backstory | `NECO-SUB-AGENTS.md` (most detailed) |
-| 5 | `{AGENT}-ANTI-DEGRADATION.md` | Agent-specific structural gates (adapter to core system) | `EXA-ANTI-DEGRADATION.md` |
+| 5 | `{AGENT}-ANTI-DEGRADATION.md` | Agent-specific structural gates (adapter to core system) | `ORION-ANTI-DEGRADATION.md` |
 | 6 | `SESSION-LOG.md` | YAML build state + session history | Any existing `SESSION-LOG.md` |
 
 ### Mandatory CLAUDE.md Sections
@@ -173,8 +173,8 @@ Define how this agent communicates with existing agents:
 | {Agent} → Tess | | _What data flows?_ | |
 | {Agent} → Veda | | _What production requests?_ | |
 | {Agent} → Neco | | _What copy requests?_ | |
-| {Agent} → Exa | | _What strategic inputs?_ | |
-| Exa → {Agent} | | _What directives?_ | |
+| {Agent} → Orion | | _What strategic inputs?_ | |
+| Orion → {Agent} | | _What directives?_ | |
 
 ### 4.4 MEMORY.md Update
 
@@ -199,9 +199,9 @@ Run after bootstrap is complete:
 
 ---
 
-## Appendix: Exa S001 Bootstrap Timeline (Reference)
+## Appendix: Orion S001 Bootstrap Timeline (Reference)
 
-The Exa agent was bootstrapped in this sequence:
+The Orion agent was bootstrapped in this sequence:
 
 1. **S001** — Research (analyzed Veda/Tess/Nate/Boris patterns) → 11-gap intent alignment → PRD v1.0 + CLAUDE.md + SESSION-LOG.md + spark-book-launch-map
 2. **S002** — _ops/ structure + meeting prep + transcript analysis + Master Agent v1.0
@@ -234,11 +234,11 @@ Each person gets their own agent instances. Agents share the Creative OS infrast
 Same agent instances, but with role-based views:
 - John sees CMO-level dashboards
 - Christopher sees IC-to-VP execution view
-- Shared Exa instance with different execution modes per person
+- Shared Orion instance with different execution modes per person
 
 ### Open Questions for John Discussion
 
-1. Does John want his own Exa equivalent, or does he want to interact with Christopher's Exa?
+1. Does John want his own Orion equivalent, or does he want to interact with Christopher's Orion?
 2. What data should John see that Christopher generates? (Weekly updates? Scorecards? Raw session logs?)
 3. Should John's agent have write access to SSS, or read-only?
 4. Does John need Tess access (data), Neco access (copy), or just strategic oversight?

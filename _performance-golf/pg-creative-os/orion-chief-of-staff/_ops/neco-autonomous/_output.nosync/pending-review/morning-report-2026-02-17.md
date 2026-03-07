@@ -3,9 +3,9 @@
 **Tasks Processed**: 3
 
 ## Completed (2)
-- **neco-auto-2026-02-17-002**: /Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/exa-chief-of-staff/_ops/neco-autonomous/_output/pending-review/Neco-2026-02-17-hooks-auto-001.md
+- **neco-auto-2026-02-17-002**: _ops/neco-autonomous/_output/pending-review/Neco-2026-02-17-hooks-auto-001.md
   Tokens: 15899 in / 2292 out
-- **neco-auto-2026-02-17-003**: /Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/exa-chief-of-staff/_ops/neco-autonomous/_output/pending-review/Neco-2026-02-17-hooks-auto-002.md
+- **neco-auto-2026-02-17-003**: _ops/neco-autonomous/_output/pending-review/Neco-2026-02-17-hooks-auto-002.md
   Tokens: 15917 in / 2489 out
 
 ## Errors (1)

@@ -1,6 +1,6 @@
 # Wise Reply — Reference
 
-Wise Reply is Exa Mode 8 (Communications Strategist).
+Wise Reply is Orion Mode 8 (Communications Strategist).
 
 - **Skill file**: `~/.claude/skills/wise-reply/SKILL.md`
 - **Working relationships**: `~/.claude/projects/-Users-christopherogle/memory/working-relationships/`

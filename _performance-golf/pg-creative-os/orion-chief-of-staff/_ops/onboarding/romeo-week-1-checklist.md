@@ -9,7 +9,7 @@
 
 ### Morning: Creative OS Architecture Tour
 - [ ] Walk through Creative OS structure: what each agent does and how they connect
-  - **Exa** (Strategic Chief of Staff) — sits above all, consolidation layer
+  - **Orion** (Strategic Chief of Staff) — sits above all, consolidation layer
   - **Tess** (Strategic Scaling System) — data intelligence, what's working, what to make next
   - **Veda** (Video Editing Agent) — video production, asset creation
   - **Neco** (NeuroCopy Agent) — copy generation, audience psychology

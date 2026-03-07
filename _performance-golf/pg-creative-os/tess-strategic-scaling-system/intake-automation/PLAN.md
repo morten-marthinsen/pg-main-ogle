@@ -10,7 +10,7 @@ When someone submits the Ad Backlog Intake Form in ClickUp, a new task is create
 
 ## Approach: Python Polling Script (launchd, every 2 min)
 
-**Why polling over webhook**: Reuses existing `registry_sync.py` Python code directly (no porting to JavaScript), follows the established launchd pattern (Exa daily, Tess weekly), and is easy to debug. Form submissions are low-frequency (a few/day), so a 2-minute delay is acceptable. Upgrade path to real-time Apps Script webhook exists if needed later.
+**Why polling over webhook**: Reuses existing `registry_sync.py` Python code directly (no porting to JavaScript), follows the established launchd pattern (Orion daily, Tess weekly), and is easy to debug. Form submissions are low-frequency (a few/day), so a 2-minute delay is acceptable. Upgrade path to real-time Apps Script webhook exists if needed later.
 
 ## Existing Code to Reuse
 
@@ -24,7 +24,7 @@ When someone submits the Ad Backlog Intake Form in ClickUp, a new task is create
 | `_read_existing_ids()` | `registry_sync.py:413` | Reads Column D for dedup |
 | Custom field helpers | `registry_sync.py:473-526` | Extract text, dropdown, URL, users fields from tasks |
 
-**All source files at**: `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/tess-strategic-scaling-system/`
+**All source files at**: `_performance-golf/pg-creative-os/tess-strategic-scaling-system/` (relative to repo root)
 
 ## ID Generation Logic
 

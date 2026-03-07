@@ -34,7 +34,7 @@ Together: every step executed AND executed with appropriate cognitive depth.
 
 ## PER-AGENT EFFORT MAPPING
 
-### Exa (Strategic Chief of Staff)
+### Orion (Strategic Chief of Staff)
 
 | Phase | Effort | Rationale |
 |---|---|---|

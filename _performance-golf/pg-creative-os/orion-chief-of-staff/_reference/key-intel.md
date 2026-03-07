@@ -1,7 +1,7 @@
-# Exa — Key Intel Archive
+# Orion — Key Intel Archive
 
 > Static intelligence from key meetings. Referenced on-demand, not loaded at session start.
-> Moved from Build State during Exa Audit (2026-02-20) to reduce auto-load overhead.
+> Moved from Build State during Orion Audit (2026-02-20) to reduce auto-load overhead.
 
 ---
 

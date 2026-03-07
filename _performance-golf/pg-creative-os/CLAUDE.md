@@ -1,7 +1,7 @@
 # PG Creative OS
 
 > **Owner**: Christopher Ogle — Interim Creative Lead, Performance Golf
-> **Path**: `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/`
+> **Path**: `_performance-golf/pg-creative-os/` (relative to repo root)
 > **Purpose**: Unified operating system for PG's creative department — four agents coordinating data intelligence, copy, video production, and strategic oversight under one roof.
 
 ---
@@ -11,7 +11,7 @@
 The pipeline is **non-linear**. Tess feeds Veda directly AND feeds Neco in parallel. They are NOT a linear chain.
 
 ```
-Exa (strategic orchestration — sits above all)
+Orion (strategic orchestration — sits above all)
 ├── Tess (intelligence — what's working, what to make next)
 │   ├──→ Veda (production — creates the assets)  [via intake queue]
 │   └──→ Neco (copy & briefs — how to say it)    [via data protocol]
@@ -24,7 +24,7 @@ Exa (strategic orchestration — sits above all)
 
 | Agent | Role | Folder | Runtime |
 |-------|------|--------|---------|
-| **Exa** | Strategic Chief of Staff ("the strategist") | `exa-chief-of-staff/` | Advisory (docs + operational outputs) |
+| **Orion** | Strategic Chief of Staff ("the strategist") | `orion-chief-of-staff/` | Advisory (docs + operational outputs) |
 | **Tess** | Strategic Scaling System ("the brain") | `tess-strategic-scaling-system/` | Python (micro-skills pipeline + Google Sheets) |
 | **Veda** | Video Editing Agent ("the hands") | `veda-video-editing-agent/` | Node.js + TypeScript (ESM, vitest) |
 | **Neco** | NeuroCopy Agent ("the voice") | `neco-neurocopy-agent/` | Advisory (docs + reference files) |
@@ -37,16 +37,16 @@ Each agent has its own `CLAUDE.md` with full session protocols, non-negotiables,
 
 | User Request | Route To | Why |
 |-------------|----------|-----|
-| "Where do I stand?" / strategic review / 30-60-90 | **Exa** | Strategic oversight and scorecard tracking |
-| Meeting prep / delegation / weekly update | **Exa** | Chief of Staff operations |
+| "Where do I stand?" / strategic review / 30-60-90 | **Orion** | Strategic oversight and scorecard tracking |
+| Meeting prep / delegation / weekly update | **Orion** | Chief of Staff operations |
 | Data analysis / what's working / performance trends | **Tess** | Data intelligence and classification |
 | Spreadsheet operations / naming convention / asset tracking | **Tess** | Pipeline and data management |
 | Create a video / expand an ad / hook stack | **Veda** | Video production and asset creation |
 | Build pipeline / fix tests / TypeScript work (in Veda) | **Veda** | Engineering work on video system |
 | Write ad copy / hooks / scripts / angle ideation | **Neco** | Copy generation and audience psychology |
 | "Create a static image brief" / "image brief" / "ad brief" | **Neco** Sub-Agent #7 | Static image brief generation |
-| "Wise reply" / "help me respond" / Slack response help | **Exa** Mode 8 | Communications advisory with stakeholder awareness |
-| Recruiting / team evaluation / hiring framework | **Exa** | People strategy |
+| "Wise reply" / "help me respond" / Slack response help | **Orion** Mode 8 | Communications advisory with stakeholder awareness |
+| Recruiting / team evaluation / hiring framework | **Orion** | People strategy |
 | "What should we make next?" | **Tess** → then **Neco** or **Veda** | Tess recommends, others execute |
 | "Ingest video" / "video transcript" / "summarize YouTube" | **Skill** `/ingest-video` | YouTube → education intelligence pipeline (saves to `_shared/education/`) |
 
@@ -60,17 +60,11 @@ Each agent has Phase-Stop, Session Log, and Anti-Degradation rules in its own CL
 
 **NEVER fabricate names, codes, metrics, or product claims.** If data is not found in source systems (SSS spreadsheet, ClickUp, Iconik), state "UNKNOWN" with a plan to obtain. Root angles come from SSS Column C. Product names come from PG's catalog. No exceptions.
 
-### iCloud Drive Safety (MANDATORY — ALL AGENTS)
+### Heavy-Write Directory Safety (ALL AGENTS)
 
-This project lives inside iCloud Drive. Terminal-based file operations can corrupt iCloud's sync metadata, causing folders to become invisible in Finder (`hidden` flag) and triggering "data tree not found" errors.
+This repo lives at `~/pg-main-ogle` — a regular git repo, NOT inside iCloud Drive. Terminal-based directory operations (`git mv`, `mv`, `mkdir`) are safe here.
 
-**Rules:**
-1. **NEVER rename or move directories** via terminal (`mv`) inside this project. If folder restructuring is needed, propose the plan and let the user execute it in Finder.
-2. **NEVER create directories that reuse names iCloud has previously tracked.** iCloud caches directory metadata indefinitely — reusing old names triggers sync conflict loops.
-3. **New files are safe** — creating or editing files via terminal is fine. Only directory-level restructuring (rename, move, delete+recreate) causes problems.
-4. **If you must restructure**, use completely fresh directory names iCloud has never seen, and verify afterwards with `ls -lO` that no `hidden` flags appeared.
-5. **Recovery pattern**: If files become invisible in Finder, run `chflags -R nohidden <path>` and check for iCloud conflict copies (files with ` <number>` appended before the extension).
-6. **`.nosync` pattern for heavy-write directories (MANDATORY).** Any directory used for rapid/bulk file writes (pipeline output, downloaded media, build artifacts, test caches) MUST use the `.nosync` rename + symlink pattern: rename to `<dir>.nosync/`, create symlink `<dir>` → `<dir>.nosync`. iCloud skips `.nosync` directories entirely. Without this, rapid writes cause iCloud to create hundreds of conflict copies (e.g., `file 2`, `file 3`, ...). Veda has a code-level guard (`ensureICloudSafeDir()` in `src/utils/icloud-safe-dir.ts`) that enforces this automatically. Other agents should apply the pattern manually to their output directories.
+**`.nosync` pattern for heavy-write directories (RECOMMENDED).** Any directory used for rapid/bulk file writes (pipeline output, downloaded media, build artifacts, test caches) should use the `.nosync` rename + symlink pattern: rename to `<dir>.nosync/`, create symlink `<dir>` → `<dir>.nosync`. This avoids issues if the repo is ever synced via iCloud or similar services, and keeps large generated files out of git/Finder indexing. Veda has a code-level guard (`ensureICloudSafeDir()` in `src/utils/icloud-safe-dir.ts`) that enforces this automatically. Other agents should apply the pattern manually to their output directories.
 
 **Known `.nosync`-protected directories:**
 | Agent | Directory | Status |
@@ -91,7 +85,7 @@ This project lives inside iCloud Drive. Terminal-based file operations can corru
 | **Tess → Veda** | Intake Queue tab in SSS (18 cols). Veda reads via `--from-sheets` CLI. | LIVE |
 | **Tess → Neco** | Data protocol — Tess provides performance data, audience segments, winning angles. Neco uses as context for copy generation. | DEFINED |
 | **Neco → Veda** | Future copy handoff — Neco-generated scripts feed Veda production pipeline. | PLANNED |
-| **Exa → All** | Strategic direction, scorecard alignment, Brand Thread assignments. Exa sits above all agents as consolidation layer. | LIVE |
+| **Orion → All** | Strategic direction, scorecard alignment, Brand Thread assignments. Orion sits above all agents as consolidation layer. | LIVE |
 
 ---
 

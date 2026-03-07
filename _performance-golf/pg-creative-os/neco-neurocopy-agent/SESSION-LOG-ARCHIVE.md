@@ -78,7 +78,7 @@
 
 ### Vault & Demo Prep (S011-S012)
 - **$50K minimum ad spend for vault admission** — Tony's reference promos are multi-million dollar winners; Neco's vault should only contain ads proven at scale (S011)
-- **Exa backlog file created** — `exa-chief-of-staff/_ops/backlog.md` for capturing future ideas. First entry: Airtable MCP integration (S011)
+- **Exa backlog file created** — `orion-chief-of-staff/_ops/backlog.md` for capturing future ideas. First entry: Airtable MCP integration (S011)
 - **Chris H demo** — planned for S012 but handoff occurred before execution. Chris H already using old NeuroCopy; demo is an upgrade walkthrough (S011-S012)
 
 ### Naming Convention (S013)

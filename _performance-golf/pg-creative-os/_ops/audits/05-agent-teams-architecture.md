@@ -13,7 +13,7 @@
 1. [Why Agent Teams for Creative OS](#1-why-agent-teams-for-creative-os)
 2. [Neco Arena Design](#2-neco-arena-design)
 3. [Veda Pipeline Design](#3-veda-pipeline-design)
-4. [Exa Oversight Design](#4-exa-oversight-design)
+4. [Orion Oversight Design](#4-exa-oversight-design)
 5. [Checkpoint File Specification](#5-checkpoint-file-specification)
 6. [Simulated Type 1 Signals for Creative OS](#6-simulated-type-1-signals-for-creative-os)
 7. [Implementation Phases](#7-implementation-phases)
@@ -398,14 +398,14 @@ This is a Phase 5 implementation — after the Neco Arena proves the Agent Teams
 
 ---
 
-## 4. Exa Oversight Design
+## 4. Orion Oversight Design
 
-Exa sits above all agents as the strategic consolidation layer. Its Agent Teams use case is fundamentally different from Neco's (creative generation) and Veda's (pipeline optimization). Exa uses Agent Teams for **monitoring and aggregation** — spawning read-only agents to check system health across all four agents simultaneously.
+Orion sits above all agents as the strategic consolidation layer. Its Agent Teams use case is fundamentally different from Neco's (creative generation) and Veda's (pipeline optimization). Orion uses Agent Teams for **monitoring and aggregation** — spawning read-only agents to check system health across all four agents simultaneously.
 
 ### 4.1 Multi-Agent Health Dashboard
 
 ```
-TEAM LEAD (Exa Coordinator)
+TEAM LEAD (Orion Coordinator)
 │
 ├── TESS MONITOR (read-only)
 │   └── Reads tess-strategic-scaling-system/SESSION-LOG.md
@@ -439,7 +439,7 @@ The Team Lead aggregates all monitor outputs into a single health report:
 ```yaml
 creative_os_health_report:
   generated: "2026-02-09T10:00:00Z"
-  generated_by: "Exa Health Dashboard"
+  generated_by: "Orion Health Dashboard"
 
   agents:
     tess:
@@ -460,7 +460,7 @@ creative_os_health_report:
     neco:
       last_session: "S011 — 2026-02-08"
       status: HEALTHY
-      recent_activity: "$50K vault gate. Exa backlog created. S012 demo prep."
+      recent_activity: "$50K vault gate. Orion backlog created. S012 demo prep."
       blockers: []
       next_milestone: "E2E demo with Chris H (S012)"
 
@@ -485,7 +485,7 @@ creative_os_health_report:
 
   recommendation: |
     Veda blocked on Iconik transcriptions — trigger DQFE donor transcriptions
-    before S038. Neco S012 demo is the next quality milestone. Exa should
+    before S038. Neco S012 demo is the next quality milestone. Orion should
     transfer Google Doc content after MCP restart.
 ```
 
@@ -493,7 +493,7 @@ creative_os_health_report:
 
 The health dashboard enables cross-agent blocker detection that single-agent sessions miss:
 
-| Pattern | Detection Method | Example |
+| Pattern | Detection Method | Orionmple |
 |---|---|---|
 | **Upstream blocker** | Veda blocked on something Tess should provide | Veda needs transcriptions → Tess/Iconik dependency |
 | **Bridge stall** | A defined bridge has zero activity for 7+ days | Tess-to-Neco protocol defined but never exercised |
@@ -502,7 +502,7 @@ The health dashboard enables cross-agent blocker detection that single-agent ses
 
 ### 4.4 Implementation Note
 
-This is the lowest-priority Agent Teams use case. Exa can perform manual health checks using single-context reads today. Agent Teams makes it faster (parallel reads) and more systematic (structured report format), but doesn't change the quality ceiling. Phase 6 implementation.
+This is the lowest-priority Agent Teams use case. Orion can perform manual health checks using single-context reads today. Agent Teams makes it faster (parallel reads) and more systematic (structured report format), but doesn't change the quality ceiling. Phase 6 implementation.
 
 ---
 
@@ -515,7 +515,7 @@ Checkpoint files are filesystem gates that enable structural enforcement across 
 All checkpoint files use YAML format with a standard schema:
 
 ```yaml
-# Example: checkpoints/PHASE_4_COMPLETE.yaml
+# Orionmple: checkpoints/PHASE_4_COMPLETE.yaml
 phase: 4
 phase_name: "Pipeline Integration"
 completed_at: "2026-02-09T10:30:00Z"
@@ -607,12 +607,12 @@ verification:
   neco_check_passed: [bool]       # NECO-CHECK at gate boundary passed
 ```
 
-#### Exa Checkpoints
+#### Orion Checkpoints
 
-**Location**: `exa-chief-of-staff/checkpoints/`
+**Location**: `orion-chief-of-staff/checkpoints/`
 
 ```yaml
-# Exa phase completion includes strategic-specific verification
+# Orion phase completion includes strategic-specific verification
 verification:
   scorecard_aligned: [bool]       # Action advances 30/60/90
   challenger_reviewed: [bool]     # Unresolved items surfaced
@@ -650,7 +650,7 @@ ON SESSION RESUME:
      - For Veda: run npm test, check git status, verify build
      - For Tess: check spreadsheet row count, verify naming convention
      - For Neco: check output archive, verify gate states
-     - For Exa: check scorecard alignment, review challenger items
+     - For Orion: check scorecard alignment, review challenger items
   5. If checkpoint verification passes → proceed from that point
   6. If checkpoint verification fails → REPORT DISCREPANCY before proceeding
 ```
@@ -670,15 +670,15 @@ The following six signals are adapted from Tony's framework to Creative OS's dom
 | **INCOMPLETENESS ALERT** | Session log entry missing required fields (see each agent's session log format) | Cannot mark session complete. Return to session log and fill all required fields. | All |
 | **SYNTHESIS WARNING** | Generating copy/analysis without reading source data file in THIS session | Pause. Verify the actual file was read (quote specific lines as proof). If no proof, go back and read the file. | All (critical for Neco) |
 | **RUSHING ALERT** | 3+ phases completed without MC-CHECK execution | Mandatory MC-CHECK before next phase. If in YELLOW+ zone, prepare handoff. | All |
-| **DEGRADATION WARNING** | Quality indicators declining: test count dropping (Veda), file counts wrong (Tess), hook scores declining (Neco), scorecard items stalling (Exa) | Context load assessment required. Announce zone. If RED+, prepare handoff. | All |
+| **DEGRADATION WARNING** | Quality indicators declining: test count dropping (Veda), file counts wrong (Tess), hook scores declining (Neco), scorecard items stalling (Orion) | Context load assessment required. Announce zone. If RED+, prepare handoff. | All |
 | **CONSTRAINT VIOLATION** | Action matches a forbidden behavior from any agent's non-negotiables or anti-degradation adapter | Halt immediately. Review the specific constraint. Undo the violating action if possible. Log the violation. | All |
 | **OVERLOAD RISK** | Holding 5+ complex items simultaneously (5+ file reads, 5+ pending edits, 5+ unresolved decisions) | Write intermediate state to a file before continuing. Do not rely on context memory for complex state. | All |
 
-### 6.2 Agent-Specific Trigger Examples
+### 6.2 Agent-Specific Trigger Orionmples
 
 #### Neco-Specific Triggers
 
-| Signal | Neco Trigger Example |
+| Signal | Neco Trigger Orionmple |
 |---|---|
 | INCOMPLETENESS ALERT | Hook output missing attribution metadata (framework, audience, angle, style, brand_thread) |
 | SYNTHESIS WARNING | Generating hooks without reading `_reference/style-library.md` or `_reference/hook-library.md` in this session |
@@ -689,7 +689,7 @@ The following six signals are adapted from Tony's framework to Creative OS's dom
 
 #### Veda-Specific Triggers
 
-| Signal | Veda Trigger Example |
+| Signal | Veda Trigger Orionmple |
 |---|---|
 | INCOMPLETENESS ALERT | Pipeline run completed but output directory missing expected .mp4 files |
 | SYNTHESIS WARNING | Running CLI command without `npm run build` first (operating on stale dist/) |
@@ -700,7 +700,7 @@ The following six signals are adapted from Tony's framework to Creative OS's dom
 
 #### Tess-Specific Triggers
 
-| Signal | Tess Trigger Example |
+| Signal | Tess Trigger Orionmple |
 |---|---|
 | INCOMPLETENESS ALERT | Registry sync completed but row count doesn't match expected |
 | SYNTHESIS WARNING | Generating naming convention IDs without reading TESS-NAMING-CONVENTION.md |
@@ -709,9 +709,9 @@ The following six signals are adapted from Tony's framework to Creative OS's dom
 | CONSTRAINT VIOLATION | Naming convention violation (wrong position mapping). Fabricated ClickUp custom field values. |
 | OVERLOAD RISK | Processing 5+ offers simultaneously across multiple spreadsheet tabs |
 
-#### Exa-Specific Triggers
+#### Orion-Specific Triggers
 
-| Signal | Exa Trigger Example |
+| Signal | Orion Trigger Orionmple |
 |---|---|
 | INCOMPLETENESS ALERT | Weekly update missing required sections (Wins, In Motion, Needs Input, Pulse, Thread Alignment) |
 | SYNTHESIS WARNING | Writing scorecard update without reading actual agent session logs |
@@ -773,7 +773,7 @@ The signals are the detection mechanism. The anti-degradation system defines the
 | **Neco** | `max` for hook generation, script generation, angle ideation. `high` for audience analysis, quality validation. `medium` for NECO-CHECK, gate verification. |
 | **Veda** | `high` for hook selection logic, assembly planning. `medium` for standard pipeline operations, test verification. `low` for session log updates. |
 | **Tess** | `high` for classification decisions, naming convention generation. `medium` for registry sync, spreadsheet operations. `low` for session log updates. |
-| **Exa** | `high` for challenger assessments, weekly updates, meeting prep. `medium` for delegation triage, scorecard review. `low` for session log updates. |
+| **Orion** | `high` for challenger assessments, weekly updates, meeting prep. `medium` for delegation triage, scorecard review. `low` for session log updates. |
 
 **Deliverable**: Updated CLAUDE.md files for each agent with effort protocol section.
 
@@ -828,17 +828,17 @@ The signals are the detection mechanism. The anti-degradation system defines the
 
 **Deliverable**: Parallel hook evaluation and variation assembly in Veda pipeline.
 
-### Phase 6: Exa Monitoring Dashboard (Lowest Priority)
+### Phase 6: Orion Monitoring Dashboard (Lowest Priority)
 
 **Timeline**: 1-2 sessions
-**Effort**: Build health dashboard Team Lead + 4 monitor agents. Define report format. Wire into Exa's Mode 1 (Strategic Review).
+**Effort**: Build health dashboard Team Lead + 4 monitor agents. Define report format. Wire into Orion's Mode 1 (Strategic Review).
 **Impact**: Systematic cross-agent health monitoring. Replaces ad-hoc session log reading.
 
 **Dependencies**:
 - Checkpoint files exist in all agents (Phase 2 complete)
 - All agents have stable session log formats
 
-**Deliverable**: Exa health dashboard that spawns read-only monitors and produces aggregated status report.
+**Deliverable**: Orion health dashboard that spawns read-only monitors and produces aggregated status report.
 
 ### Phase Summary
 
@@ -849,7 +849,7 @@ The signals are the detection mechanism. The anti-degradation system defines the
 | 3 | Simulated Signals | 1 session after Phase 2 | Phase 2 (checkpoints give signals something to check) | None (detection logic only) |
 | 4 | Neco Arena | S012+ | Phases 1-3, Agent Teams stable, Chris H baseline | ~14-21x per Arena run (see Section 8) |
 | 5 | Veda Parallel | After Phase 4 | Phase 4 proven, Veda pipeline stable | ~3-5x per batch run |
-| 6 | Exa Dashboard | After Phase 5 | Phases 2-5 complete | ~5x per health check |
+| 6 | Orion Dashboard | After Phase 5 | Phases 2-5 complete | ~5x per health check |
 
 ---
 
@@ -972,7 +972,7 @@ While quality over cost is the principle, practical optimizations exist:
 | Neco Master Agent | `pg-creative-os/neco-neurocopy-agent/NECO-MASTER-AGENT.md` |
 | Neco Sub-Agents | `pg-creative-os/neco-neurocopy-agent/NECO-SUB-AGENTS.md` |
 | Veda Master Agent | `pg-creative-os/veda-video-editing-agent/VEDA-MASTER-AGENT.md` |
-| Exa Master Agent | `pg-creative-os/exa-chief-of-staff/EXA-MASTER-AGENT.md` |
+| Orion Master Agent | `pg-creative-os/orion-chief-of-staff/ORION-REFERENCE.md` |
 | Tess Master Agent | `pg-creative-os/tess-strategic-scaling-system/TESS-MASTER-AGENT.md` |
 
 ---
