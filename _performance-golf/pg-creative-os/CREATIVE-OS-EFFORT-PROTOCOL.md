@@ -34,14 +34,14 @@ Together: every step executed AND executed with appropriate cognitive depth.
 
 ## PER-AGENT EFFORT MAPPING
 
-### Exa (Strategic Chief of Staff)
+### Orion (Strategic Chief of Staff)
 
 | Phase | Effort | Rationale |
 |---|---|---|
 | Strategic analysis / scorecard review | `max` | Decisions cascade to all agents |
 | Wise Reply / communications drafting | `max` | Political nuance requires deep reasoning |
 | Meeting prep / delegation planning | `high` | Needs thoroughness for stakeholder nuance |
-| Weekly update generation | `high` | Represents Christopher to CMO |
+| Weekly update generation | `high` | Represents Creative Lead to CMO |
 | Status checks / session resume | `medium` | Quick verification |
 | Session handoff | `low` | Mechanical recording |
 

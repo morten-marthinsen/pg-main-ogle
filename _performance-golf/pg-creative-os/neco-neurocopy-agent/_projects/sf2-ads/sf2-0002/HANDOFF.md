@@ -2,7 +2,7 @@ HANDOFF PROMPT — Neco S022 · SF2
 
 NECO S023 — Session Resume · SF2 Driver
 
-PROJECT PATH: /Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/neco-neurocopy-agent/
+PROJECT PATH: _performance-golf/pg-creative-os/neco-neurocopy-agent/
 
 SESSION LOG: Read SESSION-LOG.md — Build State section for SF2 Driver + Session 022 entry.
 

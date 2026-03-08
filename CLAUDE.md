@@ -15,7 +15,7 @@ There are two top-level directories:
 The core system lives at `_performance-golf/pg-creative-os/`. It is a **four-agent operating system** with non-linear data flow:
 
 ```
-Exa (strategic orchestration — sits above all)
+Orion (strategic orchestration — sits above all)
 ├── Tess (intelligence — what's working, what to make next)
 │   ├──→ Veda (production — creates video assets)  [via intake queue]
 │   └──→ Neco (copy & briefs — how to say it)       [via data protocol]
@@ -24,7 +24,7 @@ Exa (strategic orchestration — sits above all)
 
 | Agent | Role | Runtime | Folder |
 |-------|------|---------|--------|
-| **Exa** | Strategic Chief of Staff | Advisory (docs + pipeline) | `pg-creative-os/exa-chief-of-staff/` |
+| **Orion** | Strategic Chief of Staff | Advisory (docs + pipeline) | `pg-creative-os/orion-chief-of-staff/` |
 | **Tess** | Data Intelligence | Python (micro-skills + Google Sheets) | `pg-creative-os/tess-strategic-scaling-system/` |
 | **Veda** | Video Production | Node.js + TypeScript (ESM, vitest) | `pg-creative-os/veda-video-editing-agent/` |
 | **Neco** | NeuroCopy (ad copy) | Advisory (docs + reference files) | `pg-creative-os/neco-neurocopy-agent/` |
@@ -35,7 +35,7 @@ Exa (strategic orchestration — sits above all)
 
 | Request Type | Route To |
 |-------------|----------|
-| Strategic review / 30-60-90 / meeting prep / delegation | **Exa** |
+| Strategic review / 30-60-90 / meeting prep / delegation | **Orion** |
 | Data analysis / performance trends / spreadsheet ops | **Tess** |
 | Create video / expand ad / hook stack | **Veda** |
 | Write ad copy / hooks / scripts / angle ideation / static image briefs | **Neco** |

@@ -117,7 +117,7 @@ The pipeline *works* mechanically (intake → AI → composite → upload), but 
 3. Applied FATE model analysis for women's "Beat the Guys" angle — Tribe-dominant (cross-gender competition), Emotion (proving them wrong), Authority (serious coaching for women), Focus (visual novelty).
 4. Generated 10 FATE-aligned environment ideas, user selected 5 (Balanced FATE): Mixed-gender tee box, Pro academy studio, Golden hour range, Indoor simulator, Country club patio.
 5. User confirmed: variations v0016-v0020 (next available), Erika Larkin talent, pipeline-test-first approach.
-6. Full plan documented in `/Users/christopherogle/.claude/plans/splendid-cooking-thimble.md`.
+6. Full plan documented in `~/.claude/plans/splendid-cooking-thimble.md`.
 
 ### Key Decisions
 

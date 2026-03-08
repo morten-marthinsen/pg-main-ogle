@@ -15,11 +15,11 @@
 
 ### 1.1 What Creative OS Does
 
-Creative OS is the organization and operating system for Performance Golf's creative department. It defines what success looks like for the creative team over 30/60/90 days, aligns all creative execution with research, data, strategy, and campaign themes, and serves as the single reference for how creative work is governed. Creative OS sits under Marketing OS and brings the Marketing OS to life through execution: ads, organic content, social, email design, and other creative output. It coordinates people, processes, and AI agents (Exa, Tess, Veda, Neco) so that every product launch and campaign ties into the same vision, reduces wasted time in meetings and Slack, and produces output that is 90–95% aligned from the start.
+Creative OS is the organization and operating system for Performance Golf's creative department. It defines what success looks like for the creative team over 30/60/90 days, aligns all creative execution with research, data, strategy, and campaign themes, and serves as the single reference for how creative work is governed. Creative OS sits under Marketing OS and brings the Marketing OS to life through execution: ads, organic content, social, email design, and other creative output. It coordinates people, processes, and AI agents (Orion, Tess, Veda, Neco) so that every product launch and campaign ties into the same vision, reduces wasted time in meetings and Slack, and produces output that is 90–95% aligned from the start.
 
 ### 1.2 What Creative OS Does NOT Do
 
-- NOT: Replace or define agent-level specs — those live in individual agent PRDs (e.g. EXA-PRD, TESS-PRD)
+- NOT: Replace or define agent-level specs — those live in individual agent PRDs (e.g. ORION-REFERENCE, TESS-PRD)
 - NOT: Own copywriting methodology or long-form copy skills — those are Marketing OS (E5, A-Z, brand voice)
 - NOT: Make creative decisions on behalf of John or Christopher — it establishes the rules and thinking; humans decide
 - NOT: Update itself automatically — only senior team members update this PRD; a human is always in the loop
@@ -172,7 +172,7 @@ Showing the innovation story behind products: Chris McGinley's expertise, Joe Ki
 
 Each GTM launch gets a Figma board card. The board maps the root angle, which brand thread(s) it connects to, all personas being tested, and the specific ad set assignments. Each ad set contains one angle tested against all personas — this is the core of the angle × persona discovery loop. The copy team gets complete clarity on who they're writing to; leadership gets a single visual of the launch's creative structure; the optimization team has a built-in expansion map once data returns. At least two ad sets per launch are UGC-generated organic angles, ensuring social proof and native formats are always part of the initial test battery. As campaigns mature, the Figma board becomes the record of what angles and personas have been tested, what won, and what was elevated.
 
-**Example — SpeedTrac GTM Launch:**
+**Orionmple — SpeedTrac GTM Launch:**
 
 ```
 GTM LAUNCH: SpeedTrac
@@ -346,7 +346,7 @@ Persona mapping is a living resource. As ad set tests return data, winning angle
 
 ### 6.3 Sub-Agents and PRD Alignment
 
-- Sub-agents (e.g. Exa, Bravo) must have a challenger skill/sub-agent that keeps work aligned with this PRD
+- Sub-agents (e.g. Orion, Bravo) must have a challenger skill/sub-agent that keeps work aligned with this PRD
 - PRD reference should be token-efficient: e.g. optional "Load Creative OS PRD for alignment?" at session start, or trigger on keywords (campaign, launch, strategy, GTM), or short PRD-reminder block in CLAUDE.md
 - Challenger: event-triggered (e.g. when PRD is loaded, or on "challenge this" / "align check"), not every turn
 
@@ -395,7 +395,7 @@ Persona mapping is a living resource. As ad set tests return data, winning angle
 This PRD is the **requirements authority** for the Creative OS organization. In case of conflict:
 
 - This PRD defines WHAT success looks like and what every creative asset must satisfy
-- Individual agent PRDs (Exa, Tess, Veda, Neco) and Master Agent docs define HOW those agents operate within this vision
+- Individual agent PRDs (Orion, Tess, Veda, Neco) and Master Agent docs define HOW those agents operate within this vision
 - John and Christopher's explicit decisions override the PRD when they choose to deviate (and should be documented)
 
 ---
@@ -425,7 +425,7 @@ This PRD is the **requirements authority** for the Creative OS organization. In 
 | 7 | Question | Lock on-time delivery definition for the ads team (e.g. X days before launch, or within launch window) | Needed for GTM success metrics |
 | 8 | Action | Add root angle detail from Tess and the ad naming convention into the PRD (and/or link to Tess docs) | Ensures every asset and agent can apply the root angle principle consistently |
 | 9 | Question | Campaign success metrics: Agree with product, inventory planning, and media teams on expected unit velocity, revenue, and success metrics per product launch | Feeds Track 2 and reporting |
-| 10 | Action | Implement token-efficient PRD load and challenger behavior in Exa and Bravo (per CREATIVE-OS-PRD-PLAN Section 8) | Prevents drift without burning context every session |
+| 10 | Action | Implement token-efficient PRD load and challenger behavior in Orion and Bravo (per CREATIVE-OS-PRD-PLAN Section 8) | Prevents drift without burning context every session |
 
 ---
 

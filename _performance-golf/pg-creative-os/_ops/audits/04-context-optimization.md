@@ -13,7 +13,7 @@
 | Agent | File | Lines | Bytes | Sessions Logged | Lines/Session | Archive |
 |-------|------|------:|------:|----------------:|--------------:|---------|
 | Root COS | `SESSION-LOG.md` | 146 | 6.3 KB | 2 | 73 | None |
-| Exa | `exa-chief-of-staff/SESSION-LOG.md` | 1,005 | 58 KB | 10 | 100 | None |
+| Orion | `orion-chief-of-staff/SESSION-LOG.md` | 1,005 | 58 KB | 10 | 100 | None |
 | Tess | `tess-strategic-scaling-system/SESSION-LOG.md` | 2,422 | 119 KB | 9 (active, S099-S118) | 269 | `SESSION-LOG-ARCHIVE.md` (196 lines, 8.5 KB, S001-S075) |
 | Veda | `veda-video-editing-agent/SESSION-LOG.md` | 4,416 | 285 KB | 36 (S001-S036) | 123 | None |
 | Neco | `neco-neurocopy-agent/SESSION-LOG.md` | 1,262 | 82 KB | 13 | 97 | None |
@@ -27,7 +27,7 @@
 |------|------:|------:|
 | `~/.claude/CLAUDE.md` (global) | 62 | 3.6 KB |
 | Root COS `CLAUDE.md` | 127 | 6.1 KB |
-| Exa `CLAUDE.md` | 147 | 7.8 KB |
+| Orion `CLAUDE.md` | 147 | 7.8 KB |
 | Tess `CLAUDE.md` | 114 | 4.5 KB |
 | Veda `CLAUDE.md` | 124 | 6.0 KB |
 | Neco `CLAUDE.md` | 166 | 8.4 KB |
@@ -67,7 +67,7 @@ After sampling all 5 session logs (first 100 + last 100 + mid-sections), I ident
 |----------|-------------|---------------------------:|
 | **Build State YAML** | Top-of-file machine-readable state block | 5-15% (once per file) |
 | **Strategic Context** | Decisions made, architectural choices, scope changes | 15-25% |
-| **Operational Detail** | Exact commands run, file paths, error messages, retries | 30-40% |
+| **Operational Detail** | Orionct commands run, file paths, error messages, retries | 30-40% |
 | **File Manifests** | Tables listing files created/modified with line counts | 10-15% |
 | **Handoff Prompts** | Next-session resume blocks (duplicates "Next" section) | 5-10% |
 | **Changelogs** | Bottom-of-file tables summarizing all sessions | 5-10% |
@@ -76,7 +76,7 @@ After sampling all 5 session logs (first 100 + last 100 + mid-sections), I ident
 
 **Root COS** (146 lines, 2 sessions): HIGH density. Well-structured. Each session entry has: Focus, Completed, Files Created, Decisions Made, Next. Minimal operational noise. This is already close to optimal.
 
-**Exa** (1,005 lines, 10 sessions): MODERATE density. The Build State YAML (79 lines) is excellent — machine-readable, compact, comprehensive. Session entries are moderately detailed. The "What Happened" sections include strategic reasoning alongside operational detail. The handoff prompts at the end of each session duplicate ~80% of the "Next Session Priorities" section.
+**Orion** (1,005 lines, 10 sessions): MODERATE density. The Build State YAML (79 lines) is excellent — machine-readable, compact, comprehensive. Session entries are moderately detailed. The "What Happened" sections include strategic reasoning alongside operational detail. The handoff prompts at the end of each session duplicate ~80% of the "Next Session Priorities" section.
 
 **Tess** (2,422 lines, 9 active sessions): LOW density. The Session State YAML is massive (100+ lines) and accumulates historical annotations that should live in the archive. The Changelog at the bottom (lines 2396-2421) compresses ~20 sessions into 26 lines — proving that compression works. Session entries include pipeline commands, formula fixes, and cell-level debugging detail. The CSV Upload Runbook (lines 2374-2394) is operational documentation that belongs in a separate file, not in the session log.
 
@@ -110,7 +110,7 @@ MEMORY.md duplicates the following from session logs:
 Based on session log patterns, the following categories of information are written but rarely or never referenced in subsequent sessions:
 
 1. **Individual test names/descriptions** (e.g., "parseTimestamp (5), formatTimestamp (6), getTranscriptDuration (2)...") — these are in the test files themselves
-2. **Exact file line counts** at time of creation — files change; original counts become stale
+2. **Orionct file line counts** at time of creation — files change; original counts become stale
 3. **Error messages and debugging traces** — once resolved, these are noise
 4. **Step-by-step "What Happened" narrative** — the decisions matter, the play-by-play does not
 5. **Handoff prompts** that restate the "Next" section — pure duplication
@@ -169,7 +169,7 @@ SESSION-LOG-FULL.md (Tier 2: Full Detail)
 
 Target: **15-20 lines per session**. No test case names, no function signatures, no error traces, no handoff prompts (the "Next" section IS the handoff).
 
-### 3.3 Concrete Example: Converting Veda Session 011
+### 3.3 Concrete Orionmple: Converting Veda Session 011
 
 **BEFORE (Tier 2 — Current format, Session 011):**
 ~220 lines including full sub-agent descriptions, every test name, function signatures, pipeline coverage tables, 91 decisions referenced, "MASSIVE BUILD SESSION" narrative, etc.
@@ -247,7 +247,7 @@ All confirmed decisions, reference paths, API credentials details, and key refer
 3. **Add explicit "last updated" dates** to each entry so stale entries can be identified
 4. **Target**: Keep MEMORY.md under 120 lines (60% of budget), leaving 80 lines for growth
 
-**Example compressed Veda entry** (current: ~40 lines -> proposed: 8 lines):
+**Orionmple compressed Veda entry** (current: ~40 lines -> proposed: 8 lines):
 ```markdown
 ### Veda (Video Editing Agent)
 - **Path**: `pg-creative-os/veda-video-editing-agent/`
@@ -273,12 +273,12 @@ All CLAUDE.md files are currently well-managed (62-166 lines each, total 740 lin
 |-------------|-------------|----------------|
 | **Individual test case names** | Veda S010, S011, S012, S013 | Remove from Tier 1. Test files are the source of truth. |
 | **Exported function lists** | Veda S010, S011 | Remove from Tier 1. Code is the source of truth. |
-| **Handoff prompts** | Exa (all sessions), Veda (intermittent) | Eliminate entirely. "Next" section IS the handoff. |
+| **Handoff prompts** | Orion (all sessions), Veda (intermittent) | Eliminate entirely. "Next" section IS the handoff. |
 | **CSV Upload Runbook** | Tess (lines 2374-2394) | Move to separate ops doc (e.g., `_ops/csv-runbook.md`) |
 | **Duplicate "Priorities" sections** | Veda (`Session N -> N+1 Priorities` as separate headings) | Merge into "Next" section of the session entry. |
 | **Historical confirmed decisions in Build State** | Neco (accumulates forever), Veda (89 lines) | Move to Tier 2 or dedicated reference file. |
 | **Session State YAML historical annotations** | Tess (`session_110_completed:` block inline) | Only keep current state in Tier 1 YAML. Archive historical state blocks. |
-| **Full "What Happened" narrative** | Exa (detailed numbered lists) | Compress to accomplishment bullets for Tier 1. |
+| **Full "What Happened" narrative** | Orion (detailed numbered lists) | Compress to accomplishment bullets for Tier 1. |
 
 ### 4.4 Tess Already Proved Archiving Works
 
@@ -297,7 +297,7 @@ This proves the pattern works but was applied too coarsely. The archive is essen
 | Agent | Current Lines | Tier 1 Target | Reduction | Savings |
 |-------|-------------:|-------------:|-----------:|--------:|
 | Root COS | 146 | 100 | 32% | 46 lines |
-| Exa | 1,005 | 300 | 70% | 705 lines |
+| Orion | 1,005 | 300 | 70% | 705 lines |
 | Tess | 2,422 | 400 | 83% | 2,022 lines |
 | Veda | 4,416 | 500 | 89% | 3,916 lines |
 | Neco | 1,262 | 300 | 76% | 962 lines |
@@ -319,7 +319,7 @@ This proves the pattern works but was applied too coarsely. The archive is essen
 | Content | Current Lines | Compressed Lines | Savings |
 |---------|-------------:|-----------------:|--------:|
 | Veda entry | ~40 | 8 | 32 |
-| Exa entry | ~20 | 8 | 12 |
+| Orion entry | ~20 | 8 | 12 |
 | Tess entry | ~10 | 7 | 3 |
 | Neco entry | ~15 | 8 | 7 |
 | Root COS entry | ~5 | 5 | 0 |
@@ -357,7 +357,7 @@ Veda's log is the largest and most verbose. Implement first.
    - Target: ~250 lines total
 3. **Update `CLAUDE.md`** context budget rules
 
-### Phase 3: Exa & Neco (Moderate impact)
+### Phase 3: Orion & Neco (Moderate impact)
 
 1. **Create Tier 2 files** for each
 2. **Compress Tier 1** — last 5 sessions + changelog
@@ -401,7 +401,7 @@ The two-tier system would reduce the actively-loaded context to **~36K tokens** 
 
 Implementation is non-destructive: Tier 2 files are created by copying existing content, then Tier 1 files are rewritten as compressed summaries. No information is deleted.
 
-**Priority order**: Veda (highest impact) -> Tess -> Exa/Neco -> MEMORY.md -> Governance update.
+**Priority order**: Veda (highest impact) -> Tess -> Orion/Neco -> MEMORY.md -> Governance update.
 
 ---
 
@@ -452,6 +452,6 @@ For Creative OS, this means:
 | Veda pipeline execution | Agent Teams | Sub-agents operate in clean context, parallel execution |
 | Tess deep data analysis (single long session) | 1M context | Single-agent analysis benefits from holding all data in one context |
 | Veda debugging (tracing a pipeline failure) | 1M context | Need full execution trace in one window to identify root cause |
-| Exa strategic synthesis | 1M context | Advisory agent benefits from seeing everything at once |
+| Orion strategic synthesis | 1M context | Advisory agent benefits from seeing everything at once |
 
 The two strategies are not mutually exclusive. Agent Teams is the default for creative and production work. 1M context is the fallback for deep single-agent analysis where splitting context would lose the holistic view.

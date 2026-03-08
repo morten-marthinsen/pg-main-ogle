@@ -2,7 +2,7 @@ HANDOFF PROMPT — Neco S022 · PGB-VSL
 
 NECO S023 — Session Resume · PGB Shortened VSL
 
-PROJECT PATH: /Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/neco-neurocopy-agent/
+PROJECT PATH: _performance-golf/pg-creative-os/neco-neurocopy-agent/
 
 SESSION LOG: Read SESSION-LOG.md — Build State section for PGB Shortened VSL + Session 022 entry.
 

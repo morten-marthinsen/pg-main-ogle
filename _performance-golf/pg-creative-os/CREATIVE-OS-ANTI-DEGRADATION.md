@@ -20,7 +20,7 @@ As sessions grow complex and context windows fill, LLMs:
 - Claim completion without verification
 - Synthesize from memory instead of reading actual files
 
-This document converts instruction-based rules into structural barriers that cannot be bypassed. Every agent (Exa, Tess, Veda, Neco) inherits these universal patterns. Agent-specific gates live in each agent's adapter file.
+This document converts instruction-based rules into structural barriers that cannot be bypassed. Every agent (Orion, Tess, Veda, Neco) inherits these universal patterns. Agent-specific gates live in each agent's adapter file.
 
 ---
 
@@ -152,7 +152,7 @@ MC-CHECK-LITE:
 
 ### The Problem
 
-Exa, Tess, Veda, and Neco hand off to each other. A degraded output from one agent cascades into failures in another.
+Orion, Tess, Veda, and Neco hand off to each other. A degraded output from one agent cascades into failures in another.
 
 ### Universal Handoff Gate
 
@@ -259,7 +259,7 @@ Each agent extends this core with agent-specific structural gates:
 
 | Agent | Adapter File | Key Agent-Specific Gates |
 |-------|-------------|--------------------------|
-| Exa | `exa-chief-of-staff/EXA-ANTI-DEGRADATION.md` | Scorecard alignment, delegation ratio, communication boundary |
+| Orion | `orion-chief-of-staff/ORION-ANTI-DEGRADATION.md` | Scorecard alignment, delegation ratio, communication boundary |
 | Tess | `tess-strategic-scaling-system/TESS-ANTI-DEGRADATION.md` | TypeScript, git, visual verification, dashboard KPIs |
 | Veda | `veda-video-editing-agent/VEDA-ANTI-DEGRADATION.md` | TypeScript, test suite, root angle integrity, naming convention |
 | Neco | `neco-neurocopy-agent/NECO-ANTI-DEGRADATION.md` | Context completeness, human checkpoints, factual claims |
