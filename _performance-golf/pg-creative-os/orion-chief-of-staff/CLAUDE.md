@@ -3,30 +3,35 @@
 ## Build State
 
 ```yaml
-version: 5.2
-last_session: 058
-last_date: 2026-03-07
-status: "S058 DONE — Ghost exa-chief-of-staff/ cleanup complete: copied 14 month-folders + merged 2025-02 (20 files total) into orion transcripts (28 months, 2023-10 through 2026-03), deleted ghost folder. Updated both launchd plists (fathom-sync, clickup-sync) from exa→orion paths, reloaded. All 6 PG launchd jobs verified."
+version: 6.0
+last_session: 065
+last_date: 2026-03-08
+status: "S065 DONE — Created M00a preview report (2026-03-09-PREVIEW-v2.md) with Today at a Glance section. Documented Christopher's Lisbon timezone in MEMORY.md (pipeline renders ET, needs conversion fix). Updated v2 report with S064 triage results (6 triaged, 4 approved items added to week tracker). Original v1 preview preserved for comparison."
 
 # 30/60/90 Status
-day_count: 26
+day_count: 27
 next_checkpoint: Day 30 (~2026-03-11)
 russ_exit: "~2026-02-19 (Wed) — DONE"
 
 # Ops Status
-daily_briefing: "v1.5.1 VERIFIED — Executive Assistant upgrade complete + verified. Phase 1.5 fully wired (launch detection, week capacity). Live run: 15/15 modules, 53,742 chars, all features confirmed. Title renamed to Orion."
-persistent_actions: "LIVE v2.0 — Multi-factor ABC (PriorityScorer), 3 A-task cap, week-ahead Mon-Fri view with capacity headers + Why column. Fallback to simple ABC when intelligence.multi_factor_abc=false."
-transcript_intelligence: "LIVE + VERIFIED — 158 transcripts total processed (60 legacy + 98 extracted)."
+daily_briefing: "v2.0.0 — M00a Today at a Glance (display-first), work block allocation, conflict detection, launch countdown, What Changed delta, PRD alignment tags. auto_approve_threshold: 0.80. reconcile.py end-of-day CLI. 16 modules total. KNOWN BUG: calendar times render in US Eastern, not Lisbon — needs fix in M12/capacity_engine."
+completed_registry: "LIVE — 305 entries, Phase 4-5 DONE. Staleness rule active (21d penalty, 35d hard reject)."
+persistent_actions: "LIVE v2.1 — Multi-factor ABC, 3 A-task cap, week-ahead Mon-Fri, capacity headers + Why column with PRD alignment tags."
+transcript_intelligence: "LIVE — 131 transcripts processed (60 legacy + 71 extracted). M9 MAX_TRANSCRIPTS_PER_RUN fixed to 3. All old transcripts marked processed."
 transcript_sync: "LIVE — ClickUp API (5 min) + Fathom API (30 min), both launchd auto-sync. Plists updated to orion paths (S058)."
 kb_delegation: "LIVE — apply_overrides supports dict-style overrides."
 neco_autonomous: "LIVE v1.0 — nightly 10pm, quality gates working."
 gmail_oauth: DONE
 slack_bot: "DONE — read-only OAuth, M4/M5 live."
 slack_interface: "BOT RUNNING (S048) — NOT YET COMMITTED. P0 from S048 still open."
-google_calendar_mcp: "LIVE — M12 LIVE, Calendar API v3 with own OAuth token."
+slack_webhook: "LIVE — Orion Daily Briefing app (A0AFW0Y3Z39), DM to Christopher only. .env SLACK_WEBHOOK_URL set."
+google_calendar_mcp: "LIVE — M12 LIVE, Calendar API v3 with calendar.events scope (read+write). OAuth re-authed S064."
+triage_auto_approve: "LIVE — threshold 0.80, auto-approved items shown in M00 transparency list + M00a alerts."
+reconcile_cli: "NEW — python3 reconcile.py for end-of-day task reconciliation (d/r/s/a/q commands)."
+daily_snapshot: "NEW — .kb-daily-snapshot.json saved each run for What Changed delta tracking."
 
 # Next Session (P0)
-next_session: "S059 — Normal ops. Exa→Orion migration fully complete (no ghost folders, all plists updated, all transcripts consolidated)."
+next_session: "S066 — (1) SESSION-LOG.md compression (>500 lines — MANDATORY). (2) Live pipeline run to verify M00a renders with real data (compare against v2 preview). (3) Pipeline timezone fix: convert calendar times from ET to Lisbon (WET/WEST) in M12 + capacity_engine. (4) Debug Google Docs MCP. (5) Rename 'Exa - PG Creative Intel' Slack app to Orion."
 
 # Active Challenges
 unresolved_block: []
@@ -119,7 +124,14 @@ Build State (above) is your current snapshot — no file reads needed on start. 
 
 1. Update Build State in **this file** (session number, date, status, ops changes, challenges)
 2. Append session entry to `SESSION-LOG.md` (append-only history)
-3. **That's the handoff.** The updated Build State IS the handoff — no separate handoff prompt ceremony needed.
+3. **Persist confirmed tasks to KB (MANDATORY):** If the session confirmed any A/B/C tasks (especially during triage or week planning), write them to `.kb-manual-items.json` with `status: "open"` and add their scheduled dates to `.kb-schedule.json`. Tasks that only exist in session prose will be lost — the pipeline can only render tasks that are in the KB. Use IDs `mi-NNN` for manual items. Source: `"session-{number}-confirmed"`.
+4. **That's the handoff.** The updated Build State IS the handoff — no separate handoff prompt ceremony needed.
+
+### Triage Safety Rules
+
+- **Schedule protection:** Before closing ANY open item, check `.kb-schedule.json`. If the item is scheduled for a future date, FLAG it and ask Christopher for explicit confirmation. Do NOT bulk-close future-scheduled items.
+- **Week plan integrity:** After triage, verify that the Action Items Tracker still contains all confirmed items for the current week. If items are missing, recover them immediately.
+- The `add_to_registry()` function in `transcript_kb.py` has built-in schedule protection — items with future scheduled dates are skipped unless `force=True`.
 
 ### SESSION-LOG.md Role
 

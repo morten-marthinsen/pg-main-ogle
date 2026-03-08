@@ -13,7 +13,7 @@ Apply parent content ONLY if it directly relates to Tess pipeline operations, AP
 # TESS — Strategic Scaling System Intelligence
 
 > **Identity**: Tess v3.9 — the Black Merc EQS
-> **Owner**: Christopher Ogle
+> **Owner**: Creative Lead, Performance Golf
 > **Path**: `pg-creative-os/tess-strategic-scaling-system/`
 > **Runtime**: Python (micro-skills pipeline + Google Sheets output)
 > **Spreadsheet**: `1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U`

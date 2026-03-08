@@ -1,7 +1,7 @@
 # Orion — Consolidated Reference
 
 > Single searchable reference for Orion's full specification. **Never auto-loaded** — use Grep for specific sections.
-> Consolidated from: EXA-PRD.md (v1.2), EXA-MASTER-AGENT.md (v1.1), EXA-SUB-AGENTS.md (v1.0), EXA-ANTI-DEGRADATION.md (v1.0).
+> Consolidated from: EXA-PRD.md (v1.2), EXA-MASTER-AGENT.md (v1.1), EXA-SUB-AGENTS.md (v1.0), EXA-ANTI-DEGRADATION.md (v1.0). (Renamed to Orion in S056.)
 > Created: 2026-02-20 (Orion Audit)
 
 ---

@@ -1,7 +1,7 @@
 # Neco — The NeuroCopy Agent — Session Log
 
-session_id: Neco-2026-03-06-v2.0-S043-SPD-Doc-Update-Script1
-session_number: 043
+session_id: Neco-2026-03-08-v2.0-S044-Izozi-Mechanism-Lock
+session_number: 044
 owner: Christopher Ogle
 started: 2026-02-07
 last_updated: 2026-03-06
@@ -49,6 +49,19 @@ version: "2.0"
 - **File**: `_projects/influencer-briefs/dqfe-influencer-creative-brief.md`
 - **Summary**: Base brief exists with women-focused labels applied where relevant, but not yet run through full collaborative persona-first refinement loop.
 - **Next**: Run DQFE persona selection workshop, then concept alignment pass.
+
+### Izozi — 3D Vows (Blissful Marriage Blueprint)
+- **Status**: MECHANISM LOCKED — "Three-Dimensional Vows" / "3D Vows" confirmed
+- **Last touched**: S044
+- **Client**: Eric and Cheri (Izozi)
+- **Brand**: Those Lucky Bastards (TLB)
+- **Files** (local, not in repo):
+  - `~/Documents/Christopher Ogle Unipessoal LDA/Izozi Blissful Marriage Blueprint/Thesis & Mechanism Draft _ 3D Vows (name tbc).md`
+  - `~/Documents/Christopher Ogle Unipessoal LDA/Izozi Blissful Marriage Blueprint/Blissful Marriage Blueprint _ Buyer Profiles.md`
+  - `~/Documents/Christopher Ogle Unipessoal LDA/Izozi Blissful Marriage Blueprint/Blissful Marriage Blueprint _ Market Research Collection.md`
+  - `~/Documents/Christopher Ogle Unipessoal LDA/Izozi Blissful Marriage Blueprint/Mechanism & Mission Finalization 2025.txt`
+- **Summary**: Mechanism naming decision made live on Zoom call (Christopher + Eric + Cheri, 2026-03-08). Explored 20+ alternatives across 3 rounds (adjective-based, process-based, analogy-based). None beat the original. "3D Vows" locked as Type 3 Transubstantiated Mechanism (Todd Brown). Marketing thesis, 4 sub-beliefs, 3 buyer personas, and market research already complete.
+- **Next**: Proceed with offer build using locked mechanism name. Update Google Docs versions.
 
 ### SpeedTrac Video Ads
 - **Status**: HERO PERSONA LOCKED — Ready for Script 1 writing (S043)
@@ -129,6 +142,76 @@ session_042:
 
   outcome: |
     All persona decisions locked. Ready for Script 1 writing in S043.
+```
+
+---
+
+## Session 044 — 2026-03-08 (Izozi — Mechanism Name Lock: 3D Vows)
+
+```yaml
+session_044:
+  date: 2026-03-08
+  session_id: Neco-2026-03-08-v2.0-S044-Izozi-Mechanism-Lock
+  status: COMPLETE
+
+  context: |
+    Live Zoom call with Eric and Cheri (Izozi / Blissful Marriage Blueprint).
+    Goal: finalize the mechanism name for their vow-writing coaching offer.
+    Previous sessions had ingested all project docs (thesis, buyer personas,
+    market research, call transcript) and identified "3D Vows" as the working
+    name with "name tbc" status.
+
+  phases:
+    phase_1_context_recovery: |
+      Recovered full Izozi project state from two prior conversation histories.
+      Project assets: marketing thesis (drafted), 4 sub-beliefs (structured),
+      3 buyer personas (locked: Couple, Emma/bride, Jake/groom), market research
+      (complete), mechanism concept (locked — Type 3 Transubstantiated per
+      Todd Brown), call transcript (fully analyzed — third entity, autonomy
+      within unity, living language, generational blueprint).
+
+    phase_2_adjective_exploration: |
+      Round 1: Explored adjective-based names (Vivid, Sculpted, Cinematic,
+      Resonant, Immersive). Scored against 6 criteria (instant image, contrast,
+      ownability, scientific grounding, curiosity gap, speakability).
+      All rejected by Christopher, Eric, and Cheri — none hit the visceral
+      X-factor bar.
+
+    phase_3_process_word_exploration: |
+      Round 2: Christopher redirected to process words — "What is the word for
+      taking something from 2D to 3D?" Explored: Rendered, Crystallized,
+      Animated, Embodied, Forged, Dimensionalized, Dimensional, Dimensioned.
+      All rejected — too clinical, too niche, or lacking the IMAX-level
+      instant recognition.
+
+    phase_4_analogy_exploration: |
+      Round 3: Explored analogy-from-experience words — real-world things that
+      signal "3D" without saying it (like IMAX does). Candidates: Holographic,
+      Surround, Panoramic, Amplified, Hi-Fi, Orchestrated.
+      None could match the original.
+
+    phase_5_decision: |
+      After 20+ alternatives across 3 rounds, all three participants agreed:
+      "3D Vows" / "Three-Dimensional Vows" cannot be beaten. The name earned
+      its lock by surviving every challenger. Updated thesis document to reflect
+      locked status.
+
+  files_modified:
+    - path: "~/Documents/Christopher Ogle Unipessoal LDA/Izozi Blissful Marriage Blueprint/Thesis & Mechanism Draft _ 3D Vows (name tbc).md"
+      change: "Added MECHANISM NAME: Three-Dimensional Vows (3D Vows) — LOCKED. Updated OFFER NAME to 3D Vow Coaching with Eric and Cheri."
+    - path: "SESSION-LOG.md"
+      change: "S044 entry. Izozi project added to Build State."
+    - path: "project-state.yaml"
+      change: "Izozi project added."
+
+  decisions:
+    - "MECHANISM NAME LOCKED: Three-Dimensional Vows / 3D Vows (confirmed by Christopher, Eric, Cheri on live Zoom call)"
+    - "Mechanism type: Type 3 Transubstantiated (Todd Brown framework)"
+    - "20+ alternatives explored and rejected — original name validated by elimination"
+
+  outcome: |
+    Mechanism name locked. Thesis document updated. Next: proceed with
+    offer build, update Google Docs versions, begin copy/funnel work.
 ```
 
 ---
@@ -290,6 +373,7 @@ session_037:
 
 | Date | Session | Change |
 |------|---------|--------|
+| 2026-03-08 | 044 | Izozi: Mechanism name LOCKED — "Three-Dimensional Vows" / "3D Vows". Confirmed live on Zoom with Eric + Cheri. 20+ alternatives explored and rejected. Thesis doc updated. |
 | 2026-03-06 | 042 | SPD: Comeback King renamed -> The Fading Competitor (research: 95% active golfers). First from the Fairway selected as hero persona. SESSION-LOG compressed (700->~170 lines). |
 | 2026-03-06 | 041 | SPD: 3 files migrated from Obsidian vault. SESSION-LOG-ARCHIVE reconciled (S027-S036). |
 | 2026-02-22 | 038 | SF2 influencer brief cleanup complete. Renumbered, reordered, link-validated. |

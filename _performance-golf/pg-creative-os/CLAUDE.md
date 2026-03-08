@@ -1,6 +1,6 @@
 # PG Creative OS
 
-> **Owner**: Christopher Ogle — Interim Creative Lead, Performance Golf
+> **Owner**: Creative Lead, Performance Golf
 > **Path**: `_performance-golf/pg-creative-os/` (relative to repo root)
 > **Purpose**: Unified operating system for PG's creative department — four agents coordinating data intelligence, copy, video production, and strategic oversight under one roof.
 
@@ -74,7 +74,7 @@ This repo lives at `~/pg-main-ogle` — a regular git repo, NOT inside iCloud Dr
 | Tess | `output/` → `output.nosync/` | PROTECTED (symlink) |
 | Tess | `.pytest_cache/` → `.pytest_cache.nosync/` | PROTECTED (symlink) |
 | Tess | `tess-dashboard/node_modules/` → `node_modules.nosync/` | PROTECTED (symlink) |
-| Neco | `_output/` | NEEDS PROTECTION — apply `.nosync` on next Neco session |
+| Neco | `_output/` → `_output.nosync/` | PROTECTED (symlink) |
 
 ---
 

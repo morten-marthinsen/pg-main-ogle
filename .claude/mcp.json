@@ -2,6 +2,21 @@
   "mcpServers": {
     "figma": {
       "url": "https://mcp.figma.com/mcp"
+    },
+    "clickup": {
+      "command": "npx",
+      "args": ["-y", "@hauptsache.net/clickup-mcp@latest"],
+      "env": {
+        "CLICKUP_MCP_MODE": "read"
+      }
+    },
+    "google-docs": {
+      "command": "npx",
+      "args": ["-y", "@a-bonus/google-docs-mcp"]
+    },
+    "fathom": {
+      "command": "node",
+      "args": ["/Users/christopherogle/.claude/fathom-mcp/dist/index.js"]
     }
   }
 }

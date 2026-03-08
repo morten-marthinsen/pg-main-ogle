@@ -32,7 +32,7 @@ The Creative OS PRD is the **organization-level vision document** for Performanc
 | In scope | Out of scope (or subordinate) |
 |----------|------------------------------|
 | Creative **team** organization (people + processes) | PRD is **not** *for* the Creative OS AI system; agents are *included* in the PRD but are not the primary subject |
-| Vision for the creative department (30/60/90) | Agent-level specs stay in agent PRDs (e.g. EXA-PRD) |
+| Vision for the creative department (30/60/90) | Agent-level specs stay in agent PRDs (e.g. ORION-REFERENCE) |
 | How Creative OS (people + agents) works with Marketing OS | |
 | Org structure/chart: key people + roles + sub-agents under them | |
 | Process and thinking behind every creative tactic/asset; rules, skills, and principles that all creative must follow | |

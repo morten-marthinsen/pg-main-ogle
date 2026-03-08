@@ -1,4 +1,4 @@
-# Exa — Session Log Archive
+# Orion — Session Log Archive
 
 > Compressed historical sessions. For recent sessions, see `SESSION-LOG.md`.
 > Archive created: Session 013 (2026-02-09). Sessions 001-009 moved here.

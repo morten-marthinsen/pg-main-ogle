@@ -13,7 +13,7 @@
 1. [Why Agent Teams for Creative OS](#1-why-agent-teams-for-creative-os)
 2. [Neco Arena Design](#2-neco-arena-design)
 3. [Veda Pipeline Design](#3-veda-pipeline-design)
-4. [Orion Oversight Design](#4-exa-oversight-design)
+4. [Orion Oversight Design](#4-orion-oversight-design)
 5. [Checkpoint File Specification](#5-checkpoint-file-specification)
 6. [Simulated Type 1 Signals for Creative OS](#6-simulated-type-1-signals-for-creative-os)
 7. [Implementation Phases](#7-implementation-phases)
@@ -464,7 +464,7 @@ creative_os_health_report:
       blockers: []
       next_milestone: "E2E demo with Chris H (S012)"
 
-    exa:
+    orion:
       last_session: "S011 — 2026-02-09"
       status: HEALTHY
       recent_activity: "Audit + John call prep + private file architecture."

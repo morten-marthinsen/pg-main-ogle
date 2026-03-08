@@ -5,6 +5,32 @@
 
 ---
 
+## Session 059 — 2026-03-07
+
+**Status:** DONE
+**Focus:** Daily briefing system audit, gap analysis, tool recommendations
+
+### What Happened
+
+1. **Full system audit.** Analyzed all 15 modules, config, capacity engine, triage intelligence, and daily_briefing.py orchestrator. Documented current state of v1.5.1 after today's S052-S058 upgrade sprint.
+
+2. **Gap analysis with deep dives.** Identified 8 gaps, deep-dived 3 at Christopher's request: launch detection (inert, needs ClickUp tagging), triage backlog (82 items, enabled auto_reject), failure notifications (fully implemented, needs webhook URL).
+
+3. **Config changes applied.** `auto_reject: true` (was false), added 3 scorecard keywords (Romeo, Nate Jones, Donny), fixed stale "Exa" header.
+
+4. **Preview report generated.** `2026-03-07-PREVIEW.md` shows post-upgrade format: 69 items (was 96), 13 auto-rejected, capacity-aware suggestions, Orion branding.
+
+5. **Tool gap analysis.** 5 tools recommended: ClickUp MCP (HIGH), Slack webhook (HIGH), Google Docs MCP (MEDIUM), Google Drive MCP (MEDIUM), Fathom API MCP (LOW). Checklist at `~/.claude/plans/swift-wibbling-yeti.md`.
+
+### Files Modified
+- `config.yaml` (auto_reject + scorecard keywords + header)
+- `CLAUDE.md` (Build State v5.4, S059)
+
+### Files Created
+- `daily-reports.nosync/mar-26-reports/2026-03-07-PREVIEW.md`
+
+---
+
 ## Session 058 — 2026-03-07
 
 **Status:** DONE
@@ -421,4 +447,171 @@
 - `config.py` — Thread/product cap constants
 - `data/sync.sh` — Phase 2 raw micro-scripts sync
 - `CLAUDE.md` — Build State v4.2, S048
+
+---
+
+## Session 060 — 2026-03-07
+
+**Status:** DONE
+**Focus:** Tool installation checklist — Tool 1 (Slack Incoming Webhook)
+
+### What Happened
+
+1. **Slack app renamed.** "Exa Daily Briefing" → "Orion Daily Briefing" (app A0AFW0Y3Z39) via Slack API portal. Added short description. Completed the Exa→Orion rename for Slack apps.
+
+2. **Incoming Webhook created.** Enabled webhooks on the app, created webhook URL pointed to Christopher's DM (private, Christopher-only). Tested with curl → `ok`. Message confirmed delivered.
+
+3. **`.env` updated.** Uncommented and set `SLACK_WEBHOOK_URL`. Fixed stale "Exa" references in `.env` header and Slack section comment.
+
+4. **Privacy rule established.** Christopher flagged that suggesting public channels (e.g. #general) for bot notifications is a career risk in a 288-member workspace with CEO/leadership. Rule saved to memory: ALL Orion automations → Christopher's DM only, never shared channels.
+
+### Files Modified
+- `_ops/daily-briefing/.env` — webhook URL set, Exa→Orion header fixes
+- `CLAUDE.md` — Build State v5.5
+
+### Pending for S061
+- Tool 2: ClickUp MCP Server (HIGH)
+- Tool 3: Google Docs MCP Server (MEDIUM)
+- Tool 4: Google Drive MCP Server (MEDIUM)
+- Tool 5: Fathom API as MCP (LOW)
+- Rename "Exa - PG Creative Intel" Slack app → Orion
+- ClickUp launch tagging (SF2/SpeedTrack/RS1)
+- Batch triage ~69 pending review items
 - `SESSION-LOG.md` — S048 entry
+
+---
+
+## S062 — Task Recovery + Schedule Protection (2026-03-08)
+
+**Problem:** S061 bulk triage destroyed 11 confirmed week tasks (Mar 9-13). SF2 Figma, SpeedTrac Figma, CSR delegation, Romeo ElevenLabs training, NLC automations, and 6 others were either swept into the completed registry or never entered the KB.
+
+**Root causes identified:**
+1. Bulk triage had no schedule protection — future-scheduled items closed alongside stale ones
+2. Session-confirmed B/C tasks never persisted to KB (only existed in handoff prose)
+3. Completed registry is a one-way trap — no reactivation path
+
+**Changes:**
+- **Phase 1: Recovery** — Added 14 manual items (mi-025 to mi-038) to `.kb-manual-items.json` with correct scheduled dates in `.kb-schedule.json`. Full week plan restored: Mon 7 items, Tue 4 items, Wed 1 item, Thu 2 items, Fri 2+ items
+- **Phase 2: Schedule protection** — Added `check_schedule_protection()` and `force` parameter to `add_to_registry()` in `transcript_kb.py`. Items with future scheduled dates are now skipped with a warning unless `force=True`
+- **Phase 3: Session-to-KB bridge** — Added mandatory rule to Orion CLAUDE.md: session-confirmed tasks MUST be written to `.kb-manual-items.json` + `.kb-schedule.json` on exit. Triage safety rules documented
+
+**Files changed:**
+- `.kb-manual-items.json` — 14 recovered items (mi-025 to mi-038)
+- `.kb-schedule.json` — 14 new schedule entries
+- `modules/transcript_kb.py` — `check_schedule_protection()` + `add_to_registry(force=)` guard
+- `CLAUDE.md` — Build State v5.6, session-to-KB bridge rule, triage safety rules
+
+### Pending for S063
+- Google Calendar description enrichment
+- Tool installation checklist (Tools 2-5, plans/swift-wibbling-yeti.md)
+- Rename "Exa - PG Creative Intel" Slack app → Orion
+
+---
+
+## S063 — Executive Assistant Upgrade v2.0.0 (2026-03-08)
+
+**Status:** DONE
+**Focus:** Full 8-phase EA upgrade — "wake up and know exactly what to do today"
+
+### What Happened
+
+All 8 phases from the EA Upgrade plan implemented in a single session:
+
+1. **Phase 1: Today at a Glance (M00a).** New module `m00a_today_summary.py` (~450 lines). Runs LAST in execution (needs all shared_state) but renders FIRST in report. Shows Day X/90, phase, checkpoint countdown, A/B/C tasks with time slots, meetings, launch countdowns, What Changed delta, and alerts.
+
+2. **Phase 2: Work Block Time Allocation.** `allocate_work_blocks()` fits A-tasks into focus block gaps between meetings. B-tasks in afternoon block. Duration defaults: 60m (A), 30m (B), 15m (C) with `duration_min` override. Tasks get time slot labels (e.g., "8:30am–9:30am").
+
+3. **Phase 3: Conflict Detection.** `check_day_viability()` generates alerts: OVERLOADED (A-tasks > focus time), TIGHT (<30m buffer), CAPACITY WARNING (5h+ meetings), ROLLOVER (3+ items from prior days), LAUNCH CRUNCH (<3 days).
+
+4. **Phase 4: Launch Countdown.** `format_launch_countdown()` shows launches sorted by urgency with days remaining + status.
+
+5. **Phase 5: Auto-Approve Triage.** `triage_intelligence.py` auto-approves items scoring ≥0.80. Config: `intelligence.auto_approve_threshold: 0.80`. M00 shows full transparency list. M0b shows count in summary (excluded from triage counts).
+
+6. **Phase 6: What Changed Delta.** `.kb-daily-snapshot.json` saved each run. `compute_delta()` shows +new, -completed, rescheduled items vs previous day.
+
+7. **Phase 7: PRD Alignment Tags.** `get_alignment_tag()` maps 14 scorecard keywords to milestones (e.g., `[Day 30: hiring]`). Shown in M00a A-task list and M0 week view Why column.
+
+8. **Phase 8: Housekeeping.** `prd_context.py`: "Exa"→"Orion", "EXA-PRD"→"ORION-REFERENCE". `daily_briefing.py`: logger "exa"→"orion", version 1.3.0→2.0.0. New `reconcile.py` CLI (d=done, r=reschedule, s=skip, a=all done, q=quit).
+
+### Verification
+- `python3 daily_briefing.py --dry-run`: 16/16 modules, 0 errors
+- M00a renders first in report output (display-first ordering works in both dry-run and live modes)
+- All imports clean (`m00a_today_summary`, `reconcile`)
+
+### Files Created
+- `modules/m00a_today_summary.py` — Today at a Glance (Phases 1-4, 6-7)
+- `reconcile.py` — End-of-day CLI tool (Phase 8)
+
+### Files Modified
+- `modules/__init__.py` — M00a added to MODULE_REGISTRY (runs last, displays first)
+- `daily_briefing.py` — v2.0.0, M00a display-first logic, Exa→Orion logger
+- `config.yaml` — M00a config, `auto_approve_threshold: 0.80`
+- `modules/triage_intelligence.py` — Auto-approve logic, shared_state storage
+- `modules/m0b_pending_review.py` — Auto-approved count in summary line
+- `modules/m00_overnight_summary.py` — Auto-approved transparency list
+- `modules/m0_persistent_actions.py` — PRD alignment tags in Why column
+- `modules/prd_context.py` — Exa→Orion, EXA-PRD→ORION-REFERENCE
+- `CLAUDE.md` — Build State v5.8, S063
+
+### ⚠️ SESSION-LOG.md over 500 lines — compression required at S065 start
+
+---
+
+## S064 — 2026-03-08 (Sat)
+
+**Focus**: Calendar enrichment exploration (killed), triage, tool audit
+
+### What Happened
+1. **Calendar enrichment M13 — explored then killed**. Built full module (attendee name matching, `<!-- ORION -->` block injection, `sendUpdates: "none"` silent writes). Dry-run showed correct matching but large meetings (15+ attendees) matched 9-10 items, short names caused false positives, and fuzzy name matching needed. Christopher decided complexity/value tradeoff wasn't worth it — daily report task list is sufficient.
+2. **OAuth scope upgraded**: `calendar.readonly` → `calendar.events` (read+write). Token re-authed. Kept in place — harmless superset, no reason to downgrade.
+3. **M13 fully reverted**: module deleted, removed from `__init__.py` and `config.yaml`.
+4. **Tool installation audit**: ClickUp MCP confirmed already working (read-only, `CLICKUP_MCP_MODE: "read"`). Google Docs MCP configured in `mcp.json` but not loading — needs debug. Fathom MCP also configured but not loading. Google Sheets MCP working.
+5. **Triaged 6 pending review items**:
+   - ✅ ai-9a6082b7: Jordan Belfort/Todd Brown materials for Romeo → Tue Mar 10 B
+   - ✅ mi-039 (NEW): Review Romeo's Veda output batch, approve 3 assets → Tue Mar 10 B
+   - ✅ mi-040 (NEW): Follow-up with Romeo on ElevenLabs voice cloning → Thu Mar 12 B
+   - ❌ Item 4 (Shopify template): Removed (not in KB, not needed)
+   - ✅ ai-e1279fb6: Customer success stories from Russ → Tue Mar 10 B
+   - ❌ ai-ec5a0a8d: Chris Hibbert automation pipeline → Rejected
+
+### Key Decision
+- **Calendar enrichment killed** — matching items to meetings by attendee name is too noisy for large group meetings. Christopher prefers using the daily report task list directly.
+
+### Files Modified
+- `auth/calendar_auth.py` — scope upgraded to `calendar.events`, verification updated
+- `modules/calendar_helper.py` — scope upgraded to `calendar.events`
+- `.kb-approvals.json` — 3 approvals + 1 rejection added
+- `.kb-schedule.json` — 4 schedule entries added
+- `.kb-manual-items.json` — mi-039, mi-040 added
+- `.kb-triage-history.json` — 5 decisions logged (stats: 57 total, 21 approved, 36 rejected)
+- `CLAUDE.md` — Build State v5.9, S064
+
+---
+
+## S065 — 2026-03-08 (Sat)
+
+**Focus**: M00a preview report creation + timezone documentation + S064 triage integration
+
+### What Happened
+1. **Created M00a preview report.** Duplicated `2026-03-09-PREVIEW.md` → `2026-03-09-PREVIEW-v2.md`. Added "Today at a Glance" section at top: Day 28/90 header, TIGHT capacity alert (0m buffer), 3 A-tasks with time slots in 8:30–11:30 focus block, PRD alignment tags, meetings list, alerts (2 Slack DMs, 4 overnight items). Original v1 preserved for side-by-side comparison.
+
+2. **Documented Christopher's Lisbon timezone.** Added "Christopher's Location & Timezone" section to MEMORY.md — Lisbon (WET/WEST), ~4-5h ahead of US Eastern, pipeline bug noted (calendar times render in ET not Lisbon). Updated Work Rhythm section to note meeting-free mornings.
+
+3. **Integrated S064 triage into v2 report.** Collapsed Pending Review to "6 items triaged — 0 remaining". Added 4 approved items to Action Items Tracker: 3 B-tasks on Tue Mar 10 (Jordan Belfort materials, Romeo Veda review, customer success stories), 1 B-task on Thu Mar 12 (Romeo ElevenLabs follow-up). Open count updated 12→16. Altitude warning updated 58%→69%.
+
+4. **Known pipeline bug surfaced.** Calendar times shown in US Eastern, not Christopher's Lisbon time. Ad Team Mastermind shows as 11:30am ET but is actually 3:30pm Lisbon. Focus block (8:30am–12pm Lisbon) is fully meeting-free. Fix tracked for S066.
+
+### Key Discovery
+- **Christopher is in Lisbon, Portugal** — all meeting times need ET→WET/WEST conversion. Morning focus block is entirely uninterrupted.
+
+### Strategic Feedback Captured
+- **Slack bot evolution needed**: Christopher wants the Slack bot to evolve from read-only monitoring into an active assistant that observes work patterns, blockers, lead times, and feeds intelligence back into triage/capacity planning.
+
+### Files Created
+- `daily-reports.nosync/mar-26-reports/2026-03-09-PREVIEW-v2.md`
+
+### Files Modified
+- `~/.claude/projects/-Users-christopherogle-pg-main-ogle/memory/MEMORY.md` — Lisbon timezone section added
+- `CLAUDE.md` — Build State v6.0, S065
+
+### ⚠️ SESSION-LOG.md over 500 lines — compression required at S066 start

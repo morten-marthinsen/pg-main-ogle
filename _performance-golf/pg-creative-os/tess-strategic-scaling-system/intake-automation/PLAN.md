@@ -95,7 +95,7 @@ Includes:
 - CLI: `python -m tess_micro_skills.ingestion.intake_id_generator [--dry-run]`
 
 ### Phase 3: Shell Wrapper + launchd Job
-- `run-intake-id.sh` -- loads `.env`, runs script, logs output (pattern from `run-exa-daily.sh`)
+- `run-intake-id.sh` -- loads `.env`, runs script, logs output (pattern from `run-orion-daily.sh`)
 - `com.performancegolf.intake-id.plist` -- `StartInterval: 120` (2 min), same PATH/env as existing plists
 - Logs to `logs/intake-id-stdout.log` and `logs/intake-id-stderr.log`
 
