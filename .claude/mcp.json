@@ -15,8 +15,8 @@
       "args": ["-y", "@a-bonus/google-docs-mcp"]
     },
     "fathom": {
-      "command": "node",
-      "args": ["/Users/christopherogle/.claude/fathom-mcp/dist/index.js"]
+      "command": "bash",
+      "args": ["-c", "node ~/.claude/fathom-mcp/dist/index.js"]
     }
   }
 }
