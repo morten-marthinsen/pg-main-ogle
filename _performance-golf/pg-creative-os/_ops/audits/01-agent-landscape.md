@@ -9,19 +9,19 @@
 
 ## 1. System Overview: What Creative OS IS
 
-Creative OS is a unified AI operating system for Performance Golf's creative department. It coordinates four agents — Exa (strategy), Tess (data), Veda (video production), and Neco (copy) — under a single orchestration layer. The system exists to serve one goal: help Christopher Ogle succeed as Interim Creative Lead and earn the VP of Creative title within 90 days.
+Creative OS is a unified AI operating system for Performance Golf's creative department. It coordinates four agents — Orion (strategy), Tess (data), Veda (video production), and Neco (copy) — under a single orchestration layer. The system exists to serve one goal: help Christopher Ogle succeed as Interim Creative Lead and earn the VP of Creative title within 90 days.
 
 The pipeline is explicitly **non-linear**:
 
 ```
-Exa (strategic oversight — sits above all)
+Orion (strategic oversight — sits above all)
  |-- Tess (intelligence — what's working, what to make next)
  |    |-->  Veda (production — creates the assets)  [via intake queue]
  |    +-->  Neco (copy — how to say it)              [via data protocol]
  +-- Neco --> Veda  [future: copy scripts feed production]
 ```
 
-The metaphor is clear and consistent across docs: Tess is the brain, Veda is the hands, Neco is the voice, Exa is the strategist.
+The metaphor is clear and consistent across docs: Tess is the brain, Veda is the hands, Neco is the voice, Orion is the strategist.
 
 **Current state**: 2 root sessions. Individual agents range from 11 to 118 sessions. Structural foundation (root CLAUDE.md, anti-degradation, provisioning template, governance model) is in place. No root-level PRD exists.
 
@@ -29,7 +29,7 @@ The metaphor is clear and consistent across docs: Tess is the brain, Veda is the
 
 ## 2. Agent Profiles
 
-### 2.1 Exa — Strategic Chief of Staff
+### 2.1 Orion — Strategic Chief of Staff
 
 | Field | Value |
 |-------|-------|
@@ -44,9 +44,9 @@ The metaphor is clear and consistent across docs: Tess is the brain, Veda is the
 | File | Purpose | Version |
 |------|---------|---------|
 | `CLAUDE.md` | Auto-loaded standing orders, routing, non-negotiables | Current |
-| `EXA-PRD.md` | Full requirements: scorecard, success criteria, scope boundaries | v1.1 |
-| `EXA-MASTER-AGENT.md` | How Exa operates: modes, session protocols, challenger, delegation | v1.1 |
-| `EXA-SUB-AGENTS.md` | Sub-agent specs with backstory pattern | v1.0 (3/8 specified) |
+| `ORION-REFERENCE.md (was EXA-PRD)` | Full requirements: scorecard, success criteria, scope boundaries | v1.1 |
+| `ORION-REFERENCE.md (was EXA-MASTER-AGENT)` | How Orion operates: modes, session protocols, challenger, delegation | v1.1 |
+| `ORION-REFERENCE.md (was EXA-SUB-AGENTS)` | Sub-agent specs with backstory pattern | v1.0 (3/8 specified) |
 | `SESSION-LOG.md` | Session history and current state | 9 sessions |
 | `_ops/` | Operational outputs (meetings, weekly-updates, decision-log, delegation-tracker) | Active |
 | `_reference/` | Scorecard, weekly cadence, team roster, stakeholder map, spark book | Active |
@@ -54,17 +54,17 @@ The metaphor is clear and consistent across docs: Tess is the brain, Veda is the
 **Strengths:**
 - Most thoroughly documented agent. PRD is detailed with concrete success criteria.
 - Challenger protocol (FLAG/BLOCK/CONVINCE ME) is a standout design.
-- Clear boundary between what Exa does and doesn't do.
+- Clear boundary between what Orion does and doesn't do.
 - Mode 8 (Wise Reply / Communications Strategist) shows practical extension capability.
 - The `_ops/` directory structure is well-organized for operational outputs.
 
 **Gaps:**
-- 3/8 sub-agents specified. Layer 2 (delegation_engine, launch_tracker) and Layer 3 (prep_generator, hiring_advisor, operating_rhythm) are undefined in EXA-SUB-AGENTS.md.
+- 3/8 sub-agents specified. Layer 2 (delegation_engine, launch_tracker) and Layer 3 (prep_generator, hiring_advisor, operating_rhythm) are undefined in ORION-REFERENCE.md (was EXA-SUB-AGENTS).
 - No `_reference/30-60-90-scorecard.md` file found — it's referenced but may not exist yet.
 - No `_reference/team-roster.md` found.
 - Stakeholder map lives in private memory, not in agent directory — by design but limits portability.
 
-**Onboarding readiness: 4/5** — Excellent documentation. A new operator could understand Exa's purpose and operate it from docs alone. Gap: unfinished sub-agent specs mean some modes are underspecified.
+**Onboarding readiness: 4/5** — Excellent documentation. A new operator could understand Orion's purpose and operate it from docs alone. Gap: unfinished sub-agent specs mean some modes are underspecified.
 
 ---
 
@@ -99,7 +99,7 @@ The metaphor is clear and consistent across docs: Tess is the brain, Veda is the
 - Production-operational with launchd automation.
 - Python codebase with real data processing capabilities.
 - Naming convention (v3.4) is the shared standard across the system.
-- Challenger protocol added (mirrors Exa's approach).
+- Challenger protocol added (mirrors Orion's approach).
 
 **Gaps:**
 - `tess-dashboard/` contains a Next.js project with full `node_modules/` but unclear operational status. Is it deployed? Used? Abandoned?
@@ -206,7 +206,7 @@ The metaphor is clear and consistent across docs: Tess is the brain, Veda is the
 
 | Resource | Path | Status |
 |----------|------|--------|
-| Agent Provisioning Template | `_shared/agent-provisioning-template.md` | v1.0 — 5-phase checklist based on Exa bootstrap |
+| Agent Provisioning Template | `_shared/agent-provisioning-template.md` | v1.0 — 5-phase checklist based on Orion bootstrap |
 | LOMS Library | `_shared/loms-library/` | Referenced but contents not verified |
 | Ads Creative | `_shared/ads-creative/` | Contains ad angle CSVs (SF2, ONE1, SpeedTrac, ClickStick), templates, influencer shoot angles |
 
@@ -217,7 +217,7 @@ The metaphor is clear and consistent across docs: Tess is the brain, Veda is the
 | File | Scope |
 |------|-------|
 | `CREATIVE-OS-ANTI-DEGRADATION.md` | Core system (universal enforcement) |
-| `EXA-ANTI-DEGRADATION.md` | Exa adapter |
+| `ORION-ANTI-DEGRADATION.md` | Orion adapter |
 | `TESS-ANTI-DEGRADATION.md` | Tess adapter (v1.1) |
 | `VEDA-ANTI-DEGRADATION.md` | Veda adapter |
 | `NECO-ANTI-DEGRADATION.md` | Neco adapter |
@@ -226,7 +226,7 @@ The metaphor is clear and consistent across docs: Tess is the brain, Veda is the
 
 ### 3.3 `_ops/` (Root Level)
 
-The root `_ops/` directory exists but is empty except for the `audits/` folder (just created). All operational outputs currently live in `exa-chief-of-staff/_ops/`. This is logical since Exa is the operational layer, but it means root-level ops tracking is nonexistent.
+The root `_ops/` directory exists but is empty except for the `audits/` folder (just created). All operational outputs currently live in `orion-chief-of-staff/_ops/`. This is logical since Orion is the operational layer, but it means root-level ops tracking is nonexistent.
 
 ---
 
@@ -247,29 +247,29 @@ What exists at the root:
 
 **Arguments for a Root PRD:**
 - The root CLAUDE.md does routing and governance well but doesn't articulate success criteria, scope boundaries, or evolution strategy for the OS as a whole.
-- Exa's PRD defines *Christopher's* success, not the *system's* success. These overlap but are not identical.
+- Orion's PRD defines *Christopher's* success, not the *system's* success. These overlap but are not identical.
 - When other operators join (Fatima, Day 30-60), they'll need a document that explains the whole system — not just the routing table.
 - The inter-agent bridge table lists statuses (LIVE, DEFINED, PLANNED) but there's no roadmap for completing them.
 - No document defines what Creative OS v2.0 looks like after Christopher's 90 days.
 
 **Arguments against (for now):**
 - The root CLAUDE.md already covers routing, architecture, and governance effectively.
-- Exa's PRD covers the strategic layer. Each agent has its own PRD.
+- Orion's PRD covers the strategic layer. Each agent has its own PRD.
 - Writing a root PRD now risks premature abstraction — the system is still actively evolving.
 - Christopher's 90-day window prioritizes execution over documentation.
 
-**Recommendation**: Create a lightweight Root PRD (target: 2-3 pages) after the John meeting debrief — when governance decisions are locked and the Architect-Operator model is confirmed. Scope it to: system purpose, agent roster with maturity levels, inter-agent bridge roadmap, success criteria for the OS (distinct from Exa's scorecard), and multi-user governance model.
+**Recommendation**: Create a lightweight Root PRD (target: 2-3 pages) after the John meeting debrief — when governance decisions are locked and the Architect-Operator model is confirmed. Scope it to: system purpose, agent roster with maturity levels, inter-agent bridge roadmap, success criteria for the OS (distinct from Orion's scorecard), and multi-user governance model.
 
 ### 4.3 Root CLAUDE.md Routing Completeness
 
 The routing table is **comprehensive and accurate**. Spot-checked:
 - "Create a static image brief" correctly routes to Neco Sub-Agent #7 (matches global `~/.claude/CLAUDE.md`)
-- "Wise reply" correctly routes to Exa Mode 8 (matches the skill file)
+- "Wise reply" correctly routes to Orion Mode 8 (matches the skill file)
 - Agent map matches actual directory structure
 - Inter-agent bridges match what the agents describe in their own docs
 - Brand Thread description is consistent across all agents
 
-**One omission**: The routing table doesn't handle "help me evaluate a team member" or "give me a framework for assessing someone's performance" — this would route to Exa (hiring_advisor sub-agent / prep_generator), but it's not explicit. Given the P0 Morton evaluation, this should be added.
+**One omission**: The routing table doesn't handle "help me evaluate a team member" or "give me a framework for assessing someone's performance" — this would route to Orion (hiring_advisor sub-agent / prep_generator), but it's not explicit. Given the P0 Morton evaluation, this should be added.
 
 ---
 
@@ -277,7 +277,7 @@ The routing table is **comprehensive and accurate**. Spot-checked:
 
 | Agent | Sessions | Doc Version | Sub-Agents | Runtime | Tests | Git | Maturity |
 |-------|----------|-------------|------------|---------|-------|-----|----------|
-| **Exa** | 9 | PRD v1.1, MA v1.1 | 3/8 specified | Advisory | N/A | N/A | Foundation |
+| **Orion** | 9 | PRD v1.1, MA v1.1 | 3/8 specified | Advisory | N/A | N/A | Foundation |
 | **Tess** | 118 | PRD v1.4, MA v2.2 | Defined | Python | Unknown | Yes (local) | Production |
 | **Veda** | 36 | PRD exists, MA v0.5 | 13 defined | Node.js/TS | 620/630 | Yes (28 commits, local) | Late Development |
 | **Neco** | 11 | PRD v2.0, MA v1.1 | 8 defined | Advisory | N/A | N/A | Foundation (demo-ready) |
@@ -285,7 +285,7 @@ The routing table is **comprehensive and accurate**. Spot-checked:
 **Maturity definitions:**
 - **Production**: Running in production workflows. Battle-tested. (Tess)
 - **Late Development**: Core functionality complete. Blocked on integration items. (Veda)
-- **Foundation**: Architecture defined, docs in place, operational but not yet proven at scale. (Exa, Neco)
+- **Foundation**: Architecture defined, docs in place, operational but not yet proven at scale. (Orion, Neco)
 
 ---
 
@@ -293,7 +293,7 @@ The routing table is **comprehensive and accurate**. Spot-checked:
 
 | Agent | Score | Could a new operator pick this up from docs alone? |
 |-------|-------|-----------------------------------------------------|
-| **Exa** | 4/5 | Yes. Clear identity, modes, protocols. Sub-agent gaps are minor. |
+| **Orion** | 4/5 | Yes. Clear identity, modes, protocols. Sub-agent gaps are minor. |
 | **Tess** | 3/5 | With effort. Volume of docs is high (1,872-line MA, 118 sessions). No quick-start. Python codebase lacks README. |
 | **Veda** | 3/5 | For a developer, yes. Master Agent is DRAFT. No standalone codebase README. Phase plan is stale. |
 | **Neco** | 4/5 | Yes. Well-organized routing table, checkpoint system, framework references. Advisory nature is self-documenting. |
@@ -309,18 +309,18 @@ The routing table is **comprehensive and accurate**. Spot-checked:
 |---|-----|--------|----------------|
 | 1 | **No remote git for Veda** | 28 commits exist only on Christopher's machine. iCloud is not a substitute for a git remote. If the machine fails, Veda's codebase is lost. | Push to a private GitHub/GitLab repo immediately. This is a P0 risk. |
 | 2 | **Veda Master Agent is v0.5 DRAFT** | The most mature codebase has the least current spec doc. Divergence between code reality and doc claims will grow. | Update to v1.0 based on actual implemented state (Phases 1-4). |
-| 3 | **Exa sub-agents 4-8 unspecified** | Modes 3, 4, 5 (Delegation, Prep, Launch Tracking) lack formal sub-agent specs. They work because the Master Agent describes them, but there's no backstory, input/output contracts, or failure modes. | Specify during Exa Phase 3 (Layer 2 + 3). Not urgent but creates fragility. |
+| 3 | **Orion sub-agents 4-8 unspecified** | Modes 3, 4, 5 (Delegation, Prep, Launch Tracking) lack formal sub-agent specs. They work because the Master Agent describes them, but there's no backstory, input/output contracts, or failure modes. | Specify during Orion Phase 3 (Layer 2 + 3). Not urgent but creates fragility. |
 | 4 | **Tess has no quick-start guide** | 118 sessions of context. A new operator would drown. | Create a 1-page `README.md` in Tess root: what it does, how to run it, key files, weekly cadence. |
 
 ### Moderate Gaps
 
 | # | Gap | Impact | Recommendation |
 |---|-----|--------|----------------|
-| 5 | **No root-level PRD** | Governance model exists in an Exa meeting prep doc, not in a system-level doc. | Create lightweight Root PRD after governance is locked. |
+| 5 | **No root-level PRD** | Governance model exists in an Orion meeting prep doc, not in a system-level doc. | Create lightweight Root PRD after governance is locked. |
 | 6 | **Tess dashboard status unknown** | `tess-dashboard/` has a Next.js project with `node_modules/`. Is it used? Deployed? Abandoned? | Assess and either document or archive. The `node_modules/` adds significant disk weight. |
 | 7 | **Neco has no structural enforcement** | Advisory agent — all gates are instructions, not code. The anti-degradation system explicitly warns that instructions can be ignored. | Accept this for now — Neco's value is in the frameworks and prompt engineering, not code enforcement. Long-term: consider a lightweight validation script for output format. |
 | 8 | **Stale Phase 2 plan for Veda** | Plan references session numbers from the past. Session 015 is 21 sessions ago. | Either update the plan or archive it and create a new Phase 5+ plan that reflects current reality. |
-| 9 | **Root `_ops/` empty** | All operational outputs live in `exa-chief-of-staff/_ops/`. If anyone other than Exa needs to produce ops outputs, there's no root home. | Acceptable for now. Move to root `_ops/` when multi-user governance activates. |
+| 9 | **Root `_ops/` empty** | All operational outputs live in `orion-chief-of-staff/_ops/`. If anyone other than Orion needs to produce ops outputs, there's no root home. | Acceptable for now. Move to root `_ops/` when multi-user governance activates. |
 | 10 | **Neco -> Veda handoff format defined but not tested** | The production order YAML format in NECO-MASTER-AGENT.md Section 9 is forward-looking but untested. | Test during Chris H demo or first real script -> video workflow. |
 
 ### Minor Gaps
@@ -328,7 +328,7 @@ The routing table is **comprehensive and accurate**. Spot-checked:
 | # | Gap | Impact | Recommendation |
 |---|-----|--------|----------------|
 | 11 | **Routing table missing "evaluate a team member"** | Morton evaluation is a P0 but no routing rule captures it. | Add to root CLAUDE.md routing table. |
-| 12 | **Agent provisioning template untested** | Created in S002 but never used for an actual provisioning. | Will be tested when Fatima provisioning begins. Note: template should be validated against Exa's actual bootstrap experience. |
+| 12 | **Agent provisioning template untested** | Created in S002 but never used for an actual provisioning. | Will be tested when Fatima provisioning begins. Note: template should be validated against Orion's actual bootstrap experience. |
 | 13 | **LOMS library contents unverified** | Referenced across all agents but contents not confirmed during this audit. | Verify `/loms-run` skill exists and LOMS capture is actually happening. |
 | 14 | **Tess output/ directory accumulates files** | Timestamped CSVs and JSONs from every pipeline run. No documented cleanup. | Add retention policy to Tess operational docs (e.g., keep last 30 days, archive or delete older). |
 
@@ -352,8 +352,8 @@ The routing table is **comprehensive and accurate**. Spot-checked:
 11. Neco provides copy angles (via Tess data protocol)
 12. Neco generates hooks, scripts, briefs for new campaigns
 13. Neco -> Veda handoff delivers scripts for production (FUTURE)
-14. Exa tracks all of this against the 30/60/90 scorecard
-15. Exa generates weekly Creative Lead Update for John
+14. Orion tracks all of this against the 30/60/90 scorecard
+15. Orion generates weekly Creative Lead Update for John
 ```
 
 ### What's Actually Working
@@ -371,7 +371,7 @@ The routing table is **comprehensive and accurate**. Spot-checked:
 | 11 (Tess -> Neco) | DEFINED | Protocol exists in docs but never executed. |
 | 12 (Neco generation) | OPERATIONAL | Advisory mode works. Demo with Chris H planned. |
 | 13 (Neco -> Veda) | FORMAT DEFINED | YAML format in NECO-MASTER-AGENT.md. Not tested. |
-| 14 (Exa tracking) | OPERATIONAL | 9 sessions. Scorecard, challenger, delegation all active. |
+| 14 (Orion tracking) | OPERATIONAL | 9 sessions. Scorecard, challenger, delegation all active. |
 | 15 (Weekly update) | OPERATIONAL | Format defined. Updates generated. |
 
 ### Key Bottleneck
@@ -394,9 +394,9 @@ The end-to-end pipeline has never completed a full cycle from data ingestion to 
 
 ### Architectural Tensions
 
-1. **Code vs. Advisory split.** Tess and Veda have codebases with structural enforcement (TypeScript compilation, test suites, git). Exa and Neco are advisory-only — their "gates" are instructions, not code. The anti-degradation system explicitly says instructions can be ignored. This creates a two-tier enforcement model.
+1. **Code vs. Advisory split.** Tess and Veda have codebases with structural enforcement (TypeScript compilation, test suites, git). Orion and Neco are advisory-only — their "gates" are instructions, not code. The anti-degradation system explicitly says instructions can be ignored. This creates a two-tier enforcement model.
 
-2. **Exa's scope creep risk.** Exa is described as sitting "above" the other agents, but it also has its own operational outputs (meeting preps, weekly updates, delegation tracking). As Exa grows, the line between "strategic oversight" and "another agent with its own workload" may blur.
+2. **Orion's scope creep risk.** Orion is described as sitting "above" the other agents, but it also has its own operational outputs (meeting preps, weekly updates, delegation tracking). As Orion grows, the line between "strategic oversight" and "another agent with its own workload" may blur.
 
 3. **Tess is the oldest but least integrated with the COS structure.** Tess was built standalone before Creative OS existed (session 1 predates COS by months). Its CLAUDE.md, anti-degradation adapter, and challenger protocol were retrofitted during the COS restructure (S001). The integration works but Tess still feels like an independent system wearing a COS uniform rather than a native COS citizen.
 
@@ -406,9 +406,9 @@ The end-to-end pipeline has never completed a full cycle from data ingestion to 
 
 ## 10. Verdict
 
-**Creative OS is a thoughtfully designed system with strong fundamentals.** The routing table, anti-degradation system, phase-stop discipline, and session protocols create genuine consistency across four very different agents. The documentation depth is remarkable — particularly for Exa and Neco.
+**Creative OS is a thoughtfully designed system with strong fundamentals.** The routing table, anti-degradation system, phase-stop discipline, and session protocols create genuine consistency across four very different agents. The documentation depth is remarkable — particularly for Orion and Neco.
 
-**The honest assessment: it's 60% built.** Tess is in production. Exa and Neco are operational but not proven at scale. Veda is the highest-investment agent (36 sessions, 620 tests) but has never produced a real video from the pipeline end-to-end. The inter-agent bridges are defined but only Tess -> Veda (intake queue) is actually functioning.
+**The honest assessment: it's 60% built.** Tess is in production. Orion and Neco are operational but not proven at scale. Veda is the highest-investment agent (36 sessions, 620 tests) but has never produced a real video from the pipeline end-to-end. The inter-agent bridges are defined but only Tess -> Veda (intake queue) is actually functioning.
 
 **The biggest risk is not technical — it's operational.** All code lives on one machine with no remote backup. All operational knowledge lives in session logs that total 4,000+ lines across agents. If Christopher can't operate the system for any reason, no one else can pick it up today without significant ramp time.
 
@@ -443,7 +443,7 @@ How ready is each agent to adopt Agent Teams as a production execution model?
 |-------|-----------|-----------|
 | **Neco** | HIGH | Multi-perspective generation maps directly to the Arena pattern from CopywritingEngine. Each hook lens becomes a separate teammate with its own context. The Critic becomes a genuinely external evaluator (not self-critique via NECO-CHECK). A 7-agent team design is ready: 3 lens agents + 2 variant agents + 1 critic agent + 1 judge agent. This is the highest-value Agent Teams candidate in Creative OS. |
 | **Veda** | MEDIUM | The pipeline has sequential dependencies (Steps 1-7 must run in order) that limit parallelization. However, hook selection (Phase 4) is an excellent candidate — selecting 3 hooks from different donors could run as parallel teammate evaluations. Source probing and format validation could also benefit from parallel execution. |
-| **Exa** | LOW-MEDIUM | Advisory nature means Agent Teams adds coordination overhead without clear quality gain for most operations. The best use case is a multi-agent health monitoring dashboard where separate teammates monitor each agent's state simultaneously and report to a coordinator. Not a priority. |
+| **Orion** | LOW-MEDIUM | Advisory nature means Agent Teams adds coordination overhead without clear quality gain for most operations. The best use case is a multi-agent health monitoring dashboard where separate teammates monitor each agent's state simultaneously and report to a coordinator. Not a priority. |
 | **Tess** | LOW | Data pipeline is already automated via Python micro-skills and launchd. Agent Teams does not improve batch data processing, classification, or spreadsheet operations. The pipeline is sequential by nature (ingest, process, classify, recommend). No meaningful parallelization opportunity. |
 
 ### A.3 Architectural Shift: Agent Teams as Permanent Layer

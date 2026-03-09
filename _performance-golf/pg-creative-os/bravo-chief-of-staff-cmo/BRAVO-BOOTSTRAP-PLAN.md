@@ -3,13 +3,13 @@
 > **Version**: 1.0  
 > **Created**: 2026-02-10  
 > **Status**: PLANNING  
-> **Purpose**: Comprehensive plan for bootstrapping Bravo, John's Chief of Staff agent, modeled after Exa but customized for CMO-level priorities and workflows
+> **Purpose**: Comprehensive plan for bootstrapping Bravo, John's Chief of Staff agent, modeled after Orion but customized for CMO-level priorities and workflows
 
 ---
 
 ## Project Intent Summary
 
-**Goal**: Create Bravo, a Strategic Chief of Staff agent for John (CMO) at Performance Golf, modeled after Exa (Christopher's agent) but customized to John's CMO-level priorities, working style, and strategic initiatives.
+**Goal**: Create Bravo, a Strategic Chief of Staff agent for John (CMO) at Performance Golf, modeled after Orion (Christopher's agent) but customized to John's CMO-level priorities, working style, and strategic initiatives.
 
 **Key Objective**: Help John execute on his four core priorities while managing the transition from direct-response-only to a brand-plus-performance model, protecting his time for high-leverage strategic work, and ensuring visibility into progress for the CEO.
 
@@ -20,7 +20,7 @@
 ### 1. Agent Identity
 - **Name**: Bravo
 - **Role**: Strategic Chief of Staff for John (CMO)
-- **Model**: Based on Exa's architecture, customized for CMO-level scope
+- **Model**: Based on Orion's architecture, customized for CMO-level scope
 - **Folder**: `bravo-chief-of-staff-cmo/` (already exists)
 
 ### 2. Governance & Permissions
@@ -33,7 +33,7 @@
 - **SSS Access**: Read-only access to Strategic Scaling System (no write permissions)
 
 ### 3. Inter-Agent Communication
-- **Exa Interaction**: Bravo should communicate with Christopher's Exa agent
+- **Orion Interaction**: Bravo should communicate with Christopher's Orion agent
 - **Protocol**: To be defined during implementation
 - **Communication Boundary**: Bravo drafts only (no direct Slack sends); John reviews and sends
 
@@ -55,9 +55,9 @@ All modes are critical, but initial focus on:
 4. **Meeting Prep and Triage** — High-volume meeting management
 
 ### 6. Architecture
-- **Structure**: Mirror Exa's sub-agent architecture
+- **Structure**: Mirror Orion's sub-agent architecture
 - **Customization**: Sub-agents customized to John's PRD (to be created)
-- **Layers**: Follow Exa's Layer 1 (Strategic Core), Layer 2 (Operational Engine), Layer 3 (Support Functions) pattern
+- **Layers**: Follow Orion's Layer 1 (Strategic Core), Layer 2 (Operational Engine), Layer 3 (Support Functions) pattern
 
 ### 7. Reference Materials & Folder Structure
 - **Brand Guidelines**: Already exist in `pg-skills/pg-brand-guidelines/`
@@ -75,7 +75,7 @@ All modes are critical, but initial focus on:
 ## Critical Requirement: Challenger Subagent
 
 ### Overview
-Bravo must include a **Challenger subagent** (modeled after Exa's Challenger) that is embedded directly in the main `CLAUDE.md` file so it's active in all conversations.
+Bravo must include a **Challenger subagent** (modeled after Orion's Challenger) that is embedded directly in the main `CLAUDE.md` file so it's active in all conversations.
 
 ### Purpose
 The Challenger helps John:
@@ -87,7 +87,7 @@ The Challenger helps John:
 ### Implementation Approach
 - **Location**: Embedded in `CLAUDE.md` (main agent config file)
 - **Activation**: Always-on, active in every conversation
-- **Escalation Levels**: FLAG, BLOCK, CONVINCE ME (same as Exa)
+- **Escalation Levels**: FLAG, BLOCK, CONVINCE ME (same as Orion)
 - **Focus Areas** (adapted for CMO-level):
   - Strategic alignment with brand mission and quarterly goals
   - CMO altitude (ensuring John stays at strategic level, not tactical)
@@ -96,12 +96,12 @@ The Challenger helps John:
   - Decision quality and consistency with brand positioning
   - Workflow optimization and delegation opportunities
 
-### Key Differences from Exa's Challenger
+### Key Differences from Orion's Challenger
 - **Focus**: CMO-level concerns vs. VP-level concerns
-  - Exa: "VP narrative", "earn VP title", "30/60/90 scorecard"
+  - Orion: "VP narrative", "earn VP title", "30/60/90 scorecard"
   - Bravo: "CMO strategic leverage", "brand mission alignment", "quarterly priorities", "CEO visibility"
 - **Metrics**: Quarterly framework vs. 30/60/90-day milestones
-- **Stakeholders**: CEO, CFO, CPO, direct reports vs. John (for Exa)
+- **Stakeholders**: CEO, CFO, CPO, direct reports vs. John (for Orion)
 - **Scope**: Company-wide transformation vs. department-level execution
 
 ---
@@ -140,18 +140,18 @@ The Challenger helps John:
 **Questions**:
 - Which sub-agents are needed?
 - What's the priority order?
-- Should they mirror Exa's layer structure?
+- Should they mirror Orion's layer structure?
 
-### 4. Inter-Agent Bridge Protocol with Exa
+### 4. Inter-Agent Bridge Protocol with Orion
 **Questions**:
-- What data/information flows between Bravo and Exa?
+- What data/information flows between Bravo and Orion?
 - What triggers communication?
 - What's the protocol for coordination?
-- Should Bravo read Exa's SESSION-LOG.md or deliverables?
+- Should Bravo read Orion's SESSION-LOG.md or deliverables?
 
 ### 5. Core Principle & Agent Identity
 **Question**: What's Bravo's core principle?
-- Exa uses "Strategic Leverage Principle"
+- Orion uses "Strategic Leverage Principle"
 - What governs all of Bravo's decisions?
 - What's the agent metaphor? ("the strategist", "the orchestrator", etc.)
 - What's the one-sentence role description?
@@ -159,12 +159,12 @@ The Challenger helps John:
 ### 6. PRD Creation Process
 **Question**: How should we approach PRD creation?
 - Start with template Phase 0 (pre-bootstrap)?
-- Run intent alignment session first (like Exa's 11-gap process)?
+- Run intent alignment session first (like Orion's 11-gap process)?
 - Create PRD before defining sub-agents, or define sub-agents as part of PRD?
 
 ### 7. Non-Negotiables & Phase-Stop Discipline
 **Questions**:
-- Should Bravo use same phase-stop discipline as Exa?
+- Should Bravo use same phase-stop discipline as Orion?
 - What are Bravo-specific non-negotiables?
   - Brand mission alignment (from briefing)
   - Premium creative quality (from briefing)
@@ -176,17 +176,17 @@ The Challenger helps John:
 **Questions**:
 - Should Bravo have its own `BRAVO-ANTI-DEGRADATION.md` adapter?
 - What agent-specific structural gates are needed?
-- Should it reference core system like Exa does?
+- Should it reference core system like Orion does?
 
 ### 9. Session Protocol & Context Budget
 **Questions**:
-- Should Bravo follow Exa's session protocol (read SESSION-LOG.md first, handoff on exit)?
+- Should Bravo follow Orion's session protocol (read SESSION-LOG.md first, handoff on exit)?
 - What's the context budget? (What to read, what to skip)
 - How should Bravo handle session resumption?
 
 ### 10. CEO Update Protocol (Future Task)
 **Noted as future work**, but helpful to clarify:
-- Format preference? (Like Exa's Creative Lead Update — 3-5 bullets, 60-second read?)
+- Format preference? (Like Orion's Creative Lead Update — 3-5 bullets, 60-second read?)
 - Frequency? (Weekly? Bi-weekly?)
 - What data sources should Bravo scrape? (Domo, Shopify, ClickUp, etc.)
 - What's the CEO's preferred delivery method?
@@ -195,7 +195,7 @@ The Challenger helps John:
 
 ## Recommended Bootstrap Sequence
 
-Based on the Agent Provisioning Template and Exa's bootstrap pattern:
+Based on the Agent Provisioning Template and Orion's bootstrap pattern:
 
 ### Phase 0: Pre-Bootstrap (Information Gathering)
 - [ ] Fill in Phase 0.1: Person & Role details
@@ -275,7 +275,7 @@ bravo-chief-of-staff-cmo/
 
 ### Phase 4: Integration
 - [ ] Update root Creative OS `CLAUDE.md` (add Bravo to architecture)
-- [ ] Document inter-agent bridges (Bravo ↔ Exa)
+- [ ] Document inter-agent bridges (Bravo ↔ Orion)
 - [ ] Update MEMORY.md (if applicable)
 
 ### Phase 5: Verification
@@ -317,7 +317,7 @@ CEO updates must include scraped data from Domo, Shopify, ClickUp, and other sou
 ## Next Steps
 
 1. **Resolve Open Questions**: Address gaps identified above
-2. **Run Intent Alignment Session**: Modeled on Exa's 11-gap process
+2. **Run Intent Alignment Session**: Modeled on Orion's 11-gap process
 3. **Create PRD**: Define scope, scorecard, and sub-agents
 4. **Build Foundation Documents**: Start with CLAUDE.md (embedding Challenger)
 5. **Test & Iterate**: Complete first session and refine
@@ -327,10 +327,8 @@ CEO updates must include scraped data from Domo, Shopify, ClickUp, and other sou
 ## Reference Documents
 
 - **Agent Provisioning Template**: `_shared/agent-provisioning-template.md`
-- **Exa PRD**: `exa-chief-of-staff/EXA-PRD.md`
-- **Exa Master Agent**: `exa-chief-of-staff/EXA-MASTER-AGENT.md`
-- **Exa Sub-Agents**: `exa-chief-of-staff/EXA-SUB-AGENTS.md`
-- **Exa CLAUDE.md**: `exa-chief-of-staff/CLAUDE.md`
+- **Orion Reference** (consolidated spec): `orion-chief-of-staff/ORION-REFERENCE.md`
+- **Orion CLAUDE.md**: `orion-chief-of-staff/CLAUDE.md`
 - **John's Briefing**: `bravo-chief-of-staff-cmo/bravo-cmo-chief-of-staff-briefing.md`
 
 ---

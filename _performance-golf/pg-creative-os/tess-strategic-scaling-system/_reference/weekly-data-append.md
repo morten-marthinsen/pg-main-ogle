@@ -33,7 +33,7 @@ Layer 3: Ad Level Tracking (Google Sheets tab)
 
 1. Log into Domo
 2. Export the ad performance data for the new time period
-3. Save the CSV file to: `Documents/The Sauce Vault/_Performance Golf/PG - Scaling Acquisition/Strategic Scaling System/DOMO Ad Performance CSVs/`
+3. Save the CSV file to: `tess-strategic-scaling-system/_reference/domo-csvs/` (repo-relative)
 4. Use naming convention: `Ad Performance MM-DD-YYYY-MM-DD-YYYY.csv`
 
 ### Step 2: Run the Append Script
@@ -185,8 +185,8 @@ If the QUERY formula breaks, it's likely due to:
 | File | Location |
 |------|----------|
 | SSS Spreadsheet | [Google Sheets Link](https://docs.google.com/spreadsheets/d/1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U/edit) |
-| Domo CSV Exports | `Documents/The Sauce Vault/_Performance Golf/PG - Scaling Acquisition/Strategic Scaling System/DOMO Ad Performance CSVs/` |
-| This Documentation | `Documents/The Sauce Vault/_Performance Golf/PG - Scaling Acquisition/Strategic Scaling System/Weekly_Data_Append_Process.md` |
+| Domo CSV Exports | `tess-strategic-scaling-system/_reference/domo-csvs/` (repo-relative) |
+| This Documentation | `tess-strategic-scaling-system/_reference/weekly-data-append.md` (this file) |
 
 ---
 

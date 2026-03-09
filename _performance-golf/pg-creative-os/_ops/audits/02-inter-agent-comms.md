@@ -41,11 +41,11 @@
 | 1 | Tess → Veda | One-way | **LIVE** | Code (intake queue + Google Sheets) |
 | 2 | Tess → Neco | One-way | **DEFINED** | Documentation only (natural language protocol) |
 | 3 | Neco → Veda | One-way | **PLANNED** | Documentation only (YAML format spec) |
-| 4 | Exa → Tess | One-way | **LIVE** | Reads Tess SESSION-LOG.md header |
-| 5 | Exa → Veda | One-way | **LIVE** | Reads Veda SESSION-LOG.md header |
-| 6 | Exa → Neco | One-way | **IMPLICIT** | No direct mechanism documented; Exa monitors via root CLAUDE.md routing |
-| 7 | Tess → Exa | One-way | **IMPLICIT** | No push mechanism; Exa pulls from Tess build state |
-| 8 | Neco → Exa | One-way | **IMPLICIT** | Brand Thread metadata on outputs; no direct channel |
+| 4 | Orion → Tess | One-way | **LIVE** | Reads Tess SESSION-LOG.md header |
+| 5 | Orion → Veda | One-way | **LIVE** | Reads Veda SESSION-LOG.md header |
+| 6 | Orion → Neco | One-way | **IMPLICIT** | No direct mechanism documented; Orion monitors via root CLAUDE.md routing |
+| 7 | Tess → Orion | One-way | **IMPLICIT** | No push mechanism; Orion pulls from Tess build state |
+| 8 | Neco → Orion | One-way | **IMPLICIT** | Brand Thread metadata on outputs; no direct channel |
 
 ---
 
@@ -160,35 +160,35 @@ production_order:
 
 ---
 
-### 2.4 Exa → All Agents (Strategic Oversight) — LIVE
+### 2.4 Orion → All Agents (Strategic Oversight) — LIVE
 
 **Status:** Operational through a read-only monitoring pattern.
 
 **Files:**
-- `exa-chief-of-staff/EXA-MASTER-AGENT.md` (Section 8.1, lines 562-571)
+- `orion-chief-of-staff/ORION-REFERENCE.md` (Section 8.1, lines 562-571)
 - Root `CLAUDE.md` (lines 13-18, architecture diagram)
 
 **Mechanism:**
-- Exa reads Tess and Veda SESSION-LOG.md headers for build state
-- Exa generates weekly Creative Lead Updates that reference agent progress (Mode 6 template includes "Creative OS Progress" section)
-- Exa provides strategic direction through meeting preps and scorecards
-- Brand Thread assignments flow from Exa (John's North Stars) to all agents via root CLAUDE.md
+- Orion reads Tess and Veda SESSION-LOG.md headers for build state
+- Orion generates weekly Creative Lead Updates that reference agent progress (Mode 6 template includes "Creative OS Progress" section)
+- Orion provides strategic direction through meeting preps and scorecards
+- Brand Thread assignments flow from Orion (John's North Stars) to all agents via root CLAUDE.md
 
 **Data flow:**
 ```
-Exa reads:   Tess SESSION-LOG.md build state header
-Exa reads:   Veda SESSION-LOG.md build state header
-Exa writes:  Weekly updates (consumed by John, reference agent progress)
-Exa writes:  Meeting preps, delegation records
+Orion reads:   Tess SESSION-LOG.md build state header
+Orion reads:   Veda SESSION-LOG.md build state header
+Orion writes:  Weekly updates (consumed by John, reference agent progress)
+Orion writes:  Meeting preps, delegation records
 ```
 
 **Gaps:**
-- **No direct Exa → Neco monitoring path documented.** EXA-MASTER-AGENT.md Section 8.1 lists TESS and VEDA as upstream systems but does not mention Neco
-- **One-way monitoring only.** Exa can observe Tess/Veda state but cannot push directives to them. Strategic direction flows through the human operator
-- **No health dashboard.** Exa checks SESSION-LOG.md headers but there is no aggregated "Creative OS health" view that combines all four agents' states
+- **No direct Orion → Neco monitoring path documented.** ORION-REFERENCE.md Section 8.1 lists TESS and VEDA as upstream systems but does not mention Neco
+- **One-way monitoring only.** Orion can observe Tess/Veda state but cannot push directives to them. Strategic direction flows through the human operator
+- **No health dashboard.** Orion checks SESSION-LOG.md headers but there is no aggregated "Creative OS health" view that combines all four agents' states
 - **Brand Thread propagation is documentation-based.** All agents reference the threads in their CLAUDE.md files, but there is no enforcement that outputs are actually tagged
 
-**Risk: LOW.** The Architect-Operator model explicitly puts the human in the loop. Exa's monitoring pattern is appropriate for the current scale. The Neco monitoring gap should be closed.
+**Risk: LOW.** The Architect-Operator model explicitly puts the human in the loop. Orion's monitoring pattern is appropriate for the current scale. The Neco monitoring gap should be closed.
 
 ---
 
@@ -199,7 +199,7 @@ Exa writes:  Meeting preps, delegation records
 | Veda → Tess (completion feedback) | No mechanism. When Veda completes a production run, Tess has no way to know. | MEDIUM -- Tess can't close the loop on recommendations |
 | Veda → Neco (production feedback) | No mechanism. If Neco's script doesn't work in production, no feedback path exists | LOW -- future concern |
 | Neco → Tess (angle performance) | No mechanism. Neco tracks saturation internally but can't push back to Tess | LOW -- Neco's saturation is self-contained |
-| Any agent → Exa (alert/escalation) | No mechanism. Agents cannot flag blockers to Exa autonomously | MEDIUM -- relies on human noticing |
+| Any agent → Orion (alert/escalation) | No mechanism. Agents cannot flag blockers to Orion autonomously | MEDIUM -- relies on human noticing |
 
 ---
 
@@ -212,9 +212,9 @@ Exa writes:  Meeting preps, delegation records
 | Tess | `TESS-NAMING-CONVENTION.md` (owns the spec) | v3.4 |
 | Veda | Points to `tess-strategic-scaling-system/TESS-NAMING-CONVENTION.md` | v3.4 (CLAUDE.md line 89) |
 | Neco | No naming convention reference | N/A |
-| Exa | No naming convention reference | N/A |
+| Orion | No naming convention reference | N/A |
 
-**Finding:** Naming convention is shared correctly between Tess (owner) and Veda (consumer). Single source of truth. Neco does not need it (copy output, not asset production). Exa does not need it.
+**Finding:** Naming convention is shared correctly between Tess (owner) and Veda (consumer). Single source of truth. Neco does not need it (copy output, not asset production). Orion does not need it.
 
 **Consistency: GOOD.** No version drift detected.
 
@@ -227,28 +227,28 @@ All agents follow a consistent directory pattern:
 ├── CLAUDE.md                       # All 4 agents: YES
 ├── {AGENT}-PRD.md                  # All 4 agents: YES
 ├── {AGENT}-MASTER-AGENT.md         # All 4 agents: YES
-├── {AGENT}-SUB-AGENTS.md           # Exa: YES, Tess: YES, Veda: YES, Neco: YES
+├── {AGENT}-SUB-AGENTS.md           # Orion: YES, Tess: YES, Veda: YES, Neco: YES
 ├── {AGENT}-ANTI-DEGRADATION.md     # All 4 agents: YES
 ├── SESSION-LOG.md                  # All 4 agents: YES (+ root has one too)
-├── _reference/                     # Exa: YES, Tess: YES, Veda: NO (uses Tess's), Neco: YES (11 files)
-├── _ops/                           # Exa: YES, Tess: NO, Veda: NO, Neco: NO
+├── _reference/                     # Orion: YES, Tess: YES, Veda: NO (uses Tess's), Neco: YES (11 files)
+├── _ops/                           # Orion: YES, Tess: NO, Veda: NO, Neco: NO
 └── _output/                        # Neco: YES, others: NO
 ```
 
-**Finding:** Strong structural consistency. The provisioning template (Section 4) correctly captures this pattern. The `_ops/` directory is Exa-specific (operational outputs). Neco's `_output/` and `_vault/` and `_learning/` directories are Neco-specific additions.
+**Finding:** Strong structural consistency. The provisioning template (Section 4) correctly captures this pattern. The `_ops/` directory is Orion-specific (operational outputs). Neco's `_output/` and `_vault/` and `_learning/` directories are Neco-specific additions.
 
 ### 3.3 Session Log Format
 
 | Agent | YAML Header | Entry Format | Archive Protocol |
 |-------|-------------|--------------|------------------|
-| Exa | YES (build state) | Full YAML (Section 3.2 of MA) | 50-session threshold |
+| Orion | YES (build state) | Full YAML (Section 3.2 of MA) | 50-session threshold |
 | Tess | YES (build state) | Full YAML (mirrors Veda) | 50-session threshold |
 | Veda | YES (build state) | Full YAML (Section 3.2 of MA) | 50-session threshold |
 | Neco | YES (build state) | Full YAML (mirrors Veda) | 50-session threshold |
 
 **Entry fields comparison:**
 
-| Field | Exa | Tess | Veda | Neco |
+| Field | Orion | Tess | Veda | Neco |
 |-------|-----|------|------|------|
 | date | Y | Y | Y | Y |
 | status | Y | Y | Y | Y |
@@ -266,7 +266,7 @@ All agents follow a consistent directory pattern:
 | next_session_priority | Y | Y | Y | Y |
 
 **Finding:** Core fields are consistent (date, status, what_happened, decisions, accomplishments, files, next_session_priority). Variations are appropriate to each agent's role:
-- Exa adds scorecard/delegation/challenge tracking (strategic oversight)
+- Orion adds scorecard/delegation/challenge tracking (strategic oversight)
 - Veda adds code_corrections and questions_asked (engineering)
 - Neco adds questions_asked (conversational intake)
 
@@ -274,7 +274,7 @@ All agents follow a consistent directory pattern:
 
 ### 3.4 CLAUDE.md Routing Patterns
 
-| Section | Exa | Tess | Veda | Neco |
+| Section | Orion | Tess | Veda | Neco |
 |---------|-----|------|------|------|
 | Identity paragraph | Y | Y | Y | Y |
 | Anti-degradation ref | Y | Y | Y | Y |
@@ -287,7 +287,7 @@ All agents follow a consistent directory pattern:
 | Session handoff | Y | Y | Y | Y |
 
 *Tess has Data Integrity as a non-negotiable but no numbered list like others.
-**Only Exa has a full execution modes table in CLAUDE.md. Others document modes in MASTER-AGENT.md only.
+**Only Orion has a full execution modes table in CLAUDE.md. Others document modes in MASTER-AGENT.md only.
 
 **Finding:** Tess's CLAUDE.md is lighter than others -- missing explicit non-negotiables list and common mistakes section. This could be an issue for onboarding if Tess conventions are not as explicitly documented.
 
@@ -297,10 +297,10 @@ All agents follow a consistent directory pattern:
 |-------|---------------|-------------|----------------------|
 | Tess | `1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U` | Read + Write (owner) | Python micro-skills |
 | Veda | Same ID | Read + Write (via intake queue + tracking updates) | TypeScript (`google-sheets-client.ts`) |
-| Exa | Same ID | Read (mentioned in refs) | None (reads via Tess summaries) |
+| Orion | Same ID | Read (mentioned in refs) | None (reads via Tess summaries) |
 | Neco | Not connected | None | None |
 
-**Finding:** Single SSS spreadsheet is the shared data backbone. Tess and Veda both have code-level access. Exa and Neco rely on human-mediated access.
+**Finding:** Single SSS spreadsheet is the shared data backbone. Tess and Veda both have code-level access. Orion and Neco rely on human-mediated access.
 
 ---
 
@@ -315,19 +315,19 @@ All agents follow a consistent directory pattern:
 | Phase | Content | Assessment |
 |-------|---------|------------|
 | Phase 0 — Pre-Bootstrap | Person & role, strategic context, reference materials, API credentials, governance decisions | COMPLETE -- thorough checklist |
-| Phase 1 — Identity & Architecture | Agent name, role, metaphor, folder, runtime, core principle, execution modes, sub-agent count, gap alignment process | COMPLETE -- mirrors Exa S001 bootstrap |
+| Phase 1 — Identity & Architecture | Agent name, role, metaphor, folder, runtime, core principle, execution modes, sub-agent count, gap alignment process | COMPLETE -- mirrors Orion S001 bootstrap |
 | Phase 2 — Foundation Documents | 6-document trinity (CLAUDE.md, PRD, MA, Sub-Agents, Anti-Deg, Session Log) with mandatory CLAUDE.md sections checklist | COMPLETE -- good template references |
 | Phase 3 — Directory Structure | Standard folder layout with _reference/, _ops/, _output/ | COMPLETE |
 | Phase 4 — Integration | Root CLAUDE.md updates, anti-degradation adapter, inter-agent bridges table, MEMORY.md update | COMPLETE -- but bridge table is BLANK template |
 | Phase 5 — Verification | 9-point checklist | COMPLETE |
-| Appendix — Exa Timeline | 7-session bootstrap reference | USEFUL reference |
+| Appendix — Orion Timeline | 7-session bootstrap reference | USEFUL reference |
 | Appendix — Multi-User Governance | Options A (independent) and B (shared), plus 6 open questions | DRAFT -- decision pending |
 
 **Verdict:** The template is **USABLE** for bootstrapping a new agent for an existing team member. It is well-structured and comprehensive. However:
 
 **Missing from template:**
 1. **No inter-agent bridge implementation guide.** Phase 4.3 has a blank table but no instructions on HOW to implement a bridge (code vs. doc vs. sheet-based)
-2. **No example of a completed provisioning.** The Exa timeline is helpful but doesn't show filled-in Phase 0-5 values
+2. **No example of a completed provisioning.** The Orion timeline is helpful but doesn't show filled-in Phase 0-5 values
 3. **No rollback plan.** If provisioning fails or the person leaves, there's no guidance on decommissioning an agent
 4. **No access control model.** The governance decisions in Phase 0.5 ask the questions but provide no recommendations or patterns
 
@@ -339,7 +339,7 @@ All agents follow a consistent directory pattern:
 |-------------|--------|-----|
 | Provisioning template | EXISTS | None -- template is ready |
 | Role definition for Fatima | MISSING | Need her actual job scope doc |
-| Access model decided | DRAFT | Governance doc has a Fatima-specific draft (read-only Tess, request pipeline Veda, read-only Neco briefs, no Exa) |
+| Access model decided | DRAFT | Governance doc has a Fatima-specific draft (read-only Tess, request pipeline Veda, read-only Neco briefs, no Orion) |
 | Agent identity session | NOT STARTED | Needs 1:1 with Fatima to run gap alignment |
 | Google Sheets read-only access | POSSIBLE | SSS credentials exist; need separate read-only scope |
 | Veda intake queue access | POSSIBLE | She could write PENDING entries manually |
@@ -354,7 +354,7 @@ All agents follow a consistent directory pattern:
 
 ### 4.3 Multi-User Governance Readiness
 
-**File:** `exa-chief-of-staff/_ops/meetings/2026-02-09–multi-user-governance-prep.md`
+**File:** `orion-chief-of-staff/_ops/meetings/2026-02-09–multi-user-governance-prep.md`
 
 **Status:** Thorough strategic document. Recommends "Architect-Operator" model (Option C):
 - Christopher = sole operator of full Creative OS
@@ -362,14 +362,14 @@ All agents follow a consistent directory pattern:
 - Team = future users (Fatima first, Day 30-60)
 
 **What's decided:**
-- Exa stays private to Christopher (confirmed)
+- Orion stays private to Christopher (confirmed)
 - John gets curated outputs, not raw access (recommended)
 - Fatima is first provisioning candidate (recommended)
 
 **What's still open (6 decisions):**
 1. Does John get an agent? (Lean: No)
 2. Who is first team member provisioned? (Lean: Fatima)
-3. Shared Exa or independent? (Decided: No shared Exa)
+3. Shared Orion or independent? (Decided: No shared Orion)
 4. SSS access model for team (Lean: Read-only via Tess summaries)
 5. Google Docs MCP for friction reduction (Day 30-60)
 6. Slack MCP for team visibility (Day 60)
@@ -388,9 +388,9 @@ All agents follow a consistent directory pattern:
 |---|------|----------|------------|------------|
 | 1 | Tess → Neco data protocol has no implementation, leading to Neco operating data-blind | MEDIUM | HIGH (happens now) | Implement a Tess export micro-skill or shared data format for Neco consumption |
 | 2 | No feedback loop from Veda → Tess on completed productions | MEDIUM | HIGH (happens now) | Add completion callback or shared status in SSS |
-| 3 | Exa has no monitoring path for Neco | LOW | MEDIUM | Add Neco SESSION-LOG.md to Exa's upstream systems (Section 8.1) |
+| 3 | Orion has no monitoring path for Neco | LOW | MEDIUM | Add Neco SESSION-LOG.md to Orion's upstream systems (Section 8.1) |
 | 4 | Neco → Veda production order format doesn't map to Veda's RawIntake | LOW | LOW (future work) | Build translation layer when automation begins |
-| 5 | No agent → Exa escalation mechanism | MEDIUM | MEDIUM | Currently mitigated by single-operator model; needs addressing for multi-user |
+| 5 | No agent → Orion escalation mechanism | MEDIUM | MEDIUM | Currently mitigated by single-operator model; needs addressing for multi-user |
 | 6 | Tess CLAUDE.md lighter than others (missing non-negotiables list, common mistakes) | LOW | LOW | Bring Tess CLAUDE.md to parity with others |
 | 7 | Multi-user governance has no technical implementation plan | MEDIUM | LOW (Day 30+) | Create technical spec before first provisioning |
 | 8 | Queue-writer deduplication doesn't check COMPLETED entries | LOW | LOW | Enhance dedup logic when queue volume grows |
@@ -401,11 +401,11 @@ All agents follow a consistent directory pattern:
 
 ### P0 — Do Before Next Provisioning
 
-1. **Close the Exa → Neco monitoring gap.** Add Neco to EXA-MASTER-AGENT.md Section 8.1 upstream systems. Exa should read Neco SESSION-LOG.md header for build state.
+1. **Close the Orion → Neco monitoring gap.** Add Neco to ORION-REFERENCE.md Section 8.1 upstream systems. Orion should read Neco SESSION-LOG.md header for build state.
 
 2. **Document the Tess → Neco data transfer procedure.** Even without code automation, create a "Tess Data Export for Neco" checklist that specifies exactly which SSS data to pull, in what format, and where to paste it for Neco's Context Gatherer.
 
-3. **Bring Tess CLAUDE.md to parity.** Add explicit non-negotiables list and common mistakes section to match Exa/Veda/Neco pattern.
+3. **Bring Tess CLAUDE.md to parity.** Add explicit non-negotiables list and common mistakes section to match Orion/Veda/Neco pattern.
 
 ### P1 — Before Fatima Provisioning (Day 30-45)
 
@@ -432,9 +432,9 @@ All agents follow a consistent directory pattern:
 | Tess → Veda | 5/5 | 5/5 | 5/5 | 5/5 | 4/5 (no retry) | **LIVE** |
 | Tess → Neco | 3/5 | 1/5 | 0/5 | 0/5 | 0/5 | **DOC-ONLY** |
 | Neco → Veda | 4/5 | 3/5 | 0/5 | 0/5 | 0/5 | **FORMAT-ONLY** |
-| Exa → Tess | 3/5 | 1/5 | 0/5 | 0/5 | 0/5 | **READ-ONLY** |
-| Exa → Veda | 3/5 | 1/5 | 0/5 | 0/5 | 0/5 | **READ-ONLY** |
-| Exa → Neco | 1/5 | 0/5 | 0/5 | 0/5 | 0/5 | **MISSING** |
+| Orion → Tess | 3/5 | 1/5 | 0/5 | 0/5 | 0/5 | **READ-ONLY** |
+| Orion → Veda | 3/5 | 1/5 | 0/5 | 0/5 | 0/5 | **READ-ONLY** |
+| Orion → Neco | 1/5 | 0/5 | 0/5 | 0/5 | 0/5 | **MISSING** |
 
 ---
 
@@ -451,8 +451,8 @@ All agents follow a consistent directory pattern:
 **Weaknesses:**
 - Only 1 of 6 documented bridges has code implementation
 - Tess → Neco data protocol says "pull" but no pull mechanism exists
-- No feedback loops (Veda cannot tell Tess about completions; no agent can alert Exa)
-- Exa's monitoring explicitly omits Neco
+- No feedback loops (Veda cannot tell Tess about completions; no agent can alert Orion)
+- Orion's monitoring explicitly omits Neco
 - Multi-user governance is strategy-only; no technical implementation plan
 - Tess CLAUDE.md is lighter than peer agents
 
@@ -491,7 +491,7 @@ Agent Teams enables genuinely external critique: a Critic agent that has never s
 Our audit flagged "no feedback loops" as a significant gap (Section 2.5):
 
 - Veda cannot tell Tess about completed productions
-- No agent can alert Exa about blockers
+- No agent can alert Orion about blockers
 - Neco cannot push angle performance data back to Tess
 
 Agent Teams provides feedback loops natively:
@@ -499,7 +499,7 @@ Agent Teams provides feedback loops natively:
 | Gap from Our Audit | Agent Teams Solution |
 |---------------------|---------------------|
 | Veda -> Tess completion feedback | Veda teammate sends message to Tess teammate on task completion. Tess receives status without human relay. |
-| Agent -> Exa escalation | Any teammate can message the team lead (Exa) when blocked. Blockers trigger escalation automatically. |
+| Agent -> Orion escalation | Any teammate can message the team lead (Orion) when blocked. Blockers trigger escalation automatically. |
 | Neco -> Tess angle feedback | Neco teammate sends saturation data to Tess teammate after generation. Tess updates performance tracking. |
 | Task visibility | All teammates see shared task list with status. No single communication bus (the human operator) required. |
 

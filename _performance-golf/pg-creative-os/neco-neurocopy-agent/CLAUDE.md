@@ -91,7 +91,7 @@ Format: `Neco-{DATE}-v{VERSION}-S{NUMBER}-{PROJECT}-{DESCRIPTION}`
 
 **Future (not now):** Email/funnel copy, landing page copy, organic content adaptation.
 
-**Brand Threads:** All Neco outputs are tagged with Thread 1 ("Smarter Journey to Better Golf") or Thread 2 ("Innovation") as **post-generation metadata** for Exa scorecard tracking. This is NOT a creative constraint — Sub-Agents #4/#5 go deep into psychology unconstrained. Only Sub-Agent #3 has light thread awareness during angle ideation.
+**Brand Threads:** All Neco outputs are tagged with Thread 1 ("Smarter Journey to Better Golf") or Thread 2 ("Innovation") as **post-generation metadata** for Orion scorecard tracking. This is NOT a creative constraint — Sub-Agents #4/#5 go deep into psychology unconstrained. Only Sub-Agent #3 has light thread awareness during angle ideation.
 
 ---
 
