@@ -8,6 +8,7 @@
 **Review:** Brixton Albert
 
 ---
+**Intro 1: New Customers** 
 
 Hey, it's Brixton Albert.
 
@@ -15,19 +16,9 @@ Welcome to PG1... the smartest way for YOU to learn golf.
 
 Because every single part of PG1 is customized to your swing, your schedule, and your goals.
 
-Let me walk you through your PG1 Pulse Smart Path right now.
+Let me walk you through your PG1 Smart Path right now.
 
-It all starts with 
-
-
-
-🚨Action🚨 -  where to include course training videos?
-
-You'll find your course training videos under "Watch Your Course" right here at the top... and in the section called "Learn" below.
-
-These recommended videos are the most important videos from your course...
-
-Organized so you can dive right in.
+Now, you'll find your course training videos under "Watch Your Course" right here at the top... and in the section called "Learn" down below.
 
 ---
 
@@ -44,56 +35,37 @@ So I want to start by saying you still have access to ALL your content.
 You'll find the last course you were watching here...
 
 And any other courses you've purchased from us here.
-
-Now, your course is great for learning the concepts... but to really improve, you want to work on every part of your game — not just one area.
-
-That's what the Smart Path does. Hit that orange "Show Me My Plan" button and pick the part of your game you want to improve most.
-
 ---
 
 ## Both Scripts Pick Up Here
 
-Your course teaches you the fundamentals... but real improvement means working on every part of your game in the right order.
+Now, your course training teaches you the fundamentals... but for maximum, on-course results we need you working on the ONE thing in your game... that's going to help you the most right now. 
 
-Set your Swing Focus right here — just pick the area you want to improve most. This tells PG1 what to prioritize for you. You can change it anytime.
+That's why your first step is to set your Swing Focus right here — just pick the area you want to improve most and that's where we'll start. This tells your PG1 Pulse what to prioritize for you.  
 
-**CONNECT**
+Now, another crucial piece to love your game and make real, meaningful improvement... is CoachChat  — where you connect with your PG1 Certified Coach, upload your swing, and get live video feedback from your coach within 48 hours. 
 
-This is Connect — where you meet your PG1 Certified Coach.
+Then, you'll move into Practice mode. This is where you get the ONE structured drill built to dial in your Swing Focus. 
 
-Upload your swing and they'll send you a live video breakdown within 48 hours telling you exactly what to work on.
+Plus, you'll get a challenge to work on at the range... so you can simulate REAL, on-course pressure. 
 
-**PRACTICE**
+Then, once you're ready to put your new skills to the test... you'll move into Play Mode where you'll track your rounds and scores.
 
-Practice gives you structured drills built around your Swing Focus.
+After a round, your Smart Path adjusts your training all based on how you just played.
 
-Not random — specific to what your game needs right now.
+So you're always accelerating and working on the right things, at the right time, in the right order. 
 
-**PLAY**
-
-Play is where you track your rounds and scores.
-
-This is how we measure whether the work is showing up on the course.
-
-**ACCELERATE**
-
-After a round, come back here and update your focus.
-
-The Smart Path adjusts — new drills, new coaching, all based on how you just played.
-
-**THE LOOP**
-
-And that's the whole system.
+That's how this PG1 Smart System works... 
 
 Learn. Connect. Practice. Play. Accelerate.
 
-Then it loops.
+That's how you make REAL progress... REAL fast. 
 
-Every time you update your focus, the path gets smarter.
-
-You're always working on the right thing, in the right order, at the right time.
+Because every time you update your focus, everytime you connect with your coach, and everytime you track your stats on the course... your PG1 path gets smarter, more personalized, and more in-tuned with your game, your goals, and YOUR love for the game. 
 
 If you have any questions at all, your coach is just a message away.
+
+Go get after it... and love your game!
 
 ---
 
