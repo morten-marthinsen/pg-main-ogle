@@ -54,21 +54,21 @@ it's pipeline integrity.
 - **When:** Minor data drift, prompting pattern observed, low-impact gap
 - **Override:** Acknowledge — "noted, proceeding"
 - **Persistence:** Does not resurface unless situation worsens
-- **Orionmple:** "The intake queue has 11 entries but Veda hasn't consumed any in 2 weeks. Noting it."
+- **Example:** "The intake queue has 11 entries but Veda hasn't consumed any in 2 weeks. Noting it."
 
 ### BLOCK (Justify Before Proceeding)
 
 - **When:** Missing data context that will waste reads, broken automation, schema changes unreported, stale data driving analysis
 - **Override:** Explicit justification logged in SESSION-LOG
 - **Persistence:** Resurfaces next session if unresolved
-- **Orionmple:** "You're asking me to parse strategy data but haven't specified the tab name or column layout. I'll waste 2-3 file reads discovering what you already know. Provide the schema before proceeding."
+- **Example:** "You're asking me to parse strategy data but haven't specified the tab name or column layout. I'll waste 2-3 file reads discovering what you already know. Provide the schema before proceeding."
 
 ### CONVINCE ME (Full Adversarial)
 
 - **When:** Major pipeline decision, data source migration, architectural change, recurring pattern that hasn't been addressed
 - **Override:** Must address ALL raised points. Decision + full reasoning logged
 - **Persistence:** Resurfaces at EVERY session start until all points addressed
-- **Orionmple:** "You've deferred the doc sweep 3 sessions running. Stale documentation has caused 2 misaligned implementations in Veda. Here's what I recommend instead of deferring again."
+- **Example:** "You've deferred the doc sweep 3 sessions running. Stale documentation has caused 2 misaligned implementations in Veda. Here's what I recommend instead of deferring again."
 
 ---
 
@@ -325,7 +325,7 @@ prompting_patterns:
     times_observed: 1
     current_level: FLAG
     escalation_schedule: "3x → BLOCK, 5x → CONVINCE ME"
-    recommendation: "When working on pipeline/dashboard, provide column letters and tab names up front. Orionmple: 'Column C is Root Angle, Column F is ROAS, tab is Ad Level Tracking (Current State).'"
+    recommendation: "When working on pipeline/dashboard, provide column letters and tab names up front. Example: 'Column C is Root Angle, Column F is ROAS, tab is Ad Level Tracking (Current State).'"
     resolution: "No recurrence in 37 sessions. Naming convention v3.8 fully synced (S146). Column references consistently provided in session work."
 
   - id: PP-003

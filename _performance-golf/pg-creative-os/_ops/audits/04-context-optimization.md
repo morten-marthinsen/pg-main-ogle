@@ -169,7 +169,7 @@ SESSION-LOG-FULL.md (Tier 2: Full Detail)
 
 Target: **15-20 lines per session**. No test case names, no function signatures, no error traces, no handoff prompts (the "Next" section IS the handoff).
 
-### 3.3 Concrete Orionmple: Converting Veda Session 011
+### 3.3 Concrete Example: Converting Veda Session 011
 
 **BEFORE (Tier 2 — Current format, Session 011):**
 ~220 lines including full sub-agent descriptions, every test name, function signatures, pipeline coverage tables, 91 decisions referenced, "MASSIVE BUILD SESSION" narrative, etc.
@@ -247,7 +247,7 @@ All confirmed decisions, reference paths, API credentials details, and key refer
 3. **Add explicit "last updated" dates** to each entry so stale entries can be identified
 4. **Target**: Keep MEMORY.md under 120 lines (60% of budget), leaving 80 lines for growth
 
-**Orionmple compressed Veda entry** (current: ~40 lines -> proposed: 8 lines):
+**Example compressed Veda entry** (current: ~40 lines -> proposed: 8 lines):
 ```markdown
 ### Veda (Video Editing Agent)
 - **Path**: `pg-creative-os/veda-video-editing-agent/`

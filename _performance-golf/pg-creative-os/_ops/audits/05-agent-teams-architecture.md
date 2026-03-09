@@ -493,7 +493,7 @@ creative_os_health_report:
 
 The health dashboard enables cross-agent blocker detection that single-agent sessions miss:
 
-| Pattern | Detection Method | Orionmple |
+| Pattern | Detection Method | Example |
 |---|---|---|
 | **Upstream blocker** | Veda blocked on something Tess should provide | Veda needs transcriptions → Tess/Iconik dependency |
 | **Bridge stall** | A defined bridge has zero activity for 7+ days | Tess-to-Neco protocol defined but never exercised |
@@ -515,7 +515,7 @@ Checkpoint files are filesystem gates that enable structural enforcement across 
 All checkpoint files use YAML format with a standard schema:
 
 ```yaml
-# Orionmple: checkpoints/PHASE_4_COMPLETE.yaml
+# Example: checkpoints/PHASE_4_COMPLETE.yaml
 phase: 4
 phase_name: "Pipeline Integration"
 completed_at: "2026-02-09T10:30:00Z"
@@ -674,11 +674,11 @@ The following six signals are adapted from Tony's framework to Creative OS's dom
 | **CONSTRAINT VIOLATION** | Action matches a forbidden behavior from any agent's non-negotiables or anti-degradation adapter | Halt immediately. Review the specific constraint. Undo the violating action if possible. Log the violation. | All |
 | **OVERLOAD RISK** | Holding 5+ complex items simultaneously (5+ file reads, 5+ pending edits, 5+ unresolved decisions) | Write intermediate state to a file before continuing. Do not rely on context memory for complex state. | All |
 
-### 6.2 Agent-Specific Trigger Orionmples
+### 6.2 Agent-Specific Trigger Examples
 
 #### Neco-Specific Triggers
 
-| Signal | Neco Trigger Orionmple |
+| Signal | Neco Trigger Example |
 |---|---|
 | INCOMPLETENESS ALERT | Hook output missing attribution metadata (framework, audience, angle, style, brand_thread) |
 | SYNTHESIS WARNING | Generating hooks without reading `_reference/style-library.md` or `_reference/hook-library.md` in this session |
@@ -689,7 +689,7 @@ The following six signals are adapted from Tony's framework to Creative OS's dom
 
 #### Veda-Specific Triggers
 
-| Signal | Veda Trigger Orionmple |
+| Signal | Veda Trigger Example |
 |---|---|
 | INCOMPLETENESS ALERT | Pipeline run completed but output directory missing expected .mp4 files |
 | SYNTHESIS WARNING | Running CLI command without `npm run build` first (operating on stale dist/) |
@@ -700,7 +700,7 @@ The following six signals are adapted from Tony's framework to Creative OS's dom
 
 #### Tess-Specific Triggers
 
-| Signal | Tess Trigger Orionmple |
+| Signal | Tess Trigger Example |
 |---|---|
 | INCOMPLETENESS ALERT | Registry sync completed but row count doesn't match expected |
 | SYNTHESIS WARNING | Generating naming convention IDs without reading TESS-NAMING-CONVENTION.md |
@@ -711,7 +711,7 @@ The following six signals are adapted from Tony's framework to Creative OS's dom
 
 #### Orion-Specific Triggers
 
-| Signal | Orion Trigger Orionmple |
+| Signal | Orion Trigger Example |
 |---|---|
 | INCOMPLETENESS ALERT | Weekly update missing required sections (Wins, In Motion, Needs Input, Pulse, Thread Alignment) |
 | SYNTHESIS WARNING | Writing scorecard update without reading actual agent session logs |

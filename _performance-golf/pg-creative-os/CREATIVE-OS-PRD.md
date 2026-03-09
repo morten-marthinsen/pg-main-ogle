@@ -172,7 +172,7 @@ Showing the innovation story behind products: Chris McGinley's expertise, Joe Ki
 
 Each GTM launch gets a Figma board card. The board maps the root angle, which brand thread(s) it connects to, all personas being tested, and the specific ad set assignments. Each ad set contains one angle tested against all personas — this is the core of the angle × persona discovery loop. The copy team gets complete clarity on who they're writing to; leadership gets a single visual of the launch's creative structure; the optimization team has a built-in expansion map once data returns. At least two ad sets per launch are UGC-generated organic angles, ensuring social proof and native formats are always part of the initial test battery. As campaigns mature, the Figma board becomes the record of what angles and personas have been tested, what won, and what was elevated.
 
-**Orionmple — SpeedTrac GTM Launch:**
+**Example — SpeedTrac GTM Launch:**
 
 ```
 GTM LAUNCH: SpeedTrac
