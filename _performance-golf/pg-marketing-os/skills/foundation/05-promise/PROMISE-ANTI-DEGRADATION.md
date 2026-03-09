@@ -8,6 +8,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: PROMISE-ANTI-DEGRADATION.md v2.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Generate fewer than 15 raw candidates, skip proof ceiling calibration, or accept a primary promise score below 8.0.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**
@@ -598,10 +611,73 @@ Each microskill entry in execution-log.md MUST include:
 
 ---
 
+## STRUCTURAL FIX 12: CATEGORY SPREAD + DIVERSITY ENFORCEMENT
+
+### The Problem
+Promise generation tends to cluster around one promise type — typically transformation or improvement promises. When 10 of 15 candidates are variations of "you'll lose X pounds in Y days," the Arena evaluates volume without diversity. The best promise may be an emotional or prevention type that was never generated.
+
+### The Fix
+
+**Reference:** `skills/protocols/BRAINSTORM-DIVERSITY-PROTOCOL.md`
+
+**1. Minimum Category Spread:**
+
+Promise candidates MUST cover 4+ promise types:
+
+| Type | What It Means |
+|------|--------------|
+| **Transformation** | Who they'll become (identity shift) |
+| **Improvement** | What gets measurably better (specific metric) |
+| **Relief** | What pain/problem disappears |
+| **Capability** | What new ability they gain |
+| **Prevention** | What future problem they avoid |
+| **Identity** | How others will perceive them differently |
+| **Emotional** | How they'll feel (internal state change) |
+| **Speed/ease** | How quickly/easily they'll see results |
+
+```yaml
+category_spread_check:
+  total_candidates: [number]
+  promise_types_represented: [number]
+  IF promise_types_represented < 4:
+    HALT — "Need candidates from 4+ promise types. Missing types: [list]"
+```
+
+**2. Similarity De-duplication:**
+
+After generation (Layer 1), before calibration (Layer 2):
+- Group candidates by dominant promise frame
+- If any single group contains >40% of total candidates: flag as "cluster-heavy"
+- When cluster-heavy: generate 3-5 additional candidates OUTSIDE the overrepresented type
+- This is additive — does not delete existing candidates
+
+**3. Specimen-Anchored Divergence:**
+
+When specimens are used to guide promise generation:
+- Each ideation pass must anchor to a DIFFERENT specimen
+- Mix classic and modern approaches
+- Prevents all promises being variations of one specimen's pattern
+
+**MC-CHECK Addition:**
+
+Add to PROMISE-MC-CHECK:
+
+```yaml
+diversity_verification:
+  promise_types_represented: [number]
+  if_under_4: "HALT — Need 4+ promise types represented"
+  cluster_heavy_detected: [Y/N]
+  if_yes_additional_generated: [Y/N]
+  if_cluster_heavy_and_no_additional: "HALT — Generate 3-5 candidates outside overrepresented type"
+```
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.1 | 2026-03-06 | CATEGORY SPREAD + DIVERSITY: Added Structural Fix 12 — 4+ promise types required, 40% cluster threshold triggers additive generation, specimen-anchored divergence. MC-CHECK enhanced with diversity_verification. Reference: `skills/protocols/BRAINSTORM-DIVERSITY-PROTOCOL.md`. |
 | 2.0 | 2026-02-14 | STRUCTURAL ENFORCEMENT PROPAGATION: Added 4 structural fixes from Skills 01-04 propagation pattern. Fix 8: Mandatory project infrastructure (PROJECT-STATE.md + PROGRESS-LOG.md). Fix 9: Binary gate enforcement with forbidden statuses. Fix 10: Stale artifact cleanup. Fix 11: Anti-degradation mandatory read at session startup. Implementation checklist expanded with PRE-EXECUTION and POST-EXECUTION sections. |
 | 1.2 | 2026-02-12 | Added Per-Microskill Output Protocol (v3.2) — complete output file table for all 31 microskills across Layers 0, 1, 2, 3, and 4. Layer gate enhancement, execution log enhancement, forbidden behaviors. |
 | 1.1 | 2026-02-06 | ARENA MANDATORY ENFORCEMENT: Added structural fix for Arena Layer (2.5) — cannot be skipped. ARENA_COMPLETE.yaml checkpoint required before Layer 3. Added Arena-specific forbidden rationalizations. Updated checkpoint progression and implementation checklist. |

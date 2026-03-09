@@ -8,6 +8,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: OFFER-COPY-ANTI-DEGRADATION.md v2.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Skip D-F-W-B-P format for deliverables, create fewer than 3 value demonstration iterations, or use identical CTA language.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**

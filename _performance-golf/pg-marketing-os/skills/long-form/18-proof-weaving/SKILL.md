@@ -26,3 +26,9 @@ point in the copy — not random testimonial insertion.
 
 **Output:** Proof-woven copy with strategic placement annotations
 **Requires:** Campaign Brief (Skill 09), Complete Copy (Skills 10-17), Proof Inventory (Skill 02)
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `PROOF-WEAVING-ANTI-DEGRADATION.md` before execution — structural enforcement rules

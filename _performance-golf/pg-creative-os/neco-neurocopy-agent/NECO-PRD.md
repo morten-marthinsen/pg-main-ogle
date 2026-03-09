@@ -288,7 +288,7 @@ The copy Neco generates must be:
 |------|---------|-----------|
 | **Web Search** | Research proof elements, competitive landscape, audience data | Context Acquisition (if proof missing) |
 | **Ref** | Deep research on topics, trends, market data | Audience recommendation, competitive differentiation |
-| **Exa** | Semantic search for relevant content and examples | Framework application examples, proof sourcing |
+| **Exa (research tool)** | Semantic search for relevant content and examples | Framework application examples, proof sourcing |
 
 ---
 

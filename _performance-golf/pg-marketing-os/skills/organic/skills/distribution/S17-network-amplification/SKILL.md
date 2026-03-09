@@ -28,6 +28,13 @@ This skill coordinates a network of accounts (owned, partnered, or AI-driven) to
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `S17-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
+---
+
 ## SKILL IDENTITY
 
 ```yaml

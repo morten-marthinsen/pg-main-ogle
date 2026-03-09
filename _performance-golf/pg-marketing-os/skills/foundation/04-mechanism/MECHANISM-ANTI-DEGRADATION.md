@@ -8,6 +8,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: MECHANISM-ANTI-DEGRADATION.md v3.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Skip scorecard validation, accept a composite score below 7.0, or produce a mechanism without a memorable name and analogy.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**
@@ -769,6 +782,58 @@ Skipping scorecard means accepting mediocre mechanisms that don't convert.
 
 ---
 
+## STRUCTURAL FIX 16: SEMI-FORMAL REASONING + STEEL MAN GATE
+
+### The Problem
+Mechanism selection (winner from Arena) and scorecard validation produce analytical conclusions. Without structured reasoning, mechanism winners can be selected because they "feel right" rather than because evidence supports them. Without a Steel Man Gate, the strongest counterargument against the winner is never articulated.
+
+### The Fix
+
+**Reference:** `skills/protocols/SEMI-FORMAL-REASONING-PROTOCOL.md`
+
+**1. Semi-Formal Reasoning for Validation (Layer 3):**
+
+Layer 3 microskills (3.1-3.5) MUST use the Semi-Formal Reasoning Template:
+- **PREMISES** — Sourced from scorecard scores, upstream packages, proof mapping
+- **EVIDENCE CHAIN** — Why this mechanism passes/fails each validation dimension
+- **COUNTEREXAMPLE CHECK** — What would make this mechanism fail? Why doesn't it?
+- **CONFIDENCE ASSESSMENT** — Based on evidence quality, not process length
+
+**2. Steel Man Gate for Winner Selection:**
+
+**MANDATORY before finalizing Arena winner selection (mechanism-selection microskill 3.5):**
+
+Before the winning mechanism is accepted:
+- Articulate the strongest argument AGAINST the winner
+- Identify what evidence would invalidate the winner
+- Explain why the counterargument fails
+- If the counterargument CANNOT be defeated: FLAG FOR HUMAN REVIEW, do not auto-select
+
+```yaml
+steel_man_gate:
+  winner: "[mechanism name]"
+  strongest_counterargument: "[genuine argument against]"
+  invalidating_evidence: "[what would disprove this winner]"
+  counterargument_defeated: [Y/N]
+  if_no: "FLAG — Present both winner and counterargument to human for decision"
+```
+
+**MC-CHECK Addition:**
+
+Add to MECH-MC-CHECK at Layer 3:
+
+```yaml
+reasoning_quality_check:
+  semi_formal_template_used: [Y/N]
+  steel_man_gate_completed: [Y/N]
+  counterargument_defeated: [Y/N]
+  if_template_no: "HALT — Validation requires semi-formal reasoning per SEMI-FORMAL-REASONING-PROTOCOL.md"
+  if_steel_man_no: "HALT — Winner selection requires Steel Man Gate"
+  if_counterargument_not_defeated: "FLAG — Present to human with counterargument"
+```
+
+---
+
 ## Per-Microskill Output Protocol (v3.2)
 
 **Added:** 2026-02-12
@@ -842,6 +907,7 @@ Each microskill entry in execution-log.md MUST include:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 3.2 | 2026-03-06 | SEMI-FORMAL REASONING + STEEL MAN GATE: Added Structural Fix 16 — Semi-Formal Reasoning Template required for Layer 3 validation. Steel Man Gate mandatory before winner selection (microskill 3.5). Counterargument must be defeated or flagged for human review. MC-CHECK enhanced with reasoning_quality_check + steel_man_gate. Reference: `skills/protocols/SEMI-FORMAL-REASONING-PROTOCOL.md`. |
 | 3.1 | 2026-02-23 | EXPRESSION ANCHORING PROTOCOL: Added 0.2.8-tier1-expression-reference (2KB min) and 1.7-naming-anchoring-scores (3KB min) to per-microskill output table. Shared protocol: Skills/protocols/EXPRESSION-ANCHORING-PROTOCOL.md. Scores naming candidates against audience vocabulary match (40%), TIER1 naming patterns (30%), and FSSIT echo (30%). Adds quote-first naming to Phase B. |
 | 3.0 | 2026-02-14 | CONCEPT/NAMING SEPARATION + SOUL.MD: Added STRUCTURAL FIX 13 (Concept Checkpoint Gate) — Layer 1B Naming cannot execute without CONCEPT_APPROVED.yaml. Includes gate file format, updated checkpoint progression (LAYER_1A → CONCEPT_APPROVED → LAYER_1B → LAYER_2 → ARENA → LAYER_3), 6 concept-specific forbidden rationalizations. Added STRUCTURAL FIX 14 (Soul.md Loading Gate) — mandatory Soul.md check at pre-execution with voice/energy/anti-voice extraction, mechanism name voice-matching constraint. MECH-MC-CHECK enhanced with concept_checkpoint_verification block (6 checks) and soul_md_check block (3 checks). Implementation checklist restructured: Layer 1 split into "Layer 1A / Phase A (Concept Discovery)" and "Layer 1B / Phase B (Naming)", new CONCEPT CHECKPOINT section with 6 items, Soul.md loading added to pre-execution and Layer 0. Old Fix 13 (Anti-Degradation Mandatory Read) renumbered to Fix 15. |
 | 2.1 | 2026-02-12 | Added Per-Microskill Output Protocol (v3.2) — complete output file table for all 33 microskills across Layers 0, 1, 2, 3, and 4. Layer gate enhancement, execution log enhancement, forbidden behaviors. |

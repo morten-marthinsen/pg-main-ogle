@@ -25,3 +25,9 @@ anchor serves the conversion goal.
 
 **Output:** Offer section copy
 **Requires:** Campaign Brief (Skill 09), Product Introduction (Skill 15), Offer Package (Skill 07)
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `OFFER-COPY-ANTI-DEGRADATION.md` before execution — structural enforcement rules

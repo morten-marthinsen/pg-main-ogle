@@ -8,6 +8,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: A01-AD-INTELLIGENCE-ANTI-DEGRADATION.md v1.1
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Scrape fewer than 500 ads and call it "representative sample", invent gate statuses like "PARTIAL_PASS" or "CONDITIONAL_PASS", or summarize specimens instead of extracting verbatim copy.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**

@@ -26,6 +26,11 @@ This skill runs the full Arena competition on any content piece. It is MANDATORY
 **Requires:** Campaign Brief File (CBF) + Content Draft
 **Process:** 7 Personas × 3 Rounds → Final Synthesis
 
+## ANTI-DEGRADATION
+
+- Read `S13-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

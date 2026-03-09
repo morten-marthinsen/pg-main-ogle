@@ -1648,7 +1648,7 @@ The Notes/Description column from CSVs contains variation-level descriptors, not
 
 **Run cleaning script**:
 ```bash
-cd "/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/tess-strategic-scaling-system"
+cd "$(git rev-parse --show-toplevel)/_performance-golf/pg-creative-os/tess-strategic-scaling-system"
 python3 clean_root_angles.py
 ```
 
@@ -1688,7 +1688,7 @@ When new CSVs are added or spreadsheet is refreshed:
 
 ```bash
 # 1. Navigate to project
-cd "/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/tess-strategic-scaling-system"
+cd "$(git rev-parse --show-toplevel)/_performance-golf/pg-creative-os/tess-strategic-scaling-system"
 
 # 2. Build lookup table from CSVs
 python3 -c "

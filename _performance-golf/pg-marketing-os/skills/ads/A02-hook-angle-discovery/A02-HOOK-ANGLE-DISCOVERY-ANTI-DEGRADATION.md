@@ -7,6 +7,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: A02-HOOK-ANGLE-DISCOVERY-ANTI-DEGRADATION.md v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Generate the big idea AS the hook instead of entry points that LEAD to the big idea, generate fewer than 50 hooks and declare "these are the strongest", or bypass the mandatory human curation checkpoint by auto-selecting winners.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**

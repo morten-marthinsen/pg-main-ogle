@@ -55,7 +55,7 @@ Tess remembers returning operators and their preferences:
 ```bash
 # 1. Export CSV from Domo (manual step)
 # 2. Run pipeline:
-cd "/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/strategic-scaling-system"
+cd "$(git rev-parse --show-toplevel)/_performance-golf/pg-creative-os/tess-strategic-scaling-system"
 python3 main.py /path/to/domo-export.csv --output sheets --skip-checkpoints
 ```
 
@@ -94,7 +94,7 @@ python3 main.py /path/to/domo-export.csv --output sheets --skip-checkpoints
 **Option A: Direct to Google Sheets (Recommended)**
 
 ```bash
-cd "/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/strategic-scaling-system"
+cd "$(git rev-parse --show-toplevel)/_performance-golf/pg-creative-os/tess-strategic-scaling-system"
 
 python3 main.py ~/Downloads/domo-export-2026-01-27.csv --output sheets
 ```
@@ -205,7 +205,7 @@ if [ -z "$CSV_FILE" ]; then
     exit 1
 fi
 
-cd "/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/strategic-scaling-system"
+cd "$(git rev-parse --show-toplevel)/_performance-golf/pg-creative-os/tess-strategic-scaling-system"
 python3 main.py "$CSV_FILE" --output sheets --skip-checkpoints
 ```
 

@@ -7,6 +7,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: A10-PRE-LAUNCH-SCORING-ANTI-DEGRADATION.md v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Assign scores without uncertainty/confidence ranges (creating false precision), score variants based on "vibes" instead of tracing each score to specific evidence from A01/A06/benchmarks, or define kill/scale criteria without connecting to budget math and the 3x AOV formula.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**

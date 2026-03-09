@@ -18,6 +18,19 @@ The Arena is the quality gate before content launch. These failure modes have be
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: S13: Arena Generation Anti-Degradation System v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Run fewer than 3 full Arena rounds or skip any of the 7 required personas. Proceed to synthesis without Critic challenge forcing differentiation. Create GATE_2.5_ARENA_COMPLETE without capturing human selection.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## The 9 Core Fixes
 
 ### Fix 1: Project Infrastructure (MANDATORY)
@@ -172,6 +185,38 @@ If human unavailable: BLOCK at Gate 2.5, escalate. Do NOT proceed to Layer 4 wit
 
 ---
 
+### Fix 10: Homogeneity Detection (Arena Diversity Protocol)
+
+**Reference:** `skills/protocols/ARENA-DIVERSITY-PROTOCOL.md`
+
+**The Problem:** LLMs converge toward similar outputs across personas. When most personas produce similar content variations, the Arena produces volume without diversity.
+
+**MANDATORY in every Arena round:**
+
+1. **Variant Diversity Audit** — After all 7 personas generate, classify each output by emotional frame, structural approach, entry angle, and differentiating phrase. If >3 convergent pairs detected: trigger Divergence Protocol (3 most-similar regenerate with differentiation constraint).
+
+2. **Competitive Distance Scoring (10% weight)** — Score each variant against S01 competitive intelligence data. How different is this from what competitors publish? Scores MUST cite specific competitor examples.
+
+3. **Pattern Break Bonus (5% weight)** — Does this variant violate expected organic content conventions? Name the convention being broken.
+
+4. **Memorability Test** — After scoring, recall one phrase per variant without re-reading. Flag forgettable variants.
+
+**Organic-Specific Convergence Patterns:**
+
+| Pattern | Divergence Constraint |
+|---------|----------------------|
+| All variants use listicle format | Require narrative, how-to, or contrarian formats |
+| All openings use hook question | Require story, statistic, or bold claim openings |
+| All tones are educational | Require entertainment, personal, or provocative tones |
+
+**Add to Quality Enforcement Checklist:**
+- [ ] Diversity audit completed each round
+- [ ] Competitive Distance scored (10% weight)
+- [ ] Pattern Break scored (5% weight)
+- [ ] Memorability test completed
+
+---
+
 ## Failure Mode Table
 
 | Failure Mode | Detection | Response | Escalation |
@@ -233,4 +278,5 @@ Escalate to human: "Arena Critic not achieving differentiation. Scores convergin
 
 ## Version History
 
+- **v1.1** (2026-03-06): HOMOGENEITY DETECTION: Added Fix 10 — Arena Diversity Protocol integration. Variant Diversity Audit, Competitive Distance (10%), Pattern Break (5%), Memorability Test. Organic-specific convergence patterns. Reference: `skills/protocols/ARENA-DIVERSITY-PROTOCOL.md`.
 - **v1.0** (2026-03-05): Initial anti-degradation system for S13 Arena Generation

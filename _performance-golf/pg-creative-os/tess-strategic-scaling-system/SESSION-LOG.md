@@ -178,10 +178,10 @@ next:
 
 ### Files Changed
 - `SESSION-LOG.md` — Build State bumped to S158, cleared stale carryover, updated next block, added S158 entry
-- `exa-chief-of-staff/_ops/daily-briefing/modules/m8_agent_status.py` — NEW (143 lines, Agent Status module)
-- `exa-chief-of-staff/_ops/daily-briefing/modules/__init__.py` — Added M8 import + registry entry
-- `exa-chief-of-staff/_ops/daily-briefing/config.yaml` — Added m8_agent_status config (enabled: true)
-- `exa-chief-of-staff/_ops/daily-reports/2026-02-15.md` — Regenerated with M8 section
+- `orion-chief-of-staff/_ops/daily-briefing/modules/m8_agent_status.py` — NEW (143 lines, Agent Status module)
+- `orion-chief-of-staff/_ops/daily-briefing/modules/__init__.py` — Added M8 import + registry entry
+- `orion-chief-of-staff/_ops/daily-briefing/config.yaml` — Added m8_agent_status config (enabled: true)
+- `orion-chief-of-staff/_ops/daily-reports/2026-02-15.md` — Regenerated with M8 section
 
 ---
 

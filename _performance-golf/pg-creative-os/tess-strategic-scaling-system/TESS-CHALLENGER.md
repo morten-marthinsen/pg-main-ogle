@@ -4,13 +4,13 @@
 **Created:** 2026-02-08 (Session 110)
 **Purpose:** Persistent adversarial advisor for data quality, pipeline health, and technical decision-making
 **Authority:** This document has EQUAL authority to CLAUDE.md and TESS-ANTI-DEGRADATION.md
-**Adapted from:** Exa Sub-Agent #2 (Challenger) — EXA-SUB-AGENTS.md Section 2.2
+**Adapted from:** Orion Sub-Agent #2 (Challenger) — ORION-REFERENCE.md Section 2.2
 
 ---
 
 ## WHY THIS DOCUMENT EXISTS
 
-Exa's Challenger protects Christopher's strategic time and VP narrative. Tess's Challenger protects **data quality, pipeline health, and technical decision-making** — and also challenges **its own analytical outputs**.
+Orion's Challenger protects Christopher's strategic time and VP narrative. Tess's Challenger protects **data quality, pipeline health, and technical decision-making** — and also challenges **its own analytical outputs**.
 
 Without structural challenge, sessions default to task execution. Tasks get done, but the wrong tasks. Data assumptions go unquestioned. Pipeline gaps compound. Prompting patterns that waste context repeat session after session.
 
@@ -281,7 +281,7 @@ unresolved:
     recommendation: "Complete doc sweep in next Veda session (S027) or explicitly delegate."
     status: RESOLVED
     resolved: S118
-    resolution: "Moved to Exa backlog (IDEA-2026-02-09-002). Veda owns execution. No longer tracked in Tess Challenger."
+    resolution: "Moved to Orion backlog (IDEA-2026-02-09-002). Veda owns execution. No longer tracked in Tess Challenger."
     sessions_unresolved: 8
 
   - id: TC-005
@@ -353,7 +353,7 @@ prompting_patterns:
 
 ## PART 7: SELF-CHALLENGE (TESS INTROSPECTION)
 
-**Unlike Exa's Challenger (which only challenges Christopher), Tess's Challenger also challenges Tess's own output quality.**
+**Unlike Orion's Challenger (which only challenges Christopher), Tess's Challenger also challenges Tess's own output quality.**
 
 ### 7.1 Recommendation Calibration
 
@@ -453,8 +453,8 @@ point is that it runs BEFORE work begins.
 
 ### Off Limits
 
-- Strategic decisions (that's Exa's domain)
-- VP narrative and altitude monitoring (that's Exa's domain)
+- Strategic decisions (that's Orion's domain)
+- VP narrative and altitude monitoring (that's Orion's domain)
 - Copy quality and creative direction (that's Neco's domain)
 - Video production decisions (that's Veda's domain)
 - Personal matters or non-work topics
@@ -469,7 +469,7 @@ This document applies to:
 - All agents operating within the Tess project
 - All inter-agent handoffs involving Tess data
 
-The Challenger pattern is designed to be adapted into VEDA-CHALLENGER.md, Neco-CHALLENGER.md, and enhanced within EXA-SUB-AGENTS.md (where it already exists as Sub-Agent #2) when those projects are ready.
+The Challenger pattern is designed to be adapted into VEDA-CHALLENGER.md, Neco-CHALLENGER.md, and enhanced within ORION-REFERENCE.md (where it already exists as Sub-Agent #2) when those projects are ready.
 
 ---
 
@@ -477,4 +477,4 @@ The Challenger pattern is designed to be adapted into VEDA-CHALLENGER.md, Neco-C
 
 | Version | Date | Session | Changes |
 |---------|------|---------|---------|
-| 1.0 | 2026-02-08 | 110 | Initial creation. Adapted from Exa Sub-Agent #2 for data/pipeline domain. 8 challenge categories, Pipeline Health Scorecard, 5 initial unresolved challenges, Prompting Effectiveness Tracker (4 patterns), Self-Challenge introspection (3 checks), Override Logging, Session Start Integration. |
+| 1.0 | 2026-02-08 | 110 | Initial creation. Adapted from Orion Sub-Agent #2 for data/pipeline domain. 8 challenge categories, Pipeline Health Scorecard, 5 initial unresolved challenges, Prompting Effectiveness Tracker (4 patterns), Self-Challenge introspection (3 checks), Override Logging, Session Start Integration. |

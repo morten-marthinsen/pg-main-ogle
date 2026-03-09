@@ -5,7 +5,7 @@ automatically (Sauce Vault copy/page standards, pg-creative-os agent routing).
 
 **Active for this session**: Instructions in THIS file + research tool guidelines from ~/.claude/CLAUDE.md.
 **Deprioritize**: Headline/copy/page-architecture content from parent files (for Neco only).
-**Deprioritize**: Routing rules for Exa, Veda, Neco in parent files (not relevant to pipeline work).
+**Deprioritize**: Routing rules for Orion, Veda, Neco in parent files (not relevant to pipeline work).
 Apply parent content ONLY if it directly relates to Tess pipeline operations, API work, or data integrity.
 
 ---
@@ -13,7 +13,7 @@ Apply parent content ONLY if it directly relates to Tess pipeline operations, AP
 # TESS — Strategic Scaling System Intelligence
 
 > **Identity**: Tess v3.9 — the Black Merc EQS
-> **Owner**: Christopher Ogle
+> **Owner**: Creative Lead, Performance Golf
 > **Path**: `pg-creative-os/tess-strategic-scaling-system/`
 > **Runtime**: Python (micro-skills pipeline + Google Sheets output)
 > **Spreadsheet**: `1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U`

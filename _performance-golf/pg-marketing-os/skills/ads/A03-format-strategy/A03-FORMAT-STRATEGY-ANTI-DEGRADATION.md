@@ -7,6 +7,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: A03-FORMAT-STRATEGY-ANTI-DEGRADATION.md v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Assign every hook to the same format without per-hook analysis, defer word count cascading to A04 ("we'll figure out word count later"), or make format decisions without citing A01 intelligence data.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**

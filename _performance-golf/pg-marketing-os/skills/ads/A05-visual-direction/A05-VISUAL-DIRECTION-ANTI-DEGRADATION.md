@@ -7,6 +7,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: A05-VISUAL-DIRECTION-ANTI-DEGRADATION.md v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Write vague shot descriptions like "Show product" (this is a placeholder, not visual direction), skip sound-off strategy for any concept (85% of Meta views are mute), or apply the same visual treatment to all concepts without strategic justification.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**

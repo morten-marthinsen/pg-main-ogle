@@ -6,6 +6,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: S10 Carousel Design — ANTI-DEGRADATION PROTOCOL v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Treat the cover slide as just a title instead of the most critical scroll-stop element. Skip visual direction for any slide or claim it can come later. Skip Arena for carousels or assume slides should all match in formatting.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## EXECUTIVE SUMMARY
 
 This protocol prevents 9 failure modes that degrade carousel quality. Every agent executing S10 MUST read this file before beginning work.

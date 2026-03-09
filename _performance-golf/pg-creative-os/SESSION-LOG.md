@@ -4,20 +4,20 @@
 
 - **Version**: 1.5
 - **Sessions**: 6
-- **Status**: Two-tier compression COMPLETE for ALL 4 agents (Veda, Tess, Neco, Exa). Universal auto-archive protocol enforced.
+- **Status**: Two-tier compression COMPLETE for ALL 4 agents (Veda, Tess, Neco, Orion). Universal auto-archive protocol enforced.
 - **Last session**: S006 (2026-02-09)
 
 ---
 
 ## Session 006 — 2026-02-09
 
-**Focus**: Neco two-tier compression + Exa compression verification
+**Focus**: Neco two-tier compression + Orion compression verification
 
 ### Completed
 
 - **Neco session log compression** — 1,262 lines → 240 lines active (81% reduction). Sessions 001-010 archived into `SESSION-LOG-ARCHIVE.md` (75 lines). 5 critical decision groups preserved (Architecture, Structure, CE Analysis, Implementation). Full changelog for archived sessions.
 - **Neco CHECKPOINT.yaml created** — 60-line state snapshot. Covers: session 013, implementation phases (6/7 complete), directories, blockers (none), next steps (S014 Chris H demo).
-- **Exa compression verified** — Already completed during Exa S013 (1,128 → 182 lines). `SESSION-LOG-ARCHIVE.md` + `CHECKPOINT.yaml` both exist.
+- **Orion compression verified** — Already completed during Orion S013 (1,128 → 182 lines). `SESSION-LOG-ARCHIVE.md` + `CHECKPOINT.yaml` both exist.
 - **All 4 agents now compressed** — total context savings: ~9,200 lines → ~840 lines active (91% reduction).
 
 ### Files Created
@@ -41,14 +41,14 @@
 | Veda (S004) | 4,704 lines | 380 lines | 92% | 55 lines |
 | Tess (S005) | 2,611 lines | 139 lines | 95% | 66 lines |
 | Neco (S006) | 1,262 lines | 240 lines | 81% | 60 lines |
-| Exa (Exa S013) | 1,128 lines | 182 lines | 84% | ~80 lines |
+| Orion (Orion S013) | 1,128 lines | 182 lines | 84% | ~80 lines |
 | **Total** | **~9,705 lines** | **~941 lines** | **90%** | **~261 lines** |
 
 ### Next (S007+)
 
-- Debrief John meeting (Feb 9) — via Exa
-- Russ exit execution brief (P0 — Feb 13 deadline) — via Exa
-- Morton evaluation framework — via Exa
+- Debrief John meeting (Feb 9) — via Orion
+- Russ exit execution brief (P0 — Feb 13 deadline) — via Orion
+- Morton evaluation framework — via Orion
 - Neco Arena implementation (S012+ with Chris H)
 
 ---
@@ -65,7 +65,7 @@
   - 500-line auto-archive threshold (MANDATORY — if exceeded, compression is first phase of next session)
   - Checkpoint verification before handoff (re-read + verify ALL session changes reflected)
   - Preservation vs. compression table (what stays, what gets removed)
-- **All 4 agent CLAUDE.md files updated** — Tess, Veda, Neco, Exa all have:
+- **All 4 agent CLAUDE.md files updated** — Tess, Veda, Neco, Orion all have:
   - CHECKPOINT.yaml as first-read in Context Budget Rules
   - SESSION-LOG-ARCHIVE.md in Key Files / context budget
   - 500-line threshold trigger in session start protocol
@@ -86,7 +86,7 @@
 | `tess-strategic-scaling-system/CLAUDE.md` | Checkpoint-first protocol, 500-line threshold, checkpoint verification |
 | `veda-video-editing-agent/CLAUDE.md` | 500-line threshold + checkpoint verification added |
 | `neco-neurocopy-agent/CLAUDE.md` | Checkpoint-first protocol, 500-line threshold, checkpoint verification |
-| `exa-chief-of-staff/CLAUDE.md` | Checkpoint-first protocol, 500-line threshold, checkpoint verification |
+| `orion-chief-of-staff/CLAUDE.md` | Checkpoint-first protocol, 500-line threshold, checkpoint verification |
 | `CLAUDE.md` (root) | New "Session Log Management" section — universal two-tier protocol |
 | `SESSION-LOG.md` | This entry (S005) |
 
@@ -101,10 +101,10 @@
 ### Next (S006+)
 
 - Neco two-tier compression (1,262 lines — priority 2)
-- Exa two-tier compression (1,067 lines — priority 3)
-- Debrief John meeting (Feb 9) — via Exa
-- Russ exit execution brief (P0 — Feb 13 deadline) — via Exa
-- Morton evaluation framework — via Exa
+- Orion two-tier compression (1,067 lines — priority 3)
+- Debrief John meeting (Feb 9) — via Orion
+- Russ exit execution brief (P0 — Feb 13 deadline) — via Orion
+- Morton evaluation framework — via Orion
 - Neco Arena implementation (S012+ with Chris H)
 
 ---
@@ -121,13 +121,13 @@
 
 ### Pattern: Two-Tier + Checkpoint (For Other Agents)
 
-This pattern should be adopted by Tess, Neco, and Exa in their own agent sessions:
+This pattern should be adopted by Tess, Neco, and Orion in their own agent sessions:
 
 1. **SESSION-LOG-ARCHIVE.md** — Condensed archive of older sessions. Format: index table (session ranges + focus + key outcome), critical decisions (must-preserve), compact changelog. Follow Tess S079 precedent.
 2. **CHECKPOINT.yaml** — Single lightweight state snapshot (~40-55 lines). Updated at session end. Read first at session start. Replaces the need to parse Build State YAML from session logs.
 3. **CLAUDE.md updates** — Add checkpoint to session start/end protocol. Update context budget rules: checkpoint first, session log for detail, archive for history.
 
-**Adoption priority**: Tess next (2,566 lines, 120 sessions), then Exa (1,067 lines), then Neco (1,262 lines).
+**Adoption priority**: Tess next (2,566 lines, 120 sessions), then Orion (1,067 lines), then Neco (1,262 lines).
 
 ### Files Created
 
@@ -146,9 +146,9 @@ This pattern should be adopted by Tess, Neco, and Exa in their own agent session
 
 ### Next (S005+)
 
-- Debrief John meeting (Feb 9) — via Exa
-- Russ exit execution brief (P0 — Feb 13 deadline) — via Exa
-- Morton evaluation framework — via Exa
+- Debrief John meeting (Feb 9) — via Orion
+- Russ exit execution brief (P0 — Feb 13 deadline) — via Orion
+- Morton evaluation framework — via Orion
 - Two-tier compression for Tess (next highest impact)
 - Neco Arena implementation (S012+ with Chris H)
 - Simulated Type 1 signal integration
@@ -167,7 +167,7 @@ This pattern should be adopted by Tess, Neco, and Exa in their own agent session
 - **CopywritingEngine cross-reference** — read Tony's `AGENT-TEAMS-UPGRADE-ANALYSIS.md` (389 lines) + full `CLAUDE.md`. Identified 8 gaps our audit missed: no Effort Protocol, Neco "One Brain Pretending to Be Three" problem, no Critic/Judge separation, no Synthesizer Layer, Agent Teams as architecture not tool, no checkpoint files, no Simulated Type 1 signals, no Learning Log system.
 - **4-agent upgrade team** (`cos-upgrade-2026-02-09`): report-updater-1 (audits 01+02), report-updater-2 (audits 03+04), architecture-writer (report 05), effort-writer (Effort Protocol). All 4 ran in parallel.
 - **All 4 audit reports updated** with CopywritingEngine cross-reference appendices.
-- **Agent Teams Architecture plan** created (report 05) — full Neco Arena design with 7 behavioral psychology agents (Focus, Suggestibility, Compliance, Data, Architect, Critic, Judge), Veda pipeline design, Exa oversight design, checkpoint file spec, Simulated Type 1 signals.
+- **Agent Teams Architecture plan** created (report 05) — full Neco Arena design with 7 behavioral psychology agents (Focus, Suggestibility, Compliance, Data, Architect, Critic, Judge), Veda pipeline design, Orion oversight design, checkpoint file spec, Simulated Type 1 signals.
 - **Effort Protocol** created — global effort mapping + per-agent tables for all 4 agents.
 
 ### Files Created
@@ -178,7 +178,7 @@ This pattern should be adopted by Tess, Neco, and Exa in their own agent session
 | `_ops/audits/02-inter-agent-comms.md` | ~650 | 6 bridges, maturity scorecard, architecture diagram + CE appendix |
 | `_ops/audits/03-anti-degradation.md` | ~600 | Grade B+, per-adapter grades, checkpoint gap + CE appendix |
 | `_ops/audits/04-context-optimization.md` | ~550 | 616KB footprint, two-tier proposal, 77% reduction + CE appendix |
-| `_ops/audits/05-agent-teams-architecture.md` | ~1100 | Neco Arena, Veda pipeline, Exa oversight, checkpoints, Type 1 signals |
+| `_ops/audits/05-agent-teams-architecture.md` | ~1100 | Neco Arena, Veda pipeline, Orion oversight, checkpoints, Type 1 signals |
 | `CREATIVE-OS-EFFORT-PROTOCOL.md` | ~110 | Global + per-agent effort level mapping (v1.0) |
 
 ### Decisions Made
@@ -186,7 +186,7 @@ This pattern should be adopted by Tess, Neco, and Exa in their own agent session
 - **Agent Teams = permanent architectural layer**, not ad-hoc research tool. Each creative perspective gets its own 200K context window.
 - **Neco Arena: full 7-agent pattern** adapted to behavioral psychology framework (not Tony's legendary copywriter personas). Design-only — implementation deferred to Neco S012+ with Chris H.
 - **Effort Protocol source pattern**: TonyFlo's CopywritingEngine. "Anti-degradation fights the SYMPTOM. Extended thinking addresses the CAUSE."
-- **Two-tier session logs approved in principle** — Veda first (biggest savings), then Tess, then Exa/Neco. Implementation deferred.
+- **Two-tier session logs approved in principle** — Veda first (biggest savings), then Tess, then Orion/Neco. Implementation deferred.
 - **Checkpoint files**: YAML format specified. Veda (filesystem gates after each pipeline step), Tess (after sync operations). Implementation deferred.
 
 ### Next (S004)
@@ -207,8 +207,8 @@ This pattern should be adopted by Tess, Neco, and Exa in their own agent session
 
 ### Completed
 
-- **Agent provisioning template** created at `_shared/agent-provisioning-template.md` — 5-phase standardized checklist based on Exa S001 bootstrap pattern (Pre-Bootstrap → Identity → Foundation Docs → Directory Structure → Integration + Verification)
-- **Multi-user governance prep** created at `exa-chief-of-staff/_ops/meetings/2026-02-09–multi-user-governance-prep.md` — resolves the tension between "John wants team OS" and "Christopher needs to own it for VP narrative"
+- **Agent provisioning template** created at `_shared/agent-provisioning-template.md` — 5-phase standardized checklist based on Orion S001 bootstrap pattern (Pre-Bootstrap → Identity → Foundation Docs → Directory Structure → Integration + Verification)
+- **Multi-user governance prep** created at `orion-chief-of-staff/_ops/meetings/2026-02-09–multi-user-governance-prep.md` — resolves the tension between "John wants team OS" and "Christopher needs to own it for VP narrative"
 - **Recommended model**: "Architect-Operator" (Option C) — Christopher owns and operates the full OS, John gets curated visibility (weekly updates, scorecard snapshots, demo moments), team plugs in starting Day 60 with Fatima as first candidate
 - **Data boundaries defined**: what John sees vs. doesn't see vs. shared data
 - **Meeting talking points**: how to position the scaling story in tomorrow's Creative OS demo section
@@ -219,12 +219,12 @@ This pattern should be adopted by Tess, Neco, and Exa in their own agent session
 | File | Lines | Purpose |
 |------|-------|---------|
 | `_shared/agent-provisioning-template.md` | ~200 | Standardized 5-phase agent bootstrap checklist |
-| `exa-chief-of-staff/_ops/meetings/2026-02-09–multi-user-governance-prep.md` | ~200 | Multi-user governance model + John meeting strategy |
+| `orion-chief-of-staff/_ops/meetings/2026-02-09–multi-user-governance-prep.md` | ~200 | Multi-user governance model + John meeting strategy |
 
 ### Decisions Made
 
 - **Architect-Operator model** chosen over independent agents (Option A) or shared instances (Option B)
-- **Exa remains private** — Christopher's COS, not shared
+- **Orion remains private** — Christopher's COS, not shared
 - **Fatima = first provisioning candidate** (Day 30-60), pending 1:1
 - **John gets curated visibility**, not raw access or his own agents
 - **MCP scoping deferred** to Day 30 (Google Docs) and Day 60 (Slack)
@@ -259,7 +259,7 @@ This pattern should be adopted by Tess, Neco, and Exa in their own agent session
 |------|-------|---------|
 | `CLAUDE.md` | 126 | Root orchestration, routing, governance |
 | `CREATIVE-OS-ANTI-DEGRADATION.md` | 273 | Core anti-degradation system |
-| `exa-chief-of-staff/EXA-ANTI-DEGRADATION.md` | 122 | Exa adapter |
+| `orion-chief-of-staff/ORION-ANTI-DEGRADATION.md` | 122 | Orion adapter |
 | `veda-video-editing-agent/VEDA-ANTI-DEGRADATION.md` | 167 | Veda adapter |
 | `neco-neurocopy-agent/NECO-ANTI-DEGRADATION.md` | 170 | Neco adapter |
 | `SESSION-LOG.md` | — | This file |
@@ -285,7 +285,7 @@ This pattern should be adopted by Tess, Neco, and Exa in their own agent session
 ### Next (S002)
 
 - Multi-user expansion planning — John (CMO) agent provisioning
-- Create agent provisioning template (based on Exa S001 bootstrap pattern)
+- Create agent provisioning template (based on Orion S001 bootstrap pattern)
 - Consider PRD + Master Agent at root level when multi-user work begins
 - Governance model for shared vs. private data across users
 - Routing expansion for person + request type (2D: who + what)
@@ -310,7 +310,7 @@ CREATIVE-OS-[DATE] | Session [N]
 HANDOFF
 
 PROJECT PATH:
-/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/
+_performance-golf/pg-creative-os/
 
 SESSION [N] COMPLETED:
 - [verified accomplishments]

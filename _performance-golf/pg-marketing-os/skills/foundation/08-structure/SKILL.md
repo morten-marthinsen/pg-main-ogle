@@ -35,6 +35,12 @@ sales letter, and both differ from a landing page.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `STRUCTURE-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## OUTPUT LOCATION
 
 Save to: `outputs/[project-name]/structure-package.json`

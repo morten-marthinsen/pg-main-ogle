@@ -25,3 +25,9 @@ momentum to carry the reader through the entire piece.
 
 **Output:** Lead section copy
 **Requires:** Campaign Brief (Skill 09), Headlines (Skill 10)
+
+---
+
+## ANTI-DEGRADATION
+
+- Read `LEAD-ANTI-DEGRADATION.md` before execution — structural enforcement rules

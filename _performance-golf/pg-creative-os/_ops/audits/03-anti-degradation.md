@@ -2,7 +2,7 @@
 
 **Auditor**: Anti-Degradation Auditor (COS Audit Team)
 **Date**: 2026-02-09
-**Scope**: All Creative OS agents (Exa, Tess, Veda, Neco) + unified core + TonyFlo source
+**Scope**: All Creative OS agents (Orion, Tess, Veda, Neco) + unified core + TonyFlo source
 
 ---
 
@@ -35,7 +35,7 @@ The system is structurally complete but has several areas where the adaptation c
 | TonyFlo Feature | What's Missing | Impact |
 |-----------------|---------------|--------|
 | **Checkpoint files (YAML)** | TonyFlo uses physical `LAYER_N_COMPLETE.yaml` files that must exist before progression. Creative OS core mentions "agent-specific gates" but no adapter implements filesystem checkpoint files. | **HIGH** -- This is the single biggest gap. TonyFlo's power comes from *file-based* structural barriers. Creative OS gates are instructional checklists, not file-verified barriers. For Veda (code agent), this could be `PHASE_N_COMPLETE.yaml` in a checkpoints directory. |
-| **Minimum quantifiable thresholds** | TonyFlo has exact numeric thresholds per skill (1000 quotes, 5 searches, etc.). Creative OS adapters have qualitative gates ("root angle comes from SSS") but no numeric minimums with HALT triggers. | **MEDIUM** -- Advisory agents (Exa, Neco) may not need numeric thresholds, but Veda (620 tests) and Tess (1058 assets) have countable outputs that could be gated. |
+| **Minimum quantifiable thresholds** | TonyFlo has exact numeric thresholds per skill (1000 quotes, 5 searches, etc.). Creative OS adapters have qualitative gates ("root angle comes from SSS") but no numeric minimums with HALT triggers. | **MEDIUM** -- Advisory agents (Orion, Neco) may not need numeric thresholds, but Veda (620 tests) and Tess (1058 assets) have countable outputs that could be gated. |
 | **Simulated Type 1 signals** | TonyFlo defines 6 explicit warning signals (INCOMPLETENESS ALERT, SYNTHESIS WARNING, etc.). Creative OS core has no equivalent section. | **MEDIUM** -- These are instructional (can be ignored), but they serve as useful pattern-interrupt triggers during generation. Their absence means degradation signals are less explicit. |
 | **Context resume re-counting from source** | TonyFlo requires re-counting actual data (e.g., re-count quotes from scored_quotes.json). Creative OS says "verify against actual files" but doesn't mandate re-counting. | **LOW-MEDIUM** -- For code agents, this would mean re-running `npm test` on resume rather than trusting session log claims. Veda's adapter doesn't explicitly mandate this. |
 | **Extraction progress tracking** | TonyFlo tracks items_scraped vs items_processed with 100% requirement. No equivalent in Creative OS for tracking granular phase progress. | **LOW** -- More relevant to CopywritingEngine's batch processing than Creative OS's phase-stop model. |
@@ -53,7 +53,7 @@ The system is structurally complete but has several areas where the adaptation c
 
 ## Part 2: Adapter Assessment
 
-### Exa — Anti-Degradation Adapter (v1.0)
+### Orion — Anti-Degradation Adapter (v1.0)
 
 **Grade: B+**
 
@@ -61,17 +61,17 @@ The system is structurally complete but has several areas where the adaptation c
 |-----------|--------|-------|
 | References core system | YES | First line directs to core. |
 | Gates appropriate for runtime | YES | Advisory gates: scorecard alignment, delegation ratio, communication boundary, data integrity. All fit an advisory agent. |
-| Forbidden rationalizations | YES | 4 entries, all Exa-specific and high-quality. "Christopher should handle this himself" is exactly the right kind of trap to name. |
-| Context zones | INHERITED | Via core. No Exa-specific zone modifications. |
-| iCloud guard | NOT APPLICABLE | No git repo in Exa. Correct omission. |
-| Bridge gates | YES | Exa->All direction gate. |
+| Forbidden rationalizations | YES | 4 entries, all Orion-specific and high-quality. "Christopher should handle this himself" is exactly the right kind of trap to name. |
+| Context zones | INHERITED | Via core. No Orion-specific zone modifications. |
+| iCloud guard | NOT APPLICABLE | No git repo in Orion. Correct omission. |
+| Bridge gates | YES | Orion->All direction gate. |
 | Agent-specific MC-CHECK | YES | Adds strategic_alignment and delegation_check fields. |
 
-**Strengths**: The communication boundary gate (Gate 3) is genuinely structural -- Exa literally cannot call `slack_post_message` (not allowlisted). This is the purest structural barrier in the entire system. The delegation ratio gate (Gate 2) converts a soft aspiration into a countable metric.
+**Strengths**: The communication boundary gate (Gate 3) is genuinely structural -- Orion literally cannot call `slack_post_message` (not allowlisted). This is the purest structural barrier in the entire system. The delegation ratio gate (Gate 2) converts a soft aspiration into a countable metric.
 
 **Weaknesses**: The scorecard alignment gate (Gate 1) is entirely instructional -- "CHECK: Does this advance a scorecard metric?" relies on honest self-assessment. There's no structural mechanism to enforce it.
 
-**Recommendation**: No changes needed. Exa's adapter is well-matched to an advisory agent.
+**Recommendation**: No changes needed. Orion's adapter is well-matched to an advisory agent.
 
 ---
 
@@ -162,7 +162,7 @@ The system is structurally complete but has several areas where the adaptation c
 | Agent | CLAUDE.md References Anti-Degradation | Correct Core + Adapter Paths | Assessment |
 |-------|---------------------------------------|------------------------------|------------|
 | Root | YES -- section in "Universal Governance" with table of all 4 adapters | YES | Excellent routing hub |
-| Exa | YES -- "Anti-Degradation (MANDATORY)" section with core + adapter refs | YES | Clean |
+| Orion | YES -- "Anti-Degradation (MANDATORY)" section with core + adapter refs | YES | Clean |
 | Tess | YES -- "Anti-Degradation (MANDATORY)" section with core + adapter refs | YES | Clean |
 | Veda | YES -- "Anti-Degradation (MANDATORY)" section with core + adapter refs | YES | Clean |
 | Neco | YES -- "Anti-Degradation (MANDATORY)" section with core + adapter refs | YES | Clean |
@@ -188,7 +188,7 @@ The `_shared/agent-provisioning-template.md` includes anti-degradation in Phase 
 | Tess | 118 | Session log is 93K+ lines (archived at S075). Context pressure explicitly acknowledged in adapter header. No visible MC-CHECK outputs in log headers. | The sheer volume validates the need for the system. But there's no evidence of MC-CHECKs being *executed* in practice -- they're defined but possibly not surfaced during sessions. |
 | Veda | 36 | Clean working tree. 28 commits. Phase 5 demo blocked by external dependency (Iconik transcriptions), not by internal degradation. | No evidence of degradation. The pipeline's test suite (620 tests) serves as an implicit structural barrier. |
 | Neco | 13 | Advisory agent. No code artifacts to degrade. Session log shows careful phase tracking with explicit decisions logged per session. | Low degradation risk. The bigger risk is specification drift, not execution degradation. |
-| Exa | 10 | Advisory agent. Clean state management. P0 items tracked with explicit status. No evidence of rationalization in log. | Low degradation risk. The system is young enough that context pressure hasn't been a factor yet. |
+| Orion | 10 | Advisory agent. Clean state management. P0 items tracked with explicit status. No evidence of rationalization in log. | Low degradation risk. The system is young enough that context pressure hasn't been a factor yet. |
 
 ### Key Observation: The MC-CHECK Is Defined but Not Evidenced
 
@@ -236,7 +236,7 @@ The iCloud `.git/index` bug is documented in core and in Tess's adapter with bot
 
 The current system is reasonably token-efficient:
 - Core is 274 lines (reasonable for a system-wide doc).
-- Adapters range from 123 lines (Exa) to 200 lines (Tess). Appropriate scope.
+- Adapters range from 123 lines (Orion) to 200 lines (Tess). Appropriate scope.
 - The core-plus-adapter pattern avoids duplication -- universal patterns live once.
 
 **One efficiency concern**: The CLAUDE.md files for each agent repeat the anti-degradation section preamble almost identically. This costs ~30 tokens per agent. It could be reduced to a single line ("Anti-degradation: See core + adapter.") but the current explicit phrasing serves as a stronger prompt-level signal, so the tradeoff favors keeping it.
@@ -308,7 +308,7 @@ Tony uses `LAYER_N_COMPLETE.yaml` files that physically block progression -- the
 - **Veda**: `checkpoints/PHASE_N_COMPLETE.yaml` -- created when the test suite passes at a phase boundary. Next phase blocked without it. This is the highest-value implementation because Veda is a code agent with verifiable gates (TypeScript compilation, test counts, build success).
 - **Tess**: `checkpoints/SYNC_VERIFIED.yaml` -- created after successful registry sync completes with dedup verification. Prevents stale data from flowing downstream to Veda's intake queue or Neco's data protocol.
 - **Neco**: `checkpoints/FRAMEWORK_ANALYSIS_COMPLETE.yaml` -- created after behavioral framework analysis is logged with specific frameworks applied and key findings documented. Prevents copy generation without analysis (addresses the proof-of-analysis gap flagged in Part 2).
-- **Exa**: Not applicable. Exa is an advisory agent with no sequential phases to gate. Its structural enforcement comes from the communication boundary (Gate 3: `slack_post_message` not allowlisted) and scorecard alignment checks.
+- **Orion**: Not applicable. Orion is an advisory agent with no sequential phases to gate. Its structural enforcement comes from the communication boundary (Gate 3: `slack_post_message` not allowlisted) and scorecard alignment checks.
 
 ### Gap 4: Learning Log Standardization
 
@@ -321,7 +321,7 @@ In Creative OS, only Neco has a `_learning/failure-log.md` directory. The other 
 | Neco | `_learning/failure-log.md` EXISTS | Already implemented. Ensure entries follow numbered/dated format. |
 | Tess | No learning directory | Add `_learning/` directory with same pattern. Tess has 118+ sessions -- failures have occurred but are not systematically logged. |
 | Veda | No learning directory | Add `_learning/` directory. Veda's pipeline complexity (620 tests, 13 sub-agents) makes failure logging especially valuable. |
-| Exa | `_ops/decision-log/` EXISTS | Exa's learning goes through its decision log, which is the appropriate structure for an advisory agent. No change needed. |
+| Orion | `_ops/decision-log/` EXISTS | Orion's learning goes through its decision log, which is the appropriate structure for an advisory agent. No change needed. |
 
 ### Gap 5: MC-CHECK Visibility Mandate
 
@@ -339,12 +339,12 @@ This should appear at session start (after resume verification) and at every pha
 ---
 
 **Files reviewed**:
-- `/Users/christopherogle/Documents/The Sauce Vault/TonyFlo Systems/CopywritingEngine/LLM-ANTI-DEGRADATION-SYSTEM.md` (source, 881 lines)
-- `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/CREATIVE-OS-ANTI-DEGRADATION.md` (core, 274 lines)
-- `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/exa-chief-of-staff/EXA-ANTI-DEGRADATION.md` (adapter, 123 lines)
-- `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/tess-strategic-scaling-system/TESS-ANTI-DEGRADATION.md` (adapter, 200 lines)
-- `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/veda-video-editing-agent/VEDA-ANTI-DEGRADATION.md` (adapter, 168 lines)
-- `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/neco-neurocopy-agent/NECO-ANTI-DEGRADATION.md` (adapter, 171 lines)
+- `TonyFlo Systems/CopywritingEngine/LLM-ANTI-DEGRADATION-SYSTEM.md` (source, 881 lines)
+- `pg-creative-os/CREATIVE-OS-ANTI-DEGRADATION.md` (core, 274 lines)
+- `pg-creative-os/orion-chief-of-staff/ORION-ANTI-DEGRADATION.md` (adapter, 123 lines)
+- `pg-creative-os/tess-strategic-scaling-system/TESS-ANTI-DEGRADATION.md` (adapter, 200 lines)
+- `pg-creative-os/veda-video-editing-agent/VEDA-ANTI-DEGRADATION.md` (adapter, 168 lines)
+- `pg-creative-os/neco-neurocopy-agent/NECO-ANTI-DEGRADATION.md` (adapter, 171 lines)
 - All 5 CLAUDE.md files (root + 4 agents)
 - All 4 SESSION-LOG.md files (headers)
 - Agent provisioning template

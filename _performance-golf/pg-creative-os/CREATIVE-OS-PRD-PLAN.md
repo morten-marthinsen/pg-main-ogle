@@ -13,7 +13,7 @@ The Creative OS PRD is the **organization-level vision document** for Performanc
 **Must be explicitly connected to:**
 
 - **Performance Golf brand guidelines and strategy** — the PRD should reference and align with PG's brand standards and strategic direction.
-  - **Path:** `/Users/johnhardesty/Documents/The Sauce Vault/_performance-golf/pg-skills/pg-brand-guidelines`
+  - **Path:** `_performance-golf/pg-skills/pg-brand-guidelines` (repo-relative)
 
 - **Two 2026 brand themes/threads** (used as the lens for all creative output and prioritization):
 
@@ -32,7 +32,7 @@ The Creative OS PRD is the **organization-level vision document** for Performanc
 | In scope | Out of scope (or subordinate) |
 |----------|------------------------------|
 | Creative **team** organization (people + processes) | PRD is **not** *for* the Creative OS AI system; agents are *included* in the PRD but are not the primary subject |
-| Vision for the creative department (30/60/90) | Agent-level specs stay in agent PRDs (e.g. EXA-PRD) |
+| Vision for the creative department (30/60/90) | Agent-level specs stay in agent PRDs (e.g. ORION-REFERENCE) |
 | How Creative OS (people + agents) works with Marketing OS | |
 | Org structure/chart: key people + roles + sub-agents under them | |
 | Process and thinking behind every creative tactic/asset; rules, skills, and principles that all creative must follow | |
@@ -229,18 +229,18 @@ The Creative OS PRD is the **organization-level vision document** for Performanc
 ## 7. Resolved Items
 
 ### 7.1 Brand Guidelines
-- **Path:** `/Users/johnhardesty/Documents/The Sauce Vault/_performance-golf/pg-skills/pg-brand-guidelines`
+- **Path:** `_performance-golf/pg-skills/pg-brand-guidelines` (repo-relative)
 - **Action:** PRD should reference these guidelines (format TBD — inline summary vs link vs appendix)
 
 ### 7.2 Brand Thread 2 Naming
 - Final wording: **"Stories of Innovation"** (confirmed)
 
 ### 7.3 PRD Structure and Placement
-- **Location:** Directly under Creative OS file path (`/Users/johnhardesty/Documents/The Sauce Vault/_performance-golf/pg-creative-os/`)
+- **Location:** Directly under Creative OS file path (`_performance-golf/pg-creative-os/`)
 - **Structure:** TBD (will be refined as PRD is built)
 
 ### 7.4 Challenger Function
-- Every sub-agent (e.g. Bravo, Exa) must have a **challenger skill/sub-agent** that challenges the human operator so work stays aligned with the Creative OS PRD.
+- Every sub-agent (e.g. Bravo, Orion) must have a **challenger skill/sub-agent** that challenges the human operator so work stays aligned with the Creative OS PRD.
 - Must be **token-efficient**: automated where useful but not burning context every session. (See Recommendations below.)
 
 ### 7.5 Multiple Product Launches

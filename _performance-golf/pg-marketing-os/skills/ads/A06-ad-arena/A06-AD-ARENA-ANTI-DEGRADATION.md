@@ -7,6 +7,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: A06-AD-ARENA-ANTI-DEGRADATION.md v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Run fewer than 3 Arena rounds ("concepts look strong enough after Round 1"), evaluate hooks/scripts/visuals separately instead of as atomic integrated units, or run Arena without loading verbatim ad specimens for each persona (minimum 15 per persona).
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**
@@ -676,6 +689,50 @@ DO NOT:
 
 ---
 
+## STRUCTURAL FIX 9: HOMOGENEITY DETECTION (Arena Diversity Protocol)
+
+### The Problem
+LLMs naturally converge toward similar outputs across personas. When 5 of 7 personas produce fear-based problem-solution hooks, the Arena produces volume without diversity. The best ad concept may be hiding in an unexplored approach.
+
+### The Fix
+
+**Reference:** `skills/protocols/ARENA-DIVERSITY-PROTOCOL.md`
+
+**MANDATORY in every Arena round:**
+
+1. **Variant Diversity Audit** — After all 7 personas generate, classify each output by emotional frame, structural approach, entry angle, and differentiating phrase. If >3 convergent pairs detected: trigger Divergence Protocol (3 most-similar regenerate with differentiation constraint).
+
+2. **Competitive Distance Scoring (10% weight)** — Score each concept against A01 competitive intelligence data. How different is this from what competitors are running? Scores MUST cite specific competitor examples.
+
+3. **Pattern Break Bonus (5% weight)** — Does this concept violate expected ad category conventions? Name the convention being broken.
+
+4. **Memorability Test** — After scoring, recall one phrase per concept without re-reading. Flag forgettable concepts.
+
+### Ad-Specific Convergence Patterns to Watch
+
+| Convergence Pattern | Why It Happens | Divergence Constraint |
+|---|---|---|
+| All hooks use fear/urgency | Default LLM emotional register | Require curiosity, aspiration, or humor hooks |
+| All scripts follow problem-solution | Default persuasion structure | Require story-first, question-driven, or contrarian scripts |
+| All visuals use before/after | Default health ad visual | Require lifestyle, mechanism-visual, or social proof visuals |
+
+### MC-CHECK Addition
+
+Add to AD-ARENA-MC-CHECK:
+
+```yaml
+diversity_verification:
+  diversity_audit_completed: [Y/N]
+  convergent_pairs_count: [number]
+  divergence_protocol_triggered: [Y/N]
+  competitive_distance_scored: [Y/N]
+  pattern_break_scored: [Y/N]
+  memorability_test_completed: [Y/N]
+  if_any_no: "HALT — Complete diversity audit per ARENA-DIVERSITY-PROTOCOL.md"
+```
+
+---
+
 ## KEY A06-SPECIFIC DEGRADATION PATTERNS
 
 ### Pattern 1: Isolated Element Evaluation
@@ -754,4 +811,5 @@ DO NOT:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1 | 2026-03-06 | HOMOGENEITY DETECTION: Added Structural Fix 9 — Arena Diversity Protocol integration. Variant Diversity Audit mandatory each round, Competitive Distance (10%) and Pattern Break (5%) added to scoring, Memorability Test post-scoring. Ad-specific convergence patterns table. MC-CHECK enhanced with diversity_verification block. Reference: `skills/protocols/ARENA-DIVERSITY-PROTOCOL.md`. |
 | 1.0 | 2026-02-22 | Initial creation with 8 structural fixes, per-microskill output table (31 microskills across rounds), implementation checklist, ALL-BELOW-THRESHOLD protocol, 8 A06-specific degradation patterns. Full Arena anti-degradation architecture for ad concept evaluation. |

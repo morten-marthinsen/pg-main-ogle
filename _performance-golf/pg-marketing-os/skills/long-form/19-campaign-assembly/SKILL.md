@@ -29,6 +29,12 @@ skill, not a drafting skill.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `CAMPAIGN-ASSEMBLY-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## LAYER ARCHITECTURE
 
 - **Layer 0:** Upstream draft loading, structure blueprint loading, proof weaving instructions

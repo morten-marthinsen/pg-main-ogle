@@ -832,6 +832,11 @@ skill: "[skill-name]"
 status: COMPLETE
 timestamp: "[ISO 8601]"
 
+anti_degradation:
+  file_read: "[FILENAME]-ANTI-DEGRADATION.md"
+  version: "[version from file header]"
+  declaration_written_to: "layer-0/[first-output-filename].md"
+
 verification:
   [metric_1]:
     required: [number]

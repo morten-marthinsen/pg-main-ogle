@@ -7,6 +7,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: A04-SCRIPT-ARCHITECTURE-ANTI-DEGRADATION.md v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Accept word counts as "close enough" (word count is physics, not a guideline), generate monolithic scripts instead of modular [HOOK]+[SETUP]+[MECHANISM]+[PROOF]+[CTA] structures, or omit mechanism integration from 60+ second scripts.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## WHY THIS DOCUMENT EXISTS
 
 **Anticipated Failure Patterns:**

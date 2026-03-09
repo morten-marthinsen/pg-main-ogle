@@ -39,6 +39,11 @@ Content Published → Performance Analyzed (S19) → Learning Captured (S20) →
 System Updated → Better Predictions → Better Content → [Repeat]
 ```
 
+## ANTI-DEGRADATION
+
+- Read `S20-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## PREREQUISITES

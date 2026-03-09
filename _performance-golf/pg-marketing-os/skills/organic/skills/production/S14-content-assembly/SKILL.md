@@ -25,6 +25,11 @@ This skill assembles all production elements into a final, ready-to-publish cont
 **Output:** Complete content package ready for publishing
 **Prerequisite:** Campaign Brief File (CBF) + relevant production skill outputs
 
+## ANTI-DEGRADATION
+
+- Read `S14-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

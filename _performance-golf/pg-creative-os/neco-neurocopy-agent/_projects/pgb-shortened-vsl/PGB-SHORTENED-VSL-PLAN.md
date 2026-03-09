@@ -14,8 +14,8 @@
 - Guarantee: TBD (current script says 30-day; PGF model uses 365-day)
 - Must maintain structural integrity per TonyFlo CopywritingEngine and Neco Golf Suggestibility Principle
 
-**Source file:** `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/_pg-digital-products/pgb/pgb-vsl-script.md`
-**Reference for offer structure:** `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/_pg-digital-products/pgf/PGF - Off-Season Swing Saver - Fitness VSL + Upsell Tabs.md`
+**Source file:** `_performance-golf/_pg-digital-products/pgb/pgb-vsl-script.md`
+**Reference for offer structure:** `_performance-golf/_pg-digital-products/pgf/PGF - Off-Season Swing Saver - Fitness VSL + Upsell Tabs.md`
 
 ---
 
@@ -354,10 +354,10 @@ Complete read-through performed (2026-02-10). Results:
 ---
 
 ## Reference Files
-- **Source script**: `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/_pg-digital-products/pgb/pgb-vsl-script.md`
-- **PGF offer model**: `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/_pg-digital-products/pgf/PGF - Off-Season Swing Saver - Fitness VSL + Upsell Tabs.md`
-- **AA VSL (Bonus #1)**: `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/_pg-digital-products/aa/aa-vsl-script.md`
-- **PGB checkout page**: `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/_pg-digital-products/pgb/pgb-checkout.md`
-- **WPSS FAQ model**: `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/_pg-digital-products/wpss/wpss-vsl-script.md`
-- **TonyFlo CopywritingEngine**: `/Users/christopherogle/Documents/The Sauce Vault/TonyFlo Systems/CopywritingEngine/`
-- **Neco NeuroCopy Agent**: `/Users/christopherogle/Documents/The Sauce Vault/_performance-golf/pg-creative-os/neco-neurocopy-agent/`
+- **Source script**: `_performance-golf/_pg-digital-products/pgb/pgb-vsl-script.md`
+- **PGF offer model**: `_performance-golf/_pg-digital-products/pgf/PGF - Off-Season Swing Saver - Fitness VSL + Upsell Tabs.md`
+- **AA VSL (Bonus #1)**: `_performance-golf/_pg-digital-products/aa/aa-vsl-script.md`
+- **PGB checkout page**: `_performance-golf/_pg-digital-products/pgb/pgb-checkout.md`
+- **WPSS FAQ model**: `_performance-golf/_pg-digital-products/wpss/wpss-vsl-script.md`
+- **TonyFlo CopywritingEngine**: `TonyFlo Systems/CopywritingEngine/`
+- **Neco NeuroCopy Agent**: `_performance-golf/pg-creative-os/neco-neurocopy-agent/`

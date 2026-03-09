@@ -35,6 +35,12 @@ same claims as competitors.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `MECHANISM-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## OUTPUT LOCATION
 
 Save to: `outputs/[project-name]/mechanism-package.json`

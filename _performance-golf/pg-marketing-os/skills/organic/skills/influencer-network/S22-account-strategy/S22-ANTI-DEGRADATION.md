@@ -11,6 +11,19 @@ Prevent degradation in account strategy development: identical strategies across
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: S22 Account Strategy — Anti-Degradation Protocol v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Create identical strategies across personas with >70% overlap. Use vague growth tactics like "use hashtags" or "engage with audience" without specifics. Skip platform-specific adaptation for bio copy, posting times, or content formats.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## Fix 1: Project Infrastructure Requirements
 
 ### Required Files at Project Start

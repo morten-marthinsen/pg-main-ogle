@@ -25,6 +25,11 @@ This skill produces carousel content optimized for saves, shares, and algorithmi
 **Output:** Complete carousel structure with copy for each slide
 **Prerequisite:** Campaign Brief File (CBF) required
 
+## ANTI-DEGRADATION
+
+- Read `S10-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+- See `skills/protocols/EXECUTION-GUARDRAILS.md` for universal enforcement protocol
+
 ---
 
 ## REQUIRED CONTEXT

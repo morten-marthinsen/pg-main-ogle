@@ -6,7 +6,9 @@
 **Agent**: Neco -- The NeuroCopy Agent
 **Product**: SpeedTrac -- Speed + Face Control Training System
 **Format**: Video Ads (3 concept directions)
-**Status**: DRAFT -- Awaiting Christopher Review
+**Status**: REFERENCE ONLY -- Superseded by persona-driven approach (S039-S042)
+
+> **NOTE (S043)**: This angle library organized audiences by PROBLEM TYPE. The persona workshop (`spd-persona-workshop.md`) reorganized by VALUE SYSTEM and is now the driving document. 3 body angles were locked in S040: (1) "Fast AND Straight" (Category Killer), (2) "The Smartest Way to Add Distance" (Strategic Intelligence), (3) "Where Did The Speed Go?" (Age-Decline Reclamation). Hero persona: First from the Fairway (S042). See persona workshop for all current decisions.
 
 ---
 

@@ -36,6 +36,12 @@ skill bridges the gap between symptom and cause.
 
 ---
 
+## ANTI-DEGRADATION
+
+- Read `ROOT-CAUSE-ANTI-DEGRADATION.md` before execution — structural enforcement rules
+
+---
+
 ## OUTPUT LOCATION
 
 Save to: `outputs/[project-name]/root-cause-package.yaml`

@@ -6,6 +6,19 @@
 
 ---
 
+## MANDATORY READ DECLARATION
+
+```
+I HAVE READ THIS FILE: S16-ANTI-DEGRADATION.md v1.0
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
+I WILL: Produce per-microskill output files for every microskill executed.
+I WILL NOT: Use generic response templates like "Nice!" or "Great!" instead of specific on-brand replies. Skip first-hour engagement protocol. Omit DM strategy triggers for relationship building.
+```
+
+**Write this declaration to your first output file before executing any microskill.**
+
+---
+
 ## FORBIDDEN RATIONALIZATIONS
 
 | Forbidden Phrase | Why Forbidden | Correct Response |
