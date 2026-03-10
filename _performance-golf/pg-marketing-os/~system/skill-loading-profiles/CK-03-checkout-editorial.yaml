@@ -1,0 +1,10 @@
+skill_id: "CK-03"
+skill_name: checkout-editorial
+engine: checkout
+arena: false
+generates_copy: false
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools: []
+protocols_required:
+  - pipeline-handoff-registry.md

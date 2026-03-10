@@ -1,0 +1,11 @@
+skill_id: "A05"
+skill_name: ad-visual-direction
+engine: ads
+arena: false
+generates_copy: false
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools:
+  - gemini-media
+protocols_required:
+  - pipeline-handoff-registry.md

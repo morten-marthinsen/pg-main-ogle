@@ -1,0 +1,15 @@
+skill_id: "A06"
+skill_name: ad-arena
+engine: ads
+arena: true
+arena_mode: generative_full_draft
+generates_copy: true
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools: []
+protocols_required:
+  - ARENA-PROTOCOL.md
+  - ARENA-CORE-PROTOCOL.md
+  - SPECIMEN-GUIDE.md
+  - PERSONA-VOICE-LOADING-PROTOCOL.md
+  - pipeline-handoff-registry.md

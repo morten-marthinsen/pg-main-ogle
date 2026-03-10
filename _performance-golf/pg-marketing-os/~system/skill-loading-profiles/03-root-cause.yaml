@@ -1,0 +1,14 @@
+skill_id: "03"
+skill_name: root-cause-framing
+engine: main-pipeline
+arena: true
+arena_mode: strategic_competition
+generates_copy: false
+consumes_upstream: true
+expression_anchoring: true
+mcp_tools: []
+protocols_required:
+  - ARENA-PROTOCOL.md
+  - ARENA-CORE-PROTOCOL.md
+  - pipeline-handoff-registry.md
+  - EXPRESSION-ANCHORING-PROTOCOL.md
