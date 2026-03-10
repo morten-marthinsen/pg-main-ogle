@@ -902,7 +902,7 @@ SIMILARITY CHECK (post-round):
        → Trigger Divergence Protocol from ARENA-DIVERSITY-PROTOCOL.md
 ```
 
-**Integration with hooks:** The similarity check can be implemented as a programmatic validator (Layer 1 verification). See `.claude/hooks/validators/` for the hook architecture.
+**Integration with hooks:** The similarity check can be implemented as a programmatic validator (Layer 1 verification). See `.hooks/validators/` for the hook architecture.
 
 ### Single-Context Hardening Summary
 

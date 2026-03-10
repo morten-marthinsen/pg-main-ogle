@@ -120,7 +120,7 @@ Replace scheduled MC-CHECKs with detector-triggered reminders. MC-CHECK itself s
 > ACTION: Re-read the context reservoir and current skill's upstream packages before continuing.
 ```
 
-#### `.claude/hooks/validators/reminder_detector.py`
+#### `.hooks/validators/reminder_detector.py`
 
 New Python validator that implements Detectors 1, 2, 4, 5, 7. Detectors 3 and 6 extend existing validators.
 
@@ -128,7 +128,7 @@ New Python validator that implements Detectors 1, 2, 4, 5, 7. Detectors 3 and 6 
 # Structure (implement in session):
 #
 # class ReminderDetector:
-#     def __init__(self, state_file=".claude/hooks/.reminder-state.json"):
+#     def __init__(self, state_file=".hooks/.reminder-state.json"):
 #         self.state = self._load_state(state_file)
 #
 #     def detect_abbreviation(self, content: str) -> Optional[str]:
@@ -180,10 +180,10 @@ New Python validator that implements Detectors 1, 2, 4, 5, 7. Detectors 3 and 6 
 |------|--------|
 | `~system/SYSTEM-CORE.md` | Add "Event-Driven Reminders" section after MC-CHECK. Keep MC-CHECK as format but update "When to Execute" to say "triggered by detectors, not on fixed schedule." Add detector reference table. |
 | `~system/protocols/EXECUTION-GUARDRAILS.md` | Add detector list to Pre-Flight Checklist awareness. Operators should know reminders may fire. |
-| `.claude/hooks/dispatch-validator.sh` | Add routing for `reminder_detector.py` on ALL Write/Edit events (runs alongside existing validators). |
-| `.claude/hooks/validators/token_estimator.py` | Extend zone transition detection to emit reminder-format JSON (Detector 6). |
-| `.claude/hooks/validators/gate_validator.py` | Extend forbidden status detection to emit reminder-format JSON (Detector 5). |
-| `.claude/hooks/README.md` | Document new reminder_detector.py and updated validator behaviors. |
+| `.hooks/dispatch-validator.sh` | Add routing for `reminder_detector.py` on ALL Write/Edit events (runs alongside existing validators). |
+| `.hooks/validators/token_estimator.py` | Extend zone transition detection to emit reminder-format JSON (Detector 6). |
+| `.hooks/validators/gate_validator.py` | Extend forbidden status detection to emit reminder-format JSON (Detector 5). |
+| `.hooks/README.md` | Document new reminder_detector.py and updated validator behaviors. |
 
 ### MC-CHECK Schedule Change
 
@@ -787,7 +787,7 @@ Extend it to:
 | `~system/SYSTEM-CORE.md` | Update Context Zone Management to reference compaction stages per zone. Current zone responses say "double MC-CHECK" — add "apply Stage N compaction." |
 | `~system/SESSION-ARCHITECTURE.md` | Update Context Loading table with "After Compaction" column showing reduced token estimates. Update Future State section — compaction partially addresses what larger windows would solve. |
 | `~system/protocols/CONTEXT-RESERVOIR-TEMPLATE.md` | Add "Compaction Profiles" section defining Stage 3 (triage) and Stage 5 (micro-reservoir) versions. |
-| `.claude/hooks/validators/token_estimator.py` | Extend to output compaction recommendations at zone transitions. |
+| `.hooks/validators/token_estimator.py` | Extend to output compaction recommendations at zone transitions. |
 
 ### Session Impact Estimate
 
@@ -1102,7 +1102,7 @@ Add convergence detection at three levels: Arena persona convergence, round-over
 
 ### Files to Create
 
-#### `.claude/hooks/validators/convergence_detector.py`
+#### `.hooks/validators/convergence_detector.py`
 
 ```python
 # Convergence Detector — Three Detection Modes
@@ -1210,8 +1210,8 @@ When a 3-sentence block repeats within a single output:
 | File | Change |
 |------|--------|
 | `~system/ARENA-PROTOCOL.md` | Add "Convergence Detection" section after "Arena Context Management." Reference both new files. |
-| `.claude/hooks/dispatch-validator.sh` | Add routing for `convergence_detector.py` on writes to `arena/` paths. |
-| `.claude/hooks/README.md` | Document convergence_detector.py. |
+| `.hooks/dispatch-validator.sh` | Add routing for `convergence_detector.py` on writes to `arena/` paths. |
+| `.hooks/README.md` | Document convergence_detector.py. |
 
 ### Effort Estimate
 
@@ -1307,7 +1307,7 @@ git checkout "snapshot/[project]/post-[XX]-[name]" -- ~outputs/[project]/
 
 ## Automated Snapshot Hook
 
-Add to `.claude/hooks/` a hook that fires on skill boundaries:
+Add to `.hooks/` a hook that fires on skill boundaries:
 
 ```json
 {
@@ -1315,12 +1315,12 @@ Add to `.claude/hooks/` a hook that fires on skill boundaries:
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
-        "command": ".claude/hooks/dispatch-validator.sh"
+        "command": ".hooks/dispatch-validator.sh"
       }
     ],
     "Stop": [
       {
-        "command": ".claude/hooks/dispatch-validator.sh --final-check"
+        "command": ".hooks/dispatch-validator.sh --final-check"
       }
     ]
   }

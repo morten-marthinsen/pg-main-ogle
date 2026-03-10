@@ -254,7 +254,7 @@ IF CRITICAL ZONE (750K-1M):
   - DO NOT attempt new skills
 ```
 
-**Automated tracking:** The token estimator hook (`.claude/hooks/validators/token_estimator.py`) monitors cumulative file sizes and injects zone warnings automatically on every file write.
+**Automated tracking:** The token estimator hook (`.hooks/validators/token_estimator.py`) monitors cumulative file sizes and injects zone warnings automatically on every file write.
 
 ---
 

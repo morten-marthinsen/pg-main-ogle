@@ -8,17 +8,17 @@
 
 ## Manual Setup Required
 
-These hooks are shipped with marketing-os but must be registered in your **root-level** `.claude/settings.json` to auto-fire. The hooks live at `pg-marketing-os/.claude/hooks/` — Claude Code only loads hooks from the project root's `.claude/` directory.
+These hooks are shipped with marketing-os but must be registered in your **root-level** `.claude/settings.json` to auto-fire. The hooks live at `pg-marketing-os/.hooks/` — Claude Code only loads hooks from the project root's `.claude/` directory.
 
 **To activate:**
 
 1. Copy or symlink the hooks directory to your project root:
    ```bash
    # Option A: Symlink (recommended — stays in sync)
-   ln -s marketing-os/.claude/hooks .claude/hooks
+   ln -s _performance-golf/pg-marketing-os/.hooks .claude/hooks
 
    # Option B: Copy
-   cp -r marketing-os/.claude/hooks .claude/hooks
+   cp -r _performance-golf/pg-marketing-os/.hooks .claude/hooks
    ```
 
 2. Ensure your root `.claude/settings.json` registers the hooks:
@@ -28,12 +28,12 @@ These hooks are shipped with marketing-os but must be registered in your **root-
        "PostToolUse": [
          {
            "matcher": "Write|Edit",
-           "command": ".claude/hooks/dispatch-validator.sh"
+           "command": ".hooks/dispatch-validator.sh"
          }
        ],
        "Stop": [
          {
-           "command": ".claude/hooks/dispatch-validator.sh --final-check"
+           "command": ".hooks/dispatch-validator.sh --final-check"
          }
        ]
      }
@@ -128,22 +128,22 @@ Each validator can be run standalone:
 
 ```bash
 # Test gate validator
-python3 .claude/hooks/validators/gate_validator.py path/to/checkpoint.yaml
+python3 .hooks/validators/gate_validator.py path/to/checkpoint.yaml
 
 # Test output validator on a project directory
-python3 .claude/hooks/validators/output_validator.py outputs/project-name/
+python3 .hooks/validators/output_validator.py outputs/project-name/
 
 # Test schema validator
-python3 .claude/hooks/validators/schema_validator.py path/to/mechanism-package.json
+python3 .hooks/validators/schema_validator.py path/to/mechanism-package.json
 
 # Test proportionality check
-python3 .claude/hooks/validators/proportionality_check.py path/to/scored-package.json
+python3 .hooks/validators/proportionality_check.py path/to/scored-package.json
 
 # Test token estimator
-python3 .claude/hooks/validators/token_estimator.py path/to/any-file.md
+python3 .hooks/validators/token_estimator.py path/to/any-file.md
 
 # Token estimator project summary
-python3 .claude/hooks/validators/token_estimator.py --summary outputs/project-name/
+python3 .hooks/validators/token_estimator.py --summary outputs/project-name/
 ```
 
 ---
@@ -169,9 +169,7 @@ To disable a single validator, comment out or remove its routing block in `dispa
 ## File Structure
 
 ```
-.claude/
-├── settings.json                  ← Hook configuration (PostToolUse + Stop)
-└── hooks/
+.hooks/
     ├── dispatch-validator.sh       ← Shell router
     ├── .token-estimator-state.json ← Cumulative tracking state (auto-generated)
     ├── .reminder-state.json        ← Reminder detector state (auto-generated)

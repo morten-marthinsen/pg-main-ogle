@@ -218,7 +218,7 @@ IF CRITICAL ZONE (750K-1M):
   - DO NOT attempt new skills
 ```
 
-**Note:** The token estimator hook (`.claude/hooks/validators/token_estimator.py`) tracks cumulative context automatically and injects zone warnings into the agent's context.
+**Note:** The token estimator hook (`.hooks/validators/token_estimator.py`) tracks cumulative context automatically and injects zone warnings into the agent's context.
 
 ---
 
@@ -575,7 +575,7 @@ When context grows large:
 
 **Every skill across all engines has a dedicated ANTI-DEGRADATION.md file.** These contain STRUCTURAL enforcement that CANNOT be bypassed. Each file has EQUAL authority to this ~system/SYSTEM-CORE.md.
 
-**Automated Validation Hooks** (`.claude/hooks/`) fire on every file Write/Edit, checking for forbidden gate statuses, schema compliance, output completeness, threshold clustering, and context zone boundaries. The Stop hook blocks session completion if critical validation failures exist. See `.claude/hooks/README.md` for details.
+**Automated Validation Hooks** (`.hooks/`) fire on every file Write/Edit, checking for forbidden gate statuses, schema compliance, output completeness, threshold clustering, and context zone boundaries. The Stop hook blocks session completion if critical validation failures exist. See `.hooks/README.md` for details.
 
 ### Universal Enforcement Protocol
 

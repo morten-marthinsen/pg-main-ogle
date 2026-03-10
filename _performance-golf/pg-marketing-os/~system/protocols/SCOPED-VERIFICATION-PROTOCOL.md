@@ -23,7 +23,7 @@
 
 ## Why Layer 2 Exists
 
-Layer 1 (programmatic hooks in `.claude/hooks/`) catches quantifiable failures: missing files, forbidden statuses, schema violations, threshold clustering. But structural gates verify **existence and quantity**, not **quality**.
+Layer 1 (programmatic hooks in `.hooks/`) catches quantifiable failures: missing files, forbidden statuses, schema violations, threshold clustering. But structural gates verify **existence and quantity**, not **quality**.
 
 The failure mode that remains: output technically passes all numeric gates but the content doesn't serve the campaign. The mechanism name is present but forced. The voice drifted from Soul.md. The FSSIT candidates are grounded in synthesis, not actual quotes.
 
@@ -35,7 +35,7 @@ The failure mode that remains: output technically passes all numeric gates but t
 
 | Layer | Mechanism | What It Checks | LLM Required? |
 |-------|-----------|----------------|---------------|
-| **1** | Programmatic hooks (`.claude/hooks/`) | Quantifiable gates — counts, sizes, field presence, schema, forbidden statuses | No |
+| **1** | Programmatic hooks (`.hooks/`) | Quantifiable gates — counts, sizes, field presence, schema, forbidden statuses | No |
 | **2** | Scoped verification step (THIS PROTOCOL) | Quality criteria — voice match, differentiation, upstream tracing, semantic alignment | Yes (lightweight, fresh context) |
 | **3** | The Arena (existing) | Creative quality — persuasion, specificity, voice, competitive distance | Yes (already built) |
 

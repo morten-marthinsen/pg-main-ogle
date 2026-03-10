@@ -660,8 +660,8 @@ When the agent tries to finish, a final comprehensive validation runs. If critic
 
 - **You don't need to do anything.** Hooks fire automatically.
 - **The agent will tell you** if validation catches an issue. You'll see it in the agent's output.
-- **You can spot-check manually** by running validators directly: `python3 .claude/hooks/validators/gate_validator.py <file>`
-- **Hook documentation** lives in `.claude/hooks/README.md`
+- **You can spot-check manually** by running validators directly: `python3 .hooks/validators/gate_validator.py <file>`
+- **Hook documentation** lives in `.hooks/README.md`
 
 ---
 
