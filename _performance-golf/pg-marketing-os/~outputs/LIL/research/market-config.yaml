@@ -1,0 +1,205 @@
+# Lil' Legends — Market Configuration
+# Step 0.0: Adapts research system to the specific market
+
+product:
+  name: "Lil' Legends"
+  category: "Toddler Golf Equipment System"
+  type: "Physical product — 3-club set + skills mat + carry bag"
+  price_range: "$130-299 (TBD — competitive analysis needed)"
+  mode: "B"  # New product, no existing marketing
+
+market:
+  industry: "Junior Golf / Children's Developmental Products"
+  vertical: "Sports equipment — children's segment"
+  maturity: "Emerging (blue ocean between toys and real equipment)"
+
+# SEARCH TERMINOLOGY — adapted for this market
+terminology:
+  product_terms:
+    - "toddler golf clubs"
+    - "kids golf set"
+    - "junior golf clubs ages 2-5"
+    - "toddler golf starter set"
+    - "baby golf clubs"
+    - "first golf clubs for kids"
+    - "children's golf equipment"
+
+  pain_terms:
+    - "toddler won't hit golf ball"
+    - "kid loses interest in golf"
+    - "teaching toddler golf frustrating"
+    - "child can't hold golf club"
+    - "kid golf club too heavy"
+    - "plastic golf set useless"
+    - "toddler attention span golf"
+    - "how to get toddler interested in golf"
+    - "kid hates golf"
+    - "toddler golf frustration"
+
+  hope_terms:
+    - "get my kid into golf"
+    - "toddler loves golf"
+    - "kid's first golf swing"
+    - "teaching kids to love golf"
+    - "golf with my toddler"
+    - "start kids golf early"
+    - "golf as family activity"
+    - "golfing with kids"
+    - "passing golf to next generation"
+    - "golf bonding with kids"
+
+  competitor_terms:
+    - "Charlie Golf Co review"
+    - "Littlest Golfer review"
+    - "US Kids Golf review"
+    - "Callaway XJ1 review"
+    - "Orlimar toddler golf review"
+    - "best toddler golf clubs 2025 2026"
+    - "toddler golf club comparison"
+    - "junior golf set review"
+    - "kids golf club recommendations"
+
+  villain_terms:
+    - "plastic golf clubs waste of money"
+    - "cheap kids golf clubs break"
+    - "screen time kids"
+    - "kids don't play outside anymore"
+    - "too young for golf"
+    - "golf is too hard for kids"
+    - "kids golf clubs expensive"
+    - "forced kids into sports"
+    - "kids quitting golf"
+
+# PLATFORM TARGETING — where to scrape
+platforms:
+  priority_1_high_signal:
+    - platform: "Reddit"
+      subreddits:
+        - "r/golf"
+        - "r/daddit"
+        - "r/Mommit"
+        - "r/Parenting"
+        - "r/golfclassifieds"
+        - "r/GolfSwing"
+      search_queries:
+        - "toddler golf"
+        - "kids golf clubs"
+        - "teaching kid golf"
+        - "golf with kids"
+        - "junior golf"
+        - "toddler golf set"
+        - "getting kids into golf"
+        - "golf for 2 year old"
+        - "golf for 3 year old"
+        - "golf for 4 year old"
+
+    - platform: "Amazon Reviews"
+      products:
+        - "Charlie Golf Co Kids Golf Club Set"
+        - "The Littlest Golfer First Set"
+        - "Orlimar ATS Toddler Golf Set"
+        - "Callaway XJ1 Junior Set"
+        - "US Kids Golf Yard Club"
+        - "Tour X Toddler Golf Set"
+        - "Wilson Ultra BLK Kids Golf Set"
+        - "Little Tikes TotSports Easy Hit Golf Set"
+        - "Franklin Sports PGA Kids Tee Trainer"
+
+    - platform: "YouTube Comments"
+      channels_and_videos:
+        - "Grant Horvat Golf — family/kids content"
+        - "Grant Horvat Golf — general audience engagement"
+        - "Good Good Golf — family content"
+        - "toddler golf compilation videos"
+        - "kids first golf swing videos"
+        - "junior golf reviews"
+
+  priority_2_supporting:
+    - platform: "Golf Forums"
+      sites:
+        - "GolfWRX forums"
+        - "The Sand Trap forums"
+        - "MyGolfSpy community"
+      threads: "kids golf, junior golf, toddler golf"
+
+    - platform: "Parenting Forums"
+      sites:
+        - "BabyCenter"
+        - "What to Expect"
+        - "Mumsnet"
+      threads: "sports for toddlers, golf for kids, outdoor activities 2-5 year olds"
+
+    - platform: "Social Media"
+      targets:
+        - "Instagram — #kidsgolf #juniorgolf #toddlergolf #golfkids"
+        - "TikTok — toddler golf, kids golf, golf dad content"
+
+# BUCKET MAPPING — what to look for in each bucket
+bucket_guidance:
+  pain:
+    description: "Frustration and difficulty parents experience trying to introduce toddlers to golf"
+    signals:
+      - "Frustration with child losing interest quickly"
+      - "Difficulty getting toddler to hold club correctly"
+      - "Plastic toys that don't teach real skills"
+      - "Real clubs too heavy/long for toddlers"
+      - "Child can't make contact with ball"
+      - "Coaching frustration (verbal instructions don't work)"
+      - "Money wasted on sets that didn't work"
+      - "Guilt about pushing child too hard"
+
+  hope:
+    description: "Aspirations, dreams, and positive emotions around kids and golf"
+    signals:
+      - "Dream of playing golf together as family"
+      - "Wanting to share love of golf with kids"
+      - "Excitement when child shows interest"
+      - "Pride in child's first real swing"
+      - "Generational bonding through golf"
+      - "Golf as character-building activity"
+      - "Child development benefits of early sports"
+      - "Getting kids outside and off screens"
+
+  root_cause:
+    description: "Why current solutions fail — the underlying reasons toddlers struggle with golf"
+    signals:
+      - "Toddler cognitive limitations (can't process verbal instructions)"
+      - "Attention span too short for traditional instruction"
+      - "Hand-eye coordination still developing"
+      - "Equipment not designed for how toddlers actually learn"
+      - "Gap between toy clubs and real clubs"
+      - "No system designed for HOW toddlers learn (visual, shape-based)"
+      - "Adult coaching approach doesn't work for 2-5 year olds"
+
+  solutions_tried:
+    description: "What parents have already tried to get their toddler into golf"
+    signals:
+      - "Bought plastic toy sets (didn't work)"
+      - "Cut down adult/junior clubs"
+      - "Tried lessons (too young)"
+      - "YouTube instruction videos (didn't help)"
+      - "Took them to range (lost interest)"
+      - "Bought multiple cheap sets"
+      - "Tried different sports first"
+
+  competitor_mechanism:
+    description: "How competing products claim to solve the problem"
+    signals:
+      - "Charlie Golf Co — premium metal construction"
+      - "US Kids Golf — height-based sizing"
+      - "Littlest Golfer — lightweight intro set"
+      - "TaylorMade Junior — brand recognition"
+      - "Callaway XJ1 — scaled-down real clubs"
+      - "Competitor pricing strategies"
+      - "What competitors promise vs. reality"
+
+  villain:
+    description: "What parents blame for the problem — external forces, bad products, cultural barriers"
+    signals:
+      - "Screen time culture stealing kids from outdoor play"
+      - "Plastic toy manufacturers selling junk"
+      - "Golf industry ignoring youngest beginners"
+      - "Equipment makers focused on adults only"
+      - "Pushy sports parent culture (fear of becoming that)"
+      - "Cost of youth sports equipment"
+      - "Golf perceived as too elitist for kids"
