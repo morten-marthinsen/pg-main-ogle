@@ -1,13 +1,11 @@
 # GEMINI.md
 
-**Read WORKSPACE.md first.** It is the single source of truth for this repository — all shared rules, architecture, routing, commands, and standards live there.
+@WORKSPACE.md
 
-This file provides Gemini CLI-specific guidance for this repository.
+This file provides Gemini CLI-specific guidance for this repository. `WORKSPACE.md` above is the single source of truth for all shared rules, architecture, routing, commands, and standards.
 
 ## Gemini-Specific Notes
 
-### Agent Context Files
-
-Each agent has its own instructions file with session protocols and context rules. Navigate into the agent folder and read its documentation before starting work on that agent.
-
-**All shared rules and standards are in WORKSPACE.md. Refer to it for any questions about this repository's architecture, conventions, or workflows.**
+1. Keep this file thin. If a rule should apply across Codex, Claude, and Gemini, it belongs in `WORKSPACE.md`, not here.
+2. Read the relevant agent-specific instructions file after routing the request from `WORKSPACE.md`.
+3. Do not duplicate or override workspace policy here unless the difference is genuinely Gemini-specific.

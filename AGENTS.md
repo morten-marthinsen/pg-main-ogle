@@ -6,8 +6,7 @@ This file provides OpenAI Codex-specific guidance for this repository.
 
 ## Codex-Specific Notes
 
-### Agent Context Files
-
-Each agent has its own instructions file with session protocols and context rules. Navigate into the agent folder and read its documentation before starting work on that agent.
-
-**All shared rules and standards are in WORKSPACE.md. Refer to it for any questions about this repository's architecture, conventions, or workflows.**
+1. `AGENTS.md` is the Codex entrypoint, not the workspace rulebook. Keep shared policy in `WORKSPACE.md`.
+2. Codex should explicitly open and read `WORKSPACE.md` at session start before substantive work. Do not rely on this file alone.
+3. After routing the request from `WORKSPACE.md`, read the relevant agent-specific instructions file inside that agent folder.
+4. Use Codex-specific strengths when helpful: parallel agents for independent side tasks and worktrees for isolated parallel implementations. Do not use either if they would create overlapping write scopes or violate phase-stop discipline.

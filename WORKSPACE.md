@@ -7,65 +7,15 @@ This is the single source of truth for all AI coding tools working in this repos
 This is the **Performance Golf (PG) main repository** — a multi-project monorepo containing marketing content, AI agent systems, copywriting assets, and creative operations for Performance Golf, a direct-response golf brand.
 
 There are two top-level directories:
-- **`_performance-golf/`** — PG's operational hub: product marketing, AI agent systems, creative OS, skills/prompts, swipe files, brand assets
+- **`_performance-golf/`** — PG's operational hub: marketing OS, AI agent systems, creative OS, skills/prompts, swipe files, brand assets
 - **`rich-schefren/`** — AI training content, agent frameworks, and methodology shared by Rich Schefren (advisor/partner)
 
-## Architecture: PG Creative OS (Primary System)
-
-The core system lives at `_performance-golf/pg-creative-os/`. It is a **four-agent operating system** with non-linear data flow:
-
-```
-Orion (strategic orchestration — sits above all)
-├── Tess (intelligence — what's working, what to make next)
-│   ├──→ Veda (production — creates video assets)  [via intake queue]
-│   └──→ Neco (copy & briefs — how to say it)       [via data protocol]
-└── Neco ──→ Veda  [copy scripts feed production]
-```
-
-| Agent | Role | Runtime | Folder |
-|-------|------|---------|--------|
-| **Orion** | Strategic Chief of Staff | Advisory (docs + pipeline) | `pg-creative-os/orion-chief-of-staff/` |
-| **Tess** | Data Intelligence | Python (micro-skills + Google Sheets) | `pg-creative-os/tess-strategic-scaling-system/` |
-| **Veda** | Video Production | Node.js + TypeScript (ESM, vitest) | `pg-creative-os/veda-video-editing-agent/` |
-| **Neco** | NeuroCopy (ad copy) | Advisory (docs + reference files) | `pg-creative-os/neco-neurocopy-agent/` |
-
-**Each agent has its own instructions file with session protocols, non-negotiables, and context budget rules. Always navigate into the agent folder and read its instructions before starting work on that agent.**
-
-### Agent Routing
-
-| Request Type | Route To |
-|-------------|----------|
-| Strategic review / 30-60-90 / meeting prep / delegation | **Orion** |
-| Data analysis / performance trends / spreadsheet ops | **Tess** |
-| Create video / expand ad / hook stack | **Veda** |
-| Write ad copy / hooks / scripts / angle ideation / static image briefs | **Neco** |
-| "What should we make next?" | **Tess** → then Neco or Veda |
-
-### Tess Dashboard (Sub-project)
-
-Next.js 14 dashboard at `pg-creative-os/tess-strategic-scaling-system/tess-dashboard/`. Read-only executive view of the Strategic Scaling System data.
-
-```bash
-cd _performance-golf/pg-creative-os/tess-strategic-scaling-system/tess-dashboard
-npm run dev    # Dev server at localhost:3000
-npm run build  # Production build
-npm run lint   # ESLint
-```
-
-### Veda Commands
-
-```bash
-cd _performance-golf/pg-creative-os/veda-video-editing-agent
-npm install    # Install deps
-npm test       # Run tests (vitest)
-npm run build  # Build
-npx tsc --noEmit  # Type-check
-```
-
-## Other Key Areas
+## Key Areas
 
 | Directory | Contents |
 |-----------|----------|
+| `_performance-golf/pg-marketing-os/` | Multi-layer copywriting engine — core message, VSLs, e-comm, pages, upsells, checkout, emails, ads, advertorials, organic |
+| `_performance-golf/pg-creative-os/` | Four-agent system (Orion, Tess, Veda, Neco) — strategy, data intelligence, video production, ad copy |
 | `_performance-golf/_pg-digital-products/` | Product marketing funnels (VSLs, sales pages, quizzes) |
 | `_performance-golf/_pg-physical-products/` | Physical product launches (SF2, SPD, ONE.1, etc.) |
 | `_performance-golf/_pg-guru-content/` | Instructor content (Hank Haney, Andrew Rice) |
@@ -74,6 +24,8 @@ npx tsc --noEmit  # Type-check
 | `_performance-golf/pg-shared-resources/` | Legacy swipe files, Todd Brown training materials |
 | `_performance-golf/pg-marketing-os/copywriting-engine/` | Multi-layer copywriting skill system with quality gates |
 | `rich-schefren/` | Agent frameworks, ZenithPro systems, methodology docs |
+
+**Each system has its own documentation and instructions. Always read the system-level docs before starting work in that area.**
 
 ## Universal Rules
 
@@ -99,7 +51,7 @@ For Veda and Tess dashboard:
 2. `npm test` — zero failures (Veda)
 3. `npm run build` — clean build (Veda)
 
-No `--no-verify`. If any gate fails, halt and fix first.
+Apply these gates only when the relevant runnable project files are present in the current checkout. No `--no-verify`. If any gate fails, halt and fix first.
 
 ## Copywriting Heuristics (Learned From Draft → Final Edits)
 

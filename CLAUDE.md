@@ -6,6 +6,8 @@ This file provides Claude Code-specific guidance for this repository. All shared
 
 ## Claude-Specific Configuration
 
+1. Keep this file thin. If a rule should apply across Codex, Claude, and Gemini, it belongs in `WORKSPACE.md`, not here.
+
 ### Shared vs. Local Config (MANDATORY)
 
 This repo is shared across multiple contributors via GitHub. Everything in `.claude/` is committed and shared by default so everyone benefits from the same settings, agents, hooks, skills, and rules — including `mcp.json`, which defines shared MCP server connections. One file is gitignored because it contains machine-specific config that would be incorrect on another person's machine: `settings.local.json` (personal permissions). Never commit this file. Never add machine-specific values (localhost URLs, file paths, personal tokens) to any shared config file. If a new config file contains machine-specific values, add it to `.gitignore` before committing.
