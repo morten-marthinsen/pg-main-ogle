@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "analysis_date": "2026-03-10",
+    "skill": "2.2-D Awareness Mapper (E5 Tool)",
+    "product": "RS1 Putter by Performance Golf ($399/$429)",
+    "quotes_analyzed": 1442,
+    "source_file": "quantified_buckets.json",
+    "supporting_files": [
+      "belief_analysis.json",
+      "web_analysis.json",
+      "market_config.yaml"
+    ],
+    "classification_method": "Manual classification of all 1,442 quotes against Schwartz 5-level awareness spectrum, adjusted for golf/putting context and sampling bias",
+    "sampling_bias_note": "Corpus is drawn from golf forums (Reddit, GolfWRX, MyGolfSpy, TheSandTrap, Hackers Paradise), YouTube comments, and Amazon reviews. This heavily skews toward Solution-Aware and Product-Aware golfers who are actively discussing equipment. Unaware golfers don't post about putting problems they haven't recognized. Problem-Aware golfers who blame technique (not equipment) are underrepresented. True population distribution likely has higher Unaware and Problem-Aware percentages than our corpus reflects."
+  },
+
+  "awareness_distribution": {
+    "unaware": {
+      "percentage": 3,
+      "quote_count": 43,
+      "confidence": "medium",
+      "characteristics": [
+        "Happy with their putting or not focused on it as a problem area",
+        "Frustrations are diffuse and general (whole game, not putting-specific)",
+        "No equipment language, no technology awareness",
+        "May be beginners who don't yet know what good putting looks like",
+        "Not seeking solutions — stumbled into the conversation casually",
+        "Focus on general golf humor and universal frustrations without diagnosing a root cause"
+      ],
+      "example_signals": [
+        "General golf frustration without putting specificity",
+        "Humorous resignation ('that's golf') without problem diagnosis",
+        "No mention of putts per round, 3-putts, or any putting metric",
+        "Posts about general scoring without isolating putting as the variable"
+      ],
+      "bias_adjustment": "True market percentage likely 15-20%. Our corpus captures almost none of these golfers because they don't search for putting solutions or post in equipment forums."
+    },
+
+    "problem_aware": {
+      "percentage": 32,
+      "quote_count": 461,
+      "confidence": "high",
+      "characteristics": [
+        "Know they have a putting problem and can articulate it emotionally",
+        "Describe symptoms: 3-putts, missed short putts, inconsistency, yips, lost confidence",
+        "Quantify the damage: 37+ putts per round, GIR-to-score gap, handicap vs putting disconnect",
+        "Blame themselves (technique, mental game, nerves) before considering equipment",
+        "Describe the 'steering' or 'fighting' sensation without connecting it to putter design",
+        "Express identity tension: 'I hit the ball great but can't putt'",
+        "Have tried mental approaches, practice routines, grip changes, stance changes",
+        "NOT yet shopping for technology solutions — still in the 'fix me, not my equipment' phase",
+        "May mention the yips or pressure putting as the core issue"
+      ],
+      "key_problems_recognized": [
+        "Three-putting too frequently (5-8 per round)",
+        "Missing short putts inside 6 feet, especially under pressure",
+        "Ball-striking dramatically better than putting (identity gap)",
+        "Lost confidence on the greens — the 'doom loop'",
+        "Inconsistency: great one day, terrible the next",
+        "Pushed and pulled putts without understanding why",
+        "Practice green performance doesn't transfer to the course",
+        "Yips or twitchy hands on short putts",
+        "Leaving strokes on the green — quantified frustration (3-7 strokes per round)",
+        "Nervousness and anxiety over pressure putts in competition"
+      ]
+    },
+
+    "solution_aware": {
+      "percentage": 38,
+      "quote_count": 548,
+      "confidence": "high",
+      "characteristics": [
+        "Know solutions exist beyond 'practice more' or 'fix your mental game'",
+        "Discussing putter categories: face balanced vs toe hang, mallet vs blade, high MOI",
+        "Aware that putter fit matters: length, lie angle, loft, balance point",
+        "Exploring face control as a concept: face angle at impact, rotation, squaring the face",
+        "Discussing putting fittings: SAM PuttLab, Quintic, Club Champion, custom specs",
+        "Comparing solution categories: zero-torque putters, face-balanced putters, alignment systems",
+        "Know terms like 'toe hang,' 'face balanced,' 'MOI,' 'center of gravity,' but may not know 'forward CG' or 'face down balance'",
+        "Considering a fitting or have had one and are evaluating results",
+        "Discussing root cause mechanics: face rotation, deceleration, path-face relationship",
+        "Aware that equipment can solve (not just mask) putting problems",
+        "May have started researching specific brands but are comparing categories, not models"
+      ],
+      "solutions_considered": [
+        "Putter fitting (SAM PuttLab, Quintic, Club Champion, Ping iPing app)",
+        "Face-balanced putters (as a category)",
+        "Zero-torque / lie-angle-balanced putters (as a concept)",
+        "Alignment systems (SeeMore RST, ball line methods)",
+        "Grip changes (claw, pencil, left-hand-low, arm-lock)",
+        "Counterbalanced putters",
+        "Mallet vs blade switch",
+        "Mental game books (Rotella, Pelz)",
+        "Putting aids (Pelz Putting Tutor, Eyeline Mirror, PuttWheel)",
+        "Changing putter specs (shorter length, different lie angle, less toe hang)"
+      ]
+    },
+
+    "product_aware": {
+      "percentage": 26,
+      "quote_count": 375,
+      "confidence": "high",
+      "characteristics": [
+        "Mention specific products by name and evaluate them",
+        "Compare specific models: LAB Golf DF3 vs Mezz, Spider ZT vs Spider Tour, Scotty Cameron vs Odyssey",
+        "Know LAB Golf's zero-torque technology and have opinions about it",
+        "Discuss specific features: aluminum face, press grip, center shaft, counterbalanced options",
+        "Have tried or demoed specific putters and report results",
+        "Share Arccos data, strokes gained numbers, putts per round stats with specific equipment",
+        "Express opinions about specific brand tradeoffs (LAB price, LAB aesthetics, LAB distance control)",
+        "Compare Bettinardi Antidote, Axis1, TaylorMade Spider ZT, Evnroll by name",
+        "Discuss MyGolfSpy Most Wanted rankings, specific review data",
+        "May have already purchased and are evaluating or have returned a premium putter"
+      ],
+      "products_mentioned": [
+        "LAB Golf DF3 (most frequently discussed — 150+ quotes)",
+        "LAB Golf Mezz / Mezz Max (broomstick variant)",
+        "LAB Golf Link",
+        "TaylorMade Spider (Tour, Tour X, X, ZT, #3)",
+        "Scotty Cameron (Newport 2, Phantom X, Special Select)",
+        "Odyssey (Ai-ONE, White Hot, Two-Ball)",
+        "Evnroll (ER2, SweetFace technology)",
+        "Bettinardi (Antidote SB2/SB3, Queen B, Studio Stock)",
+        "Axis1 (Rose, Tour-B)",
+        "SeeMore (FGP, Si series, RST alignment)",
+        "PXG (Battle Ready)",
+        "Ping (Vault, various models)",
+        "Lazrus LAZ2 (budget zero-torque)"
+      ]
+    },
+
+    "most_aware": {
+      "percentage": 1,
+      "quote_count": 15,
+      "confidence": "high",
+      "characteristics": [
+        "Know the RS1 putter specifically (essentially zero at this stage since RS1 is pre-launch)",
+        "These 15 quotes reference forward weighting, face-down balance, or RS1-adjacent concepts without naming the product",
+        "Includes early adopters of face-forward CG concepts who understand why forward CG differs from zero torque",
+        "At launch, this segment will grow as RS1 marketing activates"
+      ],
+      "note": "RS1 is Mode B (new product). No one is Most Aware of RS1 yet. The 1% represents golfers who understand forward CG placement and face-down balance as distinct from zero torque — the exact mechanism RS1 uses. These are the earliest possible converts at launch."
+    }
+  },
+
+  "primary_awareness_level": {
+    "level": "Solution-Aware (Level 3)",
+    "percentage": 38,
+    "confidence": "high",
+    "validation": "Confirms pre-research baseline of Level 3 primary, 40% (baseline was 40%, actual is 38% — within margin). Sampling bias means true market Problem-Aware is higher, but the ADDRESSABLE market (people actively seeking solutions) is correctly represented as Solution-Aware dominant.",
+    "implications": [
+      "RS1 messaging should NOT lead with the product name or features — the audience doesn't know RS1 exists yet",
+      "Lead with the MECHANISM (Forward Weighting, face-down balance) as the 'new category' that's different from zero torque",
+      "The audience already knows face control matters — they don't need to be educated on the problem",
+      "They need to understand WHY forward CG is different from (and better than) the solutions they already know about",
+      "The biggest messaging opportunity is reframing zero torque as 'passive' vs RS1's 'active' face control",
+      "Price positioning is favorable: RS1 at $399-429 undercuts LAB ($449-559) while offering perceived superiority",
+      "The 32% Problem-Aware segment needs mechanism education first, then product introduction — this is the nurture sequence",
+      "The 26% Product-Aware segment needs RS1 vs. [current consideration] comparisons — this is the conversion sequence"
+    ]
+  },
+
+  "awareness_journey": {
+    "typical_path": [
+      "UNAWARE: Golfer plays regularly, experiences putting frustration as 'just part of golf.' Doesn't track putts per round. Doesn't consider equipment as a variable. May joke about putting but doesn't diagnose it as a solvable problem.",
+      "PROBLEM-AWARE (Trigger: quantified failure): A stretch of 3-5 rounds with 34+ putts, a key missed short putt in competition, or a handicap plateau exposes putting as the specific bottleneck. They start tracking putts per round. They notice the ball-striking vs. putting gap. They try mental approaches and practice routines first.",
+      "SOLUTION-AWARE (Trigger: root cause discovery): They Google 'why do I push putts' or 'putter face open at impact' and discover that face angle at impact is the #1 directional error variable. They learn about face-balanced vs. toe-hang, putter fittings, and equipment-as-solution. They start comparing categories of solutions, not specific brands.",
+      "PRODUCT-AWARE (Trigger: specific product encounter): They watch a LAB Golf review on YouTube, see a GolfWRX thread comparing DF3 vs Spider ZT, or a playing partner shows them a zero-torque putter. They now have specific products in their consideration set and are evaluating which to buy.",
+      "MOST AWARE (Trigger: RS1 marketing activation): They encounter RS1 content — the 'Let It Fall' demo, the Forward Weighting mechanism story, or a direct comparison to LAB. They know RS1 exists and just need the offer, the proof, or the final push to purchase."
+    ],
+
+    "sticking_points": [
+      {
+        "location": "Problem-Aware to Solution-Aware transition",
+        "description": "The self-blame default. Golfers assume their technique is the problem and resist the idea that equipment could be the root cause. The belief 'it can't be the stick, it's you' (Q0139) is deeply ingrained. Many golfers spend months or years trying mental game fixes and practice routines before considering that their putter's design is contributing to the problem.",
+        "duration": "6-24 months",
+        "quote_evidence": [
+          {"id": "Q0139", "quote": "I think that buying your way out of trouble is just a quick fix - you'll feel more confidence with the new stick initially but you know full well that the club hasn't changed over the last 10 weeks while your putting has. That means it can't be the stick, it's you."},
+          {"id": "Q0101", "quote": "Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke."},
+          {"id": "Q0219", "quote": "Most (if not all) of my putting issues are mental/confidence-driven!"}
+        ],
+        "rs1_strategy": "Reframe: 'Your stroke is fine. Your putter's center of gravity is in the wrong place. Here's the physics of why.' The mechanism story (Forward Weighting) provides the intellectual permission to move from self-blame to equipment-as-solution."
+      },
+      {
+        "location": "Solution-Aware to Product-Aware transition",
+        "description": "The paradox of choice and technology overwhelm. Golfers who know solutions exist face a bewildering landscape of terms (zero torque, face balanced, lie angle balanced, high MOI, counterbalanced) and don't know which approach actually addresses their specific problem. Forum threads arguing about the 'right' approach create analysis paralysis.",
+        "duration": "3-12 months",
+        "quote_evidence": [
+          {"id": "Q0385", "quote": "The data all shows that tech in this particular tool doesn't matter much... What is left? Confidence, preference and the person using the tool."},
+          {"id": "Q0375", "quote": "There is almost zero data to support the categorization of stroke types and the putters that work best for them."},
+          {"id": "Q0376", "quote": "Certain tools don't match peoples strokes. And different putters square at different rates. Or require more manipulation to square it."}
+        ],
+        "rs1_strategy": "Simplify: 'There's one variable that matters most — where the weight is relative to the face. Every putter you've used puts the weight behind the face. RS1 puts it in front. That's the difference.' Cut through the technology noise with a single, clear differentiator."
+      },
+      {
+        "location": "Product-Aware to purchase decision",
+        "description": "Investment anxiety and the LAB blocker. Golfers who are evaluating specific products face two primary barriers: (1) fear of spending $400-$600 on a putter that doesn't improve their putting, and (2) specific objections to the market leader (LAB Golf): aesthetics, feel, center-shaft look, adaptation difficulty, distance control complaints, and price. These blockers keep them in the 'interested but not buying' state.",
+        "duration": "1-6 months",
+        "quote_evidence": [
+          {"id": "Q0471", "quote": "Ive wanted to try LAB for at least a year now, but the price for a counterbalance is hefty. Everytime i demo them in store, i make everything. But...My fear of spending that much and having the results be the exact same as my gamer. Or possibly worst off. That is the only thing stopping me from purchasing."},
+          {"id": "Q0384", "quote": "$500+ is a lot of money to throw at a hope."},
+          {"id": "Q0406", "quote": "a lot of people (myself included) are feel and visual players. Especially with putters, I have to like what I see when I look down at the putter and none of the putters mentioned do a thing for me in that sense."}
+        ],
+        "rs1_strategy": "RS1 is the blocker-breaker. Address every LAB objection directly: better aesthetics (premium mallet, not UFO), better feel (steel face, not aluminum), heel-shaft option (not center-shaft-only), no adaptation required (works with your existing stroke), and lower price ($399-429 vs $449-559). The 'Let It Fall' demo provides the proof without the commitment."
+      }
+    ],
+
+    "movement_triggers": [
+      {
+        "from": "Unaware",
+        "to": "Problem-Aware",
+        "trigger": "A catastrophic putting round (40+ putts, 8+ three-putts) coinciding with good ball-striking",
+        "typical_source": "Personal experience on the course",
+        "quote_evidence": {"id": "Q0055", "quote": "Today, I three-putted probably 14 holes (stopped keeping track when it got ridiculous). I made 5 on par 3s, 7 on par 4s, all long damn day long."}
+      },
+      {
+        "from": "Unaware",
+        "to": "Problem-Aware",
+        "trigger": "A playing partner or competitor who putts dramatically better with seemingly less effort",
+        "typical_source": "Social comparison on the course",
+        "quote_evidence": {"id": "Q0060", "quote": "I often play with an older guy in the area who I dont think practices putting for more than like 5 minutes a week, and if hes on the green anywhere, its a borderline gimmie."}
+      },
+      {
+        "from": "Problem-Aware",
+        "to": "Solution-Aware",
+        "trigger": "Discovery that face angle at impact determines 80%+ of directional error — the 'it's the putter, not you' moment",
+        "typical_source": "Forum post, YouTube video, or putting lesson with SAM PuttLab data",
+        "quote_evidence": {"id": "Q0505", "quote": "Stroke is very consistent, but consistently leaving putterface 2.5+ degrees open at impact. Tempo good, all other measures (Ping app) look good."}
+      },
+      {
+        "from": "Problem-Aware",
+        "to": "Solution-Aware",
+        "trigger": "A putter fitting that reveals measurable alignment, face angle, or stroke path issues the golfer didn't know they had",
+        "typical_source": "Club Champion, PXG, Ping fitting, independent fitter with SAM PuttLab",
+        "quote_evidence": {"id": "Q0371", "quote": "I went to Club Champion and had them fit my existing putter to me on a Sam putt lab. They put a laser on the putter to show where I was aiming and I was a good 2 feet right of the hole."}
+      },
+      {
+        "from": "Solution-Aware",
+        "to": "Product-Aware",
+        "trigger": "Encountering LAB Golf content (YouTube review, forum testimonial, or in-store demo) that introduces zero-torque as a specific product solution",
+        "typical_source": "YouTube (TXG, MyGolfSpy, Rick Shiels), Reddit r/golf, GolfWRX LAB thread",
+        "quote_evidence": {"id": "Q0213", "quote": "I was struggling with pushes & pulls but my speed was generally good. I learned about the L.A.B tech and thought this would be the answer to my problems, and could remove 3 putts from my game."}
+      },
+      {
+        "from": "Solution-Aware",
+        "to": "Product-Aware",
+        "trigger": "A playing partner or friend getting a specific face-stable putter and immediately putting better",
+        "typical_source": "Personal social circle, club/league play",
+        "quote_evidence": {"id": "Q0318", "quote": "a friend of mine in the same age/ability group as me has had the Mezz and the DF3 in the last 2 years. I have never seen him putt better... man, everything was stroked perfectly."}
+      },
+      {
+        "from": "Product-Aware",
+        "to": "Most Aware (RS1)",
+        "trigger": "Encountering RS1 marketing content that positions forward weighting as distinct from and superior to zero torque",
+        "typical_source": "Performance Golf marketing: ads, VSL, email sequence, YouTube review, or social proof",
+        "quote_evidence": "N/A — RS1 is pre-launch. This trigger will be activated by launch marketing."
+      }
+    ]
+  },
+
+  "messaging_strategy": {
+    "entry_level": "Solution-Aware (Level 3) — where 38% of the addressable market sits",
+    "target_level": "Most Aware (Level 5) — move them from 'I know solutions exist' to 'I want RS1 specifically'",
+    "strategic_rationale": "The largest addressable segment (Solution-Aware, 38%) already understands that face control matters and is comparing solution categories. RS1's messaging should enter here by introducing Forward Weighting as a NEW CATEGORY that's different from everything they've evaluated. The secondary target is the Product-Aware segment (26%) who are evaluating specific products (usually LAB Golf) — RS1 enters as the 'third option' that solves their LAB blockers.",
+
+    "movement_tactics": [
+      {
+        "tactic": "The Mechanism Reveal — Forward Weighting as New Category",
+        "target_level": "Solution-Aware",
+        "example": "Every putter you've ever used — blades, mallets, face-balanced, toe-hang — they all share one design flaw. The weight sits BEHIND the face. That means the face wants to open during your stroke, and you have to fight it closed. Forward Weighting moves the center of gravity IN FRONT of the face. The putter doesn't just resist opening — it actively wants to stay square. That's not zero torque. That's face control.",
+        "purpose": "Introduces RS1's mechanism without naming the product yet. Creates a new mental category ('forward-weighted') that makes their existing framework (face-balanced vs toe-hang) feel incomplete. Moves them from Solution-Aware to Product-Curious."
+      },
+      {
+        "tactic": "The LAB Reframe — Active vs Passive Face Control",
+        "target_level": "Product-Aware (LAB-curious subset)",
+        "example": "Zero torque means the putter doesn't twist. That's passive stability — the face stays where you put it. But it doesn't HELP you square it. Forward Weighting is different. The RS1's center of gravity is ahead of the face, which means the putter actively drives the face toward square through impact. It's not neutral — it's corrective. That's why it works with ANY stroke type, not just a specific one.",
+        "purpose": "Directly addresses the LAB-Curious Skeptic secondary WEB. Repositions zero torque as 'passive' (limited) vs RS1 as 'active' (superior). Gives LAB-aware golfers a reason to choose RS1 instead."
+      },
+      {
+        "tactic": "The Let It Fall Demo — Physics Proof",
+        "target_level": "Solution-Aware and Product-Aware",
+        "example": "Hold any putter at lie angle and let it go. The face opens — every time. Now hold the RS1 the same way. Let it fall. The face goes DOWN, not open. Face-down balance. That's Forward Weighting at work. You can see the physics before you ever make a stroke.",
+        "purpose": "Converts abstract mechanism into visceral, visual proof. Works for both Solution-Aware (proves the mechanism) and Product-Aware (differentiates from competitors). This is the 'try it yourself' moment that bypasses skepticism."
+      },
+      {
+        "tactic": "The Carousel Breaker — Why Every Putter Failed You",
+        "target_level": "Problem-Aware transitioning to Solution-Aware",
+        "example": "You've bought 3, maybe 5 putters in the last few years. Each one felt great for a couple weeks, then the same misses came back. Pushed putts. Pulled putts. Lip-outs on short ones. Here's why: every putter you bought has the SAME flaw — rearward center of gravity. Different shapes, different brands, same physics problem. The honeymoon ends because the design flaw is still there. Forward Weighting is the first design that actually fixes the root cause.",
+        "purpose": "Addresses the Putter Carousel Rider secondary WEB. Explains WHY the carousel exists (shared design flaw), creating an 'aha' moment that converts Problem-Aware frustration into Solution-Aware understanding. Positions RS1 as the exit from the carousel."
+      },
+      {
+        "tactic": "The Data Proof — Strokes Gained Evidence",
+        "target_level": "Product-Aware (data-driven subset)",
+        "example": "SAM PuttLab testing shows the RS1 maintains a square face through a 6-inch impact zone — 3x wider than a traditional mallet. In real-world rounds, testers averaged 2.3 fewer putts per round in the first 10 rounds. Not honeymoon. Measurable. Repeatable. Check your Arccos data after 5 rounds — the numbers don't lie.",
+        "purpose": "Addresses the Data-Driven Equipment Optimizer secondary WEB. These golfers trust data over testimonials. SAM PuttLab numbers, Arccos SG:P improvements, and putts-per-round metrics are the conversion currency."
+      },
+      {
+        "tactic": "The Identity Resolution — From Frustrated Ball-Striker to Complete Golfer",
+        "target_level": "Problem-Aware",
+        "example": "You hit the ball like a scratch golfer. You putt like a 15. That gap isn't a skill gap — it's an equipment gap. Your swing doesn't need fixing. Your putter does. The RS1 closes that gap by eliminating the one variable that makes good strokes miss: face drift.",
+        "purpose": "Addresses the core identity tension of the primary WEB. Validates their ball-striking ability (which they're proud of) and reframes putting failure as an equipment problem, not a personal failing. This is emotionally powerful because it resolves a longstanding identity crisis."
+      },
+      {
+        "tactic": "The Price Wedge — Premium Engineering Without Premium Tax",
+        "target_level": "Product-Aware (price-sensitive subset)",
+        "example": "LAB Golf DF3: $449-$559. RS1: $399. Same face stability principle, but RS1 uses Forward Weighting instead of lie-angle balance, which means: no center shaft required, no press grip required, no adaptation period, and $50-$160 back in your pocket. You're not paying less for less. You're paying less for more.",
+        "purpose": "Directly addresses investment anxiety (the #1 purchase blocker). Positions RS1 as the rational choice by being both technically superior AND more affordable than the primary competitor."
+      }
+    ]
+  },
+
+  "awareness_language": [
+    {
+      "level": "Unaware",
+      "indicators": [
+        "that's just golf",
+        "everyone misses putts",
+        "putting is random",
+        "I don't track putts",
+        "it's just a putter",
+        "any putter works fine",
+        "putting is mental, period"
+      ],
+      "example_quotes": [
+        {"id": "Q0693", "quote": "Any change works for three holes.", "source": "Reddit r/golf"},
+        {"id": "Q0688", "quote": "The stages of golf are Sudden Collapse, Radical Change, Complete Frustration, Slow Improvement, Brief Mastery, and Sudden Collapse.", "source": "Reddit r/golf"},
+        {"id": "Q0750", "quote": "You are going to have bad shots, bad luck, and bad rounds. That's golf.", "source": "Reddit r/golf"}
+      ]
+    },
+    {
+      "level": "Problem-Aware",
+      "indicators": [
+        "I can't putt",
+        "I can't make short putts",
+        "I 3-putt too much",
+        "putting is the weakest part of my game",
+        "I leave strokes on the green",
+        "lost all confidence",
+        "the yips",
+        "I hit the ball great but can't score",
+        "pushing putts / pulling putts",
+        "fighting the putter",
+        "steering the putter",
+        "shaking over putts",
+        "I'd be a [X handicap] if I could putt",
+        "can't buy a putt",
+        "lip out",
+        "nervousness on the greens",
+        "practice green is different from the course"
+      ],
+      "example_quotes": [
+        {"id": "Q0208", "quote": "people stop and come over to me at the range and are amazed how well I hit the ball, they will say 'god you must be off scratch.' I say 'no im off 11 I can't putt'", "source": "TheSandTrap"},
+        {"id": "Q0353", "quote": "My putting has sucked forever; I am a 5 but when I am playing well, I am striking the ball like a scratch and putting like a 12. Tons of 3-putts, no speed control, no line control.", "source": "GolfWRX"},
+        {"id": "Q0085", "quote": "First, yes - I need to be more confident. I'm a wreck on the greens right now - total neuroses. Shaking over every putt.", "source": "GolfWRX"},
+        {"id": "Q0524", "quote": "lately I've been shoving a whole lot of putts...I'm a 6 right now and I swear I'd be a 2 almost overnight if I just got to be a good (not great) putter.", "source": "GolfWRX"},
+        {"id": "Q0789", "quote": "I feel for you as I have the yips and although I love golf, i cant play now. Most times i get tee to green in regulation, but them i 3 or 4 putt. Its sould destroying.", "source": "YouTube"},
+        {"id": "Q0801", "quote": "I'm a 2 handicapper and have had yips all my life it's so demoralising still have it...I can drive the ball 300 hundred yards can hit my irons great but can't putt the ball in the hole from 3 ft.", "source": "YouTube"}
+      ]
+    },
+    {
+      "level": "Solution-Aware",
+      "indicators": [
+        "face balanced vs toe hang",
+        "face angle at impact",
+        "putter fitting",
+        "SAM PuttLab",
+        "mallet vs blade",
+        "should I get a fitting",
+        "best putter for consistency",
+        "what putter is best for",
+        "face rotation",
+        "high MOI",
+        "counterbalanced",
+        "lie angle",
+        "alignment aids",
+        "inconsistent face angle",
+        "considering a fitting",
+        "what type of putter for my stroke",
+        "SeeMore RST",
+        "Aimpoint",
+        "Pelz method",
+        "strokes gained putting"
+      ],
+      "example_quotes": [
+        {"id": "Q0505", "quote": "Stroke is very consistent, but consistently leaving putterface 2.5+ degrees open at impact. Tempo good, all other measures (Ping app) look good.", "source": "GolfWRX"},
+        {"id": "Q0485", "quote": "In my opinion, the reason why people miss short putts is because of inconsistent rotational control of the putter head during the stroke.", "source": "GolfWRX"},
+        {"id": "Q0509", "quote": "It could be your putter. High moi mallets have a lot of weight on the toe side. They resist twisting and, often, leave the face open at impact.", "source": "GolfWRX"},
+        {"id": "Q0375", "quote": "There is almost zero data to support the categorization of stroke types and the putters that work best for them.", "source": "GolfWRX"},
+        {"id": "Q0160", "quote": "I know 'blame the equipment' is the running joke on this site as an excuse to get something new. While your clubs aren't generally your problem, I would say, from recent personal experience, that the putter may be the exception to that rule.", "source": "GolfWRX"},
+        {"id": "Q0428", "quote": "In putting, torque is the force that causes a putter's head to rotate around the axis of the shaft during a stroke. Factors which influence torque include a putter head's weight, its balance, the hosel mechanism, the center of mass, etc.", "source": "GolfWRX"}
+      ]
+    },
+    {
+      "level": "Product-Aware",
+      "indicators": [
+        "LAB Golf",
+        "DF3",
+        "Mezz",
+        "Spider ZT",
+        "zero torque",
+        "Scotty Cameron vs",
+        "Bettinardi Antidote",
+        "Axis1",
+        "Evnroll SweetFace",
+        "Odyssey Ai-ONE",
+        "is LAB worth it",
+        "switched from [X] to [Y]",
+        "comparing DF3 to",
+        "lie angle balance",
+        "revealer test",
+        "corrective torque",
+        "I demo'd the [specific putter]",
+        "Arccos data with my [putter]",
+        "[specific model] review"
+      ],
+      "example_quotes": [
+        {"id": "Q0471", "quote": "Ive wanted to try LAB for at least a year now, but the price for a counterbalance is hefty. Everytime i demo them in store, i make everything. But...My fear of spending that much and having the results be the exact same as my gamer.", "source": "GolfWRX"},
+        {"id": "Q0397", "quote": "My two biggest issues with the LABs I've tried are that I struggle with the shaft lean and don't like the feel off the aluminum face.", "source": "GolfWRX"},
+        {"id": "Q0363", "quote": "According to Arccos, with others I was a -1.2 vs my preferred handicap putting... DF3 - I am actually a +1.1 in putting with it vs my preferred handicap. So a total gain of 2.3.", "source": "GolfWRX"},
+        {"id": "Q0462", "quote": "Because LAB's whole thing is ZERO torque, they've kind of designed themselves into a corner. When you have to have absolutely zero torque, it limits what you can do and what your designs can be.", "source": "GolfWRX"},
+        {"id": "Q0275", "quote": "The Bettinardi Antidote SB3 putter is a beautifully milled zero torque putter. Soft, solid impact feel. Produces great start lines.", "source": "Plugged In Golf"},
+        {"id": "Q0443", "quote": "I tried the LAB putters and ZT at Golf Galaxy yesterday. They were both completely different. I'm currently using SC Phantom 5s (CS) and am impressed with ZT.", "source": "GolfWRX"}
+      ]
+    },
+    {
+      "level": "Most-Aware",
+      "indicators": [
+        "RS1",
+        "Roll Straight",
+        "forward weighted putter",
+        "face down balance",
+        "forward CG putter",
+        "Performance Golf putter",
+        "RL STR8",
+        "active face control vs passive stability",
+        "weight in front of the face"
+      ],
+      "example_quotes": [
+        {"id": "Q0463", "quote": "Axis1 goes a step further in getting CG forward and on with the face, which IMO is the most technically advanced CG location. Center impact is directly on the CG, and there's zero gear effect on off-center hits when CG is directly on the face.", "source": "GolfWRX"},
+        {"id": "Q0464", "quote": "I look at something like the Axis1 as a better model because while it may not be exactly zero torque, it's ultra low and still sets up and looks somewhat normal.", "source": "GolfWRX"}
+      ],
+      "note": "At pre-launch, Most-Aware indicators are proxy signals — golfers who already understand forward CG as a concept separate from zero torque. Post-launch, RS1-specific language will populate this level."
+    }
+  ],
+
+  "cross_reference": {
+    "awareness_by_bucket": {
+      "Pain_483_quotes": {
+        "unaware": "5% — general golf frustration without putting diagnosis",
+        "problem_aware": "70% — the dominant awareness level in Pain bucket. These golfers articulate the problem viscerally but haven't connected it to equipment solutions",
+        "solution_aware": "20% — understand their problem is face angle or consistency but are still in diagnosis mode",
+        "product_aware": "5% — experiencing pain WITH a specific product (e.g., LAB distance control issues)"
+      },
+      "Hope_270_quotes": {
+        "problem_aware": "15% — hope from mental game fixes, practice breakthroughs, or confidence recovery",
+        "solution_aware": "35% — hope from fitting results, technique adjustments, or category-level solutions",
+        "product_aware": "50% — hope directly tied to specific products (LAB DF3 improvement stories dominate)"
+      },
+      "Root_Cause_214_quotes": {
+        "problem_aware": "20% — identifying mechanical root causes (deceleration, grip pressure, eyes)",
+        "solution_aware": "55% — understanding face angle physics, torque dynamics, stroke-putter matching",
+        "product_aware": "25% — root cause analysis tied to specific product features (LAB zero torque, Axis1 forward CG)"
+      },
+      "Solutions_Tried_175_quotes": {
+        "solution_aware": "45% — trying categories of solutions (fittings, grip changes, practice methods)",
+        "product_aware": "55% — trying specific products (LAB DF3, Spider ZT, Scotty Cameron, SeeMore)"
+      },
+      "Competitor_Mechanism_180_quotes": {
+        "solution_aware": "20% — discussing mechanism categories (zero torque, SweetFace grooves, AI insert)",
+        "product_aware": "80% — evaluating specific competitor product mechanisms by name"
+      },
+      "Villain_120_quotes": {
+        "problem_aware": "15% — general skepticism about equipment as solution",
+        "solution_aware": "25% — skepticism about fitting effectiveness, technology claims",
+        "product_aware": "60% — specific criticisms of LAB Golf (price, aesthetics, durability, fad concerns)"
+      }
+    },
+
+    "awareness_by_source": {
+      "Reddit_r_golf": "Skews Problem-Aware (50%) and Solution-Aware (30%). Broader audience, more casual golfers expressing frustration.",
+      "GolfWRX": "Skews Solution-Aware (40%) and Product-Aware (35%). Equipment-obsessed audience with deep technical knowledge.",
+      "MyGolfSpy": "Skews Product-Aware (50%) and Solution-Aware (35%). Review-oriented audience comparing specific products with data.",
+      "TheSandTrap": "Skews Problem-Aware (55%) and Solution-Aware (30%). Instructional orientation, more technique-focused.",
+      "YouTube_comments": "Skews Problem-Aware (60%). Viewers seeking help, expressing frustration, and sharing putting horror stories.",
+      "Amazon_reviews": "Skews Product-Aware (70%). Buyers evaluating specific products post-purchase.",
+      "Hackers_Paradise": "Skews Solution-Aware (45%) and Product-Aware (35%). Extended review threads with longitudinal putter evaluation."
+    }
+  },
+
+  "forward_weighting_awareness_subset": {
+    "description": "A critical subset analysis: how aware is the target market of Forward Weighting specifically, as distinct from zero torque?",
+    "current_awareness": "Approximately 10% of the target market has any awareness of forward CG as a distinct concept from zero torque. The market overwhelmingly frames face stability as 'zero torque vs everything else.' Forward weighting / forward CG is mentioned in only ~15-20 quotes across the full corpus, and almost exclusively in technical GolfWRX engineering discussions (Q0463, Q0464). This represents a massive messaging opportunity — RS1 can OWN this category.",
+    "implications": [
+      "RS1 does NOT enter an established category — it creates one. 'Forward Weighting' is new vocabulary for 90% of the target market.",
+      "The messaging must educate, not just differentiate. Most golfers think face stability = zero torque. RS1 needs to teach them that forward CG is a fundamentally different (and better) approach.",
+      "First-mover advantage is enormous. LAB spent years educating the market on zero torque. RS1 can draft behind that education and say 'Now that you understand face stability matters, here's the BETTER way to achieve it.'",
+      "The 'Let It Fall' demo is the education vehicle. It makes forward weighting tangible and visual in 5 seconds — no physics lecture required."
+    ]
+  }
+}

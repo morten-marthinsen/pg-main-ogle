@@ -17,6 +17,21 @@
 
 ---
 
+## Research Tool Strategy (Skill 01 / Deep Research)
+
+Deep Research uses a **4-tool stack** — each tool has a distinct role:
+
+| Tool | Role | Best For |
+|------|------|----------|
+| **Exa** | Discovery + synthesis | "Find the most relevant sources about X" — semantic search finds high-quality URLs, Deep Researcher runs autonomous multi-step exploration |
+| **Perplexity** | Targeted Q&A | "What are common complaints about X?" — fast synthesized answers with citations for specific questions |
+| **Firecrawl** | Raw extraction | "Scrape this URL / search + scrape" — extracts full page content from known URLs, crawls multi-page sites |
+| **Apify** | Platform scraping | "Scrape Reddit / YouTube / Amazon reviews" — specialized actors for platforms that block generic scrapers |
+
+**Workflow:** Use Exa + Perplexity to discover and synthesize → then Firecrawl + Apify to extract verbatim quotes from the best sources.
+
+---
+
 ## Tool-to-Skill Mapping
 
 ### Firecrawl (Web Scraping)
@@ -36,7 +51,7 @@
 
 ### Apify Actors
 
-**Skills that use it:** A01 (Ad Intelligence — Facebook Ad Library), S09 (Caption Writing)
+**Skills that use it:** 01 (Deep Research), A01 (Ad Intelligence — Facebook Ad Library), S09 (Caption Writing)
 
 **Tools:**
 - `search-actors` — Find relevant actors in Apify Store
@@ -45,6 +60,52 @@
 - `fetch-actor-details` — Get actor input schema
 
 **Load via:** `ToolSearch("apify")` at Layer 0
+
+---
+
+### Exa (AI-Native Search + Deep Research)
+
+**Skills that use it:** 01 (Deep Research), A01 (Ad Intelligence)
+
+**Tools:**
+- `web_search_exa` — Semantic search across the web (meaning-based, not just keywords)
+- `crawling_exa` — Crawl and extract content from discovered URLs
+- `deep_researcher_start` — Launch autonomous multi-step deep research on a topic
+- `deep_researcher_check` — Check status / retrieve deep research results
+- `company_research_exa` — Company intelligence (funding, tech stack, competitors)
+- `linkedin_search_exa` — Search LinkedIn profiles and companies
+- `get_code_context_exa` — Search code repositories and technical documentation
+
+**When to use:** Use Exa to DISCOVER what to scrape (semantic search finds high-relevance sources), then Firecrawl/Apify to extract full content. Use Deep Researcher for broad synthesis tasks that benefit from autonomous multi-step exploration.
+
+**Load via:** `ToolSearch("exa")` at Layer 0
+
+---
+
+### Perplexity (AI-Synthesized Search)
+
+**Skills that use it:** 01 (Deep Research)
+
+**Tools:**
+- Perplexity search tools — Returns synthesized answers with source citations
+
+**When to use:** Use Perplexity for targeted Q&A where you need a synthesized answer fast ("What are common complaints about LAB Golf putters?", "How does lie angle balance work in putters?"). Returns a coherent answer with linked citations. Complements Exa (broad exploration) and Firecrawl/Apify (raw extraction).
+
+**Load via:** `ToolSearch("perplexity")` at Layer 0
+
+---
+
+### Ref (Documentation Search)
+
+**Skills that use it:** Any skill needing library/framework/API documentation
+
+**Tools:**
+- `ref_search_documentation` — Search docs for a library or framework
+- `ref_read_url` — Read a specific documentation URL
+
+**When to use:** Reference tool for development tasks. Not typically used during marketing pipeline execution, but available when building or debugging tools/agents.
+
+**Load via:** `ToolSearch("ref")` at Layer 0
 
 ---
 
@@ -105,7 +166,7 @@ The majority of skills use NO external MCP tools. These skills should NOT trigge
 
 | Engine | Skills WITH MCP Tools | Skills WITHOUT |
 |--------|----------------------|----------------|
-| Foundation (00-09) | 01 (Research) | 00, 02-09 |
+| Foundation (00-09) | 01 (Research: Firecrawl, Apify, Exa, Perplexity) | 00, 02-09 |
 | Long-form (10-20) | None | 10-20 |
 | E-Commerce (EC-00-06) | None | EC-00 to EC-06 |
 | Upsell (U0-U5) | None | U0-U5 |

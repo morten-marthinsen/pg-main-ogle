@@ -1,0 +1,843 @@
+{
+  "metadata": {
+    "compilation_date": "2026-03-10",
+    "skill": "3.1-B Evidence Compiler",
+    "opportunities_compiled": 16,
+    "total_evidence_points": 847,
+    "source_files_processed": 18,
+    "source_files": [
+      "layer-3-outputs/ranked_opportunities.json",
+      "layer-2-outputs/quantified_buckets.json",
+      "layer-2-outputs/pattern_analysis.json",
+      "layer-2-outputs/theme_synthesis.json",
+      "layer-2-outputs/competitor_analysis.json",
+      "layer-2-outputs/belief_analysis.json",
+      "layer-2-outputs/villain_analysis.json",
+      "layer-2-outputs/mechanism_inventory.json",
+      "layer-2-outputs/proof_inventory.json",
+      "layer-2-outputs/now_after_grid.json",
+      "layer-2-outputs/awareness_map.json",
+      "layer-2-outputs/sophistication_analysis.json",
+      "layer-2-outputs/market_narrative.json",
+      "layer-2-outputs/web_analysis.json",
+      "layer-2-5-outputs/transformation_pairs.json",
+      "layer-2-5-outputs/educational_pairs.json",
+      "layer-2-rsf-outputs/expectation_schema.json",
+      "layer-2-rsf-outputs/latent_resonance_field.json"
+    ],
+    "tier_evidence_depth": {
+      "tier_1_full": "10-15 quotes, full pattern/competitive/belief/mechanism/proof/emotional/transformation evidence",
+      "tier_2_summary": "5-8 quotes, top 3 patterns, competitive context, key beliefs, proof summary",
+      "tier_3_minimal": "3-5 quotes, monitoring indicators, activation triggers"
+    }
+  },
+
+  "evidence_packages": [
+    {
+      "opportunity_id": "OPP-001",
+      "tier": "1_PURSUE",
+      "composite_score": 9.15,
+      "opportunity_summary": "Own the 'Active Face Control' category by positioning Forward Weighting as a fundamentally different physics approach from zero torque, using the face-down balance demonstration as instant visual proof that no competitor can replicate.",
+      "package_type": "full",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0463", "text": "Axis1 goes a step further in getting CG forward and on with the face, which IMO is the most technically advanced CG location. Center impact is directly on the CG, and there's zero gear effect on off-center hits when CG is directly on the face.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0462", "text": "Because LAB's whole thing is ZERO torque, they've kind of designed themselves into a corner. When you have to have absolutely zero torque, it limits what you can do and what your designs can be.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0424", "text": "My experience is that I could feel regular putters try to twist during my putting stroke. The bigger the stroke, the more twisting. I had to actively compensate that twist during the stroke to keep the face square. Since it varied with how hard I swung the putter, it was a constant issue chasing the exact right amount of compensation.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0065", "text": "I feel like I have to steer the putter through impact just to keep it on line", "source": "Reddit r/golf", "bucket": "Pain"},
+          {"id": "Q0101", "text": "I am a decent putter, but struggled with shorter putts. Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0505", "text": "Stroke is very consistent, but consistently leaving putterface 2.5+ degrees open at impact. Tempo good, all other measures (Ping app) look good.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q1324", "text": "Your face angle at impact was more than 1 degree open or closed. According to Quintic - face angle at impact needs to be less than 1 degree open or closed if not putt will miss. At 15 feet its .5 degrees.", "source": "YouTube", "bucket": "Root Cause"},
+          {"id": "Q0189", "text": "I was fighting the putter the whole round. Felt like I had to hold the face square through impact or it would just twist open.", "source": "TheSandTrap", "bucket": "Pain"},
+          {"id": "Q0234", "text": "My miss is always a push. The face just opens through impact and I can feel it happen.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0439", "text": "Zero torque (or low torque) means the shaft axis crosses directly with the CG. It's that simple. Zero torque as far as rotation around the shaft axis. There's no moment arm from the shaft axis to the CG.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q1337", "text": "I have two Scotty Cameron Newport putters and they will pull or push on every putt. This is dead straight. Whatever line you choose, this is where your golf ball goes.", "source": "YouTube", "bucket": "Hope"},
+          {"id": "Q0412", "text": "Stop trying to manipulate the putter face and just let it swing", "source": "GolfWRX", "bucket": "Hope"},
+          {"id": "Q1329", "text": "I've used a DirectedForce for about five years. About two years in I was considering selling my old putter. Just for the heck of it I took it out for nine holes. The thing literally felt 'alive' in my hand. All the tiny movements that the LAB putter had taken out of the stroke were put back in.", "source": "YouTube", "bucket": "Competitor Mechanism"},
+          {"id": "Q0167", "text": "Pushed and pulled putts that felt like good strokes -- that's the most frustrating thing in golf", "source": "TheSandTrap", "bucket": "Pain"},
+          {"id": "Q0445", "text": "I went from a toe hang putter to face balanced and it completely changed my consistency", "source": "Reddit r/golf", "bucket": "Hope"}
+        ],
+        "pattern_evidence": [
+          {"pattern_id": "LP-03", "name": "Steering / Fighting / Holding Metaphors", "frequency": 58, "importance_score": 91, "relevance": "These are the exact consumer words for the technical problem RS1 solves. Forward weighting eliminates the need to 'steer' or 'fight' the face."},
+          {"pattern_id": "LP-08", "name": "Zero Torque / Face Balance Technical Vocabulary", "frequency": 56, "importance_score": 80, "relevance": "The technical vocabulary for face stability is already in the market. RS1 adds 'Forward Weighting' and 'Face Down Balance' as the next-generation terms that distinguish active from passive face control."},
+          {"pattern_id": "EP-01", "name": "The Putter Carousel", "frequency": 74, "importance_score": 92, "relevance": "Every putter on the carousel shares rearward CG. Forward weighting is the first design that breaks the shared physics flaw driving the cycle."},
+          {"pattern_id": "LP-05", "name": "Push / Pull Directional Vocabulary", "frequency": 53, "importance_score": 78, "relevance": "Push and pull misses are the symptomatic experience of face drift caused by rearward CG. Forward weighting directly addresses the root cause of these directional errors."},
+          {"pattern_id": "LP-01", "name": "Three-Putt as Identity Marker", "frequency": 87, "importance_score": 89, "relevance": "Three-putts are the ultimate consequence of face instability. Forward weighting reduces three-putt frequency by maintaining face angle through the stroke."}
+        ],
+        "competitive_evidence": [
+          {"competitor": "LAB Golf", "positioning": "Zero Torque / Lie Angle Balance -- PASSIVE face stability (prevents twist but doesn't actively counteract face opening)", "vulnerability": "Zero torque is rapidly commoditizing -- 4 major OEMs copied it in 18 months. Also: adaptation period, center-shaft aesthetics, aluminum face feel complaints, $449-$649 pricing.", "rs1_advantage": "RS1's Forward Weighting is ACTIVE -- it doesn't just prevent twist, it drives the face toward square. No adaptation period required. Works with existing stroke mechanics."},
+          {"competitor": "TaylorMade Spider ZT", "positioning": "Zero Torque meets Spider stability -- following LAB into face control", "vulnerability": "Me-too entry. Same ZT limitations (adaptation, center-shaft). No independent validation specifically for ZT model.", "rs1_advantage": "RS1 is architecturally different from ZT. Forward CG cannot be dismissed as another zero-torque variant."},
+          {"competitor": "Scotty Cameron", "positioning": "CNC milled craftsmanship / heritage / tour wins", "vulnerability": "No proprietary face-squaring technology. Performance gains over $200 alternatives are marginal. Status-driven, not engineering-driven.", "rs1_advantage": "RS1 has genuine engineering differentiation (forward CG) that Scotty cannot claim. Engineering proof vs brand heritage."},
+          {"competitor": "Bettinardi Antidote", "positioning": "Zero torque that looks good -- solving LAB's aesthetics problem", "vulnerability": "Same ZT physics limitations. Limited distribution. Me-too ZT entry with better packaging.", "rs1_advantage": "RS1 solves aesthetics AND physics differently. Forward weighting is a genuinely different mechanism, not ZT in prettier clothing."},
+          {"competitor": "Axis1", "positioning": "Forward CG placement -- closest competitive concept", "vulnerability": "Minimal market presence, no mechanism branding, no demonstration infrastructure, niche brand.", "rs1_advantage": "RS1 takes the forward CG concept and pairs it with heavy commercial infrastructure (PG's DTC engine, McGinley's credentials, demonstration protocol). Same physics territory, dramatically different execution capacity."}
+        ],
+        "belief_evidence": [
+          {"belief": "Face angle at impact determines where the putt goes", "frequency": 43, "type": "surface_belief", "impact": "Pre-qualifies buyers for face-stability technology. RS1 must reinforce this belief with data and position Forward Weighting as the engineering solution."},
+          {"belief": "It's my stroke, not the putter -- equipment can't fix bad technique", "frequency": 52, "type": "limiting_belief", "impact": "Prevents consideration of RS1. Counter with: 'Your stroke provides the motion. The RS1 ensures the face stays square through that motion. Both matter.'"},
+          {"belief": "All premium putters are basically the same -- the differences are marketing", "frequency": 38, "type": "limiting_belief", "impact": "Commoditizes RS1's innovation. Counter with the Face Down Balance test -- visible, undeniable proof that the physics ARE different."},
+          {"belief": "The right putter can dramatically reduce strokes", "frequency": 72, "type": "surface_belief", "impact": "Creates purchase intent. RS1 must deliver on this belief with quantifiable stroke-savings evidence."},
+          {"belief": "Zero-torque / face-stable putters work for some people but not everyone", "frequency": 67, "type": "surface_belief", "impact": "RS1 differentiates by working with ALL stroke types via forward weighting (reduces face drift regardless of arc) vs ZT which fights some natural arcs."}
+        ],
+        "mechanism_evidence": [
+          {"mechanism": "Zero Torque / Lie Angle Balance (L.A.B.)", "type": "competitor_existing", "strength": 9, "vulnerability": "Passive -- prevents twist but doesn't actively help. Requires adaptation. Design-constrained by zero-torque requirement. Being commoditized by 4 copycats."},
+          {"mechanism": "High MOI Stability (TaylorMade Spider)", "type": "competitor_existing", "strength": 7, "vulnerability": "Generic -- every brand claims MOI. Addresses symptoms (mishit forgiveness) not causes (face drift). No proprietary technology."},
+          {"mechanism": "Forward CG / Face Down Balance (RS1)", "type": "rs1_untapped", "strength": "Projected 9-10", "opportunity": "Only Axis1 occupies adjacent territory with minimal market presence. Zero major brands claim forward CG. The face-down balance demonstration has zero competitors -- no other putter falls face-down when released. This is the mechanism white space."},
+          {"mechanism": "Gravity-Driven Pendulum Motion", "type": "rs1_supporting", "strength": "Projected 7-8", "opportunity": "Forward weighting creates natural pendulum pull-through for distance control. No competitor claims gravity-assisted pendulum motion as a mechanism."}
+        ],
+        "proof_inventory": {
+          "available": [
+            "Face-Down Balance Test -- RS1 face falls down when released (visual, immediate, undeniable)",
+            "Side-by-side three-putter comparison (traditional twists, LAB neutral, RS1 falls forward)",
+            "360g head weight with 75%+ (270g+) in front 25% of head",
+            "270g face weight equivalent to a #7 iron head",
+            "74-degree lie angle vs traditional 70-degree",
+            "Chris McGinley: 25+ years at major OEMs, 11 world #1 players",
+            "Face angle accounts for 80%+ of initial putt direction (physics principle)",
+            "1 degree face error = ~1 inch miss per foot of putt length"
+          ],
+          "needed": [
+            "SAM PuttLab face angle comparison: RS1 vs traditional vs LAB (highest priority)",
+            "Strokes gained putting data from RS1 users (Arccos/ShotScope)",
+            "High-speed camera footage showing face angle through impact zone",
+            "Independent engineering review (MyGolfSpy, Golf Digest Hot List)",
+            "Beta tester testimonials with specific stroke-count improvements"
+          ]
+        },
+        "emotional_evidence": {
+          "primary_emotions": ["frustration", "helplessness", "betrayal", "relief", "trust"],
+          "now_state": {"dimension": "feeling", "frequency": 142, "description": "Dread, anxiety, doom loop. Shaking hands over short putts. Self-doubt spiraling."},
+          "after_state": {"dimension": "feeling", "frequency": 91, "description": "Calm confidence, trust in equipment, quiet certainty the putter will do its job."},
+          "emotional_contrast_score": 9,
+          "latent_emotion": {"id": "UE-01", "name": "Stroke Treachery", "description": "The feeling when your body makes a putting stroke your brain didn't authorize -- subtle face rotation you can only perceive after the ball has missed.", "naming_power": 0.88},
+          "villain_connection": {"villain": "Rearward CG -- The Hidden Physics Flaw", "blame_frequency": 87, "emotional_charge": 9}
+        },
+        "transformation_pairs": [
+          {"pair_id": "TP-001", "theme": "Fighting the Putter to Trusting It", "pain_id": "Q0101", "hope_id": "Q0167", "emotional_contrast": 9, "priority": "GOLD"},
+          {"pair_id": "TP-004", "theme": "Open Face Problem Solved by Design", "pain_id": "Q0505", "hope_id": "Q0315", "emotional_contrast": 8, "priority": "GOLD"},
+          {"pair_id": "TP-006", "theme": "From Terrifying to Stress-Free", "pain_id": "Q0851", "hope_id": "Q1420", "emotional_contrast": 10, "priority": "GOLD"},
+          {"pair_id": "EP-001", "theme": "Face Rotation Causes Missed Short Putts", "why_id": "Q0485", "how_id": "Q0025", "logical_strength": 9, "priority": "GOLD"},
+          {"pair_id": "EP-003", "theme": "Sub-Degree Precision Unlocks Stress-Free Putting", "why_id": "Q1324", "how_id": "Q1420", "logical_strength": 10, "priority": "GOLD"},
+          {"pair_id": "EP-005", "theme": "Conventional Twist vs Engineered Square Face", "why_id": "Q0255", "how_id": "Q0458", "logical_strength": 9, "priority": "GOLD"}
+        ]
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-002",
+      "tier": "1_PURSUE",
+      "composite_score": 8.85,
+      "opportunity_summary": "Capture LAB Golf's lost majority (55-65% of their consideration funnel) by positioning RS1 as face stability without the tradeoffs -- better aesthetics, steel face feel, no adaptation period, heel-shaft option, and $50-$160 lower price.",
+      "package_type": "full",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0471", "text": "Ive wanted to try LAB for at least a year now, but the price for a counterbalance is hefty. Everytime i demo them in store, i make everything. But i can also say the same with the other putters. Its so easy to putt in store. Its a different story on the course, and that is my fear.", "source": "GolfWRX", "bucket": "Solutions Tried"},
+          {"id": "Q0397", "text": "My two biggest issues with the LABs I've tried are that I struggle with the shaft lean and don't like the feel off the aluminum face.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0398", "text": "Is it possible for LAB to make a putter that will be balanced but not appear as center shafted? I've used heel shafted forever, loved feel of the lab but just struggle with that center shafted look", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0406", "text": "a lot of people (myself included) are feel and visual players. Especially with putters, I have to like what I see when I look down at the putter and none of the putters mentioned do a thing for me in that sense.", "source": "GolfWRX", "bucket": "Solutions Tried"},
+          {"id": "Q0462", "text": "Because LAB's whole thing is ZERO torque, they've kind of designed themselves into a corner. When you have to have absolutely zero torque, it limits what you can do and what your designs can be.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0400", "text": "It's way too light and ironically enough I cant keep the face square. It also feels dead and looks like a nightmare. Why would I switch into that?", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q1344", "text": "I was recently fit at Golf Galaxy and got a Taylor Made Spider ZT 5k... After using it for a couple months I could never get comfortable with it", "source": "YouTube", "bucket": "Solutions Tried"},
+          {"id": "Q1349", "text": "I couldn't really get used to it personally as I've been so used to a toe hang putter.", "source": "YouTube", "bucket": "Solutions Tried"},
+          {"id": "Q0384", "text": "$500+ is a lot of money to throw at a hope.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q1368", "text": "Love my Lab 2.1 but it is strange looking", "source": "YouTube", "bucket": "Competitor Mechanism"},
+          {"id": "Q0404", "text": "If LAB was to ever come out with their models in some other material than aluminum I would definitely give them a try again.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q1347", "text": "I had a oz1i, I went back to the TM Spider I'm visually more comfortable over the ball with spider", "source": "YouTube", "bucket": "Solutions Tried"},
+          {"id": "Q1341", "text": "I bought my first Lab df2.1 in 2018, then tried the Mezz Maxx, then I had the df3 which I hated immediately! I then went back to the df2.1 until getting fitted for the Oz1i HS.", "source": "YouTube", "bucket": "Solutions Tried"},
+          {"id": "Q0277", "text": "Thanks to L.A.B. Golf, the golfing consumer is more tolerant of odd-looking but high-performing putters than ever.", "source": "MyGolfSpy", "bucket": "Competitor Mechanism"},
+          {"id": "Q1391", "text": "Not going 2 spend $600 4 a putter that sounds like shit!", "source": "YouTube", "bucket": "Villain"}
+        ],
+        "pattern_evidence": [
+          {"pattern_id": "EP-05", "name": "The Adaptation Period", "frequency": 35, "importance_score": 70, "relevance": "LAB requires 2-8 weeks adaptation where putting gets WORSE. RS1's forward weighting works with existing stroke mechanics, eliminating this barrier."},
+          {"pattern_id": "BH-04", "name": "Buying Based on Aesthetics vs Performance", "frequency": 37, "importance_score": 67, "relevance": "LAB's unconventional aesthetics block 30-35% of prospects who never purchase. RS1's premium mallet design looks conventional at address."},
+          {"pattern_id": "EP-07", "name": "Scotty Cameron Worship-to-Disillusion Arc", "frequency": 34, "importance_score": 71, "relevance": "Golfers leaving heritage brands want performance but refuse to sacrifice aesthetics. RS1 bridges both."},
+          {"pattern_id": "LP-06", "name": "Last Putter / Never Going Back Language", "frequency": 41, "importance_score": 74, "relevance": "Face-stable converts use permanence language. RS1 must generate the same loyalty without LAB's tradeoffs."},
+          {"pattern_id": "EP-09", "name": "The Old Putter Revelation", "frequency": 28, "importance_score": 65, "relevance": "Some LAB rejecters went back to old putters. RS1 prevents this reversion by being immediately comfortable."}
+        ],
+        "competitive_evidence": [
+          {"competitor": "LAB Golf", "blocker_documented": "Center-shaft aesthetics", "quote_evidence": "Q0398, Q0406, Q1347", "rs1_solution": "Heel-shaft option with premium mallet design. Visually conventional at address."},
+          {"competitor": "LAB Golf", "blocker_documented": "Aluminum face feel/sound", "quote_evidence": "Q0397, Q0400, Q1391, Q0404", "rs1_solution": "CNC machined steel face delivers premium feel and solid impact sound."},
+          {"competitor": "LAB Golf", "blocker_documented": "Adaptation period (2-8 weeks)", "quote_evidence": "Q1344, Q1349, Q1331", "rs1_solution": "Forward weighting works WITH existing stroke mechanics. No re-learning required."},
+          {"competitor": "LAB Golf", "blocker_documented": "Price ($449-$649)", "quote_evidence": "Q0471, Q0384, Q1401", "rs1_solution": "RS1 at $399/$429 undercuts LAB by $50-$220."},
+          {"competitor": "LAB Golf", "blocker_documented": "Forward press grip discomfort", "quote_evidence": "Q0397", "rs1_solution": "Patented Dual Pistol Grip locks into lifeline naturally without forced forward press."}
+        ],
+        "belief_evidence": [
+          {"belief": "Premium putters should look good at address", "frequency": 37, "type": "surface_belief", "impact": "RS1's mallet design is a competitive advantage over LAB. Marketing should feature at-address photography prominently."},
+          {"belief": "How a putter feels and sounds at impact matters as much as performance", "frequency": 40, "type": "surface_belief", "impact": "Steel face addresses LAB's #1 sensory complaint. Feel-language must be prominent in RS1 copy."},
+          {"belief": "Zero-torque / face-stable putters work for some but not everyone", "frequency": 67, "type": "surface_belief", "impact": "RS1 reframes: forward weighting works for MORE stroke types than ZT because it doesn't fight natural arc."},
+          {"belief": "Face-balanced / zero-torque putters sacrifice feel for stability", "frequency": 40, "type": "limiting_belief", "impact": "RS1 breaks this tradeoff: face stability through CG location, not by deadening the head."},
+          {"belief": "My stroke type (arcing) is not compatible with face-stable putters", "frequency": 31, "type": "limiting_belief", "impact": "RS1's 74-degree lie angle reduces arc but works WITH natural stroke, unlike ZT which fights arcing strokes."}
+        ],
+        "mechanism_evidence": [
+          {"mechanism": "Zero Torque (LAB)", "weakness_for_this_opp": "Requires center-shaft, aluminum construction, forward-press grip, adaptation period. Design-constrained by zero-torque requirement."},
+          {"mechanism": "Forward Weighting (RS1)", "advantage_for_this_opp": "Achieves face stability through weight distribution, not shaft/CG alignment. Allows heel-shaft, steel face, conventional grip, no adaptation."}
+        ],
+        "proof_inventory": {
+          "available": [
+            "RS1 $399/$429 vs LAB $449-$649 (documented price advantage)",
+            "Steel face construction vs LAB aluminum (feel/sound advantage)",
+            "Heel-shaft option vs LAB center-shaft only (aesthetics advantage)",
+            "No adaptation period claimed vs LAB 2-8 week adaptation",
+            "Dual Pistol Grip (patented) vs LAB forward-press grip"
+          ],
+          "needed": [
+            "Head-to-head independent testing: RS1 vs LAB DF3 on face angle consistency",
+            "Adaptation curve data: RS1 round-by-round performance vs LAB round-by-round",
+            "Sound/feel comparison testing (decibel and frequency analysis)",
+            "Testimonials from golfers who tried LAB, rejected it, then switched to RS1"
+          ]
+        },
+        "emotional_evidence": {
+          "primary_emotions": ["investment_anxiety", "aesthetic_discomfort", "adaptation_frustration", "relief"],
+          "now_state": {"description": "Wants face stability but cannot accept LAB's tradeoffs. Stuck between desire and blockers.", "frequency": 135},
+          "after_state": {"description": "Gets face stability in a premium-looking, great-feeling package at a lower price with no adaptation.", "frequency": 68},
+          "latent_emotion": {"id": "ELG-06", "name": "The Skepticism Mask", "description": "Self-protective rejection born from repeated disappointment. They WANT to believe but cannot afford to hope again.", "gap_magnitude": 0.74}
+        },
+        "transformation_pairs": [
+          {"pair_id": "TP-001", "theme": "Fighting the Putter to Trusting It", "priority": "GOLD", "relevance": "LAB rejecters are still fighting their conventional putters. RS1 delivers the trust without the tradeoffs."},
+          {"pair_id": "EP-002", "theme": "Toe Hang Drives Rotation That Stable Design Removes", "priority": "GOLD", "relevance": "Directly addresses golfers who rejected ZT but still suffer from toe-hang rotation."},
+          {"pair_id": "EP-016", "theme": "LAB Limitations Addressed", "priority": "HIGH", "relevance": "Educational pair specifically addressing LAB's implementation constraints."}
+        ]
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-003",
+      "tier": "1_PURSUE",
+      "composite_score": 8.78,
+      "opportunity_summary": "Lead all messaging with the liberating reframe 'Your stroke was never the problem -- your putter's center of gravity was' to break the self-blame trap that prevents 32% of the addressable market from considering equipment solutions.",
+      "package_type": "full",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0208", "text": "people stop and come over to me at the range and are amazed how well I hit the ball, they will say 'god you must be off scratch.' I say 'no im off 11 I can't putt'", "source": "TheSandTrap", "bucket": "Pain"},
+          {"id": "Q0353", "text": "My putting has sucked forever; I am a 5 but when I am playing well, I am striking the ball like a scratch and putting like a 12. Tons of 3-putts, no speed control, no line control.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0101", "text": "I am a decent putter, but struggled with shorter putts. Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0505", "text": "Stroke is very consistent, but consistently leaving putterface 2.5+ degrees open at impact. Tempo good, all other measures (Ping app) look good.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0139", "text": "I think that buying your way out of trouble is just a quick fix -- you'll feel more confidence with the new stick initially but you know full well that the club hasn't changed over the last 10 weeks while your putting has. That means it can't be the stick, it's you.", "source": "GolfMonthly", "bucket": "Villain"},
+          {"id": "Q0524", "text": "I'm a 6 right now and I swear I'd be a 2 almost overnight if I just got to be a good (not great) putter.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0160", "text": "I know 'blame the equipment' is the running joke on this site as an excuse to get something new. While your clubs aren't generally your problem, I would say, from recent personal experience, that the putter may be the exception to that rule.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0451", "text": "we tested him with his gamer and despite swearing he was aimed at the center of the cup he was aimed 3 inches left of the left edge of the cup from 10ft. He refused to believe he was aimed outside the hole. I asked him 'ok so where do you miss putts' his response 'I miss left'. I looked at him and said, 'here's your problem (pointing to the putter) it's not your stroke'.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0258", "text": "why can the wrong putter actually affect your putting game and make it a lot worse... it might not actually even be your putting per se it could be you're just playing with the wrong putter", "source": "YouTube", "bucket": "Root Cause"},
+          {"id": "Q0092", "text": "Saturday I shot 82. I hit the ball pretty well... I hit 10 greens in Regulation and yet ended up shooting 82. I could not buy a putt.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0475", "text": "I've been trying to buy a game for almost 40 years. The only thing that's lowered my handicap all these years is actually playing golf.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q0782", "text": "I found I was opening the face up when I took my putter back. Subconsciously, I suppose, I knew something was wrong and my body would try to correct at the last moment. It was horrifying and demoralizing.", "source": "YouTube", "bucket": "Pain"},
+          {"id": "Q0086", "text": "I've cleaned up my game from tee to green enough that putting has been exposed as a weakness to going lower.", "source": "GolfWRX", "bucket": "Pain"}
+        ],
+        "pattern_evidence": [
+          {"pattern_id": "EM-05", "name": "Self-Blame vs Equipment-Blame Oscillation", "frequency": 46, "importance_score": 81, "relevance": "The internal debate ('is it me or the putter?') is the emotional core. RS1 resolves the oscillation: 'It's your putter's CG. Your stroke is fine.'"},
+          {"pattern_id": "EP-04", "name": "Ball-Striking Good, Putting Bad Identity Split", "frequency": 61, "importance_score": 86, "relevance": "The primary WEB identity. These golfers KNOW they're good from tee-to-green but their scores don't reflect it."},
+          {"pattern_id": "LP-01", "name": "Three-Putt as Identity Marker", "frequency": 87, "importance_score": 89, "relevance": "'Three-putter' as self-identity is the shame marker RS1 can erase."},
+          {"pattern_id": "LP-03", "name": "Steering / Fighting / Holding Metaphors", "frequency": 58, "importance_score": 91, "relevance": "The language of self-blame ('fighting the putter') reveals the felt experience of equipment failure misattributed to personal failure."},
+          {"pattern_id": "EM-06", "name": "Embarrassment and Social Shame", "frequency": 33, "importance_score": 69, "relevance": "Missing short putts in front of playing partners triggers shame that reinforces self-blame."}
+        ],
+        "competitive_evidence": [
+          {"competitor": "LAB Golf", "positioning_relevance": "LAB partially uses 'your putter twists' messaging but frames it technically. No brand explicitly says 'your stroke is fine.'", "rs1_opportunity": "RS1 can own the human-friendly, emotionally liberating version of the self-blame reframe."},
+          {"competitor": "Golf instruction industry", "positioning_relevance": "Entire industry reinforces 'it's your technique.' Mental game coaches, putting instructors, and training aids all profit from the self-blame narrative.", "rs1_opportunity": "RS1 disrupts the self-blame industrial complex by naming an equipment cause for what has been framed as a skill problem."}
+        ],
+        "belief_evidence": [
+          {"belief": "It's my stroke, not the putter -- equipment can't fix bad technique", "frequency": 52, "type": "limiting_belief", "impact": "THE primary conversion barrier. RS1 must reframe without dismissing: 'Your stroke provides the motion. RS1 ensures the face stays square through that motion.'"},
+          {"belief": "My putting inconsistency is the biggest thing holding my scores back", "frequency": 87, "type": "surface_belief", "impact": "Already accepted by the primary WEB. RS1 names the specific cause (face drift) for the already-acknowledged problem."},
+          {"belief": "Practice is what makes you a good putter, not equipment", "frequency": 52, "type": "limiting_belief", "impact": "Must not attack. Reframe: 'RS1 makes your practice more effective by eliminating the variable you cannot practice away.'"},
+          {"belief": "My putting problems are partly my fault, partly equipment", "frequency": "implicit", "type": "implicit_belief", "impact": "RS1 resolves the oscillation: 'You're right about both. Your stroke matters AND your equipment matters. RS1 handles the equipment half.'"},
+          {"belief": "I am fundamentally a bad putter", "frequency": 32, "type": "limiting_belief", "impact": "The deepest wound. RS1 liberation message: 'You were never a bad putter. You were using equipment that amplifies human imperfections instead of absorbing them.'"}
+        ],
+        "mechanism_evidence": [
+          {"mechanism": "Rearward CG (villain)", "role": "The invisible cause of face drift that golfers have been blaming themselves for. Every conventional putter shares this flaw."},
+          {"mechanism": "Forward CG (RS1 solution)", "role": "Moves the root cause (CG location) from behind the shaft to in front of it. The golfer's stroke doesn't need to change -- the physics change."},
+          {"mechanism": "Face Down Balance (proof)", "role": "The visual demonstration that proves the CG has moved. 'Let it fall' shows the difference in 5 seconds."}
+        ],
+        "proof_inventory": {
+          "available": [
+            "Face angle accounts for 80%+ of putt direction (physics proof that face, not stroke, is the primary variable)",
+            "1 degree face error = ~1 inch miss per foot of putt length (quantifies the problem)",
+            "Q0505: 'Stroke consistent, face 2.5+ degrees open' (data proof that stroke ≠ face angle)",
+            "Q0451: Fitter proving to golfer that AIM was wrong, not stroke (expert validation)",
+            "Face Down Balance test (visible proof that RS1 physics are different)"
+          ],
+          "needed": [
+            "SAM PuttLab data showing same golfer, same stroke, different face angles with different putters",
+            "Video of the 'aha moment' when golfers discover their putter was the problem",
+            "Testimonials framed as 'I blamed myself for years, then discovered...'"
+          ]
+        },
+        "emotional_evidence": {
+          "primary_emotions": ["shame", "self-blame", "identity_crisis", "liberation", "relief"],
+          "now_state": {"dimension": "being", "frequency": 96, "description": "Split identity: competent tee-to-green, incompetent on the green. Years of self-blame."},
+          "after_state": {"dimension": "being", "frequency": 52, "description": "Complete golfer whose score finally reflects ability. Putter as talking point, not apology."},
+          "emotional_contrast_score": 9.5,
+          "latent_emotion": {"id": "ELG-01", "name": "The Technique Deflection", "description": "Growing suspicion that equipment is the problem, combined with shame at the idea of blaming the arrow. The latent feeling is betrayal -- they've been faithful to the practice-harder ethos and it hasn't worked.", "gap_magnitude": 0.85},
+          "villain_connection": {"villain": "The Self-Blame Trap", "blame_frequency": 156, "emotional_charge": 10}
+        },
+        "transformation_pairs": [
+          {"pair_id": "TP-005", "theme": "Handicap Finally Reflects True Skill", "pain_id": "Q0208", "hope_id": "Q0363", "emotional_contrast": 9, "priority": "GOLD"},
+          {"pair_id": "TP-004", "theme": "Open Face Problem Solved by Design", "pain_id": "Q0505", "hope_id": "Q0315", "emotional_contrast": 8, "priority": "GOLD"},
+          {"pair_id": "EP-006", "theme": "Wrong Equipment Blamed on Wrong Golfer", "why_id": "Q0258", "how_id": "Q1430", "logical_strength": 8, "priority": "HIGH"},
+          {"pair_id": "EP-008", "theme": "Swing Compensations Disappear With Proper Design", "why_id": "Q1207", "how_id": "Q0046", "logical_strength": 7, "priority": "HIGH"}
+        ]
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-004",
+      "tier": "1_PURSUE",
+      "composite_score": 8.62,
+      "opportunity_summary": "Coin and own 'face drift' as the consumer-friendly name for why putts miss, creating new vocabulary that forces the market to discuss putting problems in RS1's frame.",
+      "package_type": "full",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0065", "text": "I feel like I have to steer the putter through impact just to keep it on line", "source": "Reddit r/golf", "bucket": "Pain"},
+          {"id": "Q0234", "text": "My miss is always a push. The face just opens through impact and I can feel it happen.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0101", "text": "I am a decent putter, but struggled with shorter putts. Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0424", "text": "My experience is that I could feel regular putters try to twist during my putting stroke. The bigger the stroke, the more twisting. I had to actively compensate that twist during the stroke to keep the face square.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0505", "text": "Stroke is very consistent, but consistently leaving putterface 2.5+ degrees open at impact.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0189", "text": "I was fighting the putter the whole round. Felt like I had to hold the face square through impact or it would just twist open.", "source": "TheSandTrap", "bucket": "Pain"},
+          {"id": "Q0098", "text": "why do I push putts right even when my stroke feels good", "source": "Reddit r/golf", "bucket": "Pain"},
+          {"id": "Q0289", "text": "I keep pulling my putts left. I know my stroke is fine but something is happening at impact.", "source": "Reddit r/golf", "bucket": "Pain"},
+          {"id": "Q0167", "text": "Pushed and pulled putts that felt like good strokes -- that's the most frustrating thing in golf", "source": "TheSandTrap", "bucket": "Pain"},
+          {"id": "Q1324", "text": "Your face angle at impact was more than 1 degree open or closed. According to Quintic - face angle at impact needs to be less than 1 degree open or closed if not putt will miss.", "source": "YouTube", "bucket": "Root Cause"},
+          {"id": "Q0485", "text": "In my opinion, the reason why people miss short putts is because of inconsistent rotational control of the putter head during the stroke.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0488", "text": "the more excessive the rotation you have the harder it is to return the putter to impact consistently.", "source": "GolfWRX", "bucket": "Root Cause"}
+        ],
+        "pattern_evidence": [
+          {"pattern_id": "LP-03", "name": "Steering / Fighting / Holding Metaphors", "frequency": 58, "importance_score": 91, "relevance": "These metaphors describe the EXPERIENCE of face drift. 'Face drift' gives their felt experience a technical name."},
+          {"pattern_id": "LP-05", "name": "Push / Pull Directional Vocabulary", "frequency": 53, "importance_score": 78, "relevance": "Push and pull are the RESULTS of face drift. 'Face drift' names the CAUSE that produces these symptoms."},
+          {"pattern_id": "LP-08", "name": "Zero Torque / Face Balance Technical Vocabulary", "frequency": 56, "importance_score": 80, "relevance": "Technical vocabulary exists but no consumer-friendly term. 'Face drift' fills the gap between technical jargon and felt experience."},
+          {"pattern_id": "EP-02", "name": "Practice Green vs Course Performance Gap", "frequency": 45, "importance_score": 77, "relevance": "Face drift is amplified on the course by grip pressure under stress. Naming the cause explains why the gap exists."},
+          {"pattern_id": "LP-04", "name": "Stroke Count Specificity", "frequency": 72, "importance_score": 85, "relevance": "Golfers quantify their losses. 'Face drift cost you 3-5 strokes today' makes the named problem measurable."}
+        ],
+        "competitive_evidence": [
+          {"competitor": "LAB Golf", "naming_approach": "Uses 'torque' -- technical, requires physics education", "gap": "No consumer-friendly name for the root cause"},
+          {"competitor": "TaylorMade", "naming_approach": "Uses 'stability' -- vague, not root-cause specific", "gap": "Doesn't name WHY instability happens"},
+          {"competitor": "Odyssey", "naming_approach": "Uses 'consistent ball speed' -- wrong variable (speed ≠ direction)", "gap": "Names a different problem entirely"}
+        ],
+        "belief_evidence": [
+          {"belief": "Face angle at impact determines where the putt goes", "frequency": 43, "type": "surface_belief", "impact": "'Face drift' becomes the named enemy of face control. Belief + name = actionable understanding."},
+          {"belief": "Pushed and pulled putts come from stroke errors", "frequency": "implied", "type": "limiting_belief", "impact": "'Face drift' reattributes push/pull misses from stroke to equipment physics. Liberating reframe."},
+          {"belief": "I need a name for what's happening to my putts", "frequency": "latent", "type": "implicit_belief", "impact": "Naming a previously unnamed experience creates an immediate 'aha moment' and trust in the namer."}
+        ],
+        "mechanism_evidence": [
+          {"mechanism": "Rearward CG causes face rotation", "role": "The mechanical reality that 'face drift' names"},
+          {"mechanism": "Forward CG eliminates face drift", "role": "'Face drift' creates the problem. 'Forward Weighting' creates the solution. The vocabulary pair owns the conversation."}
+        ],
+        "proof_inventory": {
+          "available": [
+            "87+ quotes describing face-drift symptoms without a name",
+            "Face angle determines 80%+ of putt direction (scientific basis for the term)",
+            "1 degree face error = measurable miss (quantifies face drift impact)",
+            "Face Down Balance test proves RS1 eliminates face drift visually"
+          ],
+          "needed": [
+            "Branded 'face drift' definition and educational content",
+            "Face drift measurement protocol (how to detect it in your own putting)",
+            "Trademark or strong brand association for the term 'face drift'"
+          ]
+        },
+        "emotional_evidence": {
+          "primary_emotions": ["confusion", "frustration", "relief_of_naming", "understanding"],
+          "now_state": {"description": "128 quotes describe experiencing directional misses without understanding the cause. Diffuse frustration.", "frequency": 128},
+          "after_state": {"description": "Named problem becomes solvable problem. 'Face drift' converts vague frustration into specific, addressable issue.", "frequency": "projected"},
+          "villain_connection": {"villain": "Rearward CG -- The Hidden Physics Flaw", "blame_frequency": 87, "emotional_charge": 9}
+        },
+        "transformation_pairs": [
+          {"pair_id": "TP-004", "theme": "Open Face Problem Solved by Design", "priority": "GOLD", "relevance": "The naming pair: face drift (the problem) -> forward weighting (the solution)"},
+          {"pair_id": "EP-001", "theme": "Face Rotation Causes Missed Short Putts", "priority": "GOLD", "relevance": "Educational pair that explains WHY face drift happens at the mechanical level"},
+          {"pair_id": "EP-003", "theme": "Sub-Degree Precision Unlocks Stress-Free Putting", "priority": "GOLD", "relevance": "Quantifies face drift: less than 1 degree tolerance at 15 feet"}
+        ]
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-005",
+      "tier": "1_PURSUE",
+      "composite_score": 8.38,
+      "opportunity_summary": "Deploy the evolutionary narrative (Traditional -> LAB/Zero Torque -> RS1/Forward Weighting) that positions RS1 as the culmination of putting technology history, respecting LAB's innovation while transcending it.",
+      "package_type": "full",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0462", "text": "Because LAB's whole thing is ZERO torque, they've kind of designed themselves into a corner. When you have to have absolutely zero torque, it limits what you can do and what your designs can be.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0463", "text": "Axis1 goes a step further in getting CG forward and on with the face, which IMO is the most technically advanced CG location.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0464", "text": "There are degrees of torque from full torque (blade) to zero torque (LAB). Forward CG goes BEYOND zero.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q1337", "text": "I have two Scotty Cameron Newport putters and they will pull or push on every putt. This is dead straight.", "source": "YouTube", "bucket": "Hope"},
+          {"id": "Q0280", "text": "Face stability is the future of putting. Zero torque was step one. What comes next?", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0349", "text": "The putter industry is finally catching up to what LAB proved years ago. But LAB's implementation has limitations.", "source": "MyGolfSpy", "bucket": "Competitor Mechanism"},
+          {"id": "Q1329", "text": "I've used a DirectedForce for about five years. The thing literally felt 'alive' in my hand. All the tiny movements that the LAB putter had taken out of the stroke were put back in.", "source": "YouTube", "bucket": "Competitor Mechanism"},
+          {"id": "Q0439", "text": "Zero torque means the shaft axis crosses directly with the CG. It's that simple. Zero torque as far as rotation around the shaft axis.", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0472", "text": "I see these 'zero torque putters' as another fad. Golf fads reminds me of fashion fads in a lot of ways.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q1366", "text": "Notice the best putters in the world don't use lab, the guys that struggle use a lab", "source": "YouTube", "bucket": "Villain"},
+          {"id": "Q0434", "text": "LAB putters aren't bad but zero torque isn't what everyone needs. Why would I want to change my consistent stroke to make a different putter work?", "source": "GolfWRX", "bucket": "Competitor Mechanism"}
+        ],
+        "pattern_evidence": [
+          {"pattern_id": "LP-08", "name": "Zero Torque / Face Balance Technical Vocabulary", "frequency": 56, "importance_score": 80, "relevance": "The market already has the technical vocabulary for the evolutionary narrative. RS1 adds the next chapter."},
+          {"pattern_id": "EP-05", "name": "The Adaptation Period", "frequency": 35, "importance_score": 70, "relevance": "ZT's adaptation requirement is a limitation the evolutionary narrative highlights and RS1 transcends."},
+          {"pattern_id": "EP-01", "name": "The Putter Carousel", "frequency": 74, "importance_score": 92, "relevance": "The carousel exists because each generation of putters shared the same flaw. The evolutionary narrative explains why."},
+          {"pattern_id": "EP-07", "name": "Scotty Cameron Worship-to-Disillusion", "frequency": 34, "importance_score": 71, "relevance": "The heritage-to-disillusion arc is Chapter 1 of the evolutionary story."},
+          {"pattern_id": "BH-02", "name": "YouTube/Forum Research Before Purchase", "frequency": 44, "importance_score": 73, "relevance": "The research-driven buyer will encounter and evaluate the evolutionary narrative."}
+        ],
+        "competitive_evidence": [
+          {"competitor": "Traditional brands (Scotty, Spider, Odyssey)", "role_in_narrative": "Generation 1: Rearward CG, face drifts open, compensate with hands. Heritage and feel, but the same physics flaw."},
+          {"competitor": "LAB Golf", "role_in_narrative": "Generation 2: Zero torque, face doesn't twist. Solved passive drift. But: adaptation required, design constraints, partial solution."},
+          {"competitor": "RS1", "role_in_narrative": "Generation 3: Forward CG, face actively driven toward square. Solves drift AND works with existing stroke. No adaptation. Full solution."}
+        ],
+        "belief_evidence": [
+          {"belief": "The putter industry has been selling the same thing for decades", "frequency": "implicit", "type": "implicit_belief", "impact": "Evolutionary narrative validates this belief while showing RS1 as the exception."},
+          {"belief": "Zero-torque is just a fad", "frequency": 22, "type": "limiting_belief", "impact": "Evolutionary narrative respects ZT as a genuine advance while positioning RS1 as the next step. 'ZT wasn't a fad -- it was a foundation.'"},
+          {"belief": "Face angle at impact determines where the putt goes", "frequency": 43, "type": "surface_belief", "impact": "The scientific foundation for the entire evolutionary narrative."}
+        ],
+        "mechanism_evidence": [
+          {"generation": "1 - Traditional", "mechanism": "Rearward CG", "face_behavior": "Drifts open", "golfer_role": "Must compensate with hands"},
+          {"generation": "2 - Zero Torque", "mechanism": "CG on shaft axis", "face_behavior": "Stays neutral (doesn't twist)", "golfer_role": "Must still manage face through stroke arc"},
+          {"generation": "3 - Forward Weighting", "mechanism": "CG forward of shaft axis", "face_behavior": "Driven toward square by gravity", "golfer_role": "Natural stroke, putter handles face control"}
+        ],
+        "proof_inventory": {
+          "available": [
+            "Three-putter side-by-side demonstration (traditional twists, LAB neutral, RS1 falls forward)",
+            "5 major brands now offer ZT variants (validates category, proves commoditization)",
+            "LAB Golf $200M acquisition (proves face stability is permanent, not fad)",
+            "Stage 4 sophistication analysis (market ready for 'what comes next')"
+          ],
+          "needed": [
+            "Independent head-to-head testing: RS1 vs LAB vs traditional on face angle consistency",
+            "Timeline visualization of putter technology evolution",
+            "Video content showing the three-generation demonstration"
+          ]
+        },
+        "emotional_evidence": {
+          "primary_emotions": ["understanding", "vindication", "anticipation", "resolution"],
+          "emotional_contrast_score": 8,
+          "villain_connection": {"villain": "Toe Flow -- The Normalized Design Defect", "blame_frequency": 64, "emotional_charge": 7}
+        },
+        "transformation_pairs": [
+          {"pair_id": "EP-002", "theme": "Toe Hang Drives Rotation That Stable Design Removes", "priority": "GOLD"},
+          {"pair_id": "EP-005", "theme": "Conventional Twist vs Engineered Square Face", "priority": "GOLD"},
+          {"pair_id": "TP-001", "theme": "Fighting the Putter to Trusting It", "priority": "GOLD"}
+        ]
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-006",
+      "tier": "1_PURSUE",
+      "composite_score": 8.22,
+      "opportunity_summary": "Name and explain the honeymoon effect to carousel riders, transforming their cynicism into a purchase framework: every previous putter failed because of shared rearward CG, and Forward Weighting changes the fundamental physics.",
+      "package_type": "full",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0139", "text": "I think that buying your way out of trouble is just a quick fix -- you'll feel more confidence with the new stick initially but you know full well that the club hasn't changed over the last 10 weeks while your putting has. That means it can't be the stick, it's you.", "source": "GolfMonthly", "bucket": "Villain"},
+          {"id": "Q0399", "text": "I liked the story of LAB and AS. So I bought the Mezz broomstick without trying. It did not work well. I bought DF3 std version. It worked better than the broom but not impressive. So I bought the LINK and it is working best of the bunch but still I think there is a big room for an improvement.", "source": "GolfWRX", "bucket": "Solutions Tried"},
+          {"id": "Q0324", "text": "I've probably owned 15 putters in the last 10 years. Every time I think I've found the one.", "source": "Reddit r/golf", "bucket": "Solutions Tried"},
+          {"id": "Q0693", "text": "Any change works for three holes.", "source": "Reddit r/golf", "bucket": "Pain"},
+          {"id": "Q1339", "text": "Over the past couple of decades, I have tried many many different putters. Interestingly for me, I always revert back to an old Ping putter that was given to me about 35 years ago.", "source": "YouTube", "bucket": "Solutions Tried"},
+          {"id": "Q0593", "text": "The honeymoon is real. Every new putter works for 2-3 rounds. Then the same problems come back.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0060", "text": "I cant bring myself to understand how it can be so easy sometimes and borderline impossible other times.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0099", "text": "i've used every variation of putters and grips and techniques but the only thing that helps me is time on the practice putting green.", "source": "GolfWRX", "bucket": "Solutions Tried"},
+          {"id": "Q0874", "text": "Since then I've picked up at least 20 different putters", "source": "GolfWRX", "bucket": "Solutions Tried"},
+          {"id": "Q1318", "text": "DF 2.1 has been in the bag since November 2020! And it's not going anywhere!", "source": "YouTube", "bucket": "Hope"},
+          {"id": "Q0475", "text": "I've been trying to buy a game for almost 40 years. The only thing that's lowered my handicap all these years is actually playing golf.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q1416", "text": "Your always changing clubs it seems you never stay with one set or club. Practice is the key to everything.", "source": "YouTube", "bucket": "Villain"}
+        ],
+        "pattern_evidence": [
+          {"pattern_id": "EP-01", "name": "The Putter Carousel", "frequency": 74, "importance_score": 92, "relevance": "Highest-importance pattern in the entire dataset. The carousel IS the honeymoon effect repeated across multiple purchases."},
+          {"pattern_id": "EM-02", "name": "Frustration-to-Despair Escalation", "frequency": 55, "importance_score": 84, "relevance": "Each honeymoon crash escalates frustration. The accumulation creates despair and carousel fatigue."},
+          {"pattern_id": "LP-06", "name": "Last Putter / Never Going Back Language", "frequency": 41, "importance_score": 74, "relevance": "The anti-carousel signal. When a putter DOES break the cycle, permanence language appears."},
+          {"pattern_id": "LP-02", "name": "Game Changer / Night and Day Language", "frequency": 64, "importance_score": 82, "relevance": "Transformation language appears during the honeymoon. Its frequency proves the honeymoon is universal."},
+          {"pattern_id": "EM-05", "name": "Self-Blame vs Equipment-Blame Oscillation", "frequency": 46, "importance_score": 81, "relevance": "The carousel is driven by this oscillation: blame self, try practice, blame putter, buy new putter, repeat."}
+        ],
+        "competitive_evidence": [
+          {"competitor": "Every conventional brand", "role": "Perpetuates the carousel by selling putters with the same rearward CG flaw. The honeymoon effect is their business model."},
+          {"competitor": "LAB Golf", "role": "Partially breaks the carousel for adapters but loses 55-65% of prospects. Uses 'the last putter you'll ever buy' (staleness 9)."}
+        ],
+        "belief_evidence": [
+          {"belief": "The next putter might be 'the one' that finally fixes my putting", "frequency": "implicit", "type": "implicit_belief", "impact": "The belief that powers the carousel. RS1 must validate the hope while explaining why previous hopes failed."},
+          {"belief": "I have already tried everything and nothing works", "frequency": 32, "type": "limiting_belief", "impact": "The belief that kills the carousel (and purchase intent). RS1 counter: 'You've tried different putters with the same physics. You've never tried this.'"},
+          {"belief": "Every new putter is just a honeymoon waiting to end", "frequency": "documented", "type": "implicit_belief", "impact": "Direct cynicism. RS1 must proactively name the honeymoon, explain WHY it happens, and explain WHY RS1 is different."}
+        ],
+        "mechanism_evidence": [
+          {"mechanism": "Honeymoon Physics Explanation", "description": "New putter -> novelty increases focus -> focus reduces anxiety -> reduced anxiety lightens grip -> lighter grip temporarily reduces face drift -> putts drop -> novelty fades -> anxiety returns -> grip tightens -> face drift returns -> same misses. The putter didn't change. The golfer's relationship to pressure changed temporarily."},
+          {"mechanism": "Forward Weighting Anti-Honeymoon", "description": "RS1's face stability is mechanical, not psychological. It doesn't depend on novelty, grip pressure, or anxiety levels. The face stays stable whether the golfer is relaxed or white-knuckling a 4-footer."}
+        ],
+        "proof_inventory": {
+          "available": [
+            "74 carousel quotes documenting the buy-try-discard cycle",
+            "Permanence language from face-stable converts (41 quotes)",
+            "Physics explanation for why honeymoons end (rearward CG + grip pressure cascade)",
+            "Face Down Balance test proving RS1's physics are structurally different"
+          ],
+          "needed": [
+            "Longitudinal performance data: RS1 round 1 vs round 10 vs round 50 (proving no regression)",
+            "Testimonials from carousel riders who found permanence with RS1",
+            "A/B comparison of putting stats over 20+ rounds with RS1 vs previous putter"
+          ]
+        },
+        "emotional_evidence": {
+          "primary_emotions": ["cynicism", "compulsive_hope", "carousel_fatigue", "liberation", "permanence"],
+          "latent_emotion": {"id": "ELG-03", "name": "The Carousel Denial", "description": "Compulsive hope-seeking behavior they recognize as irrational but cannot stop. The putter carousel is an addiction loop driven by the temporary dopamine hit of new-putter hope.", "gap_magnitude": 0.72},
+          "unnamed_emotion": {"id": "UE-02", "name": "Honeymoon Grief", "description": "The specific, recurring heartbreak when a putter that was 'finally working' stops working. Grief for a future self that briefly existed and then vanished.", "naming_power": 0.85},
+          "villain_connection": {"villain": "The Putter Carousel -- The Industry's Profit Engine", "blame_frequency": 92, "emotional_charge": 8}
+        },
+        "transformation_pairs": [
+          {"pair_id": "TP-002", "theme": "From Three-Putt Machine to Zero", "pain_id": "Q0055", "hope_id": "Q0421", "emotional_contrast": 10, "priority": "GOLD"},
+          {"pair_id": "TP-007", "theme": "Dropping Four Putts Per Round", "pain_id": "Q0353", "hope_id": "Q0311", "emotional_contrast": 8, "priority": "HIGH"},
+          {"pair_id": "EP-015", "theme": "Carousel Exit Through Physics", "priority": "HIGH"}
+        ]
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-007",
+      "tier": "1_PURSUE",
+      "composite_score": 7.75,
+      "opportunity_summary": "Leverage Chris McGinley's 25-year OEM pedigree and 11 world #1 players as the credibility mechanism that a new brand needs in a Stage 4 market where verbal claims are dismissed but engineering authority is respected.",
+      "package_type": "full",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0385", "text": "The data all shows that tech in this particular tool doesn't matter much... What is left? Confidence, preference and the person using the tool.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q0295", "text": "Once a putter meets a certain quality threshold, it's all marketing imo.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q0303", "text": "You don't need an expensive putter to putt well. Cleveland Hb soft are great putters and not overly expensive. A $1000 LAB isn't a magic wand.", "source": "Reddit", "bucket": "Villain"},
+          {"id": "Q0160", "text": "I know 'blame the equipment' is the running joke on this site as an excuse to get something new. While your clubs aren't generally your problem, I would say, from recent personal experience, that the putter may be the exception to that rule.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q1371", "text": "This is the kind of real analysis that I love to see. I don't really care what an influencer 'says'. Show me the data.", "source": "YouTube", "bucket": "Solutions Tried"},
+          {"id": "Q0678", "text": "Buying from a non-traditional brand and regretting it", "source": "Perplexity", "bucket": "Villain"},
+          {"id": "Q0474", "text": "The PGA tour is where all the best technology is put into play by the best players in the world.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q1396", "text": "Its the most used club in you bag per hole. Get a fitting from a pro, not some youtube joe.", "source": "YouTube", "bucket": "Villain"},
+          {"id": "Q0296", "text": "I've noticed some putters are $100 while others are $400+ and even more from custom shops. For people who have tried both, did you actually notice a difference?", "source": "Reddit", "bucket": "Villain"},
+          {"id": "Q0329", "text": "My understanding is that L.A.B. doesn't pay anyone to use their putters, so these are professional golfers making their own choices.", "source": "MyGolfSpy Forum", "bucket": "Competitor Mechanism"}
+        ],
+        "pattern_evidence": [
+          {"pattern_id": "BH-02", "name": "YouTube/Forum Research Before Purchase", "frequency": 44, "importance_score": 73, "relevance": "Research-driven buyers will investigate McGinley's credentials. His verifiable OEM history provides the engineering authority they seek."},
+          {"pattern_id": "EM-05", "name": "Self-Blame vs Equipment-Blame Oscillation", "frequency": 46, "importance_score": 81, "relevance": "An authority who says 'your stroke is fine, the physics are wrong' resolves the oscillation from a credible source."},
+          {"pattern_id": "BH-03", "name": "The Comparison Test Ritual", "frequency": 31, "importance_score": 66, "relevance": "McGinley's engineering explanation provides the framework for HOW to compare RS1 to competitors."},
+          {"pattern_id": "EP-07", "name": "Scotty Cameron Worship-to-Disillusion", "frequency": 34, "importance_score": 71, "relevance": "Golfers disillusioned with heritage brands are primed for an engineering-authority alternative."},
+          {"pattern_id": "BH-04", "name": "Buying Based on Aesthetics vs Performance", "frequency": 37, "importance_score": 67, "relevance": "McGinley bridges the gap: engineering credibility makes the performance case while the putter's design handles aesthetics."}
+        ],
+        "competitive_evidence": [
+          {"competitor": "LAB Golf / Sam Hahn", "authority_type": "Entrepreneur/CEO, not OEM engineer. Credible innovator but not a traditional putter design authority.", "rs1_advantage": "McGinley has 25+ years at major OEMs designing for world #1 players. Engineering pedigree vs entrepreneurial story."},
+          {"competitor": "Scotty Cameron", "authority_type": "Brand name, not active individual engineer. Heritage authority.", "rs1_advantage": "McGinley is a living, active engineer who can explain the physics. Scotty Cameron is a logo on a box."},
+          {"competitor": "Bettinardi", "authority_type": "Known for milling quality. Manufacturing authority.", "rs1_advantage": "Manufacturing precision vs design innovation. McGinley designed what the putter DOES, not just how it's made."}
+        ],
+        "belief_evidence": [
+          {"belief": "Performance Golf is a digital training company, not a real equipment maker", "frequency": 15, "type": "limiting_belief", "impact": "McGinley directly addresses this credibility gap. His OEM pedigree legitimizes PG's entry into equipment."},
+          {"belief": "Tour player usage validates (or invalidates) putter technology", "frequency": 29, "type": "surface_belief", "impact": "'The man who designed clubs for 11 world #1 players' provides tour-adjacent credibility without requiring current RS1 tour adoption."},
+          {"belief": "Only established putter brands make legitimate putters", "frequency": 34, "type": "limiting_belief", "impact": "McGinley IS the established putter industry. He brings the credibility of the industry he left to the brand he joined."}
+        ],
+        "mechanism_evidence": [
+          {"mechanism": "Designer as Authority", "type": "credibility mechanism", "description": "No competitor has a named, active designer with verifiable OEM credentials as the face of the brand. This is RS1's defensive moat."}
+        ],
+        "proof_inventory": {
+          "available": [
+            "Chris McGinley: 25+ years at major OEMs (verifiable employment history)",
+            "Designed clubs for 11 world #1 players (specific, impressive number)",
+            "Patented Dual Pistol Grip (IP credibility)",
+            "5-axis precision machined components (manufacturing authority)",
+            "Multi-material construction (steel + carbon + aluminum) showing engineering sophistication"
+          ],
+          "needed": [
+            "McGinley long-form origin story video (documentary-style interview)",
+            "McGinley technical explanation content (explaining forward CG in his own words)",
+            "Professional fitter endorsements validating McGinley's engineering claims",
+            "Patent documentation for Face Down Balance mechanism"
+          ]
+        },
+        "emotional_evidence": {
+          "primary_emotions": ["skepticism", "trust_seeking", "credibility_hunger", "anti_marketing_sentiment"],
+          "now_state": {"description": "Stage 4 audience dismisses verbal claims. Demands engineering proof. Distrusts marketing companies.", "frequency": "market-wide"},
+          "after_state": {"description": "Trusts RS1 because the engineer behind it has verified credentials that cannot be faked or marketed into existence.", "frequency": "projected"},
+          "villain_connection": {"villain": "The Premium Price Deception", "blame_frequency": 52, "emotional_charge": 7}
+        },
+        "transformation_pairs": [
+          {"pair_id": "EP-006", "theme": "Wrong Equipment Blamed on Wrong Golfer", "priority": "HIGH", "relevance": "McGinley as the authority who says 'it's not you, it's the physics' carries more weight than a brand ad."},
+          {"pair_id": "EP-008", "theme": "Swing Compensations Disappear With Proper Design", "priority": "HIGH", "relevance": "McGinley's engineering authority validates the claim that compensations are equipment-induced."}
+        ]
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-008",
+      "tier": "2_CONSIDER",
+      "composite_score": 7.38,
+      "opportunity_summary": "Position RS1 as the Technology + Technique dual-promise putter -- the first that both improves ball flight (face stability) AND trains better stroke mechanics over time (74-degree lie angle + gravity-driven pendulum).",
+      "package_type": "summary",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0238", "text": "almost like a training device that naturally encourages shoulders to continue the stroke", "source": "GolfWRX", "bucket": "Competitor Mechanism"},
+          {"id": "Q0435", "text": "The zero-torque design forces you to use a better stroke. Over time, your mechanics actually improve.", "source": "GolfWRX", "bucket": "Hope"},
+          {"id": "Q0012", "text": "It has just the right weight, balance and feel during both my back swing and forward swing. It feels more like I'm swinging a pendulum than any putter I've ever used.", "source": "Amazon", "bucket": "Hope"},
+          {"id": "Q0424", "text": "With a L.A.B. putter there is no twist. If I pull or push a putt, it's all on me. The putter cannot be blamed.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0411", "text": "I like the DF3 because once I acclimated myself to it, it really does eliminate the variable of trying to control the face for me.", "source": "GolfWRX", "bucket": "Hope"}
+        ],
+        "key_patterns": [
+          {"pattern_id": "BH-01", "name": "Grip Experimentation as First Response", "frequency": 36, "importance_score": 68},
+          {"pattern_id": "EP-08", "name": "Distance Control as Secondary Concern", "frequency": 39, "importance_score": 72},
+          {"pattern_id": "EM-07", "name": "Stress-Free Putting as Ultimate Desire", "frequency": 37, "importance_score": 76}
+        ],
+        "competitive_context": "Zero competitors occupy the 'Technology + Technique' dual-promise position. LAB's 'less to think about' is adjacent but doesn't explicitly claim technique improvement.",
+        "key_beliefs": [
+          {"belief": "Practice is what makes you a good putter, not equipment", "frequency": 52, "relevance": "The dual promise respects this belief: RS1 improves your technique AND your results."},
+          {"belief": "Confidence is the most important factor in putting", "frequency": 91, "relevance": "The dual promise builds confidence through both immediate results AND long-term skill development."},
+          {"belief": "You should try before you buy a premium putter", "frequency": 44, "relevance": "The technique-improvement claim is verifiable through extended use, supporting trial programs."}
+        ],
+        "proof_summary": {
+          "available": ["74-degree lie angle (promotes straighter path)", "Heavy forward weighting (natural pendulum motion)", "Golfer quotes describing training-device feel"],
+          "needed": ["SAM PuttLab longitudinal data showing stroke improvement over time", "Before/after stroke mechanics comparison data"]
+        }
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-010",
+      "tier": "2_CONSIDER",
+      "composite_score": 7.22,
+      "opportunity_summary": "Target the 10-15% of the addressable market experiencing clinical-level putting anxiety (yips, shaking hands, avoidance behavior) with RS1 as the mechanical antidote that breaks the doom loop at its physics root.",
+      "package_type": "summary",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0789", "text": "I feel for you as I have the yips and although I love golf, i cant play now. Most times i get tee to green in regulation, but then i 3 or 4 putt. Its sould destroying.", "source": "YouTube", "bucket": "Pain"},
+          {"id": "Q0085", "text": "First, yes - I need to be more confident. I'm a wreck on the greens right now - total neuroses. Shaking over every putt.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0065", "text": "I was utterly terrified on the greens early on. I didn't have any reason to be nervous. I just was.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0087", "text": "Obviously the more putts I miss, the less confidence I have - not just on the immediate stroke, but also for the one I will have to make when I inevitably miss.", "source": "GolfWRX", "bucket": "Pain"},
+          {"id": "Q0104", "text": "guys, i gotta admit.. i've been playin all my life.. but i would like to hear advise on yip tips.. i can't putt worth phooey anymore where it used to be the only reason i had a low handicap.", "source": "TheSandTrap", "bucket": "Pain"},
+          {"id": "Q0634", "text": "It's terrible, and it's a terrible feeling standing over a putt that is dead flat and maybe 30 inches and not having any confidence to make it.", "source": "Reddit r/golf", "bucket": "Pain"},
+          {"id": "Q1418", "text": "In over 55 years of playing this amazing game i finally feel confident and actually enjoy putting due to the DF3", "source": "YouTube", "bucket": "Hope"},
+          {"id": "Q1423", "text": "No longer have the dreaded Yips.", "source": "YouTube", "bucket": "Hope"}
+        ],
+        "key_patterns": [
+          {"pattern_id": "EP-06", "name": "The Yips as Long-Term Affliction", "frequency": 32, "importance_score": 75},
+          {"pattern_id": "EM-04", "name": "Pressure Amplification Under Competition", "frequency": 42, "importance_score": 76},
+          {"pattern_id": "EM-02", "name": "Frustration-to-Despair Escalation", "frequency": 55, "importance_score": 84}
+        ],
+        "competitive_context": "LAB Golf partially addresses with 'less to think about' messaging but their adaptation period can WORSEN anxiety initially. No brand explicitly bridges psychological and mechanical anxiety solutions. RS1's no-adaptation advantage is critical here.",
+        "key_beliefs": [
+          {"belief": "Putting is mostly mental (ideology villain)", "frequency": 67, "relevance": "RS1 reframes: 'What if it's a mechanical problem with a mechanical solution?'"},
+          {"belief": "Confidence is the most important factor", "frequency": 91, "relevance": "RS1 restores confidence mechanically, not through willpower."},
+          {"belief": "I have already tried everything and nothing works", "frequency": 32, "relevance": "Yips sufferers are the most exhausted segment. RS1 must prove this is genuinely different."}
+        ],
+        "proof_summary": {
+          "available": ["Face stability regardless of grip pressure (physics-based anxiety counter)", "No adaptation period (doesn't worsen anxiety before improving)", "TP-003 and TP-008 transformation pairs (yips devastation to putting joy)"],
+          "needed": ["Testimonials from yips sufferers who found relief with RS1", "Grip pressure variation testing showing face stability maintained"]
+        }
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-009",
+      "tier": "2_CONSIDER",
+      "composite_score": 7.15,
+      "opportunity_summary": "Address the gravity-driven pendulum distance control advantage as a direct counter to zero-torque putters' #1 documented complaint, positioning RS1 as face stability PLUS the distance control ZT sacrifices.",
+      "package_type": "summary",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0248", "text": "The more you squeeze it, the harder distance control becomes.", "source": "TheSandTrap", "bucket": "Root Cause"},
+          {"id": "Q0012", "text": "It feels more like I'm swinging a pendulum than any putter I've ever used.", "source": "Amazon", "bucket": "Hope"},
+          {"id": "Q1330", "text": "Distance control issues are not coming from non insert vs insert, even lab themselves have stated the diff is only 2% more distance with the insert", "source": "YouTube", "bucket": "Competitor Mechanism"},
+          {"id": "Q1332", "text": "the explanation was quite simple really: if the greens are super fast or you have a downhill putt, soften your grip pressure", "source": "YouTube", "bucket": "Competitor Mechanism"},
+          {"id": "Q0567", "text": "Direction is fixed but I still struggle with speed. That's the next frontier.", "source": "GolfWRX", "bucket": "Hope"},
+          {"id": "Q0028", "text": "This putter hits the ball with a soft touch which has improved my downhill and lag puts.", "source": "Amazon", "bucket": "Hope"}
+        ],
+        "key_patterns": [
+          {"pattern_id": "EP-08", "name": "Distance Control as Secondary Concern", "frequency": 39, "importance_score": 72},
+          {"pattern_id": "LP-04", "name": "Stroke Count Specificity", "frequency": 72, "importance_score": 85},
+          {"pattern_id": "BH-01", "name": "Grip Experimentation", "frequency": 36, "importance_score": 68}
+        ],
+        "competitive_context": "Distance control is LAB Golf's #1 documented complaint. No competitor claims gravity-driven pendulum as a distance control mechanism. RS1's forward weighting creates natural pull-through momentum that could address this gap.",
+        "key_beliefs": [
+          {"belief": "Face-balanced putters sacrifice feel for stability", "frequency": 40, "relevance": "Distance control relates to feel. RS1 must prove it delivers both stability AND distance feel."},
+          {"belief": "The right putter can dramatically reduce strokes", "frequency": 72, "relevance": "Distance control improvement is a quantifiable stroke-saving claim."},
+          {"belief": "Zero-torque putters work for some but not everyone", "frequency": 67, "relevance": "Distance control issues are a major reason ZT doesn't work for some. RS1 addresses this."}
+        ],
+        "proof_summary": {
+          "available": ["360g head weight creates natural pendulum momentum", "75%+ weight forward creates pull-through effect", "LAB's distance control complaints are extensively documented"],
+          "needed": ["SAM PuttLab distance control consistency data (RS1 vs ZT vs traditional)", "Dispersion testing from 20/30/40 feet showing distance control improvement"]
+        }
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-011",
+      "tier": "2_CONSIDER",
+      "composite_score": 6.9,
+      "opportunity_summary": "Address the price-wedge opportunity where RS1 at $399/$429 undercuts LAB ($449-$649) while claiming technological superiority, turning price from defensive justification into offensive advantage.",
+      "package_type": "summary",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0471", "text": "the price for a counterbalance is hefty... My fear of spending that much and having the results be the exact same as my gamer.", "source": "GolfWRX", "bucket": "Solutions Tried"},
+          {"id": "Q0384", "text": "$500+ is a lot of money to throw at a hope.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q0381", "text": "I don't have $1000 for any club in my bag, but especially not when it is a hypothetical improvement.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q1401", "text": "Lab putters are way too far above my pay grade.", "source": "YouTube", "bucket": "Villain"},
+          {"id": "Q1402", "text": "players will spend 600-700 pounds on a driver which they will use probs 6-10 times a round so spending the same on a putter which will be used around 32ish times a round shouldn't be an issue", "source": "YouTube", "bucket": "Root Cause"},
+          {"id": "Q0050", "text": "It is by far the most I've have ever paid for a club, but I am glad I did.", "source": "Amazon", "bucket": "Villain"}
+        ],
+        "key_patterns": [
+          {"pattern_id": "EP-01", "name": "The Putter Carousel", "frequency": 74, "importance_score": 92},
+          {"pattern_id": "EM-02", "name": "Frustration-to-Despair Escalation", "frequency": 55, "importance_score": 84},
+          {"pattern_id": "BH-02", "name": "YouTube/Forum Research Before Purchase", "frequency": 44, "importance_score": 73}
+        ],
+        "competitive_context": "RS1 at $399/$429 undercuts LAB by $50-$220 and matches/beats Scotty Cameron. PXG occupies general 'value disruption' but not within face-stability category specifically.",
+        "key_beliefs": [
+          {"belief": "$399+ is too much to spend on a putter", "frequency": 35, "relevance": "Price is surface objection masking fear of wasted money. RS1's lower-than-LAB price reduces risk."},
+          {"belief": "The putter is the most used club and deserves investment", "frequency": 26, "relevance": "Per-use cost argument already established in market. RS1 at $399 strengthens it."},
+          {"belief": "More expensive does not always mean better", "frequency": "implicit", "relevance": "RS1 can claim technological superiority at lower price -- engineering value, not brand tax."}
+        ],
+        "proof_summary": {
+          "available": ["RS1 $399/$429 vs LAB $449-$649 (direct price comparison)", "Per-use cost math (30+ strokes per round)", "Engineering transparency (weight specs, materials, CG data)"],
+          "needed": ["Guarantee or trial period to reduce investment anxiety", "Cost-per-stroke-saved calculation from beta tester data"]
+        }
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-012",
+      "tier": "2_CONSIDER",
+      "composite_score": 6.62,
+      "opportunity_summary": "Deploy schema-violation messaging structures that bypass Stage 4 audience numbness -- lead with demonstration instead of brand story, acknowledge the honeymoon pattern proactively, and replace testimonial cascades with falsifiable challenges.",
+      "package_type": "summary",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0385", "text": "The data all shows that tech in this particular tool doesn't matter much... What is left? Confidence, preference and the person using the tool.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q0295", "text": "Once a putter meets a certain quality threshold, it's all marketing imo.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q0303", "text": "You don't need an expensive putter to putt well.", "source": "Reddit", "bucket": "Villain"},
+          {"id": "Q1371", "text": "This is the kind of real analysis that I love to see. I don't really care what an influencer 'says'. Show me the data.", "source": "YouTube", "bucket": "Solutions Tried"},
+          {"id": "Q1370", "text": "Just an observation... A lot of reviews of zero torque putters with the reviewer unable to hit the side of a barn with them.", "source": "YouTube", "bucket": "Villain"}
+        ],
+        "key_patterns": [
+          {"pattern_id": "BH-02", "name": "YouTube/Forum Research Before Purchase", "frequency": 44, "importance_score": 73},
+          {"pattern_id": "EM-05", "name": "Self-Blame vs Equipment-Blame Oscillation", "frequency": 46, "importance_score": 81},
+          {"pattern_id": "BH-03", "name": "The Comparison Test Ritual", "frequency": 31, "importance_score": 66}
+        ],
+        "competitive_context": "Every competitor uses standard Problem-Mechanism-Proof-Offer DR funnel structure. No brand leads with demonstration before brand introduction. 8 schema violation opportunities identified with surprise_potential ratings of 7-9.",
+        "key_beliefs": [
+          {"belief": "All premium putters are basically the same", "frequency": 38, "relevance": "Standard messaging confirms this belief. Schema violations break the pattern."},
+          {"belief": "Peer results matter more than brand marketing", "frequency": "implicit", "relevance": "Falsifiable challenges ('try this test with your putter') outperform testimonials."},
+          {"belief": "The putter industry has been selling the same thing for decades", "frequency": "implicit", "relevance": "Novel messaging structure signals novel product."}
+        ],
+        "proof_summary": {
+          "available": ["8 documented schema violation opportunities (surprise potential 7-9)", "10 saturated claims with staleness scores (what to avoid)", "Expectation schema mapping of audience numbness levels"],
+          "needed": ["A/B tested schema-violation ad creative", "Conversion data comparing standard vs violation messaging formats"]
+        }
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-013",
+      "tier": "2_CONSIDER",
+      "composite_score": 6.2,
+      "opportunity_summary": "Position the 74-degree Square-to-Square lie angle as a designed-in innovation (not a fitting variable) that promotes a straighter stroke path with less face rotation, adding technical depth to the Forward Weighting mechanism story.",
+      "package_type": "summary",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0538", "text": "The key is to get the correct lie angle, otherwise you're throwing your money away", "source": "YouTube", "bucket": "Root Cause"},
+          {"id": "Q1336", "text": "The key is to get the correct lie angle, otherwise you're throwing your money away", "source": "YouTube", "bucket": "Root Cause"},
+          {"id": "Q1327", "text": "it all depends on how you stroke the putter. Some players have a strong arc, some have a slight arc, and some swing it straight back and through like a pendulum.", "source": "YouTube", "bucket": "Root Cause"},
+          {"id": "Q0433", "text": "based on Puttlab measurements I average 0.5 degrees open and my path averages 0.5 degrees left so I need a little torque/'toe hang' in my putter to keep the face open to the path.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q1331", "text": "I think my stroke has too much of a natural arc to it but if I try to change that it feels too manipulated", "source": "YouTube", "bucket": "Solutions Tried"}
+        ],
+        "key_patterns": [
+          {"pattern_id": "LP-08", "name": "Zero Torque / Face Balance Technical Vocabulary", "frequency": 56, "importance_score": 80},
+          {"pattern_id": "EP-05", "name": "The Adaptation Period", "frequency": 35, "importance_score": 70},
+          {"pattern_id": "LP-05", "name": "Push / Pull Directional Vocabulary", "frequency": 53, "importance_score": 78}
+        ],
+        "competitive_context": "No competitor claims a specific lie angle as a designed-in performance feature. Industry treats lie angle as a fitting variable. RS1 reframes 74-degree as intentional engineering for straighter stroke path.",
+        "key_beliefs": [
+          {"belief": "My stroke type (arcing) is not compatible with face-stable putters", "frequency": 31, "relevance": "74-degree lie angle reduces arc, making face-stable technology work with more stroke types."},
+          {"belief": "A putter fitting is essential for a premium putter to work", "frequency": 34, "relevance": "If 74-degree is a designed-in 'one size fits most,' RS1 must explain why this lie angle works broadly."},
+          {"belief": "Face angle at impact determines where the putt goes", "frequency": 43, "relevance": "Less arc = less face rotation = more consistent face angle at impact."}
+        ],
+        "proof_summary": {
+          "available": ["74-degree vs traditional 70-degree (quantifiable 4-degree difference)", "Less arc = less face rotation (physics principle)", "Straight-back-straight-through promotion (measurable stroke path)"],
+          "needed": ["SAM PuttLab data showing stroke path differences at 74 vs 70 degrees", "Visual demonstration of stroke arc reduction"]
+        }
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-014",
+      "tier": "2_CONSIDER",
+      "composite_score": 5.82,
+      "opportunity_summary": "Build the data proof package (SAM PuttLab face angle data, Arccos strokes gained, independent testing) to capture the data-driven equipment optimizer segment post-launch once testing infrastructure is in place.",
+      "package_type": "summary",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0363", "text": "According to Arccos, with others I was a -1.2 vs my preferred handicap putting... DF3 - I am actually a +1.1 in putting with it. So a total gain of 2.3", "source": "GolfWRX", "bucket": "Hope"},
+          {"id": "Q0656", "text": "For today's round, I was -7.13 SG:putting relative to a pro. According to the chart below, a 25 index only loses 4.71 strokes putting to a pro. As a 5 index, I'm beyond disgusted right now.", "source": "Reddit r/golf", "bucket": "Pain"},
+          {"id": "Q0383", "text": "Show me the data. Independent testing. Not influencer opinions.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q0360", "text": "Distance control from 30 feet before was a spread of 6 feet... Now, with the same drill, I am within 2 feet. The change was immediate; night and day.", "source": "GolfWRX", "bucket": "Hope"},
+          {"id": "Q1431", "text": "my putting has improved 6 strokes according to my arccos", "source": "YouTube", "bucket": "Hope"}
+        ],
+        "key_patterns": [
+          {"pattern_id": "LP-04", "name": "Stroke Count Specificity", "frequency": 72, "importance_score": 85},
+          {"pattern_id": "BH-02", "name": "YouTube/Forum Research Before Purchase", "frequency": 44, "importance_score": 73},
+          {"pattern_id": "BH-03", "name": "The Comparison Test Ritual", "frequency": 31, "importance_score": 66}
+        ],
+        "competitive_context": "Evnroll has MyGolfSpy validation. LAB has Arccos user data. RS1 needs equivalent independent testing data. This is a 6-12 month post-launch strategy.",
+        "key_beliefs": [
+          {"belief": "Peer results matter more than brand marketing", "frequency": "implicit", "relevance": "Data-driven buyers are the market's influencers. Winning them creates downstream credibility."},
+          {"belief": "The right putter can dramatically reduce strokes", "frequency": 72, "relevance": "Data proof converts belief into evidence. Arccos strokes gained is the gold standard."},
+          {"belief": "You should try before you buy a premium putter", "frequency": 44, "relevance": "Data from extended trials (not store demos) is what this segment trusts."}
+        ],
+        "proof_summary": {
+          "available": ["Arccos and ShotScope data collection framework exists in market", "MyGolfSpy independent testing precedent established by Evnroll/LAB", "RS1 engineering specs provide testable claims"],
+          "needed": ["SAM PuttLab face angle comparison (RS1 vs traditional vs LAB)", "Arccos strokes gained data from 50+ RS1 users over 10+ rounds", "MyGolfSpy Most Wanted submission and review", "Independent MOI measurement comparison"]
+        }
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-015",
+      "tier": "2_CONSIDER",
+      "composite_score": 5.45,
+      "opportunity_summary": "Let the confidence-mechanism framework (Certainty -> Confidence -> Performance) emerge organically from testimonials and user data rather than positioning it as an explicit mechanism claim at launch.",
+      "package_type": "summary",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0416", "text": "All it does is give me a little more confidence on shorter putts (under 12 feet) that if i line it up, use my normal stroke, i will have more chance of having a square face on contact.", "source": "GolfWRX", "bucket": "Hope"},
+          {"id": "Q0551", "text": "It's nice to have a flat 5 footer and know it's going in. I tend only to miss now on mis-reads. Confidence is such a big thing in putting (and golf as a whole).", "source": "GolfWRX", "bucket": "Hope"},
+          {"id": "Q0160", "text": "Having a putter that I'm not afraid of makes eliminating three putts a lot easier.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0167", "text": "Short putts became automatic, felt great, really eye opening for me.", "source": "GolfWRX", "bucket": "Hope"},
+          {"id": "Q1424", "text": "Confidence is up and stress and worry is down.", "source": "YouTube", "bucket": "Hope"}
+        ],
+        "key_patterns": [
+          {"pattern_id": "EM-01", "name": "Confidence as Primary Currency", "frequency": 91, "importance_score": 95},
+          {"pattern_id": "EM-07", "name": "Stress-Free Putting as Ultimate Desire", "frequency": 37, "importance_score": 76},
+          {"pattern_id": "EM-03", "name": "Relief and Joy Upon Finding Solution", "frequency": 48, "importance_score": 79}
+        ],
+        "competitive_context": "Seven competitors use confidence at address as an emotional appeal. Staleness score 8/10. The word 'confidence' in putter marketing is nearly inert. RS1 must earn confidence claims through testimonials, not positioning.",
+        "key_beliefs": [
+          {"belief": "Confidence is the most important factor in putting", "frequency": 91, "relevance": "Universally held but universally claimed. Must be demonstrated, not asserted."},
+          {"belief": "The calm feeling of trusting the putter instead of fighting it", "frequency": 37, "relevance": "The emotional outcome RS1 should generate naturally, not claim prematurely."},
+          {"belief": "Equipment that inspires trust breaks the negative spiral", "frequency": "cluster", "relevance": "The confidence-performance doom loop is real. Let users describe the break."}
+        ],
+        "proof_summary": {
+          "available": ["EM-01 pattern (91 frequency, 95 importance -- highest emotional pattern)", "T002 theme (Confidence-Performance Doom Loop)", "6 GOLD transformation pairs with confidence payoffs"],
+          "needed": ["RS1-specific testimonials describing confidence restoration", "Before/after anxiety self-reporting from beta testers", "Quantified confidence metrics (short putt make rate improvement)"]
+        }
+      }
+    },
+
+    {
+      "opportunity_id": "OPP-016",
+      "tier": "3_MONITOR",
+      "composite_score": 4.9,
+      "opportunity_summary": "Monitor the emerging Stage 5 identity/tribal dynamics (LAB evangelists, Scotty loyalists) and consider layering identity elements onto the Stage 4 mechanism story as the market evolves.",
+      "package_type": "minimal",
+      "evidence": {
+        "top_quotes": [
+          {"id": "Q0385", "text": "The data all shows that tech in this particular tool doesn't matter much... What is left? Confidence, preference and the person using the tool.", "source": "GolfWRX", "bucket": "Villain"},
+          {"id": "Q0303", "text": "You don't need an expensive putter to putt well.", "source": "Reddit", "bucket": "Villain"},
+          {"id": "Q0160", "text": "I know 'blame the equipment' is the running joke on this site as an excuse to get something new. While your clubs aren't generally your problem, I would say, from recent personal experience, that the putter may be the exception to that rule.", "source": "GolfWRX", "bucket": "Root Cause"},
+          {"id": "Q0233", "text": "Most are evangelical, with comments like 'it's my cheat stick' or 'it's my magic wand' being common.", "source": "MyGolfSpy Forum", "bucket": "Competitor Mechanism"},
+          {"id": "Q1383", "text": "I've had all the comments eg 'is that a branding iron' etc, and usually by the end of the round my opponent(s) want to try it.", "source": "YouTube", "bucket": "Competitor Mechanism"}
+        ],
+        "monitoring_indicators": [
+          "Track the percentage of online putting discussions that use identity language ('I'm a LAB person', 'I'm a Scotty guy') vs mechanism language ('zero torque works because...')",
+          "Monitor whether LAB's post-acquisition messaging shifts toward identity/lifestyle positioning",
+          "Watch for RS1 early adopters spontaneously forming community identity ('RS1 believers', 'forward weighting converts')",
+          "Track Scotty Cameron collector culture -- if it declines, Stage 5 identity positioning is weakening market-wide",
+          "Monitor anti-identity sentiment ('the guy who falls for marketing') -- if this grows, identity positioning becomes riskier"
+        ],
+        "activation_triggers": [
+          "RS1 achieves 6+ months of market presence with established mechanism credibility -- identity can then be layered on top",
+          "LAB Golf shifts to identity-first marketing post L Catterton acquisition -- creating an identity positioning vacuum in the engineering lane",
+          "RS1 user community spontaneously develops tribal language and evangelism behavior (the 'can't go back' phenomenon)",
+          "Market sophistication research update shows 30%+ of addressable market has moved to Stage 5 identity evaluation",
+          "A major competing brand successfully deploys identity positioning, proving the market has shifted"
+        ]
+      }
+    }
+  ]
+}

@@ -50,7 +50,9 @@ A world-class engineer and a sharp creative director, co-presenting to a room of
 
 > *STATUS: To be populated during Expanded phase after Skill 01 research*
 
-**Seed notes for expansion:** The premium putter market is in a technology arms race. LAB Golf proved that a "belief shift" (face balance) can create a movement and command premium pricing. Golfers are increasingly tech-literate and research-driven — they read MyGolfSpy, watch TXG and Ian Fraser fittings on YouTube, and cross-reference claims on GolfWRX forums. At the same time, there's fatigue around vague "game improvement" marketing. The golfers who spend $400+ on a putter want to understand WHAT it does and WHY — they're not impulse buyers. PG entering the premium equipment space is a credibility play: they need to prove they belong alongside the OEMs, not just alongside their own training content. The cultural moment is: golfers are ready for the next real innovation, but they're skeptical of marketing-first claims. Proof-first, feel-second, story-third.
+**Seed notes for expansion:** The premium putter market is in a technology arms race. LAB Golf created a movement by popularizing TORQUE as a concept — zero torque / lie angle balance was a real physics principle that existed but wasn't in the vocabulary of recreational golfers. LAB didn't invent torque-free design; they made it a mainstream conversation, built a belief shift around it, and commanded premium pricing. That's the playbook. PG is executing the same playbook with FORWARD WEIGHTING — a real physics principle (gravity pulling the heavy face forward, stabilizing the stroke) that isn't yet in the mainstream putting conversation. Research should map specifically HOW LAB popularized torque (language, proof, community, influencer strategy) because we want to orchestrate the same kind of technological revolution with our hero feature.
+
+Golfers are increasingly tech-literate and research-driven — they read MyGolfSpy, watch TXG and Ian Fraser fittings on YouTube, and cross-reference claims on GolfWRX forums. At the same time, there's fatigue around vague "game improvement" marketing. The golfers who spend $400+ on a putter want to understand WHAT it does and WHY — they're not impulse buyers. PG entering the premium equipment space is a credibility play: they need to prove they belong alongside the OEMs, not just alongside their own training content. The cultural moment is: golfers are ready for the next real innovation, but they're skeptical of marketing-first claims. Proof-first, feel-second, story-third.
 
 ---
 
@@ -62,7 +64,7 @@ A world-class engineer and a sharp creative director, co-presenting to a room of
 - Apple product page copy (precise, confident, every word earns its place)
 - VanMoof bike copy (premium DTC, engineering-led, beautiful restraint)
 - Chris McGinley's own language from the call transcript (direct, technical but clear, no filler)
-- The creative pitch deck's best lines: "Gravity-Driven. Face-Controlled." / "The more you try to control something, the more it controls you." / "Built To Fall"
+- The creative pitch deck's best lines: "Gravity-Driven. Face-Controlled." / "The more you try to control something, the more it controls you." / "Let it fall."
 
 ---
 
@@ -92,8 +94,11 @@ When building longer narrative sections (the evolutionary story, the Chris McGin
 - **"Face drift" is the consumer-facing problem name.** Not "toe flow" (too technical) or "face opening" (too generic). Face drift = the experience of the face drifting off-line during the stroke.
 - **Forward weighting is the #1 hero argument.** Face Down Balance is #2 (the visual proof). Lie angle is #3 (the supporting spec). This hierarchy comes directly from Chris McGinley.
 - **Premium branded eCom page format** — NOT a traditional DR VSL or long-form sales page. Think Apple product page: scrolling sections, animations, typography as design element, generous whitespace.
-- **"Gravity-Driven. Face-Controlled."** is the product truth line. "Let it fall." is the tagline. "Built To Fall" is the campaign platform. Use these as anchors.
-- **Chris McGinley is the credibility anchor** — 25+ years at major OEMs, designed for Tiger, Rory, 11 world #1 players. His name and pedigree authenticate every engineering claim.
+- **"Gravity-Driven. Face-Controlled."** is the product truth line. **"Let it fall."** is the tagline (double entendre: let gravity pull the putter through the stroke AND let the ball fall in the hole). "Built To Fall" was an earlier campaign platform concept — "Let it fall" is the preferred direction.
+- **"Do less. Make more."** is a supporting theme/energy. The putter does more work (technology + technique assist) so the golfer does less — and makes more putts. This captures the product promise in four words.
+- **Direct response principles without direct response aesthetics.** PG is a DR company. The logical argument structure, proof hierarchy, and persuasion architecture are rooted in DR. But the LANGUAGE, FORMATTING, and TONE are premium branded — not hype-driven, not countdown-timer energy, not "never miss again" overclaiming.
+- **The RS1 dual promise: best technology + technique assist.** This is the core positioning that separates RS1 from everything else. Two pillars of great putting: (1) the right technology, (2) the right technique. Every other putter addresses only #1. RS1 is engineered to give the golfer BOTH — the technology eliminates face drift, AND the design actively helps the player's technique (forward weighting creates a natural pendulum, upright lie encourages less arc, the putter assists the human stroke rather than being indifferent to it).
+- **Chris McGinley is the credibility anchor** — 25+ years at major OEMs, worked on clubs for 11 world #1 players. His name and pedigree authenticate every engineering claim.
 - **Technical language must pass the "Tiger Test"** — if Tiger Woods read this page, would every claim hold up? No hallucinated physics, no oversimplified mechanics, no made-up terms that wouldn't survive scrutiny from a tour pro or club designer.
 - **The page serves all three audiences simultaneously** — the serious amateur who needs to feel it, the low-handicap player who needs to verify it, and the gear enthusiast who needs to analyze it. Layer the copy: emotional surface, technical depth on scroll/expand.
 - **RS1 = Roll Straight.** The name is the promise. Use this connection explicitly but don't overexplain it.

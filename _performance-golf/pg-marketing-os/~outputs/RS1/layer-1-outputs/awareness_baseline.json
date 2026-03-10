@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "product_name": "RS1 Putter",
+    "skill": "1.0-B-prospect-awareness-mapper",
+    "generated_date": "2026-03-10",
+    "market_mode": "B",
+    "note": "Mode B = new product, no existing RS1 marketing in market. However, the CATEGORY (premium putters) is mature. This creates a split: high awareness for the category, low awareness for the specific product and its mechanism (forward weighting)."
+  },
+
+  "diagnosis": {
+    "primary_level": 3,
+    "primary_level_name": "Solution Aware",
+    "confidence": 80,
+    "reasoning": "The premium putter market is mature and highly competitive. Target golfers (5-20 handicap, equipment-literate) overwhelmingly know that premium putters exist and are actively comparing options (Scotty Cameron, LAB Golf, TaylorMade Spider, Odyssey). They understand concepts like face balance, MOI, and increasingly zero torque. However, RS1 is unknown (Mode B), and forward weighting as a SPECIFIC MECHANISM is new to most golfers. The market is Solution Aware for the category but effectively Problem Aware (Level 2) for the specific mechanism RS1 introduces. The page must bridge this gap: meet them where they are (comparing putter technology) and educate them on a new approach (forward weighting + technique assistance)."
+  },
+
+  "distribution": {
+    "level_5_most_aware": {
+      "percentage": 0,
+      "indicators": [
+        "RS1 does not exist in market yet — zero Most Aware prospects",
+        "No one has heard of RS1 or Performance Golf as a putter brand",
+        "Will shift to 5-10% post-launch after Founders 500 seeding"
+      ]
+    },
+    "level_4_product_aware": {
+      "percentage": 25,
+      "indicators": [
+        "Know multiple premium putter brands by name (Scotty, LAB, Spider, Odyssey)",
+        "Actively comparing specific models in forums and YouTube",
+        "Understand technology differentiators (zero torque, face balance, MOI)",
+        "GolfWRX regulars, MyGolfSpy readers, TXG viewers",
+        "Have likely considered or tried LAB Golf"
+      ]
+    },
+    "level_3_solution_aware": {
+      "percentage": 40,
+      "indicators": [
+        "Know premium putters exist and promise better performance",
+        "May have been fit for a putter or considering getting fit",
+        "Aware that technology matters but not clear on which approach is best",
+        "Search 'best putter for consistency' and 'best putter 2026'",
+        "Read reviews but haven't narrowed to specific brand",
+        "Know about face balance vs toe hang at a general level"
+      ]
+    },
+    "level_2_problem_aware": {
+      "percentage": 25,
+      "indicators": [
+        "Know their putting is inconsistent — feel it every round",
+        "Describe 'leaving strokes on the green' and 'missing short putts'",
+        "May blame technique rather than equipment",
+        "Haven't connected putting frustration to a specific equipment solution",
+        "Post frustration on Reddit/forums without mentioning specific products",
+        "May think 'a putter is a putter' or that practice is the only answer"
+      ]
+    },
+    "level_1_unaware": {
+      "percentage": 10,
+      "indicators": [
+        "Don't realize equipment could meaningfully improve their putting",
+        "Believe putting is purely a skill/feel/talent issue",
+        "May not know their putter's face opens during their stroke",
+        "Rarely discuss equipment in putting context",
+        "Think their current putter is 'fine' despite inconsistent results"
+      ]
+    }
+  },
+
+  "mechanism_awareness_overlay": {
+    "note": "Critical for RS1: awareness of the specific MECHANISM (forward weighting) is different from category awareness",
+    "zero_torque_awareness": {
+      "percentage_who_know_concept": 35,
+      "percentage_who_understand_deeply": 15,
+      "source": "LAB Golf's marketing + TaylorMade/Bettinardi adoption has made zero torque mainstream in 2025-2026"
+    },
+    "forward_weighting_awareness": {
+      "percentage_who_know_concept": 10,
+      "percentage_who_understand_deeply": 3,
+      "source": "Bettinardi Queen B mentions it, but not as a primary narrative. RS1 will be introducing this as a mainstream concept — similar to where LAB was 3-4 years ago with zero torque"
+    },
+    "implication": "RS1 must run LAB's playbook: popularize a physics concept (forward weighting / gravity-driven) that recreational golfers don't currently discuss, making it a mainstream conversation. The page must EDUCATE as much as SELL."
+  },
+
+  "implications": {
+    "query_emphasis": [
+      "Solution comparison queries (35% weight) — 'best putter for consistency,' 'LAB Golf vs,' 'premium putter comparison'",
+      "Problem articulation queries (30% weight) — 'inconsistent putting,' 'missing short putts,' 'putting frustration,' 'face opens during stroke'",
+      "Product/mechanism comparison queries (20% weight) — 'zero torque putter,' 'face balanced vs toe hang,' 'mallet vs blade'",
+      "Competitor complaint queries (10% weight) — 'LAB Golf problems,' 'Scotty Cameron worth it,' 'returned my putter'",
+      "Identity/aspiration queries (5% weight) — 'what putter should I buy,' 'putter fitting worth it,' 'best putter for low handicap'"
+    ],
+    "source_priorities": [
+      "Reddit r/golf — ALL levels present, highest volume of emotional language (Level 2-4)",
+      "GolfWRX Forums — Level 3-5 heavy, deepest technical discussions, gear junkie language",
+      "YouTube Comments — Level 2-4, unfiltered reactions, influencer-influenced language",
+      "MyGolfSpy — Level 4-5 heavy, data-driven comparison, informed buyer language",
+      "Amazon Reviews — Level 2-3, post-purchase reality, buyer's remorse/satisfaction language",
+      "LAB Golf pages/reviews — Level 4 heavy, primary competitor intelligence"
+    ],
+    "messaging_approach": "Lead with PROBLEM AGITATION (the face drift experience) to hook Level 2-3 prospects, then EDUCATE on the mechanism (forward weighting) to move them to Level 4, then DIFFERENTIATE (RS1 vs LAB vs traditional putters) to convert Level 4-5. The page architecture must work as an awareness escalator — meeting each segment where they are and moving them up. This is NOT a simple 'buy now' page — it's an education-to-conversion journey."
+  },
+
+  "research_recommendations": [
+    {
+      "recommendation": "Weight problem articulation queries at 30% — higher than typical for a mature category",
+      "rationale": "25% of market is Problem Aware (Level 2) and 10% is Unaware (Level 1). RS1's page must capture and convert these golfers, not just the comparison shoppers. The emotional language from Level 2 prospects is the most powerful copy fuel."
+    },
+    {
+      "recommendation": "Dedicate specific scraping passes to LAB Golf customer experience",
+      "rationale": "LAB is the primary comparison point for the Level 3-4 segment. Their converts are RS1's best prospects (already believe in the physics). Their complaints (distance control, aesthetics, adjustment period) are RS1's opportunity gaps."
+    },
+    {
+      "recommendation": "Include instructional/educational content queries",
+      "rationale": "Level 2-3 golfers search for putting instruction, not putter reviews. Capturing their language when they're learning about face control and stroke mechanics reveals the education gaps RS1's page must fill."
+    },
+    {
+      "recommendation": "Scrape cross-industry premium DTC brand pages for architecture reference",
+      "rationale": "The page format (Apple/VanMoof style) is critical. Understanding how premium brands educate and convert in a single scrolling experience informs RS1's page architecture."
+    },
+    {
+      "recommendation": "Extract competitor MECHANISM language specifically — not just reviews",
+      "rationale": "Zero torque is now used by LAB, TaylorMade, and Bettinardi. RS1 needs a distinct mechanism name (forward weighting / Roll Straight Technology) that doesn't overlap. Research must map every competitor's mechanism language to find white space."
+    },
+    {
+      "recommendation": "Track the 'technique vs equipment' debate closely",
+      "rationale": "RS1's unique dual promise (technology + technique) requires understanding where golfers stand on this debate. Many believe putting is 'all feel' — RS1 must overcome this without dismissing their experience."
+    }
+  ]
+}

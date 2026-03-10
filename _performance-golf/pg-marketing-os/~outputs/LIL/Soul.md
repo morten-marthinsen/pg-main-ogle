@@ -2,7 +2,7 @@
 
 **Created:** 2026-03-09
 **Last Updated:** 2026-03-09
-**Status:** Seed
+**Status:** Expanded (post-Research, Skill 01 complete)
 
 ---
 
@@ -42,15 +42,71 @@ Grant talking to a fellow golf-loving parent at the range while their kids mess 
 
 ## Audience Voice Samples
 
-> *STATUS: To be filled during Expanded phase (after Research, Skill 01)*
-> *Target sources: Reddit r/golf, r/daddit, YouTube comments on Grant Horvat family content, Amazon reviews on competitor toddler golf sets, golf forum threads about kids and golf*
+> *STATUS: Expanded — populated from Skill 01 Deep Research (1,169 quotes across 8 source files)*
+
+**How They Talk About the Dream:**
+- "Nothing beats golfing with your family." [EXP2-H-009]
+- "Some of my favorite memories as a kid were our trips to the range." [EXP2-H-087]
+- "The true definition of GOLF IS LIFE...If Sam doesn't have a club in his hand, this is what you will find him doing around the house. ALL.DAY.EVERY.DAY" [EXP2-H-017]
+- "Watching my husband share the game we love with our daughter is [one of the most beautiful things]." [CC-054]
+- "As a former junior golfer who turned pro, nothing has come close to the satisfaction and joy of teaching my own kids to play golf." [EXP2-H-068]
+
+**How They Talk About the Problem:**
+- "Imagine playing golf with a sledgehammer. That's what you are asking your 30-pound toddler to do with even a one-pound club." [EXP2-RC-001]
+- "My 2 year old loves golf and has broken a LOT of plastic clubs and most of the metal ones are too heavy." [A-079]
+- "It's so easy for them to walk away after a few frustrating swings and decide golf isn't for them." [YF-133]
+- "I wonder how many kids have been given hand-me-down clubs and given up golf completely because making contact with the ball was too hard." [R3-P-016]
+- "Most kids don't quit golf because it's hard. They quit because it feels impossible." [EXP2-P-037]
+
+**How They Talk About What They Want:**
+- "keep it fun" / "make it fun" (8+ sources — the universal parent mantra)
+- "real clubs" vs. "toys" (the positioning parents already use)
+- "he can actually hit the ball" (the success metric, in their words)
+- "something we can do together" (bonding > performance)
+- "game for life" / "lifetime sport" (long-term value frame)
+
+**How They Talk About Success:**
+- "loves it" / "obsessed" / "doesn't want to stop" / "asking to go"
+- "hits it better than me" (pride + humor)
+- "she swings better than me" / "natural"
+- "proud dad" (the identity they aspire to)
 
 ---
 
 ## Cultural Context
 
-> *STATUS: To be filled during Expanded phase*
-> *Initial direction: The cultural moment around screen time anxiety, outdoor play advocacy, "give your kids experiences not screens" sentiment, golf's growing accessibility/youth movement, influencer-to-founder pipeline credibility*
+> *STATUS: Expanded — populated from Skill 01 Deep Research*
+
+**Screen Time Crisis (The Cultural Lever)**
+- 60% of parents feel guilty about their child's screen time [CC-067]
+- 82% say screens make outdoor play motivation harder [CC-068]
+- 72% of kids prefer in-person activities when offered [CC research]
+- Golf uniquely checks every box: outdoor, active, motor skills, character, family bonding
+- USE SPARINGLY — acknowledge the tension but never preach or guilt
+
+**Youth Golf Boom**
+- 4M juniors played on-course in 2025 — highest since 2004 [CC research]
+- Women's golf is fastest-growing segment; LPGA "1 Million More" campaign
+- "Grow the game" is an active cultural movement, not just marketing
+- Charlie Golf Co went 0 → 13,000 families in 2 years (proves demand)
+
+**The "Developmental Product" Category**
+- A THIRD category is emerging in parent language: not "toy," not "equipment," but "developmental"
+- Parents already frame quality toddler golf products as developmental tools
+- 90% brain development by age 5 is a well-sourced, credible claim [CC-016]
+- Piaget preoperational stage (2-7) = verbal instruction doesn't work for toddlers
+
+**Grant Horvat's Structural Fit**
+- His audience IS the buyer (YouTube golf 18-32 → golf dads 28-40)
+- Father was PGA Tour of Australasia pro — golf is literally his inheritance
+- "My dad gave me this game" is the #1 legacy phrase in research AND Grant's actual story
+- Won 2025 Creator Classic, played first PGA Tour event Jan 2026 — credibility beyond creator
+- This isn't a spokesperson deal — it's mission alignment
+
+**The Serial Purchase Pattern**
+- Average parent has tried 2-4 products before finding "the right one"
+- Market is primed for a "final answer" premium product
+- One $150 set that works beats four $30 sets that break
 
 ---
 

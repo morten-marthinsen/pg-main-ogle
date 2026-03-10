@@ -14,6 +14,9 @@ Check the table below against the engines you plan to use. If you only need core
 |-----------|------------|-------------|-----------|
 | **Firecrawl** | Deep Research (01), Ad Intelligence (A01), Caption Writing (S09) | Web scraping, search, content extraction | 500 credits on signup |
 | **Apify** | Deep Research (01), Ad Intelligence (A01), Caption Writing (S09) | Platform-specific scraping (Reddit, YouTube, Facebook Ad Library, social media) | $5/month free |
+| **Exa** | Deep Research (01), Ad Intelligence (A01) | AI-native search, deep research synthesis, company intelligence, LinkedIn search | Pay-per-use |
+| **Perplexity** | Deep Research (01) | AI-synthesized search with citations — returns summarized answers with source URLs | Pay-per-use |
+| **Ref** | Any skill needing library/framework docs | Search and read documentation for libraries, frameworks, and APIs | Free |
 | **Google Drive** | Deep Research (01) | Access source materials stored in Google Docs/Sheets | Free with Google account |
 | **Gemini** | Visual Direction (A05), Visual/Video Production (A08) | Image generation (Imagen 4), video generation (Veo 3.1), image editing | Pay-per-use via Google AI Studio |
 | **ElevenLabs** | Visual/Video Production (A08) | Voice-over (TTS), music generation, sound effects | Limited free tier; paid plans from $5/mo |
@@ -23,7 +26,7 @@ Check the table below against the engines you plan to use. If you only need core
 | Engine | MCPs Needed | Notes |
 |--------|------------|-------|
 | 00 Deep Research — Brief (Skill 00) | None | |
-| 00 Deep Research — Research (Skill 01) | Firecrawl, Apify, Google Drive | Core research engine — Firecrawl + Apify are essential |
+| 00 Deep Research — Research (Skill 01) | Firecrawl, Apify, Exa, Perplexity, Google Drive | Core research engine — Firecrawl + Apify for scraping, Exa + Perplexity for synthesized research |
 | 00 Deep Research — Proof Inventory (Skill 02) | None | Works from Skill 01 output |
 | 01 Core Message (Skills 03-09) | None | Pure strategy — no external tools |
 | 02 Long-Form VSL (Skills 10-20) | None | Copy generation from internal context |
@@ -32,7 +35,7 @@ Check the table below against the engines you plan to use. If you only need core
 | 05 Upsells (U0-U5) | None | |
 | 06 Checkout (CK-00 to CK-03) | None | |
 | 07 Emails (E0-E4) | None | |
-| 08 Ads — Intelligence (A01) | Firecrawl, Apify | Competitive ad scraping |
+| 08 Ads — Intelligence (A01) | Firecrawl, Apify, Exa | Competitive ad scraping + company intelligence |
 | 08 Ads — Visual Direction (A05) | Gemini | Image generation for visual briefs |
 | 08 Ads — Production (A08) | Gemini, ElevenLabs | Full media production |
 | 08 Ads — All Other Skills | None | Strategy, copy, arena skills |
@@ -128,7 +131,99 @@ npm install -g @anthropic-ai/mcp-server-apify
 
 ---
 
-### 3. Google Drive (Source Material Access)
+### 3. Exa (AI-Native Search + Deep Research)
+
+**Used by:** Skill 01 (Deep Research), A01 (Ad Intelligence)
+
+**What it does:** AI-native search engine that understands meaning, not just keywords. Returns high-relevance results for nuanced queries. Includes a Deep Researcher mode that runs autonomous multi-step research and returns synthesized reports with citations. Also provides company intelligence (funding, tech stack, competitors) and LinkedIn search.
+
+**Why use it alongside Firecrawl/Apify:** Firecrawl and Apify are raw scrapers — they extract content from URLs you point them at. Exa is a synthesized research layer — it finds the most relevant sources across the entire web for a given concept, then lets you crawl those specific URLs. Use Exa to discover WHAT to scrape, then Firecrawl/Apify to extract the full content.
+
+**Setup:**
+
+1. **Create account:** Go to [https://exa.ai](https://exa.ai) and sign up
+2. **Get API key:** Dashboard → API Keys
+3. **Pricing:** Pay-per-use. Search queries ~$0.001-0.003 each. Deep Researcher runs ~$0.10-0.50 depending on depth. A typical research project uses $2-5.
+
+**Add to Claude Code (user scope — available in all projects):**
+
+```bash
+claude mcp add exa -s user --env EXA_API_KEY="your-exa-api-key" -- npx -y exa-mcp-server
+```
+
+**Tools available:**
+- `web_search_exa` — Semantic search across the web
+- `crawling_exa` — Crawl and extract content from discovered URLs
+- `deep_researcher_start` — Launch autonomous deep research on a topic
+- `deep_researcher_check` — Check status and retrieve deep research results
+- `company_research_exa` — Company intelligence (funding, tech stack, employees)
+- `linkedin_search_exa` — Search LinkedIn profiles and companies
+- `get_code_context_exa` — Search code repositories and technical docs
+
+**Verify:** Ask Claude "Use Exa to search for 'premium putter technology reviews'" — it should return relevant results with URLs.
+
+---
+
+### 4. Perplexity (AI-Synthesized Search)
+
+**Used by:** Skill 01 (Deep Research)
+
+**What it does:** AI-powered search that returns synthesized answers with citations. Unlike raw search engines, Perplexity reads multiple sources, synthesizes the information, and returns a coherent answer with links to every claim. Excellent for competitor research, market landscape questions, and technical fact-checking.
+
+**Why use it alongside Exa:** Exa excels at finding specific sources and running multi-step autonomous research. Perplexity excels at quick synthesized answers to specific questions. Use Perplexity for targeted Q&A ("What are common complaints about LAB Golf putters?") and Exa for broad exploratory research.
+
+**Setup:**
+
+1. **Create account:** Go to [https://perplexity.ai](https://perplexity.ai) and sign up
+2. **Get API key:** Settings → API → Generate key (requires Perplexity Pro subscription)
+3. **Pricing:** Included with Perplexity Pro ($20/month). API calls are pay-per-use on top of subscription.
+
+**Add to Claude Code (user scope — available in all projects):**
+
+```bash
+claude mcp add perplexity -s user --env PERPLEXITY_API_KEY="your-perplexity-api-key" -- npx -y @perplexity-ai/mcp-server
+```
+
+**Verify:** Ask Claude "Use Perplexity to search for 'LAB Golf putter reviews 2025'" — it should return a synthesized answer with citations.
+
+---
+
+### 5. Ref (Documentation Search)
+
+**Used by:** Any skill needing to reference library, framework, or API documentation
+
+**What it does:** Searches and reads official documentation for libraries, frameworks, and APIs. Useful when building tools, debugging integrations, or referencing technical specs during development.
+
+**Setup:**
+
+1. **Get API key:** Go to [https://ref.tools](https://ref.tools) and create an account
+2. **Pricing:** Free tier available.
+
+**Add to Claude Code (user scope):**
+
+```json
+{
+  "mcpServers": {
+    "Ref": {
+      "type": "http",
+      "url": "https://api.ref.tools/mcp",
+      "headers": {
+        "x-ref-api-key": "your-ref-api-key"
+      }
+    }
+  }
+}
+```
+
+**Tools available:**
+- `ref_search_documentation` — Search docs for a library or framework
+- `ref_read_url` — Read a specific documentation URL
+
+**Verify:** Ask Claude "Use Ref to search the Next.js documentation for 'server components'" — it should return relevant doc sections.
+
+---
+
+### 6. Google Drive (Source Material Access)
 
 **Used by:** Skill 01 (Deep Research) — for accessing source documents, sales pages, and brand materials stored in Google Drive
 
@@ -171,7 +266,7 @@ npm install -g @anthropic-ai/mcp-server-google-drive
 
 ---
 
-### 4. Gemini (Image + Video Generation)
+### 7. Gemini (Image + Video Generation)
 
 **Used by:** A05 (Visual Direction), A08 (Visual/Video Production)
 
@@ -209,7 +304,7 @@ npm install -g gemini-mcp
 
 ---
 
-### 5. ElevenLabs (Audio Production)
+### 8. ElevenLabs (Audio Production)
 
 **Used by:** A08 (Visual/Video Production)
 
@@ -249,25 +344,44 @@ npm install -g elevenlabs-mcp
 
 ## Combined Configuration
 
-If you need all MCP servers, here is the complete config block for Claude Code (`~/.claude/settings.json`):
+If you need all MCP servers, here is the complete config block. **Recommended approach:** Add research MCPs at user scope (available everywhere) and project-specific MCPs at project scope.
+
+**User scope** (run these commands — adds to `~/.claude.json`):
+
+```bash
+# Research + scraping stack (available in all projects)
+claude mcp add firecrawl -s user --env FIRECRAWL_API_KEY="your-key" -- npx -y firecrawl-mcp
+claude mcp add apify -s user  # Use HTTP config below for Apify
+claude mcp add exa -s user --env EXA_API_KEY="your-key" -- npx -y exa-mcp-server
+claude mcp add perplexity -s user --env PERPLEXITY_API_KEY="your-key" -- npx -y @perplexity-ai/mcp-server
+```
+
+For Apify (HTTP-based) and Ref, add directly to `~/.claude.json` under `mcpServers`:
+
+```json
+{
+  "apify": {
+    "type": "http",
+    "url": "https://mcp.apify.com",
+    "headers": {
+      "Authorization": "Bearer your-apify-token"
+    }
+  },
+  "Ref": {
+    "type": "http",
+    "url": "https://api.ref.tools/mcp",
+    "headers": {
+      "x-ref-api-key": "your-ref-api-key"
+    }
+  }
+}
+```
+
+**Project scope** (add to `.claude/mcp.json` in the project — no API keys):
 
 ```json
 {
   "mcpServers": {
-    "firecrawl-mcp": {
-      "command": "npx",
-      "args": ["-y", "firecrawl-mcp"],
-      "env": {
-        "FIRECRAWL_API_KEY": "your-firecrawl-api-key"
-      }
-    },
-    "apify": {
-      "command": "npx",
-      "args": ["-y", "@anthropic-ai/mcp-server-apify"],
-      "env": {
-        "APIFY_API_TOKEN": "your-apify-token"
-      }
-    },
     "google-drive": {
       "command": "npx",
       "args": ["-y", "@anthropic-ai/mcp-server-google-drive"],
@@ -297,12 +411,12 @@ If you need all MCP servers, here is the complete config block for Claude Code (
 
 ## Budget Estimates Per Project
 
-| Activity | Firecrawl | Apify | Gemini | ElevenLabs | Total |
-|----------|-----------|-------|--------|------------|-------|
-| Full Research (Skill 01) | $10-15 | $3-8 | — | — | **$13-23** |
-| Ad Intelligence (A01) | $5-10 | $2-5 | — | — | **$7-15** |
-| Ad Production (A05+A08) | — | — | $5-20 | $3-10 | **$8-30** |
-| Organic Caption Research (S09) | $2-5 | $1-3 | — | — | **$3-8** |
+| Activity | Firecrawl | Apify | Exa | Perplexity | Gemini | ElevenLabs | Total |
+|----------|-----------|-------|-----|------------|--------|------------|-------|
+| Full Research (Skill 01) | $10-15 | $3-8 | $2-5 | $1-3 | — | — | **$16-31** |
+| Ad Intelligence (A01) | $5-10 | $2-5 | $1-3 | — | — | — | **$8-18** |
+| Ad Production (A05+A08) | — | — | — | — | $5-20 | $3-10 | **$8-30** |
+| Organic Caption Research (S09) | $2-5 | $1-3 | — | — | — | — | **$3-8** |
 
 Most engines (core message, long-form copy, emails, upsells, checkout, e-commerce, advertorials, page builder) cost **$0** in external tool fees — they run entirely on AI reasoning.
 

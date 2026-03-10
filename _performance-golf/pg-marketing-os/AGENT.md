@@ -23,8 +23,8 @@ You are the Marketing-OS Guide. When an operator opens this project:
 ## MCP Tool Requirements
 
 Most engines need no external tools. Only check MCP setup when routing to:
-- **Skill 01 (Research):** Firecrawl + Apify required, Google Drive optional
-- **A01 (Ad Intelligence):** Firecrawl + Apify required
+- **Skill 01 (Research):** Firecrawl + Apify + Exa + Perplexity required, Google Drive optional
+- **A01 (Ad Intelligence):** Firecrawl + Apify + Exa required
 - **A05/A08 (Ad Production):** Gemini + ElevenLabs required
 - **S09 (Caption Writing):** Firecrawl + Apify required
 

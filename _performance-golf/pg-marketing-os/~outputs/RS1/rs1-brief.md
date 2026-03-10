@@ -75,6 +75,14 @@ context:
     - "How do we earn the right to charge $399-429 when PG is known for sub-$200 products (SQ putter)?"
     - "What's the right balance of technical precision vs. emotional resonance for an audience that includes both tour pros and 15-handicappers?"
 
+  launch_sku_config: >
+    TWO OPTIONS AT LAUNCH (no further customization available initially):
+    1. Standard ($399): Stepless steel shaft, 0.370 Tip, Dual Pistol Rubber Grip, 35" Length, 74° Lie, 3.5° loft — RH and LH
+    2. Upgraded ($429): 15mm low torque graphite shaft, Dual Pistol Poly Urethane Grip — RH and LH
+    FUTURE: Full customization shop planned (lie angle options, length, headweight, colors,
+    laser engraving, etc.) — not for initial launch but will be built into the site later.
+    The eCom page should be architected with this future expansion in mind.
+
   target_customer: >
     PRIMARY: Serious amateur golfers (5-20 handicap) who are actively trying to improve
     and willing to invest in premium equipment. They've likely researched putters, know
@@ -93,6 +101,29 @@ context:
 
     ASPIRATIONAL VALIDATION: Tour professionals and high-level influencers (Brixton Albert,
     Eric Cogorno, JT). Their adoption signals credibility to all three segments above.
+
+  founders_500_launch: >
+    FOUNDERS 500: An exclusive limited run of 500 RS1 putters with unique Performance Golf
+    colorway. Same putter, distinct cosmetics. Only the first 500 buyers get this version —
+    it will not be available again. Big-name golf influencers will receive and promote the
+    Founders 500 edition. Their content (video, photos, reactions) becomes social proof
+    assets that can be leveraged on the main eCom page post-launch. This creates a built-in
+    credibility layer: by the time the general RS1 page is live, there will be influencer
+    footage of real players using the putter in real conditions.
+
+  page_credibility_architecture: >
+    NO SINGLE GURU / FACE FOR THIS PAGE. This is a product-led page, not a personality-led
+    page. Two key people featured:
+    1. CHRIS McGINLEY — The product innovator/engineer. 25+ years at major OEMs, worked on
+       clubs for 11 world #1 players. He is the technical credibility anchor. His role on
+       the page: the expert who designed this, the "why it works" authority.
+    2. BRIXTON ALBERT — PG CEO and visionary. His role on the page: the founder who wanted
+       a premium putter good enough for his PGA Tour friends AND for PG customers. The "why
+       it exists" story — bridging tour-level quality with direct-to-consumer accessibility.
+    PLUS: Influencer/pro social proof from Founders 500 seeding. These are not testimonial
+    sections — they're credibility signals (footage, reactions, on-course use). Think
+    "as seen with" not "as endorsed by." The page earns trust through engineering proof
+    and visible adoption, not through a single spokesperson.
 ```
 
 ---
@@ -164,12 +195,17 @@ additional_questions:
 
 ```yaml
 exploration_emphasis:
-  - area: "LAB Golf customer experience — both converts and skeptics"
+  - area: "LAB Golf customer experience + HOW they popularized torque as a mainstream concept"
     why: >
       LAB is the primary competitor and the clearest 'before' in the evolutionary
-      narrative. Understanding what LAB converts love (and what still frustrates them),
-      plus why LAB skeptics didn't buy, reveals the exact gap RS1 fills. Deep-dive
-      LAB Golf reviews on GolfWRX, Reddit, YouTube comments, MyGolfSpy testing.
+      narrative. But beyond customer sentiment, we need to understand HOW LAB made
+      'zero torque' a mainstream conversation. Torque was a real physics concept that
+      recreational golfers didn't talk about — LAB popularized it and built a movement.
+      PG is running the same playbook with FORWARD WEIGHTING. Research should map:
+      (1) what LAB converts love and what still frustrates them, (2) why LAB skeptics
+      didn't buy, (3) the specific language, proof, community, and influencer strategy
+      LAB used to make torque mainstream. Deep-dive LAB Golf reviews, marketing,
+      GolfWRX, Reddit, YouTube comments, MyGolfSpy testing.
 
   - area: "Golfer emotional language around putting frustration and inconsistency"
     why: >
@@ -213,12 +249,22 @@ constraints:
   - The putter does NOT "stabilize the arc" — the arc is player-dependent
   - Correct: the putter HEAD is stable throughout the arc because it eliminates mechanical toe opening flow and resists player-induced face opening
   - The more upright lie angle ENCOURAGES less arc — less arc = better chance to keep face square
-- **Campaign platform** is established: "Built To Fall" / "Let it fall" / "Gravity-Driven. Face-Controlled."
+- **Tagline:** "Let it fall." (preferred over "Built To Fall") — double entendre: let gravity pull the putter through the stroke AND let the ball fall in the hole
+- **Product truth line:** "Gravity-Driven. Face-Controlled."
+- **Supporting theme:** "Do less. Make more." — the putter does more work (technology + technique) so the golfer does less and makes more putts
 - **Creative direction** is locked: "Quiet Premium + Precision Overlay" — modern, restrained, not overproduced
+- **Direct response principles, premium branded execution.** PG is a DR company — the logical argument structure, proof hierarchy, and persuasion architecture are rooted in DR. But the language, formatting, and tone are premium branded. No hype, no countdown timers, no overclaiming.
+
+### Core positioning — the dual promise (CRITICAL):
+RS1 is the only putter that addresses BOTH pillars of great putting:
+1. **The right technology** — forward weighting, FDB, and the full Roll Straight Technology system eliminate face drift at the equipment level
+2. **The right technique** — the design actively HELPS the player's technique (natural pendulum stroke, upright lie encourages less arc, forward weighting creates gravity-driven motion the player doesn't have to force)
+Every other putter on the market addresses only pillar #1 (technology). Even LAB Golf, which eliminated mechanical torque, still leaves the player alone to manage their own technique. RS1 gives the golfer both — technology that fixes the equipment AND assists the human stroke. This dual promise must be woven into every layer of the positioning.
 
 ### What needs fresh research:
 - Real golfer language around putting frustration (voice-of-customer mining)
 - LAB Golf customer sentiment at depth (not just feature comparisons)
+- HOW LAB popularized torque as a mainstream concept (language, proof, influencer strategy, community) — this is the playbook PG replicates with forward weighting
 - Premium brand storytelling patterns for the eCom page architecture
 - Validation of "face drift" as a consumer-facing term
 - Evidence base for the evolutionary narrative (old → LAB → RS1)
