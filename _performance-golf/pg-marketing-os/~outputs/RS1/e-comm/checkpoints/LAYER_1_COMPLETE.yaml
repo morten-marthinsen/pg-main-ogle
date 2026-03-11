@@ -1,0 +1,220 @@
+gate: 1
+gate_name: "Classification & Mapping"
+status: PASS
+timestamp: "2026-03-11T12:02:00Z"
+completed_at: "2026-03-11T12:02:00Z"
+skill_id: "EC-00-ecomm-strategist"
+product: "RS1 Putter by Performance Golf"
+source_mode: "campaign_brief"
+prerequisite_gate: "LAYER_0_COMPLETE.yaml — PASS at 2026-03-11T12:00:00Z"
+
+# ────────────────────────────────────────
+# VERIFICATION: 1.1 Page Type Classifier
+# ────────────────────────────────────────
+verification:
+  skill_1_1_page_type_classifier:
+    status: PASS
+    skill_file: "skills/layer-1/1.1-page-type-classifier.md"
+    output_file: "layer-1-outputs/1.1-page-type-classifier.md"
+    output_size_check: "PASS — exceeds 5KB minimum"
+
+    page_type: "pdp"
+    confidence: 0.97
+    confidence_tier: "HIGH"
+    confidence_breakdown:
+      product_structure_clarity: { weight: "40%", score: 1.0, rationale: "Single product, two variant SKUs with identical core head" }
+      purchase_intent_clarity: { weight: "30%", score: 0.95, rationale: "Primarily direct purchase from product-first traffic" }
+      category_precedent: { weight: "20%", score: 0.95, rationale: "Premium putters have established PDP patterns from Scotty Cameron, LAB Golf, TaylorMade" }
+      data_completeness: { weight: "10%", score: 0.98, rationale: "Completeness score from 0.3 validation = 0.98" }
+
+    classification_rationale: "RS1 is a single physical product with two variant SKUs (Standard $399 / Upgraded $429) sharing an identical 360g Forward Weighted putter head. Variants differ only in shaft material (steel vs graphite) and grip material (rubber vs PU). Deep feature story required for Forward Weighting, FDB, 10-piece construction, 74-degree lie angle. Direct purchase intent from product-first traffic. Premium putter category has established PDP patterns."
+    ambiguity_detected: false
+    human_override_needed: false
+    alternatives_considered:
+      - type: "bundle"
+        why_rejected: "Two SKUs are variants of same product, not distinct bundled products. Included items (COA, card, guide) are standard premium packaging."
+      - type: "collection"
+        why_rejected: "RS1 has dedicated product page with deep feature story. Not a category browsing page."
+    section_filter_applied: "pdp_applicable — all 19 NLS sections eligible"
+
+  # ────────────────────────────────────────
+  # VERIFICATION: 1.2 Section Mapper
+  # ────────────────────────────────────────
+  skill_1_2_section_mapper:
+    status: PASS
+    skill_file: "skills/layer-1/1.2-section-mapper.md"
+    output_file: "layer-1-outputs/1.2-section-mapper.md"
+    output_size_check: "PASS — exceeds 5KB minimum"
+
+    active_section_count: 15
+    excluded_section_count: 4
+    active_sections:
+      - { number: 1, name: "Hero Carousel", conversion_impact: "HIGH" }
+      - { number: 2, name: "Copy Block", conversion_impact: "HIGH" }
+      - { number: 3, name: "CTA Box", conversion_impact: "HIGH" }
+      - { number: 4, name: "Product Highlights", conversion_impact: "HIGH" }
+      - { number: 6, name: "Expert Credibility", conversion_impact: "HIGH" }
+      - { number: 7, name: "Ingredients/Materials (Construction Breakdown)", conversion_impact: "MEDIUM" }
+      - { number: 9, name: "Problem/Solution", conversion_impact: "HIGH" }
+      - { number: 10, name: "Why It Works", conversion_impact: "HIGH" }
+      - { number: 11, name: "Comparison Chart", conversion_impact: "HIGH" }
+      - { number: 13, name: "How to Use", conversion_impact: "MEDIUM" }
+      - { number: 14, name: "Reviews & Ratings", conversion_impact: "HIGH", placeholder: true }
+      - { number: 15, name: "FAQ", conversion_impact: "HIGH" }
+      - { number: 16, name: "Offer/Pricing", conversion_impact: "HIGH" }
+      - { number: 17, name: "Guarantee", conversion_impact: "HIGH" }
+      - { number: 18, name: "Use Cases", conversion_impact: "MEDIUM" }
+
+    excluded_sections:
+      - number: 5
+        name: "UGC Video Carousel"
+        reason: "Pre-launch, zero customer UGC. Placeholder content better placed in Section 6 and hero carousel."
+        reactivation_trigger: "Post-launch when 5+ quality video testimonials available from Founders 500 customers."
+      - number: 8
+        name: "What to Expect Timeline"
+        reason: "RS1 promise states results are immediate — physics work from first putt, no adjustment period. Progressive timeline contradicts immediate-results positioning."
+        reactivation_trigger: "If user testing reveals benefits build over time (e.g., trust development over 30 days)."
+      - number: 12
+        name: "Cost Savings"
+        reason: "RS1 is a single physical product, not a multi-ingredient consumable. Carousel cost reframe better deployed in Comparison Chart (11) and Offer/Pricing (16)."
+        reactivation_trigger: "If RS1 launches subscription service or multi-product bundle."
+      - number: 19
+        name: "Awards/Press"
+        reason: "Pre-launch product with zero press, awards, or media reviews. Empty awards section would undermine premium credibility."
+        reactivation_trigger: "Any golf media review, industry award, or press mention with credibility weight."
+
+    mandatory_checks:
+      hero_section_1_active: true
+      cta_section_active: true
+      cta_sections_active: [3, 16]
+      proof_section_active: true
+      proof_sections_active: [14]
+      feature_section_active: true
+      feature_sections_active: [4, 7, 10]
+      minimum_8_sections: true
+      maximum_17_sections: true
+    exclusion_rationales_specific: true
+    exclusion_rationales_vague: false
+
+  # ────────────────────────────────────────
+  # VERIFICATION: 1.3 Crossover Identifier
+  # ────────────────────────────────────────
+  skill_1_3_crossover_identifier:
+    status: PASS
+    skill_file: "skills/layer-1/1.3-crossover-identifier.md"
+    output_file: "layer-1-outputs/1.3-crossover-identifier.md"
+    output_size_check: "PASS — exceeds 5KB minimum"
+
+    total_crossover_mappings: 10
+    ecom_native_sections: 5
+    crossover_detail:
+      skill_13_root_cause:
+        sections: [9]
+        strength: "STRONG"
+        patterns: "Enemy identification, pain agitation (bullet format), root cause reframe (single paragraph)"
+      skill_14_mechanism:
+        sections: [10]
+        strength: "STRONG"
+        patterns: "Named mechanism introduction, how-it-works sequence (3-5 step), science/technology backing"
+      skill_15_product_introduction:
+        sections: [4, 7, 13]
+        strengths: ["STRONG", "STRONG", "MODERATE"]
+        patterns: "Feature naming (caveman-benefit), feature hierarchy, feature-benefit linkage, usage positioning"
+      skill_16_offer_copy:
+        sections: [3, 16, 17]
+        strengths: ["MODERATE", "STRONG", "MODERATE"]
+        patterns: "Value stack (simplified), price anchoring, guarantee framing"
+      skill_18_proof_weaving:
+        sections: [6, 14]
+        strengths: ["STRONG", "STRONG"]
+        patterns: "Authority citation, review integration, statistical proof, credential presentation"
+    ecom_native_detail:
+      sections: [1, 2, 11, 15, 18]
+      rationale: "Hero and Copy Block handled by EC-02 architecture. Comparison Chart, FAQ, and Use Cases are eCom-native formats without direct long-form crossover."
+    minimum_3_crossovers_met: true
+    all_weak_crossovers_noted: true
+    weak_count: 0
+
+# ────────────────────────────────────────
+# COMPLETENESS CHECK
+# ────────────────────────────────────────
+completeness:
+  all_gate_1_requirements_met: true
+  checks:
+    page_type_classified_with_rationale: true
+    page_type_is_singular: true
+    section_map_produced: true
+    active_sections_minimum_8: true
+    active_sections_maximum_17: true
+    hero_section_always_active: true
+    cta_section_always_active: true
+    proof_section_active: true
+    feature_section_active: true
+    crossover_skills_identified_per_section: true
+    minimum_3_crossover_mappings: true
+    all_exclusion_rationales_specific: true
+    zero_vague_rationales: true
+    zero_copy_in_outputs: true
+  total_checks: 14
+  passed_checks: 14
+  failed_checks: 0
+
+# ────────────────────────────────────────
+# ANTI-DEGRADATION VERIFICATION
+# ────────────────────────────────────────
+anti_degradation:
+  copy_prohibition_check:
+    headline_text_present: false
+    tagline_text_present: false
+    body_copy_present: false
+    feature_description_prose_present: false
+    status: PASS
+  nls_framework_check:
+    file_loaded: true
+    file_path: "~brain/nls-pdp-best-practices.md"
+    section_count_in_framework: 19
+    sections_referenced_in_map: 19
+    non_nls_names_used: false
+    status: PASS
+  minimum_section_threshold:
+    active_count: 15
+    minimum_required: 8
+    status: PASS
+
+# ────────────────────────────────────────
+# OUTPUT FILES
+# ────────────────────────────────────────
+microskill_outputs_written:
+  - file: "layer-1-outputs/1.1-page-type-classifier.md"
+    minimum_size: "2KB"
+    actual_size_check: "PASS"
+  - file: "layer-1-outputs/1.2-section-mapper.md"
+    minimum_size: "3KB"
+    actual_size_check: "PASS"
+  - file: "layer-1-outputs/1.3-crossover-identifier.md"
+    minimum_size: "2KB"
+    actual_size_check: "PASS"
+
+# ────────────────────────────────────────
+# SESSION STATE
+# ────────────────────────────────────────
+session_state:
+  current_layer: 1
+  current_skill: "1.3-crossover-identifier"
+  completed_skills: ["0.1", "0.2", "0.3", "1.1", "1.2", "1.3"]
+  output_status: PASS
+  gate_status:
+    gate_0: PASS
+    gate_1: PASS
+    gate_2: PENDING
+    gate_4: PENDING
+  confidence_tier: HIGH
+  source_mode: campaign_brief
+  page_type: pdp
+  active_section_count: 15
+  remediation_count: 0
+  blockers: []
+
+next_layer: 2
+next_skill: "2.1-strategy-assembler"
+next_action: "Execute 2.1-strategy-assembler: priority ranking, word budgets, feature research scope, design notes, downstream handoffs"
