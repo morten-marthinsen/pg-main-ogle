@@ -125,9 +125,27 @@
 - [x] 3.4-A Opportunity Map Generator → opportunity_map.md (38KB, synthesis document)
 - [x] 3.2-A Handoff Packager → FINAL_HANDOFF.md (85KB, 1,212 lines, all 10 parts + appendix)
 
+## Core Message Pipeline Status (Skills 04-09)
+- [x] 04-Mechanism → mechanism-package.json (Forward Weighting, scorecard 8.62/10)
+- [x] 05-Promise → promise-output.json ("Do less. Make more.", score 8.5/10)
+- [x] 06-Big Idea → big-idea-output.json ("The Bent Arrow", score 8.7/10)
+- [x] 07-Offer → offer-package.json (Founders 500, $399/$429, VE composite 8.75/10)
+- [x] 08-Structure → structure-package.json (Revelation architecture, 8 CPB chunks, 8.5/10)
+- [x] 09-Campaign Brief → campaign-brief.json (Coherence 9.1/10, all 10 dimensions 8+)
+- CORE-MESSAGE-COMPLETE.md written
+
+## Campaign Identity (Locked)
+- Big Idea: The Bent Arrow
+- Tagline: Let it fall.
+- Product Truth: Gravity-Driven. Face-Controlled.
+- Supporting Theme: Do less. Make more.
+- Anchor Phrase: That miss wasn't mental. It was mechanical.
+- Lead Type: Vindication Lead (enemy reveal variant)
+- Story Type: Revelation Story (engineer discovery variant)
+
 ## Next Action
-- DEEP RESEARCH v3 PIPELINE COMPLETE
-- All layers finished: L1 (1,442 quotes) → L2 (16 skills) → L2.5 (3 skills) → L2.8-RSF (2 skills) → L3 (8 skills)
-- Total output files: 31 across 4 output directories
-- FINAL_HANDOFF.md ready for downstream copywriting/strategy use
+- CORE MESSAGE PIPELINE COMPLETE (Skills 04-09)
+- DEEP RESEARCH v3 PIPELINE COMPLETE (Skills 00-03)
+- All output files written across 04-mechanism, 05-promise, 06-big-idea, 07-offer, 08-structure, 09-campaign-brief
+- Campaign Brief (campaign-brief.json + CAMPAIGN-BRIEF-SUMMARY.md) ready for downstream writing skills (11-17)
 - Budget: $50 allocated, estimated ~$5-8 spent on Apify/Firecrawl

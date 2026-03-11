@@ -1,0 +1,112 @@
+layer: 0
+skill: "04-mechanism"
+status: COMPLETE
+timestamp: "2026-03-10T22:50:00Z"
+description: "Foundation layer — all upstream data loaded, validated, and schema-matched."
+
+upstream_inputs_loaded:
+  root_cause_package:
+    file: "03-root-cause/root-cause-package.yaml"
+    loaded: true
+    validated: true
+    key_fields_extracted:
+      statement: "Every putter you've ever owned has its weight in the wrong place -- behind the shaft -- creating a gravitational force that drifts the face open."
+      anchor_phrase_primary: "That miss wasn't mental. It was mechanical."
+      anchor_phrase_secondary: "The arrow has been bent this whole time."
+      anchor_phrase_tertiary: "Move the weight forward. The fight is over."
+      expression_method: "simple_reframe + soft_villain + metaphor"
+      reframe_technique: "scientific_discovery + blame_removal"
+      mechanism_handoff_root_cause_to_solve: "Rearward CG creates face drift that degrades under pressure."
+      mechanism_handoff_must_address: "Eliminate the gravitational force that drifts the face open by moving CG ahead of the shaft axis."
+      mechanism_handoff_must_explain: "How Forward Weighting reverses the physics -- gravity pulls face toward square instead of away from it."
+      mechanism_handoff_must_not: "Claim it eliminates ALL putting errors (only eliminates equipment-induced face drift). Must not overclaim into distance control."
+      mechanism_handoff_proof: "Lead with Let It Fall demo. The demo IS the proof of mechanism. Pair with McGinley credentials."
+
+  research_data:
+    final_handoff: true
+    final_handoff_path: "layer-3-outputs/FINAL_HANDOFF.md"
+    key_research_files_loaded:
+      - "layer-2-outputs/competitor_analysis.json (8 competitors, 1012 quotes)"
+      - "layer-2-outputs/theme_synthesis.json"
+      - "layer-2-outputs/belief_analysis.json"
+      - "layer-2-outputs/sophistication_analysis.json"
+      - "layer-2-outputs/mechanism_inventory.json"
+    schwartz_stage: 4
+    schwartz_stage_label: "Mechanism Fatigue"
+    audience_skepticism: "High — Stage 4 mechanism fatigue. Audience has internalized multiple mechanism generations (MOI, CNC milling, zero torque, AI face) and is actively questioning whether ANY putter technology matters."
+
+  rsf_data:
+    expectation_schema_loaded: true
+    expectation_schema_path: "layer-2-rsf-outputs/expectation_schema.json"
+    latent_resonance_field_loaded: true
+    latent_resonance_field_path: "layer-2-rsf-outputs/latent_resonance_field.json"
+    rsf_inputs_available: true
+    key_rsf_extractions:
+      saturated_claims_count: 10
+      top_saturated_claims:
+        - "High MOI / Most Forgiving Putter (staleness 10/10)"
+        - "Precision CNC Milled Construction (staleness 9/10)"
+        - "Game-Changer (staleness 9/10)"
+        - "Best Alignment System (staleness 8/10)"
+        - "Tour-Proven / Most Tour Wins (staleness 8/10)"
+        - "Premium Materials (staleness 8/10)"
+        - "Zero Torque / Face Stays Square (staleness 7/10)"
+        - "Best Feel (staleness 7/10)"
+      whitespace_zones_count: 5
+      fssit_candidates_count: 9
+      top_latent_emotion: "The Technique Deflection (ELG-01, magnitude 0.85) — growing suspicion that equipment is the problem combined with shame at blaming the arrow"
+
+  soul_md:
+    loaded: true
+    path: "Soul.md"
+    soul_md_phase: "Seed"
+    voice_register_extracted: true
+    voice_register: "World-class engineer and sharp creative director co-presenting to golfers who know golf. Not dumbing anything down. Not hyping anything up."
+    energy_signature_extracted: true
+    energy_signature: "Quiet power + earned authority. Restrained because product is loud enough."
+    anti_voice_extracted: true
+    anti_voice_patterns:
+      - "Infomercial hype"
+      - "Generic golf marketing ('game-changing!')"
+      - "Dumbed-down science"
+      - "Adversarial competitor bashing"
+      - "Hallucinated specs or fabricated claims"
+    pacing_signature: "Short, declarative statements. One idea per line. Technical fact → stroke impact → game impact."
+
+  product_source_docs:
+    chris_call_summary_loaded: true
+    chris_call_summary_path: "_pg-physical-products/rs1/0b-rs1-product-innovation/rs1-chris-call-summary.md"
+    product_deck_loaded: true
+    product_deck_path: "_pg-physical-products/rs1/0b-rs1-product-innovation/pg-rs1-product-deck.md"
+    key_product_facts:
+      head_weight: "360g total"
+      forward_weight_distribution: "75%+ of head weight in front 25% of head"
+      lie_angle: "74 degrees (vs industry standard ~70 degrees)"
+      construction: "10-piece multi-material (steel face, aluminum tail, carbon composite crown)"
+      designer: "Chris McGinley — 25+ years at major OEMs, 11 world #1 players"
+      mechanism_hierarchy_from_designer: "Forward Weighting (#1) → Face Down Balance (#2) → 74° Lie Angle (#3)"
+      launch_skus: "Standard $399 (steel shaft, rubber grip) / Upgraded $429 (graphite shaft, PU grip)"
+      launch_edition: "Founders 500 limited edition"
+
+anti_degradation:
+  file_read: "MECHANISM-ANTI-DEGRADATION.md"
+  version: "3.0"
+  declaration_written_to: "mechanism-package.json metadata.anti_degradation_read: true"
+
+gate_0_evaluation:
+  all_upstream_packages_present: true
+  all_schemas_validated: true
+  rsf_data_available: true
+  soul_md_available: true
+  product_source_docs_available: true
+  gate_status: PASS
+
+verification:
+  all_required_inputs_loaded: true
+  no_missing_packages: true
+  no_schema_validation_failures: true
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
