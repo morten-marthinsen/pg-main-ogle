@@ -1,0 +1,285 @@
+{
+  "feature_package_version": "1.1",
+  "generated_at": "2026-03-11T14:30:00Z",
+  "updated_at": "2026-03-11T16:45:00Z",
+  "skill_id": "EC-01-feature-naming",
+  "product_name": "RS1 Putter by Performance Golf",
+  "designer": "Chris McGinley (SOURCE OF TRUTH for all feature names and specs)",
+  "naming_source": "Chris McGinley product deck — names are pre-defined, not AI-generated",
+  "micro_script_framework": "Bill Schley 'The Micro-Script Rules' — DSI-first, ~5.2 word avg, repeat-test validated",
+  "total_features": 9,
+
+  "dsi": {
+    "statement": "The only premium putter with Forward Axis Weighting that eliminates face drift and improves your stroke at the same time.",
+    "validation": {
+      "superlative": "The ONLY",
+      "important": "Eliminates face drift (why you miss) + improves your stroke (dual promise)",
+      "believable": "Forward Axis Weighting is named, real, designed by 25-year OEM vet Chris McGinley",
+      "measurable": "Face Down Balance test proves it, stroke improvement is feelable",
+      "ownable": "No one else has Forward Axis Weighting"
+    }
+  },
+
+  "putter_level_micro_scripts": {
+    "primary_tagline": "Pull it back, let it fall.",
+    "supporting_theme": "Do less. Make more.",
+    "page_element": "Gravity-driven. Face-controlled.",
+    "fdb_section": "Gravitational face control."
+  },
+
+  "umbrella_system": {
+    "name": "Roll Straight Technology",
+    "tagline": "The name is the promise.",
+    "description": "Roll Straight Technology is the complete engineering system that keeps the face square to the target line — combining Forward Axis Weighting, Face Down Balance, upright lie geometry, and multi-material construction into a single integrated design. Nine features, one objective: roll straight.",
+    "position": "Mentioned first, sits above all individual features. The umbrella that unifies the feature story.",
+    "product_mark": "RL STR8"
+  },
+
+  "feature_hierarchy": {
+    "hero": [
+      {
+        "feature_id": "F-001",
+        "name": "Forward Axis Weighting",
+        "tier": "hero",
+        "naming_pattern": "branded_mechanism",
+        "capability": "75%+ of the 360g head weight positioned in the front 25% of the putter head, placing the center of gravity ahead of the shaft axis",
+        "what_it_does": "Reverses the gravitational torque present in every other putter — instead of gravity pulling the face open, gravity pulls the face toward square",
+        "why_it_matters": "Eliminates equipment-induced face drift AND actively assists the natural putting stroke (dual promise: technology + technique)",
+        "benefit_tagline": "Forward weight kills face drift.",
+        "micro_scripts": [
+          "Forward weight kills face drift.",
+          "Pull it back, let it fall."
+        ],
+        "proof_feature": "F-002 (Face Down Balance)",
+        "competitive_spectrum": {
+          "rear_axis": "Face drifts open — player fights it — gravity works against you",
+          "center_axis_lab": "Face hangs neutral — player controls it — passive (zero torque)",
+          "forward_axis_rs1": "Face stays square — gravity controls it — active assist (zero face drift)"
+        },
+        "dual_promise": {
+          "point_1_technology": "Zero face drift — gravity holds the face square through the stroke",
+          "point_2_technique": "Active gravity assist — pull back, let it fall, gravity does the work"
+        },
+        "source": "pg-rs1-product-deck.md — Hero Feature section"
+      }
+    ],
+    "hero_proof": [
+      {
+        "feature_id": "F-002",
+        "name": "Face Down Balance",
+        "abbreviation": "FDB",
+        "tier": "hero_proof",
+        "naming_pattern": "descriptive_action_component",
+        "capability": "When placed on a flat surface, the RS1 face sits DOWN instead of up — proving the center of gravity is ahead of the shaft",
+        "what_it_does": "Provides a visible, repeatable, 5-second physical test that proves Forward Axis Weighting is real — not a marketing claim",
+        "why_it_matters": "The putter proves itself before you hit a single putt. No faith required — only observation.",
+        "benefit_tagline": "Gravitational face control.",
+        "micro_scripts": [
+          "Gravitational face control."
+        ],
+        "relationship_to_hero": "FDB is the visual PROOF of Forward Axis Weighting — not a separate mechanism. Forward Axis Weighting is the engineering. FDB is what you can see and verify.",
+        "demo_instruction": "Place RS1 face-down on any flat surface. Face stays down. Repeat with any other putter. Face sits up. That is the difference.",
+        "source": "pg-rs1-product-deck.md — Hero Feature: Face Down Balance section"
+      }
+    ],
+    "supporting": [
+      {
+        "feature_id": "F-003",
+        "name": "Square-to-Square Lie Angle",
+        "technical_spec": "74° upright lie angle",
+        "tier": "supporting",
+        "naming_pattern": "benefit_forward_modifier",
+        "name_change_note": "Renamed from '74-Degree Upright Lie Angle' to 'Square-to-Square Lie Angle' — 74° is the technical description, not the feature name",
+        "capability": "Lie angle 4 degrees more upright than industry standard (~70 degrees), reducing stroke arc",
+        "what_it_does": "Creates a more straight-back, straight-through putting motion with less face rotation during the stroke",
+        "why_it_matters": "Double reduction in face drift — Forward Axis Weighting resists face opening AND the upright lie reduces how much the face opens in the first place",
+        "benefit_tagline": "Less arc, less error.",
+        "micro_scripts": [
+          "Less arc, less error."
+        ],
+        "supporting_detail": "Combined with Forward Axis Weighting, creates the technique assist pillar of the dual promise. Interchangeable shaft spuds are precision-milled to exact lie angle.",
+        "source": "pg-rs1-product-deck.md — Supporting Features: Square to Square Lie Angle"
+      },
+      {
+        "feature_id": "F-004",
+        "name": "10-Piece Premium Construction",
+        "tier": "supporting",
+        "naming_pattern": "quantity_component",
+        "capability": "Multi-material construction: CNC-machined steel face, carbon composite woven crown, CNC-machined aluminum tail, plus shaft spuds, weight cups, alignment inserts, and grip",
+        "what_it_does": "Enables extreme Forward Axis Weighting that is impossible with single-material construction — heavy where weight matters, light where it doesn't",
+        "why_it_matters": "The engineering precision that makes Forward Axis Weighting possible. Every gram is where Chris McGinley placed it.",
+        "benefit_tagline": "Ten pieces, one purpose.",
+        "micro_scripts": [
+          "Ten pieces, one purpose."
+        ],
+        "component_breakdown": [
+          "CNC-machined steel face (heavy — drives Forward Axis Weighting)",
+          "Carbon composite woven crown (light — saves weight from top)",
+          "CNC-machined aluminum tail (light — saves weight from rear)",
+          "Precision-milled shaft spuds (interchangeable, exact lie angle)",
+          "Weight cups (sole-mounted, adjustable)",
+          "Alignment line inserts (1-2-3mm)",
+          "Grip (Dual Pistol — rubber or PU)",
+          "Shaft (steel or graphite)",
+          "Face insert/milling pattern",
+          "Assembly hardware"
+        ],
+        "source": "pg-rs1-product-deck.md — Harmonized Multi Material (renamed per human direction)"
+      },
+      {
+        "feature_id": "F-005",
+        "name": "Patented Dual Pistol Grip",
+        "tier": "supporting",
+        "naming_pattern": "branded_mechanism",
+        "capability": "The only dual-sided pistol grip in the market — ergonomically CAD-engineered with flat top/bottom and large curved sides",
+        "what_it_does": "Locks squarely into the hands' lifeline, reduces grip pressure, and minimizes overactive hand movement through the stroke",
+        "why_it_matters": "Quieter hands mean less interference with Forward Axis Weighting's gravity-driven face control",
+        "benefit_tagline": "Quiet hands, loud results.",
+        "micro_scripts": [
+          "Quiet hands, loud results."
+        ],
+        "has_superlative": true,
+        "superlative_claim": "The ONLY dual-sided pistol grip in golf",
+        "supporting_detail": "Works equally well for conventional, cross-hand, and claw grips. Available in rubber (Standard) or PU (Upgraded). Encourages ulnar deviation for a more stable stroke.",
+        "source": "pg-rs1-product-deck.md — Patented Dual Pistol Grip section"
+      },
+      {
+        "feature_id": "F-006",
+        "name": "Face Forward Design",
+        "tier": "supporting",
+        "naming_pattern": "benefit_forward_modifier",
+        "capability": "Shaft positioned behind the face, providing full unobstructed face visibility at address",
+        "what_it_does": "Creates full face visibility for alignment and a natural pendulum pivot point for the stroke",
+        "why_it_matters": "See the entire face at setup — no hosel or shaft blocking your view. The pivot point enables a pure pendulum motion.",
+        "benefit_tagline": "Full face, full confidence.",
+        "micro_scripts": [
+          "Full face, full confidence."
+        ],
+        "source": "pg-rs1-product-deck.md — Face Forward Design section"
+      },
+      {
+        "feature_id": "F-007",
+        "name": "Face Square Focus",
+        "tier": "supporting",
+        "naming_pattern": "benefit_forward_modifier",
+        "capability": "Three extended parallel alignment lines running tail-to-front, converging at a perpendicular face line",
+        "what_it_does": "Makes misalignment visible before the stroke starts — three lines reveal face angle error more effectively than a single line",
+        "why_it_matters": "You see the problem before you create it. Setup confidence becomes automatic.",
+        "benefit_tagline": "Line it up, lock it in.",
+        "micro_scripts": [
+          "Line it up, lock it in."
+        ],
+        "source": "pg-rs1-product-deck.md — Face Square Focus section"
+      }
+    ],
+    "technical": [
+      {
+        "feature_id": "F-008",
+        "name": "T-Wing Tail",
+        "tier": "technical",
+        "naming_pattern": "branded_mechanism",
+        "capability": "Sculpted T-shaped tail section with lightweight aluminum construction",
+        "what_it_does": "Saves weight from the rear of the putter head, redistributing it forward to enable extreme Forward Axis Weighting",
+        "why_it_matters": "The distinctive RS1 silhouette — where form follows function. Every gram removed from the tail is a gram added to the face.",
+        "benefit_tagline": "Less tail weight, more face weight.",
+        "micro_scripts": [
+          "Less tail weight, more face weight.",
+          "The shape isn't just design, it's engineering."
+        ],
+        "source": "pg-rs1-product-deck.md — Bold & Beautiful T-Wing (renamed per human direction)"
+      },
+      {
+        "feature_id": "F-009",
+        "name": "Sculpted Sole Relief",
+        "tier": "technical",
+        "naming_pattern": "descriptive_action_component",
+        "capability": "Three zones of sole relief — front, middle, and back — with rounded leading/trailing edges and a non-contact midsole",
+        "what_it_does": "Allows the putter to glide back and through without catching or dragging on the putting surface",
+        "why_it_matters": "Clean contact with the green surface throughout the stroke. No snag. No drag. Just glide.",
+        "benefit_tagline": "Sculpted for scoring.",
+        "micro_scripts": [
+          "Sculpted for scoring."
+        ],
+        "source": "pg-rs1-product-deck.md — Sculpted Sole Relief section"
+      }
+    ]
+  },
+
+  "naming_validation": {
+    "generic_names_detected": 0,
+    "standalone_test_failures": 0,
+    "all_names_caveman_benefit": true,
+    "naming_patterns_used": [
+      "branded_mechanism (F-001, F-005, F-008)",
+      "descriptive_action_component (F-002, F-009)",
+      "benefit_forward_modifier (F-003, F-006, F-007)",
+      "quantity_component (F-004)"
+    ],
+    "pattern_diversity_check": "PASS — 4 different patterns across 9 features",
+    "all_names_source": "Chris McGinley product deck (SOURCE OF TRUTH) with human-directed updates: Heavy Forward Weighting → Forward Axis Weighting, Harmonized Multi Material → 10-Piece Premium Construction, Bold & Beautiful T-Wing → T-Wing Tail, 74-Degree Upright Lie Angle → Square-to-Square Lie Angle"
+  },
+
+  "feature_story_architecture": {
+    "page_flow": [
+      "Roll Straight Technology (umbrella intro — what the system is)",
+      "Forward Axis Weighting (hero mechanism — what it does)",
+      "Face Down Balance (hero proof — see it for yourself)",
+      "Square-to-Square Lie Angle (supporting — double reduction)",
+      "10-Piece Premium Construction (supporting — how it's built)",
+      "Face Forward Design (supporting — alignment + pivot)",
+      "Face Square Focus (supporting — alignment lines)",
+      "Patented Dual Pistol Grip (supporting — grip stability)",
+      "T-Wing Tail (technical — silhouette + weight distribution)",
+      "Sculpted Sole Relief (technical — stroke glide)"
+    ],
+    "narrative_logic": "Umbrella (what) → Hero (why) → Proof (see) → Supporting (how) → Technical (details). Each feature builds on the previous. Forward Axis Weighting creates the need for the construction explanation. FDB proves it works. Lie angle extends the benefit. Construction shows the engineering. Design features complete the picture."
+  },
+
+  "downstream_handoffs": {
+    "ec_02_hero": {
+      "hero_feature": "Forward Axis Weighting (F-001)",
+      "hero_proof": "Face Down Balance (F-002)",
+      "dsi": "The only premium putter with Forward Axis Weighting that eliminates face drift and improves your stroke at the same time.",
+      "hero_micro_scripts": ["Forward weight kills face drift.", "Pull it back, let it fall."],
+      "hero_proof_micro_script": "Gravitational face control.",
+      "umbrella": "Roll Straight Technology",
+      "campaign_tagline": "Pull it back, let it fall.",
+      "product_truth": "Gravity-driven. Face-controlled.",
+      "supporting_theme": "Do less. Make more."
+    },
+    "ec_03_sections": {
+      "total_features_for_sections": 9,
+      "section_4_product_highlights": ["F-001", "F-002", "F-003", "F-004", "F-005"],
+      "section_7_construction": ["F-004", "F-008", "F-009"],
+      "section_10_why_it_works": ["F-001", "F-002", "F-003"],
+      "feature_package_path": "e-comm/ec-01-outputs/feature-package.json"
+    },
+    "ec_04_scripts": {
+      "micro_scripts_available": 13,
+      "note": "13 total micro-scripts across 9 features (F-001 and F-008 have 2 each, plus 4 putter-level scripts)",
+      "hero_scripts": ["F-001", "F-002"],
+      "feature_explainer_candidates": ["F-001", "F-003", "F-004"],
+      "demo_script_candidate": "F-002 (FDB test)"
+    }
+  },
+
+  "session_state": {
+    "current_layer": 4,
+    "current_skill": "4.3-output-packager",
+    "completed_skills": ["0.1", "0.2", "0.3", "1.1", "1.2", "1.3", "2.1", "2.2", "4.1", "4.2", "4.3"],
+    "output_status": "PASS",
+    "gate_status": {
+      "gate_0": "PASS",
+      "gate_1": "PASS",
+      "gate_2": "PASS",
+      "gate_2_5": "HUMAN_PRE_APPROVED — feature names locked from Chris McGinley product deck with human-directed updates. Arena adapted: names are SOURCE OF TRUTH, arena evaluated micro-scripts and taglines only.",
+      "gate_4": "PASS"
+    },
+    "capabilities_mapped": 9,
+    "features_named": 9,
+    "generic_names_remaining": 0,
+    "human_selection_received": true,
+    "human_selection_note": "Feature names pre-approved by human operator across multiple sessions. Names come from Chris McGinley product deck with specific human corrections applied. Micro-scripts created using Bill Schley DSI-first framework and approved one-by-one by human operator.",
+    "next_action": "EC-02 (Hero & Value Prop) — use DSI + hero feature + proof + umbrella for ATF copy"
+  }
+}

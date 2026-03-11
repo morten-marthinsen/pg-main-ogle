@@ -77,7 +77,7 @@ It’s called **Face Drift.**
 
 95% of putters on the market — including the $500 ones — have a massive engineering mistake.
 
-They put the weight in the back.
+They put the weight in the back of the shaft axis.
 
 This creates a "pushing" relationship.
 
@@ -124,7 +124,7 @@ Designed by Chris McGinley — a 25-year veteran of putter engineering.
 
 Chris spent his career at the world's biggest brands.
 
-He knew the "rear-weight" flaw existed, but the big companies were too scared to change.
+He knew the "rear-weight" flaw existed, but no big company went after fixing it.
 
 "It took a small, innovative team like Performance Golf to actually do it," Chris says.
 
@@ -140,7 +140,7 @@ It actively helps you "human" better.
 ## SECTION 6: THE MAGICAL SAUCE — FORWARD AXIS BALANCE™
 ---
 **Headline:**
-The End of the "Flop."
+The End of Face Drift
 
 **The Claim:**
 RS1 is the only putter that actively counteracts your tendency to open the face.
@@ -181,7 +181,7 @@ No more guessing.
 
 No more "holding on."
 
-Just flow.
+Just pull it back... and let it fall.
 
 ---
 ## SECTION 7: HIGH-FORWARD MOI — THE STABILITY SHIFT
@@ -218,7 +218,7 @@ Trust your speed.
 
 Trust your line.
 
-Trust your game.
+Trust your stroke.
 
 ---
 ## SECTION 8: 74° SQUARE-TO-SQUARE LIE ANGLE
@@ -239,19 +239,21 @@ The 74° angle keeps your hands high and your eyes directly over the ball.
 **The Functional Benefit:**
 It creates a pure pendulum motion.
 
-Straight back. Straight through.
+As close to Straight back, Straight through possible... while still maintaining the natural arc of your stroke.
 
 **The Dimensionalized Benefit:**
 You stop thinking about "closing the face" or "releasing the toe."
 
 There is no rotation to manage.
 
-Just rock your shoulders like a clock.
+Just pull it back and let gravity do the rest.
 
 **The Emotional Close:**
 Simplify the game.
 
 Multiply the results.
+
+Less thinking... more sinking.
 
 ---
 ## SECTION 9: THE OPTICAL ADVANTAGE — FACE-SQUARE FOCUS
@@ -304,7 +306,7 @@ By using high-tech materials, we moved the weight where it matters most.
 Premium feedback and sound.
 
 **The Dimensionalized Benefit:**
-It doesn't sound like a "clunky" training aid.
+It doesn't sound "clunky".
 
 It sounds and feels like a $600 custom-milled masterpiece.
 
@@ -436,7 +438,7 @@ The result is the RS1.
 
 "This is the special magical sauce," Chris says. 
 
-"Moving the weight forward of the shaft axis makes too much sense. It works with the human stroke instead of against it."
+"Moving 75% of the weight forward of the shaft axis makes too much sense. It works with the human stroke instead of against it."
 
 When you buy an RS1, you aren't just buying a club.
 
@@ -454,27 +456,27 @@ Putting has three eras.
 **Era 1: Traditional (The "Flop" Era).**
 Weight is in the back. 
 
-The putter flops open. 
+The putter flops open... 
 
-You fight it. 
+Your HUMAN control the arc.  
 
 The "Big Guys" still sell these every day.
 
-**Era 2: LAB Golf (The "Neutral" Era).**
+**Era 2: LAB Golf (The "No Torque" Era).**
 A small, innovative company created "Zero Torque." 
 
-They made the putter neutral. 
+They made the putter neutral... meaning the TECHNOLOGY controls the face.  
 
 It was a brilliant first step. 
 
 It stopped the equipment from fighting you. 
 
-But it still required you, the human, to be perfect.
+But it still required you, the human, to be perfect in maintaining the arc.
 
 **Era 3: RS1 (The "Active-Assist" Era).**
-We realized that technology shouldn't just be neutral. 
+We realized that technology shouldn't just control the face. 
 
-It should be helpful. 
+It should also control your TECHNIQUE. 
 
 The RS1 doesn't just sit there. 
 
@@ -484,9 +486,9 @@ It’s the difference between a car that doesn't pull to the left...
 
 And a car with **lane-assist.**
 
-One is neutral. 
+One is manual. 
 
-The other is a partner.
+The other is automatic.
 
 We took the ball from the LAB and ran it into the end zone.
 
@@ -545,7 +547,7 @@ Watch what happens.
 
 95% of putters will instantly flop open toward the ceiling.
 
-That is "Face Drift" in action.
+That is "Face Drift" caused by the rear or center weighting in action.
 
 That is what you’ve been fighting.
 

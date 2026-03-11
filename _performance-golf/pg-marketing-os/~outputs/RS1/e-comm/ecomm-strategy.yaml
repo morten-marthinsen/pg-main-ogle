@@ -17,7 +17,7 @@ product_context:
   page_type: "pdp"
   page_type_confidence: 0.97
   page_type_confidence_tier: "HIGH"
-  page_type_rationale: "Single physical product with two variant SKUs (Standard $399 / Upgraded $429) sharing an identical 360g Forward Weighted putter head. Variants differ only in shaft material (steel vs graphite) and grip material (rubber vs PU). Deep feature story required for Forward Weighting, FDB, 10-piece construction, 74-degree lie angle. Direct purchase intent from product-first traffic. Premium putter category has established PDP patterns from Scotty Cameron, LAB Golf, TaylorMade."
+  page_type_rationale: "Single physical product with two variant SKUs (Standard $399 / Upgraded $429) sharing an identical 360g Forward Axis Weighted putter head. Variants differ only in shaft material (steel vs graphite) and grip material (rubber vs PU). Deep feature story required for Forward Axis Weighting, FDB, 10-piece construction, 74-degree lie angle. Direct purchase intent from product-first traffic. Premium putter category has established PDP patterns from Scotty Cameron, LAB Golf, TaylorMade."
   source_mode: "campaign_brief"
   source_file: "~outputs/RS1/09-campaign-brief/campaign-brief.json"
   designer: "Chris McGinley (SOURCE OF TRUTH for all technical specs)"
@@ -86,7 +86,7 @@ section_map:
       crossover_skill: "14-mechanism"
       crossover_strength: "STRONG"
       crossover_note: "Named mechanism introduction, how-it-works sequence (3-5 step visual), science/technology backing. Three-layer explanation (simple/medium/technical)."
-      rationale: "Forward Weighting mechanism explanation is the intellectual backbone. Stage 4 audience needs to understand HOW this is different from MOI, CNC milling, and zero torque."
+      rationale: "Forward Axis Weighting mechanism explanation is the intellectual backbone. Stage 4 audience needs to understand HOW this is different from MOI, CNC milling, and zero torque."
 
     - section_number: 4
       section_name: "Product Highlights"
@@ -99,7 +99,7 @@ section_map:
       crossover_skill: "15-product-introduction"
       crossover_strength: "STRONG"
       crossover_note: "Feature naming (caveman-benefit format), feature hierarchy (hero/supporting/technical), feature-benefit linkage."
-      rationale: "First BTF section after CTA. Resolves top 5 mental blockers in scannable format. Forward Weighting, FDB, McGinley, guarantee, Founders 500."
+      rationale: "First BTF section after CTA. Resolves top 5 mental blockers in scannable format. Forward Axis Weighting, FDB, McGinley, guarantee, Founders 500."
 
     - section_number: 6
       section_name: "Expert Credibility"
@@ -125,7 +125,7 @@ section_map:
       crossover_skill: null
       crossover_strength: null
       crossover_note: "Ecom-native format. Skill 15 (Product Introduction) provides competitive positioning data as secondary reference."
-      rationale: "Directly reduces comparison shopping. RS1 vs Scotty Cameron vs LAB Golf on 5-7 criteria. RS1 wins on Forward Weighting, FDB, dual promise, AND price."
+      rationale: "Directly reduces comparison shopping. RS1 vs Scotty Cameron vs LAB Golf on 5-7 criteria. RS1 wins on Forward Axis Weighting, FDB, dual promise, AND price."
 
     - section_number: 16
       section_name: "Offer/Pricing"
@@ -151,7 +151,7 @@ section_map:
       crossover_skill: "15-product-introduction"
       crossover_strength: "STRONG"
       crossover_note: "Feature-benefit linkage (material to benefit), feature naming (applied to materials), construction hierarchy."
-      rationale: "10-piece multi-material construction is the engineering evidence enabling Forward Weighting. Analytical buyers need to see what's inside."
+      rationale: "10-piece multi-material construction is the engineering evidence enabling Forward Axis Weighting. Analytical buyers need to see what's inside."
 
     - section_number: 14
       section_name: "Reviews & Ratings"
@@ -257,7 +257,7 @@ section_map:
 # ────────────────────────────────────────
 feature_research_scope:
   hero_feature_candidates:
-    - "Forward Weighting (75%+ of 360g in front 25% of head)"
+    - "Forward Axis Weighting (75%+ of 360g in front 25% of head)"
     - "Face Down Balance / FDB (visual proof — face sits down on flat surface)"
   supporting_feature_candidates:
     - "74-Degree Upright Lie Angle (vs industry ~70 degrees)"
@@ -365,7 +365,7 @@ downstream_handoffs:
   ec_01_feature_naming:
     input: "feature_research_scope"
     hero_candidates:
-      - "Forward Weighting (75%+ of 360g in front 25% of head)"
+      - "Forward Axis Weighting (75%+ of 360g in front 25% of head)"
       - "Face Down Balance / FDB (visual proof)"
     supporting_candidates:
       - "74-Degree Upright Lie Angle"
@@ -375,14 +375,14 @@ downstream_handoffs:
     technical_features_count: 10
     research_gaps_count: 4
     naming_source: "Chris McGinley (SOURCE OF TRUTH)"
-    naming_constraint: "Roll Straight Technology, Forward Weighting, and Face Down Balance are pre-named by designer — EC-01 applies caveman-benefit format to supporting/technical features"
+    naming_constraint: "Roll Straight Technology, Forward Axis Weighting, and Face Down Balance are pre-named by designer — EC-01 applies caveman-benefit format to supporting/technical features"
     ready: true
 
   ec_02_hero_value_prop:
     input: "section_map[hero] + feature_research_scope[hero_candidates] + word_budget[hero]"
     hero_section_budget: 200
     copy_block_budget: 150
-    hero_feature: "Forward Weighting"
+    hero_feature: "Forward Axis Weighting"
     hero_proof: "Face Down Balance"
     tagline: "Let it fall."
     product_truth: "Gravity-Driven. Face-Controlled."
@@ -423,7 +423,7 @@ downstream_handoffs:
       - type: "Feature Explainer"
         duration: "15-30s"
         section: 10
-        content: "Forward Weighting mechanism explanation"
+        content: "Forward Axis Weighting mechanism explanation"
       - type: "Feature Explainer"
         duration: "15-30s"
         section: 7

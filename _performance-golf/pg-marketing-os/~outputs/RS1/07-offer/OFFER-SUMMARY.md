@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-- **Product:** RS1 Putter — the first putter with Forward Weighting (75%+ of head weight in front 25% of head)
+- **Product:** RS1 Putter — the first putter with Forward Axis Weighting (75%+ of head weight in front 25% of head)
 - **Positioning:** Premium engineered instrument, third generation of putter design (after traditional and zero-torque)
 - **Price:** $399 (Standard) / $429 (Upgraded)
 - **Format:** Premium branded eCom page (Apple/VanMoof style) — NOT traditional DR offer
@@ -25,14 +25,14 @@
 
 **Dream Outcome:** Your putting finally matches the rest of your game. The putter carousel stops. Consistent face angle under pressure. Short putts become routine. The score reflects the ball-striking.
 
-**Core Product:** RS1 Putter with Forward Weighting — 360g multi-material head, 10-piece construction (CNC-machined steel face, aluminum tail, carbon composite crown), 74-degree upright lie angle.
+**Core Product:** RS1 Putter with Forward Axis Weighting — 360g multi-material head, 10-piece construction (CNC-machined steel face, aluminum tail, carbon composite crown), 74-degree upright lie angle.
 
 **Two SKUs:**
 - **Standard ($399):** Steel shaft, rubber grip
 - **Upgraded ($429):** Graphite shaft (lighter), premium PU grip (softer feel)
 
 **12 Problems Mapped to Solutions:**
-1. Face drift (rearward CG) → Forward Weighting reverses gravitational torque
+1. Face drift (Rear Axis Weighting) → Forward Axis Weighting reverses gravitational torque
 2. Pressure degradation → Physics are grip-pressure-independent
 3. Practice-to-course gap → Removes the variable pressure exploits
 4. Putter carousel → Addresses the root cause all previous putters shared
@@ -43,7 +43,7 @@
 9. Short putt anxiety → Consistent face angle under pressure
 10. Multi-material limitation → 10-piece construction enables extreme forward weighting
 11. No visual proof → Face Down Balance (FDB) 5-second verification test
-12. Premium price without differentiation → Forward Weighting at $399 undercuts Scotty/LAB
+12. Premium price without differentiation → Forward Axis Weighting at $399 undercuts Scotty/LAB
 
 ---
 
@@ -51,7 +51,7 @@
 
 **Bonuses (3):**
 1. **Alignment Quick-Start Card** — printed setup reference for RS1's unique geometry (addresses: "How do I use this differently?")
-2. **Forward Weighting Advantage Guide** — digital PDF explaining the science and FDB test (addresses: "Is this real science?")
+2. **Forward Axis Weighting Advantage Guide** — digital PDF explaining the science and FDB test (addresses: "Is this real science?")
 3. **Founders 500 Certificate of Authenticity** — individually numbered, signed by Chris McGinley (addresses: "Am I getting premium value?")
 
 **Guarantee:**
@@ -78,10 +78,10 @@
 |-----------|-------|-------------------|
 | Scotty Cameron Special Select | $449-469 | Craftsmanship, no mechanism |
 | LAB Golf DF3 | $449-499 | Zero torque, no technique assist |
-| **RS1 Standard** | **$399** | **Forward Weighting + technique assist** |
-| **RS1 Upgraded** | **$429** | **Forward Weighting + technique assist + premium shaft/grip** |
+| **RS1 Standard** | **$399** | **Forward Axis Weighting + technique assist** |
+| **RS1 Upgraded** | **$429** | **Forward Axis Weighting + technique assist + premium shaft/grip** |
 
-**Price Justification:** RS1 costs $50-100 less than both premium competitors while offering a provable physics advantage (Forward Weighting) that neither can claim. The putter carousel typically costs $1,000-3,000+ over years — RS1 at $399 ends the carousel.
+**Price Justification:** RS1 costs $50-100 less than both premium competitors while offering a provable physics advantage (Forward Axis Weighting) that neither can claim. The putter carousel typically costs $1,000-3,000+ over years — RS1 at $399 ends the carousel.
 
 ---
 
@@ -90,17 +90,17 @@
 **Primary:** RS1 Founders 500 Edition
 
 **Alternates:**
-- RS1 by Performance Golf — The Forward Weighted Putter
+- RS1 by Performance Golf — The Forward Axis Weighted Putter
 - RS1 — Gravity-Driven. Face-Controlled.
 - RS1 — Roll Straight Technology
 - The RS1 Putter — Do Less. Make More.
-- RS1 Founders Collection — Forward Weighting by Chris McGinley
+- RS1 Founders Collection — Forward Axis Weighting by Chris McGinley
 
 ---
 
 ## 6. Presentation Script (Premium eCom Page Sections)
 
-**Product Intro:** "RS1. The first putter built with Forward Weighting. 75% of the head weight sits in the front 25% of the putter. The face stays square because physics says it should."
+**Product Intro:** "RS1. The first putter built with Forward Axis Weighting. 75% of the head weight sits in the front 25% of the putter. The face stays square because physics says it should."
 
 **Value Demonstration:** "If all the RS1 did was stop your hands from fighting the putter face on every stroke — would that be worth $399? If all it did was make your practice-green putting transfer to the course under pressure — would that change what you'd pay? If all it did was end the putter carousel, so this was the last putter you ever bought — how much is that worth over the next 5 years of putters you'd never need to buy? The RS1 does all three. And it costs less than a Scotty Cameron."
 
