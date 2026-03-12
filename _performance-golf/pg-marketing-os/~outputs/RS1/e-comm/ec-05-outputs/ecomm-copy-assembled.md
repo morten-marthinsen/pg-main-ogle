@@ -13,7 +13,7 @@
 <!-- ATF — ABOVE THE FOLD                       -->
 <!-- ═══════════════════════════════════════════ -->
 
-## ATF: Hero Carousel + CTA 🚨Action🚨 -  reason why LAB evolution div is after the sales argument?
+## ATF: Hero Carousel + CTA
 
 ### Prehead
 The New Roll Straight Technology TM
@@ -30,7 +30,7 @@ The only premium putter with Forward Axis Weighting that **eliminates face drift
 ### CTA
 Get My RS1 Today
 
-### 10-Position Hero Carousel 🚨Action🚨 -  where is a mention of THE FEEL?  feel the face? add to benefits section below /// distance control + consistency
+### 10-Position Hero Carousel
 
 **Position 1: Hero Animation (MP4)**
 - Format: MP4 video, auto-play, loop, muted
@@ -38,11 +38,11 @@ Get My RS1 Today
 - Copy Overlay: None. The MP4 speaks for itself.
 
 **Position 2: The Problem**
-- Visual: RS1 weight distribution — 75% of weight in front of shaft axis, 25% behind. 🚨Action🚨 -  this is talking about problem, showing solution // should be a video that shows a poorly weighted putter flopping open so people know what that weighting problem DOES  (they don't know yet)
+- Visual: animation - Traditional (modern) putter weight distribution — majority of weight behind shaft axis - causing face to flop open like a hinge
 - Copy Overlay: "95% of putters have the weight in the wrong place."
 
 **Position 3: The Solution**
-- Visual: Heavy CNC steel face piece pulled out from the putter. 🚨Action🚨 -  the piece isn't the solution mechanism, the weight is the mechanism and the piece is the mechanism for delivering that, this also needs to be a MIRROR of visual 2 to clearly convey problem/solution
+- Visual: Forward Weighting animation
 - Copy Overlay: "Forward Axis Weighting eliminates face drift."
 
 **Position 4: The Proof (FDB)**
@@ -83,8 +83,6 @@ Get My RS1 Today
 
 > Placeholder — UGC content carousel positioned between ATF and first BTF section.
 
-**Do less. Make more.** 🚨Action🚨 -
-
 ---
 
 ## BTF-02: Problem
@@ -95,7 +93,7 @@ Get My RS1 Today
 
 In 95% of putters, most of the weight sits behind the shaft axis.
 
-Rear weighting pulls the face off the path of your stroke.
+Having weight in the back pulls the face off the path of your intended target line.
 
 Technically, this is called **face drift...**
 
@@ -117,7 +115,7 @@ Before you even hit the ball.
 
 **1: Technology**
 
-***The Putter's*** rear weighting is designed to open and close the face on an arc during the stroke.
+***The Putter's*** backside weighting is designed to open and close the face on an arc during the stroke.
 
 **#2: Technique**
 
@@ -141,17 +139,17 @@ Here's How The RS1 Fixes The Two Factors of Face Drift:
 
 #1: Technology
 
-Forward Axis Weighting places 75% of the 360g head weight in front of the shaft axis...
+Forward Axis Weighting stabilizes the face, by placing 75% of the 360g head weight in front of the shaft axis...
 
 So the center of gravity shifts forward.
 
-Which means the technology of the putter is using gravity to pull the face toward square — not away from it.
+Which means the technology of the putter is using gravity to square the face to your target line.
 
 #2: Technique
 
 Forward Axis Weighting *also* counteracts the player's natural tendency to manipulate the clubface during the stroke...
 
-Because the unique combination of 8 features are all working for you to keep the face square to your target line through impact.
+Because the unique combination of 8 features are all working for you to keep the face square to your target line longer.
 
 What that means for you:
 
@@ -191,26 +189,38 @@ Fixing your natural tendency to open or close the clubface during your stroke.
 
 ## BTF-04: Product Highlights
 
-**Section Header:** Roll Straight Technology
+**Section Header:** ROLL STR8 TECHNOLOGY TM
 
 **Section Subhead:** Nine features. One objective. Roll straight.
 
 ### Forward Axis Weighting
 *Forward weight fights face drift.*
 
-The RS1 eliminates face drift by placing the weight where no other putter does — in front of the shaft axis. 75% of the 360g head weight sits ahead of the shaft axis, shifting the center of gravity forward so gravity pulls the face toward square — not away from it. That's how you get zero face drift through the stroke. All you have to do? You pull it back and let gravity pull it through.
+The RS1 eliminates face drift by placing the weight where no other putter does — in front of the shaft axis. 75% of the 360g head weight sits ahead of the shaft axis, shifting the center of gravity forward so gravity keeps the face square to your intended target line - longer. That's how you get zero face drift through the stroke. All you have to do? You pull it back and let gravity pull it through.
 
 ### Face Down Balance
 *Gravitational face control.*
 
-The RS1's Face Down Balance keeps the face square to the arc for you. The weight is so far forward of the shaft axis that gravity holds the face down — where every other putter you've tried, the face flops open. With RS1 you feel the difference the moment you set up. The face sits where it should, and stays where it should, throughout the entire stroke.
+The RS1's Face Down Balance is the ONLY putter technology that dynamically counteracts your tendency to open the face - so it keeps the face square to the arc for you. With RS1 you feel the difference the moment you set up. The face sits where it should, and stays where it should, throughout the entire stroke.
+
+**Did You Know?** [visual note: put these in a box]
+
+How's This Different From A Zero Torque Putter?
+
+ZT Putters are neutrally weighted to hang without twisting...
+BUT the face still opens and closes relative to the target line
+
+❌ ZT does not fight natural face opening tendencies
+❌ ZT requires the player to control the face throughout the stroke
+❌ ZT requires a rotational timing based release
+
 
 ### Square-to-Square 74° Lie Angle
 *Less arc, less error.*
 
 The RS1 reduces your stroke arc so the face stays square to the path. A 74° upright lie angle — 4° more upright than standard — shortens the natural arc of your stroke. Because less arc means less face rotation. And less face rotation means a straighter path with less room for human error.
 
-### 10-Piece Premium Construction
+### 10-Piece "Hammerhead" Construction
 *Ten pieces, one purpose.*
 
 Every gram in the RS1 is placed exactly where Chris McGinley intended it. CNC-machined steel face, carbon composite crown, aluminum tail wings — plus seven other precision components, every gram of material hand-picked for what it contributes to weight distribution. Heavy where it drives performance, light where it doesn't. You feel the precision the moment you pull it back!
@@ -225,10 +235,12 @@ The only dual-sided pistol grip in golf, designed to silence your hands through 
 
 The shaft sits behind the face, giving you full unobstructed visibility of the entire striking surface at address. No hosel, no shaft — nothing between your eyes and the face. You see exactly where the ball is going to hit the sweet spot. That's complete alignment clarity before you take the putter back.
 
-### Face Square Focus
+### T-Trac Alignment Lines
 *Line it up, lock it in.*
 
-The T-Trac Alignment Lines run tail-to-front, converging at a perpendicular face line. Three lines reveal face angle error more effectively than a single line ever could. See the line, set up square, and know you're on track before you take it back.
+Three T-Trac Alignment Lines run tail-to-front, converging at a perpendicular face line. These three lines laser in your face angle like a scope lining up a barrel. See the line, set up square, and know you're on track before you take it back.
+
+[design note: low angle DTL image of the T-Trac alignment lines creating a scope at the cup]
 
 ### T-Wing Tail
 *Less tail weight, more face weight.*
@@ -301,15 +313,19 @@ Same putt, 20 reps. Watch where the RS1 balls cluster vs. the traditional mallet
 **[Video 4: The Gravity Test]**
 Pull both putters back to the same position and let go. The RS1's forward-weighted head accelerates through the ball — gravity pulling 75% of the weight forward. The traditional mallet? Slower, heavier through the back, fighting its own weight distribution.
 
+[production visual note: make sure we talk about pushing weight back vs. pulling weight back. ie backing up a truck with a trailer on it, when you turn one way the trailer goes the other way. that's the physics working against you with a traditional putter.]
+
 ---
 
 ## BTF-08: Organic Content
 
-**Header:** Roll Straight Roadshow
+**Header:** ROLL STR8 ROADSHOW
 
 **Subhead:** See the RS1 in action.
 
 **[Full-Width Video]**
+
+[design note for full width video above: can be one YouTube video from JoJo on the putter or a compilation from lots of organic/social video clips showing people using/reacting to the putter]
 
 ---
 
@@ -331,11 +347,17 @@ The putts you expect to make, you start making. Consistency replaces streakiness
 **Confidence at Address**
 You see the line. You trust the face. You pull it back and let it fall.
 
-**Less Practice, Better Results**
+**Do Less, Make More**
 You don't need to overhaul your stroke. The RS1 works with the stroke you already have — and makes it better.
 
 **Consistent by Design**
 Lag putts, short putts, breaking putts, straight putts. The RS1 performs the same way every time — because gravity doesn't take days off.
+
+**Feel The Face**
+Feels like a blade, stays stable & rolls straight like a mallet.
+
+**See The Line Before You Sink It**
+
 
 ---
 
@@ -350,11 +372,11 @@ Lag putts, short putts, breaking putts, straight putts. The RS1 performs the sam
 ✅ Zero face drift — gravity holds the face square through your entire stroke
 ✅ Gravity-assisted putting motion — pull it back, let gravity pull it through
 ✅ A putter that works for you instead of against you — 75% of head weight positioned in front of the shaft
-✅ Square-to-square stroke path with a 74° upright lie angle
-✅ Stop worrying about your technique so you can start focusing on the line
-✅ 10-piece multi-material construction — every gram placed with intent
+✅ Square-to-square path with a 74° upright lie angle
+✅ Stop worrying about your technique so you can focus on the line & speed
+✅ 10-piece premium construction — every gram placed with intent
 ✅ Designed by Chris McGinley — 30+ years, 11 world #1 players
-✅ 365-day guarantee — play it for a full year, send it back if you're not making more putts
+✅ 365-day guarantee — play it for a full year, make more putts or send it back
 
 What's Included With My RS1?
 
@@ -391,7 +413,7 @@ Dual Pistol Polyurethane Grip.
 
 **Header:** Dial In Your Putting With PG1
 
-The world's smartest game improvement app. Submit your putting videos directly to your coach and get real-time feedback on your stroke — right from your phone.
+The world's smartest game improvement app. Submit your putting videos directly to your coach and get real-time feedback on your stroke — straight from your phone.
 
 Your RS1 purchase includes a free 30-day trial. No subscriptions. No commitments.
 
