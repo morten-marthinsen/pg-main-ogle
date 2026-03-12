@@ -1,0 +1,85 @@
+checkpoint: CONCEPT_APPROVED
+project: "Lil' Legends (LIL)"
+skill: "03-root-cause"
+timestamp: "2026-03-12T10:00:00Z"
+previous_checkpoint: "LAYER_1_COMPLETE.yaml"
+
+# ─── APPROVAL RECORD ─────────────────────────────────────────────────────
+
+approval:
+  approved_by: "Don French (Creative Lead)"
+  approval_date: "2026-03-12"
+  approval_type: "concept_selection_with_modification"
+
+  selected_concept:
+    id: A
+    name: "The Teaching Method Root Cause"
+    original_score: 9.00
+    statement: "Every toddler golf product was designed around verbal instruction, but toddlers ages 2-5 can't learn through words. They learn through what they can see and touch. The equipment needs to teach through its design — shapes, colors, physical cues — so the child learns by playing, not by being instructed."
+
+  supporting_concept:
+    id: D
+    name: "Adapted vs. Designed"
+    original_score: 8.25
+    role: "Comparison chart material ONLY — not competitive attack, not root cause argument"
+    constraint: "Lives in us-vs-them section showing features, NOT as a narrative argument"
+
+  rejected_concepts:
+    - {id: B, name: "Silent Equipment", reason: "Subsumed by A — 'equipment should teach' is part of A's territory"}
+    - {id: C, name: "Impossible First Experience", reason: "Pain-market framing, doesn't fit hope direction"}
+    - {id: E, name: "Parent Trap", reason: "Downstream symptom, not root cause itself"}
+
+# ─── CRITICAL FRAMING DIRECTION ──────────────────────────────────────────
+
+framing_direction:
+  market_type: "HOPE (not pain)"
+  emotional_spine: "'Golf buddy' dream — playing golf together for a lifetime"
+
+  framing_rules:
+    - "Frame 'teaching through design' as a NEW OPPORTUNITY, not an exposé"
+    - "Grant is sharing exciting news about how toddlers learn, not attacking competition"
+    - "No competitive attack framing — we are NOT saying 'every children's golf set is a lie'"
+    - "'Adapted vs. designed' lives ONLY in comparison chart, not as narrative argument"
+    - "Root cause reveal should feel like a dad's discovery, not a marketer's takedown"
+    - "The $20 Walmart plastic clubs objection: they're lightweight but also don't teach through design — the teaching gap covers ALL products regardless of how they were made"
+
+  hope_framed_three_part:
+    what_parents_experience: "I want my kid to love golf, but everything I've tried hasn't clicked — they swing a few times and walk away"
+    the_insight: "Toddlers ages 2-5 learn through visual and tactile discovery, not words. The equipment needs to teach through its design."
+    the_new_opportunity: "A system designed from scratch around how toddlers actually learn — where the equipment teaches through shapes and colors, and your job is just to play alongside them."
+
+  soul_md_alignment:
+    voice: "Grant talking to a fellow golf-loving parent at the range"
+    energy: "Authentic joy + proud purpose"
+    anti_voice_active:
+      - "Never pushy-parent (no developmental pressure)"
+      - "Never corporate-product (no spec-sheet copy)"
+      - "Never condescending (no 'most parents don't know this')"
+      - "Never hard-sell DR (no urgency mechanics)"
+
+# ─── ANTI-DEGRADATION ────────────────────────────────────────────────────
+
+anti_degradation:
+  file_read: "ROOT-CAUSE-ANTI-DEGRADATION.md"
+  version: "v3.0"
+  concept_checkpoint_gate: "PASSED — human selected concept A with modifications"
+  no_naming_in_layer_1: "CONFIRMED — Layer 1 produced concepts only"
+  no_expression_before_approval: "CONFIRMED — no expression work done before this checkpoint"
+
+# ─── LAYER 2 EXECUTION PLAN ──────────────────────────────────────────────
+
+layer_2_plan:
+  primary_expression: "2.1 Simple Reframe (hope-framed)"
+  secondary_expression: "2.4 Metaphor Construction (explain visual/tactile teaching)"
+  skip:
+    - {id: "2.2", name: "Named Syndrome", reason: "Golf niche avoids medicalized language (L0 niche routing)"}
+    - {id: "2.3", name: "Villain Personification", reason: "Hope market — no competitive attack (Don directive)"}
+    - {id: "2.5", name: "Dual Problem", reason: "Unified concept approved — not dual framing"}
+  execute:
+    - "2.1 Simple Reframe"
+    - "2.4 Metaphor Construction"
+    - "2.6 Niche Expression Matching"
+    - "2.7 Expression Synthesis"
+    - "2.8 Expression Anchoring Score"
+
+next_gate: LAYER_2_COMPLETE

@@ -1,0 +1,58 @@
+checkpoint: LAYER_4_COMPLETE
+project: "Lil' Legends (LIL)"
+skill: "03-root-cause"
+timestamp: "2026-03-12T17:00:00Z"
+status: COMPLETE
+previous_checkpoint: "LAYER_3_COMPLETE.yaml"
+
+# ─── PACKAGING OUTPUT ──────────────────────────────────────────────────────
+
+packaging:
+  deliverable: "layer-4-outputs/root-cause-package.md"
+  format: "Combined package (4.1 copy blocks + 4.2 handoffs + 4.3 integration + 4.4 synthesis)"
+
+  copy_blocks_produced:
+    - {id: "2A", name: "Full Primary (Hybrid A revised)", words: 260, use: "E-comm, landing page, core message"}
+    - {id: "2B", name: "Full Secondary (Donnie French R3)", words: 255, use: "Organic video, Grant first-person"}
+    - {id: "2C", name: "Compressed", words: 90, use: "Email, social, ad support"}
+    - {id: "2D", name: "Headlines & Subheads", words: "various", use: "Page headers, ad headlines, email subjects"}
+    - {id: "2E", name: "Bullet Points", words: 65, use: "E-comm features, email scannable"}
+    - {id: "2F", name: "Organic Video Script", words: 150, use: "YouTube, Reels, TikTok"}
+    - {id: "2G", name: "Email Teaser", words: 85, use: "Launch email sequence"}
+
+  downstream_handoffs:
+    mechanism_skill: "Packaged — root cause to solve, must/must-not constraints, match type"
+    promise_skill: "Packaged — transformation arc, scope limits, emotional handoff"
+    big_idea_skill: "Packaged — disruption potential, reframe technique, niche calibration"
+
+  integration_guidance:
+    channels_covered: ["e-comm", "organic video", "social ads", "email sequence", "Instagram/TikTok"]
+    functions_mapped: ["pattern interrupt", "dream activation", "problem naming", "mechanism setup", "proof delivery", "dream close", "callback"]
+
+# ─── VERIFICATION ──────────────────────────────────────────────────────────
+
+verification:
+  core_root_cause_complete: "PASS — 16-word core statement + three-part structure"
+  all_copy_blocks_present: "PASS — 7 blocks produced"
+  validation_scores_documented: "PASS — composite 9.19, APPROVED"
+  downstream_handoffs_complete: "PASS — mechanism, promise, big idea all packaged"
+  integration_guidance_actionable: "PASS — by channel and by function"
+  metadata_accurate: "PASS — all fields populated"
+  hope_market_compliance: "PASS — all blocks hope-framed, no attack, no DR urgency"
+
+completeness:
+  previous_checkpoints:
+    - "LAYER_0_COMPLETE.yaml — PRESENT"
+    - "LAYER_1_COMPLETE.yaml — PRESENT"
+    - "CONCEPT_APPROVED.yaml — PRESENT"
+    - "LAYER_2_COMPLETE.yaml — PRESENT"
+    - "ARENA_COMPLETE.yaml — PRESENT"
+    - "LAYER_3_COMPLETE.yaml — PRESENT"
+  deliverable_file: "layer-4-outputs/root-cause-package.md"
+  all_quality_gates_passed: true
+
+# ─── SKILL COMPLETE ────────────────────────────────────────────────────────
+
+skill_status: COMPLETE
+skill_deliverable: "layer-4-outputs/root-cause-package.md"
+next_skill: "04-mechanism"
