@@ -1,0 +1,381 @@
+# ════════════════════════════════════════════════════════════════
+# sf2-pre-sale-page.yaml
+# SF2 Slice-Fix — Presale Page Builder Handoff
+# Source: sf2-pre-sale-page.md
+# ════════════════════════════════════════════════════════════════
+
+handoff_version: "1.0"
+generated_at: "2026-03-12"
+source_doc: "sf2-pre-sale-page.md"
+
+# ────────────────────────────────────────
+# PAGE SPEC
+# ────────────────────────────────────────
+page_spec:
+  page_type: "presale-content"
+  product_name: "Hank Haney's Slice-Fix Confession Series"
+  offer_name: "Slice-Fix Masterclass"
+  guru: "Hank Haney"
+  design_style: "Direct Response Content Page — high-impact, emotionally driven, long-form"
+  total_sections: 13
+  cta_placements: [11, 13]
+  video_placements: [9]
+  mobile_priority_sections: [1, 2, 6, 9, 11]
+  global_design_rules:
+    - "DR content page — bold headlines, emotional imagery, high contrast"
+    - "Hank Haney is the authority figure throughout — use his image frequently"
+    - "Pain-heavy top half, solution-heavy bottom half"
+    - "CTA buttons are high-contrast, full-width on mobile"
+    - "Proof banner stays visible/sticky on scroll"
+
+# ────────────────────────────────────────
+# SECTIONS (in page scroll order)
+# ────────────────────────────────────────
+sections:
+
+  # ── HEADER ──────────────────────────────
+  - position: 1
+    id: "header"
+    name: "Logo + Proof Banner"
+    zone: "ATF"
+    layout: "Logo centered above, proof banner full-width below"
+    mobile_behavior: "Stack vertically — logo above, banner below"
+    visual_elements:
+      - "Performance Golf logo"
+      - "Proof banner (e.g., trust badges, customer count, media mentions)"
+    notes:
+      - "Proof banner establishes credibility before any copy loads"
+
+  # ── HERO ────────────────────────────────
+  - position: 2
+    id: "atf-hero"
+    name: "Hank Haney Confession — Hero"
+    zone: "ATF"
+    layout: "Full-width hero — headline stack above, image below, credential box overlaid or adjacent"
+    mobile_behavior: "Stack vertically — headlines, image, credential box"
+    copy:
+      prehead: "TIGER WOODS' FORMER COACH, HANK HANEY, CONFESSES:"
+      headline: "\"I was wrong about your slice.\""
+      headline_style: "italic"
+      body:
+        - "Here's a fact:"
+        - "NOBODY has fixed more amateur slices than me."
+    visual_elements:
+      - "IMAGE OR GIF: Hank working with a student doing something technical that invokes curiosity"
+      - "Use best performing OSSF ad image"
+    credential_box:
+      style: "Contained box — visually distinct from body copy"
+      items:
+        - { label: "Years Coaching", value: "45" }
+        - { label: "In-Person Lessons", value: "71,000+" }
+        - { label: "Amateur Slices Fixed", value: "182,346 (and counting)" }
+    notes:
+      - "Credential box must feel like a stat card — bold numbers, smaller labels"
+      - "Headline is in italics — spoken-word confession tone"
+
+  # ── PROBLEM AWARENESS ──────────────────
+  - position: 3
+    id: "btf-problem-awareness"
+    name: "What 182,000 Slices Taught Me"
+    zone: "BTF"
+    layout: "Full-width text section with supporting image"
+    mobile_behavior: "Image above copy, stacked"
+    copy:
+      header: "What 182,000 Slices Taught Me About Yours"
+      body:
+        - "I know that sounds crazy coming from the guy who coached Tiger Woods and Mark O'Meara…"
+        - "AND has personally fixed over 182,000 amateur slices."
+        - "But I've seen this pattern too many times to ignore."
+    visual_elements:
+      - "IMAGE: Hank working with a different student"
+    notes:
+      - "Tone is confessional — Hank admitting something unexpected"
+      - "Use a different Hank image than the hero"
+
+  # ── PROBLEM AGITATION ──────────────────
+  - position: 4
+    id: "btf-problem-agitation"
+    name: "All Pain. No Gain."
+    zone: "BTF"
+    layout: "Full-width text section — no image, copy-driven"
+    mobile_behavior: "Full-width text"
+    copy:
+      header: "All Pain. No Gain."
+      body:
+        - "You spend weeks or months working on your over-the-top swing..."
+        - "Grooving a better release..."
+        - "And keeping your clubface square through impact."
+        - "But all it takes is one leaky drive..."
+        - "And you're right back to aiming left and praying it'll slice back into play."
+        - "Bad as that is – it's just the beginning."
+    notes:
+      - "Short lines — one thought per line, spoken rhythm"
+      - "Build emotional tension without resolving it"
+
+  # ── DEEPER PROBLEM (DISTANCE) ──────────
+  - position: 5
+    id: "btf-real-price"
+    name: "The Real Price of Your Slice"
+    zone: "BTF"
+    layout: "Full-width — bold header, image, then copy with bold callouts"
+    mobile_behavior: "Stack vertically — header, image, copy"
+    copy:
+      header: "THE REAL PRICE OF YOUR SLICE"
+      body:
+        - "You already know your slice costs you fairways..."
+        - "3-5 penalty shots (or more) every round..."
+        - "And confidence when you're standing over the ball."
+        - "But most golfers are so worried about missing right, you never stop to consider that..."
+      bold_callouts:
+        - "Your slice isn't just an accuracy problem."
+        - "It's a distance problem."
+    visual_elements:
+      - "IMAGE: Golfer DTL on tee pointing right — make the viewer FEEL THE PAIN"
+    notes:
+      - "Bold callouts are the emotional pivot — style them larger or in a different color"
+      - "Image should evoke frustration, not instruction"
+
+  # ── DATA VISUALIZATION ─────────────────
+  - position: 6
+    id: "btf-distance-comparison"
+    name: "Slices Steal Distance"
+    zone: "BTF"
+    layout: "Split-screen comparison graphic above, copy below"
+    mobile_behavior: "Graphic stacked above copy — graphic may need to go full-width single column on small screens"
+    copy:
+      header: "SLICES STEAL DISTANCE"
+      body:
+        - "Every yard your ball curves to the right is a yard of energy going sideways instead of forward."
+        - "A 30-yard slice doesn't just miss the fairway by 30 yards."
+        - "It flies 30 yards SHORTER than a straight ball you hit with the exact same swing."
+      pain_list:
+        - icon: "❌"
+          text: "Stuck with long approach shots"
+        - icon: "❌"
+          text: "Coming up short of greens you should be sticking in regulation"
+        - icon: "❌"
+          text: "Feeling like most par 5s are par 6s before you even tee it up"
+    comparison_graphic:
+      type: "split-screen"
+      left_side:
+        label: "DRAW"
+        visual: "Birds-eye view of golf hole — green line from tee box to left side of fairway, realistic draw shot shape"
+        stats:
+          - { label: "Swing Speed", value: "94 mph" }
+          - { label: "Carry Distance", value: "229 yards" }
+          - { label: "Total Distance", value: "243 yards" }
+        style: "Trackman-style stat icons"
+      right_side:
+        label: "SLICE"
+        visual: "Birds-eye view of same golf hole — red line from tee box to right rough, realistic slice shot shape"
+        stats:
+          - { label: "Swing Speed", value: "94 mph" }
+          - { label: "Carry Distance", value: "207 yards" }
+          - { label: "Total Distance", value: "216 yards" }
+        style: "Trackman-style stat icons"
+    notes:
+      - "This graphic is a KEY conversion element — must be polished and clear"
+      - "Same swing speed, dramatically different distance — the visual tells the story"
+      - "27-yard difference should be impossible to miss"
+
+  # ── BRIDGE / QUIET PART ────────────────
+  - position: 7
+    id: "btf-bridge"
+    name: "I'm Saying The Quiet Part Out Loud"
+    zone: "BTF"
+    layout: "Full-width text section with image"
+    mobile_behavior: "Image above copy, stacked"
+    copy:
+      header: "I'M SAYING THE QUIET PART OUT LOUD"
+      body:
+        - "You've tried to fix your slice."
+        - "Probably more times than you can count."
+        - "New grip. Swing tips. Training aids."
+        - "And while those fixes aren't wrong..."
+        - "They often aren't enough."
+        - "Because even if you're working on the right things..."
+      bold_callouts:
+        - "Unless you're working on ALL the right things – in the right order at the right time..."
+        - "You WILL keep slicing short, weak drives that suck all the fun out of the game."
+    visual_elements:
+      - "IMAGE: Hank Haney teaching a clinic/talking to multiple people"
+    notes:
+      - "This section validates the reader's past failures without blaming them"
+      - "Bold callouts are the emotional peak before the solution turn"
+
+  # ── SOLUTION INTRO ─────────────────────
+  - position: 8
+    id: "btf-solution-intro"
+    name: "I Stopped Fixing Swings & Started Fixing Slices"
+    zone: "BTF"
+    layout: "Full-width — dual header stack, GIF/video, then body copy"
+    mobile_behavior: "Stack vertically — headers, GIF, copy"
+    copy:
+      header_line_1: "I Stopped Fixing *Swings*"
+      header_line_2: "& Started Fixing *SLICES*"
+      header_style: "Line 1 italic on 'Swings', Line 2 italic+caps on 'SLICES'"
+      body:
+        - "I just discovered the missing piece to straightening out your ball flight..."
+        - "Without sacrificing one yard of distance..."
+        - "OR making a single change to your swing."
+        - "Most golfers have never even heard of this, let alone addressed it."
+        - "But now, for the first time ever, ***I'm telling all my slice-fix secrets.***"
+    visual_elements:
+      - "GIF: Use the 'Turn It' intro from one of the top performing ads — remove the 'Turn It' part, just include the draw shot and Hank saying 'One shot, one shot'"
+    notes:
+      - "This is the emotional turn — from problem to solution"
+      - "GIF is the proof moment — visual evidence before the content series reveal"
+      - "Final line is bold+italic — maximum emphasis"
+
+  # ── VIDEO CONTENT SERIES ───────────────
+  - position: 9
+    id: "btf-confession-series"
+    name: "Slice-Fix Confession Series — 4 Videos"
+    zone: "BTF"
+    layout: "Section header above, then 4 video blocks stacked vertically — each with video number label, sub-header, description, and embedded video"
+    mobile_behavior: "Full-width stacked — each video block is its own visual unit"
+    copy:
+      prehead: "Introducing Hank Haney's:"
+      headline: "SLICE-FIX CONFESSION SERIES"
+    visual_elements:
+      - "Directional arrows between prehead and video blocks"
+    videos:
+      - position: 1
+        label: "Video #1:"
+        header: "The Confession"
+        subhead: "I Asked 183,000 Amateur Golfers Why They Slice. 93% Guessed Wrong."
+        description: "This is the #1 mistake slicers make when you're trying to fix your slice."
+        video_source: "Intro Video - Forever Slice Fix Introduction"
+        notes: "Lead video — sets the confession frame"
+      - position: 2
+        label: "Video #2:"
+        header: "The EASIEST Way To Gain Distance Is With Math, Not Magic"
+        subhead: ""
+        description: "When my students want to gain 15-35+ yards, this is the FIRST thing I do. (It's NOT look at your swing)"
+        video_source: "TSS - Video 2 - Hitting A Draw"
+        notes: "Distance angle — connects slice fix to distance gain"
+      - position: 3
+        label: "Video #3:"
+        header: "The Missing Piece"
+        subhead: ""
+        description: "This ONE forgotten factor determines whether you hit a slice – or a DRAW"
+        video_source: "HankHaney_BagTapDrill_v3_16x9"
+        notes: "Intrigue/curiosity — 'forgotten factor' hook"
+      - position: 4
+        label: "Video #4:"
+        header: "Reverse Loop Trick"
+        subhead: ""
+        description: "My most popular drill. Turns slices into draws PERMANENTLY – in just 5 minutes a day"
+        video_source: "HankHaney_ReverseLoopDrill_v2_16x9"
+        notes: "Actionable/tangible — gives them something to try"
+    notes:
+      - "Each video block should feel like a 'card' — clear visual boundaries"
+      - "Video number labels (Video #1, #2, etc.) should be styled as a small badge or tag"
+      - "Headers are the hooks — style them prominently"
+      - "Video sources need to be uploaded/hosted — local file paths are for reference only"
+
+  # ── MASTERCLASS INTRO ──────────────────
+  - position: 10
+    id: "btf-masterclass-intro"
+    name: "Your Next Step — Fix Your Slice Forever"
+    zone: "BTF"
+    layout: "Full-width — header stack, image, then body copy"
+    mobile_behavior: "Stack vertically"
+    copy:
+      prehead: "YOUR NEXT STEP?"
+      headline: "FIX YOUR SLICE FOREVER"
+      body:
+        - "In my NEW slice-fix masterclass, I go further than I've ever gone publicly..."
+        - "Walking you step-by-step through exactly how you will:"
+      promise:
+        line_1: "Permanently eliminate your slice AND add serious yardage..."
+        line_2: "Without changing a single thing about your swing."
+        style: "Both lines styled as sub-headers — bold, larger font"
+    visual_elements:
+      - "Super compelling image — Hank in a masterclass/presentation setting or dramatic product shot"
+    notes:
+      - "Transition from free content to paid offer"
+      - "Promise lines are the core value prop — make them unmissable"
+
+  # ── MASTERCLASS OFFER + CTA ────────────
+  - position: 11
+    id: "btf-masterclass-offer"
+    name: "Slice-Fix Masterclass — Benefits + CTA"
+    zone: "BTF"
+    layout: "Prehead stack, benefit bullets, then CTA button with sub-text"
+    mobile_behavior: "Full-width stacked — bullets, then CTA"
+    copy:
+      eyebrow: "(FOR YOUR EYES ONLY)"
+      headline: "SLICE-FIX MASTERCLASS"
+      sub_eyebrow: "(Now Streaming)"
+      benefits_header: "You'll discover:"
+      benefits:
+        - icon: "✔️"
+          text: "**The hidden reason your slice often comes back after a few holes** — even when you make the \"right\" swing changes (it's NOT a \"muscle memory\" problem)"
+        - icon: "✔️"
+          text: "**A bulletproof way to fix your slice ON THE COURSE** — without a single lesson, swing change, or range session"
+        - icon: "✔️"
+          text: "**The discovery I'm staking my entire 45-year reputation on** — and why I've never been more confident about anything in my career"
+        - icon: "✔️"
+          text: "**A Whole Lot More!**"
+      cta_header: "WATCH THE FREE SLICE-FIX MASTERCLASS NOW ⬇️"
+      cta_button:
+        text: "YES, I WANT TO FIX MY SLICE FOREVER AND HIT LONGER DRIVES!"
+        sub_text: "(Because Good Golf Starts With Good Tee Shots)"
+        style: "High-contrast, full-width on mobile, prominent"
+        link: "TBD — masterclass page URL"
+    notes:
+      - "Eyebrow text creates exclusivity"
+      - "Benefit bullets use bold lead + explanation pattern"
+      - "CTA button text includes 'AND' underlined in the source — preserve emphasis"
+      - "Sub-text under CTA is a belief reinforcement line"
+
+  # ── TESTIMONIALS ───────────────────────
+  - position: 12
+    id: "btf-testimonials"
+    name: "What Golfers Are Saying"
+    zone: "BTF"
+    layout: "Header above, 3 testimonial cards stacked or in a row"
+    mobile_behavior: "Stacked vertically — one card per testimonial"
+    copy:
+      header: "What Golfers Are Saying"
+    testimonials:
+      - quote: "I fought my slice for 15 years. Tried everything — lessons, YouTube, new grips, you name it. I couldn't get anything to stick. But now **I'm hitting draws that carry 20 yards farther.**"
+        attribution: "— Dave R., 19 Handicap"
+      - quote: "I was ready to give up driver entirely and just hit 3-wood. Now **I'm swinging with confidence for the first time in years — and I'm actually LONGER than I was before.**"
+        attribution: "— Mike L., 22 Handicap"
+      - quote: "I always thought I had to swing slow to control my shots. A lotta times I'd go for it and it would bite me in the you know what. But since Hank opened my eyes, **I'm hitting it way longer and last round I hit 9 fairways.**"
+        attribution: "— Tom W., 17 Handicap"
+    notes:
+      - "Bold the result statement within each testimonial"
+      - "Attribution format: em dash + first name + last initial + handicap"
+      - "Testimonial cards should feel authentic — not over-designed"
+
+  # ── FINAL CTA ──────────────────────────
+  - position: 13
+    id: "btf-final-cta"
+    name: "Final CTA"
+    zone: "BTF"
+    layout: "CTA header + button + sub-text — same treatment as position 11 CTA"
+    mobile_behavior: "Full-width, prominent"
+    copy:
+      cta_header: "WATCH THE FREE SLICE-FIX MASTERCLASS NOW ⬇️"
+      cta_button:
+        text: "YES, I WANT TO FIX MY SLICE FOREVER AND HIT LONGER DRIVES!"
+        sub_text: "(Because Good Golf Is More Fun)"
+        style: "High-contrast, full-width on mobile, prominent"
+        link: "TBD — masterclass page URL"
+    notes:
+      - "Mirror the section 11 CTA but with different sub-text"
+      - "Sub-text: 'Because Good Golf Is More Fun' (different from first CTA)"
+      - "Footer follows immediately after this section"
+
+  # ── FOOTER ─────────────────────────────
+  - position: 14
+    id: "footer"
+    name: "Footer"
+    zone: "BTF"
+    layout: "Standard PG footer"
+    mobile_behavior: "Standard responsive footer"
+    notes:
+      - "Use standard Performance Golf footer template"
