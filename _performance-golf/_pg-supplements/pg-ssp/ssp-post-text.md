@@ -47,3 +47,55 @@ UC-II® (40 mg) — "The Protector Protein" — a patented, clinical-grade unden
 Formulated at Eagle Labs, a cGMP-certified facility in the U.S., with UC-II from Lonza — the Swiss gold standard in clinical nutrition, founded in 1897.
 
 Bottom line: SwingSmooth Pro doesn't just mask stiffness. It targets stuck joints at the source — helping to support full turn, full power, and full flexibility.
+
+---
+
+## Title Tags — Swiped from DrawForce™ (Draft 1)
+
+ORIGINAL
+SwingSmooth Pro™ | First-Ever Triple-Action Flexibility Formula For Golfers | Targets Root Cause of Stiff Swings | Formulated With The Doctor Behind Tiger's Masters Comeback | Performance Golf
+SwingSmooth Pro™ | 3 Patented Flexibility-Improving Compounds Never Before Combined | From Grinding To Gliding In 5 Days | Full Turn, Full Power, Full Flexibility | Performance Golf
+Golf Joint Flexibility Supplement | Targets Stuck Joints (The Root Cause of Your Stiff Swings) | Unlock Your Swing & Your Consistency In As Little As 5 Days | SwingSmooth Pro | Performance Golf
+#1 Golf Flexibility Formula | 3 Patented Compounds Target Root Cause of Stiff, Inconsistent Swings | Swing Smooth Instead of Stiff | SwingSmooth Pro | Performance Golf
+Triple-Action Flexibility Formula | Unlocks Your Rotation, Rehydrates Your Joints, Supports Full Flexibility | One Small Daily Dose | SwingSmooth Pro | Performance Golf
+Relieve Golf Pain & Stiffness | Triple-Action Formula Shown To Improve Flexibility 16% In 5 Days | More Power, More Consistency, More Flexibility | SwingSmooth Pro | Performance Golf
+Golf Joint Pain Supplement | 3 Patented Compounds, 1 Triple-Action Flexibility Formula | Never Before Combined In One Dose | SwingSmooth Pro | Performance Golf
+First-Ever Golf Flexibility Formula | Clinically Tested Compounds At Proven Doses | More Distance, Consistency, & Confidence | SwingSmooth Pro | Performance Golf
+Golf Flexibility Fix | Targets All 3 Layers of Joint Breakdown | Supports Full Turn, Full Power, Full Flexibility | SwingSmooth Pro | Performance Golf
+Joint Flexibility For Golfers | Formulated With Scottie Scheffler's Performance Coach (He's Helped Over 50,000+ Recreational Golfers) | SwingSmooth Pro | Performance Golf
+
+NEW
+SwingSmooth Pro™ | First-Ever Triple-Action Golf Flexibility Formula | Formulated With The Doctor Behind Tiger's Masters Comeback | Performance Golf
+SwingSmooth Pro™ | 3 Patented Flexibility-Improving Compounds Never Before Combined | Full Turn, Full Power, Full Flexibility | Performance Golf
+Golf Joint Flexibility Supplement | Unlock Your Swing & Your Consistency In As Little As 5 Days | SwingSmooth Pro | Performance Golf
+#1 Golf Flexibility Formula | 3 Patented Compounds Target Root Cause of Stiff, Inconsistent Swings | SwingSmooth Pro | Performance Golf
+Triple-Action Flexibility Formula | Unlocks Your Rotation, Rehydrates Your Joints, Supports Full Flexibility | SwingSmooth Pro | Performance Golf
+Relieve Golf Pain & Stiffness | Triple-Action Formula Shown To Improve Flexibility 16% In 5 Days | SwingSmooth Pro | Performance Golf
+Golf Joint Pain Supplement | 3 Patented Compounds, 1 Triple-Action Flexibility Formula | Never Before Combined | SwingSmooth Pro | Performance Golf
+Golf Flexibility Formula | Clinically Tested Compounds At Proven Doses | More Distance, Consistency, & Confidence | SwingSmooth Pro | Performance Golf
+Golf Flexibility Fix | Targets All 3 Layers of Joint Breakdown | Supports Full Turn, Full Power, Full Flexibility | SwingSmooth Pro | Performance Golf
+Joint Flexibility For Golfers | Formulated With Scottie Scheffler's Performance Doctor | SwingSmooth Pro | Performance Golf
+
+---
+
+## Feature Bullets — Swiped from DrawForce™ (Draft 1)
+
+ORIGINAL:
+ApresFlex® (100 mg) — "The Mobility Molecule" — helps quiet the muscle guarding alarm that's been locking your joints stiff, so your body stops slamming on the brakes in your swing. Shown to improve flexibility by over 16% in just 5 days.
+
+ExceptionHYAL® Jump (200 mg) — full-spectrum hyaluronic acid imported from Gerenzano, Italy — rehydrates your joints with all 3 molecular sizes so your cartilage glides instead of grinds. 520.9% greater improvement than placebo in 8 weeks.
+
+UC-II® (40 mg) — "The Protector Protein" — helps convince your immune system to stop sending destructive MMPs to attack your healthy cartilage from the inside out. Outperformed glucosamine and chondroitin at every stage tested.
+
+Triple-Action Formula combines all three patented compounds for the first time ever — working in sequence to quiet the alarm, rehydrate the joints, and protect the cartilage.
+
+One small daily dose each morning — no stretching routines, no injections, no complicated protocols. Just take it with your coffee.
+
+Formulated with Dr. Troy Van Biezen, Scottie Scheffler's performance doctor since age 14, who says: "If Tiger walked back into my clinic tomorrow… I'd put this triple-action flexibility formula in his bag immediately."
+
+NEW:
+ApresFlex® helps quiet the muscle guarding alarm that's been making your joints stiff. Shown to improve flexibility by over 16% in just 5 days.
+ExceptionHYAL® Jump rehydrates your joints so your cartilage glides instead of grinds. 520.9% greater improvement than placebo in 8 weeks.
+UC-II® (40 mg) helps support healthy joint function by "convincing" your immune system to stop attacking your healthy joint cartilage.
+Triple-Action Formula combines three patented, trademarked compounds for the first time ever – working in sequence to support healthy joints.
+Formulated with Dr. Troy Van Biezen, Scottie Scheffler's performance doctor, who has helped more than 50,000 golfers swing smooth instead of stiff.

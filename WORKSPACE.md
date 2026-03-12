@@ -79,7 +79,7 @@ The last line should be the feeling, not the feature. "You're one step away from
 In spoken copy, short declarative sentences land harder than compound ones. "Then, give you the smartest way to fix it — FAST." has more punch than a longer version saying the same thing.
 
 ### 8. Every Element Must Earn Its Spot
-Before including any beat — countersell, emotional close, proof stack, future pace, repetition — ask whether the copy is stronger with or without it. If removing it makes the piece tighter without losing anything, it didn't earn its place. This isn't about format or length. It's about whether each element is doing work that nothing else in the piece is already doing.
+The default is exclusion, not inclusion. Before including any beat — countersell, emotional close, proof stack, future pace, repetition — the piece must be worse without it. If removing it makes the copy tighter without losing anything, it didn't earn its place. This isn't about format or length. It's about whether each element is doing work that nothing else in the piece is already doing.
 
 ### 9. Complete the Proof Point — Land the Result
 When you cite a credential, finish the story. Don't stop at the event — land the outcome. "The doctor who put together Tiger Woods' recovery plan after his spinal fusion" is a credential. "On his way to winning the 2019 Masters" is the proof. The credential earns attention. The result earns belief.
