@@ -1,0 +1,114 @@
+# scoring-complete.yaml — Layer 2 Checkpoint
+# Created after Layer 2 gap analysis, scoring, and promise ceiling complete
+
+layer: 2
+status: COMPLETE
+timestamp: "2026-03-11T11:30:00Z"
+
+scoring_summary:
+  overall_strength_score: 73
+  score_tier: "strong"
+  promise_ceiling_level: 4
+  promise_ceiling_name: "significant_improvement"
+
+  category_strengths:
+    mechanism:
+      strength: 9.41
+      status: robust
+      quality: {strong: 14, medium: 0, weak: 0}
+    authority:
+      strength: 7.57
+      status: robust
+      quality: {strong: 8, medium: 6, weak: 0}
+    data:
+      strength: 7.29
+      status: robust
+      quality: {strong: 11, medium: 9, weak: 0}
+    social:
+      strength: 6.93
+      status: robust
+      quality: {strong: 5, medium: 3, weak: 0}
+      note: "ALL PROXY — market research quotes, not product testimonials"
+    demonstration:
+      strength: 6.81
+      status: robust
+      quality: {strong: 5, medium: 5, weak: 0}
+    risk_reversal:
+      strength: 3.20
+      status: weak
+      quality: {strong: 0, medium: 0, weak: 1, gap: 1}
+
+  gaps_detected: 5
+  gap_severity_distribution:
+    critical: 0
+    high: 2
+    medium: 2
+    low: 1
+
+  gaps:
+    - id: GAP-01
+      category: risk_reversal
+      type: weak
+      severity: 6.0
+      tier: HIGH
+      resolution: "BUSINESS DECISION — define guarantee terms"
+    - id: GAP-02
+      category: social
+      type: quality_gap
+      severity: 6.0
+      tier: HIGH
+      resolution: "PRE-LAUNCH — beta testing + Grant demo video"
+    - id: GAP-03
+      category: authority
+      type: subtype_gap
+      severity: 5.5
+      tier: MEDIUM
+      resolution: "LAYER 3 DISCOVERY — cite 7 scientific claims"
+    - id: GAP-04
+      category: data
+      type: quality_gap
+      severity: 5.5
+      tier: MEDIUM
+      resolution: "LAYER 3 DISCOVERY — find analogous outcome data"
+    - id: GAP-05
+      category: demonstration
+      type: subtype_gap
+      severity: 3.0
+      tier: LOW
+      resolution: "CONTENT PRODUCTION — pre-launch video/photo"
+
+  promise_ceiling_constraints:
+    hard:
+      - "No transformation language (Level 5 requires 80+)"
+      - "No product testimonial claims"
+      - "No guarantee/warranty claims"
+      - "No cited study references until Layer 3 verifies"
+      - "No product-specific outcome numbers"
+    soft:
+      - "Mechanism-based outcome language, not result-based"
+      - "Market demand for social proof, not product satisfaction"
+      - "General scientific language until citations verified"
+
+microskill_outputs:
+  - file: "layer-2-outputs/2.1-composite-score.md"
+    status: COMPLETE
+  - file: "layer-2-outputs/2.2-schwartz-adjustment.md"
+    status: COMPLETE
+  - file: "layer-2-outputs/2.3-category-strength.md"
+    status: COMPLETE
+  - file: "layer-2-outputs/2.4-overall-strength.md"
+    status: COMPLETE
+  - file: "layer-2-outputs/2.5-gap-detection.md"
+    status: COMPLETE
+  - file: "layer-2-outputs/2.6-gap-severity.md"
+    status: COMPLETE
+  - file: "layer-2-outputs/2.7-promise-ceiling.md"
+    status: COMPLETE
+
+layer_3_discovery_required: true
+discovery_thresholds:
+  study_queries: 5
+  data_queries: 3
+  expert_queries: 3
+
+ready_for_layer_3: true

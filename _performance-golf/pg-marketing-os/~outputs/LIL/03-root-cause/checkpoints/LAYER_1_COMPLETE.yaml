@@ -1,0 +1,209 @@
+checkpoint: LAYER_1_COMPLETE
+project: "Lil' Legends (LIL)"
+skill: "03-root-cause"
+timestamp: "2026-03-11T16:30:00Z"
+layer: 1
+previous_checkpoint: "LAYER_0_COMPLETE.yaml"
+
+# ─── MICROSKILLS COMPLETED ───────────────────────────────────────────────
+
+microskills_completed:
+  - id: "1.1"
+    name: "Research Pattern Analysis"
+    output: "layer-1-outputs/1.1-research-pattern-analysis.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "4 complaint clusters: Equipment Failure (50+), Interest Death (30+), Teaching Method Failure (25+), Market Gap (20+)"
+      - "Shared flaw: Every solution applies the adult golf-learning framework to a child who cannot process it"
+      - "Hidden assumption: Toddlers learn golf the same way adults do — just simplified"
+      - "Competitor blind spot: How toddlers actually LEARN (visual/tactile, not verbal)"
+
+  - id: "1.2"
+    name: "Symptom Convergence"
+    output: "layer-1-outputs/1.2-symptom-convergence.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "15 distinct symptoms inventoried from 1,169 research quotes"
+      - "100% coverage: ALL 15 symptoms trace to single root cause"
+      - "Root cause candidate: Entire toddler golf category built around adult learning framework"
+      - "4 pathway branches: Equipment, Teaching, Experience, Market"
+      - "Convergence strength: STRONG"
+
+  - id: "1.3"
+    name: "False Belief Identification"
+    output: "layer-1-outputs/1.3-false-belief-identification.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "11 false beliefs mapped across 3 categories (cause, solution, self)"
+      - "Core false belief: Toddlers learn golf the same way adults do — just simplified"
+      - "False belief cascade: 4 false solutions + 3 self-blame patterns"
+      - "Truth reframe: Equipment must teach through design (shapes, colors, physical cues)"
+      - "Derivation strength: STRONG"
+
+  - id: "1.4"
+    name: "Hidden Layer Discovery"
+    output: "layer-1-outputs/1.4-hidden-layer-discovery.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "5-level 'But Why' cascade from surface to root"
+      - "Hidden layer type: Structural"
+      - "Hidden mechanism: Equipment is silent — no product teaches through design"
+      - "All 5 validation tests PASS (invisibility, explanatory, inevitability, accessibility, actionability)"
+      - "Layer structure: Surface → Known → Hidden 1 (adapted not designed) → Hidden 2 (no teaching pathway) → Root (equipment must BE the teacher)"
+
+  - id: "1.5"
+    name: "Mechanism Constraint Check"
+    output: "layer-1-outputs/1.5-mechanism-constraint-check.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "3 root cause candidates tested against LIL's 4 proprietary mechanisms"
+      - "All 3 candidates: DIRECT SOLVE match (strongest match type)"
+      - "LIL mechanism profile: Focal Sphere + Walk-In Frame + Skills Mat + Face Forward"
+      - "System-level capability: Replace verbal instruction with design-based instruction"
+      - "No adjustments needed — research truth preserved, not distorted to fit mechanism"
+
+  - id: "1.6"
+    name: "Proof Constraint Check"
+    output: "layer-1-outputs/1.6-proof-constraint-check.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "5 proof types available: research, credentials, demonstrations, logic, competitive contrast"
+      - "All 5 strength tests PASS (credibility, relevance, accessibility, sufficiency, demonstration)"
+      - "Overall proof strength: STRONG"
+      - "MEC-13 knockout: 'Match yellow to white' — 7-word proof the system teaches without words"
+      - "3 proof gaps identified with mitigation (pre-launch constraints: no testimonials, no video, no results data)"
+
+  - id: "1.7"
+    name: "Derivation Synthesis"
+    output: "layer-1-outputs/1.7-derivation-synthesis.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "5 root cause candidates scored on 4 dimensions (Truth 30%, Revelation 25%, Mechanism Fit 25%, Provability 20%)"
+      - "Primary: Candidate A (Teaching Method) — score 9.00"
+      - "Three-part structure complete for all 5 candidates"
+      - "Primary root cause passes all 7 validation checks"
+      - "Confidence score: 9.0 (well above 7.0 threshold)"
+
+# ─── DERIVATION RESULTS ──────────────────────────────────────────────────
+
+derivation_results:
+  total_candidates: 5
+
+  candidates:
+    - id: A
+      name: "The Teaching Method Root Cause"
+      score: 9.00
+      source: "combination (false_belief + hidden_layer + convergence)"
+      statement: "Every toddler golf product was designed around verbal instruction, but toddlers ages 2-5 can't learn through words. They learn through what they can see and touch. The equipment needs to teach through its design — shapes, colors, physical cues — so the child learns by playing, not by being instructed."
+      three_part:
+        what_they_think: "The clubs are wrong (too heavy, too flimsy) / my kid isn't interested / I'm not a good enough teacher"
+        what_real: "Every product was designed around verbal instruction, but toddlers can't learn through words"
+        why_nothing_worked: "Every solution operates within the same adult framework: simplify the words. But you can't simplify your way out of a developmental impossibility."
+      mechanism_match: "Direct Solve (10/10)"
+      proof_strength: "Strong (9/10)"
+
+    - id: B
+      name: "The Silent Equipment Root Cause"
+      score: 8.75
+      source: "hidden_layer primary"
+      statement: "Every toddler golf club is a silent object — it doesn't teach anything. The child picks it up and has zero information about what to do. Without verbal coaching (which doesn't work at this age), the child swings randomly, fails, and quits."
+      three_part:
+        what_they_think: "I haven't found the right clubs yet"
+        what_real: "Every club is equally silent — none teach through design"
+        why_nothing_worked: "Switching products doesn't help because every product is equally silent"
+      mechanism_match: "Direct Solve (10/10)"
+      proof_strength: "Strong (8/10)"
+
+    - id: D
+      name: "The Adapted vs. Designed Root Cause"
+      score: 8.25
+      source: "convergence + hidden_layer"
+      statement: "Every toddler golf product was ADAPTED from adult golf — shrunk down. None was DESIGNED from scratch for how a toddler's brain and body work. Adapting preserves every wrong assumption."
+      three_part:
+        what_they_think: "I need better-quality clubs designed for kids"
+        what_real: "Every 'kid's club' was adapted from adult golf, not designed from toddler cognition"
+        why_nothing_worked: "Switching brands = switching different versions of the same mistake"
+      mechanism_match: "Strong (9/10)"
+      proof_strength: "Strong (8/10)"
+
+    - id: C
+      name: "The Impossible First Experience Root Cause"
+      score: 7.90
+      source: "convergence + false_belief"
+      statement: "Your toddler didn't 'lose interest' in golf. Every product creates an impossible first experience — wrong weight, wrong geometry, no visual guidance. Within 2-3 swings, their brain decided 'golf = frustration.'"
+      three_part:
+        what_they_think: "My kid lost interest in golf"
+        what_real: "Equipment guaranteed failure — interest was never given a chance to form"
+        why_nothing_worked: "Each new set creates the same impossible first experience"
+      mechanism_match: "Strong (8/10)"
+      proof_strength: "Moderate (7/10)"
+
+    - id: E
+      name: "The Parent Trap Root Cause"
+      score: 7.25
+      source: "false_belief + convergence"
+      statement: "Parents are trapped between overcoaching (kills joy) and stepping back (no progress). This dilemma only exists because equipment doesn't teach through design."
+      three_part:
+        what_they_think: "I'm either overcoaching or undercoaching"
+        what_real: "The push/pull dilemma exists because equipment doesn't teach"
+        why_nothing_worked: "Trying to solve a teaching problem with better talking"
+      mechanism_match: "Strong (9/10)"
+      proof_strength: "Moderate (6/10)"
+
+# ─── VERIFICATION ─────────────────────────────────────────────────────────
+
+verification:
+  anti_degradation_compliance:
+    minimum_3_candidates: "PASS — 5 candidates produced"
+    three_part_structure: "PASS — all 5 have think/real/why"
+    concept_only_no_naming: "PASS — no names, no expression decisions"
+    research_grounded: "PASS — all candidates derived from 1,169 quotes"
+    mechanism_matched: "PASS — all candidates Direct Solve or Strong"
+    proof_available: "PASS — primary candidate has 5 proof types"
+    soul_md_loaded: "PASS — constraints active throughout derivation"
+    per_microskill_output: "PASS — 7 dedicated output files written"
+
+  validation_checks_on_primary:
+    research_grounded: true
+    mechanism_matched: true
+    proof_available: true
+    revelation_potential: true
+    simple_to_explain: true
+    blame_removed: true
+    hope_created: true
+    all_7_pass: true
+
+  confidence_score: 9.0
+  confidence_threshold: 7.0
+  confidence_check: PASS
+
+completeness:
+  layer_0_checkpoint: "LAYER_0_COMPLETE.yaml — PRESENT"
+  microskills_total: 7
+  microskills_complete: 7
+  output_files_total: 8  # L0 validation + 7 Layer 1 outputs
+  quality_gates_passed: "7/7 microskills"
+  candidates_minimum_met: true
+  three_part_minimum_met: true
+  mechanism_constraint_cleared: true
+  proof_constraint_cleared: true
+
+# ─── HANDOFF ──────────────────────────────────────────────────────────────
+
+next_gate: CONCEPT_CHECKPOINT
+next_gate_type: BLOCKING
+next_gate_requirement: "Human must select one of 5 root cause concepts before Layer 2 expression work begins. NO naming, NO expression, NO copy until concept is approved."
+
+supporting_elements_for_layer_2:
+  strongest_proof: "MEC-13: 'Match the yellow ball to the white ball'"
+  analogy_opportunity: "Color-coded guitar strings (teaching through design in another domain)"
+  enemy_potential: "The 'shrink it down' philosophy — industry approach, not individual brands"
+  niche_expression: "simple_reframe"
+  emotional_core: "Relief → Hope → Excitement"
