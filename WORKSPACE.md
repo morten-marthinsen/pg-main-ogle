@@ -63,26 +63,26 @@ Break compound sentences into individual beats. Each line gets one idea the spea
 ### 2. Name What They're Looking At — Immediately
 Don't open with philosophy or setup. Tell the viewer what they're seeing in the first 3 seconds. Orientation before persuasion.
 
-### 3. Kill Stage Directions
-Don't lean on `[brackets]` as a crutch. The script should read as speakable copy, not a screenplay. Only include a visual note when referencing a specific asset (a link, a file, a demo). Transitions should BE the copy: "Let me show you how this works" — not `[Transition to screen share]`.
-
-### 4. Break Complex Ideas Into Tiny Sequential Beats
+### 3. Break Complex Ideas Into Tiny Sequential Beats
 If a concept needs explanation, break it into 3–5 short lines that build on each other. Each line is a setup for the next. The listener absorbs one piece, then the next. Dense paragraphs don't land in spoken copy.
 
-### 5. Use Punctuation for Spoken Rhythm
+### 4. Use Punctuation for Spoken Rhythm
 Ellipses create pauses. Italics create emphasis. Dashes create beats. These aren't decorative — they're delivery instructions. Write the way a speaker breathes.
 
-### 6. Branch for the Viewer
-If the viewer could be in two different situations, address both: "If you've already done X... / If you need to do X..." This is especially critical for less tech-savvy audiences who freeze when instructions don't match their exact state.
-
-### 7. Add a Safety Net
+### 5. Add a Safety Net
 After any action step, add one line that removes fear of getting stuck: "If you run into any issues, we'll get you sorted." Reducing anxiety is as important as the instruction itself.
 
-### 8. Close With Emotion, Not Logistics
+### 6. Close With Emotion, Not Logistics
 The last line should be the feeling, not the feature. "You're one step away from the best version of this experience" beats "Click submit and you'll receive a response within 48 hours." End on what it means, not what it does.
 
-### 9. Shorter Sentences = More Authority
+### 7. Shorter Sentences = More Authority
 In spoken copy, short declarative sentences land harder than compound ones. "Then, give you the smartest way to fix it — FAST." has more punch than a longer version saying the same thing.
 
-### 10. Conversational Connectors Over Structural Headers
-"And here's the cool part" beats `**NEXT SECTION**`. In a walkthrough, the speaker's voice IS the structure. Use natural transitions that a person would actually say while showing someone a screen.
+### 8. Every Element Must Earn Its Spot
+Before including any beat — countersell, emotional close, proof stack, future pace, repetition — ask whether the copy is stronger with or without it. If removing it makes the piece tighter without losing anything, it didn't earn its place. This isn't about format or length. It's about whether each element is doing work that nothing else in the piece is already doing.
+
+### 9. Complete the Proof Point — Land the Result
+When you cite a credential, finish the story. Don't stop at the event — land the outcome. "The doctor who put together Tiger Woods' recovery plan after his spinal fusion" is a credential. "On his way to winning the 2019 Masters" is the proof. The credential earns attention. The result earns belief.
+
+### 10. Close on Benefit, Not Mechanism
+By the time you reach the close, the mechanism has been explained. Don't re-explain it. The close is where you land what it means for the golfer — what they get, how it feels, what changes. The reader already knows how it works. Tell them what they walk away with.

@@ -13,10 +13,10 @@
 <!-- ATF — ABOVE THE FOLD                       -->
 <!-- ═══════════════════════════════════════════ -->
 
-## ATF: Hero Carousel + CTA
+## ATF: Hero Carousel + CTA 🚨Action🚨 -  reason why LAB evolution div is after the sales argument?
 
 ### Prehead
-The New Roll Straight Technology
+The New Roll Straight Technology TM
 
 ### Headline
 RS1 Putter
@@ -25,12 +25,12 @@ RS1 Putter
 Pull It Back, Let It Fall.
 
 ### Value Proposition (DSI)
-The only premium putter with Forward Axis Weighting that eliminates face drift and improves your stroke at the same time.
+The only premium putter with Forward Axis Weighting that **eliminates face drift and improves your stroke at the same time.**
 
 ### CTA
 Get My RS1 Today
 
-### 10-Position Hero Carousel
+### 10-Position Hero Carousel 🚨Action🚨 -  where is a mention of THE FEEL?  feel the face? add to benefits section below /// distance control + consistency
 
 **Position 1: Hero Animation (MP4)**
 - Format: MP4 video, auto-play, loop, muted
@@ -38,11 +38,11 @@ Get My RS1 Today
 - Copy Overlay: None. The MP4 speaks for itself.
 
 **Position 2: The Problem**
-- Visual: RS1 weight distribution — 75% of weight in front of shaft axis, 25% behind.
+- Visual: RS1 weight distribution — 75% of weight in front of shaft axis, 25% behind. 🚨Action🚨 -  this is talking about problem, showing solution // should be a video that shows a poorly weighted putter flopping open so people know what that weighting problem DOES  (they don't know yet)
 - Copy Overlay: "95% of putters have the weight in the wrong place."
 
-**Position 3: The Mechanism**
-- Visual: Heavy CNC steel face piece pulled out from the putter.
+**Position 3: The Solution**
+- Visual: Heavy CNC steel face piece pulled out from the putter. 🚨Action🚨 -  the piece isn't the solution mechanism, the weight is the mechanism and the piece is the mechanism for delivering that, this also needs to be a MIRROR of visual 2 to clearly convey problem/solution
 - Copy Overlay: "Forward Axis Weighting eliminates face drift."
 
 **Position 4: The Proof (FDB)**
@@ -83,48 +83,109 @@ Get My RS1 Today
 
 > Placeholder — UGC content carousel positioned between ATF and first BTF section.
 
+**Do less. Make more.** 🚨Action🚨 -
+
 ---
 
 ## BTF-02: Problem
 
 **Prehead:** The Problem With Every Putter You've Ever Owned
 
-**Header:** The Weight Is in the Wrong Place. And It's Costing You Strokes.
+**Header:** The Weight Is In the Wrong Place. And It's Costing You Strokes.
 
-In 95% of putters, the majority of weight sits behind the shaft axis. That creates a gravitational force that pulls the face open during your stroke.
+In 95% of putters, most of the weight sits behind the shaft axis.
 
-It's called **face drift.**
+Rear weighting pulls the face off the path of your stroke.
 
-Every time you pull the putter back, the weight distribution is working against you — rotating the face away from square before you ever make contact with the ball.
+Technically, this is called **face drift...**
 
-- **You can't see it** — but it's pulling your face 1-3° open at impact
-- **You can't fix it with practice** — no putting drill overcomes physics
-- **You can't outwork it** — the harder you try to hold the face square, the more your hands interfere
-- **You can't feel it** — until the ball misses and you blame yourself
+And it's arguably the biggest problem in putting.
 
-It's not your stroke. It's not your nerves. It's your putter.
+Because when the face drifts open of your intended target line, you miss right.
 
-**The RS1 was designed to eliminate face drift at the source.**
+When the face drifts closed of your intended target line, you miss left.
+
+Which means, every stroke, the technology in your putter is working against you...
+
+Before you even hit the ball.
+
+**The RS1 eliminates face drift – at the source.**
+
+---
+
+**Header:** What Causes Face Drift?
+
+**1: Technology**
+
+***The Putter's*** rear weighting is designed to open and close the face on an arc during the stroke.
+
+**#2: Technique**
+
+***The Player's*** natural tendency to control the face during the stroke...
+
+Oftentimes leaving the face open or closed before impact.
 
 ---
 
 ## BTF-03: Solution
 
-**Prehead:** Forward Axis Weighting
+**Prehead:** THE NEW SOLUTION
 
-**Header:** Pull It Back, Let It Fall
+**Header:** Forward Axis Weighting
 
-Every putter has a center of gravity. In most putters, that center sits behind or directly on the shaft axis. That's why the face drifts open — gravity is pulling it the wrong way.
+**Posthead:** Pull It Back, Let It Fall
 
-**The RS1 reverses the physics.**
+[visual: similar to the YouTube lesson video with JT and Carter where he slows down the putter, recreate it with RS1]
 
-Forward Axis Weighting places 75% of the 360g head weight in front of the shaft axis. The center of gravity shifts forward. And now gravity pulls the face toward square — not away from it.
+Here's How The RS1 Fixes The Two Factors of Face Drift:
 
-What that means for you: pull it back, and let gravity pull it through.
+#1: Technology
+
+Forward Axis Weighting places 75% of the 360g head weight in front of the shaft axis...
+
+So the center of gravity shifts forward.
+
+Which means the technology of the putter is using gravity to pull the face toward square — not away from it.
+
+#2: Technique
+
+Forward Axis Weighting *also* counteracts the player's natural tendency to manipulate the clubface during the stroke...
+
+Because the unique combination of 8 features are all working for you to keep the face square to your target line through impact.
+
+What that means for you:
+
+You just pull the putter back, and let gravity pull it through.
 
 That's how Forward Axis Weighting fixes face drift and improves your stroke at the same time.
 
-**Do less. Make more.**
+---
+
+## BTF-04: Technology Evolution Education
+
+**Header:** The Past, Present, & Future of Putters
+
+THE PAST:
+
+For 100 years, the technology in rear-weighted putters allowed the face to flop open.
+
+Plus, standard technique teaches you to swing the putter on an arc.
+
+Meaning you're relying on timing to open and close the face at the exact right time to get back to square at impact.
+
+THE PRESENT:
+
+LAB Golf changed the game.
+
+They solved the technology problem with zero torque putters — but left an element of face control up to the player.
+
+THE FUTURE: 
+
+The RS1's Forward Axis Weighting gives you the technology that prevents face drift.
+
+AND it creates a counteracting force that wants to keep that face square to the target line...
+
+Fixing your natural tendency to open or close the clubface during your stroke.
 
 ---
 
