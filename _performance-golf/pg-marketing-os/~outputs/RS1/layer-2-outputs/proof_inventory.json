@@ -1,0 +1,635 @@
+{
+  "metadata": {
+    "inventory_date": "2026-03-10",
+    "proof_elements_cataloged": 137,
+    "sources_analyzed": 5,
+    "source_files": [
+      "quantified_buckets.json (1,442 quotes)",
+      "competitor_analysis.json (8 competitors, 52 web sources)",
+      "theme_synthesis.json (7 themes, 52 patterns)",
+      "rs1-putter.md (full product spec)",
+      "market_config.yaml (market positioning)"
+    ],
+    "analyst_skill": "2.55-B Proof Inventory Builder"
+  },
+
+  "proof_inventory": {
+
+    "social_proof": {
+      "available": [
+        {
+          "proof": "Chris McGinley designed clubs for 11 world #1 players during 25+ years at major OEMs",
+          "source": "rs1-putter.md / rs1-brief.md",
+          "strength": "High",
+          "usage_note": "This is designer social proof, not customer social proof. Use as credibility bridge: 'The man behind the putters used by 11 world #1 players built this one for YOU.'"
+        },
+        {
+          "proof": "Performance Golf existing customer base and brand recognition in DTC golf instruction market",
+          "source": "market_config.yaml",
+          "strength": "Medium",
+          "usage_note": "PG is known for instruction, not equipment. This is a credibility asset for email/warm audience but a potential liability for cold traffic who may perceive PG as a marketing company, not a putter company. Frame as: 'From the company that helped millions of golfers improve their game, now the equipment to match.'"
+        }
+      ],
+      "needed": [
+        {
+          "proof_type": "Customer testimonials with specific putting improvement metrics",
+          "why_needed": "Golfers demand proof of real-world results. The #1 proof type that drives putter purchases in the quote corpus is personal results ('took X strokes off my game', 'went from 34-35 putts to 30-31'). Without this, RS1 relies entirely on engineering claims.",
+          "how_to_obtain": "Beta tester program: 50-100 golfers across handicap levels. Track putts per round, strokes gained putting (Arccos/ShotScope), and 3-putt frequency for 10+ rounds before and after RS1. Collect video testimonials."
+        },
+        {
+          "proof_type": "Tour or elite amateur adoption",
+          "why_needed": "Tour validation is the #1 proof type competitors use (LAB: Zalatoris, Adam Scott, Clark; Spider: most tour wins; Scotty: most tour prestige). Every competitor uses tour proof as a headline.",
+          "how_to_obtain": "Seed RS1 to mini-tour, Korn Ferry, and senior tour players. Leverage McGinley's OEM network. Even 3-5 visible professional users changes the perception. Do NOT fabricate or imply tour use."
+        },
+        {
+          "proof_type": "Independent reviewer/creator endorsements",
+          "why_needed": "YouTube creators (Rick Shiels, TXG, Ian Fraser, Let's Play Thru) are the primary discovery channel for premium putters. LAB Golf built their brand through creator content. RS1 needs this ecosystem.",
+          "how_to_obtain": "Send RS1 to 10-15 golf YouTubers and podcast hosts. Prioritize those who have reviewed LAB Golf (creates natural comparison content). Include SAM PuttLab data package with each unit."
+        },
+        {
+          "proof_type": "Peer validation / word-of-mouth triggers",
+          "why_needed": "Quote Q0312 ('Someone asks to try my putter almost every round') shows the viral social proof loop that drives premium putter adoption. RS1 needs to be visually distinctive enough to prompt 'what putter is that?'",
+          "how_to_obtain": "Design headcover and putter aesthetics to be conversation-starting. Include 'share your results' program with built-in referral mechanism. Create a 'RS1 Scorecard' tracking tool for owners."
+        }
+      ],
+      "customer_proof_patterns": [
+        {
+          "pattern": "Specific stroke reduction claims ('took X strokes off my game')",
+          "frequency": 38,
+          "example_quotes": [
+            "Q0001: 'This putter took 8 strokes off my game. All my golf buddies are buying one.'",
+            "Q0013: 'This putter has knocked 5 strokes off my scores.'",
+            "Q0228: 'Bought a LAB putter and it completely changed my putting. I gained 4 strokes putting according to Arccos over my last 5 rounds with the DF3.'",
+            "Q0358: '5 rounds later, the putter has probably dropped 10 strokes for me.'",
+            "Q0363: 'According to Arccos, with others I was a -1.2 vs my preferred handicap putting... DF3 - I am actually a +1.1 in putting with it. So a total gain of 2.3.'"
+          ]
+        },
+        {
+          "pattern": "Putts-per-round improvement metrics",
+          "frequency": 22,
+          "example_quotes": [
+            "Q0311: 'I went down to 30-31 putts per round consistently from 34-35.'",
+            "Q0158: 'I lost my forward hand press and gave up nearly 6 strokes in 9 holes. Once I figured out what I was doing I went from 22 putts to 15 putts.'",
+            "Q0421: 'Averaging 28 putts per round over the last three rounds with NO 3 PUTTS.'"
+          ]
+        },
+        {
+          "pattern": "'Can't go back' / loyalty declarations",
+          "frequency": 31,
+          "example_quotes": [
+            "Q0025: 'I was hesitant to replace my Scotty Cameron mallet, but within 2-3 rounds, I was ready to sell my SC.'",
+            "Q0026: 'Quite frankly the best putter I've ever owned (and I've had many)... This will stay in my bag for a long time.'",
+            "Q0233: 'Most are evangelical, with comments like it's my cheat stick or it's my magic wand being common.'"
+          ]
+        },
+        {
+          "pattern": "Short putt confidence transformation ('inside X feet became automatic')",
+          "frequency": 27,
+          "example_quotes": [
+            "Q0167: 'Short putts became automatic, felt great, really eye opening for me.'",
+            "Q0316: 'I'm making pretty much every shot inside 4 feet, and I don't think I've 3 putted more than a couple times since getting it.'",
+            "Q0235: 'L.A.B. advertising uses the phrase Less to think about and that really sums up this putter. Especially when it came to my nemesis of short putts.'"
+          ]
+        },
+        {
+          "pattern": "Pendulum/balance feel as proof of quality",
+          "frequency": 19,
+          "example_quotes": [
+            "Q0012: 'It feels more like I'm swinging a pendulum than any putter I've ever used.'",
+            "Q0045: 'It feels more like I'm swinging a pendulum than any putter I've ever used and the bright white orientation line on the top helps me keep my stroke perfectly on line.'",
+            "Q0315: 'It definitely has me thinking about less during the stroke as all I focus on now is line and speed.'"
+          ]
+        },
+        {
+          "pattern": "Competitor switching stories (from X to Y)",
+          "frequency": 34,
+          "example_quotes": [
+            "Q0019: 'This is a great putter. Was using a Scottie Cameron blade but making far more putts now.'",
+            "Q0020: 'I went from an arm lock two ball Odyssey putter to this. I love the new spider.'",
+            "Q0038: 'I was hesitant to replace my Scotty Cameron mallet, but within 2-3 rounds, I was ready to sell my SC.'"
+          ]
+        }
+      ]
+    },
+
+    "statistical_proof": {
+      "available": [
+        {
+          "proof": "360g total head weight with 75%+ (270g+) concentrated in the front 25% of the head",
+          "source": "rs1-putter.md",
+          "strength": "High",
+          "usage_note": "This is RS1's most powerful statistical proof. 270g in the face = weight of a full 7-iron head. Make it visceral: 'Imagine the weight of your 7-iron... now imagine ALL of that mass concentrated right behind your putter face, keeping it dead square.'"
+        },
+        {
+          "proof": "74-degree lie angle vs traditional 70-degree lie angle — 4-degree difference creating less stroke arc",
+          "source": "rs1-putter.md",
+          "strength": "High",
+          "usage_note": "The 4-degree difference is quantifiable and creates measurably less face rotation during the stroke. Traditional 70-degree = more arc = more face rotation = more timing required. 74-degree = straighter path = less rotation = less timing."
+        },
+        {
+          "proof": "MyGolfSpy independent testing: mallet putters had 82% make rate from 6 feet vs blade 75%",
+          "source": "Research brief / MyGolfSpy data",
+          "strength": "High",
+          "usage_note": "Third-party data proving mallet superiority on short putts. RS1 is a mallet with additional face-squaring technology beyond what standard mallets offer. Use as: 'Independent testing proves mallets make 7% more putts from 6 feet. RS1 adds active face-squaring on top of that advantage.'"
+        },
+        {
+          "proof": "LAB DF3 stays square through a 5-inch zone vs traditional putter square for only 2 inches (MyGolfSpy testing)",
+          "source": "Q0412 / MyGolfSpy review",
+          "strength": "Medium",
+          "usage_note": "This is competitor data, but it validates the category. RS1's FDB should deliver equal or better face-squaring zone. Use as: 'Face-squaring technology has been proven to keep the face square 2.5x longer than traditional putters. RS1's active Face Down Balance goes further — it doesn't just stay square, it actively fights to keep you square.'"
+        },
+        {
+          "proof": "Putter sales up 23% in premium segment",
+          "source": "Research brief",
+          "strength": "Medium",
+          "usage_note": "Market momentum proof. Golfers are investing more in putting. RS1 enters a growing market, not a declining one."
+        },
+        {
+          "proof": "Face angle accounts for 80%+ of initial putt direction (physics principle)",
+          "source": "Putting physics research / industry data",
+          "strength": "High",
+          "usage_note": "This is the foundational statistical proof for RS1's entire mechanism. If face angle determines 80%+ of where your putt starts, then ANY technology that improves face control will improve putting. RS1's entire design is optimized for face control."
+        },
+        {
+          "proof": "RS1 price point: $399/$429 vs LAB $449-$649, Scotty Cameron $449-$479",
+          "source": "rs1-putter.md / competitor_analysis.json",
+          "strength": "Medium",
+          "usage_note": "RS1 undercuts the primary competitor (LAB) by $50-$220 and matches/beats Scotty Cameron. Price proof that RS1 delivers more innovation for less money."
+        },
+        {
+          "proof": "1 degree of face angle error at impact = putt misses by approximately 1 inch per foot of putt length",
+          "source": "Putting physics / engineering data",
+          "strength": "High",
+          "usage_note": "Makes the face control problem tangible. On a 10-foot putt, 1 degree of face error = miss by 10 inches. On a 20-foot putt, 2 degrees = miss by nearly 3.5 feet. This is why face drift destroys putting."
+        }
+      ],
+      "needed": [
+        {
+          "proof_type": "SAM PuttLab face angle comparison: RS1 vs traditional putter vs LAB",
+          "why_needed": "The single most powerful proof RS1 could generate. Measuring actual face angle at impact across 50+ putts with each putter provides irrefutable, quantified evidence that RS1 keeps the face squarer.",
+          "how_to_obtain": "Conduct SAM PuttLab testing with 20+ golfers across handicap levels. Measure: face angle at impact, face rotation during stroke, closure rate, consistency (standard deviation). Compare RS1 vs each golfer's current putter."
+        },
+        {
+          "proof_type": "Strokes gained putting data from RS1 users (Arccos/ShotScope)",
+          "why_needed": "Arccos strokes gained is the gold standard proof in the quote corpus. Q0228 and Q0363 show LAB users citing Arccos data as their most convincing proof. RS1 needs equivalent data.",
+          "how_to_obtain": "Require beta testers to use Arccos or ShotScope. Track strokes gained putting for 10+ rounds pre-RS1 and 10+ rounds post-RS1. Report mean improvement with confidence interval."
+        },
+        {
+          "proof_type": "MOI measurement comparison vs competitors",
+          "why_needed": "MOI is a standard metric golfers understand. RS1's forward weighting should deliver high MOI — quantifying it vs Spider, LAB, and Scotty positions RS1 in familiar terms.",
+          "how_to_obtain": "Independent MOI testing at a qualified facility. Publish results showing RS1's MOI relative to market leaders."
+        },
+        {
+          "proof_type": "Face-square zone measurement (inches of square contact during stroke)",
+          "why_needed": "MyGolfSpy measured LAB DF3 at 5 inches of square zone vs 2 inches for traditional. RS1's FDB should match or exceed this. Quantifying it creates a head-to-head proof point.",
+          "how_to_obtain": "Replicate MyGolfSpy's testing methodology. Use high-speed camera or SAM PuttLab to measure the zone where face angle deviates less than 1 degree from square during the stroke."
+        }
+      ],
+      "market_data": [
+        {
+          "data_point": "Premium putter market growing 23% YoY",
+          "source": "Research brief",
+          "marketing_application": "Market tailwind proof — golfers are investing more in putting equipment than ever"
+        },
+        {
+          "data_point": "5 major brands now offer zero-torque putters (LAB, TaylorMade ZT, Odyssey S2S, Bettinardi Antidote, Evnroll ZT)",
+          "source": "competitor_analysis.json",
+          "marketing_application": "Category validation — the industry confirms face-squaring matters. RS1 is the next evolution."
+        },
+        {
+          "data_point": "LAB Golf acquired for ~$200M by L Catterton in 2025",
+          "source": "competitor_analysis.json",
+          "marketing_application": "Market validation — a $200M acquisition proves face-squaring technology is not a fad, it's a revolution. RS1 takes it further."
+        },
+        {
+          "data_point": "Putting accounts for approximately 40% of all golf strokes",
+          "source": "Industry standard / Q0343, Q0345",
+          "marketing_application": "Impact framing — 'You use your putter more than any other club. Shouldn't it be the most engineered club in your bag?'"
+        },
+        {
+          "data_point": "PGA Tour average: 29 putts per round. Amateur average: 32-36 putts per round",
+          "source": "Industry statistics",
+          "marketing_application": "Gap quantification — the 3-7 putt gap between tour and amateur is largely face control, not skill"
+        }
+      ]
+    },
+
+    "demonstration_proof": {
+      "available": [
+        {
+          "proof": "Face-Down Balance Test — RS1 putter face falls face-down when released from lie angle position",
+          "source": "rs1-putter.md (FDB feature)",
+          "strength": "High",
+          "usage_note": "This is RS1's killer demonstration. Hold any traditional putter at lie angle and release — the face twists toe-down or stays neutral. Hold RS1 and release — the face falls face-down. This is VISUAL, IMMEDIATE, UNDENIABLE proof that the physics are different. Every demo, video, and retail display should lead with this. The 'Let It Fall' moment."
+        },
+        {
+          "proof": "Side-by-side balance comparison: RS1 vs traditional putter vs LAB (at lie angle)",
+          "source": "rs1-putter.md",
+          "strength": "High",
+          "usage_note": "Three putters side by side. Traditional: face twists open. LAB: face stays neutral (zero torque). RS1: face falls forward (active). This three-way comparison tells the entire evolutionary story in 10 seconds. Demonstrate in every sales video."
+        },
+        {
+          "proof": "Weight distribution visualization — cross-section showing 75%+ mass in front 25%",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "CG diagram or cross-section rendering showing the massive weight concentration forward. Compare to traditional putter where weight is distributed across the full head. Make the engineering visible."
+        },
+        {
+          "proof": "Pendulum stroke demonstration — RS1's heavy face naturally falls forward on downstroke",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Show that pulling the heavy front back is more consistent than pushing a lighter front forward. The heavy face creates a natural, gravity-assisted pendulum. Less effort = more consistency."
+        },
+        {
+          "proof": "Multi-material construction visibility — steel face, carbon crown, aluminum tail",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "The different materials are visible on the putter. Each serves a specific engineering purpose. This is 'specificity as demonstration' — you can SEE the engineering, not just hear about it."
+        },
+        {
+          "proof": "Dual Pistol Grip hand-lock demonstration",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Show how the grip locks into the lifeline of both hands. Compare to a standard grip where the hands can rotate. The dual pistol shape physically prevents the grip rotation that leads to face opening."
+        }
+      ],
+      "needed": [
+        {
+          "proof_type": "Before/after SAM PuttLab face angle data visualization",
+          "why_needed": "Golfers need to SEE the improvement in data form. A SAM PuttLab printout showing face angle dispersion with their old putter vs RS1 is the most compelling demonstration for serious golfers.",
+          "how_to_obtain": "Partner with SAM PuttLab fitters. Create standardized RS1 fitting protocol that generates a before/after comparison graphic. Make this the centerpiece of the fitting experience."
+        },
+        {
+          "proof_type": "High-speed camera footage showing face angle through impact zone",
+          "why_needed": "Slow-motion video of the face staying square through impact, with angle overlay graphics, is visual proof that no spec sheet can match. This is the content that goes viral on golf YouTube.",
+          "how_to_obtain": "Commission high-speed camera testing (2000+ fps) comparing RS1 vs traditional putter vs ZT putter face angle through the impact zone. Overlay angle measurements in real-time."
+        },
+        {
+          "proof_type": "'Roll Straight' ball tracking demonstration",
+          "why_needed": "Show the ball rolling dead on line from 6 feet, 10 feet, 15 feet. Use alignment aids or laser line to prove the ball starts on the intended line. Visual proof that Roll Straight Technology delivers what the name promises.",
+          "how_to_obtain": "Film putting demonstrations with a laser line or string line showing intended path. Capture 20+ consecutive putts to demonstrate consistency, not cherry-picked results."
+        }
+      ],
+      "demonstration_concepts": [
+        {
+          "concept": "The Let It Fall Test",
+          "description": "Hold RS1 at lie angle, release it, watch the face fall forward (face-down). Then do the same with a competitor — face twists toe-down or stays neutral. This 5-second demonstration proves the physics instantly.",
+          "impact_estimate": "Very High — this is the single most powerful in-store and video demonstration. No competitor can replicate it (LAB stays neutral, traditional falls open). RS1 is the ONLY putter where the face actively falls forward."
+        },
+        {
+          "concept": "The Three Putters Side by Side",
+          "description": "Line up a traditional blade/mallet, a LAB DF3, and RS1. Balance each at lie angle. Traditional: face drifts open. LAB: face stays put (neutral). RS1: face falls square. Three generations of putter design in one visual.",
+          "impact_estimate": "High — tells the entire evolutionary story (old → LAB → RS1) in under 15 seconds. Perfect for video ads and retail displays."
+        },
+        {
+          "concept": "The Weight of a 7-Iron",
+          "description": "Hand someone a 7-iron head (approximately 265g). Then show them that RS1 packs that same weight just in the face of the putter. The physical sensation of holding that weight communicates 'Heavy Forward Weighting' better than any spec sheet.",
+          "impact_estimate": "Medium-High — tactile proof that creates an 'aha' moment. Best for in-person demos, fitting events, and video content."
+        },
+        {
+          "concept": "The Grip Lock Test",
+          "description": "Place the Dual Pistol Grip in someone's hands and ask them to rotate it. Then do the same with a standard grip. The RS1 grip physically resists rotation, locking the hands square. The standard grip rotates freely.",
+          "impact_estimate": "Medium — supports the 'full system' narrative. Every piece of RS1 is engineered to keep you square."
+        },
+        {
+          "concept": "The 10 Putts from 6 Feet Challenge",
+          "description": "Film a golfer hitting 10 putts from 6 feet with their current putter, then 10 with RS1. Count makes. Track with alignment laser. Even a small improvement (e.g., 6/10 vs 8/10) is dramatic proof.",
+          "impact_estimate": "High — if results are consistent across multiple golfers, this becomes RS1's signature demonstration. Requires honest testing — do not cherry-pick."
+        }
+      ]
+    },
+
+    "authority_proof": {
+      "available": [
+        {
+          "proof": "Chris McGinley: 25+ years designing clubs at major OEMs",
+          "source": "rs1-brief.md / rs1-putter.md",
+          "strength": "High",
+          "usage_note": "This is RS1's strongest available authority proof. McGinley is not a marketer — he is an engineer who spent decades at the highest level of club design. Lead with his engineering pedigree, not marketing claims."
+        },
+        {
+          "proof": "Chris McGinley designed clubs used by 11 world #1 players",
+          "source": "rs1-brief.md",
+          "strength": "High",
+          "usage_note": "Specific and impressive. Do NOT name the players unless confirmed and approved. The number itself (11) is powerful: 'The engineer behind clubs used by 11 world #1 players spent 3 years engineering the RS1.' The number creates credibility without requiring specific name-drops."
+        },
+        {
+          "proof": "Patented Dual Pistol Grip — the only dual-sided pistol grip in the market",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "'Patented' adds legal/IP credibility. 'Only dual-sided in the market' adds exclusivity. Patent implies this was engineered seriously enough to protect legally."
+        },
+        {
+          "proof": "Ergonomically CAD-engineered grip design",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "CAD engineering implies precision and intentionality. Not hand-shaped — computer-designed for optimal hand placement."
+        },
+        {
+          "proof": "5-axis precision machined interchangeable shaft spuds",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "5-axis machining is a manufacturing authority marker. Only used for high-precision aerospace and medical components. Shows RS1 uses manufacturing processes beyond what's typical for putter production."
+        },
+        {
+          "proof": "Multi-material construction: CNC machined steel, carbon composite woven crown, CNC machined aluminum",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Three different materials, each chosen for a specific engineering reason, each manufactured with precision processes. This is engineering authority, not aesthetic choice."
+        },
+        {
+          "proof": "RS1 is an evolution beyond SQ Putters — improved in 7 dimensions (weighting, stability, balance, stroke, face squaring, construction, appearance)",
+          "source": "rs1-putter.md",
+          "strength": "Low",
+          "usage_note": "Only relevant if audience knows SQ Putters. For most buyers, RS1 should stand on its own merits. May be useful for existing PG customers who know the SQ heritage."
+        },
+        {
+          "proof": "Physics principles: heavier mass resists acceleration changes (Newton's First Law), creating more consistent stroke",
+          "source": "Engineering physics",
+          "strength": "Medium",
+          "usage_note": "Fundamental physics proof. The heavier the face, the more it resists being deflected by off-center hits or stroke inconsistencies. This is not a claim — it is physics."
+        }
+      ],
+      "needed": [
+        {
+          "proof_type": "Independent engineering review or certification",
+          "why_needed": "Evnroll has MyGolfSpy validation. LAB has SAM PuttLab data. RS1 needs a credible third party to validate the engineering claims. Without it, 'forward weighting keeps the face square' is a manufacturer claim, not proven fact.",
+          "how_to_obtain": "Submit RS1 to MyGolfSpy for independent testing. Partner with SAM PuttLab for certified testing protocol. Commission an independent golf engineering lab to verify face angle stability claims."
+        },
+        {
+          "proof_type": "Chris McGinley long-form origin story content",
+          "why_needed": "LAB Golf's origin story (Sam Hahn, frustrated golfer-engineer who discovered torque) is central to their brand. RS1 needs McGinley's equivalent story told compellingly — what problem he saw at the OEMs, why he spent years on this, what makes RS1 different from everything he designed before.",
+          "how_to_obtain": "Film a documentary-style interview with McGinley. Show him in the engineering process. Let him explain the physics in his own words. This is RS1's 'Steve Jobs introducing iPhone' moment."
+        },
+        {
+          "proof_type": "Professional fitter endorsements",
+          "why_needed": "Club fitters are trusted advisors in the premium putter space. Q0369-Q0374 show golfers rely on fitting data. If top fitters recommend RS1 based on their data, it carries more weight than any ad.",
+          "how_to_obtain": "Send RS1 to 20+ respected club fitters with SAM PuttLab access. Let them test it with their clients. Collect their professional assessments. Film fitter reaction videos."
+        },
+        {
+          "proof_type": "Patent documentation for Face Down Balance mechanism",
+          "why_needed": "A patent proves the mechanism is novel enough that the US Patent Office granted protection. This is the strongest possible authority proof for a mechanism claim — it means engineers and patent examiners verified the innovation.",
+          "how_to_obtain": "Confirm patent status with McGinley. If patent is pending or granted, reference the patent number in marketing materials. If not yet filed, file immediately — competitors will copy."
+        }
+      ]
+    },
+
+    "specificity_proof": {
+      "available": [
+        {
+          "proof": "360g total head weight — 75%+ of weight in front 25% of the putter head (270g+ in face section)",
+          "source": "rs1-putter.md",
+          "strength": "High",
+          "usage_note": "Ultra-specific weight claim with percentage. The specificity itself builds credibility — vague claims ('heavy face') feel like marketing, specific claims ('75%+ of 360g concentrated in front 25%') feel like engineering."
+        },
+        {
+          "proof": "265g face weight equivalent to a typical #7 iron head",
+          "source": "rs1-putter.md",
+          "strength": "High",
+          "usage_note": "Brilliant comparison that makes abstract weight concrete. Every golfer knows what a 7-iron weighs in their hands. 'Imagine your 7-iron head... that's how much mass is keeping your RS1 face square.'"
+        },
+        {
+          "proof": "74-degree lie angle (vs traditional 70-degree)",
+          "source": "rs1-putter.md",
+          "strength": "High",
+          "usage_note": "Exact degree measurement. The 4-degree difference creates measurably less stroke arc. Specificity of the number (74, not 'more upright') builds engineering credibility."
+        },
+        {
+          "proof": "3.5-degree loft",
+          "source": "rs1-putter.md",
+          "strength": "Low",
+          "usage_note": "Standard spec that demonstrates attention to detail but is not differentiated."
+        },
+        {
+          "proof": "CNC machined steel front, 5-axis precision machined shaft spuds, carbon composite woven crown, CNC machined aluminum tail",
+          "source": "rs1-putter.md",
+          "strength": "High",
+          "usage_note": "Four different manufacturing processes across three materials. Each named precisely. This level of manufacturing detail communicates 'serious engineering' vs 'just another putter.' The word 'woven' for the carbon composite is particularly effective — it implies craft within the technology."
+        },
+        {
+          "proof": "Three parallel alignment lines (1mm, 2mm, 3mm widths) running tail-to-front",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Three different widths are specified — this isn't 'alignment lines' (generic), it's 'three precisely graduated lines at 1, 2, and 3mm' (specific engineering)."
+        },
+        {
+          "proof": "Custom spec options: 70/72/74-degree lie, 32/33/34/35 length, -10/+10/+20/+30g headweight adjustment",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Specific customization ranges with exact numbers. Shows RS1 is a precision instrument, not a one-size-fits-all product."
+        },
+        {
+          "proof": "Both shaft-over and shaft-in spud options available for variety of shaft configurations",
+          "source": "rs1-putter.md",
+          "strength": "Low",
+          "usage_note": "Technical detail that matters to fitters and serious equipment enthusiasts. Demonstrates engineering thoughtfulness."
+        },
+        {
+          "proof": "Heel-toe weight cups for additional weight customization",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Shows the weighting system is adjustable and tunable, not fixed. Adds a level of customization beyond competitors."
+        },
+        {
+          "proof": "Dual Pistol Grip encourages ulnar deviation (downward bending of the hands), reducing overactive hands and face rotation",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Anatomical specificity. 'Ulnar deviation' is a medical/biomechanical term that demonstrates the grip was designed with human anatomy in mind, not just aesthetics. Use selectively — too technical for mass market, perfect for gear enthusiasts."
+        },
+        {
+          "proof": "Available in both RH and LH, standard and upgraded configurations ($399/$429)",
+          "source": "rs1-putter.md",
+          "strength": "Low",
+          "usage_note": "Standard availability proof. LH availability is notable — many premium/boutique putters are RH only."
+        },
+        {
+          "proof": "Personalization options: stamped or laser engraved characters, color paint fill, colored shaft/crown/tail/weight cups",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Customization specificity. Two engraving methods (stamped AND laser), multiple color options across multiple components. This positions RS1 as a premium, personal instrument."
+        },
+        {
+          "proof": "Standard model: 35-inch length, stepless steel shaft, 0.370 tip, Dual Pistol Rubber Grip. Upgraded model: 15mm low-torque graphite shaft, Dual Pistol Poly Urethane Grip",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Exact shaft specifications (stepless, 0.370 tip, 15mm low-torque graphite) demonstrate engineering precision. The upgraded graphite shaft adds a 'why would you upgrade?' story opportunity."
+        },
+        {
+          "proof": "Sculpted sole relief in three zones — front, middle, and back — with rounded leading and trailing edges, negative space midsole, and sculpted tail wings",
+          "source": "rs1-putter.md",
+          "strength": "Medium",
+          "usage_note": "Sole design specificity. Three distinct relief zones shows intentional engineering of ground interaction, not just cosmetic shaping. 'Negative space midsole that does not contact the ground' is a particularly specific claim."
+        }
+      ],
+      "needed": [
+        {
+          "proof_type": "Exact MOI measurement (g-cm²)",
+          "why_needed": "MOI is the standard stability metric in putters. TaylorMade claims '5K MOI.' Odyssey S2S claims '6300+ Izz MOI.' RS1 needs its number to compete in spec-sheet comparisons.",
+          "how_to_obtain": "Measure MOI using standard pendulum testing methodology. Publish the number. If it's competitive or superior to Spider/Odyssey, lead with it. If not, emphasize that RS1's MOI comes from FORWARD weighting (better placement) vs perimeter weighting (less effective placement)."
+        },
+        {
+          "proof_type": "Exact CG location measurement (mm from face)",
+          "why_needed": "RS1's core claim is forward CG. Quantifying exactly where the CG sits (e.g., '8mm from the face' vs competitor average of '25mm from the face') makes the claim irrefutable.",
+          "how_to_obtain": "Engineering measurement of CG location. Compare to published CG data for competitors (or test competitors independently)."
+        },
+        {
+          "proof_type": "Face angle deviation measurement at impact (degrees) across 50+ stroke samples",
+          "why_needed": "The ultimate specificity proof. 'RS1 delivers face angle within 0.5 degrees of square on 90% of putts' is more powerful than 'RS1 keeps the face square.'",
+          "how_to_obtain": "SAM PuttLab testing protocol with minimum 50 putts per tester, minimum 20 testers. Report mean face angle deviation and standard deviation."
+        }
+      ]
+    }
+  },
+
+  "proof_gaps": [
+    {
+      "gap": "No customer testimonials or real-world results data (pre-launch product)",
+      "importance": "Critical",
+      "recommendation": "Launch beta tester program immediately with 50-100 golfers. Require Arccos/ShotScope tracking. Collect video testimonials. Minimum 10 rounds per tester before launch. This is the #1 proof gap — golfers buy based on other golfers' results more than any engineering claim."
+    },
+    {
+      "gap": "No independent third-party testing or validation (MyGolfSpy, SAM PuttLab, etc.)",
+      "importance": "Critical",
+      "recommendation": "Submit RS1 to MyGolfSpy for Most Wanted testing. Commission SAM PuttLab analysis. Partner with independent club fitters for validation. Evnroll built their brand on MyGolfSpy wins — RS1 needs equivalent validation."
+    },
+    {
+      "gap": "No tour or professional player adoption",
+      "importance": "High",
+      "recommendation": "Seed RS1 with 10-20 professional golfers (mini-tour, Korn Ferry, senior tour, LPGA). Leverage McGinley's OEM network for introductions. Even 3-5 visible professionals changes the credibility equation. Do NOT fabricate or imply tour use — the quote corpus shows golfers are hypersensitive to fake tour validation (Q0401: 'Then look at guys like Grant Horvat who were elite level putters before gaming a LAB and now they're average putters')."
+    },
+    {
+      "gap": "No YouTube/creator content ecosystem",
+      "importance": "High",
+      "recommendation": "Send RS1 to 15+ golf YouTubers and podcast hosts. Prioritize creators who have reviewed LAB Golf, Bettinardi Antidote, and Spider ZT — they will naturally create comparison content. Include a SAM PuttLab data package and 'Let It Fall' demonstration guide with each unit. LAB Golf built their brand through creator content; RS1 must do the same."
+    },
+    {
+      "gap": "No published MOI, CG location, or face angle deviation data",
+      "importance": "High",
+      "recommendation": "Commission engineering measurements of MOI, CG position, and face angle performance. Publish these numbers. In a market where every competitor publishes specs, RS1 cannot leave these blank. Gear enthusiasts (GolfWRX readers) will demand numbers."
+    },
+    {
+      "gap": "Performance Golf brand credibility in equipment category (known for instruction, not gear)",
+      "importance": "High",
+      "recommendation": "Lead with McGinley's credentials, not Performance Golf branding. The launch narrative should be: 'A world-class engineer (McGinley) partnered with a company that understands golfers (PG) to build something neither could build alone.' McGinley is the credibility; PG is the distribution. Do not position RS1 as 'a Performance Golf putter' — position it as 'Chris McGinley's RS1, brought to you by Performance Golf.'"
+    },
+    {
+      "gap": "No retail or hands-on try-before-buy availability",
+      "importance": "Medium",
+      "recommendation": "Quote corpus shows significant purchase anxiety around premium putters without testing (Q0265, Q0381, Q0383). Implement aggressive demo program: 30-round trial period, demo days at golf facilities, lending library program. Consider working with PGA Superstore or Golf Galaxy for in-store presence."
+    },
+    {
+      "gap": "No long-term durability proof",
+      "importance": "Medium",
+      "recommendation": "Spider's paint chipping and LAB's durability issues are real complaints in the corpus. RS1's multi-material construction should be positioned as premium and durable. Conduct accelerated wear testing and publish results. 'Built to be the last putter you'll ever buy.'"
+    }
+  ],
+
+  "proof_hierarchy": {
+    "strongest_available": [
+      "The Let It Fall demonstration — Face Down Balance visual proof that no competitor can replicate. The face falls forward. Period. 5 seconds to prove the physics are different.",
+      "Chris McGinley's credentials — 25+ years at major OEMs, designed clubs for 11 world #1 players. This is not a marketing company making putters; this is a world-class engineer who chose to solve this specific problem.",
+      "75%+ of 360g in front 25% of head (270g = weight of a 7-iron) — the most specific, most visualizable weight claim in premium putters. No competitor comes close to this concentration.",
+      "74-degree lie angle creating measurably less stroke arc — a quantified engineering decision with clear biomechanical rationale, directly addressing the root cause of face rotation during the stroke arc.",
+      "Face angle determines 80%+ of initial putt direction (physics) combined with the competitive proof that 5 major brands now validate face-squaring technology — RS1 is entering a proven category with a superior approach."
+    ],
+    "most_needed": [
+      "Beta tester results with Arccos/ShotScope strokes gained data — customer proof is the #1 purchase driver based on 1,442 quotes analyzed. Without it, RS1 is engineering without evidence.",
+      "Independent testing by MyGolfSpy or equivalent — third-party validation converts skeptics. Evnroll and LAB both credit independent testing as pivotal to their growth.",
+      "SAM PuttLab face angle comparison data (RS1 vs traditional vs LAB) — quantified proof that RS1 keeps the face squarer than alternatives. This is the engineering proof that substantiates every marketing claim.",
+      "YouTube creator review ecosystem — the primary discovery and validation channel for premium putters. LAB's growth was creator-driven. RS1 needs 10+ creator reviews before or at launch.",
+      "Tour or elite player adoption (even 3-5 visible professionals) — tour proof remains the ultimate credibility signal in golf equipment. RS1 doesn't need 50 tour users; it needs 3-5 credible ones."
+    ],
+    "competitive_proof_advantages": [
+      "ACTIVE face-squaring demonstration (FDB) — RS1 is the ONLY putter where the face actively falls forward. LAB's face stays neutral. Traditional putters drift open. RS1 is the only putter that FIGHTS face opening. No competitor can demonstrate this.",
+      "No adjustment period claim — every ZT putter requires 2-8 weeks of adaptation (documented extensively in quotes Q0215, Q0224, Q0260-Q0262). RS1's forward weighting works WITH the existing stroke, not against it. This is a massive competitive advantage if validated.",
+      "Distance control by design — LAB's #1 complaint is distance control (Q0402, Q0405). RS1's heavy forward weighting creates natural pendulum motion with consistent energy transfer. If RS1 delivers better distance control than ZT putters, it eliminates the biggest adoption barrier.",
+      "Superior aesthetics vs ZT competitors — LAB is 'spaceship', 'branding iron', 'alien' looking (per corpus). RS1's T-Wing design is bold but recognizably a putter. Bettinardi Antidote is beautiful but passive ZT. RS1 can be both beautiful AND actively face-squaring.",
+      "'Face drift' as the named root cause — no competitor has named this enemy. LAB calls it 'torque.' TaylorMade calls it 'instability.' RS1 can OWN 'face drift' as the consumer-friendly name for the problem, then own the solution (Face Down Balance). Naming the enemy is powerful — it gives golfers language for what they've been experiencing."
+    ]
+  },
+
+  "competitor_proof_landscape": {
+    "what_competitors_use": [
+      {
+        "competitor": "LAB Golf",
+        "proof_types": [
+          "Tour player adoption (Zalatoris, Adam Scott, Wyndham Clark)",
+          "YouTube creator testimonial ecosystem (hundreds of reviews)",
+          "SAM PuttLab fitting data showing face angle improvement",
+          "Arccos strokes gained statistics from users",
+          "Customer testimonials with specific handicap drops",
+          "MyGolfSpy independent testing results",
+          "Origin story (Sam Hahn, frustrated golfer-engineer)",
+          "'No Thumbs Drill' demonstration",
+          "$200M L Catterton acquisition as institutional validation"
+        ],
+        "effectiveness": "Very High — LAB has the most comprehensive proof stack in premium putters. Their weakness is that the proof is polarized: dramatic success stories AND dramatic failure stories. The 65% positive / 20% mixed / 15% negative split means proof cuts both ways."
+      },
+      {
+        "competitor": "Scotty Cameron",
+        "proof_types": [
+          "Tour player count and major championship wins (most of any brand)",
+          "Heritage storytelling (decades of dominance)",
+          "CNC milling factory tour content",
+          "Celebrity/influencer ownership",
+          "Resale value as 'investment' proof",
+          "Status/prestige positioning"
+        ],
+        "effectiveness": "High for brand loyalists, decreasing for tech-forward buyers. Scotty's proof is entirely backward-looking (heritage, history, tour legacy). They have zero forward-looking proof (innovation, technology, performance data). This is a vulnerability RS1 can exploit."
+      },
+      {
+        "competitor": "TaylorMade Spider",
+        "proof_types": [
+          "Tour win count (most wins on tour with Spider models)",
+          "MOI measurement data",
+          "YouTube head-to-head comparisons (Rick Shiels, etc.)",
+          "Amazon review volume (highest in premium putters)",
+          "MyGolfSpy testing data",
+          "Broad retail availability for hands-on testing"
+        ],
+        "effectiveness": "High — Spider has massive volume proof (reviews, tour wins, retail presence). But proof breadth masks depth — 'most wins' doesn't prove their MOI technology is superior, just that they're popular. RS1 can attack with depth of proof (specific face angle data) vs Spider's breadth."
+      },
+      {
+        "competitor": "Evnroll",
+        "proof_types": [
+          "MyGolfSpy Most Wanted wins (multiple years, #1 total points)",
+          "Independent testing data showing 5% improvement on off-center hits",
+          "Creator/reviewer testimonials",
+          "Custom fitting experience at Carlsbad HQ",
+          "Word-of-mouth from fitted customers"
+        ],
+        "effectiveness": "High within the 'insider' audience, low in mainstream. Evnroll's proof is the most data-driven and honestly earned of any competitor. RS1 should not attack Evnroll's proof — instead, acknowledge it and position RS1 as solving a different (bigger) problem."
+      },
+      {
+        "competitor": "Bettinardi",
+        "proof_types": [
+          "Made in USA / Chicago craftsmanship story",
+          "History of making putters for Scotty Cameron",
+          "MyGolfSpy testing results for Antidote SB2 (3rd overall in ZT category)",
+          "Creator reviews praising aesthetics",
+          "Putter fitting comparison wins"
+        ],
+        "effectiveness": "Medium — strong within the connoisseur niche but limited mainstream awareness. Antidote's placement in MyGolfSpy ZT testing is their strongest proof point."
+      },
+      {
+        "competitor": "Odyssey",
+        "proof_types": [
+          "Tour player count (#1 most played putter brand)",
+          "AI face technology demonstration videos",
+          "Broad retail availability",
+          "Price-to-performance value positioning",
+          "MyGolfSpy testing performance"
+        ],
+        "effectiveness": "Medium — Odyssey has volume proof but lacks premium perception. 'Most played' is powerful but can be spun as 'default choice' rather than 'best choice.'"
+      }
+    ],
+    "proof_differentiation_opportunities": [
+      "OWN the visual demonstration category: No competitor has a 5-second visual proof as compelling as 'Let It Fall.' LAB's 'No Thumbs Drill' is interesting but requires explanation. RS1's face-down balance test is instant, visual, undeniable.",
+      "OWN 'face drift' as the named enemy: No competitor has named this. LAB says 'torque.' Spider says 'instability.' Naming the enemy in golfer-friendly language gives RS1 a linguistic advantage.",
+      "Lead with engineering specificity where competitors lead with marketing claims: Scotty leads with 'tour proven,' LAB leads with 'zero torque,' Spider leads with 'most wins.' RS1 can lead with '75% of 360g in front 25%' — a claim so specific it feels undeniable.",
+      "Exploit the ZT adjustment period gap: Every ZT competitor requires 2-8 weeks of adaptation. RS1's 'works from day one' claim (if validated) fills the biggest unmet need in the face-squaring category.",
+      "Use competitor proof to validate the category, then differentiate: 'Five major brands now offer face-squaring technology. The market has spoken — keeping the face square matters. RS1 goes further with ACTIVE face-squaring that doesn't just prevent drift, it fights it.'",
+      "Chris McGinley vs no-name engineering: LAB has Sam Hahn (credible). But every other competitor's engineering is anonymous. RS1 has a named, credentialed engineer whose career story IS the proof. Make McGinley the face of RS1 the way Hahn is the face of LAB."
+    ]
+  }
+}

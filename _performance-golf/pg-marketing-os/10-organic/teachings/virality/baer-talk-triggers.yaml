@@ -1,0 +1,854 @@
+# ============================================================================
+# JAY BAER'S TALK TRIGGERS — ENGINEERING WORD OF MOUTH
+# ============================================================================
+# Source: "Talk Triggers: The Complete Guide to Creating Customers
+#          with Word of Mouth" by Jay Baer & Daniel Lemin
+# Published: 2018 | Portfolio / Penguin Random House
+# Core Thesis: Word of mouth is not an accident. It can be engineered
+#              through deliberate, differentiating operational choices.
+# ============================================================================
+
+meta:
+  title: "Jay Baer's Talk Triggers - Complete Word-of-Mouth Engineering Extraction"
+  source_book: "Talk Triggers: The Complete Guide to Creating Customers with Word of Mouth"
+  author: "Jay Baer & Daniel Lemin"
+  publication_year: 2018
+  publisher: "Portfolio / Penguin Random House"
+  extraction_purpose: "Organic content creation and marketing strategy"
+  created_for: "OrganicMarketingEngine"
+  core_thesis: "Word of mouth is responsible for 19% of all purchases directly and influences up to 90% of the remainder. Yet almost no businesses have an actual strategy for generating it. A talk trigger is a strategic, operational differentiator that compels word of mouth."
+  key_statistics:
+    - "Word of mouth drives 19% of all consumer purchases directly"
+    - "Up to 50-91% of all purchases are influenced by WOM"
+    - "Americans mention specific brand names 60+ times per week in conversation"
+    - "Only 1% of companies have a defined WOM strategy"
+    - "WOM impressions drive 5x more sales than paid impressions"
+    - "72% of people get news from friends and family, not media"
+  skill_mappings:
+    - S05_hook_library
+    - S06_virality_scoring
+    - S16_engagement_protocol
+    - S17_network_amplification
+
+# ============================================================================
+# THE WORD-OF-MOUTH PROBLEM
+# ============================================================================
+
+the_wom_problem:
+  core_argument: "Every business wants word of mouth but almost none have a strategy for it"
+
+  the_competence_trap:
+    definition: "Being good at what you do is expected, not talkable. Competence does not create conversation."
+    evidence: "Nobody talks about a flight that lands on time, a meal that was fine, or a package that arrived when expected"
+    insight: "Same is good. Same is safe. Same is invisible. Same does not produce word of mouth."
+
+    the_danger: "When companies focus exclusively on meeting expectations, they become invisible. Their customers have nothing specific to tell their friends."
+
+  why_businesses_ignore_wom:
+    reason_1: "They assume WOM is organic and uncontrollable"
+    reason_2: "They conflate WOM with social media mentions (only 50% of WOM occurs online)"
+    reason_3: "They focus on customer acquisition through paid channels and neglect advocacy"
+    reason_4: "They've never measured it, so they don't know what's working"
+    reason_5: "They believe their product should 'speak for itself'"
+
+  the_offline_reality:
+    statistic: "50% or more of word of mouth happens offline, face to face"
+    implication: "If your WOM strategy is limited to hashtags and share buttons, you're ignoring half the game"
+    research: "Engagement Labs found that the majority of brand conversations happen in living rooms, offices, and restaurants — not on social media"
+
+  same_vs_different:
+    same_business: "Competes on price and convenience. Customers are rented, not owned. Vulnerable to any competitor who undercuts."
+    different_business: "Competes on talkability. Customers become volunteer storytellers. Protected by organic advocacy that money can't buy."
+
+    example:
+      doubletree_cookie:
+        the_trigger: "DoubleTree by Hilton gives every guest a warm chocolate chip cookie at check-in"
+        statistics: "75,000 cookies per day. 34% of guests have told someone about the cookie without being asked."
+        why_it_works: "It's unexpected at check-in. It costs almost nothing. It happens to every guest. It's been happening for 30+ years."
+        business_impact: "When surveyed, DoubleTree guests who received the cookie rated their overall stay significantly higher — even though the cookie has nothing to do with room quality, cleanliness, or location"
+
+# ============================================================================
+# THE 4 REQUIREMENTS OF A TALK TRIGGER
+# ============================================================================
+
+four_requirements:
+  overview: "A talk trigger must pass all four tests. Fail one and it's not a talk trigger — it's a gimmick, a stunt, or noise."
+
+  requirement_1_remarkable:
+    name: "Remarkable"
+    definition: "Worthy of making a remark about. The trigger must be different enough from expectations that customers feel compelled to mention it."
+    test_question: "If a customer experienced this, would they tell a friend about it without being prompted?"
+
+    the_remarkability_spectrum:
+      invisible: "Meeting expectations. Nobody talks about competence."
+      noticeable: "Slightly above expectations. May get a brief mention."
+      remarkable: "Significantly defies expectations. Creates a story worth telling."
+      extreme: "So far beyond expectations it seems unbelievable. Creates stories that spread for years."
+
+    calibration_insight: "The trigger doesn't need to be extreme — it needs to be unexpected. A warm cookie at hotel check-in is not extreme. It is simply not what anyone expects."
+
+    mistakes:
+      - mistake: "Making the trigger too subtle"
+        result: "Nobody notices. No stories are generated."
+      - mistake: "Making the trigger too extreme"
+        result: "It feels like a stunt. People are skeptical instead of delighted."
+      - mistake: "Making the trigger about quality instead of difference"
+        result: "Great quality is expected. It doesn't violate expectations."
+
+  requirement_2_relevant:
+    name: "Relevant"
+    definition: "The trigger must be connected to your brand, your values, or your customer experience. Random acts of remarkability dilute your positioning."
+    test_question: "Does this trigger reinforce what we want to be known for?"
+
+    the_relevance_filter:
+      connected: "DoubleTree's cookie connects to warmth and hospitality"
+      disconnected: "A law firm giving out cookies would confuse, not delight"
+
+    examples:
+      relevant_trigger:
+        brand: "Skip's Kitchen (Sacramento restaurant)"
+        trigger: "Every customer draws a playing card. If you draw a joker, your meal is free."
+        relevance: "Reinforces the fun, gamblers-spirit, exciting dining experience Skip's wants to be known for"
+      irrelevant_trigger:
+        brand: "A hospital giving out playing cards"
+        trigger: "Same card-draw mechanic"
+        why_it_fails: "Gambling associations undermine trust signals that healthcare requires"
+
+    key_insight: "Relevance doesn't mean the trigger has to relate to your product. It means it has to relate to your BRAND IDENTITY — how you want customers to feel and what you want to be known for."
+
+  requirement_3_reasonable:
+    name: "Reasonable"
+    definition: "The trigger must be believable. If it sounds too good to be true, people won't pass it along because they'll fear being wrong."
+    test_question: "When someone hears about this secondhand, will they believe it?"
+
+    the_believability_threshold:
+      too_small: "Not remarkable enough to mention"
+      sweet_spot: "Surprising but plausible. Generates curiosity: 'Really? That's cool.'"
+      too_large: "Sounds like a lie. Generates skepticism: 'There's no way that's real.'"
+
+    psychology: "People protect their social capital. They won't pass along a story if they think the listener will say 'that can't be right.' The story must be surprising enough to tell but believable enough to stake your reputation on."
+
+    examples:
+      reasonable: "Free warm cookie at check-in (plausible, delightful)"
+      unreasonable: "Free steak dinner at check-in (sounds like there must be a catch)"
+
+    calibration: "The best talk triggers generate the response: 'Oh, that's a nice touch' — not 'Wait, seriously?' The former gets shared. The latter gets investigated."
+
+  requirement_4_repeatable:
+    name: "Repeatable"
+    definition: "The trigger must happen to every customer, every time, without exception. Consistency is what makes it talkable, not random acts of generosity."
+    test_question: "Does every customer experience this, not just the lucky or loud ones?"
+
+    why_repeatability_matters:
+      consistency_creates_stories: "If every guest gets the cookie, guests know they can confidently tell friends 'When you stay at DoubleTree, they give you a warm cookie.' If only some guests get it, they can't make that promise."
+      random_acts_dilute: "Random surprise upgrades feel nice for the recipient but don't create predictable stories. You can't tell a friend 'Stay there and they might upgrade you.'"
+      operational_commitment: "A repeatable trigger forces you to build it into operations, which means it becomes part of your brand DNA rather than a marketing campaign"
+
+    the_repeatability_test:
+      question_1: "Can every customer experience this?"
+      question_2: "Can we sustain this for years, not months?"
+      question_3: "Is this baked into operations, or dependent on individual employees having a good day?"
+
+    examples:
+      repeatable: "DoubleTree cookie — every guest, every hotel, every day"
+      not_repeatable: "A barista who occasionally writes a nice message on a cup"
+      not_repeatable_2: "A one-time promotional giveaway"
+
+# ============================================================================
+# THE 5 TYPES OF TALK TRIGGERS
+# ============================================================================
+
+five_types:
+  overview: "Talk triggers come in five flavors. Each type creates talkability through a different mechanism. The best businesses identify which type aligns with their brand and commit to it completely."
+
+  type_1_talkable_generosity:
+    name: "Talkable Generosity"
+    definition: "Giving more than expected. Not a coupon or a sale — a consistent operational choice to provide unexpected value."
+    mechanism: "Generosity violates the commercial expectation of transactional exchange. When a business gives something without being asked or required, it creates a story."
+    core_emotion: "Surprise and gratitude"
+
+    examples:
+      doubletree_cookie:
+        business: "DoubleTree by Hilton"
+        trigger: "Warm chocolate chip cookie at check-in for every guest"
+        cost: "Approximately $0.20 per cookie"
+        impact: "34% of guests mention it unprompted. 75,000 cookies per day across 500+ hotels."
+        longevity: "Running since the 1980s"
+        why_it_works: "Nobody expects a warm cookie when checking into a hotel. It costs nothing relative to room price. It's sensory (warm, chocolate, smell). It happens at a high-emotion moment (arrival after travel)."
+
+      five_guys_fries:
+        business: "Five Guys Burgers and Fries"
+        trigger: "Extra scoop of fries tossed into the bag beyond what you ordered"
+        cost: "Approximately $0.30 per order"
+        impact: "One of the most mentioned fast-food details in word-of-mouth research"
+        why_it_works: "The fries cost almost nothing but the GESTURE of overflow generosity — fries spilling out of the cup into the bag — creates a story every time"
+
+      texas_roadhouse:
+        business: "Texas Roadhouse"
+        trigger: "Free bucket of peanuts at every table, shells on the floor"
+        impact: "Defining characteristic that gets mentioned in nearly every recommendation"
+        why_it_works: "It's generous, sensory, and creates a participatory experience (the act of throwing shells on the floor is itself memorable)"
+
+    design_principles:
+      - "The gift should be tangible and sensory when possible"
+      - "It should cost you almost nothing relative to your product price"
+      - "It should happen at a moment of high attention (arrival, purchase, first use)"
+      - "It should feel effortless for the customer — no forms, no loyalty cards, no strings"
+      - "It should be something the customer didn't know they wanted"
+
+  type_2_talkable_usefulness:
+    name: "Talkable Usefulness"
+    definition: "Providing unexpected utility that goes beyond your core offering"
+    mechanism: "When a business solves a problem the customer didn't expect them to solve, it creates a story of exceptional competence and care"
+    core_emotion: "Relief and impressed gratitude"
+
+    examples:
+      air_new_zealand:
+        business: "Air New Zealand"
+        trigger: "Printed weather forecasts for destination city in every seat pocket"
+        cost: "Pennies per sheet"
+        impact: "Passengers photograph it and share on social media. Creates conversations on the plane between passengers."
+        why_it_works: "Solves a real micro-problem (what should I wear when I land?) that no airline is expected to solve"
+
+      charmin_restrooms:
+        business: "Charmin (Procter & Gamble)"
+        trigger: "Free luxury restroom trailers at Times Square during New Year's Eve"
+        impact: "Media coverage worth millions. Social media shares from grateful users."
+        why_it_works: "Solves a massive pain point (public restrooms in NYC) that nobody expects a toilet paper brand to address"
+
+      holiday_world:
+        business: "Holiday World & Splashin' Safari (theme park)"
+        trigger: "Free unlimited soft drinks throughout the entire park"
+        cost: "Approximately $0.05 per cup of soda"
+        impact: "Single most mentioned feature in reviews and recommendations"
+        why_it_works: "Theme parks are notorious for expensive drinks. Free unlimited drinks violates the entire category expectation."
+
+    design_principles:
+      - "Identify a friction point adjacent to your core offering"
+      - "Solve it completely, not partially"
+      - "Make the solution available to everyone, not just VIPs"
+      - "Frame it as 'of course we do this' — not as a special promotion"
+
+  type_3_talkable_speed:
+    name: "Talkable Speed"
+    definition: "Delivering faster than anyone expects or believes possible"
+    mechanism: "Speed violates temporal expectations. When something arrives or happens dramatically faster than anticipated, it creates surprise and a story worth sharing."
+    core_emotion: "Astonishment and delight"
+
+    examples:
+      jimmy_johns:
+        business: "Jimmy John's"
+        trigger: "Freaky Fast delivery — sandwich delivered in under 10 minutes"
+        tagline: "Freaky Fast. Freaky Good."
+        impact: "Speed became the brand's primary identity. Customers share delivery time screenshots."
+        why_it_works: "Food delivery expectation is 30-45 minutes. Under 10 minutes is genuinely shocking."
+
+      zappos:
+        business: "Zappos"
+        trigger: "Surprise overnight shipping upgrade on standard orders"
+        cost: "Significant — but Zappos treats shipping cost as marketing budget"
+        impact: "One of the most cited examples of WOM-driving customer experience"
+        why_it_works: "Customer expects 5-7 day shipping. Package arrives the next morning. The surprise is the trigger."
+
+    design_principles:
+      - "Speed must be dramatically faster than category expectations, not marginally"
+      - "Under-promise and over-deliver on timing consistently"
+      - "Make the speed visible — timestamps, real-time tracking, countdown timers"
+      - "Speed must not sacrifice quality — fast and bad creates negative WOM"
+
+  type_4_talkable_empathy:
+    name: "Talkable Empathy"
+    definition: "Showing that you genuinely care about customers as humans, not just as revenue"
+    mechanism: "Empathy humanizes a commercial relationship. When a business demonstrates that it sees you as a person, not a transaction number, it creates an emotional story."
+    core_emotion: "Feeling seen, understood, and valued"
+
+    examples:
+      dr_glenn_gorab:
+        business: "Dr. Glenn Gorab (oral surgeon)"
+        trigger: "Personally calls every surgery patient at home the evening after their procedure to check on them"
+        cost: "15 minutes per day"
+        impact: "Nearly 100% of patients tell someone about the call. Drives majority of new patient referrals."
+        why_it_works: "No one expects their surgeon to call them at home. The personal touch at a vulnerable moment creates a powerful emotional memory."
+
+      penn_dutch:
+        business: "Penn Station East Coast Subs"
+        trigger: "Employees write encouraging messages on the brown paper bags"
+        cost: "Zero — uses time during slow periods"
+        impact: "Customers photograph bags and share. Creates unique identity for each location."
+
+      trader_joes:
+        business: "Trader Joe's"
+        trigger: "Employees are empowered and encouraged to have genuine conversations with customers"
+        training: "Employees taste every product so they can make authentic recommendations"
+        impact: "Consistently rated as one of America's most trusted brands"
+        why_it_works: "Grocery shopping is typically transactional. A real human connection inside a retail environment is unexpected."
+
+    design_principles:
+      - "Empathy triggers work best at moments of vulnerability or frustration"
+      - "They must be authentic — scripted empathy feels worse than none"
+      - "Train for genuine care, don't mandate specific phrases"
+      - "Empower employees to make real-time empathetic decisions without managerial approval"
+      - "The best empathy triggers are low-cost but high-attention — time and care, not gifts"
+
+  type_5_talkable_attitude:
+    name: "Talkable Attitude"
+    definition: "Having a distinctive personality or approach that defies category norms"
+    mechanism: "When a business has a strong, consistent, unexpected personality, it becomes a character in customer stories rather than just a vendor."
+    core_emotion: "Entertainment, surprise, and identity alignment"
+
+    examples:
+      skips_kitchen:
+        business: "Skip's Kitchen (Sacramento)"
+        trigger: "Every customer draws a playing card at the register. Draw a joker, your meal is free."
+        odds: "1 in 54"
+        cost: "Less than 2% of revenue"
+        impact: "Customers film the draw. Creates anticipation, excitement, and stories regardless of outcome."
+        why_it_works: "Fast-casual dining is mundane. Adding a game mechanic transforms a transaction into an experience."
+
+      fresh_books:
+        business: "FreshBooks (accounting software)"
+        trigger: "Put their phone number on the homepage and answer in 3 rings or less — no phone tree"
+        attitude: "For a software company, actually wanting to talk to customers on the phone is rebellious"
+        impact: "Most mentioned feature in customer reviews"
+        why_it_works: "Software companies hide their phone numbers behind help centers and chatbots. FreshBooks does the opposite."
+
+      wienerschnitzel:
+        business: "Wienerschnitzel (hot dog chain)"
+        trigger: "Free hot dog on Halloween if you come in costume"
+        attitude: "Leans into playfulness and celebration"
+        impact: "Lines around the block. Massive social media content from costumed customers."
+
+    design_principles:
+      - "Your attitude must be genuine — forced quirkiness is cringe"
+      - "Commit fully — half-hearted attitude triggers backfire"
+      - "The attitude should reflect your actual values, not a marketing persona"
+      - "It should be embedded in operations, not just marketing copy"
+      - "The best attitude triggers make customers feel like they're part of something"
+
+# ============================================================================
+# THE 6-STEP PROCESS FOR CREATING TALK TRIGGERS
+# ============================================================================
+
+six_step_process:
+  overview: "Talk triggers aren't brainstormed in a conference room. They're discovered through systematic analysis of your customers, competitors, and operational capabilities."
+
+  step_1_gather_internal_insights:
+    name: "Gather Internal Insights"
+    purpose: "Understand what your organization is already doing that might be talkable, and what operational capabilities you have"
+
+    activities:
+      - "Interview frontline employees — they know what customers mention most"
+      - "Review customer service interactions for patterns of positive surprise"
+      - "Audit your current customer experience touchpoint by touchpoint"
+      - "Identify operational strengths you haven't leveraged for WOM"
+      - "Map your values — what do you believe that competitors don't?"
+
+    key_questions:
+      - "What do customers compliment us on most frequently?"
+      - "What do employees love doing for customers?"
+      - "What are we irrationally passionate about?"
+      - "What do we do better than anyone but never talk about?"
+      - "What operational capability do we have that could be turned outward?"
+
+    output: "A list of 10-20 internal strengths and values that could become the foundation of a talk trigger"
+
+  step_2_get_close_to_your_customers:
+    name: "Get Close to Your Customers"
+    purpose: "Understand what your customers actually value, expect, and would find remarkable"
+
+    activities:
+      - "Customer interviews — not surveys, conversations"
+      - "Social listening for unsolicited mentions and stories"
+      - "Review site analysis (Yelp, Google, Amazon, G2)"
+      - "Community observation — where do your customers gather and what do they discuss?"
+      - "Customer journey mapping with emotional states at each touchpoint"
+
+    customer_listening_framework:
+      what_do_they_expect: "Baseline expectations for your category"
+      what_delights_them: "Moments that exceeded expectations"
+      what_frustrates_them: "Pain points and friction that could be eliminated"
+      what_do_they_tell_friends: "Current organic WOM (if any)"
+      what_would_surprise_them: "Things they'd never expect from your category"
+
+    output: "A clear map of customer expectations, pain points, and surprise thresholds"
+
+  step_3_create_candidate_talk_triggers:
+    name: "Create Candidate Talk Triggers"
+    purpose: "Generate potential triggers at the intersection of internal capabilities and customer insights"
+
+    brainstorming_framework:
+      generosity_candidates: "What could we give that nobody expects?"
+      usefulness_candidates: "What adjacent problem could we solve?"
+      speed_candidates: "Where could we be dramatically faster?"
+      empathy_candidates: "Where could we show we care as humans?"
+      attitude_candidates: "What personality could we embed in operations?"
+
+    evaluation_criteria:
+      remarkable: "Would customers mention this without being asked?"
+      relevant: "Does it reinforce what we want to be known for?"
+      reasonable: "Is it believable when retold?"
+      repeatable: "Can every customer experience it, every time?"
+      affordable: "Can we sustain this operationally?"
+      defensible: "Is it hard for competitors to copy exactly?"
+
+    output: "3-5 candidate talk triggers that pass all four requirements and the operational tests"
+
+  step_4_test_and_measure:
+    name: "Test and Measure Talk Triggers"
+    purpose: "Validate that the trigger actually generates word of mouth before committing fully"
+
+    testing_methodology:
+      pilot_group: "Test with a subset of customers for 30-60 days"
+      control_group: "Compare WOM metrics against customers who didn't experience the trigger"
+      measurement_points:
+        - "Unprompted mentions in surveys (open-ended: 'Anything notable about your experience?')"
+        - "Social media mentions and sentiment"
+        - "Review site mentions of the specific trigger"
+        - "Employee reports of customer reactions"
+        - "Referral rate changes in the pilot group"
+
+    baer_measurement_framework:
+      chatter_matters_metrics:
+        volume: "How many conversations is the trigger generating?"
+        sentiment: "Are the conversations positive, neutral, or negative?"
+        velocity: "How quickly do stories spread after the trigger experience?"
+        specificity: "Do customers mention the specific trigger, or just general satisfaction?"
+
+    output: "Data on which candidate trigger generates the most organic conversation"
+
+  step_5_amplify_your_talk_trigger:
+    name: "Amplify the Trigger"
+    purpose: "Once validated, operationalize the trigger and create conditions for maximum storytelling"
+
+    operational_embedding:
+      - "Build the trigger into standard operating procedures"
+      - "Train every employee on the trigger and its purpose"
+      - "Create quality control measures to ensure consistency"
+      - "Budget for the trigger as a permanent operational cost, not a marketing expense"
+
+    storytelling_amplification:
+      make_it_visible: "Ensure customers can see, photograph, and share the trigger"
+      make_it_participatory: "When possible, let customers be active participants in the trigger"
+      make_it_memorable: "Engage multiple senses — sight, touch, taste, smell"
+      create_artifacts: "Leave physical or digital evidence that reminds customers and prompts retelling"
+
+    employee_alignment:
+      - "Employees must understand WHY the trigger exists, not just what to do"
+      - "Empower employees to enhance the trigger spontaneously"
+      - "Celebrate employee stories of trigger execution"
+      - "Measure and reward trigger consistency"
+
+    output: "A fully operationalized talk trigger with measurement systems in place"
+
+  step_6_expand_and_evolve:
+    name: "Expand and Evolve"
+    purpose: "Keep the trigger fresh and find new trigger opportunities"
+
+    evolution_strategies:
+      seasonal_variations: "DoubleTree has done cookie variations (pumpkin spice in fall, peppermint in winter) while keeping the core trigger intact"
+      channel_expansion: "Take an in-person trigger digital, or vice versa"
+      audience_expansion: "Extend the trigger to new customer segments"
+      depth_layering: "Add secondary triggers that complement the primary one"
+
+    warning: "Never abandon a working trigger for something new. Triggers get MORE powerful with time, not less. DoubleTree's cookie has been running for 30+ years and is more talkable than ever."
+
+    output: "A living trigger strategy that evolves without losing its core"
+
+# ============================================================================
+# WOM MEASUREMENT FRAMEWORK
+# ============================================================================
+
+wom_measurement:
+  core_challenge: "Most businesses don't measure WOM because it feels unmeasurable. It's not. It requires different tools than paid media measurement, but it is absolutely quantifiable."
+
+  the_conversation_graph:
+    definition: "A visual representation of how conversations about your brand flow through networks"
+    components:
+      volume: "Total number of brand conversations (online + offline)"
+      reach: "Number of unique people exposed to brand conversations"
+      sentiment: "Ratio of positive to negative to neutral conversations"
+      specificity: "Whether conversations mention your talk trigger specifically"
+      conversion: "Rate at which conversation-exposed people become customers"
+
+  measurement_tools:
+    online_wom:
+      - "Social listening platforms (Brandwatch, Mention, Sprout Social)"
+      - "Review site monitoring (Yelp, Google, TripAdvisor)"
+      - "Social share tracking and analytics"
+      - "Hashtag monitoring"
+      - "Brand mention alerts"
+    offline_wom:
+      - "Customer surveys with open-ended questions ('How did you hear about us?')"
+      - "NPS (Net Promoter Score) tracking"
+      - "Post-experience surveys ('Did you tell anyone about your experience?')"
+      - "Employee-reported customer reactions"
+      - "Referral tracking codes"
+
+  the_wom_index:
+    formula: "WOM Index = (Organic mention volume x Sentiment score x Specificity score) / Total customer base"
+    interpretation:
+      low: "Below 0.5 — Your business is invisible in conversation"
+      moderate: "0.5-1.5 — Some organic conversation, but not systematic"
+      strong: "1.5-3.0 — Active talk trigger generating consistent stories"
+      exceptional: "3.0+ — Your customers are your primary marketing channel"
+
+  attribution:
+    challenge: "How do you attribute revenue to WOM when someone hears about you at a dinner party?"
+    solution: "Track referral source at point of conversion and compare lifetime value of WOM-referred customers vs. ad-referred customers"
+    finding: "WOM-referred customers typically have 16-25% higher lifetime value than advertising-referred customers because the referral comes with pre-built trust"
+
+# ============================================================================
+# SAME-SIDE SELLING: CUSTOMER ADVOCACY MODEL
+# ============================================================================
+
+same_side_selling:
+  definition: "When your customers sell for you because they genuinely believe in what you do, not because you incentivized them"
+
+  traditional_vs_advocacy:
+    traditional_marketing:
+      model: "Business tells customers why they should buy"
+      trust_level: "Low — consumers know it's self-interested"
+      cost: "High — requires constant ad spend"
+      longevity: "Stops when budget stops"
+    advocacy_marketing:
+      model: "Customers tell other customers why they should buy"
+      trust_level: "High — peer recommendation with personal reputation staked"
+      cost: "Low to zero — powered by remarkable experience"
+      longevity: "Self-sustaining and compounding"
+
+  the_advocacy_flywheel:
+    step_1: "Deliver a talk trigger (remarkable experience)"
+    step_2: "Customer tells someone the story"
+    step_3: "Story recipient becomes curious, investigates"
+    step_4: "New customer experiences the same trigger"
+    step_5: "New customer tells someone their own version of the story"
+    step_6: "Flywheel accelerates — each cycle adds more storytellers"
+
+    compounding_effect: "Unlike advertising which degrades (ad fatigue, rising CPMs), advocacy compounds. Each new superfan creates multiple new potential customers, each of whom may become superfans themselves."
+
+  organic_advocacy_vs_paid_referral:
+    organic_advocacy:
+      driver: "Genuine delight and desire to help friends"
+      credibility: "Maximum — no financial motive visible"
+      story_quality: "Rich, emotional, specific"
+      sustainability: "Permanent — as long as trigger continues"
+    paid_referral:
+      driver: "Financial incentive"
+      credibility: "Moderate — friend knows there's a kickback"
+      story_quality: "Transactional — 'Use my code for 10% off'"
+      sustainability: "Stops when incentive stops or becomes stale"
+
+    baer_position: "Paid referral programs are fine, but they're not talk triggers. A talk trigger creates advocacy without incentive. The story IS the incentive."
+
+# ============================================================================
+# TRIGGER ENGINEERING METHODOLOGY
+# ============================================================================
+
+trigger_engineering:
+  for_content_creators: "The talk trigger framework applies to content, not just products and services"
+
+  content_as_talk_trigger:
+    core_insight: "Most content is competent but forgettable. It meets expectations for the category but gives nobody a reason to tell someone else about it."
+    the_shift: "Instead of asking 'Is this good content?' ask 'Is there something in this content that someone would specifically describe to a friend?'"
+
+  engineering_talkable_content:
+    talkable_generosity_in_content:
+      principle: "Give away something so valuable it feels like it should be paid"
+      examples:
+        - "A free resource that competitors charge hundreds for"
+        - "A complete framework delivered in a single post"
+        - "Templates, tools, or calculators that save hours of work"
+        - "Sharing proprietary data or results that others hoard"
+      test: "Would someone say 'You HAVE to see this free thing — I can't believe it's free'?"
+
+    talkable_usefulness_in_content:
+      principle: "Solve a problem your audience didn't expect you to solve"
+      examples:
+        - "A marketing creator who teaches basic finance skills for freelancers"
+        - "A fitness creator who shares meal prep logistics, not just recipes"
+        - "A tech reviewer who includes accessibility analysis"
+        - "Cross-domain content that connects unexpected fields"
+      test: "Would someone say 'They covered something nobody else talks about'?"
+
+    talkable_speed_in_content:
+      principle: "Deliver results or insights dramatically faster than expected"
+      examples:
+        - "A 60-second tutorial that replaces a 30-minute course"
+        - "Real-time content responding to events within hours"
+        - "Compressed frameworks that shortcut months of learning"
+        - "Quick-win content that delivers transformation in one sitting"
+      test: "Would someone say 'I learned in 5 minutes what took me months to figure out'?"
+
+    talkable_empathy_in_content:
+      principle: "Demonstrate understanding of your audience's emotional reality, not just their informational needs"
+      examples:
+        - "Content that names the feeling nobody else acknowledges"
+        - "Validating struggles before offering solutions"
+        - "Sharing your own failures and vulnerabilities authentically"
+        - "Creating content for the overlooked segment of your audience"
+      test: "Would someone say 'Finally, someone who GETS IT'?"
+
+    talkable_attitude_in_content:
+      principle: "Have a distinctive voice and perspective that defies category norms"
+      examples:
+        - "A finance creator who uses humor instead of jargon"
+        - "A wellness creator who calls out industry nonsense directly"
+        - "A business creator who shares real numbers and real failures"
+        - "Breaking format expectations (a newsletter that reads like a letter from a friend)"
+      test: "Would someone say 'You have to follow this person — they're not like anyone else'?"
+
+  the_content_talk_trigger_scorecard:
+    dimensions:
+      remarkability: "Does this content contain at least one element nobody expects?"
+      relevance: "Does this element reinforce our brand positioning?"
+      reasonability: "Will this be believable when someone describes it to a friend?"
+      repeatability: "Can we consistently deliver this level of remarkability?"
+      specificity: "Is there a SPECIFIC moment or element someone would describe?"
+    scoring: "Each dimension scored 1-5. Minimum 20/25 for a content talk trigger."
+
+# ============================================================================
+# APPLICATION TO ORGANIC MARKETING ENGINE
+# ============================================================================
+
+organic_marketing_application:
+  strategic_framework: "Every piece of organic content should contain at least one potential talk trigger — a specific, describable element that makes it worth mentioning to someone else"
+
+  the_shareability_architecture:
+    principle: "Don't just create good content. Engineer a specific talkable moment inside every piece of content."
+
+    implementation:
+      pre_creation:
+        - "Before creating content, define: What is the ONE thing someone would describe to a friend?"
+        - "Choose a trigger type: generosity, usefulness, speed, empathy, or attitude"
+        - "Validate: Does it pass all four requirements (remarkable, relevant, reasonable, repeatable)?"
+      during_creation:
+        - "Build the content around the talkable moment, not the other way around"
+        - "Make the trigger vivid and sensory — use specific numbers, concrete images, and named examples"
+        - "Position the trigger early enough to hook, but deep enough to require full consumption"
+      post_creation:
+        - "Test: Describe this content to someone in one sentence. If you can't, the trigger isn't clear enough."
+        - "Measure: Track which content gets organically mentioned, shared, or referenced by your audience"
+        - "Iterate: Double down on trigger types that generate the most organic conversation"
+
+  wom_content_categories:
+    conversation_starters:
+      description: "Content designed to be referenced in real conversations"
+      format: "Bold claims, contrarian takes, memorable frameworks with catchy names"
+      wom_mechanism: "Someone brings it up at dinner: 'I read this thing that said...'"
+      example: "A post titled 'Why Your Best Employees Quit on Tuesdays' gives someone a talkable claim to share"
+
+    resource_triggers:
+      description: "Content so useful it gets forwarded and bookmarked"
+      format: "Complete guides, templates, tools, checklists"
+      wom_mechanism: "Someone sends it directly: 'You need to see this'"
+      example: "A comprehensive template pack that saves 10 hours of work"
+
+    identity_triggers:
+      description: "Content that people share because it represents who they are or want to be"
+      format: "Value-driven content, philosophical takes, aspirational frameworks"
+      wom_mechanism: "Someone shares it to signal their identity: 'This is exactly what I believe'"
+      example: "A manifesto-style post about rejecting hustle culture in favor of strategic leverage"
+
+    story_triggers:
+      description: "Narratives so compelling they get retold"
+      format: "Case studies, personal stories, transformation narratives"
+      wom_mechanism: "Someone retells the story in their own words"
+      example: "A detailed breakdown of how you went from $0 to $100K using one unconventional strategy"
+
+  measurement_for_organic_content:
+    leading_indicators:
+      - "Save rate (people bookmarking for later or to share)"
+      - "DM shares (content forwarded in private messages)"
+      - "Comment specificity (comments that reference a specific element, not generic praise)"
+      - "Quote-sharing (people screenshot and share specific lines)"
+      - "Derivative content (others create content referencing yours)"
+    lagging_indicators:
+      - "New followers who cite specific content as discovery source"
+      - "Brand mention volume increase after content publication"
+      - "Referral traffic from organic links"
+      - "Community growth rate correlated with content publication"
+
+  key_principles:
+    1: "Competence is expected. Remarkability is talkable. Engineer remarkability."
+    2: "Every piece of content needs a describable moment — the thing someone would actually say to a friend."
+    3: "WOM is not a byproduct of great content. It is an engineered output of strategic trigger design."
+    4: "Measure conversations, not just clicks. Track what people SAY about your content, not just how they interact with it."
+    5: "The best organic marketing creates customers who create customers."
+    6: "Consistency compounds. A single talk trigger maintained for years outperforms a hundred one-off campaigns."
+    7: "50% of WOM happens offline. Create content that translates into face-to-face conversation, not just shares."
+
+# ============================================================================
+# SKILL MAPPINGS
+# ============================================================================
+
+skill_mappings:
+  S05_hook_library:
+    - "Use the 5 talk trigger types as hook categories: generosity hooks, usefulness hooks, speed hooks, empathy hooks, attitude hooks"
+    - "Apply the remarkability spectrum to evaluate hook strength: invisible → noticeable → remarkable → extreme"
+    - "Engineer hooks that pass the 'describe to a friend in one sentence' test"
+    - "Build a swipe file of talkable moments organized by trigger type"
+    - "Use the content talk trigger scorecard to evaluate hooks before publication"
+
+  S06_virality_scoring:
+    - "Score content against all 4 requirements: remarkable, relevant, reasonable, repeatable"
+    - "Use the WOM Index formula to track content talkability over time"
+    - "Measure save rate and DM share rate as leading indicators of WOM potential"
+    - "Track comment specificity — generic praise indicates low virality, specific element references indicate high virality"
+    - "Compare WOM-referred audience lifetime value vs. organic discovery to validate trigger effectiveness"
+
+  S16_engagement_protocol:
+    - "Design community interactions that function as empathy triggers"
+    - "Build repeatable rituals that become talkable traditions (same-side community building)"
+    - "Use the advocacy flywheel model: trigger → story → curiosity → experience → new story"
+    - "Create talkable moments inside community spaces — give members something specific to describe to outsiders"
+    - "Measure conversation specificity in community — are members describing specific experiences or just expressing general satisfaction?"
+
+  S17_network_amplification:
+    - "Identify which of the 5 trigger types resonates most with your specific audience"
+    - "Engineer content that translates into offline conversation (the 50% rule)"
+    - "Create conversation starters — content designed to be referenced at dinner tables and in DMs"
+    - "Build resource triggers — content so useful it gets forwarded as a reflex"
+    - "Track the advocacy flywheel — measure how many new audience members arrive via existing member stories"
+    - "Apply the same-side selling principle: make advocacy effortless and genuine, never incentivized"
+
+# ============================================================================
+# SOURCE VERIFICATION
+# ============================================================================
+
+source_verification:
+  status: "PRIMARY_SOURCE_VERIFIED"
+  source_type: "Published Book (EPUB)"
+  source_title: "Talk Triggers: The Complete Guide to Creating Customers with Word of Mouth"
+  source_author: "Jay Baer and Daniel Lemin"
+  source_year: 2018
+  source_publisher: "Portfolio/Penguin"
+  isbn: "9780525537274"
+  verification_date: "2026-03-04"
+  verification_method: "Direct EPUB extraction with chapter-level citations"
+  confidence: "HIGH — extracted from complete, unabridged primary source"
+
+# ============================================================================
+# SOURCE QUOTES — EXACT TEXT FROM PRIMARY SOURCE
+# ============================================================================
+
+source_quotes:
+
+  quote_01_talk_trigger_definition:
+    text: "The menu at The Cheesecake Factory is a talk trigger: a built-in differentiator that creates customer conversations."
+    chapter: "Chapter 1: Talk Is Cheap"
+    page_context: "Opening case study on The Cheesecake Factory"
+    relevance: "Core definition of talk trigger concept introduced via flagship example"
+
+  quote_02_wom_economic_impact:
+    text: "A very detailed examination of the impact of word of mouth by Engagement Labs in 2017 found that 19 percent of all consumer purchases in the United States were directly caused by offline or online word-of-mouth activity. That's approximately $10 trillion of economic impact."
+    chapter: "Chapter 1: Talk Is Cheap"
+    page_context: "Section on economic power of word of mouth"
+    relevance: "Key statistic establishing WOM as measurable economic force, not soft metric"
+
+  quote_03_one_percent_have_a_plan:
+    text: "Jantsch figures that 1 percent or less of all businesses have a written plan for creating chatter. One hundred percent of businesses care about word of mouth, but less than 1 percent have a plan for achieving it."
+    chapter: "Chapter 1: Talk Is Cheap"
+    page_context: "Citing John Jantsch's research from The Referral Engine"
+    relevance: "Establishes the massive gap between WOM importance and WOM strategy"
+
+  quote_04_usp_vs_talk_trigger:
+    text: "A USP is a feature, articulated with a bullet point, that is discussed in a conference room. A talk trigger is a benefit, articulated with a story, that is discussed at a cocktail party."
+    chapter: "Chapter 1: Talk Is Cheap"
+    page_context: "Answering a consulting client's question about the difference"
+    relevance: "Foundational distinction between conventional marketing and talk trigger strategy"
+
+  quote_05_trust_advantage:
+    text: "Fundamentally, we trust businesses and organizations less than ever, and we trust people more than ever."
+    chapter: "Chapter 1: Talk Is Cheap"
+    page_context: "Section on why WOM is more effective now than ever"
+    relevance: "Core thesis on why peer recommendation outperforms corporate messaging"
+
+  quote_06_wom_vs_wom_marketing:
+    text: "Word of mouth is just talking. Word-of-mouth marketing is the organizing of that talk and driving it in a particular way. It's doing something intentional."
+    chapter: "Chapter 3: Same Is Lame"
+    page_context: "Quoting Ted Wright, author of Fizz"
+    relevance: "Critical distinction between passive WOM and engineered talk trigger strategy"
+
+  quote_07_advertising_is_a_tax:
+    text: "It's often been said that advertising is a tax paid by unremarkable businesses."
+    chapter: "Chapter 3: Same Is Lame"
+    page_context: "Section on why same is lame and differentiation matters"
+    relevance: "Powerful framing of the cost of being undifferentiated"
+
+  quote_08_same_is_lame:
+    text: "The best way to create conversation is to have a selling proposition that is actually unique. After all, same is lame. We are physiologically conditioned to discuss what is different and to ignore average."
+    chapter: "Chapter 3: Same Is Lame"
+    page_context: "Core argument for differentiation as biological imperative"
+    relevance: "Connects WOM strategy to human psychology — difference is hardwired to get noticed"
+
+  quote_09_different_is_better_than_better:
+    text: "A focus on improving customer experience makes it more difficult to create and propagate a truly differentiated talk trigger. This is because customer experience enhancements are about being better, not being different. And as author and motivational speaker Sally Hogshead says, when it comes to word of mouth, 'different is better than better.'"
+    chapter: "Chapter 3: Same Is Lame"
+    page_context: "Contrasting CX improvement with talk trigger creation"
+    relevance: "Key insight — excellence is expected, difference is talkable"
+
+  quote_10_remarkable_definition:
+    text: "To be remarkable is the first criterion that a differentiator needs to meet to be a talk trigger candidate, and that means it's worthy of remark. It has to be a story worth telling."
+    chapter: "Chapter 4: Be Remarkable"
+    page_context: "Introducing the first of four talk trigger requirements"
+    relevance: "Precise definition of 'remarkable' in the talk trigger framework"
+
+  quote_11_skeptics_still_talk:
+    text: "Being remarkable is so effective that it encourages people to talk about you even when those same people fervently believe being remarkable has no impact."
+    chapter: "Chapter 4: Be Remarkable"
+    page_context: "Research finding that skeptics recommend DoubleTree and Cheesecake Factory at same rate as non-skeptics"
+    relevance: "Powerful proof that talk triggers work even on resistant audiences"
+
+  quote_12_reasonable_goldilocks:
+    text: "You're looking for the habitable 'Goldilocks Zone,' where the temperature is just right: a talk trigger that's remarkable enough to be a conversation catalyst but reasonable enough to be trusted."
+    chapter: "Chapter 6: Be Reasonable"
+    page_context: "Explaining the balance between remarkable and believable"
+    relevance: "Calibration principle — too extreme kills believability, too subtle kills talkability"
+
+  quote_13_surprise_and_delight_vs_trigger:
+    text: "The problem with surprise and delight is that it's a surprise. It happens one time, to one person, in one scenario. That's not an operational choice that creates conversation day after day after day. Instead, it's one or more team members doing something special because they felt like it. A stuffed giraffe is a random act of kindness. A talk trigger is a strategic choice that you can implement every day."
+    chapter: "Chapter 7: Be Repeatable"
+    page_context: "Contrasting viral 'surprise and delight' stunts with repeatable talk triggers"
+    relevance: "Critical distinction — talk triggers are operational systems, not one-time marketing moments"
+
+  quote_14_consistency_trumps_delight:
+    text: "Not only does consistency trump delight but inconsistency generates contempt among your customers."
+    chapter: "Chapter 7: Be Repeatable"
+    page_context: "Citing Gartner VP Jake Sorofman on consistency vs. delight"
+    relevance: "Principle that repeatable triggers outperform random acts of brilliance"
+
+  quote_15_repeatable_for_all:
+    text: "To be a talk trigger, and to work for your business every day and not just one day, a differentiator has to be repeatable. It's not for randomly selected customers. Or your best customers. It's for all customers."
+    chapter: "Chapter 7: Be Repeatable"
+    page_context: "Defining the fourth requirement of talk triggers"
+    relevance: "Non-negotiable principle — universality is what makes triggers talkable"
+
+  quote_16_five_types:
+    text: "The five types of talk triggers are: talkable empathy, talkable usefulness, talkable generosity, talkable speed, and talkable attitude."
+    chapter: "Section 3 Introduction"
+    page_context: "Introducing the 5 in the 4-5-6 system"
+    relevance: "Definitive enumeration of the five talk trigger archetypes"
+
+  quote_17_expectation_gap:
+    text: "Word of mouth spreads when something occurs that customers do not reasonably expect. The gap between expectation and reality is the fuel for the stories that create word of mouth and in turn produce new customers."
+    chapter: "Section 3 Introduction"
+    page_context: "Explaining why talk triggers work psychologically"
+    relevance: "Core mechanism — the expectation-reality gap drives all word of mouth"
+
+  quote_18_purposeful_differentiator:
+    text: "A talk trigger is a purposeful, operational differentiator that creates conversation among customers and recruits potential new customers in the process."
+    chapter: "Appendix: Quick Reference Guide"
+    page_context: "Summary definition from the appendix"
+    relevance: "The most concise, official definition of a talk trigger in the book"
+
+  quote_19_ridiculously_nice:
+    text: "We collect more money by being nice. We actually collect more money by being 'ridiculously nice' because consumers aren't afraid to talk to us."
+    chapter: "Chapter 8: Talkable Empathy"
+    page_context: "Kenlyn Gretz, owner of Americollect, on empathy-driven collections"
+    relevance: "Proof that empathy as operational strategy beats intimidation even in collections"
+
+  quote_20_four_rs_summary:
+    text: "The differentiator has to be: Remarkable and not just 'good'; Relevant and tied to your core business; Reasonable and not so grand as to cause distrust among customers; Repeatable and available to every customer, every time."
+    chapter: "Chapter 7: Be Repeatable (closing summary)"
+    page_context: "Summary of all four requirements at end of Section 2"
+    relevance: "Complete four-requirements checklist in one passage"

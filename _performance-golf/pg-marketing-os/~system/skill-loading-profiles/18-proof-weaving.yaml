@@ -1,0 +1,13 @@
+skill_id: "18"
+skill_name: proof-weaving
+engine: main-pipeline
+arena: false
+generates_copy: true
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools: []
+protocols_required:
+  - SPECIMEN-GUIDE.md
+  - PERSONA-VOICE-LOADING-PROTOCOL.md
+  - CONTEXT-RESERVOIR-TEMPLATE.md
+  - pipeline-handoff-registry.md

@@ -1,0 +1,915 @@
+{
+  "metadata": {
+    "framework_date": "2026-03-10",
+    "framework_skill": "3.3-C Measurement Definer",
+    "product": "RS1 Putter by Performance Golf ($399/$429)",
+    "total_metrics": 46,
+    "leading_indicators": 23,
+    "lagging_indicators": 23,
+    "decision_triggers": 18,
+    "input_files_consumed": [
+      "action_sequence.json (38 actions across 3 phases)",
+      "ranked_opportunities.json (16 ranked: 7 Tier 1, 8 Tier 2, 1 Tier 3)",
+      "risk_factors.json (46 risks: 5 CRITICAL, 10 HIGH, 29 MEDIUM, 2 LOW)",
+      "proof_inventory.json (137 proof elements, 38 available, 8 gaps)"
+    ],
+    "measurement_philosophy": "Leading indicators trigger decisions before lagging indicators confirm damage. Every Tier 1 opportunity has at least 2 metrics (1 leading, 1 lagging). Every Tier 2 opportunity has at least 1 metric. Thresholds are calibrated to a DTC premium golf equipment launch targeting 5-15 handicap frustrated ball-strikers via a $399/$429 price point."
+  },
+
+  "opportunity_metrics": [
+    {
+      "opportunity_id": "OPP-001",
+      "opportunity_summary": "Own the 'Active Face Control' category with Forward Weighting and face-down balance demonstration",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-001-01",
+          "metric_name": "Let It Fall Demo Video Completion Rate",
+          "indicator_type": "leading",
+          "measurement_method": "Track percentage of viewers who watch the face-down balance demonstration video to 75%+ completion across all platforms (YouTube, landing page embed, social ads)",
+          "target_threshold": ">65% completion rate to 75% mark",
+          "warning_threshold": "50-65% completion rate",
+          "failure_threshold": "<50% completion rate — demo is not compelling enough to hold attention",
+          "measurement_frequency": "daily",
+          "data_source": "YouTube Analytics, Wistia/landing page video hosting analytics, Meta Ads Manager video metrics",
+          "connected_actions": ["ACT-I-002", "ACT-I-010", "ACT-S-010"]
+        },
+        {
+          "metric_id": "M-001-02",
+          "metric_name": "Forward Weighting Search Volume Index",
+          "indicator_type": "leading",
+          "measurement_method": "Track branded search volume for 'forward weighting putter,' 'face down balance putter,' 'RS1 putter,' and 'active face control' via Google Search Console and Google Trends relative index",
+          "target_threshold": ">500 branded searches/week by Week 4 post-launch",
+          "warning_threshold": "200-500 searches/week by Week 4",
+          "failure_threshold": "<200 searches/week by Week 4 — category messaging is not penetrating",
+          "measurement_frequency": "weekly",
+          "data_source": "Google Search Console, Google Trends, SEMrush/Ahrefs branded keyword tracking",
+          "connected_actions": ["ACT-I-002", "ACT-I-003", "ACT-I-012"]
+        },
+        {
+          "metric_id": "M-001-03",
+          "metric_name": "Demo-to-Cart Conversion Rate",
+          "indicator_type": "lagging",
+          "measurement_method": "Track the conversion rate from viewers who watched the Let It Fall demonstration (75%+ completion) to add-to-cart action on the RS1 product page",
+          "target_threshold": ">8% demo-viewer to add-to-cart",
+          "warning_threshold": "4-8% demo-viewer to add-to-cart",
+          "failure_threshold": "<4% — demo is generating interest but not purchase intent; mechanism story may not be connecting to value",
+          "measurement_frequency": "daily",
+          "data_source": "Shopify/ecommerce analytics with video completion event tracking, Google Analytics 4 funnel",
+          "connected_actions": ["ACT-I-002", "ACT-I-007", "ACT-I-010"]
+        },
+        {
+          "metric_id": "M-001-04",
+          "metric_name": "Face-Down Balance Mention Rate in UGC/Reviews",
+          "indicator_type": "lagging",
+          "measurement_method": "Track percentage of customer reviews, social mentions, and forum posts about RS1 that reference the face-down balance test, forward weighting, or active face control in their own words",
+          "target_threshold": ">40% of organic mentions reference the mechanism by Month 3",
+          "warning_threshold": "20-40% mention rate",
+          "failure_threshold": "<20% — category vocabulary is not transferring to customers; they are describing RS1 in generic terms",
+          "measurement_frequency": "weekly",
+          "data_source": "Mention.com or Brandwatch social listening, manual review sampling, customer review content analysis",
+          "connected_actions": ["ACT-I-002", "ACT-I-012", "ACT-S-012"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-002",
+      "opportunity_summary": "Capture LAB Golf's lost majority (55-65% of consideration funnel) with face stability minus the tradeoffs",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-002-01",
+          "metric_name": "LAB-Keyword Traffic Capture Rate",
+          "indicator_type": "leading",
+          "measurement_method": "Track organic and paid traffic arriving at RS1 pages from LAB-related search queries ('LAB Golf alternative,' 'better than LAB Golf,' 'LAB Golf problems,' 'RS1 vs LAB')",
+          "target_threshold": ">300 LAB-keyword visits/week by Month 2",
+          "warning_threshold": "100-300 LAB-keyword visits/week",
+          "failure_threshold": "<100 — comparative positioning is not generating search interest",
+          "measurement_frequency": "weekly",
+          "data_source": "Google Search Console query data, Google Ads search term reports, SEMrush competitive keyword tracking",
+          "connected_actions": ["ACT-I-005", "ACT-S-004", "ACT-M-004"]
+        },
+        {
+          "metric_id": "M-002-02",
+          "metric_name": "LAB-Considerer Conversion Rate",
+          "indicator_type": "lagging",
+          "measurement_method": "Track conversion rate of visitors who enter the funnel from LAB-comparison content or ads specifically targeting LAB's blocker segments (aesthetics, price, adaptation period, center-shaft)",
+          "target_threshold": ">5% LAB-comparison page visitor to purchase",
+          "warning_threshold": "2-5% conversion rate",
+          "failure_threshold": "<2% — comparative messaging is attracting curiosity but not closing; may need stronger proof or blocker-specific landing pages",
+          "measurement_frequency": "weekly",
+          "data_source": "Shopify/ecommerce with UTM attribution for LAB-comparison campaigns, landing page analytics",
+          "connected_actions": ["ACT-I-005", "ACT-I-009", "ACT-S-004"]
+        },
+        {
+          "metric_id": "M-002-03",
+          "metric_name": "Post-Purchase Survey: Prior LAB Consideration %",
+          "indicator_type": "lagging",
+          "measurement_method": "Include post-purchase survey question: 'Were you considering a LAB Golf putter before purchasing RS1?' Track percentage answering yes",
+          "target_threshold": ">25% of RS1 buyers were LAB-considerers",
+          "warning_threshold": "15-25%",
+          "failure_threshold": "<15% — RS1 is not capturing the LAB-adjacent segment; may be attracting a different buyer profile",
+          "measurement_frequency": "monthly",
+          "data_source": "Post-purchase survey (Klaviyo/email automation), customer onboarding flow",
+          "connected_actions": ["ACT-S-004", "ACT-M-004"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-003",
+      "opportunity_summary": "Lead with 'Your stroke was never the problem' self-blame liberation reframe",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-003-01",
+          "metric_name": "Self-Blame Reframe Ad Engagement Rate",
+          "indicator_type": "leading",
+          "measurement_method": "Track click-through rate, save rate, and share rate on ads and organic content leading with the 'your stroke was never the problem' reframe vs control ads with standard mechanism messaging",
+          "target_threshold": ">2.5% CTR on self-blame reframe ads (vs 1.5% industry average for golf equipment)",
+          "warning_threshold": "1.5-2.5% CTR",
+          "failure_threshold": "<1.5% CTR — reframe is not resonating or is alienating; test alternative framings",
+          "measurement_frequency": "daily",
+          "data_source": "Meta Ads Manager, Google Ads, email open/click rates for self-blame subject lines",
+          "connected_actions": ["ACT-I-004", "ACT-I-011", "ACT-I-010"]
+        },
+        {
+          "metric_id": "M-003-02",
+          "metric_name": "Email Sequence Liberation-to-Click Rate",
+          "indicator_type": "leading",
+          "measurement_method": "Track click-through rate on the specific email in the nurture sequence that delivers the self-blame liberation message, compared to other emails in the sequence",
+          "target_threshold": ">4% click rate (top 20% of sequence emails by engagement)",
+          "warning_threshold": "2.5-4% click rate",
+          "failure_threshold": "<2.5% — liberation message is underperforming the sequence average; reframe may need proof pairing",
+          "measurement_frequency": "weekly",
+          "data_source": "Klaviyo email analytics, sequence step performance comparison",
+          "connected_actions": ["ACT-I-004", "ACT-I-011"]
+        },
+        {
+          "metric_id": "M-003-03",
+          "metric_name": "Problem-Aware to Solution-Aware Conversion",
+          "indicator_type": "lagging",
+          "measurement_method": "Track percentage of visitors who arrive at Problem-Aware content (putting frustration, missed putts) and progress to Solution-Aware content (forward weighting mechanism page, demo video) within the same session or within 7 days",
+          "target_threshold": ">35% session progression from problem content to solution content",
+          "warning_threshold": "20-35% progression",
+          "failure_threshold": "<20% — content is generating emotional resonance but failing to bridge to the RS1 solution",
+          "measurement_frequency": "weekly",
+          "data_source": "Google Analytics 4 path analysis, landing page funnel analytics",
+          "connected_actions": ["ACT-I-004", "ACT-I-010", "ACT-I-007"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-004",
+      "opportunity_summary": "Coin and own 'face drift' as the consumer-friendly root cause name",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-004-01",
+          "metric_name": "Face Drift Term Adoption in Organic Conversation",
+          "indicator_type": "leading",
+          "measurement_method": "Track mentions of 'face drift' in golf forums (GolfWRX, Reddit r/golf), YouTube comments, and social media posts NOT created by PG. Count organic adoption of the coined term by third parties",
+          "target_threshold": ">50 organic third-party mentions by Month 3",
+          "warning_threshold": "20-50 organic mentions",
+          "failure_threshold": "<20 organic mentions — term is not entering natural vocabulary; may need simpler or more intuitive coinage",
+          "measurement_frequency": "weekly",
+          "data_source": "Social listening tools (Mention, Brandwatch), manual GolfWRX/Reddit monitoring, Google Alerts for 'face drift'",
+          "connected_actions": ["ACT-I-003", "ACT-I-013", "ACT-S-012"]
+        },
+        {
+          "metric_id": "M-004-02",
+          "metric_name": "Face Drift Search Volume Growth",
+          "indicator_type": "leading",
+          "measurement_method": "Track Google search volume for 'face drift' and 'face drift putter' from zero baseline. Measure week-over-week growth rate after launch",
+          "target_threshold": ">200 searches/month for 'face drift' by Month 3",
+          "warning_threshold": "50-200 searches/month",
+          "failure_threshold": "<50 searches/month — term is not gaining traction in search behavior",
+          "measurement_frequency": "weekly",
+          "data_source": "Google Trends, Google Search Console, Ahrefs/SEMrush keyword tracking",
+          "connected_actions": ["ACT-I-003", "ACT-I-010", "ACT-I-013"]
+        },
+        {
+          "metric_id": "M-004-03",
+          "metric_name": "Competitor Co-option of Face Drift Vocabulary",
+          "indicator_type": "lagging",
+          "measurement_method": "Monitor competitor marketing materials, social content, and retail copy for adoption of 'face drift' or directly derivative terms. Track time-to-first-competitor-mention",
+          "target_threshold": "No competitor adoption in first 6 months (RS1 maintains exclusive ownership)",
+          "warning_threshold": "1 competitor uses the term in first 6 months",
+          "failure_threshold": ">1 competitor uses the term within 6 months — vocabulary is being co-opted before ownership is established; accelerate trademark and branding investment",
+          "measurement_frequency": "monthly",
+          "data_source": "Competitor website monitoring, competitive intelligence tools, GolfWRX/Reddit brand mention tracking",
+          "connected_actions": ["ACT-I-013", "ACT-S-012", "ACT-M-005"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-005",
+      "opportunity_summary": "Deploy evolutionary narrative: Traditional -> LAB/Zero Torque -> RS1/Forward Weighting",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-005-01",
+          "metric_name": "Evolutionary Narrative Content Engagement",
+          "indicator_type": "leading",
+          "measurement_method": "Track engagement metrics (time on page, scroll depth, video completion) on the three-generation evolutionary narrative content (email, VSL section, landing page) vs other content sections",
+          "target_threshold": ">3 min average time on page for evolutionary narrative content; >80% scroll depth",
+          "warning_threshold": "2-3 min time on page; 60-80% scroll depth",
+          "failure_threshold": "<2 min time on page; <60% scroll depth — narrative is too long, too complex, or not compelling",
+          "measurement_frequency": "weekly",
+          "data_source": "Google Analytics 4 engagement metrics, Wistia/video hosting scroll and watch metrics",
+          "connected_actions": ["ACT-I-005", "ACT-I-012", "ACT-I-016"]
+        },
+        {
+          "metric_id": "M-005-02",
+          "metric_name": "Three-Putter Comparison Video Performance",
+          "indicator_type": "leading",
+          "measurement_method": "Track the three-putter side-by-side comparison video (traditional vs ZT vs RS1) view count, completion rate, and share rate across platforms",
+          "target_threshold": ">100K views in first 30 days; >50% completion rate",
+          "warning_threshold": "50K-100K views; 35-50% completion",
+          "failure_threshold": "<50K views or <35% completion — comparison format is not engaging or distribution is insufficient",
+          "measurement_frequency": "weekly",
+          "data_source": "YouTube Analytics, social platform native analytics, paid ad video metrics",
+          "connected_actions": ["ACT-I-005", "ACT-I-007", "ACT-S-002"]
+        },
+        {
+          "metric_id": "M-005-03",
+          "metric_name": "Evolutionary Frame Recall in Customer Feedback",
+          "indicator_type": "lagging",
+          "measurement_method": "In post-purchase surveys and customer interviews, track how many buyers spontaneously reference the evolutionary narrative ('next generation,' 'beyond zero torque,' 'evolution of putting') when asked why they chose RS1",
+          "target_threshold": ">30% of surveyed customers reference the evolutionary frame",
+          "warning_threshold": "15-30% reference rate",
+          "failure_threshold": "<15% — narrative is not sticky; customers are buying for other reasons and the evolutionary story is not being retained",
+          "measurement_frequency": "monthly",
+          "data_source": "Post-purchase survey, customer interview transcripts, review content analysis",
+          "connected_actions": ["ACT-I-005", "ACT-I-012", "ACT-M-002"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-006",
+      "opportunity_summary": "Name and explain the honeymoon effect to carousel riders as a purchase framework",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-006-01",
+          "metric_name": "Honeymoon Content Open/Click Rates",
+          "indicator_type": "leading",
+          "measurement_method": "Track open rate and click rate on emails and ads that lead with 'Why Every Putter Works for Two Weeks' or honeymoon-effect messaging. Compare to control messaging without the honeymoon hook",
+          "target_threshold": ">35% open rate on honeymoon subject lines; >3.5% CTR (vs 25% avg open, 2% avg CTR)",
+          "warning_threshold": "25-35% open rate; 2-3.5% CTR",
+          "failure_threshold": "<25% open rate — honeymoon framing is not cutting through; test alternative hooks",
+          "measurement_frequency": "daily",
+          "data_source": "Klaviyo email analytics, Meta Ads Manager engagement metrics",
+          "connected_actions": ["ACT-I-006", "ACT-S-008", "ACT-S-013"]
+        },
+        {
+          "metric_id": "M-006-02",
+          "metric_name": "Carousel Rider Segment Conversion Rate",
+          "indicator_type": "lagging",
+          "measurement_method": "Track conversion rate of visitors who self-identify as carousel riders (owned 3+ putters in 2 years) via quiz, survey, or segment-specific landing page content. Compare to overall conversion rate",
+          "target_threshold": ">6% conversion rate for identified carousel riders (vs ~3% overall)",
+          "warning_threshold": "3-6% carousel rider conversion",
+          "failure_threshold": "<3% — carousel riders are not converting at premium rates despite targeted messaging; honeymoon explanation may not be sufficient to overcome embedded skepticism",
+          "measurement_frequency": "weekly",
+          "data_source": "Shopify/ecommerce segmented conversion data, quiz/survey segment attribution",
+          "connected_actions": ["ACT-I-006", "ACT-S-008", "ACT-S-013"]
+        },
+        {
+          "metric_id": "M-006-03",
+          "metric_name": "90-Day Retention Rate (Honeymoon Proof)",
+          "indicator_type": "lagging",
+          "measurement_method": "Track the percentage of RS1 buyers who are still using the putter as their primary putter at 90 days post-purchase (via follow-up survey, Arccos data if integrated, or customer service inquiry). This is the ultimate proof that RS1 breaks the carousel",
+          "target_threshold": ">85% still using RS1 as primary putter at 90 days",
+          "warning_threshold": "70-85% retention",
+          "failure_threshold": "<70% — RS1 is experiencing its own honeymoon effect; the mechanism claim is undermined and return rates will spike",
+          "measurement_frequency": "monthly",
+          "data_source": "90-day post-purchase survey, Arccos integration data (if available), return/exchange rate inverse",
+          "connected_actions": ["ACT-S-008", "ACT-M-002", "ACT-M-006"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-007",
+      "opportunity_summary": "Leverage Chris McGinley's 25-year OEM pedigree as credibility mechanism",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-007-01",
+          "metric_name": "McGinley Origin Video Engagement Rate",
+          "indicator_type": "leading",
+          "measurement_method": "Track view count, completion rate, and engagement metrics (likes, comments, shares) on the Chris McGinley documentary-style origin video across platforms",
+          "target_threshold": ">60% completion rate on 8-12 min origin video; >2% engagement rate",
+          "warning_threshold": "40-60% completion; 1-2% engagement",
+          "failure_threshold": "<40% completion — origin story is too long, not compelling, or not positioned correctly in the funnel",
+          "measurement_frequency": "weekly",
+          "data_source": "YouTube Analytics, landing page video hosting metrics, social platform analytics",
+          "connected_actions": ["ACT-I-001", "ACT-I-015"]
+        },
+        {
+          "metric_id": "M-007-02",
+          "metric_name": "Cold Traffic McGinley-Lead vs Brand-Lead A/B Performance",
+          "indicator_type": "leading",
+          "measurement_method": "A/B test cold traffic ads: 'Chris McGinley's RS1' / 'RS1 by McGinley' creative vs 'Performance Golf RS1' creative. Track CTR, CPC, and downstream conversion for each variant",
+          "target_threshold": "McGinley-lead ads outperform brand-lead by >30% on CTR",
+          "warning_threshold": "10-30% CTR advantage for McGinley-lead",
+          "failure_threshold": "McGinley-lead underperforms or is within 10% of brand-lead — designer credibility is not the differentiator assumed; revisit cold traffic strategy",
+          "measurement_frequency": "weekly",
+          "data_source": "Meta Ads Manager A/B test results, Google Ads experiment data",
+          "connected_actions": ["ACT-I-001", "ACT-I-015", "ACT-I-009"]
+        },
+        {
+          "metric_id": "M-007-03",
+          "metric_name": "Brand Credibility Perception Score",
+          "indicator_type": "lagging",
+          "measurement_method": "Post-purchase survey question: 'How important was the designer's (Chris McGinley) background in your purchase decision?' Scale 1-10. Also track mentions of McGinley credentials in customer reviews",
+          "target_threshold": ">7.0 average importance score; >20% of reviews mention McGinley/designer credentials",
+          "warning_threshold": "5.0-7.0 average; 10-20% mention rate",
+          "failure_threshold": "<5.0 average — McGinley credibility is not a significant purchase driver; may need to invest more in proof or change credibility strategy",
+          "measurement_frequency": "monthly",
+          "data_source": "Post-purchase survey (Klaviyo), review content analysis, NPS survey verbatim analysis",
+          "connected_actions": ["ACT-I-001", "ACT-I-015", "ACT-M-003"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-008",
+      "opportunity_summary": "Position RS1 as Technology + Technique dual-promise putter",
+      "tier": "2_CONSIDER",
+      "metrics": [
+        {
+          "metric_id": "M-008-01",
+          "metric_name": "Dual-Promise Content Engagement vs Primary Messaging",
+          "indicator_type": "leading",
+          "measurement_method": "Track engagement metrics on 'Technology + Technique' content (email, social, landing page section) relative to primary face-stability messaging. Measure click-through, time-on-section, and progression to purchase",
+          "target_threshold": "Within 80% of primary messaging engagement rates",
+          "warning_threshold": "50-80% of primary messaging engagement",
+          "failure_threshold": "<50% of primary messaging engagement — dual promise is diluting rather than supporting the mechanism story",
+          "measurement_frequency": "weekly",
+          "data_source": "GA4 content group comparison, Klaviyo email A/B results, landing page section heatmap",
+          "connected_actions": ["ACT-S-005", "ACT-I-007"]
+        },
+        {
+          "metric_id": "M-008-02",
+          "metric_name": "Stroke Improvement Self-Report Rate at 90 Days",
+          "indicator_type": "lagging",
+          "measurement_method": "In 90-day post-purchase survey, ask: 'Have you noticed improvement in your stroke mechanics (not just results) since using RS1?' Track yes/no and qualitative descriptions",
+          "target_threshold": ">50% of respondents report perceived stroke improvement",
+          "warning_threshold": "30-50% report improvement",
+          "failure_threshold": "<30% — dual-promise claim lacks experiential evidence; deprioritize in messaging",
+          "measurement_frequency": "monthly",
+          "data_source": "90-day post-purchase survey, customer testimonial content analysis",
+          "connected_actions": ["ACT-S-005", "ACT-M-001"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-009",
+      "opportunity_summary": "Gravity-driven pendulum distance control advantage vs ZT putters",
+      "tier": "2_CONSIDER",
+      "metrics": [
+        {
+          "metric_id": "M-009-01",
+          "metric_name": "Distance Control Content Engagement",
+          "indicator_type": "leading",
+          "measurement_method": "Track engagement on distance control advantage content (email, social, FAQ section). Measure click rates, time on content, and progression to product page vs other secondary benefit content",
+          "target_threshold": ">2.5% CTR on distance control content; >2 min time on page",
+          "warning_threshold": "1.5-2.5% CTR; 1-2 min",
+          "failure_threshold": "<1.5% CTR — distance control messaging is not resonating; deprioritize until testing data is available",
+          "measurement_frequency": "weekly",
+          "data_source": "Klaviyo email analytics, GA4 content engagement, landing page section analytics",
+          "connected_actions": ["ACT-S-006"]
+        },
+        {
+          "metric_id": "M-009-02",
+          "metric_name": "Three-Putt Reduction Rate in Customer Data",
+          "indicator_type": "lagging",
+          "measurement_method": "Track self-reported or Arccos-verified three-putt frequency reduction among RS1 buyers at 30, 60, and 90 day intervals post-purchase",
+          "target_threshold": ">25% average reduction in three-putts per round by 90 days",
+          "warning_threshold": "10-25% reduction",
+          "failure_threshold": "<10% — distance control claim lacks empirical support; pivot to qualitative 'feel' messaging instead",
+          "measurement_frequency": "monthly",
+          "data_source": "Customer survey, Arccos integration data, beta tester Arccos/ShotScope data",
+          "connected_actions": ["ACT-S-006", "ACT-S-001"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-010",
+      "opportunity_summary": "Target the yips/putting anxiety segment with RS1 as the mechanical antidote",
+      "tier": "2_CONSIDER",
+      "metrics": [
+        {
+          "metric_id": "M-010-01",
+          "metric_name": "Anxiety Segment Content Conversion Rate",
+          "indicator_type": "leading",
+          "measurement_method": "Track engagement and conversion from content specifically targeting putting anxiety/yips sufferers (email nurture sequences, targeted social ads, dedicated landing page). Compare to general audience conversion",
+          "target_threshold": ">4% conversion rate for anxiety-targeted content (premium segment with high emotional urgency)",
+          "warning_threshold": "2-4% conversion",
+          "failure_threshold": "<2% — anxiety segment messaging is attracting clicks but not converting; may need stronger proof or testimonials from yips sufferers",
+          "measurement_frequency": "weekly",
+          "data_source": "Segmented campaign analytics (Klaviyo, Meta), dedicated landing page conversion data",
+          "connected_actions": ["ACT-S-007"]
+        },
+        {
+          "metric_id": "M-010-02",
+          "metric_name": "Yips Resolution Testimonial Collection Rate",
+          "indicator_type": "lagging",
+          "measurement_method": "Track number of unsolicited and solicited testimonials from RS1 buyers who describe yips/anxiety improvement. Count testimonials that specifically mention reduced anxiety, yips improvement, or restored confidence under pressure",
+          "target_threshold": ">15 anxiety-resolution testimonials by Month 6",
+          "warning_threshold": "5-15 testimonials",
+          "failure_threshold": "<5 — RS1 is not generating meaningful anxiety-resolution stories; deprioritize segment targeting",
+          "measurement_frequency": "monthly",
+          "data_source": "Customer review mining, post-purchase survey anxiety questions, customer success outreach",
+          "connected_actions": ["ACT-S-007", "ACT-S-011"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-011",
+      "opportunity_summary": "Price-wedge positioning: RS1 at $399/$429 undercuts LAB ($449-$649)",
+      "tier": "2_CONSIDER",
+      "metrics": [
+        {
+          "metric_id": "M-011-01",
+          "metric_name": "Price Comparison Page Engagement and Conversion",
+          "indicator_type": "leading",
+          "measurement_method": "Track visits, time on page, and conversion rate from the value comparison table content (RS1 vs LAB vs Spider ZT vs Scotty vs Bettinardi). Measure whether price comparison content supports or dilutes purchase intent",
+          "target_threshold": ">5% conversion rate from price comparison page; >2 min time on page",
+          "warning_threshold": "3-5% conversion; 1-2 min",
+          "failure_threshold": "<3% conversion — price comparison is creating analysis paralysis rather than driving purchase; simplify or reposition",
+          "measurement_frequency": "weekly",
+          "data_source": "GA4 landing page analytics, Shopify conversion tracking with UTM attribution",
+          "connected_actions": ["ACT-S-009", "ACT-M-004"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-012",
+      "opportunity_summary": "Deploy schema-violation messaging structures to bypass Stage 4 audience numbness",
+      "tier": "2_CONSIDER",
+      "metrics": [
+        {
+          "metric_id": "M-012-01",
+          "metric_name": "Schema-Violation Ad Creative Performance vs Standard",
+          "indicator_type": "leading",
+          "measurement_method": "A/B test schema-violation ad formats (demo-first, no brand intro; falsifiable challenge; honeymoon acknowledgment) against standard Problem-Mechanism-Proof-Offer format. Track CTR, cost per click, and cost per acquisition",
+          "target_threshold": "Schema-violation creative outperforms standard by >25% on CPA",
+          "warning_threshold": "10-25% CPA advantage",
+          "failure_threshold": "Schema-violation underperforms or is within 10% — audience may prefer familiar formats; standard creative wins; abandon schema violation approach",
+          "measurement_frequency": "weekly",
+          "data_source": "Meta Ads Manager A/B test results, Google Ads experiment data",
+          "connected_actions": ["ACT-I-014", "ACT-I-016", "ACT-S-003"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-013",
+      "opportunity_summary": "Position 74-degree Square-to-Square lie angle as designed-in innovation",
+      "tier": "2_CONSIDER",
+      "metrics": [
+        {
+          "metric_id": "M-013-01",
+          "metric_name": "Lie Angle Content Engagement (Technical Audience)",
+          "indicator_type": "leading",
+          "measurement_method": "Track engagement on 74-degree lie angle technical content specifically among data-driven / GolfWRX-type audience segments. Measure time on content, shares to golf forums, and click-through to product page",
+          "target_threshold": ">3 min time on technical content; >1% share rate",
+          "warning_threshold": "1.5-3 min; 0.5-1% share rate",
+          "failure_threshold": "<1.5 min — technical audience is not engaging with lie angle content; feature is too niche for content investment",
+          "measurement_frequency": "monthly",
+          "data_source": "GA4 segment analysis (technical audience via referral source), social share tracking",
+          "connected_actions": ["ACT-S-005"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-014",
+      "opportunity_summary": "Build the data proof package (SAM PuttLab, Arccos, independent testing) post-launch",
+      "tier": "2_CONSIDER",
+      "metrics": [
+        {
+          "metric_id": "M-014-01",
+          "metric_name": "Independent Testing Submission-to-Publication Pipeline",
+          "indicator_type": "leading",
+          "measurement_method": "Track progress of RS1 through independent testing pipeline: submission date, receipt confirmation, testing start date, expected publication date. Monitor for MyGolfSpy, TXG, and other independent reviewers",
+          "target_threshold": "MyGolfSpy testing initiated by Month 3; first independent review published by Month 6",
+          "warning_threshold": "Testing initiated by Month 6; review published by Month 9",
+          "failure_threshold": "No independent testing initiated by Month 6 — RS1 is missing the data-driven audience entirely; investigate submission process and relationships",
+          "measurement_frequency": "monthly",
+          "data_source": "Internal tracking spreadsheet, communication log with testing organizations",
+          "connected_actions": ["ACT-I-008", "ACT-S-010", "ACT-M-009"]
+        },
+        {
+          "metric_id": "M-014-02",
+          "metric_name": "Data-Driven Segment Conversion Post-Review Publication",
+          "indicator_type": "lagging",
+          "measurement_method": "Track conversion rate and traffic spike from data-driven audience segment in the 30 days following each independent review publication. Measure referral traffic from review sites and forums",
+          "target_threshold": ">3x traffic spike from review referral sources in 30 days post-review; >4% conversion rate from review traffic",
+          "warning_threshold": "2-3x traffic spike; 2-4% conversion",
+          "failure_threshold": "<2x traffic spike — review did not generate significant interest; review may have been negative or RS1 data performance was underwhelming",
+          "measurement_frequency": "monthly",
+          "data_source": "GA4 referral traffic analysis, Shopify conversion by source, review publication tracking",
+          "connected_actions": ["ACT-S-010", "ACT-M-001", "ACT-M-009"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-015",
+      "opportunity_summary": "Let confidence-mechanism framework emerge organically from testimonials",
+      "tier": "2_CONSIDER",
+      "metrics": [
+        {
+          "metric_id": "M-015-01",
+          "metric_name": "Organic Confidence Mention Rate in Testimonials",
+          "indicator_type": "lagging",
+          "measurement_method": "Track the percentage of customer testimonials, reviews, and survey responses that organically use 'confidence' or confidence-adjacent language (certain, trust, calm, assured) when describing their RS1 experience — without being prompted with confidence framing",
+          "target_threshold": ">60% of testimonials organically mention confidence by Month 6 — validates that confidence IS the experienced outcome",
+          "warning_threshold": "40-60%",
+          "failure_threshold": "<40% — confidence is not the dominant experienced outcome; the mechanism-to-confidence chain may not be as strong as research suggested",
+          "measurement_frequency": "monthly",
+          "data_source": "Review content analysis, post-purchase survey open-ended responses, customer interview transcripts",
+          "connected_actions": ["ACT-S-011", "ACT-M-006"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "OPP-016",
+      "opportunity_summary": "Monitor Stage 5 identity/tribal dynamics for future layering",
+      "tier": "3_MONITOR",
+      "metrics": [
+        {
+          "metric_id": "M-016-01",
+          "metric_name": "RS1 Community/Identity Signal Emergence",
+          "indicator_type": "leading",
+          "measurement_method": "Track emergence of RS1-specific community behaviors: dedicated forum threads, user-created content, repeat purchase indicators, 'RS1 family' type language in reviews, GAMERS declarations ('switched and never going back'). This is a monitoring metric, not an actionable KPI at launch",
+          "target_threshold": ">5 organic community indicators by Month 6 (forum threads, user videos, social groups)",
+          "warning_threshold": "2-5 community indicators",
+          "failure_threshold": "<2 — no tribal identity emerging; Stage 5 positioning is premature; continue monitoring only",
+          "measurement_frequency": "monthly",
+          "data_source": "Social listening, forum monitoring, review sentiment analysis, customer community platform analytics",
+          "connected_actions": ["ACT-M-006", "ACT-M-007"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "PROD-001",
+      "opportunity_summary": "Cross-cutting Product Performance Metrics (applies to all opportunities)",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-PROD-00",
+          "metric_name": "Pre-Launch Interest Signal Volume",
+          "indicator_type": "leading",
+          "measurement_method": "Track pre-launch waitlist signups, email opt-ins from RS1 teaser content, 'notify me' clicks, and social ad engagement rates during the 2-week pre-launch period. These leading signals predict launch-week revenue performance",
+          "target_threshold": ">2,000 waitlist signups by launch day; >5% email CTR on pre-launch teaser sequence",
+          "warning_threshold": "1,000-2,000 waitlist signups; 3-5% CTR",
+          "failure_threshold": "<1,000 waitlist signups — pre-launch demand signals are weak; consider delaying launch or increasing pre-launch content investment",
+          "measurement_frequency": "daily",
+          "data_source": "Klaviyo waitlist flow, landing page opt-in tracking, Meta Ads pre-launch campaign metrics",
+          "connected_actions": ["ACT-I-001", "ACT-I-002", "ACT-I-004"]
+        },
+        {
+          "metric_id": "M-PROD-01",
+          "metric_name": "Revenue vs Forecast",
+          "indicator_type": "lagging",
+          "measurement_method": "Track total RS1 revenue (heel-shaft + center-shaft) against pre-launch forecast. Break down by SKU, channel (DTC web, email, paid), and customer segment (warm list vs cold traffic)",
+          "target_threshold": ">90% of revenue forecast achieved by Month 3",
+          "warning_threshold": "70-90% of forecast",
+          "failure_threshold": "<70% of forecast — fundamental positioning or product-market-fit issue; trigger strategic review",
+          "measurement_frequency": "daily",
+          "data_source": "Shopify/ecommerce revenue dashboard, financial reporting",
+          "connected_actions": ["ACT-I-007", "ACT-I-010"]
+        },
+        {
+          "metric_id": "M-PROD-02",
+          "metric_name": "Return/Exchange Rate",
+          "indicator_type": "lagging",
+          "measurement_method": "Track return rate and exchange rate (heel-shaft to center-shaft or vice versa) as percentage of units sold. Monitor return reasons via customer service categorization",
+          "target_threshold": "<8% return rate (premium golf equipment average is 10-12%)",
+          "warning_threshold": "8-12% return rate",
+          "failure_threshold": ">12% — product or messaging expectation mismatch; investigate top return reasons immediately",
+          "measurement_frequency": "weekly",
+          "data_source": "Shopify returns data, customer service ticket categorization, RMA tracking system",
+          "connected_actions": ["ACT-S-001", "ACT-M-002"]
+        },
+        {
+          "metric_id": "M-PROD-03",
+          "metric_name": "Net Promoter Score (NPS)",
+          "indicator_type": "lagging",
+          "measurement_method": "Deploy NPS survey at 30 days and 90 days post-purchase. Track NPS score, promoter/detractor ratio, and verbatim comments",
+          "target_threshold": ">60 NPS at 30 days; >65 NPS at 90 days (improving over time confirms the putter is not a honeymoon product)",
+          "warning_threshold": "40-60 NPS at 30 days; 40-65 NPS at 90 days",
+          "failure_threshold": "<40 NPS at 30 days OR NPS declines by >10 points between 30-day and 90-day surveys — product is experiencing honeymoon effect; messaging is overpromising",
+          "measurement_frequency": "monthly",
+          "data_source": "NPS survey tool (Delighted, AskNicely, or Klaviyo survey flow), customer feedback analysis",
+          "connected_actions": ["ACT-S-001", "ACT-M-002"]
+        },
+        {
+          "metric_id": "M-PROD-04",
+          "metric_name": "Cost Per Acquisition (CPA) by Channel",
+          "indicator_type": "lagging",
+          "measurement_method": "Track blended and channel-specific CPA: Meta Ads, Google Ads, YouTube Ads, email (cost = list maintenance + content production), organic (cost = content production). Compare to target CPA based on LTV assumptions",
+          "target_threshold": "<$80 blended CPA (assuming 20% contribution margin at $399)",
+          "warning_threshold": "$80-$120 blended CPA",
+          "failure_threshold": ">$120 blended CPA — unit economics are unsustainable; optimize creative, funnel, or targeting before scaling spend",
+          "measurement_frequency": "daily",
+          "data_source": "Meta Ads Manager, Google Ads, attribution platform (Triple Whale, Northbeam, or equivalent)",
+          "connected_actions": ["ACT-I-007", "ACT-I-009", "ACT-I-010"]
+        },
+        {
+          "metric_id": "M-PROD-05",
+          "metric_name": "SKU Mix: Heel-Shaft vs Center-Shaft Ratio",
+          "indicator_type": "lagging",
+          "measurement_method": "Track the ratio of heel-shaft ($399) to center-shaft ($429) sales. The heel-shaft option is RS1's key differentiator vs LAB (who only offers center-shaft). Monitor shifts in ratio over time",
+          "target_threshold": ">55% heel-shaft sales (confirms differentiation from LAB is working)",
+          "warning_threshold": "40-55% heel-shaft",
+          "failure_threshold": "<40% heel-shaft — buyers are choosing the center-shaft variant that is more LAB-comparable; heel-shaft differentiation messaging needs strengthening",
+          "measurement_frequency": "weekly",
+          "data_source": "Shopify SKU-level sales data, product analytics",
+          "connected_actions": ["ACT-I-005", "ACT-S-004"]
+        },
+        {
+          "metric_id": "M-PROD-06",
+          "metric_name": "Average Putts Per Round Improvement (Customer-Reported)",
+          "indicator_type": "lagging",
+          "measurement_method": "Track self-reported or Arccos-verified average putts per round improvement at 30, 60, and 90 days post-purchase. Use post-purchase survey and follow-up emails",
+          "target_threshold": ">2.5 putts per round average improvement at 90 days",
+          "warning_threshold": "1-2.5 putts per round improvement",
+          "failure_threshold": "<1 putt per round improvement — product performance is not meeting marketing claims; reevaluate mechanism effectiveness claims",
+          "measurement_frequency": "monthly",
+          "data_source": "Post-purchase survey, Arccos integration data, beta tester tracking",
+          "connected_actions": ["ACT-S-001", "ACT-M-001"]
+        }
+      ]
+    },
+    {
+      "opportunity_id": "MKTG-001",
+      "opportunity_summary": "Cross-cutting Marketing Funnel Health Metrics",
+      "tier": "1_PURSUE",
+      "metrics": [
+        {
+          "metric_id": "M-MKTG-01",
+          "metric_name": "Landing Page Conversion Rate",
+          "indicator_type": "lagging",
+          "measurement_method": "Track overall landing page conversion rate (visit to purchase) for the RS1 product page, broken down by traffic source",
+          "target_threshold": ">3.5% overall conversion rate; >5% for warm email traffic; >1.5% for cold paid traffic",
+          "warning_threshold": "2-3.5% overall; 3-5% warm; 0.8-1.5% cold",
+          "failure_threshold": "<2% overall — fundamental funnel issue; investigate page flow, proof placement, and offer structure",
+          "measurement_frequency": "daily",
+          "data_source": "GA4, Shopify analytics, landing page platform analytics",
+          "connected_actions": ["ACT-I-007", "ACT-I-010"]
+        },
+        {
+          "metric_id": "M-MKTG-02",
+          "metric_name": "Email List RS1 Launch Sequence Performance",
+          "indicator_type": "leading",
+          "measurement_method": "Track the entire RS1 launch email sequence: open rates, click rates, conversion rates per email. Identify the highest- and lowest-performing emails to optimize sequence structure",
+          "target_threshold": ">30% average open rate across sequence; >2.5% average CTR; >0.5% per-email conversion rate",
+          "warning_threshold": "20-30% open; 1.5-2.5% CTR; 0.3-0.5% conversion",
+          "failure_threshold": "<20% open — list fatigue or subject line failure; <1.5% CTR — email content not compelling; <0.3% conversion — offer or proof gap in email copy",
+          "measurement_frequency": "daily",
+          "data_source": "Klaviyo email analytics dashboard",
+          "connected_actions": ["ACT-I-004", "ACT-I-006", "ACT-I-011"]
+        },
+        {
+          "metric_id": "M-MKTG-03",
+          "metric_name": "YouTube Creator Review Pipeline",
+          "indicator_type": "leading",
+          "measurement_method": "Track number of YouTube creator seedings shipped, reviews published, aggregate view count, and sentiment of reviews. Monitor for 'Let It Fall' moment inclusion in creator content",
+          "target_threshold": ">10 creator reviews published by Month 2; >500K aggregate views; >80% positive sentiment",
+          "warning_threshold": "5-10 reviews; 200K-500K views; 60-80% positive",
+          "failure_threshold": "<5 reviews published OR <60% positive sentiment — creator pipeline is stalled or product is not impressing reviewers; investigate and course-correct seeding strategy",
+          "measurement_frequency": "weekly",
+          "data_source": "YouTube search monitoring, creator relationship tracking spreadsheet, social listening",
+          "connected_actions": ["ACT-I-009", "ACT-S-002"]
+        },
+        {
+          "metric_id": "M-MKTG-04",
+          "metric_name": "Paid Media ROAS by Creative Concept",
+          "indicator_type": "lagging",
+          "measurement_method": "Track return on ad spend broken down by creative concept: McGinley origin, Let It Fall demo, self-blame liberation, honeymoon explanation, evolutionary narrative, LAB comparison, price wedge. Identify which opportunity messaging drives the most efficient acquisition",
+          "target_threshold": ">3.0x blended ROAS; identify at least 2 creative concepts at >4.0x ROAS",
+          "warning_threshold": "2.0-3.0x blended ROAS; 1 concept at >4.0x",
+          "failure_threshold": "<2.0x blended ROAS — paid media is not profitable; pause scaling, optimize creative, or shift budget to higher-ROAS channels",
+          "measurement_frequency": "daily",
+          "data_source": "Meta Ads Manager, Google Ads, attribution platform",
+          "connected_actions": ["ACT-I-002", "ACT-I-004", "ACT-I-006", "ACT-I-009"]
+        }
+      ]
+    }
+  ],
+
+  "decision_triggers": [
+    {
+      "trigger_id": "DT-001",
+      "condition": "Return rate exceeds 12% in any 2-week period AND NPS at 30 days is below 40",
+      "action": "HALT paid media scaling. Conduct emergency product-messaging alignment review. Survey all returners for specific complaint patterns. If returns are mechanism-related (not sizing/preference), pause all face-stability claims pending investigation",
+      "connected_opportunities": ["OPP-001", "OPP-006"],
+      "urgency": "immediate",
+      "connected_risks": ["R-001-02", "R-006-03"]
+    },
+    {
+      "trigger_id": "DT-002",
+      "condition": "McGinley-lead cold traffic ads underperform brand-lead ads by >20% on CPA after 2 weeks of testing",
+      "action": "Abandon McGinley-lead cold traffic strategy. Test mechanism-lead creative (Let It Fall demo as hero) for cold traffic instead. Reserve McGinley content for mid-funnel credibility building",
+      "connected_opportunities": ["OPP-007"],
+      "urgency": "week",
+      "connected_risks": ["R-007-01", "CCR-001"]
+    },
+    {
+      "trigger_id": "DT-003",
+      "condition": "CPA exceeds $120 on any paid channel for 7+ consecutive days with spend >$500/day",
+      "action": "Pause scaling on that channel. Test 3 new creative variants before resuming spend. If CPA remains >$120 after creative refresh, reallocate budget to higher-performing channels",
+      "connected_opportunities": ["PROD-001", "MKTG-001"],
+      "urgency": "immediate",
+      "connected_risks": ["CCR-002"]
+    },
+    {
+      "trigger_id": "DT-004",
+      "condition": "Competitor (TaylorMade, Odyssey, Ping, or Callaway) announces a forward-CG or forward-weighted putter",
+      "action": "Activate competitive response protocol: (1) Accelerate 'first mover' content creation. (2) Deploy the 'Let It Fall' challenge against competitor product within 72 hours of availability. (3) Emphasize McGinley's 25-year pedigree vs competitor's rushed entry. (4) Shift messaging from 'introducing' to 'pioneering' forward weighting",
+      "connected_opportunities": ["OPP-001", "OPP-004", "OPP-005"],
+      "urgency": "immediate",
+      "connected_risks": ["R-001-01", "CCR-003"]
+    },
+    {
+      "trigger_id": "DT-005",
+      "condition": "LAB Golf launches a heel-shaft variant OR drops prices below $399",
+      "action": "Escalate OPP-002 competitive response: (1) If heel-shaft: shift messaging to RS1's steel face feel and zero adaptation period as remaining differentiators. (2) If price drop: shift price-wedge messaging to feature-set superiority and total value rather than price advantage",
+      "connected_opportunities": ["OPP-002", "OPP-011"],
+      "urgency": "week",
+      "connected_risks": ["R-002-01", "R-011-02"]
+    },
+    {
+      "trigger_id": "DT-006",
+      "condition": "Face drift term is used by a competitor in their marketing materials",
+      "action": "Accelerate trademark filing if not already submitted. Intensify face drift vocabulary deployment across all channels. Create 'We coined it' origin content establishing RS1 as the source. Monitor whether competitor is using the term in RS1's frame or redefining it",
+      "connected_opportunities": ["OPP-004"],
+      "urgency": "immediate",
+      "connected_risks": ["R-004-01"]
+    },
+    {
+      "trigger_id": "DT-007",
+      "condition": "NPS declines by >10 points between 30-day and 90-day surveys (indicating honeymoon fade)",
+      "action": "Emergency investigation: (1) Deploy detailed 90-day survey probing putting performance consistency. (2) Analyze Arccos/ShotScope data from beta testers at 90 days for actual performance degradation. (3) If confirmed, pause all 'carousel-breaker' and 'permanent physics' messaging until root cause identified. (4) If NOT confirmed (NPS decline due to other factors), investigate customer experience issues beyond product performance",
+      "connected_opportunities": ["OPP-006"],
+      "urgency": "immediate",
+      "connected_risks": ["R-006-01", "R-006-03"]
+    },
+    {
+      "trigger_id": "DT-008",
+      "condition": "Beta tester 10-round data shows <1.0 average putts-per-round improvement across cohort",
+      "action": "Do NOT publish weak beta data. Extend beta period to 20 rounds. If still <1.0 improvement at 20 rounds, pivot all messaging from specific performance claims to 'consistency and feel' framing. Halt any planned quantified improvement claims in advertising",
+      "connected_opportunities": ["OPP-001", "OPP-009", "OPP-014"],
+      "urgency": "week",
+      "connected_risks": ["R-001-02", "CCR-005"]
+    },
+    {
+      "trigger_id": "DT-009",
+      "condition": "Self-blame reframe ads generate >5% negative comment rate (comments expressing offense, anger, or dismissal)",
+      "action": "Pause self-blame reframe creative on that platform. Test softened versions: 'What if it wasn't your stroke?' instead of 'Your stroke was never the problem.' If softened versions also generate >5% negative comments, deprioritize the reframe and lead with mechanism demonstration instead",
+      "connected_opportunities": ["OPP-003"],
+      "urgency": "week",
+      "connected_risks": ["R-003-01", "R-003-02"]
+    },
+    {
+      "trigger_id": "DT-010",
+      "condition": "Heel-shaft SKU represents <30% of total sales after 30 days",
+      "action": "Investigate why RS1's key differentiator (heel-shaft option) is underperforming. Options: (1) Heel-shaft education content is insufficient — deploy dedicated heel-shaft vs center-shaft comparison content. (2) Audience is more LAB-familiar than expected and defaulting to center-shaft comfort. (3) Consider A/B landing page test leading with heel-shaft as default",
+      "connected_opportunities": ["OPP-002", "OPP-005"],
+      "urgency": "week",
+      "connected_risks": ["R-002-04"]
+    },
+    {
+      "trigger_id": "DT-011",
+      "condition": "YouTube creator reviews are >40% negative or neutral sentiment (out of first 10 reviews)",
+      "action": "Pause creator seeding program. Analyze negative review themes: (1) Product performance — investigate specific complaints, share with McGinley. (2) Aesthetics/feel — this is a perception issue, not mechanism issue. (3) Comparison to current gamer — may indicate product-market fit issue. Course-correct product or messaging before resuming seeding",
+      "connected_opportunities": ["OPP-007", "OPP-001"],
+      "urgency": "immediate",
+      "connected_risks": ["R-007-02", "CCR-001"]
+    },
+    {
+      "trigger_id": "DT-012",
+      "condition": "MyGolfSpy independent testing shows RS1 face-angle stability is not in the top 3 of tested putters",
+      "action": "Do NOT contest the data publicly. Shift messaging: (1) Deprioritize quantified face-angle claims. (2) Emphasize 'designed-in natural pendulum' and 'zero adaptation period' differentiators that testing may not capture. (3) Accelerate customer testimonial collection to provide experiential proof to supplement unfavorable data. (4) Commission alternative testing methodology that better captures RS1's advantages",
+      "connected_opportunities": ["OPP-001", "OPP-014"],
+      "urgency": "week",
+      "connected_risks": ["R-001-02", "R-014-01", "CCR-005"]
+    },
+    {
+      "trigger_id": "DT-013",
+      "condition": "Email warm list launch sequence achieves <0.3% per-email conversion rate across first 5 emails",
+      "action": "Warm list is not converting at expected rates. Diagnose: (1) Check if PG's existing customer base overlaps with RS1 target WEB (5-15 handicap frustrated ball-strikers). (2) Test segment-specific versions of the launch sequence for instruction buyers vs equipment buyers. (3) If PG list overlap is poor, accelerate cold traffic scaling and reduce reliance on warm list revenue projections",
+      "connected_opportunities": ["MKTG-001"],
+      "urgency": "immediate",
+      "connected_risks": ["CCR-001"]
+    },
+    {
+      "trigger_id": "DT-014",
+      "condition": "Blended ROAS drops below 2.0x for 14+ consecutive days with spend >$2,000/day",
+      "action": "Paid media is not profitable at scale. Execute: (1) Cut spend to breakeven level. (2) Test creative refresh with 5 new concepts in 7 days. (3) Evaluate whether the issue is creative fatigue, audience saturation, or fundamental product-market-fit. (4) If ROAS does not recover above 2.5x within 21 days of creative refresh, reallocate budget to retention/referral programs",
+      "connected_opportunities": ["MKTG-001", "PROD-001"],
+      "urgency": "immediate",
+      "connected_risks": ["CCR-002"]
+    },
+    {
+      "trigger_id": "DT-015",
+      "condition": "Face drift organic mentions exceed 50 by Month 3 AND search volume exceeds 200/month",
+      "action": "Vocabulary ownership is succeeding — ACCELERATE. Execute: (1) Create 'Face Drift Guide' cornerstone content for SEO ownership. (2) Deploy face drift education ad campaign to capture growing search intent. (3) Explore trademark registration for 'Face Drift' as a branded term. (4) Increase face drift vocabulary deployment in all new content",
+      "connected_opportunities": ["OPP-004"],
+      "urgency": "month",
+      "connected_risks": ["R-004-01"]
+    },
+    {
+      "trigger_id": "DT-016",
+      "condition": "90-day NPS is >65 AND 90-day retention is >85% AND organic confidence mentions are >60%",
+      "action": "All product-performance indicators are strong — ESCALATE investment. Execute: (1) Increase paid media budget by 50%. (2) Launch referral program leveraging high NPS. (3) Begin development of RS1 v2 or product line extension. (4) Initiate Stage 5 identity messaging ('For golfers who trust physics')",
+      "connected_opportunities": ["OPP-015", "OPP-016"],
+      "urgency": "month",
+      "connected_risks": []
+    },
+    {
+      "trigger_id": "DT-017",
+      "condition": "Zero organic face drift mentions AND <50 branded searches/week at Week 4",
+      "action": "Category messaging is failing to penetrate. Execute: (1) Test alternative root cause terminology ('face twist,' 'putter rotation,' 'face wander') in A/B ad creative. (2) Increase demonstration video distribution spend by 100%. (3) Deploy YouTube creator challenge: 'Do the Let It Fall test with your current putter.' (4) If no terminology gains traction within 60 days, abandon vocabulary ownership strategy and lead with mechanism demonstration only",
+      "connected_opportunities": ["OPP-004", "OPP-001"],
+      "urgency": "week",
+      "connected_risks": ["R-004-02", "R-001-04"]
+    },
+    {
+      "trigger_id": "DT-018",
+      "condition": "RS1 content uses competitor vocabulary ('zero torque,' 'lie angle balance,' 'face balanced') in any published material",
+      "action": "Vocabulary discipline violation. Execute: (1) Remove competitor vocabulary from published content within 24 hours. (2) Retrain all content creators using the copy review checklist. (3) Audit all existing content for additional violations. (4) This is CCR-004 mitigation — if the market groups RS1 with ZT putters, positioning fails",
+      "connected_opportunities": ["OPP-001", "OPP-004", "OPP-005"],
+      "urgency": "immediate",
+      "connected_risks": ["CCR-004"]
+    }
+  ],
+
+  "dashboard_summary": {
+    "critical_kpis": [
+      "M-PROD-01: Revenue vs Forecast (daily — are we selling?)",
+      "M-PROD-04: Blended CPA by Channel (daily — is acquisition sustainable?)",
+      "M-MKTG-04: ROAS by Creative Concept (daily — which messaging wins?)",
+      "M-MKTG-01: Landing Page Conversion Rate (daily — is the funnel working?)",
+      "M-001-01: Let It Fall Demo Video Completion Rate (daily — is the proof compelling?)",
+      "M-PROD-02: Return/Exchange Rate (weekly — are we keeping customers?)",
+      "M-007-02: McGinley-Lead vs Brand-Lead A/B (weekly — is the credibility strategy working?)"
+    ],
+    "weekly_review_metrics": [
+      "M-001-02: Forward Weighting Search Volume Index",
+      "M-002-01: LAB-Keyword Traffic Capture Rate",
+      "M-003-01: Self-Blame Reframe Ad Engagement Rate",
+      "M-004-01: Face Drift Term Adoption in Organic Conversation",
+      "M-005-02: Three-Putter Comparison Video Performance",
+      "M-006-01: Honeymoon Content Open/Click Rates",
+      "M-MKTG-02: Email Launch Sequence Performance",
+      "M-MKTG-03: YouTube Creator Review Pipeline",
+      "M-PROD-05: SKU Mix Heel-Shaft vs Center-Shaft Ratio",
+      "M-012-01: Schema-Violation vs Standard Creative A/B Performance"
+    ],
+    "monthly_review_metrics": [
+      "M-001-04: Face-Down Balance Mention Rate in UGC/Reviews",
+      "M-002-03: Post-Purchase Survey Prior LAB Consideration %",
+      "M-004-02: Face Drift Search Volume Growth",
+      "M-004-03: Competitor Co-option of Face Drift Vocabulary",
+      "M-005-03: Evolutionary Frame Recall in Customer Feedback",
+      "M-006-03: 90-Day Retention Rate (Honeymoon Proof)",
+      "M-007-03: Brand Credibility Perception Score",
+      "M-008-02: Stroke Improvement Self-Report Rate at 90 Days",
+      "M-009-02: Three-Putt Reduction Rate in Customer Data",
+      "M-010-02: Yips Resolution Testimonial Collection Rate",
+      "M-014-01: Independent Testing Submission-to-Publication Pipeline",
+      "M-015-01: Organic Confidence Mention Rate in Testimonials",
+      "M-016-01: RS1 Community/Identity Signal Emergence",
+      "M-PROD-03: Net Promoter Score (30-day and 90-day)",
+      "M-PROD-06: Average Putts Per Round Improvement"
+    ],
+    "phase_alignment": {
+      "immediate_phase_critical_metrics": [
+        "M-PROD-01 (Revenue vs Forecast)",
+        "M-PROD-04 (CPA by Channel)",
+        "M-MKTG-01 (Landing Page CVR)",
+        "M-MKTG-04 (ROAS by Creative)",
+        "M-001-01 (Demo Completion Rate)",
+        "M-007-02 (McGinley A/B Test)",
+        "M-MKTG-02 (Email Sequence Performance)"
+      ],
+      "short_term_phase_critical_metrics": [
+        "M-001-04 (UGC Mechanism Mention Rate)",
+        "M-002-03 (LAB Considerer %)",
+        "M-004-01 (Face Drift Organic Adoption)",
+        "M-006-03 (90-Day Retention)",
+        "M-PROD-02 (Return Rate Trend)",
+        "M-PROD-03 (NPS 30-day)",
+        "M-MKTG-03 (Creator Review Pipeline)"
+      ],
+      "medium_term_phase_critical_metrics": [
+        "M-PROD-03 (NPS 90-day vs 30-day delta)",
+        "M-PROD-06 (Putts Per Round Improvement)",
+        "M-014-02 (Post-Review Conversion Spike)",
+        "M-015-01 (Organic Confidence Mentions)",
+        "M-016-01 (Community Signal Emergence)",
+        "M-004-03 (Competitor Vocabulary Co-option)"
+      ]
+    }
+  }
+}

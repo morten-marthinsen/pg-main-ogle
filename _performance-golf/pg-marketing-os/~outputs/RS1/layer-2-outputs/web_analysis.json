@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "analysis_date": "2026-03-10",
+    "quotes_analyzed": 1442,
+    "source_files": ["theme_synthesis.json", "quantified_buckets.json", "market_config.yaml"],
+    "framework": "Todd Brown E5 Method — WEB (World Exclusion Bucket) Analysis",
+    "product": "RS1 Putter by Performance Golf ($399/$429)"
+  },
+
+  "market_landscape": {
+    "broad_market": "Golf equipment — putters",
+    "market_segments": [
+      {
+        "segment": "Budget putters ($50-$150)",
+        "size": "Large",
+        "our_focus": false,
+        "notes": "Price-driven buyers, beginners, casual players. Not willing to invest in premium engineering."
+      },
+      {
+        "segment": "Mid-range putters ($150-$300)",
+        "size": "Large",
+        "our_focus": false,
+        "notes": "Odyssey, Cleveland, mid-tier TaylorMade. Good-enough buyers who haven't identified face control as the root cause."
+      },
+      {
+        "segment": "Premium putters ($300-$500)",
+        "size": "Medium",
+        "our_focus": true,
+        "notes": "Scotty Cameron, TaylorMade Spider, Evnroll, RS1 price range. Engineering-aware buyers willing to invest for measurable improvement."
+      },
+      {
+        "segment": "Ultra-premium / custom putters ($500-$1000+)",
+        "size": "Small",
+        "our_focus": false,
+        "notes": "Custom LAB Golf configs, Scotty Cameron Gallery, Bettinardi custom. Collector/status buyers or deep zero-torque converts."
+      },
+      {
+        "segment": "Zero-torque / lie-angle-balanced putters",
+        "size": "Small (growing rapidly)",
+        "our_focus": true,
+        "notes": "LAB Golf, TaylorMade Spider ZT, Bettinardi Antidote, Axis1. Physics-first buyers who have identified face stability as the key variable."
+      }
+    ],
+    "total_addressable": "Approximately 3-4 million golfers in the US who play 20+ rounds per year and have purchased a putter over $200 in the past 3 years. The RS1 WEB is a subset of approximately 400,000-600,000 of these golfers."
+  },
+
+  "web_identification": {
+    "primary_web": {
+      "name": "The Frustrated Ball-Striker Who Bleeds Strokes on the Green",
+      "description": "A serious amateur golfer (5-18 handicap, skewing 5-12) who hits the ball well tee-to-green but consistently loses 3-7 strokes per round on the putting surface. They have tried multiple putters, possibly had a fitting, and are aware that face control matters — but haven't found equipment that solves the problem without requiring compromises in feel, aesthetics, or price. They are equipment-literate, research-driven, and ready to invest $300-$500 in a putter IF they can see evidence that the engineering genuinely works.",
+      "defining_characteristics": [
+        "Ball-striking is significantly better than putting — they hit greens but waste the opportunities with 3-putts and missed short putts",
+        "Handicap would be 3-5 strokes lower if putting matched their tee-to-green game",
+        "Have owned 3+ putters in the past 5 years, possibly including a Scotty Cameron, Spider, or Odyssey",
+        "Know the language: face angle, MOI, toe hang, face balanced, strokes gained — but may not know 'forward CG' or 'face down balance' yet",
+        "Have experienced the 'steering' or 'fighting' sensation — actively manipulating the putter face through impact",
+        "Miss pattern skews directional (pushes and pulls) rather than purely distance-based",
+        "Spend $1,000+ per year on golf equipment and greens fees; $399 is within reach but requires justification",
+        "Consume golf content on YouTube, Reddit, and/or GolfWRX — they research before they buy",
+        "Aware of LAB Golf, may have considered or tried it, but haven't fully committed — either due to aesthetics, feel, price, or adaptation difficulty",
+        "Age 30-60, with a concentration in 35-55"
+      ],
+      "exclusion_criteria": [
+        "NOT beginners or high-handicappers (25+) whose putting problems stem from fundamental stroke mechanics, not equipment",
+        "NOT tour professionals or scratch golfers whose putting is already elite",
+        "NOT price-sensitive golfers who would never spend $399 on a putter regardless of proof",
+        "NOT pure brand/status buyers who want a Scotty Cameron logo, not engineering differentiation",
+        "NOT golfers who putt well but struggle tee-to-green — their pain is elsewhere",
+        "NOT golfers who have found their putter and are content — they're not searching",
+        "NOT anti-technology golfers who believe putting is 100% mental/technique and equipment is irrelevant",
+        "NOT committed LAB Golf evangelists who are fully satisfied with their LAB putter — they've already solved their problem"
+      ],
+      "size_estimate": "400,000-600,000 golfers in the US alone. This is the intersection of: plays 20+ rounds/year, handicap 5-18, has purchased equipment over $300, and self-identifies as a poor-to-mediocre putter relative to their ball-striking ability.",
+      "quote_evidence": [
+        {
+          "id": "Q0208",
+          "quote": "people stop and come over to me at the range and are amazed how well I hit the ball, they will say 'god you must be off scratch.' I say 'no im off 11 I can't putt'",
+          "characteristic_supported": "Ball-striking dramatically better than putting — identity gap"
+        },
+        {
+          "id": "Q0092",
+          "quote": "Saturday I shot 82. I hit the ball pretty well, not great by any means, but a round I would consider to be a good ball striking day for me. I hit 10 greens in Regulation and yet ended up shooting 82. I could not buy a putt.",
+          "characteristic_supported": "GIR-to-score disconnect — strokes wasted on the green"
+        },
+        {
+          "id": "Q0353",
+          "quote": "My putting has sucked forever; I am a 5 but when I am playing well, I am striking the ball like a scratch and putting like a 12. Tons of 3-putts, no speed control, no line control.",
+          "characteristic_supported": "Single-digit handicap with double-digit putting — identity crisis"
+        },
+        {
+          "id": "Q0524",
+          "quote": "lately I've been shoving a whole lot of putts...I'm a 6 right now and I swear I'd be a 2 almost overnight if I just got to be a good (not great) putter.",
+          "characteristic_supported": "Knows exactly how many strokes putting costs them — quantified frustration"
+        },
+        {
+          "id": "Q0101",
+          "quote": "I am a decent putter, but struggled with shorter putts. Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke.",
+          "characteristic_supported": "Steering/fighting sensation — blaming themselves when equipment is the root cause"
+        },
+        {
+          "id": "Q0086",
+          "quote": "I've cleaned up my game from tee to green enough that putting has been exposed as a weakness to going lower. I've got a lot of expectations, because my short game always saved me when my tee to green game was sloppier.",
+          "characteristic_supported": "Improving ball-striker whose putting is now the exposed bottleneck"
+        },
+        {
+          "id": "Q0506",
+          "quote": "FWIW, I'm 41 and have been playing since I was 4 or 5. Single-digit handicap and putting is biggest weakness.",
+          "characteristic_supported": "Experienced, committed golfer — putting as lifelong weakness"
+        },
+        {
+          "id": "Q0160",
+          "quote": "I know 'blame the equipment' is the running joke on this site as an excuse to get something new. While your clubs aren't generally your problem, I would say, from recent personal experience, that the putter may be the exception to that rule.",
+          "characteristic_supported": "Equipment-literate skeptic who discovered that putter choice actually matters"
+        },
+        {
+          "id": "Q0505",
+          "quote": "Stroke is very consistent, but consistently leaving putterface 2.5+ degrees open at impact. Tempo good, all other measures (Ping app) look good.",
+          "characteristic_supported": "Data-aware golfer who can diagnose face angle problems but can't solve them with technique alone"
+        },
+        {
+          "id": "Q0424",
+          "quote": "My experience is that I could feel regular putters try to twist during my putting stroke. The bigger the stroke, the more twisting. I had to actively compensate that twist during the stroke to keep the face square. Since it varied with how hard I swung the putter, it was a constant issue chasing the exact right amount of compensation.",
+          "characteristic_supported": "Articulate description of face drift as equipment problem — exactly the RS1 use case"
+        },
+        {
+          "id": "Q0213",
+          "quote": "I was struggling with pushes & pulls but my speed was generally good. I learned about the L.A.B tech and thought this would be the answer to my problems, and could remove 3 putts from my game.",
+          "characteristic_supported": "LAB-aware, directional miss pattern, quantified improvement expectation"
+        },
+        {
+          "id": "Q0471",
+          "quote": "Ive wanted to try LAB for at least a year now, but the price for a counterbalance is hefty. Everytime i demo them in store, i make everything. But...My fear of spending that much and having the results be the exact same as my gamer. Or possibly worst off. That is the only thing stopping me from purchasing.",
+          "characteristic_supported": "LAB-curious but blocked by price and investment anxiety — RS1's exact addressable gap"
+        }
+      ]
+    },
+
+    "secondary_webs": [
+      {
+        "name": "The LAB-Curious Skeptic",
+        "description": "A golfer who has heard about zero-torque putters (primarily LAB Golf), understands the physics argument, and is intrigued — but hasn't pulled the trigger due to one or more blockers: price ($449-$559), unconventional aesthetics, center-shaft feel, adaptation difficulty, or fear of LAB's distance-control tradeoffs. They want face stability but refuse to accept the compromises LAB requires.",
+        "relationship_to_primary": "A high-value subset of the primary WEB. These golfers are already solution-aware (Schwartz Level 3-4) and have self-selected into the face-stability conversation. RS1 enters as the 'third way' — face stability without LAB's tradeoffs. Conversion potential is highest here because the education has already been done by LAB's marketing.",
+        "size_estimate": "100,000-150,000 golfers in the US",
+        "key_quotes": [
+          {"id": "Q0397", "quote": "My two biggest issues with the LABs I've tried are that I struggle with the shaft lean and don't like the feel off the aluminum face."},
+          {"id": "Q0398", "quote": "Is it possible for LAB to make a putter that will be balanced but not appear as center shafted? I've used heel shafted forever, loved feel of the lab but just struggle with that center shafted look"},
+          {"id": "Q0400", "quote": "It's way too light and ironically enough I cant keep the face square. It also feels dead and looks like a nightmare. Why would I switch into that?"},
+          {"id": "Q0406", "quote": "a lot of people (myself included) are feel and visual players. Especially with putters, I have to like what I see when I look down at the putter and none of the putters mentioned do a thing for me in that sense."},
+          {"id": "Q0462", "quote": "Because LAB's whole thing is ZERO torque, they've kind of designed themselves into a corner. When you have to have absolutely zero torque, it limits what you can do and what your designs can be."}
+        ]
+      },
+      {
+        "name": "The Putter Carousel Rider",
+        "description": "A golfer who has bought 5+ putters in the past 3-5 years, constantly searching for 'the one.' Each new putter provides a brief honeymoon of confidence and better putting, followed by regression to the mean. They have spent $1,000-$3,000+ on putters across this cycle and are frustrated that nothing sticks. They may not understand why every putter eventually fails them — they don't yet know that all their putters share the same rearward CG / face-drift design flaw.",
+        "relationship_to_primary": "Adjacent to the primary WEB — many carousel riders ARE frustrated ball-strikers, but the carousel behavior is the defining trait rather than the ball-striking gap. RS1's 'last putter you'll ever buy' positioning directly addresses carousel fatigue. The mechanism story (Forward Weighting explains WHY every previous putter failed) is the conversion lever.",
+        "size_estimate": "200,000-300,000 golfers in the US",
+        "key_quotes": [
+          {"id": "Q0099", "quote": "i've used every variation of putters and grips and techniques but the only thing that helps me is time on the practice putting green."},
+          {"id": "Q0139", "quote": "I think that buying your way out of trouble is just a quick fix - you'll feel more confidence with the new stick initially but you know full well that the club hasn't changed over the last 10 weeks while your putting has."},
+          {"id": "Q0399", "quote": "I liked the story of LAB and AS. So I bought the Mezz broomstick without trying. It did not work well. I bought DF3 std version. It worked better than the broom but not impressive. So I bought the LINK and it is working best of the bunch but still I think there is a big room for an improvement."},
+          {"id": "Q0441", "quote": "I am one of those users that got fitted, customized it, spent the money only to sell it for a loss cause it actually didn't make me any better then my current Bettinardi center shaft putter."}
+        ]
+      },
+      {
+        "name": "The Data-Driven Equipment Optimizer",
+        "description": "A golfer who uses Arccos, tracks strokes gained, has had SAM PuttLab fittings, and makes equipment decisions based on measurable performance data rather than aesthetics or brand prestige. They know their putts-per-round average, their GIR-to-score gap, and their dominant miss pattern. They are predisposed to trust engineering claims that come with data — and skeptical of claims that don't.",
+        "relationship_to_primary": "Overlaps heavily with the primary WEB but is defined by their decision-making process rather than their frustration level. These are the early adopters and the influencers — the golfer at the club who tells everyone else 'what putter is that?' They validate purchases with data and share results publicly. RS1's SAM PuttLab data, the 'Let It Fall' demo, and strokes-saved metrics are designed for this audience.",
+        "size_estimate": "75,000-125,000 golfers in the US",
+        "key_quotes": [
+          {"id": "Q0363", "quote": "According to Arccos, with others I was a -1.2 vs my preferred handicap putting... DF3 - I am actually a +1.1 in putting with it vs my preferred handicap. So a total gain of 2.3 and during the summer my handicap showed it."},
+          {"id": "Q0656", "quote": "For today's round, I was -7.13 SG:putting relative to a pro. According to the chart below, a 25 index only loses 4.71 strokes putting to a pro. As a 5 index, I'm beyond disgusted right now."},
+          {"id": "Q0383", "quote": "No serious players buys a $500+ driver without seeing data. But spending $500+ on a putter without even testing it with actual data against what you currently game seems perfectly fine. I don't understand the disconnect."},
+          {"id": "Q0360", "quote": "I had a SAM PuttLab fitting and learned a lot about my tendencies in my putting stroke. That information in combination with my new putter has made me shave about 4-6 strokes."}
+        ]
+      }
+    ]
+  },
+
+  "web_characteristics": {
+    "demographic_patterns": [
+      {
+        "characteristic": "Age 35-55 (core), extending to 30-60",
+        "prevalence": "High (70%+ of relevant quotes come from this age range when age is mentioned)",
+        "evidence": [
+          "Q0506: 'I'm 41 and have been playing since I was 4 or 5'",
+          "Q0200: 'I, too, am 63 years old, and have had periodic bouts of the yips'",
+          "Q0104: 'i've been playin all my life.. once got my handicap down 2. something'",
+          "Q0090: 'I just broke par for the first time about 6 months ago... through the last 20 years'"
+        ]
+      },
+      {
+        "characteristic": "Male (85-90%)",
+        "prevalence": "Very High",
+        "evidence": [
+          "Overwhelming male voice in Reddit, GolfWRX, and YouTube comments. Female voices appear primarily as gift-givers or family members (Q0009: 'My husband been using...')"
+        ]
+      },
+      {
+        "characteristic": "Handicap 5-18, with concentration at 5-12",
+        "prevalence": "High",
+        "evidence": [
+          "Q0353: 'I am a 5 but when I am playing well, I am striking the ball like a scratch and putting like a 12'",
+          "Q0524: 'I'm a 6 right now and I swear I'd be a 2 almost overnight if I just got to be a good putter'",
+          "Q0208: 'no im off 11 I can't putt'",
+          "Q0626: 'I'm a 16hc and 3 putt several times each round'",
+          "Q0694: 'My handicap is supposedly 8.6'"
+        ]
+      },
+      {
+        "characteristic": "Disposable income for premium golf equipment ($1,000-$5,000/year on golf)",
+        "prevalence": "High",
+        "evidence": [
+          "Multiple putter purchases, putter fitting experiences, course memberships, tournament play, premium equipment ownership (Scotty Cameron, Spider, etc.)"
+        ]
+      },
+      {
+        "characteristic": "Plays 30-80+ rounds per year — committed weekend warrior or avid player",
+        "prevalence": "High",
+        "evidence": [
+          "References to club championships, league play, tournament entry, seasonal tracking, handicap maintenance — all indicating regular play"
+        ]
+      }
+    ],
+
+    "psychographic_patterns": [
+      {
+        "characteristic": "Engineering-curious: wants to understand WHY something works, not just THAT it works",
+        "prevalence": "Very High (core WEB trait)",
+        "evidence": [
+          "Q0428: 'In putting, torque is the force that causes a putter's head to rotate around the axis of the shaft during a stroke...'",
+          "Q0439: 'Zero torque (or low torque) means the shaft axis crosses directly with the CG. It's that simple.'",
+          "Q0375: 'There is almost zero data to support the categorization of stroke types and the putters that work best for them.'"
+        ]
+      },
+      {
+        "characteristic": "Research-before-purchase: reads forums, watches YouTube reviews, compares options before buying",
+        "prevalence": "Very High",
+        "evidence": [
+          "The existence of 1,442 detailed quotes across Reddit, GolfWRX, MyGolfSpy, YouTube, and TheSandTrap proves this WEB lives in research mode",
+          "Q0265: 'Given how much these putters cost, I didn't want to make a purchase decision based only on how it performed in the studio.'",
+          "Q0221: 'I know there's been a lot of buzz with LAB this year, especially the DF3... What has been your experience with LAB putters?'"
+        ]
+      },
+      {
+        "characteristic": "Investment anxiety: fears spending $400+ and getting no improvement",
+        "prevalence": "Very High (appears in all 6 buckets)",
+        "evidence": [
+          "Q0471: 'My fear of spending that much and having the results be the exact same as my gamer. Or possibly worst off.'",
+          "Q0384: '$500+ is a lot of money to throw at a hope.'",
+          "Q0381: 'I don't have $1000 for any club in my bag, but especially not when it is a hypothetical improvement.'"
+        ]
+      },
+      {
+        "characteristic": "Self-blame default: assumes their technique is the problem before considering equipment",
+        "prevalence": "High",
+        "evidence": [
+          "Q0139: 'it can't be the stick, it's you'",
+          "Q0219: 'Most (if not all) of my putting issues are mental/confidence-driven!'",
+          "Q0101: 'Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke.'"
+        ]
+      },
+      {
+        "characteristic": "Identity tension: sees themselves as a 'good golfer who can't putt' — two conflicting self-images",
+        "prevalence": "Very High (Theme T003 in synthesis)",
+        "evidence": [
+          "Q0208: 'god you must be off scratch.' I say 'no im off 11 I can't putt'",
+          "Q0211: 'A 6 iron from 160 meters to 3 feet is of no value to a person who can't putt.'",
+          "Q0343: 'The first mistake you're making is behaving as if you are a good player but can't putt.'"
+        ]
+      },
+      {
+        "characteristic": "Skeptical of marketing claims but responsive to engineering proof and peer testimonials",
+        "prevalence": "High",
+        "evidence": [
+          "Q0385: 'The data all shows that tech in this particular tool doesn't matter much... What is left? Confidence, preference and the person using the tool.'",
+          "Q0295: 'If ya have a consistent repeatable putting stroke, then it's just another in a long list of nice premium putters.'",
+          "Q0160: 'While your clubs aren't generally your problem, I would say, from recent personal experience, that the putter may be the exception to that rule.'"
+        ]
+      }
+    ],
+
+    "situational_patterns": [
+      {
+        "characteristic": "Currently in a putting slump or experiencing the 'confidence doom loop'",
+        "prevalence": "Very High",
+        "evidence": [
+          "Q0133: 'I went through a period of about 2 months where I was very confident with it and was holing everything. I don't know what happened but now I have no confidence whatsoever'",
+          "Q0085: 'I'm a wreck on the greens right now - total neuroses. Shaking over every putt.'",
+          "Q0087: 'Obviously the more putts I miss, the less confidence I have - not just on the immediate stroke, but also for the one I will have to make when I inevitably miss.'"
+        ]
+      },
+      {
+        "characteristic": "Recently improved ball-striking, exposing putting as the bottleneck",
+        "prevalence": "High",
+        "evidence": [
+          "Q0147: 'My ballstriking has dramatically improved. However, I used to score in the mid 80s and now I am struggling to break 90.'",
+          "Q0086: 'I've cleaned up my game from tee to green enough that putting has been exposed as a weakness'",
+          "Q0146: 'I went through a phase when I was striking the ball as well as I ever had and was not scoring better.'"
+        ]
+      },
+      {
+        "characteristic": "Competitive context: plays in club events, league, or casual money games where putting failures have social/financial consequences",
+        "prevalence": "High",
+        "evidence": [
+          "Q0069: 'tournament rounds and money games virtually always begin in the morning when I find my mind is racing'",
+          "Q0070: 'I am embarrassed how I feel standing over a 3' putt for a tee shirt (shop credit)'",
+          "Q0071: 'I'm playing in more tournaments this year and one of the problems I'm having is struggling with short putts while in competition.'"
+        ]
+      },
+      {
+        "characteristic": "Post-fitting disillusionment: had a putter fitting that didn't produce lasting improvement",
+        "prevalence": "Moderate",
+        "evidence": [
+          "Q0355: 'I went for a fitting after three consecutive rounds of 40+ putts and was told that I pretty much had the right putter for my stroke.'",
+          "Q0368: 'I've had 4 putter fittings very spaced out in my time with golf (15 years). Once I received my measurements from my very first fitting, I didn't find value in the rest.'",
+          "Q0441: 'I am one of those users that got fitted, customized it, spent the money only to sell it for a loss'"
+        ]
+      },
+      {
+        "characteristic": "Considering or recently aware of face-stability technology (LAB Golf, zero-torque, face-balanced)",
+        "prevalence": "High (and growing)",
+        "evidence": [
+          "Q0213: 'I learned about the L.A.B tech and thought this would be the answer to my problems'",
+          "Q0280: 'Right now in golf, there are, I think, two camps of people. There are the believers and the unbelievers when it comes to what I think is the biggest revolution in putting'",
+          "Q0443: 'I tried the LAB putters and ZT at Golf Galaxy yesterday. They were both completely different.'"
+        ]
+      }
+    ],
+
+    "behavioral_patterns": [
+      {
+        "characteristic": "Active online research: reads and posts in golf forums, watches YouTube putting content",
+        "prevalence": "Very High",
+        "evidence": [
+          "1,442 quotes sourced from Reddit, GolfWRX, MyGolfSpy, TheSandTrap, YouTube, Hackers Paradise, Amazon reviews — this WEB lives online"
+        ]
+      },
+      {
+        "characteristic": "Equipment rotation: changes putters every 6-18 months hoping for improvement",
+        "prevalence": "High",
+        "evidence": [
+          "Q0587: 'Cheated yesterday with a different putter. Just wanted to see if my mechanics would stay sharp'",
+          "Q0169: 'After about a dozen putters and all this time, I'm finally starting to feel comfortable on the greens'",
+          "Q0593: 'My fifth putter purchase of the summer will be here Tuesday!'"
+        ]
+      },
+      {
+        "characteristic": "Putting practice investment: practices putting at home and at the course, but practice gains don't transfer to the course",
+        "prevalence": "High",
+        "evidence": [
+          "Q0060: 'I practice putting a ton too! At the course I spend hours a day on it, and at home I hit 100 3 footers, 100 6 footers, and 100 9 footers every day!'",
+          "Q0082: 'Ultimately, the thing that kills me, is the fact that when I go out to the practice green, it's inevitable that I sink at least a few putts from greater than 20'. How come that never happens on the course?'",
+          "Q0631: 'This season, I sucked at short putts, so I built an indoor putting surface'"
+        ]
+      },
+      {
+        "characteristic": "Score tracking and data analysis: uses handicap tracking, strokes gained, Arccos, or similar tools",
+        "prevalence": "Moderate-High",
+        "evidence": [
+          "Q0656: 'For today's round, I was -7.13 SG:putting relative to a pro.'",
+          "Q0363: 'According to Arccos, with others I was a -1.2 vs my preferred handicap putting'",
+          "Q0108: 'So the last two rounds I have played I shot 81, 80 respectively... the first round I had 37 putts and then next time I had 38 putts.'"
+        ]
+      },
+      {
+        "characteristic": "Peer comparison: notices that playing partners putt better with seemingly less effort",
+        "prevalence": "High",
+        "evidence": [
+          "Q0060: 'I often play with an older guy in the area who I dont think practices putting for more than like 5 minutes a week, and if hes on the green anywhere, its a borderline gimmie.'",
+          "Q0093: 'he's got a nice swing and strikes it pretty well.. but he's a terrible putter and his short game is average at best'",
+          "Q0207: 'Another junior at the club hits the ball way worse than i do... but he can putt decently and still beat me.'"
+        ]
+      }
+    ]
+  },
+
+  "language_markers": {
+    "self_identification": [
+      {
+        "phrase": "I can't putt",
+        "frequency": 30,
+        "context": "The single most common self-identification phrase. Used as a complete identity statement, not a description of a temporary condition. Often paired with evidence of competence elsewhere: 'I hit the ball great but I can't putt.'"
+      },
+      {
+        "phrase": "putting is the weakest part of my game",
+        "frequency": 22,
+        "context": "Comparative framing — everything else is acceptable, putting is the outlier. Implies they've already worked on other areas successfully."
+      },
+      {
+        "phrase": "I leave strokes on the green",
+        "frequency": 18,
+        "context": "Quantified awareness that putting is costing them measurable performance. Often followed by a specific number: '3-5 strokes per round.'"
+      },
+      {
+        "phrase": "I'm a [X] handicap who putts like a [X+8]",
+        "frequency": 14,
+        "context": "The split-identity marker. Always expresses a gap between overall ability and putting ability. Q0353: 'I am a 5 but... putting like a 12.'"
+      },
+      {
+        "phrase": "I've tried everything",
+        "frequency": 16,
+        "context": "Carousel fatigue indicator. Signals someone who has exhausted conventional solutions (lessons, grip changes, new putters) and is looking for a fundamentally different approach."
+      },
+      {
+        "phrase": "I 3-putt too much / too many 3-putts",
+        "frequency": 35,
+        "context": "The most common symptom description. Almost always followed by GIR data proving that approach play isn't the problem."
+      },
+      {
+        "phrase": "I miss short putts / can't make anything inside X feet",
+        "frequency": 28,
+        "context": "Specifically about the 3-6 foot range. This is the distance where face angle errors are most punishing and most visible. Q0071: 'struggling with short putts while in competition'"
+      },
+      {
+        "phrase": "I fight/steer/hold the putter",
+        "frequency": 15,
+        "context": "Active resistance metaphors that describe the experience of compensating for face drift. This is the exact problem RS1 Forward Weighting solves."
+      },
+      {
+        "phrase": "lost all confidence on the greens",
+        "frequency": 12,
+        "context": "Confidence as a putter-specific crisis, not a whole-game issue. Q0133: 'I don't know what happened but now I have no confidence whatsoever.'"
+      }
+    ],
+
+    "in_group_vocabulary": [
+      {
+        "term": "3-putt / three-putt",
+        "usage": "Universal shorthand for putting failure. A golfer in this WEB tracks 3-putts per round as a primary performance metric."
+      },
+      {
+        "term": "GIR / Greens in Regulation",
+        "usage": "Used to establish that their approach play is solid — the problem starts once they reach the green. 'Hit 12 GIR and still shot 82.'"
+      },
+      {
+        "term": "Putts per round (PPR)",
+        "usage": "Self-tracked metric. WEB members know their number and compare it to tour averages. 30-32 is acceptable, 34+ triggers concern, 36+ triggers crisis."
+      },
+      {
+        "term": "Strokes gained: putting (SG:P)",
+        "usage": "Advanced metric used by data-oriented subset. Negative SG:P is proof of the problem; positive SG:P after equipment change is proof of the solution."
+      },
+      {
+        "term": "Face angle at impact",
+        "usage": "Technical term that this WEB is beginning to understand. They may not know the physics yet, but they know 'my face is open/closed at impact.'"
+      },
+      {
+        "term": "Toe hang / face balanced / zero torque",
+        "usage": "Equipment specification language. WEB members understand these concepts at varying depths — from 'I've heard of it' to 'I have SAM PuttLab data.'"
+      },
+      {
+        "term": "The yips",
+        "usage": "Semi-clinical term for the extreme version of putting anxiety. Used both diagnostically ('I have the yips') and fearfully ('I'm worried I'm getting the yips')."
+      },
+      {
+        "term": "Push / pull",
+        "usage": "Directional miss language. A 'push' is a putt that goes right of the intended line (open face); a 'pull' goes left (closed face). This WEB uses these terms constantly."
+      },
+      {
+        "term": "Lip out / burned the edge",
+        "usage": "Near-miss language that intensifies frustration. 'It looked good the whole way and then just caught the edge.' Implies directional accuracy is close but not close enough."
+      },
+      {
+        "term": "Honeymoon period",
+        "usage": "The temporary improvement window after getting a new putter, before regression sets in. WEB members are aware of and cynical about this phenomenon."
+      },
+      {
+        "term": "Carousel / putter carousel",
+        "usage": "Self-aware term for the cycle of buying and discarding putters. Not all WEB members use this exact term, but they all recognize the behavior."
+      }
+    ],
+
+    "recognition_triggers": [
+      {
+        "trigger": "Someone describes hitting the ball well but scoring poorly",
+        "response": "Immediate emotional recognition. 'That's me.' This is the entry point to the primary WEB — the ball-striking/putting disconnect."
+      },
+      {
+        "trigger": "Someone describes missing a short putt that felt like a good stroke",
+        "response": "Visceral recognition. The disconnect between feel and result is the defining emotional experience of this WEB. Q0489: 'step up to that mere formality only to yank the confounded thing left, shove it right...'"
+      },
+      {
+        "trigger": "Someone mentions the feeling of 'steering' or 'fighting' the putter",
+        "response": "Physical recognition. They know exactly what this feels like — the active effort to keep the face square through impact. This is the language bridge from pain to mechanism."
+      },
+      {
+        "trigger": "Someone shows a putter demo where the face stays square without hand manipulation",
+        "response": "Intrigue followed by skepticism followed by 'I need to try that.' The 'Let It Fall' demo is designed to trigger this exact response."
+      },
+      {
+        "trigger": "Someone shares quantified putting improvement (e.g., '4 strokes gained, 30 putts per round')",
+        "response": "Immediate attention and desire for details: 'What putter? What changed? How long did it last?' Data is the trust currency of this WEB."
+      },
+      {
+        "trigger": "Mention of LAB Golf limitations (feel, aesthetics, distance control, price)",
+        "response": "Recognition paired with validation: 'I felt the same way — the technology makes sense but the putter doesn't work for me.' This is the gap RS1 fills."
+      }
+    ]
+  },
+
+  "web_journey": {
+    "entry_points": [
+      "A stretch of 3-5 rounds with 34+ putts per round, often coinciding with good ball-striking, creating maximum frustration",
+      "A specific missed short putt that costs them a match, a personal best, or a meaningful round — the emotional catalyst",
+      "A putting lesson or fitting that reveals face angle data they didn't know about — 'your face is 2.5 degrees open at impact'",
+      "Watching a YouTube video about LAB Golf, zero-torque technology, or putter face physics — the awareness trigger",
+      "A playing partner or friend getting a face-stable putter and immediately putting better — social proof entry",
+      "Seeing their strokes-gained-putting data in Arccos, Golfmetrics, or similar apps — the quantified wake-up call",
+      "Reaching a handicap plateau where they know putting is the last lever available to go lower"
+    ],
+    "typical_path": [
+      "PHASE 1 — UNCONSCIOUS FRUSTRATION: Misses putts, blames technique, tries grip changes, stance changes, mental approaches. Buys a new putter. Gets a brief honeymoon. Regresses. Cycle repeats 2-5 times.",
+      "PHASE 2 — PATTERN RECOGNITION: Realizes the problem is consistent and specific — directional misses (pushes/pulls), especially on short putts. Starts tracking putts per round. Notices the ball-striking vs. putting gap.",
+      "PHASE 3 — ROOT CAUSE SEARCH: Googles 'why do I push putts,' 'putter face open at impact,' 'best putter for consistency.' Reads Reddit threads, GolfWRX posts, watches YouTube putting content. Discovers that face angle at impact is responsible for 80%+ of directional error.",
+      "PHASE 4 — TECHNOLOGY AWARENESS: Encounters zero-torque / face-balanced / lie-angle-balanced concepts. Learns about LAB Golf. May watch TXG or MyGolfSpy reviews. Begins to understand that the PUTTER DESIGN — not just their stroke — contributes to face angle error.",
+      "PHASE 5 — CONSIDERATION & ANXIETY: Researches LAB Golf, Spider ZT, Bettinardi Antidote, or other face-stability putters. Reads forums obsessively. Tries to demo in stores. Faces blockers: price ($449-$559 for LAB), aesthetics (center shaft, unusual head shapes), feel (aluminum face, light head), and investment anxiety ('what if it doesn't work for me?').",
+      "PHASE 6 — DECISION POINT: This is where RS1 intercepts. The golfer is educated, motivated, and blocked. RS1 enters as the option they didn't know existed: face stability through Forward Weighting (not zero torque), premium mallet aesthetics, better feel, broader stroke compatibility, and a lower price point ($399-$429 vs $449-$559).",
+      "PHASE 7 — POST-PURCHASE VALIDATION: If they buy RS1, the first 3-5 rounds determine whether they stay or return to the carousel. Immediate short-putt improvement and reduced 'steering' sensation are the validation signals. If confirmed, they become evangelists."
+    ],
+    "exit_points": [
+      "SUCCESS EXIT: Find a putter that resolves the face-stability problem (RS1, LAB, or another solution). Putting improves durably. Leave the carousel. Become an evangelist for the solution that worked.",
+      "RESIGNATION EXIT: Accept that they will always be a poor putter. Stop trying to fix it with equipment. Focus on other areas of the game. Still frustrated but no longer actively searching.",
+      "DOWNWARD EXIT: Putting problems worsen into full yips. May reduce play frequency, withdraw from competitions, or lose enjoyment of the game entirely.",
+      "LATERAL EXIT: Solve the problem through non-equipment means (mental coaching, technique breakthrough, AimPoint, etc.) and exit the equipment-search WEB without buying a face-stable putter."
+    ]
+  },
+
+  "marketing_implications": {
+    "targeting_criteria": [
+      "Golf forum users who post about putting frustration, 3-putts, or missing short putts",
+      "Golfers who search for 'LAB Golf review,' 'zero torque putter,' 'best putter for consistency,' or 'putter face open at impact'",
+      "YouTube viewers who watch putting instruction, LAB Golf reviews, or putter comparison content",
+      "Golfers who track handicap and have a GIR-to-score disconnect (high GIR, high putts per round)",
+      "Purchasers of premium golf equipment ($300+ clubs) within the past 12 months",
+      "Golfers who have purchased 2+ putters in the past 3 years (carousel behavior signal)",
+      "Members of GolfWRX, MyGolfSpy forums, r/golf, r/golfequipment subreddits",
+      "Golfers aged 35-55 who play 25+ rounds per year",
+      "Retargeting: visitors to LAB Golf, Scotty Cameron, or Evnroll product pages who did not purchase",
+      "Lookalike audiences based on Performance Golf existing customer base who fit the 5-15 handicap profile"
+    ],
+    "messaging_hooks": [
+      {
+        "hook": "Your ball-striking isn't the problem. Your putter's center of gravity is.",
+        "web_resonance": "Directly addresses the identity tension (T003) and reframes the blame from golfer to equipment physics",
+        "supported_by": ["Q0208", "Q0353", "Q0524", "Q0086"]
+      },
+      {
+        "hook": "You don't need a new stroke. You need a putter that doesn't fight the one you have.",
+        "web_resonance": "Validates the self-blame default and redirects to equipment as the variable they can control",
+        "supported_by": ["Q0101", "Q0424", "Q0160"]
+      },
+      {
+        "hook": "The putter that falls face-down. Because physics doesn't care about your nerves.",
+        "web_resonance": "Connects the 'Let It Fall' demo to the confidence/anxiety problem — the putter works regardless of mental state",
+        "supported_by": ["Q0065", "Q0085", "Q0133", "Q0219"]
+      },
+      {
+        "hook": "Every putter you've ever owned has the same design flaw. Here's why they all failed the same way.",
+        "web_resonance": "Explains the carousel — WHY nothing has worked. Creates an 'aha' moment that stops the cycle",
+        "supported_by": ["Q0099", "Q0139", "Q0399"]
+      },
+      {
+        "hook": "Face stability without the LAB compromises. Better feel. Better looks. Lower price.",
+        "web_resonance": "Directly targets the LAB-Curious Skeptic secondary WEB with a clear competitive wedge",
+        "supported_by": ["Q0397", "Q0398", "Q0400", "Q0406", "Q0462"]
+      },
+      {
+        "hook": "3-5 strokes. That's what's hiding between your ball-striking and your score.",
+        "web_resonance": "Quantifies the opportunity in terms the WEB already uses (strokes gained, putts per round)",
+        "supported_by": ["Q0524", "Q0092", "Q0363"]
+      },
+      {
+        "hook": "The last putter you'll ever buy. Not because it's perfect — because the physics are.",
+        "web_resonance": "Anti-carousel positioning. The claim is grounded in engineering, not marketing — addressing the WEB's core skepticism",
+        "supported_by": ["Q0026", "Q0424", "Q0311"]
+      },
+      {
+        "hook": "You know that feeling of fighting the putter through impact? That ends today.",
+        "web_resonance": "Uses the WEB's own language ('fighting,' 'steering,' 'holding') to describe the problem, then promises resolution",
+        "supported_by": ["Q0101", "Q0424", "Q0065"]
+      }
+    ],
+    "exclusion_statements": [
+      "This is NOT for golfers who are happy with their putting — if it's working, don't change it",
+      "This is NOT a beginner putter — if you're still learning to read greens and control speed, technique comes first",
+      "This is NOT a $99 mallet with a new name — this is precision-engineered CG placement that changes how the putter behaves at impact",
+      "This is NOT zero torque — it's something different and, for most golfers, better",
+      "This is NOT for the golfer who buys putters for the logo — this is for the golfer who buys putters for the engineering",
+      "If you don't care about making more putts inside 10 feet, this putter isn't for you"
+    ]
+  }
+}

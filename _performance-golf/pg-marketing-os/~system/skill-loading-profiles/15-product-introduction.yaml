@@ -1,0 +1,19 @@
+skill_id: "15"
+skill_name: product-introduction
+engine: main-pipeline
+arena: true
+arena_mode: generative_full_draft
+generates_copy: true
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools: []
+protocols_required:
+  - ARENA-PROTOCOL.md
+  - ARENA-CORE-PROTOCOL.md
+  - SPECIMEN-GUIDE.md
+  - PERSONA-VOICE-LOADING-PROTOCOL.md
+  - CONTEXT-RESERVOIR-TEMPLATE.md
+  - pipeline-handoff-registry.md
+  - PROSE-QUALITY-VERIFICATION.md
+protocols_optional:
+  - ACTIVE-RECITATION-PROTOCOL.md

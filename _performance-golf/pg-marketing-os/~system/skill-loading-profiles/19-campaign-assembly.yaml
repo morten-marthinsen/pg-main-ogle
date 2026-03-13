@@ -1,0 +1,11 @@
+skill_id: "19"
+skill_name: campaign-assembly
+engine: main-pipeline
+arena: false
+generates_copy: false
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools: []
+protocols_required:
+  - CONTEXT-RESERVOIR-TEMPLATE.md
+  - pipeline-handoff-registry.md

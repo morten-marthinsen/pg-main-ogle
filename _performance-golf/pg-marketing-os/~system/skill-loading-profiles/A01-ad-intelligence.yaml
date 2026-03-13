@@ -1,0 +1,12 @@
+skill_id: "A01"
+skill_name: ad-intelligence
+engine: ads
+arena: false
+generates_copy: false
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools:
+  - firecrawl
+  - apify
+protocols_required:
+  - pipeline-handoff-registry.md

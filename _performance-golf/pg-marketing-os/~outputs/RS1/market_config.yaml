@@ -1,0 +1,338 @@
+# market_config.yaml
+# RS1 Putter — Auto-generated from research brief
+# Created: 2026-03-10
+
+project:
+  name: "RS1"
+  created: "2026-03-10"
+  market_mode: "B"  # New product, no existing marketing in market
+
+terminology:
+  customer:
+    primary: "golfer"
+    plural: "golfers"
+    adjective: "putting"
+    segments:
+      - "serious amateur golfer"
+      - "low-handicap player"
+      - "equipment enthusiast"
+      - "gear junkie"
+      - "competitive golfer"
+
+  problem:
+    primary: "face drift"  # Consumer-facing name for toe flow / face opening
+    technical: "toe flow"  # Industry term (used by engineers/fitters)
+    category: "putting inconsistency"
+    related_terms:
+      - "face opening"
+      - "pushed putts"
+      - "pulled putts"
+      - "inconsistent putting"
+      - "missing short putts"
+      - "streaky putting"
+      - "putter face rotation"
+      - "face angle at impact"
+      - "steering the putter"
+
+  product:
+    type: "putter"
+    solution: "forward-weighted face-down balanced mallet putter"
+    technology_name: "Roll Straight Technology"
+    technology_brand: "RL STR8"
+    hero_feature: "Heavy Forward Weighting"
+    secondary_feature: "Face Down Balance (FDB)"
+    supporting_feature: "74° Square to Square Lie Angle"
+
+platforms:
+  tier_1:
+    - name: "Reddit r/golf"
+      type: forum
+      tool: apify
+      priority: critical
+      notes: "Largest golf community. Rich putting frustration threads, gear reviews, LAB Golf discussions."
+    - name: "GolfWRX Forums"
+      type: forum
+      tool: firecrawl
+      priority: critical
+      notes: "Premium equipment discussion. Putter-specific subforum. Serious gear enthusiasts and club builders."
+    - name: "YouTube — putting content comments"
+      type: video
+      tool: apify
+      priority: critical
+      notes: "TXG, Ian Fraser, Rick Shiels, Good Good, Brixton Albert, Eric Cogorno. Comments reveal golfer language."
+    - name: "MyGolfSpy"
+      type: review
+      tool: firecrawl
+      priority: critical
+      notes: "Independent testing and reviews. LAB Golf testing data. Premium putter comparisons."
+    - name: "Amazon putter reviews"
+      type: review
+      tool: apify
+      priority: critical
+      notes: "LAB Golf DF3, Scotty Cameron, TaylorMade Spider, Odyssey Ai-ONE reviews. Real buyer language."
+
+  tier_2:
+    - name: "Reddit r/golfequipment"
+      type: forum
+      tool: apify
+      priority: high
+      notes: "Equipment-focused subreddit. Putter comparison threads."
+    - name: "The Hackers Paradise Forum"
+      type: forum
+      tool: firecrawl
+      priority: high
+      notes: "Active review community with putter-specific discussions."
+    - name: "LAB Golf website + reviews"
+      type: competitor
+      tool: firecrawl
+      priority: high
+      notes: "Primary competitor. Map their positioning, claims, proof hierarchy, customer testimonials."
+    - name: "Reddit r/puttingtips"
+      type: forum
+      tool: apify
+      priority: high
+      notes: "Putting-specific frustration and technique discussion."
+
+  tier_3:
+    - name: "Golf Digest / Golf.com equipment reviews"
+      type: media
+      tool: firecrawl
+      priority: moderate
+      notes: "Professional reviews of premium putters. Editorial perspective."
+    - name: "Scotty Cameron / TaylorMade Spider product pages"
+      type: competitor
+      tool: firecrawl
+      priority: moderate
+      notes: "Premium competitor positioning, language, and page architecture reference."
+    - name: "Apple / VanMoof / Dyson product pages"
+      type: reference
+      tool: firecrawl
+      priority: moderate
+      notes: "Cross-industry premium product storytelling and page design reference."
+
+  blocked:
+    - name: "Facebook Groups"
+      reason: "Scraping restricted. Comments often low-quality for research."
+      alternative: "Reddit and forum discussions cover same demographic"
+
+aspects:
+  - name: "Face Control & Stability"
+    definition: "How golfers talk about keeping the putter face square through the stroke — face drift, toe flow, face opening, staying square, tracking"
+    example_terms:
+      - "face opens"
+      - "toe hangs"
+      - "stays square"
+      - "tracks straight"
+      - "face rotation"
+      - "face drift"
+      - "toe flow"
+      - "square at impact"
+      - "face angle"
+
+  - name: "Putting Consistency & Frustration"
+    definition: "The emotional experience of inconsistent putting — streakiness, missing makeable putts, self-blame, pressure putting, the 'yips'"
+    example_terms:
+      - "inconsistent"
+      - "streaky"
+      - "can't make putts"
+      - "missed short putts"
+      - "leave strokes on the green"
+      - "putting yips"
+      - "under pressure"
+      - "frustrating"
+      - "three-putt"
+
+  - name: "Technology & Engineering"
+    definition: "How golfers evaluate putter technology — MOI, CG location, weighting, balance, materials, construction, face insert, milling"
+    example_terms:
+      - "MOI"
+      - "center of gravity"
+      - "forward weighted"
+      - "face balanced"
+      - "toe hang"
+      - "zero torque"
+      - "lie angle balance"
+      - "CNC milled"
+      - "multi-material"
+      - "counterbalanced"
+
+  - name: "Feel & Feedback"
+    definition: "The sensory experience of putting — how the putter feels at impact, sound, weight in hands, confidence at address, aesthetic appeal"
+    example_terms:
+      - "feels like a blade"
+      - "solid feel"
+      - "buttery"
+      - "clicky"
+      - "heavy"
+      - "blade feel"
+      - "mallet feel"
+      - "confidence at address"
+      - "looks good over the ball"
+
+  - name: "Brand Trust & Purchase Decision"
+    definition: "How golfers decide to buy a premium putter — brand credibility, price justification, switching barriers, peer validation, tour use"
+    example_terms:
+      - "worth the money"
+      - "overpriced"
+      - "tried it"
+      - "switched to"
+      - "gamechanger"
+      - "can't go back"
+      - "trust"
+      - "tour proven"
+      - "who uses it"
+
+competitors:
+  known:
+    - name: "LAB Golf"
+      type: direct
+      positioning: "Zero-torque / Lie Angle Balance. Eliminates mechanical face rotation. 'Stays square.' Premium DTC with strong creator/testimonial content."
+      models: ["DF3", "DF2.1", "Mezz.1"]
+      price: "$449-$549"
+      key_claim: "Zero torque means the putter doesn't twist"
+      weakness_hypotheses:
+        - "Distance control complaints"
+        - "Unconventional aesthetics"
+        - "Heavy feel requires adaptation"
+        - "Still requires player to control face rotation (ZT is passive, not active)"
+    - name: "Scotty Cameron"
+      type: indirect
+      positioning: "Heritage + tour-proven craft. Collector-oriented. Status symbol. Premium milled construction."
+      models: ["Special Select Newport 2", "Phantom X"]
+      price: "$449-$479"
+      key_claim: "Tour-validated precision craftsmanship"
+    - name: "TaylorMade Spider"
+      type: indirect
+      positioning: "High MOI stability + alignment. Tour-winning performance. Modern tech."
+      models: ["Spider Tour X", "Spider GT"]
+      price: "$349-$399"
+      key_claim: "Most stable, most forgiving, most wins on Tour"
+    - name: "Odyssey"
+      type: indirect
+      positioning: "AI face tech + stroke-type matching. 'Stroke balanced / square-to-square' messaging."
+      models: ["Ai-ONE Jailbird", "Tri-Hot 5K"]
+      price: "$299-$349"
+      key_claim: "AI-designed insert for consistent ball speeds"
+    - name: "Evnroll"
+      type: indirect
+      positioning: "Sweet Face Technology — variable grooves gear ball back to center on mis-hits."
+      models: ["ER2 MidBlade", "ER5 Hatchback"]
+      price: "$379-$429"
+      key_claim: "Face technology genuinely improves roll consistency"
+    - name: "Bettinardi"
+      type: indirect
+      positioning: "Boutique craftsmanship. Beautiful aesthetics. Hand-crafted in Chicago."
+      models: ["Queen B 6", "Studio Stock"]
+      price: "$350-$400"
+      key_claim: "Premium hand-crafted feel and aesthetics"
+    - name: "PXG"
+      type: indirect
+      positioning: "Aggressive tech + value positioning. Military-inspired."
+      models: ["Battle Ready II Blackjack"]
+      price: "$329-$379"
+      key_claim: "Premium performance at accessible pricing"
+    - name: "Ping"
+      type: indirect
+      positioning: "Engineering heritage. Custom fitting excellence."
+      models: ["Vault 2.0 Anser"]
+      price: "$375-$425"
+      key_claim: "Precision engineering with custom fitting"
+
+  terminology:
+    comparison_phrases:
+      - "[putter A] vs [putter B]"
+      - "switched from [X] to [Y]"
+      - "better than my [old putter]"
+      - "compared to [competitor]"
+      - "is [X] worth it over [Y]"
+    category_terms:
+      - "premium putter"
+      - "high-end putter"
+      - "mallet putter"
+      - "face balanced putter"
+      - "zero torque putter"
+      - "forward weighted putter"
+      - "best putter for"
+
+emotional_context:
+  fears:
+    - "Spending $400+ on a putter that doesn't improve their putting"
+    - "Looking foolish with an unconventional putter design"
+    - "That their putting problems are their fault (technique), not equipment"
+    - "Being 'sold' on technology that's just marketing hype"
+    - "Missing a critical putt under pressure and blaming equipment choice"
+    - "Buying from a non-traditional brand and regretting it"
+
+  frustrations:
+    - "Inconsistency on the greens despite solid ball-striking"
+    - "Leaving 3-5 strokes on the green every round"
+    - "Missing short putts (inside 6 feet) that should be automatic"
+    - "Feeling like they have to 'steer' or 'hold' the putter face square"
+    - "Pushed and pulled putts that felt like good strokes"
+    - "The putting yips or 'twitchy hands' under pressure"
+    - "Trying multiple putters and nothing feels consistently better"
+    - "Watching playing partners drain putts with seemingly no effort"
+
+  hopes:
+    - "A putter that 'does the work for you' — less manipulation, more consistency"
+    - "Finally feeling confident over every putt, especially the pressure ones"
+    - "The experience of seeing putts roll true on the intended line"
+    - "Dropping 3-5 strokes per round just by putting better"
+    - "Owning equipment that's genuinely engineered, not just marketed"
+    - "A putter they'll never want to replace — the 'last putter I'll ever buy'"
+    - "The calm feeling of trusting the putter instead of fighting it"
+
+  identity:
+    current: "Golfer who can hit the ball well but loses strokes on the green. Feels like putting is the weakest part of their game. May have tried several putters. Knows enough about technology to be dangerous but not enough to know what actually matters."
+    aspirational: "The golfer at the club who everyone asks 'what putter is that?' — someone who made a smart equipment decision based on real engineering, not hype. The person who's calm over every putt because they trust their equipment."
+    anti_identity: "The guy who buys the latest shiny putter every year and still can't putt. The sucker who falls for marketing. The golfer who spent $500 on a Scotty because of the logo, not the engineering."
+
+query_patterns:
+  pain_queries:
+    - "putting frustration reddit"
+    - "can't make short putts"
+    - "inconsistent putting help"
+    - "why do I push putts"
+    - "putter face opens during stroke"
+    - "missing putts under pressure"
+    - "putting yips"
+    - "three putt too often"
+    - "leaving strokes on the green"
+    - "putter face drift"
+    - "toe flow problem putting"
+  hope_queries:
+    - "best putter for consistency"
+    - "putter that stays square"
+    - "how to putt more consistently"
+    - "best putter 2025 2026"
+    - "putter that helps your stroke"
+    - "forward weighted putter benefits"
+    - "face balanced putter advantage"
+    - "reduced face rotation putter"
+  competitor_queries:
+    - "LAB Golf review"
+    - "LAB Golf DF3 review"
+    - "LAB Golf vs Scotty Cameron"
+    - "is LAB Golf worth it"
+    - "LAB Golf distance control"
+    - "LAB Golf problems"
+    - "zero torque putter review"
+    - "lie angle balance putter"
+    - "Scotty Cameron vs TaylorMade Spider"
+    - "best premium putter reddit"
+    - "LAB Golf switched to"
+  villain_queries:
+    - "putter companies marketing hype"
+    - "are premium putters worth it"
+    - "putter technology scam"
+    - "overpriced putters"
+    - "why do putters cost so much"
+    - "putter fitting waste of money"
+  solutions_tried_queries:
+    - "switched putters and"
+    - "tried LAB Golf"
+    - "went back to blade putter"
+    - "putter fitting experience"
+    - "new putter didn't help"
+    - "changed putters nothing changed"
+    - "putting lessons didn't work"

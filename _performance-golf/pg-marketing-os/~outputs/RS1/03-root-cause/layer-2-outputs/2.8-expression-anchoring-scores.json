@@ -1,0 +1,529 @@
+{
+  "expression_anchoring_scores": {
+    "skill": "03-root-cause",
+    "timestamp": "2026-03-10T20:30:00Z",
+    "protocol_version": "1.0",
+
+    "inputs": {
+      "research_quotes_loaded": 20,
+      "tier1_references_loaded": 4,
+      "fssit_candidates_loaded": 9,
+      "fssit_mode": "fssit",
+      "quote_first_candidates_generated": 3
+    },
+
+    "candidates": [
+      {
+        "id": "simple_reframe_C",
+        "expression": "Every putter you've ever owned has its weight in the wrong place. Behind the shaft. Creating a gravitational pull that drifts the face open during the stroke. Your hands compensate. But that compensation is imperfect, changes from putt to putt, and falls apart under pressure. Your technique was never the problem. The weight was in the wrong place.",
+        "expression_method": "simple_reframe",
+        "source": "concept_down",
+        "anchor_phrase": "You've been fighting gravity.",
+
+        "scores": {
+          "quote_penetration": {
+            "score": 8.4,
+            "top_5_quotes": [
+              {
+                "quote": "I could feel regular putters try to twist during my putting stroke. The bigger the stroke, the more twisting. I had to actively compensate that twist during the stroke to keep the face square.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0424"
+              },
+              {
+                "quote": "Stroke is very consistent, but consistently leaving putterface 2.5+ degrees open at impact.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0505"
+              },
+              {
+                "quote": "I found I was opening the face up when I took my putter back. Subconsciously, I suppose, I knew something was wrong and my body would try to correct at the last moment.",
+                "overlap_score": 8,
+                "source_bucket": "pain",
+                "quote_id": "Q0782"
+              },
+              {
+                "quote": "I am a decent putter, but struggled with shorter putts. Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0101"
+              },
+              {
+                "quote": "I've used every variation of putters and grips and techniques but the only thing that helps me is time on the practice putting green.",
+                "overlap_score": 7,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0099"
+              }
+            ]
+          },
+
+          "tier1_pattern_match": {
+            "score": 9,
+            "matched_pattern": "Simple reframe with externalization -- blame shifted from golfer to equipment physics. Mirrors pg_ssts_vsl_001 ('biggest misconception in golf') and pg_fixd_vsl_001 ('ONE root cause'). Uses scientific_discovery + blame_removal reframe combination.",
+            "tier1_sources": ["pg_ssts_vsl_001", "pg_fixd_vsl_001", "pg_sf1_vsl_001", "pg_one_vsl_001"]
+          },
+
+          "fssit_echo": {
+            "score": 9,
+            "strongest_fssit": "ELG-01 (The Technique Deflection): 'A growing, unacknowledged suspicion that something is fundamentally wrong with the equipment, combined with shame at the idea that they might be blaming the arrow instead of the archer.' This expression directly validates that latent suspicion.",
+            "connection_type": "direct"
+          }
+        },
+
+        "composite": 8.72,
+        "status": "proceed",
+        "revision_guidance": null
+      },
+
+      {
+        "id": "soft_villain_A",
+        "expression": "Golf has trained you to blame yourself for a problem that was never yours. Virtually every putter has its weight behind the shaft. That's a gravitational force pulling the face open. You didn't fail. You were fighting physics with your bare hands.",
+        "expression_method": "villain_personification",
+        "source": "concept_down",
+        "anchor_phrase": "You didn't fail. You were fighting physics.",
+
+        "scores": {
+          "quote_penetration": {
+            "score": 8.2,
+            "top_5_quotes": [
+              {
+                "quote": "I think that buying your way out of trouble is just a quick fix -- you'll feel more confidence with the new stick initially but you know full well that the club hasn't changed. That means it can't be the stick, it's you.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0139"
+              },
+              {
+                "quote": "Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0101"
+              },
+              {
+                "quote": "I found I was opening the face up when I took my putter back. Subconsciously... my body would try to correct at the last moment. It was horrifying and demoralizing.",
+                "overlap_score": 8,
+                "source_bucket": "pain",
+                "quote_id": "Q0782"
+              },
+              {
+                "quote": "The data all shows that tech in this particular tool doesn't matter much... What is left? Confidence, preference and the person using the tool.",
+                "overlap_score": 8,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0385"
+              },
+              {
+                "quote": "I've been trying to buy a game for almost 40 years. The only thing that's lowered my handicap all these years is actually playing golf.",
+                "overlap_score": 7,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0475"
+              }
+            ]
+          },
+
+          "tier1_pattern_match": {
+            "score": 8,
+            "matched_pattern": "Blame removal externalization. Matches the emotional core of pg_fixd_vsl_001 (forgotten fundamental -- it wasn't your fault) and the villain pattern in health vault swipes (adapted for golf with soft intensity).",
+            "tier1_sources": ["pg_fixd_vsl_001", "pg_sf1_vsl_001"]
+          },
+
+          "fssit_echo": {
+            "score": 9,
+            "strongest_fssit": "ELG-04 (The Confidence Attribution Error): Golfers attribute putting problems to mental weakness when they are actually experiencing equipment-induced physics. This expression names that attribution error directly.",
+            "connection_type": "direct"
+          }
+        },
+
+        "composite": 8.42,
+        "status": "proceed",
+        "revision_guidance": null
+      },
+
+      {
+        "id": "evolutionary_narrative",
+        "expression": "Putters haven't changed in a fundamental way for a long time. Head shapes, materials, alignment aids evolved. But the weight stayed behind the shaft. Every brand. Every model. What if it went forward instead of back?",
+        "expression_method": "simple_reframe",
+        "source": "concept_down",
+        "anchor_phrase": "What if the weight went forward instead of back?",
+
+        "scores": {
+          "quote_penetration": {
+            "score": 6.8,
+            "top_5_quotes": [
+              {
+                "quote": "Because LAB's whole thing is ZERO torque, they've kind of designed themselves into a corner.",
+                "overlap_score": 7,
+                "source_bucket": "pain",
+                "quote_id": "Q0462"
+              },
+              {
+                "quote": "Axis1 goes a step further in getting CG forward and on with the face, which IMO is the most technically advanced CG location.",
+                "overlap_score": 8,
+                "source_bucket": "root_cause",
+                "quote_id": "Q0463"
+              },
+              {
+                "quote": "The data all shows that tech in this particular tool doesn't matter much.",
+                "overlap_score": 6,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0385"
+              },
+              {
+                "quote": "I've used every variation of putters and grips and techniques but the only thing that helps me is time on the practice putting green.",
+                "overlap_score": 6,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0099"
+              },
+              {
+                "quote": "Nothing will improve your putting more than hours of practice. There is no need to keep changing putters, they aren't magic wands.",
+                "overlap_score": 7,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q1387"
+              }
+            ]
+          },
+
+          "tier1_pattern_match": {
+            "score": 8,
+            "matched_pattern": "Evolutionary/progressive narrative. Less common in TIER1 vault (which tends toward direct reframe), but aligns with Soul.md's explicit requirement for evolutionary framing.",
+            "tier1_sources": ["pg_sf1_vsl_001"]
+          },
+
+          "fssit_echo": {
+            "score": 7,
+            "strongest_fssit": "ELG-03 (The Carousel Denial): The evolutionary narrative implies that the carousel never had a different option available -- which validates the latent feeling that 'maybe this one will be different' was never possible until now.",
+            "connection_type": "thematic"
+          }
+        },
+
+        "composite": 7.24,
+        "status": "proceed",
+        "revision_guidance": "Strengthen quote penetration by incorporating more audience vocabulary ('fighting', 'steering', 'compensating'). Currently more observational than experiential."
+      },
+
+      {
+        "id": "bent_arrow_metaphor",
+        "expression": "Golf has always said: 'It's the archer, not the arrow.' But what if the arrow has been bent this whole time? Your putter's weight sits behind the shaft. That's the bend. Moving it forward straightens the arrow.",
+        "expression_method": "metaphor",
+        "source": "concept_down",
+        "anchor_phrase": "What if the arrow has been bent this whole time?",
+
+        "scores": {
+          "quote_penetration": {
+            "score": 7.8,
+            "top_5_quotes": [
+              {
+                "quote": "I think that buying your way out of trouble is just a quick fix... That means it can't be the stick, it's you.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0139"
+              },
+              {
+                "quote": "I am a decent putter, but struggled with shorter putts. Felt like I was always fighting the putter. Thought it was my stroke.",
+                "overlap_score": 8,
+                "source_bucket": "pain",
+                "quote_id": "Q0101"
+              },
+              {
+                "quote": "You will never be a good putter if you think it is all about the putter. Putting is about practicing.",
+                "overlap_score": 8,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q1386"
+              },
+              {
+                "quote": "why can the wrong putter actually affect your putting game... it might not actually even be your putting per se it could be you're just playing with the wrong putter.",
+                "overlap_score": 7,
+                "source_bucket": "root_cause",
+                "quote_id": "Q0258"
+              },
+              {
+                "quote": "The only thing that's lowered my handicap all these years is actually playing golf.",
+                "overlap_score": 7,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0475"
+              }
+            ]
+          },
+
+          "tier1_pattern_match": {
+            "score": 7,
+            "matched_pattern": "Subverted cliche as entry point. Less common in TIER1 golf vault, but effective for attention and memorability. Closest match: pg_sf1_vsl_001 which subverts 'every slice fix does the same thing.'",
+            "tier1_sources": ["pg_sf1_vsl_001"]
+          },
+
+          "fssit_echo": {
+            "score": 8,
+            "strongest_fssit": "ELG-01 (The Technique Deflection): The bent arrow metaphor directly names the latent suspicion that the equipment, not the golfer, is the variable. The cliche subversion lands because golfers KNOW the phrase and have been policed by it.",
+            "connection_type": "direct"
+          }
+        },
+
+        "composite": 7.64,
+        "status": "proceed",
+        "revision_guidance": null
+      },
+
+      {
+        "id": "toe_flow_reframe",
+        "expression": "The industry called it 'toe flow.' That's marketing. The face drifts open because the weight is behind the shaft. You've been fitted for the optimal amount of a design flaw.",
+        "expression_method": "villain_personification",
+        "source": "concept_down",
+        "anchor_phrase": "You've been fitted for the optimal amount of a design flaw.",
+
+        "scores": {
+          "quote_penetration": {
+            "score": 7.6,
+            "top_5_quotes": [
+              {
+                "quote": "based on Puttlab measurements I average 0.5 degrees open and my path averages 0.5 degrees left so I need a little torque/'toe hang' in my putter.",
+                "overlap_score": 8,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0433"
+              },
+              {
+                "quote": "LAB putters aren't bad but zero torque isn't what everyone needs. Why would I want to change my consistent stroke?",
+                "overlap_score": 7,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0434"
+              },
+              {
+                "quote": "I could feel regular putters try to twist during my putting stroke. The bigger the stroke, the more twisting.",
+                "overlap_score": 8,
+                "source_bucket": "pain",
+                "quote_id": "Q0424"
+              },
+              {
+                "quote": "Spider ZT is the best bar none, but I honestly dont like zero torque at all, I think for people who dont practice putting... toe hang is where its at.",
+                "overlap_score": 8,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q1359"
+              },
+              {
+                "quote": "All that said, I still don't think normal putters with torque require that much hand pressure to control them.",
+                "overlap_score": 7,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0481"
+              }
+            ]
+          },
+
+          "tier1_pattern_match": {
+            "score": 7,
+            "matched_pattern": "False-solution expose / reframe of existing vocabulary. Matches contrarian_truth reframe technique.",
+            "tier1_sources": ["pg_ssts_vsl_001"]
+          },
+
+          "fssit_echo": {
+            "score": 7,
+            "strongest_fssit": "Cultural timing signal: zero-torque copycats are commoditizing LAB's mechanism, creating an opening for 'what comes after zero torque?' The toe flow reframe positions forward weighting as the answer by exposing that toe flow was never a feature.",
+            "connection_type": "thematic"
+          }
+        },
+
+        "composite": 7.24,
+        "status": "proceed",
+        "revision_guidance": "Strong for solution-aware segment (38%). May need softening for problem-aware segment who don't know 'toe flow' vocabulary."
+      },
+
+      {
+        "id": "quote_first_A",
+        "expression": "You felt it -- your putter fighting you through impact. You compensated. You thought it was your stroke. It wasn't. The weight behind the shaft was pulling the face open. Your hands were doing exactly what they should -- fighting a force the putter created.",
+        "expression_method": "simple_reframe",
+        "source": "quote_first",
+        "anchor_phrase": "You felt it. It wasn't your stroke.",
+
+        "scores": {
+          "quote_penetration": {
+            "score": 9.0,
+            "top_5_quotes": [
+              {
+                "quote": "I could feel regular putters try to twist during my putting stroke.",
+                "overlap_score": 10,
+                "source_bucket": "pain",
+                "quote_id": "Q0424"
+              },
+              {
+                "quote": "Felt like I was always fighting the putter, no matter what I tried. Thought it was my stroke.",
+                "overlap_score": 10,
+                "source_bucket": "pain",
+                "quote_id": "Q0101"
+              },
+              {
+                "quote": "I found I was opening the face up... my body would try to correct at the last moment.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0782"
+              },
+              {
+                "quote": "I feel like I have to steer the putter through impact just to keep it on line.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0065"
+              },
+              {
+                "quote": "Since it varied with how hard I swung the putter, it was a constant issue chasing the exact right amount of compensation.",
+                "overlap_score": 8,
+                "source_bucket": "pain",
+                "quote_id": "Q0424b"
+              }
+            ]
+          },
+
+          "tier1_pattern_match": {
+            "score": 8,
+            "matched_pattern": "Experience-first entry using audience's own sensation vocabulary ('fighting', 'steering', 'compensating'). Matches pg_fixd_vsl_001 pattern of starting with the golfer's felt experience.",
+            "tier1_sources": ["pg_fixd_vsl_001", "pg_ssts_vsl_001"]
+          },
+
+          "fssit_echo": {
+            "score": 9,
+            "strongest_fssit": "ELG-01 (The Technique Deflection): This expression directly names the sensation ('fighting') that golfers feel but redirect to self-blame. Highest FSSIT echo because it validates a physical experience they have been denying.",
+            "connection_type": "direct"
+          }
+        },
+
+        "composite": 8.70,
+        "status": "proceed",
+        "revision_guidance": null
+      },
+
+      {
+        "id": "quote_first_B",
+        "expression": "You make everything on the practice green. On the course, it falls apart. That's not mental weakness. That's physics. Under pressure, your grip tightens. In a putter with the weight behind the shaft, a tighter grip means more face drift. The practice green didn't lie -- your putter just performs differently under pressure.",
+        "expression_method": "simple_reframe",
+        "source": "quote_first",
+        "anchor_phrase": "The practice green didn't lie. Your putter performs differently under pressure.",
+
+        "scores": {
+          "quote_penetration": {
+            "score": 8.6,
+            "top_5_quotes": [
+              {
+                "quote": "Everytime i demo them in store, i make everything. But i can also say the same with the other putters. Its so easy to putt in store. Its a different story on the course.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0471"
+              },
+              {
+                "quote": "I'm a wreck on the greens right now -- total neuroses. Shaking over every putt.",
+                "overlap_score": 8,
+                "source_bucket": "pain",
+                "quote_id": "Q0085"
+              },
+              {
+                "quote": "I was utterly terrified on the greens early on. I didn't have any reason to be nervous. I just was.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0065"
+              },
+              {
+                "quote": "Obviously the more putts I miss, the less confidence I have -- not just on the immediate stroke, but also for the one I will have to make when I inevitably miss.",
+                "overlap_score": 8,
+                "source_bucket": "pain",
+                "quote_id": "Q0087"
+              },
+              {
+                "quote": "It's terrible, and it's a terrible feeling standing over a putt that is dead flat and maybe 30 inches and not having any confidence to make it.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0634"
+              }
+            ]
+          },
+
+          "tier1_pattern_match": {
+            "score": 7,
+            "matched_pattern": "Pressure-specific angle. Not common as primary TIER1 root cause but strong as supporting element. Concept E from derivation.",
+            "tier1_sources": ["pg_sf1_vsl_001"]
+          },
+
+          "fssit_echo": {
+            "score": 9,
+            "strongest_fssit": "ELG-04 (The Confidence Attribution Error): 'A feeling of physical betrayal by their own hands and body that they cannot explain through the mental-game framework.' This expression names the practice-to-course gap as equipment physics, not mental weakness.",
+            "connection_type": "direct"
+          }
+        },
+
+        "composite": 8.28,
+        "status": "proceed",
+        "revision_guidance": null
+      },
+
+      {
+        "id": "quote_first_C",
+        "expression": "Every putter on the carousel missed the same way because they all had the same flaw. Different brand, different shape, different price -- same weight behind the shaft. You weren't picking wrong. Every choice had the same physics.",
+        "expression_method": "simple_reframe",
+        "source": "quote_first",
+        "anchor_phrase": "Every putter on the carousel missed the same way.",
+
+        "scores": {
+          "quote_penetration": {
+            "score": 8.2,
+            "top_5_quotes": [
+              {
+                "quote": "I've used every variation of putters and grips and techniques but the only thing that helps me is time on the practice putting green.",
+                "overlap_score": 8,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0099"
+              },
+              {
+                "quote": "Since then I've picked up at least 20 different putters.",
+                "overlap_score": 9,
+                "source_bucket": "pain",
+                "quote_id": "Q0874"
+              },
+              {
+                "quote": "I am one of those users that got fitted, customized it, spent the money only to sell it for a loss cause it actually didn't make me any better.",
+                "overlap_score": 8,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0441"
+              },
+              {
+                "quote": "I liked the story of LAB and AS. So I bought the Mezz broomstick without trying. It did not work well. I bought DF3. It worked better but not impressive. So I bought the LINK.",
+                "overlap_score": 8,
+                "source_bucket": "solutions_tried",
+                "quote_id": "Q0399"
+              },
+              {
+                "quote": "Every new putter is just a honeymoon waiting to end.",
+                "overlap_score": 8,
+                "source_bucket": "pain",
+                "quote_id": "belief_analysis"
+              }
+            ]
+          },
+
+          "tier1_pattern_match": {
+            "score": 7,
+            "matched_pattern": "Carousel explanation. Not a common TIER1 primary pattern but highly specific to putter market behavioral data.",
+            "tier1_sources": ["pg_one_vsl_001"]
+          },
+
+          "fssit_echo": {
+            "score": 8,
+            "strongest_fssit": "ELG-03 (The Carousel Denial): 'A mixture of self-contempt, helplessness, and a stubborn, irrational hope that refuses to die.' This expression validates the carousel experience by explaining WHY it never worked -- removing the self-contempt.",
+            "connection_type": "direct"
+          }
+        },
+
+        "composite": 7.82,
+        "status": "proceed",
+        "revision_guidance": null
+      }
+    ],
+
+    "summary": {
+      "total_candidates": 8,
+      "proceeded": 8,
+      "flagged": 0,
+      "rejected": 0,
+      "quote_first_vs_concept_down": "3 quote-first, 5 concept-down",
+      "gate_result": "PASS",
+      "weakest_dimension_overall": "tier1_pattern_match (some expressions break new ground not well-represented in existing TIER1 vault, which is expected for a premium equipment product vs. instruction products)",
+      "strongest_dimension_overall": "fssit_echo (the A+B root cause directly validates latent emotions identified in research -- especially ELG-01 Technique Deflection and ELG-04 Confidence Attribution Error)",
+      "top_3_by_composite": [
+        {"id": "simple_reframe_C", "composite": 8.72},
+        {"id": "quote_first_A", "composite": 8.70},
+        {"id": "soft_villain_A", "composite": 8.42}
+      ]
+    }
+  }
+}

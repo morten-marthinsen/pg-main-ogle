@@ -1,0 +1,504 @@
+{
+  "hooks_by_emotion": {
+    "version": "1.0",
+    "created": "2026-03",
+    "source": "Derived from hook-taxonomy.json",
+    "description": "Hook types organized by the primary emotion they trigger, with intensity ratings and content function mappings"
+  },
+  "emotions": {
+    "curiosity": {
+      "description": "Triggers the need to know, understand, or discover — creates an open loop the brain must close",
+      "arousal_level": "high",
+      "sharing_propensity": "medium",
+      "hooks": [
+        {
+          "type": "Curiosity Gap",
+          "category": "curiosity_hooks",
+          "pattern": "Promise information, withhold delivery",
+          "examples": [
+            "The reason most people fail at {X} is...",
+            "What nobody tells you about {X}...",
+            "The {X} mistake that cost me {Y}..."
+          ],
+          "intensity": 9,
+          "best_platforms": ["all"],
+          "best_content_functions": ["awareness", "educational"]
+        },
+        {
+          "type": "Number Reveal",
+          "category": "curiosity_hooks",
+          "pattern": "Tease specific number/result",
+          "examples": [
+            "How I went from {X} to {Y} in {time}...",
+            "The {number}-step process that {result}...",
+            "{$X} in {time} with this strategy..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["awareness", "educational"]
+        }
+      ],
+      "organic_marketing_application": "Curiosity hooks are the highest-performing hook emotion for educational content. Use to drive video watch-through and carousel swipes. The open loop must be closed within the content — never clickbait without payoff."
+    },
+    "intrigue": {
+      "description": "Deeper than curiosity — suggests hidden, exclusive, or secret knowledge that changes perception",
+      "arousal_level": "high",
+      "sharing_propensity": "high",
+      "hooks": [
+        {
+          "type": "Secret Reveal",
+          "category": "curiosity_hooks",
+          "pattern": "Promise insider/exclusive information",
+          "examples": [
+            "The secret {industry} doesn't want you to know...",
+            "After {experience}, I learned what they don't teach...",
+            "Inside information from {authority source}..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["YouTube", "LinkedIn", "TikTok"],
+          "best_content_functions": ["awareness", "authority"]
+        },
+        {
+          "type": "Contrarian Take",
+          "category": "controversy_hooks",
+          "pattern": "Disagree with common belief",
+          "examples": [
+            "Unpopular opinion: {X} is actually {opposite}...",
+            "Everyone says {X}. Here's why they're wrong...",
+            "The {industry} lie everyone believes..."
+          ],
+          "intensity": 9,
+          "best_platforms": ["LinkedIn", "X", "YouTube"],
+          "best_content_functions": ["thought_leadership", "engagement"]
+        },
+        {
+          "type": "Confession",
+          "category": "shock_hooks",
+          "pattern": "Admit something unexpected",
+          "examples": [
+            "I lied about {X}...",
+            "I've been hiding this...",
+            "Nobody knows this, but..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["authenticity", "engagement"]
+        }
+      ],
+      "organic_marketing_application": "Intrigue hooks drive the highest share rates because they make the sharer look 'in the know.' Best for authority positioning content and contrarian takes that position the creator as an insider voice."
+    },
+    "surprise": {
+      "description": "Pattern interrupt — violates expectations, forcing attention reallocation",
+      "arousal_level": "very_high",
+      "sharing_propensity": "very_high",
+      "hooks": [
+        {
+          "type": "Myth Buster",
+          "category": "controversy_hooks",
+          "pattern": "Promise to disprove common assumption",
+          "examples": [
+            "Stop doing {common practice}. Here's why...",
+            "The {X} myth is costing you {Y}...",
+            "{Common advice} is actually terrible advice..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["educational", "authority"]
+        },
+        {
+          "type": "Visual Interrupt",
+          "category": "shock_hooks",
+          "pattern": "Unexpected visual in first frame",
+          "examples": [
+            "[Unusual image/scene that doesn't match expectation]",
+            "[Before/after that seems impossible]",
+            "[Action mid-motion that captures attention]"
+          ],
+          "intensity": 9,
+          "best_platforms": ["TikTok", "Instagram", "YouTube"],
+          "best_content_functions": ["awareness", "viral"]
+        }
+      ],
+      "organic_marketing_application": "Surprise is the highest-arousal emotion for sharing (per Berger's research). Visual interrupts are the #1 hook type for short-form video. Myth busters work exceptionally well on LinkedIn and YouTube."
+    },
+    "shock": {
+      "description": "Extreme surprise that creates a visceral, involuntary attention response",
+      "arousal_level": "very_high",
+      "sharing_propensity": "high",
+      "hooks": [
+        {
+          "type": "Bold Claim",
+          "category": "shock_hooks",
+          "pattern": "Make statement that demands attention",
+          "examples": [
+            "{Extreme result} in {short time}...",
+            "I {unexpected action} and here's what happened...",
+            "This changed my entire {area}..."
+          ],
+          "intensity": 9,
+          "best_platforms": ["TikTok", "Instagram", "YouTube"],
+          "best_content_functions": ["awareness", "results"]
+        }
+      ],
+      "organic_marketing_application": "Use sparingly — shock hooks create high initial attention but can damage trust if the claim isn't substantiated. Best for transformation content where the proof is in the content itself."
+    },
+    "anticipation": {
+      "description": "Forward-looking excitement — the brain simulates the upcoming reward",
+      "arousal_level": "medium_high",
+      "sharing_propensity": "medium",
+      "hooks": [
+        {
+          "type": "Incomplete Loop",
+          "category": "curiosity_hooks",
+          "pattern": "Start a story without resolution",
+          "examples": [
+            "I was about to give up when...",
+            "Something happened yesterday that changed everything...",
+            "Three weeks ago I made a decision..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["Instagram", "TikTok", "YouTube"],
+          "best_content_functions": ["story", "engagement"]
+        },
+        {
+          "type": "How-To Promise",
+          "category": "value_hooks",
+          "pattern": "Clear outcome from watching/reading",
+          "examples": [
+            "How to {desired outcome} in {time}...",
+            "The exact steps to {goal}...",
+            "{Number} ways to {benefit}..."
+          ],
+          "intensity": 7,
+          "best_platforms": ["YouTube", "Instagram", "LinkedIn"],
+          "best_content_functions": ["educational", "conversion"]
+        }
+      ],
+      "organic_marketing_application": "Anticipation hooks create the strongest watch-through/read-through rates because the brain is already simulating the reward. Pair with strong payoff content."
+    },
+    "engagement": {
+      "description": "Active involvement — pulls the audience into the narrative as participants",
+      "arousal_level": "high",
+      "sharing_propensity": "medium",
+      "hooks": [
+        {
+          "type": "In Media Res",
+          "category": "story_hooks",
+          "pattern": "Start in the middle of action",
+          "examples": [
+            "I was standing in line when...",
+            "The email came at 3am...",
+            "My phone rang. It was {person}..."
+          ],
+          "intensity": 9,
+          "best_platforms": ["Instagram", "TikTok", "YouTube"],
+          "best_content_functions": ["story", "awareness"]
+        }
+      ],
+      "organic_marketing_application": "In media res is the most powerful story hook — it bypasses the 'should I watch this?' decision by immediately placing the viewer inside a scene. Essential for video content."
+    },
+    "empathy": {
+      "description": "Mirror neuron activation — the audience feels what the creator describes",
+      "arousal_level": "medium",
+      "sharing_propensity": "high",
+      "hooks": [
+        {
+          "type": "Transformation Start",
+          "category": "story_hooks",
+          "pattern": "Begin at the low point",
+          "examples": [
+            "Two years ago I was {bad state}...",
+            "I hit rock bottom when...",
+            "Before I figured this out, I was {struggle}..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["transformation", "community"]
+        },
+        {
+          "type": "Pain Point",
+          "category": "emotional_hooks",
+          "pattern": "Speak directly to struggle",
+          "examples": [
+            "If you're struggling with {X}...",
+            "Tired of {frustration}?",
+            "I know how it feels when {pain}..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["solution_content", "community"]
+        }
+      ],
+      "organic_marketing_application": "Empathy hooks build the deepest audience connection. They're essential for community content and create 'me too' responses in comments. Best for building superfan relationships per Flynn's model."
+    },
+    "trust": {
+      "description": "Credibility and authority signals that reduce skepticism and increase receptivity",
+      "arousal_level": "low_medium",
+      "sharing_propensity": "medium",
+      "hooks": [
+        {
+          "type": "Credential Lead",
+          "category": "authority_hooks",
+          "pattern": "Lead with proof of expertise",
+          "examples": [
+            "After {impressive credential}, here's what I know...",
+            "I've {authority builder} and this is what works...",
+            "As someone who {experience}..."
+          ],
+          "intensity": 7,
+          "best_platforms": ["LinkedIn", "YouTube"],
+          "best_content_functions": ["educational", "authority"]
+        },
+        {
+          "type": "Results Proof",
+          "category": "authority_hooks",
+          "pattern": "Lead with specific outcomes",
+          "examples": [
+            "This generated {$X} in {time}...",
+            "I went from {A} to {B} using this...",
+            "{X} clients have used this to {result}..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["conversion", "authority"]
+        },
+        {
+          "type": "Time Stamp",
+          "category": "story_hooks",
+          "pattern": "Anchor to specific moment",
+          "examples": [
+            "At 27, I realized...",
+            "On March 15th, everything changed...",
+            "Three hours before the launch..."
+          ],
+          "intensity": 7,
+          "best_platforms": ["all"],
+          "best_content_functions": ["story", "authenticity"]
+        }
+      ],
+      "organic_marketing_application": "Trust hooks convert better than any other emotion for mid-funnel content. Use credential leads sparingly (LinkedIn/YouTube) and results proof more broadly. The time stamp creates specificity that signals truth."
+    },
+    "desire": {
+      "description": "Aspiration and wanting — activates the brain's reward anticipation circuits",
+      "arousal_level": "high",
+      "sharing_propensity": "medium",
+      "hooks": [
+        {
+          "type": "Aspiration",
+          "category": "emotional_hooks",
+          "pattern": "Paint desired future state",
+          "examples": [
+            "Imagine {ideal outcome}...",
+            "What if you could {dream result}...",
+            "This is what {goal} actually looks like..."
+          ],
+          "intensity": 7,
+          "best_platforms": ["Instagram", "YouTube"],
+          "best_content_functions": ["inspirational", "lifestyle"]
+        },
+        {
+          "type": "Social Proof",
+          "category": "authority_hooks",
+          "pattern": "Reference others' success/endorsement",
+          "examples": [
+            "{Famous person/company} uses this...",
+            "This is how {X} built their {Y}...",
+            "The strategy behind {successful example}..."
+          ],
+          "intensity": 7,
+          "best_platforms": ["all"],
+          "best_content_functions": ["aspirational", "educational"]
+        }
+      ],
+      "organic_marketing_application": "Desire hooks drive saves and bookmarks (people saving content for 'future me'). Pair with value content that delivers on the aspirational promise."
+    },
+    "urgency": {
+      "description": "Time pressure and fear of missing out — activates loss aversion",
+      "arousal_level": "high",
+      "sharing_propensity": "high",
+      "hooks": [
+        {
+          "type": "Fear/Urgency",
+          "category": "emotional_hooks",
+          "pattern": "Highlight risk of inaction",
+          "examples": [
+            "If you're not doing {X}, you're falling behind...",
+            "The window for {opportunity} is closing...",
+            "This is costing you more than you think..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["conversion", "action"]
+        },
+        {
+          "type": "FOMO Trigger",
+          "category": "social_hooks",
+          "pattern": "Others know/have something you don't",
+          "examples": [
+            "Everyone's talking about {X}...",
+            "You're probably the last to know this...",
+            "While you were sleeping, {X} happened..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["TikTok", "X", "Instagram"],
+          "best_content_functions": ["trends", "awareness"]
+        }
+      ],
+      "organic_marketing_application": "Urgency hooks are the most effective for conversion content (Vaynerchuk's 'right hook'). Use loss framing per Kahneman — people feel losses 2x more than gains. But don't overuse — urgency fatigue is real."
+    },
+    "belonging": {
+      "description": "Tribal identity activation — 'people like us do things like this' (Godin)",
+      "arousal_level": "medium",
+      "sharing_propensity": "very_high",
+      "hooks": [
+        {
+          "type": "Tribe Signal",
+          "category": "social_hooks",
+          "pattern": "Speak to in-group identity",
+          "examples": [
+            "If you're a {identity}, you need to see this...",
+            "{Group} people understand this...",
+            "This is for the {tribe}..."
+          ],
+          "intensity": 7,
+          "best_platforms": ["all"],
+          "best_content_functions": ["community", "identity"]
+        },
+        {
+          "type": "Us vs Them",
+          "category": "social_hooks",
+          "pattern": "Create division that defines identity",
+          "examples": [
+            "{Our way} vs {their way}...",
+            "Most people do {X}. Winners do {Y}...",
+            "There are two types of {people}..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["positioning", "community"]
+        },
+        {
+          "type": "Relatable Question",
+          "category": "question_hooks",
+          "pattern": "Question they'll say 'yes' to",
+          "examples": [
+            "Ever feel like {common experience}?",
+            "You know that moment when {relatable situation}?",
+            "Does anyone else {shared experience}?"
+          ],
+          "intensity": 7,
+          "best_platforms": ["Instagram", "TikTok"],
+          "best_content_functions": ["community", "engagement"]
+        }
+      ],
+      "organic_marketing_application": "Belonging hooks have the highest share rate of any emotion category because sharing IS the identity performance. Per Berger's STEPPS, social currency is the #1 sharing driver. Tribe signal + us vs them create Hanlon's 'pagans/nonbelievers' primal code."
+    },
+    "relief": {
+      "description": "The 'finally, a solution' feeling — releases tension the audience didn't know they were holding",
+      "arousal_level": "medium",
+      "sharing_propensity": "medium",
+      "hooks": [
+        {
+          "type": "Shortcut Promise",
+          "category": "value_hooks",
+          "pattern": "Faster/easier path to goal",
+          "examples": [
+            "Skip {hard thing} and do this instead...",
+            "The {time} shortcut to {result}...",
+            "Stop wasting time on {X}, try {Y}..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["all"],
+          "best_content_functions": ["educational", "conversion"]
+        }
+      ],
+      "organic_marketing_application": "Relief hooks work best when paired with pain point content — first activate the pain, then provide the shortcut. This is the Schwartz 'Solution Aware' level content strategy."
+    },
+    "gratitude": {
+      "description": "Reciprocity activation — receiving unexpected value triggers obligation to engage/reciprocate",
+      "arousal_level": "low",
+      "sharing_propensity": "medium_high",
+      "hooks": [
+        {
+          "type": "Free Value",
+          "category": "value_hooks",
+          "pattern": "Promise valuable info/resource",
+          "examples": [
+            "Free {resource} that {benefit}...",
+            "I'm giving away my {valuable thing}...",
+            "Save this for later..."
+          ],
+          "intensity": 7,
+          "best_platforms": ["Instagram", "TikTok"],
+          "best_content_functions": ["lead_gen", "saves"]
+        }
+      ],
+      "organic_marketing_application": "Gratitude hooks activate Cialdini's reciprocity principle. The 'save this' CTA drives the highest save-to-impression ratio, which is a key algorithm signal on Instagram. Use for lead magnet promotion and list building."
+    },
+    "reflection": {
+      "description": "Deep thinking activation — forces the audience to pause and consider",
+      "arousal_level": "low_medium",
+      "sharing_propensity": "medium",
+      "hooks": [
+        {
+          "type": "Challenging Question",
+          "category": "question_hooks",
+          "pattern": "Question that makes them think",
+          "examples": [
+            "Why do you think {X}?",
+            "Have you ever considered that {Y}?",
+            "What if everything you knew about {X} was wrong?"
+          ],
+          "intensity": 7,
+          "best_platforms": ["LinkedIn", "X"],
+          "best_content_functions": ["thought_leadership", "engagement"]
+        }
+      ],
+      "organic_marketing_application": "Reflection hooks drive the longest comment threads because they invite genuine response. Best for LinkedIn and X where thoughtful engagement signals boost distribution."
+    },
+    "defensiveness_then_curiosity": {
+      "description": "Initial resistance ('I don't do that!') that flips to curiosity ('wait, DO I do that?')",
+      "arousal_level": "high",
+      "sharing_propensity": "high",
+      "hooks": [
+        {
+          "type": "Call Out",
+          "category": "controversy_hooks",
+          "pattern": "Direct challenge to behavior/belief",
+          "examples": [
+            "If you're still doing {X}, you're leaving money on the table...",
+            "This is why your {X} isn't working...",
+            "I'm tired of seeing {common mistake}..."
+          ],
+          "intensity": 8,
+          "best_platforms": ["Instagram", "TikTok", "LinkedIn"],
+          "best_content_functions": ["educational", "authority"]
+        }
+      ],
+      "organic_marketing_application": "The two-phase emotional response (defense → curiosity) creates extremely high watch-through rates because people need to see if the criticism applies to them. The most effective hook type for retention metrics."
+    }
+  },
+  "emotion_intensity_ranking": [
+    {"emotion": "surprise", "avg_intensity": 8.5, "sharing_propensity": "very_high"},
+    {"emotion": "shock", "avg_intensity": 9.0, "sharing_propensity": "high"},
+    {"emotion": "curiosity", "avg_intensity": 8.5, "sharing_propensity": "medium"},
+    {"emotion": "intrigue", "avg_intensity": 8.3, "sharing_propensity": "high"},
+    {"emotion": "engagement", "avg_intensity": 9.0, "sharing_propensity": "medium"},
+    {"emotion": "urgency", "avg_intensity": 8.0, "sharing_propensity": "high"},
+    {"emotion": "belonging", "avg_intensity": 7.3, "sharing_propensity": "very_high"},
+    {"emotion": "empathy", "avg_intensity": 8.0, "sharing_propensity": "high"},
+    {"emotion": "defensiveness_then_curiosity", "avg_intensity": 8.0, "sharing_propensity": "high"},
+    {"emotion": "anticipation", "avg_intensity": 7.5, "sharing_propensity": "medium"},
+    {"emotion": "desire", "avg_intensity": 7.0, "sharing_propensity": "medium"},
+    {"emotion": "relief", "avg_intensity": 8.0, "sharing_propensity": "medium"},
+    {"emotion": "trust", "avg_intensity": 7.3, "sharing_propensity": "medium"},
+    {"emotion": "gratitude", "avg_intensity": 7.0, "sharing_propensity": "medium_high"},
+    {"emotion": "reflection", "avg_intensity": 7.0, "sharing_propensity": "medium"}
+  ],
+  "berger_arousal_mapping": {
+    "high_arousal_share_driving": ["surprise", "shock", "curiosity", "urgency", "engagement", "defensiveness_then_curiosity"],
+    "medium_arousal_connection_building": ["empathy", "anticipation", "desire", "relief", "belonging"],
+    "low_arousal_depth_building": ["trust", "gratitude", "reflection"],
+    "note": "Per Berger's research in Contagious: High-arousal emotions drive sharing. Low-arousal emotions (sadness, contentment) suppress it. Content optimized for virality should lead with high-arousal hooks."
+  }
+}

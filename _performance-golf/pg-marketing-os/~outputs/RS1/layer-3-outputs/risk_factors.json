@@ -1,0 +1,761 @@
+{
+  "metadata": {
+    "assessment_date": "2026-03-10",
+    "assessor_skill": "3.3-A Risk Assessor",
+    "product": "RS1 Putter by Performance Golf ($399/$429)",
+    "opportunities_assessed": 15,
+    "tier_1_assessed": 7,
+    "tier_2_assessed": 8,
+    "total_risks_identified": 46,
+    "critical_risks": 5,
+    "high_risks": 10,
+    "medium_risks": 29,
+    "low_risks": 2,
+    "risk_categories": [
+      "competitive_response",
+      "market_timing",
+      "proof_availability",
+      "audience_readiness",
+      "execution_complexity"
+    ],
+    "input_files_consumed": [
+      "ranked_opportunities.json (16 ranked, 7 Tier 1, 8 Tier 2, 1 Tier 3)",
+      "competitor_analysis.json (8 competitors, 1,012 quotes)",
+      "market_narrative.json (92% confidence)",
+      "sophistication_analysis.json (Stage 4, 88% confidence)",
+      "villain_analysis.json (12 villains, 817 quotes)",
+      "belief_analysis.json (47 beliefs)",
+      "proof_inventory.json (137 proof elements, 38 available, 8 gaps)",
+      "expectation_schema.json (36 patterns, staleness scoring)"
+    ]
+  },
+
+  "opportunity_risks": [
+    {
+      "opportunity_id": "OPP-001",
+      "opportunity_summary": "Own the 'Active Face Control' category with Forward Weighting and face-down balance demonstration",
+      "tier": "1_PURSUE",
+      "composite_score": 9.15,
+      "risks": [
+        {
+          "risk_id": "R-001-01",
+          "category": "competitive_response",
+          "description": "Major OEM copies forward-weighting concept within 12-18 months of RS1 launch, neutralizing first-mover advantage. TaylorMade, Odyssey, or Ping could engineer a forward-CG variant with massive distribution and tour seeding advantages.",
+          "likelihood": 3,
+          "impact": 5,
+          "risk_score": 15,
+          "risk_level": "HIGH",
+          "evidence": "competitor_analysis.json documents 4 major OEMs copying LAB's zero-torque mechanism within 18 months (TaylorMade Spider ZT, Odyssey S2S, Bettinardi Antidote, Evnroll Z1). The industry has demonstrated both willingness and capability to rapidly clone face-stability innovations. sophistication_analysis.json rates ZT commoditization velocity as 'accelerating.'",
+          "mitigation": "Move aggressively to establish Forward Weighting as a branded category before competitors respond. File or publicize patents on Face Down Balance mechanism. Saturate YouTube/creator ecosystem with 'Let It Fall' demo content in first 90 days. Own the vocabulary ('face drift,' 'Forward Weighting,' 'active face control') so deeply that competitors entering later are perceived as followers.",
+          "monitoring_trigger": "Watch for patent filings mentioning forward CG in putters, OEM prototype leaks, or GolfWRX insider reports of major brands testing forward-weighted designs. Also monitor TaylorMade and Callaway R&D job postings for CG-related engineering roles."
+        },
+        {
+          "risk_id": "R-001-02",
+          "category": "proof_availability",
+          "description": "Active vs. passive face control distinction requires education that the audience may not absorb from marketing alone. The claim 'forward weighting actively drives the face square' needs independent SAM PuttLab or high-speed camera validation to be credible in a Stage 4 market.",
+          "likelihood": 4,
+          "impact": 4,
+          "risk_score": 16,
+          "risk_level": "HIGH",
+          "evidence": "proof_inventory.json lists 'SAM PuttLab face angle comparison: RS1 vs traditional putter vs LAB' as a NEEDED proof element (not available). The proof_gaps section rates 'no independent third-party testing or validation' as CRITICAL importance. sophistication_analysis.json Stage 4 signals confirm: 'mechanism claims must be PROVED, not just stated.' expectation_schema.json rates 'Active vs. Passive' whitespace at risk_level 'medium' specifically because 'the active/passive distinction requires education.'",
+          "mitigation": "Commission SAM PuttLab testing pre-launch or within 30 days of launch. Produce high-speed camera footage showing face angle through impact zone for RS1 vs conventional vs ZT. Create a simple 3-panel visual comparison: Traditional (face drifts open), ZT (face stays neutral), RS1 (face falls forward). The visual proof must carry the education burden that verbal claims cannot.",
+          "monitoring_trigger": "Track audience comprehension of active vs passive distinction in early ad engagement metrics. If CTR is high but conversion is low, the audience is intrigued but not convinced — proof gap is the likely cause."
+        },
+        {
+          "risk_id": "R-001-03",
+          "category": "audience_readiness",
+          "description": "Only 10% of the addressable market is currently aware of forward CG as a distinct concept. The remaining 90% must learn an entirely new evaluation framework before the opportunity converts.",
+          "likelihood": 3,
+          "impact": 3,
+          "risk_score": 9,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-001 cites awareness_map.json: 'forward_weighting_awareness_subset (only 10% aware of forward CG as distinct).' belief_analysis.json documents the limiting belief 'all putters are basically the same physics' at high prevalence. The Solution-Aware segment (38%) understands face stability but has not been exposed to the forward-CG concept.",
+          "mitigation": "Draft behind the ZT education wave. The 38% Solution-Aware segment already understands that face stability matters — RS1 must bridge from 'face stability matters' (known) to 'HOW it's achieved matters more' (new). The 'Let It Fall' demonstration is the bridge: it requires no prior education, just eyes.",
+          "monitoring_trigger": "Track organic search volume for 'forward weighting putter,' 'face down balance,' and 'active face control.' If these terms are not gaining traction within 60 days of launch, the education effort needs intensification."
+        },
+        {
+          "risk_id": "R-001-04",
+          "category": "execution_complexity",
+          "description": "The face-down balance demonstration requires video or in-person access to fully convert. Digital-only marketing (email, display ads, social copy) cannot replicate the visceral impact of the 'Let It Fall' moment.",
+          "likelihood": 4,
+          "impact": 3,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json risk_factors for OPP-001: 'Requires demonstration access (video/retail) to fully convert.' proof_inventory.json demonstration_proof section confirms that FDB test is 'RS1's killer demonstration' but is inherently visual and physical. expectation_schema.json rates 'Visual Proof Demonstration' surprise_potential at 9 but notes it 'requires the prospect to have access to the product for the challenge to complete.'",
+          "mitigation": "Invest heavily in video content (YouTube, social, VSL) that captures the demo from multiple angles. Create a 'Try It Yourself' program with aggressive demo/trial policy (30-round trial). Partner with golf retailers for in-store display units showing the three-putter side-by-side comparison. Consider a 'demo tour' at high-traffic courses.",
+          "monitoring_trigger": "Video completion rates on 'Let It Fall' demo content. If viewers are dropping off before the demo moment, the content structure needs revision. If completion is high but conversion is low, the demo is engaging but insufficient — additional proof layers are needed."
+        },
+        {
+          "risk_id": "R-001-05",
+          "category": "market_timing",
+          "description": "If RS1 launch delays beyond Q2 2026, the ZT commoditization wave may create such thorough 'face stability fatigue' that the market groups Forward Weighting into the same exhausted category, regardless of the physics distinction.",
+          "likelihood": 2,
+          "impact": 4,
+          "risk_score": 8,
+          "risk_level": "MEDIUM",
+          "evidence": "sophistication_analysis.json projects that 'within 12-18 months, zero torque will be as saturated as high MOI.' The Stage 4 diagnosis warns that 'when the audience starts arguing that confidence trumps technology, they've absorbed and exhausted multiple mechanism generations.' market_narrative.json market_trajectory confirms the window is at an inflection point.",
+          "mitigation": "Launch as early as possible. If production delays threaten the timeline, deploy pre-launch educational content that establishes 'Forward Weighting' vocabulary before the product ships. Build anticipation through the education-first approach so the market is already primed when the product arrives.",
+          "monitoring_trigger": "Monitor forum sentiment for ZT fatigue signals: increasing comments like 'all these face-stable putters are the same' or 'ZT/forward weight/whatever — I don't buy it anymore.' If this sentiment becomes prevalent before launch, accelerate launch timeline."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "Despite HIGH risks in competitive response and proof availability, the opportunity remains the strongest in the portfolio because the competitive window is open, the demonstration proof bypasses verbal skepticism, and the emotional payload (liberation from the 'fighting the putter' experience) is extreme. Net score adjusted for risk: 8.2/10. The critical mitigation is securing independent testing data within 30 days of launch."
+    },
+
+    {
+      "opportunity_id": "OPP-002",
+      "opportunity_summary": "Capture LAB Golf's lost majority (55-65% consideration drop-off) with face stability minus tradeoffs",
+      "tier": "1_PURSUE",
+      "composite_score": 8.85,
+      "risks": [
+        {
+          "risk_id": "R-002-01",
+          "category": "competitive_response",
+          "description": "LAB Golf evolves their product line to address known blockers — heel-shaft option, steel face variant, or shorter adaptation protocol — neutralizing RS1's 'all the benefit without the tradeoffs' positioning.",
+          "likelihood": 3,
+          "impact": 4,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "competitor_analysis.json documents LAB's $200M acquisition by L Catterton, providing resources for product line expansion. LAB already has 5 models (DF3, DF2.1, Mezz.1, OZ.1i, Links.1), demonstrating willingness to expand designs. Q0462 acknowledges LAB has 'designed themselves into a corner' with zero torque — but L Catterton capital could fund a breakout from that corner. ranked_opportunities.json OPP-002 risk_factors include: 'LAB Golf may evolve their product line to address blockers.'",
+          "mitigation": "Position RS1 as a fundamentally different physics approach (forward CG vs lie angle balance) rather than 'LAB without the tradeoffs.' If LAB adds a heel-shaft or steel face, their ZT mechanism still requires adaptation and still operates passively. The physics distinction is permanent — product feature improvements by LAB cannot close the mechanism gap.",
+          "monitoring_trigger": "Watch LAB Golf's product announcements, L Catterton press releases, and USGA conforming list for new LAB model filings. Alert on any LAB patent filings mentioning forward CG or non-center-shaft configurations."
+        },
+        {
+          "risk_id": "R-002-02",
+          "category": "proof_availability",
+          "description": "If RS1 face stability does not match or exceed LAB's in independent testing (MyGolfSpy, SAM PuttLab), the 'face stability without tradeoffs' claim collapses and positions RS1 as an inferior imitation.",
+          "likelihood": 3,
+          "impact": 5,
+          "risk_score": 15,
+          "risk_level": "HIGH",
+          "evidence": "ranked_opportunities.json OPP-002 risk: 'If RS1 face stability doesn't match ZT in independent testing, the comparison backfires.' proof_inventory.json lists face-angle comparison data as CRITICAL needed proof. competitor_analysis.json documents LAB's extensive testing proof: 'MyGolfSpy independent testing results,' 'SAM PuttLab fitting data showing face angle improvement,' 'Arccos strokes gained statistics from users.' RS1 has NONE of these proof elements available.",
+          "mitigation": "Conduct rigorous internal testing before making any head-to-head comparison claims. If RS1's face stability is equivalent to LAB but not measurably superior, shift the comparison to the holistic experience (feel, aesthetics, no adaptation, price) rather than pure face-angle numbers. Never make claims that independent testing could disprove.",
+          "monitoring_trigger": "Priority 1: obtain SAM PuttLab data comparing RS1 to LAB DF3 before any head-to-head marketing goes live. If the data shows RS1 parity or superiority, green-light comparisons. If data shows LAB superiority on face angle alone, pivot messaging to 'comparable face stability + no tradeoffs.'"
+        },
+        {
+          "risk_id": "R-002-03",
+          "category": "audience_readiness",
+          "description": "Positioning too aggressively against LAB risks alienating LAB evangelists who are key influencers in the face-stability conversation. These evangelists could actively campaign against RS1 if they perceive it as attacking their brand.",
+          "likelihood": 4,
+          "impact": 3,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "competitor_analysis.json documents LAB's tribal following with 'can't go back' loyalty declarations (31 quotes). sophistication_analysis.json Stage 5 signals: 'LAB has a tribal following: identity attachment, tribal community, belief system.' villain_analysis.json brand_voice_constraint: 'Evolutionary, NOT adversarial.' ranked_opportunities.json OPP-002 risk: 'Positioning too aggressively against LAB risks alienating LAB evangelists.'",
+          "mitigation": "Follow Soul.md's evolutionary positioning mandate. Never bash LAB. Frame RS1 as 'the next chapter' that LAB's innovation made possible. Target LAB-curious/LAB-frustrated golfers (Outcomes B and C from market_narrative.json), not LAB evangelists. Let LAB converts discover RS1 organically through comparative content rather than adversarial messaging.",
+          "monitoring_trigger": "Monitor GolfWRX and Reddit for LAB community reaction to RS1 marketing. If LAB evangelists begin organized pushback ('this is just marketing,' 'they're attacking LAB'), de-escalate comparative messaging immediately."
+        },
+        {
+          "risk_id": "R-002-04",
+          "category": "market_timing",
+          "description": "ZT copycats (Spider ZT, Odyssey S2S, Bettinardi Antidote) may create confusion that lumps RS1 into the 'ZT clone' category despite RS1 using fundamentally different physics.",
+          "likelihood": 4,
+          "impact": 3,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "sophistication_analysis.json documents 4 ZT copycats launched in 18 months. expectation_schema.json rates 'Zero Torque / Face Stays Square' staleness at 7/10. Market confusion between 'zero torque,' 'face balanced,' and 'forward weighted' is likely as the category proliferates. Q from expectation_schema: 'I see these zero torque putters as another fad.'",
+          "mitigation": "Invest heavily in the vocabulary distinction. Never use 'zero torque' to describe RS1. Always use 'Forward Weighting' and 'Face Down Balance' — vocabulary that is exclusively RS1's. The 'Let It Fall' demo is the definitive separator: ZT putters stay neutral; RS1 falls forward. Make the visual distinction unmistakable.",
+          "monitoring_trigger": "Track whether early reviews and forum discussions categorize RS1 as 'another zero torque putter.' If this happens, the vocabulary distinction campaign needs amplification."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "The LAB-blocker capture opportunity is the second-strongest in the portfolio with a documented 55-65% drop-off rate in LAB's funnel. The highest risk is proof availability — if independent testing doesn't validate RS1's face stability claims, the comparison backfires catastrophically. Net score adjusted for risk: 7.8/10. Critical dependency: SAM PuttLab comparative data before any head-to-head marketing."
+    },
+
+    {
+      "opportunity_id": "OPP-003",
+      "opportunity_summary": "Lead with self-blame liberation reframe: 'Your stroke was never the problem — your putter's center of gravity was'",
+      "tier": "1_PURSUE",
+      "composite_score": 8.78,
+      "risks": [
+        {
+          "risk_id": "R-003-01",
+          "category": "audience_readiness",
+          "description": "'Your stroke is fine' claim could alienate golfers whose strokes genuinely need improvement, or those who have invested heavily in instruction and feel their work is being dismissed.",
+          "likelihood": 3,
+          "impact": 3,
+          "risk_score": 9,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-003 risk: 'Could alienate golfers whose strokes genuinely need work.' belief_analysis.json documents the belief 'The best putters in the world use regular putters, so the problem must be me' at high prevalence. villain_analysis.json 'Just Practice More Myth' caution: 'Practice is sacred in golf culture. Never position RS1 as a replacement for practice.'",
+          "mitigation": "Nuance the message: 'Your stroke is probably better than you think. Your putter's physics have been amplifying your human imperfections instead of absorbing them.' This acknowledges that strokes vary while redirecting blame to the equipment. Add the qualifier 'RS1 makes your practice count' rather than 'practice doesn't matter.'",
+          "monitoring_trigger": "Monitor comment sentiment on self-blame liberation messaging. If pushback includes 'they're saying I don't need lessons' or 'this is insulting to teaching pros,' the message needs softening."
+        },
+        {
+          "risk_id": "R-003-02",
+          "category": "audience_readiness",
+          "description": "Self-blame liberation could be perceived as insulting golf culture's deeply held 'it's the archer, not the arrow' ethos, triggering defensive rejection rather than the intended 'aha moment.'",
+          "likelihood": 3,
+          "impact": 4,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "villain_analysis.json 'Self-Blame Trap' villain has blame_frequency 156 — the highest of all villains — meaning this belief is extremely deeply held. Q0139: 'I think that buying your way out of trouble is just a quick fix... That means it can't be the stick, it's you.' Q0385: 'The data all shows that tech in this particular tool doesn't matter much... What is left? Confidence, preference and the person using the tool.' The 'archer not arrow' belief is a cultural identity marker, not just an opinion.",
+          "mitigation": "Frame the reframe as 'both/and' rather than 'either/or.' 'You're a good archer. But even the best archer can't overcome an arrow that curves in flight. RS1 straightens the arrow.' Use the physics demonstration to bypass the cultural resistance — seeing the face fall forward is more persuasive than arguing against a belief system.",
+          "monitoring_trigger": "Track share/save rates on self-blame liberation content. High engagement with low negative sentiment = the reframe is landing. High negative sentiment = cultural resistance is dominant. A/B test 'your stroke is fine' vs 'your stroke is better than your scores show.'"
+        },
+        {
+          "risk_id": "R-003-03",
+          "category": "proof_availability",
+          "description": "The self-blame liberation claim requires credible proof pairing — the claim alone will be dismissed without the face-down balance demo or SAM PuttLab data showing the golfer's stroke is consistent but their face angle is not.",
+          "likelihood": 4,
+          "impact": 3,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-003 risk: 'Requires pairing with credible proof — the claim alone will be dismissed without the demo.' proof_inventory.json: 'Let It Fall' demonstration is available and rated High strength, but SAM PuttLab face angle comparison data is listed as NEEDED. Q0505 provides evidence: 'Stroke is very consistent, but consistently leaving putterface 2.5+ degrees open at impact' — this type of data-backed proof is exactly what's needed but not yet available for RS1.",
+          "mitigation": "Always pair self-blame liberation messaging with the 'Let It Fall' demo. Never run the reframe as standalone copy without a visual proof element. Sequence content as: (1) describe the golfer's experience precisely, (2) show the demo, (3) deliver the reframe. The proof validates the claim; the claim without proof is just another marketing promise.",
+          "monitoring_trigger": "Compare conversion rates for self-blame messaging WITH demo video vs WITHOUT. If the delta is large (expected), it confirms that proof-pairing is essential and standalone text campaigns should not be run."
+        },
+        {
+          "risk_id": "R-003-04",
+          "category": "competitive_response",
+          "description": "LAB Golf partially uses self-blame liberation messaging ('every putter you've ever used has been fighting you'). If LAB intensifies this messaging post-L Catterton acquisition, RS1's version could feel derivative.",
+          "likelihood": 2,
+          "impact": 3,
+          "risk_score": 6,
+          "risk_level": "LOW",
+          "evidence": "expectation_schema.json rates 'Self-Blame Liberation' as competitors_using: 2 (LAB partial), staleness_score 4 (still fresh). competitor_analysis.json confirms LAB's messaging includes elements of self-blame liberation but frames it technically ('torque' not 'your stroke is fine').",
+          "mitigation": "Differentiate RS1's version by framing it experientially rather than technically. LAB says 'your putter has torque.' RS1 says 'your stroke was never the problem.' The emotional relief is different: LAB blames the putter's physics; RS1 liberates the golfer's identity. Own the emotional version while LAB owns the engineering version.",
+          "monitoring_trigger": "Watch for LAB's post-acquisition marketing campaigns. If L Catterton's marketing team shifts LAB messaging toward emotional liberation rather than technical education, the differentiation gap narrows."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "The self-blame liberation reframe targets the deepest emotional wound in the data (identity crisis, frequency 96) and the largest untapped segment (Problem-Aware 32%). The primary risk is cultural resistance to challenging the 'archer not arrow' belief. This risk is mitigated by pairing with visual proof that bypasses cultural debate. Net score adjusted for risk: 7.9/10."
+    },
+
+    {
+      "opportunity_id": "OPP-004",
+      "opportunity_summary": "Coin and own 'face drift' as the consumer-friendly name for why putts miss",
+      "tier": "1_PURSUE",
+      "composite_score": 8.62,
+      "risks": [
+        {
+          "risk_id": "R-004-01",
+          "category": "competitive_response",
+          "description": "'Face drift' as a term could be co-opted by competitors if RS1 does not establish deep brand association quickly. The term is descriptive (not trademarkable) and any brand could begin using it.",
+          "likelihood": 4,
+          "impact": 4,
+          "risk_score": 16,
+          "risk_level": "HIGH",
+          "evidence": "ranked_opportunities.json OPP-004 risk: 'Could be co-opted by competitors if not trademarked or heavily branded quickly.' The term 'face drift' is descriptive of a physics phenomenon — it describes what happens, which makes it powerful for consumers but difficult to legally protect. sophistication_analysis.json documents that competitors rapidly adopt successful vocabulary (ZT copycats adopted 'zero torque' language within months).",
+          "mitigation": "Saturate the market with 'face drift' content in the first 90 days. Create a branded educational content series called 'The Face Drift Report' or similar. File trademark applications where possible (mark + logo, not the bare descriptive term). The goal is to build such strong association between 'face drift' and RS1/Performance Golf that even if competitors use the term, they're reinforcing RS1's framing.",
+          "monitoring_trigger": "Track competitor usage of 'face drift' in marketing materials, social media, and product descriptions. If any competitor begins using the term within 6 months, RS1 must already have dominant content authority."
+        },
+        {
+          "risk_id": "R-004-02",
+          "category": "audience_readiness",
+          "description": "The term 'face drift' must be immediately intuitive to non-technical golfers. If it requires explanation, it loses its power as a naming tool and becomes just another jargon term.",
+          "likelihood": 2,
+          "impact": 4,
+          "risk_score": 8,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-004 risk: 'Term must be immediately intuitive — if it requires explanation, it loses its power.' expectation_schema.json whitespace_zones 'Named Root Cause in Consumer-Friendly Language': 'LAB uses torque (technical, requires explanation). Whoever names the problem owns the solution conversation.' The term must pass the 'grandma test' — can a non-golfer understand what it means?",
+          "mitigation": "'Face drift' describes the felt experience: the face drifts open or closed during the stroke. Most golfers will understand this intuitively because they've FELT it (58 quotes describe 'fighting/steering' the putter face). Pair the term with the visual demo — show the face literally drifting open on a conventional putter — to make the abstract term concrete.",
+          "monitoring_trigger": "A/B test 'face drift' against alternative terms ('face rotation,' 'face wander,' 'face slip') in ad copy. Track which term generates highest immediate comprehension and click-through. The winning term should be used consistently across all content."
+        },
+        {
+          "risk_id": "R-004-03",
+          "category": "execution_complexity",
+          "description": "'Face drift' must be embedded consistently across ALL content from launch — VSLs, emails, ads, social, packaging, retail displays. Inconsistent terminology usage dilutes ownership.",
+          "likelihood": 3,
+          "impact": 3,
+          "risk_score": 9,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-004 risk: 'Must be embedded consistently across ALL content from launch to establish ownership.' sophistication_analysis.json vocabulary analysis shows that LAB established 'zero torque' ownership through obsessive consistency — every piece of content, every video, every product page uses the same vocabulary.",
+          "mitigation": "Create a brand vocabulary guide that mandates 'face drift' usage in every piece of RS1 content. Brief all content creators, influencers, and retail partners on the term. Include 'face drift' in the product description, packaging insert, and headcover tag. Make it impossible for a golfer to encounter RS1 without encountering the term.",
+          "monitoring_trigger": "Audit all RS1 content monthly for 'face drift' consistency. If any channel uses alternative language ('face rotation,' 'face opening'), correct immediately."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "Naming the root cause is a high-leverage strategic move with moderate execution risk. The highest risk is competitive co-option — descriptive terms are hard to legally protect. The mitigation is speed and saturation: build such dominant association between 'face drift' and RS1 that the term becomes synonymous with the brand. Net score adjusted for risk: 7.6/10."
+    },
+
+    {
+      "opportunity_id": "OPP-005",
+      "opportunity_summary": "Deploy evolutionary narrative: Traditional -> LAB/Zero Torque -> RS1/Forward Weighting",
+      "tier": "1_PURSUE",
+      "composite_score": 8.38,
+      "risks": [
+        {
+          "risk_id": "R-005-01",
+          "category": "competitive_response",
+          "description": "The evolutionary narrative requires LAB Golf to remain respected as a legitimate innovation. If LAB suffers a credibility crisis (product quality issues, negative testing results, or brand erosion post-acquisition), the narrative loses its foundation.",
+          "likelihood": 2,
+          "impact": 4,
+          "risk_score": 8,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-005 risk: 'Evolutionary framing requires LAB to remain respected.' competitor_analysis.json documents LAB's $200M acquisition by L Catterton — corporate ownership changes can affect product quality and brand perception. LAB already has a 15% outright negative reception rate with 'dramatic failures' documented.",
+          "mitigation": "Build the evolutionary narrative on the CONCEPT of face stability (validated by 5 brands and a $200M acquisition) rather than on LAB specifically. If LAB falters, the narrative shifts from 'LAB proved it, RS1 perfected it' to 'the entire industry validated face stability — RS1 is the best implementation.'",
+          "monitoring_trigger": "Monitor LAB Golf product quality reports, return rates, and forum sentiment post-acquisition. If LAB's brand perception declines significantly, adapt evolutionary narrative to reference 'the face stability movement' rather than LAB by name."
+        },
+        {
+          "risk_id": "R-005-02",
+          "category": "proof_availability",
+          "description": "If RS1 cannot demonstrate measurable superiority over ZT in independent testing, the 'evolution' claim rings hollow — it becomes 'different' rather than 'better,' which is insufficient for an evolutionary positioning.",
+          "likelihood": 3,
+          "impact": 5,
+          "risk_score": 15,
+          "risk_level": "HIGH",
+          "evidence": "ranked_opportunities.json OPP-005 risk: 'If RS1 cannot demonstrate measurable superiority over ZT in independent testing, the evolution claim rings hollow.' proof_inventory.json lists SAM PuttLab comparison data as NEEDED and rates it CRITICAL importance. competitor_analysis.json documents LAB's existing proof stack: 'MyGolfSpy independent testing results,' 'SAM PuttLab fitting data,' 'Arccos strokes gained statistics.' RS1 must match or exceed this proof standard to claim evolutionary superiority.",
+          "mitigation": "Define 'evolution' across MULTIPLE dimensions, not just face angle alone. RS1 is an evolution in: (1) face stability mechanism (active vs passive), (2) aesthetic accessibility, (3) stroke compatibility, (4) adaptation requirement, (5) price accessibility, (6) material feel, (7) customization options. Even if face angle data is equivalent to LAB (not superior), the holistic evolution claim holds across the other 6 dimensions.",
+          "monitoring_trigger": "Internal testing results comparing RS1 face angle performance to LAB DF3. If RS1 demonstrates measurable face-angle superiority, lean into the performance evolution narrative. If equivalent, lean into the accessibility/experience evolution narrative."
+        },
+        {
+          "risk_id": "R-005-03",
+          "category": "audience_readiness",
+          "description": "Risk of appearing derivative ('we improved on LAB') rather than genuinely innovative, which could position RS1 as a follower in the audience's mental model rather than a leader.",
+          "likelihood": 3,
+          "impact": 3,
+          "risk_score": 9,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-005 risk: 'Risk of appearing derivative rather than genuinely innovative.' sophistication_analysis.json documents that ZT copycats (Spider ZT, Antidote, S2S) are already perceived as LAB followers. If RS1 is grouped with these followers, the forward-weighting distinction is lost. expectation_schema.json rates 'evolutionary narrative' audience perception risk at moderate.",
+          "mitigation": "Lead with the physics difference (face falls FORWARD, not just stays neutral) before introducing the evolutionary frame. The demonstration must come first — once the audience sees something they've never seen before, the evolutionary narrative contextualizes it. If the narrative comes first without the demo, it sounds like 'we're like LAB but better' — a follower's claim.",
+          "monitoring_trigger": "Track forum and review language. If early adopters describe RS1 as 'like LAB but...' the derivative perception is taking hold. If they describe it as 'completely different from anything I've tried,' the innovation perception is winning."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "The evolutionary narrative is strategically powerful but execution-sensitive. The HIGH risk is proof availability — the 'evolution' claim requires demonstration of measurable advancement. The mitigation is defining evolution across multiple dimensions (not just face angle). Net score adjusted for risk: 7.3/10."
+    },
+
+    {
+      "opportunity_id": "OPP-006",
+      "opportunity_summary": "Name and explain the honeymoon effect, transforming carousel rider cynicism into a purchase framework",
+      "tier": "1_PURSUE",
+      "composite_score": 8.22,
+      "risks": [
+        {
+          "risk_id": "R-006-01",
+          "category": "audience_readiness",
+          "description": "Naming the honeymoon effect too prominently could make buyers question whether RS1 itself will produce a honeymoon — creating the very skepticism the messaging is designed to overcome.",
+          "likelihood": 4,
+          "impact": 4,
+          "risk_score": 16,
+          "risk_level": "HIGH",
+          "evidence": "ranked_opportunities.json OPP-006 risk: 'Naming the honeymoon effect too aggressively could make buyers question whether RS1 itself will produce a honeymoon.' expectation_schema.json rates 'The Honeymoon Period' at staleness_score 10 — meaning EVERY golfer expects it. LAB's CEO acknowledges: 'We've all experienced a honeymoon with a putter!' When the audience's default expectation is that improvement is temporary, explicitly naming that expectation could reinforce rather than overcome it.",
+          "mitigation": "Pair the honeymoon naming with the physics-based explanation of WHY RS1 is different. The messaging arc must be: (1) Name the pattern: 'You know the honeymoon — 2 weeks of magic, then the same misses come back.' (2) Explain WHY: 'Every putter you've tried had the same hidden flaw — rearward CG.' (3) Show WHY RS1 is different: 'RS1 changes the fundamental physics. The face falls forward, not open.' (4) Prove it lasts: beta tester data showing sustained improvement beyond the honeymoon window. Step 4 requires proof that may not be available at launch.",
+          "monitoring_trigger": "Track ad comment sentiment for 'I'll believe it when I see it' or 'another honeymoon' responses. If these dominate, the physics explanation is not landing and the honeymoon naming is backfiring."
+        },
+        {
+          "risk_id": "R-006-02",
+          "category": "proof_availability",
+          "description": "Proving that RS1 improvement is durable (not a honeymoon) requires longitudinal data from real users — minimum 10+ rounds per user, 50+ users — that does not exist for a pre-launch product.",
+          "likelihood": 5,
+          "impact": 4,
+          "risk_score": 20,
+          "risk_level": "CRITICAL",
+          "evidence": "proof_inventory.json proof_gaps: 'No customer testimonials or real-world results data (pre-launch product)' rated CRITICAL importance. The recommendation states: 'Launch beta tester program immediately with 50-100 golfers. Require Arccos/ShotScope tracking. Minimum 10 rounds per tester before launch. This is the #1 proof gap.' Without longitudinal data, claiming RS1 breaks the honeymoon cycle is an unsubstantiated promise in a market that has heard this promise before.",
+          "mitigation": "At launch, use proxy proof: (1) face-stable putter loyalty data from LAB corpus showing 'can't go back' permanence (31 quotes), (2) physics-based argument for WHY forward weighting doesn't regress (the physics are structural, not novelty-driven), (3) 30-round trial guarantee that frames the risk as PG's, not the buyer's. Post-launch, collect Arccos data aggressively and publish rolling updates showing sustained improvement.",
+          "monitoring_trigger": "Track return rates at 30-day, 60-day, and 90-day windows. If return rates spike at 30-60 days, it suggests a honeymoon effect IS occurring — which would be catastrophic for the anti-honeymoon positioning. If returns remain low, publish the data as proof."
+        },
+        {
+          "risk_id": "R-006-03",
+          "category": "execution_complexity",
+          "description": "Carousel riders are the most skeptical segment in the market — they've been burned by multiple putters and are resistant to any promise of permanence. Converting this audience requires more proof and more touchpoints than any other segment.",
+          "likelihood": 4,
+          "impact": 2,
+          "risk_score": 8,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-006 risk: 'Carousel riders are the most skeptical segment — they've been burned repeatedly.' pattern_analysis.json EP-01 (Putter Carousel) at importance 92 is the highest-importance behavioral pattern. Q0693: 'Any change works for three holes.' Q0139: 'you know full well that the club hasn't changed over the last 10 weeks while your putting has.'",
+          "mitigation": "Design a multi-touchpoint nurture sequence specifically for carousel riders: (1) name their experience precisely, (2) explain the shared physics flaw, (3) demonstrate FDB, (4) offer risk-reversal (extended trial), (5) show 90-day longitudinal data from beta testers. This sequence requires 5-7 touchpoints over 2-4 weeks. Single-touch campaigns will not convert this audience.",
+          "monitoring_trigger": "Track carousel-segment email sequence completion and conversion. If drop-off occurs at the physics explanation stage, the education is too complex. If drop-off occurs at the CTA, the risk-reversal offer needs strengthening."
+        }
+      ],
+      "overall_risk_profile": "HIGH",
+      "net_opportunity_assessment": "The honeymoon/carousel opportunity targets the most well-documented behavioral pattern in the data (importance 92) and the largest secondary WEB (200K-300K golfers). However, the CRITICAL proof gap — no longitudinal user data — creates a genuine risk of making promises RS1 cannot yet substantiate. Net score adjusted for risk: 6.8/10. This opportunity should launch with proxy proof and strengthen as real data accumulates post-launch."
+    },
+
+    {
+      "opportunity_id": "OPP-007",
+      "opportunity_summary": "Leverage Chris McGinley's 25-year OEM pedigree as the credibility mechanism for a new brand",
+      "tier": "1_PURSUE",
+      "composite_score": 7.75,
+      "risks": [
+        {
+          "risk_id": "R-007-01",
+          "category": "execution_complexity",
+          "description": "McGinley must be an active, visible presence across content — not a passive credential mention. This requires ongoing content production commitment (videos, interviews, Q&As) that depends on one individual's availability and willingness.",
+          "likelihood": 3,
+          "impact": 4,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-007 risk: 'McGinley must be an active, visible presence — passive credential mentions lose impact.' proof_inventory.json needed: 'Chris McGinley long-form origin story content' — described as 'RS1's Steve Jobs introducing iPhone moment.' competitor_analysis.json shows LAB's Sam Hahn is an active brand ambassador who appears in content regularly.",
+          "mitigation": "Film a comprehensive library of McGinley content in a single production window: origin story, technical explainers, FAQ responses, demo walkthroughs. This creates 6-12 months of content from a concentrated production effort. Structure content so McGinley narrates the engineering story while PG handles distribution and marketing operations.",
+          "monitoring_trigger": "Track McGinley content engagement rates vs non-McGinley content. If McGinley-fronted content significantly outperforms, increase his presence. If engagement is equivalent, the credentials matter but the personality is not the differentiator — adjust accordingly."
+        },
+        {
+          "risk_id": "R-007-02",
+          "category": "proof_availability",
+          "description": "If McGinley's engineering claims are challenged by independent testing, the credibility boomerangs — the named designer becomes personally associated with a failed promise rather than a validated innovation.",
+          "likelihood": 2,
+          "impact": 5,
+          "risk_score": 10,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-007 risk: 'If McGinley's engineering claims are challenged by independent testing, the credibility boomerangs.' proof_inventory.json needed: 'Independent engineering review or certification' rated as needed. The GolfWRX and Reddit audiences are sophisticated enough to fact-check engineering claims (Q0385: 'The data all shows that tech in this particular tool doesn't matter much').",
+          "mitigation": "Ensure all claims McGinley makes in content are conservatively stated and independently verifiable. Never overstate performance in McGinley's voice — his credibility is RS1's most valuable and most fragile asset. Frame claims as testable hypotheses ('try the Let It Fall test yourself') rather than absolute declarations.",
+          "monitoring_trigger": "Monitor GolfWRX and Reddit for fact-checking threads about RS1's engineering claims. If any claim is debunked, issue an immediate correction through McGinley himself — honesty after a challenge can strengthen credibility if handled authentically."
+        },
+        {
+          "risk_id": "R-007-03",
+          "category": "audience_readiness",
+          "description": "PG's marketing-company perception could undermine even strong designer credentials. Sophisticated golfers may view McGinley's association with PG as 'a real engineer got hired by a marketing company' rather than 'a marketing company partnered with a real engineer.'",
+          "likelihood": 4,
+          "impact": 3,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "proof_inventory.json proof_gaps: 'Performance Golf brand credibility in equipment category (known for instruction, not gear)' rated HIGH importance. belief_analysis.json documents the limiting belief 'PG is a marketing company, not a putter company.' proof_inventory.json recommendation: 'Lead with McGinley's credentials, not Performance Golf branding.'",
+          "mitigation": "De-emphasize PG branding in launch marketing. Position RS1 as 'Chris McGinley's RS1, brought to you by Performance Golf' rather than 'a Performance Golf putter.' Let McGinley lead the narrative; PG provides the platform. As the product earns its own reputation, PG brand association strengthens organically.",
+          "monitoring_trigger": "Track cold traffic ad comments for 'Performance Golf makes putters now?' or 'this is just a marketing play' sentiment. If this sentiment is prevalent, McGinley-fronted content needs higher visibility and PG branding needs further de-emphasis."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "McGinley's credentials are RS1's strongest available authority proof and the most defensible competitive moat. No competitor can replicate a 25-year OEM career with 11 world #1 players. The primary risk is the PG brand perception undermining the designer's credibility. Net score adjusted for risk: 7.0/10. Critical execution requirement: McGinley must be the face of the product, not just a credential footnote."
+    },
+
+    {
+      "opportunity_id": "OPP-008",
+      "opportunity_summary": "Position RS1 as Technology + Technique dual-promise putter (face stability AND stroke improvement)",
+      "tier": "2_CONSIDER",
+      "composite_score": 7.38,
+      "risks": [
+        {
+          "risk_id": "R-008-01",
+          "category": "proof_availability",
+          "description": "The dual-promise claim (technology improves ball flight AND technique improves over time) requires SAM PuttLab longitudinal stroke data showing measurable stroke improvement — data that does not exist at launch.",
+          "likelihood": 5,
+          "impact": 4,
+          "risk_score": 20,
+          "risk_level": "CRITICAL",
+          "evidence": "ranked_opportunities.json OPP-008 risk: 'Requires proof data (SAM PuttLab longitudinal stroke data) that doesn't exist at launch.' proof_inventory.json lists 'SAM PuttLab data showing stroke improvement over time' as NEEDED. The confidence level for this opportunity is rated 'medium' by ranked_opportunities.json, lower than all Tier 1 opportunities.",
+          "mitigation": "Defer the technique-improvement claim to post-launch Phase 2. At launch, the technology story (face stability) is sufficient. Begin collecting SAM PuttLab longitudinal data from beta testers immediately. Once data demonstrates stroke improvement over 10+ rounds, deploy the dual promise as a campaign refresh.",
+          "monitoring_trigger": "Collect SAM PuttLab data from beta testers at intervals (round 1, round 5, round 10, round 20). If stroke metrics (path consistency, face angle consistency, tempo stability) improve over time, the dual promise becomes launchable. If metrics show face stability improvement but no stroke improvement, the dual promise should remain shelved."
+        },
+        {
+          "risk_id": "R-008-02",
+          "category": "audience_readiness",
+          "description": "Dual promise ('it does everything') could trigger Stage 4 skepticism — audiences who have heard inflated claims from every brand will view 'improves your ball flight AND your stroke' as overpromising.",
+          "likelihood": 4,
+          "impact": 3,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-008 risk: 'Dual promise could be perceived as overpromising — it does everything triggers skepticism.' sophistication_analysis.json Stage 4 signals: 'consumer mechanism fatigue/skepticism emerging.' expectation_schema.json audience_numbness_level for standard claims is 6-8 across all formats. When a product claims to do two things, Stage 4 audiences assume it does neither well.",
+          "mitigation": "If deployed, position the technique improvement as a discovered secondary benefit, not a headline claim. 'We designed RS1 for face stability. What we didn't expect: golfers' strokes are getting better over time because the putter teaches proper mechanics naturally.' Discovery framing is more believable than dual-headline framing.",
+          "monitoring_trigger": "A/B test dual-promise messaging vs single-promise (face stability only) messaging. If dual-promise underperforms, the skepticism hypothesis is confirmed. Stick with single promise."
+        }
+      ],
+      "overall_risk_profile": "HIGH",
+      "net_opportunity_assessment": "The dual promise is strategically unique (zero competitors claim both) but the CRITICAL proof gap makes it premature for launch. Net score adjusted for risk: 5.8/10. Recommendation: defer to Phase 2 (post-launch, 6-12 months) once longitudinal data is available."
+    },
+
+    {
+      "opportunity_id": "OPP-010",
+      "opportunity_summary": "Target clinical-level putting anxiety (yips) segment with RS1 as the mechanical doom-loop breaker",
+      "tier": "2_CONSIDER",
+      "composite_score": 7.22,
+      "risks": [
+        {
+          "risk_id": "R-010-01",
+          "category": "audience_readiness",
+          "description": "Yips/anxiety messaging could position RS1 as a 'problem putter' or 'last resort' rather than a high-performance instrument, limiting its appeal to the broader market.",
+          "likelihood": 3,
+          "impact": 4,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-010 risk: 'Yips/anxiety messaging could position RS1 as a problem putter rather than a performance putter.' competitor_analysis.json shows LAB Golf's reception includes: 'Seems like most people who really struggle with putting/yips/demons have moved to zero torque stuff' — positioning ZT as a desperation move rather than a performance choice.",
+          "mitigation": "Confine yips messaging to nurture sequences and targeted email campaigns. Never use anxiety/yips language in headline advertising or primary launch positioning. The hierarchy must be: (1) headline = performance innovation for serious golfers, (2) secondary = LAB-alternative for face-stability seekers, (3) nurture = doom-loop solution for anxiety sufferers.",
+          "monitoring_trigger": "Track brand perception surveys for 'RS1 is for golfers with the yips' associations. If this perception exceeds 20% of brand associations, the anxiety messaging has leaked into the broader brand narrative."
+        },
+        {
+          "risk_id": "R-010-02",
+          "category": "proof_availability",
+          "description": "Clinical-level anxiety sufferers may require more than equipment to resolve their condition. If RS1 is positioned as a yips cure and users still experience anxiety, the failure is magnified by the intensity of the promise.",
+          "likelihood": 4,
+          "impact": 3,
+          "risk_score": 12,
+          "risk_level": "MEDIUM",
+          "evidence": "villain_analysis.json 'Confidence Doom Loop' caution: 'Do not oversimplify the psychology. Acknowledge that confidence in putting has multiple components.' proof_inventory.json has no clinical or sports psychology validation data. The yips have neurological components (task-specific dystonia) that equipment alone may not address.",
+          "mitigation": "Frame RS1 as addressing the MECHANICAL component of putting anxiety — never claim to cure the yips. Message: 'RS1 removes the mechanical trigger (face drift amplified by grip pressure) that feeds the anxiety cycle. The mental component still matters — but with the mechanical trigger removed, the cycle has less fuel.' Always recommend complementary mental game resources.",
+          "monitoring_trigger": "Monitor yips-segment testimonials carefully. If RS1 users with severe yips report improvement, amplify those stories. If they report no change or worsening, immediately pull yips-specific messaging."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "The yips segment is small (10-15% of addressable market) but has the highest emotional intensity in the data. The primary risk is brand dilution — being known as 'the yips putter.' Net score adjusted for risk: 6.2/10. Execute as targeted nurture content only, never as headline positioning."
+    },
+
+    {
+      "opportunity_id": "OPP-009",
+      "opportunity_summary": "Counter ZT's #1 complaint (distance control) with gravity-driven pendulum advantage",
+      "tier": "2_CONSIDER",
+      "composite_score": 7.15,
+      "risks": [
+        {
+          "risk_id": "R-009-01",
+          "category": "proof_availability",
+          "description": "Pendulum distance control claim requires SAM PuttLab or Arccos validation data comparing RS1 distance dispersion to ZT putters. This data does not exist at launch.",
+          "likelihood": 5,
+          "impact": 3,
+          "risk_score": 15,
+          "risk_level": "HIGH",
+          "evidence": "ranked_opportunities.json OPP-009 risk: 'Pendulum distance control claim requires SAM PuttLab validation data.' proof_inventory.json does not list any available distance control comparison data. The claim is theoretically grounded (forward CG creates pendulum momentum) but unvalidated empirically.",
+          "mitigation": "At launch, frame distance control as a user-reported experience rather than an engineering claim: 'RS1 owners report that distance control felt natural from day one.' Collect distance-dispersion data from beta testers and publish once validated. Avoid making specific quantified distance-control claims without data.",
+          "monitoring_trigger": "Collect beta tester self-reported distance control feedback. If 80%+ report natural distance control, the claim becomes launchable with testimonial support. If feedback is mixed, defer the claim."
+        },
+        {
+          "risk_id": "R-009-02",
+          "category": "competitive_response",
+          "description": "If independent testing shows RS1 distance control is equivalent to (not better than) ZT, the claim weakens because the audience expects SUPERIORITY from an 'evolutionary' product, not parity.",
+          "likelihood": 3,
+          "impact": 3,
+          "risk_score": 9,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-009 risk: 'If independent testing shows RS1 distance control is equivalent to ZT, the claim weakens.' competitor_analysis.json documents that LAB distance control complaints are significant but not universal — many LAB users report excellent distance control after adaptation. Evnroll's SweetFace grooves address ball-speed consistency, a related but distinct variable.",
+          "mitigation": "Position distance control as an additional benefit, not the primary claim. 'RS1 delivers face stability — AND you won't sacrifice distance control to get it.' This frames the claim as a blocker-remover rather than a superiority claim, which is more defensible with parity data.",
+          "monitoring_trigger": "Internal testing: measure 20-foot distance dispersion (standard deviation from target) comparing RS1 to LAB DF3 and a conventional mallet. If RS1 is measurably better, promote the claim. If equivalent, frame as 'no sacrifice.' If worse, do not make the claim."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "Distance control is a genuine ZT complaint that RS1 may address, but the claim requires empirical validation. Net score adjusted for risk: 6.0/10. Recommendation: position as secondary benefit with testimonial support; upgrade to primary claim only with testing data."
+    },
+
+    {
+      "opportunity_id": "OPP-011",
+      "opportunity_summary": "Deploy price-wedge advantage ($399/$429 vs LAB $449-$649) as offensive positioning",
+      "tier": "2_CONSIDER",
+      "composite_score": 6.9,
+      "risks": [
+        {
+          "risk_id": "R-011-01",
+          "category": "audience_readiness",
+          "description": "Leading with price positions RS1 as a budget alternative rather than a technological advancement, undermining the premium innovation narrative.",
+          "likelihood": 4,
+          "impact": 4,
+          "risk_score": 16,
+          "risk_level": "HIGH",
+          "evidence": "ranked_opportunities.json OPP-011 risk: 'Leading with price positions RS1 as budget alternative rather than technological advancement.' sophistication_analysis.json recommended_positioning explicitly warns: 'NEVER lead with price.' The market_config anti-identity includes 'the sucker who falls for marketing' — and value-positioning can trigger the adjacent anti-identity of 'the guy who buys cheap equipment.'",
+          "mitigation": "Price should VALIDATE the value proposition, never LEAD it. Position as: 'More technology for less money' — technology first, price second. The messaging sequence must be: (1) demonstrate the innovation, (2) establish the engineering authority, (3) reveal the price as a pleasant surprise. Never reverse this sequence.",
+          "monitoring_trigger": "Track brand perception for 'budget' or 'cheap' associations. If any ad variant generates 'you get what you pay for' pushback, the price positioning is undermining the innovation narrative."
+        },
+        {
+          "risk_id": "R-011-02",
+          "category": "competitive_response",
+          "description": "LAB Golf could respond to RS1's price positioning by dropping prices, particularly on their entry-level models, neutralizing the price advantage entirely.",
+          "likelihood": 3,
+          "impact": 3,
+          "risk_score": 9,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-011 risk: 'If LAB drops prices in response, the advantage disappears.' competitor_analysis.json notes LAB's L Catterton acquisition provides resources that could fund a price war. LAB already offers multiple price tiers ($449-$649) and could introduce a $399 model. Additionally, TEMU LAB knockoffs at $90 (Q1398) show the market is already seeing downward price pressure.",
+          "mitigation": "Never make price the primary differentiator. If LAB matches price, RS1 still wins on aesthetics, feel, adaptation, and mechanism (forward vs passive). Build the value proposition so deeply that price is a bonus, not the reason to buy.",
+          "monitoring_trigger": "Monitor LAB Golf pricing changes quarterly. If LAB introduces a sub-$400 model, immediately pivot messaging away from price comparison."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "Price advantage is real ($50-$220 vs LAB) but dangerous as a lead message. Net score adjusted for risk: 5.8/10. Recommendation: deploy price exclusively as a validation element in the consideration phase, never as a top-of-funnel hook."
+    },
+
+    {
+      "opportunity_id": "OPP-012",
+      "opportunity_summary": "Deploy schema-violation messaging structures to bypass Stage 4 audience numbness",
+      "tier": "2_CONSIDER",
+      "composite_score": 6.62,
+      "risks": [
+        {
+          "risk_id": "R-012-01",
+          "category": "execution_complexity",
+          "description": "Schema violations can feel gimmicky if the underlying product message isn't strong, creating negative brand perception rather than positive surprise.",
+          "likelihood": 3,
+          "impact": 3,
+          "risk_score": 9,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-012 risk: 'Schema violations can feel gimmicky if the underlying product message isn't strong.' expectation_schema.json schema_violation_opportunities: 'Replace the Testimonial Cascade with a Single Falsifiable Challenge' has risk_level 'medium' because 'it requires the prospect to have access to the product.' Several schema violations are rated medium risk specifically because unusual formats can confuse rather than engage.",
+          "mitigation": "Test schema violations in A/B format against standard structures before full deployment. Only adopt schema violations that demonstrably outperform standard formats in engagement AND conversion (not just engagement alone — unusual formats can generate curiosity without conversion).",
+          "monitoring_trigger": "A/B test each schema violation against the standard structure it replaces. Measure both engagement (CTR, video completion) AND conversion (add to cart, purchase). If engagement is high but conversion is low, the format is entertaining but not persuasive."
+        },
+        {
+          "risk_id": "R-012-02",
+          "category": "audience_readiness",
+          "description": "Some audience segments prefer familiar formats. Older golfers (core demographic for premium putters) may find unusual structures confusing or unprofessional.",
+          "likelihood": 3,
+          "impact": 2,
+          "risk_score": 6,
+          "risk_level": "LOW",
+          "evidence": "ranked_opportunities.json OPP-012 risk: 'Some audiences prefer familiar formats — schema violation is not universally positive.' The primary WEB skews 35-65 years old, and this demographic may respond differently to format violations than younger audiences. expectation_schema.json does not segment audience numbness by age, leaving this an assumption gap.",
+          "mitigation": "Segment schema violation deployment by channel. YouTube and social media: deploy schema violations (audience expects innovation in format). Email to warm list: test carefully (audience expects consistent brand voice). Long-form VSL: use schema violations in the first 60 seconds to hook, then transition to structured format for conversion.",
+          "monitoring_trigger": "Segment A/B test results by audience age cohort. If 55+ cohort responds negatively to schema violations, restrict unusual formats to younger-skewing channels."
+        }
+      ],
+      "overall_risk_profile": "LOW",
+      "net_opportunity_assessment": "Schema violations are a tactical execution advantage, not a strategic positioning play. The risk is low because violations can be A/B tested and deployed selectively. Net score adjusted for risk: 6.0/10."
+    },
+
+    {
+      "opportunity_id": "OPP-013",
+      "opportunity_summary": "Position 74-degree lie angle as designed-in innovation (not fitting variable)",
+      "tier": "2_CONSIDER",
+      "composite_score": 6.2,
+      "risks": [
+        {
+          "risk_id": "R-013-01",
+          "category": "audience_readiness",
+          "description": "Lie angle is a technical specification that requires education to appreciate. In short-form content, a 4-degree difference may be perceived as insignificant without demonstration data.",
+          "likelihood": 4,
+          "impact": 2,
+          "risk_score": 8,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-013 risk: 'Technical feature that requires education — may not resonate in short-form content' and 'Golfers may perceive 4-degree difference as insignificant without demonstration data.' ranked_opportunities.json rates this opportunity's emotional_intensity at only 5.5/10 — the lowest of any Tier 1 or Tier 2 opportunity.",
+          "mitigation": "Position lie angle within the Roll Straight Technology system framework, not as a standalone claim. Show video comparison of stroke arc at 70 degrees vs 74 degrees — the visual difference in face rotation through the stroke is more compelling than the number itself.",
+          "monitoring_trigger": "Track engagement on lie-angle-specific content. If engagement is significantly lower than other RS1 content, the audience is not connecting with the technical detail. Reduce prominence accordingly."
+        },
+        {
+          "risk_id": "R-013-02",
+          "category": "competitive_response",
+          "description": "Competitors could easily adjust lie angle on their putters — this is a fitting variable, not a protected innovation. Any brand can offer a 74-degree option.",
+          "likelihood": 4,
+          "impact": 2,
+          "risk_score": 8,
+          "risk_level": "MEDIUM",
+          "evidence": "ranked_opportunities.json OPP-013 notes: 'No brand markets a specific lie angle as a designed-in performance feature' — but the reason may be that lie angle is trivially adjustable in manufacturing. competitor_analysis.json shows LAB and Scotty Cameron already offer custom lie angle adjustments through their fitting processes.",
+          "mitigation": "Never position lie angle as the primary differentiator. Frame it as one component of the 7-feature RST system that TOGETHER create the forward-weighting advantage. The system is defensible; any single component is not.",
+          "monitoring_trigger": "Watch for competitor marketing that adopts lie-angle-as-feature positioning. Low concern — even if copied, the single feature is not RS1's primary value proposition."
+        }
+      ],
+      "overall_risk_profile": "LOW",
+      "net_opportunity_assessment": "Lie angle positioning is a low-risk, low-reward supporting claim. It adds technical depth to the RST system narrative but cannot carry marketing weight independently. Net score adjusted for risk: 5.5/10."
+    },
+
+    {
+      "opportunity_id": "OPP-014",
+      "opportunity_summary": "Build data proof package (SAM PuttLab, Arccos, independent testing) for data-driven segment post-launch",
+      "tier": "2_CONSIDER",
+      "composite_score": 5.82,
+      "risks": [
+        {
+          "risk_id": "R-014-01",
+          "category": "market_timing",
+          "description": "Pursuing data-driven positioning without independent testing data will destroy credibility with the most skeptical, most influential segment of the market.",
+          "likelihood": 5,
+          "impact": 4,
+          "risk_score": 20,
+          "risk_level": "CRITICAL",
+          "evidence": "ranked_opportunities.json OPP-014 risk: 'Pursuing without independent testing data will destroy credibility with most skeptical segment.' proof_inventory.json proof_gaps: 'No independent third-party testing or validation' rated CRITICAL. The timing_window score is only 4.5/10 — the lowest of any opportunity — because 'RS1 needs 6-12 months of independent testing before credibly targeting this segment.'",
+          "mitigation": "This opportunity is explicitly a post-launch strategy. Phase 1 (launch): submit RS1 to MyGolfSpy, commission SAM PuttLab testing, seed to YouTube creators. Phase 2 (month 6-12): deploy data proof package once results are in hand. Never claim data-driven validation before the data exists.",
+          "monitoring_trigger": "Track MyGolfSpy submission status, SAM PuttLab testing timeline, and YouTube creator review publication dates. The data proof package becomes deployable only when 3+ independent sources have published results."
+        },
+        {
+          "risk_id": "R-014-02",
+          "category": "competitive_response",
+          "description": "Evnroll and LAB have a significant head start in data-proof credibility. Evnroll won multiple MyGolfSpy Most Wanted awards. LAB has extensive Arccos user data. RS1 enters the data conversation as a newcomer.",
+          "likelihood": 4,
+          "impact": 2,
+          "risk_score": 8,
+          "risk_level": "MEDIUM",
+          "evidence": "competitor_analysis.json: 'Evnroll's proof is the most data-driven and honestly earned of any competitor.' 'LAB has SAM PuttLab fitting data, Arccos strokes gained statistics from users, MyGolfSpy independent testing results.' ranked_opportunities.json OPP-014 risk: 'Evnroll and LAB have head start in data-proof credibility.'",
+          "mitigation": "RS1's data-proof story should focus on forward-weighting-SPECIFIC metrics that competitors haven't tested: face-angle consistency through the impact zone, face-down balance quantification, and active vs passive face-squaring measurements. Create a new data conversation rather than competing in existing data frameworks.",
+          "monitoring_trigger": "When MyGolfSpy or independent testing results arrive, assess whether RS1 outperforms competitors on standard metrics (face angle, MOI, distance dispersion) or only on forward-weighting-specific metrics. This determines whether data positioning should be broad or niche."
+        }
+      ],
+      "overall_risk_profile": "HIGH",
+      "net_opportunity_assessment": "The data-proof opportunity is explicitly deferred to post-launch. Pursuing it prematurely is CRITICAL risk. Net score adjusted for risk: 4.5/10 at launch, potentially 7.0/10 at month 6-12 when data becomes available."
+    },
+
+    {
+      "opportunity_id": "OPP-015",
+      "opportunity_summary": "Let confidence-mechanism framework emerge organically from testimonials rather than leading with it",
+      "tier": "2_CONSIDER",
+      "composite_score": 5.45,
+      "risks": [
+        {
+          "risk_id": "R-015-01",
+          "category": "audience_readiness",
+          "description": "Leading with a confidence claim triggers immediate Stage 4 skepticism because 7 competitors already claim confidence at address.",
+          "likelihood": 5,
+          "impact": 3,
+          "risk_score": 15,
+          "risk_level": "HIGH",
+          "evidence": "expectation_schema.json rates 'Confidence at Address' at staleness_score 8/10 with 7 competitors using it. ranked_opportunities.json OPP-015 risk: 'Leading with confidence claim triggers immediate Stage 4 skepticism.' sophistication_analysis.json: audience skepticism level is 'High — Stage 4 mechanism fatigue.'",
+          "mitigation": "This opportunity is explicitly framed as 'let it emerge from testimonials.' Do not create confidence-themed ad campaigns. Instead, collect testimonials that naturally mention confidence and publish them as user stories. The confidence narrative builds credibility when it comes from USERS, not from the BRAND.",
+          "monitoring_trigger": "Track organic testimonial language for confidence references. If 60%+ of user testimonials mention confidence unprompted, consider elevating it to a secondary messaging theme (still not primary). If less than 40% mention it, leave it entirely to organic expression."
+        },
+        {
+          "risk_id": "R-015-02",
+          "category": "competitive_response",
+          "description": "Seven competitors already occupy the confidence space. Any RS1 confidence messaging, even testimonial-based, enters the most saturated emotional territory in the putter market.",
+          "likelihood": 4,
+          "impact": 2,
+          "risk_score": 8,
+          "risk_level": "MEDIUM",
+          "evidence": "expectation_schema.json: 7 competitors use confidence appeal, staleness_score 8. ranked_opportunities.json OPP-015 competitive_space score is only 3.5/10 — the lowest competitive_space score of any opportunity.",
+          "mitigation": "If confidence messaging is deployed, differentiate it as MECHANICAL confidence (certainty from physics) rather than EMOTIONAL confidence (hope from marketing). 'I'm confident because I can see the face fall forward' is different from 'I'm confident because this putter feels right.'",
+          "monitoring_trigger": "Compare RS1 confidence testimonials to competitor confidence testimonials. If they sound identical, the differentiation has failed. If they reference physics/mechanics ('I know the face stays square'), the differentiation is working."
+        }
+      ],
+      "overall_risk_profile": "MEDIUM",
+      "net_opportunity_assessment": "Confidence is the right outcome but the wrong headline. Net score adjusted for risk: 4.5/10 as a positioned claim, but 6.5/10 as an organic testimonial theme. Never lead with it; let it emerge."
+    }
+  ],
+
+  "cross_cutting_risks": [
+    {
+      "risk_id": "CCR-001",
+      "risk_name": "Brand Credibility Gap — Performance Golf has zero hardware credibility",
+      "description": "Performance Golf is known for digital instruction content, not equipment manufacturing. Every opportunity in the portfolio is affected by the fundamental credibility question: 'Why should I trust a marketing company to build a premium putter?' This is the single risk that could undermine ALL opportunities simultaneously, regardless of how well each individual opportunity is executed.",
+      "affected_opportunities": ["OPP-001", "OPP-002", "OPP-003", "OPP-004", "OPP-005", "OPP-006", "OPP-007", "OPP-008", "OPP-009", "OPP-010", "OPP-011", "OPP-012", "OPP-013", "OPP-014", "OPP-015"],
+      "likelihood": 5,
+      "impact": 5,
+      "risk_score": 25,
+      "risk_level": "CRITICAL",
+      "evidence": "proof_inventory.json proof_gaps: 'Performance Golf brand credibility in equipment category (known for instruction, not gear)' rated HIGH importance. belief_analysis.json documents the limiting belief: 'PG is a marketing company, not a putter company.' proof_inventory.json explicitly recommends: 'Lead with McGinley's credentials, not Performance Golf branding. Position as Chris McGinley's RS1, brought to you by Performance Golf.' villain_analysis.json documents 'Marketing Over Engineering' as a villain — golfers actively distrust marketing companies.",
+      "mitigation": "Three-layer credibility strategy: (1) DESIGNER AUTHORITY — Make Chris McGinley the face of RS1. His 25-year OEM pedigree and 11 world #1 players are credentials PG cannot earn on its own. (2) DEMONSTRATION PROOF — The 'Let It Fall' test doesn't require brand trust; it requires eyes. Physics proof bypasses brand skepticism. (3) INDEPENDENT VALIDATION — Submit to MyGolfSpy, commission SAM PuttLab testing, seed to YouTube creators. Third-party validation substitutes for the brand credibility PG lacks. De-emphasize PG branding in cold traffic campaigns; lead with McGinley and the product.",
+      "monitoring_trigger": "Track cold traffic conversion rates segmented by audience awareness of Performance Golf. If PG-aware audiences convert at significantly lower rates than PG-unaware audiences, the brand credibility gap is actively suppressing sales. Also monitor 'Performance Golf putter' search sentiment for skepticism indicators."
+    },
+    {
+      "risk_id": "CCR-002",
+      "risk_name": "Proof Gap — No customer testimonials, no independent testing, no tour adoption (pre-launch)",
+      "description": "RS1 launches with the three most critical proof categories EMPTY: no real-world user results, no independent third-party validation, and no professional player adoption. In a Stage 4 market where 'mechanism claims must be PROVED, not just stated,' launching with only engineering claims and a demonstration is a significant vulnerability. Every opportunity that involves a comparison claim, a performance promise, or a credibility argument is affected.",
+      "affected_opportunities": ["OPP-001", "OPP-002", "OPP-003", "OPP-005", "OPP-006", "OPP-008", "OPP-009", "OPP-010", "OPP-014"],
+      "likelihood": 5,
+      "impact": 4,
+      "risk_score": 20,
+      "risk_level": "CRITICAL",
+      "evidence": "proof_inventory.json proof_gaps lists 8 gaps: (1) No customer testimonials with metrics — CRITICAL, (2) No independent third-party testing — CRITICAL, (3) No tour/professional adoption — HIGH, (4) No YouTube creator ecosystem — HIGH, (5) No published MOI/CG/face angle data — HIGH, (6) PG brand credibility gap — HIGH, (7) No retail try-before-buy — MEDIUM, (8) No long-term durability proof — MEDIUM. Of 137 proof elements cataloged, only 38 are available — a 72% proof deficit.",
+      "mitigation": "Phased proof deployment: LAUNCH (Month 0) — Lead with available proof: 'Let It Fall' demonstration, McGinley credentials, specificity proof (75% of 360g forward), physics principles. 30-DAY SPRINT — Beta tester results with Arccos/ShotScope data. YouTube creator reviews begin publishing. 90-DAY TARGET — SAM PuttLab comparison data available. MyGolfSpy submission published. First 90-day user testimonials collected. 6-MONTH TARGET — Longitudinal data showing sustained improvement. Professional player seeding results. Full data proof package for data-driven segment.",
+      "monitoring_trigger": "Track proof acquisition timeline against these milestones. Any milestone missed by more than 30 days requires escalation and resource reallocation. The 30-day sprint (beta tester results + creator reviews) is the most critical — if this window passes without proof deployment, the launch window's persuasive power diminishes rapidly."
+    },
+    {
+      "risk_id": "CCR-003",
+      "risk_name": "Forward Weighting Co-option — Major OEM enters forward-CG space with superior distribution",
+      "description": "If a major OEM (TaylorMade, Callaway/Odyssey, Ping) launches a forward-CG putter within 18 months of RS1's launch, they bring tour seeding, retail presence, and marketing budgets that dwarf PG's resources. The ZT commoditization pattern (LAB invented it, 4 OEMs copied it in 18 months) could repeat with forward weighting.",
+      "affected_opportunities": ["OPP-001", "OPP-004", "OPP-005", "OPP-008", "OPP-013"],
+      "likelihood": 3,
+      "impact": 5,
+      "risk_score": 15,
+      "risk_level": "HIGH",
+      "evidence": "competitor_analysis.json documents the pattern: 4 major OEMs launched ZT variants within 18 months of LAB Golf's breakout. sophistication_analysis.json: 'Zero torque went from category-defining to table stakes.' market_narrative.json: 'LAB Golf acquired for $200M by L Catterton — signals institutional validation.' If forward weighting proves commercially viable, OEMs will respond. ranked_opportunities.json timing_window for OPP-001 explicitly warns: 'If a major OEM claims forward CG first, the window closes.'",
+      "mitigation": "SPEED IS THE PRIMARY MITIGATION. Establish Forward Weighting as a branded category within the first 6 months. (1) Patent and publicize IP protection for Face Down Balance mechanism. (2) Saturate content ecosystem so 'Forward Weighting = RS1' becomes the default association. (3) Build the 'face drift' vocabulary so deeply that competitors entering the space are speaking RS1's language. (4) Establish first-mover data proof that competitors cannot retroactively generate. LAB survived OEM co-option because their brand WAS the category. RS1 must achieve the same before competitors arrive.",
+      "monitoring_trigger": "Monitor USGA conforming putter list for new filings with forward-weighted CG descriptions. Monitor OEM R&D job postings, patent filings, and prototype leaks on GolfWRX. If any signal appears, accelerate content saturation and data proof deployment."
+    },
+    {
+      "risk_id": "CCR-004",
+      "risk_name": "ZT Fatigue Spillover — Face stability category exhaustion groups RS1 with ZT despite different physics",
+      "description": "As zero-torque putters proliferate (5 brands and counting), the entire face-stability category risks exhaustion in the audience's mind. Golfers may begin dismissing ALL face-stability claims — including Forward Weighting — as 'another version of the same thing,' regardless of the genuine physics distinction between passive ZT and active forward CG.",
+      "affected_opportunities": ["OPP-001", "OPP-002", "OPP-004", "OPP-005", "OPP-009"],
+      "likelihood": 3,
+      "impact": 4,
+      "risk_score": 12,
+      "risk_level": "MEDIUM",
+      "evidence": "sophistication_analysis.json: 'consumer mechanism fatigue/skepticism emerging' with quotes like 'The data all shows that tech in this particular tool doesn't matter much' (Q0385) and 'I see these zero torque putters as another fad' (expectation_schema). Stage 4 diagnosis warns of mechanism cynicism where audiences 'stop believing mechanisms altogether.' If 'zero torque' becomes 'face stability' and face stability becomes exhausted, Forward Weighting is collateral damage.",
+      "mitigation": "Obsessive vocabulary discipline. NEVER use 'zero torque,' 'face balanced,' or 'face stable' to describe RS1. Always use 'Forward Weighting' and 'Face Down Balance' — terms that are phonetically, visually, and conceptually distinct from ZT vocabulary. The 'Let It Fall' demo is the definitive separator: no ZT putter falls face-down. If the demo is shown alongside a ZT putter, the distinction is unmistakable. Build the 'active vs passive' frame so the audience has a new evaluation dimension that separates RS1 from the ZT crowd.",
+      "monitoring_trigger": "Track forum categorization of RS1. If early discussions place RS1 in the 'zero torque' category, the vocabulary campaign is failing. If discussions create a separate 'forward weighting' category, the campaign is succeeding."
+    },
+    {
+      "risk_id": "CCR-005",
+      "risk_name": "The RS1 Honeymoon — If RS1 improvement regresses like conventional putters, all positioning collapses",
+      "description": "The most existential risk: if RS1 users experience the same honeymoon-then-regression pattern as conventional putters, every claim in the portfolio becomes a broken promise. The anti-honeymoon positioning (OPP-006), the face-stability claims (OPP-001), the carousel-exit promise (OPP-006), and the self-blame liberation (OPP-003) all depend on RS1 delivering DURABLE improvement. If improvement is temporary, RS1 becomes the thing it promised to replace.",
+      "affected_opportunities": ["OPP-001", "OPP-002", "OPP-003", "OPP-005", "OPP-006", "OPP-008", "OPP-009", "OPP-010"],
+      "likelihood": 2,
+      "impact": 5,
+      "risk_score": 10,
+      "risk_level": "MEDIUM",
+      "evidence": "market_narrative.json customer_journey documents the honeymoon pattern across ALL conventional putters: 'For 2-6 weeks, the new putter works... Then, gradually, the same miss pattern returns.' The narrative argues this is caused by rearward CG specifically — and that forward CG structurally cannot regress because the physics are permanent. However, this claim is THEORETICAL until validated by longitudinal user data. LAB Golf data provides proxy evidence: LAB users show 'can't go back' permanence (31 quotes) suggesting face-stable putters DO break the honeymoon cycle. But RS1 is not LAB, and forward weighting is not zero torque.",
+      "mitigation": "Collect longitudinal user data from day one. Track every beta tester's Arccos/ShotScope data at 10 rounds, 20 rounds, 30 rounds, and 60 rounds. If the data shows sustained improvement without regression, it becomes RS1's most powerful proof asset. If the data shows regression, immediately investigate the cause and adjust claims. Implement an early warning system: if return rates increase at 30-60 days, there may be a honeymoon pattern.",
+      "monitoring_trigger": "Return rate trend analysis at 30-day intervals. Customer satisfaction survey at 30, 60, and 90 days. Arccos data trending from beta testers. ANY sign of regression should trigger immediate investigation and, if confirmed, messaging adjustment. This is a binary risk: if RS1 breaks the honeymoon, it validates everything; if it doesn't, nothing else matters."
+    }
+  ],
+
+  "risk_summary": "The RS1 risk landscape is dominated by two cross-cutting risks that affect every opportunity in the portfolio: Performance Golf's zero hardware credibility (CCR-001, CRITICAL) and the comprehensive proof gap inherent to a pre-launch product (CCR-002, CRITICAL). These are not risks that can be avoided — they are structural realities that must be mitigated through Chris McGinley's designer authority, the 'Let It Fall' demonstration proof, and an aggressive 90-day proof acquisition sprint (beta tester data, YouTube creator reviews, SAM PuttLab testing, MyGolfSpy submission). At the individual opportunity level, the highest risks concentrate in three areas: (1) proof availability — 6 of 15 opportunities carry HIGH or CRITICAL proof risks because key data doesn't exist at launch, (2) competitive response — the ZT co-option pattern could repeat with forward weighting if a major OEM enters the space (CCR-003, HIGH), and (3) audience readiness — the self-blame liberation reframe and honeymoon naming both challenge deeply held cultural beliefs that trigger defensive rejection. The most risk-adjusted opportunity is OPP-001 (Active Face Control with FDB demonstration) at 8.2/10 net score, because the visual demonstration proof bypasses both the credibility gap and audience skepticism simultaneously. The riskiest pursued opportunity is OPP-006 (Honeymoon naming) at 6.8/10 net score, because it makes a promise (durable improvement) that requires longitudinal proof RS1 cannot yet provide. Three opportunities carry CRITICAL individual risks: OPP-006 R-006-02 (no longitudinal data to prove anti-honeymoon claim), OPP-008 R-008-01 (no SAM PuttLab data for dual-promise claim), and OPP-014 R-014-01 (pursuing data-driven positioning without data). All three share the same mitigation: defer the unsubstantiated claim to Phase 2 and lead with available proof in Phase 1. The net risk profile for the RS1 launch is MEDIUM with CRITICAL dependencies on proof acquisition speed. The product's mechanism is genuinely differentiated (no competitor falls face-down). The brand's credibility is genuinely deficient (no hardware track record). The battle will be won or lost on how quickly the proof gap closes — specifically, whether beta tester results, SAM PuttLab data, and YouTube creator reviews arrive within 30-90 days of launch to convert engineering claims into validated performance evidence."
+}

@@ -1,0 +1,1 @@
+before creating runbooks we need to figure out the ideal way to compress all the effort we've put into agents and skills and context and maximizes it's power as much as possiblel

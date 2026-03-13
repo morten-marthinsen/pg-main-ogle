@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "format": "text-overlay",
+    "version": "1.0.0",
+    "created": "2026-03-04",
+    "engine": "OrganicMarketingEngine",
+    "description": "Canonical format analysis for text-on-screen video content — text as the primary information carrier with video as supporting visual. Dominates the 'sound-off' viewing environment and excels at educational, listicle, and motivational content.",
+    "specimen_count": 16,
+    "teaching_frameworks_referenced": [
+      "Brendan Kane - Hook Point",
+      "Ann Handley - Everybody Writes",
+      "Gary Vaynerchuk - Day Trading Attention",
+      "Donald Miller - StoryBrand"
+    ]
+  },
+  "format_analysis": {
+    "format_definition": "Video content where text displayed on screen is the primary information delivery mechanism. The visual background may be stock footage, ambient video, screen recordings, or minimal motion graphics. Viewer gets the full message without audio. Distinguished from subtitles/captions because the text IS the content, not a supplement to spoken words.",
+    "why_it_works": {
+      "psychological_mechanisms": [
+        "Sound-off optimization — 85% of social media video is watched without sound initially",
+        "Reading speed control — viewer processes at their own cognitive pace",
+        "Pattern completion — text appearing word-by-word or line-by-line creates micro-anticipation loops",
+        "Dual encoding — visual background + text creates two memory pathways simultaneously",
+        "Cognitive ownership — reading feels more like 'thinking it yourself' than hearing someone say it"
+      ],
+      "neurological_advantage": "Text-overlay exploits the brain's automatic reading response (Stroop effect) — when text appears in a viewer's visual field, they cannot NOT read it. This makes scroll-stopping nearly involuntary if the first words are visible."
+    },
+    "platform_performance": {
+      "tiktok": {
+        "effectiveness": "S-tier",
+        "optimal_length": "15-60 seconds",
+        "notes": "Text-overlay is one of TikTok's highest-performing formats for educational and motivational content. The platform's auto-play, sound-off default environment makes text-overlay the path of least resistance for viewers. Green screen + text, or ambient footage + text, dominate For You Pages.",
+        "avg_completion_rate": "55-75% (highest of any format when text pacing is optimized)",
+        "trending_direction": "Evergreen — consistently performs"
+      },
+      "instagram_reels": {
+        "effectiveness": "A-tier",
+        "optimal_length": "15-45 seconds",
+        "notes": "Instagram's audience scrolls sound-off even more than TikTok. Text-overlay Reels get high save rates because the visual text format makes content feel 'reference-worthy.' Aesthetic text design matters more on IG than TikTok — the audience expects visual polish.",
+        "avg_completion_rate": "50-65%",
+        "trending_direction": "Stable with upward trend for educational accounts"
+      },
+      "youtube_shorts": {
+        "effectiveness": "B-tier",
+        "optimal_length": "30-58 seconds",
+        "notes": "YouTube Shorts audience tends to prefer talking-head or high-energy visual content. Text-overlay works but underperforms compared to TikTok/IG because YouTube's culture is more audio-centric. Best used for listicles and shocking facts.",
+        "avg_completion_rate": "40-55%",
+        "trending_direction": "Moderate — niche dependent"
+      },
+      "linkedin": {
+        "effectiveness": "A-tier",
+        "optimal_length": "30-90 seconds",
+        "notes": "LinkedIn's professional environment is almost entirely sound-off. Text-overlay videos that deliver business insights, career tips, or industry analysis perform exceptionally. The format signals 'quick, efficient insight' which matches LinkedIn's user intent.",
+        "avg_completion_rate": "55-70%",
+        "trending_direction": "Rising fast — low competition, high engagement"
+      },
+      "twitter_x": {
+        "effectiveness": "B-tier",
+        "optimal_length": "15-30 seconds",
+        "notes": "Twitter's autoplay and sound-off defaults make text-overlay effective, but the text-heavy culture of Twitter means text-overlay video competes directly with text tweets. Wins when the visual background adds context the text alone cannot provide.",
+        "avg_completion_rate": "35-50%",
+        "trending_direction": "Stable"
+      }
+    },
+    "optimal_specs": {
+      "typography": {
+        "font_selection": "Sans-serif fonts dominate (Montserrat, Inter, Futura, Helvetica). Serif fonts (Playfair, Georgia) work for luxury/editorial niches. Script/handwritten fonts for personal/lifestyle niches only.",
+        "font_size_minimum": "Mobile-first: minimum 48pt equivalent on 1080x1920 canvas. If text is unreadable on a phone held at arm's length, it's too small.",
+        "color_contrast": "White text on dark backgrounds or dark text on light backgrounds with minimum 4.5:1 contrast ratio. Colored text only for single-word emphasis.",
+        "text_shadow_stroke": "Always add a slight text shadow or dark stroke when text overlays variable-brightness footage. Without it, text disappears against bright areas."
+      },
+      "timing": {
+        "words_per_second": "2.5-3.5 words per second is optimal reading speed for mobile viewers. Faster loses comprehension, slower loses attention.",
+        "line_reveal_cadence": "Reveal one line or phrase at a time, not word-by-word (too slow) and not full paragraph at once (too overwhelming).",
+        "hold_time": "Each text frame should hold for minimum 1.5 seconds, maximum 4 seconds. Under 1.5 seconds creates anxiety; over 4 seconds creates boredom.",
+        "transition_style": "Cut transitions between text frames are fastest and most effective. Dissolves/fades slow the pacing. Slide/push transitions add energy but can distract."
+      },
+      "animation": {
+        "entrance": "Simple fade-in or pop-in. Avoid elaborate entrance animations — they delay the reader and feel dated.",
+        "emphasis": "Scale pulse (105% then back to 100%) on key words. Color change on critical phrases. Underline animation for emphasis.",
+        "exit": "Cut or quick fade. Never let text linger during exit animation.",
+        "motion_graphics": "Minimal — supporting icons or simple illustrations can enhance retention but must not compete with text readability."
+      },
+      "background": {
+        "ambient_footage": "Slow-motion lifestyle, nature, or urban footage. Must be visually interesting but not distracting. Low contrast, slightly desaturated works best.",
+        "solid_dark": "Dark solid or gradient backgrounds with white text — highest readability, lowest production effort. Works well for data/stats content.",
+        "screen_recording": "Screen recordings with text overlay for tech/tutorial content. Text should be in a contrasting banner area, not floating over the recording.",
+        "split_layout": "Text in upper 60%, video/image in lower 40% — or vice versa. Creates clean separation between information and visual support."
+      },
+      "length_by_purpose": {
+        "single_tip": "10-20 seconds",
+        "listicle_3_to_5": "30-45 seconds",
+        "listicle_7_to_10": "45-75 seconds",
+        "story_with_moral": "30-60 seconds",
+        "tutorial_walkthrough": "45-90 seconds"
+      }
+    }
+  },
+  "specimens": [
+    {
+      "id": "TO-001",
+      "creator": "Wisdom accounts (aggregator format)",
+      "platform": "TikTok / Instagram Reels",
+      "content_type": "Motivational quotes with cinematic b-roll",
+      "description": "White sans-serif text over slow-motion cinematic footage (city skylines, nature, people in motion). Single powerful quote revealed line by line with dramatic music underneath.",
+      "why_effective": "The cinematic footage creates emotional priming, then the text delivers the payload. The viewer's emotional state (awe from visuals + inspiration from text) creates a dopamine spike that drives shares. The format is endlessly templatable.",
+      "text_style": "Centered, large font, line-by-line reveal",
+      "estimated_views": "500K-50M (motivational content has the highest viral ceiling)",
+      "key_techniques": ["Emotional priming through visuals", "Line-by-line reveal for anticipation", "Dramatic music underscore", "Share-trigger content", "Template-ready for scale"]
+    },
+    {
+      "id": "TO-002",
+      "creator": "Nathan Baugh",
+      "platform": "Twitter/X / LinkedIn",
+      "content_type": "Business storytelling — historical business stories told with text on screen",
+      "description": "Text appears over relevant archival images, product photos, or simple backgrounds. Tells stories of how companies were built, pivoted, or failed. Clean, newspaper-like typography.",
+      "why_effective": "The text-overlay format turns business history into a visual narrative experience. Each text frame is a micro-hook that compels the next. The format mimics documentary storytelling but in 60-second vertical video. Extremely high save rate because viewers want to reference the story later.",
+      "text_style": "Left-aligned, editorial font, with supporting images",
+      "estimated_views": "1-10M per story",
+      "key_techniques": ["Documentary-style text storytelling", "Archival imagery as supporting context", "Micro-hook per frame", "High save-rate optimization", "Business narrative structure"]
+    },
+    {
+      "id": "TO-003",
+      "creator": "Financial education accounts",
+      "platform": "TikTok / Instagram Reels",
+      "content_type": "Money tips, tax strategies, investment basics",
+      "description": "Bold text on dark background (often black or dark blue) with green/white accent colors. Numbers displayed large. Calculator or financial imagery as occasional visual support. Lists structured as numbered tips.",
+      "why_effective": "Financial content is inherently 'must-save' — people treat it as reference material. The dark background with bold numbers creates a 'data dashboard' aesthetic that signals credibility. Numbered lists create completionism drive (must read all 5).",
+      "text_style": "Bold sans-serif, numbered lists, dark theme",
+      "estimated_views": "200K-5M per post",
+      "key_techniques": ["Dashboard aesthetic for credibility", "Save-optimization through reference value", "Numbered list completionism", "Green/money color psychology", "Specific numbers over vague claims"]
+    },
+    {
+      "id": "TO-004",
+      "creator": "Keenan Beasley / Various marketing educators",
+      "platform": "TikTok / Instagram Reels",
+      "content_type": "Marketing breakdowns — why ads/campaigns work",
+      "description": "Screen recording or screenshot of an ad/brand post with text overlay explaining why it works. Red circles, arrows, and highlights draw attention to specific elements. Fast-paced text reveals the insight.",
+      "why_effective": "The 'breakdown' format leverages curiosity about familiar brands. Viewers see a brand they recognize, then learn the hidden strategy behind it. This creates an 'insider knowledge' feeling. The visual annotation (circles, arrows) mimics how a coach would analyze game tape.",
+      "text_style": "Mixed — explanatory captions + visual annotations",
+      "estimated_views": "100K-3M per post",
+      "key_techniques": ["Familiar brand as attention anchor", "Coach/analyst frame", "Visual annotation for emphasis", "Insider knowledge positioning", "Screen recording as evidence"]
+    },
+    {
+      "id": "TO-005",
+      "creator": "Facts/Did You Know accounts",
+      "platform": "TikTok / Instagram Reels / YouTube Shorts",
+      "content_type": "Surprising facts and trivia",
+      "description": "Large, bold text stating a surprising fact, often with a relevant image or stock video as background. Each fact is its own video, or listicle of 5-7 facts. Clean, punchy typography with bright accent colors.",
+      "why_effective": "The 'Did You Know' format exploits the information gap — Loewenstein's curiosity theory states that awareness of a gap in knowledge creates a drive to fill it. The text-overlay format delivers the resolution instantly, creating a rapid dopamine hit. Shares are driven by 'I didn't know this and neither did you' social currency.",
+      "text_style": "Large centered text, bright accents, supporting imagery",
+      "estimated_views": "500K-20M (fact content is platform-agnostic)",
+      "key_techniques": ["Information gap exploitation", "Social currency sharing", "Rapid dopamine delivery", "Platform-agnostic content", "Endless content supply from research"]
+    },
+    {
+      "id": "TO-006",
+      "creator": "Recipe and cooking accounts",
+      "platform": "Instagram Reels / TikTok",
+      "content_type": "Recipe instructions with text overlay on cooking footage",
+      "description": "Overhead or angled cooking footage with step-by-step text instructions appearing on screen. Ingredients listed at start, then process shown with text narrating each step. Clean, warm typography matching food aesthetic.",
+      "why_effective": "Cooking content is inherently sound-off friendly — viewers save recipes and cook along later. The text-overlay format makes the recipe scannable and reference-worthy. The visual of food preparation activates appetite and aspiration simultaneously.",
+      "text_style": "Warm tones, step-numbered, ingredient callouts",
+      "estimated_views": "200K-10M per recipe",
+      "key_techniques": ["Sound-off optimization", "Save-and-reference design", "Step-by-step structure", "Visual appetite activation", "Warm aesthetic typography"]
+    },
+    {
+      "id": "TO-007",
+      "creator": "Career/Job accounts",
+      "platform": "LinkedIn / TikTok / Instagram",
+      "content_type": "Resume tips, interview prep, salary negotiation",
+      "description": "Professional-styled text on clean backgrounds (often white or soft gradients). Bullet-pointed tips with occasional screenshot evidence (real LinkedIn profiles, resume examples). Structured as 'Do this, not that' comparisons.",
+      "why_effective": "Career content is high-anxiety, high-stakes for viewers, making them extremely attentive and likely to save. The 'Do this, not that' comparison format creates clear contrast that is easy to remember and act on. LinkedIn cross-posting gives it a professional credibility boost.",
+      "text_style": "Professional, bulleted, comparison format",
+      "estimated_views": "100K-5M per post",
+      "key_techniques": ["High-stakes anxiety engagement", "Do-this-not-that structure", "Screenshot evidence", "Cross-platform professional credibility", "Save-rate optimization"]
+    },
+    {
+      "id": "TO-008",
+      "creator": "Thread/story accounts",
+      "platform": "TikTok / Instagram Reels",
+      "content_type": "Reddit stories, confessions, relationship drama",
+      "description": "Text scrolling or appearing frame-by-frame over Minecraft parkour, subway surfer, or other satisfying gameplay footage. The story is the text; the gameplay is pure visual stimulation to maintain attention.",
+      "why_effective": "This is the most controversial but undeniably effective text-overlay variant. The dual-stimulation (reading + watching gameplay) occupies both the linguistic and visual processing systems simultaneously, making it nearly impossible to scroll away. The gameplay keeps the reptilian brain engaged while the text feeds the linguistic brain. Completion rates are abnormally high.",
+      "text_style": "Large sans-serif, scrolling or paged, over gameplay footage",
+      "estimated_views": "1-50M (this format produces some of the highest-view content on TikTok)",
+      "key_techniques": ["Dual-stimulation attention locking", "Story-driven text content", "Gameplay as visual filler", "Maximum completion rate engineering", "Low production cost, high engagement"]
+    },
+    {
+      "id": "TO-009",
+      "creator": "AI tool/tech accounts",
+      "platform": "TikTok / Instagram / LinkedIn",
+      "content_type": "AI tool recommendations and tech tutorials",
+      "description": "Screen recording of the tool in action with text overlay explaining what it does and how to use it. Numbered steps with bold tool names. Often 'listicle' format: '5 AI Tools That Will Replace Your Entire Team.'",
+      "why_effective": "Tech/AI content is visually demonstrable — showing the tool working is more convincing than talking about it. Text overlay guides the viewer through what they're seeing, reducing cognitive load. The listicle format creates binge-watching as viewers want to see all tools.",
+      "text_style": "Bold numbered headers, explanatory sub-text, screen recording background",
+      "estimated_views": "200K-10M (AI content currently has algorithmic tailwind on all platforms)",
+      "key_techniques": ["Screen recording as proof", "Guided demonstration format", "Listicle binge-trigger", "Algorithmic trend riding", "Utility-driven sharing"]
+    },
+    {
+      "id": "TO-010",
+      "creator": "Psychology/mental health accounts",
+      "platform": "TikTok / Instagram Reels",
+      "content_type": "Psychological insights, attachment styles, cognitive biases",
+      "description": "Calming background footage (nature, rain, abstract) with thoughtful text overlay explaining psychological concepts. Gentle reveal pacing. Often 'Signs you...' or 'If you do this...' format.",
+      "why_effective": "The calm visual + insightful text combination creates a 'safe space for self-reflection' that triggers deep engagement. Viewers who identify with the content experience powerful self-recognition, driving both saves (personal reference) and shares (tagging friends). The slow pacing matches the reflective mood.",
+      "text_style": "Gentle sans-serif, calm colors, slow reveal",
+      "estimated_views": "500K-20M (mental health content has massive audience)",
+      "key_techniques": ["Safe space visual design", "Self-recognition triggers", "Tag-a-friend share mechanics", "Calm pacing for reflective content", "Attachment and identity hooks"]
+    },
+    {
+      "id": "TO-011",
+      "creator": "Luxury/aspiration lifestyle accounts",
+      "platform": "TikTok / Instagram Reels",
+      "content_type": "Wealth habits, luxury lifestyle tips, high-value living",
+      "description": "Cinematic luxury footage (cars, architecture, fashion, travel) with gold or white text overlay describing habits of successful people. Aspirational music. Slow-motion visuals.",
+      "why_effective": "The aspirational visual creates desire, and the text provides the 'how to get there' roadmap. This combination of aspiration + instruction is uniquely powerful because it activates both the emotional wanting system and the rational planning system simultaneously.",
+      "text_style": "Gold or white elegant sans-serif, slow reveal, luxury aesthetic",
+      "estimated_views": "1-30M (aspiration content is universally engaging)",
+      "key_techniques": ["Aspiration + instruction combination", "Luxury footage as emotional primer", "Gold typography for premium feel", "Slow-motion pacing", "Desire-activation mechanics"]
+    },
+    {
+      "id": "TO-012",
+      "creator": "Historical/educational channels",
+      "platform": "YouTube Shorts / TikTok",
+      "content_type": "Historical events told as text narratives with maps/images",
+      "description": "Historical images, maps, and archival footage with text narrating the story. Each text frame advances the narrative like a visual book. Dates, names, and numbers displayed prominently.",
+      "why_effective": "History content in text-overlay format transforms complex events into snackable visual narratives. The archival imagery provides authenticity while the text controls pacing and emphasis. The 'I learned something' feeling drives massive shares and saves.",
+      "text_style": "Documentary-styled, with dates and location callouts",
+      "estimated_views": "200K-8M per story",
+      "key_techniques": ["Archival authenticity", "Visual narrative structure", "Educational share triggers", "Complex-to-snackable translation", "Date and number anchoring"]
+    },
+    {
+      "id": "TO-013",
+      "creator": "Comparison content accounts",
+      "platform": "TikTok / Instagram Reels",
+      "content_type": "Product comparisons, before/after, cheap vs expensive",
+      "description": "Split text sections comparing two things side by side. Product images or footage with text callouts for features, prices, differences. Often uses checkmark/X format for quick scanning.",
+      "why_effective": "Comparison content triggers the brain's evaluation circuits, which are deeply engaging because they simulate a decision the viewer might need to make. The text-overlay format makes comparisons scannable and shareable. Viewers save these as 'reference' for future purchasing decisions.",
+      "text_style": "Comparison columns, checkmark/X indicators, bold feature callouts",
+      "estimated_views": "200K-5M per comparison",
+      "key_techniques": ["Decision-simulation engagement", "Scannable comparison format", "Reference-value saves", "Purchase-intent alignment", "Clear visual hierarchy"]
+    },
+    {
+      "id": "TO-014",
+      "creator": "Branded educational accounts",
+      "platform": "LinkedIn / Instagram",
+      "content_type": "Industry insights, professional development, thought leadership",
+      "description": "Branded text overlays with company colors and logo watermark on clean, professional backgrounds. Data visualizations as backgrounds with text insights. Polished, corporate-editorial aesthetic.",
+      "why_effective": "The branded text-overlay format positions companies as thought leaders without requiring a human face. This is powerful for B2B where the insight matters more than the personality. LinkedIn's sound-off environment makes this the optimal format for B2B content distribution.",
+      "text_style": "Branded, data-informed, corporate-editorial",
+      "estimated_views": "50K-500K (B2B audiences are smaller but higher value)",
+      "key_techniques": ["Faceless brand authority", "Data visualization backgrounds", "LinkedIn-first optimization", "B2B thought leadership", "Sound-off mandatory design"]
+    },
+    {
+      "id": "TO-015",
+      "creator": "Confession/anonymous story accounts",
+      "platform": "TikTok / Instagram Reels",
+      "content_type": "Anonymous confessions, secrets, dramatic stories",
+      "description": "Plain dark or blurred background with text telling an anonymous story. Suspenseful music. Text reveals slowly to build tension. Often ends with a twist or emotional reveal.",
+      "why_effective": "Anonymous confessions remove the social risk of vulnerability, allowing stories that no talking-head would ever tell. The plain visual design forces all attention onto the text narrative. The slow reveal creates tension mechanics identical to thriller storytelling. Comment sections explode with opinions and personal stories.",
+      "text_style": "Simple white text, dark background, suspenseful slow reveal",
+      "estimated_views": "500K-30M (confession content has viral mechanics built in)",
+      "key_techniques": ["Anonymity enables extreme vulnerability", "Text-only forces narrative focus", "Slow reveal tension mechanics", "Comment section engagement explosion", "Twist endings for share triggers"]
+    },
+    {
+      "id": "TO-016",
+      "creator": "Self-improvement listicle accounts",
+      "platform": "TikTok / Instagram / YouTube Shorts",
+      "content_type": "Habits, routines, productivity tips, life hacks",
+      "description": "Clean aesthetic background with numbered list items appearing one at a time. Each item is a concise actionable tip. Often uses 'Things I stopped doing' or 'Habits that changed my life' framing.",
+      "why_effective": "The numbered list format triggers completionism — the brain wants to see all items. Each item is a standalone micro-value delivery, meaning even partial viewing delivers satisfaction. The self-improvement framing taps into universal desire for personal growth. High save rate because viewers treat lists as to-do references.",
+      "text_style": "Numbered, clean sans-serif, one item at a time",
+      "estimated_views": "300K-10M per post",
+      "key_techniques": ["Completionism psychology", "Standalone micro-value per item", "Self-improvement universal appeal", "Save-as-reference optimization", "Scalable template format"]
+    }
+  ],
+  "typography_best_practices": {
+    "mobile_first_sizing": {
+      "headline_text": "Minimum 64pt equivalent on 1080x1920 canvas — visible even at arm's length",
+      "body_text": "Minimum 40pt equivalent — readable without squinting on any phone screen",
+      "fine_print": "Never go below 32pt equivalent — if it needs to be smaller, it shouldn't be on screen",
+      "test_method": "Preview on your phone in a well-lit room at arm's length. If any text is hard to read, increase by 20%."
+    },
+    "reading_speed_optimization": {
+      "target_wpm": "150-210 words per minute on screen (slower than normal reading because mobile + distraction)",
+      "words_per_frame": "8-15 words per text frame is optimal. Under 8 feels too choppy; over 15 overwhelms.",
+      "line_length": "Maximum 6-8 words per line. Narrower columns increase reading speed on mobile by 15-20%.",
+      "reveal_timing": "Each new text frame should hold for: (word count / 3) + 0.5 seconds"
+    },
+    "hierarchy_rules": {
+      "one_level_emphasis": "Only emphasize ONE word or phrase per frame — if everything is bold, nothing is bold",
+      "color_for_emphasis": "Use accent color sparingly — one colored word per frame maximum",
+      "size_contrast": "Headlines should be 1.5-2x the size of body text for clear hierarchy",
+      "position_consistency": "Keep text in the same screen region throughout the video — jumping text positions forces re-orientation"
+    },
+    "accessibility": {
+      "safe_zones": "Keep text within the center 80% of the screen to avoid platform UI overlap (profile icons, like buttons, captions bar)",
+      "contrast_minimum": "WCAG AA minimum: 4.5:1 contrast ratio for normal text, 3:1 for large text",
+      "motion_sensitivity": "Avoid rapid flashing or strobing text animations — some viewers have photosensitive conditions",
+      "subtitle_layer": "Even in text-overlay format, adding auto-generated subtitles for any voiceover improves accessibility scores"
+    }
+  },
+  "when_text_overlay_beats_talking_head": {
+    "scenarios": [
+      "Creator is camera-shy or not comfortable on camera yet — text-overlay removes the barrier entirely",
+      "Content is data-heavy (lists, numbers, stats, comparisons) — text is more scannable than spoken data",
+      "Content is anonymous or sensitive — text-overlay allows telling stories without identifying the speaker",
+      "Brand content without a designated face — text-overlay lets brands publish without a spokesperson",
+      "Batch production at scale — text-overlay videos can be produced 5-10x faster than talking-head",
+      "Sound-off environments (LinkedIn, Instagram Stories browse) — text-overlay delivers 100% of the message visually",
+      "Repurposing written content — blog posts, tweets, and threads convert directly to text-overlay with minimal adaptation",
+      "Testing hooks — text-overlay lets you test 20 hooks in the time it takes to film 5 talking-head videos"
+    ],
+    "when_talking_head_wins": [
+      "Building personal brand and parasocial relationship",
+      "Content requires emotional nuance and tone of voice",
+      "Authority positioning through physical presence",
+      "Content benefits from spontaneous, unscripted delivery"
+    ]
+  },
+  "teaching_alignment": {
+    "kane_hook_point": {
+      "principle": "The first 3 words on screen ARE your Hook Point. In text-overlay, the viewer reads before deciding to scroll.",
+      "application": "Kane's framework applies to text-overlay as a typography challenge: Can you arrange words so the first visible text on the first frame is an irresistible hook? The answer must be yes — the first frame is everything.",
+      "key_insight": "In text-overlay format, the Hook Point is visual, not auditory. The font size, color, and first words visible when the video appears in the feed determine your stop-scroll rate."
+    },
+    "handley_writing_quality": {
+      "principle": "In text-overlay, every word is visible and permanent. Handley's 'less is more' principle is non-negotiable here.",
+      "application": "Text-overlay is the most writing-intensive video format. Every word must earn its spot on screen. Apply Handley's editing test: read every text frame aloud. If any word doesn't add value, delete it. Then delete one more word.",
+      "key_insight": "Handley's 'Nobody wants to read your content. Make them glad they did.' is the entire philosophy of text-overlay in one sentence."
+    },
+    "vaynerchuk_day_trading_attention": {
+      "principle": "Text-overlay is the ultimate 'scale' format — one person can produce 50 text-overlay videos in the time of 10 talking-heads.",
+      "application": "Gary's volume strategy maps perfectly to text-overlay because the format removes the production bottleneck. You can test more hooks, cover more topics, and flood more platforms when text-overlay is your primary format. Day-trade attention by outproducing everyone.",
+      "key_insight": "If attention is currency, text-overlay is the most efficient exchange rate — lowest production cost per unit of attention captured."
+    },
+    "miller_storybrand": {
+      "principle": "Text-overlay must follow StoryBrand's clarity principle: if you confuse, you lose.",
+      "application": "Miller's framework demands that every piece of communication answers three questions in the first 3 seconds: What do you offer? How will it make my life better? What do I do to get it? In text-overlay, these must be answered in the first two text frames.",
+      "key_insight": "The biggest failure of text-overlay content is trying to be clever instead of clear. StoryBrand's clarity-first approach prevents the #1 mistake."
+    }
+  },
+  "playbook": {
+    "quick_start": [
+      "Choose your content pillar: educational, motivational, storytelling, or comparison",
+      "Select a background style: ambient footage (Pexels/Pixabay), dark solid, or screen recording",
+      "Write 10 scripts using the listicle format — 5 items per video, 8-12 words per item",
+      "Use CapCut or InShot for text animation — start with simple fade-in, white sans-serif on dark",
+      "Test 5 different hooks on the same content to identify highest-performing first-frame text",
+      "Post daily for 14 days, then analyze: which topic + hook + visual style won?"
+    ],
+    "scaling_strategy": {
+      "phase_1": "Daily text-overlay (1 per day, 15-30 seconds, single tip format) — Weeks 1-4",
+      "phase_2": "Add listicle variant (3-5 items per video, 45-60 seconds) — Weeks 5-8",
+      "phase_3": "Introduce screen recording + text for tool/tech content — Weeks 9-12",
+      "phase_4": "Build templates in CapCut/After Effects for batch production — Month 4",
+      "phase_5": "Systematize: writer creates scripts, editor produces 5-10 per day using templates — Month 5+"
+    },
+    "bellringer_application": {
+      "positioning": "AI Strategy Intelligence Briefings — dense, data-rich text-overlay content that positions Marcus as the signal in a world of noise",
+      "signature_elements": "Dark theme with gold accents, data-forward typography, intelligence briefing aesthetic",
+      "content_pillars_for_format": [
+        "AI Tool Breakdowns — screen recording + text overlay of tools Marcus uses",
+        "Distribution Principles — numbered list format for business frameworks",
+        "Music Industry Data — surprising stats from 1.1B streams presented as visual data stories",
+        "Weekly AI Signal — curated insights presented as a 'briefing' text-overlay series"
+      ],
+      "production_efficiency": "Text-overlay is Marcus's highest-leverage format for volume — can produce 10 per session using templates while saving talking-head energy for high-impact content"
+    }
+  }
+}

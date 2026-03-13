@@ -1,0 +1,174 @@
+checkpoint: LAYER_2_COMPLETE
+project: "Lil' Legends (LIL)"
+skill: "03-root-cause"
+timestamp: "2026-03-12T14:45:00Z"
+layer: 2
+previous_checkpoint: "CONCEPT_APPROVED.yaml"
+
+# ─── MICROSKILLS COMPLETED ───────────────────────────────────────────────
+
+microskills_completed:
+  - id: "2.1"
+    name: "Simple Reframe Expression"
+    output: "layer-2-outputs/2.1-simple-reframe.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "3 hope-framed expression variants produced"
+      - "Core reframe (16 words): 'Toddlers don't learn golf from words — they learn from what they can see and touch'"
+      - "Variant A 'The Discovery' (~140 words) — recommended lead"
+      - "Variant B 'The New Opportunity' (~130 words) — e-comm/product page"
+      - "Variant C 'Grant's Personal Frame' (~160 words) — organic/video"
+      - "All variants: conversational, jargon-free, hope-framed, Soul.md compliant"
+
+  - id: "2.2"
+    name: "Named Syndrome"
+    output: "NOT DEVELOPED"
+    status: PASS
+    execution: "intentionally_skipped"
+    reason: "Golf niche avoids medicalized language (L0 niche routing). Hope market incompatible with syndrome naming."
+
+  - id: "2.3"
+    name: "Villain Personification"
+    output: "NOT DEVELOPED"
+    status: PASS
+    execution: "intentionally_skipped"
+    reason: "Hope market — no competitive attack (Don directive per CONCEPT_APPROVED.yaml)"
+
+  - id: "2.4"
+    name: "Metaphor Construction"
+    output: "layer-2-outputs/2.4-metaphor-construction.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "Primary metaphor: Shape Sorter — all 6 quality tests PASS"
+      - "Simplified: 'It's like a shape sorter for golf — the design teaches them, not you'"
+      - "Secondary metaphor: Color by Numbers (for Skills Mat specifically)"
+      - "Rejected: Training Wheels (too generic, loses visual-teaching specificity)"
+      - "Hope-compatible: shape sorters are joyful toys, not corrective devices"
+
+  - id: "2.5"
+    name: "Dual Problem Framing"
+    output: "NOT DEVELOPED"
+    status: PASS
+    execution: "intentionally_skipped"
+    reason: "Unified concept approved (Concept A). Dual framing would dilute simplicity."
+
+  - id: "2.6"
+    name: "Niche Expression Matching"
+    output: "layer-2-outputs/2.6-niche-expression-matching.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "Primary: simple_reframe (hope-framed) — confirmed"
+      - "Secondary: metaphor (shape sorter) — confirmed"
+      - "Avoided: named_syndrome, villain_personification, dual_problem"
+      - "Language calibration: 'dad at the range' tone, minimal golf lingo, we/you mix"
+      - "Dual audience validated: works for golfer AND non-golfer parents"
+
+  - id: "2.7"
+    name: "Expression Synthesis"
+    output: "layer-2-outputs/2.7-expression-synthesis.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "Three-part structure assembled (hope-adapted): Experience → Insight → Opportunity"
+      - "3 full expression blocks produced (160-185 words each)"
+      - "All 8 quality checks PASS for all 3 variants"
+      - "Core statement quotable (16 words)"
+      - "Key copy assets: core reframe, metaphor hook, knockout proof, emotional spine"
+      - "Reframe technique: scientific_discovery (hope-adapted)"
+
+  - id: "2.8"
+    name: "Expression Anchoring Score"
+    output: "layer-2-outputs/2.8-expression-anchoring-score.md"
+    status: complete
+    quality_gates: pass
+    key_findings:
+      - "6 total variants scored (3 concept-down + 3 quote-first)"
+      - "All 6 variants score 7.61+ composite (well above 6.5 threshold)"
+      - "Top scorer: QF-A 'The Dream That's Waiting' (8.77) and QF-B 'They Didn't Quit Golf' (8.77)"
+      - "Quote-first variants average 8.75 vs concept-down 8.30"
+      - "Weakest dimension: TIER1 Pattern Match (expected — hope market vs pain-market TIER1 vault)"
+      - "Strongest dimension: FSSIT Echo (1,169 research quotes create strong resonance)"
+      - "Gate: PASS — 6 variants proceed to Arena"
+
+# ─── EXPRESSION RESULTS ──────────────────────────────────────────────────
+
+expression_results:
+  core_statement: "Toddlers don't learn golf from words — they learn from what they can see and touch."
+  core_statement_word_count: 16
+
+  expression_methods:
+    primary: "simple_reframe (hope-framed)"
+    secondary: "metaphor (shape sorter)"
+    combination: "Reframe delivers insight → Metaphor makes mechanism concrete → Hope bridge connects to 'golf buddy' dream"
+
+  arena_candidates:
+    total: 6
+    concept_down: 3
+    quote_first: 3
+    all_above_threshold: true
+    threshold: 6.5
+
+    ranked:
+      - {rank: 1, id: "QF-A", name: "The Dream That's Waiting", composite: 8.77, source: "quote_first"}
+      - {rank: 2, id: "QF-B", name: "They Didn't Quit Golf", composite: 8.77, source: "quote_first"}
+      - {rank: 3, id: "reframe_grant_personal", name: "Grant's Personal Frame", composite: 8.75, source: "concept_down"}
+      - {rank: 4, id: "QF-C", name: "You Don't Have to Teach Them", composite: 8.70, source: "quote_first"}
+      - {rank: 5, id: "reframe_discovery", name: "The Discovery", composite: 8.54, source: "concept_down"}
+      - {rank: 6, id: "reframe_opportunity", name: "The New Opportunity", composite: 7.61, source: "concept_down"}
+
+  key_copy_assets:
+    core_reframe: "Toddlers don't learn golf from words — they learn from what they can see and touch."
+    metaphor_hook: "It's like a shape sorter for golf."
+    knockout_proof: "Match the yellow ball to the white ball — that's the whole golf lesson."
+    emotional_spine: "You get to be their golf buddy, not their golf coach."
+    simplified: "The equipment teaches them. You just play."
+
+# ─── VERIFICATION ─────────────────────────────────────────────────────────
+
+verification:
+  anti_degradation_compliance:
+    minimum_3_expression_variants: "PASS — 6 variants produced (3 concept-down + 3 quote-first)"
+    expression_grounded_in_research: "PASS — all variants scored against 20 research quotes"
+    hope_market_framing: "PASS — no pain exposé, no competitive attack, all variants hope-framed"
+    concept_approved_before_expression: "PASS — CONCEPT_APPROVED.yaml exists and was read"
+    niche_expression_matched: "PASS — simple_reframe + metaphor confirmed by 2.6"
+    soul_md_compliant: "PASS — all variants match 'Grant at the range' voice register"
+    per_microskill_output: "PASS — 5 dedicated output files written (2 methods + niche match + synthesis + anchoring)"
+    arena_gate_met: "PASS — 6 variants score 6.5+ composite"
+
+completeness:
+  previous_checkpoints:
+    - "LAYER_0_COMPLETE.yaml — PRESENT"
+    - "LAYER_1_COMPLETE.yaml — PRESENT"
+    - "CONCEPT_APPROVED.yaml — PRESENT"
+  microskills_planned: 8
+  microskills_executed: 5
+  microskills_skipped: 3
+  microskills_skipped_with_reason: true
+  output_files_total: 5
+  quality_gates_passed: "5/5 executed microskills"
+  arena_candidates_minimum_met: true
+  anchoring_scores_complete: true
+
+# ─── ANTI-DEGRADATION ────────────────────────────────────────────────────
+
+anti_degradation:
+  file_read: "ROOT-CAUSE-ANTI-DEGRADATION.md"
+  version: "v3.0"
+  layer_2_gate: "PASSED — 6 expression variants, all scored, all above threshold"
+  no_naming_before_arena: "CONFIRMED — expressions produced, no final root cause name selected"
+  concept_checkpoint_honored: "CONFIRMED — expression work began only after CONCEPT_APPROVED.yaml"
+
+# ─── HANDOFF ──────────────────────────────────────────────────────────────
+
+next_gate: ARENA_LAYER_2_5
+next_gate_type: BLOCKING
+next_gate_requirement: "Arena evaluates 6 expression variants through adversarial critique. Human selects final expression(s) for Layer 3 validation."
+
+arena_input:
+  candidates: 6
+  scoring_context: "2.8-expression-anchoring-score.md provides composite scores and quote citations"
+  awareness_criteria: "Research Grounding added as Arena awareness criterion per 2.8 protocol"

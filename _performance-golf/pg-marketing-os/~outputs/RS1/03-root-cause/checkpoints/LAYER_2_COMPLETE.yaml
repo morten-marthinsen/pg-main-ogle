@@ -1,0 +1,56 @@
+checkpoint: LAYER_2_COMPLETE
+skill: "03-root-cause"
+timestamp: "2026-03-10T20:35:00Z"
+product: "RS1 Putter"
+
+layer_2_summary:
+  expression_methods_executed:
+    - "2.1-simple-reframe (3 variants)"
+    - "2.2-named-syndrome (1 variant -- niche mismatch noted)"
+    - "2.3-villain-personification (3 variants -- soft intensity)"
+    - "2.4-metaphor-construction (3 metaphors)"
+    - "2.5-dual-problem-framing (1 variant -- insight carried forward)"
+    - "2.6-niche-expression-matching (complete)"
+    - "2.7-expression-synthesis (8 total variants ranked)"
+    - "2.8-expression-anchoring-scores (8 candidates scored, all PROCEED)"
+
+  total_expression_variants: 8
+  variants_proceeding_to_arena: 8
+  variants_flagged: 0
+  variants_rejected: 0
+
+  primary_method: simple_reframe
+  secondary_method: "soft_villain + metaphor"
+  reframe_technique: "scientific_discovery + blame_removal"
+
+  top_3_by_anchoring_score:
+    - id: "simple_reframe_C"
+      anchor_phrase: "You've been fighting gravity."
+      composite: 8.72
+    - id: "quote_first_A"
+      anchor_phrase: "You felt it. It wasn't your stroke."
+      composite: 8.70
+    - id: "soft_villain_A"
+      anchor_phrase: "You didn't fail. You were fighting physics."
+      composite: 8.42
+
+  output_files:
+    - "layer-2-outputs/2.1-simple-reframe.md"
+    - "layer-2-outputs/2.2-named-syndrome.md"
+    - "layer-2-outputs/2.3-villain-personification.md"
+    - "layer-2-outputs/2.4-metaphor-construction.md"
+    - "layer-2-outputs/2.5-dual-problem-framing.md"
+    - "layer-2-outputs/2.6-niche-expression-matching.md"
+    - "layer-2-outputs/2.7-expression-synthesis.md"
+    - "layer-2-outputs/2.8-expression-anchoring-scores.json"
+
+  quality_gates:
+    all_files_written: true
+    minimum_file_sizes_met: true
+    three_part_structure_complete: true
+    anchor_phrases_assigned: true
+    soul_md_compliance_verified: true
+    niche_expression_match_confirmed: true
+    anchoring_scores_gate_passed: true
+
+next_layer: "2.5-Arena"

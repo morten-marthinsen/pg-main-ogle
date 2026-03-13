@@ -1,0 +1,12 @@
+skill_id: "A08"
+skill_name: ad-visual-video-production
+engine: ads
+arena: false
+generates_copy: false
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools:
+  - gemini-media
+  - elevenlabs
+protocols_required:
+  - pipeline-handoff-registry.md

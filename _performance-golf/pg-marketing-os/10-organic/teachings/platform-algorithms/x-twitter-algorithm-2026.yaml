@@ -1,0 +1,210 @@
+# X (TWITTER) ALGORITHM TEACHING FILE
+# Extracted from 437 validated documents
+# Source: X Agent Master Knowledge Base
+# Last Updated: March 2026
+
+meta:
+  platform: x_twitter
+  document_count: 437
+  top_frameworks:
+    - Save-Share Trigger (222 occurrences)
+    - Offer Stack (165 occurrences)
+    - Reply Ladder (101 occurrences)
+    - Thread Narrative (55 occurrences)
+    - Quote Tweet Leverage (43 occurrences)
+    - Thread Loop (13 occurrences)
+  high_signal_sources:
+    - 16 Types of Video That Sells (score: 74.0)
+    - Twitter Ads Cheat Sheet (score: 67.5)
+    - David Perell Write of Passage (score: 65.25)
+    - Rob Lennon AI Content Reactor (score: 61.15)
+
+algorithm_priorities:
+  primary_metric: engagement_velocity_and_conversation
+  core_principle: "X rewards content that sparks conversation and gets amplified through replies, retweets, and quotes"
+
+  ranking_signals:
+    tier_1_critical:
+      - reply_rate:
+          weight: highest
+          description: "Replies indicate conversation value"
+          strategy: "Provocative takes, open questions"
+      - retweet_rate:
+          weight: highest
+          description: "Retweets = distribution amplifier"
+          strategy: "Create quotable, shareable content"
+      - engagement_velocity:
+          weight: highest
+          description: "Speed of engagement in first hour"
+          strategy: "Post when audience is active"
+
+    tier_2_important:
+      - quote_tweets:
+          weight: high
+          description: "Quote tweets drive conversation"
+          strategy: "Create content worth adding to"
+      - bookmark_rate:
+          weight: high
+          description: "Saves for later = high value"
+          strategy: "Lists, frameworks, references"
+      - time_spent:
+          weight: medium_high
+          description: "Time reading thread/content"
+
+    tier_3_supporting:
+      - like_rate:
+          weight: medium
+          description: "Basic engagement signal"
+      - profile_clicks:
+          weight: medium
+          description: "Interest in author"
+      - link_clicks:
+          weight: medium
+          description: "If link included"
+
+distribution_mechanics:
+  for_you_feed:
+    description: "Algorithm-curated main feed"
+    factors:
+      - "Engagement from accounts you follow"
+      - "Engagement from similar interest accounts"
+      - "Recency of post"
+      - "Author credibility score"
+
+  following_feed:
+    description: "Chronological from follows"
+    strategy: "Build engaged follower base for guaranteed reach"
+
+  search_and_trending:
+    description: "Hashtag and keyword discovery"
+    strategy: "Participate in relevant trending topics"
+
+  reply_visibility:
+    description: "Replies can surface in main feeds"
+    strategy: "Reply to large accounts with value-add content"
+
+content_optimization:
+  thread_narrative:
+    principle: "Threads outperform single tweets for depth"
+
+    structure:
+      tweet_1: "Hook - curiosity, controversy, or promise"
+      tweets_2_n: "Deliver value, one idea per tweet"
+      final_tweet: "Summary + CTA (follow, retweet, reply)"
+
+    thread_mechanics:
+      - "Number tweets (1/ or [1/10])"
+      - "Make each tweet standalone valuable"
+      - "Include visuals every 3-4 tweets"
+      - "End with engagement ask"
+
+    thread_loop:
+      - "Final tweet references first"
+      - "Retweet first tweet with final"
+      - "Pin thread when complete"
+
+  reply_ladder:
+    principle: "Build following by adding value in replies"
+
+    execution:
+      - "Reply to large accounts in your niche"
+      - "Add genuine value, not generic praise"
+      - "Be early to popular tweets"
+      - "Include your unique perspective"
+
+    visibility_boost:
+      - "Getting reply from original poster"
+      - "Engagement on your reply"
+      - "Your followers engaging"
+
+  quote_tweet_leverage:
+    principle: "Quote tweets add your voice to others' content"
+
+    strategies:
+      - "Add contrarian take to viral tweet"
+      - "Expand on thread with your experience"
+      - "Disagree respectfully with reasoning"
+      - "Apply concept to your niche"
+
+format_optimization:
+  single_tweets:
+    length: "280 characters - use fully"
+    structure: "Hook + value + engagement hook"
+    visuals: "Images increase engagement 150%+"
+
+  threads:
+    optimal_length: "7-15 tweets"
+    spacing: "Post as connected thread, not timed"
+    visuals: "1-3 images throughout"
+
+  video:
+    native_video: "Outperforms links"
+    length: "Under 2 minutes optimal"
+    captions: "Essential for autoplay muted"
+
+  polls:
+    engagement_driver: "High participation format"
+    strategy: "Use to spark discussion"
+
+voice_optimization:
+  what_works:
+    - "Authentic personality"
+    - "Contrarian takes with reasoning"
+    - "Specificity over generalities"
+    - "Personal stories and lessons"
+    - "Frameworks and mental models"
+
+  what_fails:
+    - "Generic motivation"
+    - "Over-polished corporate voice"
+    - "Vague platitudes"
+    - "Constant self-promotion"
+
+virality_patterns:
+  what_goes_viral:
+    - "Controversial but defensible takes"
+    - "Frameworks and lists"
+    - "Personal failure stories with lessons"
+    - "Industry secrets revealed"
+    - "Predictions and bets"
+
+  viral_tweet_patterns:
+    - "Hot take: [contrarian opinion]"
+    - "I [achieved X] in [time]. Here's how:"
+    - "Unpopular opinion: [take]"
+    - "[Number] lessons from [experience]:"
+    - "Thread: [curiosity gap]"
+    - "The [thing] no one talks about:"
+
+growth_tactics:
+  reply_strategy:
+    - "Reply to 10-20 relevant tweets daily"
+    - "Be early to posts from large accounts"
+    - "Add genuine value, not platitudes"
+
+  engagement_circles:
+    - "Engage consistently with similar-sized accounts"
+    - "Mutual amplification without pods"
+    - "Quote tweet friends' best content"
+
+  posting_cadence:
+    tweets: "3-5 per day minimum"
+    threads: "1-3 per week"
+    replies: "20+ meaningful per day"
+
+anti_patterns:
+  what_kills_x:
+    - "Engagement pods (algorithm detects)"
+    - "Posting links without context"
+    - "Generic replies ('Great thread!')"
+    - "Over-automation"
+    - "Inconsistent posting"
+    - "Only broadcasting, never conversing"
+
+application_to_engine:
+  skill_mappings:
+    S02_platform_strategy: "Plan for high-frequency posting"
+    S06_virality_scoring: "Weight retweet and reply potential"
+    S12_thread_design: "Apply thread narrative framework"
+    S16_engagement_protocol: "Reply ladder execution"
+    S17_network_amplification: "Quote tweet coordination"

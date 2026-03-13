@@ -1,0 +1,11 @@
+skill_id: "20"
+skill_name: long-form-editorial
+engine: main-pipeline
+arena: false
+generates_copy: false
+consumes_upstream: true
+expression_anchoring: false
+mcp_tools: []
+protocols_required:
+  - CONTEXT-RESERVOIR-TEMPLATE.md
+  - pipeline-handoff-registry.md

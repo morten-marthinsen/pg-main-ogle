@@ -1,0 +1,120 @@
+checkpoint: ARENA_COMPLETE
+project: "Lil' Legends (LIL)"
+skill: "03-root-cause"
+timestamp: "2026-03-12T16:00:00Z"
+previous_checkpoint: "LAYER_2_COMPLETE.yaml"
+status: COMPLETE
+rounds_completed: 3
+
+# ─── ARENA EXECUTION RECORD ────────────────────────────────────────────────
+
+arena:
+  protocol: "ARENA-CORE-PROTOCOL.md v2.2 (single-context hardening)"
+  rounds_executed: 3
+  panel:
+    type: "golf_vertical"
+    competitors: ["Makepeace", "Halbert", "Donnie French", "The Architect"]
+    note: "Donnie French replaces Clemens for golf niche relevance"
+  adversarial_critique: true
+  learning_briefs: true
+  structural_constraints_per_round: true
+
+  round_results:
+    round_1:
+      winner: "The Architect (8.20)"
+      emphasized_dimension: "baseline"
+    round_2:
+      winner: "Halbert (8.65)"
+      emphasized_dimension: "Obstacle Specificity"
+      breakthrough: "Halbert proof-first opening — 'Match the yellow ball' as first line"
+    round_3:
+      winner: "The Architect (8.85)"
+      emphasized_dimension: "Anchor Phrase Quality"
+
+  post_arena_synthesis:
+    hybrids_generated: 2
+    hybrid_a: {name: "The Complete Expression", score: 8.90}
+    hybrid_b: {name: "The Relief Expression", score: 8.45}
+
+  final_candidates: 6
+  all_scores_above_minimum: true
+  critical_gaps: none
+
+# ─── HUMAN SELECTION ────────────────────────────────────────────────────────
+
+human_selection:
+  selected_by: "Don French (Creative Lead)"
+  selection_date: "2026-03-12"
+
+  primary:
+    name: "Hybrid A: The Complete Expression (REVISED)"
+    type: hybrid
+    original_score: 8.90
+    revision: "Dream-first opener replacing 'quit' framing per human direction. Rationale: majority of market is starting fresh, not switching. Lead with parent-kid connection."
+    original_opener: "Your kid didn't quit golf. They quit the experience."
+    revised_opener: "Every golf parent has the same picture in their head — out on the course with their kid. Sharing the game you love with the person you love most."
+    use_case: "Lead expression — broadest use across all channels"
+
+  secondary:
+    name: "Donnie French R3 Final: Golf Buddy, Not Golf Coach"
+    type: pure
+    score: 8.50
+    anchor_phrase: "Golf Buddy, Not Golf Coach"
+    use_case: "Organic/video content where Grant speaks in first person"
+
+  rejected:
+    - {name: "Architect R3 Final", score: 8.85, reason: "Hybrid A incorporates best Architect elements"}
+    - {name: "Halbert R3 Final", score: 8.70, reason: "Hook absorbed into Hybrid A"}
+    - {name: "Hybrid B: The Relief Expression", score: 8.45, reason: "Not selected"}
+    - {name: "Makepeace R3 Final", score: 8.20, reason: "Not selected"}
+
+# ─── HOPE MARKET ADAPTATION ────────────────────────────────────────────────
+
+hope_market_notes:
+  villain_spec_skipped: true
+  reason: "L3-VILLAIN-COUNTERSELL.md is DR/health-niche focused (molecules, toxins, organisms). LIL is a hope market with no named villain per CONCEPT_APPROVED.yaml directive."
+  obstacle_instead: "'Equipment designed for coaching, not discovery' serves the obstacle function without competitive attack framing."
+  countersell_adaptation: "Serial-failure pattern (plastic broke / metal heavy / lessons used words) serves countersell function within the expression itself."
+
+# ─── ANTI-DEGRADATION ──────────────────────────────────────────────────────
+
+anti_degradation:
+  arena_protocol_followed: true
+  three_rounds_executed: true
+  adversarial_critique_each_round: true
+  human_selection_blocking: true
+  no_auto_selection: true
+  source_files_re_read: ["CONCEPT_APPROVED.yaml", "Soul.md", "arena-round-2.md", "2.7-expression-synthesis.md"]
+
+# ─── VERIFICATION ──────────────────────────────────────────────────────────
+
+verification:
+  three_rounds_completed: "PASS — 3 rounds executed with adversarial critique-revise each round"
+  learning_briefs_distributed: "PASS — cumulative learning brief after each round"
+  structural_constraints_enforced: "PASS — different opening (R2), different proof placement (R3)"
+  diversity_audit_each_round: "PASS — 0 convergent pairs in all 3 rounds"
+  post_arena_synthesis: "PASS — 2 hybrids generated from best elements"
+  human_selection_blocking: "PASS — human explicitly selected primary + secondary"
+  hope_market_framing: "PASS — no competitive attack, no pain exposé, all expressions hope-framed"
+  soul_md_compliance: "PASS — all expressions match 'Grant at the range' voice register"
+
+completeness:
+  previous_checkpoints:
+    - "LAYER_0_COMPLETE.yaml — PRESENT"
+    - "LAYER_1_COMPLETE.yaml — PRESENT"
+    - "CONCEPT_APPROVED.yaml — PRESENT"
+    - "LAYER_2_COMPLETE.yaml — PRESENT"
+  arena_rounds_executed: 3
+  competitors: 4
+  total_candidates_generated: 6
+  human_selection_made: true
+  expressions_selected: 2
+  arena_output_files:
+    - "arena-outputs/arena-round-1.md"
+    - "arena-outputs/arena-round-2.md"
+    - "arena-outputs/arena-round-3-final.md"
+
+# ─── GATE ───────────────────────────────────────────────────────────────────
+
+gate_result: PASS
+next_layer: "Layer 3 — Validation (3.1-3.5)"

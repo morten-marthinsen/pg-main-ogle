@@ -1,0 +1,1098 @@
+# GLADWELL TIPPING POINT TEACHING FILE
+# Extracted from: The Tipping Point: How Little Things Can Make a Big Difference
+# Author: Malcolm Gladwell
+# Extraction Date: March 2026
+
+meta:
+  author: malcolm_gladwell
+  source_book: "The Tipping Point: How Little Things Can Make a Big Difference"
+  publication_year: 2000
+  core_thesis: >
+    Ideas, products, messages, and behaviors spread like viruses. The moment
+    of critical mass—the threshold, the boiling point—is the Tipping Point.
+    Three agents of change drive every social epidemic: the Law of the Few,
+    the Stickiness Factor, and the Power of Context. Small changes in any
+    of these can tip an idea into explosive, self-sustaining spread.
+  extraction_purpose: "Organic content creation and marketing strategy"
+  created_for: "OrganicMarketingEngine"
+  research_base: >
+    Case studies spanning Hush Puppies revival, NYC crime drop, Paul Revere's
+    midnight ride, Sesame Street and Blue's Clues testing, Airwalk shoe brand
+    rise and fall, Gore Associates organizational design, Divine Secrets of
+    the Ya-Ya Sisterhood word-of-mouth phenomenon, and epidemiological models
+    of disease transmission applied to social behavior.
+  skill_mappings:
+    - S06_virality_scoring
+    - S17_network_amplification
+    - S23_network_coordination
+
+  source_verification:
+    status: "PRIMARY_SOURCE_VERIFIED"
+    source_type: "Published Book (FB2)"
+    source_title: "The Tipping Point: How Little Things Can Make a Big Difference"
+    source_author: "Malcolm Gladwell"
+    source_year: 2000
+    source_publisher: "Little, Brown and Company"
+    verification_date: "2026-03-04"
+    verification_method: "Direct FB2 extraction with chapter-level citations"
+    confidence: "HIGH — extracted from complete, unabridged primary source"
+
+# =============================================================================
+# SECTION 1: THE EPIDEMIC MODEL — HOW IDEAS SPREAD LIKE DISEASES
+# =============================================================================
+
+epidemic_model:
+  core_concept: >
+    Social epidemics follow the same three rules as disease epidemics. The
+    spread of ideas is not gradual or linear—it builds slowly, hits a critical
+    inflection point, then explodes geometrically. Understanding what triggers
+    that inflection is the entire game.
+
+  three_rules_of_epidemics:
+    - law_of_the_few: "A tiny percentage of people do the majority of the spreading work"
+    - stickiness_factor: "The message itself must be memorable enough to spur action"
+    - power_of_context: "The environment and conditions must be right for spread"
+
+  key_metaphor: >
+    Think of an idea as an infectious agent. The people who carry and transmit
+    it are the vectors. The message itself is the pathogen (its stickiness
+    determines how well it survives in a new host). The environment is the
+    petri dish (context determines whether conditions favor rapid replication
+    or dormancy).
+
+  geometric_progression:
+    explanation: >
+      One person tells five. Those five each tell five more. Within six
+      degrees you have 15,625 people exposed. But the curve is not smooth—it
+      stays flat for a long time, then tips suddenly. The Tipping Point is
+      the moment when the rate of spread crosses from arithmetic to geometric.
+    implication_for_organic: >
+      Content does not go viral gradually. It builds invisible momentum
+      through network handoffs, then crosses a threshold where algorithms
+      and social dynamics accelerate it simultaneously. Your job is to
+      engineer the conditions before the tip, not chase it after.
+
+  case_study_hush_puppies:
+    context: "By late 1994, Hush Puppies was selling 30,000 pairs a year and Wolverine was considering discontinuing the brand"
+    tipping_trigger: "A handful of hipsters in downtown Manhattan started wearing them as an ironic fashion statement"
+    result: "Sales exploded to 430,000 pairs in 1995, then quadrupled again. Hush Puppies won the Council of Fashion Designers award"
+    lesson: >
+      The brand did nothing. No ad campaign. No repositioning. A small number
+      of the right people wearing them in the right context tipped the entire
+      market. The few drove the many. The context (downtown Manhattan fashion
+      scene) was the amplifier.
+
+# =============================================================================
+# SECTION 2: THE LAW OF THE FEW
+# =============================================================================
+
+law_of_the_few:
+  core_principle: >
+    In any social epidemic, a tiny number of exceptional people drive the
+    overwhelming majority of spread. These people fall into three categories:
+    Connectors, Mavens, and Salesmen. Finding and activating even a handful
+    of each category is worth more than reaching thousands of average people.
+
+  the_80_20_of_spread: >
+    Gladwell references the Pareto Principle taken to extremes: in most
+    epidemics, roughly 20% of participants are responsible for 80% of
+    the transmission. In social epidemics, the ratio is even more skewed—
+    often a fraction of a percent of people drive the majority of word-of-mouth.
+
+  case_study_paul_revere:
+    setup: >
+      On April 18, 1775, two riders left Boston with the same message: the
+      British are coming. Paul Revere rode north, William Dawes rode south.
+      Revere's route erupted into organized militia response. Dawes's towns
+      slept through the night.
+    why_revere_succeeded: >
+      Revere was a Connector. He knew everyone—tradesmen, doctors, merchants,
+      political leaders across multiple social circles. When he knocked on
+      doors, the people who answered knew him, trusted him, and knew exactly
+      who else to alert. Dawes was an ordinary citizen. He knocked on doors
+      and the people who answered went back to bed.
+    organic_lesson: >
+      The same content delivered through a Connector's network produces
+      exponentially different results than content delivered through an
+      average person's network. Distribution through the right people is
+      not incrementally better—it is categorically different.
+
+  # ---------------------------------------------------------------------------
+  # AGENT TYPE 1: CONNECTORS
+  # ---------------------------------------------------------------------------
+
+  connectors:
+    definition: >
+      People with an extraordinary knack for making friends, acquaintances,
+      and social connections across diverse social worlds. They are the human
+      equivalent of network hubs—nodes with disproportionately high numbers
+      of links to other nodes.
+
+    characteristics:
+      - "Occupy many different worlds, subcultures, and niches simultaneously"
+      - "Possess unusually large social networks (often 3-10x the average person)"
+      - "Have a genuine curiosity about people—they collect relationships"
+      - "Function as social glue—they introduce people across circles"
+      - "Their address book is a sociological map of their community"
+      - "Maintain weak ties across many groups rather than strong ties in one group"
+      - "Are energized by meeting new people and making introductions"
+      - "Often hold bridge positions—they connect otherwise separate clusters"
+
+    psychological_profile:
+      trait: "Gregariousness combined with genuine social curiosity"
+      motivation: "The act of connecting is intrinsically rewarding to them"
+      strength: "Breadth over depth—their power is in how many worlds they span"
+      weakness: "May not go deep on any single topic—they spread wide"
+
+    six_degrees_research:
+      study: "Stanley Milgram's small-world experiment (1967)"
+      finding: >
+        Half of the letters that reached the target in Milgram's famous
+        experiment were delivered by the same three people. The world is
+        not 'small' for everyone equally—it is small because of Connectors
+        who bridge otherwise disconnected clusters.
+      implication: >
+        Network reach is not democratic. A tiny fraction of nodes carry
+        the vast majority of cross-cluster traffic. Identifying these
+        nodes is the highest-leverage activity in any spread strategy.
+
+    how_to_identify_connectors:
+      behavioral_signals:
+        - "They know people in multiple, unrelated industries or communities"
+        - "When you describe a problem, they immediately say 'I know someone who...'"
+        - "They host events, introduce people at parties, organize group activities"
+        - "Their social media shows engagement across wildly different niches"
+        - "People describe them as 'the person who knows everyone'"
+        - "They have followers or friends lists that span multiple demographics"
+      quantitative_signals:
+        - "Social media engagement from diverse, non-overlapping audiences"
+        - "High reply/mention counts relative to follower count"
+        - "Presence in multiple online communities or forums simultaneously"
+        - "Frequent tagging by people from different circles"
+      organic_test: >
+        Run a modified version of Gladwell's name recognition exercise: look
+        at who consistently appears in comment sections across different
+        creators, communities, and topics. Those cross-pollinators are
+        likely Connectors.
+
+    how_to_leverage_connectors:
+      strategy_1_make_it_easy_to_share:
+        description: "Connectors move fast across many circles. Your content must be instantly shareable."
+        tactics:
+          - "Create self-contained content units (no context needed to understand)"
+          - "Make the share itself look good—Connectors care about their social capital"
+          - "Provide multiple sharing angles (funny, insightful, controversial) so the Connector can frame it for each audience"
+          - "Remove friction: no login walls, no multi-step sharing flows"
+      strategy_2_give_them_insider_access:
+        description: "Connectors trade in social currency. Give them information before anyone else."
+        tactics:
+          - "Early access to content, launches, or announcements"
+          - "Behind-the-scenes material they can share as exclusive intel"
+          - "Name them, tag them, publicly acknowledge their role"
+          - "Create invite-only spaces where Connectors bring their networks"
+      strategy_3_create_bridge_content:
+        description: "Connectors link worlds. Create content that explicitly bridges two niches."
+        tactics:
+          - "Cross-domain content (AI + music production, psychology + marketing)"
+          - "Unexpected comparisons that give Connectors a reason to share across circles"
+          - "Content tagged for multiple communities simultaneously"
+
+  # ---------------------------------------------------------------------------
+  # AGENT TYPE 2: MAVENS
+  # ---------------------------------------------------------------------------
+
+  mavens:
+    definition: >
+      Information specialists who accumulate knowledge about products, prices,
+      processes, and places—and take genuine pleasure in sharing that knowledge
+      with others. The word Maven comes from Yiddish, meaning 'one who
+      accumulates knowledge.'
+
+    characteristics:
+      - "Obsessive information gatherers in their domains of interest"
+      - "Read labels, compare prices, clip coupons, test products—for fun"
+      - "Socially motivated to share what they learn (not to show off, but to help)"
+      - "People naturally come to them for advice and recommendations"
+      - "They are the first to know about trends, deals, and new products"
+      - "Write detailed reviews, create comparison guides, explain complex topics"
+      - "Emotionally invested in the marketplace—they feel personally wronged by deception"
+      - "Their sharing is driven by a desire to educate, not to sell"
+
+    psychological_profile:
+      trait: "Information obsession combined with altruistic sharing motivation"
+      motivation: "They want to help others make better decisions"
+      strength: "Depth of knowledge and perceived objectivity—people trust them"
+      weakness: "Can be slow to act because they are always gathering more data"
+      key_distinction: >
+        Mavens are not persuaders. They do not close deals. They provide
+        the raw information and social proof that Salesmen then convert
+        into action. A Maven will say 'this restaurant is incredible, here
+        is why.' A Salesman will say 'we are going Friday, are you in?'
+
+    the_maven_trap:
+      concept: >
+        Gladwell describes the 'market maven'—someone who is connected to
+        the marketplace in a way most people are not. Research by Linda Price
+        at the University of Nebraska found that almost every community has
+        at least one. They are the person everyone calls before making a
+        purchase decision.
+      key_finding: >
+        Mavens do not persuade through charisma. They persuade through the
+        weight and specificity of their knowledge. When a Maven says 'buy
+        this,' people listen because the Maven has done the homework no one
+        else wants to do.
+
+    how_to_identify_mavens:
+      behavioral_signals:
+        - "They write long, detailed product reviews (unprompted)"
+        - "They respond to questions with comprehensive, structured answers"
+        - "They correct misinformation publicly—accuracy matters to them"
+        - "Their content is information-dense: comparisons, data, tested frameworks"
+        - "People tag them in posts asking for recommendations"
+        - "They create 'best of' lists, buying guides, or tutorial threads"
+        - "They are early adopters who document their experience in detail"
+      quantitative_signals:
+        - "High save/bookmark rates on their content"
+        - "Disproportionate engagement on educational or informational posts"
+        - "Long-form content performance—their audience reads deep, not shallow"
+        - "Comments like 'this is the most helpful thing I have seen on this topic'"
+
+    how_to_leverage_mavens:
+      strategy_1_feed_their_knowledge_hunger:
+        description: "Mavens crave new, accurate, detailed information. Give it to them."
+        tactics:
+          - "Provide detailed data, case studies, and behind-the-scenes methodology"
+          - "Give them access to information others cannot easily get"
+          - "Create dense, information-rich content they can reference and cite"
+          - "Be transparent about your process—Mavens respect honesty and depth"
+      strategy_2_make_them_the_source:
+        description: "Mavens want to be the person who tells others. Position them that way."
+        tactics:
+          - "Send them products or content first so they can be the one to 'discover' it"
+          - "Create content they can teach from or explain to their network"
+          - "Provide shareable assets (infographics, data summaries) they can redistribute"
+          - "Acknowledge their expertise publicly—Mavens value being seen as knowledgeable"
+      strategy_3_align_with_their_values:
+        description: "Mavens care about accuracy and consumer protection. Never deceive them."
+        tactics:
+          - "Be honest about limitations—a Maven who catches you lying will actively warn people"
+          - "Provide genuine value—Mavens only share what they believe is truly useful"
+          - "Invite their critique—Mavens respect brands that welcome scrutiny"
+
+  # ---------------------------------------------------------------------------
+  # AGENT TYPE 3: SALESMEN
+  # ---------------------------------------------------------------------------
+
+  salesmen:
+    definition: >
+      People with powerful negotiation and persuasion skills. They possess an
+      indefinable trait that goes beyond what they say—it is their energy,
+      enthusiasm, charm, and likability that makes people want to agree with
+      them. They convert Maven knowledge into action.
+
+    characteristics:
+      - "Exude energy and optimism that is emotionally contagious"
+      - "People feel good in their presence—they create rapport instantly"
+      - "Master of nonverbal communication: facial expressions, gestures, rhythm"
+      - "They do not just present information—they make you feel the information"
+      - "Natural emotional synchronizers: their mood becomes your mood"
+      - "Persuade through likeability and trust rather than logic alone"
+      - "Close the gap between 'this sounds interesting' and 'I am doing this'"
+
+    psychological_profile:
+      trait: "Emotional contagion combined with persuasive charisma"
+      motivation: "Genuine enthusiasm for what they believe in"
+      strength: "Can move people to action through presence and energy alone"
+      weakness: "Effectiveness depends on genuine belief—they cannot fake it"
+
+    motor_mimicry_research:
+      concept: "Emotional contagion through unconscious behavioral synchronization"
+      study: >
+        Research by Howard Friedman at UC Riverside developed the Affective
+        Communication Test (ACT) measuring ability to send emotions to others.
+        High-scorers (Salesmen types) literally synchronize the moods of
+        people around them through micro-expressions and body language.
+      finding: >
+        When a high-ACT person sits in a room with a low-ACT person, the
+        low-ACT person's mood converges toward the high-ACT person's mood
+        within minutes—without a single word being spoken. Emotion is
+        literally contagious, and Salesmen are super-spreaders.
+      implication: >
+        In content, this translates to energy, conviction, and emotional
+        presence on camera, in voice, and in writing tone. Salesmen do not
+        need better arguments. They need to be authentically on fire about
+        the message.
+
+    how_to_identify_salesmen:
+      behavioral_signals:
+        - "People describe them as 'magnetic,' 'charismatic,' or 'impossible to say no to'"
+        - "Their content has high comment-to-like ratios—people respond emotionally"
+        - "They use stories, analogies, and emotional language more than data"
+        - "Watch for reply threads where they convert skeptics through warmth, not aggression"
+        - "They generate testimonials and 'this changed my life' type responses"
+        - "High video/audio performance relative to text—their presence amplifies the message"
+      quantitative_signals:
+        - "Conversion-oriented metrics: link clicks, signups, DM volume"
+        - "Share-with-commentary rates—people do not just share, they endorse"
+        - "High story/reel completion rates (people stay because of the energy)"
+
+    how_to_leverage_salesmen:
+      strategy_1_give_them_a_cause:
+        description: "Salesmen are most powerful when genuinely passionate. Give them a reason to believe."
+        tactics:
+          - "Share your origin story, mission, and why this matters beyond profit"
+          - "Let them experience the product or content firsthand"
+          - "Make them feel like insiders who are part of building something important"
+          - "Provide talking points but let them translate into their own voice"
+      strategy_2_let_them_perform:
+        description: "Salesmen are at their best in dynamic, interpersonal formats."
+        tactics:
+          - "Invite them to co-create video or audio content"
+          - "Give them challenges or live scenarios where their persuasion shines"
+          - "Create duet/stitch opportunities on social platforms"
+          - "Let them host, introduce, or endorse rather than just review"
+      strategy_3_remove_friction_for_conversion:
+        description: "Salesmen drive action. Make sure there is a clear action to drive."
+        tactics:
+          - "Provide clear CTAs they can embed in their endorsement"
+          - "Create simple landing pages or sign-up flows they can point to"
+          - "Give them exclusive offers or codes that reward their audience"
+
+  # ---------------------------------------------------------------------------
+  # HOW THE THREE AGENTS WORK TOGETHER
+  # ---------------------------------------------------------------------------
+
+  agent_synergy:
+    description: >
+      Mavens discover and validate. Connectors distribute across networks.
+      Salesmen convert attention into action. A social epidemic requires all
+      three, but the sequence matters.
+
+    epidemic_sequence:
+      step_1:
+        agent: "Maven"
+        action: "Discovers your content, validates its quality, creates detailed endorsement"
+        output: "Credibility signal and detailed knowledge transfer"
+      step_2:
+        agent: "Connector"
+        action: "Picks up the Maven's signal and distributes across multiple unrelated networks"
+        output: "Cross-cluster exposure and reach amplification"
+      step_3:
+        agent: "Salesman"
+        action: "Encounters the content through the Connector's network and converts their audience to action"
+        output: "Behavioral change—follows, purchases, shares, signs up"
+
+    organic_application: >
+      Your content strategy needs different content types for each agent.
+      Maven-bait is deep, data-rich, educational. Connector-bait is
+      surprising, cross-domain, easily shareable. Salesman-bait is
+      emotionally charged, story-driven, conviction-heavy. One piece of
+      content rarely serves all three. Build a portfolio.
+
+    content_mapping:
+      maven_content:
+        types:
+          - "Deep-dive breakdowns and analysis"
+          - "Data-backed case studies"
+          - "Comparison frameworks and buying guides"
+          - "Behind-the-scenes methodology reveals"
+        format_preferences: "Long-form, detailed, saveable, reference-worthy"
+        success_metric: "Save rate, bookmark rate, citation by others"
+
+      connector_content:
+        types:
+          - "Surprising cross-domain insights"
+          - "Remarkable or counterintuitive facts"
+          - "Content that bridges two unrelated audiences"
+          - "Memes, hot takes, or cultural commentary"
+        format_preferences: "Self-contained, instantly graspable, share-ready"
+        success_metric: "Share rate, reach beyond existing audience, tag rate"
+
+      salesman_content:
+        types:
+          - "Origin stories and mission-driven narratives"
+          - "Transformation testimonials and before/after reveals"
+          - "Emotional calls to action"
+          - "Video content with high energy and conviction"
+        format_preferences: "Video, audio, live formats—presence-heavy mediums"
+        success_metric: "Conversion rate, DM volume, link clicks, sign-ups"
+
+# =============================================================================
+# SECTION 3: THE STICKINESS FACTOR
+# =============================================================================
+
+stickiness_factor:
+  core_principle: >
+    There is a simple way to package information that, under the right
+    circumstances, can make it irresistible. The Stickiness Factor says that
+    there are specific ways of making a contagious message memorable. Relatively
+    simple changes in the presentation and structuring of information can make
+    a big difference in how much impact it has.
+
+  key_insight: >
+    Stickiness is not about bigger budgets or louder voices. It is almost always
+    about small, creative changes to the structure and delivery of the message.
+    Sesame Street and Blue's Clues did not succeed because they spent more money.
+    They succeeded because they relentlessly tested and iterated on the specific
+    elements that made children pay attention, remember, and act.
+
+  case_study_sesame_street_vs_blues_clues:
+    sesame_street:
+      innovation: "First show to systematically test every segment for child engagement"
+      method: "The Distracter: played show alongside toys, measured when children looked at screen vs toys"
+      breakthrough: "Discovered that mixing fantasy (Muppets) with real adults in same scene increased attention dramatically"
+      original_mistake: "Originally kept Muppets and humans separate—kids tuned out during human-only segments"
+      stickiness_lesson: "Integration of entertainment and education in every single moment, not alternating between them"
+
+    blues_clues:
+      innovation: "Took Sesame Street's research further with five critical stickiness improvements"
+      improvements:
+        1_single_host: "One character (Steve) created parasocial relationship and familiarity"
+        2_direct_address: "Steve looked at camera and waited for answers—kids felt involved"
+        3_repetition: "Same episode aired five days straight—comprehension scores rose each day"
+        4_narrative_arc: "Single story per episode instead of magazine format—easier to follow and remember"
+        5_pause_and_participate: "Built in pauses for kids to answer—active participation increased retention"
+      result: "Blue's Clues consistently outperformed Sesame Street on comprehension and recall tests"
+      stickiness_lesson: >
+        Repetition is not boring when each repetition deepens understanding.
+        Participation transforms passive consumption into active learning.
+        A single narrative beats a collection of segments for memorability.
+
+  stickiness_principles:
+    principle_1_participation_over_passive:
+      description: "Messages that require the audience to actively engage stick harder than those consumed passively"
+      organic_application:
+        - "Ask questions in captions that the reader mentally answers before scrolling"
+        - "Create fill-in-the-blank or 'what would you do?' content"
+        - "Use open loops that the audience must mentally close"
+        - "Polls, quizzes, and interactive stories outperform static posts"
+
+    principle_2_practical_testing_over_intuition:
+      description: "What creators think will stick and what actually sticks are often different. Test relentlessly."
+      organic_application:
+        - "A/B test hooks, thumbnails, and opening lines systematically"
+        - "Track save rates and share rates as stickiness proxies"
+        - "Do not trust your intuition about what is memorable—trust data"
+        - "Small changes in wording or framing can produce massive stickiness differences"
+
+    principle_3_simple_structural_changes:
+      description: "The difference between a sticky message and a forgettable one is often a small structural tweak, not a complete overhaul"
+      organic_application:
+        - "Reorder information: lead with the counterintuitive conclusion, not the setup"
+        - "Add a concrete, specific detail to abstract claims"
+        - "Use the 'gold box' technique: highlight one key element visually or textually"
+        - "Repeat core message in different forms across a single piece of content"
+
+    principle_4_narrative_integration:
+      description: "Information embedded in a story is dramatically more sticky than information presented as facts"
+      organic_application:
+        - "Every educational post should open with a micro-story or scenario"
+        - "Transform frameworks into narratives: 'This founder was about to quit when...'"
+        - "Use before/after structure to create narrative tension around information"
+        - "The teaching is the story. Never separate them."
+
+    principle_5_strategic_repetition:
+      description: "Repetition does not kill engagement when each repetition adds depth or changes angle"
+      organic_application:
+        - "Teach the same core idea across 5-7 formats over weeks"
+        - "Monday: tweet-length version. Wednesday: story version. Friday: deep-dive version"
+        - "Repetition builds recognition which builds trust which builds action"
+        - "Your audience needs to hear a message 7-12 times before acting on it"
+
+  gold_box_technique:
+    origin: "Columbia Record Club direct mail campaigns"
+    description: >
+      In direct mail testing, adding a small gold box on the order form with
+      the text 'find the gold box on the record and you get a free record'
+      dramatically increased response rates. The gold box was a small,
+      creative structural change that made the entire message stickier.
+    organic_translation:
+      - "Highlight one surprising element in your content with visual or textual emphasis"
+      - "The 'hidden gem' technique: bury one valuable insight and tell audience to find it"
+      - "Use pinned comments, bolded text, or visual callouts as digital gold boxes"
+      - "Create treasure-hunt dynamics in carousels: 'the best tip is on slide 7'"
+
+# =============================================================================
+# SECTION 4: THE POWER OF CONTEXT
+# =============================================================================
+
+power_of_context:
+  core_principle: >
+    Human behavior is strongly influenced by its environment and context.
+    Epidemics are sensitive to the conditions and circumstances of the times
+    and places in which they occur. Small changes in context can tip—or kill—
+    an epidemic.
+
+  key_insight: >
+    We tend to think of character as fixed and internal. Gladwell argues that
+    behavior is much more context-dependent than we believe. The Fundamental
+    Attribution Error—our tendency to explain behavior through character rather
+    than situation—blinds us to the enormous power of environmental factors.
+
+  # ---------------------------------------------------------------------------
+  # BROKEN WINDOWS THEORY
+  # ---------------------------------------------------------------------------
+
+  broken_windows_theory:
+    origin: "James Q. Wilson and George Kelling (1982)"
+    concept: >
+      Crime is the inevitable result of disorder. If a window is broken and
+      left unrepaired, people walking by conclude that no one cares and no
+      one is in charge. Soon, more windows will be broken, and the sense of
+      anarchy spreads from the building to the street, sending a signal
+      that anything goes.
+
+    nyc_crime_case_study:
+      context: "New York City in the early 1990s—2,000+ murders per year, widespread crime epidemic"
+      intervention: >
+        Under Police Commissioner William Bratton, the NYPD focused on small
+        environmental signals: graffiti on subway cars, fare-jumping, public
+        urination, squeegee men. The theory was that fixing small signals of
+        disorder would prevent larger crimes.
+      result: "Violent crime dropped 50% in five years. Murder dropped by two-thirds."
+      mechanism: >
+        The environmental signals of disorder (graffiti, fare-jumping) were
+        contextual triggers that permitted and encouraged escalating criminal
+        behavior. Cleaning those signals changed the context, which changed
+        the behavior—without changing the people.
+
+    organic_application_brand_environment:
+      principle: "Your brand's digital environment sends signals that either invite engagement or repel it"
+      applications:
+        - signal: "Unanswered comments and questions"
+          message_sent: "Nobody is in charge here. Your voice does not matter."
+          fix: "Respond to every comment within 2 hours. Create visible conversation."
+        - signal: "Inconsistent posting schedule"
+          message_sent: "This person is unreliable. Do not invest attention here."
+          fix: "Visible consistency: same days, same times, same quality standard."
+        - signal: "Low-quality visual presentation"
+          message_sent: "This is amateur. Not worth sharing with my network."
+          fix: "Minimum visual quality threshold. Clean templates. Professional appearance."
+        - signal: "Spam in comments, bot followers visible"
+          message_sent: "This community is not curated. Low-value audience."
+          fix: "Active community moderation. Remove spam. Pin high-quality comments."
+        - signal: "Active, thoughtful engagement in comments"
+          message_sent: "This is a living community. People like me are here."
+          fix: "Seed conversations. Ask provocative questions. Reward quality responses."
+
+  # ---------------------------------------------------------------------------
+  # DUNBAR'S NUMBER AND THE RULE OF 150
+  # ---------------------------------------------------------------------------
+
+  rule_of_150:
+    origin: "Robin Dunbar, British anthropologist"
+    concept: >
+      There is a cognitive limit to the number of people with whom any
+      individual can maintain stable social relationships—relationships in
+      which an individual knows who each person is and how each person relates
+      to every other person. That number is approximately 150.
+
+    evidence:
+      military: "Fighting units throughout history have converged on roughly 150 as maximum effective size"
+      hutterites: "Hutterite communities split when they reach 150 members—social pressure stops working above that number"
+      gore_associates: "W.L. Gore & Associates caps all factory/office sizes at 150 employees"
+      neocortex: "Dunbar correlated neocortex ratio to group size across primates, arriving at 147.8 for humans"
+
+    mechanism: >
+      Below 150, people can rely on personal relationships and social pressure
+      to maintain group norms. Above 150, you need formal hierarchy, rules,
+      and enforcement mechanisms. The intimacy and peer pressure that drive
+      behavior change only function within this cognitive limit.
+
+    gore_associates_case:
+      practice: "When a facility reaches 150 people, Gore builds a new facility nearby"
+      result: "One of the most consistently innovative and profitable companies in America"
+      reason: >
+        At 150, everyone knows everyone. Accountability is personal, not
+        procedural. Ideas spread through direct relationships rather than
+        memos and meetings. Social pressure maintains quality without
+        management oversight.
+
+    organic_application_community_building:
+      principle: "Build concentric circles of community, with the innermost circle capped at 150 for maximum cohesion"
+      applications:
+        inner_circle_150:
+          size: "Up to 150 members"
+          characteristics: "Everyone knows each other. Social norms are enforced through relationship, not rules."
+          examples:
+            - "Private community, mastermind, or membership group"
+            - "Active Discord or Slack channel with real relationships"
+            - "Newsletter subscribers who reply regularly"
+          strategy: "Prioritize depth over scale. These 150 are your epidemic carriers."
+
+        second_circle_1500:
+          size: "Up to 1,500 members"
+          characteristics: "Recognize names and faces. Shared identity but not personal knowledge."
+          examples:
+            - "Engaged social media followers who comment regularly"
+            - "Course alumni or event attendees"
+            - "Active free community members"
+          strategy: "Create shared rituals, language, and identity markers that bind the group."
+
+        outer_circle_unlimited:
+          size: "Unlimited"
+          characteristics: "Audience. Consume content but do not participate in community."
+          examples:
+            - "Social media followers at large"
+            - "Podcast listeners"
+            - "Blog readers"
+          strategy: "Create content that pulls people inward toward the 150."
+
+  # ---------------------------------------------------------------------------
+  # CONTEXTUAL TRIGGERS FOR ORGANIC CONTENT
+  # ---------------------------------------------------------------------------
+
+  contextual_triggers:
+    principle: >
+      Content does not exist in a vacuum. The time, platform, cultural moment,
+      and emotional state of the audience all constitute context. The same
+      content in different contexts produces wildly different results.
+
+    trigger_categories:
+      temporal_context:
+        description: "Time-based factors that amplify or suppress content spread"
+        factors:
+          - "Day of week (engagement patterns differ by day)"
+          - "Time of day (morning motivation vs. evening reflection)"
+          - "Seasonal rhythms (January ambition, September fresh-start energy)"
+          - "Current events (news cycle creates emotional context)"
+          - "Cultural moments (holidays, sporting events, viral trends)"
+        application: "Map your content calendar to contextual windows that amplify your message"
+
+      platform_context:
+        description: "Each platform has its own contextual norms that enable or inhibit spread"
+        factors:
+          - "Platform culture (LinkedIn professionalism vs. Twitter hot takes)"
+          - "Algorithm state (what the platform is currently promoting)"
+          - "Content format expectations (carousel culture on Instagram, thread culture on X)"
+          - "Community norms (what gets rewarded vs. what gets ignored)"
+        application: "Adapt the same core message to each platform's contextual norms"
+
+      emotional_context:
+        description: "The collective emotional state of your audience at the moment of delivery"
+        factors:
+          - "Post-election anxiety or relief"
+          - "Economic uncertainty driving financial content engagement"
+          - "Pandemic aftermath creating desire for connection and meaning"
+          - "AI disruption creating fear and opportunity simultaneously"
+        application: "Read the emotional room. Content that matches emotional context spreads; content that ignores it dies."
+
+# =============================================================================
+# SECTION 5: CRITICAL MASS AND TIPPING POINT DYNAMICS
+# =============================================================================
+
+tipping_point_dynamics:
+  core_concept: >
+    Every epidemic has a tipping point—the moment when slow, linear growth
+    suddenly becomes exponential. Understanding the mechanics of this transition
+    is the key to engineering it deliberately rather than hoping for luck.
+
+  the_three_conditions:
+    condition_1:
+      name: "Right Messengers"
+      requirement: "Content must reach Connectors, Mavens, and Salesmen"
+      diagnostic: "Is your content reaching the 1% who drive 80% of spread?"
+
+    condition_2:
+      name: "Sticky Message"
+      requirement: "The content itself must be memorable and actionable"
+      diagnostic: "Are people saving, bookmarking, and referencing your content days later?"
+
+    condition_3:
+      name: "Favorable Context"
+      requirement: "Environmental conditions must support spread"
+      diagnostic: "Does the current cultural/emotional/platform context amplify your message?"
+
+  pre_tipping_indicators:
+    description: "Signals that content is approaching a tipping point"
+    signals:
+      - indicator: "Engagement from outside your normal audience"
+        meaning: "Connectors are carrying your content across cluster boundaries"
+      - indicator: "Increase in saves and bookmarks without corresponding like increase"
+        meaning: "Mavens are archiving your content as reference material"
+      - indicator: "Surge in DMs and direct shares"
+        meaning: "Salesmen are personally endorsing your content to their networks"
+      - indicator: "Comments from people who do not follow you"
+        meaning: "Your content has escaped your follower graph into the wider network"
+      - indicator: "Derivative content appearing (others remixing or responding to your idea)"
+        meaning: "Your message has achieved memetic independence—it spreads without you"
+
+  post_tipping_amplification:
+    description: "What to do when content begins to tip"
+    actions:
+      - "Do NOT change or update the content—let it run"
+      - "Engage every comment to signal to algorithms that conversation is active"
+      - "Create follow-up content that deepens the same theme (capitalize on momentum)"
+      - "Identify which Connectors, Mavens, and Salesmen carried it and strengthen those relationships"
+      - "Document what worked for pattern recognition on future content"
+
+# =============================================================================
+# SECTION 6: THE AIRWALK CASE STUDY — RISE AND FALL
+# =============================================================================
+
+case_study_airwalk:
+  context: >
+    Airwalk shoes went from a niche skateboarding brand to a $175 million
+    cultural phenomenon in the mid-1990s, then collapsed almost as quickly.
+    The rise and fall perfectly illustrates Tipping Point dynamics.
+
+  the_rise:
+    mechanism: "Lambesis advertising agency identified innovators (Mavens/Connectors in youth culture) and seeded Airwalk with them"
+    strategy: >
+      Instead of mass marketing, Lambesis employed cultural translators who
+      tracked what the early adopters in skateboarding, hip-hop, and rave
+      culture were doing. They created ads that reflected those subcultures
+      back to themselves, making Airwalk feel authentic and insider.
+    result: "Airwalk tipped from niche to mainstream, growing from $16M to $175M in four years"
+
+  the_fall:
+    mechanism: "Airwalk expanded into mass retail (Walmart, Kmart), destroying the insider context"
+    mistake: >
+      When the shoes appeared at discount retailers, the Connectors and Mavens
+      who had driven the epidemic abandoned the brand. The contextual signal
+      shifted from 'insider cool' to 'mass market commodity.' The same product
+      in a different context lost all its epidemic power.
+    result: "Sales collapsed. The brand never recovered its cultural position."
+
+  organic_lesson:
+    principle: "Distribution context IS the message. Where your content appears is as important as what it says."
+    applications:
+      - "A premium framework shared on a spammy platform loses credibility"
+      - "Exclusive content that becomes freely available everywhere loses its insider value"
+      - "Community quality matters more than community size"
+      - "Protect the contextual signals that make your brand worth spreading"
+
+# =============================================================================
+# SECTION 7: ORGANIC MARKETING ENGINE — INTEGRATED APPLICATION
+# =============================================================================
+
+organic_marketing_integration:
+  framework: "The Tipping Point Organic Strategy"
+
+  phase_1_identify_your_agents:
+    objective: "Map your existing audience for Connectors, Mavens, and Salesmen"
+    actions:
+      - action: "Audit your top 50 engagers across all platforms"
+        look_for: "Who has diverse networks (Connector)? Who writes detailed responses (Maven)? Who drives others to action (Salesman)?"
+      - action: "Create an agent database with three columns"
+        columns:
+          - "Connectors: people who share across multiple communities"
+          - "Mavens: people who create detailed, informative responses"
+          - "Salesmen: people who generate replies like 'just bought this because of you'"
+      - action: "Prioritize relationship-building with your top 10 in each category"
+        method: "Direct engagement, exclusive access, co-creation opportunities"
+
+  phase_2_engineer_stickiness:
+    objective: "Make every piece of content pass the stickiness test before publishing"
+    stickiness_checklist:
+      - question: "Does this content require active participation from the audience?"
+        if_no: "Add a question, challenge, or fill-in-the-blank element"
+      - question: "Is the core message embedded in a narrative?"
+        if_no: "Reframe as a story with character, tension, and resolution"
+      - question: "Has this been tested or is it based on intuition?"
+        if_no: "Test the hook with a small audience before full deployment"
+      - question: "Is there a gold box—one surprising element that rewards attention?"
+        if_no: "Add an unexpected insight, data point, or reveal"
+      - question: "Can this be repeated across 5+ formats without losing impact?"
+        if_no: "The core idea may not be sticky enough. Refine before publishing."
+
+  phase_3_optimize_context:
+    objective: "Ensure your content environment signals quality, trust, and community"
+    context_audit:
+      broken_windows_check:
+        - "Are all comments responded to within 24 hours?"
+        - "Is spam removed and quality comments pinned?"
+        - "Is the visual quality consistent and professional?"
+        - "Does the posting schedule signal reliability?"
+        - "Does the bio/profile signal credibility and clarity?"
+      timing_alignment:
+        - "Is this content aligned with the current cultural or emotional moment?"
+        - "Is this the right platform for this message?"
+        - "Is the format matched to audience consumption context (commute, lunch, evening)?"
+
+  phase_4_monitor_for_tipping:
+    objective: "Watch for pre-tipping indicators and amplify when they appear"
+    monitoring_protocol:
+      daily_check:
+        - "Any engagement from outside your normal audience cluster?"
+        - "Save/bookmark rate trending above baseline?"
+        - "DM or direct share volume increasing?"
+      tipping_response:
+        - "Engage every comment within 1 hour during a potential tip"
+        - "Create follow-up content immediately to sustain momentum"
+        - "Identify and publicly engage the agents carrying the message"
+
+  virality_scoring_integration:
+    skill: "S06_virality_scoring"
+    scoring_dimensions_from_gladwell:
+      few_score:
+        weight: 0.35
+        measures: "Will this content activate Connectors, Mavens, and/or Salesmen?"
+        scoring:
+          1: "Generic content with no specific agent appeal"
+          3: "Appeals to one agent type clearly"
+          5: "Engineered to activate all three agent types with distinct elements"
+      stickiness_score:
+        weight: 0.35
+        measures: "Is this message memorable, actionable, and structurally optimized?"
+        scoring:
+          1: "Forgettable, passive consumption, no structural innovation"
+          3: "Contains one stickiness element (narrative OR participation OR repetition)"
+          5: "Multiple stickiness elements integrated, gold box present, tested"
+      context_score:
+        weight: 0.30
+        measures: "Does the current context amplify or dampen this message?"
+        scoring:
+          1: "Misaligned with cultural moment, wrong platform, bad timing"
+          3: "Neutral context—neither amplifying nor dampening"
+          5: "Perfect contextual alignment—cultural moment, platform norms, and emotional state all favor spread"
+
+  network_amplification_integration:
+    skill: "S17_network_amplification"
+    protocol:
+      step_1: "Identify which agent type each piece of content primarily serves"
+      step_2: "Distribute Maven-bait to information communities first"
+      step_3: "Ensure Connector-bait is frictionless to share across platforms"
+      step_4: "Equip Salesmen-bait with clear CTAs and conversion paths"
+      step_5: "Monitor cross-cluster spread as primary amplification metric"
+
+  network_coordination_integration:
+    skill: "S23_network_coordination"
+    protocol:
+      step_1: "Maintain agent database with current engagement data"
+      step_2: "Coordinate content releases with agent activation sequences"
+      step_3: "Seed content with Mavens 24-48 hours before public release"
+      step_4: "Alert Connectors at public release with shareable assets"
+      step_5: "Provide Salesmen with conversion tools within 24 hours of tipping indicators"
+
+# =============================================================================
+# SECTION 8: KEY QUOTES AND PRINCIPLES
+# =============================================================================
+
+key_quotes:
+  - quote: "The success of any kind of social epidemic is heavily dependent on the involvement of people with a particular and rare set of social gifts."
+    application: "Stop trying to reach everyone. Find and activate the few who matter."
+
+  - quote: "There is a simple way to package information that, under the right circumstances, can make it irresistible."
+    application: "Stickiness is engineered through structure, not budget."
+
+  - quote: "Epidemics are sensitive to the conditions and circumstances of the times and places in which they occur."
+    application: "Context is not background noise. It is the amplifier or the suppressor."
+
+  - quote: "The world does not accord with our intuition. Those who are successful at creating social epidemics do not just do what they think is right. They deliberately test their intuitions."
+    application: "Test everything. Your instinct about what will spread is probably wrong."
+
+  - quote: "Look at the world around you. It may seem like an immovable, implacable place. It is not. With the slightest push—in just the right place—it can be tipped."
+    application: "Small, precise interventions at leverage points outperform massive, unfocused efforts."
+
+  - quote: "That is the paradox of the epidemic: that in order to create one contagious movement, you often have to create many small movements first."
+    application: "Do not try to go viral once. Create dozens of small epidemics in your community, and one will break through."
+
+# =============================================================================
+# SOURCE-VERIFIED QUOTES — Extracted directly from primary source (FB2)
+# Verification date: 2026-03-04
+# =============================================================================
+
+source_quotes:
+
+  - source_quote: "The Tipping Point is the moment of critical mass, the threshold, the boiling point."
+    chapter: "Introduction"
+    page_context: "Definition of the core concept, following discussion of fax machine and cell phone adoption curves"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Every content strategy has a boiling point. Your job is to engineer
+      conditions so the temperature keeps rising — not to predict when the
+      water will boil.
+
+  - source_quote: "Ideas and products and messages and behaviors spread just like viruses do."
+    chapter: "Introduction"
+    page_context: "Central thesis statement of the book, following Hush Puppies and NYC crime case studies"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Content is not broadcast — it is transmitted. Every piece of content
+      is an infectious agent. Design it to replicate, not just to be seen.
+
+  - source_quote: "These three characteristics — one, contagiousness; two, the fact that little causes can have big effects; and three, that change happens not gradually but at one dramatic moment — are the same three principles that define how measles moves through a grade-school classroom or the flu attacks every winter."
+    chapter: "Introduction"
+    page_context: "Synthesis of the three epidemic characteristics after NYC crime and Hush Puppies examples"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Stop thinking linearly about growth. Content epidemics share the same
+      three traits as biological ones: contagion mechanics, disproportionate
+      cause-effect, and sudden phase transitions.
+
+  - source_quote: "Six degrees of separation doesn't mean that everyone is linked to everyone else in just six steps. It means that a very small number of people are linked to everyone else in a few steps, and the rest of us are linked to the world through those special few."
+    chapter: "Chapter Two — The Law of the Few"
+    page_context: "Analysis of Milgram's small-world experiment, showing half of all letters passed through just three people (Jacobs, Jones, and Brown)"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Network reach is not democratic. A tiny fraction of people carry most
+      cross-cluster traffic. Identifying those nodes is the highest-leverage
+      activity in any distribution strategy.
+
+  - source_quote: "Sprinkled among every walk of life, in other words, are a handful of people with a truly extraordinary knack of making friends and acquaintances. They are Connectors."
+    chapter: "Chapter Two — The Law of the Few"
+    page_context: "After the acquaintance name-recognition exercise showing some people score four to five times higher than average"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Connectors are not influencers in the modern sense. They are network
+      hubs who span multiple social worlds. Find them by looking for people
+      who appear in comment sections across unrelated communities.
+
+  - source_quote: "Acquaintances, in short, represent a source of social power, and the more acquaintances you have the more powerful you are."
+    chapter: "Chapter Two — The Law of the Few"
+    page_context: "Discussion of Mark Granovetter's 'strength of weak ties' research from Getting a Job (1974)"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Weak ties drive distribution more than strong ties. Your close
+      followers already know what you know. Your acquaintances connect you
+      to entirely new clusters of people.
+
+  - source_quote: "The word Maven comes from the Yiddish and it means one who accumulates knowledge."
+    chapter: "Chapter Two — The Law of the Few"
+    page_context: "Introduction of the Maven archetype, before discussion of market mavens research"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Mavens are not influencers — they are information accumulators who
+      share compulsively. Feed them data, case studies, and depth. They
+      will do the distribution work for free because sharing knowledge
+      is intrinsically rewarding to them.
+
+  - source_quote: "Mavens are really information brokers, sharing and trading what they know."
+    chapter: "Chapter Two — The Law of the Few"
+    page_context: "Distinction between Mavens as information sources vs. Salesmen as persuaders"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Create Maven-bait: dense, reference-worthy content that Mavens can
+      redistribute as their own discovery. High save rates and bookmarks
+      are the signal that Mavens are archiving your work.
+
+  - source_quote: "In a social epidemic, Mavens are data banks. They provide the message. Connectors are social glue: they spread it. But there is also a select group of people — Salesmen — with the skills to persuade us when we are unconvinced of what we are hearing, and they are as critical to the tipping of word-of-mouth epidemics as the other two groups."
+    chapter: "Chapter Two — The Law of the Few"
+    page_context: "Transition from Mavens to Salesmen, establishing the three-agent model"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      The three agents are not interchangeable. Maven-bait is data-rich.
+      Connector-bait is cross-domain and shareable. Salesman-bait is
+      emotionally charged. One piece of content rarely serves all three.
+      Build a portfolio that activates each type deliberately.
+
+  - source_quote: "The Stickiness Factor says that there are specific ways of making a contagious message memorable; there are relatively simple changes in the presentation and structuring of information that can make a big difference in how much of an impact it makes."
+    chapter: "Chapter One — The Three Rules of Epidemics"
+    page_context: "Formal definition of the Stickiness Factor as second rule of epidemics"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Stickiness is structural, not budgetary. The difference between
+      forgettable and unforgettable content is almost always a small
+      change in framing, sequencing, or presentation — not production
+      value or ad spend.
+
+  - source_quote: "Stickiness means that a message makes an impact. You can't get it out of your head. It sticks in your memory."
+    chapter: "Chapter One — The Three Rules of Epidemics"
+    page_context: "Following discussion of Winston cigarette slogan as a classically sticky advertising line"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      The ultimate stickiness test: can your audience recall your core
+      message three days later without prompting? If not, the message
+      is contagious but not sticky — it spreads without converting.
+
+  - source_quote: "There is a simple way to package information that, under the right circumstances, can make it irresistible. All you have to do is find it."
+    chapter: "Chapter Three — The Stickiness Factor"
+    page_context: "Closing line of the Stickiness Factor chapter, after Sesame Street and Blue's Clues case studies"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Irresistibility is discoverable through testing, not intuition. What
+      Sesame Street and Blue's Clues proved is that systematic testing of
+      small structural changes reveals what makes content impossible to
+      ignore.
+
+  - source_quote: "Wilson and Kelling argued that crime is the inevitable result of disorder. If a window is broken and left unrepaired, people walking by will conclude that no one cares and no one is in charge. Soon, more windows will be broken, and the sense of anarchy will spread from the building to the street on which it faces, sending a signal that anything goes."
+    chapter: "Chapter Four — The Power of Context (Part One)"
+    page_context: "Introduction of Broken Windows theory as applied to NYC crime reduction"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Your digital presence has broken windows. Unanswered comments,
+      inconsistent posting, spam in your community — each one signals
+      that no one is in charge. Fix the small signals of disorder and
+      the larger engagement problems fix themselves.
+
+  - source_quote: "The impetus to engage in a certain kind of behavior is not coming from a certain kind of person but from a feature of the environment."
+    chapter: "Chapter Four — The Power of Context (Part One)"
+    page_context: "Discussion of how environmental cues like graffiti on subway cars triggered criminal behavior independent of individual character"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Engagement is not about finding the right audience — it is about
+      engineering the right environment. The same person behaves
+      differently in different contexts. Design contexts that invite
+      the behavior you want.
+
+  - source_quote: "When it comes to interpreting other people's behavior, human beings invariably make the mistake of overestimating the importance of fundamental character traits and underestimating the importance of the situation and context."
+    chapter: "Chapter Four — The Power of Context (Part One)"
+    page_context: "Explanation of the Fundamental Attribution Error (FAE) in psychology"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Stop blaming your audience for not engaging. The problem is almost
+      never the people — it is the context. Change the environment
+      (timing, platform, framing, community signals) and the same people
+      will behave completely differently.
+
+  - source_quote: "The figure of 150 seems to represent the maximum number of individuals with whom we can have a genuinely social relationship, the kind of relationship that goes with knowing who they are and how they relate to us. Putting it another way, it's the number of people you would not feel embarrassed about joining uninvited for a drink if you happened to bump into them in a bar."
+    chapter: "Chapter Five — The Power of Context (Part Two)"
+    page_context: "Robin Dunbar's research on neocortex size and social group limits across primate species"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Your inner circle caps at 150 for a biological reason. Build a
+      core community of 150 where everyone knows each other and social
+      pressure maintains quality. Then use that 150 as your epidemic
+      carriers to reach the masses.
+
+  - source_quote: "Crossing the 150 line is a small change that can make a big difference."
+    chapter: "Chapter Five — The Power of Context (Part Two)"
+    page_context: "Transition to Gore Associates case study, demonstrating organizational application of Dunbar's Number"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      When your community crosses 150, peer pressure stops working and
+      you need formal rules. Either split into sub-communities or accept
+      that the intimacy dynamics that made your small group powerful will
+      erode. Design for this threshold deliberately.
+
+  - source_quote: "Epidemics are sensitive to the conditions and circumstances of the times and places in which they occur."
+    chapter: "Chapter Three — The Stickiness Factor (closing) / Chapter Four — The Power of Context"
+    page_context: "Restatement of the Power of Context principle, linking syphilis seasonality in Baltimore to Hush Puppies in East Village"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      The same content in different contexts produces wildly different
+      results. Map your content calendar to contextual windows — cultural
+      moments, emotional states, platform trends — that amplify rather
+      than dampen your message.
+
+  - source_quote: "In the end, Tipping Points are a reaffirmation of the potential for change and the power of intelligent action. Look at the world around you. It may seem like an immovable, implacable place. It is not. With the slightest push — in just the right place — it can be tipped."
+    chapter: "Chapter Eight — Conclusion"
+    page_context: "Final sentences of the book, synthesizing the entire argument"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      The entire Tipping Point thesis reduces to this: small, precise
+      interventions at leverage points outperform massive, unfocused
+      efforts every time. Find the leverage point. Apply the push.
+      The world moves.
+
+  - source_quote: "That is the paradox of the epidemic: that in order to create one contagious movement, you often have to create many small movements first."
+    chapter: "Chapter Seven — Case Study: Suicide, Smoking, and the Search for the Unsticky Cigarette"
+    page_context: "Discussion of the Ya-Ya Sisterhood word-of-mouth phenomenon and how thousands of small reading groups created the epidemic"
+    verification: "PRIMARY_SOURCE_VERIFIED"
+    organic_application: >
+      Do not try to go viral once. Seed dozens of micro-epidemics in
+      niche communities. One will break through to the mainstream.
+      The Ya-Ya Sisterhood did not have one big moment — it had
+      thousands of small ones that converged.
+
+summary:
+  one_sentence: >
+    Social epidemics tip when the right messengers (Connectors, Mavens, Salesmen)
+    carry a sticky message in a favorable context—and all three factors can be
+    deliberately engineered rather than left to chance.
+  core_framework: "Law of the Few + Stickiness Factor + Power of Context = Tipping Point"
+  biggest_organic_insight: >
+    Stop optimizing for reach and start optimizing for who reaches whom. A
+    hundred impressions on the right Connector are worth a million impressions
+    on passive scrollers. Find the few, make it stick, and engineer the context.
