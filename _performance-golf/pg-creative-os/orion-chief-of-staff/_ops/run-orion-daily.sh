@@ -150,9 +150,30 @@ cd "$BRIEFING_DIR"
 START_TIME=$(date +%s)
 
 # Run the briefing pipeline — redirect to log file directly (no tee piping)
-log "Running: python3 daily_briefing.py"
+# Pipeline watchdog: 10 min max (600s). Prevents indefinite hangs from blocking next day's run.
+PIPELINE_TIMEOUT=600
+log "Running: .venv/bin/python3 daily_briefing.py (Python 3.12) [timeout: ${PIPELINE_TIMEOUT}s]"
 
-if OUTPUT=$(python3 daily_briefing.py 2>&1); then
+# macOS doesn't have `timeout` — use background + kill pattern
+OUTFILE=$(mktemp)
+"$BRIEFING_DIR/.venv/bin/python3" daily_briefing.py > "$OUTFILE" 2>&1 &
+PY_PID=$!
+
+# Watchdog: kill if still running after PIPELINE_TIMEOUT
+( sleep "$PIPELINE_TIMEOUT" && kill "$PY_PID" 2>/dev/null && log "WATCHDOG: Killed pipeline after ${PIPELINE_TIMEOUT}s timeout" ) &
+WATCHDOG_PID=$!
+
+wait "$PY_PID"
+PY_EXIT=$?
+
+# Cancel watchdog if pipeline finished naturally
+kill "$WATCHDOG_PID" 2>/dev/null
+wait "$WATCHDOG_PID" 2>/dev/null
+
+OUTPUT=$(cat "$OUTFILE")
+rm -f "$OUTFILE"
+
+if [ "$PY_EXIT" -eq 0 ]; then
     # Append Python output to log
     echo "$OUTPUT" >> "$LOG_FILE"
 

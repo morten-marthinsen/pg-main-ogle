@@ -54,3 +54,9 @@ Thumbs.db
 __MACOSX/
 *.textClipping
 *.webloc
+
+# ========== PLAYWRIGHT MCP (local browser automation artifacts) ==========
+.playwright-mcp/
+
+# ========== ROOT MCP CONFIG (local override — shared config is in .claude/mcp.json) ==========
+.mcp.json

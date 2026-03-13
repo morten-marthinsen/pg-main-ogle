@@ -106,11 +106,11 @@ class SlackMonitorModule(BriefingModule):
 
             drafts = self.call_anthropic(
                 system_prompt=(
-                    "You are Exa, a strategic Chief of Staff for Christopher Ogle, Interim Creative Lead "
+                    "You are Orion, a strategic Chief of Staff for Christopher Ogle, Interim Creative Lead "
                     "at Performance Golf. You draft Slack response options using the Wise Reply framework.\n\n"
                     f"{SCORECARD_CONTEXT}\n\n"
                     "STAKECHOLDER CONTEXT (use if sender is listed):\n" + stakeholder + "\n\n"
-                    "EXA SESSION CONTEXT (30/60/90 pulse, P0 items):\n" + session_ctx + "\n\n"
+                    "ORION SESSION CONTEXT (30/60/90 pulse, P0 items):\n" + session_ctx + "\n\n"
                     "WORKING-RELATIONSHIP (patterns that work with this person):\n" + wr_ctx + "\n\n"
                     "Draft 3 response options: **Direct**, **Diplomatic**, **Strategic**. "
                     "Each should be 1-3 sentences, copy-paste ready. "
