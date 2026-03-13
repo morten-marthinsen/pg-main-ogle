@@ -188,8 +188,65 @@ Each verification call is a separate API call at 15-20KB context. For a Full-tie
 
 ---
 
+## Validation Convergence Loop
+
+Layer 3 validation repeats until a pass finds zero new issues, with a hard cap of 3 iterations.
+
+### Why This Exists
+
+Single-pass validation catches obvious issues but misses cascading problems — fixing one issue may introduce or reveal another. Without iteration, validation gives a false sense of completeness.
+
+### Protocol
+
+```
+Layer 3 Validation — Convergence Loop:
+
+  Pass 1: Run full validation per SCOPED-VERIFICATION-PROTOCOL rules
+    → If ZERO issues found: PASS. Proceed to Layer 4.
+    → If issues found: Fix all issues. Run Pass 2.
+
+  Pass 2: Re-run full validation on the fixed output
+    → If ZERO issues found: PASS. Proceed to Layer 4.
+    → If NEW issues found: Fix all issues. Run Pass 3.
+    → If SAME issues persist: Escalate to human.
+
+  Pass 3 (FINAL): Re-run full validation on the fixed output
+    → If ZERO issues found: PASS. Proceed to Layer 4.
+    → If STILL producing issues: ESCALATE TO HUMAN.
+      Do NOT attempt a 4th pass. Three iterations is the maximum.
+      Present: all issues found across 3 passes, all fixes attempted,
+      and which issues persist.
+```
+
+### Convergence Criteria
+
+A pass "converges" when it finds zero issues that weren't already found and addressed in a previous pass. New issues found in Pass 2 that weren't in Pass 1 are genuine cascading problems — not validation noise.
+
+### Escalation Format
+
+When 3 passes fail to converge:
+
+```markdown
+## Validation Convergence Failure — Escalation
+
+**Skill:** [skill ID]
+**Passes completed:** 3
+**Issues per pass:**
+- Pass 1: [N] issues ([list])
+- Pass 2: [N] issues ([list — note which are new vs. recurring])
+- Pass 3: [N] issues ([list — note which are new vs. recurring])
+
+**Persistent issues:** [issues that appeared in 2+ passes despite fixes]
+**Assessment:** [why these issues resist automated fixing]
+
+**Recommendation:** [human review of the persistent issues]
+```
+
+---
+
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-07 | Initial creation — Layer 2 verification architecture with 5 verification points, tier-based depth, binary question format |
+| 1.1 | 2026-03-12 | Added Validation Convergence Loop — iterative Layer 3 validation with 3-pass maximum and human escalation |

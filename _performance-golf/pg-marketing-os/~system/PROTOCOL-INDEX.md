@@ -1,7 +1,8 @@
 # CLAUDE-CORE — PROTOCOL REFERENCES (Full Reference)
 
-**Version:** 1.0
+**Version:** 1.1
 **Created:** 2026-03-08
+**Updated:** 2026-03-12
 **Source:** Extracted from ~system/SYSTEM-CORE.md. Load at session start for orientation. During execution, load individual protocol files as needed.
 
 ---
@@ -68,15 +69,17 @@ These protocols are loaded at Layer 0 based on skill requirements:
 **Applied to:** Copy generation skills (10-20), at midpoint (after Skill 12) and 75% (after Skill 15, Full tier only)
 **Key rule:** 5 strategic anchors restated VERBATIM from source packages to a recitation file. Values copied from actual files, not paraphrased. Post-recitation drift check mandatory.
 
-### Self-Learning Promotion Protocol (v1.0)
+### Self-Learning Promotion Protocol (v1.1)
 **Full protocol:** `~system/protocols/SELF-LEARNING-PROMOTION-PROTOCOL.md`
-**Applied to:** Learning log entries at L1-L2 with promotion potential
+**Applied to:** Learning log entries at L1-L2 with promotion potential + structured incident capture
 **Key rule:** J1 (judgment-free) learnings can be tested and promoted directly. J2 (judgment-required) learnings need human taste validation. Git branch workflow: branch → modify → test → keep/discard. Results logged to `promotion-results.tsv`.
+**v1.1:** Added Issue Logger with structured incident capture, automatic pattern detection (same class 2x = pattern signal), and bounded trial validation (3-example test, not 1). Issue log at `~outputs/issue-log.md`.
 
-### Autoresearch Loop Protocol (v1.0)
+### Autoresearch Loop Protocol (v1.1)
 **Full protocol:** `~system/protocols/AUTORESEARCH-LOOP-PROTOCOL.md`
-**Applied to:** Systematic skill improvement sessions (every 2-3 campaigns)
+**Applied to:** Systematic skill improvement sessions (every 2-3 campaigns) + future live campaign optimization
 **Key rule:** Karpathy pattern applied to Marketing-OS: select test input, run 3-5 experiments per session, human evaluates, keep/discard. Automated scoring PARKED.
+**v1.1:** Added Arena integration concept (AutoResearch pre-screens → Arena validates top 10) and forward vision for live campaign optimization loops against real metrics (ads, landing pages, funnels).
 
 ### Meta-Prompt Refinement Protocol (v1.0)
 **Full protocol:** `~system/protocols/META-PROMPT-REFINEMENT-PROTOCOL.md`
@@ -112,3 +115,107 @@ These protocols are loaded at Layer 0 based on skill requirements:
 **Full protocol:** `~system/protocols/BRAINSTORM-DIVERSITY-PROTOCOL.md`
 **Applied to:** Skills generating multiple candidates (10 Headlines, 05 Promise, 06 Big Idea, A02 Hooks, E2 Subject Lines)
 **Key rule:** Minimum category spread per skill, 40% cluster threshold triggers additive generation, specimen-anchored divergence across generation passes.
+
+### Adaptive Context Compaction Protocol (v1.0)
+**Full protocol:** `~system/protocols/ADAPTIVE-COMPACTION-PROTOCOL.md`
+**Applied to:** Sessions approaching context zone boundaries (YELLOW and above)
+**Key rule:** 5-stage progressive compaction mapped to context zones. Stage 1 (YELLOW): upstream package summarization. Stage 2 (ORANGE): prior prose windowing. Stage 3 (RED): context reservoir triage. Stage 4 (RED continued): execution history pruning. Stage 5 (CRITICAL): emergency micro-reservoir. Part 2 of context reservoir NEVER compressed.
+
+### Skill Pre-Flight Planning Protocol (v1.0)
+**Full protocol:** `~system/protocols/SKILL-PREFLIGHT-PROTOCOL.md`
+**Applied to:** Copy generation skills (10-17) where upstream context is large
+**Key rule:** Haiku-powered planning subagent reads all upstream context and produces a focused Execution Brief (~3-5KB) with section mission, top 5 proof elements, voice anchors, threading requirements, danger zones, and token budget. Reduces executor context load by 30-50%. Mutually exclusive with Dynamic Context Framing for the same skill.
+
+### Convergence Intervention Protocol (v1.0)
+**Full protocol:** `~system/protocols/CONVERGENCE-INTERVENTION-PROTOCOL.md`
+**Applied to:** Arena executions — all Arena skills (03-08, 10-18, 20)
+**Key rule:** Three detection modes: persona convergence (round-aware 5-gram overlap thresholds), round stagnation (score delta + same winner), output repetition (3-sentence block repeat). Automated detection via `.hooks/validators/convergence_detector.py`. Round 1 convergence = bad (intervene), Round 3 convergence = good (allow).
+
+---
+
+## INFRASTRUCTURE PROTOCOLS (Always Loaded)
+
+These protocols are loaded as part of the core system infrastructure, not conditionally per-skill:
+
+### Execution Guardrails Protocol
+**Full protocol:** `~system/protocols/EXECUTION-GUARDRAILS.md`
+**Applied to:** Every skill execution
+**Key rule:** Pre-flight checklist, mandatory read declarations, GATE_0 proof standard, post-execution verification. Referenced in SYSTEM-CORE.md.
+
+### Event-Driven Reminders Protocol
+**Full protocol:** `~system/protocols/EVENT-DRIVEN-REMINDERS.md`
+**Applied to:** All skills — detector-triggered MC-CHECK events
+**Key rule:** 6 detector types (Abbreviation, Rushing, Stale Reads, Synthesis, Gate Drift, Context Pressure) replace fixed-schedule MC-CHECK firing. Zero overhead when execution is clean.
+
+### Task Triage Protocol
+**Full protocol:** `~system/protocols/TASK-TRIAGE-PROTOCOL.md`
+**Applied to:** Campaign declaration — determines tier (Full/Standard/Quick)
+**Key rule:** 3 tiers constrain exploration depth (Arena rounds, verification points, sessions) but NEVER quality thresholds. Minimum scores identical across all tiers.
+
+### Skill Rollback Protocol
+**Full protocol:** `~system/protocols/SKILL-ROLLBACK-PROTOCOL.md`
+**Applied to:** Post-skill recovery when output is bad or later skills corrupt earlier outputs
+**Key rule:** Git snapshots at Layer 0 completion (pre-skill) and Layer 4 completion (post-skill). Manual creation required — hooks cannot detect skill boundaries.
+
+---
+
+## ARENA INFRASTRUCTURE PROTOCOLS
+
+These support the Arena system documented in `~system/ARENA-PROTOCOL.md`:
+
+### Arena Core Protocol
+**Full protocol:** `~system/protocols/ARENA-CORE-PROTOCOL.md`
+**Applied to:** All Arena executions — detailed 3-round execution mechanics
+**Key rule:** 7-competitor, 3-round competition with adversarial critique-revise cycles. Sequential Isolation Protocol for single-context mode. Single-Context Hardening (Upgrade 3.6).
+
+### Arena Persona Panel
+**Full protocol:** `~system/protocols/ARENA-PERSONA-PANEL.md`
+**Applied to:** All Arena executions — persona specifications
+**Key rule:** 7 persona specs (Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, Architect) with editorial lenses, generation focus, and specimen references.
+
+### Analytical Reasoning Capture
+**Full protocol:** `~system/protocols/ANALYTICAL-REASONING-CAPTURE.md`
+**Applied to:** Foundation skills producing analytical conclusions
+**Key rule:** Structured capture of reasoning chains, evidence, and decision rationale for downstream traceability.
+
+---
+
+## SPECIMEN & VOICE PROTOCOLS
+
+### Persona Voice Loading Protocol
+**Full protocol:** `~system/protocols/PERSONA-VOICE-LOADING-PROTOCOL.md`
+**Applied to:** Arena persona generation — voice sample loading
+**Key rule:** Fresh voice samples loaded before each persona generates. Prevents contamination between sequential persona outputs.
+
+### Persona Specimen Sources
+**Full protocol:** `~system/protocols/PERSONA-SPECIMEN-SOURCES.md`
+**Applied to:** Arena persona generation — reference material
+**Key rule:** Maps each persona to their canonical specimen works for voice calibration.
+
+### Specimen Vertical Segmentation
+**Full protocol:** `~system/protocols/SPECIMEN-VERTICAL-SEGMENTATION.md`
+**Applied to:** Vertical-specific specimen loading
+**Key rule:** Segments specimen library by vertical (golf, health, finance, personal-dev, technology) for targeted reference loading.
+
+---
+
+## TEMPLATES
+
+### Context Reservoir Template
+**Full template:** `~system/protocols/CONTEXT-RESERVOIR-TEMPLATE.md`
+**Applied to:** Between Sessions 3 and 4 — context reservoir creation
+**Key rule:** Standardized structure for the human-curated analytical intelligence document that bridges foundation → copy sessions.
+
+### FSSIT Handoff Template
+**Full template:** `~system/protocols/FSSIT-HANDOFF-TEMPLATE.md`
+**Applied to:** Foundation skill handoffs
+**Key rule:** Standardized handoff format for Foundation packages.
+
+---
+
+## VERSION HISTORY
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-03-08 | Initial creation. Extracted protocol references from SYSTEM-CORE.md. |
+| 1.1 | 2026-03-12 | Updated Self-Learning/Autoresearch to v1.1, added 3 new conditional protocols, Infrastructure/Arena/Specimen/Template sections |
