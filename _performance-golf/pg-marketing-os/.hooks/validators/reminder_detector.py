@@ -5,7 +5,8 @@ Implements Detectors 1 (Synthesis), 2 (Rushing), 4 (Abbreviation), 7 (Stale Read
 from the Event-Driven Reminder Protocol (~system/protocols/EVENT-DRIVEN-REMINDERS.md).
 
 Detectors 5 (Gate Drift) and 6 (Context Pressure) are implemented in their respective
-validators (gate_validator.py, token_estimator.py). Detector 3 (Convergence) is Phase 3 — not yet built.
+validators (gate_validator.py, token_estimator.py). Detector 3 (Convergence) is implemented
+in convergence_detector.py (see ~system/protocols/CONVERGENCE-INTERVENTION-PROTOCOL.md).
 
 Usage:
     python3 reminder_detector.py <file_path>

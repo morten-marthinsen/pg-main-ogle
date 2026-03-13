@@ -141,6 +141,14 @@ if [[ -n "$RESULT" && "$RESULT" != "{}" ]]; then
     FEEDBACK="${FEEDBACK}${RESULT}\n"
 fi
 
+# 6. Arena output files → convergence detector (persona convergence, round stagnation, output repetition)
+if [[ "$FILE_PATH" == *"arena/"* ]] && [[ "$FILE_PATH" == *"-output.md"* || "$FILE_PATH" == *"-revised.md"* || "$FILE_PATH" == *"scores"* ]]; then
+    RESULT=$(python3 "$VALIDATORS_DIR/convergence_detector.py" "$FILE_PATH" 2>/dev/null || true)
+    if [[ -n "$RESULT" && "$RESULT" != "{}" ]]; then
+        FEEDBACK="${FEEDBACK}${RESULT}\n"
+    fi
+fi
+
 # Output feedback if any validators returned results
 if [[ -n "$FEEDBACK" ]]; then
     python3 -c "
