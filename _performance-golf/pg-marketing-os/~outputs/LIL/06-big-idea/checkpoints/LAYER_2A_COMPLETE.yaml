@@ -1,0 +1,106 @@
+layer: "2A"
+skill: "06-big-idea"
+project: "Lil' Legends (LIL)"
+status: COMPLETE
+timestamp: "2026-03-13T11:00:00Z"
+
+anti_degradation:
+  file_read: "BIG-IDEA-ANTI-DEGRADATION.md"
+  version: "2.0"
+  declaration_written_to: "layer-0-outputs/0.1-deep-research-loader.md"
+
+verification:
+  concepts_generated:
+    required: 5
+    actual: 6
+    verified: true
+  concepts_in_plain_language:
+    all_plain_language: true
+    no_headlines: true
+    no_leads: true
+    no_creative_wrappers: true
+    verified: true
+  fssit_anchors_documented:
+    all_concepts_anchored: true
+    fssit_ids_used: ["FSSIT-1", "FSSIT-2", "FSSIT-3", "FSSIT-5"]
+    verified: true
+  schema_distance_assessed:
+    all_concepts_in_range: true
+    range: "4-7"
+    verified: true
+  strategic_rationale_included:
+    all_concepts_have_rationale: true
+    verified: true
+  soul_md_alignment_checked:
+    all_concepts_checked: true
+    verified: true
+
+concept_summary:
+  - id: "C1"
+    name: "The Whole Lesson Is Seven Words"
+    fssit: "FSSIT-1"
+    type: "MECHANISM"
+    sd_estimate: "5-6"
+    nr_potential: 9
+    recommendation: "RECOMMENDED — strongest proof, highest NR, self-demonstrating"
+
+  - id: "C2"
+    name: "A Shape Sorter for Golf"
+    fssit: "FSSIT-3"
+    type: "MECHANISM+DISCOVERY"
+    sd_estimate: "5-7"
+    nr_potential: 7
+    recommendation: "RECOMMENDED — strongest analogy, highest schema distance"
+
+  - id: "C3"
+    name: "Golf Buddy, Not Golf Coach"
+    fssit: "FSSIT-5"
+    type: "IDENTITY+MECHANISM"
+    sd_estimate: "5-6"
+    nr_potential: 8
+    recommendation: "RECOMMENDED — strongest emotional resonance, best Soul.md fit"
+
+  - id: "C4"
+    name: "The Equipment Teaches"
+    fssit: "FSSIT-2"
+    type: "MECHANISM"
+    sd_estimate: "5-6"
+    nr_potential: 7
+    recommendation: "VIABLE — direct thesis expression, risk of being tagline not Big Idea"
+
+  - id: "C5"
+    name: "What Nobody Told You About Teaching Your Toddler Golf"
+    fssit: "FSSIT-2"
+    type: "DISCOVERY"
+    sd_estimate: "5-7"
+    nr_potential: 8
+    recommendation: "VIABLE — strong credibility angle, risk of clinical tone"
+
+  - id: "C6"
+    name: "My Dad Gave Me This Game"
+    fssit: "FSSIT-5"
+    type: "IDENTITY"
+    sd_estimate: "4-5"
+    nr_potential: 7
+    recommendation: "VIABLE — authentic Grant story, risk of generic legacy play"
+
+human_checkpoint:
+  status: "AWAITING_SELECTION"
+  concepts_presented: 6
+  concepts_recommended: 3
+  recommended_ids: ["C1", "C2", "C3"]
+  selection_received: false
+  concept_approved_yaml_exists: false
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+
+microskill_outputs:
+  - file: "layer-2-outputs/2.1-candidate-strategy-selector.md"
+    status: COMPLETE
+  - file: "layer-2-outputs/2.2-concept-generation-PHASE-A.md"
+    status: COMPLETE
+
+next_step: "BLOCKING — Human must select 1-2 concepts before Phase B can proceed"

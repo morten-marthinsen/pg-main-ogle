@@ -42,6 +42,10 @@
 *.dmg
 *.pkg
 
+# ========== HOOK RUNTIME STATE ==========
+**/.hooks/.reminder-state.json
+**/.hooks/.token-estimator-state.json
+
 # ========== PYTHON ==========
 __pycache__/
 *.pyc
