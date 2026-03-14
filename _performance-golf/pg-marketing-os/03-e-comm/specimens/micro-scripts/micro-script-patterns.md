@@ -103,7 +103,7 @@ Across ONE.1 (30+ scripts) and RS1 (55+ scripts), micro-scripts fall into 10 dis
 | Specimen | Product |
 |----------|---------|
 | "For 100 years, the weight sat in the back and the face flopped open. One small company finally asked: what if we moved it forward? That's the RS1." | RS1 |
-| "Chris McGinley spent 25 years engineering putters. When he showed tour players the RS1, they said: 'Why hasn't anyone else done this? It makes too much sense.'" | RS1 |
+| "Chris McGinley spent 30+ years engineering putters. When he showed tour players the RS1, they said: 'Why hasn't anyone else done this? It makes too much sense.'" | RS1 |
 | "You don't have a putting problem. You have a face drift problem. And every putter you've ever owned has had it built in." | RS1 |
 
 **Craft Principle:** Micro-stories compress beginning → middle → end into 2-3 sentences. They work as standalone ad copy, email subject lines, or thumbnail overlay text. The RS1 has the richest micro-story library.
