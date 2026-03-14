@@ -1,0 +1,95 @@
+layer: "4"
+skill: "06-big-idea"
+project: "Lil' Legends (LIL)"
+status: COMPLETE
+timestamp: "2026-03-14T19:30:00Z"
+version: "v2"
+revision_trigger: "Human rejected v1 contrarian framing; directed Fun + Fundamentals emotional center"
+
+skill_status: COMPLETE
+all_layers_completed: [0, 1, "2A", "2B", "2.5", "2.5-v2", 3, "3-v2", 4, "4-v2"]
+
+big_idea_final:
+  headline: "He Didn't Give Me a Golf Lesson. He Gave Me a Game."
+  fssit_moment: "The most fun way for your toddler to learn golf is also the most effective way. Fun IS the learning mechanism."
+  type: "DISCOVERY + IDENTITY"
+  fssit_anchor: "FSSIT-2 + FSSIT-5 (reframed)"
+  approved_concept: "C5+C6 SYNTHESIS"
+  emotional_center: "Fun + Fundamentals (hope/aspiration)"
+  schema_distance: 6.78
+  nr_score: 8
+  defensibility: 8.3
+  arena_score: 8.35
+  arena_source: "Hybrid-A v2 (Architect body + Halbert headline/hook)"
+  mechanism: "See & Swing System"
+  knockout_proof: "'Match the yellow ball to the white ball' — seven words (MEC-13, 10.00)"
+  bridge_analogy: "'A shape sorter for golf' (8.90)"
+  identity_close: "'Golf buddy, not golf coach'"
+
+superseded_framing:
+  headline: "You Were Never Supposed to Teach Your Toddler Golf."
+  reason: "Contrarian. Implies parents thought they had to teach. Pain-market entry. Violates hope market."
+  arena_v1_score: 8.50
+  human_decision: "REJECTED by Creative Lead — replaced with Fun + Fundamentals emotional center"
+  status: COMPLETE  # v1 Arena was completed; human then directed revision
+
+verification:
+  output_package:
+    file: "layer-4-outputs/big-idea-package-v2.md"
+    status: COMPLETE
+    verified: true
+
+  copy_blocks:
+    block_1_primary_expression: true
+    block_2_secondary_expression: true
+    block_3_compressed: true
+    block_4_headlines_subheads: true
+    block_5_bullet_points: true
+    block_6_organic_video_script: true
+    block_7_email_teaser: true
+    total_blocks: 7
+    verified: true
+
+  downstream_handoffs:
+    ecomm_handoff: {status: COMPLETE, verified: true}
+    organic_handoff: {status: COMPLETE, verified: true}
+
+  anti_slop_final_check:
+    status: PASS
+    total_violations: 0
+    contrarian_framing: 0
+    hope_market_violations: 0
+    verified: true
+
+  validation_scores:
+    schema_distance: 6.78
+    anchor_distance_ratio: 1.25
+    expression_anchoring: 9.08
+    defensibility: 8.3
+    arena_score: 8.35
+    nr_score: 8
+    all_within_optimal_ranges: true
+    verified: true
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+  all_layers_complete: true
+  output_package_complete: true
+  downstream_handoffs_complete: true
+  proof_gaps_documented: true
+
+checkpoint_progression:
+  LAYER_0_COMPLETE: DONE
+  LAYER_1_COMPLETE: DONE
+  LAYER_2A_COMPLETE: DONE
+  CONCEPT_APPROVED: DONE
+  LAYER_2B_COMPLETE: DONE
+  ARENA_COMPLETE: "DONE (v1 — REJECTED)"
+  ARENA_V2_COMPLETE: "DONE (v2 — CURRENT)"
+  LAYER_3_COMPLETE: DONE
+  LAYER_4_COMPLETE: "DONE (v1 — superseded)"
+  LAYER_4_V2_COMPLETE: "DONE (v2 — CURRENT)"
+
+next_step: "SKILL 06 COMPLETE (v2) — downstream consumers: E-comm copywriting (EC-01 through EC-06), Organic content production"

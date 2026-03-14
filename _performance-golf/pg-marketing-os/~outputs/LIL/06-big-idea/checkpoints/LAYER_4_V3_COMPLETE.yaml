@@ -1,0 +1,106 @@
+layer: "4"
+skill: "06-big-idea"
+project: "Lil' Legends (LIL)"
+status: COMPLETE
+timestamp: "2026-03-14T20:00:00Z"
+version: "v3"
+revision_type: "Targeted refinement of v2 Hybrid-A per human direction"
+revision_trigger: "Human iterated ('we're getting closer') with 3 specific refinements: headline clarity + double entendre, fun as active ingredient, science earns FSSIT claim"
+
+skill_status: COMPLETE
+
+big_idea_final:
+  headline: "My Dad Didn't Just Give Me a Golf Lesson. He Gave Me the Game."
+  headline_device: "'The game' double entendre — the game of golf (legacy) + a game (fun to play)"
+  fssit_moment: "Developmental science has proven that the most fun way for a toddler to learn golf is also the most effective way. Fun IS the learning mechanism at this age."
+  type: "DISCOVERY + IDENTITY"
+  fssit_anchor: "FSSIT-2 + FSSIT-5 (reframed)"
+  approved_concept: "C5+C6 SYNTHESIS"
+  emotional_center: "Fun + Fundamentals (hope/aspiration)"
+  schema_distance: 6.85
+  nr_score: 8
+  defensibility: 8.4
+  arena_base_score: 8.35
+  arena_source: "Hybrid-A v2 (Architect body + Halbert headline/hook) refined per human direction"
+  mechanism: "See & Swing System"
+  knockout_proof: "'Match the yellow ball to the white ball' — seven words (MEC-13, 10.00)"
+  bridge_analogy: "'A shape sorter for golf' (8.90)"
+  identity_close: "'Golf buddy, not golf coach'"
+
+v3_refinements:
+  - change: "Headline: 'He Didn't Give Me a Golf Lesson. He Gave Me a Game.' → 'My Dad Didn't Just Give Me a Golf Lesson. He Gave Me the Game.'"
+    rationale: "'He' → 'My dad' for clarity. 'a Game' → 'the Game' for double entendre. 'Didn't' → 'Didn't just' for positive framing."
+  - change: "Personal story: 'He just played alongside me. Made it fun.' → 'He showed me how to have fun with it. That was the whole thing.'"
+    rationale: "Fun elevated from byproduct to active ingredient."
+  - change: "FSSIT structure: claim-then-science → science-then-claim"
+    rationale: "Science now EARNS the FSSIT claim before it's made. Increases defensibility."
+
+superseded_versions:
+  v1:
+    headline: "You Were Never Supposed to Teach Your Toddler Golf."
+    status: "REJECTED — contrarian framing, violates hope market"
+  v2:
+    headline: "He Didn't Give Me a Golf Lesson. He Gave Me a Game."
+    status: "SUPERSEDED — human iterated with 3 refinements"
+
+verification:
+  output_package:
+    file: "layer-4-outputs/big-idea-package-v3.md"
+    status: COMPLETE
+    verified: true
+
+  copy_blocks:
+    block_1_primary_expression: true
+    block_2_secondary_expression: true
+    block_3_compressed: true
+    block_4_headlines_subheads: true
+    block_5_bullet_points: true
+    block_6_organic_video_script: true
+    block_7_email_teaser: true
+    total_blocks: 7
+    verified: true
+
+  downstream_handoffs:
+    ecomm_handoff: {status: COMPLETE, verified: true}
+    organic_handoff: {status: COMPLETE, verified: true}
+
+  anti_slop_final_check:
+    status: PASS
+    total_violations: 0
+    contrarian_framing: 0
+    hope_market_violations: 0
+    double_entendre_explained_in_copy: 0  # Must be felt, never explained
+    verified: true
+
+  validation_scores:
+    schema_distance: 6.85
+    anchor_distance_ratio: 1.24
+    expression_anchoring: 9.15
+    defensibility: 8.4
+    nr_score: 8
+    all_within_optimal_ranges: true
+    verified: true
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+  all_layers_complete: true
+  output_package_complete: true
+  downstream_handoffs_complete: true
+  proof_gaps_documented: true
+
+checkpoint_progression:
+  LAYER_0_COMPLETE: DONE
+  LAYER_1_COMPLETE: DONE
+  LAYER_2A_COMPLETE: DONE
+  CONCEPT_APPROVED: DONE
+  LAYER_2B_COMPLETE: DONE
+  ARENA_COMPLETE: "DONE (v1 — REJECTED)"
+  ARENA_V2_COMPLETE: "DONE (v2 — refined to v3)"
+  LAYER_3_COMPLETE: DONE
+  LAYER_4_COMPLETE: "DONE (v1 — superseded)"
+  LAYER_4_V2_COMPLETE: "DONE (v2 — superseded)"
+  LAYER_4_V3_COMPLETE: "DONE (v3 — CURRENT)"
+
+next_step: "SKILL 06 COMPLETE (v3) — downstream consumers: E-comm copywriting (EC-01 through EC-06), Organic content production"

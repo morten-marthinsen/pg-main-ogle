@@ -1,8 +1,8 @@
 # SESSION HANDOFF — Big Idea Skill 06, Lil' Legends
 
-**Session Date:** 2026-03-13
-**Context Zone at Break:** RED (~550K tokens)
-**Reason for Break:** Reached CONCEPT CHECKPOINT (blocking human decision) + RED context zone
+**Session Date:** 2026-03-14
+**Status:** SKILL 06 COMPLETE (v3 — refined per human iteration)
+**All Layers:** 0, 1, 2A, 2B, 2.5, 3, 4 — DONE (v1 + v2 + v3 refinement)
 
 ---
 
@@ -10,8 +10,9 @@
 
 **Skill:** 06-big-idea
 **Project:** Lil' Legends (LIL)
-**Layer completed:** 2A (Concept Generation — Phase A)
-**Next step:** CONCEPT CHECKPOINT — Human selects 1-2 concepts
+**Layer completed:** 4-v3 (Output Packaging, refined) — FINAL
+**Skill status:** COMPLETE
+**Next step:** Downstream consumers (E-comm EC-01 through EC-06, Organic content)
 
 ### Checkpoint Progression
 
@@ -19,75 +20,106 @@
 LAYER_0_COMPLETE.yaml  ......... DONE
 LAYER_1_COMPLETE.yaml  ......... DONE
 LAYER_2A_COMPLETE.yaml ......... DONE
-CONCEPT_APPROVED.yaml  ......... AWAITING HUMAN SELECTION
-LAYER_2B_COMPLETE.yaml ......... BLOCKED (needs CONCEPT_APPROVED.yaml)
-ARENA_COMPLETE.yaml    ......... BLOCKED (needs LAYER_2B_COMPLETE.yaml)
-LAYER_3_COMPLETE.yaml  ......... BLOCKED (needs ARENA_COMPLETE.yaml)
-LAYER_4_COMPLETE       ......... BLOCKED (needs LAYER_3_COMPLETE.yaml)
+CONCEPT_APPROVED.yaml  ......... DONE (C5+C6 SYNTHESIS)
+LAYER_2B_COMPLETE.yaml ......... DONE
+ARENA_COMPLETE.yaml    ......... DONE (v1 — superseded)
+ARENA_V2_COMPLETE.yaml ......... DONE (v2 — refined to v3)
+LAYER_3_COMPLETE.yaml  ......... DONE
+LAYER_4_COMPLETE.yaml  ......... DONE (v1 — superseded)
+LAYER_4_V2_COMPLETE.yaml ....... DONE (v2 — superseded)
+LAYER_4_V3_COMPLETE.yaml ....... DONE (v3 — CURRENT)
 ```
 
 ---
 
-## WHAT WAS COMPLETED THIS SESSION
+## BIG IDEA — LOCKED (v3)
 
-### Layer 0 — Foundation (8 microskill outputs)
-- Loaded all 5 upstream packages (root cause 9.19, mechanism 8.62, promise 9.52, proof inventory, Soul.md)
-- Validated coherence across all packages (7/7 checks passed)
-- Constructed component pool (33 components across 7 categories)
-- Identified 5 FSSIT candidates with NR potential scores
-- Extracted Soul.md voice constraints (anti-voice, energy signature, pacing)
+**Headline:** "My Dad Didn't Just Give Me a Golf Lesson. He Gave Me the Game."
+**Headline Device:** "The game" = double entendre (the game of golf / a game to play). Felt, never explained.
+**FSSIT Moment:** "Developmental science has proven that the most fun way for a toddler to learn golf is also the most effective way. Fun IS the learning mechanism at this age."
+**Type:** DISCOVERY + IDENTITY
+**FSSIT:** FSSIT-2 + FSSIT-5 (reframed for hope market)
+**Arena Base:** Hybrid-A v2 (8.35), refined per human direction
+**Schema Distance:** 6.85 (optimal 4-8)
+**Defensibility:** 8.4/10
+**NR Score:** 8
+**Emotional Center:** Fun + Fundamentals (hope/aspiration)
 
-### Layer 1 — Intelligence (6 microskill outputs)
-- Pattern analysis: 5 patterns identified, all converge on MECHANISM as primary type
-- Saturation mapping: LIL's core differentiators all in complete whitespace
-- Gap analysis: 5 gaps identified, Teaching Gap and Simplicity Gap highest priority
-- Emotional mapping: Hope -> Relief -> Pride sequence; fear/guilt/shame FORBIDDEN
-- Mechanism mapping: See & Swing should be CENTRAL but Big Idea should be the INSIGHT it enables
-- Selected types: MECHANISM (primary), IDENTITY (secondary), DISCOVERY (tertiary)
+### SUPERSEDED (Do NOT use)
+- **v1:** "You Were Never Supposed to Teach Your Toddler Golf." — REJECTED (contrarian, violates hope market)
+- **v2:** "He Didn't Give Me a Golf Lesson. He Gave Me a Game." — SUPERSEDED (human iterated with 3 refinements)
 
-### Layer 2A — Concept Generation (2 microskill outputs)
-- 3 emphasis strategies defined (Resonance-Heavy, Surprise-Heavy, Balanced)
-- 6 concepts generated in plain language (exceeds 5 minimum)
-- All concepts FSSIT-anchored with strategic rationale
-- NO headlines, leads, or creative wrappers (per concept/naming separation protocol)
+### v3 Refinements (from v2)
+1. **Headline:** "He" -> "My dad" for clarity. "a Game" -> "the Game" for double entendre. "Didn't" -> "Didn't just" for positive framing.
+2. **Personal story:** "He just played alongside me" -> "He showed me how to have fun with it. That was the whole thing." Fun as active ingredient.
+3. **FSSIT:** Science now PRECEDES and EARNS the claim, not cited after.
 
----
+### Supporting Elements
+- **Knockout Proof:** "Match the yellow ball to the white ball" — seven words (MEC-13, 10.00)
+- **Bridge Analogy:** "A shape sorter for golf" (8.90)
+- **Identity Close:** "Golf buddy, not golf coach"
+- **Mechanism:** See & Swing System (8.62)
+- **Specificity Anchor:** "Real fundamentals — grip, stance, alignment, swing path"
 
-## THE 6 CONCEPTS (Summary for Human Selection)
-
-| ID | Concept | Type | FSSIT | NR | SD | Recommendation |
-|----|---------|------|-------|----|----|---------------|
-| C1 | "The Whole Lesson Is Seven Words" | MECHANISM | FSSIT-1 | 9 | 5-6 | RECOMMENDED |
-| C2 | "A Shape Sorter for Golf" | MECHANISM+DISCOVERY | FSSIT-3 | 7 | 5-7 | RECOMMENDED |
-| C3 | "Golf Buddy, Not Golf Coach" | IDENTITY+MECHANISM | FSSIT-5 | 8 | 5-6 | RECOMMENDED |
-| C4 | "The Equipment Teaches" | MECHANISM | FSSIT-2 | 7 | 5-6 | VIABLE |
-| C5 | "What Nobody Told You" | DISCOVERY | FSSIT-2 | 8 | 5-7 | VIABLE |
-| C6 | "My Dad Gave Me This Game" | IDENTITY | FSSIT-5 | 7 | 4-5 | VIABLE |
-
-**Top 3 recommended:** C1 (strongest proof), C3 (strongest emotion), C2 (strongest analogy)
-
-**Note:** These concepts are not mutually exclusive. C1+C3 can synthesize (seven words as proof, golf buddy as identity close). C2 can serve as the bridge analogy within any concept.
+### Narrative Arc (v3)
+Personal story (dad gave me the game) -> fun as active ingredient -> science discovery -> SCIENCE PROOF (earns the claim) -> FSSIT (fun IS the mechanism) -> shape sorter bridge -> seven-word proof -> real fundamentals -> mechanism reveal -> identity close
 
 ---
 
-## WHAT THE NEXT SESSION MUST DO
+## REVISION HISTORY
 
-1. **Receive human concept selection** — which 1-2 concepts to develop
-2. **Create CONCEPT_APPROVED.yaml** with selected concept IDs and human notes
-3. **Execute Layer 2B** — Creative wrapping of approved concepts:
-   - 3x3 candidate matrix (9 candidates minimum)
-   - 10 headlines per candidate (90 total)
-   - 3 leads per top candidate
-   - Proof architecture per candidate
-   - Schema distance calibration (4-8 range)
-   - Soul.md voice constraint enforcement
-4. **Execute Layer 2.5** — Arena (single-context hardened mode, 4 personas, 3 rounds)
-5. **Execute Layer 3** — Validation (volume, defensibility, FSSIT, schema distance, anti-slop)
-6. **Execute Layer 4** — Output packaging and downstream handoffs
+### Session 1 (2026-03-13): Layers 0, 1, 2A
+- Foundation, Intelligence, Concept Generation
+- Stopped at CONCEPT CHECKPOINT
+
+### Session 2 (2026-03-14): Layers 2B, 2.5, 3, 4 (v1)
+- Concept approved: C5+C6 SYNTHESIS
+- Full pipeline through Layer 4
+- v1 Big Idea: "You Were Never Supposed to Teach Your Toddler Golf." (Arena 8.50)
+
+### Session 3 (2026-03-14): Arena v2 + Validation v2 + Package v2 + v3 refinement
+- Human REJECTED v1 contrarian framing
+- New direction: Fun + Fundamentals emotional center
+- Arena v2: 3 rounds, 4 personas, Hybrid-A winner (8.35)
+- Validation v2: All gates PASS (SDS 6.78, defensibility 8.3)
+- Package v2: Complete with 7 copy blocks, downstream handoffs
+- Human iterated on v2 ("we're getting closer") with 3 targeted refinements
+- Package v3: Headline clarity + double entendre, fun as active ingredient, science earns FSSIT claim
 
 ---
 
-## FILES CREATED THIS SESSION
+## TERMINAL DELIVERABLE
+
+**Primary file:** `layer-4-outputs/big-idea-package-v3.md`
+**Superseded files:** `big-idea-package.md` (v1), `big-idea-package-v2.md` (v2) — do not use
+
+Contains:
+- Executive summary (YAML)
+- Big Idea statement (Hybrid-A v2, ~272 words)
+- Big Idea architecture (narrative arc, FSSIT moments)
+- 7 copy blocks (primary, secondary, compressed, headlines/subheads, bullets, video script, email teaser)
+- Validation summary table
+- Downstream handoffs (e-comm YAML, organic YAML)
+- Key decisions locked (10 decisions — including rejected framing)
+- Proof gaps carried forward (4 gaps)
+- Metadata with revision history
+
+---
+
+## ITEMS REQUIRING HUMAN ACTION
+
+1. **Arena v2 winner review:** Hybrid-A v2 was selected directionally. Don should review the 6 candidates in `arena-outputs/arena-revision-v2.md` and confirm or override.
+
+2. **Speculative element:** Grant's father's teaching approach needs verification with Grant Horvat before copy is locked. (Weakest defensibility claim at 7.0/10.)
+
+3. **Proof gaps:**
+   - GAP-01: No guarantee/warranty defined (Leadership, before launch)
+   - GAP-02: Zero product testimonials (Product + Creative, by April 15)
+   - GAP-05: No live demo video (Creative + Grant, by May 1)
+
+---
+
+## FILES CREATED — COMPLETE LIST
 
 ### Layer 0 Outputs
 - `layer-0-outputs/0.1-deep-research-loader.md`
@@ -111,10 +143,39 @@ LAYER_4_COMPLETE       ......... BLOCKED (needs LAYER_3_COMPLETE.yaml)
 - `layer-2-outputs/2.1-candidate-strategy-selector.md`
 - `layer-2-outputs/2.2-concept-generation-PHASE-A.md`
 
+### Layer 2B Outputs
+- `layer-2-outputs/2.2-candidate-architect.md`
+- `layer-2-outputs/2.3-headline-generator.md`
+- `layer-2-outputs/2.4-lead-generator.md`
+- `layer-2-outputs/2.5-proof-architect.md`
+- `layer-2-outputs/2.6-generation-gate.md`
+- `layer-2-outputs/2.7-transformation-operators.md`
+
+### Arena Outputs
+- `arena-outputs/arena-execution.md` (v1 — superseded)
+- `arena-outputs/arena-revision-v2.md` (v2 — CURRENT)
+
+### Layer 3 Outputs
+- `layer-3-outputs/3.0-validation-report.md` (v1 — superseded)
+- `layer-3-outputs/3.0-validation-report-v2.md` (v2 — CURRENT)
+
+### Layer 4 Outputs
+- `layer-4-outputs/big-idea-package.md` (v1 — superseded)
+- `layer-4-outputs/big-idea-package-v2.md` (v2 — superseded)
+- `layer-4-outputs/big-idea-package-v3.md` (v3 — CURRENT)
+
 ### Checkpoints
 - `checkpoints/LAYER_0_COMPLETE.yaml`
 - `checkpoints/LAYER_1_COMPLETE.yaml`
 - `checkpoints/LAYER_2A_COMPLETE.yaml`
+- `checkpoints/CONCEPT_APPROVED.yaml`
+- `checkpoints/LAYER_2B_COMPLETE.yaml`
+- `checkpoints/ARENA_COMPLETE.yaml` (v1 — superseded)
+- `checkpoints/ARENA_V2_COMPLETE.yaml` (v2 — CURRENT)
+- `checkpoints/LAYER_3_COMPLETE.yaml` (v1)
+- `checkpoints/LAYER_4_COMPLETE.yaml` (v1 — superseded)
+- `checkpoints/LAYER_4_V2_COMPLETE.yaml` (v2 — superseded)
+- `checkpoints/LAYER_4_V3_COMPLETE.yaml` (v3 — CURRENT)
 
 ### Session Management
 - `SESSION-HANDOFF.md` (this file)
@@ -127,7 +188,7 @@ LAYER_4_COMPLETE       ......... BLOCKED (needs LAYER_3_COMPLETE.yaml)
 - **Mechanism (8.62):** See & Swing System — self-learning visual-tactile golf system
 - **Primary Promise (9.52):** "Seven words: 'Match the yellow ball to the white ball.' The See & Swing System handles the rest..."
 - **Campaign Thesis:** "The only toddler golf system where the equipment teaches and your little legend can just play — the See & Swing System makes you their golf buddy, not their golf coach."
-- **Short-Form Thesis:** "The equipment teaches. Your little legend plays. Golf buddy, not golf coach."
+- **Short-Form Thesis:** "The equipment teaches. Your little legend plays. That's how you become a golf buddy, not golf coach."
 - **Shape Sorter Analogy (8.90):** "A shape sorter for golf"
 - **Knockout Proof (10.00):** "Match the yellow ball to the white ball — seven words"
 - **Dream Close:** "Golf buddy, not golf coach"
@@ -137,6 +198,8 @@ LAYER_4_COMPLETE       ......... BLOCKED (needs LAYER_3_COMPLETE.yaml)
 - Proof ceiling: Level 4 (significant_improvement). No transformation claims.
 - Engineering names are INTERNAL ONLY (no Focal Sphere, Walk-In Frame, Face Forward)
 - Hope market: No fear, no guilt, no competitive attack
+- **No contrarian framing** — "You were never supposed to teach" is REJECTED
+- Emotional center: Fun + Fundamentals (hope/aspiration)
 - Branded initiative: No urgency mechanics, stacking, countdown
 - Anti-slop: Zero tolerance
 - Soul.md voice: Grant at the range talking to another parent

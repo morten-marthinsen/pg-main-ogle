@@ -1,0 +1,142 @@
+layer: "4"
+skill: "06-big-idea"
+project: "Lil' Legends (LIL)"
+status: COMPLETE
+timestamp: "2026-03-14T18:00:00Z"
+
+anti_degradation:
+  file_read: "BIG-IDEA-ANTI-DEGRADATION.md"
+  version: "2.0"
+
+skill_status: COMPLETE
+all_layers_completed: [0, 1, "2A", "2B", "2.5", 3, 4]
+total_microskills_executed: 28
+
+verification:
+  output_package:
+    file: "layer-4-outputs/big-idea-package.md"
+    status: COMPLETE
+    sections_present:
+      executive_summary: true
+      big_idea_statement: true
+      big_idea_architecture: true
+      copy_blocks: true
+      validation_summary: true
+      downstream_handoffs: true
+      key_decisions_locked: true
+      proof_gaps_carried_forward: true
+      metadata: true
+    verified: true
+
+  copy_blocks:
+    block_1_primary_expression: true      # Hybrid-A, 267 words
+    block_2_secondary_expression: true    # Halbert R3 Pure, ~250 words
+    block_3_compressed: true              # ~100 words
+    block_4_headlines_subheads: true       # 2 headlines, 2 subheads, 1 deck
+    block_5_bullet_points: true           # 5 bullets
+    block_6_organic_video_script: true    # 7-beat Grant on camera script
+    block_7_email_teaser: true            # Subject + preview + body
+    total_blocks: 7
+    verified: true
+
+  downstream_handoffs:
+    ecomm_handoff:
+      status: COMPLETE
+      sections: ["hero", "problem_section", "mechanism_section", "authority_section", "close"]
+      constraints_documented: true
+      verified: true
+    organic_handoff:
+      status: COMPLETE
+      sections: ["video_structure", "social_captions", "email_sequence"]
+      constraints_documented: true
+      verified: true
+
+  key_decisions_locked:
+    big_idea_headline: "You Were Never Supposed to Teach Your Toddler Golf."
+    big_idea_type: "DISCOVERY + IDENTITY"
+    fssit_anchors: "FSSIT-2 + FSSIT-5"
+    narrative_structure: "FSSIT inversion -> relief -> personal story -> science bridge -> shape sorter analogy -> seven-word proof -> mechanism reveal -> identity close"
+    mechanism_position: "See & Swing System = HOW (supporting), not the Big Idea itself"
+    supporting_elements_from_rejected_concepts: ["Seven words (C1)", "Shape sorter for golf (C2)", "Golf buddy, not golf coach (C3)"]
+    speculative_element_flagged: "Grant's father's teaching approach — needs verification with Grant"
+    total_decisions: 7
+    verified: true
+
+  proof_gaps_carried_forward:
+    - id: "GAP-01"
+      description: "No guarantee/warranty defined"
+      owner: "Leadership"
+      timeline: "Before launch"
+    - id: "GAP-02"
+      description: "Zero product testimonials"
+      owner: "Product + Creative"
+      timeline: "By April 15"
+    - id: "GAP-05"
+      description: "No live demo video"
+      owner: "Creative + Grant"
+      timeline: "By May 1"
+    - id: "SPECULATIVE"
+      description: "Grant's father's teaching approach — verify with Grant"
+      owner: "Creative Lead"
+      timeline: "Before copy lock"
+    total_gaps: 4
+    verified: true
+
+  anti_slop_final_check:
+    status: PASS
+    total_violations: 0
+    hope_market_violations: 0
+    engineering_name_violations: 0
+    soul_md_anti_voice_violations: 0
+    verified: true
+
+  validation_scores:
+    schema_distance: 7.15
+    anchor_distance_ratio: 1.19
+    expression_anchoring: 9.08
+    defensibility: 8.2
+    arena_score: 8.50
+    nr_score: 9
+    all_within_optimal_ranges: true
+    verified: true
+
+big_idea_final:
+  headline: "You Were Never Supposed to Teach Your Toddler Golf."
+  type: "DISCOVERY + IDENTITY"
+  fssit_anchor: "FSSIT-2 + FSSIT-5"
+  approved_concept: "C5+C6 SYNTHESIS"
+  schema_distance: 7.15
+  nr_score: 9
+  defensibility: 8.2
+  arena_score: 8.50
+  arena_source: "Hybrid-A (Architect body + Halbert headline/hook)"
+  mechanism: "See & Swing System"
+  knockout_proof: "'Match the yellow ball to the white ball' — seven words (MEC-13, 10.00)"
+  bridge_analogy: "'A shape sorter for golf' (8.90)"
+  identity_close: "'Golf buddy, not golf coach'"
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+  all_layers_complete: true
+  output_package_complete: true
+  downstream_handoffs_complete: true
+  proof_gaps_documented: true
+
+microskill_outputs:
+  - file: "layer-4-outputs/big-idea-package.md"
+    status: COMPLETE
+    description: "Complete Big Idea output package — executive summary, copy blocks, handoffs, validation, metadata"
+
+checkpoint_progression:
+  LAYER_0_COMPLETE: DONE
+  LAYER_1_COMPLETE: DONE
+  LAYER_2A_COMPLETE: DONE
+  CONCEPT_APPROVED: DONE
+  LAYER_2B_COMPLETE: DONE
+  ARENA_COMPLETE: DONE
+  LAYER_3_COMPLETE: DONE
+  LAYER_4_COMPLETE: DONE
+
+next_step: "SKILL 06 COMPLETE — downstream consumers: E-comm copywriting (EC-01 through EC-06), Organic content production (video, social, email)"

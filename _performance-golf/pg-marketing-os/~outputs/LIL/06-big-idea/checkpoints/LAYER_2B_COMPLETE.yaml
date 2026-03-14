@@ -1,0 +1,241 @@
+layer: "2B"
+skill: "06-big-idea"
+project: "Lil' Legends (LIL)"
+status: COMPLETE
+timestamp: "2026-03-14T15:00:00Z"
+
+anti_degradation:
+  file_read: "BIG-IDEA-ANTI-DEGRADATION.md"
+  version: "2.0"
+  declaration_written_to: "layer-0-outputs/0.1-deep-research-loader.md"
+
+approved_concept:
+  concept_id: "C5+C6 SYNTHESIS"
+  original_concepts: ["C5 (What Nobody Told You)", "C6 (My Dad Gave Me This Game)"]
+  fssit_anchor: "FSSIT-2 + FSSIT-5 (fused)"
+  synthesis_direction: "Grant's dad gave him golf the right way — through play, through fun, through discovery. Eighty years of developmental science explains why that worked. The See & Swing System does the same thing, by design."
+  concept_approved_yaml: "checkpoints/CONCEPT_APPROVED.yaml"
+
+verification:
+  candidate_matrix:
+    required_candidates: 9
+    actual_candidates: 9
+    matrix_structure: "3x3 (3 angles x 3 strategies)"
+    angles: ["Grant's Discovery", "Science Parents Missed", "Passing Down the Game"]
+    strategies: ["Resonance-Heavy (A)", "Surprise-Heavy (B)", "Balanced (C)"]
+    verified: true
+
+  headline_generation:
+    required_per_candidate: 10
+    actual_per_candidate: 10
+    total_required: 90
+    total_actual: 90
+    formula_types_required_per_candidate: 5
+    formula_types_actual_per_candidate: 7
+    bracket_templates_found: 0
+    description_headlines_found: 0
+    verified: true
+
+  lead_generation:
+    required_per_top_candidate: 3
+    top_candidates_covered: ["C2", "C8", "C4"]
+    total_leads: 9
+    all_actual_copy: true
+    zero_imagine_openers: true
+    zero_you_see_openers: true
+    zero_description_language: true
+    verified: true
+
+  proof_architecture:
+    candidates_with_plans: 3
+    candidates_covered: ["C2", "C8", "C4"]
+    all_research_specific: true
+    all_authority_credentialed: true
+    all_demonstrations_actionable: true
+    proof_priority_ordered: true
+    verified: true
+
+  transformation_operators:
+    candidates_transformed: 3
+    candidates_list: ["C1", "C3", "C7"]
+    total_transformations: 6
+    operators_used: ["INVERSION", "HIDDEN_VARIABLE", "CATEGORY_VIOLATION", "TEMPORAL_SHIFT", "SCALE_SHIFT"]
+    villain_reframe_excluded: true
+    all_justified: true
+    all_above_6_threshold: true
+    verified: true
+
+  schema_distance:
+    pre_transformation_range: "4-7"
+    post_transformation_range: "5-7"
+    all_within_gate: true
+    gate_range: "4-8"
+    verified: true
+
+  fssit_anchoring:
+    all_candidates_anchored: true
+    fssit_ids_used: ["FSSIT-2", "FSSIT-5"]
+    verified: true
+
+  soul_md_compliance:
+    hope_market_violations: 0
+    fear_framing: 0
+    guilt_framing: 0
+    competitive_attack: 0
+    urgency_mechanics: 0
+    dr_language: 0
+    engineering_names: 0
+    voice_register_compatible: true
+    verified: true
+
+  generation_gate:
+    gate_status: PASS
+    all_checks_passed: true
+    verified: true
+
+candidate_summary:
+  - id: "C1"
+    name: "How My Dad Gave Me the Game"
+    angle: "Grant's Discovery"
+    strategy: "Resonance-Heavy"
+    type: "IDENTITY + DISCOVERY"
+    fssit: "FSSIT-5 + FSSIT-2"
+    sd_estimate: "5-6 (post-transformation, up from 4-5)"
+    nr_potential: 8
+    headlines: 10
+    leads: 0
+    transformations: 2
+
+  - id: "C2"
+    name: "What My Dad Knew That Science Proved"
+    angle: "Grant's Discovery"
+    strategy: "Surprise-Heavy"
+    type: "DISCOVERY + IDENTITY"
+    fssit: "FSSIT-2 + FSSIT-5"
+    sd_estimate: "6-7"
+    nr_potential: 9
+    headlines: 10
+    leads: 3
+    proof_plan: true
+    transformations: 0
+    recommendation: "TOP CANDIDATE — highest NR + SD combination, dual-layer (science + story)"
+
+  - id: "C3"
+    name: "Instinct, Then Science, Then Design"
+    angle: "Grant's Discovery"
+    strategy: "Balanced"
+    type: "DISCOVERY + MECHANISM"
+    fssit: "FSSIT-2 + FSSIT-5"
+    sd_estimate: "6-7 (post-transformation, up from 5-6)"
+    nr_potential: 7
+    headlines: 10
+    leads: 0
+    transformations: 2
+
+  - id: "C4"
+    name: "What Nobody Told You"
+    angle: "Science Parents Missed"
+    strategy: "Resonance-Heavy"
+    type: "DISCOVERY"
+    fssit: "FSSIT-2"
+    sd_estimate: "5-6"
+    nr_potential: 8
+    headlines: 10
+    leads: 3
+    proof_plan: true
+    transformations: 0
+
+  - id: "C5"
+    name: "Eighty Years of Science, Zero Products"
+    angle: "Science Parents Missed"
+    strategy: "Surprise-Heavy"
+    type: "DISCOVERY + MECHANISM"
+    fssit: "FSSIT-2"
+    sd_estimate: "6-7"
+    nr_potential: 8
+    headlines: 10
+    leads: 0
+    transformations: 0
+
+  - id: "C6"
+    name: "The Right Way to Give Them the Game"
+    angle: "Science Parents Missed"
+    strategy: "Balanced"
+    type: "DISCOVERY + IDENTITY"
+    fssit: "FSSIT-2 + FSSIT-5"
+    sd_estimate: "5-6"
+    nr_potential: 8
+    headlines: 10
+    leads: 0
+    transformations: 0
+
+  - id: "C7"
+    name: "Give Them the Game"
+    angle: "Passing Down the Game"
+    strategy: "Resonance-Heavy"
+    type: "IDENTITY"
+    fssit: "FSSIT-5"
+    sd_estimate: "5-6 (post-transformation, up from 4-5)"
+    nr_potential: 7
+    headlines: 10
+    leads: 0
+    transformations: 2
+
+  - id: "C8"
+    name: "You Were Never Supposed to Teach Them"
+    angle: "Passing Down the Game"
+    strategy: "Surprise-Heavy"
+    type: "DISCOVERY + IDENTITY"
+    fssit: "FSSIT-2 + FSSIT-5"
+    sd_estimate: "6-7"
+    nr_potential: 9
+    headlines: 10
+    leads: 3
+    proof_plan: true
+    transformations: 0
+    recommendation: "TOP CANDIDATE — strongest inversion, highest NR, dual FSSIT anchor"
+
+  - id: "C9"
+    name: "The Game Is a Gift, Not a Lesson"
+    angle: "Passing Down the Game"
+    strategy: "Balanced"
+    type: "IDENTITY + DISCOVERY"
+    fssit: "FSSIT-5 + FSSIT-2"
+    sd_estimate: "5-6"
+    nr_potential: 8
+    headlines: 10
+    leads: 0
+    transformations: 0
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+  generation_gate_status: PASS
+
+microskill_outputs:
+  - file: "layer-2-outputs/2.2-candidate-architect.md"
+    status: COMPLETE
+    description: "3x3 candidate matrix — 9 candidates from C5+C6 synthesis"
+
+  - file: "layer-2-outputs/2.3-headline-generator.md"
+    status: COMPLETE
+    description: "90 headlines (10 per candidate, 7+ formula types each)"
+
+  - file: "layer-2-outputs/2.4-lead-generator.md"
+    status: COMPLETE
+    description: "9 leads (3 per top candidate: C2, C8, C4)"
+
+  - file: "layer-2-outputs/2.5-proof-architect.md"
+    status: COMPLETE
+    description: "Proof architectures for C2, C8, C4"
+
+  - file: "layer-2-outputs/2.6-generation-gate.md"
+    status: COMPLETE
+    description: "Generation gate — all checks PASS"
+
+  - file: "layer-2-outputs/2.7-transformation-operators.md"
+    status: COMPLETE
+    description: "6 transformations on C1, C3, C7 — SD improved to 5-7"
+
+next_step: "ARENA (Layer 2.5) — single-context hardened mode, 4 personas (Makepeace, Halbert, Clemens, The Architect), 3 rounds"
