@@ -1,6 +1,6 @@
 # Feedback/Revision Protocol
 
-**Version:** 1.0
+**Version:** 1.2
 **Created:** 2026-03-13
 **Purpose:** Prevent "drift to raw model" during interactive editing by re-engaging skills, specimens, and anti-degradation rules based on revision severity.
 **Authority:** This protocol has EQUAL authority to EXECUTION-GUARDRAILS.md and ENGINE-CORE.md
@@ -334,7 +334,35 @@ IF 3+ revisions to the same section:
   → "This section has been revised 3 times. The issue may be upstream
      (strategy, feature hierarchy, or voice direction). Should we revisit
      the source skill instead?"
+
+IF same root cause class appears in 2+ revisions:
+  → FLAG — systemic pattern detected
+  → "The same root cause class ([class name]) has appeared in 2+ revisions.
+     This suggests a systemic issue — not a per-section fix. Route to the
+     Self-Learning Promotion Protocol for pattern analysis and potential
+     rule promotion."
 ```
+
+---
+
+## HUMAN EDIT EXTRACTION — INTAKE MODE
+
+**Added in v1.2.** When a human edits AI output directly — rather than giving revision feedback for the AI to execute — the revision is not classified into Levels 1-3. Instead, it is routed to the **Human Edit Extraction** procedure defined in `HUMANIZATION-PROTOCOL.md`.
+
+**When this intake mode activates:**
+- The human saves a new version of an AI-generated file with their own edits
+- Client feedback results in human-made changes (not AI-revised changes)
+- A human reviewer marks sections as "AI-sounding" and rewrites them
+- Any batch of 5+ human edits occurs on a single output
+
+**What happens:**
+1. The 6-step Human Edit Extraction procedure runs (see HUMANIZATION-PROTOCOL.md)
+2. Structural edits are pattern-analyzed against the Humanization Pattern Library
+3. Existing pattern matches update frequency counts; new patterns create L1 observations
+4. Voice-level edits are logged as specimen candidates
+5. Extraction report is saved to `~outputs/[project-code]/`
+
+**Why this is a separate intake mode:** The Feedback-Revision Protocol's 3 severity levels assume the AI is executing the revision. When the human edits directly, the AI's job is not to revise — it is to LEARN from what the human changed. The extraction procedure captures that learning and feeds it into the Self-Learning Promotion Protocol.
 
 ---
 
@@ -343,7 +371,7 @@ IF 3+ revisions to the same section:
 Before executing ANY revision:
 
 ```
-I HAVE READ: FEEDBACK-REVISION-PROTOCOL.md v1.0
+I HAVE READ: FEEDBACK-REVISION-PROTOCOL.md v1.2
 I HAVE CLASSIFIED this feedback as: Level [1/2/3]
 I WILL RE-LOAD: [list of context layers per matrix]
 I WILL VERIFY: [checklist for this level]
@@ -359,3 +387,5 @@ I WILL NOT: Revise with raw model, introduce slop, change feature names without 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-13 | Initial creation: 3 severity levels, context re-loading matrix, revision-specific anti-degradation rules, feedback hierarchy, engine-specific integration points (long-form + e-comm), revision tracking via revision-log.yaml, escalation protocol. |
+| 1.1 | 2026-03-15 | Added escalation trigger: "Same root cause class appears in 2+ revisions" — routes to Self-Learning Promotion Protocol for systemic pattern analysis. |
+| 1.2 | 2026-03-15 | Added Human Edit Extraction as a recognized intake mode. When humans edit AI output directly, the extraction procedure from HUMANIZATION-PROTOCOL.md runs instead of the 3-level revision flow. Updated mandatory read declaration to v1.2. |
