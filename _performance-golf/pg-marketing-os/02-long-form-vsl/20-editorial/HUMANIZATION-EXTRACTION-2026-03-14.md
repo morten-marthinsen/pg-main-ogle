@@ -6,7 +6,7 @@
 **Feedback origin:** Donnie and Ben flagged v5 as "still too many AI-sounding, nonhuman-sounding sentences"
 **Total edits cataloged:** 108
 **Patterns identified:** 12
-**Protocol reference:** FEEDBACK-REVISION-PROTOCOL.md v1.1 (Learning Extraction section)
+**Protocol reference:** FEEDBACK-REVISION-PROTOCOL.md v1.2 (Human Edit Extraction intake mode)
 **Self-Learning Protocol reference:** SELF-LEARNING-PROMOTION-PROTOCOL.md v1.0
 
 ---
@@ -219,8 +219,8 @@ Per FEEDBACK-REVISION-PROTOCOL v1.1 escalation triggers: "3+ revisions to the sa
 - **Pattern match:** First occurrence for golf vertical. However, the specimen vertical segmentation audit already flagged this gap — it was known but not yet addressed.
 - **Proposed prevention:** Populate golf-vertical System 2 specimens using Transformation Academy v6 as source material (it now represents human-edited, voice-calibrated copy). Create Brixton Albert / Performance Golf persona specimens from existing successful PG content.
 - **Learned:** Yes
-- **Memorialized:** Yes — `04-VSL-Humanization-Specimens.md` (in progress)
-- **Activated:** No — specimens not yet populated
+- **Memorialized:** Yes — `04-VSL-Humanization-Specimens.md` (System 1 humanization specimens — created in PR #12)
+- **Activated:** Partial — System 1 specimens populated (PR #12, 2026-03-15). System 2 persona specimens (Brixton Albert / Performance Golf) remain unpopulated. The Arena register/voice gap described in this issue requires System 2 specimens specifically.
 
 ### ISSUE-2026-03-14-003: Teaching Gap — Audience Empathy vs. Speaker Emotion
 
