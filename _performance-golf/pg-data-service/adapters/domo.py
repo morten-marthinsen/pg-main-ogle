@@ -4,10 +4,11 @@ Beast Mode calculations live HERE because they are Domo-specific workarounds.
 Domo SQL has no GROUP BY, so all aggregation happens in pandas after fetch.
 When Snowflake replaces Domo, this file dies. The model layer doesn't change.
 
-Canonical DomoClient source: /Users/patrickhayes/Development/domo/domo_client.py
+Canonical DomoClient source: see DOMO_CLIENT_PATH env var
 """
 
 import os
+import re
 import sys
 
 import pandas as pd
@@ -18,7 +19,13 @@ from .base import DataAdapter
 load_dotenv()
 
 # Import DomoClient from external path
-_domo_path = os.getenv("DOMO_CLIENT_PATH", "/Users/patrickhayes/Development/domo")
+_domo_path = os.getenv("DOMO_CLIENT_PATH")
+if not _domo_path:
+    raise EnvironmentError(
+        "DOMO_CLIENT_PATH environment variable is required. "
+        "Set it to the directory containing domo_client.py "
+        "(e.g., export DOMO_CLIENT_PATH=/path/to/domo)"
+    )
 sys.path.insert(0, _domo_path)
 from domo_client import DomoClient  # noqa: E402
 
@@ -106,6 +113,12 @@ def _clean_columns(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def _validate_date(value: str) -> None:
+    """Validate date string is YYYY-MM-DD format. Prevents SQL injection."""
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+        raise ValueError(f"Invalid date format: {value!r}. Expected YYYY-MM-DD.")
+
+
 def _safe_div(numerator: pd.Series, denominator: pd.Series) -> pd.Series:
     """Divide, returning NaN where denominator is 0."""
     return numerator / denominator.replace(0, pd.NA)
@@ -157,13 +170,23 @@ class DomoAdapter(DataAdapter):
 
     def fetch_raw(self, date_from: str, date_to: str, limit: int = 10000) -> pd.DataFrame:
         """Return raw rows, all columns, no transformation."""
-        sql = f'SELECT * FROM table WHERE `{COL_VALID_15}` = 1 LIMIT {limit}'
+        _validate_date(date_from)
+        _validate_date(date_to)
+        sql = (
+            f'SELECT * FROM table '
+            f'WHERE `{COL_VALID_15}` = 1 '
+            f'AND `dateCreated` >= \'{date_from}\' '
+            f'AND `dateCreated` <= \'{date_to}\' '
+            f'LIMIT {limit}'
+        )
         return self._query(sql)
 
     # --- Private: fetch ---
 
     def _fetch_ad_metrics(self, date_from: str, date_to: str) -> pd.DataFrame:
         """Fetch rows where Spend > 0 (ad-metric rows)."""
+        _validate_date(date_from)
+        _validate_date(date_to)
         sql = (
             f'SELECT * FROM table '
             f'WHERE `{COL_SPEND}` > 0 '
@@ -184,10 +207,13 @@ class DomoAdapter(DataAdapter):
 
     def _fetch_orders(self, date_from: str, date_to: str) -> pd.DataFrame:
         """Fetch rows where totalAmount > 0 (order rows)."""
+        _validate_date(date_from)
+        _validate_date(date_to)
         sql = (
             f'SELECT * FROM table '
             f'WHERE `{COL_TOTAL_AMOUNT}` > 0 '
             f'AND `{COL_VALID_15}` = 1 '
+            f'AND `{COL_PLATFORM}` = \'facebook\' '
             f'AND `dateCreated` >= \'{date_from}\' '
             f'AND `dateCreated` <= \'{date_to}\''
         )

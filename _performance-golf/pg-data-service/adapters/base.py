@@ -32,8 +32,7 @@ class DataAdapter(ABC):
             funnel, script_id, variation_id, platform, dimensions,
             length_tier, ad_category, expansion_type, asset_type,
             talent_code, editor_initials, copywriter_initials,
-            country_code, delivery_date, promo_name,
-            valid_15_position
+            country_code, delivery_date, promo_name
         """
         ...
 

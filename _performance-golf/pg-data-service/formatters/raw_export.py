@@ -15,10 +15,9 @@ def format_raw_export(
     output_dir: Path,
     date_from: str,
     date_to: str,
-    include_pii: bool = False,
 ) -> Path:
-    """Write raw CSV. Returns output path."""
-    df = raw_df if include_pii else strip_pii(raw_df)
+    """Write raw CSV. PII is always stripped — no escape hatch."""
+    df = strip_pii(raw_df)
 
     out_path = output_dir / "raw" / f"raw_{date_from}_to_{date_to}.csv"
     out_path.parent.mkdir(parents=True, exist_ok=True)

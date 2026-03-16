@@ -14,7 +14,6 @@ import yaml
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from adapters.domo import DomoAdapter
 from models.ad_performance import build_ad_performance
 from models.angle_analysis import build_angle_analysis
 from formatters.neco_brief import format_neco_brief
@@ -31,11 +30,13 @@ def load_config() -> dict:
 
 
 def get_adapter(config: dict):
-    """Instantiate the configured adapter."""
+    """Instantiate the configured adapter. Import is deferred so switching
+    adapters only requires changing config.yaml — no code edits."""
     adapter_type = config.get("adapter", "domo")
     dataset_id = config["dataset_id"]
 
     if adapter_type == "domo":
+        from adapters.domo import DomoAdapter
         return DomoAdapter(dataset_id)
     elif adapter_type == "snowflake":
         raise NotImplementedError("Snowflake adapter not yet implemented. Change config.yaml to adapter: domo")
@@ -65,8 +66,9 @@ def cmd_enrich(args, config):
         for cls, count in counts.items():
             print(f"  {cls}: {count}")
 
-    # Angle analysis
-    angle_df = build_angle_analysis(ad_perf_df)
+    # Angle analysis (threshold from config)
+    sat_threshold = config.get("thresholds", {}).get("saturation_variation_count", 3)
+    angle_df = build_angle_analysis(ad_perf_df, saturation_threshold=sat_threshold)
     if not angle_df.empty:
         print(f"  {len(angle_df)} root angles, {angle_df['is_saturated'].sum()} saturated")
 

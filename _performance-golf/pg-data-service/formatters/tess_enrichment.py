@@ -35,7 +35,7 @@ COLUMN_DISPLAY_NAMES = {
     "cpa": "CPA",
     "nc_cpa": "NC CPA",
     "net_aov": "Net AOV",
-    "nlpt": "Net Loss Per Trial",
+    "nlpt": "NLPT (Net Revenue Per Trial)",
     "nc_pct": "NC %",
     "cvr_pct": "CVR %",
     "nc_cvr_pct": "NC CVR %",

@@ -12,7 +12,8 @@ def build_angle_analysis(ad_perf_df: pd.DataFrame, saturation_threshold: int = 3
 
     Returns one row per root angle with:
         script_id, funnel, variation_count, total_spend, total_revenue,
-        net_roas_weighted, winner_count, classification_dist, is_saturated
+        net_roas_weighted, winner_count, potential_count,
+        underperformer_count, testing_count, is_saturated
     """
     if ad_perf_df.empty or "script_id" not in ad_perf_df.columns:
         return pd.DataFrame()

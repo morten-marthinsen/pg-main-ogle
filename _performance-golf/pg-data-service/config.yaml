@@ -12,12 +12,4 @@ thresholds:
   min_spend_for_classification: 2500
   saturation_variation_count: 3
 
-pii_columns:
-  - emailAddress
-  - customerId
-  - firstName
-  - lastName
-  - shippingAddress1
-  - city
-  - phone
-  - ipAddress
+# PII columns are defined in catalog/pii_manifest.yaml (single source of truth)
