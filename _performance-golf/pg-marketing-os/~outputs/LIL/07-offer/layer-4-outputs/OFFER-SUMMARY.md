@@ -37,10 +37,11 @@ executive_summary:
     all_gates: PASS
 
   pending_decisions:
-    - "GAP-01: Guarantee — Leadership must select from 3 branded options"
+    - "GAP-01: RESOLVED — 365-day 'Your Kid Has Fun or It's Free' guarantee"
     - "GAP-02: Testimonials — beta testing target April 15"
     - "GAP-05: Demo video — target May 1"
     - "Payment plans — Afterpay/Klarna/ShopPay decision"
+    - "Member vs Non-Member pricing — TBD"
     - "Introductory pricing — launch-week pricing or $149 from day one"
 ```
 
@@ -55,7 +56,7 @@ executive_summary:
 Seven words: "Match the yellow ball to the white ball." The See & Swing System handles the rest — alignment, stance, setup — all through shapes and colors. No lesson. Just a little legend who won't stop swinging. Golf buddy, not golf coach.
 
 ### Positioning
-**System, not product.** This is a NEW CATEGORY — "developmental golf system." Not toy clubs. Not junior equipment. Not a teaching aid. A self-teaching system where the equipment IS the teacher.
+**System, not product.** This is a NEW CATEGORY — "Fun developmental golf system." Not toy clubs. Not junior equipment. Not a teaching aid. A self-teaching system where the equipment IS the teacher... and it's SUPER fun.
 
 ### Core Deliverables
 
@@ -85,17 +86,9 @@ Seven words: "Match the yellow ball to the white ball." The See & Swing System h
 
 Total objections addressed by bonuses: 6 of 16 mapped problems. Zero overlap with core product objection coverage.
 
-### Guarantee (PENDING — GAP-01)
+### Guarantee (LOCKED)
 
-Three branded options architected for Leadership:
-
-| Option | Name | Type | Duration | Score |
-|--------|------|------|----------|-------|
-| A | The First Swings Promise | Unconditional | 60-day | 8/10 |
-| B | The Golf Buddy Guarantee | Conditional (5 uses) | 90-day | 7.5/10 |
-| **C** | **The Little Legend Promise** | **Unconditional + durability warranty** | **30-day + 1-year** | **8.5/10** |
-
-**Recommended: Option C.** Two-layer structure addresses satisfaction risk AND durability concern. Differentiates from every competitor (no toddler golf company offers a durability warranty).
+**365-Day "Your Kid Has Fun or It's Free" Guarantee** — unconditional, full refund within 365 days. No conditions, no questions asked. Differentiates from every competitor in the toddler golf space. Aligns with hope market positioning (fun IS the promise, fun IS the guarantee).
 
 ### Scarcity
 CONDITIONAL — justified ONLY if Leadership confirms a real first-run production limit. No fake scarcity.
@@ -117,7 +110,7 @@ N/A per upstream constraint (branded initiative). Three natural timing elements 
 | 3 See & Swing Clubs | $199 |
 | Skills Mat | $49 |
 | Carry Bag | $29 |
-| PG1 App 30-Day Trial | $29.99 |
+| PG1 App Free 30-Day Trial (No subscription, no hidden fees)| $199/year value |
 | First Swings Card | Included |
 | Grant Welcome Video | Exclusive |
 | **Total** | **$306.99** |
@@ -131,16 +124,16 @@ N/A per upstream constraint (branded initiative). Three natural timing elements 
 
 ### Payment Terms
 - Single: $149.00
-- Installments: PENDING (Afterpay/Klarna/ShopPay — 4 x $37.25)
+- Member vs Non-Member pricing: TBD (Leadership decision)
 
 ---
 
 ## 5. Naming
 
-- **Product name:** The Lil' Legends Start Set
+- **Product name:** The Lil' Legends Starter Set
 - **Mechanism name:** The See & Swing System
-- **Architecture:** Product = "Start Set." System inside = "See & Swing." (Same structure as RS1 Putter + Roll Straight Technology.)
-- **7 candidates evaluated.** "Start Set" selected for simplicity, e-comm suitability, and consistency with 6 upstream packages.
+- **Architecture:** Product = "Starter Set." System inside = "See & Swing." (Same structure as RS1 Putter + Roll Straight Technology.)
+- **7 candidates evaluated.** "Starter Set" selected for simplicity, e-comm suitability, and consistency with 6 upstream packages.
 
 ---
 
@@ -159,7 +152,7 @@ N/A per upstream constraint (branded initiative). Three natural timing elements 
 | 7 | Bonus Presentation | 3 bonuses with copy |
 | 8 | Value Demonstration | 3 "if all it did was" rounds |
 | 9 | Price Reveal | 4-level anchor cascade |
-| 10 | Guarantee | PENDING — GAP-01 |
+| 10 | Guarantee | 365-day "Your Kid Has Fun or It's Free" |
 | 11 | CTA Sequence | 3 CTAs with identity close |
 | 12 | Identity Close | "Golf buddy, not golf coach" |
 
@@ -230,7 +223,7 @@ Full D-F-W-B-P scripts for all 3 deliverables are in `4.2-presentation-script.md
 
 | Gap | Description | Impact | Target |
 |-----|------------|--------|--------|
-| GAP-01 | Guarantee not defined by Leadership | Reduces perceived likelihood (-0.2 from ceiling) | Before launch |
+| ~~GAP-01~~ | ~~Guarantee~~ — **RESOLVED:** 365-day "Your Kid Has Fun or It's Free" | — | LOCKED |
 | GAP-02 | Zero product testimonials (pre-launch) | No social proof (-0.3 from ceiling) | April 15 |
 | GAP-05 | No live demo video | Promise not visually demonstrated (-0.5 from ceiling) | May 1 |
 
@@ -238,12 +231,13 @@ Full D-F-W-B-P scripts for all 3 deliverables are in `4.2-presentation-script.md
 
 ## 10. Decisions Needed from Leadership
 
-1. **Guarantee:** Select Option A, B, or C. Define exact terms, return logistics, refund method.
+1. ~~**Guarantee:**~~ **LOCKED** — 365-day "Your Kid Has Fun or It's Free"
 2. **Price:** Confirm $149 or adjust within $129-$179 range.
 3. **Payment plans:** Afterpay/Klarna/ShopPay installments — yes/no?
 4. **Introductory pricing:** Any launch-week pricing or $149 from day one?
-5. **Scarcity:** Is there a genuine first-run production limit?
-6. **Bundle options:** Any SKU variations (add-on foam balls, extra mat)?
+5. **Member vs Non-Member pricing:** Different price tiers for PG members?
+6. **Scarcity:** Is there a genuine first-run production limit?
+7. **Bundle options:** Any SKU variations (add-on foam balls, extra mat)?
 
 ---
 
