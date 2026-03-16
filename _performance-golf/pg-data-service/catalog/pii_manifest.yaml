@@ -1,0 +1,12 @@
+# PII columns to strip from all formatter outputs.
+# Models may use these for joins/counts (e.g., emailAddress for distinct customer counts).
+# Formatters MUST drop these before writing any output file.
+columns:
+  - emailAddress
+  - customerId
+  - firstName
+  - lastName
+  - shippingAddress1
+  - city
+  - phone
+  - ipAddress

@@ -1,0 +1,23 @@
+adapter: domo
+
+dataset_id: a359ffd7-8175-40f3-b339-0a476cf624aa
+
+default_lookback_days: 90
+
+output_dir: outputs/
+
+thresholds:
+  winner_net_roas: 1.0       # 100% = breakeven
+  potential_net_roas_min: 0.80
+  min_spend_for_classification: 2500
+  saturation_variation_count: 3
+
+pii_columns:
+  - emailAddress
+  - customerId
+  - firstName
+  - lastName
+  - shippingAddress1
+  - city
+  - phone
+  - ipAddress

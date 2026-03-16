@@ -1,0 +1,15 @@
+# Outputs are regenerated on demand — never commit
+outputs/neco/
+outputs/tess/
+outputs/orion/
+outputs/veda/
+outputs/raw/
+
+# Credentials
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
