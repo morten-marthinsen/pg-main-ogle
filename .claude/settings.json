@@ -4,6 +4,16 @@
     "CLAUDE_CODE_TASK_LIST_ID": "pg-main"
   },
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "_performance-golf/pg-marketing-os/.hooks/reset-token-state.sh"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
