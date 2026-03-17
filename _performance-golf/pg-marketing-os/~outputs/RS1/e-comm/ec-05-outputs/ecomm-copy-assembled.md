@@ -81,6 +81,8 @@ Get My RS1 Today
 
 ## BTF-01: UGC Proof Carousel
 
+**Header:** Join The Roll Straight Revolution
+
 > Placeholder — UGC content carousel positioned between ATF and first BTF section.
 
 ---
@@ -357,7 +359,7 @@ Lag putts, short putts, breaking putts, straight putts. The RS1 performs the sam
 Feels like a blade, stays stable & rolls straight like a mallet.
 
 **See The Line Before You Sink It**
-
+See the line, set up square, and know you're on track before you take it back.
 
 ---
 
@@ -465,6 +467,7 @@ Your RS1 purchase includes a free 30-day trial. No subscriptions. No commitments
 *Custom options available upon request.*
 
 support@performancegolf.com | 1-833-PG1-GOLF
+                              1-833-741-4653
 
 ---
 

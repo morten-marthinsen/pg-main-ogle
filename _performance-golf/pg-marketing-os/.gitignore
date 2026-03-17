@@ -5,3 +5,7 @@ outputs/*/
 # Test results
 tests/results/
 !tests/.gitkeep
+
+# Hook runtime state (machine-specific, absolute paths)
+.hooks/.reminder-state.json
+.hooks/.token-estimator-state.json
