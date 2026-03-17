@@ -90,6 +90,16 @@ if [[ -z "$FILE_PATH" ]]; then
     exit 0  # No file path — nothing to validate
 fi
 
+# Path scoping: only validate files within pg-marketing-os/
+# This hook is registered repo-wide in settings.json but should only fire
+# on Marketing OS files. Without this guard, writes to Creative OS or other
+# directories contaminate the token estimator and trigger false zone warnings.
+MARKETING_OS_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+case "$FILE_PATH" in
+    "$MARKETING_OS_DIR"/*) ;; # File is inside pg-marketing-os — continue
+    *) exit 0 ;;              # File is outside pg-marketing-os — skip all validators
+esac
+
 FEEDBACK=""
 
 # Route to appropriate validator(s) based on file path patterns
