@@ -3,19 +3,19 @@
 ## Build State
 
 ```yaml
-version: 9.2
-last_session: 092
-last_date: 2026-03-12
-status: "S092 — Personal bot: Google Doc URL extraction added to Save Context shortcut (bot.py _extract_google_doc_urls + explicit prompt injection). Team bot: Google Docs formatting + revision rules added to system prompt, redeployed to Railway. Brixton intro message drafted and approved. Day 31/90."
+version: 10.4
+last_session: 102
+last_date: 2026-03-16
+status: "S102 — Daily report outage fixed (3-day gap 3/14-3/16, WiFi-after-sleep retry added). Triage executed (4 rescheduled, 4 done, registry 373). B→A priority guard: synthetic scores respect tier boundaries (B=0.34 < A threshold 0.35), ClickUp due-tomorrow exception. Calendar cross-ref upgraded to entity-aware keyword matching. Feedback memory saved. Follow-up: real auto-approve (Phase 2), Inferred Tasks rename (Phase 3). Day 35/90."
 
 # 30/60/90 Status
-day_count: 31
+day_count: 35
 next_checkpoint: "Day 60 — 2026-04-10"
 russ_exit: "~2026-02-19 (Wed) — DONE"
 
 # Ops Status
-daily_briefing: "v2.0.1 — Timezone fix LIVE. Calendar API now called with Europe/Lisbon (display_timezone in config.yaml). All meeting times render in Christopher's local time. 16 modules, 0 failures."
-completed_registry: "LIVE — 305 entries, Phase 4-5 DONE. Staleness rule active (21d penalty, 35d hard reject)."
+daily_briefing: "v2.1.0 — Network retry fix (6x 10s for WiFi-after-sleep). Calendar cross-ref upgraded to entity-aware keyword matching. B→A priority guard (synthetic scores respect tier boundaries). 16 modules, 0 failures."
+completed_registry: "LIVE — 373 entries, Phase 4-5 DONE. Staleness rule active (21d penalty, 35d hard reject)."
 persistent_actions: "LIVE v2.1 — Multi-factor ABC, 3 A-task cap, week-ahead Mon-Fri, capacity headers + Why column with PRD alignment tags."
 transcript_intelligence: "LIVE — 137 transcripts processed (60 legacy + 77 extracted). M9 MAX_TRANSCRIPTS_PER_RUN fixed to 3."
 transcript_sync: "LIVE — ClickUp API (5 min) + Fathom API (30 min), both launchd auto-sync. Plists updated to orion paths (S058)."
@@ -24,7 +24,7 @@ neco_autonomous: "LIVE v1.0 — nightly 10pm, quality gates working."
 gmail_oauth: DONE
 slack_bot: "UPGRADED — chat:write scope added to 'Orion - PG Creative Intel' (A0AH9B47PCY). M4/M5 live. slack_post_message allowlisted in Claude Code."
 slack_interface: "IN PROGRESS — Design decisions locked (S069): multi-turn Slack threads, DM to bot user, auto user-ID via Slack API, Slack-default output + optional Google Doc write. Needs: Slack Bolt app deployment (Railway/Render), Claude API key, Google OAuth for server. Plan: ~/.claude/plans/virtual-juggling-grove.md"
-orion_personal_bot: "LIVE v3.6 — Save Context Google Doc URL extraction added (S092). 8 tools, 2 message shortcuts. Shortcut auto-detects Google Doc links and injects explicit read_google_doc instruction. Pending: Google Drive permissions for E2E test."
+orion_personal_bot: "LIVE v4.1 — Vision OCR added for image-based PDFs (S099b). When PyMuPDF text extraction yields <50 chars, renders pages as PNG and sends to Haiku Vision for OCR. Also fixed: pymupdf/python-docx installed into bot .venv (was system Python only), message re-fetch for file detection, debug logging. Vision OCR extracted 274 chars on test but Haiku agent didn't use it — DEBUGGING IN PROGRESS (see S099b next steps). 8 tools, 2 message shortcuts."
 orion_team_bot: "CREATIVE ADVISOR v2.1 LIVE — Google Docs formatting + revision rules added to system prompt (S092). Redeployed to Railway. 14 tools. Brixton intro sent. Plan: ~/.claude/plans/witty-baking-twilight.md"
 google_docs_mcp: "VERIFIED WORKING — @a-bonus/google-docs-mcp loads correctly. Tools available (readDocument, listTabs, etc.)."
 slack_webhook: "LIVE — Orion Daily Briefing app (A0AFW0Y3Z39), DM to Christopher only. .env SLACK_WEBHOOK_URL set."
@@ -34,7 +34,7 @@ reconcile_cli: "NEW — python3 reconcile.py for end-of-day task reconciliation 
 daily_snapshot: "NEW — .kb-daily-snapshot.json saved each run for What Changed delta tracking."
 
 # Next Session (P0)
-next_session: "S093 — E2E test Save Context with Google Doc link (requires Google Drive permissions). Test team bot with Brixton — collect feedback via VM. Add more user profiles to context/users/ as team members use the bot."
+next_session: "S103 — (1) Real auto-approve: make auto-approve write to KB (status→open, schedule date, priority tier). (2) 'Auto-Placed This Run' report section + 'Inferred Tasks' rename. (3) Post-John-call: integrate 30-Day Review feedback. (4) Push 30-Day Review to Google Doc. (5) Waiting On staleness filter."
 
 # Active Challenges
 unresolved_block: []

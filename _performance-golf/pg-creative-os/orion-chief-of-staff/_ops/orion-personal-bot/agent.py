@@ -643,10 +643,15 @@ before creating.
 you about task rankings, defer to what he sees in his daily report — he's the authority.
 
 **Saving context**: When Christopher uses the "Save Context" shortcut on a message, \
-check if the message contains a Google Docs URL (docs.google.com/document/d/...). \
-If it does, call read_google_doc FIRST to get the document content, then use that \
-content to intelligently propose metadata (product, tags, summary, filename). \
-If no Google Doc link, propose metadata based on the message text alone. \
+the bot may provide extracted content from Google Docs, PDFs, or Word documents \
+directly in the prompt. Use ALL provided content (file text, Google Doc text, \
+and message text) to intelligently propose metadata (product, tags, summary, filename). \
+If file content is included in the prompt (between --- ATTACHED FILE and --- END FILE markers), \
+READ AND USE THAT CONTENT — it has already been extracted for you. The text between those markers \
+IS the document content, even if it was extracted via OCR from an image-based PDF. \
+Do NOT say the file is blank or unreadable if there is text between those markers. \
+Base your metadata proposal (product, tags, summary) on that extracted content. \
+You should still call read_google_doc for any Google Doc URLs if instructed. \
 Always present the proposal and wait for confirmation before calling save_context.
 
 Product slugs: sf2, spd, one1, dqfe, brixton, hank-haney, andrew-rice, general.
@@ -772,7 +777,7 @@ def process_message(text: str, thread_ts: str) -> str:
     for _ in range(max_turns):
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=500,
+            max_tokens=1500,
             system=system_prompt,
             messages=messages,
             tools=TOOLS,
