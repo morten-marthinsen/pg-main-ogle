@@ -1,0 +1,74 @@
+# GRADUATION MANIFEST — Marketing-OS System-Level Tracking
+#
+# Purpose: Tracks items PG has graduated from marketing-os/ to their
+# root/system level. The vault MIRRORS these deletions (local matches PG).
+# Phase 4 of vault-sync reads this manifest and injects standalone copies
+# into the share repo so it works without PG's system-level infrastructure.
+#
+# Updated: 2026-03-13
+# Format: YAML
+
+---
+version: 2
+last_reviewed: "2026-03-13"
+
+# ─── GRADUATED ITEMS ───────────────────────────────────
+# Each entry tracks one graduation event.
+#
+# Fields:
+#   id:                  Unique identifier
+#   date:                When PG graduated this item
+#   description:         What was moved
+#   pg_commit:           Commit hash of the graduation on PG Main
+#   mos_paths:           Paths relative to marketing-os/ that were removed
+#   vault_root_source:   Where the item now lives at vault root level
+#                        Phase 4 copies FROM here INTO the share repo
+#   share_repo_dest:     Where to place it in the share repo (relative to repo root)
+#   status:              active | reversed
+
+graduations:
+
+  - id: GRAD-001
+    date: "2026-03-10"
+    description: "Hooks moved from marketing-os to root-level system config"
+    pg_commit: "1d943d1a"
+    mos_paths:
+      - ".hooks/"
+    vault_root_source: "marketing-os/.hooks/"
+    share_repo_dest: ".hooks/"
+    status: active
+    notes: >
+      PG moved hooks to root level so they fire across all projects.
+      Vault currently still has hooks inside marketing-os/.hooks/ because
+      PG hasn't fully removed them from pg-marketing-os yet. When they do,
+      vault will mirror the deletion and move hooks to vault root.
+      Phase 4 will inject from vault root into share repo.
+
+# ─── TEMPLATE FOR FUTURE GRADUATIONS ───────────────────
+# Copy this block when PG graduates something new:
+#
+#  - id: GRAD-NNN
+#    date: "YYYY-MM-DD"
+#    description: "What was graduated"
+#    pg_commit: "commit hash"
+#    mos_paths:
+#      - "path/relative/to/marketing-os/"
+#    vault_root_source: "path/at/vault/root/"
+#    share_repo_dest: "path/in/share/repo/"
+#    status: active
+#    notes: "context"
+
+# ─── KNOWN FUTURE CANDIDATES ──────────────────────────
+# Items Donnie/Ben mentioned may graduate to system level:
+future_candidates:
+  - item: "MCP server configurations (MCP-SETUP.md)"
+    likelihood: high
+    notes: "MCP configs are project-agnostic; PG likely centralizes them"
+
+  - item: "Workspace rules / workspace.md"
+    likelihood: high
+    notes: "PG adding cross-project workspace rules at root level"
+
+  - item: "Claude Code settings (.claude/ within marketing-os)"
+    likelihood: high
+    notes: "Nested .claude/ creates shadowing conflicts with root-level settings"

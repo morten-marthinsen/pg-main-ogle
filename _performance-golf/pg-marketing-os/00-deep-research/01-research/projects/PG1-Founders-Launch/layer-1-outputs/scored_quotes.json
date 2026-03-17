@@ -1,0 +1,535 @@
+{
+  "metadata": {
+    "project": "PG1-Founders-Launch",
+    "generated": "2026-03-16",
+    "total_quotes": 1824,
+    "sources": ["reddit", "youtube", "forums", "reviews", "expansion"]
+  },
+  "bucket_counts": {
+    "pain": 652,
+    "hope": 403,
+    "root_cause": 240,
+    "solutions_tried": 281,
+    "competitor_mechanism": 160,
+    "villain": 88
+  },
+  "gate_1_thresholds": {
+    "total": 1000,
+    "pain": 300,
+    "hope": 250,
+    "root_cause": 200,
+    "solutions_tried": 150,
+    "competitor_mechanism": 100,
+    "villain": 75
+  },
+  "gate_1_status": "PASS",
+  "top_quotes_by_bucket": {
+    "pain": [
+      {
+        "id": "1.4-A-PAIN-001",
+        "score": 4.8,
+        "source": "GolfWRX",
+        "author": "westozhacker",
+        "date": "2023-06-02",
+        "text": "I am completely obsessed with golf, I spend all my spare time watching youtube videos of people playing, instructional videos, golf club reviews etc. I read books about golf in my down time at work. I go to the range 2 times a week and play once a week to try and improve. I've spent a fair chunk of cash putting together a set that should be perfect for a beginner according to my research. But often I get out on the course, top my driver, shank my 5 iron, zig zagging down the fairway losing balls and scoring 7+ strokes on a par 4. It is so frustrating to be completely obsessed with something and put so much effort and money into it only to fail miserably.",
+        "url": "https://forums.golfwrx.com/topic/1941266-obsessed-with-golf-but-failing-miserably-at-improvement/"
+      },
+      {
+        "id": "1.4-C-PAI-003",
+        "score": 4.7,
+        "source": "Reddit",
+        "author": "u/SandwichFromDahmer",
+        "date": "2025-09-06",
+        "text": "this dumpster fire of a round went completely off the rails. I was +34 through 12 holes when I stopped keeping score thinking it would help me just focus on enjoying the day and concentration. Nope. Proceeded to shoot doubles and triples",
+        "url": "https://www.reddit.com/r/golf/comments/1nabgup/in_need_of_a_pep_talk_today_was_fucking_nuclear/"
+      },
+      {
+        "id": "1.4-A-PAIN-002",
+        "score": 4.6,
+        "source": "GolfWRX",
+        "author": "westozhacker",
+        "date": "2023-06-02",
+        "text": "My swing never really feels comfortable and I get overwhelmed by how many things I have to remember to do in my setup that I've picked up from watching instructional videos. I can't just quit, I love this game and to be honest it's given me something to look forward too which makes it even tougher when I get to the course and leave more upset than happy.",
+        "url": "https://forums.golfwrx.com/topic/1941266-obsessed-with-golf-but-failing-miserably-at-improvement/"
+      },
+      {
+        "id": "1.4-B-PAIN-002",
+        "score": 4.6,
+        "source": "YouTube",
+        "author": "Golfer (unnamed)",
+        "date": "2024",
+        "text": "It's like an addiction like watching these videos it's yeah it's pretty pretty bad actually you know it's like a drug cuz you think that you found like happiness from this 3 minute video but then you get on the golf course and it doesn't work.",
+        "url": "https://www.youtube.com/watch?v=CrYkN-9PTZ8"
+      },
+      {
+        "id": "1.4-B-PAIN-005",
+        "score": 4.5,
+        "source": "Golf Monthly",
+        "author": "DrGolfer",
+        "date": "2025",
+        "text": "I can't seem to shake making 3-4 triples per round which are absolutely soul destroying.",
+        "url": "https://forums.golfmonthly.com/threads/getting-worse-before-you-get-better%E2%80%A6-opinions-please.116274/"
+      },
+      {
+        "id": "1.4-E-PAIN-001",
+        "score": 4.5,
+        "source": "GolfWRX",
+        "author": "Mookieb10",
+        "date": "2020-12-31",
+        "text": "After one full year and dumping $900 into Arccos products, I'm absolutely giving up a beaten and frustrated man. I've purchased the sensor caps, the grip and the link... it's all dreadful.",
+        "url": "https://forums.golfwrx.com/topic/1784549-im-giving-up-on-arccos/"
+      },
+      {
+        "id": "1.4-E-PAIN-004",
+        "score": 4.4,
+        "source": "GolfWRX",
+        "author": "Mookieb10",
+        "date": "2020-12-31",
+        "text": "I'm really bummed at how poor the execution has been. This product has lead me to get so frustrated with golf... more so than the usual. Do yourself a favor, avoid at all costs...",
+        "url": "https://forums.golfwrx.com/topic/1784549-im-giving-up-on-arccos/"
+      },
+      {
+        "id": "1.4-C-PAI-002",
+        "score": 4.3,
+        "source": "Reddit",
+        "author": "u/CookieMnsterr",
+        "date": "2025-09-09",
+        "text": "Been getting frustrated with not seeing any improvement even though i've been putting in the work with range, chipping, putting etc.",
+        "url": "https://www.reddit.com/r/golf/comments/1nclqgb/newish_golfer_what_would_this_community/"
+      },
+      {
+        "id": "1.4-B-PAIN-006",
+        "score": 4.3,
+        "source": "Golf Monthly",
+        "author": "DrGolfer",
+        "date": "2025",
+        "text": "I feel like I'm striking the ball better than ever (distance and flight) but completely fell apart going around the course. I was very gutted, breaking 90 feels far away.",
+        "url": "https://forums.golfmonthly.com/threads/getting-worse-before-you-get-better%E2%80%A6-opinions-please.116274/"
+      },
+      {
+        "id": "1.4-E-PAIN-010",
+        "score": 4.2,
+        "source": "MyGolfSpy",
+        "author": "Shinnman",
+        "date": "2022-05-02",
+        "text": "I tried it for 4 months, and it was a COMPLETE waste of time. I need to know what the distance each club is, and Arccos's number are completely unreliable!",
+        "url": "https://forum.mygolfspy.com/topic/50434-anyone-have-insight-on-arccos-system/"
+      },
+      {
+        "id": "1.4-C-VIL-024",
+        "score": 4.1,
+        "source": "Reddit",
+        "author": "u/Jehoshephat",
+        "date": "2024-05-06",
+        "text": "I started playing golf at 14 and still play today at 74. By the time I was 16, I had about an 18 handicap. Today at 74 years old, I have a 17 handicap. I practice at the driving range twice a week, sometimes more, and play golf once or twice a week. I have read scores of golf instruction books, watched hundreds of golf videos, and taken untold lessons. But I never get any better. What's my problem?",
+        "url": "https://www.reddit.com/r/golf/comments/1cli8p4/60_years_of_golf_and_no_improvement_yet/"
+      },
+      {
+        "id": "1.4-E-PAIN-018",
+        "score": 4.1,
+        "source": "MyGolfSpy",
+        "author": "Harveythehacker",
+        "date": "2023-06-08",
+        "text": "the concept is great but ultimately it didn't really help me find the main causes of why my pivot, takeaway and impact had gone so badly off. My son got a copy after a lesson with the same guy but ultimately he feels it hasn't helped him after extensive use",
+        "url": "https://forum.mygolfspy.com/topic/53138-sportsbox-3d/"
+      },
+      {
+        "id": "1.4-E-PAIN-019",
+        "score": 4.0,
+        "source": "MyGolfSpy",
+        "author": "Goober",
+        "date": "2023-08-17",
+        "text": "I just signed up for a month of this app. And I find it is somewhat unresponsive to use. The lighting has to be perfect, if it is too bright or too cloudy out it won't work... Then they charge $16 a month and you can only convert 12 swings a week to 3d. Tons of numbers, and not a lot of info on how to fix the issues in your swing. Really on the fence on this one. Give it a 6/10 at best.",
+        "url": "https://forum.mygolfspy.com/topic/53138-sportsbox-3d/"
+      },
+      {
+        "id": "1.4-E-PAIN-005",
+        "score": 4.0,
+        "source": "MyGolfSpy",
+        "author": "jkimbrell0",
+        "date": "2022-05-02",
+        "text": "I just felt like the cost of it and the amount of time I spent changing things on my phone mid-round were not really worth the information it was providing me.",
+        "url": "https://forum.mygolfspy.com/topic/50434-anyone-have-insight-on-arccos-system/"
+      },
+      {
+        "id": "1.4-C-VIL-030",
+        "score": 4.2,
+        "source": "Reddit",
+        "author": "u/avgmike",
+        "date": "2023-08-16",
+        "text": "It seems like the more I practice and play, the worse I get. I'm probably just drilling in the bad habits. Body awareness has always been a weakness of mine.",
+        "url": "https://www.reddit.com/r/golf/comments/15syt1x/i_need_help/"
+      },
+      {
+        "id": "1.4-E-PAIN-035",
+        "score": 3.7,
+        "source": "GolfWRX",
+        "author": "JJFWebster",
+        "date": "2025-05-11",
+        "text": "When I first started using the app, I got caught up chasing red numbers in a part of my swing that my coach had never flagged as a problem. I eventually turned that area green--but it came at the cost of 50-yard blocks to the right.",
+        "url": "https://forums.golfwrx.com/topic/1979103-gears-vs-sportsbox-ai/"
+      },
+      {
+        "id": "1.4-E-PAIN-008",
+        "score": 3.9,
+        "source": "MyGolfSpy",
+        "author": "Headhammer",
+        "date": "2022-05-27",
+        "text": "At the end of the day I was keeping score on a score card and on the app to make sure I was capturing all the data which became monotonous and I felt it was becoming more trouble than it was worth.",
+        "url": "https://forum.mygolfspy.com/topic/50434-anyone-have-insight-on-arccos-system/"
+      },
+      {
+        "id": "1.4-E-PAIN-017",
+        "score": 3.8,
+        "source": "GolfWRX",
+        "author": "goinforeit",
+        "date": "2023-10-16",
+        "text": "I tried a month of Sportsbox and just wasn't impressed for the cost. Maybe it's better at the professional level or whatever.",
+        "url": "https://forums.golfwrx.com/topic/1915582-whats-the-best-ai-swing-analyzer/"
+      },
+      {
+        "id": "1.4-B-PAIN-004",
+        "score": 3.8,
+        "source": "Golf Monthly",
+        "author": "DrGolfer",
+        "date": "2025",
+        "text": "I entered two club comps over the past week and had an absolutely awful set of rounds, 100+ scores.",
+        "url": "https://forums.golfmonthly.com/threads/getting-worse-before-you-get-better%E2%80%A6-opinions-please.116274/"
+      },
+      {
+        "id": "1.4-E-PAIN-016",
+        "score": 3.7,
+        "source": "GolfWRX",
+        "author": "kiddoc",
+        "date": "2023-10-07",
+        "text": "I have sportsbox... love it, but it's $$$$$... when I signed up it was 500, now 650 per year",
+        "url": "https://forums.golfwrx.com/topic/1915582-whats-the-best-ai-swing-analyzer/"
+      }
+    ],
+    "hope": [
+      {
+        "id": "1.4-E-HOPE-006",
+        "score": 4.5,
+        "source": "GolfWRX",
+        "author": "airjammer",
+        "date": "2023-01-09",
+        "text": "I think AI will be vastly superior to human teachers in just a few years because it will be able to identify the root cause almost immediately and given that it's data-driven people won't question it.",
+        "url": "https://forums.golfwrx.com/topic/1915032-use-ai-for-a-lesson/"
+      },
+      {
+        "id": "1.4-E-HOPE-001",
+        "score": 4.4,
+        "source": "GolfWRX",
+        "author": "josephlee",
+        "date": "2025-02-05",
+        "text": "AI Sportsbox is hands down the best app I have used for gathering information about my swing. This app allows me to see the actual numbers/degrees of rotation that I am achieving. The app helped me separate Feel from Real.",
+        "url": "https://forums.golfwrx.com/topic/1979103-gears-vs-sportsbox-ai/"
+      },
+      {
+        "id": "1.4-E-HOPE-013",
+        "score": 4.3,
+        "source": "GolfWRX",
+        "author": "Ifelloffladder",
+        "date": "2023-01-09",
+        "text": "Interesting. Would be nice to have an AI that scans your body and then shows you how to swing a club according to your body type. So all you have to do is try to copy that swing for greater impact.",
+        "url": "https://forums.golfwrx.com/topic/1915032-use-ai-for-a-lesson/"
+      },
+      {
+        "id": "1.4-E-HOPE-003",
+        "score": 4.2,
+        "source": "GolfWRX",
+        "author": "OhYeahPlayer",
+        "date": "2020-08-06",
+        "text": "The instant feedback is pretty dang cool. To make a swing, upload, and have a training plan back in about a minute is something you can't get unless you have a coach standing behind you.",
+        "url": "https://forums.golfwrx.com/topic/1747782-member-reviews-18birdies-ai-coach-see-what-members-are-saying/"
+      },
+      {
+        "id": "1.4-B-HOPE-002",
+        "score": 4.1,
+        "source": "GolfWRX",
+        "author": "JJFWebster",
+        "date": "2025-05-11",
+        "text": "I haven't tried Gears, but I'm really enjoying Sportsbox. My pro gives me a couple of things to work on, and I can record swings throughout the week. The app provides instant feedback, which helps me track my progress.",
+        "url": "https://forums.golfwrx.com/topic/1979103-gears-vs-sportsbox-ai/"
+      },
+      {
+        "id": "1.4-E-HOPE-016",
+        "score": 4.0,
+        "source": "GolfWRX",
+        "author": "kthomas",
+        "date": "2020-08-10",
+        "text": "I'm definitely getting more hip rotation. With my new range of hip motion being incorporated into my golf swing, I've even noticed that my transition, specifically with the weight on my feet, feels much more natural rather than being forced.",
+        "url": "https://forums.golfwrx.com/topic/1747782-member-reviews-18birdies-ai-coach-see-what-members-are-saying/"
+      },
+      {
+        "id": "1.4-B-HOPE-009",
+        "score": 3.9,
+        "source": "MyGolfSpy",
+        "author": "BMart519",
+        "date": "2020-11-09",
+        "text": "Definitely a great option with lockdowns. ...it can be hard to find an instructor that is of the caliber of the instructors on Skillest.",
+        "url": "https://forum.mygolfspy.com/topic/41907-unofficial-review-skillest-app-golf-lessons/"
+      },
+      {
+        "id": "1.4-E-HOPE-004",
+        "score": 3.8,
+        "source": "GolfWRX",
+        "author": "MysteryV",
+        "date": "2020-09-30",
+        "text": "Overall, I doubt I'll pay for it down the line - but who knows. Getting swing scores and seeing what goes out of wack when you make changes is actually really helpful.",
+        "url": "https://forums.golfwrx.com/topic/1747782-member-reviews-18birdies-ai-coach-see-what-members-are-saying/"
+      },
+      {
+        "id": "1.4-B-HOPE-005",
+        "score": 3.7,
+        "source": "GolfWRX",
+        "author": "Rbsiedsc",
+        "date": "2021-03-02",
+        "text": "I will say I did try the free trial of this and it did help my ball striking.",
+        "url": "https://forums.golfwrx.com/topic/1747782-member-reviews-18birdies-ai-coach-see-what-members-are-saying/"
+      },
+      {
+        "id": "1.4-B-HOPE-010",
+        "score": 3.7,
+        "source": "MyGolfSpy",
+        "author": "dlow206",
+        "date": "2021-03-24",
+        "text": "I send in videos weekly. He also responds quickly to my questions when I send him a message.",
+        "url": "https://forum.mygolfspy.com/topic/41907-unofficial-review-skillest-app-golf-lessons/"
+      }
+    ],
+    "root_cause": [
+      {
+        "id": "1.4-B-ROOTCAUSE-001",
+        "score": 4.6,
+        "source": "GolfWRX",
+        "author": "MonteScheinblum",
+        "date": "2025-05-11",
+        "text": "Civilians don't own X-ray machines, MRI's, blood panel testing equipment and so forth. The expert (the doctor) sees the readout and suggests a course of action for the individual. I wouldn't want a pga tour player to get his hands on some of this stuff without some expert guidance, never mind a solid 12 handicap who hits balls twice a week for an hour and plays on Sunday.",
+        "url": "https://forums.golfwrx.com/topic/1979103-gears-vs-sportsbox-ai/"
+      },
+      {
+        "id": "1.4-E-ROOTCAUSE-003",
+        "score": 4.3,
+        "source": "GolfWRX",
+        "author": "GungHoGolf",
+        "date": "2023-01-09",
+        "text": "There is no doubt that AI swing analysis is coming, and over time will just get better and better... But for better players, or those who want a hands-on experience, a computer will, for the foreseeable future, be inferior.",
+        "url": "https://forums.golfwrx.com/topic/1915032-use-ai-for-a-lesson/"
+      },
+      {
+        "id": "1.4-E-ROOTCAUSE-005",
+        "score": 4.1,
+        "source": "MyGolfSpy",
+        "author": "NM01",
+        "date": "2021-01-05",
+        "text": "The vast majority of us produce the same swing movements on all of our shots. A good instructor will be able to see what causes the big miss.",
+        "url": "https://forum.mygolfspy.com/topic/41907-unofficial-review-skillest-app-golf-lessons/"
+      },
+      {
+        "id": "1.4-B-ROOTCAUSE-004",
+        "score": 4.0,
+        "source": "GolfWRX",
+        "author": "tocino",
+        "date": "2020-08-04",
+        "text": "It loads very fast and I didn't have to wait that long before I was able to review my swing. Based off of the results it was very easy to see where my faults were (excessive head movement and my spine was all over the place).",
+        "url": "https://forums.golfwrx.com/topic/1747782-member-reviews-18birdies-ai-coach-see-what-members-are-saying/"
+      },
+      {
+        "id": "1.4-E-ROOTCAUSE-006",
+        "score": 3.8,
+        "source": "MyGolfSpy",
+        "author": "dlow206",
+        "date": "2021-03-24",
+        "text": "Jonathan went into great detail explaining to me about match ups and how with my normal grip, I'm a bit closed at the top...",
+        "url": "https://forum.mygolfspy.com/topic/41907-unofficial-review-skillest-app-golf-lessons/"
+      }
+    ],
+    "solutions_tried": [
+      {
+        "id": "1.4-E-SOLUTIONS-001",
+        "score": 4.3,
+        "source": "GolfWRX",
+        "author": "grantc79",
+        "date": "2025-05-10",
+        "text": "It's a diminishing returns thing. Gears is great but the cost is astronomical and it often doesn't get used because you have to suit people up. Sportsbox ai is incredibly easy to use and very accurate though not as accurate as Gears.",
+        "url": "https://forums.golfwrx.com/topic/1979103-gears-vs-sportsbox-ai/"
+      },
+      {
+        "id": "1.4-E-SOLUTIONS-002",
+        "score": 4.1,
+        "source": "GolfWRX",
+        "author": "CardsChamps11",
+        "date": "2024-01-27",
+        "text": "When you have a trackman session you are able to login and see all your data without purchasing a trackman. I think gears should be the same.",
+        "url": "https://forums.golfwrx.com/topic/1979103-gears-vs-sportsbox-ai/"
+      },
+      {
+        "id": "1.4-E-SOLUTIONS-011",
+        "score": 4.0,
+        "source": "GolfWRX",
+        "author": "me05501",
+        "date": "2023-01-09",
+        "text": "I've used the 'Traci' function on Trackman. It isn't trying to replace instruction per se, but it will take data from your session and suggest where you have the most room for improvement.",
+        "url": "https://forums.golfwrx.com/topic/1915032-use-ai-for-a-lesson/"
+      },
+      {
+        "id": "1.4-E-SOLUTIONS-003",
+        "score": 3.9,
+        "source": "GolfWRX",
+        "author": "Stillhackin",
+        "date": "2020-03-06",
+        "text": "The app recommends coaches to you when you fill in your troubled parts of the game. I also went by price. Being a first timer I went with the ten dollar lesson to see if it would work for me.",
+        "url": "https://forums.golfwrx.com/topic/1697050-my-skillest-app-online-lesson-experience-so-far-updated/"
+      },
+      {
+        "id": "1.4-E-SOLUTIONS-015",
+        "score": 3.8,
+        "source": "MyGolfSpy",
+        "author": "fixyurdivot",
+        "date": "2022-09-15",
+        "text": "Catching a little of the Fortinet coverage and they were just sharing this app and Cam Champ on the driving range. 100% chest turn... yea, like that will be me in never.",
+        "url": "https://forum.mygolfspy.com/topic/53138-sportsbox-3d/"
+      }
+    ],
+    "competitor_mechanism": [
+      {
+        "id": "1.4-E-COMPMECH-001",
+        "score": 4.4,
+        "source": "MyGolfSpy",
+        "author": "Sons_of_Pitches",
+        "date": "2021-01-04",
+        "text": "I am a former Arccos user and loved the data analytics it provided but just didn't like the extra weight the sensors added to the club (7g). Because of that I switched over to Shot Scope v3 and its been OK but the data analytics isn't as good as Arccos at this time.",
+        "url": "https://forum.mygolfspy.com/topic/50434-anyone-have-insight-on-arccos-system/"
+      },
+      {
+        "id": "1.4-E-COMPMECH-002",
+        "score": 4.2,
+        "source": "GolfWRX",
+        "author": "taskerc",
+        "date": "2020-12-31",
+        "text": "I've become a golf data junkie and Arccos was the first real option I found to be able to collect actionable data... Although I find shotscope better at shot detection, simplicity of pairing and some of your other identified concerns...",
+        "url": "https://forums.golfwrx.com/topic/1784549-im-giving-up-on-arccos/"
+      },
+      {
+        "id": "1.4-E-COMPMECH-004",
+        "score": 4.1,
+        "source": "GolfWRX",
+        "author": "Erik J. Barzeski, PGA",
+        "date": "2025-05-11",
+        "text": "GEARS / GCQuad MAX / Smart2Move 3D Plates / HackMotion / SAM PuttLab/Capto. I like measuring, the truth, and facts and don't deal in magic grits.",
+        "url": "https://forums.golfwrx.com/topic/1979103-gears-vs-sportsbox-ai/"
+      },
+      {
+        "id": "1.4-E-COMPMECH-003",
+        "score": 4.0,
+        "source": "MyGolfSpy",
+        "author": "TonyatKingsPoint",
+        "date": "2022-05-03",
+        "text": "I really do think this system could be replaced by a more solid less tech-driven approach, like Shotscope where it doesn't require any manipulations with an app...",
+        "url": "https://forum.mygolfspy.com/topic/50434-anyone-have-insight-on-arccos-system/"
+      },
+      {
+        "id": "1.4-E-COMPMECH-006",
+        "score": 3.5,
+        "source": "GolfWRX",
+        "author": "bm11",
+        "date": "2023-10-06",
+        "text": "18 Birdies has a free 7 day trial. It automatically charges you the year after the 7 days, but you can cancel it right after subscribing and still get the 7 days.",
+        "url": "https://forums.golfwrx.com/topic/1915582-whats-the-best-ai-swing-analyzer/"
+      }
+    ],
+    "villain": [
+      {
+        "id": "1.6-B-EXP-001",
+        "score": 4.8,
+        "source": "Golf Monthly Forum",
+        "author": "leaney",
+        "date": "2013-03-29",
+        "text": "I believe the vast majority of pros out there are just lazy money grabbing con artists and I'll be happy to explain why. There are hundreds of different swings on tour but pros tend to only teach and base their principles around one golf swing, at least in my experience anyway.",
+        "url": "https://forums.golfmonthly.com/threads/lessons-a-complete-waste-of-money.52989/"
+      },
+      {
+        "id": "1.4-C-VIL-018",
+        "score": 4.7,
+        "source": "Reddit",
+        "author": "u/[deleted]",
+        "date": "2021-02-22",
+        "text": "Clay Ballard is everything wrong with YouTube instruction. He's the biggest Instructional YouTuber with over 450,000 subscribers while simultaneously being the greatest offender of the 'Coach YouTube Rabbit Hole.' Every video he makes is decadent crap that oversimplifies the most difficult concepts in golf and preys on beginners collective inability to discriminate between substantive, quality content, and mystical clickbait bullshit.",
+        "url": "https://www.reddit.com/r/golf/comments/lphgf5/a_concise_as_possible_censure_of_clay_ballard/"
+      },
+      {
+        "id": "1.6-B-EXP-013",
+        "score": 4.6,
+        "source": "Practical Golf",
+        "author": "Jon Sherman",
+        "date": "2024",
+        "text": "There is no chance for you to make any meaningful changes to your golf swing if you've viewed 15 different videos from instructors who all have different philosophies on how to swing a club. The information is endless, and it's being served up to golfers at light speed.",
+        "url": "https://practical-golf.com/youtube-instagram-golf-swing-tips"
+      },
+      {
+        "id": "1.6-B-EXP-011",
+        "score": 4.5,
+        "source": "TheSandTrap",
+        "author": "Warik",
+        "date": "2007-09-06",
+        "text": "I've been playing for about 3 years, have had close to $1,000 worth of lessons over the past 2 years with 4 different instructors. I'm tired of continuing to pay instructors just to end up with the same embarrassing handicap month after month.",
+        "url": "https://thesandtrap.com/forums/topic/7582-what-to-do-when-lessons-arent-enough/"
+      },
+      {
+        "id": "1.6-B-EXP-012",
+        "score": 4.5,
+        "source": "Practical Golf",
+        "author": "David Poulton",
+        "date": "2024",
+        "text": "Years ago when teaching I would be educating and informing most golfers. Now I find I'm spending more time 'cleansing' golfers of irrelevant info or stuff they've picked up which has no bearing on them actually swinging the club.",
+        "url": "https://practical-golf.com/youtube-instagram-golf-swing-tips"
+      },
+      {
+        "id": "1.6-B-EXP-004",
+        "score": 4.4,
+        "source": "TheSandTrap",
+        "author": "JetFan1983",
+        "date": "2017-07-16",
+        "text": "Intelligent people by and large do not get into golf instruction. Golf gets the washouts and left overs.",
+        "url": "https://thesandtrap.com/forums/topic/94554-poor-instruction-is-very-common-why/"
+      },
+      {
+        "id": "1.4-C-VIL-028",
+        "score": 4.3,
+        "source": "Reddit",
+        "author": "u/Rexkramer777",
+        "date": "2023-12-20",
+        "text": "I almost wonder they purposely don't teach you too much so you burn more lessons.",
+        "url": "https://www.reddit.com/r/golf/comments/18n3xc2/mixed_feelings_with_golftech_teaching_so_far/"
+      },
+      {
+        "id": "1.6-B-EXP-009",
+        "score": 4.3,
+        "source": "TheSandTrap",
+        "author": "wachesawgolfer",
+        "date": "2008-10-27",
+        "text": "There is no agreement among teachers on what to teach and how... instruction has become static position oriented. They take lesson after lesson and never really improve.",
+        "url": "https://thesandtrap.com/forums/topic/18434-am-i-the-only-one-who-doesnt-believe-in-golf-lessons/"
+      },
+      {
+        "id": "1.4-C-VIL-027",
+        "score": 4.2,
+        "source": "Reddit",
+        "author": "u/Reiji806",
+        "date": "2024-01-10",
+        "text": "Every instructor on YT seems to give contradicting advice, or they seem to be teaching a bandaid for slicing instead of 'here's the set up, here's what you're trying to do in the swing.'",
+        "url": "https://www.reddit.com/r/golf/comments/192x4zd/where_is_your_driver_ball_position/"
+      },
+      {
+        "id": "1.6-B-EXP-003",
+        "score": 4.2,
+        "source": "Golf Monthly Forum",
+        "author": "hovis",
+        "date": "2013-03-30",
+        "text": "I've gone through maybe 15 pro's to find one that has improved my game. Just 1 big money pit.",
+        "url": "https://forums.golfmonthly.com/threads/lessons-a-complete-waste-of-money.52989/"
+      }
+    ]
+  }
+}

@@ -1,7 +1,8 @@
 # CopywritingEngine — ~system/ARENA-PROTOCOL.md
 
-**Version:** 1.0 (decomposed from CLAUDE.md v4.0)
+**Version:** 1.1
 **Created:** 2026-02-25
+**Updated:** 2026-03-12
 **Purpose:** Arena Layer protocol, Synthesizer, Agent Teams. Load for Arena skills ONLY.
 **Parent:** Read `~system/SYSTEM-CORE.md` first (always loaded).
 
@@ -138,6 +139,48 @@ MINIMUM SCORES FOR ACCEPTANCE:
 | R2 → R3 | R1+R2 winners + Cumulative Learning Brief + R2 scores | R1 non-winners + R2 non-winners |
 | R3 → Selection | ALL 7 Round 3 outputs (full) + hybrids | Prior round summaries can be dropped |
 
+### Convergence Detection & Remediation
+
+Three automated detection modes monitor Arena output quality:
+
+1. **Persona Convergence** — 5-gram overlap between persona outputs within a round. Round-aware thresholds (40%/50%/60% for rounds 1/2/3). Flags when 3+ personas share above-threshold overlap.
+2. **Round Stagnation** — Score improvement <0.2 between rounds with same winner. Presents human with options: continue, accept, or inject constraint.
+3. **Output Repetition** — 3-sentence block appearing twice within a single output. Halts generation immediately.
+
+**Convergence remediation** (when detection fires):
+- **Round 1 convergence = BAD** — personas haven't differentiated yet. Inject divergence constraint: force each converging persona to anchor on a different proof element or audience segment.
+- **Round 2 convergence = MONITOR** — some convergence is expected as losers absorb techniques. Flag if overlap > threshold but allow continuation.
+- **Round 3 convergence = ACCEPTABLE** — natural convergence toward quality. Allow unless overlap > 70% (which indicates the Arena has collapsed into a single voice).
+
+**Full protocol:** `~system/protocols/CONVERGENCE-INTERVENTION-PROTOCOL.md`
+**Automated detector:** `.hooks/validators/convergence_detector.py`
+
+### Cross-Arena Learning
+
+Arena Learning Briefs capture technique-level insights within a single skill's Arena run. **Cross-Arena learning** aggregates these across campaigns to identify persistent patterns:
+
+- Which personas consistently win for which skill types?
+- Which techniques transfer well across products/verticals?
+- Which convergence patterns signal Arena collapse vs. genuine quality convergence?
+
+This data feeds the Self-Learning Promotion Protocol. Arena-sourced learnings classified as L2 (validated by Arena consensus across multiple campaigns) can be promoted to L3 (tested via AutoResearch) and eventually L4 (promoted to skill/protocol modifications).
+
+**Cross-Arena insights are captured per-campaign in the issue log** when patterns emerge. They are NOT auto-promoted — human review is required for any change that modifies skill behavior.
+
+### Model Routing for Arena Roles
+
+Arena roles use workload-specialized model assignments for optimal cost/capability matching:
+
+| Arena Role | Model | Why |
+|------------|-------|-----|
+| Persona generators (strategic skills 03-08) | Opus 4.6 | Strategic concept generation needs depth |
+| Persona generators (copy skills 10-18) | Sonnet 4.5 | Copy generation needs fluidity + large context |
+| Critic | Opus 4.6 | Cross-model evaluation reduces self-congratulatory scoring |
+| Judge / Scorer | Opus 4.6 | Precise multi-dimensional scoring |
+| Synthesizer | Opus 4.6 | Micro-element decomposition needs precision |
+
+**Full routing spec:** `~system/MODEL-ROUTING.md`
+
 ---
 
 ## AGENT TEAM ARENA EXECUTION
@@ -232,6 +275,23 @@ POST-ARENA:
 
 ---
 
+## AUTORESEARCH PRE-SCREENING (FUTURE)
+
+When the AutoResearch loop is operational (`~system/protocols/AUTORESEARCH-LOOP-PROTOCOL.md`), it can serve as a **pre-screening layer** for the Arena:
+
+1. AutoResearch generates 50-100 copy variants rapidly using a frozen scoring rubric
+2. Top 10 candidates are surfaced to the Arena for full multi-persona evaluation
+3. Arena deep-reviews with diverse perspectives (all 7 competitors)
+4. Human approves final winner
+
+This hybrid gives AutoResearch's speed (volume) combined with Arena's judgment (quality). The key constraint: the scoring rubric used in pre-screening must be **frozen and immutable** during a session to prevent metric drift. The rubric can be revised between sessions based on Arena feedback.
+
+**Current status:** PARKED — requires an automated quality metric for copywriting output. Until one is defined, Arena runs without pre-screening.
+
+**Forward vision:** When marketing-os drives live campaigns, AutoResearch loops optimize against **real metrics** (CTR, conversion rate, AOV, ROAS) — not LLM-as-judge proxies. See `~system/protocols/AUTORESEARCH-LOOP-PROTOCOL.md` for the full live campaign optimization architecture.
+
+---
+
 ## SYNTHESIZER LAYER (2.6) MANDATORY PROTOCOL
 
 The Synthesizer Layer creates hybrid candidates by extracting the best **phrases and micro-elements** from each competitor's Round 3 output and reconstructing new unified outputs.
@@ -264,3 +324,12 @@ The Synthesizer Layer creates hybrid candidates by extracting the best **phrases
 3. ❌ Creating redundant hybrids
 4. ❌ Skipping attribution tracking
 5. ❌ Running synthesis BEFORE Arena
+
+---
+
+## VERSION HISTORY
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-02-25 | Initial creation. Decomposed from CLAUDE.md v4.0. |
+| 1.1 | 2026-03-12 | Added convergence detection & remediation, cross-Arena learning, model routing for Arena roles, AutoResearch pre-screening (future) |

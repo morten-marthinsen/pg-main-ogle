@@ -1,0 +1,67 @@
+layer: "2.5"
+skill: "07-offer"
+project: "Lil' Legends (LIL)"
+status: COMPLETE
+timestamp: "2026-03-14T12:00:00Z"
+
+description: "Arena layer — 6 persona candidates generated, scored on 7 criteria, 2 hybrids synthesized, Hybrid-1 recommended."
+
+arena_execution:
+  candidates_generated: 6
+  hybrids_synthesized: 2
+  total_candidates_evaluated: 8
+  judging_criteria: 7
+  total_scores_recorded: 42
+
+  candidates:
+    - persona: "Halbert (DR Fundamentalist)"
+      weighted_score: 7.98
+      finalist: false
+    - persona: "Schwartz (Mechanism Lead)"
+      weighted_score: 8.39
+      finalist: true
+      rank: 2
+    - persona: "Ogilvy (Brand Prestige)"
+      weighted_score: 8.46
+      finalist: true
+      rank: 1
+    - persona: "Carlton (Gift Specialist)"
+      weighted_score: 7.54
+      finalist: false
+    - persona: "Hopkins (Science Credibility)"
+      weighted_score: 7.86
+      finalist: false
+    - persona: "Collier (Emotional Narrative)"
+      weighted_score: 8.07
+      finalist: true
+      rank: 3
+
+  hybrids:
+    - name: "Hybrid-1: Ogilvy + Schwartz (Brand Mission with Mechanism Proof)"
+      status: "RECOMMENDED"
+      base_scores: "Ogilvy 8.46 + Schwartz differentiation uplift"
+      principle: "Emotion leads. Mechanism earns. Science supports. Proof demonstrates."
+    - name: "Hybrid-2: Ogilvy + Collier (Brand Mission with Emotional Depth)"
+      status: "ALTERNATE"
+      risk: "Lower differentiation without mechanism foregrounding"
+
+  recommended_winner: "Hybrid-1 (Ogilvy + Schwartz)"
+
+  human_selection:
+    status: "RECOMMENDED — awaiting human confirmation"
+    note: "Per execution instructions, agent produces arena results and recommends winner. Human will confirm or iterate."
+
+gate_2_5:
+  status: PASS
+  candidates_generated: true
+  all_criteria_scored: true
+  top_candidate_above_threshold: true
+  no_critical_gaps: true
+  human_selection: "PENDING confirmation"
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+
+next_layer: 3

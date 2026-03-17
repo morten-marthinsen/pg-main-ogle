@@ -86,6 +86,7 @@ Agent receives validation result in context and can self-correct
 | `proportionality_check.py` | Package files with scores | Threshold clustering detection (>50% at minimums = gate-passing optimization) |
 | `token_estimator.py` | All file writes | Cumulative context tracking, zone classification (GREEN/YELLOW/ORANGE/RED/CRITICAL). Also emits event-driven reminders on zone transitions (Detector 6). |
 | `reminder_detector.py` | All file writes | Event-driven degradation detection: abbreviation patterns (Detector 4), rushing/undersized outputs (Detector 2), stale reads (Detector 7), synthesis from memory (Detector 1). Supports `--record-read <path>` flag for Read event tracking (see Known Limitation above). See `~system/protocols/EVENT-DRIVEN-REMINDERS.md`. |
+| `convergence_detector.py` | Arena output files (`arena/*-output.md`, `*-revised.md`, `scores*`) | Three-mode convergence detection: (1) Persona convergence — 5-gram overlap between persona outputs within a round (round-aware thresholds: 40%/50%/60% for rounds 1/2/3), (2) Round stagnation — score improvement <0.2 between rounds with same winner, (3) Output repetition — 3-sentence block appears twice in a single output. See `~system/protocols/CONVERGENCE-INTERVENTION-PROTOCOL.md`. |
 
 ---
 
@@ -100,6 +101,9 @@ File path ends with "-package.json" or "-package.yaml"
 
 File path is in "outputs/" and ends with .md/.json/.yaml
     → output_validator.py
+
+File path contains "arena/" and ends with "-output.md", "-revised.md", or "scores*"
+    → convergence_detector.py (persona convergence, round stagnation, output repetition)
 
 All writes:
     → token_estimator.py (tracks cumulative file sizes)
@@ -182,5 +186,6 @@ To disable a single validator, comment out or remove its routing block in `dispa
         ├── schema_validator.py
         ├── proportionality_check.py
         ├── token_estimator.py
-        └── reminder_detector.py
+        ├── reminder_detector.py
+        └── convergence_detector.py
 ```

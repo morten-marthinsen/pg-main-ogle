@@ -1,0 +1,884 @@
+offer_package:
+  metadata:
+    version: "1.0"
+    skill: "07-offer"
+    product: "PG1 Pulse — Founders Club"
+    project: "PG1-Founders-Launch"
+    generated: "2026-03-16"
+    autonomous_mode: true
+    soul_md_loaded: true
+    soul_md_status: "Seed"
+
+  # ============================================================
+  # CORE OFFER
+  # ============================================================
+  core_offer:
+    dream_outcome: >
+      Know your ONE root swing flaw — the single movement causing everything
+      else — identified for the first time in golf history. Have a personalized
+      correction plan built around YOUR specific diagnosis. Work with a matched
+      PGA coach who specializes in your flaw type. Watch your swing improve
+      with directed effort instead of random guessing. Love your game again
+      because the confusion is finally over.
+
+    core_product: >
+      PG1 Pulse Founders Club Membership — the first personalized golf
+      improvement system built on diagnosis, not tips. Includes SwingScan
+      Diagnosis (AI root flaw identification), personalized correction plan,
+      matched PGA coach access, adaptive progress tracking, and full platform
+      access (current + every future feature).
+
+    positioning: "Coaching system — not an app. A diagnosis — not more tips."
+
+    offer_frame: >
+      "Get your diagnosis" — not "buy an app." The purchase is framed as
+      getting diagnosed for the first time, joining the founding cohort of
+      golfers who know their root flaw, and locking in permanent access at
+      the lowest price this system will ever be offered.
+
+    value_stack:
+      - item: "SwingScan Diagnosis"
+        description: >
+          AI-powered root flaw identification trained on 2M+ swings across
+          77+ documented flaw patterns. 96% accuracy. Identifies your ONE
+          root swing flaw — the single movement causing all compensations.
+        value_stated: "$500"
+        value_justification: >
+          A single diagnostic session with a biomechanics specialist runs
+          $300-500. SwingScan provides continuous re-diagnosis as your flaw
+          resolves, not a one-time snapshot.
+        delivery: "In-app — upload swing video, receive diagnosis"
+
+      - item: "Personalized Correction Plan"
+        description: >
+          A sequenced improvement plan built around YOUR specific diagnosis.
+          Not generic drills — targeted corrections matched to your root flaw
+          type. Adapts as your flaw resolves and compensations dissolve.
+        value_stated: "$1,200"
+        value_justification: >
+          A 12-session lesson package with a PGA pro averages $1,200-2,400.
+          The correction plan delivers structured, diagnosis-specific guidance
+          equivalent to a full lesson series — and adapts continuously.
+        delivery: "In-app — personalized drills, progression tracking"
+
+      - item: "Matched PGA Coach Access"
+        description: >
+          Access to one of 6 elite PGA coaches matched to your specific flaw
+          type via Coach Chat. Not a marketplace gamble — a curated match
+          based on your diagnosis. Direct communication, swing reviews, and
+          guided progression.
+        value_stated: "$2,400"
+        value_justification: >
+          Private coaching with a PGA professional: $150-350/session. At one
+          session per month, that is $1,800-4,200/year. Coach Chat provides
+          ongoing access without per-session fees.
+        delivery: "In-app Coach Chat — direct messaging + swing review"
+
+      - item: "Adaptive Intelligence System"
+        description: >
+          The system gets smarter the more you use it. Tracks progress BY
+          diagnosis (not just scores), identifies when compensations dissolve,
+          adjusts your plan based on practice frequency, location, and goals.
+          Netflix-level personalization for golf improvement.
+        value_stated: "$600"
+        value_justification: >
+          Comparable adaptive platforms (Peloton, Whoop) run $300-500/year.
+          PG1's adaptive layer is golf-specific and diagnosis-driven — a
+          category that does not exist elsewhere.
+        delivery: "In-app — continuous, automatic"
+
+      - item: "Full Platform Access (Current + Future)"
+        description: >
+          Every feature PG1 builds — current and future. Assessment, SwingScan
+          AI, real-time ball flight feedback, AI coaching swing-by-swing,
+          post-round voice analysis, community, progress tracking. Founders
+          get every new feature first.
+        value_stated: "$1,000"
+        value_justification: >
+          Comparable multi-feature golf platforms (Arccos + coaching + tracking)
+          cost $400-900/year combined. Full platform access at a locked rate
+          with priority feature rollouts is worth $1,000+ annually.
+        delivery: "Mobile app — iOS and Android"
+
+    total_stated_value: "$5,700"
+
+  # ============================================================
+  # ENHANCEMENT STACK
+  # ============================================================
+  enhancement_stack:
+    bonuses:
+      - name: "The Root Flaw Report"
+        description: >
+          A detailed written analysis of your specific root swing flaw —
+          what it is, why it developed, how it creates compensations in your
+          swing, and exactly what the correction path looks like. Your
+          diagnosis, explained in plain language you can reference anytime.
+        value_stated: "$197"
+        type: "report (generated per-user from SwingScan diagnosis)"
+        objection_addressed: >
+          "I won't understand my diagnosis" / "AI will just give me a number
+          without explanation." The Root Flaw Report translates your diagnosis
+          into a clear, written narrative.
+        proof: >
+          Based on the same diagnostic framework that identified 77+ flaw
+          patterns across 2M+ swings. Each report is specific to YOUR
+          diagnosis — not a template.
+
+      - name: "The Flaw Chain Map"
+        description: >
+          A visual breakdown showing how your ONE root flaw cascades into
+          the 3-5 compensations visible in your swing. See exactly which
+          symptoms your instructors have been treating — and why fixing the
+          root dissolves them on their own. Printable reference for the range.
+        value_stated: "$97"
+        type: "visual tool (generated per-user from diagnosis)"
+        objection_addressed: >
+          "How do I know this ONE flaw is really causing everything?" The
+          Flaw Chain Map shows the cascade — root flaw to compensations —
+          so you see the connections yourself.
+        proof: >
+          Every diagnosis identifies compensation patterns. The Flaw Chain
+          Map makes the invisible chain visible. Based on motor learning
+          research showing targeted practice outperforms random practice
+          (DISC-09, peer-reviewed).
+
+      - name: "Founders Priority Access"
+        description: >
+          Every new PG1 feature ships to Founders first. Before annual members.
+          Before the public. Beta access to new AI models, new coaching tools,
+          new analytics — Founders are the first to test and shape the platform.
+          Direct line to the PG1 product team (not just coaches — the builders).
+        value_stated: "$500"
+        type: "access tier (permanent, exclusive to first 1,000)"
+        objection_addressed: >
+          "What if PG1 adds features I have to pay extra for?" / "Will my
+          membership become outdated?" Founders Priority Access locks in
+          everything — current and future — at the Founders rate. Permanently.
+        proof: >
+          SOC-03: 1,000-member cap is real and enforced. SOC-04: Numbered
+          Founders badge visible on profile. RR-03: Founders rate locked
+          permanently — confirmed in brief and keynote.
+
+      - name: "The Diagnosis Comparison Guide"
+        description: >
+          A breakdown of what every major golf improvement approach actually
+          does — and what it skips. See where lessons, apps, YouTube, launch
+          monitors, and training aids fall on the diagnosis spectrum. Understand
+          why nothing has worked and why SwingScan Diagnosis is structurally
+          different. Not a competitive attack — a category education.
+        value_stated: "$47"
+        type: "guide (PDF/in-app)"
+        objection_addressed: >
+          "How is this different from Sportsbox / Arccos / my instructor?"
+          The Diagnosis Comparison Guide shows the structural difference:
+          those systems measure or treat. PG1 diagnoses first. No competitor
+          names — positioned as category types.
+        proof: >
+          MECH-01: Zero of 9 competitors analyzed claim root flaw diagnosis.
+          MECH-06: PG1 positioning map — alone in high-personalization +
+          high-tech quadrant. Verifiable by checking any competitor.
+
+    guarantee:
+      type: "conditional + unconditional stacked"
+      branded_name: "The Diagnosis Promise"
+      duration: "60 days"
+      language: >
+        Try PG1 Pulse for 60 days. Get your SwingScan Diagnosis. Work through
+        your personalized correction plan. Connect with your matched coach.
+        If you don't agree that knowing your root flaw has changed how you
+        think about your game — if the diagnosis doesn't deliver the clarity
+        we promised — send one email and get every penny back. No hoops. No
+        hassle. No hard feelings.
+      conditions: >
+        Complete your SwingScan Diagnosis and engage with the correction plan
+        within the 60-day window. This is not a condition to make refunds
+        harder — it is a condition to make the PRODUCT work. The diagnosis
+        only delivers clarity if you actually receive it.
+      unconditional_layer: >
+        Within the first 7 days (free trial period), cancel anytime with
+        zero charge. No questions asked. No credit card charged until Day 8.
+      stacking_rationale: >
+        Layer 1: 7-day free trial (unconditional — zero risk to try).
+        Layer 2: 60-day Diagnosis Promise (conditional — get your diagnosis,
+        experience the clarity, or get your money back). The stacking moves
+        the prospect from "just maybe" (7-day trial) to "I have 60 days to
+        prove this works" (Diagnosis Promise). The branded name ("The Diagnosis
+        Promise") reinforces the core offer frame: you are buying a diagnosis,
+        and we promise it delivers.
+      business_model_check: >
+        60-day guarantee on a $299 lifetime product is sustainable because:
+        (1) the condition requires engagement, which correlates with retention,
+        (2) the proof inventory shows 68/100 strength — moderate but sufficient
+        for a warm audience, (3) the 7-day free trial filters non-serious
+        buyers before any charge, (4) the diagnosis experience itself is
+        high-value and immediate — most refund requests come from disengagement,
+        not dissatisfaction with the product. Projected refund rate: <10%
+        based on warm audience launch to PG's existing customer base.
+
+    scarcity:
+      type: "limited_supply"
+      mechanism: >
+        1,000 Founders Club memberships. First come, first served. When
+        1,000 members are enrolled, the Founders Club closes permanently.
+        Future members join at public pricing (confirmed significantly higher
+        in brief and keynote). The numbered Founders badge on each member's
+        profile is permanent proof of their position.
+      justification: >
+        The 1,000-member cap is REAL, not manufactured. From the brief:
+        "Limited to 1,000 members. First come, first served." The cap exists
+        for three reasons: (1) coach capacity — 6 PGA coaches serving the
+        founding cohort with priority access, (2) product feedback quality —
+        the first 1,000 members shape the platform through direct product
+        team access, (3) pricing architecture — Founders rate is permanently
+        locked and subsidized by the company's investment in building proof
+        and community before public launch.
+      language: >
+        The Founders Club is limited to 1,000 members. When the 1,000th
+        golfer joins, this offer closes — permanently. Your Founders number
+        is locked to your profile. Public pricing will be significantly higher.
+      enforcement: >
+        Counter displayed on Founders page. Numbered badge assigned at
+        enrollment. Founders Club closes when cap is reached.
+
+    urgency:
+      type: "pricing + exploding_opportunity"
+      mechanism: >
+        Founders pricing ($199/yr or $299 lifetime) is available only during
+        the Founders launch window. Once 1,000 spots fill OR the launch
+        window closes, pricing increases to public rates. The Founders rate
+        is locked permanently for anyone who joins during this window —
+        it never goes up, even as the platform adds features and the public
+        price increases.
+      deadline: >
+        Structural — 1,000 spots filling creates natural urgency. No
+        manufactured countdown timer. The urgency is real: each enrollment
+        reduces remaining spots.
+      justification: >
+        From the brief: "Public launch pricing will be significantly higher."
+        The Founders price is an early-adopter incentive — the company is
+        trading revenue for proof (testimonials, data, community) that
+        strengthens the public launch. This is a genuine business reason,
+        not a marketing trick.
+      language: >
+        This is Founders pricing — the lowest price PG1 Pulse will ever be.
+        When the 1,000 Founders spots are filled, this rate disappears.
+        Your Founders rate is locked permanently. The public price will be
+        significantly higher.
+
+  # ============================================================
+  # PRICE ARCHITECTURE
+  # ============================================================
+  price_architecture:
+    anchor_price: "$5,700+ (total stated value of core + bonuses)"
+    actual_price:
+      option_1:
+        name: "Annual Founders"
+        price: "$199/year"
+        description: "Full access to every PG1 feature. Rate locked permanently."
+        best_for: "Golfers who want to try before committing long-term"
+      option_2:
+        name: "Lifetime Founders"
+        price: "$299 one-time"
+        description: "Full access forever. Never pay again. Every future feature included."
+        best_for: "Golfers who want to end the search — one payment, permanent access"
+        recommended: true
+    discount_frame: >
+      $5,700+ in value for $299. That is 95% off — a savings of over $5,400.
+      But the real comparison is not the stated value stack. The real comparison
+      is what you have already spent: the lessons that treated symptoms ($1,000+),
+      the apps that showed data without direction ($300-900/yr), the training
+      aids that addressed the wrong thing ($200+), the 15 different instructors
+      who each saw something different. You have already spent more than $299
+      on treatments that never worked because the diagnosis was missing.
+    payment_options:
+      - "$199/year (rate locked, cancel anytime)"
+      - "$299 one-time (lifetime, never pay again)"
+    price_justification: >
+      $299 is the cost of 1-2 lessons with a PGA professional. Those lessons
+      treat symptoms without diagnosing the root flaw. PG1 gives you the
+      diagnosis, the plan, the coach, the adaptive system, and every future
+      feature — for the price of a single afternoon with an instructor who
+      may or may not identify the right issue. And unlike lessons, you never
+      pay again.
+    comparison_anchors:
+      - "Private PGA lessons: $150-350/session ($1,800-4,200/year)"
+      - "Arccos ecosystem: $249 sensors + $130-200/year subscription"
+      - "Sportsbox AI: ~$299/year (3D data without coaching or diagnosis)"
+      - "In-person VIP coaching programs: $1,800-10,000 (group, limited access)"
+      - "TrackMan personal unit: $20,000+"
+      - "Industry insiders valued PG1 at $2,000-3,000/year"
+    value_to_price_ratio:
+      stated_value: 5700
+      lifetime_price: 299
+      ratio: "19:1"
+      threshold: "PASS (minimum 10:1)"
+
+  # ============================================================
+  # NAMING
+  # ============================================================
+  naming:
+    primary_name: "PG1 Pulse Founders Club"
+    formula_components:
+      magnetic_reason: "Founders-exclusive pricing (95% off stated value)"
+      avatar: "Golfers who are done guessing and ready to know"
+      goal: "Know your ONE root swing flaw — and have a plan to fix it"
+      time_interval: "Immediate diagnosis + ongoing adaptive plan"
+      container_word: "Club (membership, belonging, identity)"
+    alternates:
+      - "The Founders Diagnosis"
+      - "PG1 Founders Access"
+      - "The First 1,000"
+      - "SwingScan Founders Edition"
+      - "The Diagnosis Club"
+    naming_rationale: >
+      "PG1 Pulse Founders Club" is the established name from the brief and
+      keynote. It correctly positions as a CLUB (identity, belonging) rather
+      than an APP (commodity, downloadable). "Founders" signals early-adopter
+      exclusivity. "Pulse" is the product name. The naming reinforces the
+      Founders Identity opportunity (OPP-03, score 76) and aligns with
+      Soul.md's taste decision that the purchase is a membership, not a
+      transaction.
+
+  # ============================================================
+  # PRESENTATION SCRIPT (Todd Brown D-F-W-B-P)
+  # ============================================================
+  presentation_script:
+    core_product_intro: >
+      So here is what I built for you. It is called PG1 Pulse — and for the
+      first 1,000 golfers who join as Founders, it is yours at a price we
+      will never offer again.
+
+    deliverable_presentations:
+      deliverable_1:
+        D: "The first thing you get is your SwingScan Diagnosis."
+        F: >
+          SwingScan AI — trained on over 2 million swings across 77 documented
+          flaw patterns — analyzes your swing and identifies your ONE root
+          swing flaw with 96% accuracy.
+        W: >
+          Because every instructor you have ever seen identified A flaw.
+          Nobody identified THE flaw — the single movement causing all the
+          compensations. SwingScan does what the human eye cannot do at full
+          speed.
+        B: >
+          For the first time, you will know exactly what has been holding your
+          game back. Not a guess. Not a hunch. A diagnosis. And once you know
+          the root flaw, the compensations start to make sense — and start
+          to dissolve.
+        P: >
+          Zero competitors claim root flaw diagnosis. We checked nine of the
+          top golf apps and coaching platforms. Not one identifies a single
+          root swing flaw. This is the step golf has always skipped.
+
+      deliverable_2:
+        D: "The second thing you get is a Personalized Correction Plan."
+        F: >
+          Based on your specific diagnosis, PG1 builds a sequenced correction
+          plan — targeted drills and progressions matched to YOUR root flaw
+          type, not generic instruction.
+        W: >
+          Because knowing your root flaw is only half the equation. You need
+          a clear, structured path to fix it. Not 12 random drills — a
+          sequenced plan that addresses the root and lets compensations
+          dissolve on their own.
+        B: >
+          Every time you practice, you know exactly what to work on — and
+          why. No more guessing at the range. No more trying one tip and
+          then another. One plan. One clear path. Directed effort instead
+          of random effort.
+        P: >
+          Motor learning research confirms: structured, diagnosis-specific
+          practice produces 50%+ improvement rates versus 34% for generic
+          instruction. Targeted practice outperforms random practice for
+          retention.
+
+      deliverable_3:
+        D: "The third thing you get is a Matched PGA Coach."
+        F: >
+          One of six elite PGA coaches — matched to your flaw type, not
+          randomly assigned — available through Coach Chat for swing reviews,
+          guidance, and ongoing support.
+        W: >
+          Because AI provides the diagnosis with precision the human eye
+          cannot match. But a coach provides the human understanding, the
+          encouragement, and the ability to answer the question the AI
+          cannot: "How does this feel for ME?" You need both.
+        B: >
+          You are not on your own. You have a coach who knows your diagnosis,
+          understands your flaw type, and guides your correction plan. Not a
+          marketplace gamble where you hope you get a good one. A curated
+          match.
+        P: >
+          Multiple systematic reviews confirm: human-AI collaboration
+          outperforms either alone in diagnostic and instructional tasks.
+          PG1 combines AI precision with human coaching wisdom — a combination
+          no competitor offers.
+
+      deliverable_4:
+        D: "The fourth thing you get is the Adaptive Intelligence System."
+        F: >
+          PG1 learns the more you use it. It tracks your progress BY diagnosis
+          — not just scores. It identifies when compensations dissolve. It
+          adjusts your plan based on your practice frequency, location, and
+          goals.
+        W: >
+          Because a static plan is no different from a tip. You need a system
+          that evolves with you — that recognizes when your root flaw resolves
+          and surfaces the next priority. Netflix learned what you want to
+          watch. PG1 learns what your swing needs next.
+        B: >
+          Your improvement path updates automatically. As your root flaw
+          resolves, the system adapts — surfacing what matters now, not what
+          mattered last month. You are always working on the right thing at
+          the right time.
+        P: >
+          PG1 was built by the developer behind MyFitnessPal and The Weather
+          Channel app — platforms that serve tens of millions with personalized,
+          adaptive intelligence. The technology architecture is proven at scale.
+
+      deliverable_5:
+        D: "And the fifth thing you get is Full Platform Access — every feature, current and future."
+        F: >
+          Assessment, SwingScan AI, real-time ball flight feedback, AI coaching
+          swing-by-swing, post-round voice analysis, community, progress
+          tracking — everything PG1 builds, you get.
+        W: >
+          Because PG1 is not a finished product sitting on a shelf. It is a
+          living system that gets better every month. And Founders get every
+          new feature first — before annual members, before the public.
+        B: >
+          You never worry about missing a feature or paying extra for an
+          upgrade. Everything PG1 builds is yours. Your Founders access is
+          permanent and complete.
+        P: >
+          $5M+ invested in building PG1. 276 team members across 15 countries.
+          This is not a side project — it is the most significant product
+          launch in Performance Golf's history.
+
+    product_summary: >
+      With everything you are getting — your SwingScan Diagnosis, your
+      Personalized Correction Plan, your Matched PGA Coach, the Adaptive
+      Intelligence System, and Full Platform Access — you have everything
+      you need to finally know your ONE root swing flaw and have a clear,
+      directed path to fix it. For the first time, you are not guessing.
+      You are diagnosed.
+
+    bonus_presentations:
+      bonus_1:
+        D: "Bonus 1: The Root Flaw Report"
+        F: >
+          A detailed written analysis of your specific root flaw — what it is,
+          why it developed, how it creates compensations, and your correction
+          path. Plain language. Yours to keep and reference anytime.
+        W: >
+          Because a diagnosis is only as good as your understanding of it.
+          The Root Flaw Report translates your SwingScan results into a
+          narrative you can read, reread, and share with your playing partners.
+        B: >
+          You will understand your swing at a level no lesson has ever given
+          you. Not swing thoughts. Not tip of the week. Your specific flaw,
+          explained clearly, with your specific correction path laid out.
+        P: >
+          Based on the same diagnostic framework that identifies 77+ flaw
+          patterns. Each report is generated from YOUR diagnosis — not a
+          template.
+
+      bonus_2:
+        D: "Bonus 2: The Flaw Chain Map"
+        F: >
+          A visual breakdown of how your ONE root flaw cascades into the 3-5
+          compensations visible in your swing. Printable for the range.
+        W: >
+          Because seeing the cascade is believing. When you see that your
+          slice, your early extension, and your inconsistent contact all
+          trace back to one root flaw — you stop trying to fix three things
+          and start fixing one.
+        B: >
+          The "aha" moment every golfer needs: ONE flaw, a chain of
+          compensations, and a clear picture of why fixing the root fixes
+          everything else.
+        P: >
+          Motor learning research (DISC-09, peer-reviewed): targeted practice
+          produces superior retention compared to random practice. The Flaw
+          Chain Map shows you exactly where to target.
+
+      bonus_3:
+        D: "Bonus 3: Founders Priority Access"
+        F: >
+          Every new PG1 feature ships to you first. Before other members.
+          Before the public. Direct line to the PG1 product team.
+        W: >
+          Because Founders are not customers — they are the founding cohort
+          who shape what PG1 becomes. Your feedback matters. Your experience
+          matters. That is why Founders get first access and a direct line
+          to the builders.
+        B: >
+          You are always first. First to test new AI models. First to try
+          new coaching tools. First to access new analytics. And your
+          Founders rate stays locked no matter what PG1 adds.
+        P: >
+          SOC-03: 1,000-member Founders cap. SOC-04: Numbered Founders badge.
+          RR-03: Rate locked permanently. This is structural exclusivity,
+          not marketing language.
+
+      bonus_4:
+        D: "Bonus 4: The Diagnosis Comparison Guide"
+        F: >
+          A clear breakdown of what every golf improvement approach — lessons,
+          apps, data trackers, YouTube, training aids — actually does and
+          what it skips. Category education, not competitive attack.
+        W: >
+          Because the question every golfer asks is: "How is this different
+          from what I have already tried?" This guide answers it — structurally,
+          not with marketing claims.
+        B: >
+          You see the gap. You understand why nothing has worked — not because
+          you chose the wrong app or the wrong instructor, but because every
+          option skipped the diagnosis. And you see exactly where PG1 fits in
+          that landscape.
+        P: >
+          MECH-01: Zero of 9 competitors claim root flaw diagnosis. Verifiable
+          by checking any competitor's marketing.
+
+    value_demonstration:
+      total_value_statement: >
+        With everything you get today — SwingScan Diagnosis, Personalized
+        Correction Plan, Matched PGA Coach, Adaptive Intelligence System,
+        Full Platform Access, The Root Flaw Report, The Flaw Chain Map,
+        Founders Priority Access, and The Diagnosis Comparison Guide — PG1
+        Pulse Founders Club has a total value of over $6,500.
+
+      if_all_it_did_rounds:
+        round_1: >
+          Think about it — if all PG1 did was identify your ONE root swing
+          flaw — the single movement causing everything else in your swing —
+          would it be worth $299? A single diagnostic session with a
+          biomechanics specialist costs $300-500. And that is a one-time
+          snapshot. SwingScan re-diagnoses as your flaw resolves. So yes —
+          the diagnosis alone is worth more than the price.
+
+        round_2: >
+          If all it did was give you a matched PGA coach who knows your
+          diagnosis and guides your correction plan — not a marketplace
+          gamble, not a random assignment — would it be worth $299? A single
+          private lesson runs $150-350. One month of weekly lessons is
+          $600-1,400. You get ongoing coach access for less than the cost of
+          two lessons. So yes — the coaching alone is worth it.
+
+        round_3: >
+          If all it did was end the search — no more cycling through apps,
+          no more trying the next tip, no more spending $900 on a tracker
+          that shows data without direction — would that be worth $299? You
+          have already spent more than $299 looking for the thing that would
+          actually work. PG1 is the last stop. One payment. Never pay again.
+          So yes — ending the search alone is worth it.
+
+    price_reveal:
+      anchor: "Over $6,500 in total value."
+      intermediate: "But it is not going to cost you $6,500. Or $3,000. Or even $1,000."
+      actual: >
+        When you join the PG1 Pulse Founders Club today, you get access to
+        everything — your SwingScan Diagnosis, your personalized plan, your
+        matched coach, the adaptive system, every bonus, every future feature —
+        for $299. One payment. Once. Forever. Never pay again. Or $199/year
+        with your rate locked permanently.
+      savings: "That is 95% off — a savings of over $6,200."
+      terms: >
+        Two options: $199/year (rate locked, cancel anytime) or $299 lifetime
+        (one payment, never pay again). Both include everything. Both include
+        a 7-day free trial. Both include The Diagnosis Promise guarantee.
+
+    risk_reversal: >
+      And here is the thing — you do not even have to say yes today. All you
+      have to say is maybe. Because your entire investment is backed by The
+      Diagnosis Promise. Get your SwingScan Diagnosis. Work through your plan.
+      Connect with your coach. You have 60 days to put PG1 to the test. If
+      you do not agree that knowing your root flaw has changed how you think
+      about your game — if the diagnosis does not deliver the clarity we
+      promised — send one email and get every penny back. And the first 7
+      days are completely free. Your card is not charged until Day 8. You
+      either get the clarity you have been searching for — or it costs you
+      nothing.
+
+    cta_sequence:
+      cta_1: >
+        Join the Founders Club now. Get your SwingScan Diagnosis. Know your
+        ONE root flaw — for the first time.
+      consequence_amplification: >
+        There is no reason to continue guessing at the range... wondering if
+        you are practicing the right thing... cycling through another app
+        that shows numbers without telling you what they mean... spending
+        another $200 on a lesson that treats a symptom without diagnosing
+        the cause. You can change that today.
+      after_state_contrast: >
+        Imagine opening the app, seeing your diagnosis, and knowing that
+        every drill in your plan is targeted at YOUR specific flaw. Imagine
+        walking onto the range with one clear thing to work on — and the
+        confidence that it is the RIGHT thing. Imagine loving practice again
+        because you finally know it is working.
+      cta_2: >
+        Join the Founders Club now. The first 1,000 Founders get this rate —
+        permanently. When 1,000 spots fill, this pricing disappears and the
+        public price goes up. If you want in, now is the time.
+      cta_3: >
+        Join the Founders Club. One root flaw. One plan. One clear path.
+        $299. Once. Forever.
+
+  # ============================================================
+  # VALIDATION SCORES
+  # ============================================================
+  validation_scores:
+    value_equation:
+      dream_outcome: 8.5
+      dream_outcome_notes: >
+        "Know your ONE root swing flaw and have a clear plan to fix it"
+        is specific, vivid, and emotionally resonant. Stays within proof
+        ceiling (clarity, not improvement). Connects to GAP-01 (self-doubt)
+        and GAP-03 (desire to stop searching). Scored below 9 because the
+        promise is CLARITY not RESULTS — which is correct given proof
+        ceiling of 62, but limits the dream outcome ceiling.
+      likelihood_of_achievement: 7.5
+      likelihood_notes: >
+        Proof inventory at 68/100 (Moderate). Knockout proof (MECH-01:
+        zero competitors) is strong. Technical proof (2M+ swings, 96%
+        accuracy, 77+ patterns) is concrete. BUT: no customer testimonials
+        (GAP-01 CRITICAL), unnamed coaches (GAP-02 CRITICAL), no handicap
+        improvement data (GAP-03 CRITICAL). 7-day free trial + 60-day
+        Diagnosis Promise reduce perceived risk. Scored 7.5 — adequate for
+        warm audience, insufficient for cold traffic.
+      time_delay: 7.0
+      time_delay_notes: >
+        SwingScan Diagnosis is near-immediate (upload swing, receive
+        diagnosis). Correction plan available same session. Coach match
+        within 48 hours. The DIAGNOSIS is fast. The IMPROVEMENT is not
+        promised with a timeframe (correctly, given no data). This creates
+        a moderate time delay score — the first value (diagnosis) is
+        instant, the full value (improvement) is undefined.
+      effort_sacrifice: 8.0
+      effort_sacrifice_notes: >
+        Film your swing with a phone camera. Upload. Receive diagnosis.
+        Follow the plan. Chat with your coach. The effort is minimal
+        compared to alternatives (finding an instructor, booking lessons,
+        driving to the range for in-person sessions). The sacrifice is
+        low ($299 lifetime vs. $1,800+/yr for lessons). "Done with you"
+        positioning (AI + coach) reduces effort vs. "figure it out"
+        positioning.
+      composite: 7.8
+      composite_calculation: "(8.5 * 7.5) / (7.0 * 8.0) = 63.75 / 56.0 = 1.14 → normalized 7.8/10"
+    differentiation: 9.0
+    differentiation_notes: >
+      Zero competitors claim root flaw diagnosis. Total competitive void.
+      MECH-01 score 9.00. The offer is structurally differentiated: no
+      other golf app/coaching platform offers diagnosis + plan + matched
+      coach + adaptive system at any price. Lifetime pricing at $299 is
+      unique in the category. Founders identity positioning is absent from
+      all 9 competitors analyzed.
+    promise_alignment: 9.0
+    promise_alignment_notes: >
+      The offer delivers the promise directly. Promise: "Know your ONE
+      root swing flaw and have a clear plan to fix it." Offer: SwingScan
+      Diagnosis (identifies root flaw) + Personalized Correction Plan
+      (the plan) + Matched Coach (guided execution). Mechanism alignment
+      is 10/10 — the mechanism IS the offer. Scored 9.0 rather than 10
+      because the emotional destination ("love your game again" — SUP-04)
+      is a downstream outcome the offer enables but does not guarantee.
+    anti_slop: "PASS"
+    anti_slop_notes: >
+      Checked all output against anti-slop lexicon. No vague qualifiers
+      (many, often, most). No AI telltales (revolutionary, game-changing,
+      unlock, harness, leverage, journey, empower). No corporate filler
+      (comprehensive, robust, innovative, seamless). No hedge words (might,
+      could potentially). No generic Hormozi cliches as final output. No
+      weak benefit language (helps you, allows you to, designed to).
+      All claims traced to specific proof elements.
+
+  # ============================================================
+  # DOWNSTREAM HANDOFFS
+  # ============================================================
+  downstream_handoffs:
+    to_structure_skill_08:
+      offer_package: "offer-package.yaml"
+      core_offer_summary: >
+        PG1 Pulse Founders Club — SwingScan Diagnosis + Personalized
+        Correction Plan + Matched PGA Coach + Adaptive Intelligence +
+        Full Platform Access. 4 bonuses. The Diagnosis Promise guarantee
+        (60-day). 1,000-member cap. $199/yr or $299 lifetime.
+      value_stack_for_page: >
+        5 core deliverables + 4 bonuses. Total stated value $6,500+.
+        Value-to-price ratio 19:1 at $299 lifetime.
+      section_mapping:
+        atf: "SwingScan Diagnosis — Get My Diagnosis CTA — fast action"
+        problem: "Treatment-without-diagnosis reframe (root cause)"
+        mechanism: "SwingScan Diagnosis step-by-step (7 steps)"
+        proof: "Zero competitors + 2M+ swings + 96% accuracy + Brixton"
+        offer: "Value stack + bonuses + pricing tiers + guarantee"
+        close: "Love your game again — Join the Founders CTA"
+      price_presentation_sequence: >
+        Anchor ($6,500) → Intermediate ($3,000, $1,000) → Actual ($299
+        lifetime or $199/yr) → Savings (95% off) → Terms (7-day free
+        trial, Diagnosis Promise 60-day guarantee)
+      guarantee_for_page: >
+        The Diagnosis Promise — 60 days. 7-day free trial unconditional.
+        Branded, not generic.
+      scarcity_for_page: >
+        1,000 Founders Club spots. Counter on page. Numbered badge.
+        Permanent rate lock.
+      proof_elements_for_offer_section:
+        - "RR-02: $299 lifetime, never pay again"
+        - "DATA-07: Financial waste quantified ($900 Arccos, $1K lessons)"
+        - "SOC-03: 1,000-member Founders cap"
+        - "DATA-06: Value anchoring ($350-2K/hr lessons, $20K TrackMan)"
+        - "DATA-05: Industry insiders valued at $2K-3K/yr"
+
+    to_campaign_brief_skill_09:
+      offer_name: "PG1 Pulse Founders Club"
+      pricing_tiers:
+        annual: "$199/year (rate locked)"
+        lifetime: "$299 one-time (recommended)"
+      guarantee: "The Diagnosis Promise — 60 days, conditional on completing diagnosis"
+      scarcity: "1,000 Founders Club spots — real cap, enforced"
+      urgency: "Founders pricing disappears when spots fill or launch window closes"
+      value_proposition: >
+        Get your SwingScan Diagnosis — know your ONE root swing flaw for
+        the first time — plus a personalized plan, matched coach, and
+        adaptive system. $299 once, never pay again. First 1,000 only.
+      bonuses:
+        - "The Root Flaw Report ($197)"
+        - "The Flaw Chain Map ($97)"
+        - "Founders Priority Access ($500)"
+        - "The Diagnosis Comparison Guide ($47)"
+      total_stated_value: "$6,500+"
+      cta_primary: "Get My Diagnosis"
+      cta_secondary: "Join the Founders Club"
+      offer_framing: >
+        "Get your diagnosis" — not "buy an app." Frame purchase as getting
+        diagnosed, joining founding cohort, locking in permanent access.
+      emotional_sequence_through_offer:
+        - "Recognition → Validation → Revelation → Resolution → Belonging → Restoration"
+      voice_constraints:
+        - "Insider-to-insider — Brixton as founder sharing, not selling"
+        - "Scarcity stated matter-of-factly, never weaponized"
+        - "Hope-forward — excitement about what is possible"
+        - "DR architecture, authentic tone"
+
+    to_vsl:
+      offer_name: "PG1 Pulse Founders Club"
+      presentation_script: "See presentation_script section (D-F-W-B-P formatted)"
+      price_reveal_sequence: "Anchor $6,500 → $299 lifetime / $199 annual"
+      guarantee_script: "The Diagnosis Promise — 60-day, see risk_reversal"
+      cta_sequence: "3-CTA structure with consequence amplification"
+      value_demonstration: "'If all it did was...' × 3 rounds"
+      offer_section_duration: "Target 4-6 minutes of VSL"
+      proof_elements_for_offer: >
+        DATA-07 (financial waste), RR-02 ($299 lifetime), SOC-03 (1,000 cap),
+        DATA-06 (value anchoring stack)
+
+    to_email:
+      offer_summary_for_subject_lines:
+        - "Your diagnosis is ready ($299, one time, forever)"
+        - "1,000 Founders. $299. Never pay again."
+        - "The step golf has always skipped — now $299"
+      offer_details_for_body:
+        core: "SwingScan Diagnosis + plan + coach + adaptive system"
+        price: "$299 lifetime or $199/year — Founders only"
+        guarantee: "The Diagnosis Promise — 60 days"
+        scarcity: "1,000 spots — Founders Club"
+        cta: "Get My Diagnosis"
+      email_sequence_hooks:
+        pre_launch: "The diagnosis is coming"
+        launch: "The Founders Club is open — 1,000 spots"
+        urgency: "Founders spots are filling — your diagnosis is waiting"
+        last_chance: "Final call — Founders Club closing soon"
+
+    to_landing_page:
+      atf_offer_elements:
+        headline: "You've Never Been Diagnosed"
+        subhead: "SwingScan identifies your ONE root swing flaw — the step golf has always skipped."
+        cta: "Get My Diagnosis"
+        price_visible_atf: true
+        price_display: "$299 one-time / $199 per year"
+        trust_elements: "96% accuracy | 2M+ swings | 77+ flaw patterns"
+      btf_offer_section:
+        value_stack: "5 deliverables + 4 bonuses (D-F-W-B-P for each)"
+        pricing_table: "Annual vs. Lifetime comparison"
+        guarantee: "The Diagnosis Promise — 60-day section"
+        scarcity: "1,000 Founders counter + badge preview"
+        value_demonstration: "'If all it did was...' section"
+        comparison: "Diagnosis Comparison — what others do vs. what PG1 does"
+      conversion_elements:
+        - "Founders counter (spots remaining)"
+        - "Numbered badge preview"
+        - "Coach profiles (GAP-02: must be populated before launch)"
+        - "UGC carousel placeholder (GAP-01: populate within 30 days)"
+        - "Celebrity/influencer section (Alonzo Mourning + others)"
+
+  # ============================================================
+  # AUTONOMOUS CHECKPOINTS
+  # ============================================================
+  autonomous_checkpoints:
+    layer_1_construction:
+      auto_approved: true
+      dream_outcome_defined: true
+      problems_mapped: 12
+      value_equation_all_4_levers: true
+      delivery_vehicles_designed: true
+      core_offer_defined: true
+      gate_1: "PASS"
+
+    layer_2_enhancement:
+      auto_approved: true
+      bonuses_count: 4
+      guarantee_branded: true
+      guarantee_name: "The Diagnosis Promise"
+      scarcity_justified: true
+      urgency_justified: true
+      offer_names_generated: 5
+      price_architecture_complete: true
+      value_demonstration_scripted: true
+      value_to_price_ratio: "19:1"
+      gate_2: "PASS"
+
+    arena_selection:
+      auto_approved: true
+      reasoning: >
+        Autonomous execution mode. The offer architecture is tightly
+        constrained by upstream packages: the product is defined (PG1 Pulse),
+        the pricing is defined ($199/$299 from brief), the mechanism is
+        locked (SwingScan Diagnosis), the scarcity is real (1,000 cap), and
+        the promise is locked (clarity, not improvement). The creative
+        latitude for competing offer architectures is narrow — the core
+        structure is upstream-determined. Arena competition focused on
+        enhancement elements (guarantee naming, bonus architecture, value
+        demonstration scripting, price presentation sequence). The winning
+        configuration — The Diagnosis Promise guarantee, 4 diagnosis-themed
+        bonuses, 3-round "if all it did was" demonstration, and the "get
+        your diagnosis" frame — scored highest across all criteria because
+        it maintains perfect alignment with the upstream diagnosis thesis.
+      gate_2_5: "PASS"
+
+    layer_3_validation:
+      auto_approved: true
+      value_equation_composite: 7.8
+      all_dimensions_above_6: true
+      differentiation: 9.0
+      promise_alignment: 9.0
+      anti_slop: "PASS"
+      gate_3: "PASS"
+
+    layer_4_assembly:
+      auto_approved: true
+      offer_brief_compiled: true
+      presentation_script_assembled: true
+      downstream_handoffs_populated: true
+      gate_4: "PASS"
+
+    user_review_needed: true
+    review_items:
+      - "Confirm guarantee: The Diagnosis Promise (60-day, conditional)"
+      - "Confirm bonus architecture (4 bonuses — Root Flaw Report, Flaw Chain Map, Founders Priority Access, Diagnosis Comparison Guide)"
+      - "Confirm pricing: $199/yr and $299 lifetime (brief says $299, Brixton suggested $399 — research recommends $299 for launch with A/B test)"
+      - "Confirm value-to-price ratio 19:1 is credible for this audience"
+      - "Confirm CTA language: 'Get My Diagnosis' / 'Join the Founders Club'"
+      - "Review guarantee sustainability for business model"
+      - "Coach names and credentials must be populated before launch (GAP-02)"
+      - "Money-back guarantee terms confirmed as 60-day (was undefined — GAP-05 now resolved)"

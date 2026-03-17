@@ -1,7 +1,8 @@
 # Session Architecture & Model Assignment
 
-**Version:** 1.0
+**Version:** 1.1
 **Created:** 2026-03-06
+**Updated:** 2026-03-12
 **Purpose:** Define how the pipeline splits across sessions and which model runs each phase
 
 ---
@@ -18,6 +19,10 @@
 ---
 
 ## MODEL SPLIT
+
+**Full model routing specification:** `~system/MODEL-ROUTING.md` — defines 6 cognitive roles (Strategy, Generation, Critique, Validation, Planning, Visual) with per-layer, per-skill, and per-Arena-role model assignments.
+
+The summary below covers the primary session-level model split. For per-layer and per-subagent routing, see MODEL-ROUTING.md.
 
 ### Opus 4.6 — Strategy & Foundation (Skills 00-09)
 
@@ -157,6 +162,10 @@ For Ads (A01-A12), Email (E0-E4), Organic (S01-S24), and Upsell (U0-U5):
 
 **Token estimator hook** tracks actual usage and provides real-time zone alerts. The estimates above are baselines — actual loads vary by project complexity and upstream package sizes.
 
+**Adaptive Compaction:** When context pressure rises, apply progressive compaction per `~system/protocols/ADAPTIVE-COMPACTION-PROTOCOL.md`. Stage 1-2 compaction can keep Session 5 in GREEN zone (saving ~35-50K tokens). Session 6 benefits from ~50-80K savings.
+
+**Pre-Flight Planning:** For Skills 14-17 (where upstream context is largest), use the Pre-Flight Planning subagent per `~system/protocols/SKILL-PREFLIGHT-PROTOCOL.md` to distill upstream packages into a focused Execution Brief. Reduces executor context load by 30-50%. For Skills 10-13, Dynamic Context Framing provides section-specific reservoir reordering without compression.
+
 ### The Cascading Prose Pattern
 
 In Sessions 4-5, each skill loads the prose from its immediate predecessor:
@@ -181,6 +190,8 @@ Between any two sessions, the following persist via the output folder:
 2. **Assembled prose** (`.md`) — actual written copy
 3. **Context reservoir** (`context-reservoir.md`) — curated analytical intelligence
 4. **Reasoning captures** (`reasoning-captures/`) — selection rationale
+5. **Issue log** (`~outputs/issue-log.md`) — cumulative incident record across all sessions
+6. **Learning log** — captured learnings with L-level classification (L1-L6)
 
 ### What Does NOT Travel
 
@@ -191,6 +202,31 @@ Between any two sessions, the following persist via the output folder:
 
 This is why the context reservoir matters: it captures the REASONING that would otherwise be lost when sessions end.
 
+### Cross-Session Learning Accumulation
+
+The issue log and learning log accumulate across all sessions in a campaign. At session start, check `~outputs/issue-log.md` for:
+- **Same-class patterns** (2+ incidents of the same class in the last 10 entries) — these signal systemic problems that need protocol-level fixes, not just one-off corrections
+- **Skill-specific issues** — if the skill you're about to execute has prior issues logged, load those entries and address them proactively
+- **Context-loss incidents** — if prior sessions logged compaction or context loss, be extra vigilant about re-reading upstream packages
+
+**Full protocol:** `~system/protocols/SELF-LEARNING-PROMOTION-PROTOCOL.md`
+
+### Compaction Detection
+
+The token estimator hook monitors for **context compression artifacts** across Read operations. When a file returns >30% less content than a previous read (files >1KB), the system alerts:
+
+```
+COMPACTION DETECTED: [filename] returned X% less content than previous read.
+```
+
+**Response protocol:**
+1. Save a milestone checkpoint of current state
+2. Re-read critical upstream packages to verify accessibility
+3. Verify context reservoir integrity (Part 2 is NEVER compressed)
+4. If in ORANGE zone or above, recommend session break
+
+**Automated detector:** `.hooks/validators/token_estimator.py --record-read`
+
 ### Session Start Protocol
 
 At the start of each session:
@@ -198,7 +234,8 @@ At the start of each session:
 2. Load all required upstream packages per the upstream loader
 3. Load the context reservoir (Sessions 4+)
 4. Load prior section prose (Sessions 4+)
-5. Confirm all required inputs are present before generating
+5. Check `~outputs/issue-log.md` for prior issues affecting current skills
+6. Confirm all required inputs are present before generating
 
 ---
 
@@ -245,6 +282,16 @@ As model context windows grow (2M, 5M, 10M), the session architecture can simpli
 
 **The context reservoir is designed to be obsoleted.** When context windows are large enough to hold everything, the reservoir becomes unnecessary — its contents would simply be in the active context. Until then, it bridges the gap.
 
+### Campaign-Level Learning Extraction
+
+After completing a full campaign (all 6 sessions), the issue log and learning log contain a complete record of every incident and learning across the pipeline. This data feeds three improvement cycles:
+
+1. **Immediate fixes** (J1 learnings, L1-L2): Judgment-free corrections that can be tested and promoted directly via `~system/protocols/SELF-LEARNING-PROMOTION-PROTOCOL.md`
+2. **Taste validation** (J2 learnings): Human-reviewed changes to voice, expression patterns, or copy conventions
+3. **Systematic improvement** (AutoResearch loop): When 5+ L2 learnings accumulate across 2-3 campaigns, run a structured improvement session per `~system/protocols/AUTORESEARCH-LOOP-PROTOCOL.md`
+
+**The session architecture produces the data; the self-learning protocols consume it.**
+
 ---
 
 ## VERSION HISTORY
@@ -252,3 +299,4 @@ As model context windows grow (2M, 5M, 10M), the session architecture can simpli
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-06 | Initial creation. Six-session architecture with Opus/Sonnet model split, cascading prose pattern, and context reservoir integration. |
+| 1.1 | 2026-03-12 | Added cross-session learning accumulation, compaction detection, issue log integration, campaign-level learning extraction. |

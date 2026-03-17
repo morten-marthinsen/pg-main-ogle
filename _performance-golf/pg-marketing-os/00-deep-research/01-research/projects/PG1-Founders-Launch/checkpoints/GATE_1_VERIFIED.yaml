@@ -1,0 +1,46 @@
+gate: 1
+status: PASS
+timestamp: "2026-03-16T21:30:00Z"
+quote_counts:
+  total:
+    required: 1000
+    actual: 1824
+    verified: true
+  pain:
+    required: 300
+    actual: 652
+    verified: true
+  hope:
+    required: 250
+    actual: 403
+    verified: true
+  root_cause:
+    required: 200
+    actual: 240
+    verified: true
+  solutions_tried:
+    required: 150
+    actual: 281
+    verified: true
+  competitor_mechanism:
+    required: 100
+    actual: 160
+    verified: true
+  villain:
+    required: 75
+    actual: 88
+    verified: true
+verification_method: "Counted from individual scraper output files (1.4-A, 1.4-B, 1.4-C, 1.4-E) plus expansion file (1.6-B)"
+expansion_rounds_completed: 1
+quality_notes:
+  - "Reddit Villain bucket has ~31/44 mis-classified quotes (documented in 1.5-C). Gate still passes because expansion + properly classified quotes exceed 75."
+  - "~130 Tier 1 quotes (score 4.0+) across all buckets"
+  - "De-duplicated total: 1,823 unique quotes (1 cross-bucket duplicate)"
+consolidation_files:
+  - "layer-1-outputs/1.5-A-content-aggregator.md"
+  - "layer-1-outputs/1.5-B-quote-extractor.md"
+  - "layer-1-outputs/1.5-C-quote-classifier.md"
+  - "layer-1-outputs/1.5-D-quote-scorer.md"
+  - "layer-1-outputs/scored_quotes.json"
+  - "layer-1-outputs/1.6-A-layer1-validator.md"
+  - "layer-1-outputs/1.6-B-expansion-executor.md"

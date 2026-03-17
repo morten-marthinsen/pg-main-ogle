@@ -1,7 +1,8 @@
 # Marketing-OS — ~system/SYSTEM-CORE.md
 
-**Version:** 1.0 (decomposed from CLAUDE.md v4.0)
+**Version:** 1.1
 **Created:** 2026-02-25
+**Updated:** 2026-03-12
 **Purpose:** Universal execution constraints loaded for EVERY skill. This is the primary institutional memory file.
 
 **Companion Files:**
@@ -195,30 +196,54 @@ Zones use **absolute token counts**, not percentages, to encode real operational
 IF YELLOW ZONE (150K-200K):
   - Announce: "Approaching 200K boundary — cost zone transition ahead"
   - Double MC-CHECK frequency
+  - Apply Adaptive Compaction Stage 1 (upstream package summarization)
   - If Opus: recommend finishing current skill, then session break
   - Begin compressing completed work in logs
 
 IF ORANGE ZONE (200K-500K):
   - Announce: "Premium pricing active / moderate context load"
   - Double MC-CHECK, watch for synthesis-from-memory
+  - Apply Adaptive Compaction Stages 1-2 (+ prior prose windowing)
   - If Opus: you've exceeded the window — switch to Sonnet or session break
   - If Sonnet: quality still intact, but monitor
 
 IF RED ZONE (500K-750K):
   - Announce: "Context load high - conservation mode active"
   - MC-CHECK every microskill
+  - Apply Adaptive Compaction Stages 1-4 (+ reservoir triage + history pruning)
   - Prepare SESSION-HANDOFF.md
   - Recommend: "Session break after current gate"
 
 IF CRITICAL ZONE (750K-1M):
   - Announce: "Context capacity reached - controlled shutdown"
+  - Apply Adaptive Compaction Stage 5 (emergency micro-reservoir) if needed
   - HALT new complex operations
   - Complete ONLY current atomic action
   - Generate mandatory state handoff
   - DO NOT attempt new skills
 ```
 
+**Full compaction protocol:** `~system/protocols/ADAPTIVE-COMPACTION-PROTOCOL.md`
+
 **Note:** The token estimator hook (`.hooks/validators/token_estimator.py`) tracks cumulative context automatically and injects zone warnings into the agent's context.
+
+#### Compaction Self-Detection
+
+The token estimator also monitors for **context compression artifacts** — when the system compresses prior messages, re-reading a file may return significantly less content than the previous read. If a file returns >30% less content on re-read (files >1KB), the estimator flags:
+
+```
+COMPACTION DETECTED: [filename] returned X% less content than previous read.
+Context compression may have occurred. Consider saving a milestone checkpoint
+and verifying critical state is intact.
+```
+
+When compaction is detected:
+1. Save a milestone checkpoint of current state
+2. Re-read critical upstream packages to verify they're still accessible
+3. Verify the context reservoir is intact (Part 2 is NEVER compressed)
+4. Consider a session break if in ORANGE zone or above
+
+**Automated detector:** `.hooks/validators/token_estimator.py --record-read`
 
 ---
 
@@ -290,7 +315,9 @@ Generated: [timestamp]
 1. Write `SESSION-STATE.md` to active project directory
 2. Include: current position, completed outputs, key decisions, next action
 3. Include: any unwritten human reviewer edits or source material (HARD RULE from 2026-02-10)
-4. This applies to normal session ends, not just context pressure shutdowns
+4. Include: any issues logged during this session (reference `~outputs/issue-log.md` entries)
+5. Include: any learnings captured (reference learning-log entries with L-level classification)
+6. This applies to normal session ends, not just context pressure shutdowns
 
 **This fixes the State Persistence Gap where normal session termination loses state.**
 
@@ -438,12 +465,17 @@ RULE 7: Summary/handoff files MUST cite per-microskill output files as sources.
 
 ## PROTOCOL REFERENCES
 
-**Full reference:** `~system/PROTOCOL-INDEX.md` — 21 protocols with loading rules.
+**Full reference:** `~system/PROTOCOL-INDEX.md` — 23+ protocols with loading rules.
 **Load at session start** for orientation. During execution, load individual protocol files as needed per skill requirements.
 
 **Critical protocols loaded for EVERY skill:**
 - `~system/protocols/EXECUTION-GUARDRAILS.md` — Pre-flight, declarations, post-execution verification
 - Skill's own `ANTI-DEGRADATION.md` — Per-skill enforcement
+
+**Quality assurance protocols (loaded conditionally):**
+- `~system/protocols/PRE-MORTEM-PROTOCOL.md` — Before every skill execution (Full: all skills, Standard: Foundation only). Three questions: failure modes, weakest inputs, degradation prediction. Primes MC-CHECK targeting.
+- `~system/protocols/SELF-LEARNING-PROMOTION-PROTOCOL.md` — Issue logging, J1/J2 learning classification, bounded trial validation, pattern detection. Append to `~outputs/issue-log.md` on every incident.
+- `~system/protocols/AUTORESEARCH-LOOP-PROTOCOL.md` — Systematic skill improvement via git branch → modify → test → evaluate → keep/discard. Session cadence: every 2-3 campaigns.
 
 **Protocol loading is specified in each skill's AGENT.md Layer 0 section.**
 
@@ -498,6 +530,12 @@ RULE 7: Summary/handoff files MUST cite per-microskill output files as sources.
 3. Treating validation gates as optional
 4. Rushing through execution to complete faster
 5. Outputting "good enough" instead of "complete"
+
+### Issue Logging Failures
+1. Encountering a repeated failure pattern without logging to `~outputs/issue-log.md`
+2. Logging an issue without specifying its class (10 classes defined in Self-Learning Promotion Protocol)
+3. Failing to check the issue log for same-class patterns before executing a skill that previously failed
+4. Treating the issue log as optional — every gate failure, voice drift, structural regression, or context loss incident MUST be logged
 
 ---
 
@@ -575,7 +613,17 @@ When context grows large:
 
 **Every skill across all engines has a dedicated ANTI-DEGRADATION.md file.** These contain STRUCTURAL enforcement that CANNOT be bypassed. Each file has EQUAL authority to this ~system/SYSTEM-CORE.md.
 
-**Automated Validation Hooks** (`.hooks/`) fire on every file Write/Edit, checking for forbidden gate statuses, schema compliance, output completeness, threshold clustering, and context zone boundaries. The Stop hook blocks session completion if critical validation failures exist. See `.hooks/README.md` for details.
+**Automated Validation Hooks** (`.hooks/`) fire on every file Write/Edit, checking for forbidden gate statuses, schema compliance, output completeness, threshold clustering, context zone boundaries, and **feature regression** (heading/section/link/frontmatter loss detection on markdown files). The Stop hook blocks session completion if critical validation failures exist. See `.hooks/README.md` for details.
+
+### Issue Logger — Structured Incident Capture
+
+Every gate failure, voice drift incident, structural regression, or context loss event MUST be logged to `~outputs/issue-log.md` as a structured entry. The issue log is append-only and persists across sessions.
+
+**10 Issue Classes:** factual-error, voice-drift, structural-regression, missing-input, scope-creep, specification-gap, context-loss, hallucination, threading-failure, other.
+
+**Pattern Detection:** When the same issue class appears 2+ times in the last 10 entries, it signals a systemic pattern requiring a protocol or skill-level fix — not just a one-off correction.
+
+**Full protocol:** `~system/protocols/SELF-LEARNING-PROMOTION-PROTOCOL.md` (v1.1, Issue Logger section)
 
 ### Universal Enforcement Protocol
 
@@ -613,3 +661,12 @@ If you are an LLM reading this file at the start of a Marketing-OS session:
 8. Write SESSION-STATE.md before ending ANY session
 
 **Failure to follow these protocols has caused real problems. Do not repeat them.**
+
+---
+
+## VERSION HISTORY
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-02-25 | Initial creation. Decomposed from CLAUDE.md v4.0. |
+| 1.1 | 2026-03-12 | Added Adaptive Compaction stage refs to zone management, compaction self-detection, issue logger reference, issue logging failures to forbidden behaviors, quality assurance protocols |

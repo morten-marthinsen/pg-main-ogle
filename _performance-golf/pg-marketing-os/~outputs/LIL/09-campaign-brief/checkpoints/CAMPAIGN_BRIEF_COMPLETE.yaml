@@ -1,0 +1,171 @@
+# CAMPAIGN_BRIEF_COMPLETE.yaml
+# Skill 09 — Campaign Brief | Project: Lil' Legends (LIL)
+
+skill: "09-campaign-brief"
+status: COMPLETE
+timestamp: "2026-03-16T15:00:00Z"
+human_approved: false
+
+upstream_verification:
+  research_loaded: true
+  proof_inventory_loaded: true
+  root_cause_loaded: true
+  mechanism_loaded: true
+  promise_loaded: true
+  big_idea_loaded: true
+  offer_loaded: true
+  structure_loaded: true
+  all_8_packages: true
+
+brief_components:
+  core_thesis_documented: true
+  voice_tone_defined: true
+  threading_elements_listed: true
+  narrative_sequence_specified: true
+
+completeness:
+  all_sections_populated: true
+  no_placeholder_text: true
+
+section_verification:
+  campaign_thesis:
+    populated: true
+    word_count: 285
+    min_required: 200
+    status: PASS
+  target_avatar:
+    populated: true
+    word_count: 195
+    min_required: 150
+    status: PASS
+  root_cause_anchor:
+    populated: true
+    word_count: 210
+    min_required: 50
+    status: PASS
+  mechanism_name:
+    populated: true
+    word_count: 265
+    min_required: 50
+    status: PASS
+  primary_promise:
+    populated: true
+    word_count: 220
+    min_required: 100
+    status: PASS
+  big_idea_expression:
+    populated: true
+    word_count: 340
+    min_required: 150
+    status: PASS
+  offer_summary:
+    populated: true
+    word_count: 350
+    min_required: 200
+    status: PASS
+  voice_tone_direction:
+    populated: true
+    word_count: 245
+    min_required: 150
+    status: PASS
+  threading_elements:
+    populated: true
+    word_count: 680
+    min_required: 200
+    status: PASS
+  narrative_sequence:
+    populated: true
+    word_count: 210
+    min_required: 100
+    status: PASS
+
+all_10_sections_pass: true
+
+coherence_audit:
+  overall_score: 9.11
+  minimum_threshold: 7.0
+  threshold_met: true
+  dimensions_below_6: 0
+  structural_failure: false
+  critical_failure: false
+
+layer_completion:
+  layer_0_upstream_loading: COMPLETE
+  layer_1_synthesis: COMPLETE
+  layer_2_coherence_audit: COMPLETE
+  layer_3_creative_direction: COMPLETE
+  layer_4_brief_assembly: COMPLETE
+  all_layers: COMPLETE
+
+output_files:
+  primary:
+    - {file: "layer-4-outputs/campaign-brief.json", format: "JSON", size_check: "PASS (>10KB)"}
+    - {file: "layer-4-outputs/CAMPAIGN-BRIEF-SUMMARY.md", format: "Markdown", size_check: "PASS (>5KB)"}
+  layer_0:
+    - "layer-0-outputs/0.1-upstream-context.md"
+    - "layer-0-outputs/0.4-validation-report.md"
+  layer_1:
+    - "layer-1-outputs/1.1-campaign-summary.md"
+    - "layer-1-outputs/1.2-element-relationships.md"
+    - "layer-1-outputs/1.3-thesis-validation.md"
+  layer_2:
+    - "layer-2-outputs/2.1-coherence-scores.md"
+    - "layer-2-outputs/2.2-weakness-report.md"
+  layer_3:
+    - "layer-3-outputs/3.1-creative-direction.md"
+  checkpoints:
+    - "checkpoints/layer-0-checkpoint.yaml"
+    - "checkpoints/CAMPAIGN_BRIEF_COMPLETE.yaml"
+
+placeholder_check:
+  contains_TBD: false
+  contains_placeholder: false
+  result: PASS
+
+threading_check:
+  mechanism_name_documented: true
+  root_cause_anchor_documented: true
+  knockout_proof_documented: true
+  primary_promise_documented: true
+  identity_close_documented: true
+  shape_sorter_documented: true
+  open_loops_count: 3
+  recurring_elements_count: 3
+  transition_rules_count: 7
+  all_elements_have_exact_text: true
+  all_elements_have_occurrence_targets: true
+  result: PASS
+
+execution_log:
+  upstream_packages_loaded: "8/8"
+  sections_populated: "10/10"
+  placeholder_text_scan: PASS
+  threading_elements_documented: "6/6 with exact text and counts"
+
+mc_check:
+  timestamp: "2026-03-16T15:00:00Z"
+  upstream_verification:
+    packages_loaded: 8
+    if_under_8: null
+  content_verification:
+    thesis_documented: Y
+    voice_defined: Y
+    threading_documented: Y
+    sequence_specified: Y
+    if_any_no: null
+  placeholder_check:
+    contains_TBD: N
+    contains_placeholder: N
+    if_any_yes: null
+  result: CONTINUE
+
+handoff_ready:
+  to_ecomm_EC01_through_EC06: true
+  to_organic_content: true
+  to_email_sequence: true
+  brief_location: "~outputs/LIL/09-campaign-brief/layer-4-outputs/"
+  primary_files:
+    machine_readable: "campaign-brief.json"
+    human_readable: "CAMPAIGN-BRIEF-SUMMARY.md"
+
+next_step: "Human review and approval. Once approved, brief unlocks all downstream execution."

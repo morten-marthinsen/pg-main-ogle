@@ -1,0 +1,221 @@
+{
+  "skill": "03-root-cause",
+  "microskill": "2.8-expression-anchoring-score",
+  "project": "PG1-Founders-Launch",
+  "timestamp": "2026-03-16",
+  "scoring_method": "Expression Anchoring Protocol v1.0",
+  "weights": {
+    "audience_quote_resonance": 0.40,
+    "tier1_pattern_match": 0.30,
+    "fssit_echo": 0.30
+  },
+  "candidates": [
+    {
+      "id": "SR-1",
+      "anchor_phrase": "You've never been diagnosed",
+      "quote_resonance": {
+        "score": 9.0,
+        "top_matching_quotes": [
+          "What is actually causing the inconsistent ball striking? What's the root cause? (GGTTH)",
+          "Most golf pros can ID a Cause of a poor swing. But not that many can ID THE Cause.",
+          "the concept is great but ultimately it didn't really help me find the main causes (Harveythehacker)"
+        ],
+        "quote_count_aligned": 85,
+        "justification": "Directly names what 85+ quotes describe as missing. Golfers ASK for diagnosis without using the word."
+      },
+      "tier1_match": {
+        "score": 8.5,
+        "matching_patterns": ["false_belief_destruction (pg_ssts_vsl_001)", "contrarian_truth (pg_fixd_vsl_001)"],
+        "justification": "Matches TIER1 golf pattern: simple reframe revealing a hidden truth. Same structural DNA as 'biggest misconception in golf.'"
+      },
+      "fssit_echo": {
+        "score": 9.5,
+        "matching_fssit": ["FSSIT-02 (momentum-adjusted 10)", "FSSIT-05 (8)"],
+        "justification": "Near-perfect echo of FSSIT-02 ('You don't need more tips. You've needed a diagnosis this whole time.') The expression IS the FSSIT."
+      },
+      "composite_anchoring_score": 9.0,
+      "proceed_to_arena": true
+    },
+    {
+      "id": "SR-2",
+      "anchor_phrase": "A flaw vs. THE flaw",
+      "quote_resonance": {
+        "score": 8.5,
+        "top_matching_quotes": [
+          "There's an underlying movement that affects everything (Shilgy)",
+          "Every instructor saw something different",
+          "15 pro's to find one that has improved my game (hovis)"
+        ],
+        "quote_count_aligned": 65,
+        "justification": "Golfers describe seeing multiple instructors who each find different things. The a/THE distinction names this exactly."
+      },
+      "tier1_match": {
+        "score": 8.0,
+        "matching_patterns": ["false_belief_destruction (pg_ssts_vsl_001)"],
+        "justification": "Matches the 'misconception' structure — you think it's many problems, it's actually one."
+      },
+      "fssit_echo": {
+        "score": 8.0,
+        "matching_fssit": ["FSSIT-05 (8)"],
+        "justification": "Direct echo of FSSIT-05 ('Every instructor identified A cause. Nobody identified THE cause.')"
+      },
+      "composite_anchoring_score": 8.2,
+      "proceed_to_arena": true
+    },
+    {
+      "id": "MET-1",
+      "anchor_phrase": "Nobody ever ran the test",
+      "quote_resonance": {
+        "score": 8.5,
+        "top_matching_quotes": [
+          "Civilians don't own X-ray machines (MonteScheinblum)",
+          "If you're not diagnosing the cause, you can make things worse",
+          "Tons of numbers, not a lot of info on how to fix the issues (Goober)"
+        ],
+        "quote_count_aligned": 50,
+        "justification": "Medical/diagnostic language appears organically. Golfers already frame the gap in medical terms."
+      },
+      "tier1_match": {
+        "score": 7.5,
+        "matching_patterns": ["scientific_discovery pattern"],
+        "justification": "Medical metaphor is less common in golf TIER1 swipes (those use simple reframe). Still strong but not the dominant vault pattern."
+      },
+      "fssit_echo": {
+        "score": 9.0,
+        "matching_fssit": ["FSSIT-02 (10)", "FSSIT-08 (8)"],
+        "justification": "Strong FSSIT-02 echo through medical reframe. FSSIT-08 ('the search is over... because we start with diagnosis') is the resolution."
+      },
+      "composite_anchoring_score": 8.3,
+      "proceed_to_arena": true
+    },
+    {
+      "id": "VP-3",
+      "anchor_phrase": "The Symptom Industry",
+      "quote_resonance": {
+        "score": 7.5,
+        "top_matching_quotes": [
+          "the vast majority of pros out there are just lazy money grabbing con artists (leaney)",
+          "I almost wonder they purposely don't teach you too much (u/Rexkramer777)",
+          "After one full year and dumping $900 into Arccos products (Mookieb10)"
+        ],
+        "quote_count_aligned": 40,
+        "justification": "Industry-blame quotes exist but are less prevalent than diagnosis-gap quotes. Villain is supported but not dominant."
+      },
+      "tier1_match": {
+        "score": 6.0,
+        "matching_patterns": [],
+        "justification": "Golf TIER1 swipes don't use villain personification as primary. This is a health/supplement pattern applied to golf."
+      },
+      "fssit_echo": {
+        "score": 6.5,
+        "matching_fssit": ["FSSIT-06 (7)"],
+        "justification": "Mild echo of financial waste FSSIT. Villain framing is less resonant with FSSIT candidates than diagnosis framing."
+      },
+      "composite_anchoring_score": 6.7,
+      "proceed_to_arena": true
+    },
+    {
+      "id": "MET-2",
+      "anchor_phrase": "Which one number is wrong",
+      "quote_resonance": {
+        "score": 7.0,
+        "top_matching_quotes": [
+          "overwhelmed by how many things I have to remember (westozhacker)",
+          "Having a trusted person to say this is the most important thing to fix first (u/poidhxyz)"
+        ],
+        "quote_count_aligned": 35,
+        "justification": "Golfers describe overwhelm with multiple things to fix. Combination lock addresses this but is keynote-introduced, not organic."
+      },
+      "tier1_match": {
+        "score": 7.0,
+        "matching_patterns": ["false_belief_destruction"],
+        "justification": "The 'you don't need all the numbers, just the wrong one' follows misconception destruction pattern."
+      },
+      "fssit_echo": {
+        "score": 6.5,
+        "matching_fssit": ["FSSIT-07 (7)"],
+        "justification": "Mild echo — FSSIT-07 addresses knowledge overload, combo lock addresses effort overload."
+      },
+      "composite_anchoring_score": 6.8,
+      "proceed_to_arena": true
+    },
+    {
+      "id": "SR-3",
+      "anchor_phrase": "Treatment without diagnosis",
+      "quote_resonance": {
+        "score": 8.0,
+        "top_matching_quotes": [
+          "Same root cause quotes as SR-1",
+          "70% of golfers who take lessons don't improve (Clampett)"
+        ],
+        "quote_count_aligned": 70,
+        "justification": "Shares SR-1 quote resonance but the anchor is more analytical, less personal."
+      },
+      "tier1_match": {
+        "score": 7.5,
+        "matching_patterns": ["false_solution_expose"],
+        "justification": "Exposes the solution model as flawed. Good pattern match."
+      },
+      "fssit_echo": {
+        "score": 8.0,
+        "matching_fssit": ["FSSIT-02 (10)"],
+        "justification": "Echo of FSSIT-02 through clinical lens."
+      },
+      "composite_anchoring_score": 7.8,
+      "proceed_to_arena": true
+    },
+    {
+      "id": "MET-3",
+      "anchor_phrase": "You needed an X-ray, not just eyes",
+      "quote_resonance": {
+        "score": 7.5,
+        "top_matching_quotes": [
+          "Civilians don't own X-ray machines (MonteScheinblum)",
+          "AI will be vastly superior to human teachers (airjammer)"
+        ],
+        "quote_count_aligned": 30,
+        "justification": "X-ray language is organic but less frequent than diagnosis language."
+      },
+      "tier1_match": {
+        "score": 7.0,
+        "matching_patterns": ["scientific_discovery"],
+        "justification": "Technology reframe pattern."
+      },
+      "fssit_echo": {
+        "score": 7.0,
+        "matching_fssit": ["FSSIT-05 (8)"],
+        "justification": "Echo — instructors used eyes (A cause), AI uses X-ray (THE cause)."
+      },
+      "composite_anchoring_score": 7.2,
+      "proceed_to_arena": true
+    },
+    {
+      "id": "DP-1",
+      "anchor_phrase": "One flaw, a dozen compensations",
+      "quote_resonance": {
+        "score": 7.5,
+        "top_matching_quotes": [
+          "I got caught up chasing red numbers... came at the cost of 50-yard blocks to the right (JJFWebster)",
+          "There's an underlying movement that affects everything (Shilgy)"
+        ],
+        "quote_count_aligned": 30,
+        "justification": "Compensation-cascade described in multiple quotes but less frequently than diagnosis gap."
+      },
+      "tier1_match": {
+        "score": 7.0,
+        "matching_patterns": ["pg_one_vsl_001 dual problem"],
+        "justification": "Matches ONE.1 dual problem pattern from vault."
+      },
+      "fssit_echo": {
+        "score": 6.5,
+        "matching_fssit": ["FSSIT-03 (8)"],
+        "justification": "Mild echo of practice paradox FSSIT."
+      },
+      "composite_anchoring_score": 7.0,
+      "proceed_to_arena": true
+    }
+  ],
+  "arena_qualified": 8,
+  "arena_disqualified": 0,
+  "top_3_for_arena": ["SR-1 (9.0)", "MET-1 (8.3)", "SR-2 (8.2)"]
+}

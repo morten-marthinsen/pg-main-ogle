@@ -1,0 +1,104 @@
+checkpoint: LAYER_0_COMPLETE
+project: "Lil' Legends (LIL)"
+skill: "04-mechanism"
+timestamp: "2026-03-13T10:45:00Z"
+status: COMPLETE
+
+# ─── MICROSKILLS COMPLETED ───────────────────────────────────────────────
+
+microskills_completed:
+  - id: "0.0.1"
+    name: "Vertical Profile Loader"
+    output: "layer-0-outputs/0.0.1-vertical-profile.md"
+    status: COMPLETE
+    size: "3.2KB"
+
+  - id: "0.1"
+    name: "Upstream Loader"
+    output: "layer-0-outputs/0.1-upstream-loader.md"
+    status: COMPLETE
+    size: "8.5KB"
+
+  - id: "0.2"
+    name: "Vault Intelligence Loader"
+    output: "layer-0-outputs/0.2-vault-intelligence-loader.md"
+    status: COMPLETE
+    size: "3.8KB"
+    note: "FALLBACK MODE — no vault-intelligence JSON available"
+
+  - id: "0.2.5"
+    name: "Specimen Decomposer"
+    output: "layer-0-outputs/0.2.5-specimen-decomposer.md"
+    status: COMPLETE
+    size: "5.1KB"
+    note: "Adapted — cross-niche physical product patterns used"
+
+  - id: "0.2.8"
+    name: "TIER1 Expression Reference"
+    output: "layer-0-outputs/0.2.8-tier1-expression-reference.md"
+    status: COMPLETE
+    size: "5.4KB"
+    note: "Cross-vertical patterns — no golf-specific TIER1 mechanism extractions"
+
+  - id: "0.3"
+    name: "Teachings Loader"
+    output: "layer-0-outputs/0.3-teachings-loader.md"
+    status: COMPLETE
+    size: "7.8KB"
+
+  - id: "0.4"
+    name: "Input Validator"
+    output: "layer-0-outputs/0.4-input-validator.md"
+    status: COMPLETE
+    size: "5.2KB"
+
+# ─── GATE 0 ──────────────────────────────────────────────────────────────
+
+gate_0:
+  status: PASS
+  critical_failures: 0
+  warnings: 5
+  warnings_detail:
+    - "Big Idea context unavailable (downstream skill)"
+    - "Vault intelligence JSON not found (fallback active)"
+    - "Vault exemplars below 10 minimum (5 available)"
+    - "Vault language models unavailable"
+    - "Vault naming patterns thin"
+  ready_for_layer_1: true
+
+# ─── KEY DECISIONS ────────────────────────────────────────────────────────
+
+decisions:
+  emphasis_strategy: "science_conceptual (Stage 2→3)"
+  mechanism_type: "actual (4 real product components)"
+  bandwidth_allocation:
+    root_cause_pct: 25
+    science_conceptual_pct: 50
+    delivery_tangible_pct: 25
+  soul_md_loaded: true
+  vertical: "golf"
+
+# ─── VERIFICATION ─────────────────────────────────────────────────────────
+
+verification:
+  vertical_profile_loaded: true
+  upstream_packages_loaded: true
+  vault_intelligence_loaded: "partial (fallback mode)"
+  teachings_loaded: true
+  scorecard_dimensions: 13
+  input_validation_passed: true
+  soul_md_integrated: true
+  stale_artifacts_checked: true
+
+completeness:
+  microskills_planned: 7
+  microskills_executed: 7
+  output_files_total: 7
+  all_output_files_present: true
+
+# ─── ANTI-DEGRADATION ─────────────────────────────────────────────────────
+
+anti_degradation:
+  file_read: "MECHANISM-ANTI-DEGRADATION.md"
+  version: "3.0"
+  declaration_written_to: "layer-0-outputs/0.0.1-vertical-profile.md"

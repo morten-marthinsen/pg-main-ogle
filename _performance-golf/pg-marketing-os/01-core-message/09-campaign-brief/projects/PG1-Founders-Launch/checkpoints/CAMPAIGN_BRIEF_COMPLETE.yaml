@@ -1,0 +1,78 @@
+skill: "09-campaign-brief"
+status: COMPLETE
+timestamp: "2026-03-16T00:00:00Z"
+
+upstream_verification:
+  research_loaded: true
+  proof_inventory_loaded: true
+  root_cause_loaded: true
+  mechanism_loaded: true
+  promise_loaded: true
+  big_idea_loaded: true
+  offer_loaded: true
+  structure_loaded: true
+  soul_md_loaded: true
+  brief_loaded: true
+  all_8_packages: true
+
+brief_components:
+  core_thesis_documented: true
+  voice_tone_defined: true
+  threading_elements_listed: true
+  narrative_sequence_specified: true
+
+section_verification:
+  campaign_thesis:
+    populated: true
+    word_count_above_minimum: true
+  target_avatar:
+    populated: true
+    word_count_above_minimum: true
+  root_cause_anchor:
+    populated: true
+    word_count_above_minimum: true
+  mechanism_name:
+    populated: true
+    word_count_above_minimum: true
+  primary_promise:
+    populated: true
+    word_count_above_minimum: true
+  big_idea_expression:
+    populated: true
+    word_count_above_minimum: true
+  offer_summary:
+    populated: true
+    word_count_above_minimum: true
+  voice_tone_direction:
+    populated: true
+    word_count_above_minimum: true
+  threading_elements:
+    populated: true
+    word_count_above_minimum: true
+  narrative_sequence:
+    populated: true
+    word_count_above_minimum: true
+
+completeness:
+  all_sections_populated: true
+  no_placeholder_text: true
+  coherence_score: 8.72
+  coherence_above_threshold: true
+  structural_failures: 0
+  campaign_blocking_issues: 0
+
+output_files:
+  campaign_brief_project: "projects/PG1-Founders-Launch/campaign-brief.md"
+  campaign_brief_outputs: "~outputs/PG1/campaign-brief.md"
+
+downstream_unlocked:
+  - "EC-00 (E-Comm Foundation)"
+  - "EC-01 (E-Comm Research)"
+  - "EC-02 (E-Comm Hero)"
+  - "EC-03 (E-Comm Section Copy)"
+  - "EC-04 (E-Comm Features)"
+  - "EC-05 (E-Comm Assembly)"
+  - "EC-06 (E-Comm Editorial)"
+  - "Ads"
+  - "Email Sequences"
+  - "Organic Content"

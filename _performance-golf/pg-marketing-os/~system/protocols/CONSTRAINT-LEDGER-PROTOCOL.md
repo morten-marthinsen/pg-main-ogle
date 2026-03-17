@@ -62,6 +62,19 @@ constraint_ledger:
         - "Never reduce to 'stretching' or 'flexibility' — this is a PATHWAY, not an exercise"
       downstream_skills: ["06", "11", "12", "13", "14", "15", "16"]
       status: "active"
+
+    # --- Superseded entry example ---
+    - id: "CL-003"
+      skill: "03-root-cause"
+      decision: "McGinley credential: 30+ years"
+      rationale: "User directive — credential updated based on direct knowledge"
+      supersedes: "CL-001"          # ID of the entry this replaces
+      supersedes_reason: "Human override — factual correction"
+      fact_change_ref: "FC-001"     # Links to fact-changes.yaml entry
+      constraints:
+        - "All files must use '30+ years' — not '25+' or '35+'"
+      downstream_skills: ["all"]
+      status: "active"
 ```
 
 ---
@@ -87,7 +100,7 @@ constraint_ledger:
 
 ### When Entries Are Retired
 
-Entries are NEVER deleted. They can be marked `status: "superseded"` with a reference to the replacing entry.
+Entries are NEVER deleted. They can be marked `status: "superseded"` with a reference to the replacing entry. When superseded, add `superseded_by` and `superseded_date` fields. The new entry uses the `supersedes` field to point back. See FACT-CHANGE-PROPAGATION-PROTOCOL.md for the full propagation workflow.
 
 ---
 

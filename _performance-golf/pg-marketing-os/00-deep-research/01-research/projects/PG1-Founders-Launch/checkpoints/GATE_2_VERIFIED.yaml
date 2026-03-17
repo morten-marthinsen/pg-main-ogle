@@ -1,0 +1,92 @@
+gate: 2
+status: PASS
+timestamp: "2026-03-16T22:45:00Z"
+confidence: 95
+layer2_outputs_verified: 14
+e5_requirements_met: true
+can_proceed_to_layer3: true
+
+files_verified:
+  - name: "2.1-A-pattern-analyzer.md"
+    exists: true
+    size_ok: true
+    size_bytes: 28430
+  - name: "2.1-B-theme-synthesizer.md"
+    exists: true
+    size_ok: true
+    size_bytes: 31637
+  - name: "2.2-A-web-analysis.md"
+    exists: true
+    size_ok: true
+    size_bytes: 19722
+  - name: "2.2-B-belief-excavator.md"
+    exists: true
+    size_ok: true
+    size_bytes: 18338
+  - name: "2.2-C-now-after-grid.md"
+    exists: true
+    size_ok: true
+    size_bytes: 12146
+  - name: "2.2-D-awareness-mapper.md"
+    exists: true
+    size_ok: true
+    size_bytes: 22257
+  - name: "2.3-A-competitor-analyzer.md"
+    exists: true
+    size_ok: true
+    size_bytes: 21925
+  - name: "2.3-B-mechanism-extractor.md"
+    exists: true
+    size_ok: true
+    size_bytes: 19228
+  - name: "2.3-C-market-narrative-builder.md"
+    exists: true
+    size_ok: true
+    size_bytes: 18554
+  - name: "2.4-A-villain-extractor.md"
+    exists: true
+    size_ok: true
+    size_bytes: 21814
+  - name: "2.4-B-opportunity-gap-finder.md"
+    exists: true
+    size_ok: true
+    size_bytes: 17860
+  - name: "2.55-A-sophistication-analyzer.md"
+    exists: true
+    size_ok: true
+    size_bytes: 13950
+  - name: "2.55-B-proof-inventory.md"
+    exists: true
+    size_ok: true
+    size_bytes: 18704
+  - name: "2.7-A-story-elements-researcher.md"
+    exists: true
+    size_ok: true
+    size_bytes: 19285
+
+checks:
+  e5_completeness: PASS
+  pattern_quality: PASS
+  mechanism_readiness: PASS
+  competitive_intelligence: PASS
+  synthesis_coherence: PASS
+
+summary:
+  master_themes: 13
+  patterns_identified: 42
+  mechanisms_cataloged: 22
+  competitors_analyzed: 9
+  villains_identified: 5
+  opportunity_gaps: 14
+  market_sophistication_stage: "Late Stage 3 / Early Stage 4"
+  primary_web: "The Educated Frustrated Golfer"
+  awareness_distribution: "Problem-Aware 30% + Solution-Aware 40%"
+  total_output_bytes: 283850
+
+warnings:
+  - "W-01: Beta user proof gap — no specific handicap improvement results available"
+  - "W-02: Individual coach credentials not yet populated"
+  - "W-03: Reddit Villain mis-classification (31/44) — worked around in Layer 2"
+  - "W-04: Guarantee/risk reversal not defined"
+
+validation_report: "layer-2-outputs/2.6-A-layer2-validator.md"

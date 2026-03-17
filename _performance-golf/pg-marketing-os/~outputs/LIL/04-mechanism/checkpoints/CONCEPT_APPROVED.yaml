@@ -1,0 +1,109 @@
+# ─── CONCEPT APPROVAL CHECKPOINT ─────────────────────────────────────────
+# Project: Lil' Legends (LIL)
+# Skill: 04-mechanism
+# Gate: CONCEPT_CHECKPOINT (between Layer 1A and Layer 1B)
+# Status: APPROVED — proceed to Layer 1B (Naming)
+# ─────────────────────────────────────────────────────────────────────────
+
+mechanism_concept_approved:
+  selected_concept: "B+D Hybrid"
+  plain_description: |
+    A self-learning golf system where the equipment teaches toddlers through
+    shapes and colors — no verbal coaching needed. Each component uses visual
+    and tactile cues (the shape sorter principle) to teach one golf fundamental
+    automatically. The equipment is the teacher. The parent is the golf buddy.
+
+  type: "SYSTEM (primary) × SCIENTIFIC (secondary)"
+  emphasis: "SCIENCE_CONCEPTUAL (Stage 2→3)"
+
+  root_cause_connection: |
+    Root cause = equipment designed for coaching (verbal instruction). This
+    mechanism replaces coaching entirely with a self-teaching system that uses
+    shapes and colors — the learning channel toddlers' brains actually use.
+    The root cause (Skill 03, composite 9.19) identified: "Every toddler golf
+    product was designed for coaching, but toddlers can't learn from words.
+    They learn through visual/tactile discovery." This mechanism IS the direct
+    solve — equipment that teaches through the visual/tactile channel.
+
+  differentiation: |
+    Zero competitors have self-teaching equipment. All competitors assume
+    a parent/coach giving verbal instruction. This is the only golf equipment
+    designed to teach through its own design — like a shape sorter for golf.
+    DAT-19 (score 9.24): Zero competitors have visual-tactile mechanisms.
+    Competitive gap is absolute, not relative.
+
+  user_direction:
+    - "Self-learning system as the primary frame"
+    - "Shapes/colors as the explanation of HOW it works"
+    - "Must tie to golf — not generic developmental science"
+
+  concept_sources:
+    primary: "Concept D — Self-Discovery System (self-teaching frame)"
+    secondary: "Concept B — Shape Sorter Principle (explanatory mechanism)"
+    constraint: "Golf-specific anchoring (user directive)"
+
+  approved_at: "2026-03-13T11:30:00Z"
+  total_concepts_presented: 6
+
+# ─── APPROVED CONCEPT — FULL DETAIL ─────────────────────────────────────
+
+concept_detail:
+  core_idea: |
+    The equipment is a self-learning system for golf. Each piece uses shapes,
+    colors, and physical positioning to teach one golf fundamental — alignment,
+    stance, setup, face angle — without any verbal instruction. The shape sorter
+    principle explains HOW: just as a shape sorter teaches geometry through its
+    design (circle goes in the circle hole, nobody teaches that), this equipment
+    teaches golf through its design (yellow ball matches white ball, nobody
+    coaches that).
+
+  explanation_architecture:
+    step_1: "Recognition — you've tried coaching, toddlers can't process words into movement"
+    step_2: "Insight — but they CAN learn from shapes and colors (shape sorter principle)"
+    step_3: "Application — we built a self-learning golf system that uses THAT channel"
+    step_4: "Proof — 'match the yellow ball to the white ball' — seven words, alignment taught"
+    step_5: "System — every piece works the same way, visual/tactile cue teaches one skill"
+    step_6: "Payoff — the equipment teaches, you just play. Golf buddy, not golf coach."
+
+  analogy:
+    primary: "A shape sorter for golf — the object teaches through its design"
+    supporting: "Nobody teaches a toddler a shape sorter. The shape sorter teaches the toddler."
+    validation: "Shape sorter analogy scored 8.90 in Root Cause Arena (Hybrid A)"
+
+  proof_map:
+    knockout: "MEC-13: 'Match the yellow ball to the white ball' — one-sentence instruction (score 10.00, KO potential 25.12)"
+    system_proofs:
+      - "MEC-01: Color matching teaches alignment (score 10.00)"
+      - "MEC-03: Walk-in frame teaches setup position (score 10.00)"
+      - "MEC-06: Skills Mat teaches stance with 8 visual guides (score 10.00)"
+      - "MEC-12: Walk-in eliminates parent repositioning (score 10.00)"
+    authority: "AUT-11: Piaget developmental psychology, preoperational stage ages 2-7 (score 8.42)"
+    competitive: "DAT-19: Zero competitors have visual-tactile mechanisms (score 9.24)"
+
+  soul_md_alignment:
+    voice_fit: "Grant explaining to another parent how the equipment works on its own"
+    energy: "Authentic excitement — 'dude, you don't even have to teach them'"
+    anti_voice_check:
+      - "NOT corporate: 'self-learning system' in Grant voice, not engineering voice"
+      - "NOT pushy: 'the equipment teaches' is hope-forward, not pressure"
+      - "NOT condescending: doesn't imply parent was doing it wrong"
+    hope_market: "Frames through what's NOW POSSIBLE (self-learning), not what was broken"
+
+  naming_direction:
+    must: "Tie to golf — the mechanism name must ground in golf, not generic learning"
+    should: "Evoke the self-teaching nature — the equipment IS the teacher"
+    could: "Reference shapes/colors as the learning method"
+    must_not:
+      - "Use engineering names (Focal Sphere, Walk-In Frame, etc.)"
+      - "Sound clinical/corporate (Visual-Tactile Learning System)"
+      - "Be generic (The Method, The System, The Technique)"
+      - "Exceed 4 words"
+
+# ─── GATE STATUS ─────────────────────────────────────────────────────────
+
+gate_status:
+  concept_checkpoint: "PASS"
+  concept_approved: true
+  naming_authorized: true
+  layer_1B_unblocked: true
+  next_step: "Layer 1B — Generate 15+ naming candidates for approved concept"

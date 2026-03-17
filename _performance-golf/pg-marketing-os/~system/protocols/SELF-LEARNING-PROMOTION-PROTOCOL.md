@@ -208,8 +208,129 @@ Until scoring is solved, the loop runs with human evaluation. This is slower (ca
 
 ---
 
+## Issue Logger — Structured Incident Capture
+
+Before learnings can be promoted, they must be captured. The Issue Logger is the intake mechanism that feeds the promotion pipeline.
+
+### When to Log
+
+Log an issue whenever:
+- A skill produces output rated < 5
+- A skill requires 21+ human edits
+- A system error occurs (wrong file loaded, broken reference, missing upstream)
+- A quality failure is caught by audit, Arena, or human review
+- The same mistake type appears to have occurred before (even if you're not sure)
+
+### Issue Entry Format
+
+Append to `~outputs/issue-log.md`:
+
+```markdown
+### ISSUE-[YYYY-MM-DD]-[sequential-number]
+
+- **Date:** [ISO 8601]
+- **Class:** [one of: factual-error | voice-drift | structural-regression | missing-input | scope-creep | specification-gap | context-loss | hallucination | threading-failure | other]
+- **Skill:** [skill ID where issue occurred]
+- **Project:** [project-code]
+- **Severity:** [critical | moderate | minor]
+- **Description:** [What went wrong — be specific]
+- **Root cause:** [Why it went wrong — best assessment]
+- **Pattern match:** [Does this match any previous issue? If yes, cite ISSUE-ID]
+- **Proposed prevention:** [What rule or change would prevent recurrence]
+- **Learned:** [Yes / No]
+- **Memorialized:** [Yes / No — if yes, cite location]
+- **Activated:** [Yes / No — if yes, cite code]
+```
+
+### Automatic Pattern Detection
+
+When logging a new issue, scan `~outputs/issue-log.md` for pattern matches:
+
+**Pattern signal:** Same `Class` appears 2+ times within the last 10 issues.
+
+When a pattern signal fires:
+1. Print: `PATTERN DETECTED: [class] has occurred [N] times in recent issues. See [ISSUE-IDs].`
+2. Draft a proposed rule in the format: "Before [action], always [check] to prevent [class]."
+3. Add the proposed rule to the issue entry under `Proposed prevention:`
+4. Flag the learning for promotion (advance to L2 in the learning log)
+
+This transforms the issue log from a historical record into an active pattern detector.
+
+---
+
+## Integration with QE-Style Bounded Trial
+
+When a proposed rule reaches L3 (Tested Fix), validate with a bounded trial:
+
+1. **Test on 3 recent examples** — not just 1. Apply the proposed fix to 3 different past inputs where the issue class occurred.
+2. **Evaluate all 3:**
+   - J1 (judgment-free): Did output quality maintain or improve in all 3 cases?
+   - J2 (judgment-required): Does human confirm improvement in all 3 cases?
+3. **Promote only if 3/3 pass.** If 2/3, the rule needs refinement. If 1/3 or 0/3, discard.
+
+This is stricter than a single-example test and prevents confirmation bias.
+
+---
+
+## Class-c Escalation Pipeline
+
+When the Issue Logger detects pattern signals, the escalation pipeline determines the response intensity:
+
+| Occurrences | Signal Level | Action |
+|-------------|-------------|--------|
+| **2x** same class in last 10 issues | Pattern Signal | Flag for attention. Draft proposed rule. Advance to L2. |
+| **3x** same class in last 10 issues | Hook Development | Propose a new validator hook or enhancement to an existing validator. The pattern has proven persistent enough to warrant structural enforcement. |
+| **5x** same class in last 10 issues | Mandatory Engineering Review | Human MUST review. This class is systemic. The issue log, all affected outputs, and proposed validators are presented for architectural decision. |
+
+**The escalation pipeline creates an explicit path from behavioral rule to structural enforcement.** A one-time issue gets a rule. A persistent issue gets a hook. A systemic issue gets human engineering.
+
+### Escalation Response Format
+
+When an escalation triggers at the 3x level:
+
+```markdown
+### ESCALATION: [class] — Hook Development Recommended
+
+**Pattern:** [class] has occurred [N] times in recent issues.
+**Affected issues:** [ISSUE-IDs]
+**Proposed hook/validator:**
+- **Type:** [new validator | enhancement to existing validator]
+- **Detection logic:** [what the hook would check for]
+- **Trigger condition:** [when it would fire]
+- **Expected prevention rate:** [estimate based on pattern analysis]
+
+**Status:** AWAITING HUMAN APPROVAL — do not implement without explicit authorization.
+```
+
+---
+
+## Learning Ledger Taxonomy
+
+Every issue in the Issue Logger tracks three columns beyond the base entry format, creating a complete lifecycle view:
+
+| Column | Question It Answers | Values |
+|--------|-------------------|--------|
+| **Learned** | Was the issue observed and understood? | Yes / No |
+| **Memorialized** | Was a rule, protocol addition, or ANTI-DEGRADATION entry written? | Yes (cite location) / No |
+| **Activated** | Was the rule built into structural enforcement (hook, validator, gate)? | Yes (cite code) / No |
+
+### Lifecycle Example
+
+```
+Issue: voice-drift in Skill 14 (Mechanism Narrative) — 3 occurrences
+
+Learned:     Yes — identified as failure to re-read Soul.md before generation
+Memorialized: Yes — added to 02-long-form-vsl/14-mechanism-narrative/ANTI-DEGRADATION.md
+Activated:    Yes — reminder_detector.py Detector 1 fires on synthesis-from-memory
+```
+
+Issues where Learned=Yes but Memorialized=No are knowledge gaps. Issues where Memorialized=Yes but Activated=No are enforcement gaps. The ledger makes both visible.
+
+---
+
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-07 | Initial creation — J1/J2 classification, L1-L6 progression, git branch promotion workflow, results tracking |
+| 1.1 | 2026-03-12 | Added Issue Logger with structured incident capture, automatic pattern detection, QE-style bounded trial (3-example validation), class-c escalation pipeline (2x/3x/5x), and learning ledger taxonomy (Learned/Memorialized/Activated) |

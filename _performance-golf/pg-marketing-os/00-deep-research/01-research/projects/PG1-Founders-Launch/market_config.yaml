@@ -1,0 +1,354 @@
+# market_config.yaml
+# Generated for: PG1 Pulse — Founders Club
+# Date: 2026-03-16
+# Market Mode: B (new product launch)
+
+project:
+  name: PG1-Founders-Launch
+  created: 2026-03-16
+  market_mode: B
+
+terminology:
+  customer:
+    primary: golfer
+    plural: golfers
+    adjective: golf
+  problem:
+    primary: inconsistent game despite effort
+    category: performance/skill improvement
+  product:
+    type: coaching system
+    solution: personalized game improvement system
+
+platforms:
+  tier_1:
+    - name: Reddit
+      type: forum
+      tool: apify
+      priority: critical
+      specific_sources:
+        - r/golf
+        - r/GolfSwing
+        - r/golfinstruction
+        - r/GolfTech
+    - name: GolfWRX
+      type: forum
+      tool: firecrawl
+      priority: critical
+      specific_sources:
+        - golfwrx.com/forums/forum/50-instruction-academy/
+        - golfwrx.com/forums/forum/6-tour-talk/
+        - golfwrx.com/forums/forum/258-apps-and-technology/
+    - name: YouTube
+      type: video
+      tool: apify
+      priority: critical
+      specific_sources:
+        - Golf instruction channels (Rick Shiels, Me and My Golf, Athletic Motion Golf, Milo Lines, Mike Malaska)
+        - Golf app review videos
+        - Golf improvement transformation videos
+    - name: App Store Reviews
+      type: review
+      tool: apify
+      priority: critical
+      specific_sources:
+        - Skillest app reviews
+        - Arccos Caddie app reviews
+        - V1 Golf app reviews
+        - Golfshot app reviews
+        - Shot Scope app reviews
+        - 18Birdies app reviews
+        - SwingU app reviews
+
+  tier_2:
+    - name: Google Play Reviews
+      type: review
+      tool: apify
+      priority: high
+      specific_sources:
+        - Same golf app set as App Store
+    - name: Golf forums (misc)
+      type: forum
+      tool: firecrawl
+      priority: high
+      specific_sources:
+        - thesandtrap.com/forums
+        - golfmagic.com/forum
+    - name: Facebook Groups
+      type: social
+      tool: apify
+      priority: high
+      specific_sources:
+        - Golf improvement groups
+        - Golf technology groups
+    - name: Twitter/X
+      type: social
+      tool: apify
+      priority: high
+      specific_sources:
+        - Golf instruction accounts
+        - Golf tech discussions
+
+  tier_3:
+    - name: Quora
+      type: qa
+      tool: firecrawl
+      priority: moderate
+      specific_sources:
+        - Golf improvement topics
+        - Golf technology topics
+    - name: Golf app comparison/review sites
+      type: review
+      tool: firecrawl
+      priority: moderate
+      specific_sources:
+        - mygolfspy.com
+        - golfdigest.com (app reviews)
+        - golf.com (tech reviews)
+    - name: Podcast transcripts
+      type: audio
+      tool: perplexity
+      priority: moderate
+      specific_sources:
+        - Golf improvement podcasts
+        - Golf technology podcasts
+
+  blocked:
+    - name: Reddit
+      reason: Firecrawl blocked by Reddit
+      alternative: Use Apify Reddit scraper actor
+
+aspects:
+  - name: DIAGNOSIS
+    definition: Understanding what's wrong with the swing — root cause identification, swing analysis, fault detection
+    example_terms:
+      - root cause
+      - swing fault
+      - swing flaw
+      - diagnosis
+      - what's wrong
+      - root issue
+      - the one thing
+  - name: INSTRUCTION
+    definition: The quality, delivery, and personalization of coaching and lessons
+    example_terms:
+      - lesson
+      - instructor
+      - coach
+      - personalized
+      - one-size-fits-all
+      - generic tips
+      - YouTube tips
+      - conflicting advice
+  - name: TECHNOLOGY
+    definition: AI analysis, app features, launch monitors, tracking systems
+    example_terms:
+      - AI
+      - app
+      - swing analysis
+      - launch monitor
+      - TrackMan
+      - technology
+      - algorithm
+      - data
+  - name: PROGRESS
+    definition: Measurable improvement, handicap change, consistency, results over time
+    example_terms:
+      - handicap
+      - scores
+      - improvement
+      - consistency
+      - plateau
+      - stuck
+      - breakthrough
+      - progress
+  - name: EXPERIENCE
+    definition: Enjoyment, frustration, confidence, relationship with the game
+    example_terms:
+      - enjoy
+      - frustrating
+      - confidence
+      - love the game
+      - hate golf
+      - give up
+      - fun again
+
+competitors:
+  known:
+    - name: Skillest
+      type: direct
+      positioning: Online golf coaching marketplace — connect with coaches via video
+    - name: Arccos Caddie
+      type: indirect
+      positioning: GPS/stat tracking system with AI-powered insights
+    - name: V1 Golf
+      type: direct
+      positioning: Video swing analysis app with instructor markup
+    - name: Golfshot
+      type: indirect
+      positioning: GPS rangefinder and stat tracking
+    - name: Shot Scope
+      type: indirect
+      positioning: Wearable performance tracking with GPS
+    - name: 18Birdies
+      type: indirect
+      positioning: GPS, scoring, and social golf app
+    - name: SwingU
+      type: indirect
+      positioning: GPS, coaching tips, and video lessons
+    - name: Hackmotion
+      type: indirect
+      positioning: Wrist sensor for swing mechanics
+    - name: Gears Golf
+      type: indirect
+      positioning: 3D motion capture for club fitting and instruction
+    - name: Sportsbox AI
+      type: direct
+      positioning: 3D AI swing analysis from phone video
+  terminology:
+    comparison_phrases:
+      - vs
+      - better than
+      - compared to
+      - alternative to
+      - worth it
+      - switched from
+    category_terms:
+      - golf app
+      - golf coaching app
+      - swing analysis app
+      - golf improvement app
+      - golf AI
+      - golf technology
+
+emotional_context:
+  fears:
+    - Wasting more money on another golf solution that doesn't work
+    - Never actually improving despite years of effort
+    - Being embarrassed on the course in front of playing partners
+    - Getting worse instead of better after changing swing
+    - Being too old to improve or too far gone to fix
+    - Investing in technology they won't understand or use
+  frustrations:
+    - Tried dozens of YouTube tips that contradict each other
+    - Took lessons but improvements didn't stick
+    - Can hit it great on the range but not on the course
+    - Information overload — too many things to work on
+    - Don't know what to practice or what order to work on things
+    - Spent thousands on equipment, training aids, and lessons with no lasting results
+    - Two steps forward, three steps back — never consistent
+    - Every instructor says something different
+  hopes:
+    - One clear path to improvement instead of guessing
+    - Someone (or something) that truly understands MY specific swing issues
+    - Breaking through the plateau and seeing real score improvement
+    - Enjoying golf again instead of being frustrated every round
+    - Confidence on the first tee — knowing what to do with the club
+    - Practice that actually translates to the course
+    - A system that adapts as they improve
+  identity:
+    current: Frustrated golfer who works hard but can't get consistent — feels stuck despite investing time and money
+    aspirational: Golfer with a clear plan, seeing steady improvement, confident and enjoying every round
+    anti_identity: The golfer who has given up on getting better and just accepts mediocrity — or the sucker who keeps buying the latest gimmick
+
+query_patterns:
+  pain_queries:
+    - "golf improvement frustrated"
+    - "can't improve at golf"
+    - "golfers stuck at same handicap"
+    - "tired of inconsistent golf"
+    - "why can't I get better at golf"
+    - "golf information overload"
+    - "too many golf tips confusing"
+    - "golf lessons didn't help"
+    - "wasted money on golf lessons"
+    - "golf swing getting worse"
+  hope_queries:
+    - "how to actually improve at golf"
+    - "best way to lower handicap"
+    - "golfer breakthrough story"
+    - "finally improved my golf game"
+    - "what actually works golf improvement"
+    - "golf app that actually helps"
+    - "personalized golf coaching"
+    - "AI golf swing analysis results"
+  root_cause_queries:
+    - "why golfers don't improve"
+    - "root cause swing problems"
+    - "one thing ruining golf swing"
+    - "why golf lessons don't work"
+    - "why YouTube golf tips don't help"
+    - "golf improvement plateau why"
+  solution_queries:
+    - "how I fixed my golf swing"
+    - "what worked for golf improvement"
+    - "golf coaching app that works"
+    - "best golf improvement method"
+    - "golf app worth paying for"
+    - "online golf coaching experience"
+  competitor_queries:
+    - "Skillest review golf"
+    - "Arccos Caddie worth it"
+    - "V1 Golf app review"
+    - "best golf app 2025 2026"
+    - "Sportsbox AI review"
+    - "golf app comparison"
+    - "is Skillest worth it"
+  emotional_queries:
+    - "golf so frustrating want to quit"
+    - "love hate relationship golf"
+    - "golf confidence destroyed"
+    - "finally enjoying golf again"
+    - "golf embarrassing"
+    - "golf breakthrough moment"
+
+youtube:
+  search_terms:
+    direct:
+      - golf swing tips
+      - golf lesson tutorial
+      - golf for beginners
+      - how to improve golf swing
+      - golf coaching app review
+    problem:
+      - can't stop slicing golf
+      - inconsistent golf swing
+      - why your golf game isn't improving
+      - golf information overload
+      - golf lessons don't work
+    symptom:
+      - golf slice fix
+      - golf topped shots
+      - golf inconsistency
+      - golf chunking irons
+      - golf yips
+    emotional:
+      - golf so frustrating
+      - finally broke 80 golf
+      - golf transformation
+      - quitting golf
+      - love golf again
+    solution_seeking:
+      - how to lower handicap fast
+      - best golf improvement plan
+      - golf swing analysis app
+      - AI golf coach
+      - personalized golf instruction
+  minimum_videos: 100
+  transcripts_required: 30
+  comments_per_video: 500
+
+# Cross-industry research (per brief Section 6, Exploration Emphasis 3)
+cross_industry:
+  insider_launch_tactics:
+    platforms:
+      - Reddit (r/marketing, r/entrepreneur, r/startups)
+      - Marketing case study sites
+      - Product launch retrospectives
+    query_patterns:
+      - "leaked content marketing tactic"
+      - "insider access product launch"
+      - "behind the scenes marketing campaign"
+      - "Apple keynote marketing psychology"
+      - "founders early access launch strategy"
+      - "exclusive access product launch conversion"

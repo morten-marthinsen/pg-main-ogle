@@ -1,0 +1,158 @@
+# ─── LAYER 1 CHECKPOINT ──────────────────────────────────────────────────
+# Project: Lil' Legends (LIL)
+# Skill: 04-mechanism
+# Status: COMPLETE (Layer 1A concept + Layer 1B naming both approved)
+# ─────────────────────────────────────────────────────────────────────────
+
+checkpoint: LAYER_1_COMPLETE
+project: "Lil' Legends (LIL)"
+skill: "04-mechanism"
+timestamp: "2026-03-13T12:00:00Z"
+status: COMPLETE
+
+# ─── LAYER 1A: CONCEPT DISCOVERY ────────────────────────────────────────
+
+layer_1A:
+  status: COMPLETE
+  concepts_presented: 6
+  concepts:
+    - "A: Learning Modality Shift (scientific angle)"
+    - "B: Shape Sorter Principle (analogy-as-mechanism)"
+    - "C: Design-Based Teaching (built-in lessons)"
+    - "D: Self-Discovery System (self-teaching frame)"
+    - "E: Developmental Stage-Matched Equipment (Piaget science)"
+    - "F: Coach-Free Learning System (coaching replacement)"
+  approved_concept: "B+D Hybrid — Self-learning golf system using shapes/colors"
+  user_direction:
+    - "Self-learning system as the primary frame"
+    - "Shapes/colors as the explanation of HOW it works"
+    - "Must tie to golf — not generic developmental science"
+  checkpoint_file: "CONCEPT_APPROVED.yaml"
+
+# ─── LAYER 1B: NAMING ───────────────────────────────────────────────────
+
+layer_1B:
+  status: COMPLETE
+  naming_candidates_generated: 23
+  pattern_diversity:
+    experiential_action: 5
+    metaphor_concept: 5
+    branded_compound: 5
+    principle_descriptive: 3
+    quote_first: 5
+  top_5_anchored:
+    - {name: "See & Swing", composite: 7.9, pattern: "experiential/action"}
+    - {name: "Just Play", composite: 8.0, pattern: "quote-first"}
+    - {name: "Match Play", composite: 7.6, pattern: "metaphor/transsubstantiated"}
+    - {name: "First Swing", composite: 7.7, pattern: "quote-first"}
+    - {name: "Grip & Go", composite: 7.5, pattern: "experiential/action"}
+
+  selected_name: "See & Swing System"
+  selection_rationale: |
+    User selected See & Swing as the mechanism name. Visual learning (see) +
+    golf action (swing) in two words. Rhythmic, memorable, passes all 5 naming
+    tests. Matches PG's strongest TIER1 naming pattern (action pair). Grant
+    would say "the See & Swing system" naturally at the range.
+
+# ─── USER DECISIONS (NAMING SESSION) ────────────────────────────────────
+
+user_naming_decisions:
+  mechanism_name: "See & Swing System"
+  feature_names_parked_for_ecomm:
+    - {name: "Shape Play", candidate_for: "TBD feature"}
+    - {name: "First Swing [something]", candidate_for: "TBD feature"}
+    - {name: "Grip & Go / Walk Grip & Swing", candidate_for: "Walk-in feature"}
+  explanation_directive: |
+    Must explain See & Swing in SIMPLE, parent-friendly terms. Prove it's
+    developmentally superior to watching/copying, verbal instruction, and formal
+    lessons — but NOT as a neurological argument. Frame: "The fastest way for
+    kids to intuitively tap into that malleable child brain and learn the game
+    in a fun way." Brand connection: Lil' Legends = creating little legends,
+    fun way to learn golf, parents enjoy the game with their kids for decades.
+  pipeline_note: "After mechanism skill → e-comm (not immediately, but next phase)"
+
+# ─── GATE 1B ────────────────────────────────────────────────────────────
+
+gate_1B:
+  status: PASS
+  naming_candidates: 23
+  pattern_types: 5
+  minimum_met: true
+  name_selected: true
+  ready_for_layer_2: true
+
+# ─── MICROSKILLS COMPLETED ──────────────────────────────────────────────
+
+microskills_completed:
+  - id: "1.0"
+    name: "Emphasis Strategy Selector"
+    output: "layer-1-outputs/1.0-emphasis-strategy.md"
+    status: COMPLETE
+
+  - id: "1.1"
+    name: "Mechanism Type Selector"
+    output: "layer-1-outputs/1.1-mechanism-type-selection.md"
+    status: COMPLETE
+
+  - id: "1.3-1.5"
+    name: "Concept Discovery (Explanation Architect + Analogy Developer + Proof Mapper)"
+    output: "layer-1-outputs/1.3-1.5-concept-discovery.md"
+    status: COMPLETE
+
+  - id: "1.2"
+    name: "Naming Generator"
+    output: "layer-1-outputs/1.2-naming-candidates.md"
+    status: COMPLETE
+
+# ─── ANTI-DEGRADATION ───────────────────────────────────────────────────
+
+anti_degradation:
+  file_read: "MECHANISM-ANTI-DEGRADATION.md"
+  version: "3.0"
+  concept_checkpoint_gate: "PASS (CONCEPT_APPROVED.yaml written)"
+  naming_gate: "PASS (23 candidates, 5 patterns, name selected)"
+  soul_md_loaded: true
+  simplicity_gate: "PASS (See & Swing passes 12-year-old test)"
+
+# ─── VERIFICATION ────────────────────────────────────────────────────────
+
+verification:
+  layer_1A_concept_discovery:
+    concepts_generated_minimum_5: true
+    each_concept_has_plain_description: true
+    each_concept_has_root_cause_connection: true
+    each_concept_has_type_and_emphasis: true
+    each_concept_has_proof_strength: true
+    each_concept_has_analogy: true
+    each_concept_has_soul_md_fit: true
+    no_names_in_concepts: true
+    human_checkpoint_completed: true
+    concept_approved_yaml_written: true
+  layer_1B_naming:
+    naming_candidates_minimum_15: true
+    pattern_diversity_no_single_pattern_over_50pct: true
+    quote_first_names_minimum_5: true
+    each_candidate_has_pattern: true
+    each_candidate_has_embedded_benefits: true
+    each_candidate_has_mouth_feel: true
+    anchoring_scores_calculated: true
+    top_5_identified: true
+    name_selected_by_user: true
+  cross_layer:
+    emphasis_strategy_defined: true
+    mechanism_type_selected: true
+    soul_md_consistency_maintained: true
+    hope_market_framing_maintained: true
+    engineering_names_avoided: true
+    golf_anchoring_present: true
+
+completeness:
+  microskills_planned: 6
+  microskills_executed: 6
+  output_files_total: 4
+  all_output_files_present: true
+  checkpoint_files: ["CONCEPT_APPROVED.yaml", "LAYER_1_COMPLETE.yaml"]
+
+# ─── NEXT STEP ───────────────────────────────────────────────────────────
+
+next_step: "Layer 2 — 13-Dimension Scorecard Optimization for See & Swing System"

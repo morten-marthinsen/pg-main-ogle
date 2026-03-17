@@ -1,0 +1,115 @@
+layer: "3"
+skill: "06-big-idea"
+project: "Lil' Legends (LIL)"
+status: COMPLETE
+timestamp: "2026-03-14T17:00:00Z"
+
+anti_degradation:
+  file_read: "BIG-IDEA-ANTI-DEGRADATION.md"
+  version: "2.0"
+
+verification:
+  volume_validator:
+    status: PASS
+    candidates: 9
+    headlines: 90
+    leads: 9
+    proof_plans: 3
+    arena_rounds: 3
+    hybrids: 2
+    verified: true
+
+  quantification_validator:
+    status: PASS
+    big_idea_word_count: 267
+    headline_word_count: 9
+    fssit_anchors: 2
+    schema_distance: "6-7"
+    nr_potential: 9
+    proof_ceiling_compliant: true
+    verified: true
+
+  defensibility_validator:
+    status: PASS
+    score: 8.2
+    minimum_required: 7.0
+    weakest_claim: "Grant's father never coached him (7.0 — speculative, needs verification)"
+    strongest_claim: "Toddler's brain can't turn words into a golf swing (9.0 — settled science)"
+    verified: true
+
+  actionability_validator:
+    status: PASS
+    ecomm_hero_actionable: true
+    ecomm_mechanism_actionable: true
+    ecomm_close_actionable: true
+    organic_video_actionable: true
+    email_actionable: true
+    social_actionable: true
+    verified: true
+
+  anti_slop_validator:
+    status: PASS
+    total_violations: 0
+    imagine_openers: 0
+    you_see_openers: 0
+    generic_mechanisms: 0
+    hype_words: 0
+    ai_tells: 0
+    fear_framing: 0
+    guilt_framing: 0
+    competitive_attack: 0
+    urgency_mechanics: 0
+    engineering_names: 0
+    soul_md_anti_voice: 0
+    verified: true
+
+  validation_gate:
+    status: PASS
+    all_gates_passed: true
+    verified: true
+
+  schema_distance_calculator:
+    cni: 8.0
+    bci: 7.0
+    lni: 6.0
+    igc: 1.0
+    composite_sds: 7.15
+    within_optimal_range: true  # 4-8 range
+    semi_formal_reasoning_documented: true
+    verified: true
+
+  anchor_distance_ratio:
+    anchor_score: 8.5
+    distance_score: 7.15
+    ratio: 1.19
+    within_optimal_range: true  # 0.8-1.5
+    verified: true
+
+  expression_anchoring_score:
+    average_score: 9.08
+    all_anchors_above_8: true
+    all_anchors_connected: true
+    verified: true
+
+big_idea_validated:
+  headline: "You Were Never Supposed to Teach Your Toddler Golf."
+  type: "DISCOVERY + IDENTITY"
+  fssit_anchor: "FSSIT-2 + FSSIT-5"
+  schema_distance: 7.15
+  nr_score: 9
+  defensibility: 8.2
+  arena_score: 8.50
+  arena_source: "Hybrid-A (Architect body + Halbert headline/hook)"
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+  semi_formal_reasoning_for_sd: true
+
+microskill_outputs:
+  - file: "layer-3-outputs/3.0-validation-report.md"
+    status: COMPLETE
+    description: "Consolidated validation report — all 9 microskills (3.1-3.9)"
+
+next_step: "Layer 4 (Output Packaging) — brief compiler, downstream mapper, handoff packager"

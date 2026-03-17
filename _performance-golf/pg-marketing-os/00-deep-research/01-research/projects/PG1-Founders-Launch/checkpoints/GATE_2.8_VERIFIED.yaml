@@ -1,0 +1,49 @@
+gate: 2.8
+status: PASS
+timestamp: "2026-03-16T16:00:00Z"
+path: A_RSF_EXECUTED
+rsf_status:
+  expectation_schema_generated: true
+  latent_resonance_generated: true
+  rsf_skip_approved: false
+artifacts_validated:
+  - file: "layer-2-rsf-outputs/expectation_schema.md"
+    status: COMPLETE
+    validation:
+      total_patterns_mapped: 24
+      saturated_claims: 7
+      exhausted_metaphors: 5
+      default_emotional_appeals: 5
+      whitespace_zones: 5
+      schema_violation_opportunities: 7
+      schema_summary_present: true
+      schema_summary_word_count: 186
+    minimums_met:
+      total_patterns_gte_15: true
+      saturated_claims_gte_5: true
+      exhausted_metaphors_gte_3: true
+      whitespace_zones_gte_3: true
+      schema_violation_opportunities_gte_5: true
+      schema_summary_present: true
+  - file: "layer-2-rsf-outputs/latent_resonance_field.md"
+    status: COMPLETE
+    validation:
+      expressed_vs_latent_gaps: 5
+      unnamed_emotions: 3
+      identity_tensions: 3
+      fssit_candidates: 8
+      fssit_candidates_with_recognition_gte_6: 8
+      resonance_summary_present: true
+      resonance_summary_word_count: 168
+      emotional_momentum_entries: 6
+      cultural_timing_populated: true
+    minimums_met:
+      gaps_gte_3: true
+      unnamed_emotions_gte_2: true
+      identity_tensions_gte_2: true
+      fssit_candidates_gte_5: true
+      all_fssit_recognition_gte_6: true
+      resonance_summary_present: true
+total_artifacts: 2
+overall_confidence: "94%"
+next_step: "Layer 3 — Opportunity Scoring, Evidence Compilation, Objection Handling, Strategic Planning, Opportunity Map, Final Handoff"

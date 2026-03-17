@@ -1,0 +1,21 @@
+layer: 1
+status: PASS
+completed_at: "2026-03-16T15:00:00Z"
+gate_checks:
+  page_type_classified: true
+  page_type: "pdp"
+  page_type_confidence: 0.95
+  section_map_produced: true
+  active_sections: 14
+  excluded_sections: 5
+  minimum_8_active: true
+  hero_active: true
+  cta_active: true
+  proof_section_active: true
+  feature_section_active: true
+  crossover_mappings: 9
+  minimum_3_crossovers: true
+microskills_completed:
+  - "1.1-page-type-classifier"
+  - "1.2-section-mapper"
+  - "1.3-crossover-identifier"

@@ -1,0 +1,286 @@
+{
+  "feature_package_version": "1.0",
+  "generated_at": "2026-03-16T18:30:00Z",
+  "skill_id": "EC-01-feature-naming",
+  "product_name": "PG1 Pulse — Founders Club",
+  "mechanism_name": "SwingScan Diagnosis",
+  "naming_source": "Campaign brief + mechanism package + offer package — names derived from product capabilities",
+  "micro_script_framework": "Bill Schley 'The Micro-Script Rules' — DSI-first, caveman-benefit format",
+  "total_features": 10,
+
+  "dsi": {
+    "statement": "The first system in golf that diagnoses your ONE root swing flaw before prescribing a single fix.",
+    "validation": {
+      "superlative": "The FIRST (and ONLY — zero competitors claim root flaw diagnosis)",
+      "important": "Identifies root swing flaw — the single cause behind every compensation",
+      "believable": "SwingScan AI trained on 2M+ swings, 96% accuracy, 77+ flaw patterns",
+      "measurable": "96% accuracy is a stated and verifiable product specification",
+      "ownable": "Zero of 9 competitors analyzed claim root flaw diagnosis (MECH-01, composite 9.00)"
+    }
+  },
+
+  "product_level_micro_scripts": {
+    "primary_tagline": "You've never been diagnosed.",
+    "supporting_theme": "One flaw. One plan. One clear path.",
+    "cta_frame": "Get my diagnosis.",
+    "emotional_destination": "Love your game again."
+  },
+
+  "feature_hierarchy": {
+    "hero": [
+      {
+        "feature_id": "F-001",
+        "name": "SwingScan Diagnosis",
+        "tier": "hero",
+        "naming_pattern": "branded_mechanism",
+        "capability": "AI-powered root flaw identification trained on 2M+ swings across 77+ documented flaw patterns, identifying the golfer's ONE root swing flaw with 96% accuracy",
+        "what_it_does": "Analyzes your swing video and identifies the single root flaw causing all your compensations — the step golf has always skipped",
+        "why_it_matters": "For the first time, you know exactly what's been holding your game back. Not 12 things to work on — ONE root flaw. The diagnosis that changes everything.",
+        "benefit_tagline": "The test golf never had.",
+        "micro_scripts": [
+          "The test golf never had.",
+          "Find the one flaw causing everything else."
+        ],
+        "naming_rationale": "Pre-named from mechanism package. 'SwingScan' is branded, ownable IP already in product architecture. 'Diagnosis' is the medical-frame outcome word the campaign thesis demands. Name occupies maximum whitespace (WZ-05) — zero competitors position as diagnostic.",
+        "proof_elements": [
+          "2M+ swings in training data",
+          "96% diagnostic accuracy",
+          "77+ documented flaw patterns",
+          "Zero competitors claim root flaw diagnosis (MECH-01)"
+        ],
+        "competitive_void": "Total. Zero of 9 competitors analyzed claim to diagnose a golfer's single root swing flaw before prescribing treatment.",
+        "source": "mechanism-package.yaml — winner.name"
+      }
+    ],
+    "supporting": [
+      {
+        "feature_id": "F-002",
+        "name": "Personalized Correction Plan",
+        "tier": "supporting",
+        "naming_pattern": "benefit_forward_modifier",
+        "capability": "A sequenced improvement plan built around the golfer's specific SwingScan diagnosis — targeted corrections matched to their root flaw type, adapting as the flaw resolves",
+        "what_it_does": "Builds a step-by-step practice plan specific to YOUR diagnosis — not generic drills, not one-size-fits-all, but corrections sequenced for your exact root flaw",
+        "why_it_matters": "Every drill you do has a reason. Every session builds on the last. No more random practice — directed effort built on your diagnosis.",
+        "benefit_tagline": "Your plan, built from your diagnosis.",
+        "micro_scripts": [
+          "Your plan, built from your diagnosis."
+        ],
+        "naming_rationale": "'Personalized' is normally a stale word (SC-02, staleness 8), but 'Correction Plan' adds specificity — this is not a 'personalized experience,' it is a sequenced correction protocol. The word 'correction' signals directed action, not passive content delivery.",
+        "source": "campaign-brief.md — value stack item 2"
+      },
+      {
+        "feature_id": "F-003",
+        "name": "Matched PGA Coach",
+        "tier": "supporting",
+        "naming_pattern": "benefit_forward_modifier",
+        "capability": "Access to one of 6 elite PGA coaches matched to the golfer's specific flaw type via Coach Chat — not a marketplace gamble, a curated match based on diagnosis",
+        "what_it_does": "Assigns you a PGA coach who specializes in YOUR specific root flaw type. Direct communication, swing reviews, and guided progression through Coach Chat.",
+        "why_it_matters": "No more coaching roulette. Your coach was chosen because they are the best person in the world to fix YOUR specific flaw.",
+        "benefit_tagline": "The right coach for your flaw.",
+        "micro_scripts": [
+          "The right coach for your flaw."
+        ],
+        "naming_rationale": "'Matched' does the heavy lifting — communicates curation and specificity. 'PGA Coach' borrows credibility from the PGA credential. Together they signal: not random, not a marketplace, not a chatbot — a real coach matched to your diagnosis.",
+        "source": "campaign-brief.md — value stack item 3"
+      },
+      {
+        "feature_id": "F-004",
+        "name": "Adaptive Intelligence",
+        "tier": "supporting",
+        "naming_pattern": "benefit_forward_modifier",
+        "capability": "System tracks progress by diagnosis (not just scores), identifies when compensations dissolve, adjusts the correction plan based on practice frequency, location, and goals",
+        "what_it_does": "Gets smarter the more you use it. Tracks your flaw resolution, spots when compensations dissolve, and adjusts your plan in real time. Netflix-level personalization for golf improvement.",
+        "why_it_matters": "Your plan evolves as you do. The system doesn't just prescribe and forget — it watches, learns, and adapts.",
+        "benefit_tagline": "It learns as you improve.",
+        "micro_scripts": [
+          "It learns as you improve."
+        ],
+        "naming_rationale": "'Adaptive' communicates the learning/evolving behavior. 'Intelligence' signals the AI capability without using the stale 'AI-powered' framing (SC-01, staleness 9). The name describes what the system DOES (adapts) rather than what it IS (AI).",
+        "source": "campaign-brief.md — value stack item 4"
+      },
+      {
+        "feature_id": "F-005",
+        "name": "77-Flaw Pattern Library",
+        "tier": "supporting",
+        "naming_pattern": "quantity_component",
+        "capability": "Comprehensive taxonomy of 77+ documented root swing flaw patterns — the diagnostic reference database SwingScan AI uses to identify the golfer's specific flaw",
+        "what_it_does": "Contains every documented root swing flaw in golf. SwingScan matches your swing against all 77+ patterns to identify the ONE flaw causing your compensations.",
+        "why_it_matters": "Your flaw is already catalogued. SwingScan isn't guessing — it's pattern-matching against the most comprehensive flaw database ever assembled for golf.",
+        "benefit_tagline": "Every flaw, already mapped.",
+        "micro_scripts": [
+          "Every flaw, already mapped."
+        ],
+        "naming_rationale": "'77' is specific and concrete — communicates exhaustive research without using vague words like 'comprehensive.' 'Flaw Pattern Library' describes the collection in diagnostic terms. The number itself is the proof point.",
+        "source": "mechanism-package.yaml — 77+ flaw patterns (Brixton confirmed 77 is correct number)"
+      }
+    ],
+    "technical": [
+      {
+        "feature_id": "F-006",
+        "name": "2M+ Swing Training Database",
+        "tier": "technical",
+        "naming_pattern": "quantity_component",
+        "capability": "AI training dataset of 2,000,000+ swing samples used to train SwingScan's pattern recognition",
+        "what_it_does": "SwingScan learned to see your flaw by studying over 2 million swings. That is more swings than any instructor could watch in a hundred lifetimes.",
+        "why_it_matters": "The AI's diagnostic precision comes from scale no human can match. 2M+ swings means your flaw pattern has been seen, studied, and catalogued before you ever upload your video.",
+        "benefit_tagline": "Trained on two million swings.",
+        "micro_scripts": [
+          "Trained on two million swings."
+        ],
+        "naming_rationale": "'2M+' is the proof point — specific, large, concrete. 'Swing Training Database' describes the asset without technical jargon. The scale itself communicates credibility.",
+        "source": "mechanism-package.yaml — 2M+ swings in AI training data"
+      },
+      {
+        "feature_id": "F-007",
+        "name": "96% Diagnostic Accuracy",
+        "tier": "technical",
+        "naming_pattern": "quantity_component",
+        "capability": "SwingScan AI identifies swing flaws with 96% accuracy — verified product specification",
+        "what_it_does": "When SwingScan says it found your root flaw, it is right 96 times out of 100.",
+        "why_it_matters": "This is not a guess. Not an estimate. 96% accuracy means you can trust the diagnosis — and build your entire improvement plan on it with confidence.",
+        "benefit_tagline": "96% accurate. Not a guess.",
+        "micro_scripts": [
+          "96% accurate. Not a guess."
+        ],
+        "naming_rationale": "'96%' is specific and concrete. 'Diagnostic Accuracy' uses the medical frame. Together they communicate: precision + trustworthiness. The number does more selling than any adjective.",
+        "source": "mechanism-package.yaml — 96% accuracy"
+      },
+      {
+        "feature_id": "F-008",
+        "name": "Founders Pricing Lock",
+        "tier": "technical",
+        "naming_pattern": "benefit_forward_modifier",
+        "capability": "$199/year or $299 lifetime — Founders Club pricing permanently locked for first 1,000 members. Post-Founders pricing will be significantly higher.",
+        "what_it_does": "Locks your price permanently at the lowest this system will ever be offered. Whether you choose annual ($199/yr) or lifetime ($299 once), your rate never increases.",
+        "why_it_matters": "The search for the right tool ends here — and the price you pay today is the price you pay forever. No surprise increases. No premium tiers you can't access.",
+        "benefit_tagline": "Your price. Locked forever.",
+        "micro_scripts": [
+          "Your price. Locked forever."
+        ],
+        "naming_rationale": "'Founders' signals exclusivity and early access. 'Pricing Lock' communicates the permanent rate guarantee. Together they create identity (Founder) + security (locked). Not 'limited time offer' — permanent structural advantage.",
+        "source": "offer-package.yaml — pricing tiers"
+      },
+      {
+        "feature_id": "F-009",
+        "name": "The Root Flaw Report",
+        "tier": "technical",
+        "naming_pattern": "branded_mechanism",
+        "capability": "Detailed written analysis of the golfer's specific root swing flaw — what it is, why it developed, how it creates compensations, and the correction path. Generated per-user from SwingScan diagnosis.",
+        "what_it_does": "Translates your SwingScan diagnosis into a plain-language written report you can reference anytime. Your flaw explained — not just identified.",
+        "why_it_matters": "You do not just get a label. You get a full explanation of YOUR specific root flaw, why it developed, and how it cascades through your swing. Understanding fuels commitment.",
+        "benefit_tagline": "Your flaw, explained.",
+        "micro_scripts": [
+          "Your flaw, explained."
+        ],
+        "naming_rationale": "'Root Flaw Report' uses the campaign's core language (root flaw) and the medical frame (report, as in diagnostic report). The definite article 'The' signals a specific, tangible deliverable — not a feature description.",
+        "source": "offer-package.yaml — bonus 1"
+      },
+      {
+        "feature_id": "F-010",
+        "name": "The Flaw Chain Map",
+        "tier": "technical",
+        "naming_pattern": "branded_mechanism",
+        "capability": "Visual breakdown showing how the golfer's ONE root flaw cascades into 3-5 visible compensations. Printable reference showing which symptoms instructors have been treating.",
+        "what_it_does": "Shows you the chain — how your root flaw creates the 3-5 compensations your instructors have been treating as separate problems. See the connections yourself.",
+        "why_it_matters": "The moment you see how one flaw creates everything else, the entire 'I need to work on 12 things' belief collapses. One flaw. One fix. The rest dissolves.",
+        "benefit_tagline": "See the chain. Break it at the root.",
+        "micro_scripts": [
+          "See the chain. Break it at the root."
+        ],
+        "naming_rationale": "'Flaw Chain' makes the cascade concept concrete and visual. 'Map' signals a visual deliverable — something you can look at and understand immediately. Together they communicate: your problem has a visible structure, and this shows it to you.",
+        "source": "offer-package.yaml — bonus 2"
+      }
+    ]
+  },
+
+  "naming_validation": {
+    "generic_names_detected": 0,
+    "standalone_test_failures": 0,
+    "all_names_caveman_benefit": true,
+    "naming_patterns_used": [
+      "branded_mechanism (F-001, F-009, F-010)",
+      "benefit_forward_modifier (F-002, F-003, F-004, F-008)",
+      "quantity_component (F-005, F-006, F-007)"
+    ],
+    "pattern_diversity_check": "PASS — 3 different patterns across 10 features",
+    "generic_kill_list_applied": true,
+    "standalone_test_results": {
+      "F-001_SwingScan_Diagnosis": "PASS — communicates AI diagnostic tool for golf swing",
+      "F-002_Personalized_Correction_Plan": "PASS — communicates customized fix roadmap",
+      "F-003_Matched_PGA_Coach": "PASS — communicates curated coach assignment",
+      "F-004_Adaptive_Intelligence": "PASS — communicates learning/evolving system",
+      "F-005_77_Flaw_Pattern_Library": "PASS — communicates specific flaw catalogue scope",
+      "F-006_2M_Swing_Training_Database": "PASS — communicates AI training scale",
+      "F-007_96pct_Diagnostic_Accuracy": "PASS — communicates precision level",
+      "F-008_Founders_Pricing_Lock": "PASS — communicates permanent price guarantee",
+      "F-009_Root_Flaw_Report": "PASS — communicates diagnostic document",
+      "F-010_Flaw_Chain_Map": "PASS — communicates cascade visualization"
+    }
+  },
+
+  "feature_story_architecture": {
+    "page_flow": [
+      "SwingScan Diagnosis (hero — the diagnostic system)",
+      "Personalized Correction Plan (supporting — what happens after diagnosis)",
+      "Matched PGA Coach (supporting — human guidance layer)",
+      "Adaptive Intelligence (supporting — system evolution)",
+      "77-Flaw Pattern Library (supporting — diagnostic scope)",
+      "2M+ Swing Training Database (technical — AI training proof)",
+      "96% Diagnostic Accuracy (technical — precision proof)",
+      "Founders Pricing Lock (technical — access/pricing)",
+      "The Root Flaw Report (technical/bonus — diagnostic deliverable)",
+      "The Flaw Chain Map (technical/bonus — cascade visualization)"
+    ],
+    "narrative_logic": "Diagnosis (what) > Plan (then what) > Coach (with who) > Adaptation (over time) > Proof Metrics (why trust it) > Access (how to get in). Each feature answers the next natural question: 'What does it do?' > 'Then what happens?' > 'Who helps me?' > 'What if things change?' > 'Can I trust this?' > 'What does it cost?'"
+  },
+
+  "downstream_handoffs": {
+    "ec_02_hero": {
+      "hero_feature": "SwingScan Diagnosis (F-001)",
+      "dsi": "The first system in golf that diagnoses your ONE root swing flaw before prescribing a single fix.",
+      "hero_micro_scripts": ["The test golf never had.", "Find the one flaw causing everything else."],
+      "primary_tagline": "You've never been diagnosed.",
+      "supporting_theme": "One flaw. One plan. One clear path.",
+      "cta_frame": "Get my diagnosis.",
+      "emotional_destination": "Love your game again.",
+      "headline_direction": "You've Never Been Diagnosed",
+      "subhead_direction": "SwingScan identifies your ONE root swing flaw — the step golf has always skipped.",
+      "proof_element": "96% accuracy. 2M+ swings. 77+ flaw patterns."
+    },
+    "ec_03_sections": {
+      "total_features_for_sections": 10,
+      "section_4_product_highlights": ["F-001", "F-002", "F-003", "F-004", "F-005"],
+      "section_10_why_it_works": ["F-001", "F-005", "F-006", "F-007"],
+      "section_12_cost_savings": ["F-008"],
+      "section_16_offer": ["F-008", "F-009", "F-010"],
+      "feature_package_path": "e-comm/ec-01-outputs/feature-package.json"
+    },
+    "ec_04_scripts": {
+      "micro_scripts_available": 12,
+      "hero_scripts": ["F-001"],
+      "feature_explainer_candidates": ["F-001", "F-002", "F-003", "F-004"],
+      "proof_script_candidates": ["F-005", "F-006", "F-007"],
+      "bonus_script_candidates": ["F-009", "F-010"]
+    }
+  },
+
+  "session_state": {
+    "current_layer": 4,
+    "current_skill": "4.3-output-packager",
+    "completed_skills": ["0.1", "0.2", "0.3", "1.1", "1.2", "1.3", "2.1", "2.2", "4.1", "4.2", "4.3"],
+    "output_status": "PASS",
+    "gate_status": {
+      "gate_0": "PASS",
+      "gate_1": "PASS",
+      "gate_2": "PASS",
+      "gate_2_5": "AUTONOMOUS — Arena adapted for autonomous execution. Feature names derived from mechanism package, campaign brief, and offer package. Naming validated against generic kill list and standalone test. Human review recommended before EC-02.",
+      "gate_4": "PASS"
+    },
+    "capabilities_mapped": 10,
+    "features_named": 10,
+    "generic_names_remaining": 0,
+    "human_selection_received": false,
+    "human_selection_note": "Autonomous execution per task directive. Feature names produced from upstream packages (mechanism, campaign brief, offer). All names pass generic kill list and standalone test. Human review recommended before downstream skills execute.",
+    "next_action": "EC-02 (Hero & Value Prop) — use DSI + hero feature + proof elements for ATF copy"
+  }
+}

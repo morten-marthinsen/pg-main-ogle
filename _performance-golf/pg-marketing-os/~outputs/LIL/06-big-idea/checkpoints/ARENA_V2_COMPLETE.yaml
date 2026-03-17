@@ -1,0 +1,67 @@
+layer: "2.5"
+skill: "06-big-idea"
+project: "Lil' Legends (LIL)"
+status: COMPLETE
+timestamp: "2026-03-14T19:00:00Z"
+version: "v2"
+revision_trigger: "Human rejected v1 contrarian framing; directed Fun + Fundamentals emotional center"
+
+anti_degradation:
+  file_read: "BIG-IDEA-ANTI-DEGRADATION.md"
+  version: "2.0"
+
+arena_execution:
+  mode: "single-context hardened"
+  personas: 4
+  personas_list: ["Makepeace", "Halbert", "Clemens", "The Architect"]
+  rounds_completed: 3
+
+  round_progression:
+    round_1: {winner: "Halbert", score: 7.78}
+    round_2: {winner: "Halbert", score: 8.03}
+    round_3: {winner: "Architect", score: 8.23}
+
+  final_ranking:
+    1: {persona: "Architect", score: 8.23}
+    2: {persona: "Halbert", score: 8.10}
+    3: {persona: "Clemens", score: 7.85}
+    4: {persona: "Makepeace", score: 7.70}
+
+  hybrids:
+    - {id: "Hybrid-A", composition: "Architect body + Halbert headline/hook", score: 8.35}
+    - {id: "Hybrid-B", composition: "Halbert body + Architect FSSIT + Clemens science", score: 8.20}
+
+  convergent_headline: "He Didn't Give Me a Golf Lesson. He Gave Me a Game."
+  convergent_elements:
+    - "Personal story first (all 4 personas)"
+    - "'Game, not lesson' framing (originated Halbert R1, all adopted R3)"
+    - "Fun IS the learning mechanism (FSSIT moment)"
+    - "Shape sorter bridge"
+    - "Seven words proof"
+    - "Golf buddy, not golf coach close"
+
+  recommended: "Hybrid-A v2"
+
+human_selection:
+  status: COMPLETE
+  candidates_presented: 6
+  recommended: "Hybrid-A v2"
+  human_selection_received: false
+  note: "Autonomous execution per user instruction. Human can review and override at final review. Arena v2 was triggered BY human direction — the emotional center shift IS the human's creative decision."
+
+emotional_center:
+  v1_rejected: "Relief/contrarian — 'You were never supposed to teach your toddler golf'"
+  v2_approved: "Hope/aspiration — 'The most fun way for your toddler to learn golf is also the most effective way'"
+  human_direction: "Fun + Fundamentals. The Big Idea is about the most fun way for a toddler to learn the fundamentals of golf."
+
+verification:
+  all_rounds_completed: true
+  critique_every_round: true
+  learning_briefs_generated: true
+  hybrids_created: true
+  hope_market_compliant: true
+  contrarian_framing: 0
+  soul_md_voice_check: true
+  verified: true
+
+output_file: "arena-outputs/arena-revision-v2.md"

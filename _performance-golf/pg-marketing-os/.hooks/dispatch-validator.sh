@@ -129,16 +129,32 @@ if [[ "$FILE_PATH" == *"outputs/"* ]] && [[ "$FILE_PATH" == *.md || "$FILE_PATH"
     fi
 fi
 
-# 4. All writes → token estimator (tracks cumulative context)
+# 4. Output files → fact change validator (detects stale upstream values)
+if [[ "$FILE_PATH" == *"outputs/"* ]] && [[ "$FILE_PATH" == *.md || "$FILE_PATH" == *.json || "$FILE_PATH" == *.yaml ]]; then
+    RESULT=$(python3 "$VALIDATORS_DIR/fact_change_validator.py" "$FILE_PATH" 2>/dev/null || true)
+    if [[ -n "$RESULT" && "$RESULT" != "{}" ]]; then
+        FEEDBACK="${FEEDBACK}${RESULT}\n"
+    fi
+fi
+
+# 5. All writes → token estimator (tracks cumulative context)
 RESULT=$(python3 "$VALIDATORS_DIR/token_estimator.py" "$FILE_PATH" 2>/dev/null || true)
 if [[ -n "$RESULT" && "$RESULT" != "{}" ]]; then
     FEEDBACK="${FEEDBACK}${RESULT}\n"
 fi
 
-# 5. All writes → reminder detector (event-driven degradation reminders)
+# 6. All writes → reminder detector (event-driven degradation reminders)
 RESULT=$(python3 "$VALIDATORS_DIR/reminder_detector.py" "$FILE_PATH" 2>/dev/null || true)
 if [[ -n "$RESULT" && "$RESULT" != "{}" ]]; then
     FEEDBACK="${FEEDBACK}${RESULT}\n"
+fi
+
+# 7. Arena output files → convergence detector (persona convergence, round stagnation, output repetition)
+if [[ "$FILE_PATH" == *"arena/"* ]] && [[ "$FILE_PATH" == *"-output.md"* || "$FILE_PATH" == *"-revised.md"* || "$FILE_PATH" == *"scores"* ]]; then
+    RESULT=$(python3 "$VALIDATORS_DIR/convergence_detector.py" "$FILE_PATH" 2>/dev/null || true)
+    if [[ -n "$RESULT" && "$RESULT" != "{}" ]]; then
+        FEEDBACK="${FEEDBACK}${RESULT}\n"
+    fi
 fi
 
 # Output feedback if any validators returned results

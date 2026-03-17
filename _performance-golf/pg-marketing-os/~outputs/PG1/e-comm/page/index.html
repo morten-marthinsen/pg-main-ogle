@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG1 Pulse — Founders Club | Performance Golf</title>
+<meta name="description" content="The first system in golf that identifies your ONE root swing flaw — before prescribing a single fix. SwingScan Diagnosis. 1,000 Founders Club memberships.">
+<meta property="og:title" content="PG1 Pulse — Founders Club | Performance Golf">
+<meta property="og:description" content="You've Never Been Diagnosed. The first system in golf that identifies your ONE root swing flaw — before prescribing a single fix.">
+<meta property="og:image" content="https://performancegolf.com/og-pg1-founders.jpg">
+<meta property="og:url" content="https://performancegolf.com/pg1-founders">
+<meta property="og:type" content="product">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PG1 Pulse — Founders Club | Performance Golf">
+<meta name="twitter:description" content="You've Never Been Diagnosed. SwingScan Diagnosis finds your ONE root swing flaw.">
+<meta name="twitter:image" content="https://performancegolf.com/og-pg1-founders.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛳</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ═══════════════════════════════════
+   CSS CUSTOM PROPERTIES
+   ═══════════════════════════════════ */
+:root {
+  --color-bg-dark: #0a0f1a;
+  --color-bg-darker: #060b14;
+  --color-bg-medium: #111827;
+  --color-bg-light: #f8f9fa;
+  --color-bg-off-white: #f1f3f5;
+  --color-bg-card: #1a2332;
+  --color-bg-card-highlight: #152030;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-dark: #1a1a2e;
+  --color-text-dark-secondary: #475569;
+  --color-accent-gold: #d4a843;
+  --color-accent-gold-hover: #e6bc5a;
+  --color-accent-green: #22c55e;
+  --color-accent-green-hover: #16a34a;
+  --color-accent-green-dark: #15803d;
+  --color-border-subtle: rgba(255,255,255,0.08);
+  --color-border-gold: rgba(212,168,67,0.3);
+  --color-border-light: #e2e8f0;
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-gradient-hero: linear-gradient(135deg, #0a0f1a 0%, #1a1a3e 50%, #0a0f1a 100%);
+  --color-gradient-dark: linear-gradient(180deg, #0a0f1a 0%, #111827 100%);
+  --color-gradient-cta: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  --color-gradient-gold: linear-gradient(135deg, #d4a843 0%, #b8922e 100%);
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.12);
+  --shadow-card-hover: 0 8px 40px rgba(0,0,0,0.2);
+  --shadow-glow-green: 0 0 40px rgba(34,197,94,0.15);
+  --shadow-glow-gold: 0 0 40px rgba(212,168,67,0.15);
+  --transition-base: 0.3s ease;
+}
+
+/* ═══════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background: var(--color-bg-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--color-accent-gold); text-decoration: none; transition: color var(--transition-base); }
+a:hover { color: var(--color-accent-gold-hover); }
+
+/* ═══════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════ */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-md); }
+.container--narrow { max-width: var(--max-width-narrow); margin: 0 auto; padding: 0 var(--space-md); }
+.section-padding { padding: var(--space-2xl) 0; }
+.section-padding-lg { padding: var(--space-3xl) 0; }
+.text-center { text-align: center; }
+.text-gold { color: var(--color-accent-gold); }
+.text-green { color: var(--color-accent-green); }
+.text-muted { color: var(--color-text-secondary); }
+.prehead {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  margin-bottom: var(--space-sm);
+}
+.prehead--light { color: var(--color-accent-green); }
+.section-header {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.02em;
+}
+.section-subhead {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  max-width: 640px;
+  margin-bottom: var(--space-lg);
+}
+.section-subhead--centered { margin-left: auto; margin-right: auto; }
+
+/* ═══════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  padding: 1rem 2.25rem;
+  line-height: 1;
+}
+.btn--primary {
+  background: var(--color-gradient-cta);
+  color: #fff;
+  box-shadow: var(--shadow-glow-green);
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 60px rgba(34,197,94,0.25);
+  color: #fff;
+}
+.btn--secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border-subtle);
+}
+.btn--secondary:hover {
+  border-color: var(--color-accent-gold);
+  color: var(--color-accent-gold);
+}
+.btn--gold {
+  background: var(--color-gradient-gold);
+  color: #000;
+  box-shadow: var(--shadow-glow-gold);
+}
+.btn--gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 60px rgba(212,168,67,0.3);
+  color: #000;
+}
+.btn--lg { padding: 1.15rem 2.75rem; font-size: 1.15rem; }
+
+/* ═══════════════════════════════════
+   NAV BAR
+   ═══════════════════════════════════ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10,15,26,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding: 0.75rem 0;
+}
+.nav__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+.nav__logo span { color: var(--color-accent-gold); }
+.nav__cta { padding: 0.6rem 1.5rem; font-size: 0.9rem; }
+
+/* ═══════════════════════════════════
+   SECTION 1: HERO
+   ═══════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--color-gradient-hero);
+  position: relative;
+  overflow: hidden;
+  padding-top: 5rem;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(34,197,94,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+.hero__text { max-width: 600px; }
+.hero__prehead {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-green);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.hero__prehead::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-accent-green);
+}
+.hero__headline {
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-md);
+}
+.hero__subhead {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+.hero__value-prop {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+.hero__ctas {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+.hero__price {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+.hero__price strong { color: var(--color-text-secondary); font-weight: 600; }
+.hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__video-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #1a2332 0%, #0d1520 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+.hero__video-placeholder:hover {
+  border-color: var(--color-accent-green);
+  box-shadow: var(--shadow-glow-green);
+}
+.hero__play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.15);
+  border: 2px solid var(--color-accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+.hero__video-placeholder:hover .hero__play-btn {
+  background: rgba(34,197,94,0.25);
+  transform: scale(1.08);
+}
+.hero__play-btn::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid var(--color-accent-green);
+  margin-left: 4px;
+}
+.hero__video-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* HERO HIGHLIGHTS */
+.hero-highlights {
+  margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-sm);
+}
+.hero-highlight {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.02);
+}
+.hero-highlight__icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+.hero-highlight__name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+.hero-highlight__desc {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════════
+   SECTION 2: COPY BLOCK
+   ═══════════════════════════════════ */
+.copy-block {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.copy-block__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+.copy-block__text p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+.icon-row {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+.icon-row__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.icon-row__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.icon-row__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+.copy-block__visual {
+  background: linear-gradient(135deg, #1a2332 0%, #0d1520 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: var(--space-md);
+}
+
+/* ═══════════════════════════════════
+   SECTION 3: CTA BOX
+   ═══════════════════════════════════ */
+.cta-box {
+  background: linear-gradient(180deg, var(--color-bg-dark) 0%, var(--color-bg-darker) 100%);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.pricing-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+.pricing-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  position: relative;
+  transition: all var(--transition-base);
+}
+.pricing-card:hover {
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+.pricing-card--recommended {
+  border-color: var(--color-accent-gold);
+  background: var(--color-bg-card-highlight);
+  box-shadow: var(--shadow-glow-gold);
+}
+.pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gradient-gold);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 1.25rem;
+  border-radius: 20px;
+}
+.pricing-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.pricing-card__price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.03em;
+}
+.pricing-card__price-note {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+.pricing-card__features {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+.pricing-card__features li {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.pricing-card__features li::before {
+  content: '✓';
+  color: var(--color-accent-green);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.pricing-card__cta { width: 100%; text-align: center; }
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.trust-badge__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(212,168,67,0.1);
+  border: 1px solid rgba(212,168,67,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+/* ═══════════════════════════════════
+   SECTION: PROBLEM/SOLUTION
+   ═══════════════════════════════════ */
+.problem {
+  background: linear-gradient(180deg, #060b14 0%, #0a1020 50%, #060b14 100%);
+  position: relative;
+}
+.problem::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border-subtle), transparent);
+}
+.problem__body {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+.problem__body p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+.problem__body p strong {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+.problem__callout {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  text-align: center;
+  padding: var(--space-lg) 0;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+}
+.problem__stat {
+  display: inline-block;
+  background: rgba(212,168,67,0.08);
+  border: 1px solid rgba(212,168,67,0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-sm) auto;
+  text-align: center;
+}
+.problem__stat-number {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--color-accent-gold);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.problem__stat-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+.problem__stats-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  margin: var(--space-lg) 0;
+}
+
+/* ═══════════════════════════════════
+   SECTION: HOW IT WORKS
+   ═══════════════════════════════════ */
+.mechanism {
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+  position: relative;
+}
+.mechanism .prehead { color: var(--color-accent-green-dark); }
+.mechanism .section-subhead { color: var(--color-text-dark-secondary); }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+.step {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  position: relative;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+}
+.step:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+.step__number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent-green);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+}
+.step__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 0.5rem;
+}
+.step__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-dark-secondary);
+  line-height: 1.6;
+}
+.data-callouts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+.data-callout {
+  text-align: center;
+  padding: var(--space-lg);
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+.data-callout__number {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--color-accent-green-dark);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.data-callout__label {
+  font-size: 0.85rem;
+  color: var(--color-text-dark-secondary);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════════
+   SECTION: PRODUCT HIGHLIGHTS
+   ═══════════════════════════════════ */
+.highlights {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-md);
+}
+.feature-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+}
+.feature-card:hover {
+  border-color: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+.feature-card__icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+.feature-card__name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.feature-card__micro {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--color-accent-gold);
+  margin-bottom: var(--space-sm);
+}
+.feature-card__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════
+   SECTION: EXPERT CREDIBILITY
+   ═══════════════════════════════════ */
+.credibility {
+  background: linear-gradient(180deg, #0d1520 0%, #111827 100%);
+}
+.founder-story {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+.founder-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #1a2332 0%, #0d1520 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-align: center;
+  border: 1px solid var(--color-border-subtle);
+}
+.founder-story__text p {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+}
+.founder-story__text p:first-child {
+  font-size: 1.15rem;
+  color: var(--color-text-primary);
+  font-style: italic;
+}
+.coach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+.coach-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+.coach-card:hover {
+  border-color: rgba(255,255,255,0.12);
+}
+.coach-card__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a2332 0%, #0d1520 100%);
+  margin: 0 auto var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  border: 2px solid var(--color-border-subtle);
+}
+.coach-card__name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+.coach-card__specialty {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+.data-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+.data-bar__item {
+  text-align: center;
+}
+.data-bar__number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-accent-gold);
+}
+.data-bar__label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
+.tech-credit {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: rgba(255,255,255,0.02);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════
+   SECTION: SOCIAL PROOF
+   ═══════════════════════════════════ */
+.social-proof {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+.testimonial-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  position: relative;
+}
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-size: 3rem;
+  color: var(--color-accent-gold);
+  opacity: 0.3;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+.testimonial-card__quote {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+.testimonial-card__author {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+.celebrity-badge {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+.celebrity-badge__icon {
+  font-size: 1.5rem;
+}
+.celebrity-badge__text {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+.celebrity-badge__name {
+  font-weight: 700;
+  color: var(--color-accent-gold);
+}
+
+/* ═══════════════════════════════════
+   SECTION: TIMELINE
+   ═══════════════════════════════════ */
+.timeline-section {
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+.timeline-section .prehead { color: var(--color-accent-green-dark); }
+.timeline-section .section-subhead { color: var(--color-text-dark-secondary); }
+.timeline {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--color-accent-green) 0%, var(--color-accent-gold) 100%);
+  border-radius: 2px;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 72px;
+  padding-bottom: var(--space-xl);
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item__dot {
+  position: absolute;
+  left: 16px;
+  top: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent-green);
+  border: 4px solid var(--color-bg-light);
+  z-index: 2;
+}
+.timeline-item__marker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-green-dark);
+  margin-bottom: 0.25rem;
+}
+.timeline-item__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 0.5rem;
+}
+.timeline-item__desc {
+  font-size: 0.95rem;
+  color: var(--color-text-dark-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+.timeline-item__feeling {
+  font-style: italic;
+  color: var(--color-accent-green-dark);
+  font-size: 0.9rem;
+}
+
+/* ═══════════════════════════════════
+   SECTION: COMPARISON
+   ═══════════════════════════════════ */
+.comparison {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.comparison-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--space-lg);
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 700px;
+}
+.comparison-table th {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid var(--color-border-subtle);
+}
+.comparison-table th:last-child {
+  color: var(--color-accent-green);
+  background: rgba(34,197,94,0.05);
+  border-bottom-color: var(--color-accent-green);
+}
+.comparison-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border-subtle);
+  color: var(--color-text-secondary);
+  vertical-align: top;
+}
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.comparison-table td:last-child {
+  background: rgba(34,197,94,0.03);
+  color: var(--color-accent-green);
+  font-weight: 600;
+}
+.comparison-table .check { color: var(--color-success); font-weight: 700; }
+.comparison-table .cross { color: var(--color-danger); opacity: 0.6; }
+.comparison__summary {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+.comparison__summary p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+}
+.comparison__summary p:last-child {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+}
+
+/* ═══════════════════════════════════
+   SECTION: COST SAVINGS
+   ═══════════════════════════════════ */
+.cost-savings {
+  background: linear-gradient(180deg, #0d1520 0%, #0a0f1a 100%);
+}
+.cost-items {
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+}
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.cost-item__label {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+.cost-item__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-danger);
+}
+.cost-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-md) 0;
+  border-top: 2px solid var(--color-accent-gold);
+  margin-top: var(--space-sm);
+}
+.cost-total__label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+.cost-total__price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-danger);
+  text-decoration: line-through;
+}
+.cost-reveal {
+  text-align: center;
+  margin-top: var(--space-xl);
+  padding: var(--space-xl);
+  background: rgba(34,197,94,0.05);
+  border: 1px solid rgba(34,197,94,0.15);
+  border-radius: var(--radius-lg);
+}
+.cost-reveal__label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+.cost-reveal__price {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--color-accent-green);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.cost-reveal__note {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.5rem;
+}
+.cost-savings__footnote {
+  text-align: center;
+  margin-top: var(--space-lg);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════
+   SECTION: OFFER / PRICING
+   ═══════════════════════════════════ */
+.offer {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.value-stack {
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+}
+.value-stack__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.value-stack__name {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  flex: 1;
+  padding-right: var(--space-sm);
+}
+.value-stack__price {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  flex-shrink: 0;
+}
+.value-stack__total {
+  font-weight: 800;
+}
+.value-stack__total .value-stack__name { color: var(--color-text-primary); font-size: 1.1rem; }
+.value-stack__total .value-stack__price {
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+  text-decoration: line-through;
+}
+.bonuses-header {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+  padding-top: var(--space-md);
+}
+.offer-closing {
+  text-align: center;
+  margin-top: var(--space-xl);
+  max-width: var(--max-width-narrow);
+  margin-left: auto;
+  margin-right: auto;
+}
+.offer-closing__headline {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+}
+.offer-closing__text {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════
+   SECTION: GUARANTEE
+   ═══════════════════════════════════ */
+.guarantee {
+  background: linear-gradient(180deg, #0a0f1a 0%, #0d1520 100%);
+}
+.guarantee__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.guarantee__seal {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(212,168,67,0.1);
+  border: 3px solid var(--color-accent-gold);
+  margin: 0 auto var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.guarantee__body {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+.guarantee__callout {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-top: var(--space-md);
+}
+
+/* ═══════════════════════════════════
+   SECTION: FAQ
+   ═══════════════════════════════════ */
+.faq {
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+.faq .prehead { color: var(--color-accent-green-dark); }
+.faq-list {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--color-border-light);
+}
+.faq-item__question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  text-align: left;
+  gap: var(--space-sm);
+}
+.faq-item__question:hover { color: var(--color-accent-green-dark); }
+.faq-item__toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+  color: var(--color-text-dark-secondary);
+}
+.faq-item.active .faq-item__toggle {
+  background: var(--color-accent-green);
+  color: #fff;
+  transform: rotate(45deg);
+}
+.faq-item__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.faq-item.active .faq-item__answer {
+  max-height: 500px;
+}
+.faq-item__answer-inner {
+  padding: 0 0 var(--space-md);
+  font-size: 0.95rem;
+  color: var(--color-text-dark-secondary);
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════
+   SECTION: USE CASES
+   ═══════════════════════════════════ */
+.use-cases {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+.persona-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl) var(--space-lg);
+  transition: all var(--transition-base);
+}
+.persona-card:hover {
+  border-color: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+.persona-card__label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.persona-card__descriptor {
+  font-size: 0.9rem;
+  color: var(--color-accent-gold);
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+.persona-card__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════
+   SECTION: FINAL CTA
+   ═══════════════════════════════════ */
+.final-cta {
+  background: var(--color-gradient-hero);
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(34,197,94,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.final-cta__inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.final-cta__headline {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-sm);
+}
+.final-cta__subhead {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+.final-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+.final-cta__meta {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════ */
+.footer {
+  background: var(--color-bg-darker);
+  border-top: 1px solid var(--color-border-subtle);
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+.footer p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ═══════════════════════════════════
+   STICKY MOBILE CTA
+   ═══════════════════════════════════ */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(10,15,26,0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--color-border-subtle);
+  padding: 0.75rem var(--space-md);
+}
+.sticky-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.sticky-cta__price {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+}
+.sticky-cta__price strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+.sticky-cta .btn { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
+
+/* ═══════════════════════════════════
+   RESPONSIVE — MOBILE FIRST
+   ═══════════════════════════════════ */
+@media (max-width: 767px) {
+  .hero__content { grid-template-columns: 1fr; text-align: center; }
+  .hero__text { max-width: 100%; }
+  .hero__prehead { justify-content: center; }
+  .hero__ctas { justify-content: center; }
+  .hero-highlights { grid-template-columns: repeat(2, 1fr); }
+  .hero-highlights .hero-highlight:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  .copy-block__inner { grid-template-columns: 1fr; }
+  .copy-block__text { text-align: center; }
+  .icon-row { justify-content: center; }
+  .pricing-cards { grid-template-columns: 1fr; }
+  .pricing-card--recommended { order: -1; }
+  .steps { grid-template-columns: 1fr; }
+  .data-callouts { grid-template-columns: repeat(2, 1fr); }
+  .feature-grid { grid-template-columns: 1fr; }
+  .founder-story { grid-template-columns: 1fr; text-align: center; }
+  .founder-photo { margin: 0 auto; }
+  .coach-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .data-bar { grid-template-columns: repeat(2, 1fr); }
+  .persona-grid { grid-template-columns: 1fr; }
+  .sticky-cta { display: block; }
+  .section-padding { padding: var(--space-xl) 0; }
+  .section-padding-lg { padding: var(--space-2xl) 0; }
+  body { padding-bottom: 70px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero__content { grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
+  .hero-highlights { grid-template-columns: repeat(3, 1fr); }
+  .hero-highlights .hero-highlight:nth-child(4),
+  .hero-highlights .hero-highlight:nth-child(5) { }
+  .coach-grid { grid-template-columns: repeat(3, 1fr); }
+  .persona-grid { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     NAV BAR
+     ═══════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav__inner">
+    <div class="nav__logo">Performance <span>Golf</span></div>
+    <a href="#pricing" class="btn btn--primary nav__cta">Get My Diagnosis</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════
+     SECTION 1: HERO
+     ═══════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__text">
+        <div class="hero__prehead">Introducing SwingScan Diagnosis</div>
+        <h1 class="hero__headline">You've Never Been Diagnosed.</h1>
+        <p class="hero__subhead">The first system in golf that identifies your ONE root swing flaw — before prescribing a single fix.</p>
+        <p class="hero__value-prop">SwingScan AI finds the one flaw causing everything else. Then builds your plan, matches your coach, and adapts as you improve. The step golf has always skipped — now exists.</p>
+        <div class="hero__ctas">
+          <a href="#pricing" class="btn btn--primary btn--lg">Get My Diagnosis</a>
+          <a href="#how-it-works" class="btn btn--secondary btn--lg">See How It Works</a>
+        </div>
+        <p class="hero__price"><strong>$199/yr</strong> Annual &nbsp;|&nbsp; <strong>$299</strong> Lifetime (Never Pay Again)</p>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__video-placeholder" role="img" aria-label="PG1 SwingScan Diagnosis keynote video">
+          <div class="hero__play-btn" aria-hidden="true"></div>
+          <span class="hero__video-label">Watch the Keynote</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-highlights">
+      <div class="hero-highlight">
+        <div class="hero-highlight__icon">🔬</div>
+        <div class="hero-highlight__name">SwingScan Diagnosis</div>
+        <div class="hero-highlight__desc">AI identifies your ONE root flaw. 96% accuracy. 2M+ swings. 77+ patterns.</div>
+      </div>
+      <div class="hero-highlight">
+        <div class="hero-highlight__icon">📋</div>
+        <div class="hero-highlight__name">Personalized Correction Plan</div>
+        <div class="hero-highlight__desc">Your plan, built from your diagnosis. Not generic drills.</div>
+      </div>
+      <div class="hero-highlight">
+        <div class="hero-highlight__icon">🎓</div>
+        <div class="hero-highlight__name">Matched PGA Coach</div>
+        <div class="hero-highlight__desc">The right coach for your flaw. 6 elite PGA coaches matched to your flaw type.</div>
+      </div>
+      <div class="hero-highlight">
+        <div class="hero-highlight__icon">🧠</div>
+        <div class="hero-highlight__name">Adaptive Intelligence</div>
+        <div class="hero-highlight__desc">Tracks flaw resolution, adjusts your plan, spots when compensations dissolve.</div>
+      </div>
+      <div class="hero-highlight">
+        <div class="hero-highlight__icon">🔒</div>
+        <div class="hero-highlight__name">Founders Pricing Lock</div>
+        <div class="hero-highlight__desc">$299 once or $199/yr — the lowest PG1 will ever be.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 2: COPY BLOCK
+     ═══════════════════════════════════ -->
+<section class="copy-block section-padding">
+  <div class="container">
+    <div class="copy-block__inner">
+      <div class="copy-block__text">
+        <div class="prehead">The First Diagnosis in Golf</div>
+        <p>Every instructor saw a different problem. Every app showed data without direction. Every tip treated a symptom while the root flaw sat underneath — invisible at full speed.</p>
+        <p>SwingScan Diagnosis changes that. One flaw identified. One plan built. One coach matched. One system that adapts as you improve.</p>
+        <div class="icon-row">
+          <div class="icon-row__item">
+            <div class="icon-row__icon">🔬</div>
+            <span class="icon-row__label">Diagnosis</span>
+          </div>
+          <div class="icon-row__item">
+            <div class="icon-row__icon">📋</div>
+            <span class="icon-row__label">Plan</span>
+          </div>
+          <div class="icon-row__item">
+            <div class="icon-row__icon">🎓</div>
+            <span class="icon-row__label">Coach</span>
+          </div>
+          <div class="icon-row__item">
+            <div class="icon-row__icon">🧠</div>
+            <span class="icon-row__label">Adaptive</span>
+          </div>
+          <div class="icon-row__item">
+            <div class="icon-row__icon">⭐</div>
+            <span class="icon-row__label">Founders</span>
+          </div>
+        </div>
+      </div>
+      <div class="copy-block__visual" role="img" aria-label="SwingScan Diagnosis UI screenshot">
+        SwingScan Diagnosis UI<br>App Screenshot Placeholder
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 3: CTA BOX
+     ═══════════════════════════════════ -->
+<section class="cta-box section-padding" id="pricing-atf">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: var(--space-xl);">
+      <div class="prehead">1,000 Founders Club Memberships</div>
+    </div>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="pricing-card__title">Annual Founders</div>
+        <div class="pricing-card__price">$199<span style="font-size:1rem;font-weight:500;color:var(--color-text-muted)">/yr</span></div>
+        <div class="pricing-card__price-note">Rate locked permanently</div>
+        <ul class="pricing-card__features">
+          <li>Full PG1 Pulse access</li>
+          <li>SwingScan Diagnosis</li>
+          <li>Personalized Correction Plan</li>
+          <li>Matched PGA Coach</li>
+          <li>Adaptive Intelligence</li>
+          <li>Every future feature</li>
+          <li>7-day free trial</li>
+        </ul>
+        <a href="#" class="btn btn--primary pricing-card__cta">Get My Diagnosis — Annual</a>
+      </div>
+      <div class="pricing-card pricing-card--recommended">
+        <div class="pricing-card__badge">Recommended</div>
+        <div class="pricing-card__title">Lifetime Founders</div>
+        <div class="pricing-card__price">$299</div>
+        <div class="pricing-card__price-note">One payment. Never pay again.</div>
+        <ul class="pricing-card__features">
+          <li>Everything in Annual</li>
+          <li>One payment. Never pay again.</li>
+          <li>Founders Priority Access</li>
+          <li>First to test every new feature</li>
+          <li>Direct product team line</li>
+          <li>Rate locked permanently</li>
+          <li>7-day free trial</li>
+        </ul>
+        <a href="#" class="btn btn--gold pricing-card__cta">Get My Diagnosis — Lifetime</a>
+      </div>
+    </div>
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <div class="trust-badge__icon">🛡️</div>
+        <span>60-Day Diagnosis Promise</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge__icon">👥</div>
+        <span>1,000 Founders Only</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge__icon">🔐</div>
+        <span>Secure Checkout</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 9: PROBLEM / SOLUTION
+     ═══════════════════════════════════ -->
+<section class="problem section-padding-lg" id="problem">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">Why Nothing Has Worked</div>
+      <h2 class="section-header">You've Been Treated.<br>You've Never Been Diagnosed.</h2>
+      <p class="section-subhead section-subhead--centered">70% of golfers who take lessons don't improve. Here's why.</p>
+    </div>
+
+    <div class="problem__body">
+      <p>Think about everything you've tried.</p>
+      <p>Lessons with three, five, maybe fifteen different instructors. Every one of them saw something different. One said your backswing was too long. The next said it was too short. One worked on your grip. Another on your hip turn. A third on your downswing plane.</p>
+      <p>None of them were wrong about what they saw.<br>They were all looking at different symptoms of the same thing.</p>
+      <p>You have ONE root swing flaw — a single movement creating a cascade of compensations. Every instructor identified a compensation. Nobody identified the cause.</p>
+      <p><strong>That's why your handicap hasn't moved.</strong></p>
+
+      <div class="problem__stats-row">
+        <div class="problem__stat">
+          <div class="problem__stat-number">70%</div>
+          <div class="problem__stat-label">of golfers who take lessons don't improve</div>
+        </div>
+        <div class="problem__stat">
+          <div class="problem__stat-number">14.2</div>
+          <div class="problem__stat-label">Average handicap — unchanged since 2020</div>
+        </div>
+      </div>
+
+      <p>The average American golfer's handicap has stayed between 14.0 and 14.2 from 2020 to 2025. Eighty-two million rounds posted. An explosion of instruction technology. And no improvement — because the entire industry has been prescribing treatment without running a diagnostic.</p>
+      <p>You wouldn't take medication without a blood test.<br>You wouldn't let a doctor prescribe treatment without running a diagnostic.<br>But that's exactly what golf has done your whole life.</p>
+
+      <div class="problem__callout">Every lesson was a prescription.<br>Nobody ever ran the test.</div>
+
+      <p style="text-align:center;">It's not you. The system skipped a step. And that step now exists.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 10: HOW IT WORKS (MECHANISM)
+     ═══════════════════════════════════ -->
+<section class="mechanism section-padding-lg" id="how-it-works">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">SwingScan Diagnosis</div>
+      <h2 class="section-header" style="color:var(--color-text-dark)">The Test Golf Never Had.</h2>
+      <p class="section-subhead section-subhead--centered">How SwingScan identifies your ONE root flaw — and builds your plan around it.</p>
+    </div>
+
+    <p style="text-align:center;color:var(--color-text-dark-secondary);max-width:640px;margin:0 auto var(--space-xl);font-size:1.05rem;line-height:1.7;">SwingScan Diagnosis reverses the sequence golf has always gotten backward. Instead of prescribing treatment first, it diagnoses first. Here's how.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step__number">1</div>
+        <div class="step__title">Film Your Swing</div>
+        <div class="step__desc">Phone camera. Any angle. Range or course. No special equipment.</div>
+      </div>
+      <div class="step">
+        <div class="step__number">2</div>
+        <div class="step__title">SwingScan Analyzes</div>
+        <div class="step__desc">AI trained on 2M+ swings compares your movement against 77+ documented root flaw patterns. It reads what the human eye cannot see at full speed.</div>
+      </div>
+      <div class="step">
+        <div class="step__number">3</div>
+        <div class="step__title">Your Root Flaw Is Identified</div>
+        <div class="step__desc">Not 12 things to work on. ONE root flaw — the single movement causing all your compensations. 96% accuracy.</div>
+      </div>
+      <div class="step">
+        <div class="step__number">4</div>
+        <div class="step__title">Your Correction Plan Is Built</div>
+        <div class="step__desc">A sequenced practice plan specific to YOUR diagnosis. Not generic drills. Targeted corrections matched to your root flaw type.</div>
+      </div>
+      <div class="step">
+        <div class="step__number">5</div>
+        <div class="step__title">Your Coach Is Matched</div>
+        <div class="step__desc">One of 6 elite PGA coaches — matched to your specific flaw type. Direct communication through Coach Chat. Swing reviews. Guided progression.</div>
+      </div>
+      <div class="step">
+        <div class="step__number">6</div>
+        <div class="step__title">The System Adapts</div>
+        <div class="step__desc">As your flaw resolves, the system tracks it — by diagnosis, not just scores. Your plan adjusts. When compensations dissolve, the system sees it.</div>
+      </div>
+      <div class="step">
+        <div class="step__number">7</div>
+        <div class="step__title">Compensations Dissolve</div>
+        <div class="step__desc">Fix the root and the chain breaks. The compensations your instructors have been treating as separate problems? They resolve on their own.</div>
+      </div>
+    </div>
+
+    <div class="data-callouts">
+      <div class="data-callout">
+        <div class="data-callout__number">2M+</div>
+        <div class="data-callout__label">Swings in SwingScan's pattern recognition database</div>
+      </div>
+      <div class="data-callout">
+        <div class="data-callout__number">96%</div>
+        <div class="data-callout__label">Right 96 times out of 100</div>
+      </div>
+      <div class="data-callout">
+        <div class="data-callout__number">77+</div>
+        <div class="data-callout__label">Every documented root swing flaw — catalogued and mapped</div>
+      </div>
+      <div class="data-callout">
+        <div class="data-callout__number">0</div>
+        <div class="data-callout__label">Competitors claim root flaw diagnosis</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 4: PRODUCT HIGHLIGHTS
+     ═══════════════════════════════════ -->
+<section class="highlights section-padding-lg" id="features">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">What You Get</div>
+      <h2 class="section-header">One Flaw. One Plan. One Clear Path.</h2>
+      <p class="section-subhead section-subhead--centered">Five core capabilities built around your diagnosis.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-card__icon">🔬</div>
+        <div class="feature-card__name">SwingScan Diagnosis</div>
+        <div class="feature-card__micro">The test golf never had.</div>
+        <div class="feature-card__desc">AI identifies your ONE root swing flaw from a phone video. Trained on 2M+ swings across 77+ flaw patterns with 96% accuracy. Not a measurement tool. Not a data dashboard. A diagnosis — the step every instructor, every app, and every video has always skipped.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">📋</div>
+        <div class="feature-card__name">Personalized Correction Plan</div>
+        <div class="feature-card__micro">Your plan, built from your diagnosis.</div>
+        <div class="feature-card__desc">A sequenced improvement plan built around YOUR specific root flaw. Every drill has a reason. Every session builds on the last. Not generic content — targeted corrections matched to your diagnosis, adapting as your flaw resolves.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">🎓</div>
+        <div class="feature-card__name">Matched PGA Coach</div>
+        <div class="feature-card__micro">The right coach for your flaw.</div>
+        <div class="feature-card__desc">One of 6 elite PGA coaches matched to your specific flaw type. Direct access through Coach Chat — swing reviews, guided progression, real answers from a real coach who specializes in YOUR kind of flaw. Not a marketplace gamble. A curated match.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">🧠</div>
+        <div class="feature-card__name">Adaptive Intelligence</div>
+        <div class="feature-card__micro">It learns as you improve.</div>
+        <div class="feature-card__desc">The system gets smarter with every session. Tracks your flaw resolution — not just your scores. Spots when compensations dissolve. Adjusts your plan based on your progress, your schedule, your goals.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">📊</div>
+        <div class="feature-card__name">77-Flaw Pattern Library</div>
+        <div class="feature-card__micro">Every flaw, already mapped.</div>
+        <div class="feature-card__desc">77+ documented flaw patterns — and SwingScan matches your swing against all of them to identify YOUR specific root flaw. Your flaw is already in the library. SwingScan is not guessing. It is pattern-matching.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 6: EXPERT CREDIBILITY
+     ═══════════════════════════════════ -->
+<section class="credibility section-padding-lg" id="team">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">Who Built This</div>
+      <h2 class="section-header">$5M+ Invested. 276 Team Members.<br>15 Countries. Built for This Moment.</h2>
+      <p class="section-subhead section-subhead--centered">The people behind SwingScan Diagnosis.</p>
+    </div>
+
+    <div class="founder-story">
+      <div class="founder-photo" role="img" aria-label="Brixton founder portrait">Brixton<br>Founder Photo</div>
+      <div class="founder-story__text">
+        <p>I was a +3 handicap. And I hit a wall.</p>
+        <p>I did what every serious golfer does — hired instructors, bought training aids, watched everything. Nothing moved.</p>
+        <p>Then one instructor found my ONE root flaw. Not a list of things to work on. One flaw. I dropped 5 shots in weeks.</p>
+        <p>That's when I knew: the diagnosis is everything. And I spent the next several years — and over $5 million — building the system that gives every golfer what I got. Not from luck. From technology.</p>
+      </div>
+    </div>
+
+    <div style="margin-bottom:var(--space-md);">
+      <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:var(--space-md);text-align:center;">The Coaching Team</h3>
+      <p style="text-align:center;color:var(--color-text-secondary);max-width:640px;margin:0 auto var(--space-lg);font-size:0.95rem;line-height:1.6;">Six elite PGA coaches built the diagnostic framework and deliver your coaching. Each specializes in specific flaw types — so when SwingScan identifies your root flaw, your coach is the person best equipped to help you fix it.</p>
+    </div>
+
+    <div class="coach-grid">
+      <div class="coach-card">
+        <div class="coach-card__photo">👤</div>
+        <div class="coach-card__name">Coach 1</div>
+        <div class="coach-card__specialty">Flaw specialty TBD</div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-card__photo">👤</div>
+        <div class="coach-card__name">Coach 2</div>
+        <div class="coach-card__specialty">Flaw specialty TBD</div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-card__photo">👤</div>
+        <div class="coach-card__name">Coach 3</div>
+        <div class="coach-card__specialty">Flaw specialty TBD</div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-card__photo">👤</div>
+        <div class="coach-card__name">Coach 4</div>
+        <div class="coach-card__specialty">Flaw specialty TBD</div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-card__photo">👤</div>
+        <div class="coach-card__name">Coach 5</div>
+        <div class="coach-card__specialty">Flaw specialty TBD</div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-card__photo">👤</div>
+        <div class="coach-card__name">Coach 6</div>
+        <div class="coach-card__specialty">Flaw specialty TBD</div>
+      </div>
+    </div>
+
+    <div class="tech-credit">
+      Built by the developer behind MyFitnessPal and the Weather Channel app. The AI infrastructure is the core of a platform that 1.4 million golfers already rely on.
+    </div>
+
+    <div class="data-bar" style="margin-top:var(--space-lg);">
+      <div class="data-bar__item">
+        <div class="data-bar__number">$5M+</div>
+        <div class="data-bar__label">Invested</div>
+      </div>
+      <div class="data-bar__item">
+        <div class="data-bar__number">276</div>
+        <div class="data-bar__label">Team Members</div>
+      </div>
+      <div class="data-bar__item">
+        <div class="data-bar__number">15</div>
+        <div class="data-bar__label">Countries</div>
+      </div>
+      <div class="data-bar__item">
+        <div class="data-bar__number">1.4M</div>
+        <div class="data-bar__label">Golfers on Platform</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 5: SOCIAL PROOF
+     ═══════════════════════════════════ -->
+<section class="social-proof section-padding-lg" id="testimonials">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">What Golfers Are Saying</div>
+      <h2 class="section-header">Early Reactions</h2>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"For the first time, I actually know what's wrong with my swing. Not a guess — a specific diagnosis. That alone was worth it."</div>
+        <div class="testimonial-card__author">— Beta User</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"I've spent $900 on Arccos, over $1,000 on lessons, worked with 15 different instructors. Nobody ever told me I had ONE root flaw causing all of it."</div>
+        <div class="testimonial-card__author">— Research Participant</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"It's like getting an MRI for your golf swing. You see exactly what's going on underneath."</div>
+        <div class="testimonial-card__author">— Research Participant</div>
+      </div>
+    </div>
+
+    <div class="celebrity-badge">
+      <div class="celebrity-badge__icon">🏆</div>
+      <div class="celebrity-badge__text"><span class="celebrity-badge__name">Alonzo Mourning</span> — Celebrity endorsement placeholder</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 8: WHAT TO EXPECT TIMELINE
+     ═══════════════════════════════════ -->
+<section class="timeline-section section-padding-lg" id="timeline">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">Your First 90 Days</div>
+      <h2 class="section-header" style="color:var(--color-text-dark)">What Happens After You Join</h2>
+      <p class="section-subhead section-subhead--centered">From sign-up to flaw resolution — here's the path.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__marker">Day 1</div>
+        <div class="timeline-item__title">Your Diagnosis</div>
+        <div class="timeline-item__desc">Film your swing. Upload it. SwingScan identifies your ONE root flaw. You receive your Root Flaw Report — a plain-language explanation of what's been holding your game back. For the first time, you know.</div>
+        <div class="timeline-item__feeling">Clarity. Relief. "So THAT'S what it was."</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__marker">Week 1</div>
+        <div class="timeline-item__title">Your Plan</div>
+        <div class="timeline-item__desc">Your Personalized Correction Plan builds around your diagnosis. Targeted drills sequenced for your specific flaw. Your Flaw Chain Map shows how your root flaw creates 3-5 visible compensations.</div>
+        <div class="timeline-item__feeling">Direction. "I finally know what to work on — and why."</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__marker">Week 1-2</div>
+        <div class="timeline-item__title">Your Coach</div>
+        <div class="timeline-item__desc">Your Matched PGA Coach connects through Coach Chat. They specialize in your flaw type. Submit swing videos, ask questions, get guided feedback from someone who knows your specific flaw.</div>
+        <div class="timeline-item__feeling">Support. "I'm not figuring this out alone."</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__marker">Month 1</div>
+        <div class="timeline-item__title">Directed Practice</div>
+        <div class="timeline-item__desc">Every range session has a purpose. Every drill connects to your diagnosis. Adaptive Intelligence tracks your progress — by flaw resolution, not just scores.</div>
+        <div class="timeline-item__feeling">Momentum. "The practice actually means something now."</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__marker">Month 3</div>
+        <div class="timeline-item__title">Compensations Dissolve</div>
+        <div class="timeline-item__desc">As your root flaw resolves, the compensations begin to dissolve on their own. The system sees it. Your coach confirms it. The chain breaks at the root.</div>
+        <div class="timeline-item__feeling">Confidence. "I didn't fix 12 things. I fixed one."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 11: COMPARISON CHART
+     ═══════════════════════════════════ -->
+<section class="comparison section-padding-lg" id="compare">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">How PG1 Pulse Compares</div>
+      <h2 class="section-header">They Measure. They Prescribe.<br>We Diagnose.</h2>
+    </div>
+
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th>YouTube</th>
+            <th>Lessons</th>
+            <th>Tracking Apps</th>
+            <th>AI Swing Apps</th>
+            <th>PG1 Pulse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Root Flaw Diagnosis</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="check">&#10003;</span> 96% accuracy</td>
+          </tr>
+          <tr>
+            <td>Identifies ONE Root Cause</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="check">&#10003;</span> 77+ patterns</td>
+          </tr>
+          <tr>
+            <td>Personalized Correction Plan</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td>Sometimes</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td>Generic</td>
+            <td><span class="check">&#10003;</span> From YOUR diagnosis</td>
+          </tr>
+          <tr>
+            <td>Matched Coach (by flaw type)</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td>Random</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="check">&#10003;</span> 6 PGA coaches</td>
+          </tr>
+          <tr>
+            <td>Adaptive Learning</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td>Basic</td>
+            <td>Basic</td>
+            <td><span class="check">&#10003;</span> Tracks flaw resolution</td>
+          </tr>
+          <tr>
+            <td>Diagnosis-First Approach</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="check">&#10003;</span> The only one in golf</td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>Free–$30/mo</td>
+            <td>$150–350/hr</td>
+            <td>$200–500/yr</td>
+            <td>$100–300/yr</td>
+            <td><strong>$199/yr or $299 lifetime</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="comparison__summary">
+      <p>Every approach does something useful. YouTube provides tips. Lessons provide instruction. Tracking apps provide data. AI apps provide analysis.</p>
+      <p>None of them diagnose your root flaw first. PG1 does.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 12: COST SAVINGS
+     ═══════════════════════════════════ -->
+<section class="cost-savings section-padding-lg">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">The Real Cost of Not Knowing</div>
+      <h2 class="section-header">Add Up What You've Already Spent.</h2>
+    </div>
+
+    <p style="text-align:center;color:var(--color-text-secondary);max-width:640px;margin:0 auto var(--space-xl);font-size:1.05rem;line-height:1.7;">Think about the last three years.</p>
+
+    <div class="cost-items">
+      <div class="cost-item">
+        <span class="cost-item__label">Private lessons ($150–350/session)</span>
+        <span class="cost-item__price">$1,800–4,200/yr</span>
+      </div>
+      <div class="cost-item">
+        <span class="cost-item__label">Golf apps &amp; subscriptions</span>
+        <span class="cost-item__price">$200–900/yr</span>
+      </div>
+      <div class="cost-item">
+        <span class="cost-item__label">Training aids (how many are in your garage?)</span>
+        <span class="cost-item__price">$50–200 each</span>
+      </div>
+      <div class="cost-item">
+        <span class="cost-item__label">Different instructors — each starting from scratch</span>
+        <span class="cost-item__price">3–15 instructors</span>
+      </div>
+      <div class="cost-total">
+        <span class="cost-total__label">Average spent (last 3 years)</span>
+        <span class="cost-total__price">$2,000–5,000+</span>
+      </div>
+    </div>
+
+    <div class="cost-reveal">
+      <div class="cost-reveal__label">PG1 Founders Pricing</div>
+      <div class="cost-reveal__price">$299</div>
+      <div class="cost-reveal__note">One payment. Never pay again.</div>
+    </div>
+
+    <p class="cost-savings__footnote">Industry insiders valued the system at $2,000–3,000 per year.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 16: OFFER / PRICING
+     ═══════════════════════════════════ -->
+<section class="offer section-padding-lg" id="pricing">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">The Founders Club</div>
+      <h2 class="section-header">One Flaw. One Plan. One Clear Path.</h2>
+      <p class="section-subhead section-subhead--centered">1,000 memberships. Two options. The lowest price PG1 will ever be.</p>
+    </div>
+
+    <!-- Value Stack -->
+    <div class="value-stack">
+      <h3 style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-sm);">What's Included</h3>
+      <div class="value-stack__item">
+        <span class="value-stack__name">SwingScan Diagnosis — AI root flaw identification (2M+ swings, 96% accuracy, 77+ patterns)</span>
+        <span class="value-stack__price">$500</span>
+      </div>
+      <div class="value-stack__item">
+        <span class="value-stack__name">Personalized Correction Plan — sequenced plan built around YOUR diagnosis</span>
+        <span class="value-stack__price">$1,200</span>
+      </div>
+      <div class="value-stack__item">
+        <span class="value-stack__name">Matched PGA Coach Access — Coach Chat, matched to your flaw type</span>
+        <span class="value-stack__price">$2,400</span>
+      </div>
+      <div class="value-stack__item">
+        <span class="value-stack__name">Adaptive Intelligence System — tracks progress by diagnosis, adapts your plan</span>
+        <span class="value-stack__price">$600</span>
+      </div>
+      <div class="value-stack__item">
+        <span class="value-stack__name">Full Platform Access — current + every future feature, permanently</span>
+        <span class="value-stack__price">$1,000</span>
+      </div>
+      <div class="value-stack__item value-stack__total">
+        <span class="value-stack__name">Total Value</span>
+        <span class="value-stack__price">$5,700</span>
+      </div>
+
+      <div class="bonuses-header">Bonuses (Included Free)</div>
+      <div class="value-stack__item">
+        <span class="value-stack__name">The Root Flaw Report — your flaw, explained in plain language</span>
+        <span class="value-stack__price">$197</span>
+      </div>
+      <div class="value-stack__item">
+        <span class="value-stack__name">The Flaw Chain Map — see the chain from root flaw to compensations</span>
+        <span class="value-stack__price">$97</span>
+      </div>
+      <div class="value-stack__item">
+        <span class="value-stack__name">Founders Priority Access — first to test every new feature, direct product team line</span>
+        <span class="value-stack__price">$500</span>
+      </div>
+      <div class="value-stack__item">
+        <span class="value-stack__name">The Diagnosis Comparison Guide — what every approach skips</span>
+        <span class="value-stack__price">$47</span>
+      </div>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="pricing-cards" style="margin-top:var(--space-xl);">
+      <div class="pricing-card">
+        <div class="pricing-card__title">Annual Founders</div>
+        <div class="pricing-card__price">$199<span style="font-size:1rem;font-weight:500;color:var(--color-text-muted)">/year</span></div>
+        <div class="pricing-card__price-note">Rate locked permanently — never increases</div>
+        <ul class="pricing-card__features">
+          <li>Full PG1 Pulse access</li>
+          <li>SwingScan Diagnosis + Personalized Correction Plan</li>
+          <li>Matched PGA Coach (Coach Chat)</li>
+          <li>Adaptive Intelligence</li>
+          <li>All 4 bonuses included</li>
+          <li>Every future feature</li>
+          <li>7-day free trial</li>
+          <li>60-day Diagnosis Promise guarantee</li>
+        </ul>
+        <a href="#" class="btn btn--primary pricing-card__cta">Get My Diagnosis — Annual</a>
+      </div>
+      <div class="pricing-card pricing-card--recommended">
+        <div class="pricing-card__badge">Recommended</div>
+        <div class="pricing-card__title">Lifetime Founders</div>
+        <div class="pricing-card__price">$299<span style="font-size:1rem;font-weight:500;color:var(--color-text-muted)"> one-time</span></div>
+        <div class="pricing-card__price-note">One payment. Never pay again.</div>
+        <ul class="pricing-card__features">
+          <li>Everything in Annual</li>
+          <li>One payment. Never pay again.</li>
+          <li>Founders Priority Access (first to every new feature)</li>
+          <li>Direct product team line</li>
+          <li>Numbered Founders badge on your profile</li>
+          <li>Rate locked permanently</li>
+          <li>7-day free trial</li>
+        </ul>
+        <a href="#" class="btn btn--gold pricing-card__cta">Get My Diagnosis — Lifetime</a>
+      </div>
+    </div>
+
+    <div class="offer-closing">
+      <div class="offer-closing__headline">$5,700+ in value. $299 once.</div>
+      <p class="offer-closing__text">This is Founders pricing — the lowest price PG1 Pulse will ever be. When the 1,000 Founders spots are filled, this rate disappears. Your Founders rate is locked permanently. The public price will be significantly higher.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 17: GUARANTEE
+     ═══════════════════════════════════ -->
+<section class="guarantee section-padding-lg" id="guarantee">
+  <div class="container">
+    <div class="guarantee__inner">
+      <div class="guarantee__seal" aria-label="Guarantee seal">🛡️</div>
+      <div class="prehead text-center">The Diagnosis Promise</div>
+      <h2 class="section-header text-center">If the Diagnosis Doesn't Deliver Clarity — Every Penny Back.</h2>
+      <p class="guarantee__body">Try PG1 Pulse for 60 days. Get your SwingScan Diagnosis. Work through your Personalized Correction Plan. Connect with your Matched PGA Coach.</p>
+      <p class="guarantee__body">If the diagnosis doesn't deliver the clarity we promised — send one email and get every penny back. No hoops. No hassle. No hard feelings.</p>
+      <p class="guarantee__body"><strong style="color:var(--color-text-primary);">Within the first 7 days, cancel anytime with zero charge.</strong> No questions asked. No credit card charged until Day 8. Try everything. See your diagnosis. If it's not for you, walk away free.</p>
+      <div class="guarantee__callout">60 days. Full refund. One email.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 15: FAQ
+     ═══════════════════════════════════ -->
+<section class="faq section-padding-lg" id="faq">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">Questions? Answers.</div>
+      <h2 class="section-header" style="color:var(--color-text-dark)">Everything You Need to Know</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-item__question" aria-expanded="true">
+          <span>What is PG1 Pulse?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer" style="max-height:500px;">
+          <div class="faq-item__answer-inner">A personalized golf improvement system — not an app. It combines SwingScan Diagnosis, a Personalized Correction Plan, a Matched PGA Coach, and Adaptive Intelligence into a single system that starts with your diagnosis and evolves as you improve. The app is the delivery vehicle. The system is what makes it different.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>What is SwingScan Diagnosis?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">AI trained on 2M+ swings across 77+ documented flaw patterns. It analyzes your swing video and identifies your ONE root swing flaw — the single movement causing all your compensations — with 96% accuracy. The diagnostic step golf has never had.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Can AI really diagnose my swing?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">Yes. Human-AI collaboration outperforms either alone in diagnostic tasks. SwingScan provides precision the human eye cannot match at full speed (2M+ swings, 96% accuracy). Your Matched PGA Coach provides human understanding and guided coaching. You get both.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>How is this different from other golf apps?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">Every golf app does one of three things: measures, prescribes, or analyzes. None diagnose your root flaw first. PG1 starts with diagnosis — identifying the ONE cause — then builds everything around it. Zero of 9 competitors claim root flaw diagnosis.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>What if I don't improve?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">The Diagnosis Promise: try PG1 for 60 days. Get your diagnosis. Work through your plan. If the diagnosis doesn't deliver the clarity promised, one email, every penny back. First 7 days: cancel anytime, zero charge.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Do I need special equipment?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">No. Phone camera. Any angle. Range or course.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>What's the difference between Annual and Lifetime?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">Both include full access: SwingScan Diagnosis, Personalized Correction Plan, Matched PGA Coach, Adaptive Intelligence, all bonuses, every future feature. Annual: $199/year, rate locked, cancel anytime. Lifetime: $299 once, never pay again, Founders Priority Access, numbered badge, direct product team line.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>What happens after the 1,000 Founders spots fill?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">Founders Club closes permanently. Future members join at public pricing — significantly higher. Your Founders rate is locked forever, even as the platform adds features and the public price increases.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Who are the PGA coaches?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">Six elite PGA coaches, each specializing in specific flaw types. SwingScan identifies your root flaw; your coach is matched by expertise. Coach profiles will be published before launch.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>How long until I see my diagnosis?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">Day 1. Film, upload, diagnosed. Your Root Flaw Report and Flaw Chain Map generate from your diagnosis. Your Personalized Correction Plan begins building immediately.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Is my data private?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">Yes. Your swing videos and diagnostic data are used only for YOUR improvement. PG1 does not share individual user data.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Can I cancel anytime?</span>
+          <span class="faq-item__toggle">+</span>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">Annual: cancel anytime. Lifetime: one payment, no further charges. Both covered by 7-day free trial (zero charge) and 60-day Diagnosis Promise.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 18: USE CASES
+     ═══════════════════════════════════ -->
+<section class="use-cases section-padding-lg">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:var(--space-xl);">
+      <div class="prehead">Is This For You?</div>
+      <h2 class="section-header">PG1 Was Built for Golfers Who've Tried Everything.</h2>
+    </div>
+
+    <div class="persona-grid">
+      <div class="persona-card">
+        <div class="persona-card__label">The Plateau Player</div>
+        <div class="persona-card__descriptor">Handicap stuck despite genuine effort.</div>
+        <div class="persona-card__desc">
+          <p>You've played for years. You practice. You've taken lessons. Your handicap hasn't moved.</p>
+          <p style="margin-top:0.75rem;">It's not you. You've never been diagnosed. SwingScan identifies the ONE root flaw your instructors missed — and builds a plan around it. The plateau breaks when the root flaw resolves.</p>
+        </div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-card__label">The Lesson Skeptic</div>
+        <div class="persona-card__descriptor">Burned by past instruction.</div>
+        <div class="persona-card__desc">
+          <p>You've worked with 3, 5, maybe 15 different instructors. Every one saw something different. You're done trusting someone else's opinion.</p>
+          <p style="margin-top:0.75rem;">PG1 doesn't start with an opinion. It starts with a diagnosis — AI trained on 2M+ swings, 96% accurate. Your coach is matched to your specific flaw type. Directed, evidence-based improvement.</p>
+        </div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-card__label">The Tech-Forward Golfer</div>
+        <div class="persona-card__descriptor">Believes in technology but hasn't found the right system.</div>
+        <div class="persona-card__desc">
+          <p>You've tried the tracking apps, the launch monitors, the AI analyzers. None gave you a clear direction — just more data.</p>
+          <p style="margin-top:0.75rem;">PG1 turns data into a diagnosis. SwingScan identifies the ONE flaw causing everything else. Then builds a plan, matches a coach, and adapts as you improve.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FINAL CTA
+     ═══════════════════════════════════ -->
+<section class="final-cta section-padding-lg">
+  <div class="container">
+    <div class="final-cta__inner">
+      <h2 class="final-cta__headline">Love Your Game Again.</h2>
+      <p class="final-cta__subhead">One flaw. One plan. One clear path. The search ends here.</p>
+      <div class="final-cta__buttons">
+        <a href="#pricing" class="btn btn--primary btn--lg">Get My Diagnosis</a>
+      </div>
+      <p class="final-cta__meta">
+        $199/yr Annual &nbsp;|&nbsp; $299 Lifetime (Never Pay Again)<br>
+        1,000 Founders Club Memberships &nbsp;|&nbsp; 60-Day Diagnosis Promise
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <p>Performance Golf &copy; 2026. All rights reserved. PG1 Pulse Founders Club.</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════
+     STICKY MOBILE CTA
+     ═══════════════════════════════════ -->
+<div class="sticky-cta">
+  <div class="sticky-cta__inner">
+    <div class="sticky-cta__price">
+      <strong>$299 Lifetime</strong>
+      Never pay again
+    </div>
+    <a href="#pricing" class="btn btn--primary">Get My Diagnosis</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+     ═══════════════════════════════════ -->
+<script>
+// FAQ Accordion
+document.querySelectorAll('.faq-item__question').forEach(function(button) {
+  button.addEventListener('click', function() {
+    var item = this.parentElement;
+    var isActive = item.classList.contains('active');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(function(faq) {
+      faq.classList.remove('active');
+      faq.querySelector('.faq-item__answer').style.maxHeight = null;
+      faq.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+    });
+    // Open clicked (if it was not already open)
+    if (!isActive) {
+      item.classList.add('active');
+      var answer = item.querySelector('.faq-item__answer');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    var target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Nav background on scroll
+var nav = document.querySelector('.nav');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 100) {
+    nav.style.background = 'rgba(10,15,26,0.95)';
+  } else {
+    nav.style.background = 'rgba(10,15,26,0.85)';
+  }
+});
+</script>
+</body>
+</html>
