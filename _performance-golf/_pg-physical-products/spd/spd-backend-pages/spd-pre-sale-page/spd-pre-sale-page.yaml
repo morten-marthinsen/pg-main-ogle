@@ -1,0 +1,778 @@
+# ════════════════════════════════════════════════════════════════
+# spd-pre-sale-page.yaml
+# SpeedTrac — "The Senior Speed Series" Presale Page Builder Handoff
+# Source: spd-pre-sale-page.md
+# ════════════════════════════════════════════════════════════════
+
+handoff_version: "1.1"
+generated_at: "2026-03-17"
+source_doc: "spd-pre-sale-page.md"
+
+# ────────────────────────────────────────
+# BRAND SYSTEM
+# ────────────────────────────────────────
+brand:
+  name: "Performance Golf"
+  tagline: "Love Your Game"
+
+  colors:
+    primary:
+      performance_orange: "#FD3300"
+      dark_orange: "#DB2C00"
+      black: "#1D1A1A"
+      ui_gray: "#7B726C"
+    neutrals:
+      stone: "#B3AAA3"
+      pebble: "#DFD9D5"
+      sand: "#ECE9E4"
+      fog: "#F4F2F0"
+      mist: "#FCFAFA"
+    secondary:
+      hi_vis: "#E4F222"
+      grass: "#BCE9B1"
+      forest: "#2E4734"
+      sky: "#B2C6EB"
+      indigo: "#4F41D5"
+      polo: "#C5A6CA"
+    proportion_rule: "60% neutrals / 30% Performance Orange + Dark Orange / 10% secondary + black"
+    accessibility: "All text/background combinations must meet WCAG 4.5:1 contrast ratio minimum"
+
+  typography:
+    primary:
+      family: "Repro"
+      weights: ["Regular", "Medium", "Bold"]
+      usage: "Bold Uppercase for impactful titles; Regular Sentence Case for body copy"
+      fallback: "DM Sans, sans-serif"
+    secondary:
+      family: "GT Super Text"
+      weights: ["Book", "Italic"]
+      usage: "Book Sentence Case for human, approachable moments"
+      fallback: "Times New Roman, serif"
+    tertiary:
+      family: "Repro Mono"
+      weights: ["Regular"]
+      usage: "Regular Uppercase for metrics, stats, details"
+      fallback: "DM Mono, monospace"
+    font_files: "pg-skills/pg-brand-guidelines/assets/fonts/"
+
+  logos:
+    symbol:
+      black: "PER-Symbol-Black.svg"
+      white: "PER-Symbol-White.svg"
+      orange: "PER-Symbol-Orange.svg"
+    logotype:
+      black: "PER-Logotype-Black.svg"
+      white: "PER-Logotype-White.svg"
+    combination:
+      black: "PER-Combination-Black.svg"
+      white: "PER-Combination-White.svg"
+    rules:
+      - "Maintain clear space around the logo"
+      - "Ensure strong contrast with background"
+      - "NEVER distort, rotate at odd angles, apply unapproved colors, or crowd the mark"
+
+# ────────────────────────────────────────
+# PAGE SPEC
+# ────────────────────────────────────────
+page_spec:
+  page_type: "presale-content"
+  product_name: "The Senior Speed Series"
+  offer_name: "Senior Speed Masterclass"
+  guru: "Andrew Rice"
+  design_style: "Direct Response Content Page — high-impact, emotionally driven, long-form"
+  total_sections: 12
+  cta_placements: [9, 11]
+  video_placements: [7]
+  mobile_priority_sections: [1, 2, 3, 7, 9]
+  global_design_rules:
+    - "DR content page — bold headlines, emotional imagery, high contrast"
+    - "Andrew Rice is the authority figure throughout — use his image frequently"
+    - "Problem-heavy top half, solution-heavy bottom half"
+    - "CTA buttons use Performance Orange (#FD3300), white text, full-width on mobile"
+    - "Proof banner stays visible/sticky on scroll"
+    - "Headlines use Repro Bold Uppercase"
+    - "Body copy uses GT Super Text Book for warmth and readability"
+    - "Stats and data callouts use Repro Mono Regular Uppercase"
+    - "Background defaults to Mist (#FCFAFA); section alternation uses Fog (#F4F2F0) for visual rhythm"
+    - "Bold callouts and emphasis text use Dark Orange (#DB2C00) or Black (#1D1A1A)"
+    - "All images lazy-loaded below the fold"
+    - "SpeedTrac is NEVER named on this page — product is blind"
+
+# ────────────────────────────────────────
+# SECTIONS (in page scroll order)
+# ────────────────────────────────────────
+sections:
+
+  # ── SECTION 1: LOGO ───────────────────
+  - position: 1
+    id: "header-logo"
+    name: "Logo"
+    zone: "ATF"
+    layout: "PG combination logo centered, full-width container, white or Mist background"
+    mobile_behavior: "Logo centered, scales down proportionally"
+    visual_elements:
+      - type: "logo"
+        asset: "PER-Combination-Black.svg"
+        placement: "Centered horizontally"
+        max_width: "200px"
+        clear_space: "Minimum 24px padding on all sides"
+    notes:
+      - "Use the combination mark (symbol + wordmark) — PER-Combination-Black.svg"
+      - "Background: Mist (#FCFAFA)"
+
+  # ── SECTION 2: PROOF BANNER ───────────
+  - position: 2
+    id: "proof-banner"
+    name: "Proof Banner"
+    zone: "ATF"
+    layout: "Full-width bar — 'As Featured In:' label left-aligned or centered, media logos in a horizontal row"
+    mobile_behavior: "Label above, logos in a scrollable row or 2-row grid"
+    background: "#1D1A1A"
+    text_color: "#FCFAFA"
+    copy:
+      label: "As Featured In:"
+      label_font: "Repro Mono Regular Uppercase"
+    visual_elements:
+      - type: "media-logos"
+        logos:
+          - "Sports Illustrated"
+          - "New York Times"
+          - "ESPN"
+          - "Golf Digest"
+          - "GOLF"
+        style: "White or light-gray logo lockups on dark background"
+        spacing: "Even horizontal spacing, vertically centered"
+    notes:
+      - "Dark background (#1D1A1A) with white/light logos for high contrast"
+      - "Establishes credibility before any copy loads"
+      - "Consider making this sticky on scroll"
+
+  # ── SECTION 3: HERO HEADLINE ──────────
+  - position: 3
+    id: "atf-hero"
+    name: "Hero Headline"
+    zone: "ATF"
+    layout: "Full-width hero — stacked headline hierarchy, centered text, clean background"
+    mobile_behavior: "Stack vertically — all text centered, responsive font scaling"
+    background: "#FCFAFA"
+    copy:
+      prehead_line_1: "Top 25 Golf Coach Releases"
+      prehead_line_2: "Documented Proof On How To:"
+      prehead_font: "Repro Medium, Sentence Case"
+      prehead_color: "#7B726C"
+      headline: "ADD 15-50 YARDS TO YOUR DRIVES..."
+      headline_font: "Repro Bold Uppercase"
+      headline_color: "#1D1A1A"
+      headline_size: "Largest on page — primary H1"
+      subhead: "AND Hit 10+ Fairways... At Any Age!"
+      subhead_font: "GT Super Text Italic"
+      subhead_color: "#DB2C00"
+      subhead_size: "H2 — smaller than headline, larger than body"
+    notes:
+      - "Clean, uncluttered hero — headline does the heavy lifting"
+      - "Prehead establishes credibility context for the headline"
+      - "Subhead in GT Super Text Italic adds warmth and human tone"
+      - "'AND' in subhead should be visually emphasized (bold or underline)"
+
+  # ── SECTION 4: EXPERT INTRO + CREDIBILITY ──
+  - position: 4
+    id: "expert-intro"
+    name: "Expert Introduction + Credibility"
+    zone: "ATF"
+    layout: "Image left or above, copy right or below — conversational introduction block"
+    mobile_behavior: "Image stacked above copy, full-width"
+    background: "#F4F2F0"
+    copy:
+      body:
+        - "This is Andrew Rice."
+        - "For 35+ years, he's watched senior golfers get sold the same lie:"
+        - "*\"You want more distance? You have to give up accuracy.\"*"
+        - "*\"Because when you swing faster, you sacrifice control.\"*"
+        - "But Andrew refuses to accept that."
+        - "He's made it his life's mission to ***end the Senior Speed Sacrifice***..."
+        - "By proving once and for all that ***golfers at any age can hit it farther AND straighter.***"
+      body_font: "GT Super Text Book"
+      body_color: "#1D1A1A"
+      emphasis_style:
+        italic_quotes: "GT Super Text Italic, slightly larger or indented"
+        bold_italic_phrases: "Repro Bold, Dark Orange (#DB2C00)"
+    visual_elements:
+      - type: "image"
+        description: "Andrew Rice action shot teaching an older student, doing something technical that invokes curiosity"
+        asset: "PLACEHOLDER — andrew-rice-teaching-action.webp"
+        aspect_ratio: "4:3 or 16:9"
+        loading: "eager"
+        alt_text: "Andrew Rice coaching a senior golfer on the driving range"
+    notes:
+      - "Conversational tone — reads like Andrew is talking directly to you"
+      - "Bold+italic phrases ('end the Senior Speed Sacrifice', 'hit it farther AND straighter') are the emotional anchors"
+      - "Image should show Andrew engaged with a real student, not posed"
+
+  # ── SECTION 5: THE SPEED GAP TRAP ────
+  - position: 5
+    id: "problem-speed-gap"
+    name: "The Speed Gap Trap"
+    zone: "BTF"
+    layout: "Full-width — bold header, animation embed, then body copy"
+    mobile_behavior: "Stack vertically — header, animation, copy"
+    background: "#FCFAFA"
+    copy:
+      headline: "THE SPEED GAP TRAP"
+      headline_font: "Repro Bold Uppercase"
+      headline_color: "#1D1A1A"
+      body:
+        - "You're not hitting shorter, less accurate drives because you're swinging slower."
+        - "You're losing distance and accuracy because your highest swing speed ***(called your Speed Apex)*** is happening AFTER you hit the ball."
+        - "The wider the gap is between your top swing speed and the moment of impact, the shorter (and wilder) you hit your drives."
+      body_font: "GT Super Text Book"
+      body_color: "#1D1A1A"
+      bold_italic_style: "Repro Bold, Dark Orange (#DB2C00)"
+    visual_elements:
+      - type: "animation"
+        description: "Speed apex animation from SRSW demonstrating the gap between speed apex and impact"
+        asset: "PLACEHOLDER — speed-apex-gap-animation.mp4"
+        format: "MP4 auto-play loop, muted"
+        aspect_ratio: "16:9"
+        loading: "lazy"
+        alt_text: "Animation showing the speed gap between swing speed apex and ball impact"
+    notes:
+      - "This is the core problem education — animation is critical for comprehension"
+      - "Animation should visually show the speed apex occurring AFTER the ball"
+      - "Bold italic '(called your Speed Apex)' introduces the key term"
+
+  # ── SECTION 6: PROBLEM AGITATION ──────
+  - position: 6
+    id: "problem-agitation"
+    name: "Golf Is A Game Of Inches + Swing Tips Won't Save You"
+    zone: "BTF"
+    layout: "Two sub-sections stacked — each with header, animation/visual, and copy"
+    mobile_behavior: "Full-width stacked"
+    background: "#F4F2F0"
+    sub_sections:
+
+      - id: "game-of-inches"
+        header: "Golf Is A Game Of Inches"
+        header_font: "Repro Bold Uppercase"
+        header_color: "#1D1A1A"
+        copy:
+          - icon: "❌"
+            text: "Speed Apex one inch before impact? You lose 10 yards and leak a few shots."
+          - icon: "❌"
+            text: "Speed Apex three inches before impact? 30 yards gone and you can't hit a fairway."
+          - icon: "❌"
+            text: "Speed Apex six inches before impact? That's when your driver goes the same distance as a 5-iron..."
+          - bold_callout: "**And the only thing you're losing faster than golf balls – is *confidence.***"
+        copy_font: "GT Super Text Book"
+        icon_color: "#FD3300"
+        bold_callout_style: "Repro Bold, Dark Orange (#DB2C00)"
+        visual_elements:
+          - type: "animation"
+            description: "Speed apex animation from SRSW demonstrating the difference as the gap gets wider"
+            asset: "PLACEHOLDER — speed-apex-widening-gap-animation.mp4"
+            format: "MP4 auto-play loop, muted"
+            aspect_ratio: "16:9"
+            loading: "lazy"
+            alt_text: "Animation showing how wider speed gaps cause greater distance and accuracy loss"
+
+      - id: "swing-tips"
+        header: "Swing Tips Won't Save You"
+        header_font: "Repro Bold Uppercase"
+        header_color: "#1D1A1A"
+        copy:
+          intro: "Swing tips rarely work because no swing tip closes your speed gap."
+          list:
+            - icon: "❌"
+              text: "Dropping your right foot back doesn't move your speed apex closer to impact"
+            - icon: "❌"
+              text: "Flaring your feet doesn't close the gap"
+            - icon: "❌"
+              text: "Swinging from the inside, keeping your left arm straight, keeping your shoulder high..."
+          outro: "None of these tips address WHERE you release your speed."
+          bold_callout_header: "**Bottom line:**"
+          bold_callout: "**Until you close your \"Speed Gap\" you will NEVER hit the ball as far or straight as you're capable of.**"
+        copy_font: "GT Super Text Book"
+        icon_color: "#FD3300"
+        bold_callout_style: "Repro Bold, Dark Orange (#DB2C00)"
+    notes:
+      - "Short lines — one thought per line, spoken rhythm"
+      - "❌ icons use Performance Orange (#FD3300)"
+      - "Bold callout at end of each sub-section is the emotional peak"
+      - "Animations are KEY — they make the abstract concept concrete"
+
+  # ── SECTION 7: SOLUTION + VIDEO SERIES ──
+  - position: 7
+    id: "solution-video-series"
+    name: "The Solution + Senior Speed Series Videos"
+    zone: "BTF"
+    layout: "Solution intro block, then series header, then 4 video cards stacked vertically"
+    mobile_behavior: "Full-width stacked — each video card is its own visual unit"
+    background: "#FCFAFA"
+
+    solution_intro:
+      header_line_1: "The Solution:"
+      header_line_1_font: "Repro Medium, Sentence Case"
+      header_line_1_color: "#7B726C"
+      headline: "RELEASE YOUR SPEED AT IMPACT"
+      headline_font: "Repro Bold Uppercase"
+      headline_color: "#1D1A1A"
+      visual_elements:
+        - type: "animation"
+          description: "Speed apex animation from SRSW demonstrating closing the gap — speed apex syncing with impact"
+          asset: "PLACEHOLDER — speed-apex-closing-gap-animation.mp4"
+          format: "MP4 auto-play loop, muted"
+          aspect_ratio: "16:9"
+          loading: "lazy"
+          alt_text: "Animation showing speed apex syncing perfectly with moment of impact"
+      copy:
+        - "When you sync your speed apex with the moment of impact…"
+        - "Two incredible things happen."
+      numbered_points:
+        - number: "#1:"
+          text: "Your fastest swing speed happens AT IMPACT... so all your power transfers into the back of the ball."
+        - number: "#2:"
+          text: "Because you're releasing your speed at the ball instead of after it, your face is more square naturally…"
+      followup:
+        - "Eliminating slices and hooks."
+        - "**That's how you gain distance AND accuracy at the same time.**"
+      copy_font: "GT Super Text Book"
+      bold_style: "Repro Bold, #1D1A1A"
+      number_font: "Repro Bold"
+      number_color: "#FD3300"
+
+    series_intro:
+      prehead: "Introducing Andrew Rice's:"
+      prehead_font: "Repro Medium, Sentence Case"
+      prehead_color: "#7B726C"
+      headline: "Senior Speed Series"
+      headline_font: "Repro Bold Uppercase"
+      headline_color: "#1D1A1A"
+      subhead: "The Only Speed Training System For Seniors Proven To:"
+      subhead_font: "GT Super Text Book"
+      subhead_color: "#1D1A1A"
+      checkmarks:
+        - icon: "✅"
+          text: "Release your speed apex at impact..."
+        - icon: "✅"
+          text: "Add 15-50 yards of effortless accurate distance..."
+        - icon: "✅"
+          text: "AND eliminate your most frustrating miss off the tee!"
+      checkmark_font: "GT Super Text Book"
+      checkmark_icon_color: "#2E4734"
+      directional_element: "Directional arrows between intro and video blocks"
+      directional_asset: "PLACEHOLDER — directional-arrows.svg"
+
+    videos:
+      - position: 1
+        label: "Video #1:"
+        label_font: "Repro Mono Regular Uppercase"
+        label_color: "#FD3300"
+        header: "The Senior Speed Secret"
+        header_font: "Repro Bold"
+        header_color: "#1D1A1A"
+        description: "*Add 15-50 (Yes, 50!) Accurate Yards To Your Drives In A Single Practice Session – Without Swinging Harder*"
+        description_font: "GT Super Text Italic"
+        description_color: "#7B726C"
+        video_source: "PLACEHOLDER — video-1-senior-speed-secret"
+        iconik_ref: "https://app.iconik.io/asset/074f3fec-0d20-11ef-834b-f21aa180b7f1"
+        aspect_ratio: "16:9"
+        notes: "Lead video — sets the speed + accuracy frame"
+
+      - position: 2
+        label: "Video #2:"
+        label_font: "Repro Mono Regular Uppercase"
+        label_color: "#FD3300"
+        header: "Unlocking \"Effortless Efficiency\" In Your Golf Swing"
+        header_font: "Repro Bold"
+        header_color: "#1D1A1A"
+        description_intro: "**This is NOT about:**"
+        description_intro_font: "Repro Bold"
+        not_list:
+          - icon: "⦿"
+            text: "Dropping your right foot back to cheat the turn"
+          - icon: "⦿"
+            text: "Flaring your trail foot"
+          - icon: "⦿"
+            text: "Keeping your left arm straight"
+          - icon: "⦿"
+            text: "Swinging deep from the inside"
+          - icon: "⦿"
+            text: "Keeping your shoulder high to \"stay behind it\""
+          - icon: "⦿"
+            text: "Narrowing your stance for more rotation"
+        not_list_font: "GT Super Text Book"
+        not_list_icon_color: "#7B726C"
+        video_source: "PLACEHOLDER — video-2-effortless-efficiency"
+        iconik_ref: "https://app.iconik.io/asset/e61ab116-0d9d-11ef-ad92-96b41a60c1c2"
+        aspect_ratio: "16:9"
+        notes: "Contrarian angle — tells them what it's NOT before showing what it IS"
+
+      - position: 3
+        label: "Video #3:"
+        label_font: "Repro Mono Regular Uppercase"
+        label_color: "#FD3300"
+        header: "The Power Pause"
+        header_font: "Repro Bold"
+        header_color: "#1D1A1A"
+        description: "*This Counter-Intuitive Move Helps Senior Golfers Hit It FARTHER AND STRAIGHTER*"
+        description_font: "GT Super Text Italic"
+        description_color: "#7B726C"
+        video_source: "PLACEHOLDER — video-3-power-pause"
+        iconik_ref: "https://app.iconik.io/asset/e60b9fc8-0d9d-11ef-a8b7-028ce366fd1a"
+        aspect_ratio: "16:9"
+        notes: "Counter-intuitive hook — 'pause to hit it farther'"
+
+      - position: 4
+        label: "Video #4:"
+        label_font: "Repro Mono Regular Uppercase"
+        label_color: "#FD3300"
+        header: "Senior \"Speed Funnels\""
+        header_font: "Repro Bold"
+        header_color: "#1D1A1A"
+        description: "These 3 \"Speed Funnels\" Determine Your Distance AND Accuracy."
+        description_font: "GT Super Text Book"
+        description_color: "#7B726C"
+        video_source: "PLACEHOLDER — video-4-speed-funnels"
+        iconik_ref: "https://app.iconik.io/asset/a4910cf8-1136-11ef-9b7d-9ad2ef9bffbe"
+        aspect_ratio: "16:9"
+        notes: "Bridges to the masterclass — creates desire for the complete system"
+
+    video_card_design:
+      style: "Each video block is a distinct card with clear visual boundaries"
+      background: "#FFFFFF"
+      border: "1px solid #DFD9D5"
+      border_radius: "8px"
+      padding: "24px"
+      shadow: "Subtle drop shadow for depth"
+      label_style: "Small badge/tag above header — Performance Orange text"
+      video_embed_style: "16:9 responsive container with rounded corners"
+
+    notes:
+      - "This is the longest section — the 4 videos are the core content delivery"
+      - "Each video card should feel self-contained but part of a series"
+      - "Video sources need to be uploaded/hosted — Iconik refs are for internal reference only"
+      - "Directional arrows between series intro and first video card"
+
+  # ── SECTION 8: TIP OF THE ICEBERG + BULLETS ──
+  - position: 8
+    id: "masterclass-transition"
+    name: "Tip of the Iceberg — Masterclass Intro + Bullets"
+    zone: "BTF"
+    layout: "Full-width — transition header, image, intro copy, then benefit bullets, then masterclass header"
+    mobile_behavior: "Image stacked above copy, bullets full-width"
+    background: "#F4F2F0"
+    copy:
+      header_line_1: "The Fastest Way To"
+      header_line_2: "Take Your Accurate Distance To The Course"
+      header_font: "Repro Bold Uppercase"
+      header_color: "#1D1A1A"
+      body:
+        - "Andrew has spent 35+ years and 50,000 lessons proving senior golfers at any age CAN:"
+      checkmarks:
+        - icon: "✅"
+          text: "Increase distance"
+        - icon: "✅"
+          text: "Dial in your accuracy"
+        - icon: "✅"
+          text: "Transfer those gains directly to the golf course"
+      checkmark_icon_color: "#2E4734"
+      transition:
+        - "Now he's assembled an in-depth masterclass that goes way deeper than this Senior Speed Series..."
+        - "Showing you how to **take your new, dead-straight distance to the course starting the next time you play.**"
+      body_font: "GT Super Text Book"
+      body_color: "#1D1A1A"
+      bold_style: "Repro Bold, #1D1A1A"
+
+      masterclass_header:
+        prehead: "Full-Length"
+        prehead_font: "Repro Medium, Sentence Case"
+        prehead_color: "#7B726C"
+        headline: "SENIOR SPEED MASTERCLASS"
+        headline_font: "Repro Bold Uppercase"
+        headline_color: "#1D1A1A"
+        sub: "***(Now Streaming)***"
+        sub_font: "GT Super Text Bold Italic"
+        sub_color: "#FD3300"
+
+      benefits_header: "You'll discover:"
+      benefits_header_font: "Repro Medium"
+      benefits:
+        - icon: "checkmark-box"
+          icon_color: "#FD3300"
+          text: "**The shocking reason most speed training actually makes your big miss WORSE.** (This is why your scores go up when your swing speed goes up)"
+        - icon: "checkmark-box"
+          icon_color: "#FD3300"
+          text: "**The \"forgotten experiment\" with 30 golfers over age 55** — where every single one gained at least 30 yards in 15 minutes"
+        - icon: "checkmark-box"
+          icon_color: "#FD3300"
+          text: "**The one number Andrew checks FIRST when he starts working with a new student.** It's not swing speed, launch angle, or spin rate. 90% of instructors never look at it, but it's the key to unlocking dead-straight drives."
+        - icon: "checkmark-box"
+          icon_color: "#FD3300"
+          text: "**Andrew's \"do less, gain more\" method** — so you add real distance ON THE GOLF COURSE. No gym, no speed sticks, no flexibility program, no swinging out of your shoes, no dropping $500 on a new driver. Just one simple \"speed shift\" unlocks your full potential off the tee."
+      benefits_font: "GT Super Text Book"
+      benefits_bold_style: "Repro Bold, #1D1A1A"
+
+    visual_elements:
+      - type: "image"
+        description: "Compelling photo of Andrew Rice working with a senior golfer on the range — energy, engagement, results"
+        asset: "PLACEHOLDER — andrew-rice-range-teaching.webp"
+        aspect_ratio: "16:9 or 3:2"
+        loading: "lazy"
+        alt_text: "Andrew Rice working with a senior golfer on the driving range"
+    notes:
+      - "This section transitions from free content to paid offer"
+      - "Checkmark-box icons should be a filled square with checkmark in Performance Orange"
+      - "Benefit bullets use bold lead (Repro Bold) + explanation (GT Super Text Book)"
+      - "Each bullet creates an open loop that can only be closed by watching the masterclass"
+
+  # ── SECTION 9: PRIMARY CTA ────────────
+  - position: 9
+    id: "primary-cta"
+    name: "Primary CTA"
+    zone: "BTF"
+    layout: "Centered text block above, CTA button below — generous whitespace"
+    mobile_behavior: "Full-width button, text centered above"
+    background: "#FCFAFA"
+    copy:
+      header: "Dial In Your Drives TODAY"
+      header_font: "Repro Bold Uppercase"
+      header_color: "#1D1A1A"
+      body:
+        - "Click below now to watch Andrew's Complete ***Senior Speed Masterclass…***"
+        - "So you gain speed…"
+        - "Add real distance on the golf course…"
+        - "And hit 10+ fairways every single round."
+      body_font: "GT Super Text Book"
+      body_color: "#1D1A1A"
+      bold_italic_style: "Repro Bold, Dark Orange (#DB2C00)"
+    cta_button:
+      text: "YES, I WANT MORE SPEED AND MORE FAIRWAYS!"
+      text_font: "Repro Bold Uppercase"
+      text_color: "#FFFFFF"
+      sub_text: "(Because Great Drives Make Golf More Fun!)"
+      sub_text_font: "GT Super Text Italic"
+      sub_text_color: "#7B726C"
+      background_color: "#FD3300"
+      hover_color: "#DB2C00"
+      border_radius: "8px"
+      padding: "20px 40px"
+      width: "Full-width on mobile, max-width 600px on desktop"
+      link: "TBD — masterclass page URL"
+    notes:
+      - "CTA button is the most prominent element on the page"
+      - "Performance Orange (#FD3300) background, white text"
+      - "Sub-text sits directly below button in lighter color"
+      - "Generous whitespace above and below this section"
+
+  # ── SECTION 10: PROOF — MEET YOUR COACH ──
+  - position: 10
+    id: "proof-coach"
+    name: "Meet Your Coach + Testimonials"
+    zone: "BTF"
+    layout: "Header stack, headshot, credential checkmarks, then testimonial cards"
+    mobile_behavior: "Stack vertically — headshot centered, credentials below, testimonials stacked"
+    background: "#F4F2F0"
+
+    coach_intro:
+      prehead: "MEET YOUR COACH"
+      prehead_font: "Repro Mono Regular Uppercase"
+      prehead_color: "#7B726C"
+      headline_line_1: "Andrew Rice Is"
+      headline_line_2: "A Senior Speed Specialist"
+      headline_font: "Repro Bold Uppercase"
+      headline_color: "#1D1A1A"
+
+    visual_elements:
+      - type: "image"
+        description: "Andrew Rice professional headshot"
+        asset: "PLACEHOLDER — andrew-rice-headshot.webp"
+        aspect_ratio: "1:1 or 3:4"
+        loading: "lazy"
+        alt_text: "Andrew Rice — Top 25 Golf Coach and Senior Speed Specialist"
+        style: "Circular crop or rounded corners, centered"
+
+    credentials:
+      font: "GT Super Text Book"
+      icon: "checkmark"
+      icon_color: "#2E4734"
+      items:
+        - "**35 years experience coaching 50,000+ lessons** and **1,000 golf schools with players over age 50**"
+        - "**Golf Digest's #25 Top Teacher In America** and **Golf Magazine Top 100 Instructor**"
+        - "**One of only 9 TrackMan University Partners in the world**"
+        - "**Consulted with PING's engineering team on club design to improve equipment performance for older players**"
+        - "**Known as the \"coach's speed coach\"** because other top instructors seek him out when THEY want to understand how speed really works"
+      bold_style: "Repro Bold, #1D1A1A"
+
+    testimonials_header: "What Golfers Are Saying:"
+    testimonials_header_font: "Repro Bold"
+    testimonials_header_color: "#1D1A1A"
+    testimonials:
+      - quote: "I'd been losing about 5 yards a year since I turned 55. Tried wider stances, flaring my feet, swinging from the inside — all the stuff YouTube tells you to do. Nothing stuck. Then Andrew explained how to sync my speed at impact. I picked up 22 yards in one session."
+        attribution: "– Tom R., 61, 12 Handicap"
+      - quote: "I'm 15 yards longer AND I'm hitting more fairways. In the past when I swung hard I sprayed it all over the course. Now I'm hitting 9 fairways a round and sending it way down there."
+        attribution: "– Jim K., 58, 14 Handicap"
+      - quote: "I've tried every distance tip out there but I never felt comfortable with the driver. Now I'M the guy my Sunday Scramble counts on to find the fairway."
+        attribution: "– Bill D., 64, 16 Handicap"
+    testimonial_card_design:
+      background: "#FFFFFF"
+      border: "1px solid #DFD9D5"
+      border_radius: "8px"
+      padding: "24px"
+      quote_font: "GT Super Text Italic"
+      quote_color: "#1D1A1A"
+      attribution_font: "Repro Mono Regular"
+      attribution_color: "#7B726C"
+      style: "Authentic feel — not over-designed"
+    notes:
+      - "Credential checkmarks use Forest green (#2E4734) for trust"
+      - "Bold the credential highlights within each line"
+      - "Testimonial cards should feel authentic — clean but not corporate"
+      - "Attribution format: em dash + first name + last initial + age + handicap"
+
+  # ── SECTION 11: SECONDARY CTA ─────────
+  - position: 11
+    id: "secondary-cta"
+    name: "Secondary CTA"
+    zone: "BTF"
+    layout: "CTA button with sub-text — same treatment as Section 9"
+    mobile_behavior: "Full-width button, prominent"
+    background: "#FCFAFA"
+    cta_button:
+      text: "YES, I WANT MORE SPEED AND MORE FAIRWAYS!"
+      text_font: "Repro Bold Uppercase"
+      text_color: "#FFFFFF"
+      sub_text: "(So I love my game every time I tee it up!)"
+      sub_text_font: "GT Super Text Italic"
+      sub_text_color: "#7B726C"
+      background_color: "#FD3300"
+      hover_color: "#DB2C00"
+      border_radius: "8px"
+      padding: "20px 40px"
+      width: "Full-width on mobile, max-width 600px on desktop"
+      link: "TBD — masterclass page URL"
+    notes:
+      - "Mirrors Section 9 CTA but with different sub-text"
+      - "Sub-text: 'So I love my game every time I tee it up!' — ties back to PG brand 'Love Your Game'"
+
+  # ── SECTION 12: FOOTER ────────────────
+  - position: 12
+    id: "footer"
+    name: "Footer"
+    zone: "BTF"
+    layout: "Standard PG footer — logo centered above, links below"
+    mobile_behavior: "Standard responsive footer — links stacked or in grid"
+    background: "#1D1A1A"
+    text_color: "#B3AAA3"
+    visual_elements:
+      - type: "logo"
+        asset: "PER-Combination-White.svg"
+        placement: "Centered"
+        max_width: "160px"
+    footer_links:
+      font: "Repro Regular"
+      color: "#B3AAA3"
+      hover_color: "#FCFAFA"
+      items:
+        - "Privacy Policy"
+        - "Terms"
+        - "Contact"
+      separator: "|"
+    copyright:
+      text: "© 2026 Performance Golf. All Rights Reserved."
+      font: "Repro Regular"
+      color: "#7B726C"
+    notes:
+      - "Dark footer (#1D1A1A) with white logo and Stone-colored links"
+      - "Standard PG footer template"
+
+# ────────────────────────────────────────
+# PLACEHOLDER ASSET MANIFEST
+# ────────────────────────────────────────
+placeholder_assets:
+  images:
+    - id: "andrew-rice-teaching-action"
+      section: 4
+      description: "Andrew Rice action shot teaching an older student — technical, curiosity-invoking"
+      format: "WebP"
+      recommended_size: "1200x800"
+      status: "NEEDED"
+
+    - id: "andrew-rice-range-teaching"
+      section: 8
+      description: "Andrew Rice working with a senior golfer on the range — energy, engagement, results"
+      format: "WebP"
+      recommended_size: "1200x800"
+      status: "NEEDED"
+
+    - id: "andrew-rice-headshot"
+      section: 10
+      description: "Andrew Rice professional headshot"
+      format: "WebP"
+      recommended_size: "600x600"
+      status: "NEEDED"
+
+  animations:
+    - id: "speed-apex-gap-animation"
+      section: 5
+      description: "Speed apex animation demonstrating the gap between speed apex and impact"
+      source: "SRSW animation assets"
+      format: "MP4, auto-play loop, muted"
+      aspect_ratio: "16:9"
+      status: "NEEDED"
+
+    - id: "speed-apex-widening-gap-animation"
+      section: 6
+      description: "Speed apex animation showing the difference as the gap gets wider (1 inch, 3 inches, 6 inches)"
+      source: "SRSW animation assets"
+      format: "MP4, auto-play loop, muted"
+      aspect_ratio: "16:9"
+      status: "NEEDED"
+
+    - id: "speed-apex-closing-gap-animation"
+      section: 7
+      description: "Speed apex animation showing the gap closing — speed syncing with impact"
+      source: "SRSW animation assets"
+      format: "MP4, auto-play loop, muted"
+      aspect_ratio: "16:9"
+      status: "NEEDED"
+
+  videos:
+    - id: "video-1-senior-speed-secret"
+      section: 7
+      label: "Video #1: The Senior Speed Secret"
+      iconik_ref: "https://app.iconik.io/asset/074f3fec-0d20-11ef-834b-f21aa180b7f1"
+      format: "Hosted video embed"
+      status: "NEEDS HOSTING URL"
+
+    - id: "video-2-effortless-efficiency"
+      section: 7
+      label: "Video #2: Unlocking Effortless Efficiency"
+      iconik_ref: "https://app.iconik.io/asset/e61ab116-0d9d-11ef-ad92-96b41a60c1c2"
+      format: "Hosted video embed"
+      status: "NEEDS HOSTING URL"
+
+    - id: "video-3-power-pause"
+      section: 7
+      label: "Video #3: The Power Pause"
+      iconik_ref: "https://app.iconik.io/asset/e60b9fc8-0d9d-11ef-a8b7-028ce366fd1a"
+      format: "Hosted video embed"
+      status: "NEEDS HOSTING URL"
+
+    - id: "video-4-speed-funnels"
+      section: 7
+      label: "Video #4: Senior Speed Funnels"
+      iconik_ref: "https://app.iconik.io/asset/a4910cf8-1136-11ef-9b7d-9ad2ef9bffbe"
+      format: "Hosted video embed"
+      status: "NEEDS HOSTING URL"
+
+  graphics:
+    - id: "directional-arrows"
+      section: 7
+      description: "Directional arrows between series intro and video blocks"
+      format: "SVG"
+      status: "NEEDED"
+
+    - id: "media-logos"
+      section: 2
+      description: "White/light logo lockups for Sports Illustrated, New York Times, ESPN, Golf Digest, GOLF"
+      format: "SVG preferred"
+      status: "NEEDED"
