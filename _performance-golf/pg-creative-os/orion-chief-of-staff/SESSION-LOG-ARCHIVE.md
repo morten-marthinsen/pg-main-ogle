@@ -2,7 +2,7 @@
 
 > Compressed historical sessions. For recent sessions, see `SESSION-LOG.md`.
 > Archive created: Session 013 (2026-02-09). Sessions 001-009 moved here.
-> Last updated: Session 051 (2026-03-06). Sessions 032-047 archived.
+> Last updated: Session 093 (2026-03-13). Sessions 074c-089 archived.
 
 ---
 
@@ -58,6 +58,50 @@
 | 045 | 2026-02-22 | Slack interface plan + GitHub repo scaffold | "Exa — PG Creative Intel" architecture, private repo created, project scaffolded |
 | 046 | 2026-02-22 | Slack bot Phase 1 MVP code | app.py, product_resolver, knowledge_loader, AI layer, message_handler, data sync |
 | 047 | 2026-02-22 | Slack app setup + workspace install | Slack app created at api.slack.com, Socket Mode, manifest, OAuth, .env configured |
+| 048 | 2026-02-22 | Slack bot multi-turn + product intel | Thread history, 6 product intel cards, knowledge loader expanded |
+| 049 | 2026-02-23 | PRD v1.1 batch update | Brand architecture restructured, Thread 1 renamed, persona testing, Figma card example |
+| 050 | 2026-03-06 | Pipeline migration to GitHub + first triage | Pipeline moved from Obsidian to pg-main-ogle, launchd updated, 26 items triaged |
+| 051 | 2026-03-06 | Compression + Daily Brief Intelligence plan | S032-S047 archived, triage intelligence architecture designed |
+| 052 | 2026-03-07 | Daily Brief Intelligence Phases 3-5 + Mar 7 regen | M0b triage enrichment, decision recording, config, 6 transcripts processed |
+| 053 | 2026-03-07 | Fathom transcript sync + launchd | `--since` flag, 2 transcripts downloaded, 30-min auto-sync plist |
+| 054 | 2026-03-07 | Executive Assistant Intelligence Upgrade (6 phases) | capacity_engine.py, multi-factor ABC, 3 A-task cap, week-ahead, Waiting On |
+| 055 | 2026-03-07 | Donny call action items — path migration | 34 hardcoded paths replaced across 13 files, Orion rename planned |
+| 056 | 2026-03-07 | Exa → Orion rename (all 6 phases) | Folder/file renames, 30+ content files, launchd plist swap, private files |
+| 057 | 2026-03-07 | Phase 1.5 code + live pipeline verification | Launch detection, week capacity, title rename, ghost folder discovered |
+| 058 | 2026-03-07 | Ghost exa cleanup + launchd plist migration | 14 transcript folders consolidated, ghost deleted, sync plists updated |
+| 059 | 2026-03-07 | Daily briefing system audit + gap analysis | 15-module audit, 8 gaps, auto_reject enabled, 5 tools recommended |
+| 060 | 2026-03-07 | Slack webhook + app rename | "Orion Daily Briefing" app, webhook to DM, privacy rule established |
+| 062 | 2026-03-08 | Task recovery + schedule protection | 14 items recovered (mi-025 to mi-038), add_to_registry() force guard |
+| 063 | 2026-03-08 | Executive Assistant v2.0.0 (8 phases) | M00a Today at a Glance, work block allocation, conflict detection, launch countdown, auto-approve, What Changed delta, PRD tags, reconcile.py |
+| 064 | 2026-03-08 | Calendar enrichment (killed) + triage + tool audit | M13 built then killed (too noisy for large meetings). OAuth scope upgraded. 6 items triaged. ClickUp MCP confirmed working |
+| 065 | 2026-03-08 | M00a preview report + timezone docs | M00a v2 preview created (Today at a Glance). Christopher's Lisbon timezone documented. Triage integrated. Calendar timezone bug surfaced |
+| 066 | 2026-03-08 | PR #1 creation + shareability audit | 46 files changed, PR #1 (personal fork) + PR #8 (cross-fork to PG org). Fathom MCP hardcoded path fixed |
+| 067 | 2026-03-09 | Session log compression + timezone fix | S048-S063 archived. Live pipeline verified. Calendar API timezone fixed (display_timezone: Europe/Lisbon) |
+| 068 | 2026-03-09 | Exa→Orion rename + Slack bot upgrade | 22 refs renamed across 12 pipeline modules. Slack app renamed. chat:write scope + slack_post_message allowlisted. Team bot plan written |
+| 069 | 2026-03-09 | Pending Review bulk triage + Build State reconciliation | 35 items triaged (30 rejected, 5 kept). Pipeline re-run verified clean |
+| 069b | 2026-03-09 | Google Docs MCP fix + Brixton transcript + Orion bot design | Conflicting user-level MCP config removed. Bot design: multi-turn threads, DM, auto user-ID, Slack-first output. Product audit done |
+| 070 | 2026-03-09 | Orion Personal Bot — design + plan | Private Slack bot architecture: Socket Mode, forward-to-task, mark-complete, positional priority (A1-A3/B1-B3/C), PriorityScorer |
+| 071 | 2026-03-10 | Orion Personal Bot — full implementation | 5 modules built (bot.py, kb_ops.py, task_parser.py, conversation.py, priority_explainer.py). Forward-to-task + mark-complete + quick commands. reconcile bug fixed |
+| 072 | 2026-03-10 | Slack app creation + PR #8 merge + Google Docs MCP | PR #8 merged. Google Docs MCP verified. "Orion (Personal)" Slack app created via Playwright. 3 of 4 tokens collected |
+| 073 | 2026-03-10 | Anthropic API key + .env created | All 4 tokens collected. .env created with SLACK_BOT_TOKEN, SLACK_APP_TOKEN, ANTHROPIC_API_KEY, OWNER_SLACK_ID |
+| 074 | 2026-03-10 | Morning triage + B2/B3 planning | Full Mar 10 briefing triaged. SF2 brief done (mi-041 closed). A-tasks revised. 13 waiting-on items closed. DWAI/RV naming convention planned |
+| 074b | 2026-03-10 | Bot launch + Slack config fix + intent gap | Venv created, import chain fixed (importlib bypass). Bot connected via Socket Mode. "Hey Orion, B1 is finished" misrouted → intent classifier needed |
+| 074c | 2026-03-10 | Intent classifier — Claude NLU routing | intent_classifier.py (5 intents, regex fallback), bot.py rewired, tier ref support |
+| 075 | 2026-03-10 | Claude-as-Agent rewrite | agent.py conversation engine, report-as-ground-truth, thread history, 5 tools |
+| 076 | 2026-03-10 | Report refresh after task changes | quick_refresh.py (1.1-1.4s surgical re-render), regenerate_report tool added |
+| 077 | 2026-03-11 | Session log compression (5th) + bot verification | S064-074b archived. Personal bot LIVE (launchd). Playwright MCP fixed. Team bot Slack app audited |
+| 078 | 2026-03-11 | Triage Intelligence v2.0 | TaskClassifier (5 types), ScheduleSuggester (multi-factor), hybrid dedup, "Why" column |
+| 079 | 2026-03-11 | Team bot scaffold + SSS wiring | 7 files scaffolded, 4 SSS functions + ClickUp + agent status, 6 read-only tools |
+| 080 | 2026-03-11 | Team bot auth + data verification | Service account created, 5/6 data sources verified, Socket Mode conflict found |
+| 081 | 2026-03-11 | Socket Mode fix + Railway prep | Second app-level token, Procfile + railway.toml, bot display name fixed |
+| 082 | 2026-03-12 | Message shortcut — "Create Orion task" | @app.shortcut handler, thread continuity, enforce-proposal prompt |
+| 083 | 2026-03-12 | Message shortcut E2E test + bug fix | chat_update channel ID fix (user ID → DM channel ID) |
+| 084 | 2026-03-12 | Team bot Railway deployment | Railway project created, bot token mismatch fixed, Slack display name (3 layers) |
+| 085 | 2026-03-12 | Personal bot E2E test + track closeout | Message shortcut full success, personal bot FEATURE-COMPLETE v3.3 |
+| 086 | 2026-03-12 | Personal bot README documentation | README.md (setup guide, 8 troubleshooting items), SETUP.md updated |
+| 087 | 2026-03-12 | Team bot creative advisor — planning | Product catalog mapped (14 products), 5-phase plan, user profiles + context-first workflow designed |
+| 088 | 2026-03-12 | Save Context shortcut — design + plan | 5 storage layers mapped, context-library/ design locked, 4-phase plan approved |
+| 089 | 2026-03-12 | Team bot creative advisor — EXECUTION | Phase 1-5 all complete. 14 tools (6 data + 5 creative + 3 Google Docs). Haiku→Sonnet. Deployed to Railway |
 
 ---
 
@@ -211,6 +255,120 @@
 - **Product resolver**: 80+ aliases mapping natural language → 12 PG product codes. Longest-match-first.
 - **Private repo**: `github.com/christophero90/exa-pg-creative-intel`.
 
+### Session 048 — Slack Bot Multi-Turn + Product Intel
+- **Thread history**: `thread_history.py` fetches Slack thread context. Product resolution runs against full thread text.
+- **Product intel cards**: 6 distilled cards (SF2, SPD, WDG1, CLST, 357, RS1 stub). Knowledge priority: Product Intel > Ad Angles > Influencer Angles.
+
+### Session 049 — PRD v1.1 Brand Architecture
+- **Brand hierarchy**: Love Your Game (promise) → brand themes → product → root angle → testing → personas A-E.
+- **Thread 1 renamed**: "A Smarter Way to Improve Golf" → "The Smarter Way to Play Better Golf".
+- **Terminology locked**: "ad sets" = Meta/YouTube test units, "campaigns" = 360-degree brand campaigns.
+
+### Session 050 — Pipeline Migration + Triage Patterns
+- **Pipeline moved from Obsidian to GitHub repo**. Secrets symlinked from old path.
+- **Daily reports stay local-only** (gitignored) — GitHub for shared team work.
+- **Triage format preferences**: post-triage Pending Review collapses to one-line. "Already working on" = KEEP, not remove.
+
+### Session 052 — Triage Intelligence Integration
+- **Enrichment rendering**: Two-column format (Signal + Suggestion) in M0b.
+- **Decision recording**: `apply_approvals()` records to `TriageHistory` with item snapshots.
+- **Pipeline resilience**: All triage integration try/except wrapped — never breaks pipeline.
+
+### Session 054 — Executive Assistant Architecture
+- **capacity_engine.py**: WorkBlock, DayCapacity, PriorityScorer, classify_day_items.
+- **Multi-factor scoring**: launch 0.30, overdue 0.25, deadline 0.20, scorecard 0.15, day-type 0.10.
+- **3 A-task hard cap per day**. Mon-Fri only. Friday overflow → Monday.
+- **Waiting On items skip triage enrichment entirely**.
+
+### Session 055-056 — Path Migration + Exa → Orion Rename
+- **34 hardcoded paths** replaced across 13 files (user-agnostic).
+- **Full Exa → Orion rename**: folder, files, 30+ content files, launchd plist, private ~/.claude/ files.
+- **Historical files left as-is** — session archives retain "Exa" as record.
+
+### Session 060 — Slack Privacy Rule (CRITICAL)
+- **ALL Orion automations → Christopher's DM ONLY**. Never shared/public channels. 288-member workspace with CEO/leadership = career risk.
+
+### Session 062 — Schedule Protection (CRITICAL)
+- **Bulk triage destroyed 11 confirmed week tasks**. Root cause: no schedule protection + tasks only in session prose.
+- **`add_to_registry()` force guard**: items with future scheduled dates skipped unless `force=True`.
+- **Session-to-KB bridge**: confirmed tasks MUST be written to `.kb-manual-items.json` + `.kb-schedule.json` on exit.
+
+### Session 063 — EA v2.0.0 Architecture
+- **M00a "Today at a Glance"**: runs LAST (needs shared_state), renders FIRST. Day X/90, tasks with time slots, meetings, launch countdowns, What Changed delta, alerts.
+- **Work block allocation**: `allocate_work_blocks()` fits A-tasks into focus block gaps between meetings.
+- **Auto-approve threshold**: 0.80. Transparency list in M00.
+- **reconcile.py**: end-of-day CLI (d/r/s/a/q).
+
+### Session 064 — Calendar Enrichment Killed
+- **M13 calendar enrichment explored then killed.** Built full module (attendee matching, silent writes) but large meetings (15+ attendees) caused 9-10 false positive matches. Christopher decided daily report task list is sufficient.
+- **OAuth scope upgraded**: `calendar.readonly` → `calendar.events` (read+write). Kept in place.
+
+### Session 066 — PR #1 Cross-Fork Pattern
+- **Cross-fork PR created**: christophero90:pg-dev-ogle → performance-golf/pg-main:main (PR #8). Remote `pg-main` added to local git config.
+- **Fathom MCP portability**: Keep in shared mcp.json, use `bash -c` wrapper so `~` expands at runtime.
+
+### Session 067 — Timezone Fix Architecture
+- **API-level timezone fix** instead of post-hoc conversion. Tell Calendar API to return times in `Europe/Lisbon` — fixes both display formatting AND capacity engine overlap calculations in one change.
+
+### Session 068 — Slack Privacy + Team Bot Design
+- **Team-wide bot, not CEO-only.** Anyone at PG can DM Orion, same data restrictions apply universally. Allowlist protects Christopher's private operational data, not who's asking.
+- **Exa→Orion rename in pipeline**: 22 references across 12 module files. Only remaining "Exa" is in `.bak` file.
+
+### Session 069b — Bot Output + Hosting Decisions
+- **Google Docs MCP**: Use `@a-bonus/google-docs-mcp` (npm package), not local build. Conflicting user-level entry removed.
+- **Bot hosting**: Must be server-deployed (Railway/Render) for team-facing bot — anyone in PG, anytime.
+- **Slack-first output**, Google Doc write-back optional with explicit permission.
+
+### Session 070-071 — Personal Bot Architecture
+- **Local, not hosted**: KB files are local, pipeline is local, Socket Mode eliminates hosting need.
+- **Separate app**: private task bot ≠ team data bot. Different Slack apps, different concerns.
+- **Positional priority**: score-based ranking within tier (highest score = position 1). 3 A-task cap, 3 B-task cap, C = no position.
+- **reconcile.get_today_items bug**: Schedule JSON has wrapper keys but function iterates top-level dict. Fixed with transcript_kb.load_schedule() for flat dict access.
+
+### Session 074b — Intent Classification Gap
+- **Default handler should NOT be create-task** — should ask for clarification or use Claude to classify intent.
+- **Tier/position references (A1, B1, B2) must be supported** — Christopher naturally refers to tasks by daily position.
+
+### Session 074c-075 — Personal Bot Claude-as-Agent Architecture
+- **Haiku for intent classification** — fast + cheap (~200 tokens/call). "Unclear" as default instead of create-task.
+- **Claude-as-Agent replaced intent→handler pipeline** — every message goes to Haiku with system prompt + thread history + 5 tool definitions. Claude decides actions naturally.
+- **Report as ground truth** — daily report is what Christopher sees; bot must agree with it. Task ID map parsed from rendered M0 table.
+- **Thread history**: in-memory, 1hr TTL, 20 messages max. No persistence needed for single user.
+
+### Session 076 — Quick Refresh Architecture
+- **Surgical re-render (1.1-1.4s)** instead of full pipeline (633s). Patches M00a/M0b/M0 via HTML comment markers. Only non-AI task modules run.
+- **Auto-refresh after mutations** — `regenerate_report` tool fires automatically after any task-modifying operation.
+
+### Session 078 — Triage Intelligence v2.0
+- **5 learned placement rules** from Christopher's feedback: (1) scheduling→today/tomorrow, (2) someone else→remove, (3) waiting on input→don't place, (4) automated→don't place, (5) cross-reference meetings for piggyback.
+- **TaskClassifier**: 5 types (scheduling 10m, quick_action 15m, deep_work 60m, strategic 30m, stale 0m).
+- **Hybrid dedup**: SequenceMatcher + Jaccard word overlap at 0.52 threshold.
+
+### Session 079-081 — Team Bot Architecture
+- **Service account over OAuth** for Railway deploy. Base64-encoded JSON in env var.
+- **6 tools, all read-only** — performance_summary, top_ads, by_funnel, strategy_recommendations, pipeline_status, agent_status.
+- **5-minute cache** on all data sources to prevent API hammering.
+- **Second app-level token** for Socket Mode conflict — personal bot keeps `exa-socket`, team bot uses `orion-team-socket`.
+- **Worker process** in Procfile (not web) — Socket Mode uses outbound WebSocket.
+
+### Session 082-085 — Message Shortcut + Personal Bot Closeout
+- **"Connect to apps" is the permanent UX path** for message shortcuts in third-party Slack apps.
+- **chat_update needs DM channel ID from response**, not user ID (Slack resolves user ID → DM channel).
+- **Personal bot closed as FEATURE-COMPLETE v3.3** — 6 tools, 2 message shortcuts, thread memory, auto report refresh.
+- **Slack has THREE name layers** for bots: App Name (Basic Info), Bot Display Name (App Home), Workspace Bot User (Configuration page).
+
+### Session 087-089 — Team Bot Creative Advisor Upgrade
+- **User profiles in `context/users/`** — deployed via Docker, auto-update with repo push.
+- **Context-first creative workflow** — 4-step: identify user → understand project → confirm → produce.
+- **Sonnet for all team bot messages** — creative tasks need Sonnet-level reasoning.
+- **ClickUp integration KILLED** — Donnie's team building separate Brixton dashboard.
+- **14 tools total** (6 data + 5 creative + 3 Google Docs).
+
+### Session 088 — Save Context Architecture
+- **Flat directory with YAML frontmatter tags** — no subdirectories, no index file. `grep -rl` on frontmatter is sufficient.
+- **`_shared/context-library/`** — committed, available to all agents.
+- **Same propose-then-confirm DM flow** as Create Orion Task shortcut.
+
 ### Session 030-031 — Neco Autonomous Architecture
 - **Hybrid project state approach**: `project-state.yaml` in Neco root (machine-readable). Runner reads 3 sources: ClickUp tasks + project-state.yaml + reference files.
 - **Smart evaluation logic**: 5 scenarios — new work, LOCKED (skip), human_review (skip), IN_PROGRESS (continue), dependency-blocked (skip).
@@ -270,6 +428,50 @@
 | 045 | slack-bot/ directory structure, .gitignore, .env.example, requirements.txt | plan file |
 | 046 | app.py, config.py, Procfile, ai/, handlers/, knowledge/, utils/ modules, data/sync.sh | — |
 | 047 | slack-bot/.env | — |
+| 048 | thread_history.py, 6 product intel cards | message_handler.py, loader.py, system_prompt.py, config.py |
+| 049 | — | CREATIVE-OS-PRD-PLAN.md (v1.1) |
+| 050 | _ops/daily-briefing/, daily-reports.nosync/, MEMORY.md | launchd plist, .gitignore |
+| 051 | — | SESSION-LOG-ARCHIVE.md, SESSION-LOG.md (compression) |
+| 052 | .kb-triage-history.json | m0b, transcript_kb.py, config.yaml |
+| 053 | fathom-sync.plist, 2 transcripts | fetch-fathom-transcripts.py |
+| 054 | capacity_engine.py | preferences, config, daily_briefing, triage, m0, m0b |
+| 055 | — | 13 files (path migration) |
+| 056 | orion.plist | 30+ files (Exa→Orion) |
+| 057 | — | daily_briefing.py (Phase 1.5 + title) |
+| 058 | — | fathom-sync.plist, clickup-sync.plist |
+| 059 | 2026-03-07-PREVIEW.md | config.yaml |
+| 060 | — | .env (webhook) |
+| 062 | — | .kb-manual-items.json, .kb-schedule.json, transcript_kb.py |
+| 063 | m00a_today_summary.py, reconcile.py | __init__.py, daily_briefing.py, config.yaml, 5 modules |
+| 064 | — | calendar_auth.py (scope), calendar_helper.py (scope), .kb-approvals/schedule/manual-items/triage-history.json |
+| 065 | 2026-03-09-PREVIEW-v2.md | MEMORY.md (Lisbon timezone) |
+| 066 | — | .claude/mcp.json (Fathom path fix), SETUP.md (MCP section) |
+| 067 | — | config.yaml (display_timezone), daily_briefing.py, m12, calendar_helper, m00a (timezone fix) |
+| 068 | — | 12 pipeline modules (Exa→Orion), ~/.claude/settings.local.json (slack_post_message) |
+| 069 | — | .kb-approvals/overrides/schedule/priorities.json, 2026-03-09.md |
+| 069b | — | ~/.claude/.mcp.json (removed conflicting google-docs) |
+| 070 | _ops/orion-personal-bot/ (scaffolded) | — |
+| 071 | bot.py, kb_ops.py, task_parser.py, conversation.py, priority_explainer.py, requirements.txt, env.template, plist | — |
+| 072 | — | — (Slack app created externally) |
+| 073 | .env (4 tokens) | — |
+| 074 | — | 2026-03-10.md, .kb-manual-items/schedule/completed-registry/transcript-kb.json |
+| 074b | .gitignore | kb_ops.py (importlib bypass), plist (venv path) |
+| 074c | intent_classifier.py | bot.py (rewired to intent classifier) |
+| 075 | agent.py (conversation engine) | bot.py (slim router), kb_ops.py (priority loading) |
+| 076 | quick_refresh.py | agent.py (regenerate_report tool) |
+| 077 | — | SESSION-LOG-ARCHIVE.md, ~/.claude/.mcp.json (Playwright) |
+| 078 | — | triage_intelligence.py (v2.0), m0b_pending_review.py |
+| 079 | bot.py, agent.py, data_sources.py, Dockerfile, requirements.txt, .env.template, .gitignore (team-bot) | — |
+| 080 | .env (team-bot) | data_sources.py (cos_dir path fix) |
+| 081 | Procfile, railway.toml | data_sources.py (graceful degradation), .env |
+| 082 | — | bot.py (@app.shortcut handler) |
+| 083 | — | bot.py (chat_update channel ID fix) |
+| 084 | — | .env (team-bot token fix) |
+| 085 | — | bot.py (channel ID fix — duplicate of S083) |
+| 086 | README.md (personal-bot) | SETUP.md |
+| 087 | — | — (planning only) |
+| 088 | — | — (planning only) |
+| 089 | context/product-catalog.md, creative-frameworks.md, users/brixton.md (team-bot) | agent.py, data_sources.py (team-bot: creative tools + Google Docs) |
 
 ---
 
@@ -302,3 +504,27 @@
 | Google Calendar M12 | S043 | S044 | OAuth complete, 13/13 LIVE. |
 | Slack bot Phase 1 MVP | S045 | S048 | Architecture → code → Slack app → multi-turn + product intel. Bot running. |
 | Session log compression (3rd) | S051 | S051 | S032-S047 archived. |
+| Daily Brief Intelligence Upgrade | S051 | S052 | Triage enrichment, decision recording, pattern learning. |
+| Fathom transcript sync | S053 | S053 | --since flag, launchd 30-min auto-sync. |
+| Executive Assistant Intelligence | S054 | S054 | capacity_engine.py, multi-factor ABC, 3 A-task cap, week-ahead. |
+| Path migration (user-agnostic) | S055 | S055 | 34 paths → relative across 13 files. |
+| Exa → Orion rename | S055 | S058 | Full rename: folder, files, content, launchd, private files, ghost cleanup. |
+| Slack webhook (Tool 1) | S060 | S060 | Orion Daily Briefing app, webhook to DM only. |
+| Task recovery + schedule protection | S062 | S062 | 14 items recovered, force guard on add_to_registry(). |
+| EA v2.0.0 | S063 | S063 | M00a, work blocks, conflict detection, launch countdown, auto-approve, reconcile.py. |
+| Session log compression (4th) | S067 | S067 | S048-S063 archived. |
+| Calendar enrichment M13 | S064 | S064 | Explored then killed — too noisy for large meetings. |
+| Pipeline timezone fix | S065 | S067 | Calendar API → display_timezone: Europe/Lisbon. |
+| PR #8 cross-fork | S066 | S072 | Donnie approved, merged to performance-golf/pg-main:main. |
+| Google Docs MCP fix | S069b | S072 | Conflicting user-level config removed. Verified working. |
+| Exa→Orion pipeline rename | S068 | S068 | 22 refs across 12 modules. Slack app renamed. |
+| Slack chat:write + allowlist | S068 | S068 | slack_post_message allowlisted. Gate 3 preserved for Wise Reply. |
+| Orion Personal Bot v1-v3 | S070 | S085 | Design → code → intent classifier → Claude-as-Agent → report refresh → message shortcut. FEATURE-COMPLETE v3.3. |
+| Session log compression (5th) | S077 | S077 | S064-S074b archived. |
+| Triage Intelligence v2.0 | S078 | S078 | TaskClassifier, ScheduleSuggester, hybrid dedup, "Why" column. 5 placement rules. |
+| Team bot scaffold + Railway deploy | S079 | S084 | Scaffold → auth → Socket Mode fix → Railway deploy. 6 read-only tools, SSS data. |
+| Message shortcut (Create Orion Task) | S082 | S085 | Shortcut → E2E test → channel ID bug fix. "Connect to apps" UX path. |
+| Personal bot README | S086 | S086 | Comprehensive setup guide + SETUP.md updates. |
+| Team bot creative advisor upgrade | S087 | S089 | Product catalog, creative frameworks, user profiles, 14 tools, Sonnet, Google Docs. Railway deployed. |
+| Save Context shortcut | S088 | S091 | Design → code → Slack config → LIVE. context-library/ + kb_ops + agent tool + bot handler. |
+| Session log compression (6th) | S093 | S093 | S074c-S089 archived. |

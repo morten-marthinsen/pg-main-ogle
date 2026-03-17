@@ -1,10 +1,10 @@
 # Neco — The NeuroCopy Agent — Session Log
 
-session_id: Neco-2026-03-08-v2.0-S044-Izozi-Mechanism-Lock
-session_number: 044
+session_id: Neco-2026-03-11-v2.0-S045-BrixtonSocial-FounderVoice
+session_number: 045
 owner: Christopher Ogle
 started: 2026-02-07
-last_updated: 2026-03-06
+last_updated: 2026-03-11
 version: "2.0"
 
 ## Build State (per-project)
@@ -77,9 +77,49 @@ version: "2.0"
 - **S042 decisions**: (1) Comeback King renamed → The Fading Competitor (research: 95% active golfers, not comeback). (2) First from the Fairway selected as hero persona (social wound = #1 purchase trigger, matches active buyer behavior, strongest visual narrative for 90-120s social). (3) Fading Competitor's identity-erosion psychology powers the body of every ad; hero persona is the hook entry point.
 - **Next**: Source SPD VSL body copy, then write Script 1 — "Fast AND Straight" body angle, First from the Fairway hero, 5 persona hooks, three-column production format (Sub-Agent #5 protocol).
 
+### Brixton Social Content — Personal IG
+- **Status**: ROUND 1 DELIVERED — revised scripts in Google Doc, awaiting Brixton's final accept
+- **Last touched**: S045
+- **File**: `_projects/brixton-social-content/README.md`
+- **Google Doc**: `1feUdl3PRV7ff6-OoFzrXBLWNL4YX1Gg5r-4EcXL-iVo`
+- **Summary**: Brixton shared 6 product demo scripts for his personal IG (filming Thursday). Agency copy used UGC template. Rewrote all 5 scripts in founder voice (varied structure, "we built" language, discovery storytelling). Addressed 3 Brixton comments with `[REVISED]` inserts preserving his Google Doc comments. Differentiated wedge scripts 2 & 6 (fear vs. engineering).
+- **Next**: Brixton accepts/rejects revisions before Thursday filming. Talking Heads scripts TBD when he has direction.
+
 > **For history**: Sessions 001-036 archived in `SESSION-LOG-ARCHIVE.md`.
 > **Note**: S023 happened (resolved 3 sf2-0002 decisions, locked body v4) but was not logged. sf2-0002-body-v4-LOCKED.md confirms.
 > **Note**: S039-S040 happened in Obsidian vault (persona workshop + Figma handoff). Migrated to GitHub in S041.
+
+---
+
+## Session 045 — 2026-03-11 (Brixton Social Content — Founder Voice Rewrite)
+
+```yaml
+session_045:
+  date: 2026-03-11
+  session_id: Neco-2026-03-11-v2.0-S045-BrixtonSocial-FounderVoice
+  status: COMPLETE
+
+  context: |
+    Brixton (CEO) shared 6 product demo scripts for personal IG via Slack DM
+    (voice message + Google Doc). Working with external social agency. Filming
+    Thursday. Wanted founder voice, not UGC creator.
+
+  phases:
+    - "Phase 1: Analyzed transcript + doc. Identified core issue — identical UGC 4-beat template x6, 'you're doing it wrong' framing. Appended Founder Voice Notes framework to bottom of Google Doc."
+    - "Phase 2: Rewrote all 5 scripts in founder voice. Varied structure per script. Differentiated Scripts 2 & 6 (fear vs engineering). Appended below originals."
+    - "Phase 3: Addressed 3 Brixton comments with [REVISED] inserts below originals to preserve his Google Doc comments. (1) 3-bad-lies rapid-fire demo direction, (2) 'Fear gone. Just hit the ground and the club does the rest.' closer, (3) '5 features' replacing 'solutions' in SF2 opener."
+    - "Phase 4: Created project at _projects/brixton-social-content/. Saved Brixton working-relationship file (first entry). Updated index."
+
+  deliverables:
+    - "Google Doc revised (5 founder-voice scripts + framework + 3 comment responses)"
+    - "_projects/brixton-social-content/README.md"
+    - "~/.claude/projects/.../working-relationships/brixton.md (first entry)"
+
+  decisions:
+    - "Additive feedback approach — revised versions below originals, never overwrite Brixton's work"
+    - "Scripts 2 & 6 differentiated: Script 2 = fear/psychology, Script 6 = engineering deep dive"
+    - "'Feature stacking' named as a founder philosophy concept for SF2 (Brixton's own language)"
+```
 
 ---
 

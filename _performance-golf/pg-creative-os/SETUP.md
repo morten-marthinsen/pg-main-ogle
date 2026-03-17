@@ -55,6 +55,7 @@ Several agents use `launchd` plist files for scheduled jobs:
 | ClickUp task sync | Orion | Every 5 min | `com.performancegolf.clickup-sync` |
 | Neco autonomous hooks | Neco | 10:00 PM | `com.performancegolf.neco-autonomous` |
 | LOMS nightly | Shared | Nightly | `com.performancegolf.loms-nightly` |
+| Orion Personal Bot | Orion | Always-on (KeepAlive) | `com.performancegolf.orion-personal` |
 
 Plists live in `~/Library/LaunchAgents/`. See each agent's ops docs for setup details.
 
@@ -66,4 +67,5 @@ Plists live in `~/Library/LaunchAgents/`. See each agent's ops docs for setup de
 | **Tess Dashboard** | `cd tess-strategic-scaling-system/tess-dashboard && npm install` | — | `npm run build` |
 | **Tess Pipeline** | `cd tess-strategic-scaling-system && pip install -r requirements.txt` | — | — |
 | **Orion** | `cd orion-chief-of-staff/_ops/daily-briefing && pip install -r requirements.txt` | — | — |
+| **Orion Personal Bot** | `cd orion-chief-of-staff/_ops/orion-personal-bot && pip install -r requirements.txt` | — | — |
 | **Neco** | No runtime dependencies (advisory agent — docs + reference files) | — | — |

@@ -10,7 +10,7 @@
 ```yaml
 session_number: 164
 last_updated: 2026-02-23
-version: "3.9"
+version: "3.10"
 current_phase: S164 IN PROGRESS — Root Angle lookup complete (681/1102 updated). coha Google Doc add pending.
 
 sheet: "1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U" | Ad Level Tracking | 1102 rows (Jan 1–Feb 22, reset from full CSV) | Asset Registry | 776 rows | Raw_Daily_Data | 33,693 rows (Jan 1–Feb 22, 2026 — FULLY CURRENT)
@@ -40,6 +40,28 @@ next:
   5. [NOTE] 421 assets have no Root Angle (funnels not in ClickUp AD_DELIVERY_LIST_ID: 357/83, ossf/59, wpss/51, sf1/49, clst/44, ssts/38, pss/21, dqfe/18, gbf/16, pgf/10).
   6. [NOTE] pmax/microsoft/search ad rows are PERMANENTLY excluded by funnel filter + carryover filter. 357-0073-v0005 all-time spend is $14,524 (benchmark was ~$12,900 from pre-fix data — difference expected).
 ```
+
+---
+
+## Session 165 — 2026-03-16 — Dashboard Re-scaffold + gitignore Fix
+
+**Date**: 2026-03-16
+**Status**: COMPLETE
+
+### What Happened
+- **Dashboard re-scaffold**: Tess dashboard had no source files (only docs + stale node_modules.nosync from initial repo import). Re-scaffolded with Next.js 14 + TypeScript + Tailwind + Tremor + React Query. Created layout with sidebar nav, 4 page shells (Executive Summary, Asset Explorer, Performance, Creative Strategy), and `/api/sheets/assets` API route with mock data. Dev server confirmed running at localhost:3000.
+- **gitignore fix**: `node_modules.nosync/` was tracked from the original repo import — caused ~4,500 files in git status, triggering VS Code "too many active changes" throttle. Added `**/node_modules.nosync/` to `.gitignore`, ran `git rm -r --cached` to untrack 695 files (96,324 lines). Committed as `bb23378b`. Git status: 4,492 → 28 files.
+- **nosync pattern applied**: `node_modules` → `node_modules.nosync` symlink in place per COS convention.
+
+### Files Changed
+- `.gitignore` — added `**/node_modules.nosync/` and `**/node_modules` rules
+- `tess-dashboard/` — full re-scaffold: `package.json`, `tsconfig.json`, `tailwind.config.ts`, `next.config.mjs`, `postcss.config.mjs`, `.eslintrc.json`, `src/` (layout, 4 pages, API route, Sidebar, Providers components)
+
+### Remaining
+- [ ] Wire Google Sheets API to real SSS spreadsheet (needs service account creds in `.env.local`)
+- [ ] Build out Asset Explorer page (Phase 4)
+- [ ] Build out Performance page (Phase 5)
+- [ ] Build out Creative Strategy page (Phase 6)
 
 ---
 

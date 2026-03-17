@@ -1,617 +1,516 @@
 # Orion — Session Log (Append-Only)
 
 > Build State lives in `CLAUDE.md` (auto-loaded every session). This file is append-only history.
-> For sessions 001-047, see `SESSION-LOG-ARCHIVE.md`.
+> For sessions 001-089, see `SESSION-LOG-ARCHIVE.md`.
 
 ---
 
-## Session 059 — 2026-03-07
-
-**Status:** DONE
-**Focus:** Daily briefing system audit, gap analysis, tool recommendations
+## S090 — 2026-03-12 — Save Context Shortcut: EXECUTION
 
 ### What Happened
+1. **Phase 1: Context library + kb_ops helper.** Created `_shared/context-library/.gitkeep`. Added `save_context_file(filename, frontmatter, body)` to kb_ops.py — resolves path 4 parents up, writes YAML frontmatter + markdown body, handles filename collisions (-2, -3, etc.).
 
-1. **Full system audit.** Analyzed all 15 modules, config, capacity engine, triage intelligence, and daily_briefing.py orchestrator. Documented current state of v1.5.1 after today's S052-S058 upgrade sprint.
+2. **Phase 2: Agent tool.** Added `save_context` tool to agent.py TOOLS list (9 input fields), `execute_tool()` branch (builds frontmatter dict, calls `save_context_file()`), and system prompt instructions (product slug list, filename format, propose-then-confirm rule). Bot now has 7 tools.
 
-2. **Gap analysis with deep dives.** Identified 8 gaps, deep-dived 3 at Christopher's request: launch detection (inert, needs ClickUp tagging), triage backlog (82 items, enabled auto_reject), failure notifications (fully implemented, needs webhook URL).
+3. **Phase 3: Bot shortcut handler.** Added `@app.shortcut("save_orion_context")` to bot.py — mirrors existing `create_orion_task` pattern. Extracts message text, sender name (via `users_info`), channel name/ID, message_ts. Builds prompt enforcing propose-then-confirm. Posts placeholder DM, calls `process_message()`, updates with proposal.
 
-3. **Config changes applied.** `auto_reject: true` (was false), added 3 scorecard keywords (Romeo, Nate Jones, Donny), fixed stale "Exa" header.
-
-4. **Preview report generated.** `2026-03-07-PREVIEW.md` shows post-upgrade format: 69 items (was 96), 13 auto-rejected, capacity-aware suggestions, Orion branding.
-
-5. **Tool gap analysis.** 5 tools recommended: ClickUp MCP (HIGH), Slack webhook (HIGH), Google Docs MCP (MEDIUM), Google Drive MCP (MEDIUM), Fathom API MCP (LOW). Checklist at `~/.claude/plans/swift-wibbling-yeti.md`.
+4. **Phase 4: Documentation.** Updated README.md — 2 shortcuts in setup, 7 tools table, dual shortcut testing section, updated troubleshooting.
 
 ### Files Modified
-- `config.yaml` (auto_reject + scorecard keywords + header)
-- `CLAUDE.md` (Build State v5.4, S059)
+- `_shared/context-library/.gitkeep` — CREATED
+- `_ops/orion-personal-bot/kb_ops.py` — added `save_context_file()` (~25 lines)
+- `_ops/orion-personal-bot/agent.py` — added tool def + execute branch + system prompt (~55 lines)
+- `_ops/orion-personal-bot/bot.py` — added `save_orion_context` handler (~70 lines)
+- `_ops/orion-personal-bot/README.md` — updated for 2 shortcuts, 7 tools
+- `CLAUDE.md` — Build State v9.1, S090
 
-### Files Created
-- `daily-reports.nosync/mar-26-reports/2026-03-07-PREVIEW.md`
+### Status: CODE COMPLETE — Needed Slack app config + E2E test
 
 ---
 
-## Session 058 — 2026-03-07
-
-**Status:** DONE
-**Focus:** Ghost exa-chief-of-staff/ cleanup + launchd plist migration
+## S091 — 2026-03-12 — Save Context Shortcut: SLACK CONFIG + GO LIVE
 
 ### What Happened
+1. **Phase 1: Slack app config via Playwright.** Opened api.slack.com/apps → Orion (Personal) → Interactivity & Shortcuts → Created new message shortcut: Name "Save Context", Description "Save this message as tagged context to the shared library", Callback ID `save_orion_context`. Saved changes — success banner confirmed.
 
-1. **Transcript consolidation.** Copied 14 month-folders (2023-10 through 2025-01) from ghost `exa-chief-of-staff/_ops/meetings/transcripts/` into orion. Merged 2025-02 (14 exa early-Feb files + 6 orion late-Feb files = 20 total, no conflicts). Orion now has 28 month-folders spanning 2023-10 through 2026-03 — full transcript history.
+2. **Phase 2: Bot restart.** Killed PID 16070, launchd auto-restarted as PID 45659. Confirmed clean boot: "Bolt app is running!" in logs.
 
-2. **Ghost folder deleted.** `exa-chief-of-staff/` removed entirely. No more ghost.
+3. **Phase 3: E2E test.** Christopher tested Save Context shortcut on a real Slack message (forwarded from Chris McGinley with Google Doc attachment). Bot fired correctly, sent proposal DM. **Gap discovered**: bot can't read Google Doc content — only sees the URL. Bot asked Christopher for manual context instead of reading the doc.
 
-3. **Launchd plists updated.** Both `com.performancegolf.fathom-sync.plist` and `com.performancegolf.clickup-sync.plist` had stale `exa-chief-of-staff/` paths in ProgramArguments, WorkingDirectory, StandardOutPath, and StandardErrorPath. Updated all to `orion-chief-of-staff/`. Unloaded and reloaded both. All 6 PG launchd jobs verified running (orion, fathom-sync, clickup-sync, neco-autonomous, tess, loms-nightly).
+### Gap Identified
+- **Google Doc reading**: When a message contains a Google Doc link, the bot should extract the doc ID, fetch content via Google Docs API (reusing daily-briefing OAuth), and use it to auto-propose metadata. Currently the bot has no Google Docs tool.
 
 ### Files Modified
-- `~/Library/LaunchAgents/com.performancegolf.fathom-sync.plist` (exa→orion paths)
-- `~/Library/LaunchAgents/com.performancegolf.clickup-sync.plist` (exa→orion paths)
-- `CLAUDE.md` (Build State v5.2, S058)
+- `CLAUDE.md` — Build State v9.2, S091
+
+### Status: LIVE — Save Context shortcut working. Google Doc reading is next enhancement (S092).
 
 ---
 
-## Session 057 — 2026-03-07
+## S092 — 2026-03-12 (Thu)
 
-**Status:** DONE
-**Focus:** Phase 1.5 code completion + live pipeline verification + Orion title fix
-
-### What Happened
-
-1. **Phase 1.5 code completed in `daily_briefing.py`.** Two additions to Phase 1.5 block:
-   - (a) Launch detection: filters ClickUp tasks by launch/milestone tags or list IDs → `shared_state["launches"]`. Enriched `clickup_tasks` with `tags`, `list_name`, `list_id`.
-   - (b) Week capacity: calls `compute_week_capacity()` with calendar events + work blocks → `shared_state["week_capacity"]`.
-   - Both config-gated (`intelligence.launch_calendar`, `intelligence.capacity_engine`), try/except wrapped.
-
-2. **Full live pipeline run from orion path — ALL FEATURES VERIFIED.**
-   - 15/15 modules, 0 failures, 53,742 chars
-   - Phase 1.5 logs: 5 calendar days, 6 ClickUp tasks, 0 launch tasks (none tagged yet), 5 work days / 13 A-slots
-   - Pending Review: 96 to triage, 14 auto-routed to Waiting On, day+tier suggestions working
-   - Waiting On: 14 items with person + source columns
-   - Action Items Tracker: Mon-Fri week view with capacity headers + ABC
-   - No Sat/Sun in any output
-   - M9 processed 20 new transcripts (Jan-Feb Fathom backlog) → 158 total
-
-3. **Title renamed.** "Exa Daily Briefing" → "Orion Daily Briefing" in `daily_briefing.py` (docstring, header, footer, argparse).
-
-4. **Ghost `exa-chief-of-staff/` folder discovered.** Contains old transcripts (2023-10 through 2025-02) NOT present in orion folder. Must copy before deleting. Also need to verify Fathom/ClickUp sync launchd plists point to orion paths.
-
-### Files Modified
-- `daily_briefing.py` (Phase 1.5 launch detection + week capacity + Orion title)
-- `CLAUDE.md` (Build State v5.1, S057)
-
----
-
-## Session 056 — 2026-03-07
-
-**Status:** DONE
-**Focus:** Exa → Orion rename — full system-wide agent rename (all 6 phases)
+**Focus**: Personal bot Google Doc fix + Team bot Docs rules + Brixton intro
 
 ### What Happened
+1. **Personal bot: Google Doc URL extraction for Save Context.** Added `_extract_google_doc_urls()` helper to `bot.py` — extracts Google Doc URLs from Slack message text (angle-bracket format), attachments (unfurled links), and blocks. When URLs found, shortcut handler injects explicit "CALL read_google_doc FIRST" instruction into the prompt. Root cause of S091 gap: Haiku wasn't reliably following the system prompt instruction without per-message reinforcement. Bot restarted (PID 73426).
 
-1. **Phase A complete — folder + file renames via `git mv`.** Confirmed repo is at `~/pg-main-ogle` (not iCloud), so terminal renames are safe.
-   - `exa-chief-of-staff/` → `orion-chief-of-staff/`, `EXA-REFERENCE.md` → `ORION-REFERENCE.md`, `run-exa-daily.sh` → `run-orion-daily.sh`
+2. **Team bot: Google Docs formatting + revision rules.** Added to system prompt in `agent.py`: (a) Always use proper formatting — bold headings, italics for notes, clean hierarchy with line breaks. (b) When revising copy, replace the original — don't append a "revised" section. Redeployed to Railway.
 
-2. **Phase B complete — shared repo file content updates (~30 files).** All `exa-chief-of-staff` paths → `orion-chief-of-staff`. All "Exa" agent name refs → "Orion" across root CLAUDE.md, COS CLAUDE.md, PRD files, 5 audit files, agent CLAUDEs, session logs. Exa research tool refs preserved.
-
-3. **Phase C complete — agent internal files.** CLAUDE.md, ORION-REFERENCE.md, run-orion-daily.sh, backlog.md, wise-reply-README.md, key-intel.md, romeo-week-1-checklist.md.
-
-4. **Phase D complete — launchd plist swap.** Unloaded `com.performancegolf.exa`, created `com.performancegolf.orion.plist` with updated Label/paths/logs, loaded and verified (PID running, exit 0). Old plist removed.
-
-5. **Phase E complete — private `~/.claude/` files.**
-   - `~/.claude/CLAUDE.md`: 3 Exa→Orion agent refs + fixed Neco project path (old iCloud → `~/pg-main-ogle`)
-   - `~/.claude/skills/wise-reply/SKILL.md`: 7 updates (frontmatter, metadata, title, session state path, Gate 3, mid-session text, footer)
-
-6. **Phase F complete — iCloud safety rule update.** COS CLAUDE.md: replaced iCloud Drive safety section with "Heavy-Write Directory Safety" (repo at `~/pg-main-ogle`, `.nosync` kept as recommended). Orion CLAUDE.md: updated Common Mistakes to reflect no iCloud.
-
-7. **Historical files left as-is.** Session log archives, meeting prep docs, and deliverables from February retain "Exa" as historical record.
-
-8. **S054 P0 pipeline verification — PASS.** Today's report (2026-03-07.md) confirmed all Executive Assistant features live: 15/15 modules active, 14 auto-routed to Waiting On, triage intelligence firing (`~reject?~` signals), capacity-aware scheduling (`→ Wed Mar 11 as B`), Action Items Tracker present.
-
-9. **Cosmetic leftover found.** Report header still says "Exa Daily Briefing" — needs update in `daily_briefing.py` Python source.
-
-### Next
-- **S057**: Update "Exa Daily Briefing" title in `daily_briefing.py` → "Orion Daily Briefing". Then normal ops.
-
----
-
-## Session 055 — 2026-03-07
-
-**Status:** DONE
-**Focus:** Donny call action items — Creative OS path migration + rename/setup planning
-
-### What Happened
-
-1. **Transcript analysis.** Read 030626-impromptu-google-meet-meeting.md (Donny French call). Extracted 4 system engineering action items + 4 operational items.
-
-2. **Action items identified:**
-   - (1) Make Creative OS user-agnostic (file paths) — HIGH
-   - (2) Rename Exa → Orion — Christopher confirmed
-   - (3) Setup guide for new users — HIGH, deferred to next session
-   - (4) Nate Jones content ingestion agent — scoped, deferred to weekend
-
-3. **Path migration COMPLETE.** 34 hardcoded `/Users/christopherogle/Documents/The Sauce Vault/...` paths replaced with relative repo paths across 13 files in `pg-creative-os/`. Scope: Creative OS only (product files deferred). Verification: `grep` returns 0 matches.
-
-4. **Files changed:**
-   - `pg-creative-os/CLAUDE.md` — path header
-   - `tess-strategic-scaling-system/_reference/weekly-workflow-sop.md` — 3 shell commands
-   - `tess-strategic-scaling-system/TESS-MASTER-AGENT.md` — 2 shell commands
-   - `tess-strategic-scaling-system/intake-automation/PLAN.md` — path reference
-   - `neco-neurocopy-agent/NECO-MASTER-AGENT.md` — PROJECT PATH
-   - `neco-neurocopy-agent/_projects/sf2-ads/sf2-0002/HANDOFF.md` — PROJECT PATH
-   - `neco-neurocopy-agent/_projects/pgb-shortened-vsl/HANDOFF.md` — PROJECT PATH
-   - `neco-neurocopy-agent/_projects/pgb-shortened-vsl/PGB-SHORTENED-VSL-PLAN.md` — 9 paths
-   - `_ops/audits/03-anti-degradation.md` — 6 file review paths
-   - `SESSION-LOG.md` (COS-level) — project path
-   - `veda-video-editing-agent/SESSION-LOG.md` — plan file path
-   - 4x morning-report files in neco-autonomous — output paths
-
-5. **Orion rename planned.** Full audit completed: ~350 references across 18+ shared files, agent internals, launchd plist, private ~/.claude/ files. Phase A (Finder renames) pending Christopher action. Phases B-E (content updates) pending next session.
-
-### Plan File
-`~/.claude/plans/reactive-roaming-seahorse.md`
-
-### Operational Items (from Donny call — Christopher tracks)
-- SpeedTrack ads: use PDP copy (not VSL), 5 persona hooks
-- Romeo AI ads: pipeline → live this week
-- Connect Romeo + JoJo for 11 Labs voice work
-- Share retrospectives with Donny
-
----
-
-## Session 054 — 2026-03-07
-
-**Status:** DONE (all 6 phases complete)
-**Focus:** Executive Assistant Intelligence Upgrade — work block allocation, multi-factor ABC, auto-routing
-
-### What Happened
-
-1. **Full system exploration.** Deep-read all pipeline files: capacity model, ClickUp integration (M7 + Phase 1.5), Calendar integration (M12), triage intelligence, M0 (action items), M0b (pending review), config, preferences, triage history (51 decisions), schedule, manual items.
-
-2. **Design + plan approved.** 6-phase plan created at `~/.claude/plans/polished-dreaming-knuth.md`. Key decisions from Christopher:
-   - Launch dates: pull from ClickUp milestones/tags
-   - Depends-on items: auto-route to "Waiting On" section (skip triage)
-   - 3 A-tasks max per day (hard cap)
-   - Work rhythm: 8:30am-12pm focus (A-tasks), 1-2pm afternoon (B-tasks), 2pm+ meetings/comms
-   - **Mon-Fri only** — Sat/Sun reserved for AI process improvement, never PG tasks
-   - Friday overflow rolls to Monday
-
-3. **Phase 1 complete — capacity_engine.py created** (~380 lines). New utility module with:
-   - `WorkBlock` dataclass + `load_work_blocks()` from preferences
-   - `DayCapacity` — computes focus_minutes, afternoon_minutes, a_task_slots (min 3, capacity-aware)
-   - `compute_week_capacity()` — Mon-Fri only, Sat/Sun = zero capacity
-   - `PriorityScorer` — multi-factor scoring (launch 0.30, overdue 0.25, deadline 0.20, scorecard 0.15, day-type 0.10)
-   - `classify_day_items()` — ABC assignment with hard 3 A-task cap
-   - `next_weekday()` — weekend deadline → Friday pull-forward
-   - Import verified clean.
-
-4. **Phase 2 complete — preferences + config expanded.**
-   - `.kb-preferences.json` v2.0: added work_blocks (focus/afternoon/comms), a_task_cap=3, work_days=Mon-Fri, weekend_rule=roll_to_monday
-   - `config.yaml`: added `intelligence` section with 6 feature gates, launch_indicators (tags), 11 scorecard keywords. Updated day_type_rules: Sat/Sun → "off"
-
-5. **Phase 3 partial — daily_briefing.py Phase 1.5 expanded.**
-   - Added `calendar_day_events` storage (per-day parsed events for capacity overlap calculation)
-   - Launch detection + week capacity computation still needed in Phase 1.5
-
-6. **Phase 4 complete — triage_intelligence.py upgraded.**
-   - `route_depends_on_items()` — splits pending into triage vs waiting_on based on depends_on field
-   - Launch proximity scoring in `PatternMatcher.score()` — +0.40 boost for items matching launches due within 14 days
-   - `ScheduleSuggester` rewritten — capacity-aware (uses DayCapacity), suggests day+tier (e.g., "Tue Mar 10 as A2"), Mon-Fri only
-   - `enrich_pending_items()` wires launches and week_capacity to components
-
-7. **Phase 5 complete — m0_persistent_actions.py upgraded.**
-   - `_classify_priority()` → `_classify_priority_simple()` (kept as fallback)
-   - New `_classify_priority()` uses multi-factor scoring when `intelligence.multi_factor_abc` enabled
-   - New `_render_week_view()` — Mon-Fri capacity headers, multi-factor ABC via `classify_day_items()`, 3 A-task hard cap, "Why" column for A-tasks
-   - `analyze()` routes to week view or standard view; extracted `_render_standard_view()` as fallback
-
-8. **Phase 6 complete — m0b_pending_review.py upgraded.**
-   - `route_depends_on_items()` called in `fetch_data()` before enrichment — depends_on items skip scoring
-   - New "Waiting On" section with item/waiting-on/source table
-   - Suggestion column now shows day+tier format from capacity-aware ScheduleSuggester
-   - Updated summary line: "N to triage | N auto-routed to Waiting On | score breakdown"
+3. **Brixton intro message drafted and approved.** Casual, 3-sentence DM introducing the bot, how to use it (DM "Orion - PG Creative Intel"), and request for VM feedback.
 
 ### Key Decisions
-- Capacity engine is a utility (not a BriefingModule) — called by M0, M0b, triage_intelligence
-- All features config-gated under `intelligence.*` — set `capacity_engine: false` to revert
-- Mon-Fri hard constraint replaces old Sat=study/Sun=off model
-- PriorityScorer uses weighted multi-factor scoring, not simple overdue-based classification
-- Waiting On items skip triage enrichment entirely (no scoring needed)
-- Week view falls back to standard view on error (try/except wrapped)
-
-### Files Created
-- `modules/capacity_engine.py` (work block model + priority scoring engine)
+- **Prompt injection over model upgrade** — rather than switching personal bot to Sonnet for Save Context flows, added explicit per-message instructions when Google Doc URLs are detected. Cheaper and more reliable.
+- **Replace-not-append for doc revisions** — Brixton's feedback: overwrite originals with improved versions, don't create "revised" sections.
 
 ### Files Modified
-- `.kb-preferences.json` (v1.0 → v2.0, work blocks + capacity config)
-- `config.yaml` (intelligence section + day_type_rules Sat/Sun→off)
-- `daily_briefing.py` (Phase 1.5: calendar_day_events storage)
-- `modules/triage_intelligence.py` (auto-routing, launch scoring, capacity-aware scheduling)
-- `modules/m0_persistent_actions.py` (multi-factor ABC, week-ahead view, Why column)
-- `modules/m0b_pending_review.py` (Waiting On section, route_depends_on, day+tier suggestions)
-- `CLAUDE.md` (Build State v4.8, S054)
+- `_ops/orion-personal-bot/bot.py` — Added `re` import, `_extract_google_doc_urls()` helper, Google Doc URL detection in save context handler
+- `_ops/orion-team-bot/agent.py` — Added Google Docs Rules section to system prompt (formatting + revision behavior)
+- `CLAUDE.md` — Build State v9.3, S092
+
+### Status: DEPLOYED — Both bots updated. Pending: Google Drive permissions for personal bot E2E test. Brixton testing team bot.
 
 ---
 
-## Session 053 — 2026-03-07
+## S093 — 2026-03-13 (Thu)
 
-**Status:** DONE
-**Focus:** Fathom transcript sync — first download + launchd automation
+**Focus**: Session log compression + Brixton intro + relationship capture
 
 ### What Happened
+1. **Session log compression (6th).** Archived S074c-S089 (16 sessions) to SESSION-LOG-ARCHIVE.md. SESSION-LOG.md: 509 → 70 lines (86% reduction). Archive updated with 16 index entries, 8 critical decision blocks, 19 changelog entries, 9 P0 history entries.
 
-1. **Added `--since` CLI flag to `fetch-fathom-transcripts.py`.** Supports relative (`7d`) and absolute (`YYYY-MM-DD`) date filtering. Passes `created_after` param to `list_meetings()` API call. Also imported `timedelta` and `timezone` for relative date calculation.
+2. **Brixton team bot intro message.** Redrafted the intro DM with concrete use cases (copy review, angle feedback, performance data, Google Docs link drop) and a VM feedback ask. Christopher sent the message to Brixton via Slack DM.
 
-2. **Downloaded last 7 days of Fathom transcripts.** Ran `--since 7d`: API returned 7 meetings, 2 were Christopher's (saved), 5 filtered out (not-mine). Files saved:
-   - `transcripts/2026-03/030626-christopher-chris.md` (9,568 chars — sync with Chris Fleeks re Fatima coverage)
-   - `transcripts/2026-03/030626-impromptu-google-meet-meeting.md` (39,190 chars)
-
-3. **Created launchd plist for 30-min auto-sync.** `com.performancegolf.fathom-sync.plist` at `~/Library/LaunchAgents/`, mirrors ClickUp sync pattern (bash wrapper for FDA, nice=5, log rotation). Loaded and verified in launchctl. Default behavior (no `--backfill`, no `--since`) fetches only new meetings not in `.last-fathom-fetch.json`.
-
-4. **Verified transcript format.** MMDDYY-kebab-title.md naming, `**Source:** Fathom` header, attendees from calendar_invitees, timestamped speaker turns. M9 will auto-process these on next daily briefing run.
-
-### Files Modified
-- `_ops/meetings/scripts/fetch-fathom-transcripts.py` (added `--since` flag, `timedelta`/`timezone` imports)
-- `CLAUDE.md` (Build State S053, transcript_sync updated, next_session updated)
-
-### Files Created
-- `~/Library/LaunchAgents/com.performancegolf.fathom-sync.plist` (launchd 30-min sync)
-- `_ops/meetings/transcripts/2026-03/030626-christopher-chris.md` (Fathom transcript)
-- `_ops/meetings/transcripts/2026-03/030626-impromptu-google-meet-meeting.md` (Fathom transcript)
+3. **Working relationship entry saved.** Captured Christopher's actual sent message as a communication style reference in `brixton.md` (entry #2). Updated Communication Patterns with Christopher's intro/pitch style for Brixton.
 
 ---
 
-## Session 052 — 2026-03-07
+## S094 — 2026-03-13 (Thu)
 
-**Status:** DONE
-**Focus:** Daily Brief Intelligence Upgrade (Phases 3-5) + March 7 report regeneration
+**Focus**: SF2 Launch Board — Figma board design & plan approval
 
 ### What Happened
+1. **Analyzed SpeedTrac Figma board** (the template). Read `SPEEDTRAC-FIGMA-HANDOFF.md` — 7-section creative direction board (product overview, brand threads, personas, ad set grid, expansion testing, talent direction, asset tracker).
 
-1. **Phases 3-5 implemented (completing S052 partial).** Phases 1-2 were done in the first half of S052. This session completed:
-   - **Phase 3 (M0b integration):** `m0b_pending_review.py` now calls `enrich_pending_items()` in `fetch_data()` and renders enrichment data in `analyze()`. New table format: Signal column (REJECT/REVIEW/APPROVE badges), Suggestion column (matched rules, ClickUp matches, suggested day). Header shows score breakdown ("8 likely reject, 5 likely approve, 8 need review"). Falls back gracefully to original format if enrichment fails.
-   - **Phase 4 (Decision recording):** `transcript_kb.py` `apply_approvals()` now records each approve/reject to `TriageHistory.record_decision()` with item snapshot. Lazy-loads TriageHistory, wrapped in try/except.
-   - **Phase 5 (Config):** Added `triage_intelligence:` section to `config.yaml` with enabled, auto_reject/auto_approve (both false), thresholds, day_type_rules.
+2. **Designed SF2 Figma launch board.** Evolved from 7-section creative direction board (SpeedTrac) to 10-section cross-functional launch alignment board. 4 rounds of structural feedback with Christopher. Key evolution: board follows the real-world sequence of how a launch gets built — Research/VSL drives everything downstream.
 
-2. **Verification passed.** All three modules import clean. Dry run: 15/15 modules, zero failures. Bootstrap: 51 decisions (17 approved, 34 rejected), 5 delegation targets, 5 keyword patterns, 73% depends_on rejection rate.
+3. **Final 10-section structure locked:**
+   - S1: Product Overview
+   - S2: Brand Thread Alignment
+   - S3: Research & VSL Messaging (NEW — marketing OS → creative OS handoff foundation)
+   - S4: Persona & Value Driver Matrix (5 personas, not 9)
+   - S5: Creative Matrix & Ad Scripts
+   - S6: Email/Backend Alignment (NEW)
+   - S7: Production & Shoot Plan
+   - S8: Phase 1: Launch
+   - S9: Phase 2: Expansion & Optimization
+   - S10: Phase 3: Page & Funnel Optimization (NEW)
 
-3. **March 7 report regenerated.** The 8AM auto-run produced a stale report (no March 6 transcripts in folder yet). Fixed by:
-   - Identified duplicate transcript (`030626-john-x-andy-gtm-launch-sync-65314.md` vs non-suffix version — 2-byte diff, identical content). Marked `-65314` as processed in KB to skip.
-   - Re-ran full pipeline: M9 processed 6 March 6 transcripts → 16 new action items + 18 decisions extracted.
-   - First live run with triage intelligence: Pending Review shows 42 items with Signal/Suggestion columns (17 likely reject, 25 need review, 0 likely approve).
-   - All 15/15 modules active, 0 failures. Report: 43,412 chars (up from 35,549 stale).
+4. **Root angle verified.** "The slice-fixing driver that doesn't sacrifice distance" — confirmed across research PRD, VSL script, and funnel identification doc.
 
-4. **Pipeline version bumped to v1.4.0** in Build State.
+5. **Ownership decided: Orion.** Board is cross-functional strategic alignment (not just creative direction). Content doc lives at `_ops/launch-boards/sf2/`. This becomes the reusable SOP/template for all future PG product launches.
 
-### Key March 6 Transcripts Processed
-- Weekly Aroll Cut Review (Chris Fleeks leaving, Fatima wedding, compensation discrepancy, SF1 angles)
-- Romeo/Christopher Veda PRD + Context Management (GitHub setup, file naming, asset delivery windows)
-- Paid Ads Ops Strat Copy Sync (static ad delivery automation, ClickUp webhooks, intake form)
-- John x Andy GTM Launch Sync (ClickUp AI assistant, centralized campaign hub, brief-to-execution waterfall)
-- GTM Creative Ops Weekly (RS1 branded video, SF2 timeline revised, Figma board 03/18, reallocate Keenan/Vlad)
-- Customer Success Stories Jam (SF2 launch 03/23, ads due 03/20, B-roll gaps, unboxing video with Jerry)
+6. **Three memory files saved** for future launch SOPs:
+   - `feedback_launch_expansion_process.md` — Phase 1 = hook stacks only, 7-day data, Monday→Friday turnaround
+   - `feedback_launch_board_email_sync.md` — email/backend sync section required for marketing OS → creative OS handoff
+   - `feedback_launch_personas_and_phases.md` — 5 personas max per launch, 3 launch phases
 
 ### Key Decisions
-- Enrichment rendering uses two-column format (Signal + Suggestion) instead of adding to existing columns — cleaner at-a-glance scanning
-- TriageHistory lazy-loaded in apply_approvals() to avoid import cost when no approvals exist
-- All triage integration wrapped in try/except — pipeline never breaks if intelligence layer fails
-- Duplicate transcript handling: compare file sizes + headers, mark dupe as processed in KB extraction state
+- **Orion owns launch boards** (not Neco) — cross-functional alignment is strategic orchestration
+- **5 personas per launch** (not 9) — each batch 1 ad variation targets one persona. Aligns with Creative OS standard
+- **Phase 1 expansions = hook stacks ONLY** — no horizontal environment changes in Phase 1
+- **Phase 2 = Expansion & Optimization** (both expanding into angles AND optimizing existing creative)
+- **Phase 3 = Page & Funnel Optimization** (CRO involvement, page performance data)
+- **Content doc first → then Figma MCP** (MCP confirmed working from SpeedTrac test)
+- **Presenting directly March 19th** — no JoJo pre-review for SF2 (alignment call, not creative collaboration)
+- **Phase 2 trigger = calendar-based** — 2 weeks post-launch
 
-### Files Modified
-- `modules/m0b_pending_review.py` (triage enrichment integration in fetch_data + analyze)
-- `modules/transcript_kb.py` (decision recording in apply_approvals)
-- `config.yaml` (triage_intelligence section added)
-- `.transcript-kb.json` (6 Mar 6 transcripts processed + duplicate marked)
-- `CLAUDE.md` (Build State v4.6, S052)
+### Files Created/Modified
+- `_ops/launch-boards/sf2/` — CREATED (directory)
+- `~/.claude/plans/snuggly-launching-stream.md` — Full execution plan (7 phases)
+- `~/.claude/projects/.../memory/feedback_launch_expansion_process.md` — CREATED
+- `~/.claude/projects/.../memory/feedback_launch_board_email_sync.md` — CREATED
+- `~/.claude/projects/.../memory/feedback_launch_personas_and_phases.md` — CREATED
+- `~/.claude/projects/.../memory/MEMORY.md` — Updated with launch process section
 
-### Files Created
-- `.kb-triage-history.json` (bootstrapped from .kb-approvals.json — 51 decisions)
-
-### Files Overwritten
-- `daily-reports/mar-26-reports/2026-03-07.md` (regenerated with fresh data + triage intelligence)
+### Status: PLAN APPROVED — Content generation not yet started. Phase 1 (Sections 1-2) ready to execute.
 
 ---
 
-## Session 051 — 2026-03-06
+## S095 — 2026-03-13 (Thu)
 
-**Status:** DONE
-**Focus:** Session log compression + Daily Brief Intelligence Upgrade planning
+**Focus**: SF2 Launch Board — Sections 1-3 content generation
 
 ### What Happened
+1. **Section 1 (Product Overview) generated.** Product identity, root angle (verified), key promise with distance sources, full 6-feature SliceFix SpeedTech mechanism table, toe lag root problem, SF1→SF2 upgrade comparison, 5 proof points, complete offer structure.
 
-1. **Session log compressed (3rd compression).** Archived S032-S047 (16 sessions) to SESSION-LOG-ARCHIVE.md. SESSION-LOG.md: 618 → 118 lines (81% reduction). Archive updated with session index, critical decisions (7 new blocks), changelog (16 entries), P0 history (8 entries).
+2. **Section 2 (Brand Thread Alignment) generated.** Both PG brand threads defined with SF2 mapping. Thread 1 (Smarter Journey) and Thread 2 (Innovation) each mapped with specific VSL quotes. Root angle bridges both threads. Creative priority matrix added (which thread leads for VSL vs. ads vs. testimonials vs. retargeting).
 
-2. **Daily Brief Intelligence Upgrade — plan designed and approved.** Full architecture plan for reducing morning triage from 20+ min to quick confirmation pass. Four pillars: triage pattern learning, calendar-aware work block allocation, ClickUp cross-reference dedup, pre-triage scoring. Plan: new `triage_intelligence.py` utility (~300 lines) called by M0b, Phase 1.5 pre-fetch in daily_briefing.py, decision recording in transcript_kb.py. v1 is suggestions-only (no auto-actions). Plan saved at `~/.claude/plans/crispy-munching-ladybug.md`.
+3. **Section 3 (Research & VSL Messaging) generated.** Collaborated with Christopher on structure. Key decisions:
+   - Research = Executive Summary only (8 top insights). Research feeds the BSL, which is already written by this point.
+   - Messaging Architecture = yes (problem/solution/proof frameworks + VSL emotional arc)
+   - Page Status = no (tracked in ClickUp, not duplicated on board)
+   - Funnel Pages = simple table with placeholder URLs
+   - **Key Language echo table added** — 10 phrases/concepts downstream creative must stay consistent with (toe lag, automation not manipulation, SliceFix SpeedTech, etc.)
 
 ### Key Decisions
-- Intelligence layer is a utility (not a BriefingModule) — called by M0b during fetch_data()
-- v1: suggestions only, no auto-approve/reject. Earn trust before enabling auto-actions
-- Pure rule-based scoring (no AI calls in triage layer) — patterns are deterministic
-- Bootstrap from existing .kb-approvals.json + .kb-overrides.json for initial training data (~51 decisions)
-- Score classifications: LIKELY REJECT (<=-0.60), LEAN REJECT, NEEDS REVIEW, LEAN APPROVE, LIKELY APPROVE (>=+0.60)
+- **Section 3 template structure locked**: Research Executive Summary → Messaging Architecture → Key Language → Funnel Pages
+- **No page status on board** — ClickUp is the single source of truth for page/ad build status
+- **Key Language table is a new sub-section** — ensures ad scripts, email, and retargeting echo the same core phrases from the VSL
 
-### Files Modified
-- `SESSION-LOG.md` (compression + S051 entry)
-- `SESSION-LOG-ARCHIVE.md` (S032-S047 archived)
-- `CLAUDE.md` (Build State v4.4, S051)
+### Files Created/Modified
+- `_ops/launch-boards/sf2/sf2-launch-board-content.md` — CREATED (Sections 1-3 complete)
+- `CLAUDE.md` — Build State v9.4, S095
+
+### Status: Sections 1-3 COMPLETE. Sections 4-10 remaining. Next: Persona consolidation 9→5 (Section 4).
 
 ---
 
-## Session 050 — 2026-03-06
+## S096 — 2026-03-13 (Thu)
 
-**Status:** DONE
-**Focus:** Daily briefing pipeline migration to GitHub + first daily report triage in new system
+**Focus**: SF2 Launch Board — Sections 4-6 (Personas, Creative Matrix, Email Alignment)
 
 ### What Happened
+1. **Section 4 (Persona & Value Driver Matrix) generated.** Consolidated 9 personas → 5 for launch. Christopher confirmed: Chronic Slicer, Equipment Skeptic, Tech Enthusiast, Weekend Warrior, Comeback Golfer. Key decision: P5 Comeback Golfer chosen over P9 Competitive Amateur for 5th slot — larger addressable market in cold traffic, stronger emotional entry (nostalgia), and P9's self-image doesn't align with "slice-fix" premise. P9 deferred to Phase 2 (needs post-launch testimonials from decent golfers). Coverage matrix, value drivers (10), and batch 1 variation mapping included.
 
-1. **Pipeline migrated from Obsidian to GitHub repo.** Discovered pipeline was still running and generating reports (Mar 2–6) at old Obsidian path. Copied pipeline code (`daily-briefing/`, `run-exa-daily.sh`) + 5 missing March reports to `pg-main-ogle`. Symlinked secrets (`.env`, `auth/`) from old path. Created `daily-reports → daily-reports.nosync` symlink. Updated launchd plist (all 4 paths). Reloaded launchd — manual test passed (idempotency guard correctly skipped).
+2. **Section 5 (Creative Matrix & Ad Scripts) generated.** All 3 locked scripts mapped: sf2-0001 (long-form DR, leads Thread 2), sf2-0002 (Andromeda 5-hook social proof, leads Thread 1), sf2-0003 (brand commercial, leads Thread 2 → Thread 1 close). Per-script persona × value driver mapping for every hook. Launch persona coverage analysis revealed Weekend Warrior and Comeback Golfer are thin (one hook each in sf2-0002) — flagged as Phase 2 expansion priority. Placeholders tracked (gold one-liners, testimonials, 96% stat verification).
 
-2. **Gitignore updated.** Daily reports + pipeline code gitignored (local-only, not shared with team). Added `auth/`, `token*.json`, `__pycache__/`, `*.pyc` to root `.gitignore`.
-
-3. **Mar 6 daily report triaged.** Full triage of 26 Pending Review items + 20 Action Items. Result: 3 A-tasks for today (SpeedTrack Figma, automation call with Fatima/Fleeks, Romeo call for weekend ad delivery). Tasks scheduled across the week (Sat–Thu). Learned Christopher's triage patterns for future automation.
-
-4. **Triage format preferences established.** Post-triage, Pending Review collapses to one-line summary. No recap — triaged items flow directly into Action Items Tracker. "Already working on this" = KEEP active, not remove.
-
-5. **Daily Brief Intelligence Upgrade scoped.** Next session (plan mode): auto-triage, work block allocation, ClickUp cross-reference, pre-triage scoring. Goal: reduce 20+ min manual triage to quick confirmation pass.
+3. **Section 6 (Email/Backend Alignment) generated.** Structured placeholder for SF2 — key language alignment table (8 phrases email must echo), 6 email sequence directions, backend coordination checklist, cross-team sync points with timing. Designed as reusable template for future launches.
 
 ### Key Decisions
-- Daily reports stay local-only (gitignored) — GitHub repo is for shared team work
-- Brixton identified as CEO — saved to memory + stakeholder map already has entry
-- Pipeline secrets stay symlinked from old Obsidian path (no migration needed)
-- launchd plist now uses StartCalendarInterval at 8:00 AM (was StartInterval 300s previously)
-
-### Files Created
-- `pg-main-ogle/.../_ops/daily-briefing/` (pipeline code, copied from old path)
-- `pg-main-ogle/.../_ops/run-exa-daily.sh` (run script, copied from old path)
-- `pg-main-ogle/.../_ops/daily-reports.nosync/mar-26-reports/` (5 reports: Mar 2–6)
-- `pg-main-ogle/.../_ops/daily-reports` (symlink → `daily-reports.nosync`)
-- `pg-main-ogle/.../_ops/daily-briefing/.env` (symlink to old path)
-- `pg-main-ogle/.../_ops/daily-briefing/auth` (symlink to old path)
-- `~/.claude/projects/-Users-christopherogle-pg-main-ogle/memory/MEMORY.md` (project memory)
+- **P5 Comeback Golfer > P9 Competitive Amateur** for launch persona #5. Reasoning: addressable market size (lapsed golfers > mid-handicappers), self-identification fit (comeback golfers know they slice; competitive amateurs don't), emotional potency (nostalgia > ambition in cold scroll), and P9 already has sf2-0003 H2 regardless of persona status.
+- **Phase 2 creative priority identified**: Weekend Warrior and Comeback Golfer have thinnest batch 1 coverage — first targets for hook stacks and net new scripts.
 
 ### Files Modified
-- `~/Library/LaunchAgents/com.performancegolf.exa.plist` (all paths → pg-main-ogle)
-- `pg-main-ogle/.gitignore` (added daily-reports.nosync, daily-briefing, auth, python caches)
-- `pg-main-ogle/.../_ops/daily-reports.nosync/mar-26-reports/2026-03-06.md` (triaged)
-- `CLAUDE.md` (Build State v4.3, S050)
+- `_ops/launch-boards/sf2/sf2-launch-board-content.md` — Sections 4-6 added
+- `CLAUDE.md` — Build State v9.5, S096
+
+### Status: Sections 1-6 COMPLETE. Sections 7-10 remaining (Production, Launch Phases).
 
 ---
 
-## Session 049 — 2026-02-23
+## S097 — 2026-03-13 (Thu)
 
-**Status:** DONE — CREATIVE-OS-PRD.md updated to v1.1
-**Focus:** PRD batch update from Wispr Flow notes + new strategic direction
-
-### What Happened
-
-1. **Brand architecture restructured.** New Section 3.0 added with visual hierarchy: Love Your Game (brand promise) → two brand themes → Product We're Advertising → Root Core Angle → Net New & Expansion Testing → Personas A–E. Funnel tier view also added (Innovation = lower funnel, Smarter Way = mid, Love Your Game = top).
-
-2. **Thread 1 renamed.** "A Smarter Way to Improve Golf and Love Your Game" → "The Smarter Way to Play Better Golf" throughout. Thread 1 description expanded to cover digital + physical products, and how it intertwines with Stories of Innovation (each is proof/vision for the other). Thread 2 holds; flagged for future expansion with John.
-
-3. **Data feedback loop added to Point 1.** GTM → angle → ad set testing → data → confidence → elevation. If a tested angle outperforms the original, revisit and update. Loop closes back into the system.
-
-4. **Terminology locked.** "Ad sets" = Meta/YouTube test units. "Campaigns" = 360-degree brand campaigns. Terminology note added to Point 3. Guardrail added to Section 7.1. Updated throughout.
-
-5. **Point 4 completed.** "Quality means the ad communicates" → "...communicates the one root angle effectively."
-
-6. **Persona testing bullet added (2.3).** Meta Andromeda alignment, angle × persona discovery, path to page tests and brand campaigns.
-
-7. **Figma board visual added (3.4).** Full GTM card example: SpeedTrac / "Speed Without the Slice" / 5 personas / NN_ADDSET_STRUCTURE with AD SET 1 (Smarter Way) and AD SET 2 (Stories of Innovation), each hitting all 5 personas. Launch rules: min 3, max 5 ad sets; at least 2 UGC organic; one angle per ad set.
-
-8. **Persona Architecture added (3.5).** PG-level + product-level. Ownership: Christopher. Digital → Chris Hibbert; physical → Chris Fleeks.
-
-9. **Wispr Flow removed** from Sections 2.2, 4.1, 7.1, 8.2, and Section 9 action item table.
-
-10. **CTAN (CTA end cards) noted complete** in Section 4.1.
-
-11. **Tess introduced** on first prose mention (Section 4.1) and in Section 4.4.
-
-12. **Day 30/60/90 dates set.** Day 30: March 11 / Day 60: April 10 / Day 90: May 10. "DAY" added to Section 5 heading.
-
-13. **Version bumped to 1.1.** Update note added to header.
-
----
-
-## Session 048 — 2026-02-22
-
-**Status:** DONE (Multi-turn thread history + product intel cards shipped + bot running)
-**Focus:** Fix single-turn amnesia + expand product knowledge base
+**Focus**: SF2 Launch Board — Sections 7-10 (Production, Launch Phases)
 
 ### What Happened
+1. **Section 7 (Production & Shoot Plan) generated.** 3 shoot breakdowns (Gerry unboxing, JoJo POV pickups, Friday testimonials) with shot lists, creative direction, and script mapping. Incoming assets tracker (animations, lifestyle footage, testimonials, demo day, McGinley lab). Footage gap → shoot coverage matrix. Script → footage dependency map. Assistant editor task list.
 
-1. **Multi-turn thread history implemented.** New `utils/thread_history.py` module fetches Slack thread context via `conversations_replies`, maps messages to user/assistant roles based on bot_user_id. `handlers/message_handler.py` updated: bot_user_id resolved once at startup via `auth_test()`, both `handle_mention` and `handle_message` now fetch thread history for reply messages, product resolution runs against full thread text (not just current message). Falls back gracefully to single-turn on API failure.
+2. **Section 8 (Phase 1: Launch) generated.** Launch timeline (ads due March 20, launch March 23). Batch 1 ad lineup: 3 scripts × multiple hooks = ~14 unique ad versions. Andromeda optimization strategy for sf2-0002. Platform/targeting (Meta, cold + SF1 retargeting). Budget placeholders for Media Buying. Funnel routing table. Launch week monitoring plan (Day 1-7 cadence). Open items/placeholders tracker.
 
-2. **Product intel cards created (6 products).** New `data/product_intel/` directory with distilled intel cards: `sf2.md` (2.4KB, from 49KB micro-scripts), `spd.md` (2.7KB, from 36KB micro-scripts), `wdg1.md` (2.1KB, from 8KB micro-scripts), `clst.md` (2.8KB, from interview), `357.md` (3.2KB, from sales page + top-10-angles), `rs1.md` (774B stub — no source data). Standardized format: category, binary frame, dominant selling idea, positioning, key features, micro-scripts, proof points.
-
-3. **Knowledge loader expanded.** `knowledge/loader.py` now reads product intel cards from `data/product_intel/{code}.md` at startup. Intel loaded into `knowledge["products"][code]["product_intel"]`.
-
-4. **System prompt updated.** `ai/system_prompt.py` now includes Product Intelligence section (before ad angles), with knowledge priority guidance: Product Intel > Ad Angles > Influencer Angles. Limited data flag now checks all three sources before triggering.
-
-5. **Config updated.** `MAX_THREAD_MESSAGES = 20`, `MAX_PRODUCTS_IN_PROMPT = 5`.
-
-6. **sync.sh Phase 2 added.** Copies raw micro-scripts to `data/micro_scripts_raw/` as human-readable reference for future card updates.
-
-### Files Created
-- `utils/thread_history.py` — Thread history retrieval
-- `data/product_intel/sf2.md` — SF2 Driver intel card
-- `data/product_intel/spd.md` — SpeedTrac intel card
-- `data/product_intel/wdg1.md` — ONE.1 Wedge intel card
-- `data/product_intel/clst.md` — Click Stick intel card
-- `data/product_intel/357.md` — 357 Fairway Hybrid intel card
-- `data/product_intel/rs1.md` — RS1 Putter stub card
+3. **Sections 9-10 (Phase 2 & Phase 3) generated.** Phase 2 (~April 6 trigger): hook stack cadence (Monday tickets → Friday delivery), priority targets from S096 coverage gap analysis (Weekend Warrior + Comeback Golfer first), batch 2 script directions (5 trigger-based), creative optimization signal→action table, influencer shoot plan. Phase 3 (4-6 weeks post-launch): CRO integration points, ad→page messaging alignment, 6 A/B testing priorities ordered by expected impact, CRO ticket protocol.
 
 ### Files Modified
-- `handlers/message_handler.py` — Thread history fetch, full-text product resolution, bot_user_id
-- `knowledge/loader.py` — Product intel loader
-- `ai/system_prompt.py` — Product intel section + knowledge priority
-- `config.py` — Thread/product cap constants
-- `data/sync.sh` — Phase 2 raw micro-scripts sync
-- `CLAUDE.md` — Build State v4.2, S048
+- `_ops/launch-boards/sf2/sf2-launch-board-content.md` — Sections 7-10 added (~370 lines). All 10 sections complete.
+- `CLAUDE.md` — Build State v9.6, S097
+
+### Status: ALL 10 SECTIONS COMPLETE. Content doc ready for March 19th pre-launch call. Next: Persona images → Figma build → SOP template.
 
 ---
 
-## Session 060 — 2026-03-07
-
-**Status:** DONE
-**Focus:** Tool installation checklist — Tool 1 (Slack Incoming Webhook)
+## S098 — 2026-03-13 — Orion Personal Bot v4.0: PDF + Word Doc Attachment Support + Git Sync
 
 ### What Happened
+1. **Git sync.** Committed 41 files (Orion bots, Neco projects, shared education, SF2 prep, config updates). Pushed to fork (`christophero90/pg-main-ogle`). Merged 50 team commits from `performance-golf/pg-main`. Zero conflicts. Pushed merged result. Branch `pg-dev-ogle` fully synced.
 
-1. **Slack app renamed.** "Exa Daily Briefing" → "Orion Daily Briefing" (app A0AFW0Y3Z39) via Slack API portal. Added short description. Completed the Exa→Orion rename for Slack apps.
+2. **Save Context PDF/Word upgrade (bot.py).** Added 4 new helpers: `_extract_file_attachments()` (filters Slack `files` array to PDF/Word), `_download_slack_file()` (urllib with bot token auth), `_extract_text_from_file()` (PyMuPDF for PDF, python-docx for Word), `_cleanup_stale_pending_confirmations()` (10-min TTL). Added constants for size limits (auto: 20pg/50K chars, hard reject: 100pg). Modified `handle_save_context_shortcut()` to detect file attachments, download, extract text, inject into agent prompt. Modified `handle_message()` with pending file confirmation flow (yes/skip/unrecognized). Fixed empty-message guard to allow file-only messages. Added old .doc format warning.
 
-2. **Incoming Webhook created.** Enabled webhooks on the app, created webhook URL pointed to Christopher's DM (private, Christopher-only). Tested with curl → `ok`. Message confirmed delivered.
+3. **Agent system prompt update (agent.py).** Updated "Saving context" section to recognize extracted file content markers (`--- ATTACHED FILE / --- END FILE ---`) and use all provided content (files + Google Docs + message text) for metadata proposals.
 
-3. **`.env` updated.** Uncommented and set `SLACK_WEBHOOK_URL`. Fixed stale "Exa" references in `.env` header and Slack section comment.
+4. **Dependencies (requirements.txt).** Added `pymupdf>=1.24.0` and `python-docx>=1.1.0`. Both installed and verified.
 
-4. **Privacy rule established.** Christopher flagged that suggesting public channels (e.g. #general) for bot notifications is a career risk in a 288-member workspace with CEO/leadership. Rule saved to memory: ALL Orion automations → Christopher's DM only, never shared channels.
+5. **Slack app permissions.** Added `files:read` scope to Orion (Personal) app (`A0AKHNEL5BP`) via Slack API dashboard. Reinstalled app to Performance Golf workspace. Bot token unchanged.
 
 ### Files Modified
-- `_ops/daily-briefing/.env` — webhook URL set, Exa→Orion header fixes
-- `CLAUDE.md` — Build State v5.5
+- `_ops/orion-personal-bot/bot.py` — 4 new helpers, modified save_context handler + message handler (~150 lines added)
+- `_ops/orion-personal-bot/agent.py` — system prompt update (save context section)
+- `_ops/orion-personal-bot/requirements.txt` — added pymupdf, python-docx
+- `CLAUDE.md` — Build State v9.7, S098
 
-### Pending for S061
-- Tool 2: ClickUp MCP Server (HIGH)
-- Tool 3: Google Docs MCP Server (MEDIUM)
-- Tool 4: Google Drive MCP Server (MEDIUM)
-- Tool 5: Fathom API as MCP (LOW)
-- Rename "Exa - PG Creative Intel" Slack app → Orion
-- ClickUp launch tagging (SF2/SpeedTrack/RS1)
-- Batch triage ~69 pending review items
-- `SESSION-LOG.md` — S048 entry
+### Status: CODE COMPLETE. Slack permissions configured. Needs E2E test with actual PDF in Slack DM.
 
 ---
 
-## S062 — Task Recovery + Schedule Protection (2026-03-08)
+## S099b — 2026-03-13 — Personal Bot: PDF E2E Test + Vision OCR
 
-**Problem:** S061 bulk triage destroyed 11 confirmed week tasks (Mar 9-13). SF2 Figma, SpeedTrac Figma, CSR delegation, Romeo ElevenLabs training, NLC automations, and 6 others were either swept into the completed registry or never entered the KB.
-
-**Root causes identified:**
-1. Bulk triage had no schedule protection — future-scheduled items closed alongside stale ones
-2. Session-confirmed B/C tasks never persisted to KB (only existed in handoff prose)
-3. Completed registry is a one-way trap — no reactivation path
-
-**Changes:**
-- **Phase 1: Recovery** — Added 14 manual items (mi-025 to mi-038) to `.kb-manual-items.json` with correct scheduled dates in `.kb-schedule.json`. Full week plan restored: Mon 7 items, Tue 4 items, Wed 1 item, Thu 2 items, Fri 2+ items
-- **Phase 2: Schedule protection** — Added `check_schedule_protection()` and `force` parameter to `add_to_registry()` in `transcript_kb.py`. Items with future scheduled dates are now skipped with a warning unless `force=True`
-- **Phase 3: Session-to-KB bridge** — Added mandatory rule to Orion CLAUDE.md: session-confirmed tasks MUST be written to `.kb-manual-items.json` + `.kb-schedule.json` on exit. Triage safety rules documented
-
-**Files changed:**
-- `.kb-manual-items.json` — 14 recovered items (mi-025 to mi-038)
-- `.kb-schedule.json` — 14 new schedule entries
-- `modules/transcript_kb.py` — `check_schedule_protection()` + `add_to_registry(force=)` guard
-- `CLAUDE.md` — Build State v5.6, session-to-KB bridge rule, triage safety rules
-
-### Pending for S063
-- Google Calendar description enrichment
-- Tool installation checklist (Tools 2-5, plans/swift-wibbling-yeti.md)
-- Rename "Exa - PG Creative Intel" Slack app → Orion
-
----
-
-## S063 — Executive Assistant Upgrade v2.0.0 (2026-03-08)
-
-**Status:** DONE
-**Focus:** Full 8-phase EA upgrade — "wake up and know exactly what to do today"
+**Focus**: E2E test Save Context with PDF attachment, fix gaps discovered during testing
 
 ### What Happened
+1. **Bug fix: pymupdf/python-docx not in bot venv.** Bot runs via `.venv/bin/python3` (launchd plist), but S098 installed deps into system Python. Installed both into `.venv`. This was the initial crash (`No module named 'fitz'`).
 
-All 8 phases from the EA Upgrade plan implemented in a single session:
+2. **Bug fix: Slack shortcut payload file detection.** Discovered shortcut payloads sometimes omit `files` array. Added `conversations.history` re-fetch as fallback. In testing, the shortcut payload DID include files (1 file detected), but re-fetch hit `channel_not_found` (bot not in source channel). Optimized to only re-fetch when payload is missing files.
 
-1. **Phase 1: Today at a Glance (M00a).** New module `m00a_today_summary.py` (~450 lines). Runs LAST in execution (needs all shared_state) but renders FIRST in report. Shows Day X/90, phase, checkpoint countdown, A/B/C tasks with time slots, meetings, launch countdowns, What Changed delta, and alerts.
+3. **Vision OCR for image-based PDFs.** Test PDF was genuinely image-based (1 page, 0 chars from PyMuPDF across 3 strategies). Built `_ocr_pdf_with_vision()` — renders PDF pages as PNG via PyMuPDF, sends to Haiku Vision for text extraction. Vision OCR successfully extracted 274 chars from the test PDF.
 
-2. **Phase 2: Work Block Time Allocation.** `allocate_work_blocks()` fits A-tasks into focus block gaps between meetings. B-tasks in afternoon block. Duration defaults: 60m (A), 30m (B), 15m (C) with `duration_min` override. Tasks get time slot labels (e.g., "8:30am–9:30am").
+4. **Remaining gap: Haiku agent ignores extracted content.** Vision OCR works (274 chars injected into prompt between `--- ATTACHED FILE` markers), but the Haiku agent responding to the Save Context flow doesn't use the extracted text — it tells Christopher the PDF is "blank or unreadable" and asks for manual input. Root cause likely: (a) 274 chars may be a description of a blank/minimal page rather than real content, or (b) the agent prompt needs stronger instruction to trust and use extracted file content. Debug image logging added but not yet triggered.
 
-3. **Phase 3: Conflict Detection.** `check_day_viability()` generates alerts: OVERLOADED (A-tasks > focus time), TIGHT (<30m buffer), CAPACITY WARNING (5h+ meetings), ROLLOVER (3+ items from prior days), LAUNCH CRUNCH (<3 days).
+### Bugs Fixed
+- `No module named 'fitz'` — deps installed to wrong Python environment
+- `channel_not_found` on re-fetch — now only re-fetches when shortcut payload missing files
+- Image-based PDF extraction — Vision OCR pipeline built and working
 
-4. **Phase 4: Launch Countdown.** `format_launch_countdown()` shows launches sorted by urgency with days remaining + status.
-
-5. **Phase 5: Auto-Approve Triage.** `triage_intelligence.py` auto-approves items scoring ≥0.80. Config: `intelligence.auto_approve_threshold: 0.80`. M00 shows full transparency list. M0b shows count in summary (excluded from triage counts).
-
-6. **Phase 6: What Changed Delta.** `.kb-daily-snapshot.json` saved each run. `compute_delta()` shows +new, -completed, rescheduled items vs previous day.
-
-7. **Phase 7: PRD Alignment Tags.** `get_alignment_tag()` maps 14 scorecard keywords to milestones (e.g., `[Day 30: hiring]`). Shown in M00a A-task list and M0 week view Why column.
-
-8. **Phase 8: Housekeeping.** `prd_context.py`: "Exa"→"Orion", "EXA-PRD"→"ORION-REFERENCE". `daily_briefing.py`: logger "exa"→"orion", version 1.3.0→2.0.0. New `reconcile.py` CLI (d=done, r=reschedule, s=skip, a=all done, q=quit).
-
-### Verification
-- `python3 daily_briefing.py --dry-run`: 16/16 modules, 0 errors
-- M00a renders first in report output (display-first ordering works in both dry-run and live modes)
-- All imports clean (`m00a_today_summary`, `reconcile`)
-
-### Files Created
-- `modules/m00a_today_summary.py` — Today at a Glance (Phases 1-4, 6-7)
-- `reconcile.py` — End-of-day CLI tool (Phase 8)
+### Remaining Issue
+- Vision OCR extracts text but Haiku agent doesn't use it in its response. Need to: (1) trigger one more test to get debug image + raw Vision output logged, (2) inspect whether Vision returned real content or a "this page appears blank" description, (3) if real content, strengthen the agent system prompt to trust extracted file text.
 
 ### Files Modified
-- `modules/__init__.py` — M00a added to MODULE_REGISTRY (runs last, displays first)
-- `daily_briefing.py` — v2.0.0, M00a display-first logic, Exa→Orion logger
-- `config.yaml` — M00a config, `auto_approve_threshold: 0.80`
-- `modules/triage_intelligence.py` — Auto-approve logic, shared_state storage
-- `modules/m0b_pending_review.py` — Auto-approved count in summary line
-- `modules/m00_overnight_summary.py` — Auto-approved transparency list
-- `modules/m0_persistent_actions.py` — PRD alignment tags in Why column
-- `modules/prd_context.py` — Exa→Orion, EXA-PRD→ORION-REFERENCE
-- `CLAUDE.md` — Build State v5.8, S063
+- `_ops/orion-personal-bot/bot.py` — message re-fetch, Vision OCR (`_ocr_pdf_with_vision()`), debug logging, improved extraction strategies
+- `CLAUDE.md` — Build State orion_personal_bot updated to v4.1
 
-### ⚠️ SESSION-LOG.md over 500 lines — compression required at S065 start
+### Status: VISION OCR PIPELINE WORKING but agent not using extracted text. One more test needed with debug logging.
 
 ---
 
-## S064 — 2026-03-08 (Sat)
+## S100 — 2026-03-13 — Triage Intelligence P0 Upgrade + Daily Brief Triage
 
-**Focus**: Calendar enrichment exploration (killed), triage, tool audit
+**Focus**: Cross-reference filter for triage pipeline + daily brief triage application
 
 ### What Happened
-1. **Calendar enrichment M13 — explored then killed**. Built full module (attendee name matching, `<!-- ORION -->` block injection, `sendUpdates: "none"` silent writes). Dry-run showed correct matching but large meetings (15+ attendees) matched 9-10 items, short names caused false positives, and fuzzy name matching needed. Christopher decided complexity/value tradeoff wasn't worth it — daily report task list is sufficient.
-2. **OAuth scope upgraded**: `calendar.readonly` → `calendar.events` (read+write). Token re-authed. Kept in place — harmless superset, no reason to downgrade.
-3. **M13 fully reverted**: module deleted, removed from `__init__.py` and `config.yaml`.
-4. **Tool installation audit**: ClickUp MCP confirmed already working (read-only, `CLICKUP_MCP_MODE: "read"`). Google Docs MCP configured in `mcp.json` but not loading — needs debug. Fathom MCP also configured but not loading. Google Sheets MCP working.
-5. **Triaged 6 pending review items**:
-   - ✅ ai-9a6082b7: Jordan Belfort/Todd Brown materials for Romeo → Tue Mar 10 B
-   - ✅ mi-039 (NEW): Review Romeo's Veda output batch, approve 3 assets → Tue Mar 10 B
-   - ✅ mi-040 (NEW): Follow-up with Romeo on ElevenLabs voice cloning → Thu Mar 12 B
-   - ❌ Item 4 (Shopify template): Removed (not in KB, not needed)
-   - ✅ ai-e1279fb6: Customer success stories from Russ → Tue Mar 10 B
-   - ❌ ai-ec5a0a8d: Chris Hibbert automation pipeline → Rejected
+1. **Daily brief triage applied.** Mar 13 report updated: 2A/8B/4C today, SpeedTrac pushed to Fri Mar 20, Pending Review collapsed (31→0), Waiting On reduced (16→5).
 
-### Key Decision
-- **Calendar enrichment killed** — matching items to meetings by attendee name is too noisy for large group meetings. Christopher prefers using the daily report task list directly.
+2. **Cross-reference filter LIVE.** `filter_already_handled()` in `triage_intelligence.py` checks pending items against Action Items Tracker, Google Calendar (scheduling-type), and ClickUp completed tasks before they reach Pending Review. Integrated into M0b pipeline with transparency stats in summary line.
+
+3. **Auto-reconcile executed.** 27 "done" + 4 "rejected" items from today's triage batch-registered into `.kb-completed-registry.json` and `.kb-overrides.json`. These won't resurface.
+
+4. **Chris F call prep doc created.** `2026-03-13-chris-f-call-prep.md` with 3 agenda items (static asset workflow, NLC retargeting brief, thumbnail approach).
 
 ### Files Modified
-- `auth/calendar_auth.py` — scope upgraded to `calendar.events`, verification updated
-- `modules/calendar_helper.py` — scope upgraded to `calendar.events`
-- `.kb-approvals.json` — 3 approvals + 1 rejection added
-- `.kb-schedule.json` — 4 schedule entries added
-- `.kb-manual-items.json` — mi-039, mi-040 added
-- `.kb-triage-history.json` — 5 decisions logged (stats: 57 total, 21 approved, 36 rejected)
-- `CLAUDE.md` — Build State v5.9, S064
+- `_ops/daily-reports/mar-26-reports/2026-03-13.md` — full triage applied + B8 added
+- `_ops/daily-reports/mar-26-reports/2026-03-13-chris-f-call-prep.md` — NEW call prep doc
+- `_ops/daily-briefing/modules/triage_intelligence.py` — added `filter_already_handled()` + imports
+- `_ops/daily-briefing/modules/m0b_pending_review.py` — integrated `filter_already_handled` call, added `xref_stats`
+- `_ops/daily-briefing/.kb-completed-registry.json` — 31 new entries (367 total)
+- `_ops/daily-briefing/.kb-overrides.json` — 31 items closed
+
+### Status: COMPLETE. Cross-reference filter live. Registry at 367. Plan: `~/.claude/plans/encapsulated-churning-church.md`
 
 ---
 
-## S065 — 2026-03-08 (Sat)
+## S101 — 2026-03-13 — SF2 Launch Board: Full Figma Build (Phase 6 COMPLETE)
 
-**Focus**: M00a preview report creation + timezone documentation + S064 triage integration
+**Focus**: Build the complete SF2 Launch Board as a branded HTML artifact, capture to Figma, prepare for John Hardesty feedback integration.
 
 ### What Happened
-1. **Created M00a preview report.** Duplicated `2026-03-09-PREVIEW.md` → `2026-03-09-PREVIEW-v2.md`. Added "Today at a Glance" section at top: Day 28/90 header, TIGHT capacity alert (0m buffer), 3 A-tasks with time slots in 8:30–11:30 focus block, PRD alignment tags, meetings list, alerts (2 Slack DMs, 4 overnight items). Original v1 preserved for side-by-side comparison.
+1. **Status review.** Audited all project files: plan (`~/.claude/plans/snuggly-launching-stream.md`), content doc (801 lines, all 10 sections), persona images (5 generated via fal.ai FLUX in S099), persona image prompts. Confirmed Phases 1-5 complete, Phase 6 next.
 
-2. **Documented Christopher's Lisbon timezone.** Added "Christopher's Location & Timezone" section to MEMORY.md — Lisbon (WET/WEST), ~4-5h ahead of US Eastern, pipeline bug noted (calendar times render in ET not Lisbon). Updated Work Rhythm section to note meeting-free mornings.
+2. **Brand guidelines extracted.** Parsed `PER-Color-Palettes.ase` (binary ASE file) — extracted full PG brand palette: Primary (Performance Orange #FD3300, Dark Orange #DB2C00, PG Black #1D1A1A, UI Gray #7B726C), Neutrals (Stone #B3AAA3, Pebble #DFD9D5, Sand #ECE9E4, Fog #F4F2F0, Mist #FCFAFA), Secondary (Hi-Vis #E4F222, Grass #BCE9B1, Forest #2E4734, Sky #B2C6EB, Indigo #4F41D5, Polo #C5A6CA). Also found full design system doc at `pg-brand/pg-brand-guidelines/PG-DESIGN-SYSTEM.md` with color proportions (60% neutrals, 30% orange, 10% secondary), typography (ABC Repro, GT Super Text, ABC Repro Mono), and WCAG accessibility notes.
 
-3. **Integrated S064 triage into v2 report.** Collapsed Pending Review to "6 items triaged — 0 remaining". Added 4 approved items to Action Items Tracker: 3 B-tasks on Tue Mar 10 (Jordan Belfort materials, Romeo Veda review, customer success stories), 1 B-task on Thu Mar 12 (Romeo ElevenLabs follow-up). Open count updated 12→16. Altitude warning updated 58%→69%.
+3. **HTML board built.** Created `sf2-launch-board.html` — full 10-section left-to-right horizontal scrolling board with:
+   - Fixed header bar (PG Black background, Performance Orange logo, launch date badge)
+   - Section navigation bar with directional arrows showing sequential flow
+   - 10 section columns (min-width 520px, max-width 560px) with PG brand styling
+   - Sections 1-5, 7: fully populated with all content from content doc
+   - Sections 6, 8-10: styled as placeholders (dashed borders, gray headers, Hi-Vis "Structured Placeholder" badges, yellow notice boxes)
+   - 5 persona images rendered in Section 4 cards with quotes and emotion tags
+   - All tables, matrices, timelines, checklists, feature rows, stat boxes formatted for scannability
+   - PG brand fonts loaded via @font-face (ABC Repro Regular/Medium/Bold, GT Super Text, ABC Repro Mono)
 
-4. **Known pipeline bug surfaced.** Calendar times shown in US Eastern, not Christopher's Lisbon time. Ad Team Mastermind shows as 11:30am ET but is actually 3:30pm Lisbon. Focus block (8:30am–12pm Lisbon) is fully meeting-free. Fix tracked for S066.
+4. **Figma capture.** Served HTML locally (`python3 -m http.server 8765`), added Figma capture script, captured via MCP `generate_figma_design` into Performance Golf team workspace. Figma file created: `https://www.figma.com/design/pWzfEuks7YKhe6Uatdr05B`
 
-### Key Discovery
-- **Christopher is in Lisbon, Portugal** — all meeting times need ET→WET/WEST conversion. Morning focus block is entirely uninterrupted.
+5. **Layout decisions confirmed with Christopher:**
+   - Left-to-right (horizontal) layout — sections as a sequential journey, not vertical scroll
+   - Full density — not shortened for any audience
+   - New Figma file in PG workspace (confirmed safe — creates new file, doesn't touch existing)
+   - Placeholder sections (6, 8-10) styled nicely but clearly marked as placeholders
+   - Skill creation planned for after SF2 board is validated (Phase 7)
 
-### Strategic Feedback Captured
-- **Slack bot evolution needed**: Christopher wants the Slack bot to evolve from read-only monitoring into an active assistant that observes work patterns, blockers, lead times, and feeds intelligence back into triage/capacity planning.
-
-### Files Created
-- `daily-reports.nosync/mar-26-reports/2026-03-09-PREVIEW-v2.md`
+### Key Decisions
+- **Build method**: HTML → Figma Capture (via MCP). HTML file is the portable artifact and future skill template.
+- **Audience for first review**: John Hardesty (CMO, Christopher's direct manager) — today, to demonstrate the launch board template concept.
+- **Board is the PROOF OF CONCEPT** for the reusable SOP that addresses John's two core gaps (campaign alignment + asset visibility). See plan: `~/.claude/plans/snuggly-cooking-cookie.md`.
 
 ### Files Modified
-- `~/.claude/projects/-Users-christopherogle-pg-main-ogle/memory/MEMORY.md` — Lisbon timezone section added
-- `CLAUDE.md` — Build State v6.0, S065
+- `_ops/launch-boards/sf2/sf2-launch-board.html` — CREATED (full HTML board, ~900 lines)
+- `_ops/launch-boards/sf2/sf2-launch-board.html` — Figma capture script injected
 
-### ⚠️ SESSION-LOG.md over 500 lines — compression required at S066 start
+### Key Artifacts
+- **HTML board**: `_ops/launch-boards/sf2/sf2-launch-board.html`
+- **Content doc**: `_ops/launch-boards/sf2/sf2-launch-board-content.md` (801 lines, source of truth)
+- **Figma file**: `https://www.figma.com/design/pWzfEuks7YKhe6Uatdr05B`
+- **Persona images**: `_ops/launch-boards/sf2/persona-images/p1-p5*.jpg`
+- **John's gaps plan**: `~/.claude/plans/snuggly-cooking-cookie.md`
+- **Original build plan**: `~/.claude/plans/snuggly-launching-stream.md`
+
+### What's Next (for the handoff conversation)
+After John Hardesty reviews the board and provides feedback, the next session should:
+1. Read the plan `~/.claude/plans/snuggly-cooking-cookie.md` — it contains John's 5 gaps (A-E) cross-referenced against the board
+2. Integrate John's specific feedback into the HTML board + content doc
+3. Re-capture to Figma after changes
+4. Then proceed to Phase 7 (SOP Template extraction) and skill creation
+
+### Status: PHASE 6 COMPLETE. Board live in Figma. Awaiting John Hardesty feedback for iteration.
+
+---
+
+## S101 — 2026-03-13 — John Hardesty VM Feedback Integration
+
+### What Happened
+1. **John Hardesty VM analyzed.** Voice message distilled into 2 core gaps (campaign alignment + asset visibility). Cross-referenced against SF2 board (10 sections), Google Doc (30-Day Review), and Creative OS architecture. 5 gaps identified (A-E), plan written.
+
+2. **Phase 1: Organic Asset Registry (Gap A).** Added "Organic & Content Deliverables" subsection to Section 7 — 9-row cross-team asset registry (JoJo, Fatima, Jesse, Jessi, Brixton). Both HTML + content doc updated.
+
+3. **Phase 2: Email Team T-14 Milestone (Gap B).** Added Mar 9 timeline item to Section 8 (email team reviews Sections 3 & 6, Theo + Christopher). Updated Section 6 placeholder notice to reference T-14 checkpoint.
+
+4. **Phase 3: CEO Quick View (Gap C).** Added Brixton-facing "CEO Quick View: SF2 Content Status" callout to top of Section 7. Three rows: Shot/Available (6), In Production (5), Missing/TBD (3) with thread tags.
+
+5. **Phase 4: Marketing OS → Creative OS Bridge (Gap D).** Section 3 subtitle updated. Muted callout replaced with prominent green-bordered bridge callout explicitly framing Section 3 as the formal handoff point.
+
+6. **Phase 5: Figma re-capture.** All changes captured to existing file (pWzfEuks7YKhe6Uatdr05B, node 3:2).
+
+### Files Modified
+- `_ops/launch-boards/sf2/sf2-launch-board.html` — Phases 1-4 (S7 organic registry, S8 timeline, S7 CEO view, S3 bridge label)
+- `_ops/launch-boards/sf2/sf2-launch-board-content.md` — Matching content for all 4 phases
+- `~/.claude/plans/snuggly-cooking-cookie.md` — John VM analysis + 5-phase execution plan
+- `CLAUDE.md` — Build State v10.0, S101
+
+### Status: ALL 5 PHASES COMPLETE. Board ready for John call.
+
+---
+
+## S101b — 2026-03-13 — SF2 Board: CEO Card, Vertical Figma, Surge Prep
+
+### What Happened
+1. **CEO Direction Card (Section 00).** Added "Brixton — Start Here" as first section (left of Section 1). Orange-bordered card with launch status, content status (6/5/3), "What to Shoot Next" priorities, and board navigation guide with anchor links. Nav bar updated with orange button. Both HTML + content doc updated.
+
+2. **Vertical Figma variant.** Created `sf2-launch-board-figma.html` — same content, stacked vertically at 1440px width. Nav bar hidden, sections full-width, overflow visible. Solves the viewport capture problem (horizontal version only showed Sections 1-3).
+
+3. **Figma re-capture (vertical).** Captured vertical variant to existing file (pWzfEuks7YKhe6Uatdr05B, node 8:2). All 11 sections (00-10) now visible in one tall frame.
+
+4. **Surge deploy prepared.** Created `deploy/` directory with `index.html` (capture script removed, font paths rewritten to local) + 6 PG brand font files. Ready to publish — needs Surge CLI authentication.
+
+### Files Modified
+- `_ops/launch-boards/sf2/sf2-launch-board.html` — Section 00 CEO card added, nav updated, capture script removed
+- `_ops/launch-boards/sf2/sf2-launch-board-content.md` — Section 00 content added
+- `_ops/launch-boards/sf2/sf2-launch-board-figma.html` — CREATED (vertical variant for Figma)
+- `_ops/launch-boards/sf2/deploy/` — CREATED (Surge deploy dir: index.html + fonts/)
+- `CLAUDE.md` — Build State v10.1, S101b
+
+### Status: Surge deploy blocked on auth. Google Doc update deferred to after Surge + Figma verified.
+
+---
+
+## S101c — 2026-03-13 — 30-Day Review Markdown: Creation + Christopher Feedback Pass
+
+**Focus**: Create local markdown version of the 30-Day Review & Alignment Brief, incorporate SF2 board references, then refine based on Christopher's direct feedback before tomorrow's John Hardesty call.
+
+### What Happened
+1. **Located correct Google Doc.** Christopher provided the 30-Day Review doc (`1dqv4xu-8zARy7Ek-j6ZSOr6dGTWpdT-m779rTzmioAs`) — distinct from the original Feb 6 prep doc (`1TRbAh5rA2Rb_RNNTApK89_k_5Zqn3uTnmZEQFFY8Nwc`). Read full Google Doc content.
+
+2. **Created local markdown file.** `_ops/meetings/prep/031426-30-day-review-alignment-brief.md` — initial version added SF2 board section, updated brand deposit map references, tightened customer success stories framing.
+
+3. **Christopher feedback pass (10 corrections):**
+   - **Purpose & Framing**: Removed "collaborative, not defensive" — reframed around stepping up to take more off John's plate so John can rise to higher levels. Not about proving himself.
+   - **1:1s**: Corrected — weekly touchpoints with Fatima, Jojo, Morton. Jenni is NEXT (reached out, booking for next week). Not "DONE."
+   - **Fatima**: Removed "elevated to strategic partner" (inaccurate). Replaced with: finding her footing, moving towards automation, gradually increasing output.
+   - **Romeo**: Added first AI workflow (horizontal environment expansions) + 8 sales at last KPI check.
+   - **Editor pipeline**: New Senior Editor candidates came in today, reviewing over weekend, goal to hire within 1-2 weeks.
+   - **Brand Deposit Map**: Corrected from "IN PROGRESS" to "NOT YET STARTED" across all references. SF2 board = campaign alignment, NOT brand deposits. Brand deposit map (influencer program, organic content) is a separate deliverable.
+   - **Customer Success Stories**: Added Jojo confirmation step (Zoom calls vs. filmed interviews), resourcing context, Day 31-60 window.
+   - **Future boards**: Added SpeedTrak and PG1 alongside RS1 as next boards using SF2 template.
+   - **Surge URL**: Added live link (https://pg-sf2-board.surge.sh/).
+
+### Key Decisions
+- **Brand deposit map ≠ SF2 launch board.** Christopher was clear: don't make something look like something it's not. SF2 board covers campaign alignment and asset visibility. Brand deposit map (how we make deposits to the brand) is a separate, unbuilt deliverable.
+- **Document framing**: Not about proving himself → about showing progress and identifying where he can step up further to free John for higher-level work.
+
+### Files Modified
+- `_ops/meetings/prep/031426-30-day-review-alignment-brief.md` — CREATED + 10 edits from Christopher's feedback
+- `CLAUDE.md` — Build State v10.2, S101c
+
+### Status: Markdown ready for Christopher's final review. Google Doc update deferred to S102 (post-John-call).
+
+---
+
+## S101c-b — SF2 Launch Board: Surge Deploy + John Hardesty Gap Sections (2026-03-13)
+
+### What Changed
+1. **Surge deployed** — SF2 launch board live at `pg-sf2-board.surge.sh` (authenticated, published)
+2. **Font sizes bumped +2-4pt site-wide** — body 13→15, headings 20→23, h3 14→16, tables 12→14, nav 11→13, all supporting text increased for readability
+3. **Persona images fixed** — 5 JPGs copied into `deploy/persona-images/`, height increased 140→185px to stop face cropping
+4. **S4 Campaign Strategy & Themes (placeholder)** — NEW section after Research & VSL. Addresses John's Gap A: "What's the broad campaign theme? What are the 5-6 story points connecting everyone?" Includes campaign theme prompt, story point table, 360 alignment matrix.
+5. **S9 Asset Registry & Organic Deliverables (placeholder)** — NEW section after Production. Addresses John's Gaps B+C: asset inventory (UGC, Brixton, pro, product shots) with availability dates + organic team deliverables list. Solves Theo/email searching blindly + Brixton visibility.
+6. **Board renumbered S0-S12** — 13 sections total. All nav items, IDs, cross-references, and CEO card guide updated.
+
+### Key Decisions
+- Combined John's "organic deliverables" and "asset registry" into one section (S9) rather than splitting — they solve the same findability problem.
+- Campaign Strategy (S4) placed after Research & VSL per Christopher's direction (not before it).
+- Both new sections include attribution: "identified as a gap by John Hardesty."
+
+### Files Modified
+- `deploy/index.html` — image fix, font bumps, 2 new sections, renumbering
+- `deploy/persona-images/` — 5 JPGs copied from source
+- `CLAUDE.md` — Build State v10.3
+
+### Status: Board live and ready for John Hardesty call. 13 sections (S0-S12), John's two gaps visible as placeholders.
+
+---
+
+## S102 — 2026-03-16 (Sun)
+
+**Focus**: Daily report outage fix + triage + pipeline intelligence upgrades
+
+### What Happened
+1. **Daily report outage diagnosed and fixed.** Pipeline hadn't fired since 3/14 (3 days). Root cause: `check_network()` in `daily_briefing.py` had zero retries — at 8 AM when launchd fires, WiFi isn't ready after overnight sleep. DNS resolution failed instantly and exited `0` (no alert). Fix: (a) Added retry loop (6 attempts, 10s delay = 60s max wait for WiFi). (b) Changed exit code to `1` on failure so consecutive-failures counter works. Today's report generated successfully — 16 modules, 0 failures.
+
+2. **Triage executed on today's report.** 4 items rescheduled, 4 items marked done:
+   - A2 (mi-043 Speed Track Figma) → Fri 3/20
+   - A3 (mi-025 Customer success) → Tue 3/17 as B1 (set `_priority_override: "B"`)
+   - B2 (mi-050), B3 (mi-055), B6 (mi-046), C2 (ai-7e883c21) → marked done, added to completed registry (now 373 entries)
+   - B4 (ai-dbd1e0a7 PDP copy), B5 (ai-235b44e8 static asset) → Fri 3/20
+
+3. **B→A priority guard.** Fixed synthetic scores in `capacity_engine.py` so B-override items (score 0.34) sort below A threshold (0.35). Previously B-overrides got score 0.50 which could cause misleading sort order. Added `_clickup_due_tomorrow()` helper — B items auto-promote to A ONLY when ClickUp deadline is tomorrow, with Why column note.
+
+4. **Calendar cross-reference upgrade.** Replaced character-sequence matching (`_similarity()` at 0.50) with entity-aware keyword matching in `triage_intelligence.py`. New `_extract_topic_keywords()` function extracts offer names (SF2, RS1, SSP, etc.) and significant nouns. Scheduling items now match calendar events by shared offer name or 2+ keyword overlap. Example: "Schedule SF2 ad review call" now correctly matches "SF2 pre-launch call" on calendar.
+
+5. **Feedback memory saved.** New rules: B stays B (unless ClickUp due tomorrow or explicit promotion), tasks only added to tracker via explicit request, always set `_priority_override` on triage, SF2 ≠ SpeedTrack (different offers).
+
+### Key Decisions
+- **Auto-approve stays enabled** — Christopher wants it to ACTUALLY work (auto-place tasks on tracker with correct priority/day). Current version is display-only. Real auto-approve is Phase 2 (follow-up session).
+- **"Inferred Tasks" rename deferred** to Phase 3 (follow-up session) — will accompany "Auto-Placed This Run" report section.
+- **Dedup logic is fine** — Christopher confirmed tracker dedup is working correctly. Only calendar cross-ref needed improvement.
+
+### Files Modified
+- `daily_briefing.py` — `check_network()` retry loop (6x 10s), exit code fix
+- `modules/capacity_engine.py` — synthetic scores (B=0.34, C=0.14), `_clickup_due_tomorrow()` helper, Why column note for promoted items
+- `modules/triage_intelligence.py` — `_extract_topic_keywords()`, `_OFFER_NAMES`, `_CALENDAR_GENERIC`, entity-aware calendar check in `filter_already_handled()`
+- `.kb-schedule.json` — 4 items rescheduled
+- `.kb-manual-items.json` — mi-025 B override, 3 items closed
+- `.kb-completed-registry.json` — 4 items added (373 total)
+- `~/.claude/projects/.../memory/feedback_task_placement_rules.md` — CREATED
+- `~/.claude/projects/.../memory/MEMORY.md` — updated index
+
+### Status: Intelligence fixes LIVE. Follow-up sessions needed: (1) Real auto-approve that writes to KB, (2) "Auto-Placed This Run" section + "Inferred Tasks" rename.
+
+---
+
+## S104 — 2026-03-16 (Sun)
+
+**Focus**: PG1 Member Pricing checkout template — Scratch Club elimination
+
+### What Happened
+1. **Analyzed two transcripts** (ClickUp + Fathom, March 11, Christopher + Donnie). Extracted the Scratch Club Elimination Protocol: all digital funnels swap Scratch Club for PG1 7→14-day free trial. Physical funnels get member/non-member toggle. Drop-dead date April 1st.
+
+2. **Created digital checkout template (WPSS).** Built new checkout 2-page template replacing the Pro Edition upgrade tier with Member Pricing ($97, PG1-as-vehicle) vs Non-Member Pricing ($197, standard members area). PG1 positioned as the delivery vehicle, not an add-on product. Pro Edition POV lessons moved to order bump. Key pricing: $197 non-member (matches VSL "public price"), $97 member (VSL discounted price). 14-day PG1 free trial, then $39/mo.
+
+3. **Pushed to Figma (3 iterations).**
+   - v1: Generic styling capture
+   - v2: Restyled to match PG1 Figma design system (analyzed `67LsMvACUYRGv7L9ORiQ0c`). Green border "Current Selection" + gray border "Upgrade" pattern, gold gradient buttons, Montserrat/Helvetica/Open Sans/Roboto fonts, 375px mobile artboard.
+   - v3: Fixed Step 1 (removed green product card showing ~~$197~~ $97 to prevent price confusion with Step 2). Restyled order bumps to match live Checkout Champ page — yellow checkbox CTAs with "Yes, Please ADD..." copy pattern, full body copy from live page.
+
+4. **Captured live WPSS checkout page** via Playwright (`secure.performancegolf.com/orderForms/womens-pendulum-swing-sequence-sc-32947-media`) to extract exact bump styling, copy, and checkbox patterns. Notable: live page still shows Scratch Club in order summary and fine print.
+
+### Key Decisions
+- **$197 / $97 pricing split** — non-member = VSL public price (crossed out), member = VSL discounted price. No third price. Congruent.
+- **Non-member auto-checked by default** — customer lands on higher price, switches to member as no-brainer. Discussion point for leadership.
+- **14-day free trial** (not 7-day) — matches existing Scratch Club pattern. Donnie said 7 in transcript but Christopher confirmed 14.
+- **PG1 = delivery vehicle, not add-on** — copy frames PG1 as "how you access your content" with additional benefits, not "you're also buying a subscription."
+- **Physical template separate** — different framing needed for physical items. Christopher to provide reference doc.
+
+### Files Created/Modified
+- `_performance-golf/pg-swipes/pg-checkout-page/checkout-digital-pg1-member-pricing.md` — CREATED (markdown wireframe)
+- `_performance-golf/pg-swipes/pg-checkout-page/_checkout-preview.html` — CREATED (HTML for Figma capture, 3 iterations)
+- Figma file: `geD8wYoIthYpFCGXbs29hk` — 3 pages (v1, v2 PG branded, v3 final with Step 1 fix + production bumps)
+
+### Open Items
+- [ ] Physical product checkout template (Christopher to provide reference doc)
+- [ ] Leadership call feedback → iterate on template
+- [ ] Legal sign-off on member pricing framing and PG1 terms disclosure
+- [ ] Update markdown template to match final approved Figma version

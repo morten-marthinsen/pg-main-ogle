@@ -1,4 +1,4 @@
-# **Performance Golf Ad Naming Convention - Tess v3.9**
+# **Performance Golf Ad Naming Convention - Tess v3.10**
 
 This document defines the **15-Position Asset ID** naming convention for all Performance Golf ad creatives. This system enables automated data flow from Facebook → DOMO → Tess (Strategic Scaling System Intelligence).
 
@@ -238,7 +238,7 @@ Talent codes use a **4-character format**: first 2 letters of first name + first
 
 **Image Assets:** For image assets (Root Angle ID prefix `i`), default to `xxxx` (No Talent / Not Applicable) unless the image is specifically testing a talent's likeness.
 
-**Full Talent Code Reference (44 active talents):**
+**Full Talent Code Reference (45 active talents):**
 
 | Code | Talent Name |
 |------|-------------|
@@ -257,6 +257,7 @@ Talent codes use a **4-character format**: first 2 letters of first name + first
 | `coha` | Colin Harris |
 | `crha` | Craig Hanson |
 | `diwe` | Diana West |
+| `dwai` | Diana West AI |
 | `dofr` | Donnie French |
 | `erco` | Eric Cogorno |
 | `erla` | Erika Larkin |
@@ -324,6 +325,7 @@ Talent codes use a **4-character format**: first 2 letters of first name + first
 | `ch` | Chris Hibbert |
 | `co` | Christopher Ogle |
 | `df` | Donnie French |
+| `rv` | Romeo Valois |
 
 > **Note:** Prior to February 2026, the codes `bh` (Brian Halpin) and `kd` (Keith Dingler) were also active copywriter codes. Assets with those codes in the system remain valid.
 
@@ -691,8 +693,9 @@ not yet in ClickUp. Only truly unknown root angle IDs will have blank root angle
 
 ---
 
-*Document Version: 3.9*
-*Last Updated: February 13, 2026*
+*Document Version: 3.10*
+*Last Updated: March 10, 2026*
+*Changes v3.10: Added `dwai` (Diana West AI) talent code — AI-generated content using Diana West's likeness/voice. 45 active talents. Added `rv` (Romeo Valois) copywriter code — 8 active copywriters. Orion Session 075.*
 *Changes v3.9: Renamed "Script ID" (Position 2) to "Root Angle ID" throughout — reflects that this identifier anchors to a root angle, not a script. Added `tobr` (Todd Brown) to talent codes (43 active). Added `xxxx` (No Talent / Not Applicable) as special talent code — default for image assets unless specifically testing talent. Added speaking-roles-only clarification for talent codes. Updated Offer-Guru Mapping to note video-only applicability. Tess Session 148.*
 *Changes v3.8: Changed `mult` (Multiple Talent) threshold from 4+ actors to 3+ actors. With 3+ talents, performance attribution to any single talent is unreliable, so `mult` is the correct classification. Assets with 1-2 talents use the primary talent's code. Updated Sections 3.9, 3.15, 4.1. Tess Session TBD.*
 *Changes v3.7: Added Section 3.2 Script ID (Position 2) — sequential per funnel, SSS registry. Renumbered sections 3.2–3.14 → 3.3–3.15. Added `int` (International) Expansion Type code with operational definition — horizontal expansion for geographic market adaptation. Renamed "Creation Date" to "Delivery Date" (Position 14) — the day the asset is delivered to Creative Ops. Updated Length Tier `xx` to include HTML5. Updated Expansion Type `xx` description to include `prm` and `evg`.*
