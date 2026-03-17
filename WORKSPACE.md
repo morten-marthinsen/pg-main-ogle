@@ -109,3 +109,9 @@ When you cite a credential, finish the story. Don't stop at the event — land t
 
 ### 10. Close on Benefit, Not Mechanism
 By the time you reach the close, the mechanism has been explained. Don't re-explain it. The close is where you land what it means for the golfer — what they get, how it feels, what changes. The reader already knows how it works. Tell them what they walk away with.
+
+### 11. Show, Don't Tell
+Never announce what the reader should feel or conclude — create the experience that makes them feel or conclude it on their own. "The first win comes fast" is telling. "Shots you couldn't hit last week start landing" is showing. Telling requires the reader to trust you. Showing lets them see it for themselves. If you can delete a sentence and the reader still gets the point from the surrounding picture language, the sentence was telling. Delete it.
+
+### 12. Kill Clichés on Sight
+"Something clicks." "Everything changes." "It all comes together." "Take your game to the next level." These are dead phrases — they've been used so many times they no longer create any image or feeling in the reader's mind. Every sentence must do real work. If a phrase could appear in any ad for any product in any industry, it's a cliché. Replace it with language that is specific to the person, the moment, and the feeling — or delete it entirely.
