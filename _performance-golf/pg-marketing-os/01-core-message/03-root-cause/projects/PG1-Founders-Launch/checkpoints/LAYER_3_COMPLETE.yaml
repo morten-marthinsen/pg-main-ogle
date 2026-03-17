@@ -1,0 +1,34 @@
+layer: 3
+skill: "03-root-cause"
+status: COMPLETE
+timestamp: "2026-03-16T00:00:00Z"
+
+verification:
+  truth_validation: 9.0
+  mechanism_alignment: 10.0
+  proof_availability: 7.0
+  audience_resonance: 9.5
+  composite: 8.9
+  all_above_threshold: true
+  ten_critical_rules_passed: true
+  blame_externalization: PASS
+  soul_md_compliance: PASS
+
+decision: approved
+
+microskill_outputs:
+  - file: "layer-3-outputs/3.1-truth-validation.md"
+    status: COMPLETE
+    score: 9.0
+  - file: "layer-3-outputs/3.2-mechanism-alignment.md"
+    status: COMPLETE
+    score: 10.0
+  - file: "layer-3-outputs/3.3-proof-availability.md"
+    status: COMPLETE
+    score: 7.0
+  - file: "layer-3-outputs/3.4-audience-resonance.md"
+    status: COMPLETE
+    score: 9.5
+  - file: "layer-3-outputs/3.5-validation-synthesis.md"
+    status: COMPLETE
+    decision: approved

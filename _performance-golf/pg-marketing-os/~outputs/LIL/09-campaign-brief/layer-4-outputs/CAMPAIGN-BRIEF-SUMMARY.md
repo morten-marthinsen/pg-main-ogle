@@ -13,9 +13,11 @@
 
 **"The equipment teaches. You just play."**
 
+ "Developmental science has proven that the most fun way for a toddler to learn golf is also the most effective way. Fun IS the learning mechanism at this age."
+
 Every toddler golf product on the market assumes verbal coaching. Toddlers ages 2-5 learn through sensory interaction, not verbal instruction. The See & Swing System is the only product that teaches golf fundamentals through visual-tactile design — the same way a shape sorter teaches geometry.
 
-**One-sentence thesis:** The See & Swing System is the only toddler golf product that teaches real fundamentals through visual-tactile design — the same way a shape sorter teaches geometry — because developmental science has confirmed for nearly 80 years that toddlers learn through shapes, colors, and play, not words.
+**One-sentence thesis:** The See & Swing System is the only toddler golf product that teaches real fundamentals through visual-tactile design — the same way a shape sorter toy teaches geometry — because developmental science has confirmed for nearly 80 years that toddlers learn through shapes, colors, and play, not words.
 
 **Operating principle:** Emotion leads. Mechanism earns. Science supports. Proof demonstrates.
 
@@ -64,7 +66,7 @@ Every toddler golf product on the market assumes verbal coaching. Toddlers ages 
 **Type:** ACTUAL MECHANISM (system x scientific)
 **Emphasis:** 25% root cause / 50% science-conceptual / 25% delivery-tangible
 
-**Core explanation:** The See & Swing System teaches golf the same way a shape sorter teaches geometry: through the design of the equipment itself. Yellow ball on the clubhead matches white ball on the ground — that's alignment. Stance markers show where to stand — that's setup. Club stands upright so they walk in and grab it — that's the starting position. Every piece teaches one thing through a visual or physical cue. No instructions, no coaching, no corrections.
+**Core explanation:** The See & Swing System teaches golf the same way a shape sorter teaches geometry: through the design of the equipment itself. Yellow ball on the clubhead matches white ball on the ground — that's alignment. Stance markers show where to stand — that's setup. Club stands upright so your little legend can walk in, grab it, and swing it — that's the starting position. Every piece teaches one thing through a visual or physical cue. No instructions, no coaching, no corrections.
 
 **4 components (present as examples of ONE principle, not a feature list):**
 
@@ -138,9 +140,9 @@ Every toddler golf product on the market assumes verbal coaching. Toddlers ages 
 
 ## 7. OFFER SUMMARY
 
-**Product name:** The Lil' Legends Start Set
+**Product name:** The Lil' Legends Starter Set
 **Mechanism name:** The See & Swing System
-**Architecture:** Product = "Start Set." System inside = "See & Swing." (Same structure as RS1 Putter + Roll Straight Technology.)
+**Architecture:** Product = "Starter Set." System inside = "See & Swing." (Same structure as RS1 Putter + Roll Straight Technology.)
 
 **Price:** $149
 **Total stated value:** $306.99
@@ -158,12 +160,12 @@ Every toddler golf product on the market assumes verbal coaching. Toddlers ages 
 - First Swings — 5 Games for Day One (included — not separately priced to avoid undermining "7 words is the whole lesson")
 - Grant Horvat Welcome Video (exclusive — QR code in box)
 
-**Guarantee (LOCKED):** 365-Day "Your Kid Has Fun or It's Free" — unconditional, full refund, no questions asked.
+**Guarantee (LOCKED):** 365-Day "It's Fun or It's Free" — unconditional, full refund, no questions asked.
 
 **CTA sequence:**
-1. "Get the Lil' Legends Start Set — $149"
-2. "Give your kid the game. Get the Start Set today."
-3. "Your job? The best job. Just play alongside them. Get the Lil' Legends Start Set."
+1. "Get the Lil' Legends Starter Set — $149"
+2. "Give your kid the game. Get the Starter Set today."
+3. "Your job? The best job. Just play alongside them. Get the Lil' Legends Starter Set."
 
 **Anchor cascade:**
 1. Charlie Golf $190-338 for clubs alone (no mat, no bag, no teaching system)
@@ -173,7 +175,6 @@ Every toddler golf product on the market assumes verbal coaching. Toddlers ages 
 
 **Pending Leadership decisions:**
 - Price confirmation ($149 or adjust within $129-$179)
-- Payment plans (Afterpay/Klarna/ShopPay)
 - Member vs Non-Member pricing
 - Introductory pricing (launch-week or $149 from day one)
 - Scarcity (real production limit only — no fake scarcity)

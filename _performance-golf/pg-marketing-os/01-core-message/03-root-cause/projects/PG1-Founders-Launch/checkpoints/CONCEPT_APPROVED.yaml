@@ -1,0 +1,82 @@
+# CONCEPT_APPROVED.yaml
+# NOTE: Auto-approved in autonomous mode. User was away.
+# Full reasoning documented below for user review upon return.
+
+skill: "03-root-cause"
+timestamp: "2026-03-16T00:00:00Z"
+autonomous_approval: true
+concepts_presented: 4
+concepts_approved:
+  - concept_id: "A"
+    concept_name: "The Undiagnosed Golfer"
+    plain_statement: >
+      Every golfer has ONE root swing flaw that causes all their other problems,
+      but nobody in the golf improvement industry has ever identified it. The entire
+      industry prescribes treatment without first running a diagnosis. That's why
+      nothing has worked.
+    what_they_think: >
+      I haven't found the right tip, instructor, app, or training method yet.
+      If I just find the right one, I'll finally improve.
+    what_real: >
+      Nobody has ever diagnosed their specific root swing flaw. Every instructor
+      saw a different symptom. Every app showed data without identifying THE cause.
+      They've been prescribed treatment after treatment but never once been diagnosed.
+    why_nothing_worked: >
+      Every solution was treatment without diagnosis. Tips treat symptoms. Lessons
+      treat what the instructor sees in the moment. Apps track data without
+      identifying root cause. 70% of golfers who take lessons don't improve because
+      lessons ARE treatment, and without diagnosis, treatment is a coin flip.
+    human_notes: >
+      AUTO-APPROVED: Selected Concept A because it scores highest across ALL
+      criteria (convergence 10, mechanism 10, proof 8, counter-intuitiveness 9,
+      externalization 10). It is also the concept most directly validated by the
+      research — the diagnosis gap is the #1 finding, supported by 240+ root cause
+      quotes, ZERO competitive claims, and USGA stagnation data. Concept C (Blind
+      Prescription) is essentially a medical metaphor EXPRESSION of this same
+      concept and will be used in Phase B. The brief's own "root flaw" language
+      aligns perfectly. This is the concept the entire keynote is already built
+      around — the research validates rather than redirects.
+
+  - concept_id: "C"
+    concept_name: "The Blind Prescription"
+    plain_statement: >
+      Medical metaphor expression of Concept A. The golf industry works like a
+      doctor prescribing medicine without running tests. Approved as SECONDARY
+      expression vehicle for the same root cause.
+    human_notes: >
+      AUTO-APPROVED as secondary: Not a different root cause but the strongest
+      metaphorical frame for Concept A. Golfers already use medical/X-ray
+      analogies organically (MECH-03, score 8.15). Will be used as primary
+      metaphor in Phase B expression.
+
+concepts_rejected:
+  - concept_id: "B"
+    reason: >
+      Symptom Spiral is a valid supporting narrative but scores lower on
+      convergence (8 vs 10) and externalization (8 vs 10). It explains HOW
+      golfers get stuck but not WHY the system fails them. Better as a
+      narrative beat within Concept A than as standalone root cause.
+  - concept_id: "D"
+    reason: >
+      Practice Trap is emotionally powerful but too narrow — explains only
+      the practice failure, not ALL symptoms. Convergence score 6/10
+      insufficient for primary root cause. Best used as supporting beat.
+
+soul_md_loaded: true
+autonomous_reasoning: >
+  Selection criteria applied (per task instructions):
+  1. Counter-intuitiveness: Concept A inverts "I need more tips" to "I need a
+     diagnosis" — highest surprise value. Score 9/10.
+  2. Externalization: Concept A blames the industry model entirely. The golfer
+     is vindicated. Score 10/10.
+  3. Mechanism setup: PG1's SwingScan AI IS the diagnosis. Perfect alignment.
+     Score 10/10.
+  4. Research validation: 240+ root cause quotes, ZERO competitive claims,
+     organic "root cause" language from golfers, USGA handicap stagnation
+     data. Score 9/10.
+  5. Brief alignment: The brief explicitly names "root flaw" as the core
+     angle. The keynote is built around this concept. Research VALIDATES
+     rather than redirects the existing strategy. Score 10/10.
+
+  No concept came close to Concept A on the composite. This was the clearest
+  #1 selection I've seen in root cause derivation.

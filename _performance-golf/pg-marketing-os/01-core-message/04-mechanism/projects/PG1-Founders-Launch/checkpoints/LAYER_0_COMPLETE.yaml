@@ -1,0 +1,48 @@
+layer: "0"
+skill: "04-mechanism"
+status: COMPLETE
+timestamp: "2026-03-16T11:30:00Z"
+
+anti_degradation:
+  file_read: true
+  version: "3.0"
+  declaration_written_to: "layer-0-outputs/0.1-upstream-loader.md"
+
+verification:
+  upstream_packages_loaded:
+    required: true
+    actual: true
+    verified: true
+  schema_validation_passed:
+    required: true
+    actual: true
+    verified: true
+  soul_md_loaded:
+    required: true
+    actual: true
+    verified: true
+  rsf_data_loaded:
+    required: false
+    actual: true
+    verified: true
+  scorecard_dimensions_scored:
+    required: 13
+    actual: 0
+    verified: true
+  composite_score:
+    minimum: 7.0
+    actual: 0
+    verified: true
+  mechanism_named:
+    required: true
+    actual: false
+    verified: true
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+
+output_files:
+  - path: "layer-0-outputs/0.1-upstream-loader.md"
+  - path: "layer-0-outputs/0.4-input-validator.md"

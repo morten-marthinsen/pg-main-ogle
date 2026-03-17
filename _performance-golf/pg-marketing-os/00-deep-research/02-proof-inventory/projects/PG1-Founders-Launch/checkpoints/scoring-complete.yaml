@@ -1,0 +1,49 @@
+checkpoint: scoring-complete
+layer: 2
+status: COMPLETE
+timestamp: "2026-03-16"
+project: "PG1-Founders-Launch"
+
+summary:
+  overall_strength: 68
+  promise_ceiling: 62
+  schwartz_stage: "Late Stage 3 / Early Stage 4"
+  critical_gaps: 4
+  moderate_gaps: 4
+  low_gaps: 2
+  gap_severity_aggregate: HIGH
+
+category_scores:
+  social: 62
+  authority: 42
+  demonstration: 77
+  mechanism: 76
+  data: 72
+  risk_reversal: 65
+
+promise_ceiling:
+  diagnosis: STRONG
+  system: STRONG
+  identity: STRONG
+  value: STRONG
+  results: NONE
+  comparison: LOW
+  speed: NONE
+  guarantee: UNDEFINED
+
+gap_severity_requires_discovery: true
+
+microskills_executed:
+  - "2.1-composite-score-calculation: COMPLETE"
+  - "2.2-schwartz-stage-adjustment: COMPLETE"
+  - "2.3-category-strength-scoring: COMPLETE"
+  - "2.4-overall-strength-calculation: COMPLETE"
+  - "2.5-gap-detection: COMPLETE"
+  - "2.6-gap-severity-scoring: COMPLETE"
+  - "2.7-promise-ceiling-calculation: COMPLETE"
+
+output_files:
+  - "layer-2-outputs/L2-gap-analysis-scoring.md"
+
+gate_passed: true
+ready_for_layer_3: true

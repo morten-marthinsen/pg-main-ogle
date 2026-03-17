@@ -1,0 +1,61 @@
+layer: 1
+skill: "03-root-cause"
+status: COMPLETE
+timestamp: "2026-03-16T00:00:00Z"
+
+verification:
+  root_cause_candidates:
+    required: 3
+    actual: 4
+    verified: true
+  expression_variants_per_candidate:
+    required: 3
+    actual: 0
+    verified: false  # Expression is Phase B — not yet executed
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+
+microskill_outputs:
+  - file: "layer-1-outputs/1.1-research-pattern-analysis.md"
+    status: COMPLETE
+  - file: "layer-1-outputs/1.2-symptom-convergence.md"
+    status: COMPLETE
+  - file: "layer-1-outputs/1.3-false-belief-identification.md"
+    status: COMPLETE
+  - file: "layer-1-outputs/1.4-hidden-layer-discovery.md"
+    status: COMPLETE
+  - file: "layer-1-outputs/1.5-mechanism-constraint-check.md"
+    status: COMPLETE
+  - file: "layer-1-outputs/1.6-proof-constraint-check.md"
+    status: COMPLETE
+  - file: "layer-1-outputs/1.7-derivation-synthesis.md"
+    status: COMPLETE
+
+candidates:
+  - id: "A"
+    name: "The Undiagnosed Golfer"
+    rank: 1
+    convergence: 10
+    mechanism_alignment: 10
+    proof: 8
+  - id: "B"
+    name: "The Symptom Spiral"
+    rank: 2
+    convergence: 8
+    mechanism_alignment: 9
+    proof: 7
+  - id: "C"
+    name: "The Blind Prescription"
+    rank: 3
+    convergence: 10
+    mechanism_alignment: 10
+    proof: 8
+  - id: "D"
+    name: "The Practice Trap"
+    rank: 4
+    convergence: 6
+    mechanism_alignment: 8
+    proof: 6

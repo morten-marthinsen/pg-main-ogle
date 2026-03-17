@@ -1,0 +1,70 @@
+layer: 2
+skill: "03-root-cause"
+status: COMPLETE
+timestamp: "2026-03-16T00:00:00Z"
+
+verification:
+  root_cause_candidates:
+    required: 3
+    actual: 8
+    verified: true
+  expression_variants_per_candidate:
+    required: 3
+    actual: 8
+    verified: true
+
+completeness:
+  all_microskills_executed: true
+  minimum_thresholds_met: true
+  quality_gates_passed: true
+
+microskill_outputs:
+  - file: "layer-2-outputs/2.1-simple-reframe.md"
+    status: COMPLETE
+    variants: 4
+  - file: "layer-2-outputs/2.2-named-syndrome.md"
+    status: SKIPPED
+    reason: "Not appropriate for golf niche per vault analysis"
+  - file: "layer-2-outputs/2.3-villain-personification.md"
+    status: COMPLETE
+    variants: 3
+  - file: "layer-2-outputs/2.4-metaphor-construction.md"
+    status: COMPLETE
+    variants: 4
+  - file: "layer-2-outputs/2.5-dual-problem-framing.md"
+    status: COMPLETE
+    variants: 2
+  - file: "layer-2-outputs/2.6-niche-expression-matching.md"
+    status: COMPLETE
+  - file: "layer-2-outputs/2.7-expression-synthesis.md"
+    status: COMPLETE
+    arena_candidates: 8
+  - file: "layer-2-outputs/2.8-expression-anchoring-scores.json"
+    status: COMPLETE
+    all_above_threshold: true
+
+arena_candidates:
+  - id: "SR-1"
+    anchor: "You've never been diagnosed"
+    anchoring_score: 9.0
+  - id: "MET-1"
+    anchor: "Nobody ever ran the test"
+    anchoring_score: 8.3
+  - id: "SR-2"
+    anchor: "A flaw vs. THE flaw"
+    anchoring_score: 8.2
+  - id: "SR-3"
+    anchor: "Treatment without diagnosis"
+    anchoring_score: 7.8
+  - id: "MET-3"
+    anchor: "You needed an X-ray, not just eyes"
+    anchoring_score: 7.2
+  - id: "DP-1"
+    anchor: "One flaw, a dozen compensations"
+    anchoring_score: 7.0
+  - id: "MET-2"
+    anchor: "Which one number is wrong"
+    anchoring_score: 6.8
+  - id: "VP-3"
+    anchor: "The Symptom Industry"
+    anchoring_score: 6.7

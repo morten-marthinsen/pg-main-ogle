@@ -1,0 +1,114 @@
+{
+  "project": "PG1-Founders-Launch",
+  "skill": "02-proof-inventory",
+  "version": "2.2",
+  "generated": "2026-03-16",
+  "status": "COMPLETE",
+
+  "summary": {
+    "total_elements": 50,
+    "inventory_elements": 33,
+    "discovery_elements": 17,
+    "overall_proof_strength": 68,
+    "promise_ceiling": 62,
+    "schwartz_stage": "Late Stage 3 / Early Stage 4",
+    "critical_gaps": 4,
+    "moderate_gaps": 4,
+    "low_gaps": 2
+  },
+
+  "knockout_proof": {
+    "id": "PROOF-MECH-01",
+    "element": "Zero competitors claim root flaw diagnosis",
+    "composite_score": 9.00,
+    "stage_adjusted_score": 10.80,
+    "category": "MECHANISM",
+    "rationale": "Of 9 competitors analyzed, not one claims to identify a golfer's single root swing flaw. The diagnosis positioning is entirely uncontested."
+  },
+
+  "promise_ceiling": {
+    "score": 62,
+    "can_promise": {
+      "diagnosis": { "ceiling": "STRONG", "claim": "Know your ONE root swing flaw" },
+      "system": { "ceiling": "STRONG", "claim": "AI + coaches + adaptive plan" },
+      "identity": { "ceiling": "STRONG", "claim": "Be one of the first 1,000 founders" },
+      "value": { "ceiling": "STRONG", "claim": "$299 once vs. $1,000s on random fixes" }
+    },
+    "cannot_promise": {
+      "results": { "ceiling": "NONE", "reason": "No handicap improvement data" },
+      "comparison": { "ceiling": "LOW", "reason": "No comparative data vs lessons" },
+      "speed": { "ceiling": "NONE", "reason": "No timeframe data" },
+      "guarantee": { "ceiling": "UNDEFINED", "reason": "Terms not set" }
+    },
+    "strategy": "Lead with DIAGNOSIS + SYSTEM + IDENTITY. Promise CLARITY, not IMPROVEMENT."
+  },
+
+  "category_scores": {
+    "social": { "score": 62, "grade": "C+", "elements": 7, "stage_multiplier": 1.3 },
+    "authority": { "score": 42, "grade": "D+", "elements": 6, "stage_multiplier": 0.9 },
+    "demonstration": { "score": 77, "grade": "B+", "elements": 3, "stage_multiplier": 1.4 },
+    "mechanism": { "score": 76, "grade": "B", "elements": 6, "stage_multiplier": 1.2 },
+    "data": { "score": 72, "grade": "B-", "elements": 8, "stage_multiplier": 1.1 },
+    "risk_reversal": { "score": 65, "grade": "C+", "elements": 3, "stage_multiplier": 1.3 }
+  },
+
+  "critical_gaps": [
+    {
+      "id": "GAP-01",
+      "category": "SOCIAL",
+      "description": "No PG1 customer testimonials (zero beta user stories with names/results)",
+      "severity_score": 9.4,
+      "action": "Collect from early beta testers and Founders within first 30 days"
+    },
+    {
+      "id": "GAP-02",
+      "category": "AUTHORITY",
+      "description": "6 coaches unnamed — no names, bios, or credentials",
+      "severity_score": 8.4,
+      "action": "Populate names, bios, credentials before page goes live"
+    },
+    {
+      "id": "GAP-03",
+      "category": "SOCIAL",
+      "description": "No specific handicap improvement data from beta users",
+      "severity_score": 9.1,
+      "action": "Track from Day 1, publish at 90 days"
+    },
+    {
+      "id": "GAP-04",
+      "category": "DEMONSTRATION",
+      "description": "No before/after demonstration of the SwingScan diagnosis process",
+      "severity_score": 7.7,
+      "action": "Create walkthrough demo video before launch"
+    }
+  ],
+
+  "top_10_elements": [
+    { "rank": 1, "id": "PROOF-MECH-01", "element": "Zero competitors claim root flaw diagnosis", "composite": 9.00, "stage_adjusted": 10.80, "category": "MECHANISM" },
+    { "rank": 2, "id": "PROOF-DEMO-01", "element": "Docu-series (6 belief-layer pieces)", "composite": 8.35, "stage_adjusted": 11.69, "category": "DEMONSTRATION" },
+    { "rank": 3, "id": "PROOF-RR-02", "element": "Lifetime pricing $299 never pay again", "composite": 8.35, "stage_adjusted": 10.86, "category": "RISK_REVERSAL" },
+    { "rank": 4, "id": "PROOF-DATA-07", "element": "Golfer financial waste quantified", "composite": 8.35, "stage_adjusted": 9.19, "category": "DATA" },
+    { "rank": 5, "id": "PROOF-SOC-06", "element": "Organic root cause language (20+ times)", "composite": 8.15, "stage_adjusted": 10.60, "category": "SOCIAL" },
+    { "rank": 6, "id": "PROOF-MECH-03", "element": "X-ray / medical diagnosis metaphor", "composite": 8.15, "stage_adjusted": 9.78, "category": "MECHANISM" },
+    { "rank": 7, "id": "PROOF-SOC-02", "element": "Brixton's personal story", "composite": 8.05, "stage_adjusted": 10.47, "category": "SOCIAL" },
+    { "rank": 8, "id": "PROOF-DATA-03", "element": "96% accuracy", "composite": 7.90, "stage_adjusted": 8.69, "category": "DATA" },
+    { "rank": 9, "id": "PROOF-DATA-04", "element": "77+ swing flaws identified", "composite": 7.80, "stage_adjusted": 8.58, "category": "DATA" },
+    { "rank": 10, "id": "PROOF-DEMO-02", "element": "Leaked keynote format", "composite": 7.75, "stage_adjusted": 10.85, "category": "DEMONSTRATION" }
+  ],
+
+  "discovery_highlights": [
+    { "id": "DISC-05", "finding": "USGA data: average handicap unchanged 2020-2025", "strength": 10, "relevance": 10, "source": "USGA 2025 Golf Scorecard" },
+    { "id": "DISC-08", "finding": "70% of golfers who take lessons don't improve", "strength": 9, "relevance": 10, "source": "Bobby Clampett, GolfWRX 2025" },
+    { "id": "DISC-14", "finding": "Human-AI collaboration beats either alone", "strength": 9, "relevance": 10, "source": "Multiple systematic reviews 2024-2025" },
+    { "id": "DISC-12", "finding": "AI outperforms dermatologists in 63% of studies", "strength": 9, "relevance": 8, "source": "PMC systematic review 2025" },
+    { "id": "DISC-01", "finding": "AI scored 4.08 vs human coaches 4.42; AI wins comprehensiveness", "strength": 8, "relevance": 9, "source": "Twelfth Tee research paper" }
+  ],
+
+  "downstream_handoffs": {
+    "skill_03_core_message": "Use knockout proof (MECH-01), promise ceiling constraints, and Stage 3-4 strategy",
+    "skill_04_vsl": "Use gradualization sequence and objection-proof mapping for script structure",
+    "skill_05_ecomm": "Use category rankings and C.P.B. framework for feature sections",
+    "skill_06_upsells": "Use risk reversal elements and value comparison data",
+    "skill_18_email": "Use discovery data (DISC-05, DISC-08) for belief-building sequences"
+  }
+}

@@ -1,0 +1,15 @@
+layer: 0
+status: PASS
+completed_at: "2026-03-16T15:00:00Z"
+gate_checks:
+  campaign_brief_loaded: true
+  nls_framework_loaded: true
+  product_details_validated: true
+  source_mode: "campaign_brief"
+  product_name: "The Lil' Legends Starter Set"
+  feature_count: 9
+  audience_segments: 4
+microskills_completed:
+  - "0.1-upstream-loader"
+  - "0.2-nls-framework-loader"
+  - "0.3-input-validator"
