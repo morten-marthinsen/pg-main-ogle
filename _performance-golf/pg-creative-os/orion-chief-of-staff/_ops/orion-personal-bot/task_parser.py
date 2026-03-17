@@ -60,7 +60,7 @@ def extract_task_from_message(message_text: str, sender_name: str = None) -> dic
 
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-haiku-4-5-20251001",
             max_tokens=300,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_msg}],

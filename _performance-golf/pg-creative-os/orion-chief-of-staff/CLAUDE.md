@@ -213,8 +213,8 @@ Unresolved BLOCK/CONVINCE ME persist across sessions until resolved.
 | Weekly Cadence | `_reference/weekly-cadence.md` |
 | Team Roster | `_reference/team-roster.md` |
 | Spark Book Launch Map | `_reference/spark-book-launch-map.md` |
-| Stakeholder Map | `~/.claude/projects/-Users-christopherogle/memory/stakeholder-map.md` (PRIVATE) |
-| Working Relationships | `~/.claude/projects/-Users-christopherogle/memory/working-relationships/` (PRIVATE) |
+| Stakeholder Map | `~/.claude/projects/*/memory/stakeholder-map.md` (PRIVATE — path varies by machine) |
+| Working Relationships | `~/.claude/projects/*/memory/working-relationships/` (PRIVATE — path varies by machine) |
 | Wise Reply Skill | `~/.claude/skills/wise-reply/SKILL.md` |
 | Creative OS PRD | `../CREATIVE-OS-PRD-PLAN.md` (read-only) |
 | TESS / Neco / VEDA | `../tess-.../ ../neco-.../ ../veda-.../` |

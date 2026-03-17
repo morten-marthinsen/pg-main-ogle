@@ -1,5 +1,9 @@
 """Intent Classifier — Claude-powered message routing for Orion Personal Bot.
 
+DEPRECATED: This module is no longer used by the bot. All message routing now goes
+through the Claude agent (agent.py) which classifies intent natively.
+Kept for reference only — safe to remove in a future cleanup.
+
 Replaces rigid regex patterns with natural language understanding.
 Classifies every incoming DM into one of:
   - complete_task: user wants to mark a task as done

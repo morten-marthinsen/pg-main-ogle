@@ -1,5 +1,9 @@
 """Conversation State Machine — multi-turn thread tracking for Orion Personal Bot.
 
+DEPRECATED: This module is no longer used by the bot. All conversation routing now goes
+through the Claude agent (agent.py) which handles multi-turn context natively.
+Kept for reference only — safe to remove in a future cleanup.
+
 In-memory state keyed by thread_ts. Only 1 user (Christopher), no persistence needed.
 States expire after 10 minutes.
 """

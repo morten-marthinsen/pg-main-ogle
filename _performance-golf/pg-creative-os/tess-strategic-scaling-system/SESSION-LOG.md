@@ -10,7 +10,7 @@
 ```yaml
 session_number: 164
 last_updated: 2026-02-23
-version: "3.9"
+version: "3.10"
 current_phase: S164 IN PROGRESS — Root Angle lookup complete (681/1102 updated). coha Google Doc add pending.
 
 sheet: "1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U" | Ad Level Tracking | 1102 rows (Jan 1–Feb 22, reset from full CSV) | Asset Registry | 776 rows | Raw_Daily_Data | 33,693 rows (Jan 1–Feb 22, 2026 — FULLY CURRENT)

@@ -38,11 +38,14 @@ done
 
 # Load environment variables — safe line-by-line read (no grep/xargs piping)
 if [ -f "$BRIEFING_DIR/.env" ]; then
-    while IFS='=' read -r key val; do
+    while IFS= read -r line; do
         # Skip comments and blank lines
-        case "$key" in
+        case "$line" in
             \#*|"") continue ;;
         esac
+        # Split on first '=' only (handles values containing '=' signs)
+        key="${line%%=*}"
+        val="${line#*=}"
         # Trim whitespace
         key="$(echo "$key" | xargs)"
         val="$(echo "$val" | xargs)"

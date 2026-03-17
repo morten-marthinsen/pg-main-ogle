@@ -546,7 +546,7 @@ def _read_pdf_with_claude(file_bytes: bytes, page_count: int) -> str:
         import anthropic
         client = anthropic.Anthropic(api_key=api_key)
 
-        # Save raw PDF for debugging
+        # Save raw PDF for debugging (cleaned up after processing)
         debug_pdf_path = Path("/tmp/orion-pdf-debug.pdf")
         debug_pdf_path.write_bytes(file_bytes)
         logger.info(f"Debug PDF saved to {debug_pdf_path} ({len(file_bytes)} bytes)")
@@ -588,6 +588,12 @@ def _read_pdf_with_claude(file_bytes: bytes, page_count: int) -> str:
     except Exception as e:
         logger.error(f"Claude PDF reading failed: {e}", exc_info=True)
         return ""
+    finally:
+        # Clean up debug PDF
+        debug_pdf_path = Path("/tmp/orion-pdf-debug.pdf")
+        if debug_pdf_path.exists():
+            debug_pdf_path.unlink()
+            logger.info("Debug PDF cleaned up")
 
 
 def _cleanup_stale_pending_confirmations():

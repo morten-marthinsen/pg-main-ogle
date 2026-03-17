@@ -15,10 +15,16 @@ STATE_FILE = DAILY_BRIEFING_DIR / ".m4-state.json"
 # Paths for Wise Reply context (same as skill)
 # Note: STAKEHOLDER_MAP and WR_DIR are user-specific (~/.claude/projects/...) — each user's
 # Claude projects directory has a different name based on their home path.
-STAKEHOLDER_MAP = Path.home() / ".claude/projects/-Users-christopherogle/memory/stakeholder-map.md"
+# Use glob to find the right project directory regardless of username.
+def _find_claude_project_path(subpath: str) -> Path:
+    """Find a file/dir under ~/.claude/projects/*/memory/ using glob (user-agnostic)."""
+    candidates = sorted(Path.home().glob(f".claude/projects/*/memory/{subpath}"))
+    return candidates[0] if candidates else Path.home() / f".claude/projects/_unknown/memory/{subpath}"
+
+STAKEHOLDER_MAP = _find_claude_project_path("stakeholder-map.md")
 ORION_DIR = MODULES_DIR.parent.parent  # orion-chief-of-staff/
 SESSION_LOG = ORION_DIR / "SESSION-LOG.md"
-WR_DIR = Path.home() / ".claude/projects/-Users-christopherogle/memory/working-relationships"
+WR_DIR = _find_claude_project_path("working-relationships")
 
 
 def _load_stakeholder_map() -> str:

@@ -6,6 +6,8 @@ filenames per the TESS naming convention.
 
 import re
 import requests
+import yaml
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 # ── ClickUp API ──────────────────────────────────────────────────────────────
@@ -76,35 +78,20 @@ def _get_field_text(task: dict, field_name: str) -> Optional[str]:
 
 # ── Code Tables ──────────────────────────────────────────────────────────────
 
-COPYWRITER_CODES = {
-    "Chris Fleeks": "cf",
-    "Christopher Ogle": "co",
-    "Anthony Flores": "af",
-    "Ben Marcoux": "bm",
-    "Chris Hibbert": "ch",
-    "Donnie French": "df",
-    "Romeo Valois": "rv",
-}
+# Load team member codes from config file (editable without code changes)
+_TEAM_CODES_PATH = Path(__file__).parent / "team-codes.yaml"
 
-EDITOR_CODES = {
-    "No Limit Creative (Agency)": "nlc",
-    "Arvin Roy Edrosa": "ae",
-    "Clevin Alcantara": "ca",
-    "Daryl Reyes": "dr",
-    "Gabriel Langain": "gl",
-    "Jasper Jay Oliverio": "jo",
-    "Jasper Rufino": "jr",
-    "JD Miranda": "jm",
-    "John Kent": "jk",
-    "Judhel Joseph": "jj",
-    "JV Boongaling": "jb",
-    "Keenan Garrett": "kg",
-    "Morten Marthinsen": "mm",
-    "Serhii Lahutenko": "sl",
-    "Shane Sharry Ibanez": "si",
-    "Umer Rehman": "ur",
-    "Vlad Kostetskyi": "vk",
-}
+
+def _load_team_codes() -> tuple:
+    """Load copywriter and editor codes from team-codes.yaml."""
+    if _TEAM_CODES_PATH.exists():
+        with open(_TEAM_CODES_PATH, encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+        return data.get("copywriters", {}), data.get("editors", {})
+    return {}, {}
+
+
+COPYWRITER_CODES, EDITOR_CODES = _load_team_codes()
 
 AD_CATEGORY_CODES = {
     "NN (Net New)": "nn",

@@ -473,8 +473,12 @@ def read_google_doc(doc_id: str) -> str:
 
     # Resolve paths relative to this file's directory
     bot_dir = Path(__file__).resolve().parent
-    creds_path = bot_dir / os.environ.get("GOOGLE_DOCS_CREDENTIALS_PATH", "")
-    token_path = bot_dir / os.environ.get("GOOGLE_DOCS_TOKEN_PATH", "")
+    creds_env = os.environ.get("GOOGLE_DOCS_CREDENTIALS_PATH")
+    token_env = os.environ.get("GOOGLE_DOCS_TOKEN_PATH")
+    if not creds_env or not token_env:
+        return "Error: GOOGLE_DOCS_CREDENTIALS_PATH and GOOGLE_DOCS_TOKEN_PATH must be set in .env"
+    creds_path = bot_dir / creds_env
+    token_path = bot_dir / token_env
 
     if not token_path.exists():
         raise RuntimeError(
