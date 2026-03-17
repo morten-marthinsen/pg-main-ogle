@@ -53,6 +53,29 @@ For Veda and Tess dashboard:
 
 Apply these gates only when the relevant runnable project files are present in the current checkout. No `--no-verify`. If any gate fails, halt and fix first.
 
+## Performance Golf Brand Guidelines
+
+### Tier 1: Visual Identity (MANDATORY)
+
+Any skill producing visual output (HTML, CSS, page designs, ad creative, video assets, presentations) MUST load the PG brand system before generating output. These rules are non-negotiable and cannot be overridden by agent-specific instructions unless approved by the human.
+
+**Load before any visual output:**
+- Design System: `_performance-golf/pg-brand/pg-brand-guidelines/PG-DESIGN-SYSTEM.md`
+- Visual Identity: `_performance-golf/pg-brand/pg-brand-guidelines/references/visual-identity.md`
+- Logo Assets: `_performance-golf/pg-brand/pg-brand-guidelines/assets/logos/`
+
+### Tier 2: Voice & Copy Defaults (DEFAULT — Agent Overrides Allowed)
+
+Brand voice and copy guidelines apply as the DEFAULT for all PG content. Agent-specific or project-specific voice instructions (e.g., Neco's behavioral frameworks, Soul.md project overrides) take precedence within their scope. When no agent-specific voice is defined, Brixton is the default.
+
+**Load for any customer-facing copy:**
+- Brand Voice & Copy: `_performance-golf/pg-brand/pg-brand-guidelines/pg-copy-voice.md`
+- Brand Skill (combined): `_performance-golf/pg-brand/pg-brand-guidelines/brand-guidelines-skill.md`
+
+**Copy restrictions apply universally regardless of voice:** Hank Haney = "Tiger's FORMER coach". Never "USGA approved" → "conforms to the rules of golf". Never mention: Golf Fanatic, Moe Norman, Dustin Johnson, Titleist, Sir Nick Faldo. See `pg-copy-voice.md` for full list.
+
+---
+
 ## Copywriting Heuristics (Learned From Draft → Final Edits)
 
 These rules apply to all spoken-word scripts, voiceover copy, and video walkthroughs across any offer. They were extracted by comparing AI-generated drafts against human-edited finals.
