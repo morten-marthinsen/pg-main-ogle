@@ -78,25 +78,33 @@ Validation is binary (pass/fail on factual claims, coherence checks). Competitio
 
 ## Recommendation
 
-**Hybrid approach — adopt Arena for hooks only.**
+**Hybrid approach — adopt Arena for hooks only. APPROVED by Donnie (2026-03-18) with modification.**
 
 | Component | Recommendation | Rationale |
 |-----------|---------------|-----------|
-| Hook Generation | ADOPT Arena (3 competitors, 1 round) | Highest value — diverse approaches surface better hooks |
+| Hook Generation | ADOPT Arena (3 competitors, **2 rounds**) | Highest value — inter-round learning loop produces genuine quality improvement |
 | Angle Ideation | ADD structured scoring dimensions | Arena-lite — keep multi-perspective but add rubric |
 | Script Writing | KEEP current approach | Coherence > diversity for long-form |
 | Audience Analysis | KEEP current approach | Analytical, not creative |
 | Quality Validation | KEEP current approach | Binary, not competitive |
 
-### Implementation Sketch (if approved)
+### Implementation Spec (approved)
 
-1. **Hook Arena:** 3 competitors, each assigned a different behavioral framework as primary lens. 1 round. Critic scores on: pattern interrupt (0-10), curiosity gap (0-10), angle coherence (0-10), specimen-vault alignment (0-10). Human selects winners. Estimated overhead: +2-3 minutes per hook batch.
+**Hook Arena — 3 competitors × 2 rounds:**
 
-2. **Angle Scoring:** Add 4 scoring dimensions to existing angle ideation output: market novelty, emotional depth, proof support, expansion potential. No Arena — just structured rubric on existing output.
+- **Round 1:** 3 competitors generate hooks, each using a different behavioral framework as their primary lens (e.g., FATE, Six-Axis, Behavior Compass)
+- **Learning Brief:** Critic identifies winning techniques from Round 1 — what specific approaches produced the strongest pattern interrupt, curiosity gap, and angle coherence
+- **Round 2:** All 3 competitors regenerate, absorbing the Learning Brief techniques while maintaining their framework lens
+- **Critic scoring:** Pattern interrupt (0-10), curiosity gap (0-10), angle coherence (0-10), specimen-vault alignment (0-10)
+- **Human selects** winner(s) from Round 2 output
 
-### Decision Required
+**Why 2 rounds, not 1:** A single round is selection, not competition. The inter-round learning mechanism (Round 2 competitors absorb Round 1's Learning Brief) is the core value — it forces each competitor to improve rather than just generate differently. Donnie's note: *"With a single round you're just generating 3 options and picking the best. That's selection, not competition."*
 
-Christopher and Donnie: approve, modify, or reject this recommendation. If approved, implementation would be a separate Phase in Neco's next session (update Sub-Agent #4 spec + add hook Arena protocol).
+**Angle Scoring:** Add 4 structured scoring dimensions to existing angle ideation output: market novelty, emotional depth, proof support, expansion potential. No full Arena — just a rubric on existing output.
+
+### Status: APPROVED — implement in Neco's next development session
+
+Update Sub-Agent #4 spec + add hook Arena protocol to NECO-MASTER-AGENT.md or NECO-SUB-AGENTS.md.
 
 ---
 

@@ -72,7 +72,7 @@ Each agent has Phase-Stop, Session Log, and Anti-Degradation rules in its own CL
 
 ### Heavy-Write Directory Safety (ALL AGENTS)
 
-This repo lives at `~/pg-main-ogle` — a regular git repo, NOT inside iCloud Drive. Terminal-based directory operations (`git mv`, `mv`, `mkdir`) are safe here.
+This repo should be cloned to a local directory, NOT inside iCloud Drive. Terminal-based directory operations (`git mv`, `mv`, `mkdir`) are safe in any non-iCloud location.
 
 **`.nosync` pattern for heavy-write directories (RECOMMENDED).** Any directory used for rapid/bulk file writes (pipeline output, downloaded media, build artifacts, test caches) should use the `.nosync` rename + symlink pattern: rename to `<dir>.nosync/`, create symlink `<dir>` → `<dir>.nosync`. This avoids issues if the repo is ever synced via iCloud or similar services, and keeps large generated files out of git/Finder indexing. Veda has a code-level guard (`ensureICloudSafeDir()` in `src/utils/icloud-safe-dir.ts`) that enforces this automatically. Other agents should apply the pattern manually to their output directories.
 

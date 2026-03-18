@@ -32,14 +32,23 @@ fi
 # =============================================================================
 
 if [ "$MODE" = "post_tool_use" ]; then
-    # Read hook input from stdin (JSON with file_path)
-    INPUT=$(cat)
-    FILE_PATH=$(echo "$INPUT" | $PYTHON -c "import sys,json; d=json.load(sys.stdin); print(d.get('tool_input',{}).get('file_path',''))" 2>/dev/null)
+    # Fast-path: check CLAUDE_FILE_PATH env var before reading stdin.
+    # This avoids spawning Python on every write outside pg-creative-os/.
+    FILE_PATH="${CLAUDE_FILE_PATH:-}"
+
+    # If env var not available, fall back to stdin JSON parsing
+    if [ -z "$FILE_PATH" ]; then
+        INPUT=$(cat)
+        FILE_PATH=$(echo "$INPUT" | $PYTHON -c "import sys,json; d=json.load(sys.stdin); print(d.get('tool_input',{}).get('file_path',''))" 2>/dev/null)
+    else
+        # Drain stdin to avoid broken pipe errors in the calling process
+        cat > /dev/null
+    fi
 
     # Scope: only validate files within pg-creative-os/
     case "$FILE_PATH" in
         *pg-creative-os/*) ;;
-        *) exit 0 ;;  # Not our directory — skip silently
+        *) exit 0 ;;  # Not our directory — skip silently (fast exit, no Python spawned)
     esac
 
     RESULTS=""
