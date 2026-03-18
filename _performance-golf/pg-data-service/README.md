@@ -137,6 +137,71 @@ from scripts.export_ad_performance import get_ad_performance_card
 df = get_ad_performance_card("2026-01-01", "2026-03-15", day="2026-03-15")
 ```
 
+### For Christopher's Pipeline
+
+The Ad Performance card replica gives you the same 30 columns as the Domo card, with Domo display names. Drop-in replacement for the CSV export.
+
+```python
+import sys
+sys.path.insert(0, "path/to/pg-data-service")
+
+from scripts.export_ad_performance import get_ad_performance_card
+
+# Get the same data as the Domo "Ad Performance" card
+# date range = the period you want to aggregate across
+# day = the reporting date for the "Day" column
+df = get_ad_performance_card("2026-03-01", "2026-03-18", day="2026-03-18")
+
+# df has 30 columns matching the Domo card exactly:
+# Ad, Day, Status, Spend, Net Revenue, Net ROAS, NC Net ROAS,
+# Cost /<BR># SC Trials, CPA, NC CPA, Net Loss<BR>Per Trial,
+# Fixed Refund<BR>NLPT, NC %, Gross Revenue, Gross<BR>ROAS,
+# CVR, NC CVR%, RC CVR%, AOV, NC AOV, RC AOV, CPC, CTR, CPM,
+# Orders, # SC Trials<BR>Started, NC Orders, Clicks, Impressions,
+# Fixed Refund<BR>Net Revenue
+
+# Use however you want — write to Google Sheets, CSV, database, etc.
+df.to_csv("ad_performance.csv", index=False)
+```
+
+### For Tess (Strategic Scaling System)
+
+Tess needs enriched metrics for classification and scaling decisions. Use `get_enriched()` directly — it returns internal column names (snake_case), which are cleaner for programmatic use.
+
+```python
+import sys
+sys.path.insert(0, "path/to/pg-data-service")
+
+from api import get_enriched
+
+df = get_enriched("2026-03-01", "2026-03-18")
+
+# Key columns for Tess classification:
+#   net_roas    — 1.0 = breakeven, >1.0 = profitable
+#   spend       — total spend in date range
+#   nc_net_roas — new customer ROAS (always <= net_roas)
+#   cpa, nc_cpa — cost per acquisition
+#   ad_name     — full 15-position ad name
+#   funnel      — parsed funnel code (357, sf1, dqfe, etc.)
+#   script_id   — root angle identifier
+
+# Example: find Winners (net_roas >= 1.0 AND spend >= 2500)
+winners = df[(df["net_roas"] >= 1.0) & (df["spend"] >= 2500)]
+
+# Example: find ads needing scale-down
+underperformers = df[(df["net_roas"] < 0.80) & (df["spend"] >= 2500)]
+
+# All 22 computed metrics are available — see catalog/DATA_DICTIONARY.md
+# DO NOT recalculate these from raw data. The formulas have nuances.
+```
+
+**Important for both consumers:**
+- Requires `.env` with `DOMO_CLIENT_ID`, `DOMO_CLIENT_SECRET`, and `DOMO_CLIENT_PATH`
+- All PII is stripped before data is returned — no escape hatch
+- See `catalog/DATA_DICTIONARY.md` before doing any calculations — if a metric exists, use it
+
+---
+
 ### Adding a New Dataset
 
 1. Get the Domo dataset ID
