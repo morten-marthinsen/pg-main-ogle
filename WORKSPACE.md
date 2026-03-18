@@ -29,6 +29,10 @@ There are two top-level directories:
 
 ## Universal Rules
 
+### No Unverified Claims
+
+Never state anything as fact unless you have verified it in the current session. Search the internet. Read the file. Do not guess. Do not rely on training data. Do not offer to look it up — just look it up. Verify every claim, then show your proof. If verification fails, try another source. Exhaust every available tool before telling the user you could not verify.
+
 ### Data Integrity
 
 **NEVER fabricate names, codes, metrics, or product claims.** If data is not found in source systems (SSS spreadsheet, ClickUp, Iconik), state "UNKNOWN" with a plan to obtain. Root angles come from SSS Column C. Product names come from PG's catalog.
