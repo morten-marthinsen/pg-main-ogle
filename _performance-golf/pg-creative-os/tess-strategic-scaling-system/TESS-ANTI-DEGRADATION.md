@@ -92,6 +92,16 @@ PHASE COMPLETION CHECKLIST:
 
 ---
 
+## MANDATORY READ DECLARATION (Tess-Specific)
+
+When writing the Mandatory Read Declaration (see core Anti-Degradation Part 10), use these Tess-specific "I WILL NOT" items:
+
+```
+I WILL NOT: (1) skip TypeScript compilation before commit, (2) skip visual verification because the code looks right, (3) write to the spreadsheet without entering plan mode first
+```
+
+---
+
 ## TESS-SPECIFIC MC-CHECK
 
 ```yaml

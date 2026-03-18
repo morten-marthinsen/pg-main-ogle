@@ -102,6 +102,16 @@ NECO-CHECK:
 
 ---
 
+## MANDATORY READ DECLARATION (Neco-Specific)
+
+When writing the Mandatory Read Declaration (see core Anti-Degradation Part 10), use these Neco-specific "I WILL NOT" items:
+
+```
+I WILL NOT: (1) generate copy without complete audience analysis, (2) fabricate any factual claim or statistic, (3) skip a human checkpoint confirmation
+```
+
+---
+
 ## Neco-SPECIFIC FORBIDDEN RATIONALIZATIONS
 
 | Rationalization | Why Invalid | Required Response |

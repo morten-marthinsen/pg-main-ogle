@@ -1,0 +1,96 @@
+# Skill Loading Profile — Template
+# Quality Engine v4 | Component: Template
+# Purpose: YAML template declaring what a skill/agent needs to load at startup
+# Instructions: Copy this file for each skill, rename to [id]-[name].yaml,
+#   and fill in the values. Store at: system/skill-loading-profiles/
+#
+# Examples derived from real loading profiles:
+#
+# EXAMPLE 1 — Minimal skill (no arena, no generation, no upstream):
+#   skill_id: "00"
+#   skill_name: project-brief
+#   engine: main-pipeline
+#   arena: false
+#   generates_output: false
+#   consumes_upstream: false
+#   expression_testing: false
+#   external_tools: []
+#   protocols_required: []
+#
+# EXAMPLE 2 — Strategic skill (arena + upstream + expression testing):
+#   skill_id: "04"
+#   skill_name: mechanism-development
+#   engine: main-pipeline
+#   arena: true
+#   arena_mode: strategic_competition
+#   generates_output: false
+#   consumes_upstream: true
+#   expression_testing: true
+#   external_tools: []
+#   protocols_required:
+#     - ARENA-PROTOCOL.md
+#     - ARENA-CORE-PROTOCOL.md
+#     - pipeline-handoff-registry.md
+#     - EXPRESSION-TESTING-PROTOCOL.md
+#
+# EXAMPLE 3 — Generation skill (arena + copy + full stack):
+#   skill_id: "12"
+#   skill_name: story-crafting
+#   engine: main-pipeline
+#   arena: true
+#   arena_mode: generative_full_draft
+#   generates_output: true
+#   consumes_upstream: true
+#   expression_testing: false
+#   external_tools: []
+#   protocols_required:
+#     - ARENA-PROTOCOL.md
+#     - ARENA-CORE-PROTOCOL.md
+#     - SPECIMEN-GUIDE.md
+#     - VOICE-LOADING-PROTOCOL.md
+#     - CONTEXT-RESERVOIR-TEMPLATE.md
+#     - pipeline-handoff-registry.md
+#     - OUTPUT-QUALITY-VERIFICATION.md
+#   protocols_optional:
+#     - ACTIVE-RECITATION-PROTOCOL.md
+
+# --- FILL IN BELOW ---
+
+# Unique identifier for this skill/phase
+skill_id: "[ID]"
+
+# Human-readable name
+skill_name: "[NAME]"
+
+# Which engine this skill belongs to
+engine: "[ENGINE_NAME]"  # e.g., main-pipeline, ads, email, e-comm
+
+# Does this skill run a competitive evaluation (arena) process?
+arena: false
+# arena_mode: strategic_competition | generative_full_draft | scoring_only
+
+# Does this skill produce content/copy/generated output?
+generates_output: false
+
+# Does this skill load outputs from prior skills?
+consumes_upstream: false
+
+# Does this skill test language/expression variants?
+expression_testing: false
+
+# External tools required (empty array = no ToolSearch needed)
+external_tools: []
+# external_tools:
+#   - firecrawl
+#   - apify
+
+# Protocols that MUST be loaded for this skill to function
+protocols_required: []
+# protocols_required:
+#   - PROTOCOL-NAME.md
+#   - ANOTHER-PROTOCOL.md
+
+# Protocols that SHOULD be loaded if the tier supports it
+protocols_optional: []
+# protocols_optional:
+#   - OPTIONAL-PROTOCOL.md

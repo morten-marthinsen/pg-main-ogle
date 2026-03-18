@@ -97,6 +97,16 @@ BEFORE RUNNING CLI (node dist/cli.js):
 
 ---
 
+## MANDATORY READ DECLARATION (Veda-Specific)
+
+When writing the Mandatory Read Declaration (see core Anti-Degradation Part 10), use these Veda-specific "I WILL NOT" items:
+
+```
+I WILL NOT: (1) skip the test suite because I only changed one line, (2) guess a root angle instead of checking SSS Column C, (3) run CLI against a stale dist/ directory
+```
+
+---
+
 ## VEDA-SPECIFIC FORBIDDEN RATIONALIZATIONS
 
 | Rationalization | Why Invalid | Required Response |

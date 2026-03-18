@@ -167,9 +167,10 @@ That's how Forward Axis Weighting fixes face drift and improves your stroke at t
 
 THE PAST:
 
-For 100 years, the technology in rear-weighted putters allowed the face to flop open.
+For 100 years, the technology in rear-weighted putters allowed the face to flop open. Because they had to conform to the "rules" of golf. 
 
 Plus, standard technique teaches you to swing the putter on an arc.
+Which forces you to swing the putter on an exaggerated arc.
 
 Meaning you're relying on timing to open and close the face at the exact right time to get back to square at impact.
 
