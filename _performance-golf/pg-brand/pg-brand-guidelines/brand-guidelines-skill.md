@@ -186,11 +186,11 @@ Before publishing any designed asset, verify:
 ## Reference Files
 
 For detailed guidance, see:
-- **[references/full-playbook.md](full-playbook.md)** – Complete original Brand Response Playbook
-- **[references/beliefs.md](beliefs.md)** – The 10 core beliefs to shift in marketing
-- **[references/storytelling.md](_Performance%20Golf/PG%20-%20Skills/PG%20-%20Brand%20Guidelines/references/storytelling.md)** – Story types and deployment strategy
-- **[references/audience.md](audience.md)** – Persona details and audience mindset
-- **[references/visual-identity.md](visual-identity.md)** – Full color specs, type specs, CSS quick start
+- **[references/full-playbook.md](references/full-playbook.md)** – Complete original Brand Response Playbook
+- **[references/beliefs.md](references/beliefs.md)** – The 10 core beliefs to shift in marketing
+- **[references/storytelling.md](references/storytelling.md)** – Story types and deployment strategy
+- **[references/audience.md](references/audience.md)** – Persona details and audience mindset
+- **[references/visual-identity.md](references/visual-identity.md)** – Full color specs, type specs, CSS quick start
 
 ## Brand Assets
 

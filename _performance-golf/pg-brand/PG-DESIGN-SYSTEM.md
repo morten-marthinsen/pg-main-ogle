@@ -1,6 +1,66 @@
 # Performance Golf Design System
 
-This document outlines the complete design system for Performance Golf, providing both general development patterns (CSS/Tailwind/HTML) and Shopify theme integration guidance.
+**Version:** 2.0.0
+**Last Updated:** 2026-03-18
+
+This is the master design system document for Performance Golf. It is the entry point for anyone building visual output for the PG brand.
+
+---
+
+## How to Use This Folder
+
+| Folder | What's Inside | When to Use |
+|--------|--------------|-------------|
+| `pg-brand-guidelines/` | Copy voice, brand beliefs, audience personas, storytelling frameworks, visual identity reference | Writing customer-facing copy, checking brand voice rules, guru do's and don'ts |
+| `pg-brand-assets/` | Logo files (SVG + PNG), font files (OTF/WOFF/WOFF2), color palette (.ase) | Building pages, creating designs, embedding brand assets |
+
+### Key Files
+- **Copy & Voice:** `pg-brand-guidelines/pg-copy-voice.md` — all copy rules, guru restrictions, tone guidance
+- **Brand Skill:** `pg-brand-guidelines/brand-guidelines-skill.md` — the combined brand skill for AI agents
+- **Visual Identity:** `pg-brand-guidelines/references/visual-identity.md` — full color specs, type specs
+- **Audience:** `pg-brand-guidelines/references/audience.md` — persona details and mindset
+- **Beliefs:** `pg-brand-guidelines/references/beliefs.md` — the 10 core beliefs to shift
+
+### Brand Assets
+- **Logos:** `pg-brand-assets/logos/` — PER-Symbol, PER-Logotype, PER-Combination, PG1-Symbol (SVG + PNG, Black/White/Orange variants)
+- **Fonts:** `pg-brand-assets/fonts/` — Repro (Bold/Medium/Regular), GT Super Text (Book/Book Italic), Repro Mono (Regular) in OTF/WOFF/WOFF2
+- **Colors:** `pg-brand-assets/colors/PER-Color-Palettes.ase` — Adobe Swatch Exchange file with all brand colors
+
+---
+
+## Platform Guide
+
+This design system supports two build contexts. The design tokens (colors, typography, spacing, shadows, borders) are identical across both. The implementation patterns differ.
+
+### Shopify (Liquid)
+For pages built on the PG Shopify theme. Uses Liquid templates, `{% schema %}` blocks, `page-width` container class, and theme asset pipeline (`{{ 'file.css' | asset_url }}`).
+
+**Key differences from custom:**
+- Container uses `page-width` class (Shopify's built-in) alongside `pg-container`
+- Fonts loaded via Shopify theme assets, not `@font-face` in CSS
+- Section settings use `{% schema %}` JSON blocks for admin customization
+- CSS scoped per-section in `<style>` tags within `.liquid` files
+- Images use `{{ image | image_url }}` Shopify filter
+
+See: [Shopify Implementation](#shopify-implementation) below.
+
+### Custom (Vercel / React / Static HTML)
+For standalone pages, landing pages, quiz funnels, or any non-Shopify build. Uses standard HTML/CSS, React components, or Next.js pages deployed via Vercel.
+
+**Key differences from Shopify:**
+- Container uses `pg-container` class only (no `page-width`)
+- Fonts loaded via `@font-face` declarations pointing to local WOFF2 files, or via CDN
+- No `{% schema %}` — configuration via props (React) or data attributes (HTML)
+- CSS can be in external stylesheets, CSS modules, or Tailwind
+- Images use standard `<img>` with `loading="lazy"` and WebP format
+
+See: [Custom Implementation](#custom-implementation-vercel--react--static) below.
+
+---
+
+## Shared Design Tokens
+
+> The following tokens are platform-agnostic. Use them identically in both Shopify and Custom builds.
 
 ## Design Philosophy
 
@@ -313,41 +373,17 @@ Within `<style>` blocks, organize by:
 
 ### Font Loading
 
-```html
-<!-- Preload critical fonts -->
-<link rel="preload" href="/fonts/repro/repro-bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/repro/repro-regular.woff2" as="font" type="font/woff2" crossorigin>
-```
+Font files are in `pg-brand-assets/fonts/`. See the [Font Loading](#font-loading) section at the bottom for platform-specific loading instructions.
 
-```css
-@font-face {
-  font-family: 'Repro';
-  src: url('/fonts/repro/repro-bold.woff2') format('woff2');
-  font-weight: 700;
-  font-display: swap;
-}
+**Available font files:**
+- `pg-brand-assets/fonts/repro/ABCRepro-Bold.woff2` (weight 700)
+- `pg-brand-assets/fonts/repro/ABCRepro-Medium.woff2` (weight 500)
+- `pg-brand-assets/fonts/repro/ABCRepro-Regular.woff2` (weight 400)
+- `pg-brand-assets/fonts/gt-super-text/GT-Super-Text-Book.woff2` (weight 400)
+- `pg-brand-assets/fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2` (weight 400 italic)
+- `pg-brand-assets/fonts/repro-mono/ABCReproMono-Regular.woff2` (weight 400)
 
-@font-face {
-  font-family: 'Repro';
-  src: url('/fonts/repro/repro-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'GT Super Text';
-  src: url('/fonts/gt-super-text/gt-super-text-book.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Repro Mono';
-  src: url('/fonts/repro-mono/repro-mono-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-}
-```
+All fonts are also available in OTF and WOFF formats in the same directories.
 
 ### Type Scale
 
@@ -1386,6 +1422,12 @@ All approved color combinations meet WCAG 4.5:1 minimum contrast ratio for body 
 
 ---
 
+---
+
+## Custom Implementation (Vercel / React / Static)
+
+> Use these patterns when building standalone pages outside Shopify.
+
 ## Tailwind CSS Configuration
 
 If using Tailwind CSS, extend your configuration:
@@ -1455,6 +1497,12 @@ module.exports = {
 ```
 
 ---
+
+---
+
+## Shopify Implementation
+
+> Use these patterns when building on the PG Shopify theme.
 
 ## Shopify Integration Guide
 
@@ -1925,10 +1973,78 @@ When adding new components or sections:
 
 ---
 
-**Design System Version:** 1.0.0
-**Last Updated:** 2025-01-19
-**Brand Guidelines Reference:** pg-brand-guidelines/SKILL.md
+---
+
+## Font Loading
+
+### Shopify
+Upload WOFF2 files to Shopify theme assets. Reference via:
+```liquid
+{{ 'ABCRepro-Bold.woff2' | asset_url }}
+{{ 'ABCRepro-Medium.woff2' | asset_url }}
+{{ 'ABCRepro-Regular.woff2' | asset_url }}
+{{ 'GT-Super-Text-Book.woff2' | asset_url }}
+{{ 'GT-Super-Text-Book-Italic.woff2' | asset_url }}
+{{ 'ABCReproMono-Regular.woff2' | asset_url }}
+```
+
+### Custom (local files)
+Font files are in `pg-brand-assets/fonts/`. Use `@font-face`:
+```css
+@font-face {
+  font-family: 'Repro';
+  src: url('./pg-brand-assets/fonts/repro/ABCRepro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Repro';
+  src: url('./pg-brand-assets/fonts/repro/ABCRepro-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Repro';
+  src: url('./pg-brand-assets/fonts/repro/ABCRepro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Super Text';
+  src: url('./pg-brand-assets/fonts/gt-super-text/GT-Super-Text-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Super Text';
+  src: url('./pg-brand-assets/fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Repro Mono';
+  src: url('./pg-brand-assets/fonts/repro-mono/ABCReproMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+```
+
+### Custom (Tailwind + Next.js)
+Reference the WOFF2 files from `pg-brand-assets/fonts/` in your font loading setup. Tailwind config extends with the PG font families as shown in the Tailwind CSS Configuration section above.
+
+---
+
+**Design System Version:** 2.0.0
+**Last Updated:** 2026-03-18
+**Brand Guidelines Reference:** pg-brand-guidelines/brand-guidelines-skill.md
 **Maintained by:** Performance Golf
 
 **Changelog:**
+- v2.0.0 (2026-03-18): Moved to pg-brand root as master entry point. Added folder directory, platform guide (Shopify vs Custom/Vercel/React), separated shared tokens from platform-specific implementation. Added font loading section with actual file references. Added font asset files (OTF/WOFF/WOFF2) and color palette (.ase).
 - v1.0.0 (2025-01-19): Initial design system documentation with dual CSS/Shopify implementation
