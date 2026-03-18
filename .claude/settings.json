@@ -21,6 +21,10 @@
           {
             "type": "command",
             "command": "_performance-golf/pg-marketing-os/.hooks/dispatch-validator.sh"
+          },
+          {
+            "type": "command",
+            "command": "_performance-golf/pg-creative-os/.hooks/dispatch-validator.sh"
           }
         ]
       }
@@ -31,6 +35,10 @@
           {
             "type": "command",
             "command": "_performance-golf/pg-marketing-os/.hooks/dispatch-validator.sh --final-check"
+          },
+          {
+            "type": "command",
+            "command": "_performance-golf/pg-creative-os/.hooks/dispatch-validator.sh --final-check"
           }
         ]
       }
