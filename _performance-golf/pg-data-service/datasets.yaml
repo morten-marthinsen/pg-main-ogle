@@ -1,0 +1,23 @@
+# Approved datasets — the allowlist for API access.
+# Christopher (and future consumers) can only query datasets listed here.
+# Patrick controls this registry. Adding a new dataset = one entry here.
+#
+# Each entry maps a friendly name to a Domo dataset ID + description.
+# PII stripping is enforced on ALL datasets — no escape hatch.
+
+datasets:
+  ad_performance:
+    dataset_id: a359ffd7-8175-40f3-b339-0a476cf624aa
+    description: "Facebook ad performance + CheckoutChamp orders (252 columns, joined by ad name)"
+    notes: "Primary Creative OS dataset. Contains spend, orders, 15-position parsed fields."
+
+  # Future datasets — uncomment when approved
+  # facebook_raw:
+  #   dataset_id: REPLACE_ME
+  #   description: "Raw Facebook Ads API data (campaigns, adsets, ads)"
+  #   notes: "Direct Facebook connection, no order joins"
+  #
+  # checkout_champ:
+  #   dataset_id: REPLACE_ME
+  #   description: "CheckoutChamp transaction log (orders, refunds, upsells)"
+  #   notes: "Heavy PII — shipping addresses, payment info, emails"

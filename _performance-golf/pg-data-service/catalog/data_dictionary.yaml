@@ -1,0 +1,446 @@
+# PG Data Service — Data Dictionary
+#
+# Single source of truth for metric definitions, business rules, and column metadata.
+# Format mirrors OpenMetadata Glossary Term schema for direct import in Phase 5.
+#
+# LOCAL SNAPSHOT — OpenMetadata becomes system of record after OM Phase 5 deployment.
+# After that, this file becomes a read-only export from OM's Glossary API.
+#
+# Structure:
+#   _shared    — Terms that apply across ALL datasets (identity, classification)
+#   datasets   — Per-dataset terms (Beast Modes, raw columns, aggregations)
+#
+# When adding a new dataset to datasets.yaml, add its terms here too.
+#
+# Tags:
+#   beast-mode      — Computed in Domo adapter, dies with Snowflake migration
+#   do-not-derive   — MUST come from get_enriched(), never hand-calculated from raw columns
+#   classification  — Business rule applied in model layer (survives migration)
+#   raw             — Source column from Domo dataset, no transformation
+#   derived         — Computed from raw columns
+#   pii-derived     — Derived from PII source (source stripped, derivative is safe)
+#   aggregated      — Result of grouping/counting across rows
+
+version: "2.0"
+last_updated: "2026-03-17"
+owner: "Patrick Hayes"
+
+
+# ===========================================================================
+# SHARED — applies to ALL datasets served by the data service
+# ===========================================================================
+
+_shared:
+
+  email_address_hash:
+    display_name: Email Address Hash
+    description: "SHA-256 hash of emailAddress (first 16 chars). Use for unique customer counts and cohort tracking."
+    formula: "SHA256(lower(trim(emailAddress)))[:16]"
+    source: derived
+    tags: [pii-derived]
+    gotchas:
+      - "Same person = same hash across all time periods and datasets"
+      - "Lowercased and trimmed before hashing for consistency"
+      - "NOT reversible — cannot recover the email from the hash"
+      - "Available in raw data only (enriched data has pre-aggregated counts instead)"
+      - "Use this field — not orderId — for unique customer counts"
+
+  # Classification is NOT applied by the service — it's a consumer-side business rule.
+  # Documented here as reference for consumers who want to implement it.
+  classification_reference:
+    display_name: Ad Classification (Reference Only)
+    description: "Performance tiers from Tess PRD v1.4. NOT applied by the data service — consumers implement their own."
+    source: reference
+    tags: [reference]
+    rules:
+      Winner: "net_roas >= 1.0 (100%) AND spend >= $2,500"
+      Potential: "net_roas >= 0.80 (80%) AND net_roas < 1.0 (100%)"
+      Underperformer: "net_roas < 0.80 (80%)"
+      Testing: "spend < $2,500 (regardless of ROAS)"
+    gotchas:
+      - "Source: Tess PRD v1.4 — may need alignment with Tess team on Potential definition"
+      - "The service provides the metrics (net_roas, spend) — consumers apply these rules"
+
+
+
+# ===========================================================================
+# PER-DATASET TERMS
+# ===========================================================================
+
+datasets:
+
+  # =========================================================================
+  # ad_performance — Facebook ad performance + CheckoutChamp orders
+  # Domo dataset: a359ffd7-8175-40f3-b339-0a476cf624aa
+  # 252 columns, two row types (ad-metric + order), joined by Ad name
+  # =========================================================================
+
+  ad_performance:
+    description: "Facebook ad performance joined with CheckoutChamp order data. Two row types in one dataset — ad-metric rows (Spend > 0) and order rows (totalAmount > 0). Never both on same row."
+
+    beast_modes:
+
+      # --- Revenue & Profit ---
+
+      gross_revenue:
+        display_name: Gross Revenue
+        description: "Total order revenue attributed to an ad. SUM of totalAmount grouped by Ad name."
+        formula: "SUM(totalAmount) WHERE totalAmount > 0, grouped by Ad"
+        source: aggregated
+        raw_column: totalAmount
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "Aggregated from order rows (totalAmount > 0), NOT ad-metric rows"
+          - "Join to ad-metric rows happens on Ad name (lowercased)"
+
+      net_revenue:
+        display_name: Net Revenue
+        description: "Revenue after all costs. Negative = losing money on this ad."
+        formula: "gross_revenue - total_cogs + total_refunds - total_agency_fees - total_cc_fees - spend"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "total_refunds is ALREADY NEGATIVE from Domo transform — adding it subtracts"
+          - "Spend is on the cost side — this is a true P&L metric per ad"
+
+      gross_profit:
+        display_name: Gross Profit
+        description: "Revenue minus COGS and refunds. WARNING: known sign bug — see gotchas."
+        formula: "gross_revenue - total_cogs - total_refunds"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "BUG: total_refunds is already negative, so subtracting a negative INFLATES gross_profit"
+          - "This matches Domo's Beast Mode output exactly — intentionally replicated for parity"
+          - "Do NOT fix the sign without first confirming Domo has been corrected"
+
+      fixed_refund_net_revenue:
+        display_name: Fixed Refund Net Revenue
+        description: "Net revenue using a flat 8% refund rate instead of actual refunds."
+        formula: "gross_revenue - total_cogs - (gross_revenue * 0.08) - total_agency_fees - total_cc_fees - spend"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "Used as a comparison point to assess actual refund impact"
+          - "8% is a flat assumption, not derived from data"
+
+      # --- ROAS Metrics ---
+
+      gross_roas:
+        display_name: Gross ROAS
+        description: "Gross return on ad spend. Revenue divided by spend, no cost deductions."
+        formula: "gross_revenue / spend"
+        unit: ratio
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "Returns NaN when spend is 0"
+          - "Does NOT account for COGS, refunds, fees — use net_roas for profitability"
+
+      net_roas:
+        display_name: Net ROAS
+        description: "Net return on ad spend. 1.0 (100%) = breakeven. This is the primary profitability metric."
+        formula: "(net_revenue / spend) + 1"
+        unit: "ratio (1.0 = 100% = breakeven)"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "The +1 offset means 1.0 = breakeven, NOT 0.0"
+          - "1.5 = 150% = profitable. 0.8 = 80% = losing 20 cents per dollar"
+          - "This is the metric used for classification (Winner/Potential/Underperformer)"
+          - "Returns NaN when spend is 0"
+
+      nc_net_roas:
+        display_name: NC Net ROAS (New Customer)
+        description: "Net ROAS calculated using only new customer revenue and costs, but total spend."
+        formula: "(nc_net_revenue / spend) + 1 WHERE nc_net_revenue = nc_gross_revenue - nc_total_cogs + nc_total_refunds - nc_total_agency_fees - nc_total_cc_fees - spend"
+        unit: "ratio (1.0 = 100% = breakeven)"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "Revenue/cost side filtered to New Customers only, but SPEND is total (not split)"
+          - "Will always be <= net_roas because revenue side is a subset but spend is full"
+
+      # --- CPA Metrics ---
+
+      cpa:
+        display_name: CPA (Cost Per Acquisition)
+        description: "Spend per unique customer acquired (all customers)."
+        formula: "spend / total_customers"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "total_customers is a pre-computed distinct count (from emailAddress, which is then stripped)"
+          - "This is customers, not orders — one customer can have multiple orders"
+          - "For raw data cohort analysis, use email_address_hash for distinct counts"
+
+      nc_cpa:
+        display_name: NC CPA (New Customer CPA)
+        description: "Spend per new customer acquired."
+        formula: "spend / new_customers"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "new_customers is a pre-computed distinct count (from emailAddress WHERE New Customers != '0')"
+          - "Denominator is new customers only, numerator is TOTAL spend"
+          - "For raw data cohort analysis, use email_address_hash for distinct counts"
+
+      # --- AOV & LTV ---
+
+      net_aov:
+        display_name: Net AOV (Average Order Value)
+        description: "Net average order value factoring in all costs."
+        formula: "cpa * net_roas"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      nlpt:
+        display_name: NLPT (Net Lifetime Per Trial)
+        description: "Net revenue per SwingCoach trial started."
+        formula: "net_revenue / sc_trials"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "sc_trials column name in Domo has <BR>/newline artifacts — cleaned on fetch"
+          - "Returns NaN when sc_trials is 0"
+
+      # --- Customer Ratios ---
+
+      nc_pct:
+        display_name: NC % (New Customer Percentage)
+        description: "Percentage of customers that are new (first purchase)."
+        formula: "new_customers / total_customers"
+        unit: "ratio (0-1)"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      cvr_pct:
+        display_name: CVR % (Conversion Rate)
+        description: "Click-to-customer conversion rate (all customers)."
+        formula: "total_customers / clicks"
+        unit: "ratio (0-1)"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      nc_cvr_pct:
+        display_name: NC CVR % (New Customer Conversion Rate)
+        description: "Click-to-new-customer conversion rate."
+        formula: "new_customers / clicks"
+        unit: "ratio (0-1)"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      rc_cvr_pct:
+        display_name: RC CVR % (Returning Customer Conversion Rate)
+        description: "Click-to-returning-customer conversion rate."
+        formula: "(total_customers - new_customers) / clicks"
+        unit: "ratio (0-1)"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      # --- CPC / CTR / CPM ---
+
+      cpc:
+        display_name: CPC (Cost Per Click)
+        description: "Cost per click on the ad."
+        formula: "spend / clicks"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      ctr:
+        display_name: CTR (Click-Through Rate)
+        description: "Click-through rate (clicks as a fraction of impressions)."
+        formula: "clicks / impressions"
+        unit: "ratio (0-1)"
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      cpm:
+        display_name: CPM (Cost Per Mille)
+        description: "Cost per 1,000 impressions."
+        formula: "(spend / impressions) * 1000"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      # --- AOV Variants (Gross-Based) ---
+
+      aov:
+        display_name: AOV (Average Order Value)
+        description: "Gross average order value. Uses gross revenue, not net."
+        formula: "gross_revenue / total_orders"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "This is GROSS AOV (revenue / orders). Distinct from net_aov (cpa * net_roas)."
+
+      nc_aov:
+        display_name: NC AOV (New Customer AOV)
+        description: "Gross average order value for new customers only."
+        formula: "nc_gross_revenue / new_customers"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      rc_aov:
+        display_name: RC AOV (Returning Customer AOV)
+        description: "Gross average order value for returning customers only."
+        formula: "(gross_revenue - nc_gross_revenue) / (total_customers - new_customers)"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      # --- Cost per Trial & Fixed Refund NLPT ---
+
+      cost_per_sc_trial:
+        display_name: Cost / SC Trials
+        description: "Spend per SwingCoach trial started."
+        formula: "spend / sc_trials"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      fixed_refund_nlpt:
+        display_name: Fixed Refund NLPT
+        description: "Net lifetime per trial using fixed 8% refund rate instead of actual refunds."
+        formula: "fixed_refund_net_revenue / sc_trials"
+        unit: dollars
+        source: computed
+        tags: [do-not-derive, beast-mode]
+
+      # --- Aggregated Counts ---
+
+      total_customers:
+        display_name: Total Customers
+        description: "Distinct customer count per ad (all customers). Pre-aggregated — this is a number, not a list."
+        formula: "Pre-computed from distinct email counts, then email is stripped"
+        source: aggregated
+        tags: [do-not-derive, beast-mode, pii-derived]
+        gotchas:
+          - "This is a count, not a list — no PII in output"
+          - "For raw data cohort analysis, use email_address_hash for distinct counts"
+
+      new_customers:
+        display_name: New Customers (Count)
+        description: "Distinct new customer count per ad. Pre-aggregated — this is a number, not a list."
+        formula: "Pre-computed from distinct email counts where New Customers != '0', then email is stripped"
+        source: aggregated
+        tags: [do-not-derive, beast-mode, pii-derived]
+        gotchas:
+          - "New Customers source field is a STRING — '0' means returning"
+          - "For raw data cohort analysis, use email_address_hash for distinct counts"
+
+      total_orders:
+        display_name: Total Orders
+        description: "Distinct order count per ad."
+        formula: "COUNT(DISTINCT orderId) grouped by Ad"
+        source: aggregated
+        tags: [do-not-derive, beast-mode]
+
+      sc_trials:
+        display_name: SC Trials Started
+        description: "SwingCoach trial starts attributed to this ad."
+        formula: "SUM(# SC Trials Started) grouped by Ad"
+        source: aggregated
+        tags: [do-not-derive, beast-mode]
+        gotchas:
+          - "Source column name has <BR>/newline in Domo — cleaned automatically"
+
+    raw_columns:
+
+      spend:
+        display_name: Spend
+        description: "Facebook ad spend in dollars."
+        raw_column: Spend
+        tags: [raw]
+        gotchas:
+          - "Ad-metric rows have Spend > 0; order rows have Spend = 0"
+          - "Aggregated by SUM grouped by Ad name in enriched output"
+
+      total_amount:
+        display_name: Total Amount (Order Revenue)
+        description: "Order revenue in dollars."
+        raw_column: totalAmount
+        tags: [raw]
+        gotchas:
+          - "Order rows have totalAmount > 0; ad-metric rows have totalAmount = 0"
+          - "This is the GROSS revenue before any deductions"
+
+      funnel:
+        display_name: Funnel Code
+        description: "Pre-parsed funnel code from the 15-position ad naming convention."
+        raw_column: "[Funnel]"
+        tags: [raw]
+        gotchas:
+          - "Use [Funnel] (pre-parsed), NOT the campaign-level 'Funnel' column"
+          - "Valid codes defined in adapters/domo.py VALID_FUNNEL_CODES"
+          - "Examples: 357, sf1, clst, ossf, dqfe, ssts, pgf, wdg1"
+
+      script_id:
+        display_name: Script ID (Root Angle)
+        description: "Root angle identifier from 15-position ad name. Groups ad variations by creative concept."
+        raw_column: "[ScriptID]"
+        tags: [raw]
+        gotchas:
+          - "This is the ROOT angle — multiple ads can share a script_id (variations)"
+          - "Used with funnel as composite key for angle analysis"
+          - "Missing/empty script_id → excluded from angle analysis"
+
+      valid_15_position:
+        display_name: Valid 15-Position Ad Name
+        description: "Boolean flag — 1 if the ad name follows the 15-position naming convention."
+        raw_column: "Valid 15-Position Ad Name?"
+        tags: [raw]
+        gotchas:
+          - "ALL queries filter on this = 1 — non-conforming ads are excluded"
+          - "If an ad doesn't appear in results, check this field first"
+
+      new_customers_raw:
+        display_name: New Customers (Raw Field)
+        description: "String field indicating if the customer on this order row is new."
+        raw_column: "New Customers"
+        tags: [raw]
+        gotchas:
+          - "STRING, not boolean — '0' = returning customer, anything else = new"
+          - "Do not cast to int — check against string '0'"
+
+      refunded_revenue:
+        display_name: Refunded Revenue
+        description: "Refund amount on an order."
+        raw_column: "Refunded Revenue"
+        tags: [raw]
+        gotchas:
+          - "ALREADY NEGATIVE from Domo transform — do not negate again"
+          - "This is the source of the gross_profit sign bug — see gross_profit gotchas"
+
+
+  # =========================================================================
+  # facebook_raw — Raw Facebook Ads API data
+  # Domo dataset: TBD (uncomment in datasets.yaml when approved)
+  # =========================================================================
+
+  # facebook_raw:
+  #   description: "Direct Facebook Ads API connection. Campaigns, adsets, ads. No order joins."
+  #   beast_modes:
+  #     # Add Beast Mode definitions here when dataset is onboarded
+  #   raw_columns:
+  #     # Add key raw column definitions here when dataset is onboarded
+
+
+  # =========================================================================
+  # checkout_champ — CheckoutChamp transaction log
+  # Domo dataset: TBD (uncomment in datasets.yaml when approved)
+  # =========================================================================
+
+  # checkout_champ:
+  #   description: "CheckoutChamp order/transaction log. Heavy PII — shipping, payment, emails."
+  #   beast_modes:
+  #     # Add Beast Mode definitions here when dataset is onboarded
+  #   raw_columns:
+  #     # Add key raw column definitions here when dataset is onboarded

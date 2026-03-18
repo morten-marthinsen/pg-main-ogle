@@ -6,10 +6,7 @@ default_lookback_days: 90
 
 output_dir: outputs/
 
-thresholds:
-  winner_net_roas: 1.0       # 100% = breakeven
-  potential_net_roas_min: 0.80
-  min_spend_for_classification: 2500
-  saturation_variation_count: 3
+# Classification thresholds are documented in catalog/data_dictionary.yaml
+# but not applied by the service — consumers implement their own business rules.
 
 # PII columns are defined in catalog/pii_manifest.yaml (single source of truth)

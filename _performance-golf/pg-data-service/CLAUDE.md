@@ -3,7 +3,7 @@
 > **Path**: `_performance-golf/pg-data-service/`
 > **Owner**: Data Team (Patrick Hayes)
 > **Runtime**: Python 3.x (pandas, requests, pyyaml, python-dotenv)
-> **Architecture Doc**: `PG-DATA-SERVICE.md` (905 lines — all decisions locked)
+> **Architecture Doc**: `PG-DATA-SERVICE.md`
 
 ---
 
@@ -11,34 +11,39 @@
 
 Shared data layer for all Creative OS agents and future systems. Queries Domo (now), will query Snowflake (Q3/Q4 2026). Adapter pattern means zero business logic rewrite when switching sources.
 
+**Primary interface**: `api.py` — `from api import get_raw, get_enriched, list_datasets` (returns DataFrames, PII stripped)
+
+**Domo card replica**: `scripts/export_ad_performance.py` — returns enriched DataFrame with Domo Ad Performance card column names (30 columns)
+
+The API is the primary interface for Christopher Ogle's pipeline. `datasets.yaml` is the allowlist — only datasets registered there are queryable.
+
 ---
 
 ## Architecture Decisions (Locked)
 
 ### Beast Modes Live in the Adapter, Not the Models
 
-**Decision (2026-03-16):** Beast Mode calculations (Net ROAS, NC Net ROAS, CPA, etc.) are Domo-specific workarounds. Domo can't do GROUP BY, so we compute everything in pandas inside `adapters/domo.py`. When Snowflake arrives with pre-computed dbt models, the Snowflake adapter returns the same columns natively. The model layer receives identical schemas either way.
+**Decision (2026-03-16):** Beast Mode calculations (Net ROAS, NC Net ROAS, CPA, etc.) are Domo-specific workarounds. Domo can't do GROUP BY, so we compute everything in pandas inside `adapters/domo.py`. When Snowflake arrives with pre-computed dbt models, the Snowflake adapter returns the same columns natively.
 
 **Why:** The Beast Mode code is throwaway. If it lived in models, you'd delete "business logic" during migration. In the adapter, it dies naturally when `adapters/domo.py` is decommissioned.
 
-### Model Layer is Thin
+### Classification is Consumer-Side (Not in the Service)
 
-The model layer only does:
-1. **Classification** — Winner/Potential/Underperformer/Testing based on Net ROAS and spend thresholds
-2. **Angle analysis** — Group by root angle, flag saturation, identify winning angles
-
-It does NOT compute metrics. It receives them from the adapter.
-
-### Formatters Are Plain Functions
-
-No registry, no plugin system. Each formatter is a function that receives a DataFrame, strips PII, and writes a file. Adding a new consumer = one new file.
+Classification (Winner/Potential/Underperformer/Testing) is a Tess business rule, not a data access concern. The data dictionary documents the thresholds if a consumer wants to implement it. The service provides the metrics — consumers decide what to do with them.
 
 ### PII Handling
 
 - `emailAddress` is the distinct customer key (used for CPA, NC%, CVR% calculations)
 - PII values are consumed in the adapter's aggregation step — only counts survive into the enriched DataFrame
-- Formatters call `strip_pii()` as belt-and-suspenders defense
-- PII column list lives in `catalog/pii_manifest.yaml`
+- `strip_pii()` is called unconditionally on every API return path — no escape hatch, no `include_pii` parameter
+- PII column list lives in `catalog/pii_manifest.yaml` (single source of truth)
+
+### Security
+
+- All date inputs are validated via `_validate_date()` (YYYY-MM-DD regex) before SQL interpolation
+- `DOMO_CLIENT_PATH` is a required env var — no hardcoded machine paths in source code
+- **Enriched pipeline** filters `Ad Platform = 'facebook'` (prevents cross-platform inflation in Beast Mode calculations)
+- **Raw pipeline** returns all platforms — consumers get the full dataset for ad-hoc analysis
 
 ---
 
@@ -53,14 +58,22 @@ All formulas implemented in `adapters/domo.py::_compute_beast_modes()`.
 | **Gross ROAS** | `totalAmount / Spend` |
 | **Gross Profit** | `totalAmount - Physical COGS - Refunded Revenue` |
 | **NC Net ROAS** | Same as Net ROAS but revenue/cost side filtered to `New Customers != '0'`, spend is total |
-| **CPA** | `Spend / COUNT(DISTINCT emailAddress)` |
-| **NC CPA** | `Spend / COUNT(DISTINCT emailAddress WHERE New Customers != '0')` |
+| **CPA** | `Spend / total_customers` (pre-computed distinct count) |
+| **NC CPA** | `Spend / new_customers` (pre-computed distinct count) |
 | **Net AOV** | `CPA * Net ROAS` |
+| **AOV** | `Gross Revenue / Orders` |
+| **NC AOV** | `NC Gross Revenue / New Customers` |
+| **RC AOV** | `(Gross Revenue - NC Gross Revenue) / (Total Customers - New Customers)` |
 | **NLPT** | `Net Revenue / # SC Trials Started` |
-| **NC %** | `new_customer_emails / total_emails` |
+| **Fixed Refund NLPT** | `Fixed Refund Net Revenue / # SC Trials Started` |
+| **Cost / SC Trials** | `Spend / # SC Trials Started` |
+| **NC %** | `new_customers / total_customers` |
 | **CVR %** | `total_customers / clicks` |
 | **NC CVR %** | `new_customers / clicks` |
 | **RC CVR %** | `returning_customers / clicks` |
+| **CPC** | `Spend / Clicks` |
+| **CTR** | `Clicks / Impressions` |
+| **CPM** | `(Spend / Impressions) * 1000` |
 | **Fixed Refund Net Revenue** | Same as Net Revenue but uses `totalAmount * 0.08` instead of actual Refunded Revenue |
 
 ### Known Issue (2026-03-16)
@@ -68,16 +81,9 @@ Gross Profit formula in Domo subtracts `Refunded Revenue`, but Refunded Revenue 
 
 ---
 
-## Classification Thresholds (from Tess PRD v1.4)
+## Classification (Reference Only)
 
-| Class | Condition |
-|-------|-----------|
-| Winner | Net ROAS >= 1.0 (100%) AND spend >= $2,500 |
-| Potential | Net ROAS 0.80–0.99 (80–99%) |
-| Underperformer | Net ROAS < 0.80 (< 80%) |
-| Testing | Spend < $2,500 |
-
-Saturation: 3+ variations of same root angle = saturated.
+The service does not classify ads. Classification is a consumer-side business rule. Tess PRD v1.4 thresholds are documented in `catalog/DATA_DICTIONARY.md` for consumers who want to implement them.
 
 ---
 
@@ -98,57 +104,53 @@ Saturation: 3+ variations of same root angle = saturated.
 
 | File | What It Does |
 |------|-------------|
-| `service.py` | CLI orchestrator — `python service.py enrich --output neco` |
-| `config.yaml` | Adapter choice, dataset ID, thresholds, lookback days |
+| `api.py` | Public Python API — `get_raw()`, `get_enriched()`, `list_datasets()` |
+| `datasets.yaml` | Approved dataset allowlist (friendly name → dataset ID) |
+| `config.yaml` | Adapter choice, dataset ID |
 | `adapters/base.py` | Abstract adapter interface |
 | `adapters/domo.py` | Domo implementation — fetch, aggregate, Beast Modes |
-| `models/ad_performance.py` | Classification only (thin — adapter does the heavy lifting) |
-| `models/angle_analysis.py` | Root angle grouping, saturation flags |
-| `formatters/neco_brief.py` | Markdown brief per funnel for Neco Context Gatherer |
-| `formatters/tess_enrichment.py` | CSV with all metrics for Tess SSS integration |
-| `formatters/raw_export.py` | CSV dump of raw data |
-| `formatters/_shared.py` | PII stripping utility |
-| `contracts/v1/ad_performance.yaml` | Output schema definition |
-| `catalog/pii_manifest.yaml` | PII column list |
+| `utils/pii.py` | PII stripping utility (`strip_pii()`, `load_pii_columns()`) |
+| `scripts/export_ad_performance.py` | Domo Ad Performance card replica (30 columns, Domo display names) |
+| `catalog/pii_manifest.yaml` | PII column list (single source of truth) |
+| `catalog/data_dictionary.yaml` | Metric definitions, formulas, business rules (OM Glossary format) |
+| `catalog/DATA_DICTIONARY.md` | Human-readable data dictionary — consuming agents MUST read this |
 
 ---
 
-## CLI Usage
+## Python API Usage
 
-```bash
-# Enriched pipeline — all outputs
-python service.py enrich --from 2026-01-01 --to 2026-03-15 --output all
+```python
+from api import get_raw, get_enriched, list_datasets
 
-# Enriched — Neco briefs only
-python service.py enrich --output neco
+# See what's available
+list_datasets()
+# {'ad_performance': 'Facebook ad performance + CheckoutChamp orders...'}
 
-# Enriched — Tess CSV only
-python service.py enrich --output tess
+# Raw data — any approved dataset, PII always stripped
+df = get_raw("ad_performance", "2026-01-01", "2026-03-15")
 
-# Raw dump (all columns, PII stripped)
-python service.py raw --limit 10000
+# Enriched — all Beast Modes computed, PII stripped
+df = get_enriched("2026-01-01", "2026-03-15")
 
-# Date range defaults to last 90 days from config.yaml
+# Domo Ad Performance card replica (30 columns, Domo display names)
+from scripts.export_ad_performance import get_ad_performance_card
+df = get_ad_performance_card("2026-01-01", "2026-03-15", day="2026-03-15")
 ```
 
----
+### Adding a New Dataset
 
-## Adding a New Consumer
-
-1. Create `formatters/new_consumer.py` with a function that takes `(ad_perf_df, angle_df, output_dir, date_from, date_to)`
-2. Call `strip_pii()` first
-3. Add the output name to `service.py`'s routing
-4. Done. No model or adapter changes needed.
+1. Get the Domo dataset ID
+2. Add an entry to `datasets.yaml` with friendly name, dataset ID, description
+3. Done — `get_raw("new_name", ...)` works immediately
 
 ## Adding a New Beast Mode Metric
 
 1. Add the calculation in `adapters/domo.py::_compute_beast_modes()`
-2. Add the column to `contracts/v1/ad_performance.yaml`
-3. Update `formatters/tess_enrichment.py::COLUMN_DISPLAY_NAMES` if Tess needs it
-4. When Snowflake arrives, the dbt model provides it natively — no adapter change needed.
+2. Add the term to `catalog/data_dictionary.yaml`
+3. When Snowflake arrives, the dbt model provides it natively — no adapter change needed.
 
 ## Switching to Snowflake
 
 1. Create `adapters/snowflake.py` implementing `DataAdapter`
 2. Change `config.yaml`: `adapter: snowflake`
-3. Done. Models and formatters unchanged.
+3. Done. API unchanged.

@@ -37,9 +37,10 @@ class DataAdapter(ABC):
         ...
 
     @abstractmethod
-    def fetch_raw(self, date_from: str, date_to: str, limit: int = 10000) -> pd.DataFrame:
-        """Return raw rows with all columns, no transformation.
+    def fetch_raw(self, date_from: str, date_to: str, limit: int = 100000) -> pd.DataFrame:
+        """Return raw rows with all columns. Adds email_address_hash for cohort tracking.
 
         For ad-hoc analysis or consumers that need the full dataset.
+        PII stripping happens in the API layer, not here.
         """
         ...

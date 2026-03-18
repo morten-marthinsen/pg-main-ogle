@@ -7,6 +7,7 @@ When Snowflake replaces Domo, this file dies. The model layer doesn't change.
 Canonical DomoClient source: see DOMO_CLIENT_PATH env var
 """
 
+import hashlib
 import os
 import re
 import sys
@@ -48,8 +49,10 @@ COL_AGENCY_FEES = "Agency Fees"
 COL_CC_FEES = "CC Fees"
 COL_EMAIL = "emailAddress"
 COL_NEW_CUSTOMERS = "New Customers"
-COL_SC_TRIALS = "# SC Trials\nStarted"  # Domo <BR> renders as newline
+COL_SC_TRIAL_PURCHASE_IDS = "SC Trial Start PurchaseIDs"
 COL_HAS_UPSELL = "hasUpsell"
+COL_STATUS = "Status"
+PLATFORM_FACEBOOK = "facebook"
 
 # Pre-parsed 15-position columns (already in dataset)
 COL_FUNNEL = "[Funnel]"
@@ -102,7 +105,7 @@ ORDER_COLS = [
     COL_AD, COL_TOTAL_AMOUNT, COL_ORDER_ID,
     COL_PHYSICAL_COGS, COL_REFUNDED_REVENUE,
     COL_AGENCY_FEES, COL_CC_FEES,
-    COL_EMAIL, COL_NEW_CUSTOMERS, COL_SC_TRIALS,
+    COL_EMAIL, COL_NEW_CUSTOMERS, COL_SC_TRIAL_PURCHASE_IDS,
     COL_HAS_UPSELL,
 ]
 
@@ -168,8 +171,13 @@ class DomoAdapter(DataAdapter):
 
         return merged
 
-    def fetch_raw(self, date_from: str, date_to: str, limit: int = 10000) -> pd.DataFrame:
-        """Return raw rows, all columns, no transformation."""
+    def fetch_raw(self, date_from: str, date_to: str, limit: int = 100000) -> pd.DataFrame:
+        """Return raw rows with all columns. Adds email_address_hash for cohort tracking.
+
+        email_address_hash is SHA-256 of emailAddress (first 16 chars), added here
+        before PII stripping removes the source column in the API layer.
+        Returns all platforms (no facebook filter — unlike the enriched pipeline).
+        """
         _validate_date(date_from)
         _validate_date(date_to)
         sql = (
@@ -179,7 +187,13 @@ class DomoAdapter(DataAdapter):
             f'AND `dateCreated` <= \'{date_to}\' '
             f'LIMIT {limit}'
         )
-        return self._query(sql)
+        df = self._query(sql)
+        if not df.empty and COL_EMAIL in df.columns:
+            df["email_address_hash"] = df[COL_EMAIL].apply(
+                lambda x: hashlib.sha256(str(x).lower().strip().encode()).hexdigest()[:16]
+                if pd.notna(x) and str(x).strip() else None
+            )
+        return df
 
     # --- Private: fetch ---
 
@@ -191,7 +205,7 @@ class DomoAdapter(DataAdapter):
             f'SELECT * FROM table '
             f'WHERE `{COL_SPEND}` > 0 '
             f'AND `{COL_VALID_15}` = 1 '
-            f'AND `{COL_PLATFORM}` = \'facebook\' '
+            f'AND `{COL_PLATFORM}` = \'{PLATFORM_FACEBOOK}\' '
             f'AND `dateCreated` >= \'{date_from}\' '
             f'AND `dateCreated` <= \'{date_to}\''
         )
@@ -213,7 +227,7 @@ class DomoAdapter(DataAdapter):
             f'SELECT * FROM table '
             f'WHERE `{COL_TOTAL_AMOUNT}` > 0 '
             f'AND `{COL_VALID_15}` = 1 '
-            f'AND `{COL_PLATFORM}` = \'facebook\' '
+            f'AND `{COL_PLATFORM}` = \'{PLATFORM_FACEBOOK}\' '
             f'AND `dateCreated` >= \'{date_from}\' '
             f'AND `dateCreated` <= \'{date_to}\''
         )
@@ -259,6 +273,7 @@ class DomoAdapter(DataAdapter):
             COL_OFFER_NAME: "offer_name",
             COL_EXPANSION_TYPE_NAME: "expansion_type_name",
             COL_ASSET_TYPE_NAME: "asset_type_name",
+            COL_STATUS: "status",
         }
         keep = [COL_AD] + [c for c in position_cols if c in first_rows.columns]
         positions = first_rows[keep].rename(columns={COL_AD: "ad_name", **{k: v for k, v in position_cols.items() if k in first_rows.columns}})
@@ -274,15 +289,6 @@ class DomoAdapter(DataAdapter):
             if col in order_df.columns:
                 order_df[col] = pd.to_numeric(order_df[col], errors="coerce").fillna(0)
 
-        # Clean SC Trials column name (may have been cleaned already)
-        sc_trials_col = None
-        for candidate in ["# SC Trials Started", COL_SC_TRIALS, "# SC Trials\nStarted"]:
-            if candidate in order_df.columns:
-                sc_trials_col = candidate
-                break
-        if sc_trials_col:
-            order_df[sc_trials_col] = pd.to_numeric(order_df[sc_trials_col], errors="coerce").fillna(0)
-
         # --- All customers aggregation ---
         all_agg = order_df.groupby(COL_AD, as_index=False).agg(
             gross_revenue=(COL_TOTAL_AMOUNT, "sum"),
@@ -294,11 +300,13 @@ class DomoAdapter(DataAdapter):
             total_customers=(COL_EMAIL, "nunique"),
         )
 
-        # SC Trials
-        if sc_trials_col:
-            sc_agg = order_df.groupby(COL_AD, as_index=False).agg(
-                sc_trials=(sc_trials_col, "sum"),
-            )
+        # SC Trials: count DISTINCT non-empty SC Trial Start PurchaseIDs per ad.
+        # This is a Domo Beast Mode — the raw dataset has no '# SC Trials Started' column.
+        if COL_SC_TRIAL_PURCHASE_IDS in order_df.columns:
+            sc_col = order_df[COL_SC_TRIAL_PURCHASE_IDS].astype(str).str.strip()
+            sc_df = order_df[sc_col.ne("") & sc_col.ne("nan")]
+            sc_agg = sc_df.groupby(COL_AD, as_index=False)[COL_SC_TRIAL_PURCHASE_IDS].nunique()
+            sc_agg = sc_agg.rename(columns={COL_SC_TRIAL_PURCHASE_IDS: "sc_trials"})
             all_agg = all_agg.merge(sc_agg, on=COL_AD, how="left")
         else:
             all_agg["sc_trials"] = 0
@@ -356,6 +364,10 @@ class DomoAdapter(DataAdapter):
         df["gross_roas"] = _safe_div(gr, s)
 
         # Gross Profit: totalAmount - Physical COGS - Refunded Revenue
+        # WARNING: refunds is already negative from Domo transform, so subtracting
+        # a negative inflates gross_profit. This matches Domo's Beast Mode output
+        # exactly — likely a bug in Domo, but we replicate it for parity.
+        # Do NOT "fix" the sign without first confirming Domo has been corrected.
         df["gross_profit"] = gr - cogs - refunds
 
         # --- Net metrics ---
@@ -384,11 +396,26 @@ class DomoAdapter(DataAdapter):
         # --- Conversion rates ---
         df["cvr_pct"] = _safe_div(customers, clicks)
         df["nc_cvr_pct"] = _safe_div(new_cust, clicks)
-        rc = customers - new_cust
-        df["rc_cvr_pct"] = _safe_div(rc, clicks)
+        rc_customers = (customers - new_cust).clip(lower=0)
+        df["rc_cvr_pct"] = _safe_div(rc_customers, clicks)
 
         # --- Fixed Refund Net Revenue (8% flat instead of actual refunds) ---
         fixed_refund = gr * 0.08
         df["fixed_refund_net_revenue"] = gr - cogs - fixed_refund - agency - cc - s
+
+        # --- CPC / CTR / CPM ---
+        df["cpc"] = _safe_div(s, clicks)
+        df["ctr"] = _safe_div(clicks, df["impressions"])
+        df["cpm"] = _safe_div(s, df["impressions"]) * 1000
+
+        # --- AOV variants (gross-based, distinct from net_aov) ---
+        orders = df["total_orders"]
+        df["aov"] = _safe_div(gr, orders)
+        df["nc_aov"] = _safe_div(nc_gr, new_cust)
+        df["rc_aov"] = _safe_div(gr - nc_gr, rc_customers)  # rc_customers computed above
+
+        # --- Cost per SC Trial & Fixed Refund NLPT ---
+        df["cost_per_sc_trial"] = _safe_div(s, sc_trials)
+        df["fixed_refund_nlpt"] = _safe_div(df["fixed_refund_net_revenue"], sc_trials)
 
         return df

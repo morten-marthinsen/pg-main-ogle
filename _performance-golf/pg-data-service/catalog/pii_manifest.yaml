@@ -1,12 +1,44 @@
-# PII columns to strip from all formatter outputs.
-# Models may use these for joins/counts (e.g., emailAddress for distinct customer counts).
-# Formatters MUST drop these before writing any output file.
+# PII columns to strip from all outputs (API and CLI).
+# Matched by exact column name — case-sensitive.
+# If Domo changes column casing, these entries will silently fail.
+#
+# Audited against full 252-column dataset on 2026-03-17.
+# Policy: strip only clearly personal data. When in doubt, keep the column.
 columns:
+  # Direct identifiers
   - emailAddress
   - customerId
   - firstName
   - lastName
-  - shippingAddress1
-  - city
-  - phone
   - ipAddress
+  - phoneNumber
+  - phone
+
+  # Shipping PII (name + address)
+  - shipFirstName
+  - shipLastName
+  - shipAddress1
+  - shipAddress2
+  - shipCity
+  - shipState
+  - shipPostalCode
+  - shippingAddress1
+
+  # Billing / general address
+  - address1
+  - address2
+  - city
+  - postalCode
+
+  # Payment
+  - cardLast4
+  - cardExpiryDate
+  - achAccountNumber
+  - achRoutingNumber
+
+  # Alternate email columns
+  - most recent email address (alt optimize path)
+
+  # Klaviyo composite fields (contain embedded PII)
+  - Billing Address for Klaviyo Output
+  - Shipping Address for Klaviyo Output
