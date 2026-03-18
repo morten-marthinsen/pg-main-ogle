@@ -174,7 +174,7 @@ class DomoAdapter(DataAdapter):
     def fetch_raw(self, date_from: str, date_to: str, limit: int = 100000) -> pd.DataFrame:
         """Return raw rows with all columns. Adds email_address_hash for cohort tracking.
 
-        email_address_hash is SHA-256 of emailAddress (first 16 chars), added here
+        email_address_hash is SHA-256 of full emailAddress (hexdigest truncated to 16 chars), added here
         before PII stripping removes the source column in the API layer.
         Returns all platforms (no facebook filter — unlike the enriched pipeline).
         """

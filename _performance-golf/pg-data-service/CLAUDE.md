@@ -95,7 +95,7 @@ The service does not classify ads. Classification is a consumer-side business ru
 - **`[Funnel]`**: Use the pre-parsed position, NOT the campaign-level `Funnel` column.
 - **`New Customers`**: String field. `'0'` = returning, anything else = new.
 - **`Refunded Revenue`**: Comes in as negative from the Domo transform.
-- **`# SC Trials Started`**: Column name has `<BR>` / newline in Domo — cleaned on fetch.
+- **SC Trials**: Computed by counting distinct non-empty `SC Trial Start PurchaseIDs` per ad. The raw dataset has no `# SC Trials Started` column — that's a Domo Beast Mode.
 - **Ad names**: Normalized to lowercase. Domo may store uppercase.
 
 ---

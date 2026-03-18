@@ -33,7 +33,7 @@ Domo Dataset → Adapter (fetch + Beast Modes) → API (strip PII) → Consumer
 ```
 
 - **Raw data** (`get_raw("ad_performance", ...)`): Source rows with PII stripped. `email_address_hash` available for customer counts.
-- **Enriched data** (`get_enriched(...)`): One row per ad with all metrics computed and classification applied. PII stripped.
+- **Enriched data** (`get_enriched(...)`): One row per ad with all metrics computed. PII stripped. Classification is consumer-side (not applied by the service).
 
 **Two row types exist in this dataset:**
 - Ad-metric rows (`Spend > 0`) — impressions, clicks, spend
@@ -116,7 +116,7 @@ The data service provides the metrics. Classification is a consumer-side busines
 
 | Field | What It Is | How To Use |
 |-------|-----------|------------|
-| **email_address_hash** | SHA-256 hash of email (first 16 chars) | Same person = same hash across all time periods. Use for unique counts, cohort analysis, repeat purchase tracking. |
+| **email_address_hash** | SHA-256 hash of full email, hexdigest truncated to 16 chars | Same person = same hash across all time periods. Use for unique counts, cohort analysis, repeat purchase tracking. |
 
 - Available in **raw data only** (enriched has pre-aggregated counts)
 - Not reversible — cannot recover email from hash

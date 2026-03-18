@@ -9,7 +9,7 @@ are the same.
 
 Usage:
     python scripts/validate_vs_domo.py \
-        --csv "/Users/patrickhayes/Downloads/Ad Performance.csv" \
+        --csv "path/to/Ad Performance.csv" \
         --from 2026-03-15 --to 2026-03-18
 """
 
