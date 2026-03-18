@@ -138,6 +138,7 @@ EC-05: E-Comm Assembly
 EC-06: E-Comm Editorial
   → Quality review, scan-optimization check (ecom is scanned not read)
   → Micro-script quality, feature naming consistency, proof density
+  → Brand compliance gates: copy restrictions + design compliance (per WORKSPACE.md Tier 1 + Tier 2)
   → Arena: editorial_revision
   → Outputs: ecomm-copy-final.md
 ```

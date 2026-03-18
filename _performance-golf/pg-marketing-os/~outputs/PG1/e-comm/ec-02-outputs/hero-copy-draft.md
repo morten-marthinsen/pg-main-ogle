@@ -1,8 +1,9 @@
-# EC-02 Hero Copy Draft — PG1 Pulse Founders Club
+# EC-02 Hero Copy Draft — PG1 Smart System Founders Club
 
-**Generated:** 2026-03-16
+**Generated:** 2026-03-17
+**Updated:** 2026-03-17 (v5.0 locked — binary argument corrected verbatim)
 **Skill:** EC-02-hero-value-prop
-**Status:** DRAFT — Ready for human review
+**Status:** PRODUCTION-READY — Reflects all locked decisions (v5.0 campaign brief)
 **Page Type:** PDP (SaaS Founders Launch — Keynote-to-Conversion)
 
 ---
@@ -10,43 +11,46 @@
 ## ATF Hero Package
 
 ### Prehead
-Introducing SwingScan Diagnosis
+The PG1 Smart System
 
 ### Headline
-You've Never Been Diagnosed.
+The End of Traditional Instruction.
 
 ### Subhead
-The first system in golf that identifies your ONE root swing flaw — before prescribing a single fix.
+The first system in golf that finds your root swing flaw — then builds everything around fixing it.
 
 ### Value Proposition (DSI)
-SwingScan AI finds the one flaw causing everything else. Then builds your plan, matches your coach, and adapts as you improve. The step golf has always skipped — now exists.
+Every golfer has three to five swing flaws, but only one root swing flaw. The PG1 Smart System finds it, gives you your Smart Step — the one thing to work on right now — matches you with a coach, and adapts the more you use it. One flaw. One plan. Improvement becomes inevitable.
 
 ### CTA
-Get My Diagnosis
+Join the Founders Club
 
 ### Price Display
-$199/yr Annual | $299 Lifetime (Never Pay Again)
+$199/yr Annual | $399 Lifetime (Never Pay Again)
 
 ### Product Highlights TLDR
 
-- **SwingScan Diagnosis** — AI identifies your ONE root flaw from a phone video. 96% accuracy. 2M+ swings. 77+ flaw patterns.
-- **Personalized Correction Plan** — Your plan, built from your diagnosis. Not generic drills. Sequenced corrections for YOUR flaw.
-- **Matched PGA Coach** — The right coach for your flaw. One of 6 elite PGA coaches matched to your specific flaw type.
-- **Adaptive Intelligence** — It learns as you improve. Tracks flaw resolution, adjusts your plan, spots when compensations dissolve.
-- **Founders Pricing Lock** — Your price. Locked forever. $299 once or $199/yr — the lowest PG1 will ever be.
+- **Personalized Assessment** — The system's first understanding of you. Entry point to your root swing flaw.
+- **SwingScan AI** — Discovers your root swing flaw from a phone video. Trained on 2M+ swings. 77+ flaw patterns.
+- **Your Smart Step** — The one thing to work on right now. Not 12 things. One.
+- **Dedicated Coach Access** — Smart Match pairs you with a coach based on your root swing flaw type.
+- **Progress Dashboard + Drill & Round Tracking** — Practice and play feed the system. The more you use it, the more it knows you.
+- **Founders Pricing Lock** — $199/yr or $399 lifetime. The lowest PG1 will ever be.
 
 ---
 
 ## Copy Block (ATF Companion — Section 2)
 
-**Prehead:** The First Diagnosis in Golf
+**Prehead:** One Flaw. One Plan.
 
 **Body:**
-Every instructor saw a different problem. Every app showed data without direction. Every tip treated a symptom while the root flaw sat underneath — invisible at full speed. SwingScan Diagnosis changes that. One flaw identified. One plan built. One coach matched. One system that adapts as you improve.
+You have been working on symptoms your entire golf life. Every instructor saw something different. Every app gave you data without direction. The root swing flaw sat underneath, invisible, creating all of it.
 
-**Icon Row:** Diagnosis | Plan | Coach | Adaptive | Founders
+The PG1 Smart System ends that cycle. It finds your root swing flaw. Gives you one thing to work on. Matches you with a coach. Adapts as you improve. From knowing your name to knowing your game.
 
-**Design note:** Desktop: two-column (text left, app screenshot right showing SwingScan diagnosis UI). Mobile: full-width text above image. Keep scannable — this is the value prop expansion beneath hero, not a copy block. 125-word budget.
+**Icon Row:** Assessment | SwingScan AI | Smart Step | Smart Match | Dashboard | Tracking
+
+**Design note:** Desktop: two-column (text left, app screenshot right showing Smart System dashboard). Mobile: full-width text above image. Keep scannable. 125-word budget.
 
 ---
 
@@ -55,133 +59,55 @@ Every instructor saw a different problem. Every app showed data without directio
 **Two pricing tier cards:**
 
 **Annual Founders — $199/yr**
-- Full PG1 Pulse access
-- SwingScan Diagnosis
-- Personalized Correction Plan
-- Matched PGA Coach
-- Adaptive Intelligence
+- Full PG1 Smart System access
+- Personalized Assessment + SwingScan AI
+- Your Smart Step + Smart Path
+- Dedicated Coach Access (Smart Match)
+- Progress Dashboard + Drill & Round Tracking
 - Every future feature
 - Rate locked permanently
-- 7-day free trial
-- **[Get My Diagnosis — Annual]**
+- 365-day guarantee
+- **[Join the Founders Club — Annual]**
 
-**Lifetime Founders — $299 (Recommended)**
+**Lifetime Founders — $399 (Recommended)**
 - Everything in Annual
 - One payment. Never pay again.
-- Founders Priority Access
-- First to test every new feature
-- Direct product team line
+- Every future feature, permanently
+- Numbered Founders badge
 - Rate locked permanently
-- 7-day free trial
-- **[Get My Diagnosis — Lifetime]**
+- 365-day guarantee
+- **[Join the Founders Club — Lifetime]**
 
-**Trust badges:** 60-Day Diagnosis Promise | 1,000 Founders Only | Secure Checkout
+**Bonuses (both tiers):**
+- 30% off all PG products (permanent)
+- VIP new release access
+- $500 Transformation Academy credit
 
-**Design note:** Two-column cards on desktop (Lifetime highlighted/recommended), stacked on mobile. Sticky CTA on mobile scroll. Founders counter or badge below cards showing spots remaining. CTA button color: primary action color. "1,000 Founders Club" badge with counter.
+**Trust badges:** 365-Day Guarantee | 1,000 Founders Only | Secure Checkout
 
----
-
-## 10-Position Hero Carousel
-
-### Position 1: Keynote Anchor (Video Thumbnail)
-- **Format:** Video thumbnail with play button overlay (keynote highlight reel or SwingScan demo)
-- **Visual:** Brixton at keynote podium or SwingScan diagnosis UI in action
-- **Copy Overlay:** "You've Never Been Diagnosed."
-- **Designer Notes:** Full-width. Apple-keynote-inspired aesthetic. Play button centered. This is the first thing the visitor sees — the keynote connection is immediate for warm traffic. For cold traffic, the headline stops the scroll.
-
-### Position 2: The Problem
-- **Visual:** Split image — left side shows conflicting advice (multiple instructors, YouTube thumbnails, app screenshots all pointing different directions). Right side shows frustrated golfer.
-- **Copy Overlay:** "Every lesson was a prescription. Nobody ever ran the test."
-
-### Position 3: The Root Cause
-- **Visual:** Simple infographic showing ONE root flaw branching into 3-5 visible compensations (the flaw chain concept).
-- **Copy Overlay:** "One flaw. A dozen compensations. Zero diagnoses. Until now."
-
-### Position 4: The Mechanism
-- **Visual:** SwingScan diagnosis UI — phone screen showing swing analysis in progress with flaw identification overlay.
-- **Copy Overlay:** "SwingScan finds the ONE flaw causing everything else."
-
-### Position 5: The Proof
-- **Visual:** Data callout design with three large-format stats.
-- **Copy Overlay:** "2M+ swings. 96% accuracy. 77+ flaw patterns."
-
-### Position 6: The Plan
-- **Visual:** App UI showing personalized correction plan — sequenced drills, progress tracking, coach chat interface.
-- **Copy Overlay:** "Your plan, built from your diagnosis."
-
-### Position 7: The Coach
-- **Visual:** Coach grid — 6 PGA coach headshots in a clean arrangement.
-- **Copy Overlay:** "The right coach for your flaw."
-
-### Position 8: The Founder Story
-- **Visual:** Brixton portrait — authentic, not corporate. Behind-the-scenes energy.
-- **Copy Overlay:** "$5M+ invested. 276 team members. 15 countries. Built for this moment."
-
-### Position 9: The Emotional Destination
-- **Visual:** Golfer on course — relaxed, confident, enjoying the game. Premium lifestyle photography.
-- **Copy Overlay:** "Love your game again."
-
-### Position 10: CTA
-- **Visual:** Clean app mockup with both pricing tiers displayed. Founders badge.
-- **Copy Overlay:** "$199/yr or $299 once. Get My Diagnosis."
+**Design note:** Two-column cards on desktop (Lifetime highlighted/recommended), stacked on mobile. Sticky CTA on mobile scroll. Founders counter or badge below cards showing spots remaining. CTA button color: Performance Orange (#FD3300). "1,000 Founders Club" badge with counter.
 
 ---
 
-## Word Budget Summary
+## ATF-to-BTF Segue
 
-| Element | Words | Budget | Status |
-|---------|-------|--------|--------|
-| Prehead | 3 | N/A | PASS |
-| Headline | 5 | 5-12 | PASS |
-| Subhead | 18 | 10-20 | PASS |
-| Value Prop (DSI) | 30 | 15-30 | PASS |
-| CTA | 3 | 3-5 | PASS |
-| Highlights total | 92 | 50-100 | PASS |
-| Copy Block | 68 | ~125 budget | PASS |
-| CTA Box | ~95 | ~100 budget | PASS |
-| Carousel copy total | ~88 | 50-150 | PASS |
-| **ATF Grand Total** | ~402 | 400 (ATF budget) | PASS |
-
----
-
-## Downstream Handoffs
-
-### To EC-03 (Section Copy)
-- Hero package locked — all BTF sections reinforce, not repeat, the ATF promise
-- "You've never been diagnosed" is the primary headline — echo in problem section, do not overuse
-- DSI is the value prop — BTF sections expand on HOW (mechanism), WHO (credibility), WHY (proof)
-- Feature names from EC-01 are locked: SwingScan Diagnosis, Personalized Correction Plan, Matched PGA Coach, Adaptive Intelligence, 77-Flaw Pattern Library, 2M+ Swing Training Database, 96% Diagnostic Accuracy, Founders Pricing Lock, The Root Flaw Report, The Flaw Chain Map
-
-### To EC-05 (Assembly)
-- ATF structure: Prehead > Headline > Subhead > Value Prop > CTA > Price > Highlights
-- Copy Block is ATF companion (Section 2) — sits below hero, above CTA Box
-- CTA Box is ATF conversion point (Section 3) — two pricing tiers, trust badges
-- Carousel is 10 positions with Position 1 as video thumbnail (keynote or demo)
-
-### To Design
-- Position 1 requires video thumbnail with play button (keynote or SwingScan demo)
-- Clean, keynote-inspired aesthetic — not cluttered app-store style
-- App UI screenshots needed for Positions 4, 6, 10
-- Coach headshots needed for Position 7 (GAP-02 — must populate before launch)
-- Brixton portrait needed for Position 8
-- Lifestyle photography needed for Position 9
-- Founders counter/badge component needed for CTA Box
+What I am about to share with you is the reason nothing you have tried has worked — and the one thing that changes everything. It is not another tip. It is not another drill. It is your root swing flaw. The one movement creating everything else in your swing. Nobody has ever identified it. Until now.
 
 ---
 
 ## Key Decisions Log
 
-1. **"You've Never Been Diagnosed" as headline** — Big Idea expression, highest-scoring headline from campaign brief (9.5 strength). Stops the scroll because medical/diagnostic framing is unexpected in golf context.
-2. **Subhead = DSI in consumer language** — "The first system in golf that identifies your ONE root swing flaw" is the DSI expressed as a subhead, not a separate value prop restatement.
-3. **Value prop expands DSI with full mechanism summary** — answers "why this, why now" by covering the complete system: diagnosis, plan, coach, adaptation.
-4. **CTA = "Get My Diagnosis"** — ownership language ("My"), action-specific, mechanism-aligned. Not "Join Now" or "Start Free Trial."
-5. **Product highlights include top 5 features** — one hero (SwingScan Diagnosis) + four supporting features from EC-01 hierarchy. Technical features reserved for BTF.
-6. **Copy Block included as ATF companion** — expands the value prop for skimmers who need one more beat before CTA Box.
-7. **CTA Box with two pricing tiers** — Annual and Lifetime side by side, Lifetime recommended. Trust badges reinforce guarantee and scarcity.
-8. **Carousel Position 1 is video thumbnail** — connects warm traffic (keynote viewers) immediately. Cold traffic reads the headline overlay.
-9. **No carousel position for comparison** — comparison chart lives in BTF (Section 11). Hero carousel tells the product story, not the competitive story.
-10. **Carousel Position 8 is Brixton/founder story** — insider energy per Soul.md. Investment and team size as proof points, not personal bio.
+1. **"The End of Traditional Instruction" as headline** — Big Idea expression from locked campaign brief v5.0. Before/after binary: the old era of treatment-without-diagnosis vs. the new era of root swing flaw identification.
+2. **Subhead creates curiosity about what replaces traditional instruction** — "finds your root swing flaw — then builds everything around fixing it." This is the new era.
+3. **Value prop opens with the Binary Argument's setup** — "Every golfer has three to five swing flaws, but only one root swing flaw." Then delivers the Smart System as the answer.
+4. **CTA = "Join the Founders Club"** — identity-forward, belonging language. Feels like joining the new era, not buying an app.
+5. **Smart System vocabulary throughout** — Smart Step, Smart Path, Smart Match. No references to old "SwingScan Diagnosis" as mechanism name. SwingScan AI is one component.
+6. **Pricing locked** — $399 lifetime. 365-day guarantee. No 7-day free trial.
+7. **Bonuses locked** — 30% off PG products, VIP new release access, $500 Transformation Academy credit.
+8. **6 system components shown as ONE system** — NOT a value stack. Personalized Assessment, SwingScan AI, Your Smart Step, Progress Dashboard, Dedicated Coach Access, Drill & Round Tracking.
+9. **Root swing flaw is the star** — not "diagnosis" or "undiagnosed golfer." The headline is about the end of an era. The mechanism finds the root swing flaw.
+10. **Product name locked** — "PG1 Smart System" not "PG1 Pulse."
 
 ---
 
-*EC-02 Hero Copy Draft — DRAFT | PG1 Founders Launch | Marketing-OS E-Comm Engine*
+*EC-02 Hero Copy Draft — PRODUCTION-READY | PG1 Founders Launch | Marketing-OS E-Comm Engine*

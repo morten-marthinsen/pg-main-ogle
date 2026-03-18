@@ -90,8 +90,25 @@ IDLE -> LOADING -> AUDITING -> REVISION -> ARENA -> SCORING -> COMPLETE
 |-------|------|----------|
 | 1.1 | `1.1-scan-optimization-auditor.md` | Does every section work when scanned in 3-5s? |
 | 1.2 | `1.2-proof-density-reviewer.md` | At least 1 proof element per section? |
+| 1.3 | `1.3-brand-copy-restrictions.md` | PG brand copy restriction verification |
+| 1.4 | `1.4-brand-design-compliance.md` | PG brand visual identity verification |
 
-**Gate 1:** Scan audit complete with section-by-section scores, proof density reviewed with gaps identified.
+**1.3 Brand Copy Restrictions** must verify (applies regardless of voice/campaign):
+- Copy restrictions check: Hank Haney = "Tiger's FORMER coach" (never current, never "ex-coach")
+- Never "USGA approved" → "conforms to the rules of golf"
+- Forbidden names absent: Golf Fanatic, Moe Norman, Dustin Johnson, Titleist, Sir Nick Faldo
+- Forbidden patterns absent: overhype ("CRUSH 50 YARDS!!!"), unsubstantiated superlatives
+- No fabricated claims: all product specs, stats, and credentials traceable to source
+- Reference: `_performance-golf/pg-brand/pg-brand-guidelines/pg-copy-voice.md`
+
+**1.4 Brand Design Compliance** must verify:
+- Color palette: Performance Orange (#FD3300), Dark Orange (#DB2C00), Black (#1D1A1A), neutral palette (Stone, Pebble, Sand, Fog, Mist). Ratio: 60% neutrals / 30% orange & dark orange / 10% secondary & black
+- Typography: Repro (primary), GT Super Text (secondary serif), Repro Mono (tertiary mono). No substitutions without human approval
+- Logo usage: correct variant, clear-space, placement per visual-identity.md
+- Design principles: modern, technical, approachable, confident, premium. Never brutalist, cold, elitist, cluttered, or generic "sports brand"
+- Reference: `_performance-golf/pg-brand/pg-brand-guidelines/PG-DESIGN-SYSTEM.md`
+
+**Gate 1:** Scan audit complete, proof density reviewed, brand copy restrictions verified, brand design compliance verified.
 
 ### Layer 2: Revision
 
@@ -112,9 +129,15 @@ IDLE -> LOADING -> AUDITING -> REVISION -> ARENA -> SCORING -> COMPLETE
 |-------|------|----------|
 | 4.1 | `4.1-quality-scorer.md` | Score against ecom editorial criteria |
 | 4.2 | `4.2-feature-consistency-final.md` | Final feature naming consistency pass |
-| 4.3 | `4.3-output-packager.md` | Package ecomm-copy-final.md |
+| 4.3 | `4.3-brand-compliance-scorer.md` | Brand copy restrictions + design compliance score |
+| 4.4 | `4.4-output-packager.md` | Package ecomm-copy-final.md |
 
-**Gate 4:** Quality score meets threshold, feature consistency confirmed, final copy packaged.
+**4.3 Brand Compliance Scorer** produces:
+- `brand_copy_restrictions`: score 1-10 (minimum 8.0 to pass)
+- `brand_design_compliance`: score 1-10 (minimum 8.0 to pass)
+- If either brand gate fails, HALT and revise before packaging
+
+**Gate 4:** Quality score meets threshold, feature consistency confirmed, brand compliance verified, final copy packaged.
 
 ---
 
@@ -131,6 +154,8 @@ IDLE -> LOADING -> AUDITING -> REVISION -> ARENA -> SCORING -> COMPLETE
     "feature_consistency": 10.0,
     "design_note_quality": 8.0,
     "word_budget_compliance": 9.5,
+    "brand_copy_restrictions": 9.0,
+    "brand_design_compliance": 9.0,
     "overall": 9.0
   },
   "revisions_made": 4,
@@ -176,6 +201,8 @@ IDLE -> LOADING -> AUDITING -> REVISION -> ARENA -> SCORING -> COMPLETE
 6. **Proof density: 1+ proof per section** -- no exceptions.
 7. **Design note completeness: 100%** -- every section has layout, mobile, visuals.
 8. **Feature consistency: 100%** -- zero deviations from EC-01 names.
+9. **Brand copy restrictions minimum: 8.0** -- forbidden names, attribution rules, fabrication check.
+10. **Brand design compliance minimum: 8.0** -- colors, typography, logos per PG-DESIGN-SYSTEM.md.
 
 ### Anti-Slop Constraints
 9. **Same anti-slop lexicon as all EC skills** -- editorial removes any slop that survived.

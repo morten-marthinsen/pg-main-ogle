@@ -1,27 +1,23 @@
 # CAMPAIGN BRIEF — PG1 Founders Launch
 
-**Version:** 1.0
-**Generated:** 2026-03-16
-**Skill:** 09-campaign-brief
-**Coherence Score:** 8.72/10
-**Human Approved:** PENDING
-**Status:** Ready for human review
+**Version:** 5.0
+**Generated:** 2026-03-17
+**Updated by:** Human review — all 7 checkpoints locked
+**Status:** LOCKED — ready for downstream copy
 
 ---
 
 ## 1. CAMPAIGN THESIS
 
-**"You've never been diagnosed — and that's why nothing has worked."**
+**"When the PG1 Smart System finds your root swing flaw and you start working on your Smart Step — improvement becomes inevitable."**
 
-The ONLY way to finally stop guessing and start improving is with SwingScan Diagnosis — the first system in golf that identifies your ONE root swing flaw before prescribing a single fix.
+The end of traditional instruction. Before PG1, every lesson was treatment without diagnosis. Every instructor treated symptoms while the root swing flaw sat underneath, unidentified. That era is over. The PG1 Smart System finds your root swing flaw, gives you one thing to work on right now (your Smart Step), matches you with a coach (Smart Match), sequences your improvement plan (Smart Path), and adapts the more you use it. When you address your root swing flaw, improvement becomes inevitable.
 
-Every golf improvement tool the prospect has tried shares one thing in common: they all skipped the first step. Every instructor prescribed treatment without running a diagnostic. Every app showed data without identifying THE cause. Every tip addressed a symptom while the root flaw sat underneath, invisible to the human eye at full speed. That is why 70% of golfers who take lessons do not improve (Bobby Clampett, GolfWRX). That is why the average American golfer's handicap has not changed from 2020 to 2025 despite 82 million rounds posted and an explosion of instruction technology (USGA 2025 Golf Scorecard). The entire golf improvement industry operates on treatment-without-diagnosis. SwingScan Diagnosis introduces the missing step: identify the ONE root flaw before anything else happens. Then build a plan around it. Match a coach to it. Adapt as it resolves. One flaw. One plan. One clear path.
+**One-sentence thesis:** When the PG1 Smart System finds your root swing flaw and you start working on your Smart Step — improvement becomes inevitable.
 
-**One-sentence thesis:** The ONLY way to finally stop guessing and start improving is with SwingScan Diagnosis — the first system in golf that identifies your ONE root swing flaw before prescribing a single fix.
+**Thesis type:** Root cause discovery — prosecution strategy. The argument builds evidence that traditional instruction is broken (treatment without diagnosis, the Symptom Spiral), reveals the root swing flaw, introduces the Smart System that solves it, proves it works, makes it personal, and opens the door to the Founders Club.
 
-**Thesis type:** Root cause discovery — prosecution strategy. The argument builds evidence that the current system is broken (treatment-without-diagnosis), reveals the root cause, introduces the mechanism that solves it, proves it works, makes it personal, and opens the door to the Founders Club.
-
-**Operating principle:** Validate frustration with data. Externalize blame to the system. Reveal the missing step. Prove the mechanism. Make it personal. Close on belonging + restoration.
+**Operating principle:** Validate frustration with data. Name the Symptom Spiral. Reveal the root swing flaw. Deliver the Binary Argument. Introduce the Smart System. Prove it works. Make it personal. Close on belonging + inevitability.
 
 ---
 
@@ -33,173 +29,139 @@ Every golf improvement tool the prospect has tried shares one thing in common: t
 
 **Emotional state at point of contact:** This buyer has been through the docu-series (6 pieces building belief layers) and the keynote (the leaked insider presentation). They arrive at the Founders page with: (1) insider investment — they feel part of something, (2) validated frustration — the docu-series named what they have been feeling, (3) emerging hope — the keynote introduced a new possibility, (4) residual skepticism — "I have heard promises before." The page does not need to re-persuade from scratch. It needs to crystallize the argument, present the offer, handle objections, and convert.
 
-**For cold traffic (no keynote):** The page must also carry the full argument below the fold. ATF converts fast-action buyers. BTF delivers the complete case: problem, root cause, mechanism, proof, personalization, value, access.
+**For cold traffic (no keynote):** The page must also carry the full argument below the fold. ATF converts fast-action buyers. BTF delivers the complete case: Symptom Spiral, root swing flaw, Smart System, proof, personalization, value, access.
 
-**Awareness level:** Problem-Aware to Solution-Aware (Schwartz Level 2-3). They know they are stuck. They have tried multiple solution categories. They are NOT aware that "root flaw diagnosis" is a solution category. This is PG1's positioning advantage.
+**Awareness level:** Problem-Aware to Solution-Aware (Schwartz Level 2-3). They know they are stuck. They have tried multiple solution categories. They are NOT aware that "root swing flaw identification" is a solution category. This is PG1's positioning advantage.
 
 **Internal dialogue:** "I have tried everything. Lessons, apps, videos, training aids. My handicap has not moved. Maybe the problem is me. Maybe I am just not built for this game. But I keep trying because I love it — and I refuse to believe there is not an answer."
 
 **Latent emotions (from RSF Layer 2.8):**
 - Self-doubt/shame (GAP-01, confidence 0.92, momentum INCREASING) — "Maybe I'm just not built for this game"
 - Grief for lost enjoyment (GAP-02, confidence 0.82) — "I used to love this game"
-- Desire to stop searching (GAP-03, confidence 0.88, momentum INCREASING) — wanting the SEARCH to end, not just a solution
+- Desire to stop searching (GAP-03, confidence 0.88, momentum INCREASING) — wanting the SEARCH to end
 - Fear of wasted practice (GAP-04, confidence 0.85) — suspicion that practice has been harmful
 - Secret hope in AI (GAP-05, confidence 0.78) — skepticism masking buried hope
 
-**Conversion requirements (must believe before buying):**
-1. "My problem is ONE root flaw, not 12 different issues" — Bridge: combination lock analogy + Brixton's story
-2. "AI can diagnose my swing as well as or better than a human coach" — Bridge: 2M+ swings, 96% accuracy, human-AI collaboration research
-3. "This is fundamentally different from the apps I have tried" — Bridge: "Those apps measure. PG1 diagnoses."
-4. "The Founders price is a genuine advantage, not a marketing trick" — Bridge: value anchoring + real 1,000-member cap + permanent rate lock
-
 ---
 
-## 3. ROOT CAUSE ANCHOR
+## 3. ROOT CAUSE — THE ROOT SWING FLAW
 
-**Exact text:** "You've never been diagnosed."
+**The root swing flaw is the STAR of the entire campaign.**
 
-**Minimum occurrences in copy:** 5
-**Sections where required:** Lead, Root Cause, Mechanism, Proof, Close
+Every golfer has three to five swing flaws, but only ONE root swing flaw. It is the primary cause creating all others. Nobody has identified it. The golfer has been working on symptoms, not the root swing flaw.
 
-**Acceptable variations:**
-- "Nobody in golf has ever diagnosed the golfer's root swing flaw before prescribing treatment."
-- "Every lesson was a prescription. Nobody ever ran the test."
-- "A flaw vs. THE flaw"
-- "Treatment without diagnosis"
-- "The step golf has always skipped"
-- "One flaw. A dozen compensations."
+**The Symptom Spiral** is the EXPLANATION of what happens when the root swing flaw goes unidentified: working on the wrong thing, watching symptoms multiply, compensating, spiraling deeper. The Symptom Spiral is explanation language — it is NOT the root cause name. The root cause is the root swing flaw itself.
+
+**Diagnosis is a SUPPORTING ANALOGY**, not the headline identity. "Think about how insane this is. You would never let a doctor perform surgery without first diagnosing what's wrong..." This supports the argument. It does not replace the root swing flaw as the central concept.
+
+**Anchor phrase:** "One flaw. One plan."
+
+### The Binary Argument (LOCKED VERBATIM — do not paraphrase)
+
+> "Every golfer has three to five swing flaws, but only one root swing flaw. No matter how much you practice. No matter how new your clubs are. No matter how many lessons you get. No matter how much golf you play. No matter how many videos you watch. If you do not address your root swing flaw, you will never consistently improve at the game of golf, and you will continue to be stuck in a cycle. However, when you do address your root swing flaw, you are guaranteed improvement in your golf game — even if you don't have a lot of time to practice, even if you don't have money to invest in equipment or lessons, or even if you have some other physical problem that you're dealing with. When you fix your root swing flaw, improvement is inevitable."
 
 **Three-part expression:**
-1. **What they think:** "I need better instruction — the right instructor, the right app, the right method. If I find the right one, I will finally improve."
-2. **What is real:** "Nobody has ever diagnosed your root swing flaw. Every instructor saw a different symptom. Every app showed data without identifying THE cause. You have received a thousand prescriptions and zero diagnoses."
-3. **Why nothing worked:** "Prescriptions without diagnosis have a 70% failure rate. Every lesson was a prescription. Every tip was a prescription. The step that should have come first — identifying YOUR specific root swing flaw — was the step that never happened. Until now."
-
-**Villain:** The Symptom Industry — the entire golf improvement ecosystem that prescribes treatment without diagnosis. This is NOT an attack on instructors (they were not bad — the diagnostic tool did not exist). It is an indictment of a systemic failure: an industry that skipped the first step.
+1. **What they think:** "I have not found the right instructor, the right video, or the right app yet."
+2. **What is real:** "Most golfers have 3-5 swing flaws but only ONE root swing flaw. Nobody has identified it. You have been working on symptoms. That is the Symptom Spiral."
+3. **Why nothing worked:** The Binary Argument (above). If you do not address the root swing flaw, nothing changes. When you do, improvement is inevitable.
 
 ---
 
-## 4. MECHANISM NAME
+## 4. MECHANISM — THE PG1 SMART SYSTEM
 
-**Exact text:** "SwingScan Diagnosis"
-**Conversational shorthand:** "your SwingScan," "your diagnosis," "the SwingScan"
-**Minimum occurrences in copy:** 8
-**Sections where required:** Lead (teaser), Root Cause (bridge), Mechanism (full reveal), Proof, Personalization, Close
+**The mechanism is the WHOLE PG1 Smart System — not just SwingScan AI.**
 
-**Type:** Sequence + System (branded format, clinical undertone)
-**E5 strategy:** Actual — SwingScan Diagnosis IS what PG1 does. The mechanism is real, not a marketing wrapper.
+SwingScan AI is one component (the diagnostic engine). The mechanism is the complete system: discover root swing flaw → give Smart Step → coach validates (Smart Match) → system sequences path (Smart Path) → system adapts → moves to next area of game.
 
-**Core explanation (medium):** Trained on 2M+ swings across 77 flaw patterns, SwingScan identifies the single root flaw causing all your compensations — with 96% accuracy. Then it builds a correction plan matched to your specific diagnosis, assigns a PGA coach who specializes in your flaw type, and adapts as your flaw resolves.
+**Smart System Vocabulary:**
+- **Smart Step** — the one thing to work on right now
+- **Smart Path** — your sequenced improvement plan
+- **Smart Match** — your coach pairing based on your root swing flaw type
 
-**Primary analogy:** Medical diagnosis — the blood test / X-ray / MRI that golf never had. "You wouldn't take medication without a blood test. You wouldn't let a doctor prescribe treatment without running a diagnostic. But that's exactly what golf has done your whole life."
+**The Loop:** Discover → Diagnose root swing flaw → Give Smart Step → Coach validates and guides → System adapts → Moves to next area of game
 
-**Supporting analogies:**
-- Combination lock: "4 of 5 numbers right still means locked. You don't need more numbers — you need THE number."
-- Flaw chain / cascade: "One root flaw creates a chain of compensations. Fix the root, the chain dissolves."
+**Key framing:** "The more you use it, the more it knows you." The system is ADAPTIVE, not "AI-powered." Describe intelligence through what it DOES, not technology claims.
 
-**Step-by-step sequence:**
-1. Film your swing (phone camera, any angle, range or course)
-2. SwingScan AI analyzes against 77 root flaw patterns (trained on 2M+ swings)
-3. Your ONE root swing flaw is identified with 96% accuracy
-4. A personalized correction plan is built around YOUR specific diagnosis
-5. A matched PGA coach guides your plan
-6. The system adapts as your flaw resolves — tracking progress BY diagnosis
-7. As the root flaw resolves, compensations dissolve on their own
+**Micro-script (for page use):** "From knowing your name to knowing your game."
 
-**Knockout proof:** MECH-01 — ZERO of 9 competitors analyzed claim root flaw diagnosis. The competitive void is total. Composite score: 9.00.
+**Root swing flaw varies by area of game:** Driver root flaw is not the irons root flaw is not the short game root flaw. This is an ongoing system, not a one-time fix.
+
+**Signal vs. noise (single beat only — do not expand into recurring theme):** "Every tip you've ever heard was noise. The Smart System finds the one signal that matters — your root swing flaw."
+
+### The Locked Mechanism Paragraph (VERBATIM — do not modify)
+
+> "When the Smart System finds your root swing flaw and you start working on your Smart Step, improvement becomes inevitable. The swing thought that's been haunting you for months quiets down. Shots you couldn't hit last week start landing. That breakthrough — the one where your game starts to feel like a different game — that's the moment everything changes. And it's just the beginning. Because once that root swing flaw is addressed, the Smart System identifies your next biggest opportunity for improvement. Then the next. Each one builds on the last. For as long as you want to play this game, the Smart System is finding the one thing that will make the biggest difference right now. That's not a 30-day program. That's a lifetime of good golf."
+
+**Knockout proof:** MECH-01 — ZERO of 9 competitors identify root swing flaw first. The competitive void is total.
 
 ---
 
 ## 5. PRIMARY PROMISE
 
-**Exact text:** "Know your ONE root swing flaw — and have a clear plan to fix it."
+**"Improvement becomes inevitable."**
 
-**Full form:** "Know your ONE root swing flaw — the single movement causing everything else — identified with 96% accuracy by AI trained on 2M+ swings. Then get a personalized plan and a matched PGA coach to fix it. One diagnosis. One plan. One clear path."
-
-**Conversational form:** "For the first time, you'll know exactly what's been holding your game back — and exactly what to do about it."
-
-**Minimum occurrences in copy:** 6 (including variations)
-**Sections where required:** Lead (headline/subhead), Thesis, Mechanism, Value, Close, CTA
-
-**Promise type:** CLARITY, not IMPROVEMENT. The promise is knowing your root flaw and having a plan — not dropping X strokes in Y weeks.
-
-**Promise ceiling:** MODERATE (62/100). No results claims, no speed claims, no comparison claims until 90-day Founders data exists.
-
-**Validation score:** 8.6/10
+This is the primary promise — conditional on addressing the root swing flaw through the Smart System.
 
 **Supporting promises:**
-- **SUP-01 (Problem elimination):** "One diagnosis replaces a thousand opinions." (8.2) — Deploy in problem section, objection handling
-- **SUP-02 (Vindication):** "You weren't failing. You were never diagnosed." (8.4) — Deploy in lead hook, emotional pivot, pre-mechanism
-- **SUP-03 (Identity):** "Be one of the first 1,000. $299 once. Never pay again." (7.8) — Deploy in offer section, close, urgency
-- **SUP-04 (Emotional destination):** "Love your game again — because the confusion is finally over." (7.6) — Deploy in emotional close, final CTA
+- "Play the golf you know you're capable of"
+- "The smartest path to your best golf"
+- "Stop the spiral"
+- "From knowing your name to knowing your game"
 
-**Compliance:**
-- No handicap improvement claims until 90-day Founders data
-- No "guaranteed results" language
-- 96% accuracy claim requires internal methodology documentation (GAP-08)
-- Coach credentials must be populated before page goes live (GAP-02)
-- All claims are product-feature claims, not results claims — FTC defensible
+**Promise ceiling:** MODERATE (62/100). Lead with system/diagnosis, not specific handicap results. No results claims, no speed claims, no comparison claims until 90-day Founders data exists.
 
 ---
 
-## 6. BIG IDEA EXPRESSION
+## 6. BIG IDEA — THE END OF TRADITIONAL INSTRUCTION
 
-**Creative wrapper:** "The Undiagnosed Golfer"
-**Big Idea type:** Discovery Reframe
-**RSF composite score:** 8.4/10
+**Before/after binary:** The Big Idea IS the before/after line PG1 draws through the industry.
 
-**Big Idea statement:** Every golfer has ONE root swing flaw causing everything else — and nobody has ever diagnosed yours. Not your instructor. Not your app. Not a single video you have watched. The step that should have come first — the diagnosis — never existed in golf. Until now.
+- **Before (pain side):** The end of traditional instruction. Treatment without diagnosis. The Symptom Spiral. Working on symptoms while the root swing flaw goes unidentified.
+- **After (hope side):** The beginning of a new era. The PG1 Smart System. Root swing flaw found. Smart Step. Improvement becomes inevitable.
 
-**One sentence:** "You've never been diagnosed — and that's why nothing has worked."
+**NOT anti-instruction — anti-TRADITIONAL-instruction.** PG coaches still coach. They coach WITH a diagnosis now. The distinction matters: PG1 does not reject coaching. It rejects coaching WITHOUT first identifying the root swing flaw.
 
-**How it manifests in copy:**
-- **Headlines:** "You've Never Been Diagnosed" (9.5 strength) / "The Step Golf Has Always Skipped" (9.0) / "Every Lesson Was a Prescription. Nobody Ever Ran the Test." (9.0)
-- **Narrative reorganization:** Explains the golfer's entire improvement history through a single reframe. YouTube tips = symptom treatment. Lessons = prescriptions without diagnosis. Apps = data without cause identification. Practice = drilling the wrong pattern. "I wasn't failing — I was never diagnosed."
-- **Schema violation:** Violates SC-01 (AI-powered), SC-02 (personalized), SC-03 (data-driven) by reframing from TECHNOLOGY to MEDICINE. Zero golf brands have positioned as a diagnostic system.
-- **FSSIT anchor:** "You don't need more tips. You've needed a diagnosis this whole time." (FSSIT-02, momentum-adjusted strength 10/10)
-
-**Marketplace reality check:** "You've never been diagnosed" stops scrolling because it is genuinely unexpected in a golf context. The medical reframe is instantly comprehensible but has never been said in golf marketing. It does not feel like marketing — it feels like someone finally naming what has been wrong. The diagnosis concept is shareable because it is a genuine insight, not a clever tagline. No marketing smell — the language is plain, the claim is verifiable (check any competitor), and the proof is structural.
+**Subhead direction:** TBD — to be determined in headline/creative development.
 
 ---
 
 ## 7. OFFER SUMMARY
 
-**Product:** PG1 Pulse Founders Club Membership
-**Positioning:** "Coaching system — not an app. A diagnosis — not more tips."
-**Offer frame:** "Get your diagnosis" — not "buy an app."
+**Product:** PG1 Smart System Founders Club Membership
+**Positioning:** "One system. Six components. The end of traditional instruction."
+**Offer frame:** ONE system — NOT a value stack. The 6 components work together as a single integrated system.
 
 **Pricing:**
 - **Annual Founders:** $199/year (rate locked permanently)
-- **Lifetime Founders (recommended):** $299 one-time (never pay again, every future feature)
-- **Post-Founders:** Significantly higher (exact public pricing not stated)
+- **Lifetime Founders (recommended):** $399 one-time (never pay again, every future feature)
 
-**Core value stack:**
+**ONE System — 6 Components:**
 
-| Component | Description | Stated Value |
-|-----------|-------------|-------------|
-| SwingScan Diagnosis | AI root flaw identification (2M+ swings, 96% accuracy, 77+ patterns) | $500 |
-| Personalized Correction Plan | Sequenced plan built around YOUR diagnosis | $1,200 |
-| Matched PGA Coach Access | Coach Chat — matched to your flaw type | $2,400 |
-| Adaptive Intelligence System | Tracks progress by diagnosis, adapts plan | $600 |
-| Full Platform Access | Current + every future feature | $1,000 |
-| **Total stated value** | | **$5,700** |
+| # | Component | Role |
+|---|-----------|------|
+| 1 | Personalized Assessment | Entry point — gives the system its first understanding of you |
+| 2 | SwingScan AI | Discovery — finds the root swing flaw |
+| 3 | Your Smart Step | Direction — the one thing to work on right now |
+| 4 | Progress Dashboard | Tracking — adaptive progress by root swing flaw |
+| 5 | Dedicated Coach Access (Smart Match) | Validation — a human who knows your diagnosis |
+| 6 | Drill & Round Tracking | Feedback loop — practice and play feed the system |
 
-**Bonuses (4):**
+**3 Bonuses:**
 
-| Bonus | Description | Value |
-|-------|-------------|-------|
-| The Root Flaw Report | Written analysis of your specific diagnosis | $197 |
-| The Flaw Chain Map | Visual cascade: root flaw to compensations | $97 |
-| Founders Priority Access | First access to every new feature, direct product team line | $500 |
-| The Diagnosis Comparison Guide | Category education: what every approach skips | $47 |
+| Bonus | Description |
+|-------|-------------|
+| 30% Off All PG Products | Permanent discount on the entire PG catalog |
+| VIP New Release Access | Every new PG product launches to Founders first |
+| $500 Transformation Academy Credit | Credit toward PG's premium coaching program |
 
-**Guarantee:** "The Diagnosis Promise" — 60-day conditional + 7-day unconditional stacked. Try PG1 for 60 days. Get your SwingScan Diagnosis. Work through your plan. If the diagnosis does not deliver the clarity promised — every penny back. No hoops. No hassle. Within the first 7 days (free trial), cancel with zero charge.
+**Guarantee:** 365-day guarantee. Try the Smart System for a full year. Not satisfied for any reason — every penny back.
 
 **Scarcity:** 1,000 Founders Club memberships. Real cap. Numbered badge. When 1,000 join, Founders Club closes permanently. Stated matter-of-factly, not weaponized.
 
 **CTA language:**
-- Primary: "Get My Diagnosis"
-- Secondary: "Join the Founders Club"
-- Close: "One root flaw. One plan. One clear path. $299. Once. Forever."
+- Primary: "Join the Founders Club"
+- Secondary: "Get Started"
+- Close: "One flaw. One plan. Improvement becomes inevitable."
 
 ---
 
@@ -210,129 +172,112 @@ Every golf improvement tool the prospect has tried shares one thing in common: t
 **Emotional range:**
 - **Floor:** Honest vulnerability — "I've been where you are. I know what it's like to work hard and go nowhere."
 - **Ceiling:** Earned conviction — "This is the most important thing we've ever built."
-- **Default:** Warm authority — genuinely excited to show you something, confident because the product is real, personal because his own story is woven into why it exists.
+- **Default:** Warm authority — genuinely excited to show you something, confident because the product is real.
 
-**Energy signature:** Insider generosity + earned conviction. The energy is not selling. It is sharing something before it is public because you are important enough to see it first. The urgency comes from genuine belief in what has been built, not from manufactured scarcity.
-
-**Pacing:** Conversational and building. Medium-length sentences, natural cadence — how someone actually talks when they are excited. Paragraphs run 2-4 sentences when building an argument, then drop to single sentences for emphasis moments. Longer passages develop ideas, punctuated by short declarative statements that land the point. Uses questions for engagement. Uses analogies for accessibility (doctor analogy, combination lock, intelligence layer).
+**Energy signature:** Insider generosity + earned conviction. The energy is not selling. It is sharing something before it is public because you are important enough to see it first.
 
 **Anti-voice rules (MANDATORY for all downstream copy):**
-1. **No hard-sell countdown energy** — "Only 3 spots left! Act NOW!" The 1,000-member limit is real but stated matter-of-factly, not weaponized.
-2. **No generic app marketing** — "The #1 golf app" or "Download now and transform your game!" PG1 is a coaching system, not an app.
-3. **No clinical/corporate tech-speak** — "Leveraging proprietary AI algorithms." Technology is described through what it DOES, not how it works under the hood.
-4. **No pain exploitation** — No grinding the golfer's face in their frustration. Acknowledge with empathy, then move to hope.
-5. **No unsubstantiated hype** — No claims that cannot be traced to real data. Every number comes from actual product specs or business metrics.
+1. **No hard-sell countdown energy** — The 1,000-member limit is real but stated matter-of-factly.
+2. **No generic app marketing** — PG1 is a coaching system, not an app.
+3. **No clinical/corporate tech-speak** — Technology described through what it DOES.
+4. **No pain exploitation** — Acknowledge with empathy, then move to hope.
+5. **No unsubstantiated hype** — Every number comes from actual product specs or business metrics.
 
 **Language to USE:**
-- Problem language (from research): "I've tried everything," "my handicap hasn't moved," "15 different instructors," "soul destroying," "overwhelmed"
-- Solution language: "diagnosis," "root flaw," "one thing," "clarity," "plan," "direction"
-- Identity language: "Founders," "first 1,000," "insider," "part of something"
-- Close language: "love your game again," "the search ends here," "one clear path"
+- Problem language: "I've tried everything," "my handicap hasn't moved," "stuck in a cycle," "the Symptom Spiral"
+- Solution language: "root swing flaw," "Smart Step," "one thing," "improvement becomes inevitable"
+- System language: "Smart System," "Smart Path," "Smart Match," "from knowing your name to knowing your game"
+- Identity language: "Founders," "first 1,000," "the end of traditional instruction"
+- Close language: "one flaw, one plan," "play the golf you know you're capable of"
 
 **Language to NEVER USE:**
-- "AI-powered" (SC-01, staleness 9) — say "SwingScan" or describe what it does
-- "Personalized" as lead word (SC-02, staleness 8) — say "built around YOUR diagnosis"
+- "AI-powered" (SC-01, staleness 9) — say "Smart System" or describe what it does
+- "Personalized" as lead word (SC-02, staleness 8) — say "built around YOUR root swing flaw"
 - "Data-driven" (SC-03, staleness 8) — say "trained on 2M+ swings"
-- "Unlock your potential" (EM-04, staleness 7)
-- "Journey" / "game-changer" / "revolutionize"
+- "Unlock your potential" / "Journey" / "Game-changer" / "Revolutionize"
+- "SwingScan Diagnosis" as the mechanism name (old) — mechanism is "PG1 Smart System"
+- "The Undiagnosed Golfer" as Big Idea name (old) — Big Idea is "The End of Traditional Instruction"
 
 ---
 
 ## 9. THREADING ELEMENTS
 
 ### Mechanism Name
-- **Exact text:** "SwingScan Diagnosis"
+- **Exact text:** "PG1 Smart System" (and vocabulary: Smart Step, Smart Path, Smart Match)
 - **Minimum occurrences:** 8
 - **Required sections:** Lead (teaser), Root Cause (bridge), Mechanism (full reveal), Proof, Personalization, Value, Close
 
 ### Root Cause Anchor
-- **Exact text:** "You've never been diagnosed."
+- **Exact text:** "root swing flaw"
+- **Minimum occurrences:** 10
+- **Required sections:** Every section. This is the star.
+
+### Anchor Phrase
+- **Exact text:** "One flaw. One plan."
 - **Minimum occurrences:** 5
-- **Required sections:** Lead, Root Cause, Mechanism, Proof, Close
+- **Required sections:** Lead, Root Cause close, Mechanism, Offer, Final close
 
-### Primary Promise (Short)
-- **Exact text:** "Know your ONE root swing flaw — and have a clear plan to fix it."
-- **Minimum occurrences:** 6 (including variations)
-- **Required sections:** Lead (headline/subhead), Thesis, Mechanism, Value, Close, CTA
+### Primary Promise
+- **Exact text:** "Improvement becomes inevitable."
+- **Minimum occurrences:** 6
+- **Required sections:** Root Cause (binary argument), Mechanism (locked paragraph), Promise, Offer, Close, CTA
 
-### Knockout Proof
-- **Exact text:** "Zero competitors claim root flaw diagnosis."
+### Big Idea Frame
+- **Exact text:** "The End of Traditional Instruction"
 - **Minimum occurrences:** 3
-- **Required sections:** Mechanism (differentiation), Proof (knockout), Close (callback)
-
-### Identity Close
-- **Exact text:** "Love your game again."
-- **Minimum occurrences:** 3
-- **Required sections:** Emotional pivot, Post-mechanism landing, Final close
+- **Required sections:** ATF headline territory, Problem/Root Cause, Close
 
 ### Open Loops
 
-**Loop 1 — "What's YOUR Root Swing Flaw?"**
-- Planted in: Lead ("Let me ask you something nobody in golf has ever asked you. What's YOUR root swing flaw?")
-- Resolved in: Mechanism section (SwingScan Diagnosis identifies it)
-- Purpose: Creates a personal curiosity gap — the prospect cannot answer the question, which means nobody has ever answered it for them
+**Loop 1 — "What Is Your Root Swing Flaw?"**
+- Planted in: Lead
+- Resolved in: Mechanism section (Smart System finds it)
+- Purpose: Personal curiosity gap — the prospect cannot answer the question
 
 **Loop 2 — "Why 70% Don't Improve"**
-- Planted in: Lead / Failure Explanation ("70% of golfers who take lessons don't improve. Here's why.")
-- Resolved in: Root Cause section (treatment-without-diagnosis is the reason)
-- Purpose: Data-driven curiosity. The statistic is surprising enough to demand an explanation.
+- Planted in: Lead / Symptom Spiral section
+- Resolved in: Root Cause section (they were treating symptoms, not the root swing flaw)
 
-**Loop 3 — "The Step Golf Has Always Skipped"**
-- Planted in: Lead / headline territory
-- Resolved in: Mechanism section (the diagnosis IS the missing step)
-- Purpose: Institutional-failure framing that creates curiosity about what the step is
+**Loop 3 — "What the Smart System Knows About You"**
+- Planted in: Mechanism teaser ("from knowing your name to knowing your game")
+- Resolved in: Mechanism full reveal (the adaptive loop)
 
 **Loop 4 — "What Brixton Discovered"**
-- Planted in: Lead or Story section (Brixton was +3, hit a wall, one instructor did something different)
-- Resolved in: Mechanism section (the instructor ran a diagnostic — found the ONE root flaw — Brixton dropped 5 shots)
-- Purpose: Personal story creates emotional investment and models the transformation
+- Planted in: Lead or Story section (Brixton was +3, hit a wall)
+- Resolved in: Mechanism (one instructor found the ONE root flaw — everything changed)
 
 **Loop 5 — "Why the Founders Club Exists"**
-- Planted in: Value section (why would a company offer $5,700 in value for $299?)
-- Resolved in: Access section (trading revenue for proof — first 1,000 build the proof wall)
-- Purpose: Addresses skepticism about price while reinforcing insider identity
+- Planted in: Value section
+- Resolved in: Access section (first 1,000, shape the platform)
 
 ### Recurring Elements
 
-**Element 1: "Diagnosis" / "Diagnosed"**
-- First appearance: Lead headline ("You've Never Been Diagnosed")
-- Recurrence 1: Root Cause section ("treatment without diagnosis")
-- Recurrence 2: Mechanism section ("SwingScan Diagnosis")
-- Recurrence 3: Offer section ("Get your diagnosis")
-- Recurrence 4: Close ("the diagnosis that changes everything")
-- Unity function: The single word that carries the entire campaign. Every recurrence adds a layer of meaning — from problem (never diagnosed) to solution (the diagnosis exists) to action (get your diagnosis).
+**Element 1: "Root swing flaw"**
+- Appears in every section. The single concept that carries the campaign.
 
-**Element 2: "One root flaw"**
-- First appearance: Lead ("your ONE root swing flaw")
-- Recurrence 1: Root Cause ("one flaw creating a cascade of compensations")
-- Recurrence 2: Mechanism ("identifies your ONE root flaw")
-- Recurrence 3: Close ("One flaw. One plan. One clear path.")
-- Unity function: The specificity anchor. Counteracts the scattered "12 different things to work on" experience.
+**Element 2: "One flaw. One plan."**
+- Anchor phrase. Appears in root cause, mechanism, offer, and close.
 
-**Element 3: Medical metaphor**
-- First appearance: Root Cause ("prescription without diagnosis")
-- Recurrence 1: Mechanism ("blood test / X-ray / MRI that golf never had")
-- Recurrence 2: Proof ("AI outperforms dermatologists in 63% of diagnostic studies")
-- Recurrence 3: Guarantee ("The Diagnosis Promise")
-- Unity function: Bridges the unfamiliar (AI swing analysis) to the familiar (medical diagnostic). Makes the concept instantly comprehensible.
+**Element 3: "Improvement becomes inevitable"**
+- Primary promise. Appears in binary argument, locked mechanism paragraph, offer, and close.
 
-**Element 4: Financial waste**
-- First appearance: Failure Explanation ("$900 on Arccos, $1,000 on lessons, 15 instructors")
-- Recurrence 1: Value section ("you've already spent more than $299")
-- Recurrence 2: Close ("the search ends here — permanently")
-- Unity function: Converts sunk cost from regret into value contrast. Positions $299 lifetime as the end of the spending cycle.
+**Element 4: Smart System vocabulary**
+- Smart Step, Smart Path, Smart Match. Appears in mechanism, personalization, offer, and close.
+
+**Element 5: Medical analogy (supporting)**
+- Supports the root swing flaw argument. Does NOT lead. Appears in root cause and mechanism sections as supporting evidence.
 
 ### Transition Rules
 
 | From | To | Type | Guidance |
 |------|----|------|----------|
-| Lead | Failure Explanation (CPB-001) | Bridge | From personal/emotional entry to data-validated frustration. "And here's the thing..." |
-| Failure Explanation (CPB-001) | Root Cause (CPB-002) | Revelation | "So if it's not your fault — then what IS the problem? The answer is something nobody in golf has ever said to you." |
-| Root Cause (CPB-002) | Mechanism (CPB-003) | Pivot | "That's why we built something different. Not another app. A diagnosis. The first one golf has ever had." |
-| Mechanism (CPB-003) | Proof (CPB-004) | Escalation | "Now, I know what you're thinking. Can AI really diagnose a golf swing? Here's what the research says." |
-| Proof (CPB-004) | Personalization (CPB-006) | Elaboration | "So the science is clear. But here's the part that matters most to YOU." |
-| Personalization (CPB-006) | Value (CPB-005) | Contrast | "Now think about what you've already spent trying to fix your game without knowing your root flaw." |
-| Value (CPB-005) | Access (CPB-007) | Escalation | "And for the first 1,000 golfers who want to be part of this..." |
+| Lead | Symptom Spiral (CPB-001) | Bridge | From personal/emotional entry to data-validated frustration. |
+| Symptom Spiral (CPB-001) | Root Swing Flaw (CPB-002) | Revelation | "So what IS the problem? Your root swing flaw." |
+| Root Swing Flaw (CPB-002) | Smart System (CPB-003) | Pivot | "That is why we built the PG1 Smart System." |
+| Smart System (CPB-003) | Proof (CPB-004) | Escalation | "Can a system really do this? Here is what the research says." |
+| Proof (CPB-004) | Personalization (CPB-006) | Elaboration | "The science is clear. But here is what matters most to YOU." |
+| Personalization (CPB-006) | Value (CPB-005) | Contrast | "Now think about what you have already spent chasing symptoms." |
+| Value (CPB-005) | Founders Club (CPB-007) | Escalation | "And for the first 1,000 golfers who want to be part of this..." |
 
 ---
 
@@ -342,17 +287,17 @@ Every golf improvement tool the prospect has tried shares one thing in common: t
 
 | # | Chunk | Section Name | Emotional Beat | Purpose |
 |---|-------|-------------|---------------|---------|
-| 1 | CPB-001 | The Failure Explanation | Vindication | Validate frustration with market-level data. "It's not you. The system is broken." |
-| 2 | CPB-002 | The Root Cause Revelation | Clarity | Reveal the root cause: treatment-without-diagnosis. One root flaw, a cascade of compensations. |
-| 3 | CPB-003 | The Mechanism Reveal | Hope | Introduce SwingScan Diagnosis — the first diagnostic system in golf. Step-by-step sequence. |
-| 4 | CPB-004 | The Proof Stack | Confidence | Human-AI collaboration research, competitive void, Brixton's story, docu-series reference. |
-| 5 | CPB-006 | The Personalization Proof | Control | 77+ patterns, YOUR diagnosis, YOUR plan, YOUR coach. Structured practice outperforms random. |
-| 6 | CPB-005 | The Value Case | Freedom | Financial waste reframe. $299 vs. what you have already spent. Lifetime = end of the search. |
-| 7 | CPB-007 | The Access Question | Belonging | 1,000 Founders, $199/yr or $299 lifetime, 7-day trial, 60-day Diagnosis Promise, 4 bonuses. |
+| 1 | CPB-001 | The Symptom Spiral | Relief | Validate frustration with data. Name the Symptom Spiral. "It's not you." |
+| 2 | CPB-002 | The Root Swing Flaw | Clarity | Reveal the root swing flaw. Deliver the Binary Argument. Establish inevitability. |
+| 3 | CPB-003 | The Smart System | Hope | Introduce the PG1 Smart System — Smart Step, Smart Match, Smart Path. Deliver the locked mechanism paragraph. |
+| 4 | CPB-004 | The Proof Stack | Confidence | Human-AI collaboration, competitive void, Brixton's story, docu-series. |
+| 5 | CPB-006 | The Personalization Proof | Control | Root swing flaw varies by area of game. Ongoing system, not one-time. 77+ patterns. YOUR game. |
+| 6 | CPB-005 | The Value Case | Freedom | Financial waste reframe. $399 vs. what you have already spent on symptoms. |
+| 7 | CPB-007 | The Founders Club | Belonging | 1,000 Founders, $199/yr or $399 lifetime, 365-day guarantee, 3 bonuses. |
 
-**Sequence logic:** Problem then Cause then Solution then Proof then Personal then Value then Access. Validates frustration with data, reveals the root cause, introduces the mechanism, proves it works, makes it personal, reframes the price, opens the door. Value (CPB-005) comes AFTER personalization (CPB-006) because the golfer must believe it works for THEM before price becomes relevant.
+**Sequence logic:** Symptom Spiral → Root Swing Flaw → Smart System → Proof → Personal → Value → Founders Club.
 
-**Emotional arc:** Vindication then Clarity then Hope then Confidence then Control then Freedom then Belonging
+**Emotional arc:** Relief → Clarity → Hope → Confidence → Control → Freedom → Belonging
 
 **Estimated word budget:** 2,000-3,000 words (founders page BTF copy, not including ATF)
 
@@ -360,56 +305,44 @@ Every golf improvement tool the prospect has tried shares one thing in common: t
 
 | Element | Content |
 |---------|---------|
-| Prehead | (If applicable — keynote callback or docu-series reference) |
-| Headline | "You've Never Been Diagnosed" |
-| Subhead | "SwingScan identifies your ONE root swing flaw — the step golf has always skipped." |
-| Proof element | "96% accuracy. 2M+ swings. 77+ flaw patterns." |
-| CTA | "Get My Diagnosis" |
-| Price | "$199/year or $299 lifetime" |
+| Headline territory | "The End of Traditional Instruction" |
+| Subhead territory | TBD |
+| Proof element | "One system. Six components. The smartest path to your best golf." |
+| CTA | "Join the Founders Club" |
+| Price | "$199/year or $399 lifetime" |
 
-**ATF function:** Fast-action buyers who watched the keynote click and buy here. No warm-up needed — the headline IS the promise. The ATF sells the diagnosis. The BTF explains why the diagnosis matters.
+**ATF function:** Fast-action buyers who watched the keynote click and buy here. The ATF sells the end of an era and the beginning of something new.
 
 ### Simple Segue (ATF to BTF)
 
-"What I am about to share with you is the reason nothing you have tried has worked — and the one step that changes everything. It is not another tip. It is not another drill. It is a diagnosis. The first one golf has ever had."
+"What I am about to share with you is the reason nothing you have tried has worked — and the one thing that changes everything. It is not another tip. It is not another drill. It is your root swing flaw. The one movement creating everything else in your swing. Nobody has ever identified it. Until now."
 
 ### SIN Segue (BTF summary before offer)
 
-"You have spent years looking for the right tip, the right instructor, the right app. And your handicap has not moved. Not because you were not trying. Because nobody ever diagnosed your root swing flaw. SwingScan Diagnosis changes that. For the first time in golf, there is a way to identify YOUR specific root flaw — trained on 2M+ swings, with 96% accuracy, across 77+ documented flaw patterns. And then build a correction plan, match you with a coach, and adapt as your flaw resolves. One root flaw. One plan. One clear path. And for the first 1,000 golfers who want to be part of this — we built the Founders Club."
+"You have spent years working on symptoms. Every instructor saw something different. Every tip addressed the wrong thing. The root swing flaw sat underneath, unidentified, creating the Symptom Spiral. The PG1 Smart System ends that spiral. It finds your root swing flaw. Gives you your Smart Step — the one thing to work on right now. Matches you with a coach. Adapts the more you use it. From knowing your name to knowing your game. When you fix your root swing flaw, improvement becomes inevitable. One flaw. One plan. And for the first 1,000 golfers who want to be part of this — the Founders Club is open."
 
 ---
 
 ## 11. COHERENCE AUDIT SUMMARY
 
-**Overall coherence: 8.72/10**
+**Overall coherence: 9.0/10**
 
 | Dimension | Score | Assessment |
 |-----------|-------|-----------|
-| D1: Root Cause to Mechanism | 10 | Perfect alignment. The root cause IS treatment-without-diagnosis. The mechanism IS the diagnosis. Hearing one makes the other inevitable. |
-| D2: Mechanism to Promise | 10 | The promise (know your root flaw) is literally what the mechanism does (diagnose the root flaw). Alignment: 10/10. |
-| D3: Promise to Proof | 7 | Strong mechanism proof (MECH-01 knockout, 9.00). Strong market-level data (DISC-05, DISC-08). GAP: no customer testimonials, no handicap improvement data. Promise stays in CLARITY territory to respect ceiling. |
-| D4: Big Idea to Mechanism | 9 | "The Undiagnosed Golfer" IS the mechanism seen from the audience's perspective. The Big Idea frames the absence; the mechanism fills it. Two sides of one coin. Minor gap: Big Idea earns attention broadly; mechanism delivery narrower (app). |
-| D5: Big Idea to Audience Awareness | 9 | Solution-Aware audience at Stage 3-4. Big Idea meets them at "I've tried solutions" and reframes to "the real solution category (diagnosis) didn't exist." Moves them forward without patronizing. |
-| D6: Villain to Root Cause | 8 | Villain (The Symptom Industry) explains why the root cause persists — the entire industry skipped the diagnostic step. Score is 8 not 10 because the villain is systemic (not a specific entity), which reduces emotional charge slightly. By design — Soul.md requires empathy, not attack. |
-| D7: Offer to Promise | 9 | Every offer component maps to a promise dimension. SwingScan = diagnosis promise. Plan = clarity promise. Coach = personalization promise. Lifetime pricing = end-the-search promise. 4 bonuses each address a specific objection. Score is 9 not 10 because guarantee terms (60-day conditional) require the golfer to engage — slight friction. |
-| D8: Structure to Big Idea | 9 | Prosecution strategy builds the case for "The Undiagnosed Golfer" with data (CPB-001), revelation (CPB-002), mechanism (CPB-003), proof (CPB-004), personalization (CPB-006), value (CPB-005), access (CPB-007). Each chunk advances the Big Idea's narrative. |
-| D9: Lead Direction to Market Psychology | 8 | Revelation/Vindication lead matches the market's emotional state (self-doubt + frustration). Enters the conversation already happening in the prospect's mind. Score is 8 not 10 because the lead assumes the golfer has been actively trying to improve — the 5% Unaware segment would need a different entry. |
-| D10: Story Direction to Proof Assets | 8 | Discovery Story (Brixton's origin) leverages the strongest narrative proof (SOC-02, 8.05) and connects to the mechanism's founding story. Score is 8 not 10 because the strongest PROOF assets are data-driven (DISC-05, DISC-08, MECH-01) rather than story-driven — the data proves more than the narrative does. Story carries emotional weight; data carries logical weight. |
-
-**Weighted overall:** (10+10+7+9) * 1.5 + (9+8+9+9) * 1.0 + (8+8) * 0.75 = 54 + 35 + 12 = 101 / 11.5 = 8.78, rounded to 8.72 with contextual adjustment for proof gaps.
-
-**Structural weaknesses:** 0 (D1 and D2 both score 10 — load-bearing connections are rock-solid)
-**Critical weaknesses:** 0
-**Non-critical weaknesses:** 2
-1. D3 (Promise to Proof) scores 7 due to missing customer testimonials (GAP-01) and no handicap improvement data (GAP-03). Mitigated by keeping promise in CLARITY territory. Will resolve post-launch at 90 days.
-2. Authority category is weakest (42/100) due to unnamed coaches (GAP-02). Must be resolved before page goes live.
+| D1: Root Cause to Mechanism | 10 | The root swing flaw is the root cause. The Smart System finds it. Perfect alignment. |
+| D2: Mechanism to Promise | 10 | "Improvement becomes inevitable" is what happens when the Smart System addresses the root swing flaw. The promise IS the mechanism's outcome. |
+| D3: Promise to Proof | 7 | Strong mechanism proof (MECH-01 knockout). Strong market data (DISC-05, DISC-08). GAP: no customer testimonials yet. Promise stays MODERATE to respect ceiling. |
+| D4: Big Idea to Mechanism | 10 | "The End of Traditional Instruction" (before) → PG1 Smart System (after). The Big Idea frames the binary. The mechanism delivers the after-side. |
+| D5: Big Idea to Audience Awareness | 9 | Solution-Aware audience at Stage 3-4. Big Idea meets them at "I've tried solutions" and reframes to "the solution category (finding the root swing flaw) never existed." |
+| D6: Root Cause to Big Idea | 10 | The root swing flaw was never identified under traditional instruction. The Smart System identifies it. The Big Idea frames this as the line between eras. |
+| D7: Offer to Promise | 9 | Every system component maps to the promise. ONE system with 6 components. 365-day guarantee. Three bonuses. |
+| D8: Structure to Big Idea | 9 | Prosecution strategy builds the case. Each CPB chunk advances the before/after binary. |
 
 **Campaign-blocking issues:** 0
 **Operational items requiring resolution before launch:**
 - GAP-01: Collect Founders testimonials within 30 days of launch
 - GAP-02: Populate coach names, bios, credentials before page goes live
 - GAP-03: Track handicap improvement data from Day 1, publish at 90 days
-- GAP-05: Guarantee terms confirmed as "The Diagnosis Promise" — 60-day conditional + 7-day unconditional
 
 ---
 
@@ -417,67 +350,56 @@ Every golf improvement tool the prospect has tried shares one thing in common: t
 
 ### Lead Type
 
-**Recommended:** Revelation/Vindication Lead
+**Recommended:** Before/After Revelation Lead
 **Confidence:** 9/10
 
-**Rationale:** The audience is Solution-Aware at Stage 3-4 — they have tried multiple solution categories and failed. The dominant latent emotion is self-doubt (GAP-01, increasing momentum). A Revelation/Vindication lead enters the conversation at the golfer's deepest emotional state ("maybe it's me") and immediately externalizes the blame ("it was never you — you were never diagnosed"). This matches the mechanism type (diagnostic/clinical), the Big Idea angle (discovery reframe), and the awareness level (reframing the solution category itself). The FSSIT-01 hook ("You've probably started to wonder if something is wrong with you") is the strongest validated entry point from 1,824 research quotes.
+**Rationale:** The Big Idea is a before/after binary — "The End of Traditional Instruction." The lead opens by drawing the line between eras, then reveals why the before-era failed (the root swing flaw was never identified, the Symptom Spiral), and introduces the after-era (the PG1 Smart System).
 
 **Primary lead seed (LEAD-01, strength 9.0):**
-"Let me ask you something nobody in golf has ever asked you. What's YOUR root swing flaw? Not a swing fault an instructor noticed last Tuesday. Not a number an app spit out. YOUR root swing flaw. The one movement causing everything else. You don't know. And that's not your fault. Because nobody has ever diagnosed it."
+"There are two eras of golf instruction. The one you have been living in — where every instructor treated symptoms, every app showed data without finding the cause, and every tip addressed the wrong thing while the root swing flaw sat underneath, invisible. And the one that starts now."
 
 **Alternative leads:**
-- **LEAD-02: Data Revelation (8.5)** — Opens with USGA handicap stagnation data. Logical entry. Stronger for cold traffic who respond to evidence over emotion. Trade-off: less emotional impact, more intellectual engagement.
-- **LEAD-03: Personal Story Bridge (8.5)** — Opens with Brixton's +3 handicap wall story. Strongest for keynote viewers who already connect with Brixton. Trade-off: requires Brixton as narrator, less transferable to other channels.
-
-**Anti-recommendations:**
-- Direct Offer Lead — wrong for Stage 3-4. Audience has seen offers. Needs reframing before offer.
-- Problem-Agitation Lead — violates Soul.md anti-voice (no pain exploitation). This market does not need more agitation — they are already frustrated.
-- Scientific Lead — too clinical for this voice register. Science supports the mechanism but does not lead the conversation.
+- **LEAD-02: Binary Argument (9.0)** — Opens with the Binary Argument verbatim. Establishes inevitability immediately.
+- **LEAD-03: Personal Story Bridge (8.5)** — Opens with Brixton's +3 handicap story. Strongest for keynote viewers.
 
 ### Story Type
 
 **Recommended:** Discovery Story (Founder Origin)
 **Confidence:** 8/10
 
-**Rationale:** The strongest narrative proof asset is Brixton's personal story (SOC-02, 8.05): a +3 handicap who hit a wall, had one instructor do something different (run a diagnostic, find the ONE root flaw), dropped 5 shots. This story naturally becomes a Discovery Story — "How did we discover that diagnosis was the missing step? Because it happened to our founder first." The story IS the proof: Brixton lived the root cause, experienced the mechanism, and built the product to give every golfer the same experience. The Discovery Story positions SwingScan Diagnosis as inevitable — not a marketing invention, but a real insight from a real experience.
-
-**Alternative story types:**
-- **Revelation Story (7.5)** — Frame the diagnosis gap as a hidden truth the industry missed. Stronger conspiracy energy. Trade-off: risks violating Soul.md anti-voice ("no pain exploitation," insider generosity rather than expose energy).
-- **Proof Story (7.0)** — Lead with the 70% lesson failure stat and handicap stagnation data to prove the problem. Stronger for data-oriented audiences. Trade-off: no emotional anchor without the personal story.
+**Rationale:** Brixton's story naturally becomes a Discovery Story — he lived the root swing flaw, experienced what happens when it is identified, and built the system to give every golfer the same experience.
 
 ### Emotional Arc
 
 | Section | Emotional State | What Creates It |
 |---------|----------------|-----------------|
-| Lead/Opening | Recognition + Self-doubt naming | "You've probably started to wonder if something is wrong with you" (FSSIT-01) |
-| Failure Explanation | Vindication + Relief | "It's not you. 70% don't improve. Your handicap hasn't moved because the system is broken." |
-| Root Cause Revelation | Clarity + Understanding | "Nobody diagnosed you. Every instructor saw a different symptom." |
-| Mechanism Reveal | Hope + Curiosity | "SwingScan Diagnosis. The test golf never had. For the first time..." |
-| Proof Stack | Confidence + Belief | "Zero competitors. 2M+ swings. Human-AI collaboration research." |
-| Personalization | Control + Anticipation | "77+ patterns. YOUR flaw. YOUR plan. YOUR coach." |
-| Value Case | Freedom + Resolution | "$299 vs. everything you've already spent. Once. Forever." |
-| Access/Close | Belonging + Restoration | "First 1,000 Founders. Love your game again." |
+| Lead/Opening | Recognition | "This is the end of one era and the beginning of another" |
+| Symptom Spiral | Relief | "It was not you. It was the Symptom Spiral." |
+| Root Swing Flaw | Clarity | "One flaw. One plan. The binary argument." |
+| Smart System | Hope | "The Smart System finds it. Your Smart Step addresses it." |
+| Proof Stack | Confidence | "Zero competitors. 2M+ swings. Research validation." |
+| Personalization | Control | "Your driver root flaw. Your irons root flaw. Ongoing, not one-time." |
+| Value Case | Freedom | "$399 vs. everything you already spent on symptoms." |
+| Founders Club | Belonging | "First 1,000. 365-day guarantee. The beginning of something new." |
 
-**Tone calibration:** The arc begins in the golfer's darkness (self-doubt) but does not linger there — it immediately moves to vindication. By the mechanism reveal (section 3 of 7), the tone has shifted from problem to possibility. The second half of the argument is entirely forward-looking: proof, personalization, value, belonging. Per Soul.md: "Hope-forward, not pain-driven."
+**Tone calibration:** The arc acknowledges the before-era (frustration, Symptom Spiral) but does not linger. By the Smart System reveal (section 3 of 7), the tone has shifted from problem to possibility. The second half is entirely forward-looking. Per Soul.md: "Hope-forward, not pain-driven."
 
 ---
 
 ## 13. PROOF DEPLOYMENT MAP
 
 ### Lead Proof (ATF / First 30 Seconds)
-1. MECH-01 — Zero competitors claim root flaw diagnosis (9.00)
+1. MECH-01 — Zero competitors identify root swing flaw first (9.00)
 2. DISC-05 — USGA: handicap unchanged 2020-2025 (9.20)
-3. SOC-02 — Brixton's personal story (8.05)
+3. SOC-02 — Brixton's personal root flaw story (8.05)
 
 ### Mechanism Proof (BTF / Middle)
-1. MECH-03 — X-ray / medical diagnosis metaphor (8.15)
-2. MECH-02 — Combination lock analogy (7.50)
-3. DISC-14 — Human-AI collaboration beats either alone (8.20)
-4. DISC-12 — AI outperforms dermatologists in 63% of studies (7.80)
-5. DATA-02/03/04 — 2M+ swings, 96% accuracy, 77+ flaws (7.60-7.90)
+1. MECH-03 — Medical diagnosis analogy — supporting (8.15)
+2. DISC-14 — Human-AI collaboration beats either alone (8.20)
+3. DATA-02/03/04 — 2M+ swings, 96% accuracy, 77+ flaws (7.60-7.90)
 
 ### Close Proof (Offer / CTA)
-1. RR-02 — Lifetime pricing $299 never pay again (8.35)
+1. PRICING — $199/yr or $399 lifetime
 2. DATA-07 — Golfer financial waste quantified (8.35)
 3. DISC-08 — 70% of lesson-takers don't improve (8.80)
 4. SOC-03 — 1,000-member cap (7.35)
@@ -486,182 +408,55 @@ Every golf improvement tool the prospect has tried shares one thing in common: t
 
 | Objection | Primary Proof | Supporting |
 |-----------|--------------|------------|
-| "No app can replace a real coach" | DISC-14 (AI+human beats either), DISC-01 (AI vs human) | AUTH-01 (6 coaches), MECH-05 (hybrid) |
-| "AI apps are just algorithms" | DATA-02 (2M+ swings), DATA-03 (96%), DATA-04 (77+ flaws) | DISC-12 (AI outperforms in 63% of medical studies) |
-| "I've tried everything" | MECH-01 (zero competitors do diagnosis), DISC-08 (70% don't improve) | MECH-03 (X-ray metaphor), SOC-06 (organic root cause language) |
-| "$299 is a lot for an app" | DATA-07 (financial waste: $900 Arccos, $1K lessons) | RR-02 (lifetime pricing), DATA-06 (value anchoring) |
-| "I don't want another subscription" | RR-02 ($299 once, never pay again) | DATA-06 (competitor pricing comparison) |
-| "How is this different from Sportsbox?" | MECH-01 (diagnosis vs data), MECH-06 (positioning map) | DATA-07 (Sportsbox $650/yr quote) |
-| "This won't work for MY swing" | DATA-04 (77+ flaw patterns), SOC-06 (organic root cause) | DISC-01 (AI comprehensiveness > human) |
-| "PG is a content company" | SOC-01 (1.4M golfers), DATA-01 ($5M invested), AUTH-02 (MyFitnessPal dev) | DEMO-01 (docu-series proof) |
+| "No app can replace a real coach" | DISC-14 (AI+human beats either), coaches still coach in Smart Match | AUTH-01 (coaches), MECH-05 (hybrid) |
+| "AI apps are just algorithms" | DATA-02 (2M+ swings), DATA-03 (96%), DATA-04 (77+ flaws) | "Adaptive, not AI-powered" framing |
+| "I've tried everything" | MECH-01 (zero competitors find root swing flaw), DISC-08 (70% don't improve) | Binary Argument (verbatim) |
+| "$399 is a lot for an app" | DATA-07 (financial waste), one system not an app | Comparison anchors |
+| "I don't want another subscription" | $399 once, never pay again | 365-day guarantee |
+| "How is this different?" | MECH-01 (root swing flaw first), Smart System vocabulary | "End of traditional instruction" framing |
+| "This won't work for MY swing" | DATA-04 (77+ patterns), ongoing system not one-time | Root flaw varies by area of game |
 
 ### Proof Gaps Requiring Resolution Before Launch
 
-| Gap | Category | Severity | Resolution |
-|-----|----------|----------|------------|
-| GAP-01 | SOCIAL | CRITICAL | No customer testimonials. Collect from Founders within 30 days. |
-| GAP-02 | AUTHORITY | CRITICAL | 6 coaches unnamed. Populate names, bios, credentials before page goes live. |
-| GAP-03 | SOCIAL | CRITICAL | No handicap improvement data. Track from Day 1. Publish at 90 days. |
-| GAP-04 | DEMO | HIGH | No SwingScan before/after demo. Create video walkthrough of diagnosis flow. |
-| GAP-05 | RISK REV | RESOLVED | Guarantee defined: "The Diagnosis Promise" — 60-day conditional. |
+| Gap | Description | Resolution Timeline |
+|-----|-------------|-------------------|
+| GAP-01 | No customer testimonials | Collect within 30 days of Founders launch |
+| GAP-02 | Coach names and credentials not populated | Must resolve before page goes live |
+| GAP-03 | No handicap improvement data | Track from Day 1, publish at 90 days |
 
 ---
 
-## 14. HEADLINE SEEDS AND LEAD ANGLES
+## 14. LOCKED DECISIONS — COMPLETE LIST
 
-### Top Headlines (Ranked by Strength)
+All 7 checkpoints reviewed and locked by human on 2026-03-17.
 
-| # | Headline | Type | Strength |
-|---|----------|------|----------|
-| 1 | "You've Never Been Diagnosed" | Revelation | 9.5 |
-| 2 | "The Step Golf Has Always Skipped" | Discovery | 9.0 |
-| 3 | "Every Lesson Was a Prescription. Nobody Ever Ran the Test." | Reframe | 9.0 |
-| 4 | "You Don't Need More Tips. You've Needed a Diagnosis This Whole Time." | FSSIT Direct | 9.0 |
-| 5 | "70% of Golfers Who Take Lessons Don't Improve. Here's Why." | Data Hook | 8.5 |
-| 6 | "One Root Flaw. A Dozen Compensations. Zero Diagnoses. Until Now." | Mechanism Reveal | 8.5 |
-| 7 | "What If the Problem Was Never Your Swing — But That Nobody Diagnosed It?" | Question Hook | 8.5 |
-| 8 | "Every Instructor You've Seen Identified A Flaw. Nobody Identified THE Flaw." | Distinction | 8.5 |
-| 9 | "The First Diagnosis in Golf" | Category Creation | 8.0 |
-| 10 | "The Test Golf Never Had" | Category Creation | 8.0 |
+**Checkpoint 1 — Root Cause:** The root swing flaw IS the root cause. Symptom Spiral is explanation. Diagnosis is supporting analogy. Root swing flaw is the STAR.
 
-### Lead Angle Options
+**Checkpoint 2 — Expression:** Three-part + Binary Argument (LOCKED VERBATIM). Anchor phrase: "One flaw. One plan."
 
-| Angle | Entry Emotion | Best For | FSSIT |
-|-------|-------------|----------|-------|
-| Self-blame vindication | Self-doubt to relief | Warm audience (post-keynote) | FSSIT-01 |
-| Medical reframe | Confusion to clarity | All audiences | FSSIT-02 |
-| Failure explanation | Frustration to understanding | Data-oriented audiences | FSSIT-05 |
-| Anti-overload | Overwhelm to simplicity | YouTube/content-fatigued | FSSIT-06 |
-| The Confession | Trust to hope | Docu-series viewers | FSSIT-07 |
+**Checkpoint 3-4 — Mechanism:** PG1 Smart System (whole system, not just SwingScan AI). Vocabulary: Smart Step, Smart Path, Smart Match. The loop. Adaptive, not AI-powered. "From knowing your name to knowing your game." Root swing flaw varies by area of game. Locked mechanism paragraph (verbatim). Signal vs. noise = single beat only.
+
+**Checkpoint 5 — Promise:** "Improvement becomes inevitable." Supporting: play the golf you know you're capable of / the smartest path to your best golf / stop the spiral / from knowing your name to knowing your game. Promise ceiling moderate.
+
+**Checkpoint 6 — Big Idea:** "The End of Traditional Instruction." Before/after binary. NOT anti-instruction — anti-TRADITIONAL-instruction. PG coaches still coach, with a diagnosis. Subhead TBD.
+
+**Checkpoint 7 — Offer:** $199/yr or $399 lifetime. 1,000 Founders Club. 365-day guarantee. 3 bonuses (30% off PG products, VIP new release access, $500 Transformation Academy credit). ONE system with 6 components (not a value stack).
 
 ---
 
-## 15. DOWNSTREAM INSTRUCTIONS
+## 15. CHANGE LOG FROM V1.0
 
-### For E-Commerce (EC-00 through EC-06)
-
-**Page type:** Founders Launch Page — hybrid ATF fast-action + BTF complete argument.
-
-**ATF instructions:**
-- Headline: "You've Never Been Diagnosed" (or A/B test with "The Step Golf Has Always Skipped")
-- Subhead: "SwingScan identifies your ONE root swing flaw — the step golf has always skipped."
-- Proof element: "96% accuracy. 2M+ swings. 77+ flaw patterns."
-- CTA: "Get My Diagnosis" — $199/year or $299 lifetime
-- Keynote video embed (optional — for visitors arriving without having watched)
-- Design reference: clean, premium (Apple/product-launch energy, not DR/VSL energy)
-
-**BTF instructions:**
-- Follow the 7-chunk CPB sequence exactly as specified in Section 10
-- Use connectors between chunks (see structure-package.yaml)
-- Each section must be scannable as a standalone block (headers, short paragraphs, proof callouts)
-- No competitor brand names — use category descriptors ("tracking apps," "coaching marketplaces," "generic AI tips")
-- Proof elements mapped per chunk (see structure-package.yaml)
-- Include docu-series video reference points where appropriate
-- End with full offer presentation (CPB-007) followed by SIN segue and final CTA
-
-**Design notes:**
-- Counter showing Founders spots remaining (real number)
-- Two pricing options presented clearly ($199/yr and $299 lifetime — lifetime recommended)
-- Coach section (REQUIRES GAP-02 resolution — named coaches with photos and credentials)
-- UGC/testimonial carousel placeholder (REQUIRES GAP-01 resolution — Founders testimonials)
-- "Celebrity/Influencer PG1 Users" section placeholder (Alonzo Mourning, others)
-- Numbered Founders badge visualization
-
-### For Long-Form Copy (VSL / Keynote)
-
-The keynote script already exists and is structurally strong. The campaign brief validates and reinforces the keynote's argument. Any keynote revisions should align with:
-- Root cause anchor: "You've never been diagnosed"
-- Mechanism name: "SwingScan Diagnosis"
-- Primary promise: "Know your ONE root swing flaw"
-- Emotional close: "Love your game again"
-- Voice: Brixton as founder, insider-to-insider
-
-### For Ads
-
-**Primary ad angles (from research + brief):**
-1. "You've never been diagnosed" — revelation hook (cold + warm)
-2. "70% of golfers who take lessons don't improve" — data hook (cold)
-3. "Every instructor identified A flaw. Nobody identified THE flaw." — distinction hook (cold)
-4. "The step golf has always skipped" — curiosity hook (cold)
-5. Brixton's personal story — testimonial/founder hook (warm)
-
-**Constraints for ads:**
-- No results claims (no handicap drops, no speed promises)
-- No "guaranteed improvement" language
-- No competitor brand names
-- Avoid "before/after" implication (Facebook/Meta restriction)
-- Promise is CLARITY, not IMPROVEMENT
-- FTC compliant — all claims are product-feature, not results
-
-### For Email
-
-**Suggested 5-email sequence:**
-
-| # | Subject Line | Content | Emotional Beat |
-|---|-------------|---------|---------------|
-| 1 | "You've never been diagnosed" | Big Idea introduction — the diagnosis reframe | Recognition + Vindication |
-| 2 | "The step golf has always skipped" | Root cause + why nothing has worked | Clarity |
-| 3 | "What nobody in golf has ever asked you" | Mechanism reveal — SwingScan Diagnosis | Hope |
-| 4 | "One root flaw. That's all it takes." | Proof + personalization | Confidence + Control |
-| 5 | "The first 1,000" | Offer + Founders identity + close | Belonging + Restoration |
-
-**Email voice:** Brixton. Insider-to-insider. Each email should feel like a personal message, not a marketing blast. Short paragraphs. Conversational. One idea per email. CTA in every email after #2.
-
-### For Organic Content / Docu-Series
-
-The docu-series content (6 pieces) builds belief layers that the Founders page captures. Each docu-series piece feeds a specific section of the campaign brief:
-
-| Docu-Series Piece | Brief Section Fed | Belief Layer |
-|-------------------|------------------|-------------|
-| "The Confession" | Root Cause (CPB-002) | Honesty / Vulnerability |
-| "The War Room" | Proof (CPB-004) | Behind-the-scenes / Real stakes |
-| "The $3 Million Bet" | Proof (CPB-004) | Investment / Technical credibility |
-| "The Coaches" | Personalization (CPB-006) | Coaching quality / Exclusive access |
-| "Breakthrough on Hole 7" | Mechanism (CPB-003) | Product in action / Authenticity |
-| "72 Hours" | Access (CPB-007) | Urgency / Anticipation |
-
----
-
-## 16. CONSTRAINTS AND COMPLIANCE
-
-### Locked Decisions (Do NOT Modify Without Human Override)
-- Root cause: "You've never been diagnosed" — treatment-without-diagnosis
-- Mechanism: SwingScan Diagnosis (8.62 weighted average)
-- Primary promise: "Know your ONE root swing flaw — and have a clear plan to fix it" (8.6)
-- Big Idea: "The Undiagnosed Golfer" — "You've never been diagnosed — and that's why nothing has worked" (8.4)
-- Campaign thesis: "The ONLY way to finally stop guessing and start improving is with SwingScan Diagnosis"
-- Offer: $199/yr or $299 lifetime, 1,000 Founders, 4 bonuses, "The Diagnosis Promise" 60-day guarantee
-- Structure: 7 CPB chunks (Failure Explanation, Root Cause, Mechanism, Proof, Personalization, Value, Access)
-- CTA: "Get My Diagnosis" / "Join the Founders Club"
-- Voice: Brixton as founder, insider-to-insider, earned conviction + insider generosity
-
-### Pending Decisions (Require Human Input)
-- GAP-02: Coach names and credentials (must be populated before page goes live)
-- Price confirmation: $199/yr + $299 lifetime validated in research, but $399 lifetime was Brixton's recommendation — may need A/B testing
-- Celebrity/influencer section content (Alonzo Mourning, others — names and assets needed)
-- Docu-series integration points on Founders page (embed locations, format)
-
-### Promise Ceiling Rules (MANDATORY)
-- Promise is CLARITY, not IMPROVEMENT
-- No handicap improvement claims until 90-day Founders data
-- No speed claims ("improve in X weeks")
-- No comparison claims ("better than lessons")
-- No guaranteed improvement language
-- All claims traceable to proof inventory elements
-- 96% accuracy claim requires internal methodology documentation
-
----
-
-## BRIEF STATUS: READY FOR HUMAN REVIEW
-
-This campaign brief synthesizes all 8 upstream skill packages (Research, Proof Inventory, Root Cause, Mechanism, Promise, Big Idea, Offer, Structure) plus Soul.md and the project brief into a single deployment-ready document. Every element is sourced from verified upstream outputs. No placeholder text. All threading elements documented with exact text and occurrence targets. All constraints and compliance requirements specified.
-
-**Coherence score:** 8.72/10 (exceeds 7.0 minimum threshold)
-**Structural failures:** 0
-**Campaign-blocking issues:** 0
-
-**Next step:** Human review and approval. Once approved, this brief unlocks all downstream execution: E-Comm (EC-00 through EC-06), Ads, Email Sequences, and Organic Content.
-
----
-
-*Generated by Skill 09-campaign-brief v1.1 | Marketing-OS | 2026-03-16*
+| Element | V1.0 (Old) | V5.0 (Current — Locked) |
+|---------|-----------|------------------------|
+| Root cause name | "The Undiagnosed Golfer" / treatment-without-diagnosis | The root swing flaw (star of campaign) |
+| Root cause explanation | Diagnosis as headline | Symptom Spiral (explanation), diagnosis (supporting analogy) |
+| Mechanism | SwingScan Diagnosis | PG1 Smart System (whole system) |
+| Mechanism vocabulary | "your SwingScan" / "your diagnosis" | Smart Step, Smart Path, Smart Match |
+| Primary promise | "Know your ONE root swing flaw" | "Improvement becomes inevitable" |
+| Big Idea | "The Undiagnosed Golfer" (discovery_reframe) | "The End of Traditional Instruction" (before/after binary) |
+| Pricing | $199/yr or $299 lifetime | $199/yr or $399 lifetime |
+| Guarantee | 60-day Diagnosis Promise | 365-day guarantee |
+| Bonuses | Root Flaw Report, Flaw Chain Map, Founders Priority Access, Diagnosis Comparison Guide | 30% off PG products, VIP new release access, $500 Transformation Academy credit |
+| Offer structure | Value stack with dollar amounts | ONE system with 6 components (not a value stack) |
+| Product name | PG1 Pulse | PG1 Smart System |
+| Campaign thesis anchor | "You've never been diagnosed" | "One flaw. One plan." |

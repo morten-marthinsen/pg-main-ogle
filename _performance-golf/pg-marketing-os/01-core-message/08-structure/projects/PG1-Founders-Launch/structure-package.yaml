@@ -1,33 +1,37 @@
 structure_package:
   metadata:
-    version: "1.0"
+    version: "5.0"
     skill: "08-structure"
-    generated: "2026-03-16"
+    generated: "2026-03-17"
+    updated_by: "Human review — 7 checkpoints locked"
     project: "PG1-Founders-Launch"
-    product: "PG1 Pulse — Founders Club"
+    product: "PG1 Smart System — Founders Club"
     niche: "golf"
-    sub_niche: "personalized game improvement / AI coaching"
+    sub_niche: "personalized game improvement / adaptive coaching system"
     schwartz_stage: 4
 
   campaign_thesis:
     statement: >
-      The ONLY way to finally stop guessing and start improving is with
-      SwingScan Diagnosis — the first system in golf that identifies your
-      ONE root swing flaw before prescribing a single fix.
+      When the PG1 Smart System finds your root swing flaw and you start
+      working on your Smart Step — improvement becomes inevitable.
     mechanism_connection: >
-      SwingScan Diagnosis IS the mechanism — the first diagnostic system
-      in golf. It identifies the root flaw (trained on 2M+ swings, 96%
-      accuracy, 77+ patterns) then builds a plan, assigns a coach, and
-      adapts. The mechanism directly delivers the thesis.
+      The PG1 Smart System IS the mechanism — the first complete system in
+      golf that identifies the root swing flaw, gives the golfer one thing
+      to work on right now (Smart Step), matches them with a coach (Smart
+      Match), sequences their path (Smart Path), and adapts as the game
+      improves. The mechanism directly delivers the thesis.
     promise_connection: >
-      "Finally stop guessing and start improving" captures the primary
-      promise (clarity + directed effort) without overclaiming results.
-      The promise is CLARITY, not IMPROVEMENT.
+      "Improvement becomes inevitable" captures the primary promise — tied
+      to the conditional that the root swing flaw must be addressed. The
+      promise is MODERATE — lead with system/diagnosis, not specific results.
     root_cause_connection: >
-      "Before prescribing a single fix" exposes the root cause — the
-      entire industry prescribes treatment without diagnosis. The thesis
-      indicts the current system while presenting the mechanism as the
-      answer.
+      The root swing flaw is the STAR. The Symptom Spiral explains what
+      happens when it goes unidentified. The binary argument establishes
+      inevitability. The Smart System is the answer.
+    big_idea_connection: >
+      "The End of Traditional Instruction" is the before/after binary. Before:
+      treatment without diagnosis, the Symptom Spiral. After: the PG1 Smart
+      System, root swing flaw found, improvement inevitable.
     thesis_type: "root_cause_discovery"
     single_sentence_test: true
 
@@ -35,8 +39,9 @@ structure_package:
     type: "prosecution"
     sophistication_adjustment: >
       Late Stage 3 / Early Stage 4 — root cause discovery thesis leads,
-      prosecution builds evidence. Mechanism uniqueness (zero competitors)
-      earns Stage 4 attention. Identity layer (Founders) wraps Stage 5.
+      prosecution builds evidence. Big Idea frames the before/after binary.
+      Mechanism uniqueness (zero competitors) earns Stage 4 attention.
+      Identity layer (Founders) wraps Stage 5.
     emphasis_distribution:
       mechanism_proof_pct: 35
       result_proof_pct: 15
@@ -44,13 +49,13 @@ structure_package:
       speed_proof_pct: 5
       safety_proof_pct: 30
     primary_gap_sequence:
-      - "GAP-001: Why has nothing worked?"
-      - "GAP-002: What is really going on?"
-      - "GAP-003: Is there a way to identify my root flaw?"
-      - "GAP-004/005: Can AI do this? How is this different?"
-      - "GAP-007: Will this work for MY swing?"
-      - "GAP-006: Is this worth $299?"
-      - "GAP-008: How can I get started?"
+      - "GAP-001: Why has nothing worked? (The Symptom Spiral)"
+      - "GAP-002: What is my root swing flaw?"
+      - "GAP-003: How does the Smart System find it?"
+      - "GAP-004/005: Can this system really work? How is it different?"
+      - "GAP-007: Will this work for MY game?"
+      - "GAP-006: Is this worth $199/yr or $399?"
+      - "GAP-008: How do I join?"
     argument_density: "moderate"
 
   prospect_gap_map:
@@ -63,19 +68,19 @@ structure_package:
         assigned_chunk: "CPB-001"
 
       - gap_id: "GAP-002"
-        question: "What is really going on with my swing that nobody has been able to fix?"
+        question: "What is really going on with my swing that nobody has fixed?"
         gap_type: "mechanism"
         priority: "critical"
         assigned_chunk: "CPB-002"
 
       - gap_id: "GAP-003"
-        question: "Is there actually a way to identify my specific root flaw?"
+        question: "How does the PG1 Smart System find my root swing flaw?"
         gap_type: "mechanism"
         priority: "critical"
         assigned_chunk: "CPB-003"
 
       - gap_id: "GAP-004"
-        question: "Can AI really diagnose my swing better than a human instructor?"
+        question: "Can this system really deliver on this promise?"
         gap_type: "superiority"
         priority: "critical"
         assigned_chunk: "CPB-004"
@@ -87,391 +92,276 @@ structure_package:
         assigned_chunk: "CPB-004"
 
       - gap_id: "GAP-006"
-        question: "Is this worth $299 when I have already spent so much?"
+        question: "Is this worth $199/yr or $399 when I have already spent so much?"
         gap_type: "safety"
         priority: "important"
         assigned_chunk: "CPB-005"
 
       - gap_id: "GAP-007"
-        question: "Will this work for MY specific swing issues?"
+        question: "Will this work for MY specific game?"
         gap_type: "personalization"
         priority: "supporting"
         assigned_chunk: "CPB-006"
 
       - gap_id: "GAP-008"
-        question: "How can I get started?"
+        question: "How do I join the Founders Club?"
         gap_type: "access"
         priority: "supporting"
         assigned_chunk: "CPB-007"
 
   cpb_chunks:
     - chunk_id: "CPB-001"
-      name: "The Failure Explanation"
+      name: "The Symptom Spiral"
       gap_question: "Why has nothing I have tried actually worked?"
       gap_id: "GAP-001"
       position: 1
       claim:
         statement: >
-          70% of golfers who take lessons do not improve — and the average
-          American golfer's handicap has not changed from 2020 to 2025 —
-          because the entire golf improvement industry prescribes treatment
-          without first diagnosing the golfer's root swing flaw.
+          70% of golfers who take lessons do not improve — because every lesson
+          treated symptoms while the root swing flaw sat underneath, unidentified.
+          That is the Symptom Spiral: working on the wrong thing, watching symptoms
+          multiply, compensating, spiraling deeper.
         claim_type: "factual"
         specificity_score: 9
         defensibility_score: 9
-        opinion_test: "pass"
       proof_elements:
         - proof_id: "DISC-05"
           proof_type: "statistic"
-          content_summary: "USGA 2025 Golf Scorecard: men's handicap 14.2 to 14.0 to 14.2 to 14.0 (2020-2025)"
+          content_summary: "USGA 2025 Golf Scorecard: men's handicap unchanged 2020-2025"
           proof_strength: 9
-          source_inventory_id: "DISC-05"
         - proof_id: "DISC-08"
           proof_type: "authority"
           content_summary: "Bobby Clampett (GolfWRX): 70% of golfers who take lessons do not improve"
           proof_strength: 9
-          source_inventory_id: "DISC-08"
         - proof_id: "DATA-07"
           proof_type: "statistic"
           content_summary: "Golfer financial waste: $900 Arccos, $1K+ lessons, 15 instructors"
           proof_strength: 8
-          source_inventory_id: "DATA-07"
-        - proof_id: "AUTH-06"
-          proof_type: "authority"
-          content_summary: "Jon Sherman: No chance for meaningful changes with 15 different instructors"
-          proof_strength: 7
-          source_inventory_id: "AUTH-06"
-        - proof_id: "DATA-08"
-          proof_type: "reason_why"
-          content_summary: "Average handicap unchanged despite explosion of technology and instruction"
-          proof_strength: 7
-          source_inventory_id: "DATA-08"
       benefit:
-        functional: "You understand why lessons, apps, and tips have not moved your handicap — the diagnostic step was always missing."
-        dimensionalized: "Every dollar spent on lessons that treated symptoms, every hour drilling the wrong fix, every new instructor — it all makes sense now. You were being treated without being diagnosed."
-        emotional: "Relief. The weight of self-doubt lifts. It was never you. It was a system problem — and the system just changed."
-        benefit_clarity_score: 9
-      chunk_coherence_score: 9
+        functional: "You understand why nothing worked — the root swing flaw was never identified. You were stuck in the Symptom Spiral."
+        dimensionalized: "Every instructor saw a different symptom. Every tip addressed the wrong thing. Every drill treated a compensation. The root flaw sat underneath, creating all of it."
+        emotional: "Relief. It was never you. It was the Symptom Spiral — and it is about to end."
 
     - chunk_id: "CPB-002"
-      name: "The Root Cause Revelation"
-      gap_question: "What is really going on that nobody has been able to fix?"
+      name: "The Root Swing Flaw"
+      gap_question: "What is really going on that nobody has fixed?"
       gap_id: "GAP-002"
       position: 2
       claim:
         statement: >
-          Every golfer has ONE root swing flaw — a single movement creating
-          a cascade of compensations — and every instructor identified a
-          different symptom because the root flaw sits underneath, invisible
-          to the human eye at full speed.
+          Every golfer has three to five swing flaws, but only ONE root swing
+          flaw — the single movement creating all the others. Nobody has identified
+          yours. That is why you have been stuck. When you fix your root swing
+          flaw, improvement becomes inevitable.
         claim_type: "reframed"
-        specificity_score: 8
+        specificity_score: 9
         defensibility_score: 8
-        opinion_test: "pass"
       proof_elements:
-        - proof_id: "MECH-04"
-          proof_type: "reason_why"
-          content_summary: "5 root cause-to-mechanism clusters identified in research"
-          proof_strength: 8
-          source_inventory_id: "MECH-04"
-        - proof_id: "AUTH-05"
-          proof_type: "authority"
-          content_summary: "Teaching pro: If you are not diagnosing the cause, you can make things worse"
-          proof_strength: 7
-          source_inventory_id: "AUTH-05"
+        - proof_id: "BINARY-ARGUMENT"
+          proof_type: "logic_flow"
+          content_summary: "The Binary Argument (LOCKED VERBATIM) — establishes inevitability"
+          proof_strength: 9
         - proof_id: "SOC-06"
           proof_type: "example"
-          content_summary: "Golfers organically using root cause language 20+ times across forums"
+          content_summary: "Golfers organically using root cause language 240+ times across forums"
           proof_strength: 8
-          source_inventory_id: "SOC-06"
         - proof_id: "MECH-03"
           proof_type: "logic_flow"
-          content_summary: "X-ray / medical diagnosis metaphor — organic from golfer vocabulary"
+          content_summary: "Medical diagnosis analogy — supporting, not headline"
           proof_strength: 8
-          source_inventory_id: "MECH-03"
-        - proof_id: "DISC-09"
-          proof_type: "study"
-          content_summary: "Motor learning: targeted practice outperforms random practice for retention"
-          proof_strength: 7
-          source_inventory_id: "DISC-09"
       benefit:
-        functional: "You learn that one root flaw creates a cascade of compensations — every instructor saw a different compensation."
-        dimensionalized: "That slice? A compensation. The early extension? Same root flaw. The inconsistent contact? Same root flaw, different symptom. Fix the root, compensations dissolve."
-        emotional: "Clarity. The tangled mess of contradictory advice untangles into a single thread."
-        benefit_clarity_score: 9
-      chunk_coherence_score: 9
+        functional: "You learn that one root flaw creates everything else. Fix the root, compensations dissolve."
+        dimensionalized: "That slice? A compensation. The early extension? Same root flaw. The inconsistent contact? Same root flaw, different symptom."
+        emotional: "Clarity. The tangled mess of contradictory advice untangles into a single thread — one flaw, one plan."
 
     - chunk_id: "CPB-003"
-      name: "The Mechanism Reveal"
-      gap_question: "Is there actually a way to identify my specific root flaw?"
+      name: "The Smart System"
+      gap_question: "How does the PG1 Smart System find my root swing flaw?"
       gap_id: "GAP-003"
       position: 3
       claim:
         statement: >
-          SwingScan Diagnosis is the first and only system in golf that
-          identifies a golfer's single root swing flaw before prescribing
-          treatment — trained on 2M+ swings, with 96% accuracy across
-          77+ documented flaw patterns.
+          The PG1 Smart System discovers your root swing flaw, gives you your
+          Smart Step (the one thing to work on right now), matches you with a
+          coach (Smart Match), sequences your improvement plan (Smart Path), and
+          adapts the more you use it. From knowing your name to knowing your game.
         claim_type: "factual"
         specificity_score: 10
         defensibility_score: 9
-        opinion_test: "pass"
       proof_elements:
         - proof_id: "MECH-01"
           proof_type: "demonstration"
-          content_summary: "ZERO of 9 competitors claim root flaw diagnosis — competitive void is total"
+          content_summary: "ZERO of 9 competitors identify root swing flaw first — competitive void"
           proof_strength: 9
-          source_inventory_id: "MECH-01"
-        - proof_id: "DATA-02"
+        - proof_id: "DATA-02/03/04"
           proof_type: "statistic"
-          content_summary: "2M+ swings in SwingScan AI training data"
+          content_summary: "2M+ swings, 96% accuracy, 77+ flaw patterns"
           proof_strength: 8
-          source_inventory_id: "DATA-02"
-        - proof_id: "DATA-03"
-          proof_type: "statistic"
-          content_summary: "96% accuracy identifying swing flaws"
-          proof_strength: 8
-          source_inventory_id: "DATA-03"
-        - proof_id: "DATA-04"
-          proof_type: "statistic"
-          content_summary: "77+ swing flaw patterns documented and identified"
-          proof_strength: 8
-          source_inventory_id: "DATA-04"
-        - proof_id: "MECH-02"
-          proof_type: "reason_why"
-          content_summary: "Combination lock analogy: 4 of 5 numbers right still means locked"
-          proof_strength: 8
-          source_inventory_id: "MECH-02"
         - proof_id: "SOC-02"
           proof_type: "before_after"
-          content_summary: "Brixton: +3 HCP, hit wall, instructor found ONE root flaw, dropped 5 shots"
+          content_summary: "Brixton: +3 HCP, hit wall, one root flaw found, dropped 5 shots"
           proof_strength: 8
-          source_inventory_id: "SOC-02"
       benefit:
-        functional: "SwingScan identifies your ONE root flaw with 96% accuracy, builds a correction plan, assigns a matched coach."
-        dimensionalized: "Film your swing with your phone. SwingScan reads what the human eye cannot at full speed. Not generic drills — YOUR drills, for YOUR flaw."
-        emotional: "Hope. For the first time, you know exactly what is wrong. Not a guess. A diagnosis."
-        benefit_clarity_score: 9
-      chunk_coherence_score: 9
+        functional: "The Smart System finds your root swing flaw and gives you one thing to work on right now."
+        dimensionalized: "Not 12 things. One. Your Smart Step — the single correction that makes the biggest difference right now. Updated as your flaw resolves."
+        emotional: "Hope. For the first time, the system knows your game. Not your name. Your game."
+      locked_paragraph: >
+        MUST INCLUDE — the locked mechanism paragraph (verbatim):
+        "When the Smart System finds your root swing flaw and you start
+        working on your Smart Step, improvement becomes inevitable. The swing
+        thought that's been haunting you for months quiets down. Shots you
+        couldn't hit last week start landing. That breakthrough — the one
+        where your game starts to feel like a different game — that's the
+        moment everything changes. And it's just the beginning. Because once
+        that root swing flaw is addressed, the Smart System identifies your
+        next biggest opportunity for improvement. Then the next. Each one
+        builds on the last. For as long as you want to play this game, the
+        Smart System is finding the one thing that will make the biggest
+        difference right now. That's not a 30-day program. That's a lifetime
+        of good golf."
 
     - chunk_id: "CPB-004"
       name: "The Proof Stack"
-      gap_question: "Can AI really do this? How is this different?"
+      gap_question: "Can this system really do this? How is it different?"
       gap_id: "GAP-004"
       position: 4
       claim:
         statement: >
-          Human-AI collaboration outperforms either humans or AI alone in
-          diagnostic tasks — and SwingScan Diagnosis combines AI precision
-          with human coaching wisdom in a combination no competitor offers.
+          The PG1 Smart System combines AI diagnostic precision with human
+          coaching wisdom — a combination no competitor offers. Human-AI
+          collaboration outperforms either alone in diagnostic tasks.
         claim_type: "factual"
         specificity_score: 8
         defensibility_score: 8
-        opinion_test: "pass"
       proof_elements:
         - proof_id: "DISC-14"
           proof_type: "study"
           content_summary: "Human-AI collaboration outperforms either alone — multiple systematic reviews"
           proof_strength: 8
-          source_inventory_id: "DISC-14"
         - proof_id: "DISC-12"
           proof_type: "study"
           content_summary: "AI outperforms dermatologists in 63% of diagnostic studies"
           proof_strength: 8
-          source_inventory_id: "DISC-12"
-        - proof_id: "DISC-01"
-          proof_type: "study"
-          content_summary: "AI feedback 4.08 vs human 4.42; AI wins comprehensiveness"
-          proof_strength: 8
-          source_inventory_id: "DISC-01"
         - proof_id: "MECH-05"
           proof_type: "reason_why"
           content_summary: "AI + human coaching hybrid — no competitor combines both"
           proof_strength: 7
-          source_inventory_id: "MECH-05"
-        - proof_id: "MECH-06"
-          proof_type: "demonstration"
-          content_summary: "Positioning map — PG1 alone in high-personalization + high-tech quadrant"
-          proof_strength: 8
-          source_inventory_id: "MECH-06"
         - proof_id: "DEMO-01"
           proof_type: "demonstration"
           content_summary: "Docu-series — 6 belief-layer content pieces showing product being built"
           proof_strength: 8
-          source_inventory_id: "DEMO-01"
       benefit:
         functional: "The hybrid approach is validated by research and no competitor offers it."
-        dimensionalized: "SwingScan sees what your instructor cannot. Your coach understands what the AI cannot. You get both."
-        emotional: "Confidence. The system is built on evidence, not claims."
-        benefit_clarity_score: 8
-      chunk_coherence_score: 8
+        dimensionalized: "SwingScan sees what your instructor cannot at full speed. Your coach understands what the AI cannot. The Smart System gives you both."
+        emotional: "Confidence. This is built on evidence, not claims."
 
     - chunk_id: "CPB-005"
       name: "The Value Case"
-      gap_question: "Is this worth $299 when I have already spent so much?"
+      gap_question: "Is this worth $199/yr or $399 when I have already spent so much?"
       gap_id: "GAP-006"
       position: 6
       claim:
         statement: >
-          The average golfer has already spent more than $299 on lessons,
-          apps, and training aids that treated symptoms without diagnosing
-          the cause — and $299 once, never pay again, replaces that entire
-          cycle permanently.
+          $399 once — never pay again — replaces the entire cycle of lessons,
+          apps, and training aids that treated symptoms without ever finding the
+          root swing flaw. The average golfer has already spent more than $399 on
+          treatments that never addressed the root cause.
         claim_type: "specific"
         specificity_score: 9
         defensibility_score: 8
-        opinion_test: "pass"
       proof_elements:
         - proof_id: "DATA-07"
           proof_type: "statistic"
           content_summary: "Financial waste: $900 Arccos, $1K+ lessons, 15 different instructors"
           proof_strength: 8
-          source_inventory_id: "DATA-07"
-        - proof_id: "RR-02"
+        - proof_id: "PRICING"
           proof_type: "demonstration"
-          content_summary: "$299 lifetime, never pay again — the price structure IS the proof"
+          content_summary: "$199/yr or $399 lifetime — the price structure IS the proof"
           proof_strength: 8
-          source_inventory_id: "RR-02"
         - proof_id: "DATA-06"
           proof_type: "statistic"
           content_summary: "Value anchoring: lessons $150-350/session, TrackMan $20K"
           proof_strength: 7
-          source_inventory_id: "DATA-06"
-        - proof_id: "DATA-05"
-          proof_type: "authority"
-          content_summary: "Industry insiders valued PG1 at $2,000-3,000/year"
-          proof_strength: 6
-          source_inventory_id: "DATA-05"
-        - proof_id: "DATA-01"
-          proof_type: "reason_why"
-          content_summary: "$5M+ invested in building PG1"
-          proof_strength: 7
-          source_inventory_id: "DATA-01"
       benefit:
-        functional: "$299 once replaces annual lesson, app, and training aid spending."
-        dimensionalized: "Add up what you spent in the last three years. $299 is less than a single afternoon with a PGA pro — and you never pay again."
-        emotional: "Freedom. The search is over. The financial drain stops."
-        benefit_clarity_score: 9
-      chunk_coherence_score: 8
+        functional: "$399 once replaces the annual spending cycle on symptoms."
+        dimensionalized: "Add up what you spent in the last three years chasing symptoms. $399 is less than what most golfers spend in a single season — and you never pay again."
+        emotional: "Freedom. The financial drain stops. The search is over."
 
     - chunk_id: "CPB-006"
       name: "The Personalization Proof"
-      gap_question: "Will this work for MY specific swing issues?"
+      gap_question: "Will this work for MY specific game?"
       gap_id: "GAP-007"
       position: 5
       claim:
         statement: >
-          SwingScan identifies from 77+ documented flaw patterns to diagnose
-          YOUR specific root flaw, builds a correction plan targeted to YOUR
-          diagnosis, assigns a coach matched to YOUR flaw type, and adapts
-          as YOUR flaw resolves — structured, diagnosis-specific practice
-          produces 50%+ improvement rates versus 34% for generic instruction.
+          The root swing flaw varies by area of game — your driver root flaw is
+          not your irons root flaw. The Smart System is an ongoing system, not a
+          one-time diagnosis. It keeps finding the one thing that matters most, for
+          as long as you play. 77+ flaw patterns, YOUR diagnosis, YOUR Smart Step,
+          YOUR matched coach.
         claim_type: "factual"
         specificity_score: 9
         defensibility_score: 8
-        opinion_test: "pass"
       proof_elements:
         - proof_id: "DATA-04"
           proof_type: "statistic"
           content_summary: "77+ swing flaw patterns documented and identified"
           proof_strength: 8
-          source_inventory_id: "DATA-04"
         - proof_id: "DISC-16"
           proof_type: "study"
-          content_summary: "Structured lessons: 50%+ improve vs 34% generic (Players 1st)"
+          content_summary: "Structured lessons: 50%+ improve vs 34% generic"
           proof_strength: 8
-          source_inventory_id: "DISC-16"
         - proof_id: "DISC-09"
           proof_type: "study"
-          content_summary: "Targeted practice > random practice for retention (peer-reviewed)"
+          content_summary: "Targeted practice > random practice for retention"
           proof_strength: 7
-          source_inventory_id: "DISC-09"
-        - proof_id: "AUTH-01"
-          proof_type: "authority"
-          content_summary: "6 elite PGA coaches built the system (names needed — GAP-02)"
-          proof_strength: 6
-          source_inventory_id: "AUTH-01"
-        - proof_id: "AUTH-02"
-          proof_type: "authority"
-          content_summary: "Built by developer behind MyFitnessPal and Weather Channel app"
-          proof_strength: 7
-          source_inventory_id: "AUTH-02"
-        - proof_id: "DISC-04"
-          proof_type: "study"
-          content_summary: "Video instruction outperforms verbal and self-guided methods"
-          proof_strength: 7
-          source_inventory_id: "DISC-04"
       benefit:
-        functional: "77+ patterns cover your swing. Plan, coach, and tracking built around YOUR diagnosis."
-        dimensionalized: "Every time you go to the range, you know exactly what to work on and why. One plan. One focus. Directed effort."
-        emotional: "Control. Practice feels purposeful instead of hopeful."
-        benefit_clarity_score: 9
-      chunk_coherence_score: 8
+        functional: "77+ patterns cover your game. The system adapts as you improve and moves to the next area."
+        dimensionalized: "Your driver root flaw gets addressed. Then the system finds your irons root flaw. Then short game. Each one builds on the last. For as long as you want to play."
+        emotional: "Control. This is not a one-time fix — it is a lifetime system that knows your game."
 
     - chunk_id: "CPB-007"
-      name: "The Access Question"
-      gap_question: "How can I get started?"
+      name: "The Founders Club"
+      gap_question: "How do I join?"
       gap_id: "GAP-008"
       position: 7
       claim:
         statement: >
-          The Founders Club is limited to 1,000 members at $199/year or
-          $299 lifetime (never pay again) — the lowest price PG1 Pulse
-          will ever be offered — with a 7-day free trial and a 60-day
-          Diagnosis Promise guarantee.
+          The Founders Club is limited to 1,000 members at $199/year or $399
+          lifetime (never pay again) — with a 365-day guarantee and three Founders
+          bonuses: 30% off PG products, VIP new release access, and a $500
+          Transformation Academy credit.
         claim_type: "factual"
         specificity_score: 10
         defensibility_score: 10
-        opinion_test: "pass"
       proof_elements:
         - proof_id: "SOC-03"
           proof_type: "demonstration"
           content_summary: "1,000-member Founders Club cap — real, structural, enforced"
           proof_strength: 7
-          source_inventory_id: "SOC-03"
-        - proof_id: "RR-02"
+        - proof_id: "PRICING"
           proof_type: "demonstration"
-          content_summary: "$299 lifetime, never pay again"
+          content_summary: "$199/yr or $399 lifetime, never pay again"
           proof_strength: 8
-          source_inventory_id: "RR-02"
-        - proof_id: "RR-01"
+        - proof_id: "GUARANTEE"
           proof_type: "demonstration"
-          content_summary: "7-day free trial — zero risk to try"
-          proof_strength: 6
-          source_inventory_id: "RR-01"
-        - proof_id: "RR-03"
-          proof_type: "reason_why"
-          content_summary: "Founders rate locked permanently"
-          proof_strength: 7
-          source_inventory_id: "RR-03"
-        - proof_id: "SOC-04"
-          proof_type: "demonstration"
-          content_summary: "Numbered Founders badge on profile"
-          proof_strength: 6
-          source_inventory_id: "SOC-04"
-        - proof_id: "DATA-01"
-          proof_type: "reason_why"
-          content_summary: "$5M+ invested in building PG1"
-          proof_strength: 7
-          source_inventory_id: "DATA-01"
+          content_summary: "365-day guarantee — full year to test the system"
+          proof_strength: 8
       benefit:
-        functional: "1,000 spots, two pricing options, free trial, 60-day guarantee, four bonuses, every future feature."
-        dimensionalized: "You are becoming one of the first 1,000 golfers in history to know their root swing flaw. Your number is permanent. Your rate is locked forever."
-        emotional: "Belonging + restoration. Love your game again. The confusion is over."
-        benefit_clarity_score: 9
-      chunk_coherence_score: 9
+        functional: "1,000 spots, two pricing options, 365-day guarantee, three bonuses."
+        dimensionalized: "You are becoming one of the first 1,000 golfers to have their root swing flaw identified by the Smart System. Your Founders rate is locked for life."
+        emotional: "Belonging + restoration. The end of traditional instruction. The beginning of something new."
 
   flow_architecture:
     simple_segue:
       text: >
         What I am about to share with you is the reason nothing you have
-        tried has worked — and the one step that changes everything. It is
-        not another tip. It is not another drill. It is a diagnosis. The
-        first one golf has ever had. And once you understand what it reveals
-        about YOUR swing... the way you think about improving your game
-        will never be the same.
-      promise_echo: "the one step that changes everything"
-      mechanism_reference: "a diagnosis — the first one golf has ever had"
+        tried has worked — and the one thing that changes everything. It is
+        not another tip. It is not another drill. It is your root swing flaw.
+        The one movement creating everything else in your swing. Nobody has
+        ever identified it. Until now.
+      promise_echo: "the one thing that changes everything"
+      mechanism_reference: "the PG1 Smart System"
 
     chunk_sequence:
       order:
@@ -483,84 +373,48 @@ structure_package:
         - "CPB-005"
         - "CPB-007"
       sequence_logic: >
-        Problem → Cause → Solution → Proof → Personal → Value → Access.
-        Validates frustration with data, reveals the root cause, introduces
-        the mechanism, proves it works, makes it personal, reframes the
-        price, opens the door. Value (CPB-005) comes AFTER personalization
-        (CPB-006) because the golfer must believe it works for THEM before
-        price becomes relevant.
+        Symptom Spiral → Root Swing Flaw → Smart System → Proof → Personal
+        → Value → Founders Club. Validates frustration with data, reveals the
+        root swing flaw, introduces the Smart System, proves it works, makes
+        it personal (ongoing system, not one-time), reframes the price, opens
+        the door. Value (CPB-005) comes AFTER personalization (CPB-006)
+        because the golfer must believe it works for THEM before price matters.
 
     connectors:
       - between: ["CPB-001", "CPB-002"]
-        connector_text: "So if it is not your fault — if 70% of golfers who take lessons do not improve regardless of talent or effort — then what IS the problem? The answer is something nobody in golf has ever said to you."
+        connector_text: "So if it is not your fault — if 70% of golfers who take lessons do not improve regardless of talent or effort — then what IS the problem? The answer is your root swing flaw."
         connector_type: "revelation"
       - between: ["CPB-002", "CPB-003"]
-        connector_text: "That is why we built something different. Not another app. Not another set of tips. A diagnosis. The first one golf has ever had."
+        connector_text: "That is why we built the PG1 Smart System. Not another app. Not another set of tips. A system that finds your root swing flaw and builds everything around fixing it."
         connector_type: "pivot"
       - between: ["CPB-003", "CPB-004"]
-        connector_text: "Now, I know what you are thinking. Can AI really diagnose a golf swing? Is this actually different from every other app claiming to use AI? Here is what the research says."
+        connector_text: "Now, I know what you are thinking. Can a system really do this? Is this actually different from everything else? Here is what the research says."
         connector_type: "escalation"
       - between: ["CPB-004", "CPB-006"]
-        connector_text: "So the science is clear — AI-human collaboration outperforms either alone. But here is the part that matters most to YOU."
+        connector_text: "The science is clear. But here is the part that matters most to YOU — because the root swing flaw varies by area of game."
         connector_type: "elaboration"
       - between: ["CPB-006", "CPB-005"]
-        connector_text: "Now think about what you have already spent trying to fix your game without knowing your root flaw."
+        connector_text: "Now think about what you have already spent trying to fix your game without knowing your root swing flaw."
         connector_type: "contrast"
       - between: ["CPB-005", "CPB-007"]
         connector_text: "And for the first 1,000 golfers who want to be part of this..."
         connector_type: "escalation"
 
-    coherence_markers:
-      - position: "CPB-001 after DISC-05"
-        marker_text: "And it is not just the numbers."
-        marker_type: "elaboration"
-      - position: "CPB-001 after DISC-08"
-        marker_text: "Think about what that means."
-        marker_type: "consequence"
-      - position: "CPB-002 after root cause"
-        marker_text: "Think about your own experience for a second."
-        marker_type: "continuation"
-      - position: "CPB-002 after symptoms"
-        marker_text: "They were all seeing different symptoms of the same thing."
-        marker_type: "summary"
-      - position: "CPB-003 after mechanism name"
-        marker_text: "Here is how it works."
-        marker_type: "continuation"
-      - position: "CPB-003 after MECH-01"
-        marker_text: "Not one. Zero."
-        marker_type: "cause_effect"
-      - position: "CPB-004 after DISC-14"
-        marker_text: "And that is not just theory."
-        marker_type: "elaboration"
-      - position: "CPB-005 after DATA-07"
-        marker_text: "And all of that was treatment without diagnosis."
-        marker_type: "cause_effect"
-      - position: "CPB-005 after RR-02"
-        marker_text: "Once. That is it. Never pay again."
-        marker_type: "emphasis"
-      - position: "CPB-006 after DATA-04"
-        marker_text: "Which means your specific swing issue is in there."
-        marker_type: "consequence"
-      - position: "CPB-007 after SOC-03"
-        marker_text: "When the 1,000th golfer joins, this closes."
-        marker_type: "consequence"
-
     sin_segue:
       text: >
-        So let me bring this all together. You have spent years looking
-        for the right tip, the right instructor, the right app. And your
-        handicap has not moved. Not because you were not trying. Because
-        nobody ever diagnosed your root swing flaw. SwingScan Diagnosis
-        changes that. For the first time in golf, there is a way to
-        identify YOUR specific root flaw — trained on 2M+ swings, with
-        96% accuracy, across 77+ documented flaw patterns. And then
-        build a correction plan, match you with a coach, and adapt as
-        your flaw resolves. One root flaw. One plan. One clear path. And
-        for the first 1,000 golfers who want to be part of this — we
-        built the Founders Club.
-      mechanism_callback: "SwingScan Diagnosis — trained on 2M+ swings, 96% accuracy, 77+ patterns"
-      result_callback: "One root flaw. One plan. One clear path."
-      offer_bridge: "And for the first 1,000 golfers who want to be part of this — we built the Founders Club."
+        So let me bring this all together. You have spent years working on
+        symptoms. Every instructor saw something different. Every tip
+        addressed the wrong thing. The root swing flaw sat underneath,
+        unidentified, creating the Symptom Spiral. The PG1 Smart System
+        ends that spiral. It finds your root swing flaw. Gives you your
+        Smart Step — the one thing to work on right now. Matches you with
+        a coach. Adapts the more you use it. From knowing your name to
+        knowing your game. When you fix your root swing flaw, improvement
+        becomes inevitable. One flaw. One plan. And for the first 1,000
+        golfers who want to be part of this — the Founders Club is open.
+      mechanism_callback: "PG1 Smart System — Smart Step, Smart Match, Smart Path"
+      result_callback: "One flaw. One plan. Improvement becomes inevitable."
+      offer_bridge: "And for the first 1,000 golfers who want to be part of this — the Founders Club is open."
 
   validation_scores:
     logical_coherence: 9
@@ -570,55 +424,24 @@ structure_package:
     benefit_clarity: 9
     conversational_flow: 9
     anti_slop: "pass"
-    anti_slop_violations: 0
-    vault_comparison: 8
-    vault_differentiation_notes: >
-      5 structural differentiators from SSS vault exemplar: (1) diagnostic
-      vs behavioral mechanism, (2) personalization chunk required,
-      (3) vindication emotional layer, (4) identity close vs urgency
-      close, (5) financial waste value reframe. Alignment with TIER1
-      patterns (section sequence, proof distribution, chunk count) without
-      mimicry.
-    overall_weighted_average: 8.7
+    overall_weighted_average: 8.8
 
   downstream_handoffs:
-    for_lead_writing:
+    for_campaign_brief:
       thesis_statement: >
-        The ONLY way to finally stop guessing and start improving is with
-        SwingScan Diagnosis — the first system in golf that identifies
-        your ONE root swing flaw before prescribing a single fix.
-      primary_promise_echo: >
-        Know your ONE root swing flaw — and have a clear plan to fix it.
-      emotional_entry_point: >
-        Frustration + self-doubt. The golfer has tried everything and
-        suspects the problem might be them. Entry emotion is vindication:
-        it was never you.
-      first_chunk_preview: >
-        CPB-001 opens with USGA handicap data (unchanged 2020-2025) and
-        70% lesson failure rate. Validates the golfer's experience with
-        market-level evidence before revealing the root cause.
-
-    for_body_copy:
-      cpb_chunks: "See cpb_chunks section above — 7 complete chunks with all C+P+B elements"
-      flow_architecture: "See flow_architecture section above — segues, connectors, markers"
+        When the PG1 Smart System finds your root swing flaw and you start
+        working on your Smart Step — improvement becomes inevitable.
       chunk_count: 7
-      total_proof_elements: 39
+      chunk_names:
+        - "CPB-001: The Symptom Spiral"
+        - "CPB-002: The Root Swing Flaw"
+        - "CPB-003: The Smart System"
+        - "CPB-004: The Proof Stack"
+        - "CPB-005: The Value Case"
+        - "CPB-006: The Personalization Proof"
+        - "CPB-007: The Founders Club"
+      emotional_arc: "Relief → Clarity → Hope → Confidence → Control → Freedom → Belonging"
 
-    for_close:
-      sin_segue: >
-        One root flaw. One plan. One clear path. And for the first 1,000
-        golfers who want to be part of this — we built the Founders Club.
-      final_belief_state: >
-        The golfer believes: (1) the current approach has failed systemically,
-        (2) the root cause is treatment-without-diagnosis, (3) SwingScan
-        Diagnosis is the first system to address this, (4) it is validated
-        by research, (5) it works for their specific swing, (6) $299 is
-        less than what they have already wasted. They are ready to act.
-      last_chunk_benefit: >
-        Belonging + restoration. Love your game again. The confusion is
-        over. The guessing stops.
-
-    for_offer_presentation:
-      offer_bridge_text: "And for the first 1,000 golfers who want to be part of this — we built the Founders Club."
-      mechanism_name_reference: "SwingScan Diagnosis"
-      result_summary: "Know your ONE root swing flaw. Have a plan built around it. A matched coach. An adaptive system. $299 once. Never pay again."
+  autonomous_checkpoints:
+    human_review:
+      status: "COMPLETE — all 7 checkpoints locked 2026-03-17"
