@@ -174,8 +174,19 @@ Between any two sessions on the same agent, the following persist via files:
 
 ---
 
+## SYSTEM-AGNOSTIC DESIGN PRINCIPLES
+
+1. **All Creative OS protocols work with any AI model** (Claude, Gemini, OpenAI, etc.). Nothing in the protocol stack uses model-specific syntax or features.
+2. **Gate system is structural** (file existence, field presence, pass/fail status) — not model-specific validation.
+3. **Specimens, frameworks, and reference files are plain text/markdown** — any model can consume them.
+4. **Hook system uses standard shell scripts and Python** — not model-specific APIs. Any tool that supports PostToolUse hooks can run them.
+5. **Model recommendations use capability descriptions** (deep reasoning, code generation, creative writing, data processing) with current model mappings that can be updated as new models release. See the "Capability Levels" table above.
+6. **Session state persists via files** (Build State, SESSION-LOG.md, constraint ledger) — not via model-specific memory or conversation features.
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0 | 2026-03-18 | Initial creation. Per-agent session structure, capability-based model recommendations, Context Reservoir pattern, cross-session continuity rules. |
+| 1.0 | 2026-03-18 | Initial creation. Per-agent session structure, capability-based model recommendations, Context Reservoir pattern, cross-session continuity rules, system-agnostic design principles. |

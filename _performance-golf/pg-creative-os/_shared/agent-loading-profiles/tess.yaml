@@ -1,0 +1,41 @@
+agent_name: tess
+version: "3.10"
+description: "Strategic Scaling System — data intelligence, classification, pipeline management"
+
+mcp_tools_required:
+  - google-sheets  # SSS spreadsheet (read/write)
+
+mcp_tools_optional:
+  - clickup        # Asset registry sync
+
+external_apis:
+  - name: google-sheets-service-account
+    env_var: GOOGLE_SERVICE_ACCOUNT_KEY_PATH
+    purpose: "Direct API access to SSS spreadsheet"
+    critical: true
+
+protocols_required:
+  - SYSTEM-CORE.md
+  - CREATIVE-OS-ANTI-DEGRADATION.md
+  - CREATIVE-OS-EFFORT-PROTOCOL.md
+  - tess-strategic-scaling-system/TESS-NAMING-CONVENTION.md
+
+reference_files:
+  - tess-strategic-scaling-system/CLAUDE.md
+  - tess-strategic-scaling-system/TESS-MASTER-AGENT.md
+  - tess-strategic-scaling-system/SESSION-LOG.md
+
+generates_code: true  # Dashboard (TypeScript/React)
+generates_copy: false
+
+requires_human_checkpoints: true
+human_checkpoints:
+  - "Spreadsheet writes require plan mode + human approval"
+  - "Classification threshold changes require confirmation"
+  - "Intake queue entries require approval before Veda consumption"
+
+pre_session_checks:
+  - "Read CLAUDE.md Build State (~25 lines)"
+  - "Check SESSION-LOG.md line count (compress if >500)"
+  - "If dashboard work: verify npx tsc --noEmit passes"
+  - "If git work: ls -la .git/index* (iCloud guard)"

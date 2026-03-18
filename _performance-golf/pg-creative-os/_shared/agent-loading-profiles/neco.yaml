@@ -1,0 +1,37 @@
+agent_name: neco
+version: "2.0"
+description: "NeuroCopy Agent — ad copy, hooks, scripts, audience psychology"
+
+mcp_tools_required: []  # Neco has no external dependencies
+
+mcp_tools_optional:
+  - figma  # Static image brief design context
+
+external_apis: []  # Neco is advisory — no API dependencies
+
+protocols_required:
+  - SYSTEM-CORE.md
+  - CREATIVE-OS-ANTI-DEGRADATION.md
+  - CREATIVE-OS-EFFORT-PROTOCOL.md
+  - protocols/ANTI-SLOP-LEXICON.md
+  - protocols/HUMANIZATION-PROTOCOL.md
+
+reference_files:
+  - neco-neurocopy-agent/CLAUDE.md
+  - neco-neurocopy-agent/NECO-MASTER-AGENT.md
+  - neco-neurocopy-agent/SESSION-LOG.md
+  - neco-neurocopy-agent/_reference/copy-constraints.md
+
+generates_code: false
+generates_copy: true  # This IS Neco's primary output
+
+requires_human_checkpoints: true
+human_checkpoints:
+  - "Checkpoint 1: Audience list confirmation"
+  - "Checkpoint 2: Core angle confirmation"
+  - "Checkpoint 3: Verification review (all factual claims)"
+
+pre_session_checks:
+  - "Read CLAUDE.md Build State (~25 lines)"
+  - "Check SESSION-LOG.md line count (compress if >500)"
+  - "Verify product brief / project context is available"

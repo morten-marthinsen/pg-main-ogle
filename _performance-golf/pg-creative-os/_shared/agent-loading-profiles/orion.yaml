@@ -1,0 +1,52 @@
+agent_name: orion
+version: "10.4"
+description: "Strategic Chief of Staff — strategy, oversight, communications, delegation"
+
+mcp_tools_required:
+  - google-sheets  # SSS data for daily reports
+  - clickup        # Task sync, transcript extraction
+
+mcp_tools_optional:
+  - google-docs    # Doc reading for context saving
+  - figma          # Launch board design context
+  - fathom         # Transcript intelligence (M9)
+
+external_apis:
+  - name: anthropic
+    env_var: ANTHROPIC_API_KEY
+    purpose: "Daily briefing AI drafts, bot agent, task parsing"
+    critical: true
+  - name: slack
+    env_vars: [SLACK_BOT_TOKEN, SLACK_APP_TOKEN, SLACK_WEBHOOK_URL]
+    purpose: "Personal bot, daily briefing notifications"
+    critical: false
+  - name: google-calendar
+    purpose: "Calendar context for daily reports"
+    critical: false
+  - name: gmail
+    purpose: "Email context for daily reports"
+    critical: false
+
+protocols_required:
+  - SYSTEM-CORE.md
+  - CREATIVE-OS-ANTI-DEGRADATION.md
+  - CREATIVE-OS-EFFORT-PROTOCOL.md
+
+reference_files:
+  - orion-chief-of-staff/CLAUDE.md
+  - orion-chief-of-staff/ORION-REFERENCE.md
+  - orion-chief-of-staff/SESSION-LOG.md
+
+generates_code: false
+generates_copy: false  # Generates DRAFTS (communications), not ad copy
+
+requires_human_checkpoints: true
+human_checkpoints:
+  - "All external communications are DRAFTS — never sent directly (Gate 3)"
+  - "Strategic decisions require CONVINCE ME override if challenged"
+  - "Delegation targets require Christopher's approval"
+
+pre_session_checks:
+  - "Read CLAUDE.md Build State (~25 lines)"
+  - "Surface any unresolved BLOCK/CONVINCE ME items"
+  - "Check SESSION-LOG.md line count (compress if >500)"

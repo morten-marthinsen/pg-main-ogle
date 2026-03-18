@@ -1,0 +1,56 @@
+agent_name: veda
+version: "0.52"
+description: "Video Editing Agent — video production, asset creation, expansion pipeline"
+
+mcp_tools_required: []  # Veda uses direct APIs, not MCP
+
+mcp_tools_optional:
+  - google-sheets  # SSS data via MCP (alternative to service account)
+
+external_apis:
+  - name: iconik
+    env_vars: [ICONIK_APP_ID, ICONIK_AUTH_TOKEN, ICONIK_COLLECTION_ID, ICONIK_STORAGE_ID, ICONIK_METADATA_VIEW_ID]
+    purpose: "Source video download, asset upload, metadata tagging"
+    critical: true
+  - name: fal-ai
+    env_var: FAL_KEY
+    purpose: "BiRefNet segmentation, Flux background generation, wav2lip"
+    critical: true
+  - name: google-sheets-service-account
+    env_vars: [GOOGLE_SERVICE_ACCOUNT_KEY_PATH, VEDA_SPREADSHEET_ID]
+    purpose: "Read intake queue, update asset tracking"
+    critical: true
+  - name: elevenlabs
+    env_var: ELEVENLABS_API_KEY
+    purpose: "Voice dubbing (international expansion)"
+    critical: false
+  - name: higgsfield
+    env_vars: [HIGGSFIELD_API_KEY, HIGGSFIELD_SECRET]
+    purpose: "Character generation (presenter-gen expansion)"
+    critical: false
+
+protocols_required:
+  - SYSTEM-CORE.md
+  - CREATIVE-OS-ANTI-DEGRADATION.md
+  - CREATIVE-OS-EFFORT-PROTOCOL.md
+  - tess-strategic-scaling-system/TESS-NAMING-CONVENTION.md
+
+reference_files:
+  - veda-video-editing-agent/CLAUDE.md
+  - veda-video-editing-agent/VEDA-MASTER-AGENT.md
+  - veda-video-editing-agent/SESSION-LOG.md
+
+generates_code: true  # TypeScript pipeline
+generates_copy: false
+
+requires_human_checkpoints: true
+human_checkpoints:
+  - "Intake queue entries reviewed before processing"
+  - "AI-generated output quality reviewed before upload"
+  - "Root angle preservation verified on all expansions"
+
+pre_session_checks:
+  - "Read CLAUDE.md Build State (~25 lines)"
+  - "npx tsc --noEmit — zero errors"
+  - "npm test — zero failures"
+  - "npm run build — clean build"
