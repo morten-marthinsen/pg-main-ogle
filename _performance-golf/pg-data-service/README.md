@@ -132,14 +132,14 @@ df = get_raw("ad_performance", "2026-01-01", "2026-03-15")
 # Enriched — all Beast Modes computed, PII stripped
 df = get_enriched("2026-01-01", "2026-03-15")
 
-# Domo Ad Performance card replica (30 columns, Domo display names)
+# Domo Ad Performance card replica (30 columns, daily rows, Domo display names)
 from scripts.export_ad_performance import get_ad_performance_card
-df = get_ad_performance_card("2026-01-01", "2026-03-15", day="2026-03-15")
+df = get_ad_performance_card("2026-03-15", "2026-03-18")
 ```
 
 ### For Christopher's Pipeline
 
-The Ad Performance card replica gives you the same 30 columns as the Domo card, with Domo display names. Drop-in replacement for the CSV export.
+The Ad Performance card replica gives you the same 30 columns as the Domo card, with Domo display names. Produces daily rows (one per ad per day), same as the Domo card.
 
 ```python
 import sys
@@ -148,9 +148,8 @@ sys.path.insert(0, "path/to/pg-data-service")
 from scripts.export_ad_performance import get_ad_performance_card
 
 # Get the same data as the Domo "Ad Performance" card
-# date range = the period you want to aggregate across
-# day = the reporting date for the "Day" column
-df = get_ad_performance_card("2026-03-01", "2026-03-18", day="2026-03-18")
+# Returns daily rows — one row per ad per day
+df = get_ad_performance_card("2026-03-15", "2026-03-18")
 
 # df has 30 columns matching the Domo card exactly:
 # Ad, Day, Status, Spend, Net Revenue, Net ROAS, NC Net ROAS,

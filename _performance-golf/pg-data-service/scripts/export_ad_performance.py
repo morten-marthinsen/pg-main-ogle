@@ -2,19 +2,23 @@
 """Export enriched ad performance data matching the Domo Ad Performance card schema.
 
 Returns a DataFrame with 30 columns using Domo's display names (including <BR> artifacts).
+Produces daily rows (one per ad per day) to match the Domo card structure.
 No CSV write — consumers use the DataFrame however they want.
 
 Usage as a script:
-    python scripts/export_ad_performance.py --from 2026-03-01 --to 2026-03-18 --day 2026-03-18
+    python scripts/export_ad_performance.py --from 2026-03-15 --to 2026-03-18
 
 Usage as an import:
     from scripts.export_ad_performance import get_ad_performance_card
-    df = get_ad_performance_card("2026-03-01", "2026-03-18", day="2026-03-18")
+    df = get_ad_performance_card("2026-03-15", "2026-03-18")
 """
 
 import argparse
 import sys
+from datetime import datetime, timedelta
 from pathlib import Path
+
+import pandas as pd
 
 # Ensure pg-data-service root is importable when run as a script
 ROOT = Path(__file__).parent.parent
@@ -68,35 +72,47 @@ COLUMN_ORDER = [
 ]
 
 
-def get_ad_performance_card(date_from: str, date_to: str, day: str = None):
+def _rename_and_order(df: pd.DataFrame) -> pd.DataFrame:
+    """Rename internal columns to Domo display names and apply column order."""
+    available = {k: v for k, v in COLUMN_MAP.items() if k in df.columns}
+    df = df.rename(columns=available)
+    present = [c for c in COLUMN_ORDER if c in df.columns]
+    return df[present]
+
+
+def get_ad_performance_card(date_from: str, date_to: str):
     """Return enriched DataFrame with Domo Ad Performance card column names.
+
+    Produces daily rows (one per ad per day) matching the Domo card structure.
+    Each day is enriched independently — same as how Domo computes Beast Modes
+    per day.
 
     Args:
         date_from: Start date (YYYY-MM-DD)
         date_to: End date (YYYY-MM-DD)
-        day: Reporting date for the "Day" column. Defaults to date_to.
 
     Returns:
-        DataFrame with 30 columns matching the Domo card schema.
+        DataFrame with 30 columns matching the Domo card schema,
+        one row per ad per day.
     """
-    if day is None:
-        day = date_to
+    start = datetime.strptime(date_from, "%Y-%m-%d")
+    end = datetime.strptime(date_to, "%Y-%m-%d")
 
-    df = get_enriched(date_from, date_to)
+    frames = []
+    current = start
+    while current <= end:
+        day_str = current.strftime("%Y-%m-%d")
+        df = get_enriched(day_str, day_str)
+        if not df.empty:
+            df["Day"] = day_str
+            frames.append(df)
+        current += timedelta(days=1)
 
-    if df.empty:
-        return df
+    if not frames:
+        return pd.DataFrame()
 
-    # Inject the Day column
-    df["Day"] = day
-
-    # Rename internal names to Domo display names
-    available = {k: v for k, v in COLUMN_MAP.items() if k in df.columns}
-    df = df.rename(columns=available)
-
-    # Select only the card columns, in order, skipping any that aren't present
-    present = [c for c in COLUMN_ORDER if c in df.columns]
-    return df[present]
+    combined = pd.concat(frames, ignore_index=True)
+    return _rename_and_order(combined)
 
 
 def main():
@@ -105,18 +121,17 @@ def main():
     )
     parser.add_argument("--from", dest="date_from", required=True, help="Start date YYYY-MM-DD")
     parser.add_argument("--to", dest="date_to", required=True, help="End date YYYY-MM-DD")
-    parser.add_argument("--day", help="Reporting date for Day column (defaults to --to)")
     args = parser.parse_args()
 
     print(f"Fetching enriched data {args.date_from} to {args.date_to}...")
-    df = get_ad_performance_card(args.date_from, args.date_to, day=args.day)
+    df = get_ad_performance_card(args.date_from, args.date_to)
 
     if df.empty:
         print("No data returned.")
         sys.exit(0)
 
-    print(f"  {len(df)} ads, {len(df.columns)} columns")
-    print(f"  Columns: {list(df.columns)}")
+    days = df["Day"].nunique() if "Day" in df.columns else 0
+    print(f"  {len(df)} rows, {df['Ad'].nunique()} ads, {days} days, {len(df.columns)} columns")
     print(f"\nDataFrame ready. Use get_ad_performance_card() to access programmatically.")
 
 
