@@ -1,7 +1,8 @@
 # Creative OS — Anti-Degradation System (Core)
 
-**Version:** 1.0
+**Version:** 1.1
 **Created:** 2026-02-08
+**Updated:** 2026-03-18
 **Purpose:** STRUCTURAL enforcement to prevent execution breakdown across ALL Creative OS agents
 **Authority:** This document has EQUAL authority to every agent's CLAUDE.md
 **Adapted from:** TonyFlo's LLM-ANTI-DEGRADATION-SYSTEM.md (CopywritingEngine — READ-ONLY reference, NEVER modify original)
@@ -253,6 +254,51 @@ INSTRUCTIONS CAN BE IGNORED. STRUCTURES CANNOT BE BYPASSED.
 
 ---
 
+## PART 10: MANDATORY READ DECLARATION
+
+### The Problem
+
+Instructional constraints can be ignored under context pressure. A model can claim "I've read the Anti-Degradation file" without actually reading it. There's no structural proof.
+
+### The Fix: Structural Proof Artifact
+
+Every session's FIRST output must contain a Mandatory Read Declaration. This converts an instructional requirement into a verifiable artifact.
+
+### Declaration Template
+
+```
+I HAVE READ: CREATIVE-OS-ANTI-DEGRADATION.md v1.0
+I HAVE READ: [AGENT]-ANTI-DEGRADATION.md v[VERSION]
+I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules.
+I WILL: Follow Phase-Stop Discipline — one phase, one stop, no exceptions.
+I WILL NOT: [3 specific forbidden behaviors from the agent's adapter file]
+```
+
+### Rules
+
+1. Declaration must appear in the FIRST output file of the session (not conversation, not "mentally noted")
+2. Filename and version must match exactly (proves you read the actual file, not a cached summary)
+3. "I WILL NOT" items must reference the AGENT-SPECIFIC adapter file's forbidden behaviors (proves you read the adapter, not just the core)
+4. If you cannot write the declaration, you have not read the file. HALT and read it.
+
+### GATE_0: Declaration Verification
+
+Before any substantive work begins:
+
+```
+GATE_0 CHECK:
+  [ ] Core Anti-Degradation file read (v1.0)
+  [ ] Agent adapter file read (version matches)
+  [ ] Declaration written to first output
+  [ ] "I WILL NOT" items are agent-specific (not generic)
+
+  Missing declaration = file not read = outputs suspect
+  Generic "I WILL NOT" = file skimmed, not read = outputs suspect
+  Wrong version = cached/hallucinated version used = outputs suspect
+```
+
+---
+
 ## AGENT ADAPTERS
 
 Each agent extends this core with agent-specific structural gates:
@@ -271,3 +317,4 @@ Each agent extends this core with agent-specific structural gates:
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-02-08 | Initial creation. Extracted universal patterns from TESS-ANTI-DEGRADATION.md v1.0. Covers: session resume, phase-stop enforcement, forbidden rationalizations, context management, MC-CHECK, inter-agent handoff, iCloud guard, handoff protocol. |
+| 1.1 | 2026-03-18 | Added Part 10: Mandatory Read Declaration + GATE_0 verification. Structural proof artifact that converts "read the file" instruction into verifiable output. |
