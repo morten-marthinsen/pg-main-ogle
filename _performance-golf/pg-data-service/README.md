@@ -1,4 +1,4 @@
-# PG Data Service — Agent Instructions
+# PG Data Service
 
 > **Path**: `_performance-golf/pg-data-service/`
 > **Owner**: Data Team (Patrick Hayes)

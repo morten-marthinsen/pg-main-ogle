@@ -135,7 +135,7 @@ pg-data-service/
 ├── api.py                  ← Primary interface. get_raw(), get_enriched(), list_datasets()
 ├── datasets.yaml           ← Approved dataset allowlist (friendly name → dataset ID)
 ├── config.yaml             ← Adapter choice, dataset ID
-├── CLAUDE.md               ← Agent instructions for working in this directory
+├── README.md               ← Project overview, architecture decisions, usage
 ├── PG-DATA-SERVICE.md      ← Full architecture doc (all decisions)
 ├── docs/
 │   └── OVERVIEW.md         ← This file
