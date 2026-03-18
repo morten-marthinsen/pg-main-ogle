@@ -6,6 +6,16 @@
 
 ---
 
+## Getting Started
+
+- **New to Creative OS?** → Start with `OPERATIONS-MANUAL.md`
+- **Setting up tools?** → Start with `MCP-TOOL-REGISTRY.md`
+- **Starting a session?** → Go to your agent's directory and read its `CLAUDE.md`
+- **Understanding quality rules?** → Read `SYSTEM-CORE.md` then `CREATIVE-OS-ANTI-DEGRADATION.md`
+- **Understanding handoffs?** → Read `protocols/PIPELINE-HANDOFF-REGISTRY.md`
+
+---
+
 ## Architecture
 
 The pipeline is **non-linear**. Tess feeds Veda directly AND feeds Neco in parallel. They are NOT a linear chain.
