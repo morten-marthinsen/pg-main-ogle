@@ -25,14 +25,12 @@
 
 **Headline:** The End of Traditional Instruction.
 
-**Subhead:** The first system in golf that finds your root swing flaw — then builds everything around fixing it.
+**Subhead:** The first system in golf that finds your root swing flaw — then shows you step by step exactly how to fix it.
 
 **Value Proposition:**
-Every golfer has three to five swing flaws, but only one root swing flaw. The PG1 Smart System finds it, gives you your Smart Step — the one thing to work on right now — matches you with a coach, and adapts the more you use it. One flaw. One plan. Improvement becomes inevitable.
+The PG1 Smart System finds your root swing flaw — the one movement creating every other problem in your swing — and gives you the one thing to work on right now to get better faster. One flaw. One plan. Improvement becomes inevitable.
 
 **CTA:** Join the Founders Club
-
-**Price Display:** $199/yr Annual | $399 Lifetime (Never Pay Again)
 
 **Product Highlights:**
 - **Personalized Assessment** — The system's first understanding of you. Entry point to your root swing flaw.
@@ -40,7 +38,7 @@ Every golfer has three to five swing flaws, but only one root swing flaw. The PG
 - **Your Smart Step** — The one thing to work on right now. Not 12 things. One.
 - **Dedicated Coach Access** — Smart Match pairs you with a coach based on your root swing flaw type.
 - **Progress Dashboard + Drill & Round Tracking** — Practice and play feed the system. The more you use it, the more it knows you.
-- **Founders Pricing Lock** — $199/yr or $399 lifetime. The lowest PG1 will ever be.
+- **Founders Pricing Lock** — The lowest PG1 will ever be. Your rate is locked permanently.
 
 **Design:** Full-viewport hero. Performance Orange accents on CTA button. Clean, premium. Mobile: stacked layout with sticky CTA on scroll.
 
@@ -70,44 +68,14 @@ The PG1 Smart System ends that cycle. It finds your root swing flaw. Gives you o
 
 ---
 
-**Annual Founders — $199/yr**
-- Full PG1 Smart System access
-- Personalized Assessment + SwingScan AI
-- Your Smart Step + Smart Path
-- Dedicated Coach Access (Smart Match)
-- Progress Dashboard + Drill & Round Tracking
-- Every future feature
-- Rate locked permanently
-- 365-day guarantee
-- **[Join the Founders Club — Annual]**
+**[Join the Founders Club]**
 
-**Lifetime Founders — $399 (Recommended)**
-- Everything in Annual
-- One payment. Never pay again.
-- Every future feature, permanently
-- Numbered Founders badge
-- Rate locked permanently
-- 365-day guarantee
-- **[Join the Founders Club — Lifetime]**
+**Trust badges:** 365-Day Guarantee | Secure Checkout
 
-**Bonuses (both tiers):**
-- 30% off all PG products (permanent)
-- VIP new release access
-- $500 Transformation Academy credit
-
-**Trust badges:** 365-Day Guarantee | 1,000 Founders Only | Secure Checkout
-
-**Design:** Two-column cards on desktop (Lifetime highlighted with Performance Orange border). Stacked on mobile. Sticky CTA on mobile scroll. Founders counter below cards.
+**Design:** Single CTA button (Performance Orange). Trust badges below. Sticky on mobile scroll. No pricing display ATF — full pricing revealed in BTF Section 16.
 
 ---
 
-# ===================================================================
-# ATF-to-BTF SEGUE
-# ===================================================================
-
-What I am about to share with you is the reason nothing you have tried has worked — and the one thing that changes everything. It is not another tip. It is not another drill. It is your root swing flaw. The one movement creating everything else in your swing. Nobody has ever identified it. Until now.
-
----
 
 # ===================================================================
 # BTF — BELOW THE FOLD
@@ -115,44 +83,55 @@ What I am about to share with you is the reason nothing you have tried has worke
 
 ---
 
-## SECTION 9: Problem/Solution — The Symptom Spiral
+## SECTION 8.5: Frame Claim — Swing Flaw Facts
 
-**Zone:** BTF | **Priority:** 3
-
----
-
-**Prehead:** Why Nothing Has Worked
-
-**Header:** The Symptom Spiral
-
-**Subhead:** Every golfer has three to five swing flaws, but only one root swing flaw.
+**Zone:** BTF | **Priority:** 3a
 
 ---
 
-Think about everything you have tried.
+**Header:** Here's A Fact About Your Swing Flaws
 
-Lessons with three, five, maybe fifteen different instructors. Every one of them saw something different. One said your backswing was too long. The next said it was too short. One worked on your grip. Another on your hip turn. A third on your downswing plane.
+---
 
-None of them were wrong about what they saw.
-They were all looking at different symptoms of the same thing.
+Every golfer has three to five visible swing flaws — but you only have one ROOT swing flaw. And until you fix your ROOT flaw, you will never consistently improve at the game of golf... no matter how much you practice or play, no matter how many videos you watch, and no matter how much you pay for lessons and equipment.
 
-You have ONE root swing flaw — a single movement creating a cascade of compensations throughout your swing. Every instructor identified a compensation. Nobody identified the cause.
+However, when you DO fix your root swing flaw, you are guaranteed to get better — even if you don't have a lot of time to practice, want to invest a lot of money into your game, or have physical limitations.
 
-That is the Symptom Spiral. You work on one symptom. Another appears. You fix that one. A third shows up. You are chasing effects while the cause sits underneath, unidentified, generating all of them.
+**Design:** Full-width, dark background (PG Black #1D1A1A). Generous whitespace. Frame claim — binary argument as standalone section before problem.
 
-Think about how insane this is. You would never let a doctor prescribe treatment without first running a diagnostic. But that is exactly what golf has done your whole life. Every lesson was treatment without diagnosis.
+---
 
-**That is why your handicap has not moved.**
+## SECTION 9: Problem — Traditional Instruction
 
-The average American golfer's handicap has stayed between 14.0 and 14.2 from 2020 to 2025 (USGA 2025 Golf Scorecard). Eighty-two million rounds posted. An explosion of instruction technology. And no improvement — because the entire industry has been treating symptoms while the root swing flaw goes unidentified.
+**Zone:** BTF | **Priority:** 3b
 
-### The Binary Argument
+---
 
-Every golfer has three to five swing flaws, but only one root swing flaw. No matter how much you practice. No matter how new your clubs are. No matter how many lessons you get. No matter how much golf you play. No matter how many videos you watch. If you do not address your root swing flaw, you will never consistently improve at the game of golf, and you will continue to be stuck in a cycle. However, when you do address your root swing flaw, you are guaranteed improvement in your golf game — even if you don't have a lot of time to practice, even if you don't have money to invest in equipment or lessons, or even if you have some other physical problem that you're dealing with. When you fix your root swing flaw, improvement is inevitable.
+**Header:** Traditional Instruction Addresses Your Symptoms, NOT The Source.
 
-**Proof:** Bobby Clampett / GolfWRX: 70% lesson failure stat (DISC-08). USGA 2025 Golf Scorecard: handicap stagnation 14.0-14.2 (DISC-05).
+---
 
-**Design:** Full-width, dark background (PG Black #1D1A1A). Generous whitespace. Symptom Spiral graphic. Binary Argument as featured blockquote. "70%" and USGA stats as large-format data callouts. Mobile: stack. No CTA.
+❌ YouTube — great coaches giving great advice... that may or may not apply to your swing.
+
+❌ Instructors — they fix what they can see in an hour, then you're on your own. Plus, most coaches aren't trained to diagnose your root swing flaw.
+
+❌ Apps — give you data but no direction.
+
+❌ Drills — work on the range, fall apart on the course — because practicing the wrong thing won't fix the real problem.
+
+**Bottom Line: NONE of these methods address your root swing flaw.**
+
+Meaning: Every tip, every lesson, every app has been a prescription without a diagnosis.
+
+That is the equivalent of a doctor prescribing treatment without ever running a diagnostic. When it comes to your health, you would NEVER do that. But that's the approach you're taking every single day with your golf game.
+
+**And the numbers prove it.**
+
+The average American golfer's handicap has stayed between 14.0 and 14.2 from 2020 to 2025 (USGA/GHIN Handicap Data). Eighty-two million rounds posted. An explosion of instruction technology. And no improvement — because the entire industry skipped the diagnosis.
+
+**Proof:** Bobby Clampett / GolfWRX: 70% lesson failure stat (DISC-08). USGA/GHIN: handicap stagnation 14.0-14.2 (2020-2025, verified). 3.68M golfers with GHIN handicaps in 2025.
+
+**Design:** Full-width, dark background (PG Black #1D1A1A). Continuous with frame claim section. Short, punchy problem description → doctor analogy → stats. No CTA.
 
 ---
 
@@ -162,17 +141,17 @@ Every golfer has three to five swing flaws, but only one root swing flaw. No mat
 
 ---
 
-**Prehead:** The Smart System
+**Prehead:** The Solution
 
-**Header:** From Knowing Your Name to Knowing Your Game.
+**Header:** The PG1 Smart System
 
-**Subhead:** The PG1 Smart System finds your root swing flaw, gives you one thing to work on right now, and adapts the more you use it.
+**Subhead:** Find your root swing flaw. Fix it. Improve — inevitably.
 
 ---
 
-This is what replaces traditional instruction.
+The PG1 Smart System finds your root swing flaw and builds your entire improvement path around fixing it. One system. Six components. When the root swing flaw is addressed, improvement becomes inevitable.
 
-The PG1 Smart System does not start with a tip. It does not start with a drill. It starts by finding your root swing flaw — the one movement creating everything else. Then it builds everything around fixing it.
+Here is how it works.
 
 **Step 1: Complete Your Personalized Assessment**
 The system's first understanding of you — your game, your goals, your history.
@@ -562,7 +541,7 @@ The one thing to work on right now. Not a list of 12 corrections. The single dri
 Your coach pairing. The system matches you with a coach based on your specific root swing flaw type. Not randomly assigned. A curated match who understands your diagnosis and guides your correction.
 
 **How is this different from other golf apps?**
-Every golf app does one of three things: measures, prescribes, or analyzes. None of them find your root swing flaw first. The PG1 Smart System starts with root swing flaw identification — then builds everything around fixing it. Zero of 9 competitors offer this.
+Every golf app does one of three things: measures, prescribes, or analyzes. None of them find your root swing flaw first. The PG1 Smart System starts by finding your root swing flaw — then shows you exactly how to fix it. Zero of 9 competitors offer this.
 
 **What if I do not improve?**
 365-day guarantee. Try the Smart System for a full year. If you are not satisfied for any reason, one email, every penny back.
