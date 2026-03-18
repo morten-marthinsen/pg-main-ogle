@@ -6,6 +6,16 @@
 
 ---
 
+## Getting Started
+
+- **New to Creative OS?** → Start with `OPERATIONS-MANUAL.md`
+- **Setting up tools?** → Start with `MCP-TOOL-REGISTRY.md`
+- **Starting a session?** → Go to your agent's directory and read its `CLAUDE.md`
+- **Understanding quality rules?** → Read `SYSTEM-CORE.md` then `CREATIVE-OS-ANTI-DEGRADATION.md`
+- **Understanding handoffs?** → Read `protocols/PIPELINE-HANDOFF-REGISTRY.md`
+
+---
+
 ## Architecture
 
 The pipeline is **non-linear**. Tess feeds Veda directly AND feeds Neco in parallel. They are NOT a linear chain.
@@ -62,7 +72,7 @@ Each agent has Phase-Stop, Session Log, and Anti-Degradation rules in its own CL
 
 ### Heavy-Write Directory Safety (ALL AGENTS)
 
-This repo lives at `~/pg-main-ogle` — a regular git repo, NOT inside iCloud Drive. Terminal-based directory operations (`git mv`, `mv`, `mkdir`) are safe here.
+This repo should be cloned to a local directory, NOT inside iCloud Drive. Terminal-based directory operations (`git mv`, `mv`, `mkdir`) are safe in any non-iCloud location.
 
 **`.nosync` pattern for heavy-write directories (RECOMMENDED).** Any directory used for rapid/bulk file writes (pipeline output, downloaded media, build artifacts, test caches) should use the `.nosync` rename + symlink pattern: rename to `<dir>.nosync/`, create symlink `<dir>` → `<dir>.nosync`. This avoids issues if the repo is ever synced via iCloud or similar services, and keeps large generated files out of git/Finder indexing. Veda has a code-level guard (`ensureICloudSafeDir()` in `src/utils/icloud-safe-dir.ts`) that enforces this automatically. Other agents should apply the pattern manually to their output directories.
 
