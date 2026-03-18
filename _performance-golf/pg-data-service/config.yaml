@@ -4,8 +4,6 @@ dataset_id: a359ffd7-8175-40f3-b339-0a476cf624aa
 
 default_lookback_days: 90
 
-output_dir: outputs/
-
 # Classification thresholds are documented in catalog/data_dictionary.yaml
 # but not applied by the service — consumers implement their own business rules.
 
