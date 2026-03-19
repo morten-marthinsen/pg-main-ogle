@@ -322,22 +322,12 @@ jobs:
           SKIPPED=$(cat /tmp/skipped-count.txt)
           DATE_STR=$(date -u '+%b %-d')
 
-          SUMMARY=""
-          if [ -n "$CLAUDE" ]; then
-            SUMMARY="*Claude Code:* ${CLAUDE}"
-          else
-            SUMMARY="*Claude Code:* No changes"
-          fi
-          if [ -n "$CODEX" ]; then
-            SUMMARY="${SUMMARY}\n*Codex:* ${CODEX}"
-          else
-            SUMMARY="${SUMMARY}\n*Codex:* No changes"
-          fi
-          if [ -n "$GEMINI" ]; then
-            SUMMARY="${SUMMARY}\n*Gemini CLI:* ${GEMINI}"
-          else
-            SUMMARY="${SUMMARY}\n*Gemini CLI:* No changes"
-          fi
+          CLAUDE_STATUS="No changes"
+          CODEX_STATUS="No changes"
+          GEMINI_STATUS="No changes"
+          if [ -n "$CLAUDE" ]; then CLAUDE_STATUS="${CLAUDE}"; fi
+          if [ -n "$CODEX" ]; then CODEX_STATUS="${CODEX}"; fi
+          if [ -n "$GEMINI" ]; then GEMINI_STATUS="${GEMINI}"; fi
 
           cat > /tmp/slack-payload.json << SLACK_EOF
           {
@@ -351,17 +341,33 @@ jobs:
                 }
               },
               {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*What changed:*\n${SUMMARY}"
-                }
+                "type": "divider"
               },
               {
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*Action items:*\n\n*Claude Code:*\n[placeholder]\n\n*Codex:*\n[placeholder]\n\n*Gemini CLI:*\n[placeholder]"
+                  "text": "*Claude Code*\nChanged: ${CLAUDE_STATUS}\nAction items: [placeholder]"
+                }
+              },
+              {
+                "type": "divider"
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Codex*\nChanged: ${CODEX_STATUS}\nAction items: [placeholder]"
+                }
+              },
+              {
+                "type": "divider"
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Gemini CLI*\nChanged: ${GEMINI_STATUS}\nAction items: [placeholder]"
                 }
               }
             ]
@@ -387,17 +393,33 @@ jobs:
                 }
               },
               {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*What changed:*\n*Claude Code:* No changes\n*Codex:* No changes\n*Gemini CLI:* No changes"
-                }
+                "type": "divider"
               },
               {
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*Action items:*\n\n*Claude Code:*\n[placeholder]\n\n*Codex:*\n[placeholder]\n\n*Gemini CLI:*\n[placeholder]"
+                  "text": "*Claude Code*\nChanged: No changes\nAction items: [placeholder]"
+                }
+              },
+              {
+                "type": "divider"
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Codex*\nChanged: No changes\nAction items: [placeholder]"
+                }
+              },
+              {
+                "type": "divider"
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Gemini CLI*\nChanged: No changes\nAction items: [placeholder]"
                 }
               }
             ]
