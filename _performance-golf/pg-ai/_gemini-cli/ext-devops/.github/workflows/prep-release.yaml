@@ -1,0 +1,73 @@
+# Copyright 2025 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Prepare Release
+
+on:
+  workflow_call:
+    inputs:
+      release:
+        required: true
+        type: string
+        default: dev
+    outputs:
+      release_sha:
+        description: "The SHA that was tagged"
+        value: ${{ jobs.prep-release.outputs.sha }}
+
+env:
+  RELEASE: dev
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  prep-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      sha: ${{ steps.get_sha.outputs.sha }} 
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Get Commit SHA
+        id: get_sha
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Update Rolling Release
+        env:
+          RELEASE_TAG: ${{ inputs.release || env.RELEASE }}
+        run: |
+          echo "Processing release for: $RELEASE_TAG"
+
+          # 1. CLEANUP: Check if the release/tag exists and nukes it.
+          # This ensures the 'dev' tag is free to move to the new commit.
+          if gh release view "$RELEASE_TAG" > /dev/null 2>&1; then
+            echo "Existing release found. Deleting '$RELEASE_TAG' to update pointer..."
+            gh release delete "$RELEASE_TAG" --cleanup-tag -y
+          else
+            echo "No existing release for '$RELEASE_TAG'. Creating new one."
+          fi
+
+          # 2. CREATE: Create the release pointing to the latest commit (target main).
+          echo "Creating release..."
+          gh release create "$RELEASE_TAG" \
+            --prerelease \
+            --target "${{ steps.get_sha.outputs.sha }}" \
+            --title "$RELEASE_TAG build" \
+            --generate-notes
+
+          echo "Success: $RELEASE_TAG updated to latest commit."

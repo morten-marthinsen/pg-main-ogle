@@ -1,0 +1,66 @@
+# To create a new release,
+# 1) Tag the git ref you would like to release with a version number starting with "v".
+# 2) Push that tag to Github with git push.
+#
+# E.g.:
+# git tag v1.0.0 && git push upstream v1.0.0
+
+name: Create Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: Create archive
+        run: |
+          cd scripts
+          dart pub get
+          cd ..
+          dart run scripts/bin/build_release.dart
+        env:
+          GITHUB_MATRIX_OS: ${{ matrix.os }}
+          RUNNER_ARCH: ${{ runner.arch }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-archive-${{ matrix.os }}
+          path: ${{ env.ARCHIVE_NAME }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create GitHub Release with GH CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create ${GITHUB_REF_NAME} \
+            --generate-notes \
+            artifacts/release-archive-ubuntu-latest/* \
+            artifacts/release-archive-macos-latest/* \
+            artifacts/release-archive-windows-latest/*

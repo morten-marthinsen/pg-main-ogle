@@ -1,0 +1,15 @@
+.venv/
+dist/
+.gemini
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
+.vscode/
+*.code-workspace
+server
+.rag-sources
+# gemini-cli settings
+.gemini/
+
+# GitHub App credentials
+gha-creds-*.json

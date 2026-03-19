@@ -1,0 +1,30 @@
+# Changelog
+
+## [0.1.3](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/compare/0.1.2...0.1.3) (2026-01-28)
+
+
+### Features
+
+* **deps:** update dependency googleapis/genai-toolbox to v0.26.0 ([#61](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/issues/61)) ([2061281](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/commit/206128189fc48e7bc939bb1188a7b786389caf76))
+
+## [0.1.2](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/compare/0.1.1...0.1.2) (2025-10-17)
+
+
+### Bug Fixes
+
+* update context for install instructions ([#36](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/issues/36)) ([1d408e2](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/commit/1d408e289c21d8e7825b54dfb25104ecb37434e9))
+
+## [0.1.1](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/compare/0.1.0...0.1.1) (2025-09-30)
+
+
+### Features
+
+* recommend the cloud sql extension ([#23](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/issues/23)) ([52690d7](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/commit/52690d7e1b05dcd71b135e398b0f0f6037dbcc3d))
+* standardize mcp server names ([#22](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/issues/22)) ([06781e8](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/commit/06781e88561145dbf076ad0c26b2ec9cf9005eae))
+
+## 0.1.0 (2025-09-21)
+
+
+### Features
+
+* Add Cloud SQL for SQL Server Observability Extension ([#4](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/issues/4)) ([1884674](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability/commit/188467457e07904afe5495a32f788f726293def3))
