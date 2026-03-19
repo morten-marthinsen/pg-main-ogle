@@ -23,71 +23,78 @@ jobs:
           fetch-depth: 1
 
       # ============================================================
-      # STEP 1: Check which repos have changed, only sync those
+      # STEP 1: Check which repos changed, only sync those
       # ============================================================
 
       - name: Check and sync repos
         run: |
-          REPOS="anthropics/claude-code:claude-code
-          anthropics/skills:skills
-          anthropics/claude-plugins-official:claude-plugins-official
-          anthropics/claude-code-action:claude-code-action
-          anthropics/claude-code-security-review:claude-code-security-review
-          anthropics/claude-code-monitoring-guide:claude-code-monitoring-guide
-          anthropics/claude-agent-sdk-python:claude-agent-sdk-python
-          anthropics/claude-agent-sdk-typescript:claude-agent-sdk-typescript
-          anthropics/claude-agent-sdk-demos:claude-agent-sdk-demos
-          anthropics/claude-cookbooks:claude-cookbooks
-          anthropics/claude-quickstarts:claude-quickstarts
-          anthropics/courses:courses"
-
           SHAS_FILE="$SYNC_DIR/repo-shas.txt"
-          UPDATED_REPOS=""
-          SKIPPED=0
-
-          # Create SHAs file if it doesn't exist
           touch "$SHAS_FILE"
 
-          for entry in $REPOS; do
-            REPO=$(echo "$entry" | cut -d: -f1)
-            DIR=$(echo "$entry" | cut -d: -f2)
+          UPDATED=""
+          SKIPPED=0
+          TOTAL=12
 
-            # Get latest commit SHA from GitHub API
-            LATEST_SHA=$(curl -s "https://api.github.com/repos/${REPO}/commits/main" | jq -r '.sha // empty' 2>/dev/null)
+          sync_repo() {
+            local REPO="$1"
+            local DIR="$2"
 
-            if [ -z "$LATEST_SHA" ]; then
-              # Fallback: try HEAD if main doesn't exist
-              LATEST_SHA=$(curl -s "https://api.github.com/repos/${REPO}/commits/HEAD" | jq -r '.sha // empty' 2>/dev/null)
+            # Get latest SHA from GitHub
+            local LATEST
+            LATEST=$(curl -sf "https://api.github.com/repos/${REPO}/commits?per_page=1" | jq -r '.[0].sha // empty' 2>/dev/null || echo "")
+
+            if [ -z "$LATEST" ]; then
+              echo "WARN: Could not fetch SHA for $REPO, syncing anyway"
+              LATEST="unknown"
             fi
 
-            # Get previously synced SHA (format is repo:sha, so field 2+)
-            PREV_SHA=$(grep "^${REPO}:" "$SHAS_FILE" 2>/dev/null | sed "s|^${REPO}:||")
+            # Get stored SHA
+            local STORED
+            STORED=$(grep "^${DIR}=" "$SHAS_FILE" 2>/dev/null | cut -d= -f2 || echo "")
 
-            if [ "$LATEST_SHA" = "$PREV_SHA" ] && [ -d "$SYNC_DIR/$DIR" ]; then
-              echo "SKIP: $REPO (unchanged)"
+            # Compare
+            if [ "$LATEST" = "$STORED" ] && [ "$LATEST" != "unknown" ] && [ -d "$SYNC_DIR/$DIR" ]; then
+              echo "SKIP: $DIR"
               SKIPPED=$((SKIPPED + 1))
+              return
+            fi
+
+            echo "SYNC: $DIR"
+            rm -rf "$SYNC_DIR/$DIR"
+            git clone --depth 1 "https://github.com/${REPO}.git" "/tmp/$DIR"
+            rm -rf "/tmp/$DIR/.git"
+            mv "/tmp/$DIR" "$SYNC_DIR/$DIR"
+
+            # Store new SHA (replace old entry)
+            grep -v "^${DIR}=" "$SHAS_FILE" > "$SHAS_FILE.tmp" 2>/dev/null || true
+            echo "${DIR}=${LATEST}" >> "$SHAS_FILE.tmp"
+            mv "$SHAS_FILE.tmp" "$SHAS_FILE"
+
+            if [ -n "$UPDATED" ]; then
+              UPDATED="${UPDATED}, ${DIR}"
             else
-              echo "SYNC: $REPO (changed)"
-              rm -rf "$SYNC_DIR/$DIR"
-              git clone --depth 1 "https://github.com/${REPO}.git" "/tmp/$DIR"
-              rm -rf "/tmp/$DIR/.git"
-              mv "/tmp/$DIR" "$SYNC_DIR/$DIR"
-              UPDATED_REPOS="${UPDATED_REPOS}${DIR}, "
+              UPDATED="${DIR}"
             fi
+          }
 
-            # Update SHA record
-            if [ -n "$LATEST_SHA" ]; then
-              # Remove old entry and add new one
-              grep -v "^${REPO}:" "$SHAS_FILE" > "$SHAS_FILE.tmp" 2>/dev/null || true
-              echo "${REPO}:${LATEST_SHA}" >> "$SHAS_FILE.tmp"
-              mv "$SHAS_FILE.tmp" "$SHAS_FILE"
-            fi
-          done
+          sync_repo "anthropics/claude-code" "claude-code"
+          sync_repo "anthropics/skills" "skills"
+          sync_repo "anthropics/claude-plugins-official" "claude-plugins-official"
+          sync_repo "anthropics/claude-code-action" "claude-code-action"
+          sync_repo "anthropics/claude-code-security-review" "claude-code-security-review"
+          sync_repo "anthropics/claude-code-monitoring-guide" "claude-code-monitoring-guide"
+          sync_repo "anthropics/claude-agent-sdk-python" "claude-agent-sdk-python"
+          sync_repo "anthropics/claude-agent-sdk-typescript" "claude-agent-sdk-typescript"
+          sync_repo "anthropics/claude-agent-sdk-demos" "claude-agent-sdk-demos"
+          sync_repo "anthropics/claude-cookbooks" "claude-cookbooks"
+          sync_repo "anthropics/claude-quickstarts" "claude-quickstarts"
+          sync_repo "anthropics/courses" "courses"
 
-          # Save for later steps
-          echo "$UPDATED_REPOS" | sed 's/, $//' > /tmp/updated-repos.txt
-          echo "$SKIPPED" > /tmp/skipped-count.txt
           sort "$SHAS_FILE" -o "$SHAS_FILE"
+
+          # Save results for Slack
+          echo "$UPDATED" > /tmp/updated-repos.txt
+          echo "$SKIPPED" > /tmp/skipped-count.txt
 
       # ============================================================
       # STEP 2: Fetch docs, feeds, and other resources
@@ -107,9 +114,7 @@ jobs:
 
       - name: Record sync timestamp
         run: |
-          cat > "$SYNC_DIR/sync-metadata.yml" << METADATA
-          last_sync: $(date -u '+%Y-%m-%dT%H:%M:%SZ')
-          METADATA
+          echo "last_sync: $(date -u '+%Y-%m-%dT%H:%M:%SZ')" > "$SYNC_DIR/sync-metadata.yml"
 
       # ============================================================
       # STEP 4: Commit and push if there are changes
@@ -126,38 +131,39 @@ jobs:
             CHANGE_COUNT=$(git diff --cached --name-only | wc -l | tr -d ' ')
             echo "change_count=$CHANGE_COUNT" >> "$GITHUB_OUTPUT"
 
-            # Build summary
             UPDATED_REPOS=$(cat /tmp/updated-repos.txt)
             SKIPPED=$(cat /tmp/skipped-count.txt)
 
-            # Check if docs/feeds changed
-            DOCS_CHANGED=""
-            if git diff --cached --name-only | grep -q "claude-code-docs-full.txt"; then
-              DOCS_CHANGED="${DOCS_CHANGED}docs, "
-            fi
-            if git diff --cached --name-only | grep -q "releases.atom"; then
-              DOCS_CHANGED="${DOCS_CHANGED}release feed, "
-            fi
-            if git diff --cached --name-only | grep -q "platform-docs-index.txt"; then
-              DOCS_CHANGED="${DOCS_CHANGED}platform docs, "
-            fi
-            DOCS_CHANGED=$(echo "$DOCS_CHANGED" | sed 's/, $//')
+            # Check docs/feeds
+            DOCS=""
+            git diff --cached --name-only | grep -q "claude-code-docs-full.txt" && DOCS="${DOCS}docs refreshed, " || true
+            git diff --cached --name-only | grep -q "releases.atom" && DOCS="${DOCS}release feed updated, " || true
+            git diff --cached --name-only | grep -q "platform-docs-index.txt" && DOCS="${DOCS}platform docs refreshed, " || true
+            DOCS=$(echo "$DOCS" | sed 's/, $//')
 
-            SUMMARY=""
+            # Build summary lines
+            LINES=""
             if [ -n "$UPDATED_REPOS" ]; then
-              SUMMARY="Repos updated: ${UPDATED_REPOS}"
+              LINES="Repos: ${UPDATED_REPOS}"
             fi
-            if [ -n "$DOCS_CHANGED" ]; then
-              if [ -n "$SUMMARY" ]; then
-                SUMMARY="${SUMMARY}\n"
+            if [ -n "$DOCS" ]; then
+              if [ -n "$LINES" ]; then
+                LINES="${LINES}\n"
               fi
-              SUMMARY="${SUMMARY}Also updated: ${DOCS_CHANGED}"
+              LINES="${LINES}${DOCS}"
             fi
             if [ "$SKIPPED" -gt "0" ]; then
-              SUMMARY="${SUMMARY}\n${SKIPPED} repos unchanged, skipped."
+              if [ -n "$LINES" ]; then
+                LINES="${LINES}\n"
+              fi
+              LINES="${LINES}${SKIPPED} repos had no changes."
+            fi
+            # If only metadata changed
+            if [ -z "$LINES" ]; then
+              LINES="Metadata updated only."
             fi
 
-            echo "$SUMMARY" > /tmp/change-summary.txt
+            printf '%s' "$LINES" > /tmp/change-summary.txt
           fi
 
       - name: Commit and push
