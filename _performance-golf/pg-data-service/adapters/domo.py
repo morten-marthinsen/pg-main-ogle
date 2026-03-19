@@ -2,32 +2,15 @@
 
 All business logic (aggregation, Beast Modes) lives in enrichments/.
 This adapter only knows how to talk to Domo and return DataFrames.
-
-Canonical DomoClient source: see DOMO_CLIENT_PATH env var
 """
 
 import hashlib
-import os
 import re
-import sys
 
 import pandas as pd
-from dotenv import load_dotenv
 
 from .base import DataAdapter
-
-load_dotenv()
-
-# Import DomoClient from external path
-_domo_path = os.getenv("DOMO_CLIENT_PATH")
-if not _domo_path:
-    raise EnvironmentError(
-        "DOMO_CLIENT_PATH environment variable is required. "
-        "Set it to the directory containing domo_client.py "
-        "(e.g., export DOMO_CLIENT_PATH=/path/to/domo)"
-    )
-sys.path.insert(0, _domo_path)
-from domo_client import DomoClient  # noqa: E402
+from .domo_client import DomoClient
 
 # Column names this adapter references (kept local to avoid coupling to enrichments/)
 COL_AD = "Ad"

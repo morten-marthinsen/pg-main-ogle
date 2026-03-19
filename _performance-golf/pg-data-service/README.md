@@ -144,7 +144,7 @@ df = get_raw("ad_performance", "2026-03-08", "2026-03-14")
 
 ### Requirements for all consumers
 
-- `.env` with `DOMO_CLIENT_ID`, `DOMO_CLIENT_SECRET`, `DOMO_CLIENT_PATH`
+- `.env` with `DOMO_CLIENT_ID` and `DOMO_CLIENT_SECRET`
 - PII is always stripped — no parameter to override this
 - See `catalog/DATA_DICTIONARY.md` before calculating anything — if a metric exists, use it
 
@@ -160,7 +160,8 @@ pg-data-service/
 ├── README.md                     # This file — full architecture reference
 ├── adapters/
 │   ├── base.py                   # Abstract adapter interface (fetch_all + fetch_raw)
-│   └── domo.py                   # Domo implementation: raw row fetch only (no business logic)
+│   ├── domo.py                   # Domo implementation: raw row fetch only (no business logic)
+│   └── domo_client.py            # Domo API client (bundled, no external path needed)
 ├── enrichments/
 │   ├── __init__.py               # Enrichment function registry
 │   └── ad_performance.py         # All aggregation + Beast Mode + column formatting
@@ -273,7 +274,7 @@ The service applies **zero filters** to Domo data. No platform filter, no funnel
 ### Security
 
 - All date inputs validated via `_validate_date()` (YYYY-MM-DD regex) before SQL interpolation
-- `DOMO_CLIENT_PATH` is a required env var -- no hardcoded machine paths in source code
+- `DomoClient` is bundled in `adapters/domo_client.py` -- no external path dependencies
 - Credentials in `.env`, never committed
 
 ---
