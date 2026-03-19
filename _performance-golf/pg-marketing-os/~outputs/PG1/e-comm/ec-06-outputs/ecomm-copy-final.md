@@ -28,7 +28,7 @@
 **Subhead:** The first system in golf that finds your root swing flaw — then shows you step by step exactly how to fix it.
 
 **Value Proposition:**
-The PG1 Smart System finds your root swing flaw — the one movement creating every other problem in your swing — and gives you the one thing to work on right now to get better faster. One flaw. One plan. Improvement becomes inevitable.
+The PG1 Smart System finds your root swing flaw — the one movement creating every other problem in your swing — and gives you the one thing to work on right now to get better faster. One flaw. One plan. That's why **Improvement Is Inevitable**.
 
 **CTA:** Join the Founders Club
 
@@ -54,7 +54,7 @@ The PG1 Smart System finds your root swing flaw — the one movement creating ev
 
 You have been working on symptoms your entire golf life. Every instructor saw something different. Every app gave you data without direction. The root swing flaw sat underneath, invisible, creating all of it.
 
-The PG1 Smart System ends that cycle. It finds your root swing flaw. Gives you one thing to work on. Matches you with a coach. Adapts as you improve. From knowing your name to knowing your game.
+The PG1 Smart System ends that cycle. It finds your root swing flaw. Gives you one thing to work on. Matches you with a coach. Adapts as you improve. And goes from knowing your name to knowing your game.
 
 **Icon Row:** Assessment | SwingScan AI | Smart Step | Smart Match | Dashboard | Tracking
 
@@ -107,7 +107,7 @@ However, when you DO fix your root swing flaw, you are guaranteed to get better 
 
 ---
 
-**Header:** Traditional Instruction Addresses Your Symptoms, NOT The Source.
+**Header:** Traditional Instruction Addresses Your Symptoms, NOT The Root Cause.
 
 ---
 
@@ -273,14 +273,32 @@ That is when I knew: finding the root swing flaw changes everything. And I spent
 
 **The Coaching Team**
 
-Dedicated coaches built the framework behind Smart Match and deliver your coaching. Each specializes in specific root swing flaw types — so when SwingScan identifies your root flaw, your coach is the person best equipped to help you fix it.
+The coaches behind the PG1 Smart System built the framework behind Smart Match — and deliver your coaching directly. These are not random marketplace instructors. Each one brings decades of elite-level experience to your improvement path.
 
-**[Coach 1]** — *[Name + credential + flaw specialty — GAP-02]*
-**[Coach 2]** — *[Name + credential + flaw specialty]*
-**[Coach 3]** — *[Name + credential + flaw specialty]*
-**[Coach 4]** — *[Name + credential + flaw specialty]*
-**[Coach 5]** — *[Name + credential + flaw specialty]*
-**[Coach 6]** — *[Name + credential + flaw specialty]*
+**Main Coaches:**
+
+**Hank Haney** — *Tiger Woods' Former Coach for 6 years*
+**Martin Chuck** — *The Peoples' Coach*
+**Erika Larkin** — *Golf's #1 Female Instructor*
+**Andrew Rice** — *Helping the everyday golfer play better, faster*
+**JT Thomas** — *Golf Digest Best Young Teacher — 4 consecutive years*
+**Eric Cogorno** — *Golf Digest's Best In-State Teacher, Pennsylvania*
+**Brian Mogg** — *Golf Magazine Top 100 Instructor — 17 years running*
+
+**Supporting Coaches:**
+
+**David Leadbetter** — *50-year Hall of Fame career. Coach to seven former World #1s.*
+**Rocco Mediate** — *10-time Tour winner. Legendary golf personality.*
+**Rick Smith** — *Former coach to Jack Nicklaus, Phil Mickelson, and 80+ Tour winners.*
+**Cameron McCormick** — *Jordan Spieth's coach. 2015 PGA National Teacher of the Year.*
+
+**Expert Contributors:**
+
+James Sieckmann — *Golf Digest's #1 Short Game Coach in the World*
+Dr. Deborah Graham — *Golf Digest Top 10 Ranked Golf Psychologist, 400+ Tour pros*
+Kevin Weeks — *Golf Digest Top 50 Teacher — 10 years in a row*
+Derek Deminsky — *Regarded as the #1 ranked backspin instructor in the world*
+Craig Hanson — *Coach to over 100 Tour pros, winner of 14 Tour events*
 
 ---
 
@@ -559,7 +577,7 @@ Founders Club closes permanently. Future members join at public pricing — sign
 Not necessarily. Your root swing flaw varies by area of game. Driver root flaw is not the irons root flaw is not the short game root flaw. The Smart System addresses each area. This is an ongoing system, not a one-time fix.
 
 **Who are the coaches?**
-Dedicated coaches, each specializing in specific root swing flaw types. When SwingScan identifies your root flaw, your coach is matched by expertise. Coach profiles will be published before launch. *[GAP-02]*
+The PG1 coaching team includes Hank Haney (Tiger Woods' Former Coach), Martin Chuck, Erika Larkin, Andrew Rice, JT Thomas, Eric Cogorno, and Brian Mogg — supported by David Leadbetter, Rocco Mediate, Rick Smith, and Cameron McCormick. Each coach brings decades of elite-level experience. Smart Match pairs you with the coach best suited to your specific root swing flaw type.
 
 **Is my data private?**
 Yes. Your swing videos and data are used only for YOUR improvement. PG1 does not share individual user data.
@@ -634,7 +652,7 @@ $199/yr Annual | $399 Lifetime (Never Pay Again)
 
 | Gap | Impact | Resolution |
 |-----|--------|------------|
-| GAP-02: Coach names/photos/credentials | HIGH | Populate before page goes live (Sections 6, 15) |
+| ~~GAP-02: Coach names/photos/credentials~~ | ~~HIGH~~ | ~~RESOLVED — coaches populated (Sections 6, 15)~~ |
 | GAP-06: Beta user improvement data | MEDIUM | Collect 90-day data post-launch (Section 5) |
 | GAP-08: Accuracy methodology | MEDIUM | Internal doc for FTC defensibility |
 
