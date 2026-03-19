@@ -146,9 +146,9 @@ jobs:
 
       - name: Full checkout
         if: steps.sync.outputs.needs_sync == 'true'
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
+        run: |
+          git sparse-checkout disable
+          git checkout .
 
       - name: Download changed repos
         if: steps.sync.outputs.needs_sync == 'true'
