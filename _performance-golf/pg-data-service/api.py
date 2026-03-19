@@ -192,10 +192,10 @@ def get_card(
 
         combined = pd.concat(frames, ignore_index=True)
 
-        # Format columns — enrichment module owns the display name mapping
+        # Strip PII on snake_case columns, then format display names
+        combined = strip_pii(combined)
         combined = format_fn(combined)
-
-        return strip_pii(combined)
+        return combined
 
     elif output_mode == "summary":
         # Single call for full range, enrich once

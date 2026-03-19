@@ -165,7 +165,7 @@ def _aggregate_orders(order_df: pd.DataFrame) -> pd.DataFrame:
     else:
         all_agg["sc_trials"] = 0
 
-    nc_df = order_df[order_df[COL_NEW_CUSTOMERS].astype(str) != "0"]
+    nc_df = order_df[pd.to_numeric(order_df[COL_NEW_CUSTOMERS], errors="coerce").fillna(0) > 0]
     if not nc_df.empty:
         nc_agg = nc_df.groupby(COL_AD, as_index=False).agg(
             new_customers=(COL_EMAIL, "nunique"),
