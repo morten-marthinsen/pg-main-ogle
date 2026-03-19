@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:status.claude.com,2005:/history</id>
+  <link rel="alternate" type="text/html" href="https://status.claude.com"/>
+  <link rel="self" type="application/atom+xml" href="https://status.claude.com/history.atom"/>
+  <title>Claude Status - Incident History</title>
+  <updated>2026-03-19T16:23:24Z</updated>
+  <author>
+    <name>Claude</name>
+  </author>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29113501</id>
+    <published>2026-03-19T16:16:37Z</published>
+    <updated>2026-03-19T16:16:37Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/bf1hsq5gbm9b"/>
+    <title>Elevated errors on Claude Opus 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;19&lt;/var&gt;, &lt;var data-var='time'&gt;16:16&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident started at 8:53 PT / 15:53 UTC and the errors have now returned to baseline since 9:14 PT / 16:14 UTC.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;19&lt;/var&gt;, &lt;var data-var='time'&gt;15:59&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29113051</id>
+    <published>2026-03-19T15:46:09Z</published>
+    <updated>2026-03-19T15:46:09Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/mfhmykgrbzt5"/>
+    <title>Elevated errors on Claude Sonnet 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;19&lt;/var&gt;, &lt;var data-var='time'&gt;15:46&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - As of 8:42 PT / 15:42 UTC the error rate has now returned to baseline.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;19&lt;/var&gt;, &lt;var data-var='time'&gt;15:37&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating elevated errors that started at 8:23 PT / 15:23 UTC.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29097022</id>
+    <published>2026-03-19T01:38:31Z</published>
+    <updated>2026-03-19T01:38:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/6wlrxz9pqz8f"/>
+    <title>Elevated errors across surfaces</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;19&lt;/var&gt;, &lt;var data-var='time'&gt;01:38&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;19&lt;/var&gt;, &lt;var data-var='time'&gt;01:21&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - From 23:59–00:30 UTC, users experienced elevated errors when trying to authenticate across various Claude surfaces including Claude.ai and Claude Code. This issue has been resolved, and we are monitoring closely to ensure no further issues.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;19&lt;/var&gt;, &lt;var data-var='time'&gt;00:28&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. Our team is actively working to identify the root cause.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29086333</id>
+    <published>2026-03-18T16:05:10Z</published>
+    <updated>2026-03-18T16:05:10Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/p88wl8gmb05c"/>
+    <title>Elevated errors on Claude.ai</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;16:05&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;15:27&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;15:19&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - Claude Code login/logout actions are also affected by this outage.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;15:16&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29083173</id>
+    <published>2026-03-18T13:58:17Z</published>
+    <updated>2026-03-18T13:58:17Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/0dvq4gvy5f5f"/>
+    <title>Increased errors on Opus 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;13:58&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;13:25&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;13:19&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;12:30&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29076857</id>
+    <published>2026-03-18T09:45:53Z</published>
+    <updated>2026-03-18T09:45:53Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/s914kvccjthq"/>
+    <title>Elevated errors on Claude Opus 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;09:45&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;07:29&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;06:41&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29065976</id>
+    <published>2026-03-18T00:25:50Z</published>
+    <updated>2026-03-18T00:25:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/mhnzmndv58bt"/>
+    <title>Elevated errors on Claude Opus 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;18&lt;/var&gt;, &lt;var data-var='time'&gt;00:25&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;22:34&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;20:41&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. We have identified mitigations which we are continuing to regularly employ as we investigate the root cause.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;20:02&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;19:47&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29059551</id>
+    <published>2026-03-17T15:45:20Z</published>
+    <updated>2026-03-17T15:45:20Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/t252hkdgt81f"/>
+    <title>Elevated errors on Claude Sonnet 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;15:45&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;15:28&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;15:21&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;14:07&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented. At this stage, only free Claude.ai users are being impacted.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29052883</id>
+    <published>2026-03-17T13:03:10Z</published>
+    <updated>2026-03-17T13:03:10Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/66wxjy8wc8fx"/>
+    <title>Elevated errors on Claude Sonnet 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;13:03&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;12:13&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;11:59&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;10:05&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;08:23&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented. At this stage, only free Claude.ai users are being impacted.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;08:04&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29054541</id>
+    <published>2026-03-17T11:45:52Z</published>
+    <updated>2026-03-17T11:45:52Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/h04m7sftmtk5"/>
+    <title>Elevated errors on Claude Opus 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;11:45&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;11:37&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;10:02&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;17&lt;/var&gt;, &lt;var data-var='time'&gt;09:46&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29033847</id>
+    <published>2026-03-16T16:35:27Z</published>
+    <updated>2026-03-16T16:35:27Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/0266tzhrb7rn"/>
+    <title>Elevated errors on Claude Sonnet 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;16:35&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;15:35&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue. This is currently only impacting free Claude.ai users.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;15:13&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;14:05&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;14:04&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;14:02&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;14:02&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - There's an elevated error rate for free tier users on Claude Sonnet 4.6. We are investigating&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29033707</id>
+    <published>2026-03-16T14:21:29Z</published>
+    <updated>2026-03-16T14:21:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/81m3f5p97qkk"/>
+    <title>Elevated errors on Claude.ai</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;14:21&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;13:56&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/29031720</id>
+    <published>2026-03-16T12:36:51Z</published>
+    <updated>2026-03-16T12:36:51Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/t2m389x6k1tq"/>
+    <title>Elevated errors on Claude.ai</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;12:36&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;12:27&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;16&lt;/var&gt;, &lt;var data-var='time'&gt;12:01&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28972033</id>
+    <published>2026-03-13T21:27:50Z</published>
+    <updated>2026-03-13T21:27:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/q58b2gkv64pw"/>
+    <title>Elevated errors on Claude Opus 4.6 and Sonnet 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;13&lt;/var&gt;, &lt;var data-var='time'&gt;21:27&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;13&lt;/var&gt;, &lt;var data-var='time'&gt;18:37&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28946088</id>
+    <published>2026-03-12T18:00:19Z</published>
+    <updated>2026-03-12T23:31:42Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/tdp33ycsk4rb"/>
+    <title>Elevated errors on Claude Sonnet 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;12&lt;/var&gt;, &lt;var data-var='time'&gt;18:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;12&lt;/var&gt;, &lt;var data-var='time'&gt;16:34&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - A repeat of an earlier issue today started at 9:27 PT / 16:27 UTC.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28945632</id>
+    <published>2026-03-12T16:28:26Z</published>
+    <updated>2026-03-12T16:28:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/28hx7gp8hnzw"/>
+    <title>Elevated errors on Claude Sonnet 4.6 and on Claude.ai</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;12&lt;/var&gt;, &lt;var data-var='time'&gt;16:28&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;12&lt;/var&gt;, &lt;var data-var='time'&gt;16:07&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - We recently had an incident on Sonnet 4.6 between 8:30 PT / 15:30 UTC and 8:44 PT / 15:44 UTC where users would have seen a higher error rate across Claude Code, Claude API, and Claude.ai.&lt;br /&gt;&lt;br /&gt;Separately, we also had at around 8:27 PT an incident relate to Claude.ai that lasted a minute.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28945191</id>
+    <published>2026-03-12T15:48:28Z</published>
+    <updated>2026-03-12T15:48:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/gtj167mtk9pg"/>
+    <title>Elevated errors on Sonnet 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;12&lt;/var&gt;, &lt;var data-var='time'&gt;15:48&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;12&lt;/var&gt;, &lt;var data-var='time'&gt;15:42&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28922710</id>
+    <published>2026-03-11T17:28:30Z</published>
+    <updated>2026-03-11T17:56:48Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/jm3b4jjy2jrt"/>
+    <title>Elevated errors on Claude.ai (including login issues for Claude Code)</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;11&lt;/var&gt;, &lt;var data-var='time'&gt;17:28&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The incident is now resolved. To recap we had an incident starting at 07:17 PT / 14:17 UTC and the errors returned to baseline at 10:11 PT / 17:11 UTC.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;11&lt;/var&gt;, &lt;var data-var='time'&gt;17:22&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;11&lt;/var&gt;, &lt;var data-var='time'&gt;17:22&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;11&lt;/var&gt;, &lt;var data-var='time'&gt;17:19&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;11&lt;/var&gt;, &lt;var data-var='time'&gt;15:44&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We're currently investigating issues with Claude Code and Claude.ai. Some users may be unable to log in, and others may experience slower than usual performance. The Claude API is not affected.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;11&lt;/var&gt;, &lt;var data-var='time'&gt;15:27&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - We are continuing to investigate this issue.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;11&lt;/var&gt;, &lt;var data-var='time'&gt;14:47&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - This is affecting the login/logout actions in Claude Code as well.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;11&lt;/var&gt;, &lt;var data-var='time'&gt;14:44&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28864889</id>
+    <published>2026-03-10T16:52:45Z</published>
+    <updated>2026-03-10T16:52:45Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/pqpgkf52p3tg"/>
+    <title>Claude Desktop app unresponsive</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt;10&lt;/var&gt;, &lt;var data-var='time'&gt;16:52&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 8&lt;/var&gt;, &lt;var data-var='time'&gt;19:42&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - Root cause: Users with scheduled tasks in Claude Cowork or Claude Code who are in a timezone that observed daylight saving time last night were affected by an infinite loop. When the app tried to locate tasks scheduled during the “skipped” hour, it couldn’t resolve them and got stuck.&lt;br /&gt;&lt;br /&gt;Fix: Update to version 1.1.5749 via https://claude.com/download. If you’re unable to update right away, temporarily switching to a timezone that doesn’t observe daylight saving time will also resolve the issue.&lt;br /&gt;&lt;br /&gt;We’re working on a backend fix as well. We know disruptions to Claude affect your work, and we apologize for the trouble.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 8&lt;/var&gt;, &lt;var data-var='time'&gt;19:42&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Update&lt;/strong&gt; - Root cause: Users with scheduled tasks in Claude Cowork or Claude Code who are in a timezone that observed daylight saving time last night were affected by an infinite loop. When the app tried to locate tasks scheduled during the “skipped” hour, it couldn’t resolve them and got stuck.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 8&lt;/var&gt;, &lt;var data-var='time'&gt;18:27&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 8&lt;/var&gt;, &lt;var data-var='time'&gt;17:57&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We have identified the issue and are working on a mitigation. Currently, scheduled tasks are disabled for cowork and claude code desktop.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28829813</id>
+    <published>2026-03-08T15:49:03Z</published>
+    <updated>2026-03-08T15:49:04Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/jbc4ybjk83c6"/>
+    <title>Filesystem connector missing from Claude Desktop</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 8&lt;/var&gt;, &lt;var data-var='time'&gt;15:49&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - Filesystem extension has been restored to allowlists&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 6&lt;/var&gt;, &lt;var data-var='time'&gt;17:16&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix has been implemented. Users may need to re-add the Filesystem connector to their organization allowlist in order to reactivate it.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28846890</id>
+    <published>2026-03-07T16:58:12Z</published>
+    <updated>2026-03-07T16:58:12Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/qy1zsq4wwp1q"/>
+    <title>Elevated errors on Claude Haiku 4.5</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 7&lt;/var&gt;, &lt;var data-var='time'&gt;16:58&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - Today between 5:35 PT / 13:35 UTC and 6:44 PT / 14:44 UTC Haiku 4.5 had an elevated error rate. We are now at the baseline error rate.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 7&lt;/var&gt;, &lt;var data-var='time'&gt;13:58&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28828325</id>
+    <published>2026-03-06T16:23:02Z</published>
+    <updated>2026-03-06T16:23:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/htjkfrfnzq12"/>
+    <title>Elevated TCP three-way handshake failures on api.anthropic.com</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 6&lt;/var&gt;, &lt;var data-var='time'&gt;16:23&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 6&lt;/var&gt;, &lt;var data-var='time'&gt;16:01&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 6&lt;/var&gt;, &lt;var data-var='time'&gt;15:34&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - Some API requests to api.anthropic.com are experiencing connection timeouts due to network degradation at an upstream peering point. Requests that successfully connect are unaffected. We are working with our upstream providers to resolve the issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28787288</id>
+    <published>2026-03-04T17:01:30Z</published>
+    <updated>2026-03-04T17:01:30Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/5dbf8slk8mhr"/>
+    <title>Elevated errors on Claude Haiku 4.5</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 4&lt;/var&gt;, &lt;var data-var='time'&gt;17:01&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - Errors have returned to the baseline as of 8:08 PT / 16:08 UTC.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 4&lt;/var&gt;, &lt;var data-var='time'&gt;16:13&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 4&lt;/var&gt;, &lt;var data-var='time'&gt;15:58&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - The earlier issues with Haiku 4.5 have reappeared.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28785556</id>
+    <published>2026-03-04T15:57:48Z</published>
+    <updated>2026-03-04T15:57:48Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/cvh0kqnmzjks"/>
+    <title>Elevated errors on Claude Opus 4.6</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 4&lt;/var&gt;, &lt;var data-var='time'&gt;15:57&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 4&lt;/var&gt;, &lt;var data-var='time'&gt;14:14&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:status.claude.com,2005:Incident/28786112</id>
+    <published>2026-03-04T14:55:24Z</published>
+    <updated>2026-03-04T14:55:24Z</updated>
+    <link rel="alternate" type="text/html" href="https://status.claude.com/incidents/4xx67ythzxg5"/>
+    <title>Elevated errors on Claude Haiku 4.5</title>
+    <content type="html">&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 4&lt;/var&gt;, &lt;var data-var='time'&gt;14:55&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Resolved&lt;/strong&gt; - The incident for Haiku 4.5 has been between 6:45 PT / 14:45 UTC and 6:50 PT / 14:50 UTC.&lt;/p&gt;&lt;p&gt;&lt;small&gt;Mar &lt;var data-var='date'&gt; 4&lt;/var&gt;, &lt;var data-var='time'&gt;14:47&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt;&lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue.&lt;/p&gt;</content>
+  </entry>
+</feed>
