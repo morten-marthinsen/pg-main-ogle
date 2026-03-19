@@ -145,7 +145,7 @@ The average American golfer's handicap has stayed between 14.0 and 14.2 from 202
 
 **Header:** The PG1 Smart System
 
-**Subhead:** Find your root swing flaw. Fix it. Improve — inevitably.
+**Subhead:** Make Improvement Inevitable.
 
 ---
 
@@ -173,7 +173,15 @@ Your driver root flaw is not your irons root flaw is not your short game root fl
 
 ---
 
-When the Smart System finds your root swing flaw and you start working on your Smart Step, improvement becomes inevitable. The swing thought that's been haunting you for months quiets down. Shots you couldn't hit last week start landing. That breakthrough — the one where your game starts to feel like a different game — that's the moment everything changes. And it's just the beginning. Because once that root swing flaw is addressed, the Smart System identifies your next biggest opportunity for improvement. Then the next. Each one builds on the last. For as long as you want to play this game, the Smart System is finding the one thing that will make the biggest difference right now. That's not a 30-day program. That's a lifetime of good golf.
+When the Smart System finds your root swing flaw and you start working on your Smart Step, improvement becomes inevitable.
+
+The swing thought that's been haunting you for months quiets down. Shots you couldn't hit last week start landing. The practice that used to feel random finally has direction — because every drill connects to the one flaw that matters.
+
+And it's just the beginning.
+
+Once your root swing flaw resolves, the Smart System identifies your next biggest opportunity for improvement. Then the next. Each one builds on the last. For as long as you want to play this game, the Smart System is finding the one thing that will make the biggest difference right now.
+
+That's not a 30-day program. That's a lifetime of good golf.
 
 ---
 
@@ -197,7 +205,7 @@ When the Smart System finds your root swing flaw and you start working on your S
 
 **Header:** Everything Works Together. Nothing Works Alone.
 
-**Subhead:** The PG1 Smart System is not a value stack. It is one system with six components — each one feeding the next.
+**Subhead:** One system with six components — each one feeding the next.
 
 ---
 
@@ -239,7 +247,7 @@ The system matches you with a coach based on your specific root swing flaw type.
 ### 6. Drill & Round Tracking
 *Feedback loop — practice and play feed the system.*
 
-Every range session and every round feeds back into the Smart System. The more you use it, the more it knows you. Practice data and on-course data together give the system a complete picture of your game.
+Every range session and every round feeds back into the Smart System. The more you use it, the more it knows you.
 
 ---
 
@@ -273,7 +281,7 @@ That is when I knew: finding the root swing flaw changes everything. And I spent
 
 **The Coaching Team**
 
-The coaches behind the PG1 Smart System built the framework behind Smart Match — and deliver your coaching directly. These are not random marketplace instructors. Each one brings decades of elite-level experience to your improvement path.
+The coaches behind the PG1 Smart System built the diagnostic intelligence behind Smart Match — and deliver your coaching directly. Not random marketplace instructors. Smart Match pairs you with the coach whose expertise matches your specific root swing flaw type.
 
 **Main Coaches:**
 
@@ -304,7 +312,7 @@ Craig Hanson — *Coach to over 100 Tour pros, winner of 14 Tour events*
 
 **The Technology**
 
-Built by the developer behind MyFitnessPal and the Weather Channel app. The infrastructure is the core of a platform that 1.4 million golfers already rely on.
+Built by the developer behind MyFitnessPal and the Weather Channel app. 1.4 million golfers already rely on the platform.
 
 **Proof:** Brixton +3 HCP story (SOC-02). $5M+ (DATA-01). 276 team, 15 countries. MyFitnessPal/Weather Channel (AUTH-02). 1.4M golfers. Coaches (AUTH-01 — GAP-02).
 
@@ -354,7 +362,7 @@ Built by the developer behind MyFitnessPal and the Weather Channel app. The infr
 
 **Header:** What Happens After You Join
 
-**Subhead:** From sign-up to improvement — here is the path.
+**Subhead:** From sign-up to flaw resolution.
 
 ---
 
@@ -435,7 +443,7 @@ The average stuck golfer has spent **$2,000-5,000+** in the last three years on 
 
 **PG1 Founders pricing: $399 once. Never pay again.**
 
-That is less than two sessions with a PGA pro. And you get the Smart System that finds your root swing flaw, gives you your Smart Step, matches your coach, and adapts for life.
+That is less than two sessions with a PGA pro. And you get the complete Smart System — for life.
 
 **Design:** Visual calculator or comparison stack. Large-format price callouts. $399 Founders price reveal at bottom. Mobile: vertical stack.
 
@@ -502,7 +510,7 @@ That is less than two sessions with a PGA pro. And you get the Smart System that
 
 ---
 
-This is Founders pricing — the lowest price PG1 will ever be. When the 1,000 Founders spots are filled, this rate disappears. Your Founders rate is locked permanently. The public price will be significantly higher.
+This is Founders pricing — the lowest PG1 will ever be. When the 1,000 spots fill, this rate disappears. Yours is locked permanently.
 
 One flaw. One plan. Improvement becomes inevitable.
 
@@ -528,7 +536,7 @@ If you are not satisfied for any reason — any reason at all — send one email
 
 **365 days. Full refund. One email.**
 
-You have an entire year to let the Smart System prove what it can do for your game.
+You have an entire year to let the Smart System prove itself.
 
 **Design:** Centered, single-focus. Guarantee seal/badge above header. Full-width. Generous whitespace. Performance Orange accent on badge.
 
@@ -547,7 +555,7 @@ You have an entire year to let the Smart System prove what it can do for your ga
 ---
 
 **What is the PG1 Smart System?**
-A personalized golf improvement system — not an app. It combines a Personalized Assessment, SwingScan AI, your Smart Step, a Progress Dashboard, Dedicated Coach Access (Smart Match), and Drill & Round Tracking into one system that starts with your root swing flaw and adapts the more you use it. The app is the delivery vehicle. The system is what makes it different.
+A personalized golf improvement system — not an app. Six integrated components that start by finding your root swing flaw and adapt the more you use it. The app is the delivery vehicle. The system is what makes it different.
 
 **How does the Smart System find my root swing flaw?**
 SwingScan AI is trained on 2M+ swings across 77+ documented flaw patterns. Film your swing with your phone. SwingScan identifies your root swing flaw — the one movement creating all your compensations. Your Smart Step is built from that identification.
@@ -603,7 +611,7 @@ Yes. Your swing videos and data are used only for YOUR improvement. PG1 does not
 
 You have played for years. You practice. You have taken lessons. Your handicap has not moved.
 
-It is not you. Nobody found your root swing flaw. The Smart System finds it. Gives you your Smart Step. The plateau breaks when the root flaw resolves.
+It is not you. Nobody found your root swing flaw. The Smart System finds it. Gives you your Smart Step. The shots start dropping. The handicap starts moving.
 
 ---
 
@@ -621,7 +629,7 @@ The Smart System does not start with an opinion. It starts with your root swing 
 
 You have tried the tracking apps, the launch monitors, the AI analyzers. None gave you a clear direction — just more data.
 
-The Smart System turns data into a root swing flaw. Then builds your Smart Step, matches your coach, and adapts as you improve. From knowing your name to knowing your game.
+The Smart System does what none of them could — finds your root swing flaw and gives you one clear direction. From knowing your name to knowing your game.
 
 ---
 

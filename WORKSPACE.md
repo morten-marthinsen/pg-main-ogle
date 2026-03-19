@@ -80,42 +80,76 @@ Brand voice and copy guidelines apply as the DEFAULT for all PG content. Agent-s
 
 ---
 
-## Copywriting Heuristics (Learned From Draft → Final Edits)
+## Copywriting Principles — Persuasion Craft
 
-These rules apply to all spoken-word scripts, voiceover copy, and video walkthroughs across any offer. They were extracted by comparing AI-generated drafts against human-edited finals.
+These principles govern how to write copy that persuades. They are grounded in how humans process information, form beliefs, and make decisions. They apply to any persuasion deliverable — sales pages, e-comm, VSLs, emails, ads, scripts — and are not specific to any tool, LLM, or workflow.
 
-### 1. One Thought Per Line
-Break compound sentences into individual beats. Each line gets one idea the speaker can land before moving on. If a sentence has a comma followed by a new idea, it's probably two lines.
+Principles are extracted from real draft-to-final editing sessions. Each one traces back to a psychological mechanism — not a surface-level rule about word choice or sentence structure.
 
-### 2. Name What They're Looking At — Immediately
-Don't open with philosophy or setup. Tell the viewer what they're seeing in the first 3 seconds. Orientation before persuasion.
+### How Readers Process Information
 
-### 3. Break Complex Ideas Into Tiny Sequential Beats
-If a concept needs explanation, break it into 3–5 short lines that build on each other. Each line is a setup for the next. The listener absorbs one piece, then the next. Dense paragraphs don't land in spoken copy.
+**Every word the reader has to parse is a word they're not feeling.** Ambiguous pronouns, unclear antecedents, and vague references create cognitive friction. In persuasion, friction kills momentum. When a reader backtracks to figure out what "it" refers to, they've left the emotional flow and entered analytical mode. Name the thing. Resolve one idea before introducing the next.
 
-### 4. Use Punctuation for Spoken Rhythm
-Ellipses create pauses. Italics create emphasis. Dashes create beats. These aren't decorative — they're delivery instructions. Write the way a speaker breathes.
+**Effort without payoff is a demand — effort with payoff is an invitation.** When you describe what the reader will do ("the one thing to work on right now"), you're asking for effort. If you state effort without payoff, the reader's unconscious response is resistance. Pair it with the payoff ("the one thing to work on right now to get better faster") and effort becomes a path, not a cost.
 
-### 5. Add a Safety Net
-After any action step, add one line that removes fear of getting stuck: "If you run into any issues, we'll get you sorted." Reducing anxiety is as important as the instruction itself.
+**Either zoom out or zoom in — never split the difference.** When presenting multiple components, features, or benefits, you have two clean choices: describe the group's purpose at a high level, or give each item its own dedicated space. Cramming multiple items into a single clause ("matches you with a coach, and adapts the more you use it") creates a blur where nothing lands. The reader processes it as a list they're skimming past, not as distinct value.
 
-### 6. Close With Emotion, Not Logistics
-The last line should be the feeling, not the feature. "You're one step away from the best version of this experience" beats "Click submit and you'll receive a response within 48 hours." End on what it means, not what it does.
+### How Belief Forms
 
-### 7. Shorter Sentences = More Authority
-In spoken copy, short declarative sentences land harder than compound ones. "Then, give you the smartest way to fix it — FAST." has more punch than a longer version saying the same thing.
+**The problem section must define the root cause, not describe the symptoms.** The purpose of a problem section is to name the ONE thing the product addresses and make the reader feel it. Symptoms and patterns are supporting evidence — they validate the reader's experience. But they are not the problem itself. Define the root cause first. Then use symptoms to prove it's been operating in their life all along. The root cause is the star.
 
-### 8. Every Element Must Earn Its Spot
-The default is exclusion, not inclusion. Before including any beat — countersell, emotional close, proof stack, future pace, repetition — the piece must be worse without it. If removing it makes the copy tighter without losing anything, it didn't earn its place. This isn't about format or length. It's about whether each element is doing work that nothing else in the piece is already doing.
+**Analogies earn their place by transferring emotional certainty.** The best analogies transfer the emotional weight of something the reader already believes onto something they don't yet believe. "You would never let a doctor prescribe treatment without first running a diagnostic" maps onto a conviction the reader already holds. That certainty transfers onto the new claim. But placement matters: an analogy that arrives before the reader understands the problem is abstract. An analogy that arrives AFTER the counter-sells have shown every method failing becomes a gut punch. Set up first, then analogize.
 
-### 9. Complete the Proof Point — Land the Result
-When you cite a credential, finish the story. Don't stop at the event — land the outcome. "The doctor who put together Tiger Woods' recovery plan after his spinal fusion" is a credential. "On his way to winning the 2019 Masters" is the proof. The credential earns attention. The result earns belief.
+**A binary frame's length should match its structural weight.** A binary frame presents two mutually exclusive outcomes. When the binary is the foundational claim of the entire piece, it can afford to be expansive — each "no matter how much..." drives a nail deeper. When the binary is supporting a point already made, compress it. The question isn't "shorter is better" — it's "how much weight does this idea need to carry from here forward?"
 
-### 10. Close on Benefit, Not Mechanism
-By the time you reach the close, the mechanism has been explained. Don't re-explain it. The close is where you land what it means for the golfer — what they get, how it feels, what changes. The reader already knows how it works. Tell them what they walk away with.
+**Match the frame to the market's dominant emotional state.** A pain-focused market — where the audience tallies more frustration than aspiration — needs the problem to sit in the consequences: money wasted, effort with nothing to show, the feeling of being stuck despite doing everything right. The mechanism in a pain market solves a problem. It removes what's broken. Hope comes after, and it should be shorter. A hope-focused market — where the audience is already optimistic and looking for the next level — needs the solution to lead. The mechanism in a hope market enables a possibility. It opens a door the reader already wants to walk through. The problem section is shorter because the reader doesn't need to be convinced something is wrong — they need to be shown something better exists. In both cases: meet them where they are emotionally, THEN move them. The mistake is leading with hope in a pain market (the reader hasn't arrived there yet) or leading with pain in a hope market (the reader resists being told they're broken when they don't feel broken).
 
-### 11. Show, Don't Tell
-Never announce what the reader should feel or conclude — create the experience that makes them feel or conclude it on their own. "The first win comes fast" is telling. "Shots you couldn't hit last week start landing" is showing. Telling requires the reader to trust you. Showing lets them see it for themselves. If you can delete a sentence and the reader still gets the point from the surrounding picture language, the sentence was telling. Delete it.
+### How Persuasion Sequences
 
-### 12. Kill Clichés on Sight
-"Something clicks." "Everything changes." "It all comes together." "Take your game to the next level." These are dead phrases — they've been used so many times they no longer create any image or feeling in the reader's mind. Every sentence must do real work. If a phrase could appear in any ad for any product in any industry, it's a cliché. Replace it with language that is specific to the person, the moment, and the feeling — or delete it entirely.
+**The reader can only feel a problem through the lens they're currently holding.** When the product addresses a root cause the reader doesn't yet know exists, the problem will land as ordinary frustration rather than devastating revelation — unless you give them the lens first. A frame claim plants a new belief that transforms how the reader evaluates their own experience. The frame is educational — it introduces a new idea. The problem is experiential — it applies that idea to the reader's life. When the idea is significant enough, it needs its own room to breathe before you put it to work.
+
+**An idea's real estate should match its weight in the argument.** The more important an idea is to the case being built, the more space it gets — its own section, its own headline, its own visual treatment. A binary frame that carries the entire argument deserves an expansive standalone section. A supporting proof point earns a sentence. Burying a load-bearing idea inside another section as a paragraph signals to the reader that it's supporting detail, not a foundational claim. If the piece would collapse without the idea, give it the real estate that signals: this matters, pay attention, everything that follows depends on this.
+
+**Each section's job is partially to set up the next section.** Sections don't exist in isolation. The ATF creates curiosity that the frame claim satisfies. The frame claim creates a worldview that makes the problem devastating. The problem creates tension that the solution releases. When writing a section, ask: "What does the reader need to believe or feel BEFORE they hit the next section?"
+
+**Headlines must work twice — for the reader and the scanner.** A scanner who reads only headlines should get the argument's skeleton. A reader going top to bottom should feel momentum. The best headlines do both — they make sense in isolation AND feel like the next logical step.
+
+**Throat-clearing copy is an exit ramp.** Readers are impatient. They are actively looking for a reason to scroll away — and throat-clearing gives them one. "What I am about to share with you is the reason nothing you have tried has worked" is a pause in the momentum where nothing happens. It's a lull in a conversation that gives the listener permission to check out. Every line must either advance the argument or deepen the stakes. If a line announces what's coming instead of delivering it, the reader processes dead air — and dead air is when they leave. If a section exists only to set up the next section, it's not a section — it's a break in tension you can't afford. Cut it. If the transition needs help, the problem is in the section endings and beginnings, not the space between them.
+
+**Clarity over clever. Always.** When clarity and cleverness compete, clarity wins. This mirrors the Schley framework: DSI first (the clear difference), micro-script second (the catchy expression of it). Catchy without clear is a clever phrase with nothing behind it. Earn the micro-script by first stating what it is, what it does, and what the outcome is. The crystallizing line lands at the end of a section — at the beginning, it's a riddle.
+
+**Don't reveal price before establishing value.** Price without context triggers comparison shopping ("Is $399 a lot for a golf app?") rather than desire ("I need this — what does it cost?"). The reader must first understand what they'd lose by NOT having the product. Only after the problem, solution, and proof have done their work does price become meaningful.
+
+**Counter-sells create the gap — outposition, don't trash.** The goal isn't to say alternatives are bad. It's to show they're incomplete in a specific way only your product addresses. "YouTube — great coaches giving great advice... that may or may not apply to your swing" acknowledges value while making the gap self-evident. The reader should finish thinking "none of these are wrong, but none solve my actual problem." That's persuasive because the reader knows the alternatives aren't scams and will resist being told they are.
+
+### How Copy Lands (Sentence and Paragraph Level)
+
+**One thought per line.** If a line has a comma followed by a new idea, it's two lines. Compound sentences split attention between two concepts and neither lands with full force. In spoken copy this is non-negotiable. In written copy it's nearly as important — readers scan, and a compound sentence forces them to process two things in the space they budgeted for one.
+
+**Shorter sentences carry more authority.** Short declarative sentences land harder because they mimic the rhythm of conviction. People who are certain speak in short sentences. People who are hedging speak in long ones. The copy should sound certain.
+
+**Lead with the thing, not the approach to the thing.** First drafts almost always open with a setup paragraph the reader doesn't need — the writer needed it to find their way in. Lead with the thing itself. In video and walkthroughs, this means naming what the viewer is looking at in the first 3 seconds — orientation before persuasion.
+
+**Punctuation is delivery instruction.** Ellipses create pauses. Dashes create beats. Italics create emphasis. These aren't decorative — they tell the reader (or speaker) how to experience the rhythm of the sentence. Write the way a speaker breathes.
+
+**Close on benefit and feeling, not mechanism and logistics.** The last line of any section should be the emotion, not the feature. By the close, the mechanism has been explained — don't re-explain it. Land what it means for the reader: what they get, how it feels, what changes. "You're one step away from the best version of this experience" beats "Click submit and you'll receive a response within 48 hours."
+
+**Break complex ideas into tiny sequential beats.** If a concept needs explanation, break it into 3-5 short lines where each sets up the next. The reader absorbs one piece, then the next. Dense paragraphs that attempt a complex idea in a single pass don't land — the reader either skims or re-reads, and both break flow.
+
+**Repetition is critical — redundancy is unacceptable.** Repetition is the golden thread: a core message reappearing across sections, in different contexts, doing different work each time. "Root swing flaw" in the problem section is the thing never identified; in the solution, the thing the system finds; in the proof, the thing competitors ignore; in the close, the thing that makes improvement inevitable. Same phrase, different job. That's essential. Redundancy is when two elements say the same thing the same way — a subhead and a paragraph restating the same claim. Pick the stronger version, kill the other.
+
+**Every element must earn its spot.** The default is exclusion, not inclusion. Before including any beat, the piece must be worse without it. If removing it makes the copy tighter without losing anything, it didn't earn its place. This isn't about length — it's about whether each element is doing work nothing else is already doing.
+
+**Show, don't tell.** Never announce what the reader should feel — create the experience. "The first win comes fast" is telling. "Shots you couldn't hit last week start landing" is showing. Telling requires trust. Showing lets them see it. Test: if you can delete a sentence and the reader still gets the point from the surrounding picture language, the sentence was telling. Delete it.
+
+**A sequence of points needs a final punch to land.** When you build a case through a series of points — counter-sells, proof elements, examples — each one adds weight. Without a final line that drives it home, the sequence dissipates like a sentence that stops mid-thought. One sharp line after the sequence completes the thought and gives the reader something definitive to carry forward.
+
+**Make the reader the subject of the analogy's second half.** "That is the equivalent of a doctor prescribing treatment without ever running a diagnostic" is the analogy. "When it comes to your health, you would NEVER do that" turns the reader into the protagonist. "But that's the approach you're taking every single day with your golf game" makes the contradiction personal. An analogy that stays abstract informs. An analogy that turns personal motivates.
+
+**Vague action language sounds like work, not value.** "Builds everything around fixing it." "Creates a comprehensive solution." These describe what the SYSTEM does without telling the reader what THEY get. Replace vague action language with concrete outcome language. "Shows you step by step exactly how to fix it" tells the reader what their experience will be. "Builds everything around fixing it" tells them the system is busy.
+
+**Kill cliches on sight.** "Something clicks." "Everything changes." "It all comes together." "Take your game to the next level." Dead phrases — they create no image or feeling. If a phrase could appear in any ad for any product in any industry, it's a cliche. Replace with language specific to the person, the moment, and the feeling — or delete entirely.
+
+**Complete the proof point — land the result.** When you cite a credential, finish the story. "The doctor who put together Tiger Woods' recovery plan after his spinal fusion" is a credential. "On his way to winning the 2019 Masters" is the proof. The credential earns attention. The result earns belief.
+
+> **How this section grows:** After each draft-to-final editing session, trace each correction back to the psychological mechanism behind it. If the principle already exists here, the correction is a signal the principle wasn't followed. If the principle doesn't exist, write it: name the mechanism, explain why it works, and make it concrete enough that any writer could apply it without further instruction.

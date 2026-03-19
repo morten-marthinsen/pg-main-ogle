@@ -1,0 +1,217 @@
+name: Sync Claude Code Resources
+
+on:
+  schedule:
+    # Runs daily at 6:00 AM EST (11:00 UTC)
+    - cron: '0 11 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    env:
+      SYNC_DIR: _performance-golf/pg-ai/claude-code
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    steps:
+      - name: Checkout pg-main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # ============================================================
+      # STEP 1: Sync all Anthropic repos
+      # ============================================================
+
+      - name: Sync anthropics/claude-code
+        run: |
+          rm -rf "$SYNC_DIR/claude-code"
+          git clone --depth 1 https://github.com/anthropics/claude-code.git /tmp/claude-code
+          rm -rf /tmp/claude-code/.git
+          mv /tmp/claude-code "$SYNC_DIR/claude-code"
+
+      - name: Sync anthropics/skills
+        run: |
+          rm -rf "$SYNC_DIR/skills"
+          git clone --depth 1 https://github.com/anthropics/skills.git /tmp/skills
+          rm -rf /tmp/skills/.git
+          mv /tmp/skills "$SYNC_DIR/skills"
+
+      - name: Sync anthropics/claude-plugins-official
+        run: |
+          rm -rf "$SYNC_DIR/claude-plugins-official"
+          git clone --depth 1 https://github.com/anthropics/claude-plugins-official.git /tmp/claude-plugins-official
+          rm -rf /tmp/claude-plugins-official/.git
+          mv /tmp/claude-plugins-official "$SYNC_DIR/claude-plugins-official"
+
+      - name: Sync anthropics/claude-code-action
+        run: |
+          rm -rf "$SYNC_DIR/claude-code-action"
+          git clone --depth 1 https://github.com/anthropics/claude-code-action.git /tmp/claude-code-action
+          rm -rf /tmp/claude-code-action/.git
+          mv /tmp/claude-code-action "$SYNC_DIR/claude-code-action"
+
+      - name: Sync anthropics/claude-code-security-review
+        run: |
+          rm -rf "$SYNC_DIR/claude-code-security-review"
+          git clone --depth 1 https://github.com/anthropics/claude-code-security-review.git /tmp/claude-code-security-review
+          rm -rf /tmp/claude-code-security-review/.git
+          mv /tmp/claude-code-security-review "$SYNC_DIR/claude-code-security-review"
+
+      - name: Sync anthropics/claude-code-monitoring-guide
+        run: |
+          rm -rf "$SYNC_DIR/claude-code-monitoring-guide"
+          git clone --depth 1 https://github.com/anthropics/claude-code-monitoring-guide.git /tmp/claude-code-monitoring-guide
+          rm -rf /tmp/claude-code-monitoring-guide/.git
+          mv /tmp/claude-code-monitoring-guide "$SYNC_DIR/claude-code-monitoring-guide"
+
+      - name: Sync anthropics/claude-agent-sdk-python
+        run: |
+          rm -rf "$SYNC_DIR/claude-agent-sdk-python"
+          git clone --depth 1 https://github.com/anthropics/claude-agent-sdk-python.git /tmp/claude-agent-sdk-python
+          rm -rf /tmp/claude-agent-sdk-python/.git
+          mv /tmp/claude-agent-sdk-python "$SYNC_DIR/claude-agent-sdk-python"
+
+      - name: Sync anthropics/claude-agent-sdk-typescript
+        run: |
+          rm -rf "$SYNC_DIR/claude-agent-sdk-typescript"
+          git clone --depth 1 https://github.com/anthropics/claude-agent-sdk-typescript.git /tmp/claude-agent-sdk-typescript
+          rm -rf /tmp/claude-agent-sdk-typescript/.git
+          mv /tmp/claude-agent-sdk-typescript "$SYNC_DIR/claude-agent-sdk-typescript"
+
+      - name: Sync anthropics/claude-agent-sdk-demos
+        run: |
+          rm -rf "$SYNC_DIR/claude-agent-sdk-demos"
+          git clone --depth 1 https://github.com/anthropics/claude-agent-sdk-demos.git /tmp/claude-agent-sdk-demos
+          rm -rf /tmp/claude-agent-sdk-demos/.git
+          mv /tmp/claude-agent-sdk-demos "$SYNC_DIR/claude-agent-sdk-demos"
+
+      - name: Sync anthropics/claude-cookbooks
+        run: |
+          rm -rf "$SYNC_DIR/claude-cookbooks"
+          git clone --depth 1 https://github.com/anthropics/claude-cookbooks.git /tmp/claude-cookbooks
+          rm -rf /tmp/claude-cookbooks/.git
+          mv /tmp/claude-cookbooks "$SYNC_DIR/claude-cookbooks"
+
+      - name: Sync anthropics/claude-quickstarts
+        run: |
+          rm -rf "$SYNC_DIR/claude-quickstarts"
+          git clone --depth 1 https://github.com/anthropics/claude-quickstarts.git /tmp/claude-quickstarts
+          rm -rf /tmp/claude-quickstarts/.git
+          mv /tmp/claude-quickstarts "$SYNC_DIR/claude-quickstarts"
+
+      - name: Sync anthropics/courses
+        run: |
+          rm -rf "$SYNC_DIR/courses"
+          git clone --depth 1 https://github.com/anthropics/courses.git /tmp/courses
+          rm -rf /tmp/courses/.git
+          mv /tmp/courses "$SYNC_DIR/courses"
+
+      # ============================================================
+      # STEP 2: Fetch docs, feeds, and other resources
+      # ============================================================
+
+      - name: Fetch Claude Code full docs
+        run: curl -sL "https://code.claude.com/docs/llms-full.txt" -o "$SYNC_DIR/claude-code-docs-full.txt"
+
+      - name: Fetch Platform docs index
+        run: curl -sL "https://platform.claude.com/llms.txt" -o "$SYNC_DIR/platform-docs-index.txt"
+
+      - name: Fetch releases Atom feed
+        run: curl -sL "https://github.com/anthropics/claude-code/releases.atom" -o "$SYNC_DIR/releases.atom"
+
+      - name: Fetch status Atom feed
+        run: curl -sL "https://status.claude.com/feed.atom" -o "$SYNC_DIR/status.atom"
+
+      - name: Fetch Anthropic whitepaper
+        run: curl -sL "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf" -o "$SYNC_DIR/anthropic-whitepaper.pdf"
+
+      # ============================================================
+      # STEP 3: Record sync metadata
+      # ============================================================
+
+      - name: Record sync timestamp
+        run: |
+          cat > "$SYNC_DIR/sync-metadata.yml" << 'METADATA'
+          last_sync: TIMESTAMP_PLACEHOLDER
+          repos:
+            - anthropics/claude-code
+            - anthropics/skills
+            - anthropics/claude-plugins-official
+            - anthropics/claude-code-action
+            - anthropics/claude-code-security-review
+            - anthropics/claude-code-monitoring-guide
+            - anthropics/claude-agent-sdk-python
+            - anthropics/claude-agent-sdk-typescript
+            - anthropics/claude-agent-sdk-demos
+            - anthropics/claude-cookbooks
+            - anthropics/claude-quickstarts
+            - anthropics/courses
+          docs:
+            - https://code.claude.com/docs/llms-full.txt
+            - https://platform.claude.com/llms.txt
+          feeds:
+            - https://github.com/anthropics/claude-code/releases.atom
+            - https://status.claude.com/feed.atom
+          METADATA
+          sed -i "s|TIMESTAMP_PLACEHOLDER|$(date -u '+%Y-%m-%dT%H:%M:%SZ')|" "$SYNC_DIR/sync-metadata.yml"
+
+      # ============================================================
+      # STEP 4: Commit and push if there are changes
+      # ============================================================
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add -A "$SYNC_DIR/"
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            CHANGE_COUNT=$(git diff --cached --name-only | wc -l | tr -d ' ')
+            echo "change_count=$CHANGE_COUNT" >> "$GITHUB_OUTPUT"
+            git diff --cached --name-only | head -20 > /tmp/change-summary.txt
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          CHANGE_COUNT: ${{ steps.changes.outputs.change_count }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "sync: Update Claude Code resources $(date -u '+%Y-%m-%d')
+
+          Automated daily sync of Anthropic/Claude Code official resources.
+          Files changed: $CHANGE_COUNT"
+          git push
+
+      # ============================================================
+      # STEP 5: Slack notification
+      # ============================================================
+
+      - name: Send Slack notification (changes found)
+        if: steps.changes.outputs.has_changes == 'true' && env.SLACK_WEBHOOK_URL != ''
+        env:
+          CHANGE_COUNT: ${{ steps.changes.outputs.change_count }}
+        run: |
+          CHANGE_SUMMARY=$(cat /tmp/change-summary.txt | head -20)
+          PAYLOAD=$(jq -n \
+            --arg text "*Claude Code Sync — $(date -u '+%Y-%m-%d')*\n\nSync complete. ${CHANGE_COUNT} files updated.\n\nChanged:\n\`\`\`${CHANGE_SUMMARY}\`\`\`\n\n_Audit and action items coming in Phase 2._" \
+            '{text: $text}')
+          curl -X POST "$SLACK_WEBHOOK_URL" \
+            -H 'Content-type: application/json' \
+            -d "$PAYLOAD"
+
+      - name: Send Slack notification (no changes)
+        if: steps.changes.outputs.has_changes == 'false' && env.SLACK_WEBHOOK_URL != ''
+        run: |
+          PAYLOAD=$(jq -n \
+            --arg text "*Claude Code Sync — $(date -u '+%Y-%m-%d')*\n\nNo changes upstream. Everything is current." \
+            '{text: $text}')
+          curl -X POST "$SLACK_WEBHOOK_URL" \
+            -H 'Content-type: application/json' \
+            -d "$PAYLOAD"
