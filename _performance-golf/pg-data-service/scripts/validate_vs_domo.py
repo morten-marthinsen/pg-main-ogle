@@ -61,12 +61,20 @@ def main():
 
     # --- Load our enriched data for the same date range ---
     print(f"\nFetching enriched data {args.date_from} to {args.date_to}...")
-    ours = get_ad_performance_card(args.date_from, args.date_to, day=args.date_to)
-    if ours.empty:
+    ours_daily = get_ad_performance_card(args.date_from, args.date_to)
+    if ours_daily.empty:
         print("No enriched data returned.")
         sys.exit(1)
-    ours["Ad"] = ours["Ad"].astype(str).str.lower().str.strip()
-    print(f"  {len(ours)} ads")
+    ours_daily["Ad"] = ours_daily["Ad"].astype(str).str.lower().str.strip()
+    print(f"  {len(ours_daily)} daily rows, {ours_daily['Ad'].nunique()} ads")
+
+    # Aggregate our daily rows to match Domo aggregation above
+    for c in ADDITIVE_COLS:
+        if c in ours_daily.columns:
+            ours_daily[c] = pd.to_numeric(ours_daily[c], errors="coerce").fillna(0)
+    present_additive = [c for c in ADDITIVE_COLS if c in ours_daily.columns]
+    ours = ours_daily.groupby("Ad", as_index=False)[present_additive].sum()
+    print(f"  Aggregated to {len(ours)} ads")
 
     # --- Find common ads, focus on top N ---
     common_ads = set(domo["Ad"]) & set(ours["Ad"])
