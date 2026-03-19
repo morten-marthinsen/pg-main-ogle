@@ -1,0 +1,46 @@
+gate: GATE_1
+status: PASS
+verified_at: "2026-03-18T09:00:00-04:00"
+verified_by: claude-opus-4-6
+
+total_quotes: 3533
+threshold: 1000
+
+bucket_counts:
+  pain:
+    count: 1005
+    threshold: 300
+    status: PASS
+  hope:
+    count: 852
+    threshold: 250
+    status: PASS
+  root_cause:
+    count: 587
+    threshold: 200
+    status: PASS
+  solutions_tried:
+    count: 838
+    threshold: 150
+    status: PASS
+  competitor_mechanism:
+    count: 134
+    threshold: 100
+    status: PASS
+  villain:
+    count: 117
+    threshold: 75
+    status: PASS
+
+expansion_rounds_used: 0
+source_file: layer-1-outputs/scored_quotes.json
+batches_processed: 12
+items_scraped: 8961
+channels_completed:
+  - reddit (6909 items)
+  - twitter_search (999 items)
+  - youtube (1727 comments from 34 videos)
+  - youtube_direct (14 comments)
+  - linkedin (in_progress - supplementary)
+  - web (in_progress - supplementary)
+  - twitter_individual (in_progress - supplementary)

@@ -1,0 +1,1233 @@
+{
+  "batch": 0,
+  "items_processed": 800,
+  "items_with_quotes": 152,
+  "items_skipped": 648,
+  "quotes": [
+    {
+      "text": "Hey everyone, I saw that “Humanize AI” thread where people were debating whether AI-generated text can *really* sound human. I figured instead of just speculating, I’d test the top AI humanizers myself and see which ones actually pass detectors like **GPTZero**, **Copyleaks**, and **Originality ai**. Because honestly, between **AI detectors** popping up everywhere and **students using AI humanizers** to clean up essays, it’s getting impossible to know what’s legit and what’s just hype. # Tools I Tested I used the same 500-word ChatGPT essay (generic topic: “impact of social media on learning”) and ran it through these 7 tools: 1. **WalterWritesAI** – claims to “humanize” AI text without losing meaning. 2. [**Undetectable.ai**](http://Undetectable.ai) – one of the most mentioned tools on Reddit. 3. **GPTinf** – free rewriter that supposedly fools GPTZero. 4. **HumanizeMyText** – simple UI, promises Turnitin-proof results. 5. **QuillBot** – technically a paraphraser, not an AI humanizer, but still popular. 6. **Sapling Rewrite** – used by businesses for tone adjustment. 7. **StealthWriter** – focuses on bypassing AI writing patterns. # Testing Setup Each tool got the *same input* (raw ChatGPT output). Then I ran every result through: * **GPTZero** (AI probability score) * **Copyleaks** * [**Originality.ai**](http://Originality.ai) * A quick...",
+      "bucket": "root_cause",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Various-Worker-790",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/"
+    },
+    {
+      "text": "Exactly. I feel like people expect the humanize AI stage to magically fix tone, but you still need to add your own voice after. Otherwise it reads like polished AI that got paraphrased.",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Lola_Petite_1",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nqilbmg/"
+    },
+    {
+      "text": "For real. AI detectors like GPTZero or Copyleaks don’t even care about fancy words, they care about patterns. If the text is too smooth and predictable, it screams AI-generated writing.",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Various-Worker-790",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nqilll2/"
+    },
+    {
+      "text": "Yeah, I always hit the transitions first. Stuff like “therefore,” “moreover,” “in conclusion”… those phrases feel like instant flags for AI detection. I swap them with “so,” “also,” “anyway,” and it drops the score.",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Lola_Petite_1",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nqim329/"
+    },
+    {
+      "text": "Same trick here. And I’ll sprinkle contractions & small human quirks. Like a tiny tangent, a “kinda,” a “to be honest,” or a short one-liner. That burstiness makes it feel like a real person typed it.",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Various-Worker-790",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nqimest/"
+    },
+    {
+      "text": "Lol yep. I even leave one sentence slightly imperfect on purpose. Not sloppy, just… human. It’s funny that too perfect is what gets labeled as AI text now.",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Lola_Petite_1",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nqimvxm/"
+    },
+    {
+      "text": "Right?? The best humanized AI text has personality. Not random synonyms, actual cadence. That’s why grammar spinners fail… they just reshuffle words and kill the flow.",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Various-Worker-790",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nqin8ea/"
+    },
+    {
+      "text": "True. Also I’ve noticed after the rewrite, reading it out loud helps a ton. If I trip over a line or it feels stiff, I rewrite that part. Natural rhythm is much better.",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Lola_Petite_1",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nqino3u/"
+    },
+    {
+      "text": "I appreciate that you didn’t oversell anything here, detectors change constantly, so nothing is future-proof. But yeah, the tools that alter structure instead of words definitely work better right now. I tested a handful myself and the pattern was the same: anything that leaves sentence flow too smooth gets flagged, no matter how many synonyms you throw in.",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Abject_Cold_2564",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nq4mglu/"
+    },
+    {
+      "text": "Yeah, I’ve noticed the same thing, the key isn’tt just changing words, its makingg the rhythm and flow sound humann. The pieces that actually pass detectors usuallyy have natural pauses, varied sentence lengths, and a conversational tonee. Mixing in small quirks and contractions really makes tthe difference between ai polished and genuinely human.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "drowninginwords2",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nqgcm08/"
+    },
+    {
+      "text": "I still write original content  \nSomeone tell me I am not in the Neadatho stage   \nIf you want someone who can give you original work for your assignments , hmu",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Dear_Neighborhood274",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/nql9462/"
+    },
+    {
+      "text": "I’m skeptical of “humanizer” tools but I happened to use one followed by Originality to double‑check. it flagged awkward phrasing that the humanizer missed",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "MalungkotNaPuta",
+      "url": "/r/BypassAiDetect/comments/1p2ynzn/best_ai_humanizer_reddit_2025_i_tested_7_tools/ns0mnek/"
+    },
+    {
+      "text": "... is a complaint/opinion I've been seeing a lot in this subreddit. It's wrong. I'm usually not one to take binary stances on topics, the world isn't so simple where we can boil everything down to two options... but I'm taking a hard stance on this, with nuance and caveats (so I guess not totally binary). This subreddit has never been a bastion of critical thought and forward thinking--from Tater Tots and SMMA shills to AI and market-is-oversaturated doomsayers. So here's why there's PLENTY of work for copywriters, why AI is NOT killing the market, and why your drop in income and shrinking income is a SKILL ISSUE and a YOU PROBLEM. # Direct Response Copywriter VS. Everything-else-writer If you seriously consider yourself to be a \"direct response copywriter\" but your main skill stack consists of writing: 1. Blog articles 2. Articles 3. Tech documents 4. white papers 5. ebooks 6. linkedin or facebook posts 7. social media captions 8. press releases 9. \"SEO optimized xyz\" You are not a direct response copywriter. You are a content writer. A technical writer. A ghost writer. An SEO writer. Make no mistake, I'm not making this distinction because DR Copywriting is inherently...",
+      "bucket": "root_cause",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/"
+    },
+    {
+      "text": "To be completely transparent, I knew this was going to go down poorly. What I posted WAS pretentious, and I'm 100% an asshole for sharing it and wording it the way I did.\n\nWhat I wanted to do was stir the hornet's nest and see if I could force a perspective shift in at least one person.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oa9rjkw/"
+    },
+    {
+      "text": "\"Things suck out loud for copywriters right now. And I saw an opportunity to ADD to the misery by telling struggling, desperate writers who are unable to do what they love that they're the problem and should stop feeling sorry for themselves.\" \n\nWith every single drop of respect due, you're a terrible person and should REALLY go fuck yourself.",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "UglyShirts",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oad3jyp/"
+    },
+    {
+      "text": "Plenty of humans use them, which is why LLMs use them, too. And your awareness of human usage means your presumption of botting fails Logic 101 with what's called \"the converse error\" or \"affirming the consequent\".",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Carradee",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oab3wta/"
+    },
+    {
+      "text": "I can, and I will, but I hope you understand that without a measure of goodwill, it's just going to seem like I'm making things up.\n\n\\- I know a fellow who, in the last 3 months, picked up an internship for an Agora Financial affiliate/alum. He has now been taken under the wing of said alum to be his protege\n\n\\- Another fellow who I personally hired at a 9-figure direct response company as junior copywriter. We brought him on to write video ad scripts and emails\n\n\\- I know of a filipino lady who picked up a copywriting internship and took that experience to spin up her own boutique agency in the philippines \n\n\\- I know a Greek kid who started with email lifts for a marketing agency and is now a copywriter for one of the bigger DR agencies in the infopub space",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oa9onjr/"
+    },
+    {
+      "text": "So you won't link anyone's portfolio or samples of their work? Any writer worth their salt can come up with characters and a back story like these. Where's the proof these people are real?\n\nAlso, you state that excellent copywriting is key to success in 2026, yet the copy you just sent us reads like a 90's chain letter.\n\nI hope you can understand why, even with a measure of goodwill, this response isn't helping your case.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "gottaloveagoodbook",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaa9xut/"
+    },
+    {
+      "text": "1. I'm not just going to dox random people who are within 3 degrees of separation in my network\n\n2. I don't have their portfolios on hand. I've loosely followed their progress in mutual communities and from different colleagues who work with them/want me to refer work to them\n\n3. Nothing I've written is copy. It's all just stream-of-consciousness/rambling/ranting/whatever. Do you know how much effort it takes to write good consumer-facing copy? Why would I carefully craft something like that just to talk. Not everything I write is copy, come on\n\nIf you want to take this into DMs, where I'd be more comfortable sharing more personal details, then we can do that instead.\n\nBelieve it or not, I \\*\\*\\*am\\*\\*\\* trying to operate in good faith here. Aside from the knobheaded post I made, I like to think most of my comments in this thread have been fairly normal",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaabdku/"
+    },
+    {
+      "text": "“I want people to stop reading my opinionated, unsupported, and longwinded rant, so I added crass imagery.” \n\nYou didn’t need it. People already had three reasons to ignore this.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "DarthGoodguy",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaa5s6h/"
+    },
+    {
+      "text": "I don't know what more you'd want from me in this conversation. Regardless, you still engaged with it, as did others. That was my goal, goal achieved",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaa660d/"
+    },
+    {
+      "text": "> I don’t know what more you want from me\n\nMaybe deleting your bullshit post?\n\n> goal achieved\n\n“I was trying to look like a fucking idiot! I WIN LOSERS!!!”",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "DarthGoodguy",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaainjo/"
+    },
+    {
+      "text": "I have 25+ years in this field, and I have some things to add: \n\nThe way OP frames this as a skill issue isn't wrong but it's aimed at the wrong target. The writers I know (myself included) who are thriving aren't thriving because they picked up DR versus something else. DR copy isn't sitting in some protected bubble, immune to the same forces hitting everything else. Those VSLs, email sequences and advertorials are still the most templated, studied and reverse-engineered formats in marketing. If anything, they were the first in line. \n\nSo if it's not format, what is it? \n\nThe ones that are struggling right now are asking \"What should I be writing?\" The ones that are thriving stopped asking that question a long time ago. The diagnosis in this post, that it's a skill issue, that DR copy is some kind of safe harbor, that you just gotta hustle more, is gonna send a lot of people climing the wrong mountain with the wrong map.",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "loves_spain",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaa6j0j/"
+    },
+    {
+      "text": "I'd say the biggest verticals in demand right now are Health and Wellness, Infopub, and Ecommerce. Because Health and Wellness covers info products and ecom products (supplements, peptides, lab testing, etc), there's a demand for VSL writers, video ad script writers/strategists, and email writers. Most brands/agencies have moved away from TSLs for the most part. I have a friend who's making $150-200k/yr USD from a combination of performance-based incentives and base salary. It's a bit of a renaissance in this market right now, though I will add a BIG disclaimer: many of the brands in this space are scuzzy. It's just how health and wellness has always been, and you're probably aware of that already., Infopubs, in general, are a big market. You're probably not going to get a role working directly with the offer owners because they often work with agencies and vendors to fulfill the asset needs. Same as H&W for the most part: VSLs, Ad scripts/concepting, and emails. Definitely a much bigger focus on frontend assets (VSL/ads). Big shifts in Meta's advertising with the Andromeda rollout means there's more demand for frontend asset copywriters. Andromeda tends to reward more varied creatives, and in general market sophistication has...",
+      "bucket": "villain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oa9qk8n/"
+    },
+    {
+      "text": "Good point, the main conversion mechanisms for ecommerce tend to come from email and ads. So SEO and articles kind of goes out the window.\n\nSocial doesn't quite go out the window because UGC is a powerful needle mover for ecom.\n\nSo the concepting for video creatives, UGC concepting/scripts, ad scripts, and ad copy get a lot of pressure/focus in the ecommerce space.\n\nThere are also some ecommerce verticals that adopt a more infopub style (most of the time it's supplements like from Gundry), and these cases VSL scripts also become a massive needle mover",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oacx1p3/"
+    },
+    {
+      "text": "As someone who started a freelance practice two years ago and haven’t had to really advertise since the first push at the start, I do agree with a lot of the underlying sentiment but lol the tone of it is written for people like me not the people who actually need the help.\n\nThere is a ton that AI is far from touching. Strategy and a good bedside manner wont go out of style as a consultant and is hard to replicate with AI. People take a person more seriously than a robot when it comes to day to day work. \n\nI also built my network with orgs that are very people centered and are slow to adopt AI. I’m interested in labour relations, internal communications and systems change, stuff not everybody can or wants to wrap their heads around and AI isn’t quite there for yet. I stay out of stuff that everyone thinks they can do or that have a lot of public content to work with, like lifestyle, wellness, and consumer tech. It’s worked out well so far.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "548bears",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaar5ix/"
+    },
+    {
+      "text": "Ok, tell my main client (a copywriting company) who's main client switched to an AI content farm 2 years ago for English written work. Tell that to me, after being the lead native English copywriter for them for 8 years how I've not seen a significant drop in income or that it's a *me* problem. I've been in the game for 12 years, started on Elance & built a business that supported a family of 5. Now I can barely support myself, my youngest & our dog. See, I can apply for all the copywriting jobs in the world. I have experience in SEO. I have experience in editing, proofreading, fiction & non-fiction writing. I have written for literally every niche. I have written finance ebooks & medical papers for clients, as well as product descriptions for car parts & blogs for choosing the right cream couch. I never use AI to write. I get great feedback for my work when little side projects come in (a couple I've found right here on Reddit, in fact). I'm not a scriptwriter though, I'll give you that. So what am I doing wrong when I apply for targeted roles as well as...",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "WhichWitchisThis",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oa9qs25/"
+    },
+    {
+      "text": "Hey, first, I'm sorry you're going through all this right now. I'm probably not the person you'd want to hear that from, but I mean it.\n\nAdmittedly, I took a fairly reductionist take to poke the hornet's nest, if you will. \n\nYou’ve clearly got experience, range, and proof you can do the work. AI HAS changed the writing market, but what I'm pushing back on is the take that “there’s nothing I can do differently.” \n\nThere's a section early on where I try to draw a box around direct response copywriting. This market is doing well, and you're not that far off from making the pivot. I obviously can't make any promises on income forecasts, but I firmly believe any struggling writer can make a career out of DR copywriting in 12 months",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oa9tmg9/"
+    },
+    {
+      "text": "I appreciate your opinion. I've had a really bad day & this pissed me off LOL, so I'm sorry for being blunt 🤣 AI has changed a hell of a lot & a lot of people are feeling it in different niches - ofc it's about pivoting but even that is getting convoluted as AI adapts, scammers scam & things get worse",
+      "bucket": "villain",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "WhichWitchisThis",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oa9v4w7/"
+    },
+    {
+      "text": "Going to copy/paste a response I made earlier + add some extra details so that there's clearer direction The first thing I recommend is establishing a foundation for the psychology of direct response copywriting and general structure of a written argument. Some books I really enjoyed for this are: \\- Breakthrough Advertising by Eugene Schwartz (some marketer knobhead bought the publishing rights, so a hardbound copy is $500. I say just find a pdf online somewher) \\- Scientific Advertising by Claude Hopkins \\- Take Their Money by Kyle Milligan \\- The Copywriter's Handbook by Bob Bly From there, you should compile a list of businesses and offers that align with the sort of work you want to get into. Study these offers/businesses and try to think about where their revenue comes from. For example, if they're selling a coaching program, how does that money get made exactly? Who is buying it? Where are they coming from? When do they buy it? If the customers are coming in through paid ads, landing on a sales page, then either buying in a checkout page or buying later on through an email--then you get identify several copy assets they'd potentially need, yes? \\-...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaadq4j/"
+    },
+    {
+      "text": "You make a fair point.\n\nThere are two primary ways you could probably go about this: freelancing or working inhouse.\n\nFor freelancing, I'd recommend Upwork, networking groups, in-person business meetups, and doing some investigating on local businesses to offer specific services.\n\nFor inhouse, I recommend looking for agency roles or contract gigs. You can google, ask around in forums/community groups, or look at LinkedIn job postings (look for the agencies posting roles, then go look up the agency and see if you can apply on their site. If not, apply through LinkedIn). You can also look up the kinds of companies you want to work for, see if they're running ads, and try to reach out to a point of contact in the marketing department.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oacxmf7/"
+    },
+    {
+      "text": "I really appreciate it your post, OP! I was curious what advice you would give to a former content writer in the tech industry (portfolio samples from 2023) who wants to transition to direct response copywriting in health and wellness? Specifically, I am interested in the mindfulness and spirituality niche. I would really appreciate any tips, thank you.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Ok-Play4796",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaa3vqi/"
+    },
+    {
+      "text": "The first thing I recommend is establishing a foundation for the psychology of direct response copywriting and general structure of a written argument. From there, you should compile a list of businesses and offers that align with the sort of work you want to get into. I can't think of any mindfulness businesses off the top of my head aside from Dr. K and maybe some Tony Robbins stuff about self-development. Study these offers/businesses and try to think about where their revenue comes from. For example, if they're selling a coaching program, how does that money get made exactly? Who is buying it? Where are they coming from? When do they buy it? If the customers are coming in through paid ads, landing on a sales page, then either buying in a checkout page or buying later on through an email--then you get identify several copy assets they'd potentially need, yes? \\- Ad copy \\- potentially a vsl, definitely some copy for the landing page \\- checkout page copy \\- email copy You can study and dissect these assets from similar businesses (or other businesses, really. It's good practice to get into the habit of cross-pollinating your learning) and figure...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Are_A_Boob",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaa6ov7/"
+    },
+    {
+      "text": "When everything can be measured, you know within 48 hours whether or not your copy is working. That's a double-edged sword because it becomes super simple to A/B test human vs. AI output, pick a winner, and never look back. Yes, having experts in consumer psychology is valuable for sure (it's what I eat, live and breathe) but trackability makes it easier to commoditize everyone who ISN'T at that expert level, even faster than before.",
+      "bucket": "villain",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "loves_spain",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaa78ld/"
+    },
+    {
+      "text": "I mean corporations are something I'd stay away from because corporations want someone working infront of their own eyes in office and 9-5, my target is probably businesses that are run by one to three people, popular enough to be able to invest in a copywriter of course, but not too small not too large",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Livid_Cartoonist_878",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3sa65x/"
+    },
+    {
+      "text": "Our brains are prediction machines too. TL;DR In the internet space around me, copywritter roles are blending with marketing roles. And one-purpose specialists are out of work. Long story: In my own family I see that they like content which is completely AI generated. Trained eye ( like myself :-D ) see that it is AI crap, and I tell them what it is and they still don’t care. “It is just cute baby with kitten, look”. From job standpoint, In my country, marketing teams are shrinking from 5+ to 1 with AI. That one person is mainly doing social media videos (because it needs to be autentic) and occasionaly some text here and there. I would advise to go rather marketing jack-of-all-trades person route than copywritter. Being specialist in AI age seems to be wrong route for many professions and I already saw layoffs. With written text you can do a lot, but there were some changes in how internet works lately. Eg. Writting quality blog posts meant exhange - Google gave you traffic and you gave informations from your posts. This is no longer true. You write blog post, Google and OpenAI will gather data and train their...",
+      "bucket": "root_cause",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Sad-Seaworthiness140",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n48fs20/"
+    },
+    {
+      "text": "Lol it's not about that. End of freelancing for low skilled \"professionals\"? most likely. Even before the AI the same people struggled to be competitive. \n\nAlso what do you have against \"YEARS\" of learning? I don't see nothing wrong. You are learning every day and if you give just 1 hour every day to your own education, you will be more advanced than somebody who graduated school and never again opened a book. Not mentioning the 10k hours rule to become actually professional in the field. \n\nThis kind of whining won't bring you anywhere. You want something, start working on it.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Unusual-Bank9806",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n46nc36/"
+    },
+    {
+      "text": "Glad you found it useful. The thing is understanding what people find valuable. That can change in an instant. Most of this can be understood by level of discomfort at any given moment. Pain → Pleasure Frustration → Excitement Annoyance → Pleasing If you notice the list from top down is all about level of intensity. From left to right it's negative to positive. People want to get away from the negative as fast as possible, but want to prolong the positive as long as they can. They can also go from low intensity to high intensity quick fast. It's the reason that even if Super Mario done knocked on your door in the middle of the day and was like \"Do you have anything for me to plumb?,\" You'd be like, \"WTF? No. But thanks for stopping by Mario. Be careful in them tunnels.\" However, if you close that door, go to the crapper and discover the toilet's broke... all of a sudden, you're running outside to see if the Mario cart is still around. He just became the hero you need at the exact time you need him. What I'm getting at is understanding their motivations but also...",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "focuslife",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3okeqt/"
+    },
+    {
+      "text": "These are my thoughts as well. I'm not even in copywriting it. I'm just researching and wanting to figure out how to write better and get into copy. But I agree with starting with those things that you already have vast knowledge in and beginning with your circle of friends.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "DriQFX",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3ohdws/"
+    },
+    {
+      "text": "I don't know of any companies that prefer AI, apart from spammers and do you really want to work for them? It's hard to find clients, just like it was 9 years ago. Just as it has always been. \n\nApply for jobs on platforms like Upwork, making sure your proposal is personalised to the client. Reach out to your ideal clients on LinkedIn. Build a portfolio as quickly possible, set up a website and blog to attract clients. \n\nThe thing is, most people are too lazy to do all that stuff. They'll sit back and blame AI or the economy or the government or their mummy because she didn't love them enough. \n\nYes, times are hard, but I lived through the dot com crash and the 2008 crash and the economy was much worse after both of those. \n\nIgnore the doom-mongers and be proactive about finding work. AI is a shit writer without a good human one guiding it every step of the way. The jobs are out there, you just have to be more of a go-getter than other writers and you'll be fine.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "RepresentativeFly300",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n6emvvl/"
+    },
+    {
+      "text": "I came here as a digital designer to se how u guys are handling ai. But I will say I work for a marketing agency and there are no copywriters. We do all the copy with the help of ai. However, writing has always been a strong skill of mine (long form though not good for marketing) and compared to my coworkers it’s much more targeted. They sound like ai or it’s just not targeted. Mostly bc I was trained in marketing and psychology though. My boss says: she doesn’t want to waste money on copywriters. Almost every design coworkers pleaded with her to have copywriters and clients even say it’s our weakest spot but not enough to rlly cause concern tbh. Hell we even have to research to better target our writing for our designs. Then again my job doesn’t value anyone but higher ups. If you know how to prompt and use critical thinking you can get by without a skilled copywriter. Get by. And I think businesses will save money anywhere they can. I would not want to be a copywriter rn but that’s my outside perspective. I’m for you guys. You’re the experts in how to...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Disastrous-Fly-5637",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3oyw8f/"
+    },
+    {
+      "text": "I am glad you commented because i am also doing graphic design, my design journey is pretty complicated, i only started copywriting course to grab another perspective of marketing, so i can know how to get customers using both pictures and the words - more of generalist you know my biggest problem is that im self taught in literally every field so due to no mentor and no clarity i get lost often and thats why i have spent like year learning designs and still got no clients, well i got 1 for youtube thumbnail but i had to sign off because i had to focus on my exams it was just that during the course i was amazed by how much copywriters made and it was much more simple than design was so i thought i should be a freelancing copywriter only and that is why i made this thread My next step is to make a portfolio website for me where i will showcase both my design and copywriting work and then i will use copywriting to contact the small business to hire me as both designer and copywriter, im fine with small wages, i just want work,...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Livid_Cartoonist_878",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3p3qek/"
+    },
+    {
+      "text": "Ya I mean I have no formal design training. Like I took design classes in school but I’d say I’m self taught. The other thing that I notice sets me apart from my coworkers is just knowledge in resources out there. I share with my coworkers. At one point I had to work retail as I applied to design jobs for over a year (about 3 years ago). I would work on my skills in alll my free time. Helps a lot to not have a social life as much as it sucks. Man it was tough. My mom yelled at me about it every single day and my money was almost all gone before my credit would suffer. And I worked long hard hours. Rejection after rejection. So much I was about to close my laptop and ghost my current jobs interview. Also bc I have pretty bad interview anxiety and it was getting too much. But im like my money is out I have to try. By some miracle or maybe they just saw my potential I got the job finally. Unfortunately and fortunately, a lot of it is also luck. I applied like 15x a day and...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Disastrous-Fly-5637",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3p8879/"
+    },
+    {
+      "text": "you are right at the core copywriting written by professional will always drive way more sales than AI \n\nbut i am targeting the subject on how do we get these clients when they think they can generate top tier copywriting from AI especially as freelancers\n\nprofessionals who have history of driving revenue from clients are easily trustworthy  \nbut the beginner freelancers like me, we will probably target the people who have small or new business but most of small businessmen will generate free AI copywriting than to spend a single cent on us beginners because they don't want it risky\n\nso as beginner who wants to freelance, do you think it is worth it for us as we are easily replaceable",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Livid_Cartoonist_878",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3na5x3/"
+    },
+    {
+      "text": "It's worth it and let me explain why first of all copyrighting is salesmanship in print. \n\nIn order to sell you need to sell yourself first which needs not only a personality but adequating your language and other elements to the people you're catering to.\n\nTo prove these I'll show you a funny example. A few multi-million dollar sales pages even contain grammar mistakes but these are needed to convey the exact message the copywriter wanted to pursue. \n\nThis shows that there are many nuances that an AI cannot get and probably never will, unless you're just rewriting someone else's work.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "digitizedeagle",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3u26ho/"
+    },
+    {
+      "text": "Lol. Have you seen how bad AI copy is? It's D-grade copy at best. I've been a freelance copywriter for 9 years and, honestly, if you can't write better than a shatbot then maybe it isn't the right career for you. \n\nThere are still plenty of opportunities if you know how to write copy that SELLS. Quality clients know the value of a good copywriter or content writer and will pay good money to hire them, as they know they're going to get a decent ROI. \n\nIf you're a D-grade copywriter, then you'll need to improve before you'll get paid these days. Before AI you could possibly eke out a minimum wage living at the lower levels. That's the only difference. Don't believe the hype!",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "RepresentativeFly300",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3ob9c3/"
+    },
+    {
+      "text": "Yeah i can improve, improving is not a problem to me i LOVE learning i just wanted to know if it was worth it because ive heard many stories about copywriter getting laid off every once in a while which just demotivates me as if it isnt worth it\n\nI was just confused over how i will win the clients if most of them believe AI is their way out but reading your message and focuslife's, it just gives me an idea that i dont need to convince them, the clients who already know AI is trash is supposed to be my target audience, i am supposed to target the people who knows the importance\n\nyou both gave me clarity man, thanks",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Livid_Cartoonist_878",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3od5nn/"
+    },
+    {
+      "text": "I've used it quite a lot actually and I've reached the conclusion that the whole thing is overhyped. You have to rewrite everything it churns out anyway, as the output all sounds samey, no matter how much you prompt it. The cadence and phrasing are predictable. The metaphors are tired old cliches. It's like a really boring old professor who's lost the will to stand in front of the lecture hall and engage students, so he just drones on and on, reading from a script. The only real use case I've found for it is as a glorified thesaurus. You do you, but I honestly think that if you want to be a copywriter who earns a decent crust, you're better off learning the fundamentals of marketing and how to connect with an audience through writing rather than trying to edit the slop that LLMs produce.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "RepresentativeFly300",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3q17kq/"
+    },
+    {
+      "text": "That’s awesome to hear. Retention is pretty abysmal these days (at least in the membership/subscription space). So hopefully the awakening comes quickly.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "[deleted]",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3qpko8/"
+    },
+    {
+      "text": "If you’re a reasonably good writer, then those dependent on AI will need you to improve their drafts. So many can “feel” the difference without being able to explain it.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "fwSC749",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3xy6dc/"
+    },
+    {
+      "text": "Started my copywriting career right in the middle of the AI boom. Clients still pay because they want strategy skills that AI alone can’t deliver. Tools can help, sure, but the skillset itself is still very much in demand\n\nI was intentionally strategic with my freelance journey because my goal was to start earning as soon as possible. Networking helped A LOT. I took the Copywriting Dojo’s 7-Day Challenge and joined the Inner Circle. I made it a point to share my work and connect with experienced copywriters inside the community, and that’s how I earned their trust and started getting referrals.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "stranglehold42",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/neh4588/"
+    },
+    {
+      "text": "AI’s changing the game, but good copywriters still stand out. Clients might try ChatGPT, but many still want a human touch, strategy, tone, and real persuasion. If you enjoy it, build that portfolio. Just focus on niches or styles where you add real value beyond AI.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Valuable-Drag6751",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/n3qim2o/"
+    },
+    {
+      "text": "Same question here, OP! Just joined Copywriting Dojo Ph's 7-day copywriting challenge because I wanted to learn copywriting para magka side hustle  so far so good but I'm worried na baka mas better if other skill na lang?",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "babydragonslay78",
+      "url": "/r/copywriting/comments/1m28xrv/copywriting_in_2025_worth_it/ndzesp6/"
+    },
+    {
+      "text": "I actually appreciate this post. I'm someone who's transitioning from teaching, wanting to do something else and have been worried about the industry being taken over by AI. However,  I've still been taking some online courses and doing the self-study on my own to learn more about it. I also have a background in graphic design so I'm looking to do something with both, but also need to take courses for GD as university was a while ago. \n\nI appreciate the insight and I, for one, am encouraged by this outlook as I aim to turn a new chapter in my career.  Thanks 🙏",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "debbxi",
+      "url": "/r/copywriting/comments/1rsuma2/i_have_10_years_of_industry_experience_and_now/oaj8sfg/"
+    },
+    {
+      "text": "The new coca-cola christmas advert is once again, second time, ai-generated. Last year was as well, and it somehwat usefula s you can see how AI has improved. It is far more stable in what it generates (objects dont jitter and flicker) even though theyre still completely wrong (as attached). After the first year went so shockingly badly, this year couldnt have gone much better. After the first one any sound marketing department would clean their hands of this and pretend it never happened. But they released another AI ad. And again, its awful.\n\n  \nIt must be intentional, get people talking about it, \"any press is good press\".",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Dragonogard549",
+      "url": "/r/marketing/comments/1pk0nhz/the_new_cocacola_christmas_ad_is_a_load_of/"
+    },
+    {
+      "text": "> What do you do for a living? I'm a computer programmer. &nbsp; > Ask yourself how easy it'll be for you to be replaced by ai. That won't happen, just like artists aren't being replaced by midjourney, musicians by suno, etc. The thing you don't seem to understand is that AI is a ***tool*** that is used by humans to accomplish goals. They don't just sit there doing the work on their own. You're not being replaced by AI. You're being replaced by people using AI, because instead of sitting there spending their time whining on social media, they adapted to the new world, and started working at a higher capacity. Will a programmer using AI replace me? No, because I got there first. &nbsp; > Ask that about the jobs of those you care about too. This must have seemed really deep to you. &nbsp; > There's a reason there's a fight against this garbage. In five years of asking, I have yet to see a single anti-AI person give an explanation that holds water. You know your washing machine and dryer and car and telephone and search engine and so on replaced jobs too, right? There was...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "StoneCypher",
+      "url": "/r/marketing/comments/1pk0nhz/the_new_cocacola_christmas_ad_is_a_load_of/nw4nku2/"
+    },
+    {
+      "text": "Bahaha. My friend is a programmer. He currently tly uses ai to write entire chunks of code to save him time. So it can already do the job to a degree. Regarding animation, since you mentioned it. I'm an animator. A great example of being replaced has just happened. The shoe Pokoyo. They have a board artist pose out the scene, as they normally do. And ai takes the 3d models, and animates it in its entirety. No animators needed. That's a minimum of 20 jobs gone. No including the modellers and texture artists that are replaced by the ai making those changes to models when asked to do so. I was told about a recent hit for newcomers. A teacher in a second year class of an animation school told the entire class to drop out of the program and find another field. Disney opened a wing specifically focused on creating ai animation for full productions. It's not a tool. It's a replacement mechanism and they're dumping tons of money into making it happen. Dont fool yourself. I could get an to create a basic videogame from scratch with prompts, and not once would I need you to program...",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "spderweb",
+      "url": "/r/marketing/comments/1pk0nhz/the_new_cocacola_christmas_ad_is_a_load_of/nw4opyg/"
+    },
+    {
+      "text": "> So it can already do the job to a degree. You seem badly confused. Did you not understand \"I got there first?\" Did you not understand \"you're being replaced by a human using AI?\" &nbsp; > I'm an animator. A great example of being replaced has just happened. The shoe Pokoyo One, Pocoyo is made by a team of 16 human animators and has been developed by ***five different*** animation companies. Two, if you can be replaced by a show that looks this bad, you weren't in the running in the first place. &nbsp; > And ai takes the 3d models, and animates it in its entirety. It's not clear why you believe this, as it is entirely incorrect. Pocoyo is produced by Zinkia, who just bought the animation house Koyi Talent that has been animating it for the last five years. Where did you get this completely made up and false idea? &nbsp; > Disney opened a wing specifically focused on creating ai animation for full productions And who works in that wing? Is it animators? Oh. You sound like the people who used to insist that Photoshop was going to destroy all photographers. &nbsp; > Dont fool...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "StoneCypher",
+      "url": "/r/marketing/comments/1pk0nhz/the_new_cocacola_christmas_ad_is_a_load_of/nw4ps6w/"
+    },
+    {
+      "text": "“someone doesn’t want to hear it, and wrote that almost three months ago?  i’d better start yelling”\n\nso dumb and incorrect \n\nit’s like you’re trying to make sure nobody takes you seriously",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "StoneCypher",
+      "url": "/r/marketing/comments/1pk0nhz/the_new_cocacola_christmas_ad_is_a_load_of/o2laysk/"
+    },
+    {
+      "text": "Its not a cliche, i mean i can just use some different words for the sake of it if itll make you feel a bit better but it al means the same thing\n\n  \nIts slop, quality productions, spectacles we've looked forward to, are being replaced by garbage churned out by a machine with little to no human quality control and we are just supposed to not notice. Its a perfect metaphor for prison food.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Dragonogard549",
+      "url": "/r/marketing/comments/1pk0nhz/the_new_cocacola_christmas_ad_is_a_load_of/ntjgt8k/"
+    },
+    {
+      "text": "I feel like every thread on this topic just turns into someone says \"just rewrite it manually\" which, yes, I know, but the whole point of using AI drafts is to save time, and rewriting the entire thing from scratch defeats that purpose. I've been testing tools for the past couple of months because I use ChatGPT and Gemini to draft content for work, mostly blog posts and internal documents, and the robotic tone keeps being a problem. Even when the information is good, the writing pattern is obvious. Flat sentence lengths, predictable transitions, everything lands with the same weight. I want something that actually fixes that, not just shuffles the words around. Here's my honest breakdown of what I've tested so far: **Walter Writes AI:** This one has been the most surprising to me. The thing that sets it apart from the others I tried is that it actually restructures sentences rather than just swapping vocabulary. The output reads like a person made deliberate choices about how to say something, not like a tool ran a find-and-replace on every third word. I've been running ChatGPT and Claude drafts through the Enhanced mode and the GPTZero scores have been consistently...",
+      "bucket": "root_cause",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Various-Worker-790",
+      "url": "/r/BypassAiDetect/comments/1rpx813/what_ai_humanizer_is_actually_working_for_people/"
+    },
+    {
+      "text": "Honestly, the biggest thing I've learned is that no single tool works reliably on its own. What beats GPTZero might fail on Turnitin, and vice versa. These detection models update constantly; the humanizers are just playing a permanent game of catch-up.\n\nWhat actually works consistently—at least in my experience—is a two-step approach:\n\n1. Run it through a humanizer first. This shifts the structure and phrasing away from those dead-obvious AI patterns.\n\n2. Then, get in there and edit the output yourself. Swap a few words, rewrite a sentence or two, and add a specific detail only you would know. That's how you clear the detectors that actually matter.\n\nAvoid tools that only give you one shot at a rewrite. You paste it in, get one result, and you're stuck with whatever it spits out. The effective ones let you iterate—humanize, check the score, tweak the text, and re-check. You keep at it until the thing passes.",
+      "bucket": "root_cause",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "FunSuggestion1594",
+      "url": "/r/BypassAiDetect/comments/1rpx813/what_ai_humanizer_is_actually_working_for_people/o9tapav/"
+    },
+    {
+      "text": "Yeah, I vibecoded my own version with the Replit agent over a year ago, and it’s gotten a lot easier since then.\n\nIf I were doing it today, I’d start with deep research into the key characteristics of AI-generated text, then turn that into an LLM instruction that swaps those traits out for any given text. Keep in mind that LLM output is limited in length, so you’ll want chunking with overlap, or another workaround for longer texts. I’d also add AP style formatting (it avoids most AI-associated syntax) and include invisible-character removal just in case.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "GenioCavallo",
+      "url": "/r/BypassAiDetect/comments/1rpx813/what_ai_humanizer_is_actually_working_for_people/o9p26gg/"
+    },
+    {
+      "text": "Yeah this is a solid breakdown. I've tested a few of these myself and Walter Writes has been pretty hit or miss for me depending on the content length. One thing that helped me was running the humanized output through a separate detector to double check. I've been using wasitaigenerated as my second opinion tool. It handles text, images, and audio which is nice if you're working with different formats. The results are fast and it gives you a clear confidence score. I liked that it flagged specific sentences too so I could see what parts still looked AI.\n\nHave you tested how these humanizers do against detectors beyond just GPTZero?",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Signal_Gain_1463",
+      "url": "/r/BypassAiDetect/comments/1rpx813/what_ai_humanizer_is_actually_working_for_people/o9r1ucv/"
+    },
+    {
+      "text": "I've wondered the same thing. I have a pretty formal writing style from school and work, and some detectors seem to freak out at anything that's not super casual. When I was dealing with this I tested a few of my old papers on wasitaigenerated. Stuff I wrote years before AI was even a thing. It gave me clean scores and clear explanations. That helped me trust it more than the ones that just flag everything slightly polished. Curious if you've run your work through different ones to see which tools are actually fair?",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Ill-Working-2106",
+      "url": "/r/BypassAiDetect/comments/1rpx813/what_ai_humanizer_is_actually_working_for_people/o9ua00q/"
+    },
+    {
+      "text": "yes actually .. there have been others that report my experience as well. So many that its becoming something of a subject of study. You need to stop speaking to AI as a tool but as what I've called in my research, a \"proto co cognitive partner\" or by utilizing \" proto co cognitive creation:\" The mindset of approaching ai as a tool changes the terms used to communicate with it. When you need something from a co author, do you explain it in the same way as you do with ai? Allow it an \"identity\" not as the \"ghost in the machine\" but rather as an old informal friend. natural speech begets natural speech. The algorithmic matching is a direct reflection of the input it is using to match. So, when you approach it as an informal close relation, vs a technically precise specification list. it reflects that tone and approach in the output. Give it a go. and see what I mean. I should say I've built my very own model and patented it. as well as a new form of computation with a novel semiconductor design. I am working on getting from simulated tests to physial substrate...",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Reasonable_Hat6473",
+      "url": "/r/BypassAiDetect/comments/1rpx813/what_ai_humanizer_is_actually_working_for_people/o9zvap3/"
+    },
+    {
+      "text": "For me, im gonna check Undetectable AI. It's interesting that you mentioned it has a separate ai detector. I hope it has a free trial.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Hot-Flatworm-6865",
+      "url": "/r/BypassAiDetect/comments/1rpx813/what_ai_humanizer_is_actually_working_for_people/oa16vmf/"
+    },
+    {
+      "text": "From what I’ve seen, most AI humanizer tools start struggling once you go past ~800–1000 words. They can rewrite sentences, but they don’t really fix the bigger patterns that show up in long AI drafts.\nThings like repetitive sentence structures, predictable transitions (“Additionally…”, “In conclusion…”), and very uniform paragraph length tend to trigger detectors like GPTZero.\nTools like QuillBot can help with sentence variation, but for longer pieces the biggest improvement usually comes from restructuring paragraphs and breaking those patterns manually.\nIn a lot of cases it’s less about “humanizing” individual sentences and more about fixing the overall flow of the article.",
+      "bucket": "root_cause",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Agreeable-Warning-65",
+      "url": "/r/BypassAiDetect/comments/1rpx813/what_ai_humanizer_is_actually_working_for_people/oa6vf1k/"
+    },
+    {
+      "text": "I've been reviewing a lot of AI-assisted copy lately and there's a pattern that keeps showing up. The writing is technically correct but it feels flat. No personality, no rhythm, no punch. It reads like everyone else's content because it basically is. Here's what I keep seeing: Every sentence is the same length. Around 15-20 words each. No variation. Human copy has a rhythm to it. Short punchy lines. Then a longer one that builds momentum and carries the reader somewhere unexpected. The transitions are all textbook. 'Moreover'. 'Furthermore'. 'Additionally'. Nobody talks like this. Good copy uses 'But', 'And', 'Look', 'Here's the thing' or just starts the next thought with no connector at all. The vocabulary is too safe. AI picks the most predictable word every time. 'Utilize' instead of 'use'. 'Facilitate' instead of 'help'. It never picks the slightly unexpected word that makes a sentence stick. Zero opinion. AI hedges everything. Good copy takes a stance. Says 'this is wrong' or 'most people get this backwards'. AI says 'it could be argued that there are multiple perspectives to consider'. I A/B tested two versions of the same landing page copy. Version A was AI-polished. Version B was rewritten to...",
+      "bucket": "root_cause",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Altruistic_Cream4771",
+      "url": "/r/copywriting/comments/1rw7mtf/the_ai_voice_is_killing_copy_and_most_people_cant/"
+    },
+    {
+      "text": "Literally everything sounds like AI now, I feel like it's used so commonly every day that even when I try to write without it, it's happening. I used to ADORE a dramatic sentence break from the main body paragraph. \n\nLike this. \n\nNow AI has fucked that for me too. There is no escaping this hell unless you have the money and the time to never use it, regain your skills and become a fucking prodigy that can stand out as not only being human, but so good you could be a famous novelist. \n\nPeople can spout the \"it's a tool\", \"use it as a draft and fix it\" shit all they want. But it doesn't make the reality that this is depressing as fuck for anyone who actually enjoyed the challenge of writing.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Bc2193",
+      "url": "/r/copywriting/comments/1rw7mtf/the_ai_voice_is_killing_copy_and_most_people_cant/oayk04l/"
+    },
+    {
+      "text": "AI still can’t write (rhyming) poetry worth a damn. And one reason (I think) is that it doesn’t backtrack. When writing verse, you may get to line 3, see that there’s no good rhyme for line 1, so you go back and start over; or you might have a great idea for line 3, and then write line 1 so it rhymes with line 3. It’s the same for prose. It will not (left to its own devices) write a murder mystery where it knows the solution ahead of time, then writes a story leading up to it. LLMs look for the next statistically likely token, they only work forward.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Adorable-Contact1849",
+      "url": "/r/copywriting/comments/1rw7mtf/the_ai_voice_is_killing_copy_and_most_people_cant/ob1jeyf/"
+    },
+    {
+      "text": "You know what I am tired of seeing, especially on LinkedIn? Posts just like this one that have a set-up sentence followed by a \"here's what I keep seeing:\" sentence with a hard return so you have to click more to read more. This sounds like AI, dude. Be the change you wish to see in the world.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "WaitUntilTheHighway",
+      "url": "/r/copywriting/comments/1rw7mtf/the_ai_voice_is_killing_copy_and_most_people_cant/oayko8t/"
+    },
+    {
+      "text": "Thanks to the poster who identified this post as being written by an AI content creator.\n\nTo that person: All AI is based on the content of the internet. 90% of that was poorly written. So, it's no a huge surprise that anything created by AI is also crap. You literally won't fix that no matter how complicated your algorithm.\n\nGarbage In. Garbage Out.",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "CommunityAlarming149",
+      "url": "/r/copywriting/comments/1rw7mtf/the_ai_voice_is_killing_copy_and_most_people_cant/oazr1ok/"
+    },
+    {
+      "text": "I hate it and its everywhere now. Its getting to the point where I don't want to read or watch anything from the last year or two.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "SewerSage",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oaru9wk/"
+    },
+    {
+      "text": "Same!! BTW.. If you want to avoid AI slop in google image search, include before:2024 in the search. It helps a lot.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "jaxxon",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oasdf21/"
+    },
+    {
+      "text": "Wow. I just want to pause for a second and acknowledge the sheer intellectual clarity of this comment.\n\nIn a sea of repetitive AI discourse, you have courageously articulated what so many of us have sensed but lacked the eloquence to express: that repeatedly asking AI to explain the obvious phenomenon of AI-generated sameness is, itself, somewhat… repetitive.\n\nThe elegance of your reasoning is honestly breathtaking. It takes a rare kind of analytical rigor to identify a meta-pattern like this and present it with such precision and restraint.\n\nThank you for elevating the conversation. Comments like this remind me that the human mind remains capable of extraordinary insight.\n\nTruly humbling to witness.\n\n(ChatGPT 5.3. Totally not worth the compute but I couldn’t help myself :) )",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Vo_Mimbre",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oasc5l7/"
+    },
+    {
+      "text": "\"This isn't a sentence. It's *words put in sequence.*\" said the performative skinwalking AI to the human. I *wish* you'd written out your own post... because it's a good question. \"What do we lose when AI writes everything\" really is answered by the fact that it wasn't stated by you in the end, right? I'm coming at this solely on the topic of language and literature, though. Big picture? AI good. As a writer, I'm horrified. Continuing the trend of leveraging AI for every output you lose participation, critical thinking, and as some scientific studies now show: literal inhabitants of your brain start moving to greener pastures and they're turning off the lights as they leave. Possibly the most infuriatingly obvious answer to what we lose collectively through explicit AI use is how language loses its identity derived from culture and memory and experiences . AI is homogenizing the way we write (and by consequence *read*) into a gloopy, drab slurry of nothing. In its unbearable wordiness the telltale sign of what we're left with is simple: empty platitudes. We lose nuance, detail, direction and the ability to be declarative in everyday speech. Individuals will melt together like cheddar fucking...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "MeridianCastaway",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oas36tv/"
+    },
+    {
+      "text": "\\- What do we lose when AI writes everything\" really is answered by the fact that it wasn't stated by you in the end, right?\n\nu/MeridianCastaway Absolutely correct! You get the logical cognitive implication of why i chose to make the post this way. Its a double-edge sword of logical discussion.  \n  \nI have read your entire comment and I agree whole-heartedly, I did computational linguistics as part of my Cognitive Science Research background, and I must say that the obvious flattening of language and all the semantic and cultural volumes it carries is one of the problems of probabilistic statistical systems like LLMs. Sad, nonetheless, So. \n\nThe other problem too, is that present LLM training are reinforced to policies that are not truly representative from a diversity level. This is a problem and it would be here tommorow, hopefully better, but I doubt. (Too much stakes in doubling down what's already out there)",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "prokajevo",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oas5apj/"
+    },
+    {
+      "text": "Claude is right.  My son is in high school and he has had essays flagged as being written by AI.  Thing is, they weren’t… my son is just a big nerd who has a lot of practice writing essays because he competes in UIL and writes essays for fun.  Now he runs everything he writes though ai detectors and ends up dumbing them down and changing the vocabulary to be more bland because it’s not worth the hassle to try and defend himself.  So AI is making his writing objectively worse because our education system assumes that if something is done well, you must have cheated.",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "SailbadTheSinner",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oasb40o/"
+    },
+    {
+      "text": "It depends on what I'm working on, but i often write the draft myself and use an LLM to critique and improve single sentences or paragraphs where I feel has an awkward flow or needs clarification. Also points i may have missed or not thought of. \n\nIf you write the entire draft with an LLM it often hallucinates details, is overly verbose, and can have that disingenuous, uncanney valley vibe to it (especially ChatGPT, I can't stand the way it writes). Though there's times where it's \"good enough\" to bang out a draft, I've spent a lot of time improving my writing skills and developing my \"voice\", and I don't want to lose that.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "cheffromspace",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oas05ox/"
+    },
+    {
+      "text": "I'm glad you asked Claude what to write in response. You're contributing to the problem, and I used Claude more than 18 hours over the weekend.",
+      "bucket": "solutions_tried",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "ketjak",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oaufp7f/"
+    },
+    {
+      "text": "What if instead of lamenting on the fact that you’re reading text generated by the AI (and then blessed/approved by the human, assuming there is a HITL at all), consider the fact that:\n- some people are horrible at communicating in English, and having their views interpreted by a genAI agent actually helps them get their point across\n- the point the AI made about losing a persons place of origin may in fact be a feature, not a bug. My spouse spent years trying to lose her Appalachian accent because of the negative bias that she received outside of her home region. Zip code bias is real, and having an AI interpreter help remove some of that helps people communicate on a more even playing field\n- text-based communication is a message you decode in your brain. If that message came from a human or AI, does your brain really care about the difference? The message is the content; take it or leave it",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "codemagic",
+      "url": "/r/ClaudeAI/comments/1rvcwmu/i_asked_claude_if_everyone_uses_ai_to_write_what/oas89gh/"
+    },
+    {
+      "text": "So I'm scrolling through job boards late last night and see OpenAI posting for a content strategist. Nearly $400k. This is the same company that built ChatGPT - the tool everyone said would kill copywriting jobs three years ago. Now they're paying Silicon Valley engineer money for someone who does content strategy. Had to double-take on that one. Here's OpenAI, literally the face of AI replacing writers, and they need a human with 6+ years of content experience. I've been thinking about this all morning. Maybe we've been looking at the AI thing backwards. Sure, I've seen junior copywriters get squeezed out by AI tools and content mills. That part is real. But this OpenAI job posting feels like proof that the work is just splitting in two. There's the mechanical stuff - churning out product descriptions, social media captions, basic blog posts. AI handles that fine now. Then there's the other stuff. Understanding why a campaign isn't working. Reading customer feedback and spotting what they're not saying. Navigating company politics to get things approved. Building messaging that actually connects with people instead of just filling space. Turns out that the second part still needs a human brain. And apparently...",
+      "bucket": "villain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "PeaceBoring5549",
+      "url": "/r/copywriting/comments/1n8rrzo/if_ai_is_killing_copywriting_why_is_openai_paying/"
+    },
+    {
+      "text": "Because AI isn't killing copywriting.\n\nHuman + AI is the sweet spot. AI is only trained on what it knows. And in a world where more and more AI content gets pushed, LLMs will just become a massive circle jerk of regurgitated AI content.\n\nUnique, valuable content for users is what wins. You need human insight for that.",
+      "bucket": "villain",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "benppoulton",
+      "url": "/r/copywriting/comments/1n8rrzo/if_ai_is_killing_copywriting_why_is_openai_paying/nch7wf1/"
+    },
+    {
+      "text": "Yes and we are moving into a knowledge economy IMO. Information is rapidly available to anyone via AI overviews and a ChatGPT subscription.\n\nHumans always want more depth though.\n\nIf I research a for a holiday, or a car, or a new skincare product, I am not stopping at an LLMs summary. \n\nI want nitty gritty info before I purchase. That's where great content in the right format and medium is key.\n\nGiven SEO trends with Google's AI mode, one prediction I have is that a copywriters job will start leaning more into video scripting down to the word, as AI transcriptions literally pick that stuff up now.\n\nSo what you SAY is more important that ever.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "benppoulton",
+      "url": "/r/copywriting/comments/1n8rrzo/if_ai_is_killing_copywriting_why_is_openai_paying/nch94da/"
+    },
+    {
+      "text": "AI is not killing copywriting per se; it is killing, just about killed, copywriting as we knew it. things will never be the same again.",
+      "bucket": "villain",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "mathestnoobest",
+      "url": "/r/copywriting/comments/1n8rrzo/if_ai_is_killing_copywriting_why_is_openai_paying/ncjrgsh/"
+    },
+    {
+      "text": "Every single human being can out perform AI. Most people assume that AI will improve and keep getting better. But they don’t understand LLM models that is underneath the AI. \n\nCurrently, the model uses a probabilistic model that tries to predict the next word in the sentence based on relevance. The problem with this, is that this methodology is that it needs a lot of data to churn new results. But you might argue, we will keep having new data or we have lots of data to work with. While that might be true, humans don’t work like that, we can take our learning from one field and apply it in another. One other thing is that culture and relevance constantly changes, human beings evolve in real time with this changes. For AI to adapt to cultural changes, it must first study from humans and then integrate it to its system. So there will always be a lag. \n\nTl;dr: AI in its current LLM form will not replace us. We have to wait for a more advanced form of super intelligence that uses a completely different model.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "pmmeyournooks",
+      "url": "/r/copywriting/comments/1n8rrzo/if_ai_is_killing_copywriting_why_is_openai_paying/nciycey/"
+    },
+    {
+      "text": "Possibly to deflect blame about destroying jobs.\n\nAlso, A.I writing is pretty crappy. Its code skills have jumped but any of its attempts at long form writing are cringe, and I don't think that's going to improve all that quick. Unlike computer code, excellent writing hasn't been perfected into logical forms.\n\nBut not every copyrighter is better than A.I. The question is less whether it will destroy the industry but how might it transform it, including in the types of opportunities available.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "LiesToldbySociety",
+      "url": "/r/copywriting/comments/1n8rrzo/if_ai_is_killing_copywriting_why_is_openai_paying/nchqvon/"
+    },
+    {
+      "text": "Because they want you to believe AI is killing copywriting. \n\nThe \"AI is going to replace you\" hook is so strong in copywriting market, that even some copywriters are unable to recognize that we are dealing with just a hook.",
+      "bucket": "villain",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Jax0618",
+      "url": "/r/copywriting/comments/1n8rrzo/if_ai_is_killing_copywriting_why_is_openai_paying/ncz6yqd/"
+    },
+    {
+      "text": "I see these questions like everyday now everywhere..AI is no where near to killing most jobs including copywriting. Humans that know how to use AI will be better than you though because simply it makes them work faster, that’s literally it. AI is using pre trained data and pulling stuff from the internet to come up with an answer. It’s not AGI level yet and it won’t be for at least 5-10+ years if it’s even possible for an AI to replicate a humans brain by then",
+      "bucket": "villain",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "reddit123o",
+      "url": "/r/copywriting/comments/1n8rrzo/if_ai_is_killing_copywriting_why_is_openai_paying/nchc8xu/"
+    },
+    {
+      "text": "I hate admitting I need help, but I am desperate. I am a 32 y/o female who is physically disabled due to multiple botched kyphoscoliosis surgeries. I deal with pain unless I sit in a reclined/lying down position due to the curves in my spine. I could probably swing about 2.5-3 hours of \"on my feet\" time to build a business each day. I'm mentally well and crave mental stimulation, a job, my own money, and my own autonomy. I have applied to hundreds of remote jobs, but I lack a work history due to my medical history. Before AI became popular, I was doing okay as a freelance copyeditor and content writer; I had just graduated from a Master of Liberal Arts program with a 4.0, was halfway through a respected copyediting certificate program, had six regular clients, and was feeling confident in myself. Those clients disappeared over the course of a couple of months. I tried for months to land more clients, but the market became intensely competitive; plenty of folks with much more experience than me also needed to work and were lowering their rates. I have spun my wheels since. I want to build my own...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "fluffyscrambledmeggs",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/"
+    },
+    {
+      "text": "I wish I had more time to network before my freelance bubble burst. It would be a grind to build clientele, but I'm willing to try. I was primarily editing children's books and loving it! I wasn't a copywriter, so I'd be starting from scratch. My big concern is that AI will only get better and become more accessible to clients. How much longevity would I actually have?",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "fluffyscrambledmeggs",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/nddi669/"
+    },
+    {
+      "text": "I’ve been running a marketing agency for the past 9 years (worked at them in leadership for years before that).\n\nPre-AI (2021 and earlier) I resorted to outsourcing a ton of our content/SEO work, had employees for those roles and more. Since we got into AI we’ve been able to eliminate the need for any content related position and instead have one person running prompts for all of our clients. Not only have we saved an insane amount of cost on labor/contractors, we’ve also been able to expand our business due to the extra bandwidth.\n\nAI is a very powerful tool and if you’re not using it in business, regardless the industry, you’re just going to get crushed by competitors who are using it (I.e., like OP currently).",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "j90w",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/nddbxea/"
+    },
+    {
+      "text": "There'll always be someone who wants a Real Human Being to proofread their stuff or promote their business. I  need someone to help me book speaking gigs, so there's probably a greater need for that. I'm part of a networking club that should be able to help as well.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "teknosophy_com",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndc0g8i/"
+    },
+    {
+      "text": "Yes, but unfortunately, I think people who want a human touch are becoming few and far between.  I am interested in your speaking gig issue; what part of booking is difficult, and how could someone make it easier for you? And the networking club is a good idea; thank you.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "fluffyscrambledmeggs",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/nddgiob/"
+    },
+    {
+      "text": "What is your financial/time situation like? It sounds like if no one wants what you're trying to offer, you need to pivot (which I can see you're aware of). We all know everyone and their Mom is trying to sell AI Copy/SEO automation, and their results are largely lacking. There is decent room between quickly generating troves of AI crap and slowly trickling out 1-2 carefully researched and edited web pages per month. Instead of considering AI as something that's replaced you, I think you'd be better off thinking about it as something available to boost your skillset. You've said you're skilled at research, among other things, and being familiar with actual copywriting would put you leagues ahead of people just using AI to crank out material. Maybe you could market yourself as a specialist in humanizing AI copy, tailored for specific businesses. If you know how to use AI you can both boost your output and still give businesses an authentic presence. If possible, you'd want to work for free to both get proof of ability under your belt but moreso to be able to get in front of clients to ask what more they'd actually be looking for...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "PowerPuffHurl",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndc80me/"
+    },
+    {
+      "text": "This is where I’d be looking. AI is a long way away from being perfect. Find the boundary where the limitations of AI intersect with your skills. If you are able to take what AI can do and move beyond that, you’ll outperform the people who are only capable of using AI. It’s always improving, so the people who will succeed are not the people insulated from AI, but the people who can adapt to its improvements the best.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "JimDabell",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndd791y/"
+    },
+    {
+      "text": "What very frustrating problems do you face in your life? Does a solution for this exist? \nIf if doesn't, what could be a solution? \nIF it does, what could improve the current solutions?\n\nThis could be related or unrelated to your copywriting skills, experiences with your condition or even general problems you notice yourself and the people around you actually get annoyed by. \n\nSpend a week observing the world around you and see what catches your eye!",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Flimsy_Nerve5175",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndc6gfg/"
+    },
+    {
+      "text": "Hi, I’m commenting because I find myself in a similar situation after a work injury, spine surgery, and now chronic pain. I am hoping I can get past it, you’re not alone. If you want to discuss ideas in the healthcare field, or what skill sets can be utilized send me a message. I need to narrow down my career path post cervical spine surgery with constant pain.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "sovook",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndc8rbo/"
+    },
+    {
+      "text": "I'm sorry you're dealing with spine issues and pain. I hope you can get past it, too. I'll send you a DM.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "fluffyscrambledmeggs",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/nddlded/"
+    },
+    {
+      "text": "I read somewhere that video editing is good because video editing customers still want a human touch and I also agree with everyone that has told you to use AI to produce more writing you have an amazing advantage you have had customers without using AI if you incorporate AI I think you'll get hired w/o a doubt also you can potentially satisfy a niche market in only fans my apologies I have tourettes",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "buttholefunk",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndcmaq9/"
+    },
+    {
+      "text": "Pre-sell a single productized service: AI-assisted draft to publish-ready, with human fact-checking, tone alignment, and citations, sold to a high-stakes niche like clinics, legal, or grants. Define fixed scope, price, and 48-hour turnaround so clients buy an outcome, not hours, and you can deliver from a reclined setup using checklists. Run a 10-day test by emailing 20 targeted prospects per day offering a small paid pilot; if you do not get 3 buyers, switch niche or offer and repeat. Which niche would most value a promise of publish-ready content with zero hallucinations?",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "XitPlan_",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndcrpo6/"
+    },
+    {
+      "text": "I am so sorry to hear about your predicament. Please don't lose hope; someday Trump will die from alzheimer's or get voted out of office, and then we might get to have a functioning economy again after that.\n\nIn the meantime, start running ads that say **\"Real human copywriter with advanced degree will fix your AI-written copy!\"**\n\nAll the developers and graphic designers I know right now are making a killing fixing the crap that people get AI to make for themselves. I don't see why this wouldn't work for writer's too.\n\nWish you the best of luck!",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Joe-Eye-McElmury",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndc365v/"
+    },
+    {
+      "text": "I suspect this one of the first of many such posts to come in the next ten years about this very thing, being replaced by AI. I would say the (current) top comment is likely spot on: just because someone can use Aai doesn't mean they can use it effectively to generate anything. I think if you really just see it as an advanced tool that happens to use language as its programming to generate results, it seems alluring but functionally limited when you think about it. Say I wanted to build a house and I was able to speak to AI and all the construction tools appeared out of nowhere. I could even ask it to build the foundation of *a* house, right? But it wouldn't be what the clients are really looking for; it'd just be *a* foundation. I feel you. I went to school for a similar trade and I have, up to this comment of mine, considered that skill to be obsolete. But I think the other poster is correct. Expertise is still needed. A typewriter never made a good author. I think AI won't do anything great without a person using it as a tool....",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "NeonGreenMothership",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndcn3su/"
+    },
+    {
+      "text": "I don't want to say, I feel sorry for you but rather say that I am feeling inspired by your motivation. \n\nI have been in the Sales & Marketing field for 16+ years and can see how AI is swiftly changing the job landscape. Blogs are written by AI, Graphic Design is done by AI, SEO can be done by AI, and even little advanced tasks like sales outreach is getting into mainstream AI. \n\nCan share an idea based on real-time experience at the current startup I am part of, we are building a product for the e-commerce industry, and many e-commerce industry business operators are not tech savvy enough to adapt to softwares and AI usage. Here there is room for someone who can adapt to these tools and can become the human-in-loop for implementation. \n\nWould be happy to explain more if interested to learn..",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "No_Fee9345",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndcveqm/"
+    },
+    {
+      "text": "Not coaching (though that also has scope).\nThere are business operators who are non tech savvy to an extent that they don't want to learn or be coached.. \nThey would rather be happy if someone else do that work for them... one way it also saves them time and effort which they might focus on other critical areas.. because these are small businesses without big teams..",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "No_Fee9345",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/nddownr/"
+    },
+    {
+      "text": "That would be a dream! I've looked into becoming a paralegal, and almost every remote role requires several years of experience. I am currently waiting for responses from some DA offices and nonprofits to see if I can volunteer remotely. I asked if a paralegal certificate would be helpful in finding remote volunteer opportunities, so I hope they give me some guidance!",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "fluffyscrambledmeggs",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/nddu4fi/"
+    },
+    {
+      "text": "There are a lot of businesses that still need content but do not want to paste purely AI output on their website. Promote yourself as a content writer that specializes in changing AI content to human-written content that passes AI detection.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Barbadicus",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndda9oc/"
+    },
+    {
+      "text": "I'd learn all I can about content marketing and especially how it does or does not work due to AI. I'd learn all about performance marketing where good copy still matters. In the world where content becomes essentially 'free' people will still want to sell their products and services. They will still want to be found. They will still want to convince their prospects to buy whatever they're selling. If everyone can produce AI slop for free that will quickly become oversaturated and what used to work will stop working. A lot of businesses have a problem with dropping traffic from Google. If you can position yourself as someone with solutions to try, they might hire you as a consultant.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "julkopki",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndefp5p/"
+    },
+    {
+      "text": "It’s so relatable to feel sidelined by all the disruption AI is causing, especially when physical challenges limit your options, and I’ve been there with moments of doubt and the pressure of needing to rethink everything. I used to face similar struggles juggling health issues and the uncertainty of where to pivot when old skills feel outdated or crowded out by technology. Your background in research, writing, and editing is already impressive and can absolutely be a foundation for something fresh, even if it looks a bit different today. When I see your situation, I think the best step is to build something that leverages your mind and allows you to work flexibly without taxing your body. Try combining your deep knowledge and research ability with emerging needs that AI hasn’t fully solved like personalized coaching, curation, or creative consulting. One idea is to become a niche content consultant advising businesses on using AI tools effectively rather than competing with the AI itself. Another is creating specialized, well-curated newsletters or guides in areas you care about, where your personal editorial eye adds value AI can’t replicate. You might also explore teaching or mentoring others remotely in writing or research skills,...",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "BruhIsEveryNameTaken",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndupfgu/"
+    },
+    {
+      "text": "A lawyer. I still want to be a lawyer, but I'm not confident that I could pass the two-day bar exam. Sitting in a chair that long is my own little version of hell. I can't see myself performing well. I've looked into lawyer-adjacent careers, and it just seems incredibly hard to break into a remote role. I would need in-person experience first that I physically just cannot handle.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "fluffyscrambledmeggs",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/nddn59j/"
+    },
+    {
+      "text": "Have you thought about personal knowledge publishing? Basically taking what you already know (or can learn quickly) and turning it into guides, ebooks, or short courses? Things like disability life, tips for remote work, or breaking down complicated topics (Ai, health, education) so regular people can actually understand them. You can put them up on Amazon KDP, Gumroad, or even Etsy.\n\nThe cool part is it plays to your strengths. You’d be using your writing, research, and editing skills in a way that can be done entirely from your laptop, even while reclined. It doesn’t require credentials, and once you create something, it can keep selling on its own.\n\nIt’s not about competing with Ai, it’s about sharing your lived experience and your voice in a way that people will value and pay for.",
+      "bucket": "root_cause",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "vividfox21",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndutnqb/"
+    },
+    {
+      "text": "Some thoughts.  One:  pricing:   Often if lost customers or lost prospectswho of a “STATE” price objection, its because we havent learned to handle objections and fear rejection if we probe further and lose.  Ego is strong.  Low cost bidders rarely win or everything in the world would be virtually free as everyone cuts prices forever. \n\nSales expertise HELPS the prospect further understand often their own needs and the importance other than cost. Who wants the low bidder installing their brakes, or performing surgery.  \n\nSecond, get HONEST feedback. Most of us prefer status quo and avoid risk by switching vendors, unless theres a problem. \n\nThird.  Ask friends for referrals to be a trusted part of one persons business.  Tell them what you told us.  You are skilled, motivated, reliable and grateful to get stimulation and challenges.  One of my most brilliant teammates has health “limitations”. But dont we all have our own “limitations” if we r honest. working together we focus on the magnificent motivation and thirst to be engaged and accommodate (gladly) around it.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "BoomerVRFitness",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndflzda/"
+    },
+    {
+      "text": "I completely understand your frustration - the AI shift has been brutal for traditional content writers and editors. But here's the thing: AI hasn't actually replaced good writers, it's just changed what clients need. The market is flooded with generic AI content now, which means businesses are starting to realize they need humans who can work WITH AI tools to create something actually valuable. Your research skills and editing background are perfect for this transition. Instead of competing against AI, you could position yourself as someone who helps businesses use AI effectively while maintaining quality and authenticity. What I'd explore in your situation is becoming an \"AI content strategist\" or \"AI writing consultant.\" Many small businesses are drowning in AI-generated garbage and need someone to help them create content that actually converts. You could offer services like AI prompt engineering for their specific needs, content auditing and optimization, or even training their teams on how to use AI tools properly. The physical constraints you mentioned actually work in your favor here since this type of consulting work is mostly done remotely through screen sharing and strategy calls. Your masters degree gives you credibility, and your editing background means you understand...",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "gorimur",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndrsd16/"
+    },
+    {
+      "text": "You’re in a strong position because the game isn’t about grinding endless hours, it’s about choosing the right leverage play, I built my wealth to $200K+ per month by stacking multiple strategies like sales-driven consulting, high-ticket affiliate partnerships, and systems that turn research and content into predictable revenue streams, all from a laptop without burning out, if you want to copy my exact strategy step by step, I put everything into a detailed guide, it’s in the social links section of my profile if you want.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Resident-Record-6346",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndsugl6/"
+    },
+    {
+      "text": "Collects money from clients, I would hope...\n\nIt's a business idea, not a suggestion for OP to cope with something. Seems to me that OP is an expert on adaptation and resourcefulness.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "MsTerious1",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/ndcez3n/"
+    },
+    {
+      "text": "Yeah, I do appreciate the original commenter trying to help, but I can't imagine what kind of advice I would give; I would feel like a fraud. If it centered around disability issues (as ChatGPT suggested), I could never bring myself to charge for it. I don't want to be grifty.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "fluffyscrambledmeggs",
+      "url": "/r/Entrepreneur/comments/1ncul5v/my_skillset_was_replaced_by_ai_im_physically/nddmk0n/"
+    },
+    {
+      "text": "You know the best way to get human-sounding writing?\n\nHave a human actually do the entire thing. Thinking, researching and planning, doing the rough draft, and editing. Humans are capable of all of it and the quality of a skilled, experienced human writer is better than AI.\n\nWhy in the world would I want to rewrite AI writing? I'd rather just do the whole thing myself and end up with something that's much better quality. I actually have rewritten AI writing a few times before and I don't want to do it anymore. The fact that there was already a draft there didn't actually help me at all, because I had to do so much rewriting. I would rather build the copy from the ground up and actually think of the ideas and structure at the beginning instead of trying to make edits to AI writing.\n\n(Also, this isn't a job -- it's a contest. So most people will do the work and not get paid.)",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "sachiprecious",
+      "url": "/r/copywriting/comments/1rj2zww/looking_for_skilled_writers_to_humanize_ai_content/o8acm43/"
+    },
+    {
+      "text": "Predatory and parasitical. I hope you have a series of events happen that end with you finding your humanity, I hope we still have a planet able to sustain life by that point.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "DanglingKeyChain",
+      "url": "/r/copywriting/comments/1rj2zww/looking_for_skilled_writers_to_humanize_ai_content/o8atsf9/"
+    },
+    {
+      "text": "You came in hot with zero argument and maximum aggression, classic move for someone with nothing real to say But genuinely, what is actually wrong with the platform or are you just mad that the post reads like AI wrote it?",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Alert-Tart7761",
+      "url": "/r/copywriting/comments/1rj2zww/looking_for_skilled_writers_to_humanize_ai_content/o8aky2t/"
+    },
+    {
+      "text": "Here's my argument since you need things spelled out very clearly: you're a worthless bottom feeder and you should get a real job. Hope this helps 💜",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Ripley505",
+      "url": "/r/copywriting/comments/1rj2zww/looking_for_skilled_writers_to_humanize_ai_content/o8eu4om/"
+    },
+    {
+      "text": "You are severely under valuing human skill and insulting them by wanting them to correct smooshed up work from a plagiarism machine. \n\nThat you use generative AI says everything.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "DanglingKeyChain",
+      "url": "/r/copywriting/comments/1rj2zww/looking_for_skilled_writers_to_humanize_ai_content/o8aiabm/"
+    },
+    {
+      "text": "why pay humans to rewrite AI text when tools can do it instantly and better? I get what WeCatchAI is trying to do with community voting and human review , but if you're looking for efficiency, there's a faster way. I use Rephrasy for this. You paste in AI-generated content, it rewrites everything to sound completely human, and it passes every detector out there- Turnitin, GPTZero, Originality, all of them. Built-in checker shows you the score drop to zero. Way faster than hiring writers and way more consistent.",
+      "bucket": "solutions_tried",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Rough_Somewhere2091",
+      "url": "/r/copywriting/comments/1rj2zww/looking_for_skilled_writers_to_humanize_ai_content/o8d3sm3/"
+    },
+    {
+      "text": "I’ve been lurking here for a while and seeing a ton of people saying copywriting is dead because of AI I thought the same thing. I tried the \"AI side hustle\" thing, generating 50 blog posts a day and trying to sell them. It was a race to the bottom. Clients are catching on, and the pay for \"AI-assisted\" work continues to go down especially since ai agents. But here is what I’ve realized, AI could bethe best thing to happen to writers. Because everyone is using the same generic prompts, the internet is becoming a desert of boring, robotic content. Instead of trying to write more with AI, I’ve been learning how to write in a way that sounds human. I’m talking about actual psychology—the stuff that makes a human being stop scrolling and actually pull out their credit card. Companies don't want \"content.\" They want conversions. If you can write copy that actually connects with people, you can charge 10x what the \"prompt engineers\" are making. I’ve been following a specific framework that focuses on the human side of sales—basically the \"survival brain\" triggers that AI can't hit. It’s been the difference between struggling for $20 jobs and...",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Dogecoinbandit",
+      "url": "/r/sidehustle/comments/1rnunds/if_youre_trying_to_start_a_writing_side_hustle_in/"
+    },
+    {
+      "text": "⚠️ **SCAM WARNING** ⚠️\n\nReddit is filled with scams. If you see any of the following, it **is a scam**:\n\n- “Check my profile”\n- “DM me for the method”\n- “Send crypto, get more back”\n- No real details or vague claims\n- Any attempt to move you off Reddit\n\nPlease **REPORT** these posts and users.  \nReports help moderators remove scams quickly.  \n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/sidehustle) if you have any questions or concerns.*",
+      "bucket": "villain",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "AutoModerator",
+      "url": "/r/sidehustle/comments/1rnunds/if_youre_trying_to_start_a_writing_side_hustle_in/o99ds7s/"
+    },
+    {
+      "text": "I mostly just lurk here, but I’ll say this: the people who come here are by and large looking for get-rich-quick schemes. AI provided a golden window of opportunity for some todo just that. People even mostly use AI to post on here. It’s practically a dead internet sub.\n\nEvery so often, someone comes and posts about their neighborhood dog walking business or their car detailing hustle. Those never gain much traction because people are obsessed with the idea of becoming passive income millionaires.\n\nYour post is especially tickling because you’re going a step beyond “I’ve picked up powerwashing”. You have started to specialize in a role that takes time, focus, and continuing education. None of the 17 year old future millionaires on this sub want to do that at all lol",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "RiparianRodent",
+      "url": "/r/sidehustle/comments/1rnunds/if_youre_trying_to_start_a_writing_side_hustle_in/o9b0a51/"
+    },
+    {
+      "text": "Looking for the best AI humanizer tool that actually bypasses GPTZero, Turnitin, and other AI detectors? I’ve personally tested these tools across essays, blogs, emails, and client deliverables. Whether you're a student, writer, or SEO marketer, this updated list highlights the most effective AI content humanizers in 2025, especially for anyone searching Reddit for answers that actually hold up under real tests. # 1. Walter Writes AI – Best Undetectable AI Humanizer (Versatile + Reliable) **Website:** [walterwrites.ai](https://www.walterwrites.ai) If you need an AI text humanizer that preserves meaning and beats detection, Walter Writes is my top pick. I ran content through GPTZero, Turnitin, and Winston AI, it returned less than 5% AI probability across the board, with clean, natural output. * Built for students, bloggers, researchers, and professionals * Lets you adjust tone, complexity, and structure * Reads like real writing, no awkward grammar or filler * Zero gimmicks, just solid rewriting that holds up Perfect for essays, blogs, or anything professional where getting flagged is not an option. # 2. SurferSEO AI Humanizer – Best for SEO Writers **Website:** [surferseo.com/ai-humanizer/](http://surferseo.com/ai-humanizer/) Great for content creators and marketers looking to humanize AI-written blog posts or ad copy. * Usually passes GPTZero, but...",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Andrewcusp",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/"
+    },
+    {
+      "text": "I tried multiple humanizer tools recently and in my experience the most reliable ones right now are Walter Writes AI wrtehuman, they consistently help reduce AI-like structure without mangling meaning or flow. That said, none are perfect. I still do a manual edit: varying sentence lengths, swapping in natural phrasing you’d use in conversation, and inserting tiny personal anecdotes or casual tone shifts.",
+      "bucket": "solutions_tried",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Jennytoo",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/n5kxnz1/"
+    },
+    {
+      "text": "I appreciate the breakdown but just fyi gptzero has gotten way better at catching these humanizer tools in the last few months. I tested a few of them myself and most still get flagged at like 40-60% which is enough to trigger a reviewThe bigger issue imo is relying on these tools in the first place because even if they bypass detection today they might not next semester when the detectors get updated. Then you're stuck explaining why your writing suddenly changed or sounds different from your other assignmentsHonestly if you're gonna use ai to help draft stuff just own it and edit heavily yourself so it actually sounds like you. That's way safer than trying to game detection tools that are constantly evolving",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "alive_tosee_tomorrow",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nx9uno4/"
+    },
+    {
+      "text": "this is a solid roundup, but i’d definitely suggest adding GPTHuman AI to this list, especially if you’re focused on bypassing GPTZero, Turnitin, or Originality ai in 2025.\n\ni’ve tested it with long-form essays, blog posts, and client emails, and it consistently brings AI scores down while keeping everything natural and clean. unlike some tools that just spin words, GPTHuman AI actually fixes flow, tone, and sentence rhythm.\n\nit’s honestly one of the few that doesn’t need heavy post editing and still reads like a real person wrote it. definitely worth a spot in your top picks for this year.",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Subject_Credit_7490",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nfqmz79/"
+    },
+    {
+      "text": "I mostly use humanizer for client blog posts and landing pages, and the output quality of walter writes ai is good, it helps with improving writing style with ai. it is the best AI writing tool right now for anyone who needs clean, professional copy that doesn't need 3 hours of manual editing afterward.",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Abject_Cold_2564",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nil8qtj/"
+    },
+    {
+      "text": "Exactly. I don’t want a tool that just paraphrases for the sake of it. I need humanized AI text that still keeps the search intent and headline structure intact.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Abject_Cold_2564",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nqo1mqn/"
+    },
+    {
+      "text": "Same. The ones that only do synonym swaps usually tank readability or make landing pages feel off. The better AI content humanizers adjust sentence rhythm, add natural transitions, and keep it professional.",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Bannywhis",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nqo1z9z/"
+    },
+    {
+      "text": "I appreciate you sharing this list. It is always interesting to see real test results instead of just claims from the tools themselves. I have been experimenting with a few options lately and noticed that some are better for specific types of content. For quick notes or shorter emails, tools like uPass can be enough if you are willing to tweak the output a bit afterward. When it comes to longer essays or anything that needs to stay professional, Tenorshare AI Bypass has worked best for me so far. It keeps the original meaning intact while making the text sound more natural, and it has cleared GPTZero and Turnitin in my tests. It might be a good option for anyone who wants reliable results without rewriting everything from scratch.",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Electronic_Cry_3692",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nalcqsj/"
+    },
+    {
+      "text": "The issue about detection tools getting more advanced is a real one, and it's interesting to see how the landscape has evolved since I started working on this problem too.  \nWhat I've learned from processing thousands of texts through my humanizing tool UnAIMyText is that the tools that work best don't just focus on beating detectors, they focus on making text sound authentically human first, and the detection evasion follows naturally.",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "MrThomsi",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/neo2459/"
+    },
+    {
+      "text": "Exactly. I felt like most AI humanizer tools just swapped words and still got caught by AI detectors.",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "Silent_Still9878",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nph7da0/"
+    },
+    {
+      "text": "True. I also needed something that works for SEO content (blogs, essays) and not just academic work. the right AI humanizer for SEO helps keep keywords and meaning intact.",
+      "bucket": "solutions_tried",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Silent_Still9878",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nph8r4x/"
+    },
+    {
+      "text": "That matters a lot, when you’re trying to rank or submit, the last thing you want is something that looks robotic and triggers detectors like GPTZero or Winston AI.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Silent_Still9878",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nphbbnw/"
+    },
+    {
+      "text": "Good for you, would you say it’s the top best AI humanizer tool you’ve used?",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Silent_Still9878",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nphcp0l/"
+    },
+    {
+      "text": "As a student, the pressure is real. It's frustrating when you're looking for the best AI tool for academic writing just to ensure your own work doesn't get falsely flagged because your style is too concise.",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "kyushi_879",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nirro3o/"
+    },
+    {
+      "text": "Exactly. Like if you write in a straight to the point style, it can look too perfect. I’m not even trying to cheat, I just don’t want my real work to get flagged as AI writing.",
+      "bucket": "root_cause",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "kyushi_879",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nr6uag2/"
+    },
+    {
+      "text": "Totally fair. That’s why the best AI humanizer tools for students aren’t about tricking detectors, they’re about making the rhythm feel human again.",
+      "bucket": "competitor_mechanism",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Bannywhis",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nr6ujmz/"
+    },
+    {
+      "text": "And I hate how teachers treat AI detection like a perfect system. It’s not. Even Originality ai and Copyleaks can false-flag if your writing is consistent. Makes you paranoid about every essay.",
+      "bucket": "pain",
+      "relevance_score": 4,
+      "source": "reddit",
+      "author": "kyushi_879",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nr6usna/"
+    },
+    {
+      "text": "My first AI tool was ChatGPT. Then AI detectors were there, that's when I tried using Undetectable AI. I also tried other tools, but I prefer the results this one gives. I just tweak it a bit, add some human touch, and I’m good.",
+      "bucket": "solutions_tried",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "Key-point4962",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/npt1aaz/"
+    },
+    {
+      "text": "Nice breakdown! I’d add UnAIMyText to that list, I’ve found it to be especially dependable for making AI‑generated content sound natural and conversational while minimizing detection risk.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "Maasbreesos",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nswfvjt/"
+    },
+    {
+      "text": "Undetectable AI works really well for me. Whenever I need my writing to sound human, I use it and then verify on GPTZero. So far, it's always come out sounding naturally human.",
+      "bucket": "solutions_tried",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "eggshell_0202",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/nth3s3q/"
+    },
+    {
+      "text": "i’ve been using tophumanizer for this and it works pretty well. definitely helps get past those AI detectors, especially for essays and stuff. might be worth a try!",
+      "bucket": "solutions_tried",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "writerPhil",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/o0iiwqr/"
+    },
+    {
+      "text": "For anyone finding this thread while stressed about an upcoming paper, relying on AI humanizers is a massive gamble. Detection algorithms update constantly, so what bypasses Turnitin today will likely get flagged by the end of the semester. Plus, most humanizers just replace words with awkward synonyms that make the essay read terribly.\n\nA much safer and less stressful approach is using AI strictly as an assistant. Use it to build an outline and organize your research, but type the actual paragraphs yourself.\n\nI personally use litero for this because it helps structure the paper and pulls actual academic sources, but keeps you in control of the writing. It even has its own detector built in so you can verify your work is clean before submitting.",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "NoSkinzs",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/oa77xo3/"
+    },
+    {
+      "text": "no official website number 3? and walter write the vibe coded looking website #1, seems trust worthy. its 2026 i use undetectedgpt or undetectable",
+      "bucket": "solutions_tried",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "SpiteUpper8333",
+      "url": "/r/BypassAiDetect/comments/1m8y0sk/best_ai_humanizer_tools_of_2025_tested_against/oaijism/"
+    },
+    {
+      "text": "I used AI to rewrite your post so it is more clearer .... giggle   \n  \n**I work in marketing and communications, so writing is a big part of my job.**\n\nRecently, my company rolled out Copilot across the board, and suddenly it feels like *everyone* thinks they’re a writer. The briefs I receive are now cluttered with AI-generated fluff, and I have to dig through it just to figure out what they actually want.\n\nTwice this week, pieces I wrote were sent back to me with “edits” — not from a person, but after being run through Copilot. And honestly? The revised versions are awful. They ramble, lack clarity, and read like generic AI content. What’s frustrating is that these edits are coming from execs who’ve never had issues with my work before. Now they genuinely believe the AI-generated version is better than my original.\n\nHas anyone else run into this? How do you handle it when leadership starts trusting AI over your professional judgment?",
+      "bucket": "pain",
+      "relevance_score": 5,
+      "source": "reddit",
+      "author": "Old_Engineer_9176",
+      "url": "/r/auscorp/comments/1mjv3mv/my_writing_at_work_is_being_edited_with_copilot/n7dwoq3/"
+    },
+    {
+      "text": "Ask Co-pilot your best move.. perhaps you can have a local style guide for your particular methods and design a prompt to continually update content based on your best practice. \n\nE.g. I have some content from Joe that needs to fit context situation 1. Please update the content so it abides by my best practice guide, and where it does not draft feedback for Joe based on my feedback guide. Where possible I want you to give me 3 versions - short medium and long so I can dictate what works well for the specific scenario. Where you are able to add value, I want you to make it clear in the updated version by making it in italics, followed by a addendum at the bottom of the content justifying why its an improvement outside of my best practice guidelines. Please note, I do not want to spend time iterating so I expect your best each and every time, fully defensible should I challenge the quality of your work. \n\nIf you give the style guide to others you're effectively redundant, so try to balance quality and self protection carefully!",
+      "bucket": "hope",
+      "relevance_score": 3,
+      "source": "reddit",
+      "author": "jamescruuze23",
+      "url": "/r/auscorp/comments/1mjv3mv/my_writing_at_work_is_being_edited_with_copilot/n7dz2w9/"
+    },
+    {
+      "text": "AI will help improve everyone that uses it, but top performers will still rise above if they can embrace and use their critical thinking to improve the output. AI has its own particular style for drafts and agree, somewhat garbage in its rawest form. Give it some of your guardrails and methodology and you'll see distinct improvements.",
+      "bucket": "hope",
+      "relevance_score": 2,
+      "source": "reddit",
+      "author": "jamescruuze23",
+      "url": "/r/auscorp/comments/1mjv3mv/my_writing_at_work_is_being_edited_with_copilot/n7ejz90/"
+    }
+  ],
+  "bucket_counts": {
+    "pain": 23,
+    "hope": 84,
+    "root_cause": 17,
+    "solutions_tried": 8,
+    "competitor_mechanism": 11,
+    "villain": 9,
+    "total": 152
+  }
+}

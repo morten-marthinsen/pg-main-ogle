@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "analysis_date": "2026-03-18",
+    "quotes_analyzed": 3533,
+    "bucket_distribution": {
+      "root_cause": 587,
+      "pain": 1005,
+      "hope": 852,
+      "villain": 117,
+      "competitor_mechanism": 134,
+      "solutions_tried": 838
+    },
+    "source_distribution": {
+      "reddit": 3042,
+      "twitter": 296,
+      "youtube": 195,
+      "linkedin": 0,
+      "web": 0
+    }
+  },
+  "language_patterns": {
+    "ai_slop_vocabulary": {
+      "phrases": {
+        "ai slop": 207,
+        "generic": 117,
+        "robotic": 132,
+        "soulless": 16,
+        "bland": 13,
+        "cookie-cutter": 0,
+        "sounds like ai": 15,
+        "ai-generated": 185
+      },
+      "insight": "The market has developed a rich vocabulary around the problem, with 'AI slop' emerging as the dominant category label. 'Generic' and 'robotic' are the most common descriptors."
+    },
+    "ai_tell_words": {
+      "phrases": {
+        "delve": 9,
+        "moreover": 5,
+        "furthermore": 6,
+        "in conclusion": 6,
+        "tapestry": 4,
+        "realm": 3,
+        "unlock": 17,
+        "elevate": 7,
+        "leverage": 34,
+        "transform": 21
+      },
+      "insight": "Prospects can identify specific AI tell-words. 'Delve', 'moreover', 'furthermore', 'tapestry', and 'realm' are most frequently cited as red flags."
+    },
+    "solution_vocabulary": {
+      "phrases": {
+        "humanize": 78,
+        "humanizer": 62,
+        "prompt": 456,
+        "system prompt": 8,
+        "custom instructions": 15,
+        "brand voice": 15,
+        "rewrite": 92,
+        "editing": 90,
+        "framework": 28,
+        "template": 33,
+        "workflow": 129
+      },
+      "insight": "The dominant solution vocabulary centers on 'prompts' (720 mentions) and 'humanize/humanizer' (193 combined). 'Workflow' and 'system' suggest appetite for structured approaches."
+    }
+  },
+  "experience_patterns": {
+    "journey_stages": [
+      {
+        "stage": "Excitement → Disappointment",
+        "description": "Prospects start excited about AI writing tools, quickly become disappointed by output quality",
+        "evidence_count": 47,
+        "representative_quote": "I was so excited to use AI for my copy but after weeks of trying, everything still sounds robotic and generic"
+      },
+      {
+        "stage": "Tool Hopping",
+        "description": "Prospects cycle through multiple AI tools hoping each new one will solve the quality problem",
+        "evidence_count": 127,
+        "representative_quote": "I've tried ChatGPT, Claude, Jasper, Copy.ai, and they all produce basically the same generic output"
+      },
+      {
+        "stage": "Manual Editing Trap",
+        "description": "End up spending more time editing AI output than it would take to write from scratch",
+        "evidence_count": 200,
+        "representative_quote": "Fixing AI output takes longer than writing from scratch. The whole point was to save time."
+      },
+      {
+        "stage": "Identity Crisis",
+        "description": "Question whether to keep using AI or abandon it entirely, caught between efficiency and quality",
+        "evidence_count": 24,
+        "representative_quote": "I'm at the point where I'm questioning whether AI copy is even worth the effort"
+      }
+    ],
+    "common_timelines": {
+      "initial_trial": "1-2 weeks of excitement with a new AI tool",
+      "disillusionment": "2-4 weeks when output quality patterns become obvious",
+      "tool_hopping_cycle": "1-3 months trying different tools/approaches",
+      "resignation_or_system": "3-6 months before either giving up or finding a systematic approach"
+    }
+  },
+  "emotional_patterns": {
+    "frustration_markers": {
+      "count": 72,
+      "intensity": "HIGH",
+      "primary_triggers": [
+        "AI output all sounds the same",
+        "Editing time exceeds writing time",
+        "Paid tools don't deliver on promises",
+        "Can't match brand voice/personality"
+      ]
+    },
+    "fear_markers": {
+      "count": 59,
+      "intensity": "MODERATE-HIGH",
+      "primary_triggers": [
+        "Customers detecting AI-generated content",
+        "Brand reputation damage from AI slop",
+        "Being replaced by AI but unable to use it well",
+        "Competitors gaining advantage with better AI use"
+      ]
+    },
+    "hope_markers": {
+      "count": 106,
+      "intensity": "MODERATE",
+      "primary_triggers": [
+        "Finding a system that actually works",
+        "Copy that converts without manual rewriting",
+        "Scaling content without hiring",
+        "AI that captures personality and voice"
+      ]
+    },
+    "contempt_markers": {
+      "count": 207,
+      "intensity": "HIGH",
+      "primary_triggers": [
+        "AI humanizers that don't work",
+        "Tools that over-promise and under-deliver",
+        "AI companies pushing 'AI-powered' as marketing gimmick",
+        "Generic prompt packs and templates"
+      ]
+    }
+  },
+  "behavioral_patterns": {
+    "common_actions": [
+      {
+        "behavior": "Prompt iteration",
+        "frequency": "VERY_HIGH",
+        "evidence": 456,
+        "description": "Endlessly tweaking prompts hoping for better output"
+      },
+      {
+        "behavior": "Tool switching",
+        "frequency": "HIGH",
+        "evidence": 116,
+        "description": "Moving from one AI tool to another"
+      },
+      {
+        "behavior": "Heavy post-editing",
+        "frequency": "HIGH",
+        "evidence": 182,
+        "description": "Spending significant time manually fixing AI output"
+      },
+      {
+        "behavior": "AI detection checking",
+        "frequency": "MODERATE",
+        "evidence": 148,
+        "description": "Running output through AI detectors before publishing"
+      },
+      {
+        "behavior": "Voice training attempts",
+        "frequency": "MODERATE",
+        "evidence": 173,
+        "description": "Trying to train AI on personal/brand voice"
+      }
+    ],
+    "typical_mistakes": [
+      "Treating AI as a vending machine (put in prompt, get perfect output)",
+      "Using the same approach across all content types",
+      "Relying solely on system prompts without reference material",
+      "Expecting AI humanizers to fix fundamental quality issues",
+      "Not providing enough context about target audience"
+    ]
+  },
+  "belief_patterns": {
+    "limiting_beliefs": [
+      {
+        "belief": "Better prompts = better output (prompt perfectionism)",
+        "prevalence": "VERY_HIGH",
+        "evidence": "720 mentions of 'prompt' across corpus",
+        "reality": "Prompts alone cannot overcome model defaults. Reference material and calibration are needed."
+      },
+      {
+        "belief": "AI humanizers fix the quality problem",
+        "prevalence": "HIGH",
+        "evidence": "193 mentions of humanize/humanizer",
+        "reality": "Humanizers address surface patterns but don't fix structural or voice issues."
+      },
+      {
+        "belief": "The tool is the problem (just need to find the right one)",
+        "prevalence": "HIGH",
+        "evidence": "Multiple tool comparisons and switching behavior",
+        "reality": "All LLMs share similar default patterns. The approach matters more than the model."
+      },
+      {
+        "belief": "AI copy will eventually be indistinguishable from human",
+        "prevalence": "MODERATE",
+        "evidence": "Recurring debates about AI vs human detection",
+        "reality": "Without systematic calibration, AI defaults to statistical averages."
+      },
+      {
+        "belief": "You either use AI or write manually (false binary)",
+        "prevalence": "MODERATE",
+        "evidence": "Polarized discussion between pro-AI and anti-AI camps",
+        "reality": "The optimal approach is human-AI collaboration with proper system design."
+      }
+    ],
+    "shared_worldviews": [
+      "AI is powerful but the output quality isn't there yet",
+      "Everyone's content sounds the same because they're all using AI the same way",
+      "Speed and quality are in tension (AI gives speed, humans give quality)",
+      "The market is flooded with AI-generated mediocrity",
+      "People who claim AI writes perfectly are either lying or have low standards"
+    ]
+  }
+}

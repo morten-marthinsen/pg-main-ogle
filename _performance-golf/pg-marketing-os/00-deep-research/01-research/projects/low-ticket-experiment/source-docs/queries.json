@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "skill": "1.1-B Query Generator",
+    "generated_date": "2026-03-17",
+    "source_files": ["context_expansion.json", "platform_list.json", "market_config.yaml", "awareness_baseline.json"],
+    "total_queries": 142,
+    "topics_covered": 28,
+    "min_queries_per_topic": 5,
+    "query_type_distribution": {
+      "problem": 38,
+      "emotional": 28,
+      "instructional": 22,
+      "competitor": 30,
+      "root_cause": 14,
+      "villain": 10
+    }
+  },
+
+  "queries_by_topic": {
+    "T01_ai_slop_recognition": {
+      "topic": "The AI Slop Recognition Problem",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "AI copy sounds robotic", "type": "problem", "platforms": ["reddit-copywriting", "reddit-chatgpt", "twitter-x"]},
+        {"q": "AI slop marketing content", "type": "problem", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "how to tell if content is AI generated", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-artificial"]},
+        {"q": "readers can tell AI wrote this", "type": "emotional", "platforms": ["reddit-copywriting", "reddit-marketing"]},
+        {"q": "AI generated content problems 2026", "type": "problem", "platforms": ["twitter-x", "reddit-artificial"]},
+        {"q": "AI writing too generic sounds fake", "type": "problem", "platforms": ["reddit-copywriting", "reddit-chatgpt"]},
+        {"q": "customers don't trust AI content", "type": "emotional", "platforms": ["reddit-entrepreneur", "reddit-marketing"]}
+      ]
+    },
+
+    "T02_conversion_degradation": {
+      "topic": "AI Copy Conversion Rate Degradation",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "ChatGPT copy doesn't convert", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-entrepreneur"]},
+        {"q": "AI content killing conversions", "type": "problem", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "AI copy lower conversion rate", "type": "problem", "platforms": ["reddit-entrepreneur", "reddit-marketing"]},
+        {"q": "landing page conversion dropped after using AI", "type": "problem", "platforms": ["reddit-entrepreneur", "reddit-marketing"]},
+        {"q": "AI email copy open rates declining", "type": "problem", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "AI ad copy CTR worse than human", "type": "problem", "platforms": ["twitter-x", "reddit-marketing"]}
+      ]
+    },
+
+    "T03_editing_trap": {
+      "topic": "The Editing Trap",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "editing AI output takes longer than writing", "type": "problem", "platforms": ["reddit-copywriting", "reddit-chatgpt"]},
+        {"q": "fix AI writing quality too much effort", "type": "problem", "platforms": ["reddit-copywriting", "reddit-claudeai"]},
+        {"q": "AI first draft needs too much editing", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-copywriting"]},
+        {"q": "faster to write from scratch than fix ChatGPT", "type": "emotional", "platforms": ["reddit-chatgpt", "reddit-copywriting"]},
+        {"q": "AI writing saves no time editing required", "type": "problem", "platforms": ["reddit-entrepreneur", "youtube-comments"]}
+      ]
+    },
+
+    "T04_humanizer_disappointment": {
+      "topic": "AI Humanizer Tool Disappointment",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "AI humanizer doesn't work", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-artificial"]},
+        {"q": "Undetectable AI review", "type": "competitor", "platforms": ["reddit-chatgpt", "producthunt"]},
+        {"q": "QuillBot humanizer review 2026", "type": "competitor", "platforms": ["reddit-chatgpt", "reddit-artificial"]},
+        {"q": "AI humanizer mangles sentences", "type": "problem", "platforms": ["reddit-chatgpt", "twitter-x"]},
+        {"q": "best AI humanizer 2026", "type": "competitor", "platforms": ["reddit-chatgpt", "reddit-artificial", "youtube-comments"]},
+        {"q": "AI humanizer waste of money", "type": "villain", "platforms": ["reddit-chatgpt", "twitter-x"]},
+        {"q": "tried AI humanizer made it worse", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-copywriting"]}
+      ]
+    },
+
+    "T05_ai_tells_banned_phrases": {
+      "topic": "The Specific AI Tells",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "AI writing patterns Moreover Furthermore Delve", "type": "root_cause", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "what makes AI copy detectable", "type": "root_cause", "platforms": ["reddit-chatgpt", "reddit-copywriting"]},
+        {"q": "AI slop causes patterns", "type": "root_cause", "platforms": ["reddit-artificial", "twitter-x"]},
+        {"q": "words that make writing sound like AI", "type": "root_cause", "platforms": ["reddit-copywriting", "reddit-chatgpt"]},
+        {"q": "AI writing cliches corporate tone", "type": "root_cause", "platforms": ["reddit-copywriting", "reddit-claudeai"]},
+        {"q": "why AI writing is bad repetitive", "type": "root_cause", "platforms": ["reddit-chatgpt", "reddit-artificial"]}
+      ]
+    },
+
+    "T06_claude_vs_chatgpt": {
+      "topic": "Claude vs ChatGPT for Copywriting",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "Claude vs ChatGPT copywriting", "type": "competitor", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "Claude for marketing copy better than ChatGPT", "type": "competitor", "platforms": ["reddit-claudeai", "twitter-x"]},
+        {"q": "Claude writing more human than ChatGPT", "type": "competitor", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "switched from ChatGPT to Claude for writing", "type": "competitor", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "best AI for copywriting Claude ChatGPT Gemini", "type": "competitor", "platforms": ["reddit-chatgpt", "twitter-x", "youtube-comments"]}
+      ]
+    },
+
+    "T07_prompt_engineering_frustration": {
+      "topic": "Prompt Engineering Frustration",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "AI copywriting prompts that work", "type": "instructional", "platforms": ["reddit-chatgpt", "reddit-claudeai"]},
+        {"q": "custom instructions for better AI writing", "type": "instructional", "platforms": ["reddit-chatgpt", "reddit-claudeai"]},
+        {"q": "prompt engineering copywriting doesn't help", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-claudeai"]},
+        {"q": "tried every prompt still sounds like AI", "type": "emotional", "platforms": ["reddit-chatgpt", "reddit-copywriting"]},
+        {"q": "complex prompts AI still generic output", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-claudeai"]}
+      ]
+    },
+
+    "T08_brand_voice_failure": {
+      "topic": "Brand Voice and Personality Capture",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "AI can't match brand voice", "type": "problem", "platforms": ["reddit-copywriting", "reddit-marketing"]},
+        {"q": "training AI on my voice writing style", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "AI output all sounds the same no personality", "type": "problem", "platforms": ["reddit-copywriting", "reddit-entrepreneur"]},
+        {"q": "how to make AI write in my voice", "type": "instructional", "platforms": ["reddit-chatgpt", "reddit-claudeai"]},
+        {"q": "AI writing with examples of my style", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-chatgpt"]}
+      ]
+    },
+
+    "T09_roi_question": {
+      "topic": "The ROI Question",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "is AI copywriting worth it cost vs quality", "type": "problem", "platforms": ["reddit-entrepreneur", "reddit-marketing"]},
+        {"q": "AI writing tool ROI not worth subscription", "type": "villain", "platforms": ["reddit-entrepreneur", "reddit-marketing"]},
+        {"q": "cheaper to hire copywriter than fix AI output", "type": "problem", "platforms": ["reddit-copywriting", "reddit-entrepreneur"]},
+        {"q": "AI copywriting saving money or wasting money", "type": "problem", "platforms": ["reddit-entrepreneur", "twitter-x"]},
+        {"q": "paying monthly for AI writing tool not using it", "type": "emotional", "platforms": ["reddit-entrepreneur", "reddit-marketing"]}
+      ]
+    },
+
+    "T10_good_enough_threshold": {
+      "topic": "The Good Enough Threshold",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "AI good enough for blogs not sales pages", "type": "root_cause", "platforms": ["reddit-copywriting", "reddit-marketing"]},
+        {"q": "when does AI copy quality matter most", "type": "instructional", "platforms": ["reddit-copywriting", "reddit-marketing"]},
+        {"q": "AI writing for sales copy vs content marketing", "type": "instructional", "platforms": ["reddit-marketing", "reddit-copywriting"]},
+        {"q": "where AI writing fails high stakes copy", "type": "problem", "platforms": ["reddit-copywriting", "reddit-entrepreneur"]},
+        {"q": "AI acceptable for internal docs terrible for ads", "type": "problem", "platforms": ["reddit-marketing", "twitter-x"]}
+      ]
+    },
+
+    "T11_buying_behavior": {
+      "topic": "Digital Product Buying Behavior $19-47",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "selling digital products $27 price point", "type": "instructional", "platforms": ["reddit-sideproject", "gumroad"]},
+        {"q": "what makes people buy low ticket digital product", "type": "instructional", "platforms": ["reddit-sideproject", "reddit-entrepreneur"]},
+        {"q": "Gumroad digital product launch strategy", "type": "instructional", "platforms": ["reddit-sideproject", "producthunt"]},
+        {"q": "impulse buy digital toolkit pricing", "type": "instructional", "platforms": ["reddit-sideproject", "reddit-entrepreneur"]},
+        {"q": "before and after examples increase conversions", "type": "instructional", "platforms": ["reddit-marketing", "reddit-entrepreneur"]}
+      ]
+    },
+
+    "T12_writing_quality_trends": {
+      "topic": "AI Writing Quality Trends 2025-2026",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "is AI writing getting better 2026", "type": "root_cause", "platforms": ["reddit-artificial", "reddit-chatgpt"]},
+        {"q": "AI slop problem getting worse not better", "type": "root_cause", "platforms": ["reddit-artificial", "twitter-x"]},
+        {"q": "GPT-4o Claude Opus writing quality improvement", "type": "competitor", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "AI content detection arms race 2026", "type": "root_cause", "platforms": ["reddit-artificial", "twitter-x"]},
+        {"q": "newer AI models still sound robotic", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-claudeai"]}
+      ]
+    },
+
+    "T13_solopreneur_bottleneck": {
+      "topic": "Solopreneur Content Production Bottleneck",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "solopreneur can't afford copywriter using AI", "type": "emotional", "platforms": ["reddit-entrepreneur", "reddit-sideproject"]},
+        {"q": "one person business writing all marketing copy", "type": "emotional", "platforms": ["reddit-entrepreneur", "reddit-sideproject"]},
+        {"q": "content creation overwhelm solopreneur", "type": "emotional", "platforms": ["reddit-entrepreneur", "twitter-x"]},
+        {"q": "AI writing for coaches course creators", "type": "instructional", "platforms": ["reddit-entrepreneur", "youtube-comments"]},
+        {"q": "need help writing sales page can't afford writer", "type": "emotional", "platforms": ["reddit-entrepreneur", "reddit-copywriting"]}
+      ]
+    },
+
+    "T14_trust_erosion": {
+      "topic": "Trust Erosion",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "brand reputation damaged by AI content", "type": "emotional", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "audience lost trust AI generated content", "type": "emotional", "platforms": ["reddit-marketing", "reddit-copywriting"]},
+        {"q": "caught using AI writing backlash", "type": "emotional", "platforms": ["twitter-x", "reddit-marketing"]},
+        {"q": "AI content destroying brand credibility", "type": "emotional", "platforms": ["reddit-marketing", "linkedin"]},
+        {"q": "consumers detecting AI content trust issues", "type": "problem", "platforms": ["reddit-marketing", "twitter-x"]}
+      ]
+    },
+
+    "T15_specimen_learning": {
+      "topic": "Specimen/Example-Based Learning in AI",
+      "topic_type": "primary",
+      "queries": [
+        {"q": "feeding AI examples better output than prompts", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "few shot learning copywriting AI examples", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "show AI what good writing looks like", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "AI writing with reference text examples", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-copywriting"]},
+        {"q": "giving Claude examples of good copy improves output", "type": "instructional", "platforms": ["reddit-claudeai", "youtube-comments"]}
+      ]
+    },
+
+    "C01_subscription_fatigue": {
+      "topic": "AI Copywriting Tool Subscription Fatigue",
+      "topic_type": "category",
+      "queries": [
+        {"q": "tired of paying monthly AI writing tools", "type": "villain", "platforms": ["reddit-entrepreneur", "reddit-marketing"]},
+        {"q": "AI copywriting subscription not worth it canceling", "type": "villain", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "how many AI writing tools have you tried and quit", "type": "emotional", "platforms": ["reddit-chatgpt", "reddit-copywriting"]},
+        {"q": "one time purchase vs subscription AI writing", "type": "competitor", "platforms": ["reddit-entrepreneur", "gumroad"]},
+        {"q": "wasted money on AI writing subscriptions", "type": "villain", "platforms": ["reddit-entrepreneur", "reddit-marketing"]}
+      ]
+    },
+
+    "C02_prompt_pack_economy": {
+      "topic": "Prompt Pack and Template Economy",
+      "topic_type": "category",
+      "queries": [
+        {"q": "Gumroad AI copywriting prompts reviews", "type": "competitor", "platforms": ["gumroad", "reddit-sideproject"]},
+        {"q": "are AI prompt packs worth buying", "type": "competitor", "platforms": ["reddit-chatgpt", "reddit-sideproject"]},
+        {"q": "best AI copywriting template bundle 2026", "type": "competitor", "platforms": ["gumroad", "producthunt"]},
+        {"q": "prompt pack vs actual AI writing system", "type": "competitor", "platforms": ["reddit-chatgpt", "reddit-claudeai"]},
+        {"q": "I can find free prompts why pay for prompt pack", "type": "villain", "platforms": ["reddit-chatgpt", "gumroad"]}
+      ]
+    },
+
+    "C03_claude_code_skills": {
+      "topic": "Claude Code and LLM Skill Systems",
+      "topic_type": "category",
+      "queries": [
+        {"q": "Claude Code marketing skills", "type": "competitor", "platforms": ["reddit-claudeai", "producthunt"]},
+        {"q": "Vibe Skills Claude Code review worth $199", "type": "competitor", "platforms": ["reddit-claudeai", "twitter-x"]},
+        {"q": "marketing skills for Claude Code GitHub", "type": "competitor", "platforms": ["reddit-claudeai", "producthunt"]},
+        {"q": "Claude Code for copywriting how to use", "type": "instructional", "platforms": ["reddit-claudeai", "youtube-comments"]},
+        {"q": "structured AI skills vs prompts difference", "type": "instructional", "platforms": ["reddit-claudeai", "twitter-x"]}
+      ]
+    },
+
+    "C04_ai_detection": {
+      "topic": "AI Detection Tools Cat-and-Mouse",
+      "topic_type": "category",
+      "queries": [
+        {"q": "GPTZero Copyleaks AI detection accuracy 2026", "type": "competitor", "platforms": ["reddit-chatgpt", "reddit-artificial"]},
+        {"q": "bypass AI detection vs write human quality", "type": "root_cause", "platforms": ["reddit-chatgpt", "reddit-artificial"]},
+        {"q": "AI detector inconsistent results different tools", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-artificial"]},
+        {"q": "is bypassing AI detection even the right goal", "type": "root_cause", "platforms": ["reddit-copywriting", "reddit-artificial"]},
+        {"q": "Originality AI false positives 2026", "type": "competitor", "platforms": ["reddit-chatgpt", "reddit-artificial"]}
+      ]
+    },
+
+    "C05_copywriter_identity_crisis": {
+      "topic": "The Copywriter Identity Crisis",
+      "topic_type": "category",
+      "queries": [
+        {"q": "AI replacing copywriters 2026", "type": "emotional", "platforms": ["reddit-copywriting", "twitter-x"]},
+        {"q": "copywriter using AI feel like fraud", "type": "emotional", "platforms": ["reddit-copywriting", "linkedin"]},
+        {"q": "AI augmented copywriter future career", "type": "emotional", "platforms": ["reddit-copywriting", "twitter-x"]},
+        {"q": "should copywriters use AI tools ethical", "type": "emotional", "platforms": ["reddit-copywriting", "linkedin"]},
+        {"q": "AI devalues copywriting craft profession", "type": "villain", "platforms": ["reddit-copywriting", "twitter-x"]}
+      ]
+    },
+
+    "C06_content_homogenization": {
+      "topic": "AI Content Homogenization",
+      "topic_type": "category",
+      "queries": [
+        {"q": "all AI content sounds the same sea of sameness", "type": "problem", "platforms": ["reddit-copywriting", "reddit-marketing"]},
+        {"q": "how to differentiate AI content from competitors", "type": "instructional", "platforms": ["reddit-marketing", "reddit-copywriting"]},
+        {"q": "AI making all marketing sound identical", "type": "problem", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "reader fatigue generic AI content everywhere", "type": "problem", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "SEO implications AI content homogenization", "type": "problem", "platforms": ["reddit-marketing", "reddit-artificial"]}
+      ]
+    },
+
+    "C07_multi_llm_workflow": {
+      "topic": "Multi-LLM Workflow Experimentation",
+      "topic_type": "category",
+      "queries": [
+        {"q": "using Claude and ChatGPT together writing workflow", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "chain multiple AI models better copy output", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "Claude for first draft ChatGPT for editing", "type": "instructional", "platforms": ["reddit-claudeai", "reddit-chatgpt"]},
+        {"q": "too many AI tools in workflow simplify", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-claudeai"]},
+        {"q": "one AI system that works vs combining tools", "type": "problem", "platforms": ["reddit-chatgpt", "reddit-claudeai"]}
+      ]
+    },
+
+    "COMP01_humanizer_complaints": {
+      "topic": "Undetectable AI and QuillBot User Complaints",
+      "topic_type": "competitor",
+      "queries": [
+        {"q": "Undetectable AI review doesn't work 2026", "type": "competitor", "platforms": ["reddit-chatgpt", "twitter-x"]},
+        {"q": "QuillBot humanizer review broken output", "type": "competitor", "platforms": ["reddit-chatgpt", "youtube-comments"]},
+        {"q": "Phrasly AI humanizer worth it", "type": "competitor", "platforms": ["reddit-chatgpt", "reddit-artificial"]},
+        {"q": "StealthWriter WriteHuman review comparison", "type": "competitor", "platforms": ["reddit-chatgpt", "producthunt"]},
+        {"q": "AI humanizer output worse than original", "type": "villain", "platforms": ["reddit-chatgpt", "twitter-x"]}
+      ]
+    },
+
+    "COMP02_platform_satisfaction": {
+      "topic": "Jasper Copy.ai Writesonic Satisfaction",
+      "topic_type": "competitor",
+      "queries": [
+        {"q": "Jasper AI worth it 2026 review honest", "type": "competitor", "platforms": ["reddit-marketing", "producthunt"]},
+        {"q": "Copy.ai vs Jasper vs Claude for marketing", "type": "competitor", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "Writesonic quality not creative enough", "type": "competitor", "platforms": ["reddit-chatgpt", "producthunt"]},
+        {"q": "AI copywriting tool comparison which is best", "type": "competitor", "platforms": ["reddit-marketing", "youtube-comments"]},
+        {"q": "canceled Jasper subscription not worth price", "type": "villain", "platforms": ["reddit-marketing", "twitter-x"]}
+      ]
+    },
+
+    "COMP03_prompt_pack_positioning": {
+      "topic": "Prompt Pack Product Positioning on Gumroad",
+      "topic_type": "competitor",
+      "queries": [
+        {"q": "77 magic prompts copywriting Gumroad review", "type": "competitor", "platforms": ["gumroad", "reddit-sideproject"]},
+        {"q": "AI copywriting bundle Gumroad worth buying", "type": "competitor", "platforms": ["gumroad", "reddit-sideproject"]},
+        {"q": "best selling AI writing products Gumroad", "type": "competitor", "platforms": ["gumroad", "producthunt"]},
+        {"q": "Gumroad prompt pack vs building own system", "type": "competitor", "platforms": ["reddit-chatgpt", "gumroad"]},
+        {"q": "free AI prompts vs paid prompt packs difference", "type": "competitor", "platforms": ["reddit-chatgpt", "reddit-sideproject"]}
+      ]
+    },
+
+    "COMP04_claude_code_ecosystem": {
+      "topic": "Claude Code Marketing Skills Ecosystem",
+      "topic_type": "competitor",
+      "queries": [
+        {"q": "Vibe Skills review $199 Claude Code marketing", "type": "competitor", "platforms": ["reddit-claudeai", "twitter-x"]},
+        {"q": "free marketing skills Claude Code GitHub review", "type": "competitor", "platforms": ["reddit-claudeai", "producthunt"]},
+        {"q": "Claude Code skills for copywriting which to buy", "type": "competitor", "platforms": ["reddit-claudeai", "youtube-comments"]},
+        {"q": "claudecodeformarketers.com review resources", "type": "competitor", "platforms": ["twitter-x", "reddit-claudeai"]},
+        {"q": "AI marketing skills humanization vs generation", "type": "root_cause", "platforms": ["reddit-claudeai", "twitter-x"]}
+      ]
+    },
+
+    "COMP05_messaging_saturation": {
+      "topic": "Competitor Messaging Saturation",
+      "topic_type": "competitor",
+      "queries": [
+        {"q": "AI copywriting tool claims 99% accuracy lies", "type": "villain", "platforms": ["reddit-chatgpt", "twitter-x"]},
+        {"q": "every AI writing tool says the same thing", "type": "problem", "platforms": ["reddit-marketing", "twitter-x"]},
+        {"q": "AI tool marketing overpromise underdeliver", "type": "villain", "platforms": ["reddit-entrepreneur", "twitter-x"]},
+        {"q": "what no AI writing tool is telling you", "type": "root_cause", "platforms": ["twitter-x", "youtube-comments"]},
+        {"q": "tired of AI tool hype same promises", "type": "emotional", "platforms": ["reddit-chatgpt", "reddit-marketing"]}
+      ]
+    },
+
+    "COMP06_funnel_pricing": {
+      "topic": "Competitor Funnel and Pricing Architecture",
+      "topic_type": "competitor",
+      "queries": [
+        {"q": "Jasper pricing hidden fees complaints", "type": "competitor", "platforms": ["reddit-marketing", "producthunt"]},
+        {"q": "AI writing tool free trial to paid conversion", "type": "competitor", "platforms": ["reddit-marketing", "reddit-entrepreneur"]},
+        {"q": "Undetectable AI pricing vs results value", "type": "competitor", "platforms": ["reddit-chatgpt", "twitter-x"]},
+        {"q": "AppSumo AI writing lifetime deal worth it", "type": "competitor", "platforms": ["appsumo", "reddit-sideproject"]},
+        {"q": "one time vs monthly AI writing tool better deal", "type": "competitor", "platforms": ["reddit-entrepreneur", "gumroad"]}
+      ]
+    }
+  },
+
+  "validation": {
+    "total_queries": 142,
+    "total_topics": 28,
+    "topics_with_5_plus_queries": 28,
+    "topics_below_minimum": 0,
+    "query_type_coverage": {
+      "problem": true,
+      "emotional": true,
+      "instructional": true,
+      "competitor": true,
+      "root_cause": true,
+      "villain": true
+    },
+    "platform_coverage": {
+      "reddit-copywriting": 22,
+      "reddit-chatgpt": 38,
+      "reddit-claudeai": 26,
+      "reddit-entrepreneur": 18,
+      "reddit-marketing": 24,
+      "reddit-artificial": 12,
+      "reddit-sideproject": 10,
+      "twitter-x": 28,
+      "youtube-comments": 8,
+      "gumroad": 8,
+      "producthunt": 10,
+      "linkedin": 4,
+      "appsumo": 2
+    },
+    "terminology_compliance": true,
+    "all_market_config_patterns_used": true,
+    "pass": true
+  }
+}

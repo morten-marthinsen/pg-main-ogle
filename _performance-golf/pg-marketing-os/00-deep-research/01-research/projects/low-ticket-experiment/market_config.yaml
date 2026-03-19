@@ -1,0 +1,357 @@
+# market_config.yaml
+# Generated from research brief: Low-Ticket Experiment
+# Product: Anti-Slop AI Copy That Converts
+
+project:
+  name: low-ticket-experiment
+  created: 2026-03-17
+  market_mode: B  # New product, no marketing history
+
+terminology:
+  customer:
+    primary: "marketer"
+    plural: "marketers"
+    adjective: "marketing"
+    alternates:
+      - "copywriter"
+      - "founder"
+      - "solopreneur"
+      - "creator"
+      - "business owner"
+      - "Claude user"
+
+  problem:
+    primary: "AI-generated copy that sounds robotic and fails to convert"
+    category: "content quality"
+    alternates:
+      - "AI slop"
+      - "generic AI output"
+      - "robotic copy"
+      - "AI-sounding writing"
+      - "low-converting AI content"
+      - "cookie-cutter AI copy"
+
+  product:
+    type: "toolkit"
+    solution: "humanization system"
+    alternates:
+      - "copy system"
+      - "AI writing system"
+      - "copywriting kit"
+      - "prompt system"
+      - "skill pack"
+
+platforms:
+  tier_1:
+    - name: "Reddit r/copywriting"
+      type: forum
+      tool: apify
+      priority: critical
+      url: "https://www.reddit.com/r/copywriting/"
+      rationale: "Direct target audience — copywriters frustrated with AI output"
+
+    - name: "Reddit r/ClaudeAI"
+      type: forum
+      tool: apify
+      priority: critical
+      url: "https://www.reddit.com/r/ClaudeAI/"
+      rationale: "Claude users discussing copy quality, humanization, writing use cases"
+
+    - name: "Reddit r/ChatGPT"
+      type: forum
+      tool: apify
+      priority: critical
+      url: "https://www.reddit.com/r/ChatGPT/"
+      rationale: "Largest AI user community — AI copy complaints and comparisons"
+
+    - name: "Reddit r/Entrepreneur"
+      type: forum
+      tool: apify
+      priority: critical
+      url: "https://www.reddit.com/r/Entrepreneur/"
+      rationale: "Business owners using AI for marketing copy — practical pain points"
+
+    - name: "X/Twitter"
+      type: social
+      tool: apify
+      priority: critical
+      hashtags:
+        - "#AIMarketing"
+        - "#AICopywriting"
+        - "#ClaudeCode"
+        - "#AISlop"
+        - "#Copywriting"
+      rationale: "Real-time conversation about AI copy quality, tool comparisons"
+
+  tier_2:
+    - name: "Reddit r/artificial"
+      type: forum
+      tool: apify
+      priority: high
+      url: "https://www.reddit.com/r/artificial/"
+      rationale: "General AI discussion with writing quality threads"
+
+    - name: "Reddit r/marketing"
+      type: forum
+      tool: apify
+      priority: high
+      url: "https://www.reddit.com/r/marketing/"
+      rationale: "Marketing professionals discussing AI tool adoption"
+
+    - name: "Reddit r/SideProject"
+      type: forum
+      tool: apify
+      priority: high
+      url: "https://www.reddit.com/r/SideProject/"
+      rationale: "Indie builders selling digital products — distribution intelligence"
+
+    - name: "Gumroad Marketplace"
+      type: marketplace
+      tool: firecrawl
+      priority: high
+      url: "https://gumroad.com"
+      rationale: "Competitor product pricing and positioning intelligence"
+
+    - name: "Product Hunt"
+      type: marketplace
+      tool: firecrawl
+      priority: high
+      url: "https://www.producthunt.com"
+      rationale: "AI writing tool launches, market reception, competitor intelligence"
+
+  tier_3:
+    - name: "YouTube Comments"
+      type: video
+      tool: apify
+      priority: moderate
+      rationale: "Comments on AI copywriting tutorials — pain points and desires"
+
+    - name: "LinkedIn"
+      type: social
+      tool: firecrawl
+      priority: moderate
+      rationale: "Professional marketers discussing AI adoption — B2B angle"
+
+    - name: "AppSumo"
+      type: marketplace
+      tool: firecrawl
+      priority: moderate
+      url: "https://appsumo.com"
+      rationale: "Lifetime deal pricing intelligence, competitor products"
+
+  blocked:
+    - name: "TikTok"
+      reason: "Low purchase intent for $27 digital toolkit, aggressive bot detection"
+      alternative: "YouTube comments on AI copywriting content"
+    - name: "Facebook Groups"
+      reason: "Login wall, difficult to scrape, groups are private"
+      alternative: "Reddit communities with similar audiences"
+
+aspects:
+  - name: "Output Quality"
+    definition: "How human-sounding, natural, and polished the AI-generated copy reads"
+    example_terms:
+      - "sounds human"
+      - "natural writing"
+      - "authentic voice"
+      - "not robotic"
+      - "publish-ready"
+      - "editorial quality"
+
+  - name: "Conversion Performance"
+    definition: "Whether the copy actually drives clicks, signups, purchases, or other desired actions"
+    example_terms:
+      - "converts"
+      - "CTR"
+      - "conversion rate"
+      - "sells"
+      - "ROI"
+      - "revenue"
+      - "clicks"
+
+  - name: "Efficiency & Speed"
+    definition: "How much time, effort, and editing the system saves vs. manual writing or other tools"
+    example_terms:
+      - "saves time"
+      - "no editing needed"
+      - "near publish-ready"
+      - "first draft quality"
+      - "speed"
+      - "fast"
+
+  - name: "AI Detection & Trust"
+    definition: "Whether readers or detection tools can identify the copy as AI-generated, and the trust implications"
+    example_terms:
+      - "AI detection"
+      - "bypasses detectors"
+      - "undetectable"
+      - "AI slop"
+      - "sounds like a bot"
+      - "machine fingerprints"
+      - "synthetic"
+
+  - name: "System & Implementation"
+    definition: "The approach, methodology, or tools used to achieve humanized, converting copy"
+    example_terms:
+      - "system"
+      - "template"
+      - "prompt"
+      - "framework"
+      - "method"
+      - "skills"
+      - "workflow"
+      - "specimens"
+
+competitors:
+  known:
+    - name: "Undetectable AI"
+      type: direct
+      positioning: "AI humanizer — post-processing tool to bypass AI detectors"
+      price: "$19/mo"
+
+    - name: "Jasper"
+      type: indirect
+      positioning: "AI copywriting platform with brand voice"
+      price: "$39-59/mo/seat"
+
+    - name: "Copy.ai"
+      type: indirect
+      positioning: "AI copywriting with templates"
+      price: "Free-$49/mo"
+
+    - name: "Writesonic"
+      type: indirect
+      positioning: "Speed-focused AI writing"
+      price: "$16/mo"
+
+    - name: "QuillBot"
+      type: direct
+      positioning: "Paraphrasing and humanization tool"
+      price: "Free-$19.95/mo"
+
+    - name: "Phrasly"
+      type: direct
+      positioning: "AI humanizer for technical content"
+      price: "$10.99-19.99/mo"
+
+    - name: "77+ Magic Prompts for Copywriting"
+      type: indirect
+      positioning: "Prompt pack on Gumroad"
+      price: "$9 intro → $97"
+
+    - name: "Vibe Skills"
+      type: indirect
+      positioning: "10 marketing skills for Claude Code"
+      price: "$199"
+
+    - name: "Marketing Skills for Claude Code"
+      type: indirect
+      positioning: "Free open-source marketing skills"
+      price: "Free (GitHub)"
+
+  terminology:
+    comparison_phrases:
+      - "X vs Y"
+      - "best AI copywriting tool"
+      - "better than ChatGPT for copy"
+      - "Claude vs ChatGPT for writing"
+      - "AI humanizer comparison"
+      - "is X worth it"
+    category_terms:
+      - "AI copywriting tool"
+      - "AI humanizer"
+      - "AI writing assistant"
+      - "prompt pack"
+      - "copy system"
+      - "Claude Code skills"
+
+emotional_context:
+  fears:
+    - "AI copy will damage brand reputation by sounding generic/robotic"
+    - "Customers will detect AI-generated content and lose trust"
+    - "Competitors using AI better will steal market share"
+    - "Investing in AI tools that produce unusable output (wasted money)"
+    - "Being replaced by AI but also unable to use AI effectively"
+    - "Publishing AI slop that tanks conversion rates"
+
+  frustrations:
+    - "Every AI tool produces the same generic, corporate-sounding output"
+    - "Fixing AI output takes longer than writing from scratch"
+    - "AI uses the same transition words and patterns (Moreover, Furthermore, Delve)"
+    - "Paying monthly subscriptions for tools that don't deliver"
+    - "Can't get AI to match brand voice or personality"
+    - "The gap between AI promise and AI reality in copywriting"
+
+  hopes:
+    - "Copy that sounds like a $10K copywriter wrote it"
+    - "Near publish-ready AI output from the first draft"
+    - "A system that produces copy which actually converts"
+    - "Write faster without sacrificing quality"
+    - "AI that captures personality and emotional resonance"
+    - "Scale content production without hiring a team"
+
+  identity:
+    current: "Frustrated AI user who knows the output isn't good enough but doesn't know how to fix it"
+    aspirational: "Sophisticated marketer who gets professional-grade copy from AI while competitors struggle with slop"
+    anti_identity: "The amateur who publishes obviously AI-generated content that repels customers"
+
+query_patterns:
+  pain_queries:
+    - "AI copy sounds robotic"
+    - "AI writing too generic"
+    - "ChatGPT copy doesn't convert"
+    - "AI slop marketing"
+    - "AI generated content problems"
+    - "AI copywriting frustrated"
+    - "fix AI writing quality"
+    - "AI humanizer doesn't work"
+    - "Claude writing quality issues"
+    - "AI content killing conversions"
+
+  hope_queries:
+    - "how to make AI copy sound human"
+    - "best AI for copywriting"
+    - "AI copy that converts"
+    - "Claude for marketing copy"
+    - "AI copywriting system that works"
+    - "humanize AI writing"
+    - "professional AI copy"
+    - "AI copy as good as human"
+    - "high converting AI copy"
+    - "AI writing with personality"
+
+  competitor_queries:
+    - "Undetectable AI review"
+    - "Jasper AI worth it"
+    - "best AI humanizer 2026"
+    - "ChatGPT vs Claude copywriting"
+    - "AI copywriting tool comparison"
+    - "Jasper vs Copy.ai"
+    - "QuillBot humanizer review"
+    - "Claude Code marketing skills"
+    - "Gumroad AI copywriting"
+    - "AI writing tool reviews"
+
+  root_cause_queries:
+    - "why does AI copy sound the same"
+    - "why AI writing is bad"
+    - "what makes AI copy detectable"
+    - "AI writing patterns"
+    - "AI slop causes"
+    - "why AI copywriting fails"
+
+  solutions_tried_queries:
+    - "tried AI humanizer"
+    - "switched from ChatGPT to Claude"
+    - "AI copywriting prompts that work"
+    - "custom instructions for better AI writing"
+    - "AI writing with examples"
+    - "training AI on my voice"
+
+  villain_queries:
+    - "worst AI writing tools"
+    - "AI copywriting scam"
+    - "hate AI writing"
+    - "AI humanizer waste of money"
+    - "AI copywriting overhyped"
+    - "AI replacing copywriters bad"
