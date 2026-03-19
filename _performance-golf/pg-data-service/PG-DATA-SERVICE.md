@@ -216,7 +216,7 @@ From Tess PRD v1.4. The service provides the metrics — consumers apply classif
 - **Two row types in one dataset**: Ad-metric rows (`Spend > 0`) and order rows (`totalAmount > 0`). Never both on same row. Aggregate separately, join on `Ad` name.
 - **Domo SQL**: No GROUP BY, no aggregate functions. All aggregation happens in pandas after fetch.
 - **`dateCreated`** is the date column used for all filtering.
-- **`Valid 15-Position Ad Name?`**: Always filter on `= 1` for creative-level analysis. All queries do this.
+- **`Valid 15-Position Ad Name?`**: 1 = ad follows the 15-position naming convention. The service returns all ads — consumers filter on this as needed for creative-level analysis.
 - **`[Funnel]`**: Use the pre-parsed position, NOT the campaign-level `Funnel` column. They can disagree.
 - **`New Customers`**: String field. `'0'` = returning, anything else = new. Do not cast to int.
 - **`Refunded Revenue`**: Comes in as negative from the Domo transform. Do not negate.

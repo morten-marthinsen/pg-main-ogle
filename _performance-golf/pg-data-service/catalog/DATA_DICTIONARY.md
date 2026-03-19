@@ -130,7 +130,7 @@ The data service provides the metrics. Classification is a consumer-side busines
 |--------|----------|-----------|
 | **funnel** | `[Funnel]` | Use this, NOT the campaign-level `Funnel` column |
 | **script_id** | `[ScriptID]` | Root angle — groups variations of same creative concept |
-| **valid_15_position** | `Valid 15-Position Ad Name?` | All queries filter on `= 1`. If an ad is missing, check this first. |
+| **valid_15_position** | `Valid 15-Position Ad Name?` | 1 = follows 15-position naming. Service returns all ads — consumers filter as needed. |
 | **New Customers** | `New Customers` | STRING field. `'0'` = returning. Do not cast to int. |
 | **Refunded Revenue** | `Refunded Revenue` | Already negative from Domo. Do not negate. |
 

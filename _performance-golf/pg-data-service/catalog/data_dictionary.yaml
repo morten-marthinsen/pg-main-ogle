@@ -397,8 +397,8 @@ datasets:
         raw_column: "Valid 15-Position Ad Name?"
         tags: [raw]
         gotchas:
-          - "ALL queries filter on this = 1 — non-conforming ads are excluded"
-          - "If an ad doesn't appear in results, check this field first"
+          - "1 = follows 15-position naming convention. Service returns all ads — consumers filter as needed."
+          - "Non-conforming ads will have empty/null parsed position fields ([Funnel], [ScriptID], etc.)"
 
       new_customers_raw:
         display_name: New Customers (Raw Field)

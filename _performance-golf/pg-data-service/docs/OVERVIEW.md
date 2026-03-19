@@ -125,7 +125,7 @@ Classification is a consumer-side business rule, not applied by the service. Tes
 - **`New Customers`** field: `'0'` = returning customer, anything else = new
 - **`Refunded Revenue`** comes in as a negative number from Domo's transform
 - **`# SC Trials Started`** has a line-break in the column name (Domo quirk) — cleaned automatically
-- **`Valid 15-Position Ad Name?`** = 1 filters to ads with the naming convention
+- **`Valid 15-Position Ad Name?`** = 1 means the ad follows the 15-position naming convention (consumers can filter on this)
 - **Always use `[Funnel]`** (the parsed position) not the campaign-level `Funnel` column
 
 ## File Map

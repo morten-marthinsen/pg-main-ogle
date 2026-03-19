@@ -40,7 +40,6 @@ COL_SPEND = "Spend"
 COL_CLICKS = "Clicks"
 COL_IMPRESSIONS = "Impressions"
 COL_PLATFORM = "Ad Platform"
-COL_VALID_15 = "Valid 15-Position Ad Name?"
 COL_TOTAL_AMOUNT = "totalAmount"
 COL_ORDER_ID = "orderId"
 COL_PHYSICAL_COGS = "Physical COGS Per Order"
@@ -76,7 +75,7 @@ COL_ASSET_TYPE_NAME = "Asset Type"
 # Columns to select for ad-metric rows (Spend > 0)
 AD_METRIC_COLS = [
     COL_AD, COL_SPEND, COL_CLICKS, COL_IMPRESSIONS,
-    COL_PLATFORM, COL_VALID_15,
+    COL_PLATFORM,
     COL_FUNNEL, COL_SCRIPT_ID, COL_VARIATION_ID,
     COL_AD_CATEGORY, COL_EXPANSION_TYPE, COL_ASSET_TYPE,
     COL_TALENT_CODE, COL_EDITOR, COL_COPYWRITER,
@@ -160,14 +159,13 @@ class DomoAdapter(DataAdapter):
 
         email_address_hash is SHA-256 of full emailAddress (hexdigest truncated to 16 chars), added here
         before PII stripping removes the source column in the API layer.
-        Returns all rows matching Valid 15-Position and date range.
+        Returns all rows in date range.
         """
         _validate_date(date_from)
         _validate_date(date_to)
         sql = (
             f'SELECT * FROM table '
-            f'WHERE `{COL_VALID_15}` = 1 '
-            f'AND `dateCreated` >= \'{date_from}\' '
+            f'WHERE `dateCreated` >= \'{date_from}\' '
             f'AND `dateCreated` <= \'{date_to}\' '
             f'LIMIT {limit}'
         )
@@ -188,7 +186,6 @@ class DomoAdapter(DataAdapter):
         sql = (
             f'SELECT * FROM table '
             f'WHERE `{COL_SPEND}` > 0 '
-            f'AND `{COL_VALID_15}` = 1 '
             f'AND `dateCreated` >= \'{date_from}\' '
             f'AND `dateCreated` <= \'{date_to}\''
         )
@@ -205,7 +202,6 @@ class DomoAdapter(DataAdapter):
         sql = (
             f'SELECT * FROM table '
             f'WHERE `{COL_TOTAL_AMOUNT}` > 0 '
-            f'AND `{COL_VALID_15}` = 1 '
             f'AND `dateCreated` >= \'{date_from}\' '
             f'AND `dateCreated` <= \'{date_to}\''
         )

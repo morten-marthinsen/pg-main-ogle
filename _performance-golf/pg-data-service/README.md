@@ -42,7 +42,7 @@ Classification (Winner/Potential/Underperformer/Testing) is a Tess business rule
 
 - All date inputs are validated via `_validate_date()` (YYYY-MM-DD regex) before SQL interpolation
 - `DOMO_CLIENT_PATH` is a required env var — no hardcoded machine paths in source code
-- Both enriched and raw pipelines return all platforms — no filtering. Only `Valid 15-Position Ad Name? = 1` is applied (matches Domo card behavior).
+- Both enriched and raw pipelines return all rows — no filtering applied. Consumers filter as needed.
 
 ---
 
@@ -90,7 +90,7 @@ The service does not classify ads. Classification is a consumer-side business ru
 
 - **Two row types in one dataset**: ad-metric rows (`Spend > 0`) and order rows (`totalAmount > 0`). Never both on same row. Aggregate separately, join on `Ad` name.
 - **Domo SQL**: No GROUP BY, no aggregate functions. All aggregation in pandas.
-- **`Valid 15-Position Ad Name?`**: Always filter on this = 1 for creative-level analysis.
+- **`Valid 15-Position Ad Name?`**: 1 = ad follows the 15-position naming convention. Consumers can filter on this for creative-level analysis.
 - **`[Funnel]`**: Use the pre-parsed position, NOT the campaign-level `Funnel` column.
 - **`New Customers`**: String field. `'0'` = returning, anything else = new.
 - **`Refunded Revenue`**: Comes in as negative from the Domo transform.
