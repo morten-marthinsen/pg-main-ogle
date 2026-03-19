@@ -157,8 +157,7 @@ pg-data-service/
 ├── api.py                        # Public API: get_card(), get_raw(), list_cards(), list_datasets()
 ├── cards.yaml                    # Card registry (card name → dataset, enrichment, output mode)
 ├── datasets.yaml                 # Approved dataset allowlist (friendly name → dataset ID)
-├── README.md                     # Project overview, consumer usage examples
-├── PG-DATA-SERVICE.md            # This file — full architecture reference
+├── README.md                     # This file — full architecture reference
 ├── adapters/
 │   ├── base.py                   # Abstract adapter interface (fetch_all + fetch_raw)
 │   └── domo.py                   # Domo implementation: raw row fetch only (no business logic)
