@@ -1,0 +1,231 @@
+{
+  "$schema": "project-progress-v1.0",
+  "project_code": "",
+  "project_name": "",
+  "client": "",
+  "tier": "standard",
+  "created": "",
+  "last_updated": "",
+  "current_session": 1,
+  "session_log": [],
+
+  "audience_agents": {
+    "status": "not_constructed",
+    "persona_count": 0,
+    "file_path": null,
+    "constructed_date": null
+  },
+
+  "context_reservoir": {
+    "status": "not_created",
+    "file_path": null,
+    "created_date": null
+  },
+
+  "engines": {
+    "main_pipeline": {
+      "name": "Main Pipeline",
+      "status": "pending",
+      "skills": {
+        "00": { "name": "project-brief", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "01": { "name": "deep-research", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "02": { "name": "proof-inventory", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "03": { "name": "root-cause", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "04": { "name": "mechanism", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "05": { "name": "promise", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "06": { "name": "big-idea", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "07": { "name": "offer-stack", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "08": { "name": "structure", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "09": { "name": "campaign-brief", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
+      }
+    },
+
+    "long_form_vsl": {
+      "name": "Long-Form VSL",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "10": { "name": "headlines", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "11": { "name": "lead", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "12": { "name": "story", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "13": { "name": "root-cause-narrative", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "14": { "name": "mechanism-narrative", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "15": { "name": "product-introduction", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "16": { "name": "offer-copy", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "17": { "name": "close", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "18": { "name": "proof-weaving", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "19": { "name": "campaign-assembly", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "20": { "name": "editorial", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true }
+      }
+    },
+
+    "e_comm": {
+      "name": "E-Commerce",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "EC-00": { "name": "e-comm-strategist", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "EC-01": { "name": "feature-naming", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "EC-02": { "name": "hero-value-prop", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "EC-03": { "name": "section-copy", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "EC-04": { "name": "micro-scripts", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "EC-05": { "name": "assembly", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "EC-06": { "name": "editorial", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
+      }
+    },
+
+    "page_builder": {
+      "name": "Page Builder",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "LP-07": { "name": "hero-section", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "LP-08": { "name": "trust-elements", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "LP-09": { "name": "benefits-features", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "LP-10": { "name": "social-proof-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "LP-11": { "name": "offer-pricing", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "LP-12": { "name": "faq-objections", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "LP-13": { "name": "urgency-scarcity", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "LP-14": { "name": "cta-optimizer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true }
+      }
+    },
+
+    "upsells": {
+      "name": "Upsells",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "U0": { "name": "upsell-strategist", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "U1": { "name": "order-bump-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "U2": { "name": "upsell-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "U3": { "name": "downsell-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "U4": { "name": "upsell-assembler", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "U5": { "name": "upsell-editorial", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
+      }
+    },
+
+    "checkout": {
+      "name": "Checkout",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "CK-00": { "name": "checkout-strategist", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "CK-01": { "name": "trust-security-copy", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "CK-02": { "name": "form-microcopy", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "CK-03": { "name": "checkout-editorial", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
+      }
+    },
+
+    "emails": {
+      "name": "Emails",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "E0": { "name": "email-strategist", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "E1": { "name": "email-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "E2": { "name": "subject-line-engine", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "E3": { "name": "sequence-assembler", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "E4": { "name": "email-editorial", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
+      }
+    },
+
+    "ads": {
+      "name": "Ads",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "A01": { "name": "ad-intelligence", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "A02": { "name": "hook-angle-discovery", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "A03": { "name": "format-strategy", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "A04": { "name": "script-architecture", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "A05": { "name": "visual-direction", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "A06": { "name": "ad-arena", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "A07": { "name": "copy-production", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "A08": { "name": "visual-video-production", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "A09": { "name": "assembly-variant-matrix", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "A10": { "name": "pre-launch-scoring", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "A11": { "name": "launch-package", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "A12": { "name": "performance-learning", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
+      }
+    },
+
+    "advertorials": {
+      "name": "Advertorials",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "ADV-00": { "name": "advertorial-strategist", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "ADV-01": { "name": "hook-lead-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "ADV-02": { "name": "body-copy-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "ADV-03": { "name": "cta-bridge-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "ADV-04": { "name": "advertorial-assembly", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "ADV-05": { "name": "advertorial-editorial", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
+      }
+    },
+
+    "organic": {
+      "name": "Organic",
+      "status": "pending",
+      "depends_on": ["09"],
+      "skills": {
+        "S01": { "name": "audience-intelligence", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S02": { "name": "platform-strategy", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S03": { "name": "brand-voice", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S04": { "name": "content-architecture", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S05": { "name": "hook-library", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "S06": { "name": "virality-scoring", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S07": { "name": "campaign-brief", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S08": { "name": "script-writing", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "S09": { "name": "caption-writing", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "S10": { "name": "carousel-design", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "S11": { "name": "thread-writing", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "S12": { "name": "visual-direction", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S13": { "name": "arena-generation", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "S14": { "name": "content-assembly", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S15": { "name": "scheduling-choreography", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S16": { "name": "engagement-protocol", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S17": { "name": "network-amplification", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S18": { "name": "repurpose", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S19": { "name": "performance-analysis", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S20": { "name": "learning-capture", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S21": { "name": "persona-architect", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S22": { "name": "account-strategy", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S23": { "name": "network-coordination", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "S24": { "name": "monetization-engine", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
+      }
+    }
+  },
+
+  "gates": [],
+
+  "human_checkpoints": [
+    { "after_skill": "03", "description": "Review root cause selection + villain", "status": "pending", "date": null },
+    { "after_skill": "04", "description": "Review mechanism winner + analogy", "status": "pending", "date": null },
+    { "after_skill": "05", "description": "Review Big Idea / promise", "status": "pending", "date": null },
+    { "after_skill": "09", "description": "Review campaign brief — LAST strategic checkpoint", "status": "pending", "date": null },
+    { "after_skill": "10", "description": "Review headline candidates", "status": "pending", "date": null },
+    { "after_skill": "12", "description": "Review story draft + midpoint recitation", "status": "pending", "date": null },
+    { "after_skill": "17", "description": "Review full draft before assembly", "status": "pending", "date": null },
+    { "after_skill": "20", "description": "Final editorial review before release", "status": "pending", "date": null }
+  ],
+
+  "foundation_integrity_check": {
+    "status": "pending",
+    "triggered_after": "13",
+    "date": null,
+    "result": null
+  },
+
+  "parallel_execution": {
+    "status": "not_started",
+    "primary_engine": null,
+    "worktrees": [],
+    "started_date": null,
+    "completed_date": null,
+    "engines_merged": []
+  },
+
+  "active_engines": [],
+
+  "notes": []
+}

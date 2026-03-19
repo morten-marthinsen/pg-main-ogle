@@ -1,0 +1,367 @@
+{
+  "$schema": "pipeline-dag-v1.0",
+  "version": "1.0",
+  "created": "2026-03-18",
+  "description": "Directed acyclic graph of all 93 marketing-OS skills. Defines execution order, dependency edges, human gates, parallel groups, model routing, and tier configuration. Consumed by the Session Orchestrator (Phase 4) to automate skill sequencing.",
+  "total_nodes": 93,
+
+  "engines": [
+    { "id": "main_pipeline", "name": "Main Pipeline", "skills": ["00","01","02","03","04","05","06","07","08","09"], "entry": "00", "exit": "09" },
+    { "id": "long_form_vsl", "name": "Long-Form VSL", "skills": ["10","11","12","13","14","15","16","17","18","19","20"], "entry": "10", "exit": "20", "depends_on_engine": "main_pipeline" },
+    { "id": "e_comm", "name": "E-Commerce", "skills": ["EC-00","EC-01","EC-02","EC-03","EC-04","EC-05","EC-06"], "entry": "EC-00", "exit": "EC-06", "depends_on_engine": "main_pipeline" },
+    { "id": "page_builder", "name": "Page Builder", "skills": ["LP-07","LP-08","LP-09","LP-10","LP-11","LP-12","LP-13","LP-14"], "entry": "LP-07", "exit": "LP-14", "depends_on_engine": "main_pipeline" },
+    { "id": "upsells", "name": "Upsells", "skills": ["U0","U1","U2","U3","U4","U5"], "entry": "U0", "exit": "U5", "depends_on_engine": "main_pipeline" },
+    { "id": "checkout", "name": "Checkout", "skills": ["CK-00","CK-01","CK-02","CK-03"], "entry": "CK-00", "exit": "CK-03", "depends_on_engine": "main_pipeline" },
+    { "id": "emails", "name": "Emails", "skills": ["E0","E1","E2","E3","E4"], "entry": "E0", "exit": "E4", "depends_on_engine": "main_pipeline" },
+    { "id": "ads", "name": "Ads", "skills": ["A01","A02","A03","A04","A05","A06","A07","A08","A09","A10","A11","A12"], "entry": "A01", "exit": "A12", "depends_on_engine": "main_pipeline" },
+    { "id": "advertorials", "name": "Advertorials", "skills": ["ADV-00","ADV-01","ADV-02","ADV-03","ADV-04","ADV-05"], "entry": "ADV-00", "exit": "ADV-05", "depends_on_engine": "main_pipeline" },
+    { "id": "organic", "name": "Organic", "skills": ["S01","S02","S03","S04","S05","S06","S07","S08","S09","S10","S11","S12","S13","S14","S15","S16","S17","S18","S19","S20","S21","S22","S23","S24"], "entry": "S01", "exit": "S20", "depends_on_engine": null, "notes": "Mode A: S07 consumes campaign-brief from Skill 09. Mode B: runs standalone from S01." }
+  ],
+
+  "nodes": [
+
+    { "id": "00", "name": "project-brief", "engine": "main_pipeline", "depends_on": [], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "01", "name": "deep-research", "engine": "main_pipeline", "depends_on": ["00"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "02", "name": "proof-inventory", "engine": "main_pipeline", "depends_on": ["01"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "03", "name": "root-cause", "engine": "main_pipeline", "depends_on": ["02"], "arena": true, "generates_copy": false, "model": "opus", "gate_after": "G-03" },
+    { "id": "04", "name": "mechanism", "engine": "main_pipeline", "depends_on": ["03"], "arena": true, "generates_copy": false, "model": "opus", "gate_after": "G-04" },
+    { "id": "05", "name": "promise", "engine": "main_pipeline", "depends_on": ["04"], "arena": true, "generates_copy": false, "model": "opus", "gate_after": "G-05" },
+    { "id": "06", "name": "big-idea", "engine": "main_pipeline", "depends_on": ["05"], "arena": true, "generates_copy": false, "model": "opus" },
+    { "id": "07", "name": "offer-stack", "engine": "main_pipeline", "depends_on": ["06"], "arena": true, "generates_copy": false, "model": "opus" },
+    { "id": "08", "name": "structure", "engine": "main_pipeline", "depends_on": ["07"], "arena": true, "generates_copy": false, "model": "opus" },
+    { "id": "09", "name": "campaign-brief", "engine": "main_pipeline", "depends_on": ["08"], "arena": false, "generates_copy": false, "model": "opus", "gate_after": "G-09" },
+
+    { "id": "10", "name": "headlines", "engine": "long_form_vsl", "depends_on": ["09"], "arena": true, "generates_copy": true, "model": "sonnet", "gate_after": "G-10" },
+    { "id": "11", "name": "lead", "engine": "long_form_vsl", "depends_on": ["10"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "12", "name": "story", "engine": "long_form_vsl", "depends_on": ["11"], "arena": true, "generates_copy": true, "model": "sonnet", "gate_after": "G-12" },
+    { "id": "13", "name": "root-cause-narrative", "engine": "long_form_vsl", "depends_on": ["12"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "14", "name": "mechanism-narrative", "engine": "long_form_vsl", "depends_on": ["13"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "15", "name": "product-introduction", "engine": "long_form_vsl", "depends_on": ["14"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "16", "name": "offer-copy", "engine": "long_form_vsl", "depends_on": ["15"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "17", "name": "close", "engine": "long_form_vsl", "depends_on": ["16"], "arena": true, "generates_copy": true, "model": "sonnet", "gate_after": "G-17" },
+    { "id": "18", "name": "proof-weaving", "engine": "long_form_vsl", "depends_on": ["09"], "arena": true, "generates_copy": true, "model": "sonnet", "notes": "Parallel with 10-17 cascade. Consumes proof-inventory (02), structure (08), campaign-brief (09) only." },
+    { "id": "19", "name": "campaign-assembly", "engine": "long_form_vsl", "depends_on": ["17", "18"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "20", "name": "editorial", "engine": "long_form_vsl", "depends_on": ["19"], "arena": true, "generates_copy": false, "model": "opus", "gate_after": "G-20" },
+
+    { "id": "EC-00", "name": "e-comm-strategist", "engine": "e_comm", "depends_on": ["09"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "EC-01", "name": "feature-naming", "engine": "e_comm", "depends_on": ["EC-00"], "arena": true, "generates_copy": false, "model": "opus" },
+    { "id": "EC-02", "name": "hero-value-prop", "engine": "e_comm", "depends_on": ["EC-01"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "EC-03", "name": "section-copy", "engine": "e_comm", "depends_on": ["EC-01"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "EC-04", "name": "micro-scripts", "engine": "e_comm", "depends_on": ["EC-01"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "EC-05", "name": "assembly", "engine": "e_comm", "depends_on": ["EC-02", "EC-03", "EC-04"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "EC-06", "name": "editorial", "engine": "e_comm", "depends_on": ["EC-05"], "arena": false, "generates_copy": false, "model": "opus" },
+
+    { "id": "LP-07", "name": "hero-section", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
+    { "id": "LP-08", "name": "trust-elements", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
+    { "id": "LP-09", "name": "benefits-features", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
+    { "id": "LP-10", "name": "social-proof-writer", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
+    { "id": "LP-11", "name": "offer-pricing", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
+    { "id": "LP-12", "name": "faq-objections", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
+    { "id": "LP-13", "name": "urgency-scarcity", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
+    { "id": "LP-14", "name": "cta-optimizer", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
+
+    { "id": "U0", "name": "upsell-strategist", "engine": "upsells", "depends_on": ["09"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "U1", "name": "order-bump-writer", "engine": "upsells", "depends_on": ["U0"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "U2", "name": "upsell-writer", "engine": "upsells", "depends_on": ["U0"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "U3", "name": "downsell-writer", "engine": "upsells", "depends_on": ["U2"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "U4", "name": "upsell-assembler", "engine": "upsells", "depends_on": ["U1", "U2", "U3"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "U5", "name": "upsell-editorial", "engine": "upsells", "depends_on": ["U4"], "arena": false, "generates_copy": false, "model": "opus" },
+
+    { "id": "CK-00", "name": "checkout-strategist", "engine": "checkout", "depends_on": ["09"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "CK-01", "name": "trust-security-copy", "engine": "checkout", "depends_on": ["CK-00"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "CK-02", "name": "form-microcopy", "engine": "checkout", "depends_on": ["CK-00"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "CK-03", "name": "checkout-editorial", "engine": "checkout", "depends_on": ["CK-01", "CK-02"], "arena": false, "generates_copy": false, "model": "opus" },
+
+    { "id": "E0", "name": "email-strategist", "engine": "emails", "depends_on": ["09"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "E1", "name": "email-writer", "engine": "emails", "depends_on": ["E0"], "arena": true, "generates_copy": true, "model": "sonnet", "notes": "Runs N times (once per email in sequence). E2 runs after each E1 completion." },
+    { "id": "E2", "name": "subject-line-engine", "engine": "emails", "depends_on": ["E1"], "arena": true, "generates_copy": true, "model": "sonnet", "notes": "Runs after E1 per email. E2 reads FINISHED E1 output — never a draft." },
+    { "id": "E3", "name": "sequence-assembler", "engine": "emails", "depends_on": ["E1", "E2"], "arena": false, "generates_copy": false, "model": "opus", "notes": "Waits for ALL E1+E2 pairs across all emails." },
+    { "id": "E4", "name": "email-editorial", "engine": "emails", "depends_on": ["E3"], "arena": false, "generates_copy": false, "model": "opus" },
+
+    { "id": "A01", "name": "ad-intelligence", "engine": "ads", "depends_on": ["09"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "A02", "name": "hook-angle-discovery", "engine": "ads", "depends_on": ["A01"], "arena": true, "generates_copy": false, "model": "opus", "gate_after": "G-A02" },
+    { "id": "A03", "name": "format-strategy", "engine": "ads", "depends_on": ["A02"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "A04", "name": "script-architecture", "engine": "ads", "depends_on": ["A03"], "arena": true, "generates_copy": false, "model": "sonnet" },
+    { "id": "A05", "name": "visual-direction", "engine": "ads", "depends_on": ["A04"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "A06", "name": "ad-arena", "engine": "ads", "depends_on": ["A04", "A05"], "arena": true, "generates_copy": true, "model": "sonnet", "gate_after": "G-A06" },
+    { "id": "A07", "name": "copy-production", "engine": "ads", "depends_on": ["A06"], "arena": false, "generates_copy": true, "model": "sonnet" },
+    { "id": "A08", "name": "visual-video-production", "engine": "ads", "depends_on": ["A06"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "A09", "name": "assembly-variant-matrix", "engine": "ads", "depends_on": ["A07", "A08"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "A10", "name": "pre-launch-scoring", "engine": "ads", "depends_on": ["A09"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "A11", "name": "launch-package", "engine": "ads", "depends_on": ["A10"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "A12", "name": "performance-learning", "engine": "ads", "depends_on": ["A11"], "arena": false, "generates_copy": false, "model": "opus", "phase": "post_launch" },
+
+    { "id": "ADV-00", "name": "advertorial-strategist", "engine": "advertorials", "depends_on": ["09"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "ADV-01", "name": "hook-lead-writer", "engine": "advertorials", "depends_on": ["ADV-00"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "ADV-02", "name": "body-copy-writer", "engine": "advertorials", "depends_on": ["ADV-01"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "ADV-03", "name": "cta-bridge-writer", "engine": "advertorials", "depends_on": ["ADV-02"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "ADV-04", "name": "advertorial-assembly", "engine": "advertorials", "depends_on": ["ADV-01", "ADV-02", "ADV-03"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "ADV-05", "name": "advertorial-editorial", "engine": "advertorials", "depends_on": ["ADV-04"], "arena": false, "generates_copy": false, "model": "opus" },
+
+    { "id": "S01", "name": "audience-intelligence", "engine": "organic", "depends_on": [], "arena": false, "generates_copy": false, "model": "opus", "notes": "Standalone entry point. Mode A: starts after Skill 09 for alignment. Mode B: starts independently." },
+    { "id": "S02", "name": "platform-strategy", "engine": "organic", "depends_on": ["S01"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S03", "name": "brand-voice", "engine": "organic", "depends_on": ["S02"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S04", "name": "content-architecture", "engine": "organic", "depends_on": ["S03"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S05", "name": "hook-library", "engine": "organic", "depends_on": ["S04"], "arena": true, "generates_copy": false, "model": "opus" },
+    { "id": "S06", "name": "virality-scoring", "engine": "organic", "depends_on": ["S05"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S07", "name": "campaign-brief", "engine": "organic", "depends_on": ["S06"], "arena": false, "generates_copy": false, "model": "opus", "notes": "Mode A: also consumes campaign-brief.json from Skill 09. Mode B: synthesizes S01-S06 only.", "gate_after": "G-S07" },
+    { "id": "S08", "name": "script-writing", "engine": "organic", "depends_on": ["S07"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "S09", "name": "caption-writing", "engine": "organic", "depends_on": ["S07"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "S10", "name": "carousel-design", "engine": "organic", "depends_on": ["S07"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "S11", "name": "thread-writing", "engine": "organic", "depends_on": ["S07"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "S12", "name": "visual-direction", "engine": "organic", "depends_on": ["S07"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S13", "name": "arena-generation", "engine": "organic", "depends_on": ["S07"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "S14", "name": "content-assembly", "engine": "organic", "depends_on": ["S08", "S09", "S10", "S11", "S12", "S13"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S15", "name": "scheduling-choreography", "engine": "organic", "depends_on": ["S14"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S16", "name": "engagement-protocol", "engine": "organic", "depends_on": ["S14"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S17", "name": "network-amplification", "engine": "organic", "depends_on": ["S14"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S18", "name": "repurpose", "engine": "organic", "depends_on": ["S14"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S19", "name": "performance-analysis", "engine": "organic", "depends_on": ["S14"], "arena": false, "generates_copy": false, "model": "opus", "phase": "post_launch" },
+    { "id": "S20", "name": "learning-capture", "engine": "organic", "depends_on": ["S19"], "arena": false, "generates_copy": false, "model": "opus", "phase": "post_launch" },
+    { "id": "S21", "name": "persona-architect", "engine": "organic", "depends_on": ["S07"], "arena": false, "generates_copy": false, "model": "opus", "notes": "Influencer sub-system. Independent of S08-S20 production pipeline." },
+    { "id": "S22", "name": "account-strategy", "engine": "organic", "depends_on": ["S21"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S23", "name": "network-coordination", "engine": "organic", "depends_on": ["S22"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "S24", "name": "monetization-engine", "engine": "organic", "depends_on": ["S23"], "arena": false, "generates_copy": false, "model": "opus" }
+  ],
+
+  "gates": [
+    {
+      "id": "G-03",
+      "after_skill": "03",
+      "blocks_skills": ["04"],
+      "description": "Review root cause selection + villain",
+      "type": "human_review",
+      "requires": "CONCEPT_APPROVED.yaml + Arena selection verified"
+    },
+    {
+      "id": "G-04",
+      "after_skill": "04",
+      "blocks_skills": ["05"],
+      "description": "Review mechanism winner + analogy",
+      "type": "human_review",
+      "requires": "CONCEPT_APPROVED.yaml + Arena selection verified"
+    },
+    {
+      "id": "G-05",
+      "after_skill": "05",
+      "blocks_skills": ["06"],
+      "description": "Review Big Idea / promise",
+      "type": "human_review",
+      "requires": "Arena selection verified + proof ceiling alignment"
+    },
+    {
+      "id": "G-09",
+      "after_skill": "09",
+      "blocks_skills": ["10", "18", "EC-00", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U0", "CK-00", "E0", "A01", "ADV-00"],
+      "description": "Review campaign brief — LAST strategic checkpoint before copy generation",
+      "type": "human_review",
+      "requires": "All 10 coherence dimensions scored >= minimums, state = PASS"
+    },
+    {
+      "id": "G-10",
+      "after_skill": "10",
+      "blocks_skills": ["11"],
+      "description": "Review headline candidates",
+      "type": "human_review",
+      "requires": "Arena selection verified + quality_score >= 8.5"
+    },
+    {
+      "id": "G-12",
+      "after_skill": "12",
+      "blocks_skills": ["13"],
+      "description": "Review story draft + midpoint recitation",
+      "type": "human_review",
+      "requires": "Arena selection verified + midpoint Active Recitation complete"
+    },
+    {
+      "id": "G-17",
+      "after_skill": "17",
+      "blocks_skills": ["19"],
+      "description": "Review full draft before assembly",
+      "type": "human_review",
+      "requires": "All narrative skills (10-17) Arena-verified"
+    },
+    {
+      "id": "G-20",
+      "after_skill": "20",
+      "blocks_skills": [],
+      "description": "Final editorial review before release",
+      "type": "human_review",
+      "requires": "P1 and P2 issues resolved, post_editorial_score >= 8.5"
+    },
+    {
+      "id": "G-A02",
+      "after_skill": "A02",
+      "blocks_skills": ["A03"],
+      "description": "Human curation of hook/angle candidates — select 8-10 from top 15-20",
+      "type": "human_curation",
+      "requires": "50-100+ hooks generated, bottom 70% automated cut complete"
+    },
+    {
+      "id": "G-A06",
+      "after_skill": "A06",
+      "blocks_skills": ["A07", "A08"],
+      "description": "Human selection of winning ad concepts from Arena",
+      "type": "human_review",
+      "requires": "Arena scoring complete, full concept evaluations (hook + script + visual)"
+    },
+    {
+      "id": "G-S07",
+      "after_skill": "S07",
+      "blocks_skills": ["S08", "S09", "S10", "S11", "S12", "S13", "S21"],
+      "description": "Organic Campaign Brief validated — blocks all production and influencer skills",
+      "type": "human_review",
+      "requires": "CBF exists and validates, all foundation gates (G01-G06) passed"
+    }
+  ],
+
+  "parallel_groups": [
+    {
+      "id": "PG-BRANCH-LAUNCH",
+      "name": "Branch Engine Launch",
+      "description": "After Skill 09 + gate G-09 passes, all branch engine entry points become eligible simultaneously. VSL Skill 10 and Skill 18 (proof-weaving) also start here.",
+      "trigger": { "skill_completed": "09", "gate_passed": "G-09" },
+      "members": ["10", "18", "EC-00", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U0", "CK-00", "E0", "A01", "ADV-00"]
+    },
+    {
+      "id": "PG-VSL-PROOF",
+      "name": "VSL Narrative + Proof Weaving",
+      "description": "Skill 18 (proof-weaving) runs in parallel with the 10→17 narrative cascade. Both feed into Skill 19 (assembly).",
+      "trigger": { "skill_completed": "09", "gate_passed": "G-09" },
+      "members": ["10", "18"],
+      "convergence": "19"
+    },
+    {
+      "id": "PG-ECOMM-WRITE",
+      "name": "E-Comm Copy Generation",
+      "description": "EC-02, EC-03, EC-04 run in parallel after EC-01 (feature naming) completes.",
+      "trigger": { "skill_completed": "EC-01" },
+      "members": ["EC-02", "EC-03", "EC-04"],
+      "convergence": "EC-05"
+    },
+    {
+      "id": "PG-LPB-ELEMENTS",
+      "name": "Landing Page Element Writing",
+      "description": "All 8 page builder element writers run in parallel. Each produces independent section copy.",
+      "trigger": { "skill_completed": "09", "gate_passed": "G-09" },
+      "members": ["LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14"]
+    },
+    {
+      "id": "PG-UPSELL-WRITE",
+      "name": "Upsell Copy Generation",
+      "description": "U1 (order bump) and U2 (upsell) run in parallel after U0. U3 (downsell) waits for U2.",
+      "trigger": { "skill_completed": "U0" },
+      "members": ["U1", "U2"]
+    },
+    {
+      "id": "PG-CHECKOUT-WRITE",
+      "name": "Checkout Copy Generation",
+      "description": "CK-01 (trust/security) and CK-02 (form microcopy) run in parallel after CK-00.",
+      "trigger": { "skill_completed": "CK-00" },
+      "members": ["CK-01", "CK-02"],
+      "convergence": "CK-03"
+    },
+    {
+      "id": "PG-ADS-PRODUCE",
+      "name": "Ad Production",
+      "description": "A07 (copy production) and A08 (visual/video production) run in parallel after A06 Arena selection.",
+      "trigger": { "skill_completed": "A06", "gate_passed": "G-A06" },
+      "members": ["A07", "A08"],
+      "convergence": "A09"
+    },
+    {
+      "id": "PG-ORGANIC-PRODUCE",
+      "name": "Organic Content Production",
+      "description": "S08-S13 all run in parallel after S07 (organic campaign brief). All feed into S14 (content assembly).",
+      "trigger": { "skill_completed": "S07", "gate_passed": "G-S07" },
+      "members": ["S08", "S09", "S10", "S11", "S12", "S13"],
+      "convergence": "S14"
+    },
+    {
+      "id": "PG-ORGANIC-DISTRIBUTE",
+      "name": "Organic Distribution",
+      "description": "S15-S18 can run in parallel after S14 (content assembly) completes.",
+      "trigger": { "skill_completed": "S14" },
+      "members": ["S15", "S16", "S17", "S18"]
+    },
+    {
+      "id": "PG-ORGANIC-INFLUENCER",
+      "name": "Organic Influencer Network",
+      "description": "S21-S24 is an independent sub-system that runs after S07 but parallel with S08-S20.",
+      "trigger": { "skill_completed": "S07", "gate_passed": "G-S07" },
+      "members": ["S21", "S22", "S23", "S24"]
+    }
+  ],
+
+  "model_routing": {
+    "opus": {
+      "description": "Opus 4.6 — strategy, analysis, assembly, editorial, adversarial evaluation",
+      "skills": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "19", "20", "EC-00", "EC-01", "EC-05", "EC-06", "U0", "U4", "U5", "CK-00", "CK-03", "E0", "E3", "E4", "A01", "A02", "A03", "A05", "A08", "A09", "A10", "A11", "A12", "ADV-00", "ADV-04", "ADV-05", "S01", "S02", "S03", "S04", "S05", "S06", "S07", "S12", "S14", "S15", "S16", "S17", "S18", "S19", "S20", "S21", "S22", "S23", "S24"]
+    },
+    "sonnet": {
+      "description": "Sonnet 4.5 — copy generation, Arena generative_full_draft, persona simulation",
+      "skills": ["10", "11", "12", "13", "14", "15", "16", "17", "18", "EC-02", "EC-03", "EC-04", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U1", "U2", "U3", "CK-01", "CK-02", "E1", "E2", "A04", "A06", "A07", "ADV-01", "ADV-02", "ADV-03", "S08", "S09", "S10", "S11", "S13"]
+    }
+  },
+
+  "tier_config": {
+    "full": {
+      "arena_mode": "2-round + audience evaluation",
+      "verification_points": "all (foundation, midpoint, per-prose-handoff, pre-assembly, editorial)",
+      "active_recitation": "midpoint + 75%",
+      "pre_mortem": "all skills",
+      "foundation_integrity_check": true,
+      "audience_agents": "5-7 personas",
+      "skip_skills": []
+    },
+    "standard": {
+      "arena_mode": "2-round + audience evaluation (3 audience agents)",
+      "verification_points": "foundation + midpoint",
+      "active_recitation": "midpoint only",
+      "pre_mortem": "foundation skills only",
+      "foundation_integrity_check": true,
+      "audience_agents": "3 personas",
+      "skip_skills": []
+    },
+    "quick": {
+      "arena_mode": "no Arena",
+      "verification_points": "none",
+      "active_recitation": "none",
+      "pre_mortem": "optional",
+      "foundation_integrity_check": false,
+      "audience_agents": "none",
+      "skip_skills": [],
+      "notes": "No skills are skipped — execution depth is reduced, not pipeline width. Quality thresholds remain identical across all tiers."
+    }
+  },
+
+  "execution_phases": {
+    "description": "High-level phases for human orientation. Not consumed by the orchestrator — use nodes/depends_on for execution ordering.",
+    "phases": [
+      { "id": "P0", "name": "Project Setup", "skills": ["00"], "description": "Brief intake, tier determination, project initialization" },
+      { "id": "P1", "name": "Deep Research", "skills": ["01", "02"], "description": "1000+ quote research + proof inventory" },
+      { "id": "P2", "name": "Strategic Foundation", "skills": ["03", "04", "05", "06"], "description": "Root cause → mechanism → promise → big idea. Human gates after each." },
+      { "id": "P3", "name": "Campaign Architecture", "skills": ["07", "08", "09"], "description": "Offer stack → structure → campaign brief. Final strategic checkpoint." },
+      { "id": "P4", "name": "Copy Generation", "skills": ["10", "11", "12", "13", "14", "15", "16", "17", "18"], "description": "VSL narrative cascade (10→17) + proof weaving (18). Prose cascades through each skill." },
+      { "id": "P5", "name": "Assembly & Editorial", "skills": ["19", "20"], "description": "Full draft assembly + Arena editorial pass." },
+      { "id": "P6", "name": "Branch Engines", "skills": ["EC-*", "LP-*", "U*", "CK-*", "E*", "A*", "ADV-*", "S*"], "description": "All branch engines execute in parallel after Skill 09. Internal skills run sequentially within each engine." }
+    ]
+  },
+
+  "cross_engine_dependencies": {
+    "description": "Optional/conditional dependencies between engines. Not modeled as hard edges in the DAG — these are documented for orchestrator awareness.",
+    "dependencies": [
+      { "from": "U4", "to": "E0", "type": "optional", "description": "Upsell sequence architecture informs email follow-up strategy" },
+      { "from": "CK-00", "to": "U1", "type": "optional", "description": "Checkout strategy provides order bump placement spec" },
+      { "from": "EC-05", "to": "LP-07", "type": "optional", "description": "E-comm assembled copy can feed page builder for implementation" },
+      { "from": "A02", "to": "ADV-00", "type": "optional", "description": "Ad hook angles can be adapted for advertorial opens" },
+      { "from": "09", "to": "S07", "type": "mode_a", "description": "In Mode A (downstream), organic S07 consumes campaign-brief from Skill 09" }
+    ]
+  },
+
+  "foundation_integrity_check": {
+    "triggers_after": ["13"],
+    "description": "Fresh-context verification of mechanism translation, root cause resonance, expression anchoring, and Foundation contradictions. Runs between Skills 13 and 14 for Full and Standard tiers.",
+    "applies_to_tiers": ["full", "standard"]
+  }
+}
