@@ -159,9 +159,6 @@ pg-data-service/
 ├── datasets.yaml                 # Approved dataset allowlist (friendly name → dataset ID)
 ├── README.md                     # Project overview, consumer usage examples
 ├── PG-DATA-SERVICE.md            # This file — full architecture reference
-├── docs/
-│   ├── OVERVIEW.md               # Plain-English overview of the system
-│   └── superpowers/              # Design specs and implementation plans
 ├── adapters/
 │   ├── base.py                   # Abstract adapter interface (fetch_all + fetch_raw)
 │   └── domo.py                   # Domo implementation: raw row fetch only (no business logic)
