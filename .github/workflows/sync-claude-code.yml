@@ -183,19 +183,57 @@ jobs:
           CHANGE_COUNT: ${{ steps.changes.outputs.change_count }}
         run: |
           CHANGE_SUMMARY=$(cat /tmp/change-summary.txt)
-          PAYLOAD=$(jq -n \
-            --arg text "<@U024E2PBFQV>\n\n*Claude Code Sync — $(date -u '+%b %-d')*\n\n*What changed:*\n${CHANGE_SUMMARY}\n${CHANGE_COUNT} files total.\n\n*Action items:*\n1. [placeholder]\n2. [placeholder]\n3. [placeholder]" \
-            '{text: $text, link_names: 1}')
+          DATE_STR=$(date -u '+%b %-d')
+          cat > /tmp/slack-payload.json << SLACK_EOF
+          {
+            "link_names": 1,
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "<@U024E2PBFQV>\n\n*Claude Code Sync — ${DATE_STR}*"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*What changed:*\n${CHANGE_SUMMARY}\n${CHANGE_COUNT} files total."
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Action items:*\n1. [placeholder]\n2. [placeholder]\n3. [placeholder]"
+                }
+              }
+            ]
+          }
+          SLACK_EOF
           curl -X POST "$SLACK_WEBHOOK_URL" \
             -H 'Content-type: application/json' \
-            -d "$PAYLOAD"
+            -d @/tmp/slack-payload.json
 
       - name: Send Slack notification (no changes)
         if: steps.changes.outputs.has_changes == 'false' && env.SLACK_WEBHOOK_URL != ''
         run: |
-          PAYLOAD=$(jq -n \
-            --arg text "<@U024E2PBFQV>\n\n*Claude Code Sync — $(date -u '+%b %-d')*\n\nNo changes upstream. Everything current." \
-            '{text: $text, link_names: 1}')
+          DATE_STR=$(date -u '+%b %-d')
+          cat > /tmp/slack-payload.json << SLACK_EOF
+          {
+            "link_names": 1,
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "<@U024E2PBFQV>\n\n*Claude Code Sync — ${DATE_STR}*\n\nNo changes upstream. Everything current."
+                }
+              }
+            ]
+          }
+          SLACK_EOF
           curl -X POST "$SLACK_WEBHOOK_URL" \
             -H 'Content-type: application/json' \
-            -d "$PAYLOAD"
+            -d @/tmp/slack-payload.json
