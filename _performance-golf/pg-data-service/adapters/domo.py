@@ -72,27 +72,6 @@ COL_EXPANSION_TYPE_NAME = "Expansion Type"
 COL_ASSET_TYPE_NAME = "Asset Type"
 
 
-# Columns to select for ad-metric rows (Spend > 0)
-AD_METRIC_COLS = [
-    COL_AD, COL_SPEND, COL_CLICKS, COL_IMPRESSIONS,
-    COL_PLATFORM,
-    COL_FUNNEL, COL_SCRIPT_ID, COL_VARIATION_ID,
-    COL_AD_CATEGORY, COL_EXPANSION_TYPE, COL_ASSET_TYPE,
-    COL_TALENT_CODE, COL_EDITOR, COL_COPYWRITER,
-    COL_TALENT_NAME, COL_EDITOR_NAME, COL_COPYWRITER_NAME,
-    COL_OFFER_NAME, COL_EXPANSION_TYPE_NAME, COL_ASSET_TYPE_NAME,
-]
-
-# Columns to select for order rows (totalAmount > 0)
-ORDER_COLS = [
-    COL_AD, COL_TOTAL_AMOUNT, COL_ORDER_ID,
-    COL_PHYSICAL_COGS, COL_REFUNDED_REVENUE,
-    COL_AGENCY_FEES, COL_CC_FEES,
-    COL_EMAIL, COL_NEW_CUSTOMERS, COL_SC_TRIAL_PURCHASE_IDS,
-    COL_HAS_UPSELL,
-]
-
-
 def _clean_columns(df: pd.DataFrame) -> pd.DataFrame:
     """Strip <BR> / newline artifacts from Domo column names."""
     df.columns = [c.replace("<BR>", " ").replace("\n", " ").strip() for c in df.columns]
@@ -121,16 +100,24 @@ class DomoAdapter(DataAdapter):
         return _clean_columns(df)
 
     def fetch_ad_performance(self, date_from: str, date_to: str) -> pd.DataFrame:
-        """Fetch ad-metric + order rows, aggregate, compute Beast Modes.
+        """Fetch all rows once, split into ad-metric/order subsets, aggregate, compute Beast Modes.
 
         Returns one row per ad with all computed metrics and parsed 15-position fields.
+        Single API call — split into spend/order subsets in pandas.
         """
-        ad_df = self._fetch_ad_metrics(date_from, date_to)
-        order_df = self._fetch_orders(date_from, date_to)
-        all_ads_df = self._fetch_all_ads(date_from, date_to)
-
-        if all_ads_df.empty:
+        raw_df = self._fetch_all_rows(date_from, date_to)
+        if raw_df.empty:
             return pd.DataFrame()
+
+        # Build distinct ad list with position fields from full dataset
+        all_ads_df = self._extract_ad_list(raw_df)
+
+        # Split into spend rows and order rows in pandas (no extra API calls)
+        spend_col = COL_SPEND if COL_SPEND in raw_df.columns else None
+        order_col = COL_TOTAL_AMOUNT if COL_TOTAL_AMOUNT in raw_df.columns else None
+
+        ad_df = raw_df[pd.to_numeric(raw_df[spend_col], errors="coerce").fillna(0) > 0].copy() if spend_col else pd.DataFrame()
+        order_df = raw_df[pd.to_numeric(raw_df[order_col], errors="coerce").fillna(0) > 0].copy() if order_col else pd.DataFrame()
 
         # --- Aggregate spend side: one row per ad ---
         spend_agg = self._aggregate_spend(ad_df) if not ad_df.empty else pd.DataFrame()
@@ -188,8 +175,8 @@ class DomoAdapter(DataAdapter):
 
     # --- Private: fetch ---
 
-    def _fetch_all_ads(self, date_from: str, date_to: str) -> pd.DataFrame:
-        """Fetch distinct ad names + status for the date range. Includes all ads even with zero activity."""
+    def _fetch_all_rows(self, date_from: str, date_to: str) -> pd.DataFrame:
+        """Single API call — fetch all rows in date range. Spend/order splitting happens in pandas."""
         _validate_date(date_from)
         _validate_date(date_to)
         sql = (
@@ -201,7 +188,10 @@ class DomoAdapter(DataAdapter):
         if df.empty:
             return df
         df[COL_AD] = df[COL_AD].astype(str).str.lower().str.strip()
-        # Only keep columns we need — ad name, status, platform, and position fields
+        return df
+
+    def _extract_ad_list(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Extract distinct ad names + position fields from an already-fetched DataFrame."""
         position_renames = {
             COL_FUNNEL: "funnel", COL_SCRIPT_ID: "script_id",
             COL_VARIATION_ID: "variation_id", COL_AD_CATEGORY: "ad_category",
@@ -214,50 +204,16 @@ class DomoAdapter(DataAdapter):
             COL_ASSET_TYPE_NAME: "asset_type_name", COL_STATUS: "status",
         }
         keep_cols = [COL_AD] + [c for c in position_renames if c in df.columns]
-        df = df[keep_cols]
-        # Keep first occurrence per ad (for status + position fields)
-        df = df.drop_duplicates(subset=[COL_AD], keep="first")
-        # Rename to internal names
-        df = df.rename(columns={k: v for k, v in position_renames.items() if k in df.columns})
-        return df
-
-    def _fetch_ad_metrics(self, date_from: str, date_to: str) -> pd.DataFrame:
-        """Fetch rows where Spend > 0 (ad-metric rows)."""
-        _validate_date(date_from)
-        _validate_date(date_to)
-        sql = (
-            f'SELECT * FROM table '
-            f'WHERE `{COL_SPEND}` > 0 '
-            f'AND `dateCreated` >= \'{date_from}\' '
-            f'AND `dateCreated` <= \'{date_to}\''
-        )
-        df = self._query(sql)
-        if df.empty:
-            return df
-        df[COL_AD] = df[COL_AD].astype(str).str.lower().str.strip()
-        return df
-
-    def _fetch_orders(self, date_from: str, date_to: str) -> pd.DataFrame:
-        """Fetch rows where totalAmount > 0 (order rows)."""
-        _validate_date(date_from)
-        _validate_date(date_to)
-        sql = (
-            f'SELECT * FROM table '
-            f'WHERE `{COL_TOTAL_AMOUNT}` > 0 '
-            f'AND `dateCreated` >= \'{date_from}\' '
-            f'AND `dateCreated` <= \'{date_to}\''
-        )
-        df = self._query(sql)
-        if df.empty:
-            return df
-        df[COL_AD] = df[COL_AD].astype(str).str.lower().str.strip()
-        return df
+        result = df[keep_cols].copy()
+        result = result.drop_duplicates(subset=[COL_AD], keep="first")
+        result = result.rename(columns={k: v for k, v in position_renames.items() if k in result.columns})
+        return result
 
     # --- Private: aggregation ---
 
     def _aggregate_spend(self, ad_df: pd.DataFrame) -> pd.DataFrame:
         """Group ad-metric rows by ad name. Sum spend/clicks/impressions."""
-        # Ensure numeric
+        ad_df = ad_df.copy()
         for col in [COL_SPEND, COL_CLICKS, COL_IMPRESSIONS]:
             ad_df[col] = pd.to_numeric(ad_df[col], errors="coerce").fillna(0)
 
@@ -271,7 +227,7 @@ class DomoAdapter(DataAdapter):
 
     def _aggregate_orders(self, order_df: pd.DataFrame) -> pd.DataFrame:
         """Group order rows by ad name. Compute revenue, costs, customer counts."""
-        # Ensure numeric
+        order_df = order_df.copy()
         for col in [COL_TOTAL_AMOUNT, COL_PHYSICAL_COGS, COL_REFUNDED_REVENUE,
                      COL_AGENCY_FEES, COL_CC_FEES]:
             if col in order_df.columns:
