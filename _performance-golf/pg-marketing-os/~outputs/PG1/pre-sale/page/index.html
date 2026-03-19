@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$5 Million to Answer One Question About Your Golf Game</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="$5 Million to Answer One Question About Your Golf Game">
+  <meta property="og:description" content="A six-part insider series. New episodes dropping now.">
+  <meta property="og:image" content="https://shop.performancegolf.com/cdn/shop/files/BP_1994.jpg?v=1772658412&width=1200">
+  <meta property="og:url" content="https://shop.performancegolf.com/pages/pg1-presale">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Performance Golf">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="$5 Million to Answer One Question About Your Golf Game">
+  <meta name="twitter:description" content="A six-part insider series. New episodes dropping now.">
+  <meta name="twitter:image" content="https://shop.performancegolf.com/cdn/shop/files/BP_1994.jpg?v=1772658412&width=1200">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://shop.performancegolf.com/cdn/shop/files/pg-favicon.png?crop=center&height=32&v=1772234168&width=32">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://shop.performancegolf.com">
+  <link rel="preconnect" href="https://cdn.shopify.com">
+  <link rel="preconnect" href="https://www.performancegolf.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- DM Sans (fallback for Repro) -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ======================================================
+       RESET + BASE
+       ====================================================== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ======================================================
+       DESIGN TOKENS (PG Design System)
+       ====================================================== */
+    :root {
+      /* Primary */
+      --pg-orange: #FD3300;
+      --pg-dark-orange: #DB2C00;
+      --pg-black: #1D1A1A;
+      --pg-ui-gray: #7B726C;
+
+      /* Neutrals */
+      --pg-stone: #B3AAA3;
+      --pg-pebble: #DFD9D5;
+      --pg-sand: #ECE9E4;
+      --pg-fog: #F4F2F0;
+      --pg-mist: #FCFAFA;
+
+      /* Dark theme overrides for this page */
+      --page-bg: #0A0A0A;
+      --page-bg-elevated: #111111;
+      --page-bg-card: #161616;
+      --page-border: rgba(255, 255, 255, 0.08);
+      --text-primary: #F0EDEA;
+      --text-secondary: #9A9490;
+      --text-muted: #6B6560;
+
+      /* Typography */
+      --pg-font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --pg-font-display: Georgia, 'Times New Roman', serif;
+      --pg-font-mono: 'DM Mono', 'Courier New', monospace;
+
+      /* Type Scale */
+      --pg-text-hero: clamp(2.5rem, 8vw, 6rem);
+      --pg-text-7xl: 4.5rem;
+      --pg-text-6xl: 3.75rem;
+      --pg-text-5xl: 3rem;
+      --pg-text-4xl: 2.25rem;
+      --pg-text-3xl: 1.875rem;
+      --pg-text-2xl: 1.5rem;
+      --pg-text-xl: 1.25rem;
+      --pg-text-base: 1rem;
+      --pg-text-sm: 0.875rem;
+      --pg-text-xs: 0.75rem;
+
+      /* Spacing */
+      --pg-space-1: 0.25rem;
+      --pg-space-2: 0.5rem;
+      --pg-space-3: 0.75rem;
+      --pg-space-4: 1rem;
+      --pg-space-6: 1.5rem;
+      --pg-space-8: 2rem;
+      --pg-space-10: 2.5rem;
+      --pg-space-12: 3rem;
+      --pg-space-16: 4rem;
+      --pg-space-20: 5rem;
+      --pg-space-24: 6rem;
+      --pg-space-32: 8rem;
+
+      /* Borders & Radius */
+      --pg-radius: 4px;
+      --pg-radius-md: 8px;
+      --pg-radius-lg: 12px;
+
+      /* Shadows */
+      --pg-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+      --pg-shadow-orange: 0 4px 14px 0 rgba(253, 51, 0, 0.25);
+
+      /* Transitions */
+      --pg-transition-base: 200ms ease;
+      --pg-transition-slow: 300ms ease;
+
+      /* Containers */
+      --pg-container-sm: 640px;
+      --pg-container-md: 768px;
+      --pg-container-lg: 1024px;
+      --pg-container-xl: 1200px;
+    }
+
+    ::selection {
+      background-color: var(--pg-orange);
+      color: var(--pg-mist);
+    }
+
+    body {
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-base);
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--page-bg);
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ======================================================
+       UTILITIES
+       ====================================================== */
+    .pg-container {
+      width: 100%;
+      max-width: var(--pg-container-xl);
+      margin: 0 auto;
+      padding: 0 var(--pg-space-6);
+    }
+
+    .pg-container--narrow {
+      max-width: var(--pg-container-md);
+    }
+
+    .pg-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--pg-orange);
+      outline-offset: 2px;
+    }
+
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* ======================================================
+       NAVIGATION
+       ====================================================== */
+    .pg-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: var(--pg-space-4) 0;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--page-border);
+    }
+
+    .pg-nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pg-nav__logo {
+      height: 28px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .pg-nav__cta {
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pg-mist);
+      background: var(--pg-orange);
+      padding: var(--pg-space-2) var(--pg-space-4);
+      border-radius: var(--pg-radius);
+      transition: background var(--pg-transition-base), box-shadow var(--pg-transition-base);
+    }
+
+    .pg-nav__cta:hover {
+      background: var(--pg-dark-orange);
+      box-shadow: var(--pg-shadow-orange);
+    }
+
+    /* ======================================================
+       SECTION: HERO
+       ====================================================== */
+    .pg-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--pg-space-32) var(--pg-space-6) var(--pg-space-16);
+      overflow: hidden;
+    }
+
+    .pg-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(253, 51, 0, 0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(253, 51, 0, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .pg-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--pg-space-2);
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pg-orange);
+      margin-bottom: var(--pg-space-10);
+      opacity: 0;
+      animation: fadeSlideUp 0.8s ease 0.3s forwards;
+    }
+
+    .pg-hero__badge::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--pg-orange);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .pg-hero__headline {
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-hero);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      max-width: 14ch;
+      margin-bottom: var(--pg-space-8);
+      opacity: 0;
+      animation: fadeSlideUp 1s ease 0.6s forwards;
+    }
+
+    .pg-hero__headline em {
+      font-style: normal;
+      color: var(--pg-orange);
+    }
+
+    .pg-hero__subhead {
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-xl);
+      font-style: italic;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      color: var(--text-secondary);
+      max-width: 36ch;
+      opacity: 0;
+      animation: fadeSlideUp 0.8s ease 1s forwards;
+    }
+
+    .pg-hero__scroll {
+      position: absolute;
+      bottom: var(--pg-space-8);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      opacity: 0;
+      animation: fadeSlideUp 0.6s ease 1.4s forwards;
+    }
+
+    .pg-hero__scroll-chevrons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .pg-hero__scroll-chevron {
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid var(--text-muted);
+      border-bottom: 2px solid var(--text-muted);
+      transform: rotate(45deg);
+      opacity: 0;
+      animation: chevronPulse 2s ease-in-out infinite;
+    }
+
+    .pg-hero__scroll-chevron:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .pg-hero__scroll-chevron:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .pg-hero__scroll-chevron:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    /* ======================================================
+       SECTION: BRIXTON INTRO
+       ====================================================== */
+    .pg-intro {
+      padding: var(--pg-space-24) 0;
+      position: relative;
+    }
+
+    .pg-intro::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--page-border));
+    }
+
+    .pg-intro__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--pg-space-12);
+      align-items: start;
+    }
+
+    .pg-intro__portrait {
+      position: relative;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .pg-intro__portrait-img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 100%;
+      border-radius: var(--pg-radius-md);
+      filter: grayscale(20%);
+    }
+
+    .pg-intro__portrait-caption {
+      margin-top: var(--pg-space-4);
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .pg-intro__letter {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pg-intro__letter p {
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-xl);
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      color: var(--text-secondary);
+      margin-bottom: var(--pg-space-6);
+    }
+
+    .pg-intro__letter p:first-child {
+      font-size: var(--pg-text-2xl);
+      color: var(--text-primary);
+    }
+
+    .pg-intro__letter p em {
+      color: var(--text-primary);
+      font-style: italic;
+    }
+
+    .pg-intro__signature {
+      margin-top: var(--pg-space-10);
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-2xl);
+      font-style: italic;
+      color: var(--text-primary);
+    }
+
+    @media screen and (min-width: 768px) {
+      .pg-intro__inner {
+        grid-template-columns: 1fr 1.4fr;
+        gap: var(--pg-space-16);
+      }
+
+      .pg-intro__portrait {
+        position: sticky;
+        top: 120px;
+      }
+    }
+
+    /* ======================================================
+       SECTION: EPISODES
+       ====================================================== */
+    .pg-episodes {
+      padding: var(--pg-space-24) 0;
+      background: var(--page-bg-elevated);
+    }
+
+    .pg-episodes__header {
+      text-align: center;
+      margin-bottom: var(--pg-space-16);
+    }
+
+    .pg-episodes__label {
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pg-orange);
+      margin-bottom: var(--pg-space-4);
+    }
+
+    .pg-episodes__title {
+      font-family: var(--pg-font-heading);
+      font-size: clamp(2rem, 5vw, var(--pg-text-5xl));
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
+
+    .pg-episodes__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--pg-space-6);
+    }
+
+    .pg-episode-card {
+      position: relative;
+      background: var(--page-bg-card);
+      border: 1px solid var(--page-border);
+      border-radius: var(--pg-radius-md);
+      overflow: hidden;
+      transition: border-color var(--pg-transition-slow), transform var(--pg-transition-slow);
+    }
+
+    .pg-episode-card:hover {
+      border-color: rgba(253, 51, 0, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .pg-episode-card__video {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: var(--page-bg);
+      overflow: hidden;
+    }
+
+    .pg-episode-card__video::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, var(--page-bg-card));
+    }
+
+    .pg-episode-card__play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(253, 51, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--pg-transition-base), transform var(--pg-transition-base);
+      cursor: pointer;
+      border: none;
+    }
+
+    .pg-episode-card:hover .pg-episode-card__play {
+      background: var(--pg-orange);
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    .pg-episode-card__play svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 3px;
+      fill: white;
+    }
+
+    .pg-episode-card__body {
+      padding: var(--pg-space-6) var(--pg-space-6) var(--pg-space-8);
+    }
+
+    .pg-episode-card__number {
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pg-orange);
+      margin-bottom: var(--pg-space-3);
+    }
+
+    .pg-episode-card__title {
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-2xl);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: var(--pg-space-4);
+    }
+
+    .pg-episode-card__teaser {
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-sm);
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: var(--pg-space-4);
+    }
+
+    .pg-episode-card__hook {
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-sm);
+      font-style: italic;
+      color: var(--text-muted);
+      padding-top: var(--pg-space-4);
+      border-top: 1px solid var(--page-border);
+    }
+
+    @media screen and (min-width: 768px) {
+      .pg-episodes__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .pg-episodes__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .pg-episode-card__body {
+        padding: var(--pg-space-8);
+      }
+    }
+
+    /* ======================================================
+       SECTION: THE QUESTION
+       ====================================================== */
+    .pg-question {
+      padding: var(--pg-space-32) var(--pg-space-6);
+      text-align: center;
+      position: relative;
+    }
+
+    .pg-question::before,
+    .pg-question::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, rgba(253, 51, 0, 0.3), transparent);
+    }
+
+    .pg-question::before { top: 0; }
+    .pg-question::after { bottom: 0; }
+
+    .pg-question__headline {
+      font-family: var(--pg-font-heading);
+      font-size: clamp(2rem, 6vw, var(--pg-text-6xl));
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      margin-bottom: var(--pg-space-16);
+    }
+
+    .pg-question__headline em {
+      font-style: normal;
+      color: var(--pg-orange);
+    }
+
+    .pg-question__lines {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .pg-question__line {
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-2xl);
+      line-height: 1.5;
+      color: var(--text-secondary);
+      margin-bottom: var(--pg-space-3);
+    }
+
+    .pg-question__line--yet {
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-4xl);
+      font-weight: 700;
+      color: var(--pg-orange);
+      margin-top: var(--pg-space-8);
+      letter-spacing: -0.02em;
+    }
+
+    /* ======================================================
+       SECTION: KEYNOTE
+       ====================================================== */
+    .pg-keynote {
+      padding: var(--pg-space-24) 0;
+      background: var(--page-bg-elevated);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pg-keynote::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(253, 51, 0, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .pg-keynote__inner {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .pg-keynote__date {
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pg-orange);
+      margin-bottom: var(--pg-space-8);
+    }
+
+    .pg-keynote__title {
+      font-family: var(--pg-font-heading);
+      font-size: clamp(1.75rem, 4vw, var(--pg-text-4xl));
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: var(--pg-space-8);
+    }
+
+    .pg-keynote__body {
+      text-align: left;
+      max-width: 640px;
+      margin: 0 auto var(--pg-space-12);
+      border-left: 2px solid var(--pg-orange);
+      padding-left: var(--pg-space-8);
+    }
+
+    .pg-keynote__body p {
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-xl);
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin-bottom: var(--pg-space-6);
+    }
+
+    .pg-keynote__body p strong {
+      color: var(--text-primary);
+      font-weight: 400;
+    }
+
+    /* Countdown Timer */
+    .pg-countdown {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--pg-space-4);
+      margin-top: var(--pg-space-12);
+      margin-bottom: var(--pg-space-12);
+    }
+
+    .pg-countdown__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--pg-space-2);
+      min-width: 72px;
+    }
+
+    .pg-countdown__number {
+      font-family: var(--pg-font-mono);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .pg-countdown__label {
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    .pg-countdown__separator {
+      font-family: var(--pg-font-mono);
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--text-muted);
+      line-height: 1;
+      padding-bottom: var(--pg-space-6);
+      opacity: 0.4;
+    }
+
+    @media screen and (min-width: 768px) {
+      .pg-countdown__block {
+        min-width: 100px;
+      }
+    }
+
+    /* Qualification Quiz */
+    .pg-quiz {
+      margin-top: var(--pg-space-12);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pg-quiz__trigger {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--pg-mist);
+      background: var(--pg-orange);
+      border: none;
+      border-radius: var(--pg-radius);
+      padding: var(--pg-space-4) var(--pg-space-8);
+      cursor: pointer;
+      transition: background var(--pg-transition-base), box-shadow var(--pg-transition-base);
+      min-height: 52px;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .pg-quiz__trigger:hover {
+      background: var(--pg-dark-orange);
+      box-shadow: var(--pg-shadow-orange);
+    }
+
+    .pg-quiz__seats {
+      margin-top: var(--pg-space-4);
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-base);
+      color: var(--text-muted);
+    }
+
+    /* Quiz Steps Container */
+    .pg-quiz__steps {
+      display: none;
+    }
+
+    .pg-quiz__steps.pg-quiz__steps--active {
+      display: block;
+    }
+
+    .pg-quiz__step {
+      display: none;
+      text-align: left;
+    }
+
+    .pg-quiz__step.pg-quiz__step--active {
+      display: block;
+      animation: fadeSlideUp 0.4s ease forwards;
+    }
+
+    .pg-quiz__progress {
+      display: flex;
+      gap: var(--pg-space-2);
+      margin-bottom: var(--pg-space-8);
+      justify-content: center;
+    }
+
+    .pg-quiz__progress-dot {
+      width: 32px;
+      height: 3px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: background var(--pg-transition-base);
+    }
+
+    .pg-quiz__progress-dot--active {
+      background: var(--pg-orange);
+    }
+
+    .pg-quiz__progress-dot--complete {
+      background: rgba(253, 51, 0, 0.4);
+    }
+
+    .pg-quiz__question-number {
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pg-orange);
+      margin-bottom: var(--pg-space-3);
+      text-align: center;
+    }
+
+    .pg-quiz__question-text {
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-xl);
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--text-primary);
+      margin-bottom: var(--pg-space-8);
+      text-align: center;
+    }
+
+    .pg-quiz__options {
+      display: flex;
+      flex-direction: column;
+      gap: var(--pg-space-3);
+    }
+
+    .pg-quiz__option {
+      display: block;
+      width: 100%;
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-base);
+      font-weight: 400;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--pg-radius);
+      padding: var(--pg-space-4) var(--pg-space-6);
+      cursor: pointer;
+      text-align: left;
+      transition: border-color var(--pg-transition-base), color var(--pg-transition-base), background var(--pg-transition-base);
+    }
+
+    .pg-quiz__option:hover {
+      border-color: rgba(253, 51, 0, 0.4);
+      color: var(--text-primary);
+      background: rgba(253, 51, 0, 0.05);
+    }
+
+    .pg-quiz__option--selected {
+      border-color: var(--pg-orange);
+      color: var(--text-primary);
+      background: rgba(253, 51, 0, 0.08);
+    }
+
+    /* Email step */
+    .pg-quiz__email-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--pg-space-3);
+    }
+
+    .pg-quiz__input {
+      width: 100%;
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-base);
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--pg-radius);
+      padding: var(--pg-space-4) var(--pg-space-6);
+      transition: border-color var(--pg-transition-base), box-shadow var(--pg-transition-base);
+    }
+
+    .pg-quiz__input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .pg-quiz__input:focus {
+      outline: none;
+      border-color: var(--pg-orange);
+      box-shadow: 0 0 0 3px rgba(253, 51, 0, 0.15);
+    }
+
+    .pg-quiz__submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--pg-mist);
+      background: var(--pg-orange);
+      border: none;
+      border-radius: var(--pg-radius);
+      padding: var(--pg-space-4) var(--pg-space-8);
+      cursor: pointer;
+      transition: background var(--pg-transition-base), box-shadow var(--pg-transition-base);
+      min-height: 52px;
+      width: 100%;
+    }
+
+    .pg-quiz__submit:hover {
+      background: var(--pg-dark-orange);
+      box-shadow: var(--pg-shadow-orange);
+    }
+
+    /* Confirmation */
+    .pg-quiz__confirmation {
+      display: none;
+      text-align: center;
+      padding: var(--pg-space-8) 0;
+    }
+
+    .pg-quiz__confirmation.pg-quiz__confirmation--active {
+      display: block;
+      animation: fadeSlideUp 0.5s ease forwards;
+    }
+
+    .pg-quiz__confirmation-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(253, 51, 0, 0.1);
+      border: 1px solid rgba(253, 51, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--pg-space-6);
+    }
+
+    .pg-quiz__confirmation-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--pg-orange);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .pg-quiz__confirmation-heading {
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-2xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--pg-space-4);
+    }
+
+    .pg-quiz__confirmation-text {
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-base);
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* ======================================================
+       SECTION: PROOF STRIP
+       ====================================================== */
+    .pg-proof {
+      padding: var(--pg-space-16) 0;
+      border-top: 1px solid var(--page-border);
+      border-bottom: 1px solid var(--page-border);
+    }
+
+    .pg-proof__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--pg-space-8) var(--pg-space-4);
+      text-align: center;
+    }
+
+    .pg-proof__item:last-child {
+      grid-column: 1 / -1;
+    }
+
+    .pg-proof__value {
+      font-family: var(--pg-font-heading);
+      font-size: clamp(2rem, 5vw, var(--pg-text-5xl));
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+    }
+
+    .pg-proof__label {
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-top: var(--pg-space-2);
+    }
+
+    @media screen and (min-width: 768px) {
+      .pg-proof__grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: var(--pg-space-8);
+      }
+
+      .pg-proof__item:last-child {
+        grid-column: auto;
+      }
+    }
+
+    /* ======================================================
+       SECTION: FOOTER / CLOSING
+       ====================================================== */
+    .pg-footer {
+      padding: var(--pg-space-24) 0 var(--pg-space-16);
+    }
+
+    .pg-footer__inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pg-footer__heading {
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-3xl);
+      font-style: italic;
+      color: var(--text-primary);
+      margin-bottom: var(--pg-space-8);
+    }
+
+    .pg-footer__body p {
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-xl);
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin-bottom: var(--pg-space-6);
+    }
+
+    .pg-footer__signature {
+      margin-top: var(--pg-space-10);
+      font-family: var(--pg-font-display);
+      font-size: var(--pg-text-2xl);
+      font-style: italic;
+      color: var(--text-primary);
+    }
+
+    .pg-footer__colophon {
+      margin-top: var(--pg-space-24);
+      padding-top: var(--pg-space-8);
+      border-top: 1px solid var(--page-border);
+      text-align: center;
+    }
+
+    .pg-footer__colophon-logo {
+      height: 24px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.4;
+      margin: 0 auto var(--pg-space-4);
+    }
+
+    .pg-footer__colophon-text {
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ======================================================
+       COACH AVATAR STRIP (for Episode 4 card)
+       ====================================================== */
+    .pg-coach-avatars {
+      display: flex;
+      gap: 0;
+      margin-top: var(--pg-space-4);
+      margin-bottom: var(--pg-space-2);
+    }
+
+    .pg-coach-avatars__img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--page-bg-card);
+      margin-left: -8px;
+      filter: grayscale(30%);
+    }
+
+    .pg-coach-avatars__img:first-child {
+      margin-left: 0;
+    }
+
+    /* ======================================================
+       VIDEO MODAL
+       ====================================================== */
+    .pg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: var(--pg-space-6);
+      opacity: 0;
+      transition: opacity var(--pg-transition-slow);
+    }
+
+    .pg-modal-overlay--active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .pg-modal {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      background: var(--page-bg-card);
+      border: 1px solid var(--page-border);
+      border-radius: var(--pg-radius-lg);
+      overflow: hidden;
+      animation: fadeSlideUp 0.35s ease forwards;
+    }
+
+    .pg-modal__close {
+      position: absolute;
+      top: var(--pg-space-4);
+      right: var(--pg-space-4);
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(0, 0, 0, 0.6);
+      color: var(--text-primary);
+      font-size: var(--pg-text-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background var(--pg-transition-base), border-color var(--pg-transition-base);
+    }
+
+    .pg-modal__close:hover {
+      background: rgba(253, 51, 0, 0.3);
+      border-color: var(--pg-orange);
+    }
+
+    .pg-modal__video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--page-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-sm);
+      letter-spacing: 0.05em;
+    }
+
+    .pg-modal__title {
+      padding: var(--pg-space-6) var(--pg-space-8);
+      font-family: var(--pg-font-heading);
+      font-size: var(--pg-text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      border-top: 1px solid var(--page-border);
+    }
+
+    .pg-modal__title span {
+      color: var(--pg-orange);
+      font-family: var(--pg-font-mono);
+      font-size: var(--pg-text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: var(--pg-space-2);
+    }
+
+    /* ======================================================
+       ANIMATIONS
+       ====================================================== */
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    @keyframes scrollLine {
+      0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+      50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+      50.01% { transform-origin: bottom; }
+      100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    @keyframes chevronPulse {
+      0% { opacity: 0; transform: rotate(45deg) translate(-4px, -4px); }
+      30% { opacity: 0.6; }
+      60% { opacity: 0.6; transform: rotate(45deg) translate(2px, 2px); }
+      100% { opacity: 0; transform: rotate(45deg) translate(4px, 4px); }
+    }
+
+    /* Scroll-triggered fade-in */
+    .pg-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .pg-reveal--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered children */
+    .pg-stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .pg-stagger--visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+    .pg-stagger--visible > *:nth-child(2) { transition-delay: 80ms; opacity: 1; transform: translateY(0); }
+    .pg-stagger--visible > *:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+    .pg-stagger--visible > *:nth-child(4) { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+    .pg-stagger--visible > *:nth-child(5) { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
+    .pg-stagger--visible > *:nth-child(6) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+
+    /* ======================================================
+       RESPONSIVE ADJUSTMENTS
+       ====================================================== */
+    @media screen and (max-width: 767px) {
+      .pg-hero {
+        padding-top: var(--pg-space-24);
+        min-height: 90vh;
+      }
+
+      .pg-hero__headline {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+      }
+
+      .pg-intro {
+        padding: var(--pg-space-16) 0;
+      }
+
+      .pg-episodes {
+        padding: var(--pg-space-16) 0;
+      }
+
+      .pg-question {
+        padding: var(--pg-space-20) var(--pg-space-6);
+      }
+
+      .pg-keynote {
+        padding: var(--pg-space-16) 0;
+      }
+
+      .pg-footer {
+        padding: var(--pg-space-16) 0 var(--pg-space-12);
+      }
+
+      .pg-countdown {
+        gap: var(--pg-space-2);
+      }
+
+      .pg-countdown__block {
+        min-width: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="pg-nav" role="navigation" aria-label="Main navigation">
+    <div class="pg-container pg-nav__inner">
+      <a href="https://shop.performancegolf.com" aria-label="Performance Golf home">
+        <img
+          class="pg-nav__logo"
+          src="https://shop.performancegolf.com/cdn/shop/files/PG-Logo.svg?v=1770845489&width=200"
+          alt="Performance Golf"
+          width="200"
+          height="28"
+        >
+      </a>
+      <a href="#keynote" class="pg-nav__cta">Apply for Your Seat</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="pg-hero" id="hero" aria-labelledby="hero-headline">
+      <span class="pg-hero__badge" aria-hidden="true">Now Streaming</span>
+      <h1 class="pg-hero__headline" id="hero-headline">
+        $5 Million to Answer <em>One Question</em> About Your Golf Game.
+      </h1>
+      <p class="pg-hero__subhead">A six-part insider series. New episodes dropping now.</p>
+      <div class="pg-hero__scroll" aria-hidden="true">
+        <div class="pg-hero__scroll-chevrons">
+          <div class="pg-hero__scroll-chevron"></div>
+          <div class="pg-hero__scroll-chevron"></div>
+          <div class="pg-hero__scroll-chevron"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BRIXTON'S INTRO
+         ============================================================ -->
+    <section class="pg-intro" id="intro" aria-labelledby="intro-heading">
+      <h2 id="intro-heading" class="pg-sr-only">A letter from Brixton</h2>
+      <div class="pg-container">
+        <div class="pg-intro__inner">
+
+          <div class="pg-intro__portrait pg-reveal">
+            <img
+              class="pg-intro__portrait-img"
+              src="https://shop.performancegolf.com/cdn/shop/files/FTL_JJ-124_2.png?v=1772210721&width=1000"
+              alt="Brixton Albert, CEO of Performance Golf"
+              width="1000"
+              height="1333"
+              loading="lazy"
+            >
+            <p class="pg-intro__portrait-caption">Brixton Albert &mdash; CEO, Performance Golf</p>
+          </div>
+
+          <div class="pg-intro__letter pg-reveal">
+            <p style="font-family: var(--pg-font-mono); font-size: var(--pg-text-xs); text-transform: uppercase; letter-spacing: 0.15em; color: var(--pg-fog); margin-bottom: var(--pg-space-6);">From the desk of Brixton Albert</p>
+
+            <p>I owe you an honest conversation.</p>
+
+            <p>For years, we gave you more content. More tips. More drills. More instructors telling you more things to work on. And you showed up &mdash; you practiced, you invested, you did everything a serious golfer is supposed to do.</p>
+
+            <p>But the data tells a different story. USGA handicap averages haven't moved in five years &mdash; and our own internal numbers confirm it.</p>
+
+            <p>That bothered me so much I committed $5 million and two years to finding out why. I put 276 people across 15 countries behind a single question: <em>Why do dedicated golfers stay stuck &mdash; and what would it take to actually fix it?</em></p>
+
+            <p>What we found changes the way I think about this game. It changes the way our entire coaching team thinks about instruction. And I believe it will change the way you think about your own improvement.</p>
+
+            <p>I recorded six conversations about what we discovered. They were meant for our internal team &mdash; the coaches, the engineers, the people building what comes next. But the more I watched them back, the more I realized you deserve to hear this before anyone else does.</p>
+
+            <p>This is that series.</p>
+
+            <p class="pg-intro__signature">&mdash; Brixton</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EPISODE GRID
+         ============================================================ -->
+    <section class="pg-episodes" id="episodes" aria-labelledby="episodes-heading">
+      <div class="pg-container">
+
+        <header class="pg-episodes__header pg-reveal">
+          <p class="pg-episodes__label">The Series</p>
+          <h2 class="pg-episodes__title" id="episodes-heading">Six Conversations</h2>
+        </header>
+
+        <div class="pg-episodes__grid pg-stagger">
+
+          <!-- Episode 1 -->
+          <article class="pg-episode-card">
+            <div class="pg-episode-card__video">
+              <button class="pg-episode-card__play" aria-label="Play Episode 1: The Confession">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="8,5 19,12 8,19"/></svg>
+              </button>
+            </div>
+            <div class="pg-episode-card__body">
+              <p class="pg-episode-card__number">Episode 1</p>
+              <h3 class="pg-episode-card__title">The Confession</h3>
+              <p class="pg-episode-card__teaser">Brixton says what no golf company CEO has said out loud. Performance Golf &mdash; his own company &mdash; was part of the problem. More content. More instructors. More products. And none of it addressed the one thing that actually determines whether a golfer improves or stays stuck for the rest of their life.</p>
+              <p class="pg-episode-card__teaser">This is the conversation that started everything.</p>
+              <p class="pg-episode-card__hook">&ldquo;Someone finally said it.&rdquo;</p>
+            </div>
+          </article>
+
+          <!-- Episode 2 -->
+          <article class="pg-episode-card">
+            <div class="pg-episode-card__video">
+              <button class="pg-episode-card__play" aria-label="Play Episode 2: The War Room">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="8,5 19,12 8,19"/></svg>
+              </button>
+            </div>
+            <div class="pg-episode-card__body">
+              <p class="pg-episode-card__number">Episode 2</p>
+              <h3 class="pg-episode-card__title">The War Room</h3>
+              <p class="pg-episode-card__teaser">The whiteboards on the wall at Performance Golf headquarters tell a story most companies would never let you see. Two years of building. Real arguments about what golfers actually need versus what the industry keeps selling them. A team that put their careers behind the answer &mdash; with $5 million in the room to prove it was not a conversation. It was a commitment.</p>
+              <p class="pg-episode-card__hook">&ldquo;This is what it looks like when a company decides to build something that did not exist before.&rdquo;</p>
+            </div>
+          </article>
+
+          <!-- Episode 3 -->
+          <article class="pg-episode-card">
+            <div class="pg-episode-card__video">
+              <button class="pg-episode-card__play" aria-label="Play Episode 3: The Root Swing Flaw">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="8,5 19,12 8,19"/></svg>
+              </button>
+            </div>
+            <div class="pg-episode-card__body">
+              <p class="pg-episode-card__number">Episode 3</p>
+              <h3 class="pg-episode-card__title">The Root Swing Flaw</h3>
+              <p class="pg-episode-card__teaser">Every golfer has three to five visible swing flaws. Most of them are not the problem &mdash; they are symptoms of a single underlying flaw that nobody has ever identified for you. Not your instructor. Not your app. Not the YouTube coach who seemed to know exactly what you were doing wrong. This episode names the concept that makes your entire history of improvement attempts make sense for the first time.</p>
+              <p class="pg-episode-card__hook">&ldquo;One flaw. Creating everything.&rdquo;</p>
+            </div>
+          </article>
+
+          <!-- Episode 4 -->
+          <article class="pg-episode-card">
+            <div class="pg-episode-card__video">
+              <button class="pg-episode-card__play" aria-label="Play Episode 4: The Coaches">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="8,5 19,12 8,19"/></svg>
+              </button>
+            </div>
+            <div class="pg-episode-card__body">
+              <p class="pg-episode-card__number">Episode 4</p>
+              <h3 class="pg-episode-card__title">The Coaches</h3>
+              <div class="pg-coach-avatars" aria-hidden="true">
+                <img class="pg-coach-avatars__img" src="https://www.performancegolf.com/wp-content/uploads/2023/08/hank-haney.webp" alt="Hank Haney" width="36" height="36" loading="lazy">
+                <img class="pg-coach-avatars__img" src="https://www.performancegolf.com/wp-content/uploads/2023/08/martin-chuck.webp" alt="Martin Chuck" width="36" height="36" loading="lazy">
+                <img class="pg-coach-avatars__img" src="https://www.performancegolf.com/wp-content/uploads/2024/08/erika-larkin.webp" alt="Erika Larkin" width="36" height="36" loading="lazy">
+                <img class="pg-coach-avatars__img" src="https://www.performancegolf.com/wp-content/uploads/2024/08/andrew-rice.webp" alt="Andrew Rice" width="36" height="36" loading="lazy">
+                <img class="pg-coach-avatars__img" src="https://cdn.shopify.com/s/files/1/0680/3020/2177/files/JT-Thomas.png?v=1772034786" alt="JT Thomas" width="36" height="36" loading="lazy">
+                <img class="pg-coach-avatars__img" src="https://www.performancegolf.com/wp-content/uploads/2023/08/eric-cogorno.webp" alt="Eric Cogorno" width="36" height="36" loading="lazy">
+                <img class="pg-coach-avatars__img" src="https://www.performancegolf.com/wp-content/uploads/2023/08/brian-mogg.webp" alt="Brian Mogg" width="36" height="36" loading="lazy">
+              </div>
+              <p class="pg-episode-card__teaser">Hank Haney. Martin Chuck. Erika Larkin. Andrew Rice. JT Thomas. Eric Cogorno. Brian Mogg &mdash; supported by David Leadbetter, Rocco Mediate, Rick Smith, and Cameron McCormick. These coaches are not endorsing something from a distance. They helped build it. This episode shows you what that collaboration produced and why these coaches agreed to put their names behind a system none of them would have imagined five years ago.</p>
+              <p class="pg-episode-card__hook">&ldquo;The coaches who built this are the same ones who will work with you.&rdquo;</p>
+            </div>
+          </article>
+
+          <!-- Episode 5 -->
+          <article class="pg-episode-card">
+            <div class="pg-episode-card__video">
+              <button class="pg-episode-card__play" aria-label="Play Episode 5: The Breakthrough">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="8,5 19,12 8,19"/></svg>
+              </button>
+            </div>
+            <div class="pg-episode-card__body">
+              <p class="pg-episode-card__number">Episode 5</p>
+              <h3 class="pg-episode-card__title">The Breakthrough</h3>
+              <p class="pg-episode-card__teaser">A real golfer walks in with a swing he has been fighting for years. Multiple instructors. Hundreds of hours on the range. The system identifies his root swing flaw in minutes &mdash; something no human coach caught across dozens of lessons. Then he gets one thing to work on. One correction. And you watch his swing change on camera, in real time, in the same session.</p>
+              <p class="pg-episode-card__hook">&ldquo;Watching someone&rsquo;s game change is different from hearing about it.&rdquo;</p>
+            </div>
+          </article>
+
+          <!-- Episode 6 -->
+          <article class="pg-episode-card">
+            <div class="pg-episode-card__video">
+              <button class="pg-episode-card__play" aria-label="Play Episode 6: 72 Hours">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="8,5 19,12 8,19"/></svg>
+              </button>
+            </div>
+            <div class="pg-episode-card__body">
+              <p class="pg-episode-card__number">Episode 6</p>
+              <h3 class="pg-episode-card__title">72 Hours</h3>
+              <p class="pg-episode-card__teaser">Brixton. Direct to camera. No production. No script. In three days, he is going to share something Performance Golf has been building for two years with the people who matter most to this company. Not investors. Not press. You.</p>
+              <p class="pg-episode-card__hook">&ldquo;Three days.&rdquo;</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         THE QUESTION
+         ============================================================ -->
+    <section class="pg-question" id="question" aria-labelledby="question-headline">
+      <div class="pg-container pg-container--narrow">
+        <div class="pg-reveal">
+          <h2 class="pg-question__headline" id="question-headline">What is <em>YOUR</em> root swing flaw?</h2>
+          <div class="pg-question__lines">
+            <p class="pg-question__line">Every golfer has three to five visible swing flaws.</p>
+            <p class="pg-question__line">Only one is the root cause.</p>
+            <p class="pg-question__line">Most golfers go their entire life without ever identifying theirs.</p>
+            <p class="pg-question__line pg-question__line--yet">Until now.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         KEYNOTE
+         ============================================================ -->
+    <section class="pg-keynote" id="keynote" aria-labelledby="keynote-title">
+      <div class="pg-container">
+        <div class="pg-keynote__inner pg-reveal">
+
+          <p class="pg-keynote__date">[Date] &nbsp;|&nbsp; [Time]</p>
+
+          <p class="pg-keynote__presents" style="font-family: var(--pg-font-mono); font-size: clamp(0.75rem, 1.5vw, 1rem); text-transform: uppercase; letter-spacing: 0.15em; color: var(--pg-fog); margin-bottom: var(--pg-space-4);">PG Presents</p>
+
+          <h2 class="pg-keynote__supertitle" style="font-family: var(--pg-font-heading); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.95; margin-bottom: var(--pg-space-4); color: #fff;">The Future of Golf Instruction</h2>
+
+          <p class="pg-keynote__title" id="keynote-title" style="font-family: var(--pg-font-heading); font-size: clamp(1.25rem, 3vw, 2rem); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--pg-orange); margin-bottom: var(--pg-space-8);">1,000 Seats. By Application Only.</p>
+
+          <p class="pg-keynote__subtitle" style="font-family: var(--pg-font-body); font-size: clamp(1rem, 2vw, 1.25rem); color: var(--pg-fog); margin-bottom: 2rem; font-style: italic;">This is not a public product launch.</p>
+
+          <div class="pg-keynote__body">
+            <p>Brixton built this presentation for the Performance Golf team. The team that spent two years and $5 million building what you have been watching in this series.</p>
+
+            <p>Now he is opening the doors &mdash; to 1,000 golfers.</p>
+
+            <p>He is going to walk through everything &mdash; what the root swing flaw is, why it has been invisible to the entire golf instruction industry, and what his team built to finally address it.</p>
+
+            <p><strong>This is the moment when two years of work meets the golfers it was built for. Not everyone gets a seat.</strong></p>
+          </div>
+
+          <!-- Countdown Timer -->
+          <div class="pg-countdown" aria-label="Countdown to keynote">
+            <div class="pg-countdown__block">
+              <span class="pg-countdown__number" id="countdown-days">14</span>
+              <span class="pg-countdown__label">Days</span>
+            </div>
+            <span class="pg-countdown__separator">:</span>
+            <div class="pg-countdown__block">
+              <span class="pg-countdown__number" id="countdown-hours">08</span>
+              <span class="pg-countdown__label">Hours</span>
+            </div>
+            <span class="pg-countdown__separator">:</span>
+            <div class="pg-countdown__block">
+              <span class="pg-countdown__number" id="countdown-minutes">42</span>
+              <span class="pg-countdown__label">Minutes</span>
+            </div>
+            <span class="pg-countdown__separator">:</span>
+            <div class="pg-countdown__block">
+              <span class="pg-countdown__number" id="countdown-seconds">17</span>
+              <span class="pg-countdown__label">Seconds</span>
+            </div>
+          </div>
+
+          <!-- Qualification Quiz -->
+          <div class="pg-quiz" id="qualification-quiz">
+
+            <!-- CTA Trigger -->
+            <div class="pg-quiz__cta" id="quiz-cta">
+              <button class="pg-quiz__trigger" type="button" id="quiz-start-btn">Apply for Your Seat</button>
+              <p class="pg-quiz__seats">Seats are limited &mdash; we're starting with golfers who are serious about their game.</p>
+            </div>
+
+            <!-- Quiz Steps -->
+            <div class="pg-quiz__steps" id="quiz-steps">
+
+              <!-- Progress -->
+              <div class="pg-quiz__progress" id="quiz-progress">
+                <div class="pg-quiz__progress-dot pg-quiz__progress-dot--active" data-step="1"></div>
+                <div class="pg-quiz__progress-dot" data-step="2"></div>
+                <div class="pg-quiz__progress-dot" data-step="3"></div>
+                <div class="pg-quiz__progress-dot" data-step="4"></div>
+                <div class="pg-quiz__progress-dot" data-step="5"></div>
+              </div>
+
+              <!-- Step 1 -->
+              <div class="pg-quiz__step pg-quiz__step--active" data-step="1">
+                <p class="pg-quiz__question-number">Question 1 of 4</p>
+                <p class="pg-quiz__question-text">Have you purchased from Performance Golf before?</p>
+                <p style="font-family: var(--pg-font-display); font-size: var(--pg-text-sm); font-style: italic; color: var(--text-muted); text-align: center; margin-top: calc(-1 * var(--pg-space-4)); margin-bottom: var(--pg-space-6);">(It's okay if you haven't &mdash; we're looking for golfers who are serious about improving)</p>
+                <div class="pg-quiz__options">
+                  <button class="pg-quiz__option" type="button" data-next="2">Yes</button>
+                  <button class="pg-quiz__option" type="button" data-next="2">No</button>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="pg-quiz__step" data-step="2">
+                <p class="pg-quiz__question-number">Question 2 of 4</p>
+                <p class="pg-quiz__question-text">What is your current average score for 18 holes?</p>
+                <div class="pg-quiz__options">
+                  <button class="pg-quiz__option" type="button" data-next="3">Under 80</button>
+                  <button class="pg-quiz__option" type="button" data-next="3">80&ndash;89</button>
+                  <button class="pg-quiz__option" type="button" data-next="3">90&ndash;99</button>
+                  <button class="pg-quiz__option" type="button" data-next="3">100+</button>
+                  <button class="pg-quiz__option" type="button" data-next="3">I&rsquo;m not sure</button>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="pg-quiz__step" data-step="3">
+                <p class="pg-quiz__question-number">Question 3 of 4</p>
+                <p class="pg-quiz__question-text">How committed are you to improving your game this year?</p>
+                <div class="pg-quiz__options">
+                  <button class="pg-quiz__option" type="button" data-next="4">Very</button>
+                  <button class="pg-quiz__option" type="button" data-next="4">Somewhat</button>
+                  <button class="pg-quiz__option" type="button" data-next="4">Just curious</button>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="pg-quiz__step" data-step="4">
+                <p class="pg-quiz__question-number">Question 4 of 4</p>
+                <p class="pg-quiz__question-text">Do you agree that random tips and generic instruction have not worked for you?</p>
+                <div class="pg-quiz__options">
+                  <button class="pg-quiz__option" type="button" data-next="5">Yes</button>
+                  <button class="pg-quiz__option" type="button" data-next="5">No</button>
+                </div>
+              </div>
+
+              <!-- Step 5: Email -->
+              <div class="pg-quiz__step" data-step="5">
+                <p class="pg-quiz__question-number">Final Step</p>
+                <p class="pg-quiz__question-text">If you're approved, where should we send your keynote access?</p>
+                <div class="pg-quiz__email-group">
+                  <label for="quiz-email" class="pg-sr-only">Email address</label>
+                  <input
+                    class="pg-quiz__input"
+                    id="quiz-email"
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                  >
+                  <button class="pg-quiz__submit" type="button" id="quiz-submit-btn">Reserve My Seat</button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Confirmation -->
+            <div class="pg-quiz__confirmation" id="quiz-confirmation">
+              <div class="pg-quiz__confirmation-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <p class="pg-quiz__confirmation-heading">You&rsquo;re in.</p>
+              <p class="pg-quiz__confirmation-text">We&rsquo;ll send your keynote access to your email before [DATE]. Keep watching the series &mdash; you&rsquo;ll want the full picture before the keynote drops.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROOF STRIP
+         ============================================================ -->
+    <section class="pg-proof" id="proof" aria-label="Key metrics">
+      <div class="pg-container">
+        <div class="pg-proof__grid pg-stagger">
+
+          <div class="pg-proof__item">
+            <p class="pg-proof__value">$5M+</p>
+            <p class="pg-proof__label">Invested</p>
+          </div>
+
+          <div class="pg-proof__item">
+            <p class="pg-proof__value">2M+</p>
+            <p class="pg-proof__label">Swings Analyzed</p>
+          </div>
+
+          <div class="pg-proof__item">
+            <p class="pg-proof__value">77+</p>
+            <p class="pg-proof__label">Flaw Patterns Catalogued</p>
+          </div>
+
+          <div class="pg-proof__item">
+            <p class="pg-proof__value">276</p>
+            <p class="pg-proof__label">Team Members</p>
+          </div>
+
+          <div class="pg-proof__item">
+            <p class="pg-proof__value">15</p>
+            <p class="pg-proof__label">Countries</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER / CLOSING
+         ============================================================ -->
+    <section class="pg-footer" id="closing" aria-labelledby="closing-heading">
+      <div class="pg-container">
+        <div class="pg-footer__inner pg-reveal">
+
+          <h2 class="pg-footer__heading" id="closing-heading">One more thing.</h2>
+
+          <div class="pg-footer__body">
+            <p>After the keynote, we are going to invite a small group of golfers to be the first to experience what you have been watching us build.</p>
+
+            <p>Not the general public. Not everyone on our email list. A small group &mdash; the first one thousand.</p>
+
+            <p>If you have watched even one of these episodes, you already understand why this matters. And you already know this is unlike anything we have done before.</p>
+
+            <p>I will have more to share at the keynote. For now &mdash; watch the series, and make sure you are on the list for [DATE].</p>
+          </div>
+
+          <p class="pg-footer__signature">&mdash; Brixton</p>
+
+        </div>
+
+        <footer class="pg-footer__colophon">
+          <img
+            class="pg-footer__colophon-logo"
+            src="https://shop.performancegolf.com/cdn/shop/files/PG-Logo.svg?v=1770845489&width=200"
+            alt="Performance Golf"
+            width="200"
+            height="28"
+            loading="lazy"
+          >
+          <p class="pg-footer__colophon-text">Performance Golf &nbsp;|&nbsp; 2026</p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         VIDEO MODAL
+         ============================================================ -->
+    <div class="pg-modal-overlay" id="video-modal" role="dialog" aria-modal="true" aria-label="Episode video player">
+      <div class="pg-modal">
+        <button class="pg-modal__close" id="modal-close-btn" aria-label="Close video">&times;</button>
+        <div class="pg-modal__video" id="modal-video-area">
+          Video player placeholder
+        </div>
+        <div class="pg-modal__title">
+          <span id="modal-episode-number"></span>
+          <span id="modal-episode-title" style="color: var(--text-primary); font-size: var(--pg-text-xl); font-family: var(--pg-font-heading); text-transform: none; letter-spacing: -0.02em; display: block; margin-bottom: 0;"></span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       JS: Scroll-reveal, Countdown, Quiz
+       ============================================================ -->
+  <script>
+    (function () {
+      // ==========================================
+      // Scroll-reveal observer
+      // ==========================================
+      var reveals = document.querySelectorAll('.pg-reveal, .pg-stagger');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                if (entry.target.classList.contains('pg-reveal')) {
+                  entry.target.classList.add('pg-reveal--visible');
+                }
+                if (entry.target.classList.contains('pg-stagger')) {
+                  entry.target.classList.add('pg-stagger--visible');
+                }
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+        );
+        reveals.forEach(function (el) { observer.observe(el); });
+      } else {
+        reveals.forEach(function (el) {
+          el.classList.add('pg-reveal--visible');
+          el.classList.add('pg-stagger--visible');
+        });
+      }
+
+      // ==========================================
+      // Countdown Timer
+      // ==========================================
+      // Set a target date (placeholder — 14 days from page load)
+      var now = new Date();
+      var targetDate = new Date(now.getTime() + 14 * 24 * 60 * 60 * 1000);
+
+      var daysEl = document.getElementById('countdown-days');
+      var hoursEl = document.getElementById('countdown-hours');
+      var minutesEl = document.getElementById('countdown-minutes');
+      var secondsEl = document.getElementById('countdown-seconds');
+
+      function padZero(n) {
+        return n < 10 ? '0' + n : '' + n;
+      }
+
+      function updateCountdown() {
+        var diff = targetDate.getTime() - new Date().getTime();
+        if (diff <= 0) {
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        daysEl.textContent = padZero(days);
+        hoursEl.textContent = padZero(hours);
+        minutesEl.textContent = padZero(minutes);
+        secondsEl.textContent = padZero(seconds);
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // ==========================================
+      // Qualification Quiz
+      // ==========================================
+      var quizCta = document.getElementById('quiz-cta');
+      var quizSteps = document.getElementById('quiz-steps');
+      var quizConfirmation = document.getElementById('quiz-confirmation');
+      var quizStartBtn = document.getElementById('quiz-start-btn');
+      var quizSubmitBtn = document.getElementById('quiz-submit-btn');
+      var progressDots = document.querySelectorAll('.pg-quiz__progress-dot');
+
+      var currentStep = 1;
+
+      function showStep(stepNum) {
+        // Hide all steps
+        var allSteps = document.querySelectorAll('.pg-quiz__step');
+        allSteps.forEach(function (s) { s.classList.remove('pg-quiz__step--active'); });
+
+        // Show target step
+        var target = document.querySelector('.pg-quiz__step[data-step="' + stepNum + '"]');
+        if (target) {
+          target.classList.add('pg-quiz__step--active');
+        }
+
+        // Update progress dots
+        progressDots.forEach(function (dot) {
+          var dotStep = parseInt(dot.getAttribute('data-step'), 10);
+          dot.classList.remove('pg-quiz__progress-dot--active', 'pg-quiz__progress-dot--complete');
+          if (dotStep === stepNum) {
+            dot.classList.add('pg-quiz__progress-dot--active');
+          } else if (dotStep < stepNum) {
+            dot.classList.add('pg-quiz__progress-dot--complete');
+          }
+        });
+
+        currentStep = stepNum;
+      }
+
+      // Start quiz
+      if (quizStartBtn) {
+        quizStartBtn.addEventListener('click', function () {
+          quizCta.style.display = 'none';
+          quizSteps.classList.add('pg-quiz__steps--active');
+          showStep(1);
+        });
+      }
+
+      // Option clicks advance to next step
+      document.querySelectorAll('.pg-quiz__option').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          // Briefly highlight selected
+          var siblings = btn.parentElement.querySelectorAll('.pg-quiz__option');
+          siblings.forEach(function (s) { s.classList.remove('pg-quiz__option--selected'); });
+          btn.classList.add('pg-quiz__option--selected');
+
+          var nextStep = parseInt(btn.getAttribute('data-next'), 10);
+
+          // Small delay for visual feedback
+          setTimeout(function () {
+            showStep(nextStep);
+          }, 250);
+        });
+      });
+
+      // ==========================================
+      // Video Modal
+      // ==========================================
+      var modalOverlay = document.getElementById('video-modal');
+      var modalCloseBtn = document.getElementById('modal-close-btn');
+      var modalEpisodeNumber = document.getElementById('modal-episode-number');
+      var modalEpisodeTitle = document.getElementById('modal-episode-title');
+
+      function openModal(episodeNum, episodeTitle) {
+        modalEpisodeNumber.textContent = episodeNum;
+        modalEpisodeTitle.textContent = episodeTitle;
+        modalOverlay.classList.add('pg-modal-overlay--active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modalOverlay.classList.remove('pg-modal-overlay--active');
+        document.body.style.overflow = '';
+      }
+
+      // Attach click to each episode card and play button
+      document.querySelectorAll('.pg-episode-card').forEach(function (card) {
+        var numEl = card.querySelector('.pg-episode-card__number');
+        var titleEl = card.querySelector('.pg-episode-card__title');
+        var epNum = numEl ? numEl.textContent : '';
+        var epTitle = titleEl ? titleEl.textContent : '';
+
+        card.style.cursor = 'pointer';
+
+        card.addEventListener('click', function (e) {
+          openModal(epNum, epTitle);
+        });
+      });
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+      }
+
+      // Close on overlay click (outside modal)
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', function (e) {
+          if (e.target === modalOverlay) {
+            closeModal();
+          }
+        });
+      }
+
+      // Close on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('pg-modal-overlay--active')) {
+          closeModal();
+        }
+      });
+
+      // Submit email
+      if (quizSubmitBtn) {
+        quizSubmitBtn.addEventListener('click', function () {
+          var emailInput = document.getElementById('quiz-email');
+          if (emailInput && emailInput.value && emailInput.validity.valid) {
+            quizSteps.classList.remove('pg-quiz__steps--active');
+            quizSteps.style.display = 'none';
+            quizConfirmation.classList.add('pg-quiz__confirmation--active');
+          } else if (emailInput) {
+            emailInput.focus();
+            emailInput.style.borderColor = 'var(--pg-orange)';
+          }
+        });
+      }
+
+    })();
+  </script>
+
+</body>
+</html>

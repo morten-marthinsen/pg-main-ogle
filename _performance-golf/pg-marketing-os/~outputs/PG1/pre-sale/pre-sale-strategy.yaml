@@ -1,0 +1,544 @@
+# ════════════════════════════════════════════════════════════════
+# PG1 Founders Launch -- Pre-Sale Strategy
+# Generated: 2026-03-19
+# Status: DRAFT -- Awaiting human review before build
+# ════════════════════════════════════════════════════════════════
+
+strategy_version: "1.0"
+generated_at: "2026-03-19"
+source_docs:
+  - "~outputs/PG1/campaign-brief.md"
+  - "~outputs/PG1/Soul.md"
+  - "~outputs/PG1/pre-sale/research-summary.md"
+  - "_pg-pg1/pg1-founders-launch/pg1-keynote.md"
+  - "_pg-pg1/pg1-founders-launch/pg1-keynote-root-flaw-idea.md"
+  - "pg-marketing-os/00-deep-research/01-research/projects/PG1-Founders-Launch/layer-2-outputs/2.7-A-story-elements-researcher.md"
+
+# ────────────────────────────────────────
+# STRATEGIC RECOMMENDATION
+# ────────────────────────────────────────
+
+recommendation:
+  page_structure: "Single evolving page with 6 content chapters"
+  rationale: |
+    One page. Not multiple pages linked together.
+
+    Why: Elite brands (Nike, Apple, Peloton) use a SINGLE destination that evolves
+    as content drops. Multiple pages fragment attention, break the narrative thread,
+    and force the audience to navigate between destinations. A single page creates
+    a consistent home base where the audience returns for each new episode.
+
+    The page evolves in 3 stages:
+    - STAGE 1 (Episodes 1-4): Content hub -- each episode unlocks in sequence.
+      Page focuses on the docu-series experience. The audience is watching, learning,
+      forming beliefs. No product pitch. No price. Just the story.
+    - STAGE 2 (Episodes 5-6): Anticipation hub -- the page shifts from content to
+      countdown. "72 Hours" episode drops. Keynote countdown timer appears. The tone
+      shifts from "here's what we discovered" to "something is about to happen."
+    - STAGE 3 (Post-keynote): Conversion hub -- after the keynote, the page transforms.
+      The docu-series remains as proof. A new hero section appears with the Founders
+      Club offer. The keynote replay is embedded. The CTA becomes "Join the Founders Club."
+
+    This mirrors Apple's landing page evolution (teaser -> content hub -> launch page)
+    and Peloton's single-destination founding member approach.
+
+  why_not_multiple_pages: |
+    Multiple pages create navigation friction. Every click is a potential exit point.
+    The docu-series narrative loses coherence when episodes live on separate URLs.
+    The audience needs ONE place to come back to. "Go to the PG1 page" is simpler
+    than "go to episode 3 on the PG1 series page." Supreme succeeds with one drop
+    page. Apple succeeds with one product page. Nike succeeds with one SNKRS page.
+    One page. One story. One destination.
+
+# ────────────────────────────────────────
+# DOCU-SERIES VIDEO MAPPING
+# ────────────────────────────────────────
+
+docu_series_mapping:
+  total_episodes: 6
+  release_cadence: "Every 2-3 days (compressed timeline aligns with 2-week pre-sale window)"
+
+  episodes:
+    - number: 1
+      title: "The Confession"
+      belief_layer: "Vulnerability + Recognition"
+      content: |
+        Brixton admits PG was part of the problem. The information overload ecosystem.
+        "We gave them too many options when what they needed was ONE clear path."
+        Audience state after watching: "Someone finally admits what I've been feeling."
+      page_treatment: |
+        Hero episode. Full-width video embed with dark background.
+        Below video: a single line of copy -- "Something is changing at Performance Golf."
+        No product mention. No CTA beyond "Get notified when Episode 2 drops."
+      emotional_beat: "Relief -- it's not you"
+
+    - number: 2
+      title: "The War Room"
+      belief_layer: "Stakes + Credibility"
+      content: |
+        Inside PG headquarters. The team making real decisions. The $5M investment.
+        The technology partner (MyFitnessPal/Weather Channel pedigree). The 6 elite coaches.
+        "These people are making real decisions, not just marketing."
+      page_treatment: |
+        Second video unlocks below Episode 1 (which stays visible but grayed/completed).
+        Below video: one proof stat -- "$5M invested. 2 years building. 276 team members."
+        Still no product name. Still no CTA beyond notification.
+      emotional_beat: "This is serious -- real resources, real people"
+
+    - number: 3
+      title: "The Root Swing Flaw"
+      belief_layer: "Revelation + Clarity"
+      content: |
+        The root swing flaw concept revealed. Every golfer has 3-5 swing flaws but only
+        ONE root swing flaw. Nobody has identified it. The Symptom Spiral explained.
+        Brixton's personal story: +3 handicap, hit a wall, one instructor found the root
+        flaw, dropped 5 shots in weeks.
+      page_treatment: |
+        Third video unlocks. This is the PIVOT episode -- the first time the audience
+        hears the core concept. Below video: the Binary Argument (formatted as a
+        standalone quote block). A new section appears below all episodes:
+        "What is YOUR root swing flaw?" with email capture for keynote notification.
+      emotional_beat: "Clarity -- one flaw, one plan"
+
+    - number: 4
+      title: "The Coaches"
+      belief_layer: "Access + Quality"
+      content: |
+        Meet the 6 elite PGA coaches built into the system. Their credentials,
+        their expertise areas. "I could never afford or access these coaches normally."
+        Shows how the coaches validated and trained the AI diagnostic.
+      page_treatment: |
+        Fourth video unlocks. Below video: coach credential cards (photo, name,
+        specialty, credential line). The page is now a content library -- all 4
+        episodes visible, creating a visual sense of depth and investment.
+      emotional_beat: "These are real people with real credentials"
+
+    - number: 5
+      title: "The Breakthrough"
+      belief_layer: "Proof + Possibility"
+      content: |
+        Real golfer case study. SwingScan AI demo. Root swing flaw identified,
+        Smart Step given, results shown. "It actually works -- on a real golfer,
+        on a real course." Beta user results.
+      page_treatment: |
+        Fifth video unlocks. The page begins its STAGE 2 transition. Below the
+        episode, new copy appears: "In 72 hours, Brixton is going to show you
+        everything." A countdown timer appears for the first time.
+        The keynote notification CTA becomes more prominent.
+      emotional_beat: "It works -- I want this"
+
+    - number: 6
+      title: "72 Hours"
+      belief_layer: "Urgency + Anticipation"
+      content: |
+        Final episode. Short. Brixton to camera: "In 72 hours, I'm going to show
+        you something we've been building for 2 years. Something no one in golf
+        has ever done. I'm going to share it with our team first -- and then with you."
+        The "leaked keynote" framing is planted here.
+      page_treatment: |
+        Sixth video unlocks. The page fully transitions to STAGE 2.
+        Countdown timer is now the dominant page element.
+        "The keynote drops [date/time]."
+        All 6 episodes remain visible below as proof of the journey.
+        Email/SMS capture for keynote notification.
+      emotional_beat: "I don't want to miss this"
+
+# ────────────────────────────────────────
+# PAGE STAGES
+# ────────────────────────────────────────
+
+page_stages:
+
+  stage_1:
+    name: "Content Hub"
+    active_during: "Episodes 1-4"
+    page_structure:
+      - section: "Hero"
+        content: |
+          Dark, cinematic header. PG logo. No product name yet.
+          Headline: "Something is happening at Performance Golf."
+          Subtext: "A 6-part insider series. New episodes dropping now."
+        design_notes: |
+          Black/dark background. Performance Orange accents.
+          Cinematic feel -- think Apple event invite aesthetic meets
+          documentary title card. Repro Bold uppercase headline.
+          GT Super Text italic for the subtext.
+
+      - section: "Episode Grid"
+        content: |
+          Episodes displayed as numbered cards in a vertical stack.
+          Released episodes show video embed + title + one-line description.
+          Unreleased episodes show locked state: number, title, "Coming [date]."
+        design_notes: |
+          Each episode card: dark card on slightly lighter background.
+          Episode number in Performance Orange. Large, bold.
+          Released episodes have a subtle glow or orange accent border.
+          Locked episodes are muted, with a lock icon.
+
+      - section: "Notification CTA"
+        content: |
+          "Don't miss the next episode."
+          Email capture field + submit button.
+        design_notes: |
+          Minimal. Single field. Performance Orange button.
+          Appears at bottom of episode grid.
+
+      - section: "Footer"
+        content: "Standard PG footer"
+
+    tone: "Documentary. Insider. No selling. Pure story."
+    cta: "Get notified when the next episode drops"
+
+  stage_2:
+    name: "Anticipation Hub"
+    active_during: "Episodes 5-6 through keynote"
+    page_structure:
+      - section: "Hero -- Evolves"
+        content: |
+          Headline shifts: "The end of traditional instruction."
+          Subtext: "Brixton's keynote drops [date] at [time]."
+          Countdown timer (days : hours : minutes : seconds).
+        design_notes: |
+          Same dark cinematic feel but now with more energy.
+          Countdown timer in Repro Mono (technical precision font).
+          Performance Orange numbers on dark background.
+
+      - section: "The Question"
+        content: |
+          Full-width section. Black background.
+          "What is YOUR root swing flaw?"
+          "Every golfer has 3-5 swing flaws. Only one is the root."
+          "Nobody has identified yours. Yet."
+        design_notes: |
+          This is the curiosity gap section. Large GT Super Text serif.
+          The word "Yet" gets its own line. Performance Orange.
+          This section only appears after Episode 3 drops.
+
+      - section: "Episode Grid -- All 6"
+        content: "All episodes visible. Released ones playable. Unreleased ones locked."
+
+      - section: "Keynote CTA"
+        content: |
+          "Watch the keynote live. [Date] at [Time]."
+          Email + SMS capture.
+          "Be one of the first to see what 2 years and $5M built."
+        design_notes: |
+          More prominent than Stage 1 CTA. Larger button.
+          Performance Orange background section.
+
+      - section: "Proof Strip"
+        content: |
+          Horizontal strip with key proof points:
+          "$5M+ invested" | "2M+ swings analyzed" | "96% accuracy" | "6 elite coaches"
+        design_notes: |
+          Repro Mono uppercase. Fog/Sand background.
+          Numbers in Performance Orange.
+
+      - section: "Footer"
+        content: "Standard PG footer"
+
+    tone: "Building. Anticipation. Something big is coming."
+    cta: "Get notified when the keynote drops"
+
+  stage_3:
+    name: "Conversion Hub"
+    active_during: "Post-keynote (Founders Club open)"
+    page_structure:
+      - section: "Hero -- Final Form"
+        content: |
+          Headline: "The End of Traditional Instruction"
+          Subhead: "The PG1 Smart System Founders Club is open."
+          "1,000 memberships. Once they're claimed, the Founders Club closes."
+          CTA: "Join the Founders Club"
+          Price: "$199/year or $399 lifetime"
+        design_notes: |
+          The page has transformed. Still dark, cinematic.
+          But now the Founders Club offer is front and center.
+          The countdown timer is GONE -- replaced by a live counter
+          showing spots claimed (e.g., "347 of 1,000 Founders claimed").
+          Or no counter if that feels too aggressive -- just the stated cap.
+
+      - section: "Keynote Replay"
+        content: |
+          "Watch the keynote."
+          Full keynote video embed.
+          "See what Brixton showed the Performance Golf team."
+        design_notes: |
+          This replaces the countdown section. The keynote IS the sales
+          argument. The page doesn't need to re-persuade from scratch
+          (per Soul.md). It needs to capture the conversion.
+
+      - section: "The Root Swing Flaw"
+        content: |
+          Brief section recapping the core concept.
+          Binary Argument (locked verbatim from campaign brief).
+          "One flaw. One plan. Improvement becomes inevitable."
+        design_notes: |
+          This is the argument distilled for anyone who hasn't watched
+          the full docu-series or keynote. Quick, sharp, powerful.
+
+      - section: "The Smart System"
+        content: |
+          ONE system. 6 components. Not a value stack.
+          Visual showing the 6 components as an integrated system.
+          Locked mechanism paragraph (verbatim from campaign brief).
+        design_notes: |
+          Clean system diagram. Not 6 separate boxes with dollar values.
+          One unified system visual.
+
+      - section: "The Founders Club Offer"
+        content: |
+          What Founders get:
+          - PG1 Smart System (all 6 components)
+          - Founding rate locked permanently ($199/yr or $399 lifetime)
+          - Numbered Founders badge
+          - 30% off all PG products
+          - VIP new release access
+          - $500 Transformation Academy credit
+          - 365-day guarantee
+          CTA: "Join the Founders Club"
+        design_notes: |
+          Clean, premium presentation. Not a traditional value stack
+          with crossed-out prices. Think Apple pricing page -- clean,
+          confident, matter-of-fact.
+
+      - section: "Docu-Series Archive"
+        content: |
+          "Watch the series that started it all."
+          All 6 episodes playable. Serves as proof and context for
+          anyone arriving post-keynote without having seen the series.
+        design_notes: |
+          Collapsed/accordion view. Titles visible, expandable to watch.
+          Less prominent than keynote and offer sections.
+
+      - section: "FAQ"
+        content: |
+          Address the top objections from campaign brief Section 13:
+          - "No app can replace a real coach"
+          - "AI apps are just algorithms"
+          - "I've tried everything"
+          - "$399 is a lot for an app"
+          - "I don't want another subscription"
+          - "How is this different?"
+          - "This won't work for MY swing"
+        design_notes: |
+          Accordion FAQ. Clean, minimal.
+
+      - section: "Final CTA"
+        content: |
+          "One flaw. One plan. Improvement becomes inevitable."
+          "Join the Founders Club"
+          "$199/year or $399 lifetime"
+          "365-day guarantee. 1,000 memberships total."
+        design_notes: |
+          Full-width Performance Orange background.
+          White text. Repro Bold headline.
+          This is the final conversion moment.
+
+      - section: "Footer"
+        content: "Standard PG footer"
+
+    tone: "Warm authority. Founder-to-insider. The door is open."
+    cta: "Join the Founders Club"
+
+# ────────────────────────────────────────
+# EMOTIONAL ARC ACROSS PRE-SALE PERIOD
+# ────────────────────────────────────────
+
+emotional_arc:
+  description: |
+    The entire pre-sale period follows one emotional arc that maps to the
+    docu-series episodes and culminates at the keynote:
+
+    VULNERABILITY -> STAKES -> CLARITY -> CREDIBILITY -> PROOF -> URGENCY -> BELONGING
+
+    Episode 1 (Confession): "Someone admits what I've been feeling"
+    Episode 2 (War Room): "This is serious -- real money, real people"
+    Episode 3 (Root Flaw): "THAT's the problem -- one flaw creating everything"
+    Episode 4 (Coaches): "These are world-class people backing this"
+    Episode 5 (Breakthrough): "It works. On a real golfer. I want this."
+    Episode 6 (72 Hours): "Something is about to happen. I need to be there."
+    Keynote: "This is real. This is the end of traditional instruction."
+    Founders Club: "I'm in. I'm one of the first 1,000."
+
+    The arc is hope-forward, not pain-driven (per Soul.md). Episodes 1-2
+    acknowledge frustration with empathy. Episode 3 names the cause.
+    Episodes 4-6 shift entirely to possibility. The keynote is earned
+    conviction. The Founders Club is belonging.
+
+  key_principle: |
+    Each episode makes the NEXT episode land harder (per copywriting principles).
+    Episode 1 creates the emotional opening that makes Episode 2's stakes feel real.
+    Episode 2's investment proof makes Episode 3's root flaw concept feel credible.
+    Episode 3's clarity makes Episode 4's coach credentials feel essential.
+    Episode 4's quality proof makes Episode 5's case study feel inevitable.
+    Episode 5's results make Episode 6's countdown feel urgent.
+    Episode 6's urgency makes the keynote feel unmissable.
+
+# ────────────────────────────────────────
+# CTAs BY STAGE
+# ────────────────────────────────────────
+
+cta_strategy:
+  stage_1_ctas:
+    primary: "Get notified when the next episode drops"
+    secondary: "Share this with a golfer who needs to see it"
+    format: "Email capture only. Low friction. No selling."
+
+  stage_2_ctas:
+    primary: "Watch the keynote live -- [Date] at [Time]"
+    secondary: "Get notified when the keynote drops"
+    tertiary: "Share this with a golfer who needs to see it"
+    format: "Email + SMS capture. Slightly more prominent."
+
+  stage_3_ctas:
+    primary: "Join the Founders Club"
+    secondary: "Watch the keynote replay"
+    tertiary: "Watch the docu-series"
+    format: "Full conversion CTA with pricing. Premium presentation."
+
+# ────────────────────────────────────────
+# DESIGN DIRECTION
+# ────────────────────────────────────────
+
+design_direction:
+  overall_feel: |
+    Dark, cinematic, premium. Think Apple keynote invite meets Netflix documentary
+    title screen. NOT a traditional direct-response pre-sale page with red arrows
+    and yellow highlights. This is a premium brand launching a premium product.
+    The design itself communicates that something important is happening.
+
+  color_usage:
+    primary_background: "#1D1A1A (PG Black) or darker"
+    secondary_background: "#F4F2F0 (Fog) for contrast sections in Stage 3"
+    accent: "#FD3300 (Performance Orange) -- episode numbers, CTAs, key stats"
+    text: "#FCFAFA (Mist) on dark backgrounds, #1D1A1A (PG Black) on light"
+
+  typography:
+    headlines: "Repro Bold uppercase -- impactful, clean"
+    body: "GT Super Text Book -- warm, conversational (matches Soul.md tone)"
+    data_stats: "Repro Mono Regular uppercase -- technical precision"
+    episode_numbers: "Repro Bold -- large, Performance Orange"
+
+  key_design_elements:
+    - "Episode cards with numbered badges (like Supreme drop list aesthetic)"
+    - "Countdown timer in Repro Mono (technical, precise)"
+    - "Proof stat strip (horizontal, monospace, understated)"
+    - "Video embeds on dark backgrounds with generous padding"
+    - "Curiosity gap section ('What is YOUR root swing flaw?') as full-bleed dark section"
+    - "Founders Club offer presented like Apple pricing page (clean, confident)"
+    - "No crossed-out prices, no value stack with dollar amounts, no countdown urgency timers in Stage 3"
+
+  anti_design:
+    - "No red arrows or yellow highlights"
+    - "No generic stock golf course imagery"
+    - "No cluttered value stack with line-item pricing"
+    - "No aggressive countdown timer energy on the offer"
+    - "No 'HURRY ONLY X SPOTS LEFT' styling"
+    - "No testimonial carousels -- if testimonials exist, show them static"
+
+# ────────────────────────────────────────
+# VOICE AND COPY RULES
+# ────────────────────────────────────────
+
+voice_rules:
+  primary_voice: "Brixton as founder, insider-to-insider"
+
+  stage_1_voice: |
+    Documentary narrator energy. Short. Observational.
+    "Something is changing." Not "We're excited to announce."
+    Let the videos carry the narrative. Page copy is minimal --
+    titles, dates, one-line descriptions. The videos do the talking.
+
+  stage_2_voice: |
+    Building anticipation. Still restrained but with rising energy.
+    "In 72 hours, everything changes" is the ceiling.
+    The countdown timer does the urgency work. Copy stays warm.
+    "What is YOUR root swing flaw?" is the centerpiece question.
+
+  stage_3_voice: |
+    Warm authority. The reveal has happened. Now it's an invitation.
+    "The Founders Club is open." Not "ACT NOW BEFORE IT'S TOO LATE."
+    The 1,000-member cap is stated once, clearly, without repetition.
+    The guarantee is stated confidently. The pricing is clean.
+    The close: "One flaw. One plan. Improvement becomes inevitable."
+
+  locked_copy_elements:
+    - binary_argument: "Verbatim from campaign brief Section 3"
+    - mechanism_paragraph: "Verbatim from campaign brief Section 4"
+    - anchor_phrase: "One flaw. One plan."
+    - primary_promise: "Improvement becomes inevitable."
+    - big_idea: "The End of Traditional Instruction"
+
+  language_never_use:
+    - "AI-powered"
+    - "Personalized" as lead word
+    - "Data-driven"
+    - "Unlock your potential"
+    - "Journey"
+    - "Game-changer"
+    - "Revolutionize"
+    - "Limited time"
+    - "Act now"
+    - "Don't miss out"
+
+# ────────────────────────────────────────
+# BUILD PLAN (Phase 3 -- after review)
+# ────────────────────────────────────────
+
+build_plan:
+  output_file: "~outputs/PG1/pre-sale/page/index.html"
+
+  build_approach: |
+    Build the STAGE 3 (post-keynote) version as the primary deliverable.
+    This is the most complete version of the page and includes all elements
+    from Stages 1 and 2. The docu-series archive, keynote replay, and
+    Founders Club offer all appear on this version.
+
+    Stage 1 and Stage 2 versions can be created by toggling visibility
+    of sections (CSS classes or JavaScript state management). But the
+    primary build should be the conversion-ready Stage 3 page.
+
+  brand_compliance:
+    - "PG Design System colors, typography, spacing"
+    - "PG logo from brand assets"
+    - "Repro, GT Super Text, Repro Mono fonts (or system alternatives DM Sans, Georgia, DM Mono)"
+    - "60/30/10 color ratio (neutrals/orange/accents)"
+    - "Mobile-first responsive"
+    - "WCAG AA contrast compliance"
+
+  real_assets_to_pull:
+    - "PG logo from shop.performancegolf.com"
+    - "Product imagery if available"
+    - "Coach photos if available"
+
+  html_requirements:
+    - "Single-file HTML with inlined CSS"
+    - "No external dependencies beyond Google Fonts (if brand fonts unavailable)"
+    - "Responsive: mobile-first with min-width media queries"
+    - "Semantic HTML (header, main, section, footer)"
+    - "Open Graph meta tags"
+    - "Viewable in browser by opening file directly"
+
+# ────────────────────────────────────────
+# OPEN QUESTIONS FOR HUMAN REVIEW
+# ────────────────────────────────────────
+
+open_questions:
+  - question: "Docu-series: Are 6 episodes confirmed, or is the episode count flexible?"
+    context: "The campaign brief references '6 pieces building belief layers' and the story elements doc maps 6 emotional beats. Strategy assumes 6."
+
+  - question: "Episode content: Are the docu-series videos already produced, or are these still being scripted?"
+    context: "Strategy maps episode titles and content based on the story elements researcher output. If videos already exist with different titles/content, mapping needs adjustment."
+
+  - question: "Keynote: Is the keynote the existing script (pg1-keynote.md), or will it be re-scripted with root-swing-flaw framing (per pg1-keynote-root-flaw-idea.md)?"
+    context: "The existing keynote script uses 'PG1-Pulse' naming and 'intelligence layer' framing. Campaign brief uses 'PG1 Smart System' and 'root swing flaw' framing. Strategy assumes the updated framing."
+
+  - question: "Timeline: What is the actual launch date for the keynote? How many days/weeks before keynote do docu-series episodes start dropping?"
+    context: "Strategy assumes a 2-3 week pre-sale window with episodes every 2-3 days. Actual timeline may differ."
+
+  - question: "Live counter: Should the page show a live count of Founders spots claimed (e.g., '347 of 1,000'), or just state the 1,000 cap?"
+    context: "Tesla shows waitlist position. Peloton shows founding member count. But Soul.md says scarcity should be 'stated matter-of-factly, not weaponized.' A live counter could feel either transparent or pressure-y depending on design treatment."
+
+  - question: "Should the page build include all 3 stages (with toggle), or just the Stage 3 conversion page?"
+    context: "Building all 3 stages requires more complex HTML/CSS. Building Stage 3 only delivers the most important version fastest."
