@@ -31,7 +31,9 @@ jobs:
       - name: Check all repos for changes
         id: sync
         run: |
-          ALL_UPDATED=""
+          CLAUDE_UPDATED=""
+          CODEX_UPDATED=""
+          GEMINI_UPDATED=""
           ALL_SKIPPED=0
           touch /tmp/new-shas.txt
 
@@ -55,11 +57,17 @@ jobs:
             else
               echo "CHANGED: ${TOOL}/${DIR}"
               echo "${TOOL}/${DIR}=${LATEST}" >> /tmp/new-shas.txt
-              if [ -n "$ALL_UPDATED" ]; then
-                ALL_UPDATED="${ALL_UPDATED}, ${DIR}"
-              else
-                ALL_UPDATED="${DIR}"
-              fi
+              case "$TOOL" in
+                "_claude-code")
+                  if [ -n "$CLAUDE_UPDATED" ]; then CLAUDE_UPDATED="${CLAUDE_UPDATED}, ${DIR}"; else CLAUDE_UPDATED="${DIR}"; fi
+                  ;;
+                "_codex")
+                  if [ -n "$CODEX_UPDATED" ]; then CODEX_UPDATED="${CODEX_UPDATED}, ${DIR}"; else CODEX_UPDATED="${DIR}"; fi
+                  ;;
+                "_gemini-cli")
+                  if [ -n "$GEMINI_UPDATED" ]; then GEMINI_UPDATED="${GEMINI_UPDATED}, ${DIR}"; else GEMINI_UPDATED="${DIR}"; fi
+                  ;;
+              esac
             fi
           }
 
@@ -135,10 +143,12 @@ jobs:
           check_repo "_gemini-cli" "ext-gcloud" "gemini-cli-extensions/gcloud"
           check_repo "_gemini-cli" "ext-observability" "gemini-cli-extensions/observability"
 
-          echo "$ALL_UPDATED" > /tmp/updated-repos.txt
+          echo "$CLAUDE_UPDATED" > /tmp/claude-updated.txt
+          echo "$CODEX_UPDATED" > /tmp/codex-updated.txt
+          echo "$GEMINI_UPDATED" > /tmp/gemini-updated.txt
           echo "$ALL_SKIPPED" > /tmp/skipped-count.txt
 
-          if [ -z "$ALL_UPDATED" ]; then
+          if [ -z "$CLAUDE_UPDATED" ] && [ -z "$CODEX_UPDATED" ] && [ -z "$GEMINI_UPDATED" ]; then
             echo "needs_sync=false" >> "$GITHUB_OUTPUT"
           else
             echo "needs_sync=true" >> "$GITHUB_OUTPUT"
@@ -306,13 +316,27 @@ jobs:
       - name: Send Slack notification (changes found)
         if: steps.sync.outputs.needs_sync == 'true' && env.SLACK_WEBHOOK_URL != ''
         run: |
-          UPDATED=$(cat /tmp/updated-repos.txt)
+          CLAUDE=$(cat /tmp/claude-updated.txt)
+          CODEX=$(cat /tmp/codex-updated.txt)
+          GEMINI=$(cat /tmp/gemini-updated.txt)
           SKIPPED=$(cat /tmp/skipped-count.txt)
           DATE_STR=$(date -u '+%b %-d')
 
-          SUMMARY="Updated: ${UPDATED}"
-          if [ "$SKIPPED" -gt "0" ]; then
-            SUMMARY="${SUMMARY}\n${SKIPPED} repos had no changes."
+          SUMMARY=""
+          if [ -n "$CLAUDE" ]; then
+            SUMMARY="*Claude Code:* ${CLAUDE}"
+          else
+            SUMMARY="*Claude Code:* No changes"
+          fi
+          if [ -n "$CODEX" ]; then
+            SUMMARY="${SUMMARY}\n*Codex:* ${CODEX}"
+          else
+            SUMMARY="${SUMMARY}\n*Codex:* No changes"
+          fi
+          if [ -n "$GEMINI" ]; then
+            SUMMARY="${SUMMARY}\n*Gemini CLI:* ${GEMINI}"
+          else
+            SUMMARY="${SUMMARY}\n*Gemini CLI:* No changes"
           fi
 
           cat > /tmp/slack-payload.json << SLACK_EOF
