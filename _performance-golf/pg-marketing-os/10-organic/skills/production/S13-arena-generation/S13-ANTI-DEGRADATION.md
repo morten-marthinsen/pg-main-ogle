@@ -24,7 +24,7 @@ The Arena is the quality gate before content launch. These failure modes have be
 I HAVE READ THIS FILE: S13: Arena Generation Anti-Degradation System v1.0
 I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
 I WILL: Produce per-microskill output files for every microskill executed.
-I WILL NOT: Run fewer than 3 full Arena rounds or skip any of the 7 required personas. Proceed to synthesis without Critic challenge forcing differentiation. Create GATE_2.5_ARENA_COMPLETE without capturing human selection.
+I WILL NOT: Run fewer than 2 full Arena rounds or skip any of the 7 required personas. Proceed to synthesis without Critic challenge forcing differentiation. Create GATE_2.5_ARENA_COMPLETE without capturing human selection.
 ```
 
 **Write this declaration to your first output file before executing any microskill.**
@@ -65,8 +65,8 @@ If missing: create or escalate. Do NOT proceed.
 | 1.3 round-1-critique | `s13-1.3-round-1-critique.yaml` |
 | 1.4 round-2-competition | `s13-1.4-round-2-scores.yaml` |
 | 1.5 round-2-critique | `s13-1.5-round-2-critique.yaml` |
-| 1.6 round-3-competition | `s13-1.6-round-3-scores.yaml` |
-| 1.7 round-3-final-scoring | `s13-1.7-final-scores.yaml` |
+| 1.6 round-2-final-competition | `s13-1.6-round-2-final-scores.yaml` |
+| 1.7 round-2-final-scoring | `s13-1.7-final-scores.yaml` |
 | 2.5.1 synthesis-generation | `s13-2.5.1-hybrids.yaml` |
 | 2.5.2 human-selection-capture | `s13-2.5.2-selection.yaml` |
 | 4.1 arena-results-assembler | `arena_results.yaml` |
@@ -84,7 +84,7 @@ Gates are PASS or FAIL. No other status exists.
 - "PARTIAL_PASS"
 - "CONDITIONAL_PASS"
 - "NEEDS_REVIEW"
-- "2_OF_3_ROUNDS_COMPLETE"
+- "1_OF_2_ROUNDS_COMPLETE"
 
 If criteria not met: gate file NOT created. Fix or escalate.
 
@@ -116,15 +116,13 @@ If model unavailable: escalate. Do NOT substitute.
 
 ---
 
-### Fix 6: 3-Round Requirement (MANDATORY)
+### Fix 6: 2-Round + Audience Evaluation Requirement (MANDATORY)
 
-**3 rounds are NON-NEGOTIABLE.**
+**2 Rounds + Audience Evaluation are NON-NEGOTIABLE.**
 
 Round 1: Initial evaluations
-Critic: Challenge convergence
-Round 2: Response to critique
-Critic: Escalate challenge
-Round 3: Final scores
+Audience Evaluation: Challenge convergence
+Round 2 (FINAL): Final scores
 
 Forbidden rationalizations:
 - "Round 1 scores were unanimous, no need for more rounds"
@@ -221,7 +219,7 @@ If human unavailable: BLOCK at Gate 2.5, escalate. Do NOT proceed to Layer 4 wit
 
 | Failure Mode | Detection | Response | Escalation |
 |--------------|-----------|----------|------------|
-| Fewer than 3 rounds | Round count < 3 | BLOCK at Gate 1, execute missing rounds | Immediate |
+| Fewer than 2 rounds | Round count < 2 | BLOCK at Gate 1, execute missing rounds | Immediate |
 | Missing personas | Persona count < 7 in any round | BLOCK, re-execute round with all 7 | Immediate |
 | Mono-voice output | All scores within 1 point across personas | Critic escalates severity to 9/10 | After Round 1 |
 | Synthesis without critique | Hybrids don't reference Critic insights | Regenerate synthesis with Arena-informed rationale | Before Gate 2.5 |
@@ -250,11 +248,11 @@ If you think any of these: STOP. Re-read Arena protocol.
 
 **Before creating GATE_2.5_ARENA_COMPLETE:**
 
-- [ ] 3 full rounds executed
+- [ ] 2 full rounds executed
 - [ ] All 7 personas in each round
 - [ ] Critic challenged after Round 1
 - [ ] Critic challenged after Round 2
-- [ ] Final scores compiled (Round 3)
+- [ ] Final scores compiled (Round 2 FINAL)
 - [ ] 3+ hybrid variations generated
 - [ ] Human selection captured with rationale
 - [ ] Selected content documented

@@ -52,7 +52,7 @@ Transform assembled drafts from 7-8 quality to 9-9.5 quality through systematic 
 | Pre | Infrastructure + anti-degradation read | haiku | File creation only |
 | 0 | Full read + scoring (6 lenses × 7 criteria) | opus | Comprehensive analytical read |
 | 1 | Issue identification + clustering | opus | Deep analysis — pattern detection across full document |
-| 2 | Arena per-issue (7 competitors × 3 rounds) | opus | Creative generation — max quality per issue |
+| 2 | Arena per-issue (7 competitors × 2 rounds + audience evaluation) | opus | Creative generation — max quality per issue |
 | 3 | Revision application + threading preservation | opus | Careful surgical editing |
 | 4 | Final rescore + verification | opus | Comprehensive quality validation |
 | 5 | Delivery packaging | sonnet | Assembly of final deliverables |

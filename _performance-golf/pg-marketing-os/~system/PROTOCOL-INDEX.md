@@ -129,7 +129,7 @@ These protocols are loaded at Layer 0 based on skill requirements:
 ### Convergence Intervention Protocol (v1.0)
 **Full protocol:** `~system/protocols/CONVERGENCE-INTERVENTION-PROTOCOL.md`
 **Applied to:** Arena executions — all Arena skills (03-08, 10-18, 20)
-**Key rule:** Three detection modes: persona convergence (round-aware 5-gram overlap thresholds), round stagnation (score delta + same winner), output repetition (3-sentence block repeat). Automated detection via `.hooks/validators/convergence_detector.py`. Round 1 convergence = bad (intervene), Round 3 convergence = good (allow).
+**Key rule:** Three detection modes: persona convergence (round-aware 5-gram overlap thresholds), round stagnation (score delta + same winner), output repetition (3-sentence block repeat). Automated detection via `.hooks/validators/convergence_detector.py`. Round 1 convergence = bad (intervene), Round 2 (FINAL) convergence = good (allow).
 
 ---
 
@@ -165,8 +165,8 @@ These support the Arena system documented in `~system/ARENA-PROTOCOL.md`:
 
 ### Arena Core Protocol
 **Full protocol:** `~system/protocols/ARENA-CORE-PROTOCOL.md`
-**Applied to:** All Arena executions — detailed 3-round execution mechanics
-**Key rule:** 7-competitor, 3-round competition with adversarial critique-revise cycles. Sequential Isolation Protocol for single-context mode. Single-Context Hardening (Upgrade 3.6).
+**Applied to:** All Arena executions — detailed 2-round + audience evaluation execution mechanics
+**Key rule:** 7-competitor, 2-round + audience evaluation competition with adversarial critique-revise cycles. Sequential Isolation Protocol for single-context mode. Single-Context Hardening (Upgrade 3.6).
 
 ### Arena Persona Panel
 **Full protocol:** `~system/protocols/ARENA-PERSONA-PANEL.md`

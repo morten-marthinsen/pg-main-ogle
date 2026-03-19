@@ -133,8 +133,8 @@ Every second of the ad is evaluated against: "Does this move the prospect closer
 | Round | Focus |
 |-------|-------|
 | Round 1 | Map the complete conversion path. Ensure every element is present and ordered correctly. |
-| Round 2 | Optimize CTA strength and funnel alignment. Incorporate Learning Brief techniques. |
-| Round 3 | Polish the persuasion sequence to maximum efficiency. Every second earning its place. |
+| Round 2 | Optimize CTA strength and funnel alignment. Incorporate Analytical Brief techniques. |
+| Round 2 (FINAL) | Polish the persuasion sequence to maximum efficiency. Every second earning its place. |
 
 ---
 

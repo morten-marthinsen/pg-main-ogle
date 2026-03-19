@@ -136,8 +136,8 @@ In scroll environments, the first visual frame is the hook. The Visual Storytell
 | Round | Focus |
 |-------|-------|
 | Round 1 | Create the strongest visual narrative. Does the visual sell on its own? |
-| Round 2 | Optimize visual-copy coherence. Incorporate Learning Brief techniques. |
-| Round 3 | Final shot-level specificity. Is every frame producible and intentional? |
+| Round 2 | Optimize visual-copy coherence. Incorporate Analytical Brief techniques. |
+| Round 2 (FINAL) | Final shot-level specificity. Is every frame producible and intentional? |
 
 ---
 

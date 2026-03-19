@@ -109,7 +109,7 @@ completeness:
 | **Structural specimens loaded** | Body-type-matched, verbatim | HALT -- Load specimens |
 | **Persona voice specimens loaded** | 6 personas loaded before Arena | HALT -- Load persona specimens |
 | **CTA length** | Max 3 sentences (transition + URL + sign-off) | HALT -- Compress CTA |
-| **Arena rounds** | 3 minimum | HALT -- Complete all rounds |
+| **Arena rounds** | 2 + audience evaluation minimum | HALT -- Complete all rounds |
 | **Arena competitors** | 7 (6 personas + Architect) | HALT -- All must generate |
 | **Human selection** | BLOCKING | HALT -- Cannot package without |
 | **Quality score** | >= 7.5 weighted | HALT -- Refine or regenerate |
@@ -148,7 +148,7 @@ specimen_protocol:
 | "Pitch is only slightly over 30%" | Ratio is 70-80/20-30. Over 30% pitch = protocol violation | HALT -- Revise to reduce pitch content |
 | "Body type is close enough" | Body type is ASSIGNED by blueprint. Cannot substitute | HALT -- Use assigned body type |
 | "Bridge isn't needed for this email" | Every email has a bridge/transition section (except TM which has minimal commentary + direct CTA) | HALT -- Write the bridge |
-| "One Arena round produced great results" | 3 rounds MANDATORY per ~system/SYSTEM-CORE.md | HALT -- Complete all 3 rounds |
+| "One Arena round produced great results" | 2 rounds + audience evaluation MANDATORY per ~system/SYSTEM-CORE.md | HALT -- Complete all 2 rounds + audience evaluation |
 | "Specimens aren't available for this body type" | All 7 body types have specimen directories | HALT -- Load correct specimen directory |
 | "I can write multiple emails to save time" | ONE email at a time. Never batch | HALT -- Focus on current email only |
 | "This email doesn't need Arena" | Arena is MANDATORY for every email | HALT -- Execute Arena |
@@ -206,7 +206,7 @@ EMAIL-WRITER-MC-CHECK:
     competitors_completed: [number]
     if_under_7: "STOP -- All 7 Arena competitors must generate"
     rounds_completed: [number]
-    if_under_3: "STOP -- All 3 Arena rounds must complete"
+    if_under_2: "STOP -- All 2 Arena rounds + audience evaluation must complete"
 
   human_selection_verification:
     at_layer_3: [Y/N]
@@ -444,7 +444,7 @@ LAYER 2 (GENERATION):
 [ ] LAYER_2_COMPLETE.yaml created
 
 LAYER 2.5 (ARENA -- MANDATORY, CANNOT BE SKIPPED):
-[ ] All 7 competitors generated across 3 rounds
+[ ] All 7 competitors generated across 2 rounds + audience evaluation
 [ ] Adversarial critique completed each round
 [ ] Targeted revision completed each round
 [ ] Post-Arena Synthesis: 2-3 hybrids created
@@ -497,5 +497,5 @@ ON CONTEXT RESUME:
 | Body type structural violation | Email doesn't follow assigned body type structure | HALT — restructure to match body type | After 2 restructure attempts |
 | Content ratio violation | Content < 70% or pitch > 30% | HALT — rebalance content/pitch ratio | If product requires more pitch |
 | Missing specimen loading | Execution log shows no specimen injection | HALT — load specimens, regenerate | Immediately |
-| Arena shortfall | Fewer than 3 rounds or < 7 competitors | HALT — complete Arena protocol | Immediately |
+| Arena shortfall | Fewer than 2 rounds + audience evaluation or < 7 competitors | HALT — complete Arena protocol | Immediately |
 | Voice contamination | Email voice inconsistent with Soul.md | HALT — revise for voice alignment | After 2 revision attempts |

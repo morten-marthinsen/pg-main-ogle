@@ -72,7 +72,7 @@ Layer 4: Validation (Recommendation Tone, Single CTA, Packaging)
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 3-round protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 2-round + audience evaluation protocol.**
 
 ### What Stays Skill-Specific (Below)
 

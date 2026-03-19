@@ -73,7 +73,7 @@ Layer 4: Validation & Packaging (Scroll-Stop, Word Budget, Output)
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All generation phases use `effort: max`.
 

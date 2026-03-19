@@ -60,7 +60,7 @@ This agent is a **workflow orchestrator**. It delegates to microskills and valid
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Big Idea distillation + pattern type selection | sonnet | Classification + architecture decisions |
 | 2 | Headline generation (5+ candidates × 10+ variations) | opus | Creative generation — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Refinement + scoring | opus | Judgment-heavy evaluation |
 | 4 | Selection packaging | sonnet | Assembly from scored candidates |
 

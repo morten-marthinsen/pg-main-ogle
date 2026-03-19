@@ -134,7 +134,7 @@ The evaluator MUST name the convention being broken:
 
 ## 4. Memorability Test
 
-**Trigger:** After scoring all 7 variants in each round, BEFORE generating Learning Brief.
+**Trigger:** After scoring all 7 variants in each round, BEFORE generating Analytical Brief.
 
 ### Procedure
 
@@ -157,7 +157,7 @@ memorability_test:
 ### How Memorability Results Are Used
 
 - **Informational, not gate-blocking.** Memorability flags do NOT prevent advancement.
-- Forgettable variants are noted in the Learning Brief as "flagged as forgettable — consider adding a distinctive phrase or concept anchor"
+- Forgettable variants are noted in the Analytical Brief as "flagged as forgettable — consider adding a distinctive phrase or concept anchor"
 - If ALL 7 variants are forgettable: escalate to human as a quality signal — "No variant produced a memorable phrase. This may indicate the upstream strategic packages lack distinctive language."
 
 ---
@@ -182,7 +182,7 @@ ROUND [N]:
   [N]D: Scoring (now includes Competitive Distance + Pattern Break dimensions)
   [N]D.1: Memorability Test
   [N]E: Ranking
-  [N]F: Learning Brief (includes diversity and memorability notes)
+  [N]F: Analytical Brief (includes diversity and memorability notes)
 ```
 
 ---
@@ -193,11 +193,11 @@ This protocol handles WITHIN-round diversity (pairwise convergence checks within
 
 The inter-round mechanisms include:
 - Shuffled presentation order between rounds
-- Varied emphasized dimension in Learning Briefs
+- Varied emphasized dimension in Analytical Briefs
 - Structural constraints that differ per round
 - Cross-round convergence tracking (comparing winners across rounds)
 
-These two layers work together: this protocol catches within-round homogeneity, while the inter-round layer prevents the entire Arena from converging on the same structural approach over 3 rounds.
+These two layers work together: this protocol catches within-round homogeneity, while the inter-round layer prevents the entire Arena from converging on the same structural approach over 2 rounds + audience evaluation.
 
 ---
 

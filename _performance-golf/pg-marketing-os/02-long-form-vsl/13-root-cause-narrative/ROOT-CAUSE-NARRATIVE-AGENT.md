@@ -59,7 +59,7 @@ Transform the strategic root cause package (from Skill 11) into persuasive narra
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Communication type classification | sonnet | Pattern matching from vault |
 | 2 | Full narrative draft (7 phases) | opus | Creative generation — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Refinement + 10-rule validation | opus | Judgment-heavy evaluation |
 | 4 | Validation + packaging | sonnet | Assembly from existing content |
 

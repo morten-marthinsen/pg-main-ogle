@@ -362,7 +362,7 @@ All Organic Engine outputs go OUTSIDE the skill folders:
 | "This content doesn't need Arena" | Law 2. ALL production content. No exceptions. |
 | "The virality score is close enough to 60" | Numbers are exact. 59 = revision required. |
 | "We can skip S03 — the voice is obvious" | Foundation is sequential. No skipping. |
-| "One Arena round produced great results" | 3 rounds mandatory. Round 1 = baseline, not peak. |
+| "One Arena round produced great results" | 2 rounds + audience evaluation mandatory. Round 1 = baseline, not peak. |
 | "Cross-posting with minor edits counts as platform-native" | Law 5. Rebuilt, not resized. |
 
 ---
@@ -393,7 +393,7 @@ All Organic Engine outputs go OUTSIDE the skill folders:
 ```
 THE 5 LAWS:
   1. No strategy, no content (CBF required)
-  2. Every piece runs the Arena (7 personas, 3 rounds)
+  2. Every piece runs the Arena (7 personas, 2 rounds + audience evaluation)
   3. Specimens first, then generate (teachings + specimens mandatory)
   4. Virality is scored, not assumed (VSF >= 60)
   5. Platform-native or nothing (rebuilt, not resized)
@@ -401,7 +401,7 @@ THE 5 LAWS:
 PHASES:  Foundation (S01-S07) → Production (S08-S14) → Distribution (S15-S18) → Analysis (S19-S20)
 BONUS:   Influencer Network (S21-S24)
 
-ARENA:   7 personas, 3 rounds, synthesis > selection
+ARENA:   7 personas, 2 rounds + audience evaluation, synthesis > selection
 
 QUALITY: Virality >= 60, Slop density < 2%, Hook >= 7/10, Platform Fit >= 7/10
 

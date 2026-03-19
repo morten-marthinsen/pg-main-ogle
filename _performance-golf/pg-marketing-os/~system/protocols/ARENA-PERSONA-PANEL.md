@@ -64,9 +64,9 @@ STEP 4: Assemble 7-competitor panel for Arena execution
 
 ## THE PANEL (DEFAULT CONFIGURATION)
 
-The default Arena panel uses **7 competitors** (6 legendary copywriters + The Architect) and **1 dedicated adversarial critic**. Each competitor generates candidates based on their documented approach. The Critic identifies weaknesses. Competitors revise. Then candidates are judged against skill-specific criteria. 3 rounds mandatory.
+The default Arena panel uses **7 competitors** (6 legendary copywriters + The Architect) and **1 dedicated adversarial critic**. Each competitor generates candidates based on their documented approach. The Critic identifies weaknesses. Competitors revise. Then candidates are judged against skill-specific criteria. 2 rounds + audience evaluation mandatory.
 
-**Reference:** See `~system/protocols/ARENA-CORE-PROTOCOL.md` for full execution protocol (3-round competition, critique-revise, learning briefs, context management).
+**Reference:** See `~system/protocols/ARENA-CORE-PROTOCOL.md` for full execution protocol (2-round + audience evaluation competition, critique-revise, analytical briefs, context management).
 
 ### The 7 Competitors
 
@@ -438,14 +438,14 @@ Bencivenga is uniquely **proof-first**. While other personas emphasize flow (Mak
 
 | Role | When | What |
 |------|------|------|
-| **In-Arena Competitor** | Rounds 1-3 | Generates ONE integrated output competing head-to-head |
-| **Post-Arena Hybrid Creator** | After Round 3 | Creates 2-3 phrase-level hybrids from all 7 Round 3 outputs |
+| **In-Arena Competitor** | Rounds 1-2 | Generates ONE integrated output competing head-to-head |
+| **Post-Arena Hybrid Creator** | After Round 2 (FINAL) | Creates 2-3 phrase-level hybrids from all 7 Round 2 (FINAL) outputs |
 
 **Signature Approaches:**
 - **Multi-Lens Integration**: Simultaneously considers flow (Makepeace), entertainment (Halbert), market calibration (Schwartz), credibility (Ogilvy), mechanism clarity (Clemens), and proof architecture (Bencivenga)
 - **Balanced Optimization**: Instead of optimizing for one lens at the expense of others, finds the highest-total-score output across all criteria
 - **Gap Filling**: Identifies which criteria are typically underserved by specialist personas and specifically targets those
-- **Round-Over-Round Intelligence**: In Rounds 2-3, has the unique advantage of seeing ALL other outputs from the previous round
+- **Round-Over-Round Intelligence**: In Round 2, has the unique advantage of seeing ALL other outputs from the previous round
 
 **When Generating (In-Arena):**
 - Generates a COMPLETE output from scratch — NOT a synthesis of what others wrote
@@ -455,7 +455,7 @@ Bencivenga is uniquely **proof-first**. While other personas emphasize flow (Mak
 - Tests: "Does this score well on EVERY criterion, not just a few?"
 
 **When Generating (Post-Arena Hybrids):**
-- Decomposes all 7 Round 3 outputs into micro-elements
+- Decomposes all 7 Round 2 (FINAL) outputs into micro-elements
 - Scores each micro-element by function
 - Reconstructs 2-3 phrase-level hybrids
 - Validates coherence (no Frankenstein outputs)
@@ -506,16 +506,16 @@ critique:
 
 ## ARENA EXECUTION PROTOCOL
 
-**IMPORTANT:** The full 3-round execution protocol, including critique-revise phases, learning briefs, context compression, and MC-CHECK schedule, is defined in `~system/protocols/ARENA-CORE-PROTOCOL.md`. This section provides the summary.
+**IMPORTANT:** The full 2-round + audience evaluation execution protocol, including critique-revise phases, analytical briefs, context compression, and MC-CHECK schedule, is defined in `~system/protocols/ARENA-CORE-PROTOCOL.md`. This section provides the summary.
 
 ### Execution Flow (Per Round)
 
 ```
-FOR EACH round IN [1, 2, 3]:
+FOR EACH round IN [1, 2]:
   A: 7 Competitors Generate independently
      FOR each competitor IN [Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, Architect]:
        1. Load persona specification
-       2. If Round 2+: Integrate Learning Brief techniques (TECHNIQUES not VOICE)
+       2. If Round 2+: Integrate Analytical Brief techniques (TECHNIQUES not VOICE)
        3. Generate complete output using persona's approach
        4. Document which approaches were used
 
@@ -538,18 +538,18 @@ FOR EACH round IN [1, 2, 3]:
 
   E: Ranking (all 7 ranked)
 
-  F: Learning Brief generated (winner techniques → all competitors)
+  F: Analytical Brief generated (winner techniques → all competitors)
 ```
 
-**Output per round:** 7 scored, ranked outputs + Learning Brief
+**Output per round:** 7 scored, ranked outputs + Analytical Brief
 
 ### Post-Arena: Synthesizer Layer (2.6)
 
-After Round 3: The Architect creates 2-3 phrase-level hybrids from all 7 final outputs.
+After Round 2 (FINAL): The Architect creates 2-3 phrase-level hybrids from all 7 final outputs.
 
 ### Human Selection (BLOCKING)
 
-7 pure Round 3 outputs + 2-3 hybrids = **9-10 candidates** presented to human.
+7 pure Round 2 (FINAL) outputs + 2-3 hybrids = **9-10 candidates** presented to human.
 
 ---
 
@@ -589,10 +589,10 @@ persona_agent_package:
   proof_inventory: "[relevant proofs from Skill 02 output]"
 
   # 4. ROUND CONTEXT — What round is this?
-  round_number: [1|2|3]
+  round_number: [1|2]
   learning_brief: "[from previous round — null for Round 1]"
   previous_critique: "[my weakness from previous round — null for Round 1]"
-  cumulative_brief: "[combined Round 1+2 learnings — only for Round 3]"
+  cumulative_brief: "[combined Round 1+2 learnings — only for Round 2 (FINAL)]"
 
   # 5. CONSTRAINTS
   effort_level: "max"
@@ -600,7 +600,7 @@ persona_agent_package:
   forbidden_behaviors: "[from ~system/protocols/ARENA-CORE-PROTOCOL.md]"
   voice_preservation: |
     You are [persona_name]. Generate in YOUR voice using YOUR approach.
-    If you received a Learning Brief, absorb the TECHNIQUES described
+    If you received a Analytical Brief, absorb the TECHNIQUES described
     but maintain YOUR editorial lens and voice. Do NOT sound like the
     winner — sound like YOU having learned from the winner's technique.
 ```
@@ -636,7 +636,7 @@ critic_agent_package:
 
 ```yaml
 judge_agent_package:
-  role: "The Judge — Scoring and Learning Brief Generation"
+  role: "The Judge — Scoring and Analytical Brief Generation"
 
   # What to score against
   skill_criteria: "[7 criteria with weights from skill's ARENA-LAYER.md]"
@@ -656,7 +656,7 @@ judge_agent_package:
     - per_competitor_scores: "[all 7 criteria scored 1-10 with evidence]"
     - weighted_totals: "[calculated per skill weights]"
     - ranking: "[1-7]"
-    - learning_brief: "[per Learning Brief spec in ~system/protocols/ARENA-CORE-PROTOCOL.md]"
+    - analytical_brief: "[per Analytical Brief spec in ~system/protocols/ARENA-CORE-PROTOCOL.md]"
 ```
 
 ### Agent Team Benefits for Persona Quality
@@ -666,7 +666,7 @@ judge_agent_package:
 | Halbert generates AFTER seeing Makepeace's output → unconscious blending | Each persona starts fresh — zero contamination |
 | By Persona 7, model is tired and patterns have collapsed | Each agent has full energy and context |
 | Specimens compete for context space across 7 personas | Each persona loads specimens into its own 200K |
-| Learning Briefs are the model talking to itself | Learning Briefs are external input from a separate Judge agent |
+| Analytical Briefs are the model talking to itself | Analytical Briefs are external input from a separate Judge agent |
 | Critic critiques work it just created | Critic has NO generation memory — genuinely adversarial |
 
 ---
@@ -685,9 +685,9 @@ The persona panel is constant; the judging criteria are skill-specific.
 
 ## SYNTHESIZER LAYER INTEGRATION (2.6)
 
-After all 3 Arena rounds complete (7 competitors, critique-revise each round), the **Synthesizer Layer (2.6)** creates hybrid candidates by extracting the best **phrases and micro-elements** from each competitor's Round 3 output.
+After both Arena rounds complete (7 competitors, critique-revise each round), the **Synthesizer Layer (2.6)** creates hybrid candidates by extracting the best **phrases and micro-elements** from each competitor's Round 2 (FINAL) output.
 
-**The Architect performs dual duty:** competed as the 7th competitor in Rounds 1-3, then switches to Synthesizer role.
+**The Architect performs dual duty:** competed as the 7th competitor in Rounds 1-2, then switches to Synthesizer role.
 
 ### Why Synthesis Is Required
 
@@ -703,18 +703,16 @@ In practice, no single competitor "nails it" — each optimizes for their editor
 ```
 ROUND 1: 7 Competitors → Critique → Revise → Score → Learn
     ↓
-ROUND 2: 7 Competitors → Critique → Revise → Score → Learn
+ROUND 2 (FINAL): 7 Competitors → Critique → Revise → FINAL Score
     ↓
-ROUND 3: 7 Competitors → Critique → Revise → FINAL Score
-    ↓
-Layer 2.6: SYNTHESIZER (Phrase-Level Hybrid Creation from all 7 Round 3 outputs)
+Layer 2.6: SYNTHESIZER (Phrase-Level Hybrid Creation from all 7 Round 2 (FINAL) outputs)
     ↓
 HUMAN SELECTION (7 Pure + 2-3 Hybrids = 9-10 Options)
 ```
 
 ### What Synthesizer Does
 
-1. **Micro-Element Decomposition** — Breaks all 7 Round 3 outputs into smallest meaningful units
+1. **Micro-Element Decomposition** — Breaks all 7 Round 2 (FINAL) outputs into smallest meaningful units
 2. **Function Tagging** — Tags what each phrase accomplishes (hook, mechanism hint, credibility signal, etc.)
 3. **Cross-Persona Scoring** — Scores each micro-element on function strength, specificity, originality, impact
 4. **Best-Element Matrix** — Identifies winning phrase for each function across all 7 competitors
@@ -724,7 +722,7 @@ HUMAN SELECTION (7 Pure + 2-3 Hybrids = 9-10 Options)
 ### Human Selection Options
 
 After Synthesizer completes, human sees:
-- 7 Pure competitor outputs (unchanged Round 3 finals)
+- 7 Pure competitor outputs (unchanged Round 2 (FINAL) finals)
 - 2-3 Hybrid outputs (best combinations from Synthesizer)
 - **Total: 9-10 candidates**
 
@@ -749,7 +747,7 @@ See `skills/SYNTHESIZER-LAYER.md` for complete synthesis protocol including:
 | 3.0 | 2026-02-20 | VERTICAL PROFILE SYSTEM: Persona panel now configurable per vertical. Added persona-registry/ directory with individual persona files. Added verticals/ directory with 5 vertical profiles (golf, health, finance, personal-dev, technology). Added Donnie French persona (golf-native, replaces Ogilvy for golf vertical). Added Available Personas registry table, Vertical Panel Configurations table, and loading protocol. Full persona specs now live in persona-registry/[name].md — this file is the loader, not the spec. |
 | 2.2 | 2026-02-15 | SYSTEM 2 ACTIVATION: Added System 2 Specimens reference to all 6 persona specifications (Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga). Updated persona_agent_package to include system_2_specimens alongside system_1_specimens. Each persona now has a `persona-specimens/` directory containing verbatim copy by that specific writer for voice calibration. Schwartz: 14 files (10 ads with OCR body copy). Ogilvy: 30 files (29 with OCR). Halbert: 27 files (25 Boron Letters). Makepeace: 4 controls. Clemens: 4 VSLs. Bencivenga: 17+ maxims. |
 | 2.1 | 2026-02-05 | AGENT TEAMS + EFFORT PROTOCOL: Added AGENT TEAM PERSONA PACKAGING section with self-contained prompt package specs for persona agents, Critic agent, and Judge agent. Each package defines exactly what context a separate Claude instance needs to function independently: identity (persona spec + source teachings), task (skill instructions + criteria), inputs (upstream packages + specimens + research), round context (learning brief + previous critique), and constraints (effort level + anti-slop + forbidden behaviors). Added benefits comparison table showing how agent teams solve persona contamination, context fatigue, specimen competition, self-critique weakness. |
-| 2.0 | 2026-02-05 | ARENA SYSTEM UPGRADE v3.0: Added The Architect as 7th competitor (Synthesizer-as-Competitor with dual role: in-arena competitor + post-arena hybrid creator). Added The Critic as dedicated adversarial role (NOT self-critique, NOT cross-persona — uses same 7 skill-specific criteria, identifies ONE weakest element per output with actionable fix direction). Replaced 4-phase protocol with reference to ~system/protocols/ARENA-CORE-PROTOCOL.md (3-round mandatory competition with critique-revise phases and learning briefs). Updated Synthesizer integration for 7 competitors (9-10 candidates: 7 pure + 2-3 hybrids). Updated all counts from 6 to 7 throughout. |
+| 2.0 | 2026-02-05 | ARENA SYSTEM UPGRADE v3.0: Added The Architect as 7th competitor (Synthesizer-as-Competitor with dual role: in-arena competitor + post-arena hybrid creator). Added The Critic as dedicated adversarial role (NOT self-critique, NOT cross-persona — uses same 7 skill-specific criteria, identifies ONE weakest element per output with actionable fix direction). Replaced 4-phase protocol with reference to ~system/protocols/ARENA-CORE-PROTOCOL.md (2-round + audience evaluation mandatory competition with critique-revise phases and analytical briefs). Updated Synthesizer integration for 7 competitors (9-10 candidates: 7 pure + 2-3 hybrids). Updated all counts from 6 to 7 throughout. |
 | 1.4 | 2026-02-05 | Added SYNTHESIZER LAYER INTEGRATION (2.6) section documenting phrase-level hybrid creation that runs AFTER Arena. Explains 6-phase synthesis process, human selection options (6 pure + 2-3 hybrids = 8-9 candidates), and reference to full SYNTHESIZER-LAYER.md documentation. |
 | 1.3 | 2026-02-03 | Enhanced Clemens persona with complete frameworks from Craig Clemens interview and Golden Hippo control analysis. Added Two Big Ideas Framework (why watch + what product does), Compassionate Closing Framework (closing is caring, family voice test), Golden Hippo Mechanism Architecture (three-part structure), Prospect Autobiography Method, Universal Statements principle, Enemy Naming Doctrine, Authority-First Positioning (four layers), Blue Zone Research Integration, Three-Prong Solution Structure, Believability Calibration. Added comprehensive judging lens with Mechanism Clarity/Scientific Credibility/Enemy Naming/Authority Layer scores plus Two Big Ideas Check and Family Voice Test. Added source-teachings reference. |
 | 1.2 | 2026-02-03 | Enhanced Ogilvy persona with complete frameworks from authoritative sources (Ogilvy on Advertising, swipefile.com). Added 7 Ogilvy Laws, 10 Writing Rules (1982 memo), 12 Copywriting Habits, Headline Doctrine with 80/20 rule, Rolls-Royce headline analysis, Concreteness Effect principle. Added comprehensive judging lens with Credibility/Specificity/Clarity scores and Rolls-Royce Test. Added source-teachings reference. |

@@ -71,7 +71,7 @@ Produce high-save carousel content optimized for saves, shares, and algorithmic 
 
 ### LAYER 2.5: ARENA (Organic Persona Competition)
 - **2.5.1** Arena Submission → Submit carousel to 7 organic personas (Volume Machine, Value Architect, Virality Engineer, Community Builder, Brand Purist, Algorithm Hacker, Storyteller)
-- **2.5.2** Adversarial Critique → 3 rounds of critique, scoring on hook strength, save-worthiness, platform fit, engagement potential
+- **2.5.2** Adversarial Critique → 2 rounds of critique, scoring on hook strength, save-worthiness, platform fit, engagement potential
 - **2.5.3** Synthesis → Generate 3+ hybrid variants, human selection, ARENA_COMPLETE checkpoint
 
 ### LAYER 4: PACKAGING & HANDOFF
@@ -104,7 +104,7 @@ Produce high-save carousel content optimized for saves, shares, and algorithmic 
           ↓
       Layer 2.5: Arena
           ├─ Submission (2.5.1) → 7 persona variants
-          ├─ Critique (2.5.2) → 3 rounds, scoring
+          ├─ Critique (2.5.2) → 2 rounds, scoring
           └─ Synthesis (2.5.3) → 3 hybrids, HUMAN SELECT
           ↓
       ARENA_COMPLETE Checkpoint

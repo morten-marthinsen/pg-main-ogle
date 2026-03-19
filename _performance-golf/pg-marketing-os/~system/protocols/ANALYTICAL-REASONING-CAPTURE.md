@@ -31,7 +31,7 @@ This creates a "game of telephone" effect: downstream skills receive conclusions
 
 ```
 Arena Input: 7 mechanism candidates with detailed analysis
-Arena Process: 3-round tournament with scoring across 9 dimensions
+Arena Process: 2-round + audience evaluation tournament with scoring across 9 dimensions
 Arena Output: Winner name + explanation
 → All scoring rationale LOST
 → All runner-up insights LOST
@@ -42,7 +42,7 @@ Arena Output: Winner name + explanation
 
 ```
 Arena Input: 7 mechanism candidates with detailed analysis
-Arena Process: 3-round tournament with scoring across 9 dimensions
+Arena Process: 2-round + audience evaluation tournament with scoring across 9 dimensions
 Arena Output: Winner name + explanation + REASONING CAPTURE
 → Why winner won (specific dimensions that differentiated)
 → What runner-up offered (alternative angles available)

@@ -144,7 +144,7 @@ human_approval:
 | "Timing annotations can be added in production" | Makes script unusable for production team | Stop. Add timing now. |
 | "Visual direction is obvious from the script" | Production team needs explicit notes | Stop. Write visual direction for every section. |
 | "The hook is good enough without strategy" | Hook determines retention | Stop. Reference HLF and specimen patterns. |
-| "One Arena round was sufficient" | 3 rounds mandatory | Stop. Complete all 3 rounds. |
+| "One Arena round was sufficient" | 2 rounds + audience evaluation mandatory | Stop. Complete all rounds. |
 | "Virality score of 58 is close to 60" | 60 is the threshold | Stop. Revise until >= 60. |
 | "We can skip specimens for this simple script" | Violates Law 3 | Stop. Load specimens before generating. |
 
@@ -278,7 +278,7 @@ human_approval:
 | 2.2 | [script-id]-body-draft.md | Body sections with timing | ☐ |
 | 2.3 | [script-id]-cta-draft.md | CTA with visual direction | ☐ |
 | 2.4 | [script-id]-visual-direction.md | Visual notes per section | ☐ |
-| 2.5 | [script-id]-arena-results.md | 3 rounds, 7 personas, synthesis | ☐ |
+| 2.5 | [script-id]-arena-results.md | 2 rounds + audience evaluation, 7 personas, synthesis | ☐ |
 | 4.1 | scripts-assembled.yaml | All scripts in final format | ☐ |
 | 4.2 | execution-log.md | Timestamped decisions | ☐ |
 

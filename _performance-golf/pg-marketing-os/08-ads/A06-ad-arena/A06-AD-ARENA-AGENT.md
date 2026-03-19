@@ -48,7 +48,7 @@
 ## THE 3 LAWS OF THE AD ARENA (Never Scroll Past This)
 
 1. **Evaluate the COMPLETE concept, never isolated elements.** An ad concept is hook + script architecture + visual direction as an atomic unit. A brilliant hook with a weak script fails. A strong script with a generic visual fails. The Arena evaluates the integrated unit — not hooks in isolation, not scripts in isolation, not visuals in isolation. Evaluating any element alone is a protocol violation.
-2. **7 personas, 3 rounds, adversarial critique. No shortcuts.** Every Arena execution runs 7 ad-specific personas across 3 mandatory rounds with adversarial critique-revise cycles each round. "The concepts look strong after Round 1" is forbidden. "5 personas are enough" is forbidden. The quality ceiling rises in Round 2 and peaks in Round 3. Cutting rounds cuts quality.
+2. **7 personas, 2 rounds + audience evaluation, adversarial critique. No shortcuts.** Every Arena execution runs 7 ad-specific personas across 2 mandatory rounds + audience evaluation with adversarial critique-revise cycles each round. "The concepts look strong after Round 1" is forbidden. "5 personas are enough" is forbidden. The quality ceiling rises in Round 2 and peaks with audience evaluation. Cutting rounds cuts quality.
 3. **Human selects. The Arena recommends.** The Arena produces 9-10 scored candidates (7 pure evaluations + 2-3 synthesis hybrids) with transparent scoring and rationale. The human selects which concepts advance to copy production. No auto-selection. No timeout selection. No "the top scorer wins by default." Human judgment is the final gate.
 
 ---
@@ -60,9 +60,9 @@ This file exists because **ad concept evaluation has its own degradation pattern
 1. **Evaluating hooks in isolation** -- The model evaluates the hook separately from the script and visual, then averages the scores. This misses the INTEGRATION quality. A hook that creates an expectation the script doesn't fulfill scores well in isolation but fails as a concept.
 2. **Personas without specimens** -- The model generates persona evaluations based on persona descriptions without loading actual winning ad specimens. Descriptive personas produce generic evaluations. Specimen-loaded personas produce grounded evaluations with specific reference points.
 3. **Consensus-seeking instead of adversarial** -- The model drifts toward consensus in later rounds. All 7 personas start agreeing. The adversarial Critic exists precisely to prevent this — identifying the ONE weakest element per concept even when the overall score is high.
-4. **Scoring inflation** -- The model inflates scores across rounds as familiarity increases. Round 3 scores should reflect genuine quality improvement from learning, not grade inflation from repeated exposure.
+4. **Scoring inflation** -- The model inflates scores across rounds as familiarity increases. Round 2 (FINAL) scores should reflect genuine quality improvement from learning, not grade inflation from repeated exposure.
 5. **Platform blindness in evaluation** -- The model evaluates ad concepts against generic quality criteria without accounting for platform-specific demands. A concept scoring 9/10 on visual-copy coherence might be 4/10 on TikTok platform nativeness if it feels like a TV commercial.
-6. **Single-round shortcuts** -- The model declares concepts "strong enough" after Round 1, skipping the learning-improvement cycle that produces peak output in Round 3. The best evaluations emerge from the adversarial process, not from initial impressions.
+6. **Single-round shortcuts** -- The model declares concepts "strong enough" after Round 1, skipping the learning-improvement cycle that produces peak output in Round 2 (FINAL). The best evaluations emerge from the adversarial process, not from initial impressions.
 7. **Synthesis as averaging** -- The model creates hybrid concepts by averaging persona evaluations instead of genuinely synthesizing the best elements from each persona's perspective into improved concepts. Averaging produces mediocre blends. True synthesis produces concepts that exceed any single persona's version.
 
 **This file is the fix.** Before executing A06, read the relevant sections below.
@@ -81,11 +81,11 @@ A06 answers the critical question: **"Which of these ad concepts will actually p
 - 3 full rounds of competition with critique-revise completed for every concept
 - All concepts scored against 7 ad-specific judging criteria with transparent evidence
 - Adversarial Critic identifies genuine weaknesses, not surface-level observations
-- 2-3 synthesis hybrids generated from Round 3 outputs
+- 2-3 synthesis hybrids generated from Round 2 (FINAL) outputs
 - 9-10 candidates presented to human with scores, rationale, and recommendation
 - Human selects which concepts advance to A07 (BLOCKING)
 - AD-ARENA-RESULTS.md produced with complete evaluation data
-- Learning Brief documenting what the Arena learned about effective concepts for this campaign
+- Analytical Brief documenting what the Arena learned about effective concepts for this campaign
 
 This agent is an **evaluation orchestrator**. It assembles concept bundles, orchestrates multi-persona evaluation rounds, manages adversarial critique cycles, produces synthesis hybrids, and presents candidates for human selection. It does NOT generate ad copy, scripts, or visual assets — those are upstream (A02-A05) and downstream (A07-A08) skills.
 
@@ -106,7 +106,7 @@ This agent is an **evaluation orchestrator**. It assembles concept bundles, orch
 - A script writer (that is A04)
 - A visual director (that is A05)
 - A copy production tool (that is A07)
-- A single-evaluator scoring system (it is 7 personas across 3 rounds)
+- A single-evaluator scoring system (it is 7 personas across 2 rounds + audience evaluation)
 - An automatic selector (human selection is BLOCKING)
 - A format strategy tool (that is A03)
 - A performance predictor (that is A10)
@@ -316,17 +316,17 @@ The Ad Arena uses 7 ad-specific personas — distinct from the CopywritingEngine
 | Role | When | What |
 |------|------|------|
 | **In-Arena Evaluator** | Rounds 1-3 | Generates ONE integrated evaluation competing head-to-head against all 6 specialist personas |
-| **Post-Arena Hybrid Creator** | After Round 3 | Creates 2-3 improved hybrid concepts from all 7 Round 3 evaluation outputs |
+| **Post-Arena Hybrid Creator** | After Round 2 (FINAL) | Creates 2-3 improved hybrid concepts from all 7 Round 2 (FINAL) evaluation outputs |
 
 **When Evaluating (In-Arena):**
 - Integrates ALL 7 judging criteria simultaneously — no criterion sacrificed for another
 - Identifies which criteria are typically underserved by specialist personas and specifically targets those
 - Generates the "balanced optimization" — the highest total weighted score across all criteria
-- In Rounds 2-3, has the advantage of seeing ALL other persona evaluations from the previous round
+- In Round 2, has the advantage of seeing ALL other persona evaluations from the previous round
 - Tests: "Does this score well on EVERY criterion, not just 2-3?"
 
 **When Creating Hybrids (Post-Arena):**
-- Decomposes all 7 Round 3 evaluation outputs into discrete improvement suggestions
+- Decomposes all 7 Round 2 (FINAL) evaluation outputs into discrete improvement suggestions
 - Identifies the best improvement suggestion for each aspect of each concept
 - Reconstructs improved concepts by integrating the best suggestions across personas
 - Validates coherence: the improved concept must feel unified, not Frankensteined
@@ -379,7 +379,7 @@ FOR EACH persona in [DR Strategist, Scroll Stopper, UGC Native, Brand Builder, D
      - Match vertical: health specimen for health campaign, golf for golf, etc.
      - Match platform: TikTok specimens for TikTok evaluation, Meta for Meta, etc.
   3. IF NO (< 15 specimens): HALT — cannot run Arena without loaded specimens
-  4. HOLD specimens in active context during all 3 rounds
+  4. HOLD specimens in active context during both rounds + audience evaluation
   5. Persona evaluations MUST reference specific specimens as comparison points
 
 The Architect (persona 7) does NOT load separate specimens — it references all
@@ -423,7 +423,7 @@ MINIMUM SCORES FOR CONCEPT ADVANCEMENT TO COPY PRODUCTION:
 
 MINIMUM CONCEPTS ADVANCING:
 - At least 3 concepts must meet these thresholds
-- If fewer than 3 meet thresholds after all 3 rounds + synthesis:
+- If fewer than 3 meet thresholds after all rounds + synthesis:
   → Follow ALL-BELOW-THRESHOLD protocol
 ```
 
@@ -596,10 +596,10 @@ FORBIDDEN:
 ## STATE MACHINE
 
 ```
-IDLE -> LOADING -> CONCEPT_ASSEMBLY -> ARENA_R1 -> ARENA_R2 -> ARENA_R3 -> SYNTHESIS -> HUMAN_SELECTION -> PACKAGING -> COMPLETE
+IDLE -> LOADING -> CONCEPT_ASSEMBLY -> ARENA_R1 -> ARENA_R2 -> SYNTHESIS -> SYNTHESIS -> HUMAN_SELECTION -> PACKAGING -> COMPLETE
          |             |                  |           |           |            |              |                |
          v             v                  v           v           v            v              v                v
-      [GATE_0]      [GATE_1]          [GATE_R1]  [GATE_R2]   [GATE_R3]   [GATE_2.5]     [GATE_3]         [GATE_4]
+      [GATE_0]      [GATE_1]          [GATE_R1]  [GATE_R2]   [GATE_R2_FINAL]   [GATE_2.5]     [GATE_3]         [GATE_4]
       PASS/FAIL     PASS/FAIL         PASS/FAIL  PASS/FAIL   PASS/FAIL   PASS/FAIL      PASS/FAIL        PASS/FAIL
 ```
 
@@ -607,9 +607,9 @@ IDLE -> LOADING -> CONCEPT_ASSEMBLY -> ARENA_R1 -> ARENA_R2 -> ARENA_R3 -> SYNTH
 - IDLE -> LOADING (always allowed)
 - LOADING -> CONCEPT_ASSEMBLY (only if GATE_0 = PASS)
 - CONCEPT_ASSEMBLY -> ARENA_R1 (only if GATE_1 = PASS)
-- ARENA_R1 -> ARENA_R2 (only if GATE_R1 = PASS, Learning Brief generated)
-- ARENA_R2 -> ARENA_R3 (only if GATE_R2 = PASS, Cumulative Learning Brief generated)
-- ARENA_R3 -> SYNTHESIS (only if GATE_R3 = PASS, all 7 Round 3 evaluations complete)
+- ARENA_R1 -> ARENA_R2 (only if GATE_R1 = PASS, Analytical Brief generated)
+- ARENA_R2 -> SYNTHESIS (only if GATE_R2 = PASS, Cumulative Analytical Brief generated)
+- ARENA_R2 -> SYNTHESIS (only if GATE_R2_FINAL = PASS, all 7 Round 2 (FINAL) evaluations complete)
 - SYNTHESIS -> HUMAN_SELECTION (only if GATE_2.5 = PASS, 2-3 hybrids generated)
 - HUMAN_SELECTION -> PACKAGING (only if GATE_3 = PASS, human has selected)
 - PACKAGING -> COMPLETE (only if GATE_4 = PASS)
@@ -618,8 +618,8 @@ IDLE -> LOADING -> CONCEPT_ASSEMBLY -> ARENA_R1 -> ARENA_R2 -> ARENA_R3 -> SYNTH
 - LOADING -> ARENA_R1 (cannot skip concept assembly)
 - CONCEPT_ASSEMBLY -> ARENA_R2 (cannot skip Round 1)
 - ARENA_R1 -> ARENA_R3 (cannot skip Round 2)
-- ARENA_R1 -> SYNTHESIS (cannot skip Rounds 2-3)
-- ANY -> HUMAN_SELECTION without all 3 rounds completing
+- ARENA_R1 -> SYNTHESIS (cannot skip Round 2)
+- ANY -> HUMAN_SELECTION without all rounds completing
 - ANY -> PACKAGING without human selection
 - ANY -> COMPLETE without GATE_4 passing
 
@@ -632,7 +632,7 @@ BEFORE ANY A06 EXECUTION:
   1. READ: A06-AD-ARENA-ANTI-DEGRADATION.md (full file) -- MANDATORY
   2. READ: A06-AD-ARENA-AGENT.md (this file) completely
   3. READ: AD-ENGINE.md (Ad Arena Adaptation section)
-  4. READ: ~system/protocols/ARENA-CORE-PROTOCOL.md (shared protocol for 3-round structure)
+  4. READ: ~system/protocols/ARENA-CORE-PROTOCOL.md (shared protocol for 2-round + audience evaluation structure)
   5. VERIFY: A02 HOOK-ANGLE-MATRIX.md exists with human-selected hooks
   6. VERIFY: A04 SCRIPT-PACKAGE.md exists with script architectures
   7. VERIFY: A05 VISUAL-DIRECTION-PACKAGE.md exists with visual directions
@@ -691,7 +691,7 @@ BEFORE ANY A06 EXECUTION:
 
 ## Current Phase
 - Layer: [0/1/2/2.5/3/4]
-- Round: [1/2/3/post-arena]
+- Round: [1/2/post-arena]
 - Status: [IN_PROGRESS / BLOCKED / COMPLETE]
 
 ## Concepts Under Evaluation
@@ -704,7 +704,7 @@ BEFORE ANY A06 EXECUTION:
 ## Arena Progress
 - Round 1: [PENDING / IN_PROGRESS / COMPLETE]
 - Round 2: [PENDING / IN_PROGRESS / COMPLETE]
-- Round 3: [PENDING / IN_PROGRESS / COMPLETE]
+- Round 2 (FINAL): [PENDING / IN_PROGRESS / COMPLETE]
 - Synthesis: [PENDING / IN_PROGRESS / COMPLETE]
 - Human Selection: [PENDING / AWAITING / RECEIVED]
 
@@ -713,7 +713,7 @@ BEFORE ANY A06 EXECUTION:
 - GATE_1: [PASS/FAIL/PENDING]
 - GATE_R1: [PASS/FAIL/PENDING]
 - GATE_R2: [PASS/FAIL/PENDING]
-- GATE_R3: [PASS/FAIL/PENDING]
+- GATE_R2_FINAL: [PASS/FAIL/PENDING]
 - GATE_2.5: [PASS/FAIL/PENDING]
 - GATE_3: [PASS/FAIL/PENDING]
 - GATE_4: [PASS/FAIL/PENDING]
@@ -747,7 +747,7 @@ BEFORE ANY A06 EXECUTION:
 | Pre-Execution | haiku | Infrastructure creation (PROJECT-STATE.md, PROGRESS-LOG.md, checkpoints/) |
 | Layer 0 | haiku | Mechanical loading and validation — no analysis required |
 | Layer 1 | opus | Concept assembly requires strategic synthesis of upstream packages |
-| Layer 2 (All 3 Rounds) | opus | Arena evaluation, critique, revision, scoring — core creative/analytical work |
+| Layer 2 (Both Rounds + Audience Evaluation) | opus | Arena evaluation, critique, revision, scoring — core creative/analytical work |
 | Layer 2.5 | opus | Synthesis and hybrid generation — deep analytical decomposition |
 | Layer 3 | sonnet | Presentation assembly and human selection capture — formatting, not analysis |
 | Layer 4 | sonnet | Output packaging — mechanical assembly of results |
@@ -913,11 +913,11 @@ IF concepts_assembled < 3: GATE CLOSED -- insufficient concepts for meaningful A
 
 > **CRITICAL CONSTRAINTS REMINDER:** Read ANTI-DEGRADATION.md. Every microskill produces its own file. Gates are PASS/FAIL only. Numbers are exact.
 
-### Layer 2: Multi-Persona Arena Evaluation (3 Rounds)
+### Layer 2: Multi-Persona Arena Evaluation (2 Rounds + Audience Evaluation)
 
-**Purpose:** Run the full 3-round Arena evaluation with 7 ad-specific personas evaluating each concept. Each round includes: persona evaluation, adversarial critique, targeted revision, scoring, ranking, and Learning Brief generation.
+**Purpose:** Run the full 2-round + audience evaluation Arena evaluation with 7 ad-specific personas evaluating each concept. Each round includes: persona evaluation, adversarial critique, targeted revision, scoring, ranking, and Analytical Brief generation.
 
-**This is the CORE of A06. It follows the 3-round mandatory protocol from ~system/protocols/ARENA-CORE-PROTOCOL.md adapted for ad-specific personas and criteria.**
+**This is the CORE of A06. It follows the 2-round + audience evaluation mandatory protocol from ~system/protocols/ARENA-CORE-PROTOCOL.md adapted for ad-specific personas and criteria.**
 
 **Arena Mode:** `ad_concept`
 
@@ -984,23 +984,23 @@ persona_evaluation:
 |-------|------|----------|-------|
 | 2.1 | `2.1-round1-persona-evaluation.md` | All 7 personas independently evaluate each concept. Each persona produces a complete evaluation per the format above. The Architect generates an integrated evaluation (not synthesis of others). Specimens MUST be referenced. | opus |
 | 2.2 | `2.2-round1-adversarial-critique.md` | The Critic evaluates ALL persona outputs for each concept. Identifies ONE weakest element per persona evaluation per concept. Maps to specific criterion. Provides actionable fix direction. Must cite evidence from the evaluation. | opus |
-| 2.3 | `2.3-round1-targeted-revision.md` | Each persona receives their critique and revises ONLY the identified weakness. Revision must address the specific fix direction. Persona perspective MUST be maintained during revision. Maximum scope: targeted fix, not complete re-evaluation. | opus |
+| 2.3 | `2.2-round + audience evaluation1-targeted-revision.md` | Each persona receives their critique and revises ONLY the identified weakness. Revision must address the specific fix direction. Persona perspective MUST be maintained during revision. Maximum scope: targeted fix, not complete re-evaluation. | opus |
 | 2.4 | `2.4-round1-scoring.md` | Revised evaluations scored against 7 ad-specific criteria. Weighted totals calculated. All 7 personas ranked per concept. Cross-concept comparison produced. | opus |
-| 2.5 | `2.5-round1-learning-brief.md` | Learning Brief generated: winner's techniques extracted, persona-specific feedback for each non-winner, scoring gaps identified, voice preservation notes for each persona (absorb TECHNIQUES not PERSPECTIVE). | opus |
+| 2.5 | `2.5-round1-learning-brief.md` | Analytical Brief generated: winner's techniques extracted, persona-specific feedback for each non-winner, scoring gaps identified, voice preservation notes for each persona (absorb TECHNIQUES not PERSPECTIVE). | opus |
 
 **Execution Order:**
 1. 2.1: All 7 personas evaluate all concepts (parallel if using Agent Teams)
 2. 2.2: Critic evaluates all persona outputs (sequential per concept)
 3. 2.3: All 7 personas revise based on critique (parallel)
 4. 2.4: Scoring and ranking (sequential — needs all revisions)
-5. 2.5: Learning Brief generation (sequential — needs scores)
+5. 2.5: Analytical Brief generation (sequential — needs scores)
 
 **Round 1 Context Compression (for single-context mode):**
 
 ```
 KEEP (VERBATIM):
   - Winning persona evaluation per concept (full text)
-  - Learning Brief (full)
+  - Analytical Brief (full)
   - All 7 critique-revision summaries per concept
   - All 7 scores per concept
 
@@ -1048,11 +1048,11 @@ round_1_learnings:
 
 | Skill | File | Function | Model |
 |-------|------|----------|-------|
-| 2.6 | `2.6-round2-persona-evaluation.md` | All 7 personas receive the Learning Brief. Each persona re-evaluates each concept incorporating learned techniques. Key rule: Absorb TECHNIQUES, not PERSPECTIVE. The DR Strategist learning from The UGC Native's authenticity insights doesn't make the DR Strategist abandon conversion focus — it integrates authenticity INTO the conversion evaluation. Each persona notes which techniques they integrated. | opus |
+| 2.6 | `2.6-round2-persona-evaluation.md` | All 7 personas receive the Analytical Brief. Each persona re-evaluates each concept incorporating learned techniques. Key rule: Absorb TECHNIQUES, not PERSPECTIVE. The DR Strategist learning from The UGC Native's authenticity insights doesn't make the DR Strategist abandon conversion focus — it integrates authenticity INTO the conversion evaluation. Each persona notes which techniques they integrated. | opus |
 | 2.7 | `2.7-round2-adversarial-critique.md` | Same Critic protocol as Round 1. Critic checks if previous-round weaknesses were addressed. Identifies NEW weakest element (may differ from Round 1). | opus |
 | 2.8 | `2.8-round2-targeted-revision.md` | Same revision protocol as Round 1. | opus |
 | 2.9 | `2.9-round2-scoring.md` | Same scoring protocol. Track improvement from Round 1 -> Round 2 per persona per concept. Flag any score DECREASES for investigation. | opus |
-| 2.10 | `2.10-round2-cumulative-learning-brief.md` | Cumulative Learning Brief combining Round 1 + Round 2 learnings. Identifies persistent strengths across rounds. Identifies persistent weaknesses across rounds. Notes techniques that produced the biggest improvements. | opus |
+| 2.10 | `2.10-round2-cumulative-learning-brief.md` | Cumulative Analytical Brief combining Round 1 + Round 2 learnings. Identifies persistent strengths across rounds. Identifies persistent weaknesses across rounds. Notes techniques that produced the biggest improvements. | opus |
 
 **Round 2 Context Compression (for single-context mode):**
 
@@ -1060,7 +1060,7 @@ round_1_learnings:
 KEEP (VERBATIM):
   - Round 1 winner evaluations per concept
   - Round 2 winner evaluations per concept
-  - Cumulative Learning Brief
+  - Cumulative Analytical Brief
   - All Round 2 scores
 
 COMPRESS:
@@ -1104,23 +1104,20 @@ round_2_learnings:
 
 ---
 
-#### Round 3: FINAL Evaluation + Critique + Revision
+#### Round 2 (FINAL): Audience Evaluation + Analyst Synthesis
 
 | Skill | File | Function | Model |
 |-------|------|----------|-------|
-| 2.11 | `2.11-round3-persona-evaluation.md` | All 7 personas receive the Cumulative Learning Brief. FINAL competitive evaluation. Best possible output incorporating all learnings from Rounds 1-2. Full persona perspective with integrated techniques. This is the FINAL competitive evaluation — quality expectations are highest. | opus |
-| 2.12 | `2.12-round3-adversarial-critique.md` | Highest standard critique. Focus on remaining weaknesses that survived 2 rounds. These are the deepest, most persistent issues. | opus |
-| 2.13 | `2.13-round3-targeted-revision.md` | Final revision opportunity. Precision fixes only. | opus |
-| 2.14 | `2.14-round3-final-scoring.md` | Definitive scoring against all 7 criteria. All 7 final evaluations scored per concept. Complete scoring breakdown retained. Track progression: R1 -> R2 -> R3 per persona per concept. | opus |
-| 2.15 | `2.15-round3-final-ranking.md` | ALL 7 Round 3 evaluations kept in FULL per concept (these go to synthesis and human selection). Definitive ranking per concept across all personas. Cross-concept ranking: which concepts are strongest overall. Final Learning Brief documenting campaign-level learnings. | opus |
+| 2.11 | `2.11-audience-evaluation.md` | Audience persona panel evaluates all concepts from the target buyer's perspective. Validates real-world resonance beyond expert persona analysis. Incorporates Cumulative Analytical Brief learnings. This is the FINAL competitive evaluation — quality expectations are highest. | opus |
+| 2.12 | `2.12-analyst-synthesis.md` | Analyst synthesizes all Round 1, Round 2, and audience evaluation data. Definitive scoring against all 7 criteria. Complete scoring breakdown retained. Track progression: R1 -> R2 FINAL per persona per concept. Definitive ranking per concept across all personas. Cross-concept ranking: which concepts are strongest overall. Final Analytical Brief documenting campaign-level learnings. | opus |
 
-**Gate R3 -- Round 3 Complete:**
+**Gate R2 (FINAL) -- Round 2 (FINAL) Complete:**
 
 ```yaml
-# ROUND_3_COMPLETE.yaml
-gate: GATE_R3
+# ROUND_2_FINAL_COMPLETE.yaml
+gate: GATE_R2_FINAL
 skill: "A06-ad-arena"
-round: 3
+round: 2_FINAL
 status: PASS
 timestamp: "[ISO 8601]"
 checks:
@@ -1157,13 +1154,13 @@ overall_quality_assessment: "[strong/adequate/weak]"
 
 ### Layer 2.5: Synthesis & Hybrid Generation
 
-**Purpose:** After Round 3 completes, The Architect decomposes all 7 persona evaluations and generates 2-3 improved hybrid concepts that combine the best improvement suggestions from across all personas.
+**Purpose:** After Round 2 (FINAL) completes, The Architect decomposes all 7 persona evaluations and generates 2-3 improved hybrid concepts that combine the best improvement suggestions from across all personas.
 
 | Skill | File | Function | Model |
 |-------|------|----------|-------|
-| 2.5.1 | `2.5.1-improvement-decomposition.md` | For each concept, decompose all 7 Round 3 evaluation outputs into discrete improvement suggestions. Tag each suggestion by: which criterion it improves, how significant the improvement is (1-10), whether it conflicts with other suggestions. Build an improvement matrix per concept. | opus |
+| 2.5.1 | `2.5.1-improvement-decomposition.md` | For each concept, decompose all 7 Round 2 (FINAL) evaluation outputs into discrete improvement suggestions. Tag each suggestion by: which criterion it improves, how significant the improvement is (1-10), whether it conflicts with other suggestions. Build an improvement matrix per concept. | opus |
 | 2.5.2 | `2.5.2-hybrid-concept-generation.md` | For each concept that met or nearly met thresholds, generate 2-3 IMPROVED versions by combining the best non-conflicting improvement suggestions across all 7 personas. Each hybrid must be a coherent, integrated concept — not a Frankenstein of unrelated suggestions. Score each hybrid against 7 criteria. | opus |
-| 2.5.3 | `2.5.3-hybrid-validation.md` | Validate each hybrid concept: (a) coherence check — do all improvements work together? (b) consistency check — does the concept still feel like ONE ad, not a committee? (c) threshold check — does the hybrid score >= 8.0 weighted? (d) does it meaningfully differ from the best pure Round 3 evaluation? Discard hybrids that fail coherence or don't improve on the best pure version. | opus |
+| 2.5.3 | `2.5.3-hybrid-validation.md` | Validate each hybrid concept: (a) coherence check — do all improvements work together? (b) consistency check — does the concept still feel like ONE ad, not a committee? (c) threshold check — does the hybrid score >= 8.0 weighted? (d) does it meaningfully differ from the best pure Round 2 (FINAL) evaluation? Discard hybrids that fail coherence or don't improve on the best pure version. | opus |
 
 **Gate 2.5 -- Synthesis Complete:**
 
@@ -1324,7 +1321,7 @@ This gate can ONLY be PASS. It is created ONLY when human selection is received.
 
 ### Layer 4: Output Packaging
 
-**Purpose:** Package all Arena results into the primary output file (AD-ARENA-RESULTS.md), generate the Campaign Learning Brief, and prepare the handoff to A07 (Copy Production).
+**Purpose:** Package all Arena results into the primary output file (AD-ARENA-RESULTS.md), generate the Campaign Analytical Brief, and prepare the handoff to A07 (Copy Production).
 
 | Skill | File | Function | Model |
 |-------|------|----------|-------|
@@ -1399,14 +1396,14 @@ IF selected_concept_count < 3: GATE CLOSED -- insufficient concepts for variant 
 - Concept IDs, platforms, ad lengths, frameworks
 
 ## Section 3: Round 1 Results
-- Per-concept: all 7 persona scores, winning persona, Learning Brief
+- Per-concept: all 7 persona scores, winning persona, Analytical Brief
 - Cross-concept ranking
 
 ## Section 4: Round 2 Results
 - Per-concept: all 7 persona scores, improvement tracking from R1
-- Cumulative Learning Brief key findings
+- Cumulative Analytical Brief key findings
 
-## Section 5: Round 3 Results (FINAL)
+## Section 5: Round 2 (FINAL) Results (FINAL)
 - Per-concept: all 7 persona final scores with FULL evaluation text
 - Cross-concept final ranking
 - Progression tracking: R1 -> R2 -> R3
@@ -1428,7 +1425,7 @@ IF selected_concept_count < 3: GATE CLOSED -- insufficient concepts for variant 
 - Full scoring matrix: every persona × every criterion × every concept × every round
 - Weighted totals, rankings, progression data
 
-## Section 10: Campaign Learning Brief
+## Section 10: Campaign Analytical Brief
 - What hook types scored highest in Arena evaluation
 - What visual treatments were most effective
 - What criteria were hardest to meet
@@ -1479,7 +1476,7 @@ TEAM LEAD (Arena Coordinator)
 |
 +-- JUDGE AGENT (scoring -- separate from Critic):
         Own 200K context: criteria + all outputs + critiques + revisions
-        No stake in any evaluation. Generates Learning Briefs.
+        No stake in any evaluation. Generates Analytical Briefs.
 ```
 
 ### Persona Agent Prompt Package (Ad-Specific)
@@ -1508,7 +1505,7 @@ ad_persona_agent_package:
     competitive_landscape: "[from A01]"
   persona_specimens: "[3-5 niche-matched specimens from ad-persona-specimens/[persona]/]"
 
-  # 4. Round Context (Rounds 2-3 only)
+  # 4. Round Context (Round 2 only)
   round_number: [1|2|3]
   learning_brief: "[from previous round -- null for Round 1]"
   previous_critique: "[my weakness from previous round -- null for Round 1]"
@@ -1519,7 +1516,7 @@ ad_persona_agent_package:
   forbidden_behaviors: "[from this protocol]"
   perspective_preservation: |
     You are [persona_name]. Evaluate from YOUR perspective using YOUR lens.
-    If you received a Learning Brief, absorb the TECHNIQUES described
+    If you received a Analytical Brief, absorb the TECHNIQUES described
     but maintain YOUR evaluative lens. Do NOT sound like the
     winning persona -- sound like YOU having learned from their technique.
 ```
@@ -1540,26 +1537,26 @@ ROUND 1:
     9. All 7 revise IN PARALLEL
     10. Collect revised evaluations
     11. Send to Judge Agent
-    12. Judge scores, ranks, generates Learning Brief
-    13. Team Lead receives Learning Brief
+    12. Judge scores, ranks, generates Analytical Brief
+    13. Team Lead receives Analytical Brief
 
 ROUND 2:
   Team Lead:
-    1. Distribute Learning Brief to all 7
-    2. Each teammate receives: Learning Brief + their previous critique
+    1. Distribute Analytical Brief to all 7
+    2. Each teammate receives: Analytical Brief + their previous critique
     3. All 7 RE-EVALUATE fresh IN PARALLEL (effort: max)
-    4. [Steps 5-13 same as Round 1, cumulative Learning Brief]
+    4. [Steps 5-13 same as Round 1, cumulative Analytical Brief]
 
-ROUND 3:
+ROUND 2 (FINAL):
   Team Lead:
-    1. Distribute Cumulative Learning Brief to all 7
+    1. Distribute Cumulative Analytical Brief to all 7
     2. All 7 generate FINAL evaluations IN PARALLEL (effort: max)
     3. [Steps 5-13 same, FINAL scoring]
-    4. Send all 7 Round 3 outputs to Architect Agent for synthesis
+    4. Send all 7 Round 2 (FINAL) outputs to Architect Agent for synthesis
 
 POST-ARENA:
   Architect Agent:
-    1. Receives all 7 Round 3 evaluation outputs per concept (effort: max)
+    1. Receives all 7 Round 2 (FINAL) evaluation outputs per concept (effort: max)
     2. Decomposes into improvement suggestions
     3. Generates 2-3 hybrid improved concepts per qualifying concept
     4. Returns hybrids with scores
@@ -1589,10 +1586,10 @@ If Agent Teams is not available:
 | 1 | **Pre-Arena** | Before Round 1 starts | All concept bundles assembled? All specimens loaded? All 7 ad-specific criteria understood? |
 | 2 | **Post-R1-Evaluation** | After 7 personas evaluate in Round 1 | All 7 evaluations complete per concept? No abbreviations? Persona perspectives distinct? Specimens referenced? |
 | 3 | **Post-R1-Critique** | After critique phase | All critiques have evidence? Fix directions actionable? ONE weakness per evaluation? |
-| 4 | **Post-R1-Scoring** | After Round 1 scoring | All 7 scored on all 7 criteria? Learning Brief generated? Deal-breaker thresholds checked? |
-| 5 | **Post-R2-Evaluation** | After Round 2 evaluation | Learning Brief techniques integrated? Persona perspectives preserved? Improvement from R1? |
-| 6 | **Post-R2-Scoring** | After Round 2 scoring | Score improvement tracking complete? Cumulative Learning Brief generated? |
-| 7 | **Post-R3-Scoring** | After Round 3 final scoring | All 7 final evaluations complete? All retained in full? Final ranking generated? |
+| 4 | **Post-R1-Scoring** | After Round 1 scoring | All 7 scored on all 7 criteria? Analytical Brief generated? Deal-breaker thresholds checked? |
+| 5 | **Post-R2-Evaluation** | After Round 2 evaluation | Analytical Brief techniques integrated? Persona perspectives preserved? Improvement from R1? |
+| 6 | **Post-R2-Scoring** | After Round 2 scoring | Score improvement tracking complete? Cumulative Analytical Brief generated? |
+| 7 | **Post-R2-Final-Scoring** | After Round 2 (FINAL) final scoring | All 7 final evaluations complete? All retained in full? Final ranking generated? |
 | 8 | **Post-Synthesis** | After hybrid generation | Hybrids coherent? Hybrids meaningful improvements? Scored against criteria? |
 | 9 | **Pre-Human-Selection** | Before presenting to human | All candidates ready? Scores documented? Rationale clear? Presentation formatted? |
 | 10 | **Post-Human-Selection** | After human selects | Selection captured correctly? Notes documented? Handoff package complete? |
@@ -1645,11 +1642,11 @@ ARENA-MC-CHECK:
 |-------------|--------|-----------|
 | Pre-Arena setup (loading inputs, assembling concepts) | `high` | Team Lead |
 | Concept Assembly (Layer 1) | `high` | Bundler + Validator |
-| Persona Evaluation (all 3 rounds) | `max` | All 7 persona agents |
+| Persona Evaluation (both rounds + audience evaluation) | `max` | All 7 persona agents |
 | Adversarial Critique | `high` | Critic Agent |
 | Targeted Revision | `max` | All 7 persona agents |
 | Scoring & Ranking | `high` | Judge Agent |
-| Learning Brief Generation | `high` | Judge Agent |
+| Analytical Brief Generation | `high` | Judge Agent |
 | Synthesis / Hybrid Generation (Layer 2.5) | `max` | Architect Agent |
 | Human Presentation Assembly | `medium` | Team Lead |
 | Output Packaging (Layer 4) | `medium` | Assembly agents |
@@ -1664,7 +1661,7 @@ Before producing ANY evaluation output, persona agents must use extended thinkin
 3. **Reason about platform specifics** -- if evaluating for TikTok, deeply consider TikTok-native patterns. If Meta, consider sound-off behavior.
 4. **Evaluate from persona lens first** -- "What would The DR Strategist specifically notice about the conversion architecture here?"
 5. **Pre-score against criteria** -- mentally walk through all 7 criteria BEFORE writing the evaluation.
-6. **Integrate Learning Brief** (Rounds 2-3) -- deeply reason about HOW to absorb techniques without losing persona perspective.
+6. **Integrate Analytical Brief** (Round 2) -- deeply reason about HOW to absorb techniques without losing persona perspective.
 
 **The model should spend MORE time thinking than writing.** The thinking IS the evaluation quality.
 
@@ -1682,7 +1679,7 @@ RED ZONE PROTOCOL:
   2. Generate state handoff document:
      - Current round number
      - All scores from completed rounds
-     - Learning Briefs generated so far
+     - Analytical Briefs generated so far
      - Winner evaluations per concept (verbatim)
      - Remaining rounds needed
   3. Request session break
@@ -1691,7 +1688,7 @@ RED ZONE PROTOCOL:
 
 ### All-Below-Threshold
 
-If ALL concepts score below 8.0 weighted after Round 3 + synthesis:
+If ALL concepts score below 8.0 weighted after Round 2 (FINAL) + synthesis:
 
 ```
 ALL-BELOW-THRESHOLD PROTOCOL:
@@ -1731,7 +1728,7 @@ INSUFFICIENT CONCEPTS PROTOCOL:
 
 ### Tied Scores
 
-If two or more concepts are tied after Round 3:
+If two or more concepts are tied after Round 2 (FINAL):
 
 ```
 TIED SCORE PROTOCOL:
@@ -1744,9 +1741,9 @@ TIED SCORE PROTOCOL:
 
 ### Single-Round Exception
 
-**There is NO single-round exception.** All Arena runs execute 3 rounds. Period.
+**There is NO single-round exception.** All Arena runs execute 2 rounds + audience evaluation. Period.
 
-The only exception is if human EXPLICITLY requests a single round with documented acknowledgment that quality will be lower. This is NOT automatic -- the default is ALWAYS 3 rounds.
+The only exception is if human EXPLICITLY requests a single round with documented acknowledgment that quality will be lower. This is NOT automatic -- the default is ALWAYS 2 rounds + audience evaluation.
 
 ---
 
@@ -1758,9 +1755,9 @@ The only exception is if human EXPLICITLY requests a single round with documente
 |------|----------|--------|--------------|-------------------|
 | GATE_0 | Layer 0 -> Layer 1 | Concept assembly | All upstream packages loaded, all specimens validated (>= 15 per persona), A02 human selection complete | Fix missing inputs |
 | GATE_1 | Layer 1 -> Layer 2 | Arena entry | >= 3 complete concept bundles assembled, all elements present (hook + script + visual) | Resolve incomplete concepts |
-| GATE_R1 | Round 1 -> Round 2 | Round 2 entry | All 7 personas evaluated all concepts, all critiques complete, all revisions complete, Learning Brief generated | Complete missing evaluations |
-| GATE_R2 | Round 2 -> Round 3 | Round 3 entry | All 7 re-evaluated incorporating learnings, Cumulative Learning Brief generated | Complete missing re-evaluations |
-| GATE_R3 | Round 3 -> Synthesis | Synthesis entry | All 7 final evaluations complete, all retained in full, final ranking generated | Complete missing evaluations |
+| GATE_R1 | Round 1 -> Round 2 | Round 2 entry | All 7 personas evaluated all concepts, all critiques complete, all revisions complete, Analytical Brief generated | Complete missing evaluations |
+| GATE_R2 | Round 2 -> Round 2 (FINAL) | Round 2 (FINAL) entry | All 7 re-evaluated incorporating learnings, Cumulative Analytical Brief generated | Complete missing re-evaluations |
+| GATE_R2_FINAL | Round 2 (FINAL) -> Synthesis | Synthesis entry | All 7 final evaluations complete, all retained in full, final ranking generated | Complete missing evaluations |
 | GATE_2.5 | Synthesis -> Human Selection | Presentation | >= 2 meaningful hybrids generated, all scored, coherence validated | Generate additional hybrids |
 | GATE_3 | Human Selection -> Packaging | Output entry | Human selection received, concepts selected, notes captured | BLOCKING -- wait for human |
 | GATE_4 | Skill completion | Downstream | AD-ARENA-RESULTS.md exists at 50KB+, A07-HANDOFF.md exists, >= 3 concepts selected | Re-assemble with chunked protocol |
@@ -1792,8 +1789,8 @@ The only exception is if human EXPLICITLY requests a single round with documente
 
 | Rationalization | Why Forbidden | Required Response |
 |-----------------|---------------|-------------------|
-| "concepts look strong enough after Round 1" | 3 rounds mandatory. R2 and R3 improve quality through learning. | HALT -- execute all 3 rounds |
-| "Round 2 won't improve these" | Learning Briefs distribute techniques that consistently improve evaluations. | HALT -- execute Round 2 |
+| "concepts look strong enough after Round 1" | 2 rounds + audience evaluation mandatory. R2 and R3 improve quality through learning. | HALT -- execute both rounds + audience evaluation |
+| "Round 2 won't improve these" | Analytical Briefs distribute techniques that consistently improve evaluations. | HALT -- execute Round 2 |
 | "5 personas are sufficient" | 7 personas mandatory. Each provides unique lens. Missing one loses coverage. | HALT -- include all 7 personas |
 | "the hook alone is strong so the concept passes" | Concepts are evaluated as atomic units. Hook alone is not a concept. | HALT -- evaluate complete concept |
 | "all personas agree so we don't need the Critic" | Consensus is exactly when the Critic is most valuable. | HALT -- run adversarial critique |
@@ -1839,11 +1836,11 @@ RULE 1: COMPLETE CONCEPTS. NEVER ISOLATED ELEMENTS.
   "The concept integrating this hook with this script and this visual is strong
    because..." IS a valid evaluation.
 
-RULE 2: 7 PERSONAS. ALL 3 ROUNDS. NO SHORTCUTS.
+RULE 2: 7 PERSONAS. 2 ROUNDS + AUDIENCE EVALUATION. NO SHORTCUTS.
   Every round has all 7 personas evaluating all concepts.
   "4 personas gave similar feedback so the other 3 would too" is NOT acceptable.
   "Round 1 results are clear enough" is NOT acceptable.
-  7 personas x 3 rounds x all concepts. Every cell in the matrix must be filled.
+  7 personas x 2 rounds + audience evaluation x all concepts. Every cell in the matrix must be filled.
 
 RULE 3: ADVERSARIAL CRITIQUE IS MANDATORY, NOT OPTIONAL.
   The Critic MUST evaluate every persona output every round.
@@ -1863,7 +1860,7 @@ RULE 5: SCORING EVIDENCE, NOT JUST NUMBERS.
    achieved [metric]" IS acceptable.
 
 RULE 6: NO SCORING INFLATION ACROSS ROUNDS.
-  Round 3 scores should reflect genuine improvement, not familiarity-driven inflation.
+  Round 2 (FINAL) scores should reflect genuine improvement, not familiarity-driven inflation.
   If ALL scores increase from R1 to R3 without corresponding improvements to the concept,
   scoring inflation is occurring. The Judge must validate that score increases correspond
   to specific documented improvements.
@@ -1896,7 +1893,7 @@ A06-MC-CHECK:
 
   IF any rationalization detected: "HALT -- re-read anti-degradation rules"
   IF personas_completed < 7: "CONTINUE -- all 7 must evaluate"
-  IF current_round < 3: "CONTINUE -- all 3 rounds mandatory"
+  IF current_round < 2: "CONTINUE -- 2 rounds + audience evaluation mandatory"
 ```
 
 ---
@@ -1936,19 +1933,16 @@ Examples:
 | 1 | 1.3 | `1.3-concept-summary-generator.md` | 5KB | Concept summaries for evaluation |
 | 2 | 2.1 | `2.1-round1-persona-evaluation.md` | 10KB | All 7 persona evaluations R1 |
 | 2 | 2.2 | `2.2-round1-adversarial-critique.md` | 5KB | Critic output R1 |
-| 2 | 2.3 | `2.3-round1-targeted-revision.md` | 5KB | Revised evaluations R1 |
+| 2 | 2.3 | `2.2-round + audience evaluation1-targeted-revision.md` | 5KB | Revised evaluations R1 |
 | 2 | 2.4 | `2.4-round1-scoring.md` | 5KB | Scoring & ranking R1 |
-| 2 | 2.5 | `2.5-round1-learning-brief.md` | 3KB | Learning Brief R1 |
+| 2 | 2.5 | `2.5-round1-learning-brief.md` | 3KB | Analytical Brief R1 |
 | 2 | 2.6 | `2.6-round2-persona-evaluation.md` | 10KB | All 7 persona evaluations R2 |
 | 2 | 2.7 | `2.7-round2-adversarial-critique.md` | 5KB | Critic output R2 |
 | 2 | 2.8 | `2.8-round2-targeted-revision.md` | 5KB | Revised evaluations R2 |
 | 2 | 2.9 | `2.9-round2-scoring.md` | 5KB | Scoring & ranking R2 |
-| 2 | 2.10 | `2.10-round2-cumulative-learning-brief.md` | 5KB | Cumulative Learning Brief |
-| 2 | 2.11 | `2.11-round3-persona-evaluation.md` | 10KB | All 7 persona FINAL evaluations |
-| 2 | 2.12 | `2.12-round3-adversarial-critique.md` | 5KB | Critic output R3 |
-| 2 | 2.13 | `2.13-round3-targeted-revision.md` | 5KB | Final revised evaluations |
-| 2 | 2.14 | `2.14-round3-final-scoring.md` | 5KB | FINAL scoring & ranking |
-| 2 | 2.15 | `2.15-round3-final-ranking.md` | 5KB | Campaign Learning Brief |
+| 2 | 2.10 | `2.10-round2-cumulative-learning-brief.md` | 5KB | Cumulative Analytical Brief |
+| 2 | 2.11 | `2.11-audience-evaluation.md` | 10KB | Audience persona panel evaluation |
+| 2 | 2.12 | `2.12-analyst-synthesis.md` | 5KB | Final scoring, ranking & Analytical Brief |
 | 2.5 | 2.5.1 | `2.5.1-improvement-decomposition.md` | 5KB | Improvement matrices |
 | 2.5 | 2.5.2 | `2.5.2-hybrid-concept-generation.md` | 5KB | Hybrid concepts |
 | 2.5 | 2.5.3 | `2.5.3-hybrid-validation.md` | 3KB | Coherence validation |
@@ -1970,7 +1964,7 @@ Every layer checkpoint YAML must include a `microskill_outputs` section listing 
 
 ### Arena Execution Failures
 
-1. **Running fewer than 3 rounds** -- 3 rounds mandatory. "The concepts look strong after Round 1" is FORBIDDEN.
+1. **Running fewer than 2 rounds** -- 2 rounds + audience evaluation mandatory. "The concepts look strong after Round 1" is FORBIDDEN.
 2. **Skipping any of the 7 personas** -- All 7 must evaluate every round.
 3. **Skipping adversarial critique** -- Every evaluation gets adversarial critique every round.
 4. **Skipping targeted revision** -- Every persona must address their critique.
@@ -1978,7 +1972,7 @@ Every layer checkpoint YAML must include a `microskill_outputs` section listing 
 6. **Auto-selection** -- Human selection is BLOCKING. No timeouts, no defaults.
 7. **Perspective merging** -- Learning absorbs TECHNIQUES not PERSPECTIVE.
 8. **Abbreviating evaluations** -- "Similar to above" or "variation of X" is FORBIDDEN.
-9. **Single-round runs** -- There is NO exception for fewer than 3 rounds.
+9. **Single-round runs** -- There is NO exception for fewer than 2 rounds.
 10. **Evaluating hooks in isolation** -- MUST evaluate complete concepts (hook + script + visual).
 
 ### Evaluation Quality Failures
@@ -1986,7 +1980,7 @@ Every layer checkpoint YAML must include a `microskill_outputs` section listing 
 11. **Scoring without evidence** -- Every score needs specific evidence from the concept.
 12. **Personas without specimens** -- Specimens MUST be loaded before evaluation.
 13. **Consensus-seeking instead of adversarial critique** -- The Critic must find genuine weaknesses.
-14. **Scoring inflation** -- Round 3 scores must reflect genuine improvement, not familiarity.
+14. **Scoring inflation** -- Round 2 (FINAL) scores must reflect genuine improvement, not familiarity.
 15. **Platform-blind evaluation** -- Platform-specific standards must be applied.
 16. **Generic improvement suggestions** -- "Make the hook stronger" is REJECTED. "Rewrite the opening to use a question format that creates a curiosity gap about the mechanism" is ACCEPTED.
 17. **Missing specimen references** -- Evaluations without comparison to loaded specimens are incomplete.
@@ -2010,7 +2004,7 @@ Every layer checkpoint YAML must include a `microskill_outputs` section listing 
 
 27. **Keeping all evaluations verbatim across rounds** -- Follow compression protocol.
 28. **Discarding winner evaluations** -- Winners are ALWAYS kept verbatim.
-29. **Discarding Learning Briefs** -- Always retained in full.
+29. **Discarding Analytical Briefs** -- Always retained in full.
 30. **Continuing past RED zone** -- Complete current round, then break.
 
 ---
@@ -2038,7 +2032,7 @@ All A06 outputs go to the project output root:
         layer-2-outputs/
           2.1-round1-persona-evaluation.md
           2.2-round1-adversarial-critique.md
-          2.3-round1-targeted-revision.md
+          2.2-round + audience evaluation1-targeted-revision.md
           2.4-round1-scoring.md
           2.5-round1-learning-brief.md
           2.6-round2-persona-evaluation.md
@@ -2046,11 +2040,8 @@ All A06 outputs go to the project output root:
           2.8-round2-targeted-revision.md
           2.9-round2-scoring.md
           2.10-round2-cumulative-learning-brief.md
-          2.11-round3-persona-evaluation.md
-          2.12-round3-adversarial-critique.md
-          2.13-round3-targeted-revision.md
-          2.14-round3-final-scoring.md
-          2.15-round3-final-ranking.md
+          2.11-audience-evaluation.md
+          2.12-analyst-synthesis.md
         layer-2.5-outputs/
           2.5.1-improvement-decomposition.md
           2.5.2-hybrid-concept-generation.md
@@ -2090,9 +2081,9 @@ The Ad Arena (A06) adapts the CopywritingEngine Arena protocol (~system/protocol
 
 | Element | Same |
 |---------|------|
-| 3-round mandatory structure | Yes |
+| 2-round + audience evaluation mandatory structure | Yes |
 | Adversarial Critic role (ONE weakness per output) | Yes |
-| Learning Brief between rounds (techniques not voice/perspective) | Yes |
+| Analytical Brief between rounds (techniques not voice/perspective) | Yes |
 | Architect dual role (competitor + post-arena hybrid creator) | Yes |
 | Context compression between rounds | Yes |
 | BLOCKING human selection | Yes |
@@ -2141,12 +2132,12 @@ Every evaluation must:
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0 | 2026-02-22 | Initial creation: Complete A06 Ad Arena specification. 7 ad-specific personas (DR Strategist, Scroll Stopper, UGC Native, Brand Builder, Data Scientist, Visual Storyteller, Architect) with full behavioral specifications. 7 ad-specific judging criteria (Scroll-Stop Power 25%, Visual-Copy Coherence 15%, Mechanism Clarity 15%, Platform Nativeness 15%, Proof Integration 10%, CTA Strength 10%, Memorability 10%) with scoring rubrics. Full 3-round Arena adapted from ~system/protocols/ARENA-CORE-PROTOCOL.md v2.0. Layer architecture: Layer 0 (foundation + specimen validation), Layer 1 (concept assembly), Layer 2 (3-round multi-persona evaluation with critique-revise cycles), Layer 2.5 (synthesis + hybrid generation), Layer 3 (BLOCKING human selection), Layer 4 (output packaging). 31 per-microskill output files. 8 gate checkpoints. Agent Team execution mode with ad-specific persona prompt packages. 30 forbidden behaviors. 10 MC-CHECK checkpoints. Emergency protocols (all-below-threshold, insufficient concepts, tied scores, RED zone). Quality thresholds: 8.0 weighted overall, 7.0 scroll-stop (deal-breaker), 6.5 platform nativeness. Maximum 2 revision cycles on human request. Specimen requirements (15 minimum per persona, niche-matched). Anti-slop enforcement for evaluations. |
+| 1.0 | 2026-02-22 | Initial creation: Complete A06 Ad Arena specification. 7 ad-specific personas (DR Strategist, Scroll Stopper, UGC Native, Brand Builder, Data Scientist, Visual Storyteller, Architect) with full behavioral specifications. 7 ad-specific judging criteria (Scroll-Stop Power 25%, Visual-Copy Coherence 15%, Mechanism Clarity 15%, Platform Nativeness 15%, Proof Integration 10%, CTA Strength 10%, Memorability 10%) with scoring rubrics. Full 2-round + audience evaluation Arena adapted from ~system/protocols/ARENA-CORE-PROTOCOL.md v2.0. Layer architecture: Layer 0 (foundation + specimen validation), Layer 1 (concept assembly), Layer 2 (2-round + audience evaluation multi-persona evaluation with critique-revise cycles), Layer 2.5 (synthesis + hybrid generation), Layer 3 (BLOCKING human selection), Layer 4 (output packaging). 31 per-microskill output files. 8 gate checkpoints. Agent Team execution mode with ad-specific persona prompt packages. 30 forbidden behaviors. 10 MC-CHECK checkpoints. Emergency protocols (all-below-threshold, insufficient concepts, tied scores, RED zone). Quality thresholds: 8.0 weighted overall, 7.0 scroll-stop (deal-breaker), 6.5 platform nativeness. Maximum 2 revision cycles on human request. Specimen requirements (15 minimum per persona, niche-matched). Anti-slop enforcement for evaluations. |
 
 ---
 
 ## ACKNOWLEDGMENT
 
-This protocol exists because **single-evaluator, single-round concept evaluation consistently misses weaknesses that multi-persona adversarial evaluation catches.** A hook that seems brilliant in isolation fails when paired with a weak script. A concept that one evaluator loves gets exposed when 7 specialized lenses scrutinize it. And the best concepts emerge not from Round 1 impressions, but from the learning-improvement cycle across 3 rounds where each persona absorbs what works from other lenses while maintaining their specialized perspective.
+This protocol exists because **single-evaluator, single-round concept evaluation consistently misses weaknesses that multi-persona adversarial evaluation catches.** A hook that seems brilliant in isolation fails when paired with a weak script. A concept that one evaluator loves gets exposed when 7 specialized lenses scrutinize it. And the best concepts emerge not from Round 1 impressions, but from the learning-improvement cycle across 2 rounds + audience evaluation where each persona absorbs what works from other lenses while maintaining their specialized perspective.
 
 The Ad Arena ensures that production investment (A07-A12) is directed only at concepts that have survived the most rigorous evaluation process available. Every dollar spent on production is spent on concepts that 7 specialized evaluators stress-tested across 3 adversarial rounds.

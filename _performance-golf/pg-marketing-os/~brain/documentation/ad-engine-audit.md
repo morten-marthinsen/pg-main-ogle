@@ -149,7 +149,7 @@ Addresses core A05 risks: vague shot descriptions ("show product" instead of spe
 All 4 blocks present. Context includes 7 ad-specific personas with distinct editorial lenses. Task includes 7 ad-specific judging criteria with weights (Scroll-Stop 25%, Visual-Copy Coherence 15%, Mechanism Clarity 15%, Platform Nativeness 15%, Proof 10%, CTA Strength 10%, Memorability 10%). Reference includes specimen requirements (15+ per persona), adversarial Critic role. Output includes round-specific outputs in per-microskill table.
 
 **Constraint Ratio: 9/10**
-High. 3-round mandatory protocol. Human selection gate is BLOCKING. 10 forbidden rationalizations. Specimen loading requirements enforced. Arena judging criteria weights are binding, not advisory. Adversarial Critic severity thresholds defined.
+High. 2-round + audience evaluation mandatory protocol. Human selection gate is BLOCKING. 10 forbidden rationalizations. Specimen loading requirements enforced. Arena judging criteria weights are binding, not advisory. Adversarial Critic severity thresholds defined.
 
 **Guardrail Coverage: 10/10**
 All 6 guardrail elements present: 8 structural fixes, specimen loading protocol, 10 forbidden rationalizations, binary gate enforcement, mandatory read, per-microskill output with round-specific outputs, comprehensive MC-CHECK covering specimens, concept assembly, rounds, critique, scoring, thresholds, synthesis, and human selection verification.

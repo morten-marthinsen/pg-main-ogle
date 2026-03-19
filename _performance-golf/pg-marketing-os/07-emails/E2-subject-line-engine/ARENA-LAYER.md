@@ -5,7 +5,7 @@
 **Position:** Between Layer 2 (SL Generation) and Layer 3 (SL Ranking & Output)
 **Personas:** See [ARENA-PERSONA-PANEL.md](../../~system/protocols/ARENA-PERSONA-PANEL.md)
 
-> **Arena Mode:** `generative_full_draft` -- Competitors each generate 5 subject lines using different formula categories. Layer 2 candidates = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 3-round execution protocol.
+> **Arena Mode:** `generative_full_draft` -- Competitors each generate 5 subject lines using different formula categories. Layer 2 candidates = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 2-round + audience evaluation execution protocol.
 
 ---
 
@@ -55,7 +55,7 @@ Layer 2: Generation (Volume Generation + Variation Expansion)
 |  2.5.2: Adversarial Critique (The Critic identifies weakest SL per set)     |
 |  2.5.3: Targeted Revision (each competitor fixes weakness)                   |
 |  2.5.4: Scoring Round (7 SL-specific criteria)                              |
-|  2.5.5: Learning Brief + Next Round (3 rounds total)                        |
+|  2.5.5: Analytical Brief + Next Round (2 rounds + audience evaluation)       |
 |  2.5.6: Post-Arena Synthesis (best SLs across all competitors)              |
 |  2.5.7: Human Selection Checkpoint (BLOCKING)                               |
 +-----------------------------------------------------------------------------+
@@ -87,7 +87,7 @@ Layer 3: Ranking & Output (Final Scoring + Output Packaging)
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All generation phases use `effort: max`. Critique uses `effort: high`. See ~system/SYSTEM-CORE.md Effort Protocol.
 > **Agent Team Mode:** When Agent Teams enabled, each persona runs as a separate teammate agent with own context. See `~system/protocols/ARENA-CORE-PROTOCOL.md` Agent Team Execution Mode.
@@ -100,7 +100,7 @@ This skill uses `arena_mode: generative_full_draft`:
 - **7 competitors** (6 personas + The Architect) generating independently
 - **Adversarial critique** before scoring (The Critic identifies ONE weakest SL per set)
 - **Targeted revision** (each competitor replaces their weakest SL)
-- **3 rounds** of competition with learning briefs between rounds
+- **2 rounds** of competition with analytical briefs between rounds + audience evaluation
 - **Post-arena synthesis** selecting best individual SLs across all competitors
 - **Human selection** from top 10-15 candidates
 
@@ -339,7 +339,7 @@ EMAIL CONTEXT PACKAGE:
 Unlike full-draft skills where the Synthesizer creates hybrid outputs, SL synthesis works differently:
 
 **SL Synthesis Protocol:**
-1. Collect all Round 3 SLs from all 7 competitors (35 total)
+1. Collect all Round 2 (FINAL) SLs from all 7 competitors (35 total)
 2. Score each individually against 8 criteria
 3. Rank by weighted score
 4. Select top 10-15 for human presentation
@@ -355,7 +355,7 @@ Unlike full-draft skills where the Synthesizer creates hybrid outputs, SL synthe
 **Arena Layer is BLOCKING** -- Cannot proceed to Layer 3 until:
 
 ```
-[ ] All 7 competitors generated across all 3 rounds
+[ ] All 7 competitors generated across all 2 rounds + audience evaluation
 [ ] Adversarial critique completed each round
 [ ] All SL candidates scored against 8 criteria
 [ ] Top 10-15 candidates presented with rationale

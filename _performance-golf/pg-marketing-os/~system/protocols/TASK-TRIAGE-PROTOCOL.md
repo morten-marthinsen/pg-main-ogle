@@ -21,7 +21,7 @@
 
 ## Purpose
 
-Not every project requires the full 7-competitor, 3-round Arena with comprehensive verification across 6 sessions. The Task Triage Protocol defines three effort tiers that constrain **exploration depth** while maintaining **identical quality thresholds**.
+Not every project requires the full 7-competitor, 2-round + audience evaluation Arena with comprehensive verification across 6 sessions. The Task Triage Protocol defines three effort tiers that constrain **exploration depth** while maintaining **identical quality thresholds**.
 
 ---
 
@@ -34,7 +34,7 @@ Not every project requires the full 7-competitor, 3-round Arena with comprehensi
 | Dimension | Specification |
 |-----------|--------------|
 | **Model** | Opus 4.6 (up to 1M via extended sessions) |
-| **Arena** | 3 rounds, 7 competitors, adversarial Critic, Synthesizer |
+| **Arena** | 2 rounds + audience evaluation, 7 competitors, adversarial Critic, Synthesizer |
 | **Verification** | All layers (0-4): Foundation, midpoint, final, per-microskill outputs |
 | **Context Budget** | Premium pricing acceptable — full context loading |
 | **Sessions** | 6-7 (standard architecture) |

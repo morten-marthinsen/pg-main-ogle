@@ -37,7 +37,7 @@ Microskill decomposition complete for both S12 Visual Direction and S13 Arena Ge
 
 ### Layer 2.5: Arena Competition (3 microskills)
 - `2.5.1-arena-submission.md` — Prepare 3 thumbnail concepts for Arena evaluation
-- `2.5.2-adversarial-critique.md` — Execute Arena protocol (7 personas × 3 rounds)
+- `2.5.2-adversarial-critique.md` — Execute Arena protocol (7 personas × 2 rounds + audience evaluation)
 - `2.5.3-synthesis.md` — Generate 3+ hybrids, capture human selection
 
 ### Layer 4: Package Assembly (2 microskills)
@@ -54,7 +54,7 @@ Microskill decomposition complete for both S12 Visual Direction and S13 Arena Ge
 
 ### Core Files (2)
 - `S13-AGENT.md` — Full agent specification, 7 organic personas, Arena protocol
-- `S13-ANTI-DEGRADATION.md` — 9-fix pattern, 3-round enforcement, human selection requirement
+- `S13-ANTI-DEGRADATION.md` — 9-fix pattern, 2-round + audience evaluation enforcement, human selection requirement
 
 ### Layer 0: Input & Context (4 microskills)
 - `0.1-input-validator.md` — Verify content draft, CBF, infrastructure, Arena necessity
@@ -67,9 +67,9 @@ Microskill decomposition complete for both S12 Visual Direction and S13 Arena Ge
 - `1.2-round-1-competition.md` — All 7 personas evaluate content, Round 1 scores
 - `1.3-round-1-critique.md` — Critic challenges Round 1, identifies convergence
 - `1.4-round-2-competition.md` — Personas respond to critique, re-evaluate
-- `1.5-round-2-critique.md` — Critic's second challenge, Round 3 objectives
-- `1.6-round-3-competition.md` — Final evaluations, forced ranking
-- `1.7-round-3-final-scoring.md` — Compile final scores, identify synthesis opportunities
+- `1.5-round-2-critique.md` — Critic's second challenge, Round 2 FINAL objectives
+- `1.6-round-2-final-competition.md` — Final evaluations, forced ranking
+- `1.7-round-2-final-scoring.md` — Compile final scores, identify synthesis opportunities
 
 ### Layer 2.5: Synthesis & Selection (2 microskills)
 - `2.5.1-synthesis-generation.md` — Generate 3+ hybrid content variations
@@ -111,7 +111,7 @@ Both anti-degradation files include:
 3. Binary gate enforcement (PASS or FAIL only)
 4. Stale artifact cleanup
 5. Model selection binding
-6. Skill-specific enforcement (Arena 3-round requirement, brand consistency, etc.)
+6. Skill-specific enforcement (Arena 2-round + audience evaluation requirement, brand consistency, etc.)
 7. Additional skill-specific fixes
 8. Failure mode tables
 9. Forbidden rationalizations

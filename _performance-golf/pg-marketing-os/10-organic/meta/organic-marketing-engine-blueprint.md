@@ -271,7 +271,7 @@ OrganicMarketingEngine/
 │   │   │   ├── SKILL.md
 │   │   │   ├── templates/
 │   │   │   └── outputs/
-│   │   ├── S13-arena-generation/                # The Arena: 7 personas × 3 rounds for any content
+│   │   ├── S13-arena-generation/                # The Arena: 7 personas × 2 rounds + audience evaluation for any content
 │   │   │   ├── SKILL.md
 │   │   │   ├── templates/
 │   │   │   └── outputs/
@@ -488,7 +488,7 @@ S07: Campaign Brief
 ```
 
 ### Phase 2: CONTENT PRODUCTION (Skills S08-S14)
-**The Arena fires here.** Every content piece runs through 7 personas × 3 rounds.
+**The Arena fires here.** Every content piece runs through 7 personas × 2 rounds + audience evaluation.
 
 ### Phase 3: DISTRIBUTION (Skills S15-S18)
 **Content doesn't just get posted — it gets choreographed.**
@@ -554,8 +554,8 @@ S07: Campaign Brief
 2. **Adversarial Critique:** Each persona critiques the other 6 outputs
 3. **Round 2:** Each persona revises based on the strongest critiques
 4. **Adversarial Critique 2:** Second round of critique, focused on synthesis opportunities
-5. **Round 3:** Each persona produces their final version
-6. **Synthesis:** The AI synthesizer extracts the strongest elements from all 21 outputs (7 personas × 3 rounds) and assembles the final content
+5. **Audience Evaluation:** Audience personas score finalists on relevance, believability, and purchase intent
+6. **Synthesis:** The AI synthesizer extracts the strongest elements from all 14 outputs (7 personas × 2 rounds + audience evaluation) and assembles the final content
 
 ---
 

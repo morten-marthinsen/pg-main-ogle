@@ -57,7 +57,7 @@ This agent is a **workflow orchestrator**. It produces the hero section copy, no
 | 0 | Strategy + feature package loading + validation | haiku | Input loading |
 | 1 | Headline formula selection + carousel planning + highlights selection | sonnet | Architecture decisions |
 | 2 | Headline/subhead generation + hero section generation | opus | Creative generation |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality |
 | 4 | Scroll-stop validation + word budget checking + packaging | sonnet | Judgment evaluation |
 
 ---

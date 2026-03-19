@@ -36,23 +36,23 @@ Key finding from the paper: SOTA results rely 44.8% on self-generated analytical
 
 ### Current State in Marketing-OS
 
-The Learning Brief generated after each Arena round contains:
+The Analytical Brief generated after each Arena round contains:
 - Winner persona and score
 - `winning_techniques` (list of techniques with criterion impact and example)
 - Per-competitor feedback with biggest gap criterion
 - `voice_preservation_note` per competitor
 - Scoring gaps with improvement direction
 
-**What's missing:** The Learning Brief says "Makepeace won with score 9.1" and "winning technique: embedded proof within narrative paragraph." It does NOT say:
+**What's missing:** The Analytical Brief says "Makepeace won with score 9.1" and "winning technique: embedded proof within narrative paragraph." It does NOT say:
 - "Makepeace modified proof deployment from 'separate proof block after claim' to 'proof embedded within narrative paragraph.' This modification improved Flow Enhancement from 7.8 to 8.6 (+0.8) and Voice Preservation from 8.2 to 8.5 (+0.3)."
 - "Halbert attempted a similar modification but applied it to the wrong section (mechanism instead of lead), decreasing Clarity by 0.4."
 - "Bencivenga's proof-first architecture scored highest on Threading Preservation (9.2) but lowest on Flow (6.8) — the proof density broke narrative momentum."
 
-The current Learning Brief tells WHAT won. The Analyst tells WHY it won, what the delta was, what the comparison reveals, and what didn't work and why.
+The current Analytical Brief tells WHAT won. The Analyst tells WHY it won, what the delta was, what the comparison reveals, and what didn't work and why.
 
 ### What Changes
 
-Add an Analyst phase between Arena Scoring (Step 1E) and Learning Brief Generation (Step 1F). The Analyst produces a structured "Analytical Brief" that replaces the current Learning Brief with a deeper causal analysis.
+Add an Analyst phase between Arena Scoring (Step 1E) and Analytical Brief Generation (Step 1F). The Analyst produces a structured "Analytical Brief" that replaces the current Analytical Brief with a deeper causal analysis.
 
 ### Architecture
 
@@ -73,7 +73,7 @@ ROUND 1:
     - Isolates WHICH modifications caused WHICH score changes
     - Outputs: analytical-brief.md (replaces learning-brief.md)
   ─────────
-  1F: Analytical Brief Distributed (enhanced Learning Brief)
+  1F: Analytical Brief Distributed (enhanced Analytical Brief)
 ```
 
 ### Files to Create
@@ -91,7 +91,7 @@ by comparing closely related outputs that performed differently.
 
 ## When to Run
 
-After Step 1E (Ranking) and before Step 1F (Learning Brief distribution).
+After Step 1E (Ranking) and before Step 1F (Analytical Brief distribution).
 Runs once per round (3 times total in a Full tier Arena).
 
 ## Analyst Subagent Configuration
@@ -106,7 +106,7 @@ The Analyst receives:
 1. ALL 7 scored outputs (full text)
 2. ALL 7 critiques from the Critic (full text)
 3. scores.yaml — all scores across all 7 criteria
-4. Previous round's analytical-brief.md (Rounds 2-3 only)
+4. Previous round's analytical-brief.md (Round 2 only)
 
 ## Analyst Comparison Framework
 
@@ -133,7 +133,7 @@ The Analyst receives:
 - When siblings score differently on the SAME criterion, the difference
   isolates the technique variant — same goal, different execution
 
-### Comparison 4: Round-over-Round (Rounds 2-3 only)
+### Comparison 4: Round-over-Round (Round 2 only)
 - Compare each persona's current output to their previous round output
 - For each persona that improved: what specifically changed?
 - For each persona that declined: what technique was lost?
@@ -204,15 +204,15 @@ analytical_brief:
       why_it_failed: "[causal explanation]"
 ```
 
-## Integration with Learning Brief
+## Integration with Analytical Brief
 
-The Analytical Brief REPLACES the current Learning Brief structure.
+The Analytical Brief REPLACES the current Analytical Brief structure.
 The current `winning_techniques` field becomes the `winner_analysis.defining_technique`.
 The current `per_competitor_feedback` becomes the more specific
 `technique_transfer_recommendations` with expected impact quantification.
 
-The Analytical Brief is a superset of the Learning Brief — it contains
-everything the Learning Brief had plus the causal analysis.
+The Analytical Brief is a superset of the Analytical Brief — it contains
+everything the Analytical Brief had plus the causal analysis.
 
 ## Analyst vs. Judge
 
@@ -236,7 +236,7 @@ The Analyst subagent receives:
 
 ## Cost
 
-One Opus 4.6 subagent call per round × 3 rounds = 3 calls.
+One Opus 4.6 subagent call per round × 2 rounds + audience evaluation = 3 calls.
 Each call: ~50K input + ~5K output = ~55K tokens.
 Total per Arena: ~165K tokens on Opus.
 At Opus pricing (~$15-75/M tokens depending on caching): ~$2.50-$12 per Arena.
@@ -246,9 +246,9 @@ At Opus pricing (~$15-75/M tokens depending on caching): ~$2.50-$12 per Arena.
 
 | File | Change |
 |------|--------|
-| `~system/protocols/ARENA-CORE-PROTOCOL.md` | Add Step 1E.5 (Analyst Phase) between Ranking and Learning Brief. Update Learning Brief section to reference Analytical Brief format. Update Round 1/2/3 execution flows. |
+| `~system/protocols/ARENA-CORE-PROTOCOL.md` | Add Step 1E.5 (Analyst Phase) between Ranking and Analytical Brief. Update Analytical Brief section to reference Analytical Brief format. Update Round 1/2/3 execution flows. |
 | `~system/ARENA-PROTOCOL.md` | Add Analyst role to Agent Team Structure. Note that Analyst runs on Opus (Strategy role). |
-| `~system/protocols/SUBAGENT-ARENA-PROTOCOL.md` (if created from OpenDev Enhancement 3) | Add Analyst subagent to orchestration flow. Place between Judge and Learning Brief distribution. |
+| `~system/protocols/SUBAGENT-ARENA-PROTOCOL.md` (if created from OpenDev Enhancement 3) | Add Analyst subagent to orchestration flow. Place between Judge and Analytical Brief distribution. |
 | `~system/MODEL-ROUTING.md` | Add Analyst to Arena Role Routing table (Opus 4.6, Strategy role). |
 
 ### Key Implementation Decisions
@@ -259,14 +259,14 @@ At Opus pricing (~$15-75/M tokens depending on caching): ~$2.50-$12 per Arena.
 
 3. **Read-only:** The Analyst reads outputs and writes the analytical brief. No generation, no modification of outputs.
 
-4. **The Analytical Brief replaces the Learning Brief** — it's a superset. The current Learning Brief fields all exist within the Analytical Brief format, plus the causal analysis layer.
+4. **The Analytical Brief replaces the Analytical Brief** — it's a superset. The current Analytical Brief fields all exist within the Analytical Brief format, plus the causal analysis layer.
 
-5. **Round-over-round analysis (Rounds 2-3):** The Analyst receives the previous round's brief, enabling cumulative learning. "In Round 1, persona X tried technique A and it failed. In Round 2, they modified it to technique A' and it improved by 0.4. This suggests the modification [description] is the operative change."
+5. **Round-over-round analysis (Round 2):** The Analyst receives the previous round's brief, enabling cumulative learning. "In Round 1, persona X tried technique A and it failed. In Round 2, they modified it to technique A' and it improved by 0.4. This suggests the modification [description] is the operative change."
 
 ### Effort Estimate
 
 - ANALYST-PROTOCOL.md: ~3 hours
-- Modify ARENA-CORE-PROTOCOL.md (add Step 1E.5 to all 3 rounds): ~2 hours
+- Modify ARENA-CORE-PROTOCOL.md (add Step 1E.5 to both rounds + audience evaluation): ~2 hours
 - Modify ARENA-PROTOCOL.md (add Analyst to Agent Team): ~30 min
 - Modify MODEL-ROUTING.md (add Analyst routing): ~15 min
 - Build Analyst subagent prompt template: ~2 hours
@@ -447,7 +447,7 @@ With sigmoid scoring:
 
 | Tier | Sigmoid Scoring? |
 |------|-----------------|
-| Full | YES — all 3 rounds |
+| Full | YES — both rounds + audience evaluation |
 | Standard | YES — 1 round |
 | Quick | N/A — no Arena |
 
@@ -1187,7 +1187,7 @@ QUERY: "mechanism narrative winners, health vertical"
 RETURN: winning techniques, persona that won, analyst insights
 ```
 
-This supplements the Learning Brief with cross-campaign evidence.
+This supplements the Analytical Brief with cross-campaign evidence.
 
 ### After Campaign Completion
 
@@ -1272,9 +1272,9 @@ Component preference analysis across ~5,000 component instances shows:
 
 ### Current State in Marketing-OS
 
-The convergence detector (implemented in OpenDev Enhancement 7) uses a single convergence threshold applied uniformly across all rounds. But the ASI-Arch finding suggests Round 1 convergence and Round 3 convergence mean different things.
+The convergence detector (implemented in OpenDev Enhancement 7) uses a single convergence threshold applied uniformly across all rounds. But the ASI-Arch finding suggests Round 1 convergence and Round 2 (FINAL) convergence mean different things.
 
-**Already partially implemented:** The CONVERGENCE-INTERVENTION-PROTOCOL.md (created in this session) includes round-aware thresholds: 40% for Round 1, 50% for Round 2, 60% for Round 3. The `convergence_detector.py` implements the `PERSONA_OVERLAP_THRESHOLDS` dictionary with these values.
+**Already partially implemented:** The CONVERGENCE-INTERVENTION-PROTOCOL.md (created in this session) includes round-aware thresholds: 40% for Round 1, 50% for Round 2, 60% for Round 2 (FINAL). The `convergence_detector.py` implements the `PERSONA_OVERLAP_THRESHOLDS` dictionary with these values.
 
 ### What Changes
 
@@ -1284,8 +1284,8 @@ This enhancement is ALREADY IMPLEMENTED in the OpenDev Enhancement 7 files creat
 
 | File | Change |
 |------|--------|
-| `~system/protocols/ARENA-CORE-PROTOCOL.md` | Update "Adaptive Convergence Governor" (Upgrade 2.2) to reference round-aware thresholds from CONVERGENCE-INTERVENTION-PROTOCOL.md. Explicitly state that Round 3 convergence toward the winner is expected and allowed. |
-| `~system/protocols/ARENA-DIVERSITY-PROTOCOL.md` | Add note: "Round 3 convergence thresholds are relaxed (60%) because convergence toward proven approaches is a feature of high-quality output, not a flaw." |
+| `~system/protocols/ARENA-CORE-PROTOCOL.md` | Update "Adaptive Convergence Governor" (Upgrade 2.2) to reference round-aware thresholds from CONVERGENCE-INTERVENTION-PROTOCOL.md. Explicitly state that Round 2 (FINAL) convergence toward the winner is expected and allowed. |
+| `~system/protocols/ARENA-DIVERSITY-PROTOCOL.md` | Add note: "Round 2 (FINAL) convergence thresholds are relaxed (60%) because convergence toward proven approaches is a feature of high-quality output, not a flaw." |
 | `~brain/research-compilation.md` | Update Enhancement 7 status from "Planned" to "Implemented" with reference to CONVERGENCE-INTERVENTION-PROTOCOL.md and convergence_detector.py. |
 
 ### Effort Estimate

@@ -29,7 +29,7 @@
 
 1. **Strategy is not copy.** These skills produce strategic frameworks, not prose. Root cause framing, mechanism development, promise calibration — these are intellectual exercises, not writing exercises. If your output reads like a sales page, you are doing it wrong.
 2. **Each skill builds on the last.** Root Cause → Mechanism → Promise → Big Idea → Offer → Structure → Campaign Brief. Skipping a skill or reordering the sequence produces incoherent foundations.
-3. **The Arena is mandatory for Big Idea.** Skill 06 runs a 3-round Arena with minimum 3 personas. Big Ideas generated without competitive pressure converge on the first "good enough" concept.
+3. **The Arena is mandatory for Big Idea.** Skill 06 runs a 2-round + audience evaluation Arena with minimum 3 personas. Big Ideas generated without competitive pressure converge on the first "good enough" concept.
 4. **Proof constrains promises.** The promise ceiling (from Skill 02) determines what Skill 05 can claim. Bold promises without proof backing are lies, not marketing.
 5. **The Campaign Brief is the contract.** Skill 09 audits coherence across all foundation skills. If it detects contradictions, the contradiction is resolved BEFORE writing begins — never during.
 
@@ -57,7 +57,7 @@ The model describes a mechanism in generic terms — "our proprietary blend" or 
 The model makes claims that sound impressive but cannot be backed by the proof inventory. Or the opposite — the promise is so timid it creates no desire. **The fix:** Skill 05 calibrates against the promise ceiling from Skill 02. Bold enough to compel, calibrated enough to believe.
 
 ### Pattern 4: The First-Draft Big Idea
-The model generates one Big Idea and declares it done. Big Ideas require competitive pressure — multiple candidates, Arena scoring, and explicit evaluation against novelty and market saturation. **The fix:** Skill 06 mandates a 3-round Arena with minimum 3 personas. The first idea is rarely the best.
+The model generates one Big Idea and declares it done. Big Ideas require competitive pressure — multiple candidates, Arena scoring, and explicit evaluation against novelty and market saturation. **The fix:** Skill 06 mandates a 2-round + audience evaluation Arena with minimum 3 personas. The first idea is rarely the best.
 
 ### Pattern 5: The Feature Dump Offer
 The model lists product features and calls it an offer. An offer is a strategic construction — core product + bonuses + guarantee + value anchoring + urgency mechanism — designed to make saying yes the only rational choice. **The fix:** Skill 07 architects the offer as a persuasion system, not a feature list.
@@ -109,7 +109,7 @@ Skill 05: Promise Calibration
 
 Skill 06: Big Idea Generation
   → Generate worldview-shifting creative concept
-  → 3-round Arena with minimum 3 personas
+  → 2-round + audience evaluation Arena with minimum 3 personas
   → Output: big-idea-output.json
 
 Skill 07: Offer Stack Design
@@ -186,7 +186,7 @@ The promise is the specific, believable outcome the product delivers. Bold enoug
 The Big Idea is the worldview-shifting insight that hooks the audience. Not a tagline — a central creative concept that makes the audience see their problem differently. All campaign elements orbit the Big Idea.
 
 **Key outputs:** Central concept, creative wrapper, headline seeds, angle architecture
-**Arena:** 3-round with minimum 3 personas (mandatory)
+**Arena:** 2-round + audience evaluation with minimum 3 personas (mandatory)
 **Layer architecture:** Layer 0 (vertical profile, persona voice, Tier 1 expression reference), Layer 3 (expression anchoring score)
 
 ---

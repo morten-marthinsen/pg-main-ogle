@@ -5,7 +5,7 @@
 **Position:** Between Layer 2 (Email Generation) and Layer 3 (Validation & Output)
 **Personas:** See [ARENA-PERSONA-PANEL.md](../../~system/protocols/ARENA-PERSONA-PANEL.md)
 
-> **Arena Mode:** `generative_full_draft` -- Competitors write COMPLETE emails from scratch using upstream packages and structural specimens. Layer 2 draft = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 3-round execution protocol.
+> **Arena Mode:** `generative_full_draft` -- Competitors write COMPLETE emails from scratch using upstream packages and structural specimens. Layer 2 draft = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 2-round + audience evaluation execution protocol.
 
 ---
 
@@ -82,7 +82,7 @@ Incomplete Arena execution = SKILL FAILURE.
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All generation phases use `effort: max`. Critique uses `effort: high`. See ~system/SYSTEM-CORE.md Effort Protocol.
 > **Agent Team Mode:** When Agent Teams enabled, each persona runs as a separate teammate agent with full-draft generation in its own 200K context. See `~system/protocols/ARENA-CORE-PROTOCOL.md` v2.0 Agent Team Execution Mode.
@@ -95,7 +95,7 @@ This skill uses `arena_mode: generative_full_draft`:
 - **7 competitors** (6 personas + The Architect) generating independently
 - **Adversarial critique** before scoring (The Critic identifies ONE weakest element per output)
 - **Targeted revision** (each competitor fixes their identified weakness)
-- **3 rounds** of competition with learning briefs between rounds
+- **2 rounds** of competition with analytical briefs between rounds + audience evaluation
 - **Post-arena synthesis** (Layer 2.6) creating 2-3 phrase-level hybrids
 - **Human selection** from 9-10 candidates (7 pure + 2-3 hybrids)
 

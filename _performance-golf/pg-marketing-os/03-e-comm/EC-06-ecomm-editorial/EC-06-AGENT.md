@@ -55,7 +55,7 @@ This agent is a **workflow orchestrator**. It edits and refines -- it does not r
 | 0 | Loading assembled copy + specimens + strategy | haiku | Input loading |
 | 1 | Scan optimization audit + proof density review | sonnet | Analytical judgment |
 | 2 | Editorial revision + design note completeness | opus | Quality-focused revision |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality editorial |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality editorial |
 | 4 | Quality scoring + feature consistency + packaging | sonnet | Final evaluation |
 
 ---

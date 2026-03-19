@@ -62,7 +62,7 @@ Transform the strategic offer package (from Skill 11) into the product introduct
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Introduction type + bridge architecture + price architecture classification | sonnet | Pattern matching from vault |
 | 2 | Full draft (bridge + reveal + components + price) | opus | Creative generation — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Refinement + 8-principle validation | opus | Judgment-heavy evaluation |
 | 4 | Validation + packaging | sonnet | Assembly from existing content |
 

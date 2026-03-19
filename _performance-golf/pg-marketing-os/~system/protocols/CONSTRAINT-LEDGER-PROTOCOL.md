@@ -55,7 +55,7 @@ constraint_ledger:
     - id: "CL-002"
       skill: "04-mechanism"
       decision: "Selected mechanism: Fascia Rebound Pathway"
-      rationale: "Arena Round 3 winner (Clemens variant), 9.1 mechanism clarity, unique in market"
+      rationale: "Arena Round 2 (FINAL) winner (Clemens variant), 9.1 mechanism clarity, unique in market"
       constraints:
         - "Mechanism name 'Fascia Rebound Pathway' used VERBATIM — no paraphrasing, no abbreviation"
         - "Mechanism explanation must include the 3-phase sequence (release → rebound → stabilize)"

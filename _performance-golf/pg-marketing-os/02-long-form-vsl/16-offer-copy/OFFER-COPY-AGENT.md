@@ -64,7 +64,7 @@ Transform the strategic offer architecture (from Skill 11) and the product intro
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Offer format classification + D-F-W-B-P sequence mapping | sonnet | Structural classification |
 | 2 | Full draft (D-F-W-B-P + value demo + price + CTAs) | opus | Creative generation — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Refinement + 10-principle validation | opus | Judgment-heavy evaluation |
 | 4 | Validation + packaging | sonnet | Assembly from existing content |
 

@@ -46,7 +46,7 @@ Perform systematic quality review and revision of the complete assembled email c
 
 **Success Criteria:**
 - Every email scored BEFORE and AFTER revision (baseline vs. final)
-- All P1/P2 issues addressed through full Arena (3 rounds, 7 competitors)
+- All P1/P2 issues addressed through full Arena (2 rounds + audience evaluation, 7 competitors)
 - All P3/P4 issues addressed through direct fixes
 - Final score >= 7.5 for EVERY individual email
 - Campaign-level criteria (C1-C5) all verified
@@ -170,7 +170,7 @@ IDLE -> LOADING -> AUDIT -> REVISION -> RESCORING -> COMPLETE
 | Skill | File | Function |
 |-------|------|----------|
 | 2.1 | `2.1-issue-clustering.md` | Group issues by type and severity (P1 critical, P2 major, P3 minor, P4 cosmetic). Create revision plan. |
-| 2.2 | `2.2-revision-executor.md` | Apply revisions: P1/P2 = full Arena (3 rounds, 7 competitors). P3/P4 = direct fix. |
+| 2.2 | `2.2-revision-executor.md` | Apply revisions: P1/P2 = full Arena (2 rounds + audience evaluation, 7 competitors). P3/P4 = direct fix. |
 
 **Execution Order:**
 1. 2.1 first (cluster and prioritize)

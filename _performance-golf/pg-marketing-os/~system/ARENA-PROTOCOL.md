@@ -10,7 +10,7 @@
 
 ## ARENA LAYER (2.5) MANDATORY PROTOCOL
 
-The Arena Layer transforms single-perspective generation into **7-competitor, 3-round competition with adversarial critique-revise cycles**. Seven competitors (6 legendary copywriter personas + The Architect) each generate their version, receive adversarial critique, revise, get scored, learn from winners, and compete again across 3 mandatory rounds.
+The Arena Layer transforms single-perspective generation into **7-competitor, 2-round + audience evaluation competition with adversarial critique-revise cycles**. Seven competitors (6 legendary copywriter personas + The Architect) each generate their version, receive adversarial critique, revise, get scored, learn from winners, and compete again across 2 mandatory rounds + audience evaluation.
 
 **Full Protocol:** `~system/protocols/ARENA-CORE-PROTOCOL.md`
 **Persona Specs:** `~system/protocols/ARENA-PERSONA-PANEL.md`
@@ -42,46 +42,42 @@ A **dedicated adversarial critic** evaluates every output using the SAME 7 skill
 - Provides **actionable fix direction** (not vague "make it better")
 - Must **cite evidence** from the output
 
-### 3-Round Mandatory Execution Flow
+### 2-Round + Audience Evaluation Mandatory Execution Flow
 
 ```
 ROUND 1:
   1A: 7 Competitors Generate → 1B: Critic Identifies Weakness →
-  1C: Targeted Revision → 1D: Scoring → 1E: Ranking → 1F: Learning Brief
+  1C: Targeted Revision → 1D: Scoring → 1E: Ranking → 1F: Analytical Brief
   --- Context compression: non-winners compressed to summaries ---
 
 ROUND 2:
-  2A: Learning Brief distributed → 2B: 7 Re-generate (incorporating learnings) →
-  2C: Critique → 2D: Revision → 2E: Scoring → 2F: Cumulative Learning Brief
+  2A: Analytical Brief distributed → 2B: 7 Re-generate (incorporating learnings) →
+  2C: Critique → 2D: Revision → 2E: Scoring → 2F: Cumulative Analytical Brief
   --- Context compression ---
 
-ROUND 3:
-  3A: Cumulative Brief distributed → 3B: 7 Generate FINAL →
-  3C: Critique → 3D: Revision → 3E: FINAL Scoring → 3F: FINAL Ranking
-
 POST-ARENA (Layer 2.6):
-  Synthesizer decomposes all 7 Round 3 outputs → 2-3 phrase-level hybrids
+  Synthesizer decomposes all 7 Round 2 (FINAL) outputs → 2-3 phrase-level hybrids
 
 HUMAN SELECTION (BLOCKING):
-  7 pure Round 3 outputs + 2-3 hybrids = 9-10 candidates
+  7 pure Round 2 (FINAL) outputs + 2-3 hybrids = 9-10 candidates
 ```
 
-**This is NOT optional. NOT a flag. 3 rounds DEFAULT. Every Arena runs 3 rounds.**
+**This is NOT optional. NOT a flag. 2 rounds + audience evaluation DEFAULT. Every Arena runs 2 rounds + audience evaluation.**
 
 ### Learning Between Rounds: Techniques Not Voice
 
 Losers absorb the winner's TECHNIQUES but maintain their persona voice:
 - Halbert learning Ogilvy's credibility technique doesn't make Halbert sound like Ogilvy
 - Bencivenga using Makepeace's flow transitions doesn't abandon proof-first architecture
-- The Learning Brief MUST include `voice_preservation_note` per competitor
+- The Analytical Brief MUST include `voice_preservation_note` per competitor
 
 ### Arena Modes
 
 | Mode | Skills | What Changes |
 |------|--------|-------------|
-| `strategic` | 03-08 | No behavioral change. Add 3-round + critique. |
+| `strategic` | 03-08 | No behavioral change. Add 2-round + audience evaluation + critique. |
 | `generative_full_draft` | 10-18 | Competitors write COMPLETE PIECES from upstream packages. Layer 2 draft = reference material, not template. |
-| `editorial_revision` | 20 | Stays revision-based. Per-issue competition. P1/P2 = 3 rounds; P3+ can bypass with human confirmation. |
+| `editorial_revision` | 20 | Stays revision-based. Per-issue competition. P1/P2 = 2 rounds + audience evaluation; P3+ can bypass with human confirmation. |
 
 ### The 7 Default Judging Criteria
 
@@ -110,7 +106,7 @@ MINIMUM SCORES FOR ACCEPTANCE:
 **Arena Layer is BLOCKING** — Cannot proceed to Layer 3 until:
 
 ```
-[ ] All 7 competitors generated across all 3 rounds
+[ ] All 7 competitors generated across both rounds + audience evaluation
 [ ] Adversarial critique completed each round
 [ ] All candidates scored against 7 criteria
 [ ] Post-arena synthesis complete (2-3 hybrids)
@@ -135,29 +131,28 @@ MINIMUM SCORES FOR ACCEPTANCE:
 
 | Transition | Keep (Verbatim) | Compress (to Summaries) |
 |-----------|-----------------|------------------------|
-| R1 → R2 | Winner output + Learning Brief + all scores | Non-winning outputs → 2-3 sentences each |
-| R2 → R3 | R1+R2 winners + Cumulative Learning Brief + R2 scores | R1 non-winners + R2 non-winners |
-| R3 → Selection | ALL 7 Round 3 outputs (full) + hybrids | Prior round summaries can be dropped |
+| R1 → R2 | Winner output + Analytical Brief + all scores | Non-winning outputs → 2-3 sentences each |
+| R2 → Selection | ALL 7 Round 2 (FINAL) outputs (full) + hybrids | Prior round summaries can be dropped |
 
 ### Convergence Detection & Remediation
 
 Three automated detection modes monitor Arena output quality:
 
-1. **Persona Convergence** — 5-gram overlap between persona outputs within a round. Round-aware thresholds (40%/50%/60% for rounds 1/2/3). Flags when 3+ personas share above-threshold overlap.
+1. **Persona Convergence** — 5-gram overlap between persona outputs within a round. Round-aware thresholds (40%/50% for rounds 1/2). Flags when 3+ personas share above-threshold overlap.
 2. **Round Stagnation** — Score improvement <0.2 between rounds with same winner. Presents human with options: continue, accept, or inject constraint.
 3. **Output Repetition** — 3-sentence block appearing twice within a single output. Halts generation immediately.
 
 **Convergence remediation** (when detection fires):
 - **Round 1 convergence = BAD** — personas haven't differentiated yet. Inject divergence constraint: force each converging persona to anchor on a different proof element or audience segment.
 - **Round 2 convergence = MONITOR** — some convergence is expected as losers absorb techniques. Flag if overlap > threshold but allow continuation.
-- **Round 3 convergence = ACCEPTABLE** — natural convergence toward quality. Allow unless overlap > 70% (which indicates the Arena has collapsed into a single voice).
+- **Round 2 (FINAL) convergence = ACCEPTABLE** — natural convergence toward quality. Allow unless overlap > 70% (which indicates the Arena has collapsed into a single voice).
 
 **Full protocol:** `~system/protocols/CONVERGENCE-INTERVENTION-PROTOCOL.md`
 **Automated detector:** `.hooks/validators/convergence_detector.py`
 
 ### Cross-Arena Learning
 
-Arena Learning Briefs capture technique-level insights within a single skill's Arena run. **Cross-Arena learning** aggregates these across campaigns to identify persistent patterns:
+Arena Analytical Briefs capture technique-level insights within a single skill's Arena run. **Cross-Arena learning** aggregates these across campaigns to identify persistent patterns:
 
 - Which personas consistently win for which skill types?
 - Which techniques transfer well across products/verticals?
@@ -210,7 +205,7 @@ When running Arena in single-context mode, use file I/O as a contamination barri
 FOR EACH COMPETITOR IN SEQUENCE:
   1. Write previous competitor's output to file
   2. Clear conversation of previous competitor's generation content
-  3. Re-read ONLY: upstream packages + specimens + persona spec + Learning Brief
+  3. Re-read ONLY: upstream packages + specimens + persona spec + Analytical Brief
   4. Generate current competitor's output from file-loaded context ONLY
   5. Write output to file immediately
 
@@ -252,9 +247,9 @@ ROUND 1:
   Team Lead → Distributes critiques back to persona teammates
   All 7 revise targeted weakness IN PARALLEL (effort: max)
   Team Lead → Collects revised outputs → Sends to Judge Agent
-  Judge Agent → Scores all 7, generates Learning Brief (effort: high)
+  Judge Agent → Scores all 7, generates Analytical Brief (effort: high)
 
-ROUNDS 2-3: Same flow with cumulative learning.
+ROUND 2: Same flow with cumulative learning.
 
 POST-ARENA:
   Architect Agent → Creates 2-3 phrase-level hybrids (effort: max)
@@ -265,13 +260,13 @@ POST-ARENA:
 
 ## MULTI-ROUND ARENA ENFORCEMENT
 
-**Why 3 Rounds Are Mandatory:**
+**Why 2 Rounds + Audience Evaluation Are Mandatory:**
 
 - Round 1: Raw talent — each competitor's natural approach
 - Round 2: Informed talent — winners' techniques distributed, losers improve
-- Round 3: Peak performance — cumulative learning, final competitive push
+- Round 2 (FINAL): Peak performance — cumulative learning, final competitive push
 
-**There is NO exception for fewer than 3 rounds.** The only bypass is `editorial_revision` mode for P3+ issues.
+**There is NO exception for fewer than 2 rounds.** The only bypass is `editorial_revision` mode for P3+ issues.
 
 ---
 
@@ -294,11 +289,11 @@ This hybrid gives AutoResearch's speed (volume) combined with Arena's judgment (
 
 ## SYNTHESIZER LAYER (2.6) MANDATORY PROTOCOL
 
-The Synthesizer Layer creates hybrid candidates by extracting the best **phrases and micro-elements** from each competitor's Round 3 output and reconstructing new unified outputs.
+The Synthesizer Layer creates hybrid candidates by extracting the best **phrases and micro-elements** from each competitor's Round 2 (FINAL) output and reconstructing new unified outputs.
 
 **The Architect plays a DUAL ROLE:**
-1. **In-Arena Competitor** (Rounds 1-3)
-2. **Post-Arena Hybrid Creator** (After Round 3)
+1. **In-Arena Competitor** (Rounds 1-2)
+2. **Post-Arena Hybrid Creator** (After Round 2 (FINAL))
 
 **Reference:** Full protocol in `SYNTHESIZER-LAYER.md`
 

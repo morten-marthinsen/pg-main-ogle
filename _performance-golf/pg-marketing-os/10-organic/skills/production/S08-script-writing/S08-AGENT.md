@@ -30,7 +30,7 @@ Produce platform-native video scripts optimized for attention, retention, and co
 - Each script has hook (0-3 seconds), body, and CTA
 - Platform-native formatting (NOT cross-posted)
 - Timing annotations and visual direction included
-- Arena completed (3 rounds, 7 personas)
+- Arena completed (2 rounds + audience evaluation, 7 personas)
 - Virality score >= 60
 
 ---
@@ -101,7 +101,7 @@ Produce platform-native video scripts optimized for attention, retention, and co
 
 > **Critical Constraints Reminder (Layer 2.5)**
 > - Read ANTI-DEGRADATION.md before executing
-> - 3 rounds mandatory, NO exceptions
+> - 2 rounds + audience evaluation mandatory, NO exceptions
 > - All 7 personas must compete
 
 ### Layer 2.5: Arena
@@ -158,7 +158,7 @@ Produce platform-native video scripts optimized for attention, retention, and co
                           ▼
 ┌───────────────────────────────────────────────────────────┐
 │              LAYER 2.5: ARENA (opus)                      │
-│   7 Personas × 3 Rounds → Synthesis → Human Selection    │
+│   7 Personas × 2 Rounds + Audience Eval → Synthesis → Human Selection │
 │              GATE: ARENA_COMPLETE.yaml                    │
 └─────────────────────────┬─────────────────────────────────┘
                           │
@@ -291,7 +291,7 @@ quality_gates_passed:
 - NEVER label final until Arena complete
 
 ### Arena Constraints (Layer 2.5)
-- NEVER run fewer than 3 rounds
+- NEVER run fewer than 2 rounds
 - NEVER skip any of the 7 personas
 - NEVER proceed without human selection after Arena
 - NEVER accept mono-voice output

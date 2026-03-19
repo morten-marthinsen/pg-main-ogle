@@ -261,7 +261,7 @@ final_score:
 [What was requested in one line]
 
 ### Synthesis Stats
-- Total Submissions: 21 (7 personas × 3 rounds)
+- Total Submissions: 21 (7 personas × 2 rounds + audience evaluation)
 - Critiques Generated: 84 (42 per round)
 - Synthesis Difficulty: [Easy/Medium/Hard]
 

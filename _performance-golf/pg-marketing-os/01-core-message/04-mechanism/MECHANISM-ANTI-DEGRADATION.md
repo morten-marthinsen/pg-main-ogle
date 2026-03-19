@@ -273,7 +273,7 @@ MECH-MC-CHECK:
     arena_complete_yaml_exists: [Y/N]
     if_no: "STOP — Arena Layer (2.5) is MANDATORY. Cannot proceed to Layer 3."
     rounds_completed: [number]
-    if_under_3: "STOP — All 3 rounds required"
+    if_under_2: "STOP — All 2 rounds required"
     human_selection_received: [Y/N]
     if_no: "STOP — Human selection is BLOCKING"
     am_i_thinking_arena_is_optional: [Y/N]
@@ -348,7 +348,7 @@ proof_mapping:
 ## STRUCTURAL FIX 8: ARENA LAYER MANDATORY ENFORCEMENT
 
 ### The Problem
-Arena Layer (2.5) can be skipped during execution — AI goes directly from Layer 2 to Layer 3, bypassing the 7-competitor, 3-round competition. This eliminates the highest-value quality step.
+Arena Layer (2.5) can be skipped during execution — AI goes directly from Layer 2 to Layer 3, bypassing the 7-competitor, 2-round + audience evaluation competition. This eliminates the highest-value quality step.
 
 ### The Fix
 
@@ -358,7 +358,7 @@ Arena Layer (2.5) can be skipped during execution — AI goes directly from Laye
 ```
 
 This file is created ONLY after:
-1. All 7 competitors have generated across 3 rounds
+1. All 7 competitors have generated across 2 rounds
 2. Adversarial critique completed each round
 3. Targeted revision completed each round
 4. All candidates scored against 7 criteria
@@ -481,7 +481,7 @@ IF any forbidden status is generated:
 | 0 | Input validation + loading | haiku | Simple validation |
 | 1 | Ideation (emphasis, naming, explanation, analogy, proof mapping) | opus | Deep creative analysis — naming requires nuanced niche understanding |
 | 2 | Scorecard optimization (13 dimensions) | opus | Judgment-heavy scoring against rubrics |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Competitive generation — maximum quality required |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Competitive generation — maximum quality required |
 | 3 | Validation + selection | opus | Judgment-heavy scoring and comparison |
 | 4 | Output packaging | sonnet | Assembly from existing content |
 
@@ -712,15 +712,13 @@ LAYER 2.5 (ARENA — MANDATORY, CANNOT BE SKIPPED):
 [ ] All 7 competitors generated (Round 1)
 [ ] Adversarial critique completed (Round 1)
 [ ] Targeted revision completed (Round 1)
-[ ] Scoring and Learning Brief (Round 1)
+[ ] Scoring and Analytical Brief (Round 1)
 [ ] All 7 competitors regenerated (Round 2)
 [ ] Adversarial critique completed (Round 2)
 [ ] Targeted revision completed (Round 2)
-[ ] Scoring and Cumulative Learning Brief (Round 2)
-[ ] All 7 competitors generate FINAL (Round 3)
-[ ] Adversarial critique completed (Round 3)
-[ ] Targeted revision completed (Round 3)
-[ ] FINAL scoring and ranking (Round 3)
+[ ] Scoring and Cumulative Analytical Brief (Round 2)
+[ ] Audience evaluation completed (Round 2 FINAL)
+[ ] FINAL scoring and ranking (Round 2 FINAL)
 [ ] Post-Arena Synthesis: 2-3 hybrids created
 [ ] 9-10 candidates presented to human
 [ ] Human selection received (BLOCKING)
@@ -773,7 +771,7 @@ The Mechanism skill has 4 layers + Arena for a reason:
 - Layer 0: Load all inputs (can't create in vacuum)
 - Layer 1: IDEATE mechanism options with naming and analogy
 - Layer 2: OPTIMIZE against all 13 scorecard dimensions
-- **Layer 2.5: COMPETE — 7 personas, 3 rounds, adversarial critique, human selection**
+- **Layer 2.5: COMPETE — 7 personas, 2 rounds + audience evaluation, adversarial critique, human selection**
 - Layer 3: VALIDATE score meets threshold
 - Layer 4: Package for downstream skills
 

@@ -1747,7 +1747,7 @@ A05 (Visual Direction) -- UPSTREAM
   A07's visual column must be SPECIFIC enough for a video editor to execute.
 
 A06 (Ad Arena) -- UPSTREAM
-  A06 SELECTED the winning concepts through 3-round adversarial competition.
+  A06 SELECTED the winning concepts through 2-round + audience evaluation adversarial competition.
   A07 writes copy for THESE concepts ONLY.
   A07 does NOT generate new concepts or modify Arena-selected concepts.
 
@@ -1791,4 +1791,4 @@ A07 DOES:
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0 | 2026-02-22 | Initial creation. Full layer architecture (Pre-Exec, Layer 0-4 with Layer 2.5 quality check). 3 Laws of Copy Production. 7 degradation patterns with fixes. Variant Generation Model with concept-to-variant hierarchy. CTA Lever Taxonomy (7 levers). Platform Adaptation Protocol (5 required differences). Hook Swap Generation Protocol with taxonomy diversity requirements. Word Count Compliance Table format. Hook-Body Coherence Matrix format. Variant ID naming convention. AD-COPY-FINAL/ directory structure. Per-variant file format. COPY-PRODUCTION-PACKAGE.md output schema (9 sections). 6 gates (0, 1, 2, 2.5, 3, 4) with full YAML schemas. Gate failure expansion protocol (3 rounds + human escalation). 10 forbidden rationalizations. 30 forbidden behaviors. Model assignment table (opus for generation/quality, sonnet for assembly/packaging, haiku for infrastructure/loading). A07-specific MC-CHECK. Effort protocol (max for Layers 1-2, high for Layer 2.5). Context management with volume management strategy. Per-microskill output table (28 microskills). Integration notes for A04, A05, A06, A08, A09. |
+| 1.0 | 2026-02-22 | Initial creation. Full layer architecture (Pre-Exec, Layer 0-4 with Layer 2.5 quality check). 3 Laws of Copy Production. 7 degradation patterns with fixes. Variant Generation Model with concept-to-variant hierarchy. CTA Lever Taxonomy (7 levers). Platform Adaptation Protocol (5 required differences). Hook Swap Generation Protocol with taxonomy diversity requirements. Word Count Compliance Table format. Hook-Body Coherence Matrix format. Variant ID naming convention. AD-COPY-FINAL/ directory structure. Per-variant file format. COPY-PRODUCTION-PACKAGE.md output schema (9 sections). 6 gates (0, 1, 2, 2.5, 3, 4) with full YAML schemas. Gate failure expansion protocol (2 rounds + audience evaluation + human escalation). 10 forbidden rationalizations. 30 forbidden behaviors. Model assignment table (opus for generation/quality, sonnet for assembly/packaging, haiku for infrastructure/loading). A07-specific MC-CHECK. Effort protocol (max for Layers 1-2, high for Layer 2.5). Context management with volume management strategy. Per-microskill output table (28 microskills). Integration notes for A04, A05, A06, A08, A09. |

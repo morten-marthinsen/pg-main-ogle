@@ -10,7 +10,7 @@
 I HAVE READ THIS FILE: ORGANIC-ENGINE-ANTI-DEGRADATION.md v1.0
 I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
 I WILL: Produce per-microskill output files for every microskill executed.
-I WILL NOT: Skip Arena for any production content or accept fewer than 3 rounds with 7 personas. Cross-post with minor edits instead of rebuilding platform-native content. Defer learning capture to "later" — campaign is not complete until S19-S20 run.
+I WILL NOT: Skip Arena for any production content or accept fewer than 2 rounds with 7 personas. Cross-post with minor edits instead of rebuilding platform-native content. Defer learning capture to "later" — campaign is not complete until S19-S20 run.
 ```
 
 **Write this declaration to your first output file before executing any microskill.**
@@ -30,7 +30,7 @@ I WILL NOT: Skip Arena for any production content or accept fewer than 3 rounds 
 | 1 | "This content doesn't need Arena" | Law 2. ALL production content runs Arena. No exceptions. |
 | 2 | "The virality score is close enough to 60" | 59 = revision required. Numbers are exact. |
 | 3 | "We can skip S03 — the voice is obvious" | Foundation is sequential. Every skill depends on its predecessor. |
-| 4 | "One Arena round produced great results" | 3 rounds mandatory. Round 1 = baseline, not peak. |
+| 4 | "One Arena round produced great results" | 2 rounds + audience evaluation mandatory. Round 1 = baseline, not peak. |
 | 5 | "Cross-posting with minor edits counts as platform-native" | Law 5. Rebuilt, not resized. Different platform = different content. |
 | 6 | "The specimens aren't relevant to this niche" | Law 3. Load specimens anyway. Structural patterns transfer across niches. |
 | 7 | "We can generate the CBF and content in the same session" | Foundation → Production is a hard gate. No shortcuts. |
@@ -97,7 +97,7 @@ A gate checkpoint file (`S[XX]_COMPLETE.yaml`) can only be created when the gate
 | S11 | No thread hook | First tweet is generic | HALT — first tweet = scroll stop |
 | S12 | Visual direction is vague | "Make it look good" | HALT — specific color, composition, typography |
 | S12 | No thumbnail strategy | Missing save/click optimization | HALT — thumbnails drive discovery |
-| S13 | Arena skipped or shortened | <3 rounds or <7 personas | HALT — full Arena mandatory |
+| S13 | Arena skipped or shortened | <2 rounds or <7 personas | HALT — full Arena mandatory |
 | S13 | Synthesis is pick-one not synthesize | Best entry selected, not synthesized | HALT — synthesis pulls from ALL personas |
 | S14 | Pre-Arena content in final assembly | Arena selection not verified | HALT — verify arena_selection_verified flag |
 | S14 | Virality score not checked | Content assembled without VSF | HALT — minimum score required |

@@ -69,7 +69,7 @@ Write the closing section of the promotion — the final persuasive push that dr
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Closing theme classification + CTA plan design | sonnet | Pattern matching from vault |
 | 2 | Full close draft (6 Makepeace elements + CTAs) | opus | Creative generation — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Refinement + Makepeace element validation | opus | Judgment-heavy evaluation |
 | 4 | Validation + packaging | sonnet | Assembly from existing content |
 

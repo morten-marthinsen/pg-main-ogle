@@ -137,7 +137,7 @@ Required Checkpoints:
 1. Read `S10-AGENT.md` (Layer Map, Model Assignment, Templates)
 2. Read `S10-ANTI-DEGRADATION.md` (this file)
 3. Read `CAROUSEL-BRIEF-SCHEMA.md` (input schema)
-4. Load `ORGANIC-ARENA-PROTOCOL.md` (7 personas, 3-round critique)
+4. Load `ORGANIC-ARENA-PROTOCOL.md` (7 personas, 2-round + audience evaluation critique)
 5. Read individual microskill specs for current layer
 
 ---
@@ -252,7 +252,7 @@ project-directory/
 
 **Arena Protocol:**
 - Each persona generates complete carousel (all slides)
-- 3 rounds of adversarial critique
+- 2 rounds + audience evaluation
 - Scoring: Hook Strength (30%), Save-Worthiness (30%), Platform Fit (20%), Engagement (20%)
 - Generate 3+ hybrids
 - Human selects final

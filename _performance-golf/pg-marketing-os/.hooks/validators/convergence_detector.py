@@ -30,8 +30,8 @@ from typing import Optional
 # Round-aware persona convergence thresholds (ASI-Arch convergence paradox)
 PERSONA_OVERLAP_THRESHOLDS = {
     1: 0.40,  # Round 1: strict — maximum diversity expected
-    2: 0.50,  # Round 2: relaxed — some convergence from Learning Brief
-    3: 0.60,  # Round 3: permissive — refinement convergence is healthy
+    2: 0.50,  # Round 2: relaxed — some convergence from Analytical Brief
+    3: 0.60,  # Round 2 FINAL: permissive — refinement convergence is healthy
 }
 DEFAULT_OVERLAP_THRESHOLD = 0.40  # Fallback if round can't be determined
 

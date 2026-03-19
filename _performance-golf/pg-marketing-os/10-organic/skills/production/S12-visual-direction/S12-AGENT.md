@@ -220,7 +220,7 @@ visual_direction_brief:
 - [ ] Text-safe zones specified
 
 ### GATE_2.5_ARENA_COMPLETE
-- [ ] Arena run (7 personas, 3 rounds) — FOR THUMBNAILS
+- [ ] Arena run (7 personas, 2 rounds + audience evaluation) — FOR THUMBNAILS
 - [ ] Human selection captured
 - [ ] Arena results file exists with selected visual approach
 

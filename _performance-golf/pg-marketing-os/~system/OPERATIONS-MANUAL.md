@@ -76,7 +76,7 @@ Before starting a project, decide which effort tier to use. The tier controls ho
 
 | Tier | Best For | Arena | Sessions | Cost |
 |------|----------|-------|----------|------|
-| **Full** | Flagship launches, high-stakes campaigns | 3 rounds, 7 competitors | 6-7 | ~$50-100 |
+| **Full** | Flagship launches, high-stakes campaigns | 2 rounds + audience evaluation, 7 competitors | 6-7 | ~$50-100 |
 | **Standard** | Regular client work (DEFAULT) | 1 round, 3 competitors | 4-5 | ~$10-30 |
 | **Quick** | Internal drafts, explorations | No Arena | 2-3 | ~$2-10 |
 

@@ -77,7 +77,7 @@ Calibrate the PRIMARY PROMISE — the specific, believable, provable promise of 
 | 0 | Input validation + loading | haiku | Simple validation |
 | 1 | Promise generation (raw candidates, calibration) | opus | Deep creative analysis, proof ceiling integration |
 | 2 | Promise optimization + variations | opus | Nuanced judgment on promise strength |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Validation + scoring | opus | Judgment-heavy evaluation |
 | 4 | Output packaging | sonnet | Assembly from existing content |
 

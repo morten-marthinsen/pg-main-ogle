@@ -133,8 +133,8 @@ In sound-off environments (Meta, Instagram), the visual hook must work WITHOUT a
 | Round | Focus |
 |-------|-------|
 | Round 1 | Create the strongest possible first 3 seconds. Obsess over the hook. |
-| Round 2 | Ensure hook-body promise alignment. Incorporate Learning Brief techniques. |
-| Round 3 | Polish hook for maximum platform nativeness. Sound-off viability check. |
+| Round 2 | Ensure hook-body promise alignment. Incorporate Analytical Brief techniques. |
+| Round 2 (FINAL) | Polish hook for maximum platform nativeness. Sound-off viability check. |
 
 ---
 

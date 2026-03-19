@@ -146,7 +146,7 @@ Required Checkpoints:
 1. Read `S09-AGENT.md` (Layer Map, Model Assignment Table, Execution Flow)
 2. Read `S09-ANTI-DEGRADATION.md` (this file)
 3. Read `CAPTION-BRIEF-SCHEMA.md` (input schema validation)
-4. Load `ORGANIC-ARENA-PROTOCOL.md` (7 organic personas, 3-round critique)
+4. Load `ORGANIC-ARENA-PROTOCOL.md` (7 organic personas, 2-round + audience evaluation critique)
 5. Read individual microskill specs for current layer
 
 **Violation Detection:** If agent proceeds without reading required files, output will fail validation. No exceptions.
@@ -234,7 +234,7 @@ project-directory/
 
 **Arena Protocol:**
 - Each persona generates their own caption variant
-- 3 rounds of adversarial critique
+- 2 rounds + audience evaluation of adversarial critique
 - Scoring on: hook strength (30%), voice alignment (25%), platform fit (25%), engagement potential (20%)
 - Generate 3+ hybrid variants pulling strongest elements
 - Human selects final caption

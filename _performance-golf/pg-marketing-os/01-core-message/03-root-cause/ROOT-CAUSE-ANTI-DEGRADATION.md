@@ -332,15 +332,13 @@ LAYER 2.5 (ARENA — MANDATORY, CANNOT BE SKIPPED):
 [ ] All 7 competitors generated (Round 1)
 [ ] Adversarial critique completed (Round 1)
 [ ] Targeted revision completed (Round 1)
-[ ] Scoring and Learning Brief (Round 1)
+[ ] Scoring and Analytical Brief (Round 1)
 [ ] All 7 competitors regenerated (Round 2)
 [ ] Adversarial critique completed (Round 2)
 [ ] Targeted revision completed (Round 2)
-[ ] Scoring and Cumulative Learning Brief (Round 2)
-[ ] All 7 competitors generate FINAL (Round 3)
-[ ] Adversarial critique completed (Round 3)
-[ ] Targeted revision completed (Round 3)
-[ ] FINAL scoring and ranking (Round 3)
+[ ] Scoring and Cumulative Analytical Brief (Round 2)
+[ ] Audience evaluation completed (Round 2 FINAL)
+[ ] FINAL scoring and ranking (Round 2 FINAL)
 [ ] Post-Arena Synthesis: 2-3 hybrids created
 [ ] 9-10 candidates presented to human
 [ ] Human selection received (BLOCKING)
@@ -387,7 +385,7 @@ ON CONTEXT RESUME:
 ## STRUCTURAL FIX 7: ARENA LAYER MANDATORY ENFORCEMENT
 
 ### The Problem
-Arena Layer (2.5) was skipped entirely during execution — AI went directly from Layer 2 to Layer 3, bypassing the 7-competitor, 3-round competition that transforms single-perspective output into multi-perspective elite output. This is the SAME degradation pattern as Research skip and Proof Discovery skip: AI finds a "shortcut" that eliminates the highest-value step.
+Arena Layer (2.5) was skipped entirely during execution — AI went directly from Layer 2 to Layer 3, bypassing the 7-competitor, 2-round + audience evaluation competition that transforms single-perspective output into multi-perspective elite output. This is the SAME degradation pattern as Research skip and Proof Discovery skip: AI finds a "shortcut" that eliminates the highest-value step.
 
 ### The Fix
 
@@ -397,7 +395,7 @@ Arena Layer (2.5) was skipped entirely during execution — AI went directly fro
 ```
 
 This file is created ONLY after:
-1. All 7 competitors have generated across 3 rounds
+1. All 7 competitors have generated across 2 rounds
 2. Adversarial critique completed each round
 3. Targeted revision completed each round
 4. All candidates scored against 7 criteria
@@ -414,10 +412,10 @@ status: COMPLETE
 timestamp: "[ISO 8601]"
 
 arena_execution:
-  rounds_completed: 3
+  rounds_completed: 2
   competitors_per_round: 7
-  critique_phases_completed: 3
-  revision_phases_completed: 3
+  critique_phases_completed: 2
+  revision_phases_completed: 2
   hybrids_created: [number]
 
 human_selection:
@@ -428,7 +426,7 @@ human_selection:
 
 verification:
   all_7_competitors_generated: true
-  all_3_rounds_completed: true
+  all_2_rounds_completed: true
   critique_before_scoring: true
   human_selection_received: true
 ```
@@ -461,7 +459,7 @@ arena_verification:
   arena_complete_yaml_exists: [Y/N]
   if_no: "STOP — Arena Layer (2.5) is MANDATORY. Cannot proceed to Layer 3."
   rounds_completed: [number]
-  if_under_3: "STOP — All 3 rounds required"
+  if_under_2: "STOP — All 2 rounds required"
   human_selection_received: [Y/N]
   if_no: "STOP — Human selection is BLOCKING"
   am_i_thinking_arena_is_optional: [Y/N]
@@ -564,7 +562,7 @@ IF any forbidden status is generated:
 | 0 | Input validation + RSF loading | haiku | Simple validation |
 | 1 | Derivation (7 microskills) | opus | Deep analysis — pattern recognition, convergence, hidden layers |
 | 2 | Expression (7 microskills) | opus | Creative framing — requires nuanced niche understanding |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Competitive generation — maximum quality required |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Competitive generation — maximum quality required |
 | 3 | Validation (5 microskills) | opus | Judgment-heavy scoring |
 | 4 | Output packaging | sonnet | Assembly from existing content |
 
@@ -729,7 +727,7 @@ NEVER begin root cause execution without reading this anti-degradation file firs
 The Root Cause skill has 4 layers + Arena for a reason:
 - Layer 1: Map the surface (what they think, what they've tried)
 - Layer 2: DISCOVER the real root cause through multiple approaches
-- **Layer 2.5: COMPETE — 7 personas, 3 rounds, adversarial critique, human selection**
+- **Layer 2.5: COMPETE — 7 personas, 2 rounds + audience evaluation, adversarial critique, human selection**
 - Layer 3: VALIDATE the human-selected root cause meets all 10 rules
 - Layer 4: Package for downstream skills
 

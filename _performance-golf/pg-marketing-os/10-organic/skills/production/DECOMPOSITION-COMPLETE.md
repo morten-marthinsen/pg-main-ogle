@@ -23,7 +23,7 @@ Successfully decomposed 3 monolithic SKILL.md files into the marketing-os micros
 - Platform-specific architecture (X vs LinkedIn threads differ structurally)
 - Hook tweet must pass 5 standalone tests
 - No-filler enforcement (every tweet must provide standalone value)
-- 7-persona Arena competition (3 rounds mandatory)
+- 7-persona Arena competition (2 rounds + audience evaluation mandatory)
 - Virality scoring (≥60 required)
 
 ---
@@ -60,7 +60,7 @@ Successfully decomposed 3 monolithic SKILL.md files into the marketing-os micros
 **Key Features:**
 - S13 IS the Arena layer for all other production skills
 - Orchestrates 7 organic personas: Volume Machine, Value Architect, Virality Engineer, Community Builder, Brand Purist, Algorithm Hacker, Storyteller
-- 3 rounds mandatory: R1 independent generation → R1 critique → R2 revision → R2 critique → R3 convergence detection
+- 2 rounds + audience evaluation mandatory: R1 independent generation → Audience Evaluation → R2 revision (FINAL)
 - Outputs 2-3 hybrid options + 1 pure persona option
 - Human selection capture required
 - arena_selection_verified flag prevents Skill 19-style failure

@@ -396,11 +396,11 @@ ORCHESTRATOR (main Claude Code session)
 │   │
 │   ├── 7 Revision subagents (parallel, each gets their critique)
 │   │
-│   └── Task(Judge) ← scores all 7 revised outputs, produces Learning Brief
+│   └── Task(Judge) ← scores all 7 revised outputs, produces Analytical Brief
 │
-├── Rounds 2-3: Same structure with Learning Brief distributed
+├── Round 2: Same structure with Analytical Brief distributed
 │
-├── Task(Synthesizer) ← produces 2-3 hybrids from Round 3 outputs
+├── Task(Synthesizer) ← produces 2-3 hybrids from Round 2 (FINAL) outputs
 │
 └── HUMAN SELECTION (blocking)
 ```
@@ -439,10 +439,10 @@ This is YOUR independent generation from source material.
 
 Write your output to: [output path]
 
-### 5. Learning Brief (Rounds 2-3 only, ~1,500 tokens)
-[Learning Brief from previous round]
+### 5. Analytical Brief (Round 2 only, ~1,500 tokens)
+[Analytical Brief from previous round]
 Absorb the winner's TECHNIQUES but maintain YOUR voice.
-Your voice_preservation_note: [from Learning Brief]
+Your voice_preservation_note: [from Analytical Brief]
 
 ### 6. Anti-Degradation (~500 tokens)
 Minimum output size: [threshold]
@@ -515,7 +515,7 @@ for round_num in [1, 2, 3]:
         model="opus"
     )
 
-    # 7. Extract Learning Brief for next round
+    # 7. Extract Analytical Brief for next round
     learning_brief = read_file(f"arena/round-{round_num}/learning-brief.md")
 
 # Post-Arena: Synthesizer
@@ -543,7 +543,7 @@ synthesizer_task = Task(
 - Maximum concurrent persona subagents: 7 (one per persona)
 - Maximum concurrent revision subagents: 7
 - Critic and Judge run sequentially (depend on persona outputs)
-- Rounds run sequentially (Round 2 depends on Round 1 Learning Brief)
+- Rounds run sequentially (Round 2 depends on Round 1 Analytical Brief)
 
 ## Contamination Prevention
 
@@ -567,7 +567,7 @@ If subagent infrastructure is unavailable or the operator prefers single-context
 | Context reservoir | ~5,000 |
 | Prior prose (if cascading) | ~5,000-15,000 |
 | Skill spec + task instructions | ~2,000 |
-| Learning Brief (R2-R3) | ~1,500 |
+| Analytical Brief (R2-R3) | ~1,500 |
 | Anti-degradation | ~500 |
 | **Total per subagent** | **~25,000-55,000** |
 
@@ -590,7 +590,7 @@ Well within any model's context window. Each persona gets FULL context without c
 
 3. **File-based communication:** All inter-subagent communication happens through files in `~outputs/[project]/[skill]/arena/`. No message passing between subagents.
 
-4. **Human checkpoints:** The orchestrator (main session) presents candidates after all 3 rounds + synthesis. Human selects as before.
+4. **Human checkpoints:** The orchestrator (main session) presents candidates after all rounds + synthesis. Human selects as before.
 
 ### Effort Estimate
 
@@ -1094,7 +1094,7 @@ If the agent repeatedly calls the same tool with the same arguments, escalate to
 
 ### Current State in Marketing-OS
 
-No convergence detection. The Arena protocol mandates 3 rounds, but doesn't detect when rounds stop producing value. The proportionality_check.py validator catches *score* clustering (>50% at minimums = gate-passing optimization) but not *output* convergence.
+No convergence detection. The Arena protocol mandates 2 rounds + audience evaluation, but doesn't detect when rounds stop producing value. The proportionality_check.py validator catches *score* clustering (>50% at minimums = gate-passing optimization) but not *output* convergence.
 
 ### What Changes
 
@@ -1135,7 +1135,7 @@ REPETITION_BLOCK_SIZE = 3         # Sentences in a repetition block
 #
 # Response Actions:
 # - Persona convergence → inject divergence reminder + re-read persona specimens
-# - Round stagnation → notify human, offer to skip Round 3 for this skill
+# - Round stagnation → notify human, offer to skip Round 2 (FINAL) for this skill
 # - Output repetition → halt generation, re-read skill spec
 
 def calculate_ngram_overlap(text_a: str, text_b: str, n: int = 5) -> float:
@@ -1188,7 +1188,7 @@ When Round N+1 winner score improves by less than 0.2:
    "Round [N+1] did not meaningfully improve on Round [N].
     Winner score: [N] = [X], [N+1] = [Y] (delta: [Z])
     Same winner: [Yes/No]
-    Option A: Continue to Round [N+2] anyway (protocol requires 3 rounds)
+    Option A: Continue to Round [N+1] anyway (protocol requires 2 rounds + audience evaluation)
     Option B: Accept Round [N+1] results as final (human override)
     Option C: Inject a new constraint to force divergence"
 3. If Option C: add a constraint like "the winning approach from Round [N] is now BANNED —

@@ -373,7 +373,7 @@ This is the HIGH-VALUE, HUMAN-REQUIRED work. Anthony curates the best examples.
 ## What Changes vs. What Stays
 
 ### UNCHANGED (zero modifications needed)
-- ARENA-CORE-PROTOCOL.md (3-round, critique-revise, learning briefs)
+- ARENA-CORE-PROTOCOL.md (2-round + audience evaluation, critique-revise, analytical briefs)
 - SYNTHESIZER-LAYER.md (phrase-level hybrids)
 - MC-CHECK Protocol (all checkpoints)
 - Anti-Degradation System (all 20 skills)

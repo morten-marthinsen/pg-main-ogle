@@ -135,8 +135,8 @@ Evaluates whether the concept is optimized for the right primary KPI: hook rate 
 | Round | Focus |
 |-------|-------|
 | Round 1 | Apply proven framework. Maximize variant potential. Ensure modular structure. |
-| Round 2 | Optimize for primary KPI. Incorporate Learning Brief techniques. |
-| Round 3 | Final scalability check. Would this survive at $10K/day? |
+| Round 2 | Optimize for primary KPI. Incorporate Analytical Brief techniques. |
+| Round 2 (FINAL) | Final scalability check. Would this survive at $10K/day? |
 
 ---
 

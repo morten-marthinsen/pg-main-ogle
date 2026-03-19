@@ -114,7 +114,7 @@ arena_file: "[Path]"
 | "Tweet 1 makes sense in context" | Hook must work standalone | Stop. Rewrite hook to be self-contained. |
 | "This tweet is transition, not filler" | Every tweet must add value | Stop. Either add value or remove tweet. |
 | "X and LinkedIn threads are basically the same" | Platform differences are structural | Stop. Rebuild for target platform. |
-| "Arena takes too long for threads" | Law 2: Every piece runs Arena | Stop. Run full 3-round Arena. |
+| "Arena takes too long for threads" | Law 2: Every piece runs Arena | Stop. Run full 2-round + audience evaluation Arena. |
 | "The thread is close to 60 virality" | Numbers are exact | Stop. 59 = revision required. |
 
 ---
@@ -233,7 +233,7 @@ execution-log.md
 | 2.2 | body-tweets-draft.yaml | All body tweets (2 to N-1), each with standalone value | ☐ |
 | 2.3 | cta-tweet-draft.yaml | Final CTA tweet, matches content function | ☐ |
 | 2.4 | formatted-thread.yaml | Complete thread with formatting, numbering, breaks | ☐ |
-| 2.5 | arena-synthesis.md | Full Arena output with 7 personas, 3 rounds, synthesis | ☐ |
+| 2.5 | arena-synthesis.md | Full Arena output with 7 personas, 2 rounds + audience evaluation, synthesis | ☐ |
 | 4.1 | thread-output.yaml | Complete thread with virality scores, arena verification | ☐ |
 | 4.2 | execution-log.md | Timestamped decisions, model calls, quality checks | ☐ |
 

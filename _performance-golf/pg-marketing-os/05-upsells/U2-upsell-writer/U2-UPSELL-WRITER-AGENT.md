@@ -90,7 +90,7 @@ Write the 500-2000 word 1-click upsell page — the first post-purchase offer th
 | 0 | Context loading (U0 handoff, mechanism, soul.md, specimens) | haiku | Input loading, no reasoning needed |
 | 1 | Analysis (congruence mapping, position analysis, proof inventory, structure selection) | sonnet | Analytical classification — structured reasoning |
 | 2 | Full CAIRO draft generation | opus | Creative generation — max quality for 500-2000w piece |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality generation — generative_full_draft mode |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality generation — generative_full_draft mode |
 | 4 | Validation + output packaging | sonnet | Mechanical validation + assembly |
 
 **These assignments are BINDING. Do not substitute models.**
@@ -220,21 +220,21 @@ This arc is the CAIRO gold standard — US-21 (Credit Secrets) achieved 30-50% c
 ### Layer 2.5: Arena
 
 > **Critical Constraints Reminder (Layer 2.5 — Arena)**
-> - See `~system/protocols/ARENA-CORE-PROTOCOL.md` for complete 3-round execution protocol
+> - See `~system/protocols/ARENA-CORE-PROTOCOL.md` for complete 2-round + audience evaluation execution protocol
 > - See `U2-ARENA-LAYER.md` for U2-specific competitors, scoring weights, and rubrics
 > - Arena mode: `generative_full_draft` — competitors write COMPLETE upsell pages from scratch
 > - Layer 2 draft = reference material, NOT a template to vary
 > - 7 competitors (6 upsell-specific approaches + The Architect)
-> - 3 rounds MANDATORY — no "good enough after Round 1"
+> - 2 rounds + audience evaluation MANDATORY — no "good enough after Round 1"
 > - Human selection BLOCKING — no auto-selection
 > - Quality threshold: 8.0+ weighted average
 
 **Arena Execution:**
 1. Load U2-ARENA-LAYER.md for competitors, criteria, weights
-2. Load ~system/protocols/ARENA-CORE-PROTOCOL.md for 3-round execution flow
+2. Load ~system/protocols/ARENA-CORE-PROTOCOL.md for 2-round + audience evaluation execution flow
 3. Each competitor generates a COMPLETE upsell page using upstream packages + Layer 1 analysis + Layer 2 reference draft
 4. Competitors are NOT constrained to the Layer 2 draft's approach — they may use different CAIRO proportions, different opening patterns, different tone calibrations
-5. 3 rounds with adversarial critique, targeted revision, learning briefs
+5. 2 rounds with adversarial critique, targeted revision, audience evaluation + analytical briefs
 6. Post-arena synthesis: 2-3 phrase-level hybrids
 7. Human selects from 9-10 candidates (7 pure + 2-3 hybrids)
 

@@ -52,7 +52,7 @@ Generate subject lines for individual emails AFTER the email body has been writt
 - SL is calibrated for the target niche/audience
 - At least 20 candidates generated before selection
 - At least 5 formula categories used per email
-- Arena-validated quality (3 rounds, 7 competitors)
+- Arena-validated quality (2 rounds + audience evaluation, 7 competitors)
 - Achieves >= 8.0 weighted quality score
 
 **CRITICAL CONSTRAINT:** E2 runs AFTER E1 because subject lines must match the WRITTEN email, not a planned email. The body determines the SL, not the other way around. SL-body alignment is checked at every gate.
@@ -88,7 +88,7 @@ Generate subject lines for individual emails AFTER the email body has been writt
 | 0 | Email loading + formula library loading + validation | haiku | Input loading, no reasoning |
 | 1 | Formula selection + emotional trigger matching + niche calibration | sonnet | Classification + matching |
 | 2 | Volume generation (20-50 candidates) + variation expansion | opus | Creative generation -- max quality |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 2.6 | Synthesizer (2-3 hybrids) | opus | Phrase-level hybrid creation |
 | 3 | Ranking + scoring + output packaging | sonnet | Mechanical scoring + assembly |
 
@@ -261,13 +261,13 @@ IDLE --> LOADING --> SELECTION --> GENERATION --> ARENA --> RANKING --> COMPLETE
 
 ---
 
-### Layer 2.5: Arena (7 Competitors, 3 Rounds)
+### Layer 2.5: Arena (7 Competitors, 2 Rounds + Audience Evaluation)
 
 > **Critical Constraints Reminder (Layer 2.5)**
 > - Read ANTI-DEGRADATION.md before executing
 > - Every microskill produces its own output file
 > - Gates are PASS or FAIL only — no invented statuses
-> - Arena is MANDATORY — 3 rounds, 7 competitors, human selection required
+> - Arena is MANDATORY — 2 rounds + audience evaluation, 7 competitors, human selection required
 > - Layer 2 candidates are reference material, NOT templates for competitors
 
 **Purpose:** Generate 7 competing subject line sets through the Arena protocol, with adversarial critique and learning between rounds.
@@ -275,7 +275,7 @@ IDLE --> LOADING --> SELECTION --> GENERATION --> ARENA --> RANKING --> COMPLETE
 **Specification File:** `ARENA-LAYER.md`
 
 **Execution Protocol:**
-- See `~system/protocols/ARENA-CORE-PROTOCOL.md` for full 3-round execution protocol
+- See `~system/protocols/ARENA-CORE-PROTOCOL.md` for full 2-round + audience evaluation execution protocol
 - Mode: `generative_full_draft` -- each competitor generates 5 SLs using different formula categories
 - Layer 2 candidates = reference material, NOT template
 - 7 competitors (6 personas + The Architect) each generate their 5 best SLs
@@ -381,7 +381,7 @@ FOR each SL candidate:
 1. **E2 runs AFTER E1** -- Never generate SLs before the email body is written
 2. **SL-body alignment is mandatory** -- Every candidate checked against email content
 3. **All 18 formula categories must be available** -- At least 5 used per email
-4. **Arena is MANDATORY** -- 3 rounds, 7 competitors, human selection
+4. **Arena is MANDATORY** -- 2 rounds + audience evaluation, 7 competitors, human selection
 5. **Minimum 20 candidates** -- Before any selection or ranking
 
 ### Word Count Constraints

@@ -58,7 +58,7 @@ This agent is a **workflow orchestrator** with Arena competition. It produces ho
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Hook formula selection + lead structure planning | sonnet | Classification + architecture decisions |
 | 2 | Hook + lead generation (multiple candidates) | opus | Creative generation -- max quality |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 4 | Validation + packaging | sonnet | Judgment + assembly |
 
 ---

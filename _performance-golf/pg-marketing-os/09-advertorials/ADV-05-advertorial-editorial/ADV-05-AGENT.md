@@ -55,7 +55,7 @@ Execute the **Final Editorial Review** of the assembled advertorial. This is the
 | 0 | Load assembled advertorial + strategy + specimens | haiku | Input loading |
 | 1 | Editorial auditing + hook review | sonnet | Analysis + judgment |
 | 2 | Revision generation + compliance polish | opus | Creative revision -- max quality |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality revision |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality revision |
 | 4 | Scoring + word count + packaging | sonnet | Evaluation + assembly |
 
 ---

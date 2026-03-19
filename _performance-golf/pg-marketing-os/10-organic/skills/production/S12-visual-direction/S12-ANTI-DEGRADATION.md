@@ -155,11 +155,11 @@ The Model Assignment Table in S12-AGENT.md is **binding**.
 
 **For thumbnail direction: Arena is MANDATORY.**
 
-Thumbnails determine whether content gets consumed. A 7-persona × 3-round Arena evaluation prevents single-context bias.
+Thumbnails determine whether content gets consumed. A 7-persona × 2-round + audience evaluation Arena evaluation prevents single-context bias.
 
 **Arena must include:**
 - All 7 organic personas (Volume Machine, Value Architect, Virality Engineer, Community Builder, Brand Purist, Algorithm Hacker, Storyteller)
-- 3 full rounds (Round 1 → Critique → Round 2 → Critique → Round 3)
+- 2 rounds + audience evaluation (Round 1 → Audience Evaluation → Round 2 FINAL)
 - Synthesis (3+ hybrid approaches)
 - Human selection capture
 
@@ -302,7 +302,7 @@ text_safe_zone:
 
 ### Arena Compliance (if thumbnail)
 - [ ] 7 personas evaluated
-- [ ] 3 rounds completed
+- [ ] 2 rounds completed
 - [ ] Synthesis generated
 - [ ] Human selection captured
 - [ ] GATE_2.5_ARENA_COMPLETE exists

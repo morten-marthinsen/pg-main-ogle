@@ -98,7 +98,7 @@ Produce high-engagement threads for X/Twitter and LinkedIn that build authority,
 
 > **Critical Constraints Reminder (Layer 2.5 — Arena)**
 > - All threads run through 7-persona Arena
-> - 3 rounds mandatory
+> - 2 rounds + audience evaluation mandatory
 > - Mode: generative_full_draft
 
 ### Layer 2.5: Arena Competition
@@ -154,7 +154,7 @@ Produce high-engagement threads for X/Twitter and LinkedIn that build authority,
                   ▼
 ┌─────────────────────────────────────────────────────┐
 │         LAYER 2.5: ARENA (opus)                     │
-│   7 Personas × 3 Rounds → Synthesis                │
+│   7 Personas × 2 Rounds + Audience Eval → Synthesis │
 │           GATE: ARENA_COMPLETE.yaml                │
 └─────────────────┬───────────────────────────────────┘
                   │
@@ -260,7 +260,7 @@ execution_log: # Path to log file
 
 ### Arena Constraints
 - NEVER skip Arena for thread content
-- NEVER run fewer than 3 rounds
+- NEVER run fewer than 2 rounds
 - NEVER skip any of the 7 personas
 - NEVER proceed without human selection after Arena synthesis
 

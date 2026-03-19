@@ -60,7 +60,7 @@ This agent is a **workflow orchestrator**. It delegates to microskills and valid
 | 0 | Input validation + loading | haiku | Simple validation |
 | 1 | Structure analysis + segmentation | opus | Strategic architecture decisions |
 | 2 | Copy power block sequencing + proportioning | opus | Creative ordering decisions |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Validation + coherence check | opus | Judgment-heavy evaluation |
 | 4 | Output packaging | sonnet | Assembly from existing content |
 

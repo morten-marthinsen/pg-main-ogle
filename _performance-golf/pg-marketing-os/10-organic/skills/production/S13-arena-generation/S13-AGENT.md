@@ -8,7 +8,7 @@ Last Updated: 2026-03-05
 | Layer | Model | Justification |
 |-------|-------|---------------|
 | Layer 0 | claude-haiku-4 | Input validation, context loading — speed critical |
-| Layer 1 | claude-opus-4.6 | Arena execution IS the core work — 7 personas × 3 rounds requires highest quality |
+| Layer 1 | claude-opus-4.6 | Arena execution IS the core work — 7 personas × 2 rounds + audience evaluation requires highest quality |
 | Layer 2.5 | claude-opus-4.6 | Synthesis and human selection — quality-critical decision point |
 | Layer 4 | claude-sonnet-4.5 | Package assembly — structured output |
 
@@ -16,7 +16,7 @@ Last Updated: 2026-03-05
 
 ## Purpose
 
-Run the full 7-persona × 3-round Arena competition on ANY content piece from S08-S12. This is the DEDICATED Arena skill that serves as the quality gate before S14 assembly.
+Run the full 7-persona × 2-round + audience evaluation Arena competition on ANY content piece from S08-S12. This is the DEDICATED Arena skill that serves as the quality gate before S14 assembly.
 
 The Arena prevents single-context bias by evaluating content through 7 distinct lenses (Volume Machine, Value Architect, Virality Engineer, Community Builder, Brand Purist, Algorithm Hacker, Storyteller), with an adversarial Critic challenging convergence across 3 mandatory rounds.
 
@@ -25,7 +25,7 @@ The Arena prevents single-context bias by evaluating content through 7 distinct 
 ## Identity Boundaries
 
 ### THIS SKILL IS
-- Arena competition orchestration (7 personas, 3 rounds, Critic)
+- Arena competition orchestration (7 personas, 2 rounds + audience evaluation, Critic)
 - Multi-lens content evaluation
 - Adversarial critique to prevent groupthink
 - Hybrid synthesis generation
@@ -65,7 +65,7 @@ Your task is to load all required context for Arena execution.
 
 YOU ARE NOW ENTERING LAYER 1.
 
-Your task is to execute the full 7-persona × 3-round Arena protocol. This IS the core work of S13.
+Your task is to execute the full 7-persona × 2-round + audience evaluation Arena protocol. This IS the core work of S13.
 
 | Microskill | File | Model | Purpose |
 |------------|------|-------|---------|
@@ -73,9 +73,9 @@ Your task is to execute the full 7-persona × 3-round Arena protocol. This IS th
 | 1.2 | round-1-competition.md | opus | All 7 personas evaluate content, Round 1 |
 | 1.3 | round-1-critique.md | opus | Critic challenges Round 1, identifies convergence |
 | 1.4 | round-2-competition.md | opus | Personas respond to critique, Round 2 |
-| 1.5 | round-2-critique.md | opus | Critic challenges Round 2 |
-| 1.6 | round-3-competition.md | opus | Final evaluations, Round 3 |
-| 1.7 | round-3-final-scoring.md | opus | Composite scores, forced ranking |
+| 1.5 | round-2-critique.md | opus | Critic challenges Round 2, frames FINAL objectives |
+| 1.6 | round-2-final-competition.md | opus | Final evaluations, Round 2 FINAL |
+| 1.7 | round-2-final-scoring.md | opus | Composite scores, forced ranking |
 
 **Execute all Layer 1 microskills in sequence. This is the Arena.**
 
@@ -240,7 +240,7 @@ arena_results:
 
 **Human decides Arena necessity during S04-S07 strategy phase.**
 
-### 3 Rounds are NON-NEGOTIABLE
+### 2 Rounds + Audience Evaluation are NON-NEGOTIABLE
 Arena effectiveness depends on iterative refinement. Skipping rounds defeats the purpose.
 
 ### All 7 Personas Must Participate
@@ -254,7 +254,7 @@ Arena informs, human decides. Never skip human selection capture.
 
 ## Failure Modes
 
-1. **Fewer than 3 rounds** — Arena incomplete, quality gate ineffective
+1. **Fewer than 2 rounds** — Arena incomplete, quality gate ineffective
 2. **Missing personas** — Evaluation blind spots
 3. **Mono-voice output** — Personas converged without Critic challenge
 4. **Synthesis without critique** — Hybrids not informed by Arena insights
