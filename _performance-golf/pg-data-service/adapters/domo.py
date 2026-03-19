@@ -205,18 +205,13 @@ class DomoAdapter(DataAdapter):
             f'SELECT * FROM table '
             f'WHERE `{COL_SPEND}` > 0 '
             f'AND `{COL_VALID_15}` = 1 '
-            f'AND `{COL_PLATFORM}` = \'{PLATFORM_FACEBOOK}\' '
             f'AND `dateCreated` >= \'{date_from}\' '
             f'AND `dateCreated` <= \'{date_to}\''
         )
         df = self._query(sql)
         if df.empty:
             return df
-        # Normalize ad names to lowercase
         df[COL_AD] = df[COL_AD].astype(str).str.lower().str.strip()
-        # Filter to valid funnel codes (Domo's 15-position parser sometimes mis-flags)
-        if COL_FUNNEL in df.columns:
-            df = df[df[COL_FUNNEL].str.lower().str.strip().isin(VALID_FUNNEL_CODES)]
         return df
 
     def _fetch_orders(self, date_from: str, date_to: str) -> pd.DataFrame:
@@ -227,7 +222,6 @@ class DomoAdapter(DataAdapter):
             f'SELECT * FROM table '
             f'WHERE `{COL_TOTAL_AMOUNT}` > 0 '
             f'AND `{COL_VALID_15}` = 1 '
-            f'AND `{COL_PLATFORM}` = \'{PLATFORM_FACEBOOK}\' '
             f'AND `dateCreated` >= \'{date_from}\' '
             f'AND `dateCreated` <= \'{date_to}\''
         )
@@ -235,8 +229,6 @@ class DomoAdapter(DataAdapter):
         if df.empty:
             return df
         df[COL_AD] = df[COL_AD].astype(str).str.lower().str.strip()
-        if COL_FUNNEL in df.columns:
-            df = df[df[COL_FUNNEL].str.lower().str.strip().isin(VALID_FUNNEL_CODES)]
         return df
 
     # --- Private: aggregation ---

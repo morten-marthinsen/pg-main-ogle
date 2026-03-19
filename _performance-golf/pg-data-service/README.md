@@ -42,8 +42,7 @@ Classification (Winner/Potential/Underperformer/Testing) is a Tess business rule
 
 - All date inputs are validated via `_validate_date()` (YYYY-MM-DD regex) before SQL interpolation
 - `DOMO_CLIENT_PATH` is a required env var — no hardcoded machine paths in source code
-- **Enriched pipeline** filters `Ad Platform = 'facebook'` (prevents cross-platform inflation in Beast Mode calculations)
-- **Raw pipeline** returns all platforms — consumers get the full dataset for ad-hoc analysis
+- Both enriched and raw pipelines return all platforms — no filtering. Only `Valid 15-Position Ad Name? = 1` is applied (matches Domo card behavior).
 
 ---
 
