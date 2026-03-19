@@ -49,8 +49,8 @@
 
 **Star Rating Display:** [X stars from X reviews]
 
-**Price Display, Non-Members:** $299
-**Price Display, Members:** $249
+**Price Display, Non-Members:** $349
+**Price Display, Members:** $299
 
 **Configuration Selectors:** Hand (RH/LH) | Loft | Flex (X, Stiff, Regular, Senior, Ladies)
 
@@ -765,8 +765,8 @@ Take your SF2 to the range. Hit 10 drives. Don't think about your swing. Don't t
 
 **Product Image:** [SF2 hero shot]
 
-**Pricing Block, Non Members:** $299
-**Pricing Block, Members:** $249
+**Pricing Block, Non-Members:** $349
+**Pricing Block, Members:** $299
 **ACTION: SEE ONE.1 SALES PAGE DETAILED OUTLINE FOR TOGGLE COPY: /Users/BenjaminMarcoux/Documents/The Sauce Vault/_performance-golf/_pg-physical-products/one.1/one.1-sales-page/_one.1-copy-sales-page-detailed-outline.md**
 
 **Savings Callout:** PG1 Members Save $50

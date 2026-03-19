@@ -29,8 +29,8 @@
 
 **Star Rating Display:** [X stars from X reviews]
 
-**Price Display, Non-Members:** $299
-**Price Display, Members:** $249
+**Price Display, Non-Members:** $349
+**Price Display, Members:** $299
 
 **Configuration Selectors:** Hand (RH/LH) | Flex (X, Stiff, Regular, Senior, Ladies)
 
@@ -350,8 +350,8 @@ The SF2 is for golfers who:
 
 **Headline:** Put The SF2 To Work For You
 
-**Pricing Block Non-Members:** $299
-**Pricing Block Non-Members:** $249
+**Pricing Block, Non-Members:** $349
+**Pricing Block, Members:** $299
 
 **Savings Callout:** PG1 Members Save $50
 
@@ -535,8 +535,8 @@ Take your SF2 to the range. Hit 10 drives. Don't think about your swing. Don't t
 
 **Product Image:** [SF2 hero shot]
 
-**Pricing Block, Non Members:** $299
-**Pricing Block, Members:** $249
+**Pricing Block, Non-Members:** $349
+**Pricing Block, Members:** $299
 
 **Toggle Notes:**
 Toggle ON (default): "As a PG1 Member, you're saving $50 — Cancel online anytime"
