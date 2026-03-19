@@ -658,7 +658,7 @@ SESSION STARTUP:
 | 1A-CP | Human checkpoint: concept selection | — | Human judgment |
 | 1B | Naming generation (15+ names for approved concept) | opus | Creative naming |
 | 2 | Scorecard optimization (13 dimensions) | opus | Judgment-heavy scoring |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality required |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality required |
 | 3 | Validation + selection | opus | Judgment-heavy comparison |
 | 4 | Output packaging | sonnet | Assembly from existing content |
 

@@ -132,8 +132,8 @@ Slightly shaky camera, natural lighting, casual clothing, real environments (kit
 | Round | Focus |
 |-------|-------|
 | Round 1 | Create the most authentic, platform-native script possible. Zero ad signals. |
-| Round 2 | Refine creator voice and sound-off viability. Incorporate Learning Brief techniques. |
-| Round 3 | Final platform-native polish. Would this pass for organic content? |
+| Round 2 | Refine creator voice and sound-off viability. Incorporate Analytical Brief techniques. |
+| Round 2 (FINAL) | Final platform-native polish. Would this pass for organic content? |
 
 ---
 

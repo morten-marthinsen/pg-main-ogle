@@ -45,7 +45,7 @@ Perform systematic quality review and revision of the complete assembled upsell 
 
 **Success Criteria:**
 - Every piece scored BEFORE and AFTER revision (baseline vs. final)
-- All P1/P2 issues addressed through full Arena (3 rounds, 7 competitors)
+- All P1/P2 issues addressed through full Arena (2 rounds + audience evaluation, 7 competitors)
 - All P3/P4 issues addressed through direct fixes
 - Final score >= 7.5 for EVERY individual piece
 - All 5 Sequence-Level Criteria (S1-S5) verified
@@ -127,8 +127,8 @@ These are NOT the 6 legendary copywriter lenses from Skill 20. Upsell copy needs
 
 | Severity | Description | Resolution Method | Examples |
 |----------|-------------|-------------------|----------|
-| **P1 — Critical** | Fundamental structural or congruence failure that breaks the sequence | Arena (3 rounds, 7 competitors) | Congruence break (mechanism name missing/wrong), PAS structure in upsell/downsell, inverted pricing (downsell > upsell), CAIRO structure in downsell (should be ARO) |
-| **P2 — Major** | Significant quality issue that degrades conversion but doesn't break structure | Arena (3 rounds, 7 competitors) | Tone shift from post-purchase to selling, missing ARO/CAIRO sections, weak reframe ("just cheaper"), proof cascade (>2 for upsell, >1 for downsell), guilt in Acknowledge/CTA |
+| **P1 — Critical** | Fundamental structural or congruence failure that breaks the sequence | Arena (2 rounds + audience evaluation, 7 competitors) | Congruence break (mechanism name missing/wrong), PAS structure in upsell/downsell, inverted pricing (downsell > upsell), CAIRO structure in downsell (should be ARO) |
+| **P2 — Major** | Significant quality issue that degrades conversion but doesn't break structure | Arena (2 rounds + audience evaluation, 7 competitors) | Tone shift from post-purchase to selling, missing ARO/CAIRO sections, weak reframe ("just cheaper"), proof cascade (>2 for upsell, >1 for downsell), guilt in Acknowledge/CTA |
 | **P3 — Minor** | Quality issue that reduces polish but doesn't affect structure | Direct fix | Word choice improvements, CTA phrasing refinement, minor price presentation issues, awkward transitions |
 | **P4 — Cosmetic** | Formatting and presentation issues | Direct fix | Spacing, capitalization, formatting, typos, section header styling |
 
@@ -202,7 +202,7 @@ These are checked at the SEQUENCE level (not per-piece):
 
 | # | Microskill | File | Function |
 |---|-----------|------|----------|
-| 2.1 | Revision Executor | `skills/layer-2/2.1-revision-executor.md` | Execute revision plan from 1.3. For P1/P2 fix groups: run full Arena (see U5-ARENA-LAYER.md) — 7 competitors, 3 rounds, human selection per fix. For P3/P4 fix groups: apply direct fixes with before/after documented. Track all changes. Verify no fix breaks congruence, tone, or speed. |
+| 2.1 | Revision Executor | `skills/layer-2/2.1-revision-executor.md` | Execute revision plan from 1.3. For P1/P2 fix groups: run full Arena (see U5-ARENA-LAYER.md) — 7 competitors, 2 rounds + audience evaluation, human selection per fix. For P3/P4 fix groups: apply direct fixes with before/after documented. Track all changes. Verify no fix breaks congruence, tone, or speed. |
 
 **Execution order:** Single microskill, but may trigger Arena multiple times (once per P1/P2 fix group).
 
@@ -348,7 +348,7 @@ metadata:
 ## CONSTRAINTS
 
 1. **Every piece must score >= 7.5 final.** One failing piece = sequence fails.
-2. **Arena for P1/P2.** No shortcuts. 3 rounds, 7 competitors, human selection.
+2. **Arena for P1/P2.** No shortcuts. 2 rounds + audience evaluation, 7 competitors, human selection.
 3. **Direct fix for P3/P4.** No Arena overhead for minor issues.
 4. **All 7 lenses mandatory.** Every piece scored through all 7.
 5. **All S1-S5 must pass.** Sequence-level criteria are separate from per-piece scores.

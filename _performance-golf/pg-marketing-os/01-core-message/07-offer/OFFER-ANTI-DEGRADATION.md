@@ -385,7 +385,7 @@ LAYER 2 (ENHANCEMENT):
 [ ] LAYER_2_COMPLETE.yaml created
 
 LAYER 2.5 (ARENA — MANDATORY, CANNOT BE SKIPPED):
-[ ] All 7 competitors generated across 3 rounds
+[ ] All 7 competitors generated across 2 rounds
 [ ] Adversarial critique completed each round
 [ ] Targeted revision completed each round
 [ ] Post-Arena Synthesis: 2-3 hybrids created
@@ -443,7 +443,7 @@ Skipping value calculation means guessing instead of engineering.
 ## STRUCTURAL FIX 8: ARENA LAYER MANDATORY ENFORCEMENT
 
 ### The Problem
-Arena Layer (2.5) can be skipped during execution — AI goes directly from Layer 2 to Layer 3, bypassing the 7-competitor, 3-round competition. This eliminates the highest-value quality step.
+Arena Layer (2.5) can be skipped during execution — AI goes directly from Layer 2 to Layer 3, bypassing the 7-competitor, 2-round + audience evaluation competition. This eliminates the highest-value quality step.
 
 ### The Fix
 
@@ -453,7 +453,7 @@ Arena Layer (2.5) can be skipped during execution — AI goes directly from Laye
 ```
 
 This file is created ONLY after:
-1. All 7 competitors have generated across 3 rounds
+1. All 7 competitors have generated across 2 rounds
 2. Adversarial critique completed each round
 3. Targeted revision completed each round
 4. All candidates scored against 7 criteria

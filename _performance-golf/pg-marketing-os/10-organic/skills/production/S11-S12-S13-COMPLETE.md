@@ -28,7 +28,7 @@ S12 and S13 follow identical structural patterns with skill-specific content.
 S13 (Arena Generation) is the META-SKILL that orchestrates Arena competition.
 - S13 has NO Layer 2.5 (it IS the Arena)
 - S13 receives content from S08-S12 production skills
-- S13 runs the 7-persona, 3-round competition
+- S13 runs the 7-persona, 2-round + audience evaluation competition
 - S13 outputs synthesis with arena_selection_verified flag
 
 ## Pattern Established

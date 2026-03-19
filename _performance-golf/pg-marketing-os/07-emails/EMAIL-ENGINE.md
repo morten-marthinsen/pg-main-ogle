@@ -114,7 +114,7 @@ E0: Email Campaign Strategist
 
 E1: Email Writer
   → Generates individual emails (7 body type modes)
-  → Arena-powered (7 competitors, 3 rounds)
+  → Arena-powered (7 competitors, 2 rounds + audience evaluation)
   → System 1: Ben Settle structural specimens. System 2: Persona voice specimens.
 
 E2: Subject Line Engine
@@ -147,7 +147,7 @@ The Email Engine inherits from the CopywritingEngine:
 
 | Component | File | What It Provides |
 |-----------|------|-----------------|
-| **Arena Protocol** | `~system/protocols/ARENA-CORE-PROTOCOL.md` | 7-competitor, 3-round competition framework |
+| **Arena Protocol** | `~system/protocols/ARENA-CORE-PROTOCOL.md` | 7-competitor, 2-round + audience evaluation competition framework |
 | **Persona Panel** | `~system/protocols/ARENA-PERSONA-PANEL.md` | 6 persona specifications + The Architect + The Critic |
 | **Synthesizer** | `SYNTHESIZER-LAYER.md` | Post-arena phrase-level hybrid creation |
 | **Soul.md Protocol** | `skills/SOUL-MD-PROTOCOL.md` | Project-level taste constraints |
@@ -472,7 +472,7 @@ E1 generates individual emails according to the body type, function, and content
 |-------|------|----------------|-------|
 | **0** | Foundation | 0.1 Blueprint Loader (reads campaign-blueprint.yaml for THIS email's assignment), 0.2 Soul.md Loader, 0.3 Specimen Loader (System 1: body-type specimens, System 2: persona voice specimens), 0.4 Bridge Specimen Loader (transition-phrase-library.md) | haiku |
 | **1** | Classification + Planning | 1.1 Body Type Structural Template Selection, 1.2 Content Angle Identification, 1.3 Bridge Strategy Selection, 1.4 Pitch Architecture (CTA + ratio) | sonnet |
-| **2 (Arena)** | Generation | 7 competitors generate full email draft per body type assignment, 3 rounds mandatory | opus |
+| **2 (Arena)** | Generation | 7 competitors generate full email draft per body type assignment, 2 rounds + audience evaluation mandatory | opus |
 | **3** | Validation + Output | 3.1 Content-to-Pitch Ratio Verification, 3.2 Bridge Quality Assessment, 3.3 Body Type Compliance Check, 3.4 Anti-Slop Scan, 3.5 Email Output File | sonnet |
 
 ### E1 Specimen Loading Protocol (MANDATORY)
@@ -533,7 +533,7 @@ LOADING PROTOCOL:
 
 **Mode:** `generative_full_draft`
 **Competitors:** 7 (standard panel from ARENA-PERSONA-PANEL.md, or vertical-configured panel)
-**Rounds:** 3 mandatory
+**Rounds:** 2 + audience evaluation mandatory
 
 **Email-Specific Arena Judging Criteria (7 criteria, weighted):**
 
@@ -619,7 +619,7 @@ Each email produces its own output file:
 [Full email text]
 
 ## Arena Results
-- Winner: [persona name] (Round 3 score: [X])
+- Winner: [persona name] (Round 2 (FINAL) score: [X])
 - Selected: [pure winner / hybrid [letter]]
 - Key strength: [1-2 sentences]
 ```
@@ -655,9 +655,9 @@ IF E1 output does not exist → HALT. E2 cannot generate SLs for unwritten email
 
 **Mode:** `generative_full_draft`
 **Competitors:** 7 (standard panel)
-**Rounds:** 3 mandatory
+**Rounds:** 2 + audience evaluation mandatory
 
-**Each competitor generates 5 SL candidates per round.** This produces 35 candidates per round, 105 total across 3 rounds. Final scoring selects Top 10.
+**Each competitor generates 5 SL candidates per round.** This produces 35 candidates per round, 70 total across 2 rounds. Final scoring selects Top 10.
 
 **Subject Line-Specific Judging Criteria (7 criteria, weighted):**
 
@@ -706,7 +706,7 @@ FOR EACH subject line candidate:
 10. "[SL text]" — Formula: [code], Words: [N], Alignment: STRONG, Score: [X]
 
 ## Arena Results
-- Round 3 best performer: [persona]
+- Round 2 (FINAL) best performer: [persona]
 - Hybrid SLs created: [Y/N]
 - Total candidates evaluated: [N]
 - Candidates discarded (alignment): [N]
@@ -832,7 +832,7 @@ E4 is the quality review and revision layer. It audits the assembled campaign fo
 | **0** | Foundation | 0.1 Campaign Package Loader, 0.2 Soul.md Loader, 0.3 Anti-Slop Pattern Loader | haiku |
 | **1** | Audit | 1.1 Structural Compliance Audit (body types, variety, escalation), 1.2 Voice Consistency Audit (register, tone, one-to-one feel), 1.3 Pitch Ratio Audit (per-email and sequence-level), 1.4 SL-Body Alignment Audit, 1.5 Anti-Slop Scan, 1.6 Bridge Quality Audit | opus |
 | **2** | Issue Clustering | 2.1 Issue Severity Classification (P1: structural violation, P2: voice break, P3: polish), 2.2 Issue Clustering by Type | opus |
-| **3 (Arena)** | Revision | Per-issue Arena (7 competitors propose fixes, 3 rounds for P1-P2, optional for P3+) | opus |
+| **3 (Arena)** | Revision | Per-issue Arena (7 competitors propose fixes, 2 rounds + audience evaluation for P1-P2, optional for P3+) | opus |
 | **4** | Final Output | 4.1 Revised Campaign Package, 4.2 Editorial Summary, 4.3 Before/After Comparison | sonnet |
 
 ### E4 Audit Criteria
@@ -883,8 +883,8 @@ BRIDGE QUALITY:
 
 | Priority | Description | Arena Treatment |
 |----------|-------------|----------------|
-| **P1: Structural Violation** | Body type duplicate, ratio violation, missing bridge, SL mismatch | Full 3-round Arena MANDATORY |
-| **P2: Voice Break** | Register shift, copywriter voice intrusion, personality inconsistency | Full 3-round Arena MANDATORY |
+| **P1: Structural Violation** | Body type duplicate, ratio violation, missing bridge, SL mismatch | Full 2-round + audience evaluation Arena MANDATORY |
+| **P2: Voice Break** | Register shift, copywriter voice intrusion, personality inconsistency | Full 2-round + audience evaluation Arena MANDATORY |
 | **P3: Polish** | Word choice, pacing, paragraph structure, minor clarity | Arena optional (human confirms quick-fix or full Arena) |
 | **P4: Enhancement** | Opportunity to strengthen, not a flaw | Log only, human decides |
 
@@ -908,23 +908,21 @@ ROUND 1:
   1C: Targeted revision
   1D: Scoring against 7 email-specific criteria
   1E: Ranking
-  1F: Learning Brief (what worked: hook approach, bridge technique, content value)
+  1F: Analytical Brief (what worked: hook approach, bridge technique, content value)
 
-ROUND 2:
-  2A: Learning Brief distributed
+ROUND 2 (FINAL):
+  2A: Analytical Brief distributed
   2B: 7 Re-generate incorporating learnings
-  [Same 1B-1F flow]
-
-ROUND 3:
-  3A: Cumulative Learning Brief distributed
-  3B: 7 Generate FINAL
   [Same 1B-1F flow → FINAL scoring]
 
+AUDIENCE EVALUATION:
+  Audience persona panel evaluates Round 2 (FINAL) emails for resonance
+
 POST-ARENA (Layer 2.6):
-  Synthesizer decomposes all 7 Round 3 emails → 2-3 phrase-level hybrids
+  Synthesizer decomposes all 7 Round 2 (FINAL) emails → 2-3 phrase-level hybrids
 
 HUMAN SELECTION (BLOCKING):
-  7 pure Round 3 emails + 2-3 hybrids = 9-10 candidates
+  7 pure Round 2 (FINAL) emails + 2-3 hybrids = 9-10 candidates
 ```
 
 ### Subject Line Arena (E2)
@@ -942,17 +940,15 @@ ROUND 1:
   1C: Targeted revision (replace weakest SL)
   1D: Scoring against 7 SL-specific criteria
   1E: Top 10 ranking from 35 candidates
-  1F: Learning Brief
+  1F: Analytical Brief
 
-ROUND 2:
-  2A: Learning Brief + Top 10 from R1 distributed
-  2B: 7 Re-generate 5 each (35 new candidates)
-  2C-2F: Same flow → Updated Top 10
+ROUND 2 (FINAL):
+  2A: Analytical Brief + Top 10 from R1 distributed
+  2B: 7 Generate FINAL 5 each (35 candidates)
+  2C-2F: Same flow → FINAL Top 10
 
-ROUND 3:
-  3A: Cumulative Brief + Running Top 10
-  3B: 7 Generate FINAL 5 each (35 candidates)
-  3C-3F: Same flow → FINAL Top 10
+AUDIENCE EVALUATION:
+  Audience persona panel evaluates Round 2 (FINAL) SLs for resonance
 
 POST-ARENA:
   Synthesizer may create hybrid SLs (combining elements from different formulas)
@@ -1627,7 +1623,7 @@ EMAIL-MC-CHECK-LITE:
 11. Skipping E0 (starting at E1 without campaign blueprint)
 12. Running E2 before E1 is complete for that email
 13. Running E3 before all E1 + E2 outputs exist
-14. Running fewer than 3 Arena rounds for E1 or E2
+14. Running fewer than 2 Arena rounds + audience evaluation for E1 or E2
 15. Skipping any of the 7 Arena competitors
 16. Proceeding without human selection after Arena
 17. Skipping E4 editorial review
@@ -1658,7 +1654,7 @@ EMAIL-MC-CHECK-LITE:
 | "Subject lines can be generated alongside the email" | Law 2 exists because SL/body mismatch is the #1 SL failure mode. |
 | "This email doesn't need a bridge" | Every email has a bridge. No exceptions. |
 | "The sequence doesn't need all 7 body types" | Variety is structural, not optional (Law 4). |
-| "One Arena round produced great results" | 3 rounds mandatory. Round 1 = baseline, not peak. |
+| "One Arena round produced great results" | 2 rounds + audience evaluation mandatory. Round 1 = baseline, not peak. |
 | "The autoresponder can mention 'this week' loosely" | ZERO time references in AR. Absolute zero. |
 
 ---
@@ -1704,7 +1700,7 @@ SESSION PLANNING:
   E0 (Strategist): 1 session (lightweight, no Arena)
 
   E1 (Writer):
-    - Emails per session: 2-3 (each email = full 3-round Arena)
+    - Emails per session: 2-3 (each email = full 2-round + audience evaluation Arena)
     - 7-email launch: 3 sessions minimum
     - 14-email autoresponder: 5-7 sessions minimum
 
@@ -1793,7 +1789,7 @@ COMBINED WORKFLOW:
 The Email Engine maintains the same quality standards as the main CopywritingEngine:
 
 - Gates are PASS or FAIL (no conditional pass, no partial pass)
-- 3-round Arena, no exceptions
+- 2-round + audience evaluation Arena, no exceptions
 - Every microskill produces its own file
 - MC-CHECK at every layer entry and gate
 - Write to files immediately (conversation context is ephemeral)
@@ -1855,7 +1851,7 @@ SL FORMULAS: 18 categories (top 3: SL-THE, SL-HOW, SL-WHY)
 
 PIPELINE: E0 → E1 (per email) → E2 (per email) → E3 → E4
 
-ARENA: 7 competitors, 3 rounds, per email (E1) and per SL set (E2)
+ARENA: 7 competitors, 2 rounds + audience evaluation, per email (E1) and per SL set (E2)
 
 QUALITY: >= 8.0 overall, >= 7.0 voice, auto-fail if pitch > 30%
 

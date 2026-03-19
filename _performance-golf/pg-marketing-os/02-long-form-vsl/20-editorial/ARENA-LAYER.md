@@ -6,7 +6,7 @@
 **Position:** After Layer 2 (Multi-Expert Critique), Before Layer 3 (5-Tier Evaluation)
 **Gate:** GATE_2.5 — BLOCKING (requires human revision selection)
 
-> **Arena Mode:** `editorial_revision` — Competitors generate REVISIONS of existing copy per critique issues. Per-issue competition. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 3-round execution protocol.
+> **Arena Mode:** `editorial_revision` — Competitors generate REVISIONS of existing copy per critique issues. Per-issue competition. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 2-round + audience evaluation execution protocol.
 
 ---
 
@@ -152,7 +152,7 @@ All revision candidates scored against these criteria:
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All revision generation phases use `effort: max`. Critique uses `effort: high`. See ~system/SYSTEM-CORE.md Effort Protocol.
 > **Agent Team Mode:** When Agent Teams enabled, each persona runs as a separate teammate agent generating revisions in its own 200K context. See `~system/protocols/ARENA-CORE-PROTOCOL.md` v2.0 Agent Team Execution Mode.
@@ -166,22 +166,22 @@ This skill uses `arena_mode: editorial_revision`:
 - **Human selection** from 9-10 candidates per issue (7 pure + 2-3 hybrids)
 
 ### Priority-Based Round Rules
-- **P1 issues (critical):** MANDATORY 3 rounds — full Arena protocol
-- **P2 issues (important):** MANDATORY 3 rounds — full Arena protocol
+- **P1 issues (critical):** MANDATORY 2 rounds + audience evaluation — full Arena protocol
+- **P2 issues (important):** MANDATORY 2 rounds + audience evaluation — full Arena protocol
 - **P3+ issues (minor):** CAN bypass with human confirmation
-  - Human asked: "P3 issues detected. Run 3-round arena or apply quick fixes?"
+  - Human asked: "P3 issues detected. Run 2-round + audience evaluation arena or apply quick fixes?"
   - If human confirms bypass: apply fixes without full arena
-  - If human requests arena: run full 3 rounds
+  - If human requests arena: run full 2 rounds + audience evaluation
 
 ### Issue Processing Flow
 ```
 FOR EACH issue from Layer 2 critique:
   1. Classify priority (P1/P2/P3+)
   2. IF P3+ AND human confirms bypass → apply quick fix
-  3. ELSE → run full 3-round Arena per ~system/protocols/ARENA-CORE-PROTOCOL.md
+  3. ELSE → run full 2-round + audience evaluation Arena per ~system/protocols/ARENA-CORE-PROTOCOL.md
      - 7 competitors generate revision candidates
      - Critique-revise cycle each round
-     - Learning briefs between rounds
+     - Analytical briefs between rounds
      - Post-arena synthesis (2-3 hybrids)
      - Human selects winning revision
 ```
@@ -376,7 +376,7 @@ FOR EACH issue from Layer 2 critique:
 | Version | Date | Changes |
 |---------|------|---------|
 | 2.1 | 2026-02-05 | AGENT TEAMS + EFFORT PROTOCOL: Added effort level and Agent Team mode references to execution protocol. See ~system/protocols/ARENA-CORE-PROTOCOL.md v2.0 and ~system/SYSTEM-CORE.md. |
-| 2.0 | 2026-02-05 | ARENA SYSTEM UPGRADE v3.0: Added arena_mode: editorial_revision with priority-based round rules (P1/P2 = mandatory 3 rounds, P3+ = can bypass with human confirmation). Replaced execution protocol with reference to ~system/protocols/ARENA-CORE-PROTOCOL.md (3-round mandatory competition, adversarial critique-revise, 7 competitors including The Architect, learning briefs). Added critique-specific guidance. Updated all competitor counts from 6 to 7. Version bump. |
+| 2.0 | 2026-02-05 | ARENA SYSTEM UPGRADE v3.0: Added arena_mode: editorial_revision with priority-based round rules (P1/P2 = mandatory 2 rounds + audience evaluation, P3+ = can bypass with human confirmation). Replaced execution protocol with reference to ~system/protocols/ARENA-CORE-PROTOCOL.md (2-round + audience evaluation mandatory competition, adversarial critique-revise, 7 competitors including The Architect, analytical briefs). Added critique-specific guidance. Updated all competitor counts from 6 to 7. Version bump. |
 | 1.1 | 2026-02-03 | Added SPECIMEN ALIGNMENT section with persona-to-specimen mapping, issue-type-indexed loading matrix, before/after calibration specimens, 7-step loading protocol |
 | 1.0 | 2026-02-03 | Initial creation with 7 judging criteria (Issue Resolution Impact 20%, Voice Preservation 20%, Flow Enhancement 15%, Clarity Improvement 15%, Slop Elimination 10%, Brevity 10%, Threading Preservation 10%), 6-persona revision generation, critique-to-revision mapping, major element protection, BLOCKING human selection |
 

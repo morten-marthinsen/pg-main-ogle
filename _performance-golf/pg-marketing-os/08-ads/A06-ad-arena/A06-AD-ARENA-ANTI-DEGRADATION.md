@@ -25,7 +25,7 @@ I WILL NOT: Run fewer than 3 Arena rounds ("concepts look strong enough after Ro
 **Anticipated Failure Patterns:**
 - AI evaluates hooks, scripts, and visuals SEPARATELY instead of as atomic integrated units
 - AI runs Arena without loading verbatim ad specimens for each persona
-- AI runs fewer than 3 rounds ("concepts look strong enough after Round 1")
+- AI runs fewer than 2 rounds ("concepts look strong enough after Round 1")
 - AI uses self-critique instead of dedicated adversarial Critic with blind evaluation
 - AI creates consensus across personas instead of maintaining adversarial diversity
 - AI inflates scores in later rounds due to familiarity instead of genuine quality improvement
@@ -60,7 +60,7 @@ I WILL NOT: Run fewer than 3 Arena rounds ("concepts look strong enough after Ro
 [project]/A06-ad-arena/checkpoints/ARENA_R1_COMPLETE.yaml
 ```
 
-**Arena Round 3 CANNOT execute unless ALL THREE files exist:**
+**Arena Round 2 (FINAL) CANNOT execute unless ALL THREE files exist:**
 ```
 [project]/A06-ad-arena/checkpoints/LAYER_1_COMPLETE.yaml
 [project]/A06-ad-arena/checkpoints/ARENA_R1_COMPLETE.yaml
@@ -86,7 +86,7 @@ I WILL NOT: Run fewer than 3 Arena rounds ("concepts look strong enough after Ro
 
 ```yaml
 # ARENA_R[N]_COMPLETE.yaml (for Rounds 1-3)
-round: [1 | 2 | 3]
+round: [1 | 2]
 skill: "A06-ad-arena"
 timestamp: "[ISO 8601]"
 status: COMPLETE
@@ -175,7 +175,7 @@ verification:
 
 | Metric | Minimum | If Not Met |
 |--------|---------|------------|
-| **Arena rounds** | 3 (mandatory — no shortcuts) | HALT -- Complete all 3 rounds |
+| **Arena rounds** | 3 (mandatory — no shortcuts) | HALT -- Complete both rounds + audience evaluation |
 | **Personas per round** | 7 (all must evaluate) | HALT -- All 7 personas required |
 | **Specimens loaded per persona** | 15 verbatim ad specimens minimum | HALT -- Load specimens before Arena |
 | **Overall weighted score** | >= 8.0 to advance | HALT -- Refine or reject concept |
@@ -196,7 +196,7 @@ specimen_protocol:
   step_1: "CHECK: Do >= 15 specimen files exist in ad-persona-specimens/[persona-dir]/ for EACH of the 6 specialist personas?"
   step_2: "IF YES for all 6: LOAD 3-5 niche-matched + platform-matched specimens per persona"
   step_3: "IF NO (< 15 for any persona): HALT -- 'Cannot run Arena without minimum specimen count'"
-  step_4: "HOLD specimens in active context across all 3 rounds"
+  step_4: "HOLD specimens in active context across both rounds + audience evaluation"
   step_5: "Persona evaluations MUST reference specific specimens as comparison points"
   step_6: "The Architect does NOT load separate specimens -- references all specimens from other 6 personas"
 
@@ -228,7 +228,7 @@ specimen_protocol:
 
 | Rationalization | Why It's Invalid | Required Response |
 |-----------------|------------------|-------------------|
-| "Concepts look strong enough after Round 1" | Round 2 and 3 produce genuine improvement through learning. Cutting rounds cuts quality ceiling. | HALT -- Complete all 3 rounds |
+| "Concepts look strong enough after Round 1" | Round 2 and 3 produce genuine improvement through learning. Cutting rounds cuts quality ceiling. | HALT -- Complete both rounds + audience evaluation |
 | "5 personas are sufficient for this evaluation" | 7 personas is non-negotiable. Each brings a distinct lens. Missing personas = missing critical perspectives. | HALT -- All 7 personas required |
 | "The hook alone is strong so the concept passes" | Concepts are ATOMIC UNITS (hook + script + visual). Evaluating elements in isolation misses integration quality. | HALT -- Evaluate complete integrated concept |
 | "Close enough to 8.0" (e.g., 7.8 weighted score) | Thresholds are exact. 7.8 ≠ 8.0. Numbers are binary pass/fail. | HALT -- Refine until threshold met |
@@ -273,7 +273,7 @@ AD-ARENA-MC-CHECK:
 
   arena_round_compliance:
     rounds_completed: [0 | 1 | 2 | 3]
-    if_under_3_and_attempting_synthesis: "STOP -- All 3 rounds mandatory"
+    if_under_3_and_attempting_synthesis: "STOP -- Both rounds + audience evaluation mandatory"
     personas_evaluated_this_round: [count]
     if_under_7: "STOP -- All 7 personas must evaluate every round"
 
@@ -345,7 +345,7 @@ Multi-round Arena execution loses continuity without persistent state files. Wit
   layer-2-outputs/
     round-1/                # Round 1 evaluations
     round-2/                # Round 2 evaluations
-    round-3/                # Round 3 evaluations
+    round-3/                # Round 2 (FINAL) evaluations
   layer-2.5-outputs/        # Synthesis hybrids
   layer-3-outputs/          # Human selection
   layer-4-outputs/          # Final packaging
@@ -393,7 +393,7 @@ gate_status:
   GATE_1: "[PASS | FAIL | PENDING]"
   GATE_R1: "[PASS | FAIL | PENDING]"
   GATE_R2: "[PASS | FAIL | PENDING]"
-  GATE_R3: "[PASS | FAIL | PENDING]"
+  GATE_R2_FINAL: "[PASS | FAIL | PENDING]"
   GATE_2.5: "[PASS | FAIL | PENDING]"
   GATE_3: "[PASS | FAIL | PENDING]"
   GATE_4: "[PASS | FAIL | PENDING]"
@@ -473,7 +473,7 @@ SESSION STARTUP:
   1. READ this file (A06-AD-ARENA-ANTI-DEGRADATION.md) -- MANDATORY
   2. READ A06-AD-ARENA-AGENT.md -- agent architecture and 7 personas
   3. READ AD-ENGINE.md (Ad Arena Adaptation section)
-  4. READ ~system/protocols/ARENA-CORE-PROTOCOL.md (3-round shared protocol)
+  4. READ ~system/protocols/ARENA-CORE-PROTOCOL.md (2-round + audience evaluation shared protocol)
   5. IF resuming: READ PROJECT-STATE.md for current round/layer
   6. IF resuming: READ checkpoint files to verify completion
   7. CREATE infrastructure (PROJECT-STATE.md, PROGRESS-LOG.md) if not exists
@@ -556,7 +556,7 @@ PRE-EXECUTION (Fixes 5, 8):
 [ ] A06-AD-ARENA-ANTI-DEGRADATION.md read (THIS FILE)
 [ ] A06-AD-ARENA-AGENT.md read
 [ ] AD-ENGINE.md read (Ad Arena Adaptation section)
-[ ] ~system/protocols/ARENA-CORE-PROTOCOL.md read (3-round shared protocol)
+[ ] ~system/protocols/ARENA-CORE-PROTOCOL.md read (2-round + audience evaluation shared protocol)
 [ ] PROJECT-STATE.md created with all mandatory fields
 [ ] PROGRESS-LOG.md created with header row
 [ ] checkpoints/ directory created
@@ -586,28 +586,28 @@ LAYER 2 ROUND 1 (ARENA):
 [ ] Targeted revision completed based on critique
 [ ] All concepts scored against 7 criteria with evidence
 [ ] Platform-specific adjustments applied (TikTok/Meta/YouTube/Display)
-[ ] Learning Brief Round 1 generated
+[ ] Analytical Brief Round 1 generated
 [ ] ARENA_R1_COMPLETE.yaml created
 
 LAYER 2 ROUND 2 (ARENA):
-[ ] Learning Brief distributed to all 7 personas
+[ ] Analytical Brief distributed to all 7 personas
 [ ] All 7 personas re-evaluated with learning integration
 [ ] Adversarial Critic re-critiqued (found weaknesses in improved concepts)
 [ ] Targeted revision completed
 [ ] All concepts scored (genuine improvement, not inflation)
-[ ] Cumulative Learning Brief generated
+[ ] Cumulative Analytical Brief generated
 [ ] ARENA_R2_COMPLETE.yaml created
 
-LAYER 2 ROUND 3 (ARENA):
-[ ] Cumulative Learning Brief distributed to all 7 personas
+LAYER 2 ROUND 2 FINAL (ARENA):
+[ ] Cumulative Analytical Brief distributed to all 7 personas
 [ ] All 7 personas generated FINAL evaluations
 [ ] Adversarial Critic performed FINAL critique
 [ ] Targeted revision completed
 [ ] FINAL scoring completed
-[ ] ARENA_R3_COMPLETE.yaml created
+[ ] ARENA_R2_FINAL_COMPLETE.yaml created
 
 LAYER 2.5 (SYNTHESIS -- MANDATORY, CANNOT BE SKIPPED):
-[ ] All 7 Round 3 evaluations decomposed into improvement suggestions
+[ ] All 7 Round 2 (FINAL) evaluations decomposed into improvement suggestions
 [ ] Best-element matrix created (best suggestion per concept aspect)
 [ ] 2-3 hybrid concepts reconstructed (not averaged)
 [ ] Coherence validation completed (6/6 checks pass)
@@ -624,7 +624,7 @@ LAYER 3 (HUMAN SELECTION -- BLOCKING):
 
 LAYER 4 (OUTPUT & PACKAGING):
 [ ] AD-ARENA-RESULTS.md created with complete evaluation data
-[ ] Learning Brief finalized (what the Arena learned)
+[ ] Analytical Brief finalized (what the Arena learned)
 [ ] Downstream handoff to A07 prepared (selected concepts only)
 [ ] All output files verified
 [ ] LAYER_4_COMPLETE.yaml created
@@ -638,7 +638,7 @@ POST-EXECUTION:
 
 ON CONTEXT RESUME:
 [ ] VERIFY specimens were loaded (check execution log)
-[ ] VERIFY all 3 rounds completed (check round checkpoint files)
+[ ] VERIFY all rounds completed (check round checkpoint files)
 [ ] VERIFY concepts evaluated as atomic units (no isolated element scoring)
 [ ] VERIFY human selection exists (HUMAN_SELECTION_COMPLETE.yaml)
 [ ] If specimens skipped, RETURN to Layer 0
@@ -649,12 +649,12 @@ ON CONTEXT RESUME:
 
 ## ALL-BELOW-THRESHOLD PROTOCOL
 
-**Trigger:** Fewer than 3 concepts score >= 8.0 weighted after all 3 rounds + synthesis.
+**Trigger:** Fewer than 3 concepts score >= 8.0 weighted after all rounds + synthesis.
 
 **This is NOT a failure. It is a quality signal.**
 
 ```
-IF fewer than 3 concepts >= 8.0 after Round 3 + Synthesis:
+IF fewer than 3 concepts >= 8.0 after Round 2 (FINAL) + Synthesis:
 
 STEP 1: ANALYZE THE PATTERN
   - Which criterion(s) are systematically weak across all concepts?
@@ -755,9 +755,9 @@ diversity_verification:
 
 **Symptom:** After Round 1, the model declares concepts "strong enough" and skips Rounds 2-3.
 
-**Why This Fails:** The best evaluations emerge from the 3-round adversarial process. Round 1 establishes baselines. Round 2 shows improvement through learning. Round 3 produces peak quality.
+**Why This Fails:** The best evaluations emerge from the 2-round + audience evaluation adversarial process. Round 1 establishes baselines. Round 2 shows improvement through learning. Round 2 (FINAL) produces peak quality.
 
-**Fix:** 3 rounds are MANDATORY. "Strong after Round 1" is a forbidden rationalization. The Arena runs all 3 rounds regardless of Round 1 scores.
+**Fix:** 2 rounds + audience evaluation are MANDATORY. "Strong after Round 1" is a forbidden rationalization. The Arena runs 2 rounds + audience evaluation regardless of Round 1 scores.
 
 ### Pattern 4: Self-Critique Weakness
 
@@ -773,15 +773,15 @@ diversity_verification:
 
 **Why This Fails:** Consensus is a sign of degradation, not quality. Each persona should maintain its distinct lens even when learning from other personas.
 
-**Fix:** Learning Briefs distribute TECHNIQUES, not consensus. Personas absorb winner techniques but maintain their editorial lens. The Scroll Stopper learning from The Brand Builder's memorability technique doesn't make the Scroll Stopper evaluate memorability — it makes the Scroll Stopper's hook recommendations create memorability.
+**Fix:** Analytical Briefs distribute TECHNIQUES, not consensus. Personas absorb winner techniques but maintain their editorial lens. The Scroll Stopper learning from The Brand Builder's memorability technique doesn't make the Scroll Stopper evaluate memorability — it makes the Scroll Stopper's hook recommendations create memorability.
 
 ### Pattern 6: Scoring Inflation
 
-**Symptom:** Round 3 scores are higher than Round 1 not due to genuine quality improvement but due to familiarity with the concepts.
+**Symptom:** Round 2 (FINAL) scores are higher than Round 1 not due to genuine quality improvement but due to familiarity with the concepts.
 
 **Why This Fails:** Familiarity ≠ quality. Repeated exposure can inflate scores through mere-exposure effect.
 
-**Fix:** Scores must reflect genuine quality against the 7 criteria, not familiarity. Adversarial Critic in Round 3 MUST still find weaknesses even in high-scoring concepts. If the Critic finds zero weaknesses, that itself is a degradation signal.
+**Fix:** Scores must reflect genuine quality against the 7 criteria, not familiarity. Adversarial Critic in Round 2 (FINAL) MUST still find weaknesses even in high-scoring concepts. If the Critic finds zero weaknesses, that itself is a degradation signal.
 
 ### Pattern 7: Platform Blindness
 
@@ -797,7 +797,7 @@ diversity_verification:
 
 **Why This Fails:** Averaging produces mediocre blends. True synthesis creates concepts that exceed any single persona's version by integrating the best improvement suggestions.
 
-**Fix:** Synthesis is phrase-level reconstruction. Decompose all 7 Round 3 evaluations into discrete improvement suggestions. Build best-element matrix. Reconstruct 2-3 improved concepts from best suggestions. Validate coherence (the improved concept must feel unified, not Frankensteined).
+**Fix:** Synthesis is phrase-level reconstruction. Decompose all 7 Round 2 (FINAL) evaluations into discrete improvement suggestions. Build best-element matrix. Reconstruct 2-3 improved concepts from best suggestions. Validate coherence (the improved concept must feel unified, not Frankensteined).
 
 ---
 

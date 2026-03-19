@@ -3,7 +3,7 @@
 **Version:** 2.0
 **Created:** 2026-02-05
 **Updated:** 2026-02-05
-**Purpose:** Shared execution protocol for ALL 16 Arena Layers. Defines 3-round multi-round competition, adversarial critique-revise phase, Synthesizer-as-Competitor (7th competitor), learning briefs, context management, MC-CHECK integration, emergency protocols, Agent Team execution mode, and Effort Protocol integration.
+**Purpose:** Shared execution protocol for ALL 16 Arena Layers. Defines 2-round + audience evaluation multi-round competition, adversarial critique-revise phase, Synthesizer-as-Competitor (7th competitor), analytical briefs, context management, MC-CHECK integration, emergency protocols, Agent Team execution mode, and Effort Protocol integration.
 
 **Authority:** This file has EQUAL authority to ~system/SYSTEM-CORE.md. All Arena-Layer files reference this protocol.
 
@@ -47,12 +47,12 @@ The Architect plays TWO distinct roles:
 
 | Role | When | What |
 |------|------|------|
-| **In-Arena Competitor** | Rounds 1-3 | Generates ONE integrated output competing head-to-head against all 6 personas |
-| **Post-Arena Hybrid Creator** | After Round 3 | Creates 2-3 phrase-level hybrids from all 7 Round 3 outputs |
+| **In-Arena Competitor** | Rounds 1-2 | Generates ONE integrated output competing head-to-head against all 6 personas |
+| **Post-Arena Hybrid Creator** | After Round 2 (FINAL) | Creates 2-3 phrase-level hybrids from all 7 Round 2 (FINAL) outputs |
 
 **In-Arena behavior:** The Architect generates a COMPLETE output — not a synthesis of what others wrote. It approaches the task by integrating multiple editorial lenses simultaneously. It draws on flow (Makepeace), entertainment (Halbert), market calibration (Schwartz), credibility (Ogilvy), mechanism clarity (Clemens), and proof architecture (Bencivenga) to produce a single integrated output.
 
-**Round 2-3 advantage:** The Architect sees ALL other outputs from the previous round + the Learning Brief, giving it natural synthesis intelligence. This is the Architect's competitive edge — it learns what works from each persona and integrates those techniques.
+**Round 2 advantage:** The Architect sees ALL other outputs from the previous round + the Analytical Brief, giving it natural synthesis intelligence. This is the Architect's competitive edge — it learns what works from each persona and integrates those techniques.
 
 ---
 
@@ -94,9 +94,9 @@ critique:
 
 ---
 
-## 3-ROUND MANDATORY COMPETITION
+## 2-ROUND + AUDIENCE EVALUATION MANDATORY COMPETITION
 
-**This is NOT optional. NOT a flag. 3 rounds DEFAULT. Every Arena runs 3 rounds.**
+**This is NOT optional. NOT a flag. 2 rounds + audience evaluation DEFAULT. Every Arena runs 2 rounds + audience evaluation.**
 
 ### Round 1: Initial Generation + Diversity Audit + Critique + Revision
 
@@ -139,7 +139,7 @@ ROUND 1:
       - All 7 ranked by weighted score
       - Strengths and weaknesses documented per competitor
 
-  1F: Learning Brief Generated (includes diversity and memorability notes)
+  1F: Analytical Brief Generated (includes diversity and memorability notes)
       - Winner's techniques extracted
       - What the winner did that others didn't
       - Persona-specific feedback for each non-winner
@@ -151,7 +151,7 @@ ROUND 1:
 ```
 KEEP:
   - Winner output (VERBATIM — full text)
-  - Learning Brief (full)
+  - Analytical Brief (full)
   - All 7 critique-revision summaries (what was criticized, what was fixed)
   - All 7 scores
 
@@ -164,8 +164,8 @@ COMPRESS (to summaries):
 
 ```
 ROUND 2:
-  2A: Learning Brief Distributed
-      - All 7 competitors receive the Learning Brief
+  2A: Analytical Brief Distributed
+      - All 7 competitors receive the Analytical Brief
       - Key rule: Absorb TECHNIQUES, not VOICE
       - Halbert learning Ogilvy's credibility technique doesn't make Halbert sound like Ogilvy
       - Each competitor notes which techniques they'll integrate
@@ -193,20 +193,20 @@ ROUND 2:
       - Same criteria, same weights
       - Track improvement from Round 1 → Round 2
 
-  2F: Cumulative Learning Brief
+  2F: Cumulative Analytical Brief
       - Combines Round 1 + Round 2 learnings
       - Identifies persistent strengths across rounds
       - Identifies persistent weaknesses across rounds
       - Notes techniques that produced the biggest improvements
 ```
 
-### Context Compression: Round 2 → Round 3
+### Context Compression: Round 1 → Round 2 (FINAL)
 
 ```
 KEEP:
   - Round 1 winner output (VERBATIM)
   - Round 2 winner output (VERBATIM)
-  - Cumulative Learning Brief (full)
+  - Cumulative Analytical Brief (full)
   - All Round 2 scores
 
 COMPRESS:
@@ -215,11 +215,11 @@ COMPRESS:
   - Round 1 scores → keep totals only
 ```
 
-### Round 3: FINAL Generation + Diversity Audit + Critique + Revision
+### Round 2 (FINAL): FINAL Generation + Diversity Audit + Critique + Revision
 
 ```
-ROUND 3:
-  3A: Cumulative Learning Brief Distributed
+ROUND 2 (FINAL):
+  3A: Cumulative Analytical Brief Distributed
       - All techniques from Rounds 1+2 available
       - Persistent patterns highlighted
       - Each competitor knows their specific improvement areas
@@ -249,14 +249,14 @@ ROUND 3:
   3F: FINAL Ranking
       - All 7 ranked definitively
       - Complete scoring breakdown retained
-      - ALL 7 Round 3 outputs kept in FULL (these go to human selection)
+      - ALL 7 Round 2 (FINAL) outputs kept in FULL (these go to human selection)
 ```
 
 ---
 
 ## ADAPTIVE CONVERGENCE GOVERNOR (Upgrade 2.2)
 
-**Purpose:** Allow Round 3 to be skippable when Round 2 produces a clear winner with no meaningful differentiation remaining. Saves token spend without sacrificing quality.
+**Purpose:** Allow Round 2 (FINAL) to be skippable when Round 2 produces a clear winner with no meaningful differentiation remaining. Saves token spend without sacrificing quality.
 
 ### After Round 2 Scoring: Convergence Assessment
 
@@ -268,47 +268,47 @@ CASE 1 — CLEAR WINNER (early exit eligible):
   AND Round 2 winner leads Round 1 winner by 2+ points overall
   → OFFER early exit to human
   → Present: "Round 2 winner [persona] scores 9.0+ across all dimensions and
-    leads Round 1 by [N] points. Round 3 may produce marginal improvement.
-    Skip Round 3? [Y/N]"
-  → Human decides. If human says N, Round 3 proceeds normally.
+    leads Round 1 by [N] points. Round 2 (FINAL) may produce marginal improvement.
+    Skip Round 2 (FINAL)? [Y/N]"
+  → Human decides. If human says N, Round 2 (FINAL) proceeds normally.
 
 CASE 2 — CONVERGENCE WARNING:
   IF Round 2 scores are within 0.5 points of Round 1 across all dimensions
   → FLAG: "Competitors may be converging on similar output."
-  → Recommend: Inject additional diversity constraints before Round 3
+  → Recommend: Inject additional diversity constraints before Round 2 (FINAL)
   → Reference ARENA-DIVERSITY-PROTOCOL.md Divergence Protocol
 
 CASE 3 — NORMAL:
   IF neither Case 1 nor Case 2
-  → Proceed to Round 3 normally
+  → Proceed to Round 2 (FINAL) normally
 ```
 
-### Post-Round 3 Quality Floor
+### Post-Round 2 (FINAL) Quality Floor
 
 ```
-AFTER ROUND 3 SCORING:
-  IF Round 3 winner scores below 7.0 on ANY dimension
+AFTER ROUND 2 (FINAL) SCORING:
+  IF Round 2 (FINAL) winner scores below 7.0 on ANY dimension
   → FLAG for human review: "[dimension] scored [score], below 7.0 floor"
   → Human decides: proceed, request targeted revision, or re-run Arena
 ```
 
 ### Tier Constraints
 
-| Tier | Round 3 Skippable? | Early Exit Offer? |
+| Tier | Round 2 (FINAL) Skippable? | Early Exit Offer? |
 |------|-------------------|-------------------|
-| **Full** | **NEVER** — 3 rounds mandatory regardless of scores | No |
+| **Full** | **NEVER** — 2 rounds + audience evaluation mandatory regardless of scores | No |
 | **Standard** | Yes — if Case 1 conditions met AND human approves | Yes |
 | **Quick** | N/A — no Arena | N/A |
 
 ### Cost Consideration
 
-Each Arena round at 1M context (Full tier) or 200K (Standard) consumes significant tokens. Skipping an unnecessary Round 3 for Standard-tier tasks saves premium-priced tokens. This makes the convergence governor a cost optimization tool as well as a quality tool.
+Each Arena round at 1M context (Full tier) or 200K (Standard) consumes significant tokens. Skipping an unnecessary Round 2 (FINAL) for Standard-tier tasks saves premium-priced tokens. This makes the convergence governor a cost optimization tool as well as a quality tool.
 
 ---
 
 ## CONTROLLED INTER-ROUND DIVERSITY (Upgrade 2.3)
 
-**Purpose:** Prevent self-few-shotting — where Round 1 patterns lock in the structural approach for Rounds 2 and 3. Source: Manus "Context Engineering" Lesson 6: "Don't few-shot yourself."
+**Purpose:** Prevent self-few-shotting — where Round 1 patterns lock in the structural approach for Round 2. Source: Manus "Context Engineering" Lesson 6: "Don't few-shot yourself."
 
 ### The Problem
 
@@ -320,17 +320,17 @@ Between Arena rounds, the Arena Coordinator MUST:
 
 1. **Vary presentation order** — Do NOT present Round N outputs in the same order to Round N+1 competitors. Shuffle the order to prevent positional bias.
 
-2. **Vary emphasized dimension** — The Learning Brief for each round should emphasize a DIFFERENT scoring dimension as the primary improvement target:
+2. **Vary emphasized dimension** — The Analytical Brief for each round should emphasize a DIFFERENT scoring dimension as the primary improvement target:
    - Round 1→2: Emphasize the lowest-scoring dimension across all competitors
-   - Round 2→3: Emphasize a different dimension (even if the same one is still lowest)
+   - Pre-Round 2 (FINAL): Emphasize a different dimension (even if the same one is still lowest)
 
 3. **Introduce structural constraints** — Each round after Round 1 must include at least ONE structural constraint that differs from the previous round:
    - Round 2: "Your output MUST use a different opening structure than your Round 1 output"
-   - Round 3: "Your output MUST use a different proof placement strategy than your Round 2 output"
+   - Round 2 (FINAL): "Your output MUST use a different proof placement strategy than your Round 2 output"
 
 4. **Cross-round convergence tracking** — After Round 2, compare Round 1 and Round 2 winners:
    - If both rounds produced the same persona as winner: note this but don't intervene
-   - If the structural approach of the Round 2 winner is similar to Round 1 winner: flag for Divergence Protocol consideration before Round 3
+   - If the structural approach of the Round 2 winner is similar to Round 1 winner: flag for Divergence Protocol consideration before Round 2 (FINAL)
 
 ### Integration with ARENA-DIVERSITY-PROTOCOL.md
 
@@ -342,32 +342,32 @@ Round 1:
 
 Round 1→2 transition:
   → Shuffle presentation order
-  → Emphasize different dimension in Learning Brief
+  → Emphasize different dimension in Analytical Brief
   → Add structural constraint for Round 2
 
 Round 2:
   → ARENA-DIVERSITY-PROTOCOL.md runs (within-round checks)
   → Cross-round convergence tracking (compare R1 vs R2 winners)
 
-Round 2→3 transition:
+Pre-Round 2 (FINAL):
   → Shuffle presentation order again
   → Emphasize different dimension
-  → Add different structural constraint for Round 3
+  → Add different structural constraint for Round 2 (FINAL)
   → If convergence detected: additional divergence constraint
 
-Round 3:
+Round 2 (FINAL):
   → ARENA-DIVERSITY-PROTOCOL.md runs (within-round, FINAL check)
 ```
 
 ---
 
-## LEARNING BRIEF SPECIFICATION
+## ANALYTICAL BRIEF SPECIFICATION
 
-### What a Learning Brief Contains
+### What a Analytical Brief Contains
 
 ```yaml
 learning_brief:
-  round: [1|2|3]
+  round: [1|2]
   type: [round_learning | cumulative_learning]
 
   winner:
@@ -405,17 +405,17 @@ learning_brief:
 | Bencivenga uses Makepeace's flow transitions while maintaining proof-first architecture | Bencivenga abandons proof focus for flow |
 | Schwartz uses Halbert's hook power while maintaining sophistication calibration | Schwartz drops sophistication to be "entertaining" |
 
-**The Learning Brief MUST include `voice_preservation_note`** for each competitor — explicit guidance on how to integrate the winner's technique without losing persona identity.
+**The Analytical Brief MUST include `voice_preservation_note`** for each competitor — explicit guidance on how to integrate the winner's technique without losing persona identity.
 
 ---
 
 ## POST-ARENA: SYNTHESIZER LAYER (2.6)
 
-After Round 3 completes, the Synthesizer Layer activates:
+After Round 2 (FINAL) completes, the Synthesizer Layer activates:
 
 ```
 POST-ARENA (Layer 2.6):
-  1. The Architect decomposes ALL 7 Round 3 outputs into micro-elements
+  1. The Architect decomposes ALL 7 Round 2 (FINAL) outputs into micro-elements
   2. Function tagging (what each phrase accomplishes)
   3. Cross-persona scoring of each micro-element
   4. Best-element matrix construction
@@ -432,7 +432,7 @@ After synthesis, human sees:
 
 | Candidate Type | Count | Source |
 |----------------|-------|--------|
-| Pure Round 3 outputs | 7 | One from each competitor |
+| Pure Round 2 (FINAL) outputs | 7 | One from each competitor |
 | Phrase-level hybrids | 2-3 | From Synthesizer (Layer 2.6) |
 | **Total** | **9-10** | All presented for selection |
 
@@ -453,14 +453,14 @@ HUMAN SELECTION (BLOCKING):
 
 ### `strategic` (Skills 03-08)
 
-Strategic skills already generate complete packages (root cause expressions, mechanism packages, promise statements, etc.). The Arena adds 3-round competition + critique-revise.
+Strategic skills already generate complete packages (root cause expressions, mechanism packages, promise statements, etc.). The Arena adds 2-round + audience evaluation competition + critique-revise.
 
 ```
 strategic mode:
   - Competitors generate COMPLETE strategic packages
   - No behavioral change from current generation approach
-  - 3 rounds of competition with critique-revise
-  - Learning briefs between rounds
+  - 2 rounds + audience evaluation of competition with critique-revise
+  - Analytical briefs between rounds
   - Human selects winning package
 ```
 
@@ -475,8 +475,8 @@ generative_full_draft mode:
   - Each competitor generates their OWN version from scratch
   - Upstream packages (root cause, mechanism, promise, big idea, structure) are the input
   - Competitors are NOT constrained to follow the Layer 2 draft's approach
-  - 3 rounds of competition with critique-revise
-  - Learning briefs between rounds
+  - 2 rounds + audience evaluation of competition with critique-revise
+  - Analytical briefs between rounds
   - Human selects winning piece
 ```
 
@@ -487,14 +487,14 @@ Editorial stays revision-based. Per-issue competition with priority-based round 
 ```
 editorial_revision mode:
   - Competitors generate REVISIONS of existing copy (per critique issues)
-  - P1 issues (critical): MANDATORY 3 rounds
-  - P2 issues (important): MANDATORY 3 rounds
+  - P1 issues (critical): MANDATORY 2 rounds + audience evaluation
+  - P2 issues (important): MANDATORY 2 rounds + audience evaluation
   - P3+ issues (minor): CAN bypass with human confirmation
-    - Human asked: "P3 issues detected. Run 3-round arena or apply quick fixes?"
+    - Human asked: "P3 issues detected. Run 2-round + audience evaluation arena or apply quick fixes?"
     - If human confirms bypass: apply fixes without full arena
-    - If human requests arena: run full 3 rounds
+    - If human requests arena: run full 2 rounds + audience evaluation
   - Each issue gets its own competition
-  - Learning briefs between rounds
+  - Analytical briefs between rounds
   - Human selects winning revision per issue
 ```
 
@@ -502,17 +502,17 @@ editorial_revision mode:
 
 ## MC-CHECK INTEGRATION SCHEDULE
 
-**8 MC-CHECK checkpoints across 3 rounds:**
+**8 MC-CHECK checkpoints across 2 rounds + audience evaluation:**
 
 | # | Checkpoint | Trigger | What to Check |
 |---|-----------|---------|---------------|
 | 1 | **Pre-Arena** | Before Round 1 starts | All upstream packages loaded? Specimens loaded? Skill ARENA-LAYER.md read? |
 | 2 | **Post-R1-Generation** | After 7 competitors generate in Round 1 | All 7 outputs complete? No abbreviations? Persona voices distinct? |
 | 3 | **Post-R1-Critique** | After critique phase | All 7 critiques have evidence? Fix directions actionable? |
-| 4 | **Post-R1-Scoring** | After Round 1 scoring | All 7 scored on all 7 criteria? Learning Brief generated? |
-| 5 | **Post-R2-Generation** | After Round 2 generation | Learning Brief techniques integrated? Persona voices preserved? |
-| 6 | **Post-R2-Scoring** | After Round 2 scoring | Improvement from R1? Cumulative Learning Brief complete? |
-| 7 | **Post-R3-Scoring** | After Round 3 scoring | All 7 final outputs complete? Ready for synthesis? |
+| 4 | **Post-R1-Scoring** | After Round 1 scoring | All 7 scored on all 7 criteria? Analytical Brief generated? |
+| 5 | **Post-R2-Generation** | After Round 2 generation | Analytical Brief techniques integrated? Persona voices preserved? |
+| 6 | **Post-R2-Scoring** | After Round 2 scoring | Improvement from R1? Cumulative Analytical Brief complete? |
+| 7 | **Post-R2-Final-Scoring** | After Round 2 (FINAL) scoring | All 7 final outputs complete? Ready for synthesis? |
 | 8 | **Pre-Human-Selection** | Before presenting to human | All 9-10 candidates ready? Scores documented? Rationale clear? |
 
 ### Arena MC-CHECK Format
@@ -520,7 +520,7 @@ editorial_revision mode:
 ```yaml
 ARENA-MC-CHECK:
   checkpoint: "[1-8]"
-  round: [1|2|3|post]
+  round: [1|2|post]
   phase: "[generation|critique|revision|scoring|synthesis|selection]"
 
   completeness:
@@ -556,7 +556,7 @@ RED ZONE PROTOCOL:
   2. Generate state handoff document:
      - Current round number
      - All scores from completed rounds
-     - Learning Briefs generated so far
+     - Analytical Briefs generated so far
      - Winner outputs (verbatim)
      - Remaining rounds needed
   3. Request session break
@@ -565,7 +565,7 @@ RED ZONE PROTOCOL:
 
 ### All-Below-Threshold
 
-If ALL 7 competitors score below the skill's minimum threshold after Round 3:
+If ALL 7 competitors score below the skill's minimum threshold after Round 2 (FINAL):
 
 ```
 ALL-BELOW-THRESHOLD PROTOCOL:
@@ -585,7 +585,7 @@ ALL-BELOW-THRESHOLD PROTOCOL:
 
 ### Tied Scores
 
-If two or more competitors are tied after Round 3:
+If two or more competitors are tied after Round 2 (FINAL):
 
 ```
 TIED SCORE PROTOCOL:
@@ -598,7 +598,7 @@ TIED SCORE PROTOCOL:
 
 ### Single-Round Exception
 
-**There is NO single-round exception.** All arenas run 3 rounds. Period.
+**There is NO single-round exception.** All arenas run 2 rounds + audience evaluation. Period.
 
 The only bypass is `editorial_revision` mode for P3+ issues, where human can confirm quick-fix instead of full arena. Even then, the human must explicitly confirm — it's not automatic.
 
@@ -610,7 +610,7 @@ The only bypass is `editorial_revision` mode for P3+ issues, where human can con
 
 ```yaml
 round_output:
-  round: [1|2|3]
+  round: [1|2]
   competitors:
     - name: "[persona]"
       output: "[full text or compressed summary depending on keep/compress rules]"
@@ -637,16 +637,16 @@ round_output:
     scoring_gaps: [list]
 ```
 
-### Final Arena Output (Post-Round 3)
+### Final Arena Output (Post-Round 2 FINAL)
 
 ```yaml
 arena_final_output:
   skill: "[skill name]"
   arena_mode: "[strategic|generative_full_draft|editorial_revision]"
-  rounds_completed: 3
+  rounds_completed: 2
   timestamp: "[ISO]"
 
-  round_3_results:
+  round_2_final_results:
     competitors:
       - name: "[persona]"
         final_output: "[FULL TEXT — all 7 kept complete]"
@@ -655,7 +655,7 @@ arena_final_output:
           # ... all 7
           weighted_total: [float]
         final_rank: [1-7]
-        round_progression: [R1_score, R2_score, R3_score]
+        round_progression: [R1_score, R2_score]
 
   synthesis_results:
     hybrids:
@@ -681,7 +681,7 @@ arena_final_output:
 
 ### Arena Execution
 
-1. **Skipping rounds without convergence governor** — 3 rounds mandatory for Full tier. Standard tier may skip Round 3 ONLY via the Adaptive Convergence Governor (9.0+ all dims, 2+ point lead, human approval). No "the output is good enough after Round 1"
+1. **Skipping rounds without convergence governor** — 2 rounds + audience evaluation mandatory for Full tier. Standard tier may skip Round 2 (FINAL) ONLY via the Adaptive Convergence Governor (9.0+ all dims, 2+ point lead, human approval). No "the output is good enough after Round 1"
 2. **Skipping competitors** — All 7 must generate every round
 3. **Skipping critique** — Every output gets adversarial critique every round
 4. **Skipping revision** — Every competitor must address their critique
@@ -690,7 +690,7 @@ arena_final_output:
 7. **Auto-selection** — Human selection is BLOCKING. No timeouts, no defaults
 8. **Voice merging** — Learning absorbs TECHNIQUES not VOICE
 9. **Abbreviating outputs** — "Similar to above" or "variation of X" is FORBIDDEN
-10. **Single-round runs** — There is NO exception for fewer than 3 rounds (Standard tier: Round 3 skip via convergence governor is a 2-round minimum, not 1)
+10. **Single-round runs** — There is NO exception for fewer than 2 rounds (Standard tier: Round 2 (FINAL) skip via convergence governor is a 2-round minimum, not 1)
 19. **Skipping inter-round diversity mechanisms** — Presentation order, emphasized dimension, and structural constraints MUST vary between rounds per Controlled Inter-Round Diversity protocol
 20. **Same structural constraint across rounds** — Each round after Round 1 must have a DIFFERENT structural constraint
 
@@ -698,7 +698,7 @@ arena_final_output:
 
 11. **Keeping all outputs verbatim across rounds** — Follow compression protocol
 12. **Discarding winner outputs** — Winners are ALWAYS kept verbatim
-13. **Discarding Learning Briefs** — Always retained in full
+13. **Discarding Analytical Briefs** — Always retained in full
 14. **Continuing past RED zone** — Complete current round, then break
 
 ### Quality
@@ -740,7 +740,7 @@ TEAM LEAD (Arena Coordinator)
 │
 └── JUDGE AGENT (scoring — separate from Critic):
     │   Own 200K context: skill criteria + 7 outputs + critiques + revisions
-    └── No stake in any output. Generates Learning Briefs.
+    └── No stake in any output. Generates Analytical Briefs.
 ```
 
 ### Persona Agent Prompt Package
@@ -764,9 +764,9 @@ persona_agent_package:
   specimens: "[type-matched patterns from skill's 0.2.6 file]"
   market_research: "[relevant quotes, proof points from research outputs]"
 
-  # 4. Round Context (Rounds 2-3 only)
-  round_number: [1|2|3]
-  learning_brief: "[from previous round — if Round 2 or 3]"
+  # 4. Round Context (Round 2 only)
+  round_number: [1|2]
+  analytical_brief: "[from previous round — if Round 2]"
   previous_critique: "[what weakness was identified in previous round]"
 
   # 5. Constraints
@@ -791,26 +791,26 @@ ROUND 1:
     9. All 7 revise IN PARALLEL
     10. Collect 7 revised outputs
     11. Send all to Judge Agent
-    12. Judge scores, ranks, generates Learning Brief
-    13. Team Lead receives Learning Brief
+    12. Judge scores, ranks, generates Analytical Brief
+    13. Team Lead receives Analytical Brief
 
 ROUND 2:
   Team Lead:
-    1. Distribute Learning Brief to all 7 persona teammates
-    2. Each teammate receives: Learning Brief + their previous critique
+    1. Distribute Analytical Brief to all 7 persona teammates
+    2. Each teammate receives: Analytical Brief + their previous critique
     3. All 7 RE-GENERATE fresh IN PARALLEL (effort: max)
-    4. [Steps 5-13 same as Round 1, cumulative Learning Brief]
+    4. [Steps 5-13 same as Round 1, cumulative Analytical Brief]
 
-ROUND 3:
+ROUND 2 (FINAL):
   Team Lead:
-    1. Distribute Cumulative Learning Brief to all 7
+    1. Distribute Cumulative Analytical Brief to all 7
     2. All 7 generate FINAL versions IN PARALLEL (effort: max)
     3. [Steps 5-13 same, FINAL scoring]
-    4. Send all 7 Round 3 outputs to Architect Agent for synthesis
+    4. Send all 7 Round 2 (FINAL) outputs to Architect Agent for synthesis
 
 POST-ARENA:
   Architect Agent:
-    1. Receives all 7 Round 3 outputs (effort: max)
+    1. Receives all 7 Round 2 (FINAL) outputs (effort: max)
     2. Executes Synthesizer protocol (SYNTHESIZER-LAYER.md)
     3. Returns 2-3 phrase-level hybrids
 
@@ -825,8 +825,8 @@ In single-context mode, outputs must be compressed between rounds because contex
 
 - Each persona agent starts each round with a **fresh context** containing only what it needs
 - No compression required — all relevant material fits in 200K
-- The Team Lead maintains the coordination state (scores, Learning Briefs, rankings)
-- Round 3 outputs are kept in FULL because each exists in its own agent's context
+- The Team Lead maintains the coordination state (scores, Analytical Briefs, rankings)
+- Round 2 (FINAL) outputs are kept in FULL because each exists in its own agent's context
 
 **Context compression rules (from earlier in this protocol) become OPTIONAL in Agent Team mode.** They remain MANDATORY for single-context fallback.
 
@@ -873,7 +873,7 @@ Before each persona generates (in sequential single-context execution), load a *
 FOR EACH PERSONA IN SEQUENCE:
   1. Write previous persona's output to file
   2. Clear conversation of previous generation content
-  3. Load: upstream packages + specimens + Learning Brief
+  3. Load: upstream packages + specimens + Analytical Brief
   4. Load: FRESH VOICE SAMPLE for this persona
      → 500-1000 words of this persona's characteristic writing style
      → From ARENA-PERSONA-PANEL.md persona specification
@@ -930,7 +930,7 @@ These mechanisms stack with the existing Sequential Isolation Protocol (file I/O
 | Adversarial Critique | `high` | Critic Agent |
 | Targeted Revision | `max` | All 7 persona agents |
 | Scoring & Ranking | `high` | Judge Agent |
-| Learning Brief Generation | `high` | Judge Agent |
+| Analytical Brief Generation | `high` | Judge Agent |
 | Synthesis (Layer 2.6) | `max` | Architect Agent |
 | MC-CHECK | `medium` | Team Lead |
 | Human Selection Presentation | `medium` | Team Lead |
@@ -944,7 +944,7 @@ Before producing ANY output token, persona agents must use extended thinking to:
 3. **Reason about persona voice** — "What would [persona] ACTUALLY do with this material?" Deep character reasoning
 4. **Explore 3+ creative angles** — consider multiple directions before committing to one
 5. **Pre-check against criteria** — mentally score against the 7 skill-specific criteria BEFORE writing
-6. **Integrate Learning Brief** (Rounds 2-3) — deeply reason about HOW to absorb techniques without losing voice
+6. **Integrate Analytical Brief** (Round 2) — deeply reason about HOW to absorb techniques without losing voice
 
 **The model should spend MORE time thinking than writing.** The thinking IS the quality.
 
@@ -957,10 +957,10 @@ Before producing ANY output token, persona agents must use extended thinking to:
 | 2.2 | 2026-03-07 | SINGLE-CONTEXT HARDENING (Upgrade 3.6): Added Single-Context Arena Hardening section — reduced personas (7→4 in single-context), fresh voice sample loading before each persona, programmatic n-gram similarity check post-round. Raises single-context ceiling from B+ toward A-. |
 | 2.1 | 2026-03-06 | DIVERSITY ENFORCEMENT: Added Variant Diversity Audit step (1A.1/2B.1/3B.1) between generation and critique in each round — classifies outputs, pairwise convergence check, Divergence Protocol if >3 convergent pairs. Added Competitive Distance (10% weight) and Pattern Break Bonus (5% weight) as new evaluation dimensions. Added Memorability Test (1D.1) post-scoring. Reference: `~system/protocols/ARENA-DIVERSITY-PROTOCOL.md`. |
 | 2.0 | 2026-02-05 | AGENT TEAMS + EFFORT PROTOCOL: Added Agent Team Execution Mode (team architecture with 7 persona teammates + Critic + Judge as separate agents, persona agent prompt package spec, agent team round flow, context compression elimination in team mode, single-context fallback). Added Effort Protocol Integration (arena-specific effort mapping, what max effort means for generation with 6-point pre-generation checklist). Addresses three root quality constraints: persona contamination, no extended reasoning during generation, context pressure degradation. |
-| 1.0 | 2026-02-05 | Initial creation: 3-round mandatory competition, adversarial critique-revise protocol, Synthesizer-as-Competitor (7th competitor), learning brief specification, persona identity preservation rule, context compression protocol, MC-CHECK integration (8 checkpoints), arena modes (strategic/generative_full_draft/editorial_revision), emergency protocols, output schemas, forbidden behaviors |
+| 1.0 | 2026-02-05 | Initial creation: 2-round + audience evaluation mandatory competition, adversarial critique-revise protocol, Synthesizer-as-Competitor (7th competitor), analytical brief specification, persona identity preservation rule, context compression protocol, MC-CHECK integration (8 checkpoints), arena modes (strategic/generative_full_draft/editorial_revision), emergency protocols, output schemas, forbidden behaviors |
 
 ---
 
 ## ACKNOWLEDGMENT
 
-This protocol exists because **single-round, 6-competitor arenas without critique produced good but not great outputs**. The 4 upgrades — critique-before-scoring, 3-round competition, Synthesizer-as-Competitor, and full-draft mode — systematically address the gaps. Critique catches weaknesses that scoring alone misses. Multiple rounds allow losers to learn from winners. The Synthesizer competing head-to-head proves that integration can beat specialization. Full-draft mode lets generative skills reach their potential instead of being constrained by a single Layer 2 draft.
+This protocol exists because **single-round, 6-competitor arenas without critique produced good but not great outputs**. The 4 upgrades — critique-before-scoring, 2-round + audience evaluation competition, Synthesizer-as-Competitor, and full-draft mode — systematically address the gaps. Critique catches weaknesses that scoring alone misses. Multiple rounds allow losers to learn from winners. The Synthesizer competing head-to-head proves that integration can beat specialization. Full-draft mode lets generative skills reach their potential instead of being constrained by a single Layer 2 draft.

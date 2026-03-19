@@ -38,7 +38,7 @@
 1. **Read before you execute.** Read the skill's ANTI-DEGRADATION.md AND the microskill .md spec file before running anything. Synthesizing from AGENT.md summaries is the #1 failure mode.
 2. **Every microskill produces its own file.** No file = didn't happen. No combining. No summary-only output. File existence is the only proof of execution.
 3. **Gates are PASS or FAIL.** No "conditional pass," no "partial pass," no invented statuses. If it's not PASS, the gate file does not get created. Period.
-4. **3-round Arena. No exceptions.** Round 1 = baseline. Round 2 = learning. Round 3 = peak. "Good enough after Round 1" is forbidden.
+4. **2-round + audience evaluation Arena. No exceptions.** Round 1 = baseline. Round 2 = learning. Round 2 = peak via audience evaluation. "Good enough after Round 1" is forbidden.
 5. **Write to files immediately.** Conversation context is ephemeral. Every edit, every source, every decision — written to a file in the same turn it's produced. If it's not in a file, it's gone.
 6. **Numbers are exact.** 1,000 quotes means 1,000. 50KB minimum means 50KB. "Close enough" and "approximately" do not exist.
 7. **If something goes wrong, stop.** Don't push through. Don't rationalize. Don't find loopholes. Stop, re-read the protocol, and execute correctly.
@@ -545,7 +545,7 @@ Three effort tiers constrain **exploration depth** but NEVER quality thresholds.
 
 | Tier | Arena | Verification | Sessions | Default? |
 |------|-------|-------------|----------|----------|
-| **Full** | 3 rounds, 7 competitors | All layers, all gates | 6-7 | No — declare "Tier: Full" |
+| **Full** | 2 rounds + audience evaluation, 7 competitors | All layers, all gates | 6-7 | No — declare "Tier: Full" |
 | **Standard** | 1 round, 3 competitors | Foundation + midpoint | 4-5 | **YES — default if undeclared** |
 | **Quick** | No Arena | Layer 1 only | 2-3 | No — declare "Tier: Quick" |
 
@@ -566,7 +566,7 @@ Three effort tiers constrain **exploration depth** but NEVER quality thresholds.
 | **Arena Targeted Revision** | `max` | Surgical revision needs deep reasoning |
 | **Synthesizer — Hybrids** | `max` | Micro-element decomposition requires care |
 | **Arena Critique** | `high` | Must find genuine weaknesses |
-| **Learning Brief Generation** | `high` | Understanding WHY techniques worked |
+| **Analytical Brief Generation** | `high` | Understanding WHY techniques worked |
 | **Layer 0–1 — Foundation** | `high` | Decisions cascade downstream |
 | **Layer 3 — Validation** | `high` | Quality verification needs thoroughness |
 | **MC-CHECK** | `medium` | Quick honest self-assessment |

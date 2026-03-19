@@ -58,7 +58,7 @@ This agent is a **workflow orchestrator** with Arena competition.
 | 0 | Foundation + specimen loading | haiku | Input loading |
 | 1 | Type routing + proof planning | sonnet | Classification + architecture |
 | 2 | Body section generation + proof embedding | opus | Creative generation -- max quality |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 4 | Validation + packaging | sonnet | Judgment + assembly |
 
 ---

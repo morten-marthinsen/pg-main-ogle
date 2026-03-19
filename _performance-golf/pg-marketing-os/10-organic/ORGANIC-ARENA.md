@@ -207,7 +207,7 @@ Each persona revises their output based on the strongest critiques they received
 - Explain what changed and why
 
 ### Phase 4: FINAL SYNTHESIS
-The Arena Synthesizer (not a persona, but a meta-process) extracts the strongest elements from all 21 outputs (7 personas × 3 rounds) and assembles the final content.
+The Arena Synthesizer (not a persona, but a meta-process) extracts the strongest elements from all 7 personas across 2 rounds + audience evaluation and assembles the final content.
 
 **Synthesis Protocol:**
 1. Identify winning hook (which persona's hook is strongest?)

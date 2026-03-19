@@ -30,7 +30,7 @@ Produce scroll-stopping, engagement-driving captions that work WITH visual conte
 - Hook works before fold/truncation for each platform
 - Platform-native formatting (not cross-posted)
 - CTA matches content function
-- Arena completed (3 rounds, 7 personas)
+- Arena completed (2 rounds + audience evaluation, 7 personas)
 - Voice alignment with BVF confirmed
 
 ---
@@ -198,7 +198,7 @@ quality_gates_passed:
 - NEVER label final until Arena complete
 
 ### Arena Constraints (Layer 2.5)
-- NEVER run fewer than 3 rounds
+- NEVER run fewer than 2 rounds
 - NEVER skip any of the 7 personas
 - NEVER proceed without human selection
 

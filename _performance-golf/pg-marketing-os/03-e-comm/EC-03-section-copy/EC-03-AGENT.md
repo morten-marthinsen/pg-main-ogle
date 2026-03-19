@@ -56,7 +56,7 @@ This agent is a **workflow orchestrator**. It produces section-by-section copy f
 | 0 | Strategy + features + crossover patterns | haiku | Input loading |
 | 1 | Section routing + proof planning + design note planning | sonnet | Architecture |
 | 2 | Section copy generation + proof embedding | opus | Creative generation |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality |
 | 4 | Standalone test + feature consistency + packaging | sonnet | Judgment evaluation |
 
 ---

@@ -5,7 +5,7 @@
 **Position:** Between Layer 2 (Headline Generation) and Layer 3 (Headline Refinement)
 **Personas:** See [ARENA-PERSONA-PANEL.md](../../~system/protocols/ARENA-PERSONA-PANEL.md)
 
-> **Arena Mode:** `generative_full_draft` — Competitors write COMPLETE pieces from scratch using upstream packages. Layer 2 draft = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 3-round execution protocol.
+> **Arena Mode:** `generative_full_draft` — Competitors write COMPLETE pieces from scratch using upstream packages. Layer 2 draft = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 2-round + audience evaluation execution protocol.
 
 ---
 
@@ -85,7 +85,7 @@ Layer 4: Selection & Packaging
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All generation phases use `effort: max`. Critique uses `effort: high`. See ~system/SYSTEM-CORE.md Effort Protocol.
 > **Agent Team Mode:** When Agent Teams enabled, each persona runs as a separate teammate agent with full-draft generation in its own 200K context. See `~system/protocols/ARENA-CORE-PROTOCOL.md` v2.0 Agent Team Execution Mode.
@@ -98,7 +98,7 @@ This skill uses `arena_mode: generative_full_draft`:
 - **7 competitors** (6 personas + The Architect) generating independently
 - **Adversarial critique** before scoring (The Critic identifies ONE weakest element per output)
 - **Targeted revision** (each competitor fixes their identified weakness)
-- **3 rounds** of competition with learning briefs between rounds
+- **2 rounds** of competition with audience evaluation + analytical briefs between rounds
 - **Post-arena synthesis** (Layer 2.6) creating 2-3 phrase-level hybrids
 - **Human selection** from 9-10 candidates (7 pure + 2-3 hybrids)
 
@@ -307,5 +307,5 @@ Every rejected phrase MUST be replaced with specific, concrete language before c
 | Version | Date | Changes |
 |---------|------|---------|
 | 2.1 | 2026-02-05 | AGENT TEAMS + EFFORT PROTOCOL: Added effort level and Agent Team mode references to execution protocol. See ~system/protocols/ARENA-CORE-PROTOCOL.md v2.0 and ~system/SYSTEM-CORE.md. |
-| 2.0 | 2026-02-05 | ARENA SYSTEM UPGRADE v3.0: Added arena_mode: generative_full_draft (competitors write complete pieces from scratch, not variations of Layer 2 draft). Replaced Phase 1-4 execution protocol with reference to ~system/protocols/ARENA-CORE-PROTOCOL.md (3-round mandatory competition, adversarial critique-revise, 7 competitors including The Architect, learning briefs). Added critique-specific guidance. Updated all competitor counts from 6 to 7. Version bump. |
+| 2.0 | 2026-02-05 | ARENA SYSTEM UPGRADE v3.0: Added arena_mode: generative_full_draft (competitors write complete pieces from scratch, not variations of Layer 2 draft). Replaced Phase 1-4 execution protocol with reference to ~system/protocols/ARENA-CORE-PROTOCOL.md (2-round + audience evaluation mandatory competition, adversarial critique-revise, 7 competitors including The Architect, analytical briefs). Added critique-specific guidance. Updated all competitor counts from 6 to 7. Version bump. |
 | 1.0 | 2026-02-03 | Initial Arena Layer creation with 6-persona generation, 7-criterion headline-specific judging, Big Idea expression enforcement, 8.5/10 minimum threshold, human checkpoint |

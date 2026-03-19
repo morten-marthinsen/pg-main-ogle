@@ -13,7 +13,7 @@ description: >-
 ---
 
 # S13: ARENA GENERATION
-## 7 Personas × 3 Rounds for Any Content
+## 7 Personas × 2 Rounds + Audience Evaluation for Any Content
 ## Gate: G07 (Requires S07 CBF) | Output: Arena Synthesis
 
 ---
@@ -24,7 +24,7 @@ This skill runs the full Arena competition on any content piece. It is MANDATORY
 
 **Output:** Arena Synthesis (synthesized content + competition log)
 **Requires:** Campaign Brief File (CBF) + Content Draft
-**Process:** 7 Personas × 3 Rounds → Final Synthesis
+**Process:** 7 Personas × 2 Rounds + Audience Evaluation → Final Synthesis
 
 ## ANTI-DEGRADATION
 

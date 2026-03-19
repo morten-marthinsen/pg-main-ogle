@@ -53,7 +53,7 @@ Engineer the **Advertorial Bridge & CTA** -- the critical transition from editor
 | 0 | Foundation loading | haiku | Input loading |
 | 1 | Bridge frame selection + transition planning | sonnet | Architecture decisions |
 | 2 | Bridge + CTA generation | opus | Creative generation -- max quality |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 4 | Validation + packaging | sonnet | Judgment + assembly |
 
 ---

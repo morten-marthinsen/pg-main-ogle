@@ -84,7 +84,7 @@ Layer 4: Validation (Scroll-Stop Check, Editorial Voice Check, Packaging)
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 This skill uses `arena_mode: generative_full_draft`:
 - **Competitors write COMPLETE hook/lead combinations from scratch**
@@ -92,9 +92,9 @@ This skill uses `arena_mode: generative_full_draft`:
 - Layer 2 drafts are reference material, not templates
 - Each competitor generates hook + 3-5 lead paragraphs independently
 - **7 competitors** (6 personas + The Architect)
-- **3 rounds** of competition with adversarial critique
+- **2 rounds** of competition with adversarial critique + audience evaluation
 - **Post-arena synthesis** creating 2-3 hybrid combinations
-- **Human selection** from 9-10 candidates
+- **Human selection** from scored candidates
 
 ### What Stays Skill-Specific (Below)
 - 7 judging criteria with weights

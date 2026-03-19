@@ -5,7 +5,7 @@
 > **Type:** Multi-Perspective Generation + Judgment + Human Selection
 > **Dependency:** Requires GATE_2 PASS (CAIRO draft complete, all 5 sections present, word count valid)
 > **Output:** Selected upsell page candidate for validation
-> **Arena Mode:** `generative_full_draft` — Competitors write COMPLETE upsell pages from scratch using upstream packages. Layer 2 draft = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 3-round execution protocol.
+> **Arena Mode:** `generative_full_draft` — Competitors write COMPLETE upsell pages from scratch using upstream packages. Layer 2 draft = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 2-round + audience evaluation execution protocol.
 
 ---
 
@@ -174,7 +174,7 @@ Generate **1-click upsell page candidates** through 7 competitors, each bringing
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All generation phases use `effort: max`. Critique uses `effort: high`. See ~system/SYSTEM-CORE.md Effort Protocol.
 > **Agent Team Mode:** When Agent Teams enabled, each competitor runs as a separate teammate agent with full-draft generation in its own 200K context. See `~system/protocols/ARENA-CORE-PROTOCOL.md` v2.0 Agent Team Execution Mode.
@@ -187,7 +187,7 @@ This skill uses `arena_mode: generative_full_draft`:
 - **7 competitors** generating independently
 - **Adversarial critique** before scoring (The Critic identifies ONE weakest element per output)
 - **Targeted revision** (each competitor fixes their identified weakness)
-- **3 rounds** of competition with learning briefs between rounds
+- **2 rounds** of competition with audience evaluation + analytical briefs between rounds
 - **Post-arena synthesis** (Layer 2.6) creating 2-3 phrase-level hybrids
 - **Human selection** from 9-10 candidates (7 pure + 2-3 hybrids)
 

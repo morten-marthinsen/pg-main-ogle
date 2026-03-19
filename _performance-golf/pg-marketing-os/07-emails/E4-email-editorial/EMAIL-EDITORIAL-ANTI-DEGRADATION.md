@@ -119,8 +119,8 @@ WHY: Without baselines, you cannot prove the editorial improved anything.
 ## STRUCTURAL FIX 3: ARENA MANDATORY FOR P1/P2 ISSUES
 
 ```
-P1 (Critical) issues → MUST use full Arena (3 rounds, 7 competitors)
-P2 (Major) issues    → MUST use full Arena (3 rounds, 7 competitors)
+P1 (Critical) issues → MUST use full Arena (2 rounds + audience evaluation, 7 competitors)
+P2 (Major) issues    → MUST use full Arena (2 rounds + audience evaluation, 7 competitors)
 P3 (Minor) issues    → Direct fix (no Arena needed)
 P4 (Cosmetic) issues → Direct fix (no Arena needed)
 
@@ -430,8 +430,8 @@ LAYER 1 (ISSUE IDENTIFICATION):
 LAYER 2 (REVISION):
 [ ] Issues clustered by type and severity
 [ ] Revision plan created (Arena for P1/P2, direct fix for P3/P4)
-[ ] Arena executed for EVERY P1 issue cluster (3 rounds, 7 competitors)
-[ ] Arena executed for EVERY P2 issue cluster (3 rounds, 7 competitors)
+[ ] Arena executed for EVERY P1 issue cluster (2 rounds + audience evaluation, 7 competitors)
+[ ] Arena executed for EVERY P2 issue cluster (2 rounds + audience evaluation, 7 competitors)
 [ ] Direct fixes applied for all P3 issues
 [ ] Direct fixes applied for all P4 issues
 [ ] Zero unresolved P1 issues

@@ -63,7 +63,7 @@ Layer 4: Scoring & Packaging (Quality Score, Feature Consistency, Output)
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 ---
 

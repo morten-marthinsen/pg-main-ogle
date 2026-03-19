@@ -75,7 +75,7 @@ Layer 4: Validation (Smell Test, Proof Density Check, Packaging)
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 ### What Stays Skill-Specific (Below)
 - 7 judging criteria with weights

@@ -35,7 +35,7 @@ This protocol defines tests that would have caught each of these failures before
 | GT-02 | Quote Volume Gate (Bucket) | 01 Research | Create `scored_quotes.json` with 1,050 total quotes but Pain bucket at 200/300. Attempt to run Layer 2. | HALT with "BUCKET MINIMUMS NOT MET" message. No `GATE_1_VERIFIED.yaml` created. | Layer 2 executes. Gate file created despite bucket shortfall. |
 | GT-03 | Proof Threshold Gate | 02 Proof | Feed proof inventory with 2 testimonials (minimum is typically 5+). Attempt downstream skill. | Skill reports proof inventory below minimum. Does NOT produce PASS gate file. | Proof skill creates PASS gate with insufficient proof. Downstream skill accepts the inventory. |
 | GT-04 | Arena Round 2 Skip | 03-20 (any Arena skill) | Execute Arena Round 1. Attempt to jump directly to Synthesis/Hybrid creation without Rounds 2-3. | Arena refuses. Forces Round 2 execution before proceeding. | Synthesis hybrids produced from Round 1 outputs only. Round count < 3 in execution log. |
-| GT-05 | Arena Round 3 Skip | 03-20 (any Arena skill) | Execute Arena Rounds 1-2. Attempt to jump to Synthesis without Round 3. | Arena refuses. Forces Round 3 execution. | Synthesis produced from Round 2 outputs. Execution log shows only 2 rounds. |
+| GT-05 | Arena Round 2 FINAL Skip | 03-20 (any Arena skill) | Execute Arena Round 1. Attempt to jump to Synthesis without Round 2 FINAL + audience evaluation. | Arena refuses. Forces Round 2 FINAL + audience evaluation execution. | Synthesis produced from Round 1 outputs only. Execution log shows no Round 2 FINAL or audience evaluation. |
 | GT-06 | Per-Microskill Output Missing | Any skill | Execute skill fully. Delete one microskill output file (e.g., `1.2-naming-candidates.md`). Run checkpoint validation. | Checkpoint validation FAILS. Reports missing file by name. | Checkpoint YAML created/validated despite missing microskill output. Skill claims completion. |
 | GT-07 | Binary Status Invented | 01 Research | Manually create `GATE_1_VERIFIED.yaml` with `status: CONDITIONAL_PASS`. Attempt Layer 2. | Layer 2 refuses to execute. Reports invalid gate status. | Layer 2 executes with non-PASS status. Any status other than PASS treated as valid. |
 | GT-08 | Binary Status Invented (Variant) | 01 Research | Manually create `GATE_1_VERIFIED.yaml` with `status: PARTIAL_PASS`. Attempt Layer 2. | Layer 2 refuses. Same as GT-07. | Same as GT-07. |
@@ -289,7 +289,7 @@ Tests ranked by Impact (value of catching the failure) and Effort (cost to run t
 | Test ID | Name | Impact | Effort | Why Priority |
 |---------|------|--------|--------|-------------|
 | GT-03 | Proof Threshold Gate | MED | MED | Less frequently failed than research gates. |
-| GT-05 | Arena Round 3 Skip | MED | MED | Requires 2 Arena rounds before testing. |
+| GT-05 | Arena Round 2 FINAL Skip | MED | MED | Requires Round 1 before testing Round 2 FINAL skip. |
 | GT-09 | Gate File Hash Mismatch | LOW | LOW | Edge case — quote file modification after gate. |
 | RT-05 | Positional Reinforcement at Layer 3 | MED | HIGH | Hard to objectively measure. |
 | ST-E0 to ST-E4 | Email Smoke Tests | LOW | MED | Email engine less used than main pipeline currently. |

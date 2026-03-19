@@ -3,7 +3,7 @@
 **Version:** 1.0
 **Created:** 2026-03-14
 **Source:** ASI-Arch Enhancement 1 (arXiv:2507.18074) — Analyst Module
-**Purpose:** Structured causal analysis of Arena competition results. Replaces the Learning Brief with a deeper Analytical Brief that explains WHY outputs scored differently.
+**Purpose:** Structured causal analysis of Arena competition results. Replaces the Analytical Brief with a deeper Analytical Brief that explains WHY outputs scored differently.
 
 **Authority:** Referenced by `ARENA-CORE-PROTOCOL.md` (Step 1E.5). Loads during Arena execution only.
 
@@ -13,14 +13,14 @@
 
 The Analyst runs after each Arena round scoring. It produces a structured Analytical Brief that isolates WHY specific outputs scored higher than others by comparing closely related outputs that performed differently.
 
-**What the current Learning Brief tells you:** "Makepeace won with score 9.1. Winning technique: embedded proof within narrative paragraph."
+**What the current Analytical Brief tells you:** "Makepeace won with score 9.1. Winning technique: embedded proof within narrative paragraph."
 
 **What the Analytical Brief tells you:**
 - "Makepeace modified proof deployment from 'separate proof block after claim' to 'proof embedded within narrative paragraph.' This modification improved Flow Enhancement from 7.8 to 8.6 (+0.8) and Voice Preservation from 8.2 to 8.5 (+0.3)."
 - "Halbert attempted a similar modification but applied it to the wrong section (mechanism instead of lead), decreasing Clarity by 0.4."
 - "Bencivenga's proof-first architecture scored highest on Threading Preservation (9.2) but lowest on Flow (6.8) — the proof density broke narrative momentum."
 
-The current Learning Brief tells WHAT won. The Analytical Brief tells WHY it won, what the delta was, what the comparison reveals, and what didn't work and why.
+The current Analytical Brief tells WHAT won. The Analytical Brief tells WHY it won, what the delta was, what the comparison reveals, and what didn't work and why.
 
 **Key finding from ASI-Arch paper:** SOTA results rely 44.8% on self-generated analytical insights (vs. 37.7% for non-SOTA). The Analyst is the mechanism that generates these insights.
 
@@ -28,7 +28,7 @@ The current Learning Brief tells WHAT won. The Analytical Brief tells WHY it won
 
 ## WHEN TO RUN
 
-After Step 1E (Ranking) and before Step 1F (Analytical Brief distribution). Runs once per round (3 times total in a Full tier Arena).
+After Step 1E (Ranking) and before Step 1F (Analytical Brief distribution). Runs once per round (2 times total in a Full tier Arena).
 
 ```
 Step 1D: Scoring
@@ -64,7 +64,7 @@ The Analyst receives:
 | ALL 7 scored outputs (full text) | ~21-35KB | Round N persona outputs |
 | ALL 7 critiques from the Critic (full text) | ~3.5KB | Round N critique phase |
 | scores.yaml — all scores across all 7 criteria | ~2KB | Round N scoring phase |
-| Previous round's analytical-brief.md (Rounds 2-3 only) | ~3-5KB | Round N-1 Analyst output |
+| Previous round's analytical-brief.md (Round 2 only) | ~3-5KB | Round N-1 Analyst output |
 | This protocol (instructions) | ~2KB | This file |
 | **Total** | **~32-48KB** | Well within any model's context window |
 
@@ -119,7 +119,7 @@ Compare personas with similar lenses. When siblings score differently on the SAM
 
 **Why this matters:** Sibling analysis controls for strategic intent and isolates pure technique differences.
 
-### Comparison 4: Round-over-Round (Rounds 2-3 Only)
+### Comparison 4: Round-over-Round (Round 2 Only)
 
 Compare each persona's current output to their previous round output. This tracks learning effectiveness and technique evolution.
 
@@ -129,7 +129,7 @@ Compare each persona's current output to their previous round output. This track
 3. For the winner: was the winning approach a refinement of a previous approach or a fundamentally new approach?
 4. Flag any persona that degraded on a previously-strong criterion (regression signal)
 
-**Why this matters:** Round-over-round analysis catches technique regression (improving one criterion by sacrificing another) and validates which Learning Brief recommendations were successfully absorbed.
+**Why this matters:** Round-over-round analysis catches technique regression (improving one criterion by sacrificing another) and validates which Analytical Brief recommendations were successfully absorbed.
 
 ---
 
@@ -216,18 +216,18 @@ analytical_brief:
 
 ---
 
-## INTEGRATION WITH LEARNING BRIEF
+## INTEGRATION WITH ANALYTICAL BRIEF
 
-The Analytical Brief REPLACES the current Learning Brief structure. It is a superset — it contains everything the Learning Brief had plus the causal analysis layer.
+The Analytical Brief REPLACES the current Analytical Brief structure. It is a superset — it contains everything the Analytical Brief had plus the causal analysis layer.
 
-| Learning Brief Field | Analytical Brief Equivalent |
+| Analytical Brief Field | Analytical Brief Equivalent |
 |---------------------|---------------------------|
 | `winner.winning_techniques` | `winner_analysis.defining_technique` (with causal evidence) |
 | `per_competitor_feedback` | `technique_transfer_recommendations` (with expected impact quantification) |
 | `scoring_gaps` | Implicit in `closest_pair_analysis` and `maximum_delta_analysis` |
 | `voice_preservation_note` | Retained in `technique_transfer_recommendations.voice_preservation_note` |
 
-**Backward compatibility:** Any system component that reads the Learning Brief should read the Analytical Brief instead. The fields are richer but structurally compatible — `winner_analysis.persona` replaces `winner.competitor`, `technique_transfer_recommendations` replaces `per_competitor_feedback`.
+**Backward compatibility:** Any system component that reads the Analytical Brief should read the Analytical Brief instead. The fields are richer but structurally compatible — `winner_analysis.persona` replaces `winner.competitor`, `technique_transfer_recommendations` replaces `per_competitor_feedback`.
 
 ---
 
@@ -318,7 +318,7 @@ Write the Analytical Brief in YAML format per ANALYST-PROTOCOL.md schema.
 | **Expected output** | **~3-5K tokens** | Analytical Brief |
 
 **Cost per Arena:**
-- One Opus 4.6 subagent call per round x 3 rounds = 3 calls
+- One Opus 4.6 subagent call per round x 2 rounds + audience evaluation = 3 calls
 - Each call: ~20K input + ~5K output = ~25K tokens
 - Total per Arena: ~75K tokens on Opus
 - Estimated cost: ~$1-4 per Arena depending on caching
@@ -329,8 +329,8 @@ Write the Analytical Brief in YAML format per ANALYST-PROTOCOL.md schema.
 
 | Tier | Analyst Runs? | Rounds | Notes |
 |------|--------------|--------|-------|
-| **Full** | YES — all 3 rounds | 3 | Full causal analysis every round |
-| **Standard** | YES — 1 round | 1 | Single-round analysis. If Round 3 skipped via convergence governor, Analyst still runs on final round. |
+| **Full** | YES — both rounds + audience evaluation | 3 | Full causal analysis every round |
+| **Standard** | YES — 1 round | 1 | Single-round analysis. If Round 2 (FINAL) skipped via convergence governor, Analyst still runs on final round. |
 | **Quick** | N/A | 0 | No Arena = no Analyst |
 
 ---

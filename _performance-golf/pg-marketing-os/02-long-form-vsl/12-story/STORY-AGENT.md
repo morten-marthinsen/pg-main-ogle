@@ -78,7 +78,7 @@ This agent is a **workflow orchestrator**. It delegates to microskills and valid
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Story type classification + beat structure mapping | sonnet | Pattern matching from vault |
 | 2 | Full story construction (beat by beat) | opus | Creative generation — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Refinement + Carlton compliance | opus | Judgment-heavy evaluation |
 | 4 | Validation + packaging | sonnet | Assembly from existing content |
 

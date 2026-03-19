@@ -86,7 +86,7 @@ Write the 300-1000 word downsell page — the page shown when a buyer DECLINES a
 | 0 | Context loading (U0 handoff, U2 output, specimens) | haiku | Input loading, no reasoning needed |
 | 1 | Analysis (reframe selection, congruence mapping) | sonnet | Analytical classification |
 | 2 | Full ARO draft generation | opus | Creative generation — reframe is the hardest part |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality — generative_full_draft mode |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality — generative_full_draft mode |
 | 4 | Validation + output packaging | sonnet | Mechanical validation + assembly |
 
 **These assignments are BINDING. Do not substitute models.**
@@ -200,18 +200,18 @@ IDLE -> LOADING -> ANALYSIS -> GENERATION -> ARENA -> VALIDATION -> COMPLETE
 ### Layer 2.5: Arena
 
 > **Critical Constraints Reminder (Layer 2.5 — Arena)**
-> - See `~system/protocols/ARENA-CORE-PROTOCOL.md` for complete 3-round execution protocol
+> - See `~system/protocols/ARENA-CORE-PROTOCOL.md` for complete 2-round + audience evaluation execution protocol
 > - See `U3-ARENA-LAYER.md` for U3-specific competitors, scoring weights, and rubrics
 > - Arena mode: `generative_full_draft` — competitors write COMPLETE downsell pages
 > - Layer 2 draft = reference material, NOT a template
-> - 7 competitors (reframe-focused), 3 rounds MANDATORY, Human selection BLOCKING
+> - 7 competitors (reframe-focused), 2 rounds + audience evaluation MANDATORY, Human selection BLOCKING
 > - Quality threshold: 8.0+ weighted average
 
 **Arena Execution:**
 1. Load U3-ARENA-LAYER.md for competitors, criteria, weights
-2. Load ~system/protocols/ARENA-CORE-PROTOCOL.md for 3-round execution flow
+2. Load ~system/protocols/ARENA-CORE-PROTOCOL.md for 2-round + audience evaluation execution flow
 3. Each competitor generates a COMPLETE downsell page using upstream packages + Layer 1 analysis + Layer 2 reference draft
-4. 3 rounds with adversarial critique, targeted revision, learning briefs
+4. 2 rounds with adversarial critique, targeted revision, audience evaluation + analytical briefs
 5. Post-arena synthesis: 2-3 phrase-level hybrids
 6. Human selects from 9-10 candidates
 

@@ -47,7 +47,7 @@ This version adds **RSF-aware expression selection** — the ability to consider
 | 0 | Input validation + RSF loading | haiku | Simple validation |
 | 1 | Derivation (7 microskills) | opus | Deep analysis — pattern recognition, convergence |
 | 2 | Expression (7 microskills) | opus | Creative framing — nuanced niche understanding |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Competitive generation — maximum quality |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Competitive generation — maximum quality |
 | 3 | Validation (5 microskills) | opus | Judgment-heavy scoring |
 | 4 | Output packaging (4 microskills) | sonnet | Assembly from existing content |
 
@@ -383,7 +383,7 @@ MUST document any below-threshold outputs that proceed after exhausting refineme
 │              LAYER 2.5: ARENA (opus — MANDATORY, CANNOT SKIP)             │
 │              Soul.md loaded as voice constraint for all competitors       │
 │                                                                           │
-│   7 Competitors × 3 Rounds + Adversarial Critique + Targeted Revision    │
+│   7 Competitors × 2 Rounds + Audience Evaluation + Adversarial Critique + Targeted Revision    │
 │   Post-Arena: 2-3 Phrase-Level Hybrids (Synthesizer, Soul.md guided)     │
 │   HUMAN SELECTION (BLOCKING) → expression variants presented             │
 │                                    │                                      │
@@ -722,7 +722,7 @@ In addition to concept-down expression methods (2.1-2.7), generate 3+ expression
 - CREATE: `checkpoints/LAYER_2_COMPLETE.yaml` (required for Arena entry)
 
 **Layer 2.5 → Layer 3 Gate (MANDATORY — ARENA CANNOT BE SKIPPED):**
-- AFTER completing full Arena Layer (2.5): 7 competitors × 3 rounds + critique + revision + synthesis + human selection
+- AFTER completing full Arena Layer (2.5): 7 competitors × 2 rounds + audience evaluation + critique + revision + synthesis + human selection
 - BEFORE starting Layer 3 validation
 - VERIFY: `checkpoints/ARENA_COMPLETE.yaml` EXISTS with human_selection recorded
 - IF ARENA_COMPLETE.yaml DOES NOT EXIST → HALT. Arena Layer is MANDATORY. Cannot proceed to Layer 3.

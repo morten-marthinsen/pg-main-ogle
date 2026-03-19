@@ -5,7 +5,7 @@
 > **Type:** Multi-Perspective Generation + Judgment + Human Selection
 > **Dependency:** Requires GATE_2 PASS (ARO draft complete, all 3 sections present, word count valid)
 > **Output:** Selected downsell page candidate for validation
-> **Arena Mode:** `generative_full_draft` — Competitors write COMPLETE downsell pages from scratch using upstream packages. Layer 2 draft = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 3-round execution protocol.
+> **Arena Mode:** `generative_full_draft` — Competitors write COMPLETE downsell pages from scratch using upstream packages. Layer 2 draft = reference material, not template. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 2-round + audience evaluation execution protocol.
 
 ---
 
@@ -160,7 +160,7 @@ Generate **downsell page candidates** through 7 competitors, each bringing a dif
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All generation phases use `effort: max`. Critique uses `effort: high`.
 
@@ -170,7 +170,7 @@ This skill uses `arena_mode: generative_full_draft`:
 - 7 competitors generating independently
 - Adversarial critique before scoring
 - Targeted revision
-- 3 rounds with learning briefs
+- 2 rounds with audience evaluation + analytical briefs
 - Post-arena synthesis: 2-3 phrase-level hybrids
 - Human selection from 9-10 candidates
 
@@ -354,7 +354,7 @@ arena_selected_downsell:
 7. **Human selection is BLOCKING.**
 8. **Price MUST be lower than declined upsell.**
 9. **Clean binary choice.** Zero guilt in NO option.
-10. **3 rounds mandatory.** No "good enough after Round 1."
+10. **2 rounds + audience evaluation mandatory.** No "good enough after Round 1."
 
 ---
 

@@ -82,7 +82,7 @@ Layer 4: Validation & Packaging (Generic Detection, Standalone Test, Output)
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All generation phases use `effort: max`. Critique uses `effort: high`.
 
@@ -94,9 +94,9 @@ This skill uses `arena_mode: generative_full_draft`:
 - **7 competitors** (6 personas + The Architect) generating independently
 - **Adversarial critique** before scoring
 - **Targeted revision** per round
-- **3 rounds** of competition
+- **2 rounds** of competition + audience evaluation
 - **Post-arena synthesis** creating 2-3 hybrid packages
-- **Human selection** from 9-10 candidates
+- **Human selection** from scored candidates
 
 ### What Stays Skill-Specific (Below)
 - 7 judging criteria with weights

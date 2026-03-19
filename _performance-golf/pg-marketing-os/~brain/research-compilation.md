@@ -232,7 +232,7 @@ Skills are injected **only when invoked** via `invoke_skill`, not pre-loaded. Th
 Each persona becomes a subagent with:
 - `message_history=None` — completely fresh context per invocation. No contamination from other personas.
 - **Filtered tool schemas** — persona subagents get Read, Write, Glob only. No Bash, no WebSearch, no Task. They can read upstream packages and write their output. Nothing else.
-- **Specialized system prompts** — each persona receives its persona spec, voice specimens, the skill instructions, upstream packages, context reservoir, and (for Rounds 2-3) the Learning Brief. Nothing from other personas' generations.
+- **Specialized system prompts** — each persona receives its persona spec, voice specimens, the skill instructions, upstream packages, context reservoir, and (for Round 2) the Analytical Brief. Nothing from other personas' generations.
 - **Parallel execution** — all 7 generate simultaneously instead of sequentially. A round that took 15-20 minutes sequentially completes in the time of the slowest single generation (~3-5 minutes).
 
 The full orchestration architecture:
@@ -259,18 +259,18 @@ ORCHESTRATOR (main Claude Code session)
 │   └── Task(Judge) ← reads all 7 revised outputs + all critiques
 │       Output: arena/round-1/scores.yaml + learning-brief.md
 │
-├── Rounds 2-3: Same structure with Learning Brief distributed
-│   Learning Brief provides:
+├── Round 2: Same structure with Analytical Brief distributed
+│   Analytical Brief provides:
 │   - Winner's specific techniques (not voice)
 │   - Per-persona voice_preservation_note
 │   - Cumulative learning from prior rounds
 │
-├── Task(Synthesizer) ← reads all 7 Round 3 outputs
+├── Task(Synthesizer) ← reads all 7 Round 2 (FINAL) outputs
 │   Produces: 2-3 phrase-level hybrids via micro-element decomposition
 │   Output: arena/post-arena/hybrid-[N].md
 │
 └── HUMAN SELECTION (BLOCKING)
-    Candidates: 7 pure Round 3 outputs + 2-3 hybrids = 9-10 options
+    Candidates: 7 pure Round 2 (FINAL) outputs + 2-3 hybrids = 9-10 options
 ```
 
 **File I/O contracts (critical for contamination prevention):**
@@ -286,7 +286,7 @@ All inter-subagent communication happens through files in `~outputs/[project]/[s
 | Context reservoir (full Part 1 + Part 2) | ~5,000 |
 | Prior assembled prose (cascading, for copy skills) | ~5,000-15,000 |
 | Skill spec + task instructions + anti-degradation | ~2,500 |
-| Learning Brief (Rounds 2-3 only) | ~1,500 |
+| Analytical Brief (Round 2 only) | ~1,500 |
 | **Total per subagent** | **~25,000-55,000** |
 
 Well within any model's context window. Each persona gets FULL context without competing for space with other personas.
@@ -476,9 +476,9 @@ The Analyst's output serves a dual function:
 1. Archived analysis that informs subsequent design cycles
 2. A structured summary of shortcomings that serves as a **retrieval query** against the Cognition Base
 
-**For our Arena:** This is the missing Analyst agent. Currently, our Learning Brief says "Makepeace won with score 9.1." The Analyst would say: "Makepeace modified the proof deployment strategy from 'separate proof block after claim' to 'proof embedded within narrative paragraph.' This modification improved Flow Enhancement from 7.8 to 8.6 (+0.8) and improved Voice Preservation from 8.2 to 8.5 (+0.3). The technique: interleaving a Johns Hopkins finding with a personal story of frustration, creating credibility-through-narrative rather than credibility-through-authority. Halbert attempted a similar modification but applied it to the wrong section (mechanism instead of lead), which decreased Clarity by 0.4."
+**For our Arena:** This is the missing Analyst agent. Currently, our Analytical Brief says "Makepeace won with score 9.1." The Analyst would say: "Makepeace modified the proof deployment strategy from 'separate proof block after claim' to 'proof embedded within narrative paragraph.' This modification improved Flow Enhancement from 7.8 to 8.6 (+0.8) and improved Voice Preservation from 8.2 to 8.5 (+0.3). The technique: interleaving a Johns Hopkins finding with a personal story of frustration, creating credibility-through-narrative rather than credibility-through-authority. Halbert attempted a similar modification but applied it to the wrong section (mechanism instead of lead), which decreased Clarity by 0.4."
 
-That level of specificity transforms the Learning Brief from a label into an actionable technique transfer.
+That level of specificity transforms the Analytical Brief from a label into an actionable technique transfer.
 
 #### The Cognition Module (RAG System)
 
@@ -545,7 +545,7 @@ Per evolution cycle:
 - **Cold Start Phase:** First 200 explorations run WITHOUT database updates. Prevents premature convergence on early discoveries.
 - **Batched Updates:** After cold start, pool updated only after every 50 new entries (not dynamically). All parallel agents work with stable reference sets during each exploration phase.
 
-**For our Arena:** In Rounds 2-3, the Learning Brief currently distributes the winner's techniques to ALL 7 personas equally. The two-level strategy suggests a differentiated approach:
+**For our Arena:** In Round 2, the Analytical Brief currently distributes the winner's techniques to ALL 7 personas equally. The two-level strategy suggests a differentiated approach:
 - Top 2 performers from previous round receive "exploitation" brief — refine what worked
 - Bottom 5 performers receive "exploration" brief — try fundamentally different approaches, possibly seeded with techniques from positions 3-7 (not just the winner)
 - This prevents the convergence-to-winner problem while maintaining exploitation of proven techniques
@@ -606,7 +606,7 @@ The two-stage approach is **computational triage** — cheap exploration to iden
 **For our system (Tier Architecture):** Our Full/Standard/Quick tiers mirror this exactly:
 - Quick = rapid exploration (no Arena, compressed foundation)
 - Standard = moderate validation (1 round, 3 competitors)
-- Full = rigorous validation (3 rounds, 7 competitors, all verification gates)
+- Full = rigorous validation (2 rounds + audience evaluation, 7 competitors, all verification gates)
 
 ### The "Move 37" Discoveries
 
@@ -649,9 +649,9 @@ Component preference analysis across ~5,000 component instances curated into 40 
 - Non-SOTA models show a more severe long-tail, suggesting broader exploration of novel components is less effective
 - The paper concludes: achieving SOTA by "iterating on proven technologies, not pursuing novelty for its own sake"
 
-**For our Arena:** Round 3 convergence toward the winning approach should be EXPECTED and ALLOWED. The convergence detector should distinguish:
+**For our Arena:** Round 2 (FINAL) convergence toward the winning approach should be EXPECTED and ALLOWED. The convergence detector should distinguish:
 - Round 1 convergence → flag as insufficient exploration (bad)
-- Round 3 convergence toward the winner → natural refinement (good)
+- Round 2 (FINAL) convergence toward the winner → natural refinement (good)
 
 ### Acknowledged Limitations
 
@@ -673,7 +673,7 @@ Component preference analysis across ~5,000 component instances curated into 40 
 | 4 | Dynamic context framing | Skill-specific reservoir variants regenerated per-skill instead of one static document | Spec Complete | Medium-High |
 | 5 | Problem-aware specimen retrieval | Use Critic weakness description as RAG query against tagged specimen database | Spec Complete | High |
 | 6 | Campaign phylogeny | Persistent database tracking strategic decisions → outcomes across all completed campaigns | Spec Complete | Very High (long-term) |
-| 7 | Convergence paradox update | Round 3 convergence expected and allowed; only flag Round 1 convergence | **Implemented** | Medium |
+| 7 | Convergence paradox update | Round 2 (FINAL) convergence expected and allowed; only flag Round 1 convergence | **Implemented** | Medium |
 
 ---
 
@@ -755,7 +755,7 @@ Critical finding: Jarvis **refused** a direct request for "the SSN in the email"
 
 **Root cause:** Agents convert short-lived conversational tasks into permanent infrastructure without resource awareness or termination conditions. They report success and move on. Multi-agent interaction creates emergent objectives neither agent would pursue alone.
 
-**For our system:** This directly informed the Arena round structure — 3 rounds, FIXED, with explicit termination after Round 3. No "keep going until you get something better." The doom-loop detection pattern from OpenDev (Phase 5 of the ReAct loop) provides the iteration cap enforcement. And our context zone system provides resource awareness — agents announce zone transitions and recommend session breaks rather than consuming resources indefinitely.
+**For our system:** This directly informed the Arena round structure — 2 rounds + audience evaluation, FIXED, with explicit termination after Round 2 (FINAL). No "keep going until you get something better." The doom-loop detection pattern from OpenDev (Phase 5 of the ReAct loop) provides the iteration cap enforcement. And our context zone system provides resource awareness — agents announce zone transitions and recommend session breaks rather than consuming resources indefinitely.
 
 #### Case 5: Denial of Service
 
@@ -820,7 +820,7 @@ In a separate instance, Doug proactively flagged Mira's compliance with a resear
 
 **The dual-use risk:** The collaboration mechanism that enabled productive knowledge transfer is architecturally identical to the vulnerability propagation mechanism. The helpful channel IS the attack channel.
 
-**For our Arena — Learning Brief propagation:** When the Learning Brief distributes the winner's techniques to all personas, it's doing exactly what Doug did with Mira — transferring knowledge through a shared channel. If the winning output contains a subtle degradation pattern (verbose filler, summarized proof, generic voice), that pattern propagates to ALL personas. The Analyst agent (from ASI-Arch) provides the analytical filter: structured analysis of WHY the output won extracts techniques separately from the raw output, preventing blind propagation.
+**For our Arena — Analytical Brief propagation:** When the Analytical Brief distributes the winner's techniques to all personas, it's doing exactly what Doug did with Mira — transferring knowledge through a shared channel. If the winning output contains a subtle degradation pattern (verbose filler, summarized proof, generic voice), that pattern propagates to ALL personas. The Analyst agent (from ASI-Arch) provides the analytical filter: structured analysis of WHY the output won extracts techniques separately from the raw output, preventing blind propagation.
 
 #### Case 10: Constitution Attack (Persistent Behavioral Control via External Injection)
 
@@ -927,7 +927,7 @@ The three papers address three different layers of the same problem: **how do yo
 Fresh context per persona (`message_history=None`) eliminates the cross-agent contamination documented in Cases 9-10. Schema-level tool filtering prevents the unauthorized compliance documented in Case 2. File-based inter-subagent communication provides an additional contamination barrier beyond context isolation. The Subagent Arena is simultaneously an innovation enabler (parallel generation, fresh contexts) and a safety mechanism (zero contamination, restricted capabilities).
 
 **ASI-Arch's Analyst agent + Agents of Chaos's "knowledge transfer propagates vulnerabilities":**
-Without the Analyst, the Learning Brief blindly distributes the winning output's techniques to all personas — the same propagation pattern that Case 10 exploited. The Analyst provides a structural filter: it extracts WHY the output won (specific techniques, specific criteria impacts) separately from the raw output. This means degradation patterns in the winning output don't automatically propagate — only the analytically-validated techniques do.
+Without the Analyst, the Analytical Brief blindly distributes the winning output's techniques to all personas — the same propagation pattern that Case 10 exploited. The Analyst provides a structural filter: it extracts WHY the output won (specific techniques, specific criteria impacts) separately from the raw output. This means degradation patterns in the winning output don't automatically propagate — only the analytically-validated techniques do.
 
 **ASI-Arch's fitness function + OpenDev's evaluation gap:**
 OpenDev provides the infrastructure for quality evaluation but doesn't specify HOW to evaluate. ASI-Arch's composite function (sigmoid-capped quantitative + LLM-as-judge qualitative) fills this gap. Applied to our Arena: sigmoid transformation prevents score inflation, LLM-as-judge captures qualities that resist numerical measurement (voice authenticity, emotional resonance, narrative momentum), calibration anchors provide stable reference points.

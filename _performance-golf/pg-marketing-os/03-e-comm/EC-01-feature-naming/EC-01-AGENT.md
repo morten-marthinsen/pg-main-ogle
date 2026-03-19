@@ -56,7 +56,7 @@ This agent is a **workflow orchestrator**. It delegates to microskills and valid
 | 0 | Strategy loading + specimen loading + validation | haiku | Input loading, no reasoning needed |
 | 1 | Capability mapping + hierarchy design + crossover loading | sonnet | Classification + architecture decisions |
 | 2 | Feature naming + micro-script writing | opus | Creative generation -- max quality for naming |
-| 2.5 | Arena (7 competitors x 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 4 | Validation + generic detection + output packaging | sonnet | Judgment-heavy evaluation |
 
 ---

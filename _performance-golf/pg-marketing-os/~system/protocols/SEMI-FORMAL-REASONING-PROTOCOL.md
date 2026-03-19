@@ -27,7 +27,7 @@ This protocol applies to **any skill microskill that produces an analytical conc
 | 04 Mechanism | Mechanism type selection, emphasis strategy, scorecard validation |
 | 05 Promise | Proof ceiling calibration, Schwartz stage verification |
 | 06 Big Idea | Schema distance calibration, FSSIT validation, defensibility scoring |
-| Arena (all) | Winner selection, Learning Brief technique identification |
+| Arena (all) | Winner selection, Analytical Brief technique identification |
 
 **This protocol does NOT apply to:** Pure generation tasks (writing copy, generating candidates), mechanical validation (file existence checks, threshold comparisons), or data loading.
 
@@ -80,7 +80,7 @@ When producing an analytical conclusion, the output MUST follow this structure:
 
 ## 2. Steel Man Gate
 
-**Trigger:** Before accepting any winner at Arena exits and competitive gates (mechanism selection, root cause selection, Big Idea selection, promise selection, Arena Round 3 final ranking).
+**Trigger:** Before accepting any winner at Arena exits and competitive gates (mechanism selection, root cause selection, Big Idea selection, promise selection, Arena Round 2 (FINAL) final ranking).
 
 ### Steel Man Procedure
 

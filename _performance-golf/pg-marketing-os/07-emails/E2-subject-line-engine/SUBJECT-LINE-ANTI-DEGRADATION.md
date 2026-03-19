@@ -28,7 +28,7 @@ I WILL NOT: Generate subject lines before the email body is written, skip SL-bod
 - AI generates fewer than 20 candidates
 - AI uses same formula category repeatedly across a sequence
 - AI produces SLs over 10 words
-- AI skips the Arena or runs fewer than 3 rounds
+- AI skips the Arena or runs fewer than 2 rounds + audience evaluation
 - AI selects SLs without human approval
 - AI uses clickbait or AI-telltale language
 
@@ -166,7 +166,7 @@ sl_body_alignment:
 | **Top SL score** | 8.0 weighted | HALT -- Refine candidates |
 | **Word count** | Max 10 words | FLAG for review |
 | **Human selection** | BLOCKING | HALT -- Cannot package without |
-| **Arena rounds** | 3 | HALT -- All 3 rounds required |
+| **Arena rounds** | 2 + audience evaluation | HALT -- All 2 rounds + audience evaluation required |
 | **Arena competitors** | 7 | HALT -- All 7 must generate |
 
 ### Word Count Protocol
@@ -262,7 +262,7 @@ SL-MC-CHECK:
 
   arena_verification:
     rounds_completed: [number]
-    if_under_3: "STOP -- All 3 Arena rounds required"
+    if_under_2: "STOP -- All 2 Arena rounds + audience evaluation required"
     competitors_completed: [number]
     if_under_7: "STOP -- All 7 competitors must generate"
 
@@ -405,7 +405,7 @@ NEVER begin SL execution without reading this anti-degradation file first.
 ## STRUCTURAL FIX 11: ARENA LAYER MANDATORY ENFORCEMENT
 
 ### The Problem
-Arena Layer (2.5) can be skipped during execution -- AI goes directly from Layer 2 to Layer 3, bypassing the 7-competitor, 3-round competition.
+Arena Layer (2.5) can be skipped during execution -- AI goes directly from Layer 2 to Layer 3, bypassing the 7-competitor, 2-round + audience evaluation competition.
 
 ### The Fix
 
@@ -415,7 +415,7 @@ Arena Layer (2.5) can be skipped during execution -- AI goes directly from Layer
 ```
 
 This file is created ONLY after:
-1. All 7 competitors have generated across 3 rounds
+1. All 7 competitors have generated across 2 rounds + audience evaluation
 2. Adversarial critique completed each round
 3. Targeted revision completed each round
 4. All candidates scored against 7 SL-specific criteria
@@ -438,7 +438,7 @@ LAYER_0_COMPLETE.yaml --> LAYER_1_COMPLETE.yaml --> LAYER_2_COMPLETE.yaml --> AR
 | "SLs are too short for Arena" | Short outputs still benefit from multi-perspective | HALT -- Execute Arena |
 | "Context is too large for Arena" | Request session break, do NOT skip Arena | HALT -- Session break, then Arena |
 | "I'll note Arena was skipped" | Noting a skip does not excuse the skip | HALT -- Execute Arena |
-| "One round is sufficient for SLs" | 3 rounds DEFAULT. No exceptions. | HALT -- Complete all 3 rounds |
+| "One round is sufficient for SLs" | 2 rounds + audience evaluation DEFAULT. No exceptions. | HALT -- Complete all 2 rounds + audience evaluation |
 
 ---
 
@@ -475,7 +475,7 @@ LAYER 2 (GENERATION):
 [ ] LAYER_2_COMPLETE.yaml created
 
 LAYER 2.5 (ARENA -- MANDATORY, CANNOT BE SKIPPED):
-[ ] All 7 competitors generated across 3 rounds
+[ ] All 7 competitors generated across 2 rounds + audience evaluation
 [ ] Each competitor produced 5 SLs per round
 [ ] Adversarial critique completed each round
 [ ] Targeted revision completed each round

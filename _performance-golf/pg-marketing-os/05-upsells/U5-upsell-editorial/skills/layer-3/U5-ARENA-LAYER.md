@@ -5,7 +5,7 @@
 > **Type:** Multi-Perspective Revision + Judgment + Human Selection
 > **Dependency:** Requires GATE_1 PASS (baseline scored, issues identified and clustered)
 > **Output:** Revised passage(s) for each P1/P2 fix group
-> **Arena Mode:** `editorial_revision` — Competitors generate REVISIONS of existing copy per identified issues. Per-issue competition. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 3-round execution protocol.
+> **Arena Mode:** `editorial_revision` — Competitors generate REVISIONS of existing copy per identified issues. Per-issue competition. See `~system/protocols/ARENA-CORE-PROTOCOL.md` for 2-round + audience evaluation execution protocol.
 
 ---
 
@@ -166,7 +166,7 @@ Generate multiple **revision candidates** for P1/P2 issues through 7 upsell-edit
 
 ## EXECUTION PROTOCOL
 
-**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 3-round execution protocol.**
+**See `~system/protocols/ARENA-CORE-PROTOCOL.md` for the complete 2-round + audience evaluation execution protocol.**
 
 > **Effort Level:** All revision generation uses `effort: max`. Critique uses `effort: high`.
 
@@ -175,7 +175,7 @@ This skill uses `arena_mode: editorial_revision`:
 - Each P1/P2 fix group triggers a separate Arena round
 - 7 competitors generating revision candidates per fix group
 - Adversarial critique targets: congruence preservation, tone preservation, speed preservation, CTA clarity
-- 3 rounds with learning briefs
+- 2 rounds with audience evaluation + analytical briefs
 - Human selects winning revision per fix group
 
 ### Input Requirements
@@ -298,7 +298,7 @@ Each competitor receives:
 4. **Per fix group.** Each P1/P2 fix group gets its own Arena. Don't batch unrelated issues.
 5. **Human selection per fix group.** BLOCKING.
 6. **Speed is sacred.** Don't add words to fix problems. Cut or restructure.
-7. **3 rounds mandatory.** No shortcuts.
+7. **2 rounds + audience evaluation mandatory.** No shortcuts.
 8. **Zero guilt in CTAs.** Non-negotiable through all revisions.
 9. **Post-purchase/post-decline tone.** Every revision must maintain the psychological frame.
 10. **Carry forward U4 flags.** Don't lose upstream intelligence.

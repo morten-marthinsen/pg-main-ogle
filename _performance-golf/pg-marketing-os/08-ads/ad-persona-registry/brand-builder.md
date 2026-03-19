@@ -132,8 +132,8 @@ Short-term conversion tactics that damage brand equity (fabricated urgency, misl
 | Round | Focus |
 |-------|-------|
 | Round 1 | Create the most distinctive, memorable concept possible. Brand equity first. |
-| Round 2 | Balance memorability with conversion. Incorporate Learning Brief techniques. |
-| Round 3 | Final brand polish. Would someone remember this ad AND act on it? |
+| Round 2 | Balance memorability with conversion. Incorporate Analytical Brief techniques. |
+| Round 2 (FINAL) | Final brand polish. Would someone remember this ad AND act on it? |
 
 ---
 

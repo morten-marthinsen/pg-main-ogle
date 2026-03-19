@@ -22,7 +22,7 @@
 
 ## WHY THIS EXISTS
 
-The Arena protocol mandates 3 rounds of competition across 7 personas. Without convergence detection, three failure modes go undetected:
+The Arena protocol mandates 2 rounds + audience evaluation of competition across 7 personas. Without convergence detection, three failure modes go undetected:
 
 1. **Persona contamination** — Personas start sounding alike, producing variations rather than independent voices. This defeats the purpose of 7 competitors.
 
@@ -76,7 +76,7 @@ When 3+ personas converge:
 **Step 2: Identify converged cluster**
 - Which personas converged
 - What content they share (extract the overlapping 5-grams)
-- Why they converged (likely: weak persona differentiation, shared template structure, or prior round's Learning Brief was too specific)
+- Why they converged (likely: weak persona differentiation, shared template structure, or prior round's Analytical Brief was too specific)
 
 **Step 3: Re-read persona specimens** (fresh voice loading for each converged persona)
 - Load 3-5 fresh specimens from `~system/persona-specimens/[persona-name]/`
@@ -137,7 +137,7 @@ round_scores:
 
 ### Intervention: Human Decision
 
-When round stagnation is detected (typically between Round 2 and Round 3):
+When round stagnation is detected (typically between Round 1 and Round 2 FINAL):
 
 **Present to human:**
 
@@ -155,11 +155,11 @@ Round [N+1] did not meaningfully improve on Round [N].
 
 ### Options:
 
-**A: Continue to Round [N+2] anyway** (protocol requires 3 rounds)
-- Pro: Honors the mandatory 3-round protocol
+**A: Continue to Round [N+1] anyway** (protocol requires 2 rounds + audience evaluation)
+- Pro: Honors the mandatory 2-round + audience evaluation protocol
 - Con: May burn tokens without quality gain
 
-**B: Accept Round [N+1] results as final** (human override of 3-round rule)
+**B: Accept Round [N+1] results as final** (human override of 2-round + audience evaluation rule)
 - Pro: Saves time and tokens
 - Con: Bypasses mandatory protocol — must be explicitly approved
 
@@ -170,7 +170,7 @@ Round [N+1] did not meaningfully improve on Round [N].
 - Con: May sacrifice the best approach for novelty
 ```
 
-**The human decides.** The system does NOT auto-skip rounds — Law 4 says "3-round Arena, no exceptions." Only an explicit human override can reduce rounds.
+**The human decides.** The system does NOT auto-skip rounds — Law 4 says "2-round + audience evaluation Arena, no exceptions." Only an explicit human override can reduce rounds.
 
 ---
 
@@ -233,18 +233,18 @@ MC-CHECK:
 | Round | Convergence Signal | Interpretation |
 |-------|-------------------|----------------|
 | **Round 1** | 3+ personas >40% overlap | **BAD** — insufficient exploration. Personas aren't differentiated. Intervene. |
-| **Round 2** | Winner's techniques adopted by 3+ personas | **NEUTRAL** — expected learning behavior. The Learning Brief is working. Monitor but don't intervene unless scores stagnate. |
-| **Round 3** | Convergence toward winning approach | **GOOD** — natural refinement. The competition found its best approach and personas are polishing it. Allow. |
+| **Round 2** | Winner's techniques adopted by 3+ personas | **NEUTRAL** — expected learning behavior. The Analytical Brief is working. Monitor but don't intervene unless scores stagnate. |
+| **Round 2 (FINAL)** | Convergence toward winning approach | **GOOD** — natural refinement. The competition found its best approach and personas are polishing it. Allow. |
 
 **Convergence detector thresholds by round:**
 
 | Round | Overlap Threshold to Flag | Rationale |
 |-------|--------------------------|-----------|
 | 1 | 40% | Strict — Round 1 should show maximum diversity |
-| 2 | 50% | Relaxed — some convergence expected from Learning Brief |
+| 2 | 50% | Relaxed — some convergence expected from Analytical Brief |
 | 3 | 60% | Permissive — refinement convergence is healthy |
 
-The convergence detector uses round-aware thresholds. The same overlap percentage that triggers intervention in Round 1 is acceptable in Round 3.
+The convergence detector uses round-aware thresholds. The same overlap percentage that triggers intervention in Round 1 is acceptable in Round 2 (FINAL).
 
 ---
 
@@ -294,7 +294,7 @@ Convergence detection IS Detector 3 from the Event-Driven Reminders protocol. Th
 |-----------|-------|--------|
 | Persona convergence: 5-gram overlap threshold (Round 1) | 40% | OpenDev convergence detection |
 | Persona convergence: 5-gram overlap threshold (Round 2) | 50% | ASI-Arch convergence paradox |
-| Persona convergence: 5-gram overlap threshold (Round 3) | 60% | ASI-Arch convergence paradox |
+| Persona convergence: 5-gram overlap threshold (Round 2 FINAL) | 60% | ASI-Arch convergence paradox |
 | Persona convergence: minimum cluster size | 3 personas | OpenDev convergence detection |
 | Round stagnation: minimum score improvement | 0.2 | OpenDev doom-loop detection |
 | Round stagnation: same winner required | Yes | Additional signal |

@@ -185,7 +185,7 @@ A05: Visual Direction
   → Outputs: VISUAL-DIRECTION-PACKAGE.md
 
 A06: Ad Arena
-  → 7 ad-specific personas, 3 rounds, adversarial critique
+  → 7 ad-specific personas, 2 rounds + audience evaluation, adversarial critique
   → Evaluates COMPLETE AD CONCEPTS (hook + script + visual direction as unit)
   → Ad-specific judging criteria (scroll-stop power, visual-copy coherence, etc.)
   → Outputs: AD-ARENA-RESULTS.md
@@ -279,7 +279,7 @@ Each Ad Engine skill follows a layered architecture consistent with the Copywrit
 - **Gate 2:** Draft complete, word counts verified, platform constraints met
 
 ### Layer 2.5: Ad Arena (skills A02 conceptual scoring, A06 full Arena)
-- 7 ad-specific personas, 3 rounds, adversarial Critic
+- 7 ad-specific personas, 2 rounds + audience evaluation, adversarial Critic
 - **Gate 2.5:** Human selects winning concepts
 
 ### Layer 3: Validation / Refinement
@@ -344,7 +344,7 @@ A02 must understand this multiplication. It generates ANGLES first, then HOOKS p
 
 ## AD ARENA ADAPTATION
 
-The Ad Arena follows the same 3-round mandatory structure as the CopywritingEngine Arena but with adapted personas, criteria, and evaluation methodology.
+The Ad Arena follows the same 2-round + audience evaluation mandatory structure as the CopywritingEngine Arena but with adapted personas, criteria, and evaluation methodology.
 
 ### The 7 Ad Personas
 
@@ -1032,7 +1032,7 @@ Required sections:
 
 ### Arena-Specific Forbidden Behaviors
 
-1. ❌ Running fewer than 3 rounds
+1. ❌ Running fewer than 2 rounds
 2. ❌ Skipping adversarial critique
 3. ❌ Scoring against fewer than 7 ad-specific criteria
 4. ❌ Proceeding without human selection of winning concepts
@@ -1107,7 +1107,7 @@ These files contain STRUCTURAL enforcement that CANNOT be bypassed (unlike instr
 | A03 Format Strategy | `A03-format-strategy/A03-FORMAT-STRATEGY-ANTI-DEGRADATION.md` | Platform-specific constraints, sound behavior analysis, variant matrix calculator |
 | A04 Script Architecture | `A04-script-architecture/A04-SCRIPT-ARCHITECTURE-ANTI-DEGRADATION.md` | Word count physics (hard limits), modular swap-point structure, AV format compliance |
 | A05 Visual Direction | `A05-visual-direction/A05-VISUAL-DIRECTION-ANTI-DEGRADATION.md` | Shot-level specificity (no "show product"), platform safe zones, tool-specific production specs |
-| A06 Ad Arena | `A06-ad-arena/A06-AD-ARENA-ANTI-DEGRADATION.md` | 3 rounds mandatory, 7 personas, atomic concept evaluation, specimen loading, human selection blocking |
+| A06 Ad Arena | `A06-ad-arena/A06-AD-ARENA-ANTI-DEGRADATION.md` | 2 rounds + audience evaluation mandatory, 7 personas, atomic concept evaluation, specimen loading, human selection blocking |
 | A07 Copy Production | `A07-copy-production/A07-COPY-PRODUCTION-ANTI-DEGRADATION.md` | Variant generation (5-10 hook swaps per body), word count enforcement, CTA lever taxonomy |
 | A08 Visual/Video Production | `A08-visual-video-production/A08-VISUAL-VIDEO-PRODUCTION-ANTI-DEGRADATION.md` | 4-level graceful degradation, tool orchestration, asset naming with lineage tracing |
 | A09 Assembly & Variant Matrix | `A09-assembly-variant-matrix/A09-ASSEMBLY-VARIANT-MATRIX-ANTI-DEGRADATION.md` | 4-dimension coherence validation, testing priority algorithm, binding variant naming |
@@ -1226,7 +1226,7 @@ Every extracted microskill spec file follows this structure:
 | A03 Format Strategy | 25 | Master Format Assignment Table schema in Layer 2 |
 | A04 Script Architecture | 30 | 8-framework selection, modular script architecture |
 | A05 Visual Direction | 32 | 5 treatment types, tool-specific production specs in Layer 3 |
-| A06 Ad Arena | 32 | 3 rounds × 5 microskills each in Layer 2, synthesis in Layer 2.5 |
+| A06 Ad Arena | 32 | 2 rounds + audience evaluation × 5 microskills each in Layer 2, synthesis in Layer 2.5 |
 | A07 Copy Production | 28 | Variant generation architecture in Layer 2 |
 | A08 Visual/Video Production | 28 | Tool orchestration (13 tools), quality audit in Layer 2.5 |
 | A09 Assembly & Variant Matrix | 24 | 4-dimension coherence validation in Layer 2 |

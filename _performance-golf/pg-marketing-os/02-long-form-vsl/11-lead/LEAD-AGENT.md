@@ -64,7 +64,7 @@ This agent is a **workflow orchestrator**. It delegates to microskills and valid
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Lead architecture classification | sonnet | Structural classification from upstream |
 | 2 | Full lead draft generation | opus | Creative generation — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Refinement + validation | opus | Judgment-heavy evaluation |
 | 4 | Packaging + handoffs | sonnet | Assembly from scored candidates |
 

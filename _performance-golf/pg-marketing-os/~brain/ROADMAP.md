@@ -15,7 +15,7 @@
 |-----------|--------|---------|
 | **CLAUDE.md** (Master Protocol) | Complete | v3.7 |
 | **20 Skills** (01-Research through 20-Editorial) | All operational | Various |
-| **Arena System** (7 competitors, 3 rounds, adversarial Critic) | Complete | v3.0 |
+| **Arena System** (7 competitors, 2 rounds + audience evaluation, adversarial Critic) | Complete | v3.0 |
 | **Synthesizer Layer** (phrase-level hybrids) | Complete | v2.0 |
 | **Metacognitive Protocol** (MC-CHECK, context zones) | Complete | v2.4+ |
 | **Anti-Degradation System** (20/20 skills protected) | Complete | v2.8+ |
@@ -38,7 +38,7 @@
 Layer 0: Foundation (upstream loading, specimen injection)
 Layer 1: Architecture (classification, pattern selection)
 Layer 2: Generation/Drafting (Arena competition, effort: max)
-  Layer 2.5: Arena (7 competitors x 3 rounds + Critic + Judge)
+  Layer 2.5: Arena (7 competitors x 2 rounds + audience evaluation + Critic + Judge)
   Layer 2.6: Synthesizer (phrase-level hybrids from 7 outputs)
 Layer 3: Validation/Refinement (quality gates, anti-slop)
 Layer 4: Output/Packaging (handoff to next skill)
@@ -270,7 +270,7 @@ This is the Co-Evolutionary Flywheel in action — the system gets better at a c
 | 2026-02-12 | Model assignment tables added to all 20 AGENT.md files | Binding haiku/sonnet/opus assignments per layer per skill |
 | 2026-02-07 | FINAL_HANDOFF minimum set to 200KB (was 300KB) | 300KB unrealistic given context constraints; 166KB output was excellent quality |
 | 2026-02-07 | CopywritingEngine framed as methodology proof | Research synthesis revealed 1:1 mapping between engine architecture and cognitive science |
-| 2026-02-05 | Arena upgraded to v3.0 (7 competitors, 3 rounds, Critic) | Single-pass generation with 6 competitors insufficient; adversarial critique needed |
+| 2026-02-05 | Arena upgraded to v3.0 (7 competitors, 2 rounds + audience evaluation, Critic) | Single-pass generation with 6 competitors insufficient; adversarial critique needed |
 | 2026-02-05 | Agent Teams architecture specified | Persona contamination, self-critique weakness, context pressure identified as root causes of quality issues |
 | 2026-02-05 | Anti-degradation rolled out to all 20 skills | Proactive protection after Research and Proof Inventory catastrophic failures |
 

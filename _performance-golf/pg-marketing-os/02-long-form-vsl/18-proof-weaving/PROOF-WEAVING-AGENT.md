@@ -50,7 +50,7 @@ Phase 3.5: Assembly
 | 0 | Foundation + specimen loading | haiku | Input loading, no reasoning needed |
 | 1 | Proof architecture + section mapping + density planning | sonnet | Structural mapping from upstream |
 | 2 | Proof block drafting (7 proof types) | opus | Creative writing — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Validation + density audit | opus | Judgment-heavy evaluation |
 | 4 | Assembly instructions packaging | sonnet | Assembly from existing content |
 

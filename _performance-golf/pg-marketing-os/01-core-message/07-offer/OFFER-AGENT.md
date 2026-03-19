@@ -37,7 +37,7 @@ This skill produces the commercial structure that wraps around the mechanism and
 | 0 | Input validation + loading | haiku | Simple validation |
 | 1 | Offer architecture design | opus | Strategic design — value equation, stack structure |
 | 2 | Offer element development | opus | Creative development — bonuses, guarantees, framing |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 3 | Validation + scoring | opus | Judgment-heavy evaluation |
 | 4 | Output packaging | sonnet | Assembly from existing content |
 

@@ -16,7 +16,7 @@ No dedicated specimens. The Ad Architect does NOT have a single copywriter or ad
 - All 6 ad personas' specifications (to understand each editorial lens)
 - The Ad Arena's 7 judging criteria with weights
 - All upstream packages (hook matrix, script architecture, visual direction, campaign brief)
-- In Rounds 2-3: ALL outputs from the previous round + Learning Brief (unique competitive advantage)
+- In Round 2: ALL outputs from the previous round + Analytical Brief (unique competitive advantage)
 
 ---
 
@@ -35,7 +35,7 @@ No dedicated specimens. The Ad Architect does NOT have a single copywriter or ad
 | Role | When | What |
 |------|------|------|
 | **In-Arena Evaluator** | Rounds 1-3 | Generates ONE integrated evaluation competing head-to-head against all 6 specialist personas |
-| **Post-Arena Hybrid Creator** | After Round 3 | Creates 2-3 improved hybrid concepts from all 7 Round 3 evaluation outputs |
+| **Post-Arena Hybrid Creator** | After Round 2 (FINAL) | Creates 2-3 improved hybrid concepts from all 7 Round 2 (FINAL) evaluation outputs |
 
 ---
 
@@ -60,10 +60,10 @@ Target 8.0+ on EVERY criterion rather than 9.5 on one and 5.0 on another. A bala
 Identifies which criteria are typically underserved by specialist personas and targets those gaps.
 
 ### 4. Round-Over-Round Intelligence
-In Rounds 2-3, has seen ALL other outputs + Learning Briefs. Maximum intelligence about what works and what doesn't.
+In Round 2, has seen ALL other outputs + Analytical Briefs. Maximum intelligence about what works and what doesn't.
 
 ### 5. Post-Arena Hybrid Creation
-After Round 3:
+After Round 2 (FINAL):
 1. Decompose all 7 outputs into discrete improvement suggestions
 2. Identify best non-conflicting improvements per concept
 3. Reconstruct 2-3 improved hybrid concepts
@@ -137,8 +137,8 @@ The Architect is ALWAYS present in every vertical — slot 7 is non-configurable
 |-------|-------|
 | Round 1 | Generate from pure integration — "What scores highest across ALL criteria?" |
 | Round 2 | Use intelligence from all 7 Round 1 outputs. Cover gaps, incorporate winning techniques. |
-| Round 3 | Peak performance. Maximum intelligence. Highest weighted total target. |
-| Post-Arena | Decompose all 7 Round 3 outputs. Create 2-3 meaningfully different hybrids. |
+| Round 2 (FINAL) | Peak performance. Maximum intelligence. Highest weighted total target. |
+| Post-Arena | Decompose all 7 Round 2 (FINAL) outputs. Create 2-3 meaningfully different hybrids. |
 
 ---
 

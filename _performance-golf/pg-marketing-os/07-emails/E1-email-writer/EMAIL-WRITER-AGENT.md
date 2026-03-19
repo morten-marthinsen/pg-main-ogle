@@ -51,7 +51,7 @@ Generate individual emails following the campaign blueprint from E0. Each email 
 - Paragraph brevity enforced (max 3 sentences, usually 1-2)
 - Niche-appropriate language throughout
 - Voice consistent with persona selection
-- Arena-validated quality (3 rounds, 7 competitors)
+- Arena-validated quality (2 rounds + audience evaluation, 7 competitors)
 - Achieves >= 7.5 weighted quality score
 
 This agent operates in **7 body type modes**. The mode is determined by the blueprint's body_type assignment for the current email position.
@@ -87,7 +87,7 @@ This agent operates in **7 body type modes**. The mode is determined by the blue
 | 0 | Blueprint loading + specimen loading + validation | haiku | Input loading, no reasoning |
 | 1 | Body type routing + structural template + content mapping | sonnet | Classification + architecture |
 | 2 | Email generation (opening, body, bridge, CTA) | opus | Creative generation — max quality |
-| 2.5 | Arena (7 competitors × 3 rounds) | opus | Maximum quality generation |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 2.6 | Synthesizer (2-3 hybrids) | opus | Phrase-level hybrid creation |
 | 3 | Validation + output | sonnet | Mechanical validation + assembly |
 
@@ -334,13 +334,13 @@ IDLE → LOADING → ROUTING → GENERATION → ARENA → VALIDATION → COMPLET
 
 ---
 
-### Layer 2.5: Arena (7 Competitors, 3 Rounds)
+### Layer 2.5: Arena (7 Competitors, 2 Rounds + Audience Evaluation)
 
 > **Critical Constraints Reminder (Layer 2.5)**
 > - Read ANTI-DEGRADATION.md before executing
 > - Every microskill produces its own output file
 > - Gates are PASS or FAIL only — no invented statuses
-> - Arena is MANDATORY — 3 rounds, 7 competitors, human selection required
+> - Arena is MANDATORY — 2 rounds + audience evaluation, 7 competitors, human selection required
 > - Layer 2 draft is reference material, NOT a template for competitors
 
 **Purpose:** Generate 7 competing versions of this email through the Arena protocol, with adversarial critique and learning between rounds.
@@ -348,7 +348,7 @@ IDLE → LOADING → ROUTING → GENERATION → ARENA → VALIDATION → COMPLET
 **Specification File:** `ARENA-LAYER.md`
 
 **Execution Protocol:**
-- See `~system/protocols/ARENA-CORE-PROTOCOL.md` for full 3-round execution protocol
+- See `~system/protocols/ARENA-CORE-PROTOCOL.md` for full 2-round + audience evaluation execution protocol
 - Mode: `generative_full_draft` — competitors write COMPLETE emails from scratch
 - Layer 2 draft = reference material, NOT template
 - 7 competitors (6 personas + The Architect) each write the full email in their voice
@@ -422,7 +422,7 @@ Each Arena competitor gets their own voice specimens.
 1. **ONE email at a time** — Never batch-generate multiple emails
 2. **Body type is ASSIGNED** — Cannot change body type from blueprint
 3. **Specimens MUST be loaded** — Generation without specimens = protocol violation
-4. **Arena is MANDATORY** — 3 rounds, 7 competitors, human selection
+4. **Arena is MANDATORY** — 2 rounds + audience evaluation, 7 competitors, human selection
 5. **SEQUENTIAL sections** — Opening → Body → Bridge → CTA, no skipping
 
 ### Structural Constraints
