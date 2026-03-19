@@ -347,7 +347,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*Claude Code*\nChanged: ${CLAUDE_STATUS}\nAction items: [placeholder]"
+                  "text": "*Claude Code*\nChanged: ${CLAUDE_STATUS}"
                 }
               },
               {
@@ -357,7 +357,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*Codex*\nChanged: ${CODEX_STATUS}\nAction items: [placeholder]"
+                  "text": "*Codex*\nChanged: ${CODEX_STATUS}"
                 }
               },
               {
@@ -367,7 +367,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*Gemini CLI*\nChanged: ${GEMINI_STATUS}\nAction items: [placeholder]"
+                  "text": "*Gemini CLI*\nChanged: ${GEMINI_STATUS}"
                 }
               }
             ]
@@ -399,7 +399,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*Claude Code*\nChanged: No changes\nAction items: [placeholder]"
+                  "text": "*Claude Code*\nNo changes"
                 }
               },
               {
@@ -409,7 +409,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*Codex*\nChanged: No changes\nAction items: [placeholder]"
+                  "text": "*Codex*\nNo changes"
                 }
               },
               {
@@ -419,7 +419,29 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*Gemini CLI*\nChanged: No changes\nAction items: [placeholder]"
+                  "text": "*Gemini CLI*\nNo changes"
+                }
+              }
+            ]
+          }
+          SLACK_EOF
+          curl -X POST "$SLACK_WEBHOOK_URL" \
+            -H 'Content-type: application/json' \
+            -d @/tmp/slack-payload.json
+
+      - name: Send Slack notification (failure)
+        if: failure() && env.SLACK_WEBHOOK_URL != ''
+        run: |
+          DATE_STR=$(date -u '+%b %-d')
+          cat > /tmp/slack-payload.json << SLACK_EOF
+          {
+            "link_names": 1,
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "<@U024E2PBFQV>\n\n*AI Tools Sync — ${DATE_STR} — FAILED*\n\nThe daily sync did not complete. Check GitHub Actions for details."
                 }
               }
             ]
