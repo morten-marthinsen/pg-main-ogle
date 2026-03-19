@@ -383,7 +383,14 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "<@U024E2PBFQV>\n\n*AI Tools Sync — ${DATE_STR}*\n\nNo changes upstream. Everything current."
+                  "text": "<@U024E2PBFQV>\n\n*AI Tools Sync — ${DATE_STR}*"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*What changed:*\n*Claude Code:* No changes\n*Codex:* No changes\n*Gemini CLI:* No changes"
                 }
               }
             ]
