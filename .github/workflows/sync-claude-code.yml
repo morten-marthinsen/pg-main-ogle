@@ -17,179 +17,168 @@ jobs:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
     steps:
-      - name: Checkout pg-main
+      - name: Checkout pg-main (sparse — only sync metadata)
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          sparse-checkout: |
+            _performance-golf/pg-ai/claude-code/repo-shas.txt
+            .github
+          sparse-checkout-cone-mode: false
 
-      # ============================================================
-      # STEP 1: Check which repos changed, only sync those
-      # ============================================================
-
-      - name: Check and sync repos
+      - name: Full checkout if repos need updating
+        id: sync
         run: |
-          SHAS_FILE="$SYNC_DIR/repo-shas.txt"
+          SHAS_FILE="_performance-golf/pg-ai/claude-code/repo-shas.txt"
+          mkdir -p "_performance-golf/pg-ai/claude-code"
           touch "$SHAS_FILE"
 
           UPDATED=""
           SKIPPED=0
-          TOTAL=12
+          NEEDS_FULL_CHECKOUT=false
 
-          sync_repo() {
-            local REPO="$1"
-            local DIR="$2"
+          check_repo() {
+            local DIR="$1"
+            local REPO="$2"
 
-            # Get latest SHA from GitHub
             local LATEST
             LATEST=$(curl -sf "https://api.github.com/repos/${REPO}/commits?per_page=1" | jq -r '.[0].sha // empty' 2>/dev/null || echo "")
 
-            if [ -z "$LATEST" ]; then
-              echo "WARN: Could not fetch SHA for $REPO, syncing anyway"
-              LATEST="unknown"
-            fi
-
-            # Get stored SHA
             local STORED
             STORED=$(grep "^${DIR}=" "$SHAS_FILE" 2>/dev/null | cut -d= -f2 || echo "")
 
-            # Compare
-            if [ "$LATEST" = "$STORED" ] && [ "$LATEST" != "unknown" ] && [ -d "$SYNC_DIR/$DIR" ]; then
+            if [ "$LATEST" = "$STORED" ] && [ -n "$STORED" ]; then
               echo "SKIP: $DIR"
               SKIPPED=$((SKIPPED + 1))
+            else
+              echo "CHANGED: $DIR"
+              echo "${DIR}=${LATEST}" >> /tmp/new-shas.txt
+              NEEDS_FULL_CHECKOUT=true
+              if [ -n "$UPDATED" ]; then
+                UPDATED="${UPDATED}, ${DIR}"
+              else
+                UPDATED="${DIR}"
+              fi
+            fi
+          }
+
+          touch /tmp/new-shas.txt
+
+          check_repo "claude-code" "anthropics/claude-code"
+          check_repo "skills" "anthropics/skills"
+          check_repo "claude-plugins-official" "anthropics/claude-plugins-official"
+          check_repo "claude-code-action" "anthropics/claude-code-action"
+          check_repo "claude-code-security-review" "anthropics/claude-code-security-review"
+          check_repo "claude-code-monitoring-guide" "anthropics/claude-code-monitoring-guide"
+          check_repo "claude-agent-sdk-python" "anthropics/claude-agent-sdk-python"
+          check_repo "claude-agent-sdk-typescript" "anthropics/claude-agent-sdk-typescript"
+          check_repo "claude-agent-sdk-demos" "anthropics/claude-agent-sdk-demos"
+          check_repo "claude-cookbooks" "anthropics/claude-cookbooks"
+          check_repo "claude-quickstarts" "anthropics/claude-quickstarts"
+          check_repo "courses" "anthropics/courses"
+
+          echo "$UPDATED" > /tmp/updated-repos.txt
+          echo "$SKIPPED" > /tmp/skipped-count.txt
+
+          if [ -z "$UPDATED" ]; then
+            echo "needs_sync=false" >> "$GITHUB_OUTPUT"
+            echo "No repos changed."
+          else
+            echo "needs_sync=true" >> "$GITHUB_OUTPUT"
+            echo "Repos to update: $UPDATED"
+          fi
+
+      - name: Full checkout
+        if: steps.sync.outputs.needs_sync == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Download changed repos only
+        if: steps.sync.outputs.needs_sync == 'true'
+        run: |
+          SHAS_FILE="$SYNC_DIR/repo-shas.txt"
+
+          sync_repo() {
+            local DIR="$1"
+            local REPO="$2"
+
+            # Check if this repo is in the changed list
+            if ! grep -q "^${DIR}=" /tmp/new-shas.txt 2>/dev/null; then
               return
             fi
 
-            echo "SYNC: $DIR"
+            echo "Downloading: $DIR"
             rm -rf "$SYNC_DIR/$DIR"
             git clone --depth 1 "https://github.com/${REPO}.git" "/tmp/$DIR"
             rm -rf "/tmp/$DIR/.git"
             mv "/tmp/$DIR" "$SYNC_DIR/$DIR"
 
-            # Store new SHA (replace old entry)
+            # Update SHA
             grep -v "^${DIR}=" "$SHAS_FILE" > "$SHAS_FILE.tmp" 2>/dev/null || true
-            echo "${DIR}=${LATEST}" >> "$SHAS_FILE.tmp"
+            local SHA
+            SHA=$(grep "^${DIR}=" /tmp/new-shas.txt | cut -d= -f2)
+            echo "${DIR}=${SHA}" >> "$SHAS_FILE.tmp"
             mv "$SHAS_FILE.tmp" "$SHAS_FILE"
-
-            if [ -n "$UPDATED" ]; then
-              UPDATED="${UPDATED}, ${DIR}"
-            else
-              UPDATED="${DIR}"
-            fi
           }
 
-          sync_repo "anthropics/claude-code" "claude-code"
-          sync_repo "anthropics/skills" "skills"
-          sync_repo "anthropics/claude-plugins-official" "claude-plugins-official"
-          sync_repo "anthropics/claude-code-action" "claude-code-action"
-          sync_repo "anthropics/claude-code-security-review" "claude-code-security-review"
-          sync_repo "anthropics/claude-code-monitoring-guide" "claude-code-monitoring-guide"
-          sync_repo "anthropics/claude-agent-sdk-python" "claude-agent-sdk-python"
-          sync_repo "anthropics/claude-agent-sdk-typescript" "claude-agent-sdk-typescript"
-          sync_repo "anthropics/claude-agent-sdk-demos" "claude-agent-sdk-demos"
-          sync_repo "anthropics/claude-cookbooks" "claude-cookbooks"
-          sync_repo "anthropics/claude-quickstarts" "claude-quickstarts"
-          sync_repo "anthropics/courses" "courses"
+          sync_repo "claude-code" "anthropics/claude-code"
+          sync_repo "skills" "anthropics/skills"
+          sync_repo "claude-plugins-official" "anthropics/claude-plugins-official"
+          sync_repo "claude-code-action" "anthropics/claude-code-action"
+          sync_repo "claude-code-security-review" "anthropics/claude-code-security-review"
+          sync_repo "claude-code-monitoring-guide" "anthropics/claude-code-monitoring-guide"
+          sync_repo "claude-agent-sdk-python" "anthropics/claude-agent-sdk-python"
+          sync_repo "claude-agent-sdk-typescript" "anthropics/claude-agent-sdk-typescript"
+          sync_repo "claude-agent-sdk-demos" "anthropics/claude-agent-sdk-demos"
+          sync_repo "claude-cookbooks" "anthropics/claude-cookbooks"
+          sync_repo "claude-quickstarts" "anthropics/claude-quickstarts"
+          sync_repo "courses" "anthropics/courses"
 
           sort "$SHAS_FILE" -o "$SHAS_FILE"
 
-          # Save results for Slack
-          echo "$UPDATED" > /tmp/updated-repos.txt
-          echo "$SKIPPED" > /tmp/skipped-count.txt
-
-      # ============================================================
-      # STEP 2: Fetch docs, feeds, and other resources
-      # ============================================================
-
-      - name: Fetch docs and feeds
+      - name: Refresh docs and feeds
+        if: steps.sync.outputs.needs_sync == 'true'
         run: |
           curl -sL "https://code.claude.com/docs/llms-full.txt" -o "$SYNC_DIR/claude-code-docs-full.txt"
           curl -sL "https://platform.claude.com/llms.txt" -o "$SYNC_DIR/platform-docs-index.txt"
           curl -sL "https://github.com/anthropics/claude-code/releases.atom" -o "$SYNC_DIR/releases.atom"
           curl -sL "https://status.claude.com/feed.atom" -o "$SYNC_DIR/status.atom"
           curl -sL "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf" -o "$SYNC_DIR/anthropic-whitepaper.pdf"
-
-      # ============================================================
-      # STEP 3: Record sync metadata
-      # ============================================================
-
-      - name: Record sync timestamp
-        run: |
           echo "last_sync: $(date -u '+%Y-%m-%dT%H:%M:%SZ')" > "$SYNC_DIR/sync-metadata.yml"
 
-      # ============================================================
-      # STEP 4: Commit and push if there are changes
-      # ============================================================
-
-      - name: Check for changes
-        id: changes
+      - name: Commit and push
+        if: steps.sync.outputs.needs_sync == 'true'
         run: |
           git add -A "$SYNC_DIR/"
           if git diff --cached --quiet; then
-            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No file changes to commit."
           else
-            echo "has_changes=true" >> "$GITHUB_OUTPUT"
             CHANGE_COUNT=$(git diff --cached --name-only | wc -l | tr -d ' ')
-            echo "change_count=$CHANGE_COUNT" >> "$GITHUB_OUTPUT"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -m "sync: Update Claude Code resources $(date -u '+%Y-%m-%d')
 
-            UPDATED_REPOS=$(cat /tmp/updated-repos.txt)
-            SKIPPED=$(cat /tmp/skipped-count.txt)
-
-            # Check docs/feeds
-            DOCS=""
-            git diff --cached --name-only | grep -q "claude-code-docs-full.txt" && DOCS="${DOCS}docs refreshed, " || true
-            git diff --cached --name-only | grep -q "releases.atom" && DOCS="${DOCS}release feed updated, " || true
-            git diff --cached --name-only | grep -q "platform-docs-index.txt" && DOCS="${DOCS}platform docs refreshed, " || true
-            DOCS=$(echo "$DOCS" | sed 's/, $//')
-
-            # Build summary lines
-            LINES=""
-            if [ -n "$UPDATED_REPOS" ]; then
-              LINES="Repos: ${UPDATED_REPOS}"
-            fi
-            if [ -n "$DOCS" ]; then
-              if [ -n "$LINES" ]; then
-                LINES="${LINES}\n"
-              fi
-              LINES="${LINES}${DOCS}"
-            fi
-            if [ "$SKIPPED" -gt "0" ]; then
-              if [ -n "$LINES" ]; then
-                LINES="${LINES}\n"
-              fi
-              LINES="${LINES}${SKIPPED} repos had no changes."
-            fi
-            # If only metadata changed
-            if [ -z "$LINES" ]; then
-              LINES="Metadata updated only."
-            fi
-
-            printf '%s' "$LINES" > /tmp/change-summary.txt
+            Automated daily sync. Files changed: $CHANGE_COUNT"
+            git push
           fi
 
-      - name: Commit and push
-        if: steps.changes.outputs.has_changes == 'true'
-        env:
-          CHANGE_COUNT: ${{ steps.changes.outputs.change_count }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "sync: Update Claude Code resources $(date -u '+%Y-%m-%d')
-
-          Automated daily sync of Anthropic/Claude Code official resources.
-          Files changed: $CHANGE_COUNT"
-          git push
-
       # ============================================================
-      # STEP 5: Slack notification
+      # Slack notification
       # ============================================================
 
       - name: Send Slack notification (changes found)
-        if: steps.changes.outputs.has_changes == 'true' && env.SLACK_WEBHOOK_URL != ''
-        env:
-          CHANGE_COUNT: ${{ steps.changes.outputs.change_count }}
+        if: steps.sync.outputs.needs_sync == 'true' && env.SLACK_WEBHOOK_URL != ''
         run: |
-          CHANGE_SUMMARY=$(cat /tmp/change-summary.txt)
+          UPDATED=$(cat /tmp/updated-repos.txt)
+          SKIPPED=$(cat /tmp/skipped-count.txt)
           DATE_STR=$(date -u '+%b %-d')
+
+          SUMMARY="Repos: ${UPDATED}"
+          if [ "$SKIPPED" -gt "0" ]; then
+            SUMMARY="${SUMMARY}\n${SKIPPED} repos had no changes."
+          fi
+
           cat > /tmp/slack-payload.json << SLACK_EOF
           {
             "link_names": 1,
@@ -205,7 +194,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*What changed:*\n${CHANGE_SUMMARY}\n${CHANGE_COUNT} files total."
+                  "text": "*What changed:*\n${SUMMARY}"
                 }
               },
               {
@@ -223,7 +212,7 @@ jobs:
             -d @/tmp/slack-payload.json
 
       - name: Send Slack notification (no changes)
-        if: steps.changes.outputs.has_changes == 'false' && env.SLACK_WEBHOOK_URL != ''
+        if: steps.sync.outputs.needs_sync == 'false' && env.SLACK_WEBHOOK_URL != ''
         run: |
           DATE_STR=$(date -u '+%b %-d')
           cat > /tmp/slack-payload.json << SLACK_EOF
