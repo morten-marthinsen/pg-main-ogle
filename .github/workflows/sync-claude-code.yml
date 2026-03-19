@@ -23,111 +23,83 @@ jobs:
           fetch-depth: 1
 
       # ============================================================
-      # STEP 1: Sync all Anthropic repos
+      # STEP 1: Check which repos have changed, only sync those
       # ============================================================
 
-      - name: Sync anthropics/claude-code
+      - name: Check and sync repos
         run: |
-          rm -rf "$SYNC_DIR/claude-code"
-          git clone --depth 1 https://github.com/anthropics/claude-code.git /tmp/claude-code
-          rm -rf /tmp/claude-code/.git
-          mv /tmp/claude-code "$SYNC_DIR/claude-code"
+          REPOS="anthropics/claude-code:claude-code
+          anthropics/skills:skills
+          anthropics/claude-plugins-official:claude-plugins-official
+          anthropics/claude-code-action:claude-code-action
+          anthropics/claude-code-security-review:claude-code-security-review
+          anthropics/claude-code-monitoring-guide:claude-code-monitoring-guide
+          anthropics/claude-agent-sdk-python:claude-agent-sdk-python
+          anthropics/claude-agent-sdk-typescript:claude-agent-sdk-typescript
+          anthropics/claude-agent-sdk-demos:claude-agent-sdk-demos
+          anthropics/claude-cookbooks:claude-cookbooks
+          anthropics/claude-quickstarts:claude-quickstarts
+          anthropics/courses:courses"
 
-      - name: Sync anthropics/skills
-        run: |
-          rm -rf "$SYNC_DIR/skills"
-          git clone --depth 1 https://github.com/anthropics/skills.git /tmp/skills
-          rm -rf /tmp/skills/.git
-          mv /tmp/skills "$SYNC_DIR/skills"
+          SHAS_FILE="$SYNC_DIR/repo-shas.txt"
+          UPDATED_REPOS=""
+          SKIPPED=0
 
-      - name: Sync anthropics/claude-plugins-official
-        run: |
-          rm -rf "$SYNC_DIR/claude-plugins-official"
-          git clone --depth 1 https://github.com/anthropics/claude-plugins-official.git /tmp/claude-plugins-official
-          rm -rf /tmp/claude-plugins-official/.git
-          mv /tmp/claude-plugins-official "$SYNC_DIR/claude-plugins-official"
+          # Create SHAs file if it doesn't exist
+          touch "$SHAS_FILE"
 
-      - name: Sync anthropics/claude-code-action
-        run: |
-          rm -rf "$SYNC_DIR/claude-code-action"
-          git clone --depth 1 https://github.com/anthropics/claude-code-action.git /tmp/claude-code-action
-          rm -rf /tmp/claude-code-action/.git
-          mv /tmp/claude-code-action "$SYNC_DIR/claude-code-action"
+          for entry in $REPOS; do
+            REPO=$(echo "$entry" | cut -d: -f1)
+            DIR=$(echo "$entry" | cut -d: -f2)
 
-      - name: Sync anthropics/claude-code-security-review
-        run: |
-          rm -rf "$SYNC_DIR/claude-code-security-review"
-          git clone --depth 1 https://github.com/anthropics/claude-code-security-review.git /tmp/claude-code-security-review
-          rm -rf /tmp/claude-code-security-review/.git
-          mv /tmp/claude-code-security-review "$SYNC_DIR/claude-code-security-review"
+            # Get latest commit SHA from GitHub API
+            LATEST_SHA=$(curl -s "https://api.github.com/repos/${REPO}/commits/main" | jq -r '.sha // empty' 2>/dev/null)
 
-      - name: Sync anthropics/claude-code-monitoring-guide
-        run: |
-          rm -rf "$SYNC_DIR/claude-code-monitoring-guide"
-          git clone --depth 1 https://github.com/anthropics/claude-code-monitoring-guide.git /tmp/claude-code-monitoring-guide
-          rm -rf /tmp/claude-code-monitoring-guide/.git
-          mv /tmp/claude-code-monitoring-guide "$SYNC_DIR/claude-code-monitoring-guide"
+            if [ -z "$LATEST_SHA" ]; then
+              # Fallback: try HEAD if main doesn't exist
+              LATEST_SHA=$(curl -s "https://api.github.com/repos/${REPO}/commits/HEAD" | jq -r '.sha // empty' 2>/dev/null)
+            fi
 
-      - name: Sync anthropics/claude-agent-sdk-python
-        run: |
-          rm -rf "$SYNC_DIR/claude-agent-sdk-python"
-          git clone --depth 1 https://github.com/anthropics/claude-agent-sdk-python.git /tmp/claude-agent-sdk-python
-          rm -rf /tmp/claude-agent-sdk-python/.git
-          mv /tmp/claude-agent-sdk-python "$SYNC_DIR/claude-agent-sdk-python"
+            # Get previously synced SHA
+            PREV_SHA=$(grep "^${REPO}:" "$SHAS_FILE" 2>/dev/null | cut -d: -f3)
 
-      - name: Sync anthropics/claude-agent-sdk-typescript
-        run: |
-          rm -rf "$SYNC_DIR/claude-agent-sdk-typescript"
-          git clone --depth 1 https://github.com/anthropics/claude-agent-sdk-typescript.git /tmp/claude-agent-sdk-typescript
-          rm -rf /tmp/claude-agent-sdk-typescript/.git
-          mv /tmp/claude-agent-sdk-typescript "$SYNC_DIR/claude-agent-sdk-typescript"
+            if [ "$LATEST_SHA" = "$PREV_SHA" ] && [ -d "$SYNC_DIR/$DIR" ]; then
+              echo "SKIP: $REPO (unchanged at ${LATEST_SHA:0:7})"
+              SKIPPED=$((SKIPPED + 1))
+            else
+              echo "SYNC: $REPO (${PREV_SHA:0:7:-"new"} → ${LATEST_SHA:0:7})"
+              rm -rf "$SYNC_DIR/$DIR"
+              git clone --depth 1 "https://github.com/${REPO}.git" "/tmp/$DIR"
+              rm -rf "/tmp/$DIR/.git"
+              mv "/tmp/$DIR" "$SYNC_DIR/$DIR"
+              UPDATED_REPOS="${UPDATED_REPOS}${DIR}, "
+            fi
 
-      - name: Sync anthropics/claude-agent-sdk-demos
-        run: |
-          rm -rf "$SYNC_DIR/claude-agent-sdk-demos"
-          git clone --depth 1 https://github.com/anthropics/claude-agent-sdk-demos.git /tmp/claude-agent-sdk-demos
-          rm -rf /tmp/claude-agent-sdk-demos/.git
-          mv /tmp/claude-agent-sdk-demos "$SYNC_DIR/claude-agent-sdk-demos"
+            # Update SHA record
+            if [ -n "$LATEST_SHA" ]; then
+              # Remove old entry and add new one
+              grep -v "^${REPO}:" "$SHAS_FILE" > "$SHAS_FILE.tmp" 2>/dev/null || true
+              echo "${REPO}:${LATEST_SHA}" >> "$SHAS_FILE.tmp"
+              mv "$SHAS_FILE.tmp" "$SHAS_FILE"
+            fi
+          done
 
-      - name: Sync anthropics/claude-cookbooks
-        run: |
-          rm -rf "$SYNC_DIR/claude-cookbooks"
-          git clone --depth 1 https://github.com/anthropics/claude-cookbooks.git /tmp/claude-cookbooks
-          rm -rf /tmp/claude-cookbooks/.git
-          mv /tmp/claude-cookbooks "$SYNC_DIR/claude-cookbooks"
-
-      - name: Sync anthropics/claude-quickstarts
-        run: |
-          rm -rf "$SYNC_DIR/claude-quickstarts"
-          git clone --depth 1 https://github.com/anthropics/claude-quickstarts.git /tmp/claude-quickstarts
-          rm -rf /tmp/claude-quickstarts/.git
-          mv /tmp/claude-quickstarts "$SYNC_DIR/claude-quickstarts"
-
-      - name: Sync anthropics/courses
-        run: |
-          rm -rf "$SYNC_DIR/courses"
-          git clone --depth 1 https://github.com/anthropics/courses.git /tmp/courses
-          rm -rf /tmp/courses/.git
-          mv /tmp/courses "$SYNC_DIR/courses"
+          # Save for later steps
+          echo "$UPDATED_REPOS" | sed 's/, $//' > /tmp/updated-repos.txt
+          echo "$SKIPPED" > /tmp/skipped-count.txt
+          sort "$SHAS_FILE" -o "$SHAS_FILE"
 
       # ============================================================
       # STEP 2: Fetch docs, feeds, and other resources
       # ============================================================
 
-      - name: Fetch Claude Code full docs
-        run: curl -sL "https://code.claude.com/docs/llms-full.txt" -o "$SYNC_DIR/claude-code-docs-full.txt"
-
-      - name: Fetch Platform docs index
-        run: curl -sL "https://platform.claude.com/llms.txt" -o "$SYNC_DIR/platform-docs-index.txt"
-
-      - name: Fetch releases Atom feed
-        run: curl -sL "https://github.com/anthropics/claude-code/releases.atom" -o "$SYNC_DIR/releases.atom"
-
-      - name: Fetch status Atom feed
-        run: curl -sL "https://status.claude.com/feed.atom" -o "$SYNC_DIR/status.atom"
-
-      - name: Fetch Anthropic whitepaper
-        run: curl -sL "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf" -o "$SYNC_DIR/anthropic-whitepaper.pdf"
+      - name: Fetch docs and feeds
+        run: |
+          curl -sL "https://code.claude.com/docs/llms-full.txt" -o "$SYNC_DIR/claude-code-docs-full.txt"
+          curl -sL "https://platform.claude.com/llms.txt" -o "$SYNC_DIR/platform-docs-index.txt"
+          curl -sL "https://github.com/anthropics/claude-code/releases.atom" -o "$SYNC_DIR/releases.atom"
+          curl -sL "https://status.claude.com/feed.atom" -o "$SYNC_DIR/status.atom"
+          curl -sL "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf" -o "$SYNC_DIR/anthropic-whitepaper.pdf"
 
       # ============================================================
       # STEP 3: Record sync metadata
@@ -135,29 +107,9 @@ jobs:
 
       - name: Record sync timestamp
         run: |
-          cat > "$SYNC_DIR/sync-metadata.yml" << 'METADATA'
-          last_sync: TIMESTAMP_PLACEHOLDER
-          repos:
-            - anthropics/claude-code
-            - anthropics/skills
-            - anthropics/claude-plugins-official
-            - anthropics/claude-code-action
-            - anthropics/claude-code-security-review
-            - anthropics/claude-code-monitoring-guide
-            - anthropics/claude-agent-sdk-python
-            - anthropics/claude-agent-sdk-typescript
-            - anthropics/claude-agent-sdk-demos
-            - anthropics/claude-cookbooks
-            - anthropics/claude-quickstarts
-            - anthropics/courses
-          docs:
-            - https://code.claude.com/docs/llms-full.txt
-            - https://platform.claude.com/llms.txt
-          feeds:
-            - https://github.com/anthropics/claude-code/releases.atom
-            - https://status.claude.com/feed.atom
+          cat > "$SYNC_DIR/sync-metadata.yml" << METADATA
+          last_sync: $(date -u '+%Y-%m-%dT%H:%M:%SZ')
           METADATA
-          sed -i "s|TIMESTAMP_PLACEHOLDER|$(date -u '+%Y-%m-%dT%H:%M:%SZ')|" "$SYNC_DIR/sync-metadata.yml"
 
       # ============================================================
       # STEP 4: Commit and push if there are changes
@@ -173,7 +125,39 @@ jobs:
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
             CHANGE_COUNT=$(git diff --cached --name-only | wc -l | tr -d ' ')
             echo "change_count=$CHANGE_COUNT" >> "$GITHUB_OUTPUT"
-            git diff --cached --name-only | head -20 > /tmp/change-summary.txt
+
+            # Build summary
+            UPDATED_REPOS=$(cat /tmp/updated-repos.txt)
+            SKIPPED=$(cat /tmp/skipped-count.txt)
+
+            # Check if docs/feeds changed
+            DOCS_CHANGED=""
+            if git diff --cached --name-only | grep -q "claude-code-docs-full.txt"; then
+              DOCS_CHANGED="${DOCS_CHANGED}docs, "
+            fi
+            if git diff --cached --name-only | grep -q "releases.atom"; then
+              DOCS_CHANGED="${DOCS_CHANGED}release feed, "
+            fi
+            if git diff --cached --name-only | grep -q "platform-docs-index.txt"; then
+              DOCS_CHANGED="${DOCS_CHANGED}platform docs, "
+            fi
+            DOCS_CHANGED=$(echo "$DOCS_CHANGED" | sed 's/, $//')
+
+            SUMMARY=""
+            if [ -n "$UPDATED_REPOS" ]; then
+              SUMMARY="Repos updated: ${UPDATED_REPOS}"
+            fi
+            if [ -n "$DOCS_CHANGED" ]; then
+              if [ -n "$SUMMARY" ]; then
+                SUMMARY="${SUMMARY}\n"
+              fi
+              SUMMARY="${SUMMARY}Also updated: ${DOCS_CHANGED}"
+            fi
+            if [ "$SKIPPED" -gt "0" ]; then
+              SUMMARY="${SUMMARY}\n${SKIPPED} repos unchanged, skipped."
+            fi
+
+            echo "$SUMMARY" > /tmp/change-summary.txt
           fi
 
       - name: Commit and push
@@ -198,10 +182,10 @@ jobs:
         env:
           CHANGE_COUNT: ${{ steps.changes.outputs.change_count }}
         run: |
-          CHANGE_SUMMARY=$(cat /tmp/change-summary.txt | head -20)
+          CHANGE_SUMMARY=$(cat /tmp/change-summary.txt)
           PAYLOAD=$(jq -n \
-            --arg text "*Claude Code Sync — $(date -u '+%Y-%m-%d')*\n\nSync complete. ${CHANGE_COUNT} files updated.\n\nChanged:\n\`\`\`${CHANGE_SUMMARY}\`\`\`\n\n_Audit and action items coming in Phase 2._" \
-            '{text: $text}')
+            --arg text "<@U024E2PBFQV>\n\n*Claude Code Sync — $(date -u '+%b %-d')*\n\n*What changed:*\n${CHANGE_SUMMARY}\n${CHANGE_COUNT} files total.\n\n*Action items:*\n1. [placeholder]\n2. [placeholder]\n3. [placeholder]" \
+            '{text: $text, link_names: 1}')
           curl -X POST "$SLACK_WEBHOOK_URL" \
             -H 'Content-type: application/json' \
             -d "$PAYLOAD"
@@ -210,8 +194,8 @@ jobs:
         if: steps.changes.outputs.has_changes == 'false' && env.SLACK_WEBHOOK_URL != ''
         run: |
           PAYLOAD=$(jq -n \
-            --arg text "*Claude Code Sync — $(date -u '+%Y-%m-%d')*\n\nNo changes upstream. Everything is current." \
-            '{text: $text}')
+            --arg text "<@U024E2PBFQV>\n\n*Claude Code Sync — $(date -u '+%b %-d')*\n\nNo changes upstream. Everything current." \
+            '{text: $text, link_names: 1}')
           curl -X POST "$SLACK_WEBHOOK_URL" \
             -H 'Content-type: application/json' \
             -d "$PAYLOAD"
