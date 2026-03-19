@@ -210,19 +210,3 @@ def get_card(
             f"Card {card_name!r} has unknown output mode {output_mode!r}. "
             f"Expected 'daily' or 'summary'."
         )
-
-
-def get_enriched(
-    date_from: str,
-    date_to: str,
-) -> pd.DataFrame:
-    """DEPRECATED: Use get_card("ad_performance_summary", ...) instead.
-
-    Thin alias that calls get_card("ad_performance_summary", date_from, date_to).
-    """
-    warnings.warn(
-        "get_enriched() is deprecated. Use get_card('ad_performance_summary', ...) instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
-    return get_card("ad_performance_summary", date_from, date_to)

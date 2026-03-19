@@ -12,14 +12,13 @@
 
 Shared data access layer for all Creative OS agents and future systems. Queries Domo (now), will query Snowflake (Q3/Q4 2026). Adapter pattern means zero business logic rewrite when switching sources.
 
-**Four entry points:**
+**Three entry points:**
 
 | Function | What It Returns | Use Case |
 |----------|----------------|----------|
 | `get_card("ad_performance_daily", ...)` | Daily rows (one per ad per day), 30 columns with Domo display names | Christopher's pipeline, SSS sheet, anyone comparing against the Domo card |
 | `get_card("ad_performance_summary", ...)` | One row per ad, all Beast Modes computed, snake_case columns | Programmatic consumers (Tess, Neco, Veda, Orion) |
 | `get_raw()` | Raw rows with all 252 columns, email_address_hash added | Ad-hoc analysis, debugging |
-| `get_ad_performance_card()` | Same as `get_card("ad_performance_daily", ...)` | Backwards-compatible wrapper for Christopher's pipeline |
 
 All entry points strip PII unconditionally. No escape hatch.
 
@@ -141,16 +140,6 @@ list_datasets()
 
 # All 252 columns, email_address_hash added, PII stripped
 df = get_raw("ad_performance", "2026-03-08", "2026-03-14")
-```
-
-### get_enriched — DEPRECATED
-
-```python
-from api import get_enriched
-
-# Still works, emits DeprecationWarning
-# Delegates to get_card("ad_performance_summary", ...)
-df = get_enriched("2026-03-08", "2026-03-14")
 ```
 
 ### Requirements for all consumers
