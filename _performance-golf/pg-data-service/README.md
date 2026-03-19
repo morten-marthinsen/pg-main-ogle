@@ -24,6 +24,19 @@ All entry points strip PII unconditionally. No escape hatch.
 
 ---
 
+## Setup
+
+1. `cp .env.example .env`
+2. Add your Domo credentials to `.env`:
+   ```
+   DOMO_CLIENT_ID=your_client_id_here
+   DOMO_CLIENT_SECRET=your_client_secret_here
+   ```
+   Contact Patrick Hayes for credentials.
+3. `pip install -r requirements.txt`
+
+---
+
 ## How the System Works
 
 ```
