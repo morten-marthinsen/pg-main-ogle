@@ -60,14 +60,14 @@ jobs:
               LATEST_SHA=$(curl -s "https://api.github.com/repos/${REPO}/commits/HEAD" | jq -r '.sha // empty' 2>/dev/null)
             fi
 
-            # Get previously synced SHA
-            PREV_SHA=$(grep "^${REPO}:" "$SHAS_FILE" 2>/dev/null | cut -d: -f3)
+            # Get previously synced SHA (format is repo:sha, so field 2+)
+            PREV_SHA=$(grep "^${REPO}:" "$SHAS_FILE" 2>/dev/null | sed "s|^${REPO}:||")
 
             if [ "$LATEST_SHA" = "$PREV_SHA" ] && [ -d "$SYNC_DIR/$DIR" ]; then
-              echo "SKIP: $REPO (unchanged at ${LATEST_SHA:0:7})"
+              echo "SKIP: $REPO (unchanged)"
               SKIPPED=$((SKIPPED + 1))
             else
-              echo "SYNC: $REPO (${PREV_SHA:0:7:-"new"} → ${LATEST_SHA:0:7})"
+              echo "SYNC: $REPO (changed)"
               rm -rf "$SYNC_DIR/$DIR"
               git clone --depth 1 "https://github.com/${REPO}.git" "/tmp/$DIR"
               rm -rf "/tmp/$DIR/.git"
