@@ -1,0 +1,12 @@
+cards:
+  ad_performance_daily:
+    dataset: ad_performance
+    enrichment: ad_performance
+    output: daily
+    description: "Daily rows, 30 columns, Domo display names. Replaces Domo Ad Performance card."
+
+  ad_performance_summary:
+    dataset: ad_performance
+    enrichment: ad_performance
+    output: summary
+    description: "One row per ad, all Beast Modes computed. For programmatic consumers."

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Export enriched ad performance data matching the Domo Ad Performance card schema.
 
-Returns a DataFrame with 30 columns using Domo's display names (including <BR> artifacts).
+Returns a DataFrame with 30 columns using Domo's display names.
 Produces daily rows (one per ad per day) to match the Domo card structure.
 No CSV write — consumers use the DataFrame however they want.
 
@@ -15,7 +15,6 @@ Usage as an import:
 
 import argparse
 import sys
-from datetime import datetime, timedelta
 from pathlib import Path
 
 import pandas as pd
@@ -24,63 +23,10 @@ import pandas as pd
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
-from api import get_enriched  # noqa: E402
-
-# Internal column name -> Domo Ad Performance card display name.
-# Order matches the Domo card CSV export exactly. <BR> artifacts are intentional.
-COLUMN_MAP = {
-    "ad_name":                  "Ad",
-    # "day" is injected, not from the adapter
-    "status":                   "Status",
-    "spend":                    "Spend",
-    "net_revenue":              "Net Revenue",
-    "net_roas":                 "Net ROAS",
-    "nc_net_roas":              "NC Net ROAS",
-    "cost_per_sc_trial":        "Cost /<BR># SC Trials",
-    "cpa":                      "CPA",
-    "nc_cpa":                   "NC CPA",
-    "nlpt":                     "Net Loss<BR>Per Trial",
-    "fixed_refund_nlpt":        "Fixed Refund<BR>NLPT",
-    "nc_pct":                   "NC %",
-    "gross_revenue":            "Gross Revenue",
-    "gross_roas":               "Gross<BR>ROAS",
-    "cvr_pct":                  "CVR",
-    "nc_cvr_pct":               "NC CVR%",
-    "rc_cvr_pct":               "RC CVR%",
-    "aov":                      "AOV",
-    "nc_aov":                   "NC AOV",
-    "rc_aov":                   "RC AOV",
-    "cpc":                      "CPC",
-    "ctr":                      "CTR",
-    "cpm":                      "CPM",
-    "total_orders":             "Orders",
-    "sc_trials":                "# SC Trials<BR>Started",
-    "new_customers":            "NC Orders",
-    "clicks":                   "Clicks",
-    "impressions":              "Impressions",
-    "fixed_refund_net_revenue": "Fixed Refund<BR>Net Revenue",
-}
-
-# Column output order (matches Domo card CSV)
-COLUMN_ORDER = [
-    "Ad", "Day", "Status", "Spend", "Net Revenue", "Net ROAS", "NC Net ROAS",
-    "Cost /<BR># SC Trials", "CPA", "NC CPA", "Net Loss<BR>Per Trial",
-    "Fixed Refund<BR>NLPT", "NC %", "Gross Revenue", "Gross<BR>ROAS",
-    "CVR", "NC CVR%", "RC CVR%", "AOV", "NC AOV", "RC AOV",
-    "CPC", "CTR", "CPM", "Orders", "# SC Trials<BR>Started", "NC Orders",
-    "Clicks", "Impressions", "Fixed Refund<BR>Net Revenue",
-]
+from api import get_card  # noqa: E402
 
 
-def _rename_and_order(df: pd.DataFrame) -> pd.DataFrame:
-    """Rename internal columns to Domo display names and apply column order."""
-    available = {k: v for k, v in COLUMN_MAP.items() if k in df.columns}
-    df = df.rename(columns=available)
-    present = [c for c in COLUMN_ORDER if c in df.columns]
-    return df[present]
-
-
-def get_ad_performance_card(date_from: str, date_to: str):
+def get_ad_performance_card(date_from: str, date_to: str) -> pd.DataFrame:
     """Return enriched DataFrame with Domo Ad Performance card column names.
 
     Produces daily rows (one per ad per day) matching the Domo card structure.
@@ -95,24 +41,7 @@ def get_ad_performance_card(date_from: str, date_to: str):
         DataFrame with 30 columns matching the Domo card schema,
         one row per ad per day.
     """
-    start = datetime.strptime(date_from, "%Y-%m-%d")
-    end = datetime.strptime(date_to, "%Y-%m-%d")
-
-    frames = []
-    current = start
-    while current <= end:
-        day_str = current.strftime("%Y-%m-%d")
-        df = get_enriched(day_str, day_str)
-        if not df.empty:
-            df["Day"] = day_str
-            frames.append(df)
-        current += timedelta(days=1)
-
-    if not frames:
-        return pd.DataFrame()
-
-    combined = pd.concat(frames, ignore_index=True)
-    return _rename_and_order(combined)
+    return get_card("ad_performance_daily", date_from, date_to)
 
 
 def main():
