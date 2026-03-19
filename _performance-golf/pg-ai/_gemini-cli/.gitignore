@@ -1,0 +1,19 @@
+# Override parent .gitignore rules for synced Anthropic content.
+# Everything in this directory is pulled from official Anthropic repos
+# and docs — we want ALL of it committed regardless of file type.
+
+# Un-ignore file types blocked by the root .gitignore
+!*.pdf
+!*.zip
+!*.tar.gz
+!*.log
+!*.mp4
+!*.mov
+!*.mp3
+!*.wav
+
+# Un-ignore directories blocked by the root .gitignore
+!**/node_modules/
+!**/.next/
+!**/dist/
+!**/build/

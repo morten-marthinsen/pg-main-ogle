@@ -1,4 +1,4 @@
-name: Sync Claude Code Resources
+name: Sync AI Tool Resources
 
 on:
   schedule:
@@ -13,33 +13,36 @@ jobs:
       contents: write
 
     env:
-      SYNC_DIR: _performance-golf/pg-ai/claude-code
+      BASE_DIR: _performance-golf/pg-ai
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
     steps:
-      - name: Checkout pg-main (sparse — only sync metadata)
+      - name: Checkout pg-main (sparse — only SHA files)
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
           sparse-checkout: |
-            _performance-golf/pg-ai/claude-code/repo-shas.txt
+            _performance-golf/pg-ai/_claude-code/repo-shas.txt
+            _performance-golf/pg-ai/_codex/repo-shas.txt
+            _performance-golf/pg-ai/_gemini-cli/repo-shas.txt
             .github
           sparse-checkout-cone-mode: false
 
-      - name: Full checkout if repos need updating
+      - name: Check all repos for changes
         id: sync
         run: |
-          SHAS_FILE="_performance-golf/pg-ai/claude-code/repo-shas.txt"
-          mkdir -p "_performance-golf/pg-ai/claude-code"
-          touch "$SHAS_FILE"
-
-          UPDATED=""
-          SKIPPED=0
-          NEEDS_FULL_CHECKOUT=false
+          ALL_UPDATED=""
+          ALL_SKIPPED=0
+          touch /tmp/new-shas.txt
 
           check_repo() {
-            local DIR="$1"
-            local REPO="$2"
+            local TOOL="$1"
+            local DIR="$2"
+            local REPO="$3"
+
+            local SHAS_FILE="${BASE_DIR}/${TOOL}/repo-shas.txt"
+            mkdir -p "${BASE_DIR}/${TOOL}"
+            touch "$SHAS_FILE"
 
             local LATEST
             LATEST=$(curl -sf "https://api.github.com/repos/${REPO}/commits?per_page=1" | jq -r '.[0].sha // empty' 2>/dev/null || echo "")
@@ -48,44 +51,97 @@ jobs:
             STORED=$(grep "^${DIR}=" "$SHAS_FILE" 2>/dev/null | cut -d= -f2 || echo "")
 
             if [ "$LATEST" = "$STORED" ] && [ -n "$STORED" ]; then
-              echo "SKIP: $DIR"
-              SKIPPED=$((SKIPPED + 1))
+              ALL_SKIPPED=$((ALL_SKIPPED + 1))
             else
-              echo "CHANGED: $DIR"
-              echo "${DIR}=${LATEST}" >> /tmp/new-shas.txt
-              NEEDS_FULL_CHECKOUT=true
-              if [ -n "$UPDATED" ]; then
-                UPDATED="${UPDATED}, ${DIR}"
+              echo "CHANGED: ${TOOL}/${DIR}"
+              echo "${TOOL}/${DIR}=${LATEST}" >> /tmp/new-shas.txt
+              if [ -n "$ALL_UPDATED" ]; then
+                ALL_UPDATED="${ALL_UPDATED}, ${DIR}"
               else
-                UPDATED="${DIR}"
+                ALL_UPDATED="${DIR}"
               fi
             fi
           }
 
-          touch /tmp/new-shas.txt
+          # ---- Claude Code (12 repos) ----
+          check_repo "_claude-code" "claude-code" "anthropics/claude-code"
+          check_repo "_claude-code" "skills" "anthropics/skills"
+          check_repo "_claude-code" "claude-plugins-official" "anthropics/claude-plugins-official"
+          check_repo "_claude-code" "claude-code-action" "anthropics/claude-code-action"
+          check_repo "_claude-code" "claude-code-security-review" "anthropics/claude-code-security-review"
+          check_repo "_claude-code" "claude-code-monitoring-guide" "anthropics/claude-code-monitoring-guide"
+          check_repo "_claude-code" "claude-agent-sdk-python" "anthropics/claude-agent-sdk-python"
+          check_repo "_claude-code" "claude-agent-sdk-typescript" "anthropics/claude-agent-sdk-typescript"
+          check_repo "_claude-code" "claude-agent-sdk-demos" "anthropics/claude-agent-sdk-demos"
+          check_repo "_claude-code" "claude-cookbooks" "anthropics/claude-cookbooks"
+          check_repo "_claude-code" "claude-quickstarts" "anthropics/claude-quickstarts"
+          check_repo "_claude-code" "courses" "anthropics/courses"
 
-          check_repo "claude-code" "anthropics/claude-code"
-          check_repo "skills" "anthropics/skills"
-          check_repo "claude-plugins-official" "anthropics/claude-plugins-official"
-          check_repo "claude-code-action" "anthropics/claude-code-action"
-          check_repo "claude-code-security-review" "anthropics/claude-code-security-review"
-          check_repo "claude-code-monitoring-guide" "anthropics/claude-code-monitoring-guide"
-          check_repo "claude-agent-sdk-python" "anthropics/claude-agent-sdk-python"
-          check_repo "claude-agent-sdk-typescript" "anthropics/claude-agent-sdk-typescript"
-          check_repo "claude-agent-sdk-demos" "anthropics/claude-agent-sdk-demos"
-          check_repo "claude-cookbooks" "anthropics/claude-cookbooks"
-          check_repo "claude-quickstarts" "anthropics/claude-quickstarts"
-          check_repo "courses" "anthropics/courses"
+          # ---- Codex (7 repos) ----
+          check_repo "_codex" "codex" "openai/codex"
+          check_repo "_codex" "skills" "openai/skills"
+          check_repo "_codex" "symphony" "openai/symphony"
+          check_repo "_codex" "codex-action" "openai/codex-action"
+          check_repo "_codex" "codex-universal" "openai/codex-universal"
+          check_repo "_codex" "gpt-5-coding-examples" "openai/gpt-5-coding-examples"
+          check_repo "_codex" "completions-responses-migration-pack" "openai/completions-responses-migration-pack"
 
-          echo "$UPDATED" > /tmp/updated-repos.txt
-          echo "$SKIPPED" > /tmp/skipped-count.txt
+          # ---- Gemini CLI (5 core repos) ----
+          check_repo "_gemini-cli" "gemini-cli" "google-gemini/gemini-cli"
+          check_repo "_gemini-cli" "gemini-cli-action" "google-gemini/gemini-cli-action"
+          check_repo "_gemini-cli" "gemini-skills" "google-gemini/gemini-skills"
+          check_repo "_gemini-cli" "cookbook" "google-gemini/cookbook"
+          check_repo "_gemini-cli" "api-examples" "google-gemini/api-examples"
 
-          if [ -z "$UPDATED" ]; then
+          # ---- Gemini CLI Extensions (40 repos) ----
+          check_repo "_gemini-cli" "ext-devops" "gemini-cli-extensions/devops"
+          check_repo "_gemini-cli" "ext-workspace" "gemini-cli-extensions/workspace"
+          check_repo "_gemini-cli" "ext-alloydb-omni" "gemini-cli-extensions/alloydb-omni"
+          check_repo "_gemini-cli" "ext-conductor" "gemini-cli-extensions/conductor"
+          check_repo "_gemini-cli" "ext-security" "gemini-cli-extensions/security"
+          check_repo "_gemini-cli" "ext-mcp-toolbox" "gemini-cli-extensions/mcp-toolbox"
+          check_repo "_gemini-cli" "ext-cloud-sql-postgresql" "gemini-cli-extensions/cloud-sql-postgresql"
+          check_repo "_gemini-cli" "ext-vertex" "gemini-cli-extensions/vertex"
+          check_repo "_gemini-cli" "ext-looker-conversational-analytics" "gemini-cli-extensions/looker-conversational-analytics"
+          check_repo "_gemini-cli" "ext-looker" "gemini-cli-extensions/looker"
+          check_repo "_gemini-cli" "ext-dataplex" "gemini-cli-extensions/dataplex"
+          check_repo "_gemini-cli" "ext-jules" "gemini-cli-extensions/jules"
+          check_repo "_gemini-cli" "ext-nanobanana" "gemini-cli-extensions/nanobanana"
+          check_repo "_gemini-cli" "ext-cloud-sql-mysql" "gemini-cli-extensions/cloud-sql-mysql"
+          check_repo "_gemini-cli" "ext-code-review" "gemini-cli-extensions/code-review"
+          check_repo "_gemini-cli" "ext-oracledb" "gemini-cli-extensions/oracledb"
+          check_repo "_gemini-cli" "ext-alloydb" "gemini-cli-extensions/alloydb"
+          check_repo "_gemini-cli" "ext-firestore-native" "gemini-cli-extensions/firestore-native"
+          check_repo "_gemini-cli" "ext-spanner" "gemini-cli-extensions/spanner"
+          check_repo "_gemini-cli" "ext-developer-knowledge" "gemini-cli-extensions/developer-knowledge"
+          check_repo "_gemini-cli" "ext-bigquery-data-analytics" "gemini-cli-extensions/bigquery-data-analytics"
+          check_repo "_gemini-cli" "ext-cloud-sql-sqlserver" "gemini-cli-extensions/cloud-sql-sqlserver"
+          check_repo "_gemini-cli" "ext-postgres" "gemini-cli-extensions/postgres"
+          check_repo "_gemini-cli" "ext-mysql" "gemini-cli-extensions/mysql"
+          check_repo "_gemini-cli" "ext-cloud-sql-mysql-observability" "gemini-cli-extensions/cloud-sql-mysql-observability"
+          check_repo "_gemini-cli" "ext-cloud-sql-postgresql-observability" "gemini-cli-extensions/cloud-sql-postgresql-observability"
+          check_repo "_gemini-cli" "ext-sql-server" "gemini-cli-extensions/sql-server"
+          check_repo "_gemini-cli" "ext-cloud-sql-sqlserver-observability" "gemini-cli-extensions/cloud-sql-sqlserver-observability"
+          check_repo "_gemini-cli" "ext-alloydb-observability" "gemini-cli-extensions/alloydb-observability"
+          check_repo "_gemini-cli" "ext-bigquery-conversational-analytics" "gemini-cli-extensions/bigquery-conversational-analytics"
+          check_repo "_gemini-cli" "ext-flutter" "gemini-cli-extensions/flutter"
+          check_repo "_gemini-cli" "ext-genkit" "gemini-cli-extensions/genkit"
+          check_repo "_gemini-cli" "ext-web-accessibility" "gemini-cli-extensions/web-accessibility"
+          check_repo "_gemini-cli" "ext-firebase" "gemini-cli-extensions/firebase"
+          check_repo "_gemini-cli" "ext-datacommons" "gemini-cli-extensions/datacommons"
+          check_repo "_gemini-cli" "ext-ralph" "gemini-cli-extensions/ralph"
+          check_repo "_gemini-cli" "ext-stitch" "gemini-cli-extensions/stitch"
+          check_repo "_gemini-cli" "ext-angular" "gemini-cli-extensions/angular"
+          check_repo "_gemini-cli" "ext-gcloud" "gemini-cli-extensions/gcloud"
+          check_repo "_gemini-cli" "ext-observability" "gemini-cli-extensions/observability"
+
+          echo "$ALL_UPDATED" > /tmp/updated-repos.txt
+          echo "$ALL_SKIPPED" > /tmp/skipped-count.txt
+
+          if [ -z "$ALL_UPDATED" ]; then
             echo "needs_sync=false" >> "$GITHUB_OUTPUT"
-            echo "No repos changed."
           else
             echo "needs_sync=true" >> "$GITHUB_OUTPUT"
-            echo "Repos to update: $UPDATED"
           fi
 
       - name: Full checkout
@@ -94,70 +150,150 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Download changed repos only
+      - name: Download changed repos
         if: steps.sync.outputs.needs_sync == 'true'
         run: |
-          SHAS_FILE="$SYNC_DIR/repo-shas.txt"
-
           sync_repo() {
-            local DIR="$1"
-            local REPO="$2"
+            local TOOL="$1"
+            local DIR="$2"
+            local REPO="$3"
+            local SYNC_DIR="${BASE_DIR}/${TOOL}"
+            local SHAS_FILE="${SYNC_DIR}/repo-shas.txt"
+            mkdir -p "$SYNC_DIR"
+            touch "$SHAS_FILE"
 
-            # Check if this repo is in the changed list
-            if ! grep -q "^${DIR}=" /tmp/new-shas.txt 2>/dev/null; then
+            if ! grep -q "^${TOOL}/${DIR}=" /tmp/new-shas.txt 2>/dev/null; then
               return
             fi
 
-            echo "Downloading: $DIR"
-            rm -rf "$SYNC_DIR/$DIR"
-            git clone --depth 1 "https://github.com/${REPO}.git" "/tmp/$DIR"
-            rm -rf "/tmp/$DIR/.git"
-            mv "/tmp/$DIR" "$SYNC_DIR/$DIR"
+            echo "Downloading: ${TOOL}/${DIR}"
+            rm -rf "${SYNC_DIR}/${DIR}"
+            git clone --depth 1 "https://github.com/${REPO}.git" "/tmp/${TOOL}-${DIR}"
+            rm -rf "/tmp/${TOOL}-${DIR}/.git"
+            mv "/tmp/${TOOL}-${DIR}" "${SYNC_DIR}/${DIR}"
 
-            # Update SHA
             grep -v "^${DIR}=" "$SHAS_FILE" > "$SHAS_FILE.tmp" 2>/dev/null || true
             local SHA
-            SHA=$(grep "^${DIR}=" /tmp/new-shas.txt | cut -d= -f2)
+            SHA=$(grep "^${TOOL}/${DIR}=" /tmp/new-shas.txt | cut -d= -f2)
             echo "${DIR}=${SHA}" >> "$SHAS_FILE.tmp"
             mv "$SHAS_FILE.tmp" "$SHAS_FILE"
           }
 
-          sync_repo "claude-code" "anthropics/claude-code"
-          sync_repo "skills" "anthropics/skills"
-          sync_repo "claude-plugins-official" "anthropics/claude-plugins-official"
-          sync_repo "claude-code-action" "anthropics/claude-code-action"
-          sync_repo "claude-code-security-review" "anthropics/claude-code-security-review"
-          sync_repo "claude-code-monitoring-guide" "anthropics/claude-code-monitoring-guide"
-          sync_repo "claude-agent-sdk-python" "anthropics/claude-agent-sdk-python"
-          sync_repo "claude-agent-sdk-typescript" "anthropics/claude-agent-sdk-typescript"
-          sync_repo "claude-agent-sdk-demos" "anthropics/claude-agent-sdk-demos"
-          sync_repo "claude-cookbooks" "anthropics/claude-cookbooks"
-          sync_repo "claude-quickstarts" "anthropics/claude-quickstarts"
-          sync_repo "courses" "anthropics/courses"
+          # ---- Claude Code ----
+          sync_repo "_claude-code" "claude-code" "anthropics/claude-code"
+          sync_repo "_claude-code" "skills" "anthropics/skills"
+          sync_repo "_claude-code" "claude-plugins-official" "anthropics/claude-plugins-official"
+          sync_repo "_claude-code" "claude-code-action" "anthropics/claude-code-action"
+          sync_repo "_claude-code" "claude-code-security-review" "anthropics/claude-code-security-review"
+          sync_repo "_claude-code" "claude-code-monitoring-guide" "anthropics/claude-code-monitoring-guide"
+          sync_repo "_claude-code" "claude-agent-sdk-python" "anthropics/claude-agent-sdk-python"
+          sync_repo "_claude-code" "claude-agent-sdk-typescript" "anthropics/claude-agent-sdk-typescript"
+          sync_repo "_claude-code" "claude-agent-sdk-demos" "anthropics/claude-agent-sdk-demos"
+          sync_repo "_claude-code" "claude-cookbooks" "anthropics/claude-cookbooks"
+          sync_repo "_claude-code" "claude-quickstarts" "anthropics/claude-quickstarts"
+          sync_repo "_claude-code" "courses" "anthropics/courses"
 
-          sort "$SHAS_FILE" -o "$SHAS_FILE"
+          # ---- Codex ----
+          sync_repo "_codex" "codex" "openai/codex"
+          sync_repo "_codex" "skills" "openai/skills"
+          sync_repo "_codex" "symphony" "openai/symphony"
+          sync_repo "_codex" "codex-action" "openai/codex-action"
+          sync_repo "_codex" "codex-universal" "openai/codex-universal"
+          sync_repo "_codex" "gpt-5-coding-examples" "openai/gpt-5-coding-examples"
+          sync_repo "_codex" "completions-responses-migration-pack" "openai/completions-responses-migration-pack"
 
-      - name: Refresh docs and feeds
+          # ---- Gemini CLI core ----
+          sync_repo "_gemini-cli" "gemini-cli" "google-gemini/gemini-cli"
+          sync_repo "_gemini-cli" "gemini-cli-action" "google-gemini/gemini-cli-action"
+          sync_repo "_gemini-cli" "gemini-skills" "google-gemini/gemini-skills"
+          sync_repo "_gemini-cli" "cookbook" "google-gemini/cookbook"
+          sync_repo "_gemini-cli" "api-examples" "google-gemini/api-examples"
+
+          # ---- Gemini CLI Extensions ----
+          sync_repo "_gemini-cli" "ext-devops" "gemini-cli-extensions/devops"
+          sync_repo "_gemini-cli" "ext-workspace" "gemini-cli-extensions/workspace"
+          sync_repo "_gemini-cli" "ext-alloydb-omni" "gemini-cli-extensions/alloydb-omni"
+          sync_repo "_gemini-cli" "ext-conductor" "gemini-cli-extensions/conductor"
+          sync_repo "_gemini-cli" "ext-security" "gemini-cli-extensions/security"
+          sync_repo "_gemini-cli" "ext-mcp-toolbox" "gemini-cli-extensions/mcp-toolbox"
+          sync_repo "_gemini-cli" "ext-cloud-sql-postgresql" "gemini-cli-extensions/cloud-sql-postgresql"
+          sync_repo "_gemini-cli" "ext-vertex" "gemini-cli-extensions/vertex"
+          sync_repo "_gemini-cli" "ext-looker-conversational-analytics" "gemini-cli-extensions/looker-conversational-analytics"
+          sync_repo "_gemini-cli" "ext-looker" "gemini-cli-extensions/looker"
+          sync_repo "_gemini-cli" "ext-dataplex" "gemini-cli-extensions/dataplex"
+          sync_repo "_gemini-cli" "ext-jules" "gemini-cli-extensions/jules"
+          sync_repo "_gemini-cli" "ext-nanobanana" "gemini-cli-extensions/nanobanana"
+          sync_repo "_gemini-cli" "ext-cloud-sql-mysql" "gemini-cli-extensions/cloud-sql-mysql"
+          sync_repo "_gemini-cli" "ext-code-review" "gemini-cli-extensions/code-review"
+          sync_repo "_gemini-cli" "ext-oracledb" "gemini-cli-extensions/oracledb"
+          sync_repo "_gemini-cli" "ext-alloydb" "gemini-cli-extensions/alloydb"
+          sync_repo "_gemini-cli" "ext-firestore-native" "gemini-cli-extensions/firestore-native"
+          sync_repo "_gemini-cli" "ext-spanner" "gemini-cli-extensions/spanner"
+          sync_repo "_gemini-cli" "ext-developer-knowledge" "gemini-cli-extensions/developer-knowledge"
+          sync_repo "_gemini-cli" "ext-bigquery-data-analytics" "gemini-cli-extensions/bigquery-data-analytics"
+          sync_repo "_gemini-cli" "ext-cloud-sql-sqlserver" "gemini-cli-extensions/cloud-sql-sqlserver"
+          sync_repo "_gemini-cli" "ext-postgres" "gemini-cli-extensions/postgres"
+          sync_repo "_gemini-cli" "ext-mysql" "gemini-cli-extensions/mysql"
+          sync_repo "_gemini-cli" "ext-cloud-sql-mysql-observability" "gemini-cli-extensions/cloud-sql-mysql-observability"
+          sync_repo "_gemini-cli" "ext-cloud-sql-postgresql-observability" "gemini-cli-extensions/cloud-sql-postgresql-observability"
+          sync_repo "_gemini-cli" "ext-sql-server" "gemini-cli-extensions/sql-server"
+          sync_repo "_gemini-cli" "ext-cloud-sql-sqlserver-observability" "gemini-cli-extensions/cloud-sql-sqlserver-observability"
+          sync_repo "_gemini-cli" "ext-alloydb-observability" "gemini-cli-extensions/alloydb-observability"
+          sync_repo "_gemini-cli" "ext-bigquery-conversational-analytics" "gemini-cli-extensions/bigquery-conversational-analytics"
+          sync_repo "_gemini-cli" "ext-flutter" "gemini-cli-extensions/flutter"
+          sync_repo "_gemini-cli" "ext-genkit" "gemini-cli-extensions/genkit"
+          sync_repo "_gemini-cli" "ext-web-accessibility" "gemini-cli-extensions/web-accessibility"
+          sync_repo "_gemini-cli" "ext-firebase" "gemini-cli-extensions/firebase"
+          sync_repo "_gemini-cli" "ext-datacommons" "gemini-cli-extensions/datacommons"
+          sync_repo "_gemini-cli" "ext-ralph" "gemini-cli-extensions/ralph"
+          sync_repo "_gemini-cli" "ext-stitch" "gemini-cli-extensions/stitch"
+          sync_repo "_gemini-cli" "ext-angular" "gemini-cli-extensions/angular"
+          sync_repo "_gemini-cli" "ext-gcloud" "gemini-cli-extensions/gcloud"
+          sync_repo "_gemini-cli" "ext-observability" "gemini-cli-extensions/observability"
+
+          # Sort all SHA files
+          for f in "${BASE_DIR}"/_*/repo-shas.txt; do
+            sort "$f" -o "$f" 2>/dev/null || true
+          done
+
+      - name: Fetch docs and feeds
         if: steps.sync.outputs.needs_sync == 'true'
         run: |
-          curl -sL "https://code.claude.com/docs/llms-full.txt" -o "$SYNC_DIR/claude-code-docs-full.txt"
-          curl -sL "https://platform.claude.com/llms.txt" -o "$SYNC_DIR/platform-docs-index.txt"
-          curl -sL "https://github.com/anthropics/claude-code/releases.atom" -o "$SYNC_DIR/releases.atom"
-          curl -sL "https://status.claude.com/feed.atom" -o "$SYNC_DIR/status.atom"
-          curl -sL "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf" -o "$SYNC_DIR/anthropic-whitepaper.pdf"
-          echo "last_sync: $(date -u '+%Y-%m-%dT%H:%M:%SZ')" > "$SYNC_DIR/sync-metadata.yml"
+          # Claude Code
+          curl -sL "https://code.claude.com/docs/llms-full.txt" -o "${BASE_DIR}/_claude-code/claude-code-docs-full.txt"
+          curl -sL "https://platform.claude.com/llms.txt" -o "${BASE_DIR}/_claude-code/platform-docs-index.txt"
+          curl -sL "https://github.com/anthropics/claude-code/releases.atom" -o "${BASE_DIR}/_claude-code/releases.atom"
+          curl -sL "https://status.claude.com/feed.atom" -o "${BASE_DIR}/_claude-code/status.atom"
+          curl -sL "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf" -o "${BASE_DIR}/_claude-code/anthropic-whitepaper.pdf"
+
+          # Codex
+          curl -sL "https://developers.openai.com/codex/llms-full.txt" -o "${BASE_DIR}/_codex/codex-docs-full.txt"
+          curl -sL "https://developers.openai.com/codex/llms.txt" -o "${BASE_DIR}/_codex/codex-docs-index.txt"
+          curl -sL "https://developers.openai.com/llms.txt" -o "${BASE_DIR}/_codex/openai-master-docs-index.txt"
+          curl -sL "https://developers.openai.com/codex/changelog/rss.xml" -o "${BASE_DIR}/_codex/changelog.rss"
+          curl -sL "https://github.com/openai/codex/releases.atom" -o "${BASE_DIR}/_codex/releases.atom"
+          curl -sL "https://openai.com/blog/rss.xml" -o "${BASE_DIR}/_codex/openai-blog.rss"
+
+          # Gemini CLI
+          curl -sL "https://geminicli.com/llms.txt" -o "${BASE_DIR}/_gemini-cli/gemini-cli-docs-full.txt"
+          curl -sL "https://github.com/google-gemini/gemini-cli/releases.atom" -o "${BASE_DIR}/_gemini-cli/releases.atom"
+
+          # Timestamps
+          echo "last_sync: $(date -u '+%Y-%m-%dT%H:%M:%SZ')" > "${BASE_DIR}/_claude-code/sync-metadata.yml"
+          echo "last_sync: $(date -u '+%Y-%m-%dT%H:%M:%SZ')" > "${BASE_DIR}/_codex/sync-metadata.yml"
+          echo "last_sync: $(date -u '+%Y-%m-%dT%H:%M:%SZ')" > "${BASE_DIR}/_gemini-cli/sync-metadata.yml"
 
       - name: Commit and push
         if: steps.sync.outputs.needs_sync == 'true'
         run: |
-          git add -A "$SYNC_DIR/"
+          git add -A "${BASE_DIR}/"
           if git diff --cached --quiet; then
             echo "No file changes to commit."
           else
             CHANGE_COUNT=$(git diff --cached --name-only | wc -l | tr -d ' ')
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git commit -m "sync: Update Claude Code resources $(date -u '+%Y-%m-%d')
+            git commit -m "sync: Update AI tool resources $(date -u '+%Y-%m-%d')
 
             Automated daily sync. Files changed: $CHANGE_COUNT"
             git push
@@ -174,7 +310,7 @@ jobs:
           SKIPPED=$(cat /tmp/skipped-count.txt)
           DATE_STR=$(date -u '+%b %-d')
 
-          SUMMARY="Repos: ${UPDATED}"
+          SUMMARY="Updated: ${UPDATED}"
           if [ "$SKIPPED" -gt "0" ]; then
             SUMMARY="${SUMMARY}\n${SKIPPED} repos had no changes."
           fi
@@ -187,7 +323,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "<@U024E2PBFQV>\n\n*Claude Code Sync — ${DATE_STR}*"
+                  "text": "<@U024E2PBFQV>\n\n*AI Tools Sync — ${DATE_STR}*"
                 }
               },
               {
@@ -223,7 +359,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "<@U024E2PBFQV>\n\n*Claude Code Sync — ${DATE_STR}*\n\nNo changes upstream. Everything current."
+                  "text": "<@U024E2PBFQV>\n\n*AI Tools Sync — ${DATE_STR}*\n\nNo changes upstream. Everything current."
                 }
               }
             ]
