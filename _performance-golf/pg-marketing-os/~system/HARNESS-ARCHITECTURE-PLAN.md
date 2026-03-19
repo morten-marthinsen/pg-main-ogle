@@ -73,7 +73,7 @@ POST-ARENA: Synthesis + Human Selection (enhanced)
 | 1e | Analyst Protocol update (Framework 5) | `~system/protocols/ANALYST-PROTOCOL.md` v2.0 | DONE |
 | 1f | Arena Protocol overview update | `~system/ARENA-PROTOCOL.md` v2.0 | DONE |
 | 1g | System Core update (Law 4 + forbidden behaviors) | `~system/SYSTEM-CORE.md` | DONE |
-| 1h | Audience agent upstream loader | `0.5-audience-agent-loader.md` template + deployment to 16 skills | DONE |
+| 1h | Audience agent upstream loader | `0.5-audience-agent-loader.md` template + deployment to 11 skills | DONE |
 | 1i | Pipeline handoff registry update | `~system/pipeline-handoff-registry.md` | DONE |
 | 1j | ARENA-LAYER.md updates | All 29 Arena skill ARENA-LAYER.md files (16 main + 13 branch) | DONE |
 | 1k | Skill loading profile updates | `~system/skill-loading-profiles/` — 39 files updated | DONE |

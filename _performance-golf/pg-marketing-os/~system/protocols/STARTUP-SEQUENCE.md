@@ -23,7 +23,7 @@ If a session was interrupted (crash, timeout, context limit), the NEXT session s
 pwd
 ```
 
-Verify you are in the vault root: `/Users/anthonyflores/Vaults/Anthony-Main-Vault/`
+Verify you are in the marketing-OS workspace root (the directory containing `marketing-os/`).
 
 If not, navigate there. All paths in marketing-OS are relative to this root.
 
