@@ -36,15 +36,15 @@ All entry points strip PII unconditionally. No escape hatch.
 └──────────┬──────────────────┬──────────────────┬────────────────────┘
            │                  │                  │
            ▼                  ▼                  ▼
-┌───────────────┐  ┌──────────────────────┐  ┌──────────────────┐
-│  get_raw()    │  │  get_card()          │  │ get_raw()        │
-│               │  │                      │  │                  │
-│  1. VALIDATE  │  │  1. LOAD cards.yaml  │  │  1. VALIDATE     │
-│  2. FETCH     │  │  2. LOOKUP dataset   │  │  2. FETCH        │
-│  3. HASH      │  │  3. LOOKUP enrichment│  │  3. HASH emails  │
-│  4. STRIP PII │  │  4. FETCH raw rows   │  │  4. STRIP PII    │
-│  5. RETURN    │  │  5. ENRICH           │  │  5. RETURN       │
-└───────────────┘  │  6. FORMAT (daily)   │  └──────────────────┘
+┌───────────────┐  ┌──────────────────────┐  ┌──────────────────────────┐
+│  get_raw()    │  │  get_card()          │  │ get_ad_performance_card() │
+│               │  │                      │  │                          │
+│  1. VALIDATE  │  │  1. LOAD cards.yaml  │  │  Wrapper — calls         │
+│  2. FETCH     │  │  2. LOOKUP dataset   │  │  get_card(               │
+│  3. HASH      │  │  3. LOOKUP enrichment│  │    "ad_performance_daily"│
+│  4. STRIP PII │  │  4. FETCH raw rows   │  │    date_from, date_to)   │
+│  5. RETURN    │  │  5. ENRICH           │  │                          │
+└───────────────┘  │  6. FORMAT (daily)   │  └──────────────────────────┘
                    │  7. STRIP PII        │
                    │  8. RETURN           │
                    └──────────────────────┘
