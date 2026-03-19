@@ -127,30 +127,39 @@ class DomoAdapter(DataAdapter):
         """
         ad_df = self._fetch_ad_metrics(date_from, date_to)
         order_df = self._fetch_orders(date_from, date_to)
+        all_ads_df = self._fetch_all_ads(date_from, date_to)
 
-        if ad_df.empty:
+        if all_ads_df.empty:
             return pd.DataFrame()
 
         # --- Aggregate spend side: one row per ad ---
-        spend_agg = self._aggregate_spend(ad_df)
+        spend_agg = self._aggregate_spend(ad_df) if not ad_df.empty else pd.DataFrame()
 
         # --- Aggregate order side: one row per ad ---
         order_agg = self._aggregate_orders(order_df) if not order_df.empty else pd.DataFrame()
 
-        # --- Merge on ad name ---
-        if order_agg.empty:
-            merged = spend_agg.copy()
-            for col in ["gross_revenue", "total_orders", "total_cogs",
-                         "total_refunds", "total_agency_fees", "total_cc_fees",
-                         "total_customers", "new_customers", "sc_trials",
-                         "nc_gross_revenue", "nc_total_cogs", "nc_total_refunds",
-                         "nc_total_agency_fees", "nc_total_cc_fees"]:
-                merged[col] = 0
-        else:
-            merged = spend_agg.merge(order_agg, on="ad_name", how="left").fillna(0)
+        # --- Start from full ad list, merge in spend and order data ---
+        all_ads = all_ads_df.rename(columns={COL_AD: "ad_name"})
+
+        if not spend_agg.empty:
+            all_ads = all_ads.merge(spend_agg, on="ad_name", how="left")
+        if not order_agg.empty:
+            all_ads = all_ads.merge(order_agg, on="ad_name", how="left")
+
+        # Fill missing numeric columns with 0
+        numeric_cols = ["spend", "clicks", "impressions",
+                        "gross_revenue", "total_orders", "total_cogs",
+                        "total_refunds", "total_agency_fees", "total_cc_fees",
+                        "total_customers", "new_customers", "sc_trials",
+                        "nc_gross_revenue", "nc_total_cogs", "nc_total_refunds",
+                        "nc_total_agency_fees", "nc_total_cc_fees"]
+        for col in numeric_cols:
+            if col not in all_ads.columns:
+                all_ads[col] = 0
+        all_ads[numeric_cols] = all_ads[numeric_cols].fillna(0)
 
         # --- Compute Beast Modes ---
-        merged = self._compute_beast_modes(merged)
+        merged = self._compute_beast_modes(all_ads)
 
         return merged
 
@@ -178,6 +187,39 @@ class DomoAdapter(DataAdapter):
         return df
 
     # --- Private: fetch ---
+
+    def _fetch_all_ads(self, date_from: str, date_to: str) -> pd.DataFrame:
+        """Fetch distinct ad names + status for the date range. Includes all ads even with zero activity."""
+        _validate_date(date_from)
+        _validate_date(date_to)
+        sql = (
+            f'SELECT * FROM table '
+            f'WHERE `dateCreated` >= \'{date_from}\' '
+            f'AND `dateCreated` <= \'{date_to}\''
+        )
+        df = self._query(sql)
+        if df.empty:
+            return df
+        df[COL_AD] = df[COL_AD].astype(str).str.lower().str.strip()
+        # Only keep columns we need — ad name, status, platform, and position fields
+        position_renames = {
+            COL_FUNNEL: "funnel", COL_SCRIPT_ID: "script_id",
+            COL_VARIATION_ID: "variation_id", COL_AD_CATEGORY: "ad_category",
+            COL_EXPANSION_TYPE: "expansion_type", COL_ASSET_TYPE: "asset_type",
+            COL_TALENT_CODE: "talent_code", COL_EDITOR: "editor_initials",
+            COL_COPYWRITER: "copywriter_initials", COL_PLATFORM: "platform",
+            COL_TALENT_NAME: "talent_name", COL_EDITOR_NAME: "editor_name",
+            COL_COPYWRITER_NAME: "copywriter_name", COL_OFFER_NAME: "offer_name",
+            COL_EXPANSION_TYPE_NAME: "expansion_type_name",
+            COL_ASSET_TYPE_NAME: "asset_type_name", COL_STATUS: "status",
+        }
+        keep_cols = [COL_AD] + [c for c in position_renames if c in df.columns]
+        df = df[keep_cols]
+        # Keep first occurrence per ad (for status + position fields)
+        df = df.drop_duplicates(subset=[COL_AD], keep="first")
+        # Rename to internal names
+        df = df.rename(columns={k: v for k, v in position_renames.items() if k in df.columns})
+        return df
 
     def _fetch_ad_metrics(self, date_from: str, date_to: str) -> pd.DataFrame:
         """Fetch rows where Spend > 0 (ad-metric rows)."""
@@ -225,32 +267,6 @@ class DomoAdapter(DataAdapter):
             impressions=(COL_IMPRESSIONS, "sum"),
         )
         spend_agg = spend_agg.rename(columns={COL_AD: "ad_name"})
-
-        # Grab 15-position fields from first row per ad (they're the same across daily rows)
-        first_rows = ad_df.drop_duplicates(subset=[COL_AD], keep="first")
-        position_cols = {
-            COL_FUNNEL: "funnel",
-            COL_SCRIPT_ID: "script_id",
-            COL_VARIATION_ID: "variation_id",
-            COL_AD_CATEGORY: "ad_category",
-            COL_EXPANSION_TYPE: "expansion_type",
-            COL_ASSET_TYPE: "asset_type",
-            COL_TALENT_CODE: "talent_code",
-            COL_EDITOR: "editor_initials",
-            COL_COPYWRITER: "copywriter_initials",
-            COL_PLATFORM: "platform",
-            COL_TALENT_NAME: "talent_name",
-            COL_EDITOR_NAME: "editor_name",
-            COL_COPYWRITER_NAME: "copywriter_name",
-            COL_OFFER_NAME: "offer_name",
-            COL_EXPANSION_TYPE_NAME: "expansion_type_name",
-            COL_ASSET_TYPE_NAME: "asset_type_name",
-            COL_STATUS: "status",
-        }
-        keep = [COL_AD] + [c for c in position_cols if c in first_rows.columns]
-        positions = first_rows[keep].rename(columns={COL_AD: "ad_name", **{k: v for k, v in position_cols.items() if k in first_rows.columns}})
-
-        spend_agg = spend_agg.merge(positions, on="ad_name", how="left")
         return spend_agg
 
     def _aggregate_orders(self, order_df: pd.DataFrame) -> pd.DataFrame:
