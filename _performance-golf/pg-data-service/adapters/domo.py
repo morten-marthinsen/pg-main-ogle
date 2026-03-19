@@ -52,7 +52,6 @@ COL_NEW_CUSTOMERS = "New Customers"
 COL_SC_TRIAL_PURCHASE_IDS = "SC Trial Start PurchaseIDs"
 COL_HAS_UPSELL = "hasUpsell"
 COL_STATUS = "Status"
-PLATFORM_FACEBOOK = "facebook"
 
 # Pre-parsed 15-position columns (already in dataset)
 COL_FUNNEL = "[Funnel]"
@@ -72,21 +71,6 @@ COL_COPYWRITER_NAME = "Copywriter Name"
 COL_OFFER_NAME = "Offer Name"
 COL_EXPANSION_TYPE_NAME = "Expansion Type"
 COL_ASSET_TYPE_NAME = "Asset Type"
-
-# Valid funnel codes from TESS-NAMING-CONVENTION.md v3.9
-# Used to filter out rows where Domo's 15-position parser mis-flagged invalid ads
-VALID_FUNNEL_CODES = {
-    # Active Physical
-    "357", "clst", "df1", "gbf", "ghd", "pio", "pll", "rs1",
-    "sf1", "sf2", "spd", "ssp", "thr", "wdg1", "wdgs",
-    # Active Digital
-    "dqfe", "dqfe1", "htkt", "ossf", "pg1", "pgb", "pgf",
-    "srsw", "ssdp", "ssts", "wpss",
-    # Retired (may still appear in historical data)
-    "pgapp", "pss", "sqse", "sqp", "tsst",
-    # Additional observed in data
-    "tow",
-}
 
 
 # Columns to select for ad-metric rows (Spend > 0)
@@ -176,7 +160,7 @@ class DomoAdapter(DataAdapter):
 
         email_address_hash is SHA-256 of full emailAddress (hexdigest truncated to 16 chars), added here
         before PII stripping removes the source column in the API layer.
-        Returns all platforms (no facebook filter — unlike the enriched pipeline).
+        Returns all rows matching Valid 15-Position and date range.
         """
         _validate_date(date_from)
         _validate_date(date_to)

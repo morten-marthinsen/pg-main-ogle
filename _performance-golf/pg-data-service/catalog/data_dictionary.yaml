@@ -379,7 +379,6 @@ datasets:
         tags: [raw]
         gotchas:
           - "Use [Funnel] (pre-parsed), NOT the campaign-level 'Funnel' column"
-          - "Valid codes defined in adapters/domo.py VALID_FUNNEL_CODES"
           - "Examples: 357, sf1, clst, ossf, dqfe, ssts, pgf, wdg1"
 
       script_id:

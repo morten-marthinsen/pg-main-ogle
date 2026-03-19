@@ -129,10 +129,6 @@ Columns stripped: `emailAddress`, `customerId`, `firstName`, `lastName`, `ipAddr
 
 **Why:** The Beast Mode code is throwaway. In the adapter, it dies naturally when `adapters/domo.py` is decommissioned.
 
-### Enriched Pipeline Filters to Facebook
-
-The enriched pipeline (`get_enriched()` / `fetch_ad_performance()`) filters to `Ad Platform = 'facebook'`. This prevents cross-platform inflation in Beast Mode calculations. The raw pipeline (`get_raw()`) returns all platforms -- consumers get the full dataset for ad-hoc analysis.
-
 ### Security
 
 - All date inputs validated via `_validate_date()` (YYYY-MM-DD regex) before SQL interpolation
@@ -226,8 +222,7 @@ From Tess PRD v1.4. The service provides the metrics — consumers apply classif
 - **`Refunded Revenue`**: Comes in as negative from the Domo transform. Do not negate.
 - **`# SC Trials Started`**: Column name has `<BR>` / newline in Domo -- cleaned on fetch.
 - **Ad names**: Normalized to lowercase. Domo may store uppercase.
-- **Funnel code validation**: `adapters/domo.py` maintains `VALID_FUNNEL_CODES` set -- rows with invalid funnel codes are filtered out.
-- **email_address_hash**: SHA-256 of emailAddress (first 16 chars), lowercased and trimmed before hashing. Available in raw data only.
+- **email_address_hash**: SHA-256 of full emailAddress (hexdigest truncated to 16 chars), lowercased and trimmed before hashing. Available in raw data only.
 
 ### 15-Position Ad Naming Convention
 
