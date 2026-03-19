@@ -55,8 +55,8 @@ def main():
             domo_raw[c] = pd.to_numeric(domo_raw[c], errors="coerce").fillna(0)
 
     # Aggregate: sum additive columns per ad
-    agg_dict = {c: "sum" for c in ADDITIVE_COLS if c in domo_raw.columns}
-    domo = domo_raw.groupby("Ad", as_index=False).agg(**{c: (c, f) for c, f in agg_dict.items()})
+    present_additive_domo = [c for c in ADDITIVE_COLS if c in domo_raw.columns]
+    domo = domo_raw.groupby("Ad", as_index=False)[present_additive_domo].sum()
     print(f"  Aggregated to {len(domo)} ads")
 
     # --- Load our enriched data for the same date range ---

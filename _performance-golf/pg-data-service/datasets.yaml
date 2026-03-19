@@ -1,6 +1,6 @@
-# Approved datasets — the allowlist for API access.
-# Christopher (and future consumers) can only query datasets listed here.
-# Patrick controls this registry. Adding a new dataset = one entry here.
+# Approved datasets — governance allowlist for API access.
+# Consumers can only query datasets listed here.
+# Data team to update. We're actively building out this registry.
 #
 # Each entry maps a friendly name to a Domo dataset ID + description.
 # PII stripping is enforced on ALL datasets — no escape hatch.
@@ -8,8 +8,8 @@
 datasets:
   ad_performance:
     dataset_id: a359ffd7-8175-40f3-b339-0a476cf624aa
-    description: "Facebook ad performance + CheckoutChamp orders (252 columns, joined by ad name)"
-    notes: "Primary Creative OS dataset. Contains spend, orders, 15-position parsed fields."
+    description: "All-platform ad performance + CheckoutChamp orders (252 columns, joined by ad name)"
+    notes: "Primary Creative OS dataset. 12 platforms (Facebook, PMax, YouTube, Search, etc.). Contains spend, orders, 15-position parsed fields, Beast Mode metrics."
 
   # Future datasets — uncomment when approved
   # facebook_raw:

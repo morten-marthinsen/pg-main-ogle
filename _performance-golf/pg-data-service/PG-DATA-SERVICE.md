@@ -24,9 +24,8 @@ The API is the primary interface for Christopher Ogle's pipeline. Consumers work
 
 ```
 pg-data-service/
-├── api.py                     # Public Python API: get_raw(), get_enriched(), list_datasets()
+├── api.py                     # Public Python API: get_raw(), get_enriched(), list_datasets() + ADAPTER constant
 ├── datasets.yaml              # Approved dataset allowlist (friendly name -> dataset ID)
-├── config.yaml                # Adapter choice, dataset ID
 ├── README.md                  # Project overview, architecture decisions, usage
 ├── PG-DATA-SERVICE.md         # This file
 ├── docs/
@@ -37,7 +36,11 @@ pg-data-service/
 ├── utils/
 │   └── pii.py                 # PII stripping utility (strip_pii, load_pii_columns)
 ├── scripts/
-│   └── export_ad_performance.py  # Domo Ad Performance card replica (30 columns)
+│   ├── export_ad_performance.py  # Domo Ad Performance card replica (30 columns)
+│   └── validate_vs_domo.py       # Validate enriched output vs Domo CSV export
+├── notebooks/
+│   ├── validate_enriched.ipynb   # Interactive validation notebook
+│   └── demo_api.ipynb            # API usage demo
 └── catalog/
     ├── pii_manifest.yaml      # PII column list (single source of truth for stripping)
     ├── data_dictionary.yaml   # Metric definitions, formulas, business rules (OM Glossary format)
@@ -73,7 +76,7 @@ from api import get_raw, get_enriched, list_datasets
 
 # See what's available
 list_datasets()
-# {'ad_performance': 'Facebook ad performance + CheckoutChamp orders...'}
+# {'ad_performance': 'All-platform ad performance + CheckoutChamp orders...'}
 
 # Raw data -- any approved dataset, PII always stripped
 df = get_raw("ad_performance", "2026-01-01", "2026-03-15")
@@ -83,7 +86,7 @@ df = get_enriched("2026-01-01", "2026-03-15")
 
 # Domo Ad Performance card replica (30 columns, Domo display names)
 from scripts.export_ad_performance import get_ad_performance_card
-df = get_ad_performance_card("2026-01-01", "2026-03-15", day="2026-03-15")
+df = get_ad_performance_card("2026-01-01", "2026-03-15")
 ```
 
 ---
@@ -103,7 +106,7 @@ Currently approved datasets:
 
 | Name | Description |
 |------|-------------|
-| `ad_performance` | Facebook ad performance + CheckoutChamp orders (252 columns, joined by ad name) |
+| `ad_performance` | All-platform ad performance + CheckoutChamp orders (252 columns, joined by ad name) |
 
 ---
 
@@ -153,7 +156,7 @@ class DataAdapter(ABC):
 ### Switching to Snowflake (Q3/Q4 2026)
 
 1. Create `adapters/snowflake.py` implementing `DataAdapter`
-2. Change `config.yaml`: `adapter: snowflake`
+2. Change `ADAPTER` in `api.py` to `"snowflake"`
 3. Done. API unchanged.
 
 The Snowflake adapter returns pre-computed columns from dbt models. No Beast Mode calculation needed -- the adapter just passes through what dbt already computed.
@@ -228,7 +231,7 @@ From Tess PRD v1.4. The service provides the metrics — consumers apply classif
 
 Ads following the convention have all position fields pre-parsed in the dataset: `[Funnel]`, `[ScriptID]`, `[VariationID]`, `[AdCategory]`, `[ExpansionType]`, `[AssetType]`, `[TalentCode]`, `[EditorInitials]`, `[CopywriterInitials]`. Human-readable lookups also available: `Talent Name`, `Editor Name`, `Copywriter Name`, `Offer Name`, `Expansion Type`, `Asset Type`.
 
-Not all ads follow the convention. The `Valid 15-Position Ad Name?` column is the filter. Facebook is the primary platform with structured naming.
+Not all ads follow the convention. The `Valid 15-Position Ad Name?` column indicates which ads do. Facebook ads are most likely to follow it, but the service returns all ads regardless.
 
 ### Platform Coverage
 
@@ -270,7 +273,7 @@ Joins CheckoutChamp order data + ad attribution + 15-position parsed fields + ad
 | 100K | ~28s |
 | 500K | ~107s |
 
-No hard cap found at 500K rows. Full Facebook pull (~201K rows) takes ~45s.
+No hard cap found at 500K rows. Enriched pipeline runs 3 queries per day in the date range (all ads, spend rows, order rows).
 
 ### LTV Columns (Not Available)
 
@@ -316,7 +319,7 @@ OpenMetadata is the catalog and governance layer. The data dictionary (`catalog/
 | Component | Change Required |
 |-----------|----------------|
 | `adapters/snowflake.py` | Build (same DataAdapter interface) |
-| `config.yaml` | Change `adapter: snowflake` |
+| `api.py:ADAPTER` | Change to `"snowflake"` |
 | `adapters/domo.py` | Decommission |
 | Everything else | No change |
 

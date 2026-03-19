@@ -29,10 +29,9 @@ class DataAdapter(ABC):
             nc_net_roas, nc_pct, cvr_pct, nc_cvr_pct, rc_cvr_pct,
             fixed_refund_net_revenue,
             total_customers, new_customers, total_orders, sc_trials,
-            funnel, script_id, variation_id, platform, dimensions,
-            length_tier, ad_category, expansion_type, asset_type,
-            talent_code, editor_initials, copywriter_initials,
-            country_code, delivery_date, promo_name
+            funnel, script_id, variation_id, platform,
+            ad_category, expansion_type, asset_type,
+            talent_code, editor_initials, copywriter_initials
         """
         ...
 

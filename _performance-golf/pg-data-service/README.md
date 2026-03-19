@@ -103,13 +103,15 @@ The service does not classify ads. Classification is a consumer-side business ru
 
 | File | What It Does |
 |------|-------------|
-| `api.py` | Public Python API — `get_raw()`, `get_enriched()`, `list_datasets()` |
+| `api.py` | Public Python API — `get_raw()`, `get_enriched()`, `list_datasets()` + `ADAPTER` constant |
 | `datasets.yaml` | Approved dataset allowlist (friendly name → dataset ID) |
-| `config.yaml` | Adapter choice, dataset ID |
 | `adapters/base.py` | Abstract adapter interface |
 | `adapters/domo.py` | Domo implementation — fetch, aggregate, Beast Modes |
 | `utils/pii.py` | PII stripping utility (`strip_pii()`, `load_pii_columns()`) |
 | `scripts/export_ad_performance.py` | Domo Ad Performance card replica (30 columns, Domo display names) |
+| `scripts/validate_vs_domo.py` | Validate enriched output vs Domo CSV export |
+| `notebooks/validate_enriched.ipynb` | Interactive validation notebook |
+| `notebooks/demo_api.ipynb` | API usage demo |
 | `catalog/pii_manifest.yaml` | PII column list (single source of truth) |
 | `catalog/data_dictionary.yaml` | Metric definitions, formulas, business rules (OM Glossary format) |
 | `catalog/DATA_DICTIONARY.md` | Human-readable data dictionary — consuming agents MUST read this |
@@ -123,7 +125,7 @@ from api import get_raw, get_enriched, list_datasets
 
 # See what's available
 list_datasets()
-# {'ad_performance': 'Facebook ad performance + CheckoutChamp orders...'}
+# {'ad_performance': 'All-platform ad performance + CheckoutChamp orders...'}
 
 # Raw data — any approved dataset, PII always stripped
 df = get_raw("ad_performance", "2026-01-01", "2026-03-15")
@@ -215,5 +217,5 @@ underperformers = df[(df["net_roas"] < 0.80) & (df["spend"] >= 2500)]
 ## Switching to Snowflake
 
 1. Create `adapters/snowflake.py` implementing `DataAdapter`
-2. Change `config.yaml`: `adapter: snowflake`
+2. Change `ADAPTER` in `api.py` to `"snowflake"`
 3. Done. API unchanged.

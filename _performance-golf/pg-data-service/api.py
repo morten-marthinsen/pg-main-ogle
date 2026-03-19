@@ -26,7 +26,9 @@ from utils.pii import strip_pii
 ROOT = Path(__file__).parent
 
 _datasets_cache: dict | None = None
-_config_cache: dict | None = None
+
+# Adapter selection — change to "snowflake" when Snowflake replaces Domo (Q3/Q4 2026)
+ADAPTER = "domo"
 
 
 def _load_datasets() -> dict:
@@ -38,34 +40,22 @@ def _load_datasets() -> dict:
     return _datasets_cache
 
 
-def _load_config() -> dict:
-    """Load service config. Cached after first read."""
-    global _config_cache
-    if _config_cache is None:
-        with open(ROOT / "config.yaml") as f:
-            _config_cache = yaml.safe_load(f)
-    return _config_cache
-
-
 def _get_adapter(dataset_id: str):
     """Create adapter for the given dataset ID."""
-    config = _load_config()
-    adapter_type = config.get("adapter", "domo")
-
-    if adapter_type == "domo":
+    if ADAPTER == "domo":
         from adapters.domo import DomoAdapter
         return DomoAdapter(dataset_id)
-    elif adapter_type == "snowflake":
+    elif ADAPTER == "snowflake":
         raise NotImplementedError("Snowflake adapter not yet implemented.")
     else:
-        raise ValueError(f"Unknown adapter: {adapter_type}")
+        raise ValueError(f"Unknown adapter: {ADAPTER}")
 
 
 def list_datasets() -> dict[str, str]:
     """Return {name: description} for all approved datasets.
 
     >>> list_datasets()
-    {'ad_performance': 'Facebook ad performance + CheckoutChamp orders (252 columns, joined by ad name)'}
+    {'ad_performance': 'All-platform ad performance + CheckoutChamp orders (252 columns, joined by ad name)'}
     """
     return {name: info["description"] for name, info in _load_datasets().items()}
 

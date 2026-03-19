@@ -70,13 +70,13 @@ _shared:
 datasets:
 
   # =========================================================================
-  # ad_performance — Facebook ad performance + CheckoutChamp orders
+  # ad_performance — All-platform ad performance + CheckoutChamp orders
   # Domo dataset: a359ffd7-8175-40f3-b339-0a476cf624aa
   # 252 columns, two row types (ad-metric + order), joined by Ad name
   # =========================================================================
 
   ad_performance:
-    description: "Facebook ad performance joined with CheckoutChamp order data. Two row types in one dataset — ad-metric rows (Spend > 0) and order rows (totalAmount > 0). Never both on same row."
+    description: "All-platform ad performance joined with CheckoutChamp order data. Two row types in one dataset — ad-metric rows (Spend > 0) and order rows (totalAmount > 0). Never both on same row."
 
     beast_modes:
 
@@ -346,17 +346,18 @@ datasets:
       sc_trials:
         display_name: SC Trials Started
         description: "SwingCoach trial starts attributed to this ad."
-        formula: "SUM(# SC Trials Started) grouped by Ad"
+        formula: "COUNT(DISTINCT SC Trial Start PurchaseIDs) WHERE non-empty, grouped by Ad"
         source: aggregated
         tags: [do-not-derive, beast-mode]
         gotchas:
-          - "Source column name has <BR>/newline in Domo — cleaned automatically"
+          - "Raw dataset has no '# SC Trials Started' column — that's a Domo Beast Mode"
+          - "Computed from distinct non-empty SC Trial Start PurchaseIDs per ad"
 
     raw_columns:
 
       spend:
         display_name: Spend
-        description: "Facebook ad spend in dollars."
+        description: "Ad spend in dollars (all platforms)."
         raw_column: Spend
         tags: [raw]
         gotchas:

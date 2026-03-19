@@ -64,13 +64,13 @@ adapters/snowflake.py
   from dbt models
 ```
 
-**Switching to Snowflake = changing one line in `config.yaml`:**
-```yaml
+**Switching to Snowflake = changing one constant in `api.py`:**
+```python
 # Before:
-adapter: domo
+ADAPTER = "domo"
 
 # After:
-adapter: snowflake
+ADAPTER = "snowflake"
 ```
 
 Zero code changes in API.
@@ -134,7 +134,6 @@ Classification is a consumer-side business rule, not applied by the service. Tes
 pg-data-service/
 ├── api.py                  ← Primary interface. get_raw(), get_enriched(), list_datasets()
 ├── datasets.yaml           ← Approved dataset allowlist (friendly name → dataset ID)
-├── config.yaml             ← Adapter choice, dataset ID
 ├── README.md               ← Project overview, architecture decisions, usage
 ├── PG-DATA-SERVICE.md      ← Full architecture doc (all decisions)
 ├── docs/
@@ -145,7 +144,11 @@ pg-data-service/
 ├── utils/
 │   └── pii.py              ← PII stripping utility (strip_pii, load_pii_columns)
 ├── scripts/
-│   └── export_ad_performance.py  ← Domo Ad Performance card replica (30 columns)
+│   ├── export_ad_performance.py  ← Domo Ad Performance card replica (30 columns)
+│   └── validate_vs_domo.py       ← Validate enriched output vs Domo CSV
+├── notebooks/
+│   ├── validate_enriched.ipynb   ← Interactive validation notebook
+│   └── demo_api.ipynb            ← API usage demo
 └── catalog/
     ├── pii_manifest.yaml   ← PII column list (what gets stripped)
     ├── data_dictionary.yaml ← Per-dataset metric definitions (OM Glossary format)

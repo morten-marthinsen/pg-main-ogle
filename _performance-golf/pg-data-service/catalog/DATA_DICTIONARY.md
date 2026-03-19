@@ -24,7 +24,7 @@ See: [Identity & Cohort Tracking](#identity--cohort-tracking), [Classification R
 
 ## Dataset: ad_performance
 
-Facebook ad performance joined with CheckoutChamp order data.
+All-platform ad performance joined with CheckoutChamp order data.
 
 ### How Data Flows
 
