@@ -1,0 +1,109 @@
+---
+title: "Todd Brown's Personal Meeting Room 2025-10-21 17:01:20"
+date: 2025-10-21
+duration: 24m
+duration_seconds: 1486
+vimeo_id: 1129274442
+folder: "Zoom Recordings"
+source: vimeo
+tags:
+  - knowledge-base
+  - video-transcript
+  - vimeo
+---
+
+# Todd Brown's Personal Meeting Room 2025-10-21 17:01:20
+
+**Date:** 2025-10-21 | **Duration:** 24m | **Folder:** Zoom Recordings
+
+---
+
+Uh, Hey, Adida, how are you? Hey, Todd. I'm good. How are you? Good.
+
+So good to see you. Uh, I'm not sure who else is joining us. I know John can't make it today. He has a conflict, but we are going to, um, rock and, and so, okay, there we go. Um, and so what we're gonna talk about today is I'm gonna give you, uh, this should be a quick but super valuable call for you.
+
+Um, what we're gonna talk about is a way to leverage insights and trends across competitors really through their copy with something that, you know, uh, you can refer to as copy scoring. So this is something that was really a deeper version of this, was shared with, with me from a friend who is one of the most effective copywriters in the game today. Phenomenal, phenomenal student of the, um, of the game. I don't wanna share who it is because I don't want people to go and reverse engineer his entire method, but what I'm gonna show you is the part of this process that, uh, that I use and, uh, only recently started to use and find it super valuable. And so with that, let me do this and share my screen.
+
+And you're gonna find that this is extremely, very simple, very easy to do, easy to understand, easy to explain, but the value is enormous. And so, like I said, this is basic copy, uh, copy scoring. So let me give you some kind of context for this, because this is, this, the way that this tool is used is something that we don't, we don't talk about often enough. Uh, and a lot of online entrepreneurs and marketers and copywriters really kind of do, do this, skip this, do this very superficially. And what I'm talking about is really deep analysis of what is working in the marketplace.
+
+So it's really interesting. I remember when I hosted the copy legends lock-in. And so for reference, right? We had whatever it was, two dozen of some of the best copywriters on the planet, all, you know, behind closed doors, um, in Orlando, uh, for an entire day. And all there just to talk about the copy techniques that they use specifically, right?
+
+I wanted to hear about the big idea, the unique mechanism, the lead, the, um, you know, how they come up with, um, with offers and arguments and, and all that kind of stuff. And it was great, tremendous insight from some tremendous copywriters. I remember though, one of, one of the things, one of the few things that stood out to me was, I remember when Peter Kel, um, spoke, now Peter Kels, the guy behind Mindvalley, most of Mindvalley's or many of Mindvalley's biggest VSLs, I'm talking a monster VSLs that did millions and millions of dollars, uh, at one point, you know, uh, they were really the most popular kind of, they had the most popular vs l um, online mindvalley through, um, Peter's copy, great copywriter, lot of experience, lot of winners has made a lot of money. And I remember when he said, when we were just talking about generally the, the general approach that, that people take for coming up with winning copy, winning ideas, winning arguments, winning offers. And the reason why Peter's answer stood out to me is because what Peter said was, he said, basically, all I do is I look for the winners in a marketplace, the, the campaigns, the VSLs that are already working, he said, and I just reverse engineer them, and I look for patterns and trends across those, those VSLs.
+
+Um, and I just create my version of that. And so he ultimately went on to explain how he's looking for the appeal. He's looking for the dominant resident emotion. He's looking for the angles, he's looking for the hot buttons, the right, the, the, the benefits, the claims, the types of proof points. He's doing a deep analysis.
+
+And so this is where a, a tool like copy scoring comes in because it, it is part of how you can do the analysis while improving your, your, your copy chops. So the thing to really highlight here is that, right? And I've seen this level of, of analysis and auditing, if you will, um, and deep research from, I see this from some of the best copywriters on the planet. The ones that have one or more or multiple, what, what, you know, monster campaigns, banger campaigns, campaigns that, you know, like, you know, are, are life transforming, right? And this level of, of research and auditing and analysis, I typically don't see from the average typically what, what I see from the average entrepreneur, the average marketer, the average copywriter, is much more of a superficial analysis of what competitors do.
+
+Like, oh, this is the promise that they're making. This is the unique mechanism that they're using. Um, you know, uh, these are the benefit statements that they are, are, you know, are focusing on, uh, these are the claims that they're making, and that's it. And that's the, the level that that they go to. And there's, you know, that's great.
+
+That's certainly better than not really dissecting and analyzing what competitors are doing, but you can go significantly deeper and many of the best copywriters and marketers on the planet do go significantly deeper. This copy scoring is one of those, one of those ways, one of those tools, and I'm gonna show you a basic version that'll be wildly valuable if you use it and implement it. And so it is really nothing more than a three-step process, and it's very, very straightforward. The first one is, of course, you wanna identify the winning campaigns, right? Um, of your competitors in the marketplace, whether those are VSLs or long form sales letters, right?
+
+And you want to transcribe them or save them. So, right? If you identify, if there are, you know, two or three winning VSLs in your marketplace, that might be over the last year, over the last 10 months, right? Um, uh, uh, maybe even a little bit longer. Um, well identify them and then if they're VSLs, transcribe them.
+
+If they're long form sales letters, just copy them and save them, right? And so ultimately what we want is we want a, call it a Google doc, if you will, or a Word doc. So we want it in text format. Next. And here's really kind of the, the first step in the magic is you wanna then color code the copy.
+
+This is both for, um, for the analysis, for the copy scoring, as well as for your growth and development as a copywriter. So this is a manual process that takes a lot of time to do, right? This takes a lot of time to do, which is why it separates the men from the boys and the women from the girls when it comes to, right? Um, who does this and, and who are the big players and who and who aren't. This reminds me of a, a methodology that Joe Schriefer, uh, from Agora Financial.
+
+What he originally taught his copywriters, and still really does just on a more robust, comprehensive level, is that when you read through copy, don't just read it passively, read it actively and ask yourself why is the copywriter doing what they're doing at this point in the copy, at this point in the copy, right? What is being achieved here, or what's the strategy or aim or objective here? What is it here? What is it here? What is it here at each, you know, as you're going through the copy, each paragraph, each chunk, each line, right?
+
+Um, each section asking yourself, why are they doing what it is that they are doing, right? That's what Joe Shrier taught. This takes that even one step deeper, and you're gonna color code. And the first thing that you're gonna color code is you're gonna color code, right? You're, you're gonna use one color, you're gonna highlight the, the text.
+
+Anytime there is a, a benefit or a promise, or it is a hope driven angle, like right? A hope driven angle, a hope driven statement, a hope driven promise, right? Like you're gonna highlight it with a particular color, straightforward, right? And you're gonna go through the entire promotion, the entire transcript, if you will. Um, and you're gonna do that, right?
+
+And so then what you're gonna do is you're gonna go through and you're gonna highlight all of the areas that cover pain or fear, right? This is the negative, if you will, side of things. So if they're talking about the problem, if they're talking about if they're agitating the problem, right? Uh, if they're talking about the consequences, if they talk about like, what happens to you if you don't make a change, if you don't take action, all of that tends to be pain, fear, but you want to go through and you want to highlight pain, fear, pain, fear related stuff. And so you wanna highlight that with one color.
+
+Now, look, if we stopped here, this in and of itself, just these two would be valuable for, um, all marketers and all copywriters, because what it would immediately be able to show you is it would show you across multiple winning VSLs in your marketplace, or multiple, uh, winning, uh, marketing promos in your marketplace, whether there is a, uh, a trend leaning in one direction or another in terms of, you know, pain or pleasure, if you will, right? Like, you know, hope or fear, if you will. And so, or write hope or pain, if you will. In other words, you'll, you'll be able to see whether, right, we, we talk about like all emotions or all people are either driven to escape pain or to experience more pleasure while understanding, are the majority of winning VSLs, if not all the winning VSLs, let's say as an example in your marketplace, are they all moving away from pain? Well, if so, that is telling or should be telling to you, that should be indicative of what it is that the marketplace is already responding to, right?
+
+And so, right? While that doesn't necessarily tell you that they wouldn't respond to a moving towards pleasure, it certainly tells you that they do respond and are responding to moving away from pain. And so if you were gonna place a bet on which one is gonna work, I would certainly be betting on the, the, the moving away from pain, the one that is being leveraged and used across, uh, the majority of winning VSLs, uh, being used in your marketplace. But we could go even, even deeper here, because of course, right? We're gonna look at the mechanism, but we're not just gonna look at the mechanism.
+
+We're gonna look at all of the copy that is making a claim about the mechanism. So we're gonna look for how much of the campaign is mechanism driven, our claims about the mechanism. Then we're gonna highlight with a different color all of the different proof points given throughout the, um, throughout the, uh, the campaign. And the other thing, the beautiful thing, right? Is that when you highlight like this, you can immediately see how early in a promotion the mechanism is introduced, how early the proof is introduced, what chunks and parts of the campaign are filled with more proof than, than other parts.
+
+We also wanna highlight, uh, and this is the last one for the, the basic copy scoring, which is what we're gonna cover, which are the objections. And so you could say, right, I, you could say here, the fears or concerns or objections that a prospect would, would have, like all of the times that the copy is overcoming an objection or dealing with an objection or addressing an objection or concern, right? Highlight with a color so that you could see where and how they are. Um, they are dealing with objections. Now, once you've done this, right, with multiple campaigns, right?
+
+Once you've done this with multiple campaigns, step three is to feed it into ai, feed it into a tool like Chachi bt to get the amounts of each color so that you could see for a promo, right? How many highlights do we have for benefit promise? Hope? How many do we have for pain fear? How many do we have for mechanism claim?
+
+How many do we have for proof? How many do we have for objections? And really, like, look, really, I think if you look at the first two bullets, then you look across the campaigns and you look for a trend. If most of them, if not all of them, have more hope than fear, well, you know what the marketplace is already responding to. If they have more fear than hope, uh, or pain than hope, then you know what the marketplace is, um, is ultimately, uh, responding to.
+
+And so you could certainly get more, you certainly can get deeper with this, like depending on how deep you want to go and what you wanna analyze, but this, to me, is enough for the overwhelming majority of entrepreneurs and marketers to really be able to leverage what it is that your, um, competitors are already doing with their winning promotions. This is part of how you, um, you can really reverse engineer what it is that they're doing. See, what Peter was also doing was more of what Joe Schriefer was teaching, which is, okay, reverse engineering. So what is happening in the lead, right? Like, why are they saying this in the lead?
+
+What, what type of lead is being used here? Right? That's not something that you would use copy scoring or color coding for, right? But that's something that you would look at, like what type of lead is being used in the majority of these, um, in these VSLs, right? Is it a pain solution?
+
+Is it a secret? Is it a story? Right? Uh, um, excuse me. You could also reverse engineer the chunks.
+
+Like what, what's the first chunk? What's the second chunk? What's the third chunk? What's the fourth chunk? You can reverse engineer that in, in different campaigns That again, is different from copy scoring.
+
+What I'm talking about here is looking at, right, the volume of, of different copy elements that are used across the winning VSLs or long form sales letters in a marketplace and learning from that. And so, very simple, very straightforward. Any question about that Adida? Yeah. This is very cool.
+
+I li love this kind of stuff, and I guess it needs to be done with some caution as in like, what is the, who is the avatar, the, the specific, you know, within the industry, for example, what's the sub segment of the audience potentially? I don't know. Well, would you say, so what I would say is that the, the only ones that I would be doing are the ones that are going after the same subsegment of the marketplace Okay. That I'm going after. Exactly.
+
+So in other words, right? Once, like, okay, like they're going after the same audience that I'm going after, same subsegment, right? Boom, okay, now I wanna know what are the winning, you know, winning video sales letters or long form sales pages for that subsegment, if you will. Or the same that, that, that audience the same one that I'm going after. Yeah, very.
+
+I think this is very powerful for folks who are not necessarily copyright professional copywriters, but want to use ai, but they don't really understand what they're doing. Yeah. So if they had this, you know, what to look for. That would be, yeah, I, I think even, you know, there again, I think that oftentimes, you know, like, look for, for what it's worth, without going into an AI discussion, um, for this, right? Like, look, I think, you know, I think, you know, doing something like this, um, especially because it's manual labor, like it just puts you in tune with, right?
+
+With copy and what's being done, and just increases your awareness and your visibility into winning copy. But, you know, there's also massive value in taking winning promotions and then, um, feeding them into, you know, uploading them to something like Cha GPT or Claude, and then doing a full breakdown and analysis of right, of the, of the promotion, you know? Mm-hmm. Like, I mean, you could start real high level and basic, like with after you, you know, you prompt, let's say, uh, uh, Chachi, bt, um, or Claude, like, you know, you're an elite level direct response marketer, blah, blah, blah. You could ask it like, you know, tell high level, right?
+
+Um, in 100 words or less, why do you feel like this promotion, um, has done so well in the marketplace, knowing what you know about the marketplace, right? And then you get a high level, and then you could go and you can dissect it. Like you can have chat, actually dissect the, what is the primary, uh, emotion being, you know, being prodded here. What, what, why do you feel that primary emotion is the strongest emotion? Or do you feel there is another emotion that would, could be, could be stronger?
+
+Can you give me all of the examples, um, right from this copy without changing any words of the sentences or statements or phrases that are, that are included intentionally to leverage that emotion, right? You could say like, what is the secondary emotion that this is, um, that this campaign is prodding? Can you show me all of the, the phrases, the words, the copy chunks, um, without changing any that are prodding that emotion? Like, right, you can just do an analysis that if you had another individual sitting next to you, they, it would take them, you know, much, much, much, much longer to be able to do that. What you could do in, in minutes with chat or, or Claude.
+
+Yeah. And so well worth, you know, well worth doing because especially when you are like, look, especially when you're talking about the winning campaigns in a marketplace talking to the same you audience, you are, right? They've already figured something out, right? And especially when you've got multiple VSLs or multiple long form sales letters that you can pull from, right? They've already figured it out there, it's already working.
+
+And so you don't have to figure out what will work. You can reverse engineer it from the, those multiple winning, let's say VSLs. And so, right? The smart thing to do is to take the formula to identify the formula, the framework of what's already working and right, and then leverage it with your own idea. Like, I'm not saying take the copy, I'm saying identify the framework, identify the core, uh, emotion, identify the core angle, identify the core underlying belief, like all of those things.
+
+'cause you could take all of those elements that when you see that all of these elements exist across all the winning campaigns in the marketplace, right? Over the last year, 18 months, right? Well then you take those and then you, you plug them in, like you figure out what yours are going to be, and then you leverage the same, you know, the same structure, the same framework, which is ultimately really, if you think about it, what we already do at some level, um, when we, we identified the winning frameworks for the winning types of leads that the overwhelming majority of winning leads fit into one of these eight or nine categories, right? The only difference is, right, like when you dive deep into the actual winning VSLs or winning long form sales letters in your own marketplace, you can get much more detail than just, oh, they just used a, you know, a problem solution lead. We can get a lot more detail.
+
+Like, right? Like, um, you know, uh, um, how long did they stay on the problem? How long did they agitate? Like what did they say? What was the right, is there, is there similarities, uh, across these winning VSLs in terms of the problem that they're targeting in terms of the paint?
+
+Like, it just gives you so much insight for you to then leverage, so you're not starting with a blank canvas or even a, you know, a raw canvas. You're starting with a lot more. And so, does that make sense? Yeah. And even in terms of naming, say even the offer naming, like if you dig out the benefits, is it benefit driven or pain running from pain, you know, even, even forming offers and naming?
+
+Absolutely. I think that offers, right? We talk about that in, you know, obviously in stage one of the E five method, right? That part of that research process when we're, you know, analyzing competitors is looking at their offers, including their deliverables and their benefit statements so that we can see, because again, once again, right? Like I don't need, if I'm going into a new marketplace, I don't need to figure out what's the perfect price point.
+
+I could go and I could look at the winning VSLs that have been used across the board and see if there are right. Things that I can learn from that. Same thing with the deliverables, right? Like if, if everybody's including coaching right in their offer, let's say, well, it would probably be smart for us to include coaching if we're going with the same price point they are, right? And so, right, if all of them are right are selling, you know, a product below 97 bucks on the front end, right?
+
+Well, that's telling if all of them are selling a product above, you know, $47, that's also telling because they've figured it out. And so the key is that you're not just paying attention to the marketplace, you're not just stopping there, right? You're going deeper, right? Because you might see something in the marketplace from a, an entrepreneur and you see it once and you don't see it again. But maybe that's not a winning, maybe it's a losing VSL.
+
+So you wanna look at the winning VSLs and you wanna look at multiple ones because you can take what it is that you identify from your, from your analysis there and, um, and use it to make yours better that much quicker. And so I dig it, so, cool. Very cool. Mm-hmm. Thank You.
+
+There you go. Keep me posted. I'd love to hear, uh, I'd love to hear when you use it, if you get any like additional, you know, crazy insights that you didn't have before trying it. And so keep me posted. But that's it for today.
+
+Enjoy. I'll see you next week and, uh, yeah, have a great rest of your week.

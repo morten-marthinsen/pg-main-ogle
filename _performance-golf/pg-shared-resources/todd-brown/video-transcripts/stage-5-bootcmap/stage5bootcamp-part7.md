@@ -1,0 +1,59 @@
+---
+title: "Stage5Bootcamp-Part7"
+date: 2024-10-29
+duration: 7m
+duration_seconds: 423
+vimeo_id: 1024326398
+folder: "Stage 5 Bootcmap"
+source: vimeo
+tags:
+  - knowledge-base
+  - video-transcript
+  - vimeo
+---
+
+# Stage5Bootcamp-Part7
+
+**Date:** 2024-10-29 | **Duration:** 7m | **Folder:** Stage 5 Bootcmap
+
+---
+
+This, I'm just gonna show you, we don't need to go through this. You'll be able to go through this, um, when, uh, we send you the slide deck, uh, tomorrow, like I said, we're gonna send you a page with some download links or some different stuff. Um, this is the part, this is the toughest part. I originally, what this originally said was, this is the toughest part. And I'm like, all right, let me reframe that a little bit.
+
+And, uh, this requires, you know, patience and ample thinking time. Uh, I probably should have said something like, like, when you're done with this, you'll be a genius and reframe it even more. But this is the most difficult part. But these are the kind of questions that you can ask. And they're all kind of, you know, taken from really ultimately what Rich was saying earlier, you know, number one, what are the current symptoms the marketplace is dealing with?
+
+What are the, what are the, the, the different symptoms? See to me, like when somebody, you know, like, look, think about this for one second. You know, uh, I'm not getting, um, clicks, you know, I'm not getting enough clicks on my ads. Let's just say, right? Well, what is the real underlying issue?
+
+Like a good media buyer, a good direct response marketer, somebody who understands the game would be able to identify, would be able to diagnose what's the issue? Because what could the issue be if somebody's not getting clicks on their, on their ads, what could the issue be? What was that scroll stop? Meaning what? They're Not, they're not getting to stop and Watch it because, well, you would, I would say that, okay, they're, they're not the, you're not getting the scroll stop.
+
+That's still a symptom why message could be message, okay? That's one thing that one, one reason could the audience, one cook could be the wrong targeting, bad creative, like in terms of I imaging, right? So, right. Like, look, this, this is the beauty of, right? Like, could you make a case that it's the wrong targeting if you were selling something about targeting and then you could ultimately make the case with, with that, not only will you get the scroll stop and get more clicks, but your clicks will be cheaper, your conversions will be better.
+
+Therefore, your CPA to AOV ratio will be, will be better, your profits will be better. You're gonna be a happy camper all through the right targeting, right? Like some, you know, like could be right the wrong message. You can make an argument that not even touch on targeting, not even touch on, you know, ad creative or anything like that. We can make an argument for that, right?
+
+And so this is the, that whole thought of, well, what else could it be? Could I could make the argument that, 'cause Paul and I have talked about this, I could make the argument that it is a lack of differentiation that you're not demonstrating, you know, meaningful differentiation about your thing compared to everything else. And I can make an argument for that. We can make an argument for, um, you've got no big idea, you've got an ordinary idea, and I could sell something on the big idea. See how all of those things, right?
+
+Like, and I know that I can make an argument for differentiation, ultimately making an argument for the unique mechanism. You know, I could also make an argument that, you know, the, they're not getting the scroll stop because they're in, they have an immature marketing message and their market is in stage five. See how the thinking that you've gotta look, right? And so this is how you identify, right? Like, start with what are the symptoms that the marketplace is dealing with?
+
+Why this is Rich's question. I think why with the other solutions, aren't they, they yet experiencing the results outcome they want? So there's a ton of solutions out there. Why aren't they working to produce results for people? Or Why are they making it worse?
+
+What was that? Or Why are they making it Worse? Or why are they making it worse? It's a great question, Right? Yeah, great point.
+
+What is the root cause problem the marketplace believes and or is being told is the cause of their symptoms if they even are being told, like, you know what I mean? Is the marketplace hearing like it's bad copy or it's right, I'm not spending enough on advertising or I'm not doing advertising. Like what are they being told? What are they believing? Is the, is the problem?
+
+Is the, is the real problem? What are, what are all the other potential root cause problems of the market's current symptoms? This is the most difficult question of this, or the one that requires the most patient patience and ample thinking time. That's the one that is like, what are the other, you know, so, okay, they're not getting clicks on ads. This is that whole process of, well, what could be the cause?
+
+Okay, it could be bad creative, it could be bad messaging, it could be no big idea. It could be no differentiation, it could be the wrong targeting. What else could it be? You know? And like, what else could it be?
+
+It could be how direct you're being in your ad, you know, like we could really go and that's, that's the exercise and then, right, like you're, you're going there, right? And then which, which root cause problems? If we identified what are all the other potential root cause problems, well, which of those root cause problems are the current mechanism solutions not already addressing, not already addressing Which potential root cause problems not already being addressed by competitors. Can my mechanism fix, solve or alleviate? You know, this is like, this is the line of questioning that helps you get to, okay, like, right, like I see what they think is their problem.
+
+I see what the others' competitors are, are addressing or dealing with. I see what the gaps are, what they're not, um, addressing in there. And out of those that they're, that are not being being addressed, I see one or two that mine can fix and alleviate, right? And can I, and I believe if I believe that mine can address those, then I should be able to pull out the reasoning through the interrogation process. Make sense?
+
+Said it already. We're looking for the problem not being addressed by competitors, which can present, which we can present an argument for as the real cause of the prospect symptoms and which can be resolved only with our unique mechanism. Said it five times. This is an interesting little point that I wanna make. We're looking for a new contrasting perspective.
+
+Yours on the problem, on the root cause that's still consistent with your audience's current beliefs. In other words, we're not introducing new information here, just a new interpretation of what, what they're experiencing. This, this should be something the audience is not already consciously aware of, but they think they can do something about. And so the the la last part, right? Like, so number one, you don't want to create a problem that they believe they can't do anything about that, right?
+
+Like, you don't wanna create a problem that is viewed as, you know, unsolvable, but this is an important point right here, not introducing new information and that's consistent with their audience's current beliefs. What I mean by that is, right, so what I didn't say, right, like with the, what I wouldn't say, even if it was the solution for stage five was like the issue is you don't need a funnel and you've gotta stop marketing. And instead what you've gotta do is, you know, you've gotta start producing images or something like that. Like right where it is a monster leap. I'm just leveraging, right?
+
+It's a tweak, right? It's a tweak. It's not this gigantic leap. It's still within the frame. It's still within their, their scope.
+
+It's still reasonable. You understand that, right? Like it didn't become this, you know, monster leap.

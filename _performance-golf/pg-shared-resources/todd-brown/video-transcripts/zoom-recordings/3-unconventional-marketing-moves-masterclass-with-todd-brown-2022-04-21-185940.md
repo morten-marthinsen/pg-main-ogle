@@ -1,0 +1,1149 @@
+---
+title: "3  Unconventional Marketing Moves Masterclass with Todd Brown 2022-04-21 18:59:40"
+date: 2022-04-21
+duration: 1h 26m
+duration_seconds: 5177
+vimeo_id: 701821839
+folder: "Zoom Recordings"
+source: vimeo
+transcription: whisper-turbo
+tags:
+  - knowledge-base
+  - video-transcript
+  - vimeo
+  - whisper
+---
+
+# 3  Unconventional Marketing Moves Masterclass with Todd Brown 2022-04-21 18:59:40
+
+**Date:** 2022-04-21 | **Duration:** 1h 26m | **Folder:** Zoom Recordings
+
+---
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . . .
+
+. . . the chat, keep the chat off to the side. So one more time, can somebody give me a thumbs up and
+tell me that you can see my slide deck A-OK on the screen?
+
+I want to make sure that you're not
+looking at my ugly mug the whole time, but you can see some slides. Yep. Awesome. Perfect. Okay.
+
+Beautiful. So you guys and gals know that what we're going to be talking about today, what I'm
+going to cover for you are the three, what I call unconventional marketing moves that I always
+immediately share with my highest paying clients. Those are my top one private clients, mastermind
+group paying $45,000 a year. And the whole entire purpose, the whole entire aim of these three
+unconventional marketing moves that I'm going to give you, I'm going to talk you through. I'm going
+to talk through with you today on this is to ensure that these clients and now you are able to generate
+consistent, predictable, reliable daily sales from paid traffic.
+
+Now we're going to talk a little bit
+about paid traffic and why we use paid traffic. We're just going to skim the surface there, but I
+want you to understand why we go to paid, uh, paid traffic, why we use paid traffic and how it is so
+much simpler than what most entrepreneurs, online marketers think. So let's go through some ultra quick
+housekeeping. And then we're going to get right, uh, right to it. So what are we going to cover
+today?
+
+I just said, number one, we're going to cover the exact three marketing actions that I
+immediately share with, uh, with our, our top clients so that we nail all of their acquisition
+needs today. When you hear me say acquisition, what I'm talking about is you generating, you getting,
+you acquiring new buyers or new clients, depending on your business. And we're going to talk today
+about how to use these three exact moves with one single marketing campaign so that you are also
+able to consistently and reliably convert visitors from almost any online advertising into new buyers
+and new clients. And then of course, we're going to kind of bring it together and sum it up with
+how to put this one campaign to work, growing your business for months and months, meaning an evergreen
+campaign. So before we go on, I want to make something clear.
+
+Here is ultimately what we are
+talking about today. We're talking about how do you set up structure one single marketing campaign
+online that you can use day in and day out into perpetuity for months and months to bring in new
+buyers, new clients every day. We're talking about leaving behind the sporadic sales, no more ups and
+downs, no more infrequent sales, no more, no more kind of sprinkle of sales. We're talking about what do
+you really need to do? What do you ultimately need to present to say in a marketing message,
+in your marketing campaign, one campaign, so that you can drive traffic or get traffic from online
+advertising and profitably and consistently turn that traffic into daily sales for you?
+
+That's what
+it is that we're going to be covering today. Now, nothing that we are talking about, it has nothing to do
+with any kind of crazy whiz bang trend fad, it has nothing to do with manual labor, like posting on
+social media. We're not talking about building a YouTube channel, posting content on a blog, growing
+a Facebook group, getting search engine listings or rankings, direct messaging people or any of that
+kind of stuff. We're talking about, again, a single campaign that runs really, I hate to use the word
+autopilot, but it runs automatically for you day in and day out and turns traffic that you get from
+online ads into new buyers for you. The beautiful thing with the method that I'm going to teach you
+these three, these three moves, which are part of an overall method that I'm also going to talk to you
+about.
+
+The beauty is that it doesn't require you to be a slick salesperson. You don't have to have
+slick sales skills. You don't have to know closes objection covering or anything like that. This does
+not require you to be some wizard marketer with a lot of experience with a track record. It does not
+require you to be able to write a, you know, whiz bang copy.
+
+And it doesn't require you to do anything
+obnoxious or sleazy or shady in your marketing or say, or do anything in your marketing that you'd be
+embarrassed about. And it doesn't require you to use any specific funnel or campaign model, meaning
+what it is that we're going to talk about. These three moves can be plugged into any marketing campaign
+model, whether you're using a, a webinar, a video, a long form sales letter, a multi-part sequence,
+a quiz or ask campaign, a launch model. It doesn't matter if you want to have one campaign that you
+can use to acquire new buyers, new clients daily from online advertising. These three marketing moves
+are essential for you.
+
+Like I said, what we're talking about, I don't mean to beat a dead horse
+here, but I want to make sure that you are in the right place and that, you know, you're in the right
+place. What we're talking about is you having one single marketing campaign, which will work
+continually for you. Like I said, for months and months. So we're not looking for just some pop
+and then something that dies off. We're not looking for something that works today and then doesn't work
+tomorrow, right?
+
+When my clients come in, right? What I want to set them up with is a consistent,
+predictable, reliable source of new buyers or clients for their business, because that's the
+lifeblood of your business. If you are not able to consistently acquire new buyers or clients,
+depending on your business model day in and day out, right? It's only a matter of time before you
+unfortunately go out of business or you will never really be able to get off the ground and gain
+traction. So the lifeblood of your business is your ability to get new buyers, new clients day in and
+day out.
+
+So that your business can grow every week so that you're adding to your database,
+you're adding to your client list or your customer list. And so that you feel comfortable and confident
+knowing that your campaign is going to continue to work. The one thing that I never want you to have
+to experience is I never want you to have to sit back and ask yourself, what now, what do I do next
+week to generate sales? What am I going to do now in order to hit my monthly goal or my monthly number
+or my quarterly number? I never want you to have to, to worry about that.
+
+I never want you to have to
+deal with that. And so what we're talking about is being able to use the most reliable source of
+traffic, which is paid online advertising. The beauty is we're going to talk about in just a second. You could start with a few bucks a day. You don't need to be a wizard in order to do it on Facebook
+or, or even on Google or on Instagram.
+
+And the beauty is that you turn it on. Everything is
+measurable. You can see for every dollar that goes in how, whether you make back two or three or four
+or five. And you could start with whatever budget it is that you have. And when you have a campaign,
+a message set up, like I'm going to show you with these three marketing moves, you can feel
+comfortable and confident knowing that you're going to be converting these people, these visitors,
+a percentage of these people every single day at a profit into your business.
+
+So that sound good. Give me a little feedback here, right? And so give me a little, little, little, does that sound good? Does that sound like something that you'd be excited about? If so, let me know, say yes in the chat.
+
+So I can see, let me feel your energy. So heck yeah. Awesome. I'm freaking excited. Yeah.
+
+Hell yeah. Well, I love it. Okay. Beautiful. Perfect.
+
+So if you will indulge me for a second,
+I know that there are a tremendous amount of people online telling you that they've got the secret sauce
+to help you grow, to help you become wealthy, to help you make, you know, oodles of oodles of money. So who the heck am I to teach you this? Meaning really why, why should you feel comfortable
+listening to me? Well, you know, my name is Todd Brown. Number one, I've been doing this now for
+over two decades.
+
+If you're, and I'm going to go through this real quick, but I just want you to
+feel comfortable knowing who you're, who you're learning from today, where this is coming from,
+right? Cause there was a lot of charlatans out there and I want you to feel comfortable knowing
+that you can take what it is that I say today to the, to the bank. I've been doing this today
+for over two decades. As of right now, we've got clients and students, marketers, entrepreneurs,
+coaches, consultants, authors, speakers, experts, agency owners, software developers today using our
+methodology. What I'm going to give you a glimpse into today in over 71 countries, the best of the best
+online marketers today out there, the ones that you likely recognize are either students of mine,
+clients of mine, subscribers of mine attended one of my trainings conferences, come to me for
+consulting, uh, or, or refer their clients to me, whether it's Russell, whether it's Ryan, whether it's
+Jeff Walker, uh, you name it, the best of the best have worked with me.
+
+In fact, for those of you that
+have been in the marketing game for any significant length of time, maybe you recognize Jay Abraham
+considered the greatest marketing consultant, uh, on the planet. Well, when he wanted his son trained,
+he came to me. There is Clayton make piece. Unfortunately, he's no longer with us. Legendary
+copywriter.
+
+When he wanted somebody to come in and talk to his clients about funnel construction,
+when he wanted the company that he was working for to go with a marketing consultant,
+he came to me. The fact is that if you do a little bit of research, you'll see that when marketing
+experts, the marketing experts out there, and by the way, most of the top funnel experts were my
+students or clients at one point. I that's kudos to them. I tip my hat to them. They've gone on to do
+some tremendous things.
+
+Most of those top experts, when they need help with their own campaigns,
+they come to me for help, which is a tremendous blessing to me today. I've been brought in to
+speak to the biggest companies, the biggest platforms around the globe. This is me. This
+is Agora bringing me in Agora, the $1.5 billion a year direct response behemoth. Uh, you can see on
+the right in this one agenda, a couple of years ago, a few years ago, Bill Bonner, the founder of
+Agora speaking, uh, Brian Kurtz, the, uh, the VP of boardroom speaking.
+
+And then I say some knucklehead
+from New Jersey. That'd be me. Maybe you've seen me as the guy who helped Russell launch Russell
+Brunson launch his very first book. I think it was.com secrets. And he awarded me a car.
+
+I believe I was
+the first guy that he awarded a car to. And really what is most near and dear to me and what you should
+really care about most is that our method, my method, I say our, our method, because of my team,
+I'm supported by a tremendous team, a tremendous group of individuals that I love, uh, have helped
+to create more six and seven figure marketing campaigns for entrepreneurs, for experts, for
+coaches, for consultants, just like you more than anybody else. You're going to see a bunch of them
+today. Uh, the results that, um, you can experience. I will say this, a disclaimer, I am not promising you
+any amount of money, right?
+
+I'm not promising you that you'll get the same results that you're going
+to see. I'm not promising you any amount of money. Also, as a side note, I absolutely despise the get
+rich quick promotions out there, the push button solutions out there, or what are presented as push
+button solutions? And the, um, do this one thing and you're going to be wealthy. I wish it was true,
+right?
+
+I wish there was a button. If there was a button that you could push that would spit out money,
+I wouldn't be here right now. I'd be pushing that button. And so you've got to recognize that what
+I'm going to share with you today will require some upfront effort and work on your part. If that's
+not something that you're willing to do, you can jump off.
+
+This isn't for you. If you are,
+what you're going to see is the truth about how you can start getting consistent, predictable,
+reliable daily new buyers or clients in your business. So with that out of the way, hopefully
+you feel a little bit more comfortable with me and my Jersey accent attitude doesn't, uh, scare you off. Let's get started. First off before we, we're going to get to, I have this slide, one more slide,
+and then we're going to get to the first of the three marketing moves, uh, that I teach all my top
+clients to make the very first thing.
+
+I'm going to lay a little groundwork for you. So the very first
+thing that you need to understand is that there's a huge difference between marketing and selling
+online marketing and selling are not the same activity, nor do they have the same objective. So one of the biggest mistakes that I see folks make out of the gate, new entrepreneurs,
+new to the world of online marketing is they conflate marketing and selling, meaning they
+think that marketing and selling are the same thing. They view it as the same thing. They start
+to talk about a marketing campaign or a marketing funnel and a sales funnel, and they use those
+terms interchangeably, but marketing and selling are not the same activity, nor do they have the same
+objective.
+
+Selling is what you do. And by the way, right? I, I don't like selling. I'm not a good
+salesperson. Uh, I don't like selling.
+
+Fortunately, when you're, when you know how to market correctly,
+like I'm going to teach you today, uh, you can produce sales, right? And so, uh, I'm not a fan. I don't like selling personally, right? Selling is what you do when you are communicating with a
+prospect that already knows the type of product or service that they want to purchase. And they're
+interested in your exact type of product or service.
+
+They're familiar with your type of product or
+service, and they want to know why they should choose yours over the other options that are in
+the same category. Selling is what you're doing when you are talking to a prospect at the end of,
+or towards the end of the buying cycle. When you are talking about your product and the product's
+features and the product's advantages and the product's benefits, you are selling. When you're
+talking about the offer, what is the price point? Are there terms?
+
+Meaning, do you just pay one, one,
+one lump sum? Is it, do you pay a few bucks today and then a few more in a month, right? When you're
+talking terms, when you're talking about bonuses, when you're talking about your guarantee or risk
+reversal, when you're talking about the offer deadline, all of those things are selling. Selling is what
+you do when you are communicating with somebody that knows what they want. They want your type of
+product or service, and now they want to know why they should choose yours.
+
+But marketing is what you
+do when you are talking to a prospect or communicating with a prospect who doesn't know yet the exact type of
+solution they want. They don't know what makes yours unique or different or special. Maybe they don't
+even know who you are, right? And the job of marketing, listen to me, Peter Drucker, one of the
+greatest management gurus, and this is a quote that you should write down, that you should remember that
+you should live by. Peter Drucker, the greatest management guru said that the objective of marketing
+is to make selling superfluous, to make selling unnecessary.
+
+What did Peter mean? He meant that when you
+execute, when you do, when you set up your marketing the right way, you naturally lead prospects to want
+to buy, right? In other words, that hardcore selling, obnoxious scarcity, urgency, fake deadlines, fake
+timers, fake countdowns, those things. I'm not saying countdowns are bad. I'm saying the fake stuff that
+people do, right, are completely unnecessary when your marketing is done correctly.
+
+See, the job of marketing
+is to take your prospect's desire for a result, for a change, for an outcome, and to turn it into demand
+for your product or service before you ever even talk about your product or service. That's what I'm going to
+show you how to do. So what's going to happen is that we're going to open up a whole new universe of prospects for
+you, because I'm going to show you how to take people that don't even know you, don't even know what it is that you
+do, aren't aware of what it is that you offer, aren't aware of what it is that's different about your offer, and I'm going
+to show you how to put together a marketing message that leads those people to want to buy from you on the spot. I'm going
+to show you how to turn their desire for a result into demand for your product before you ever even talk about it. So that
+the selling portion, if you will, is nothing more than you presenting your offer to people that are excited to buy.
+
+Next is the
+second thing that you need to understand is that right, wrong, or whether you like to hear this or
+not. Remember, I said, I'm not here to sugarcoat anything. I'm here to tell you what you need to
+hear to be successful. That's my job as a coach, as a guide. That's what I've been doing for the last 20
+plus years now, right?
+
+You have to understand that being able to consistently convert paid advertising
+into new buyers or new clients is the holy grail because it is controllable by you. We can start with
+a $5 budget. We can turn it up. We could open it. We could spend more when we want.
+
+We could turn it
+down when we want. Everything is trackable so we know for every dollar we invest, are we getting back
+three or four or five or 12? You are in complete control of how much and when you get this traffic,
+unlike search engine optimization, for example, or unlike working with affiliates or joint venture
+partners, right? I'm not saying that there's no value in those things. I'm saying that the reality is
+that those things can be sporadic.
+
+How about this? There was a time when there were some websites
+online, many websites online that focused on search engine optimization. They thought in their mind
+that it was free. There's no such thing as free traffic, by the way. There is no such thing as free
+traffic because even getting rankings in Google requires effort.
+
+It requires time and your time or
+somebody else's time is worth money. You're either going to pay somebody else to do things to get you in
+the top of Google or you're going to do it yourself. If you do it yourself, there is a value to your time. If it takes you 40 hours of work, there's a value to that 40 hours. So there's no such thing
+as free.
+
+The reality is there are many websites that had top rankings in Google. They were getting
+all of their traffic from Google and then Google, like it does periodically, like it's done dozens
+of times, literally dozens of times since I've started online two decades ago. They changed their
+algorithm and the websites that were in the number one spot fall down to the number 11 spot. And you know
+what happens to their traffic? Gone overnight.
+
+The majority of their traffic evaporates. They go
+to sleep getting traffic with a great business. They wake up, traffic is gone. You never have to worry
+about that when you are able to turn paid advertising into consistent new buyers or clients. Now, here is the big issue.
+
+What I want you to understand before we dive into our first
+unconventional marketing move. And that is this, that the reason why most entrepreneurs online
+struggle to be able to use paid traffic is because they don't have a marketing message that converts
+enough people consistently enough into buyers to pay for that traffic. In other words, the problem
+isn't with a Facebook ad, right? Like running Facebook ads or running a Google ad or running a YouTube
+ad or running an ad on Instagram. The problem is that they don't have a marketing message, a marketing
+campaign that allows them to convert enough people often enough into new buyers, new clients to pay for
+that traffic.
+
+But when you have the ability to turn a dollar of a Facebook ad into two or three or
+$4 of new clients, new buyers for you, the game changes. Why? Because you can then go, you can start to
+invest $2, $3, $4, $5, $6. You can continue to scale up how much you're willing to invest into the
+Facebook ad, into the Google ad, into the YouTube ad, uh, as you see it bringing back multiples of
+that. See, meaning that what it comes down to is it comes down to having the right message, a message
+that allows you to convert, uh, uh, paid visitors into buyers, uh, in enough quantity and frequently
+enough period.
+
+End of the story. Now the, the second thing that I want to mention, actually, I want to
+mention one other thing that I wasn't going to mention, but I'm going to mention it anyway. And
+then we'll go into our first of the three unconventional marketing moves. There's another
+mistake that I see that I don't want you to get caught up in. And I've been talking about this for the
+last couple of years, as I see a lot more people come into the online marketing world, see the
+opportunity, recognize the, uh, the opportunity.
+
+And that is this, for some strange reason, there is
+this infatuation with, uh, with new marketers, uh, online with the, the, the funnel model. In other
+words, there are these questions all the time. Like people think that for whatever reason, people think
+that the magic is in the model. They think that, well, the answer is a webinar funnel, or they think
+that the answer is a video sales letter funnel. They think that if they're not converting on a video
+sales letter, they think, well, it's the video sales letter funnel.
+
+And so let me just take my message
+that I'm delivering in the video sales letter and switch it over to a webinar. And they think that
+the issue, right, that, that the model is going to fix the problem. Number one, that I want you to
+understand with this is that the magic is not in the model. The magic is in the message, a bad
+message, a poorly constructed message, a message lacking or going in the opposite direction of these
+three unconventional marketing moves. If it doesn't work in a VSL, you're not going to fix it by switching
+to a different model.
+
+The model isn't the answer. And that's why, you know, if you've been around this
+online marketing game for any significant length of time that you could find people that are wildly
+successful with webinars that are wildly successful with long form sales letters that are wildly
+successful with VSLs that are wildly successful with opt-in, you know, two-step opt-in lead magnet,
+and then, you know, something else, people that are wildly successful with quiz funnels, every single
+marketing model that is used, you can find people that are successful. And you can also find people
+that aren't successful. Why? Because it's not the model.
+
+It's the message. The number one priority
+is the message. What are you saying to turn those visitors into new buyers? And you've got to recognize,
+I say it all the time, and I don't want to belabor this point because I want to get to the first of our
+three unconventional marketing moves. But I say it all the time, like a bad story, if an author writes a
+bad story, right?
+
+A bad story is a bad story, whether it's in Kindle, whether it's a paperback,
+whether it is a hardback, whether it's an audio, right? Changing the model, changing the format of
+delivery doesn't make the story good, right? A bad story is a bad story, no matter how you deliver it. And a good story or good marketing campaign can be delivered in a variety of formats. That's why a good
+marketing message you can deliver if you're comfortable with a video sales letter.
+
+As a video
+sales letter or as a long-form sales letter or as a webinar, changing the format isn't going to
+radically change the results that you get. And so important for you to understand that. Now, with that being said, let me tell you the first three unconventional marketing moves that I
+teach my top clients. This is part of what it is that I do in all of our campaigns. This is what I
+train my new team members on.
+
+This is what I teach my top clients. And this is what I want you to do
+with your one campaign. And so here it is. Number one unconventional marketing move is stop talking
+about your product and shine the light on your mechanism. Stop focusing your marketing on your
+product.
+
+When you are talking about your product, you are selling, you're not marketing. You want to
+shine the light. You want to, you want to focus on in your marketing message, the mechanism or your
+mechanism. So what is, what do I mean by mechanism? Your mechanism is nothing more than how your product
+or service delivers results.
+
+You know that at the foundation of marketing, marketing is all about
+solving problems, right? No matter what it is that you market and sell, you are solving problems,
+right? That's period. Let's define for one second, what I mean by problem in this, in this context,
+because there are two types of problems that we solve with, with marketing. So number one is a pain
+point, right?
+
+You know, that typically when people think of a problem, they think of a, a pain point,
+a frustration, a disappointment, right? If you've got knee pain, if you, if you are overweight and
+struggling to, to lose weight, if you're in debt and you don't know how to get out of debt, if your
+marriage, God forbid is falling apart, right? Like that's a, a problem. If you broke your leg,
+God forbid, if you're, if you have a leak outside, if you've got termites in your home or something
+like that, all of those are problems. What, what are people buying?
+
+They are buying solutions to those
+problems. They want those problems resolved, but there is also another type of problem that we address
+in marketing. Number one is, or excuse me, the other type of problem is an unfulfilled need or
+desire. So it might not be the existence of a pain point. You might, in other words, some of you might
+be marketing something where there's no, there's no extreme pain.
+
+They're not losing blood from a wound,
+right? They're not in, in pain every night, losing sleep, right? Maybe they just want a green lush lawn
+and they don't know what to do to get it. Maybe they want more romance in their relationship and
+they don't know what to do to, to, to, to get it. Maybe they want to learn how to invest more of their
+money, right?
+
+Because they want an even bigger, uh, um, nest egg, right? All of those things are
+unfulfilled desires, right? And so you have to understand that we are ultimately at the root of
+everything we do. First and foremost, you have to be aware of what is the problem that this prospect
+has that I am solving? What, what's my marketplace problem that I am solving with my offer now in your
+product or service, doesn't matter whether you're a coach, whether you're a consultant and you, you
+consult with people, whether it is you're a course creator or you create information training programs,
+or whether you have an agency, there is a reason why you are able to deliver results.
+
+I hope and pray
+that everybody on here, when you sell something, you produce results, right? Like you're not selling
+something that doesn't work when you're promising them that they can experience X, Y, Z and your thing
+works and you believe that it works, right? If you are selling something that doesn't work, that doesn't
+produce the, the result for people stop, stop, right? And, and find something else to market and
+sell. And so I'm going to go on, on the assumption that everybody on here is selling a product that
+works.
+
+Well, your mechanism is how does your product or service work? If I asked you, if you said to me,
+Todd, I sell a supplement and my supplement helps to people, helps people to lower blood pressure. Well, I could ask you, how does it work to lower blood pressure? Like, how does it work? Is it,
+is it a combination of nutrients?
+
+Is it the dosages of nutrients in there, right? How does it work to
+lower blood pressure? That would be the mechanism of the supplement. If you said to me, I, I sell a
+software that helps people to, that helps people to identify, that helps people to get top Google
+rankings. I know we just talked about that, right?
+
+But let's just go with this. That helps people to
+get top Google rankings. Well, right. In a matter of days, well, I could ask you, well, how does it work? What, what's the mechanism by which it works to get people those top results?
+
+How does it,
+how does it work? Right. If somebody said, I, right, we, we offer a, we'll get rid of termites
+and we guarantee like, they'll never come back. So we get rid of termites permanently. Okay.
+
+Well,
+what do you do? Like, how does it work? What do you do? What, why, why does it, why is it able to
+remove termites so that they never come back? That all of those things are us talking about the
+mechanism.
+
+The mechanism is how your product or service, your agency, right? Your, your software,
+your coaching, the training program that you provide people with. How does it work? If you sell
+people a training program on, let's say how to get traffic from TikTok, right? Well, how does it work?
+
+How are you able, how is your method, your process, your system that you're teaching people
+able to get them traffic so effectively from TikTok? Tell me how it works. Now, as a side note,
+and we're not going to get into this today. Uh, there's actually a video up, uh, a short video
+presentation that I gave as a keynote at webinar con about this. Uh, but this is the reality is,
+is that most entrepreneurs, most of you on here have just never invested the time interrogating or
+thinking about or questioning yourself about why you do what you do or teach what you teach.
+
+Why did you set up the software that way? Why did you create the supplement that way? Right? Why do
+you teach the five step system that you teach? Why not six steps?
+
+Why not three steps? Why do you teach
+it in the order in which you teach it? Like, why is that so important? Why is that so valuable? See,
+most people haven't spent enough time thinking about that, but when you do it right, right,
+then what we have the ability to do is we have the ability to shine our marketing message on the
+mechanism, not the product.
+
+See, I said already that talking about the product is selling, talking
+about the mechanism in your product or the mechanism that makes your product or service work
+is marketing, right? Cause all we're really doing here with this, right? We're shifting the focus. I know that everybody did the reason why this, I said, this is unconventional is because
+everybody tells you, right? Everybody talks about out there, especially the new marketing experts or
+whatever they say, right?
+
+Talk about your product. Talk about what the product does. Talk about the
+benefits of the product that is selling. And for most products and services, they're selling sounds
+exactly the same as every other competitor in their marketplace. And so to prospects, it sounds like
+more of the same, right?
+
+They don't pay as much attention. Their sales resistance is up. And it's why so many people struggle with those typical campaigns. This is us simply introducing
+your prospects to the unique way that your product or service works to get them the outcome they want. I want you to imagine for one second, I don't care whether you, whether you help people to,
+to improve their relationship, whether you help people to get out of debt, whether you show people how
+to get in shape, whether you help people grow their business, whatever.
+
+I want you to imagine that you
+identify your mechanism. You identify how and why, what it is that you're offering works. And then in
+your marketing, right, we are introducing your marketplace to a different way to get the result
+they want. That different way, your way is your mechanism. And so as you're going to see in a second, it's a wildly
+different type of message, of marketing message than here's my product, here's what's great about my product,
+buy, buy, buy, right?
+
+This allows us to introduce something new and different to your marketplace for getting the
+result they want. And that is the number one thing that your market cares about. Your market doesn't want
+more of the same. Nobody, nobody shows up to a, a social gathering and says, Hey, what's the same this
+month as it was last month with you, Bob, Sharon, Ian, right? Randy, nobody, right?
+
+They want to know
+what's new. People want what's new and different. And so this making this pivot, making this shift,
+changing from focusing on your product to focusing on the mechanism. And you'll understand how to do
+this in just a bit, gives you something truly different to talk about that grabs attention,
+right? So we're going to shift immediately.
+
+I tell my client when I see when they're struggling to,
+to let's say to get consistent new buyers, new clients, whatever it is, or they're not getting the
+quantity that they want. We immediately take their campaign and we shift. We change the focus of the
+campaign to be focused on the mechanism, not the product, the product, the introduction of the
+product only comes in, in the end, as you'll understand in just a little bit, that is unconventional
+marketing move. Number one, unconventional marketing move. Number two is stop freaking selling
+and trying to use slick copy and slick language and these crazy advertising techniques.
+
+And instead
+present what I call an EBM message or education-based marketing content. See, I want you to understand
+something. I want you to get, despite what you hear from the majority of the, these new marketers
+out there, I want you to understand that effective marketing, having an effective campaign comes from
+showing your prospects what makes your mechanism. We call it the unique mechanism. That's right.
+
+The
+mechanism behind your product or service, the way that your product or service works to deliver the
+result. What makes your mechanism different and better for them than every other option, period. That's what leads somebody to buy. It's not this slick language. In fact, today, I would say that,
+right, I've been doing this now for 20 years.
+
+I would say that the majority of markets are filled with
+people that are jaded, highly skeptical. And when they see that kind of slick old school salesmanship
+in print, if you will, they, many are immediately turned off. They're immediately turned off. And so
+you have to understand that it's not about the slick language. Like, look, let me, let me say this for
+one second, right?
+
+Can I say this? Can I, can I deviate for one second? So you could see behind me
+is this bookshelf. For those of you wondering, that's not a, this is not a, that's not a digital
+or virtual background or whatever you call it. That's the bookshelf.
+
+On that bookshelf, there is
+one shelf that is more precious to me than any other shelf. And it is the shelf with the old school
+direct response books, the legends of direct response, Robert Collier and Gene Schwartz and
+Joe Sugarman, John Capels, right? Those are my, my, my, my most precious books. But there's one thing
+that those guys talk about, then this goes back, those guys go back decades, decades, the beginning
+of direct response that they talk about, which many other marketers continue to talk about. That is no
+longer true.
+
+That is no longer the case. They talk about, right? It is, it is salesmanship in print
+that it, we're selling in print. We are no longer today selling in print. Those guys were when they
+didn't have the internet, when they had to put out an ad and they had to generate the money in hand,
+right from that one touch, we are not selling.
+
+You are not a salesperson, right? You're not a salesperson,
+right? You're a marketer. You're an entrepreneur that executes marketing to lead people to see why
+your solution is different and superior than every other option. Leading people to see that your
+solution, right, is different and superior to every other option does not require, right, does not
+require slick copy.
+
+In fact, like I said, it turns off most people. And so all we are doing here is
+ultimately educating your prospects on how your mechanism works and what makes it superior to every
+other option, every other mechanism out there. Now, by the way, let me just say this and correct me if I am
+mistaken for any of you, that the reality, I have to believe whatever it is that you are marketing and
+ultimately selling or whatever it is that you want to market and sell, that you believe it is the best
+way for somebody to get the result they want. If you're selling a training, hypothetically, on how to
+bring romance into a relationship, I have to believe that you believe that what you're teaching is the best
+way to bring romance into a relationship. I have to believe that none of you are selling what you think
+is the second best way or the third best way for anybody to get any result, right?
+
+So in other words,
+what I'm saying is that you inherently, you inherently believe that your method is the best. Well, so what we're talking about here is using a unique type of education to show why without talking
+about the product up front. And how do we do that? We do that, like I said, by shining the light
+on the mechanism and then using education-based content about the mechanism to show your prospect
+what makes your solution different and better than the others. And what this does for you when you use
+education-based content, see, when I want you to get this, I want you to listen to me carefully here,
+okay?
+
+When you are, when you're talking about your product or service and you're talking about your
+product or service out of the gate before you've ever, before you've built value, which we're going to
+talk about before you've demonstrated value, before you've shown differentiation, right? What
+happens? Your prospect's resistance goes up, their sales filter goes up because they know you're trying
+to sell them. What we're doing here, what my clients do, what my students do, what I talk to the best of
+the best marketers is the complete opposite of that. We're not introducing a product up front.
+
+We're not
+talking about a product up front. We're not trying to sell them on a product. We're introducing them to a
+different and superior way to get the result. They want the mechanism, your mechanism, and then we're
+educating them on that mechanism. We're delivering education-based content.
+
+It's called education-based
+marketing because it's building value naturally for the mechanism, right? It's put, it's, it's showing
+the prospect what, why they should want to use benefit from by invest in the mechanism. And so,
+because we're not talking about a product, we're not selling. And because we're not selling and
+we're not pitching a product, we're not trying to, we're not, we're not trying to convince them of
+how great our product is, but instead we're educating them on the way that your product or
+service works without talking about your product, right? We prevent that sales resistance, that sales
+filter from being triggered, from being triggered.
+
+We don't trigger that because it's not a sales
+message. It's not a pitch. You're educating them on how and why your, your unique mechanism is the
+best way for them to get the result outcome payoff that they want. And that this, what, what we're
+talking about here leads prospects to see why your solution is the smartest buying decision for them
+right now. In other words, before we ever even give them the opportunity to, to buy your product,
+right?
+
+Before they even, before we even talk about the offer, right? We lead them to want your
+mechanism to understand what makes it different, to understand what makes it superior. We do it
+through EBM content. So their sales filter is down. Their resistance is down.
+
+They're much more receptive. They're much more interested. And it positions you as an expert, as an authority, as an advocate,
+as a guide. This is why it's not uncommon for our clients to have new buyers, new clients that thank
+them for the opportunity to buy. It sounds ridiculous.
+
+It sounds insane, right? It still
+blows me away when people, when I have clients that tell me, Todd, you were right, right? People are
+thanking me for the opportunity to buy. Why? Because we're educating them on the mechanism, leading them to
+want the mechanism.
+
+And then when they want the mechanism, that's when we pivot into the offer,
+which is how they get, use, benefit from the mechanism. And so next, that's the second
+unconventional marketing move. The third one is stop relying on emotional triggers. Stop focusing on
+purely an emotional pitch, right? Trying to move people purely emotionally and present instead what
+I call an airtight, logical argument.
+
+You know, there's this saying that gets thrown around that
+is misunderstood. And I want you to listen to me. I want you to listen carefully to me. There's this
+saying that gets tossed around that people buy out of emotion. And so what that leads lots of
+marketers and entrepreneurs and even salespeople to believe is that that means you want your pitch to
+be entirely emotional or emotionally driven.
+
+But just because people buy out of emotion doesn't mean
+that they don't also require logical justification for why they should buy, right? See, the people today,
+they want logical justification. See, there was this thing, this saying, many, many of you may have
+have heard it. Many of you maybe have heard it if you've been around for a long time for a significant
+amount of time that people buy out of emotion and then they justify with logic. So they buy out of
+emotion and then they justify with logic.
+
+That is no longer the case. That is absolutely no longer the
+case, right? People want to buy today out of emotion and they look for the logical support
+for that emotional desire. And when they get it, then they buy. And that's an important distinction
+for you to grasp, right?
+
+So what I want you to understand the way that we teach this is, right,
+the head follows the heart. So the head looks for justification for what the heart wants. This is why
+when we structure a campaign and we're not going to get into this right now, but the lead, the opening
+of the campaign, I don't care whether you're using a VSL, whether you're using a webinar, whether you're
+using a long form sales letter, it doesn't matter. The lead, every campaign has a lead. The lead is the
+first 350, 400, 500 words.
+
+The purpose of the lead, the objective, right? And we teach a very specific
+structure for this is to set the emotional hook, to get the prospect emotionally excited. After we set the
+emotional hook, then we present an airtight logical argument to give them the justification for why
+your mechanism is the best solution for them. And then, and only then, do we roll out the offer,
+which makes it brain dead simple for them to say yes, right? And so you have to recognize that a purely
+emotional message falls flat because you give people nothing to hang their hat on.
+
+You give them
+nothing to justify, like, why is this going to work? Show me why this works. Show me how this works,
+right? One of the first things, if you spoke to, uh, to prospective clients, to prospective buyers,
+to prospective customers, let me shut this window here. If you, if you spoke to them, one of the
+things that, and you said, hypothetically, let me, let me give you an example.
+
+Let me pivot for one
+second and say, let's say I said to you, uh, I I've got a way to save you, uh, you know, 30,000 on your
+taxes or 3000 on your taxes. I've got a way to save you 3000 on your, on, on your taxes. Uh,
+and it's going to work like crazy. Well, one of the very first questions that you would likely ask
+me is how does it work? Like, what do you do?
+
+What do you do? How does it work? Right? Is it legal? Is it illegal?
+
+Is it legit? Am I going to get in trouble for this? Like, how does it work? How does it
+work? How does it work?
+
+And so what is that when we want to know, how does it work? Right? How does it
+work? What we're asking for is the logical justification, the logical support for, uh,
+why I should believe what my heart is pulling me towards. And so you have to understand that
+effective marketing and effective marketing message conveys benefits.
+
+Yes, of course it can
+benefit. It conveys benefits. Of course you need benefits to have an effective marketing campaign,
+but conveys benefits while presenting prospects with a rock solid airtight logical
+argument, right? While giving them the logical reasons why they should believe you. The number
+one reason why people don't buy is they do not believe what it is that you are claiming.
+
+And if
+you don't have that logical support, if you don't have that, what we call the campaign argument in
+there, then you lack that and you're missing that. And that's why people have campaigns and maybe even
+you that don't convert well with paid traffic, with cold traffic, with cold visitors, right? From
+online advertising or do it infrequently where they have ups and downs. And so you have to understand
+that when you present an airtight logical argument to support what it is that you're claiming about
+your mechanism, right? We just said that we're taking the focus off of the product, putting it onto
+your mechanism, how your product or service works to deliver the result, right?
+
+And we're not selling,
+we're using education-based content. We're teaching them ultimately about what makes your mechanism
+different and superior to every other mechanism, process, system for getting the result out there,
+right? And then we're supporting it with the logical argument. And when I see this missing all the
+time, and when we add this into campaigns, man, this is like rocket fuel. This drives what we call
+purchase confidence because it leads prospects to understand on an emotional and a logical level,
+why your solution is the best.
+
+Today, you have to show your prospect emotionally and logically why
+your solution is the smartest decision. Now, the beautiful thing here is that this doesn't require
+great copy skills or great salesmanship. This isn't about copy. This isn't about slick salesmanship. This isn't about NLP.
+
+This is about you. When you say your thing works, right? If you and I were
+having a conversation and you said to me, my thing works, and I said to you, well, how does it work? Right? You'd be able to, why does it work?
+
+Why does it work? Give me evidence. Give me proof. Give me
+some support. You would be able to do that, right?
+
+Or we would be able to dig it out together. I'd be able
+to show you how to do that. It's a process. That doesn't require great copy skills. We're not trying to do
+like some, hey, hi, don't look over there, quick here.
+
+We're not trying to do slick, right? That's
+nonsense. That's nonsense today. And that's why so many entrepreneurs are struggling. They just can't
+crack the nut when it comes to consistently acquiring new buyers day in and day out from
+paid traffic.
+
+As well, this allows you to talk about what you're most excited about. This is one
+of the things, one of the reasons why I also love this methodology. We're going to talk about the
+overall methodology in a second, because it allows you to talk about what you're most excited about,
+which is how and why your process, your system, your approach, your methodology works, works,
+right? Like you're able to talk about what you're most excited about. Now, when you have,
+when you make these three moves, and these aren't the only three moves, of course, that I teach,
+obviously, but when you make these three moves, let's talk about the impact and result.
+
+Number one,
+you have a marketing message that stands out, that gets attention because you're presenting
+unique information. What is that unique information? Remember, you are not talking about your product,
+which is not unique information, right? Tons of people are pitching their products and trying to
+sell. Instead, what you're doing is you're presenting a, call it a new and different way for
+your marketplace to get the result they want.
+
+We're identifying it, right? And we're going to shine
+the spotlight on it. And there's nuance to this, of course, right? But we're shining the spotlight on
+it. And then we are introducing that new and different way for your prospects to get results
+right to the marketplace.
+
+So immediately you stand out. Remember, what gets attention is different. Different gets attention. Better doesn't always get attention. Different gets attention.
+
+And so we're
+presenting unique or different information. Number two, you have an educational message that delivers
+value while leading prospects to see your solution as different and superior. Why do I say, I want to
+be clear about something and I want you to listen to me here. Okay. I want you to get this.
+
+When I say,
+right, you have a message that delivers value. I'm not talking about pushing the free line, like giving
+free content, right? Giving free coaching. I'm not talking about any of that. I'm talking about
+you're delivering value.
+
+Why? Because you're educating your prospects on a different
+and superior way for them to get the result. You're educating them. You're teaching them. You're giving them insights.
+
+Ahas. Now you have to understand from a strategy perspective,
+really what we're giving them ahas insights about and getting them excited about is the mechanism. And that mechanism is in your product. That mechanism can only be found in your product. So you're educating them and you're delivering value.
+
+You're teaching them about why your method,
+your process, your system, your approach is not only different, but is better than the others for
+them to get the result they want, right? So you're delivering value because you're giving them, right,
+the insights that they need to make the smart decision, right? But all along, you're leading them
+to see the value of your mechanism, which then you're going to give them an offer and make it
+brain dead simple for them to buy. You turn your prospects desire for a result, their desire,
+the problem, right? They have a problem.
+
+They have a desire to solve that problem, to alleviate that
+problem. You turn their desire for a result into demand for your product or service before you ever
+even talk about it. What do I mean by that? I mean that, remember, what are we doing? We're, we're
+ultimately, we're ultimately leading your prospects to want the unique mechanism, to want your unique
+mechanism.
+
+And we're doing it through EBM content. We're showing them what makes your mechanism
+different and superior. And then they want the mechanism. Remember their sales filters down. We're not
+talking about a product.
+
+We're not pitching. We're not selling. We're not raving about how great your
+product is. We're not talking about the product at all. We're educating them on the value of the
+mechanism, leading them to want the mechanism.
+
+Then the only place for them to get the mechanism
+is from you in your offer. So when they go to your offer, when you present your offer, they are pre-sold
+and they've been pre-sold. They want, they want the offer because they want the mechanism and you led them
+to want the mechanism through education, not pitching, not selling, not slick salesmanship,
+not crazy copy, none of that obnoxious stuff. You did it through a unique type of education. And so
+ultimately, and I want you to understand this.
+
+So ultimately you're introducing your prospects to a new
+and different way to get the result they want. You're then educating them, not pitching them, educating
+them on what makes it different and superior, leading them to want the mechanism. And then,
+and only then do you pivot into the offer where you give them the opportunity to buy. When you present
+the offer, they're pre-sold already because they want the unique, they want the unique mechanism. And the only place they can get that unique mechanism that you just educated them on is from
+you.
+
+So you've created an all roads lead to you path, meaning that now when your prospects want
+that unique mechanism, the only place that they can get it from is you here now with your offer. There is no going to Google. There is no going to Amazon. There is no researching because they won't
+be able to get that unique mechanism anywhere else. They can only get it from you and you led them to want
+it through education.
+
+That's why people are grateful for the opportunity to buy when you do this. And
+that's why this type of campaign converts at such a high level. It really is a beautiful thing in action. When you experience this firsthand, it's incredible because it's really the anti-salesmanship,
+anti-sales copy approach. It's an approach that you can feel good about that works consistent
+works with paid traffic, positions you as an expert and authority, delivers value.
+
+It is off the
+charts. And that's why we've got just a disgusting, and I'm not even going to bore you with all these
+because I really want to respect your time. I'm going to show you in just a second, very quickly,
+if you want more help guidance on this, how you can get that. But we've got just a ridiculous amount
+of examples, right? And this is something, by the way, one of the things that I want you to understand
+is that this has been used for over 60 months successfully, over five years already.
+
+There is a
+five-year plus track record to this process, to this method. The method that I'm talking about,
+you could see over here from Mike, he said his E5 campaign went live two hours ago, got his first
+sale. Then he gave us an update, right? New sale just came in. So that's four sales in eight, nine
+days, lifetime value, 1.5K.
+
+Danielle over here, I know it's early days, launched my first funnel this
+morning, E5 campaign, 40% opt-in rate, 11% conversion rate. I'm not even going to bore you
+with tons of examples. I do have more examples, people that you're going to recognize in just a
+second, but this is the E5 method. That's the method that I'm talking about. Maybe you've heard it
+mentioned before or talked about, right?
+
+The E5 method is a system, a bankable, predictable,
+reliable system for setting up a marketing message that will produce new buyers, new clients for you
+from almost any source of traffic and do it from a single campaign, right? And do it reliably day in
+and day out. Now, if you'd like to learn the exact steps, the blueprints, if you want to go through
+the same program that some of the top marketers or most of the top marketers have gone through,
+then I want to give you a special opportunity today to get it. I'm going to go through this
+very quickly so that you understand what this comes with, so that you can make an educated decision for
+yourself. And I've got a special offer for you today.
+
+And so let me see here, I can do this. And so the E5 masterclass, we like to say, right, this is a system so that you never have another day
+with zero sales or zero new buyers. Again, this is so that you can generate steady new clients every
+day. And this works regardless of your product service, regardless of the price point, whether you
+sell low, mid or high ticket, and regardless of the marketplace. This is a full system, a complete
+eight module system with execution guides, videos, audios, worksheets, the entire nine.
+
+This is my
+life's work in the 20 years of doing direct response marketing effectively inside this system. And so you will learn with this, you'll understand and uncover exactly what to say to your market so
+that they buy like crazy. I'm talking about how to structure that airtight logical argument,
+how to open up your lead, how to nail your promise, how to nail your benefits. It's going to show you how
+to lay out, again, the perfect marketing message for your solution, structure a high conversion offer
+for your prospects. It's going to show you how to generate sales at a profit from
+even the most expensive traffic sources.
+
+So to show you how to set up a marketing campaign,
+a single marketing campaign, one that you can bank on to bring you predictable and consistent new buyers
+or new clients all in 35 days. And if you're like me, you could do it this weekend. No joke. If you were
+a, if you're crazy like me, you could do it this weekend. You could go through this in one weekend
+and be off to the races on, uh, on Monday.
+
+And so if you want to grow a responsive list and you want
+to do it fast, if you want to generate steady, consistent stream of new buyers, new clients,
+if you want to position yourself as an expert, as an authority, if you don't want to say anything
+icky, weird, right? Or scammy in your marketing. Instead, you want to position yourself as an
+advocate, as an authority, as an expert. If you want to create a loyal tribe of followers and have a
+and have predictability, like consistency, predictability, reliability with your business
+all in the next 35 days, then this is for you. If you're a veteran marketer, what you're going to
+learn inside the E5 camp masterclass is going to get you far more new buyers, make you more consistent
+reliable sales and rapidly grow your revenue and list size.
+
+And if you haven't gotten your first
+profitable marketing campaign up and done, this is also for you because inside the E5 masterclass,
+you get a complete, I'm talking A to Z blueprint and process for creating a wildly profitable
+client generating client acquisition campaign, right? You get the same exact system that I've used
+with thousands of clients in those 71 plus countries around the globe. This is the same exact system
+endorsed by the top online marketers. This system is endorsed by more top online marketers than any
+other marketing client acquisition customer generation system out there. You could see, right?
+
+Like
+Russell Brunson, you could see Jeff Walker, Ryan Levesque, Scott Moran from Samcart, which was just
+recently got an $80 million investment. You could see John Benson, Kevin Rogers, Kurt Molly, Matt Basak,
+you name it. And this is nothing compared. We have so many more of these. You're getting the exact
+system that I personally use to build all of our six and seven figure marketing campaigns.
+
+The same exact
+system that I taught to folks like John Hutchinson, right? Who generated $100,000 in 53 days, and then
+went on to do like, you know, to do much more, right? Or Akiba Med, who did 80,000 in 14 days, and then a
+million dollars in 11 months, right? Or Todd Herman is another one. Todd Herman paid a lot of money to come
+to West Palm Beach to learn this from me.
+
+And then he did $800,000 in less than a day. I'm certainly not
+saying that you're going to make $800,000 in less than a day. And here is Tim Donovan. He added an
+extra 3.5 million in just eight months. He also paid me a lot of money to learn this exact system
+that you're going to find inside the E5 camp masterclass.
+
+Eddie Coleman, who went from struggling
+to pay his bills to multiple millions of dollars. You could see how far back this goes. 4 million in
+2016. And he's gone on to generate multiple millions. He now lives in Hawaii.
+
+And I could go
+on and on. I have a page dedicated to just these bad boys showing you the results that people get
+from the E5 camp masterclass. This thing is the single best method for driving new buyers, new clients
+into any business, doing it consistently, predictably, and doing it at scale. If that's
+something that you want, this is for you. So what's the price?
+
+What's the price point on this
+bad boy? Well, my old program was almost $5,000. It was called it for all intents and purposes. It was
+five grand, right? Folks pay $10,000 to attend or folks actually paid $10,000 to attend a two-day event
+that was about one of the topics covered inside the E5 camp masterclass.
+
+And before this crazy virus,
+when people were, when I was allowing people to come into West Palm, they were paying over $12,000
+for a single day. And I'll tell you guys on here right now that the E5 camp masterclass is more
+valuable than any of these things. Like I said, it is my life's work up to this point, and it is way
+more affordable. You can enroll today right now for six easy installments of just $397. That's it.
+
+And those are monthly installments. So you can pay $397 today and get immediate access to this bad
+boy, or you can save $385 and make one payment of just $19.97. And so here's what I want you to do
+now. Go to toddbrown.me forward slash E5, choose your payment option, get your login info, and get
+instant access to everything. It's immediately accessible for you.
+
+And so, like I said, if you want to grow,
+a big responsive list fast, if you want to generate steady and consistent stream of sales,
+new buyers, new clients, you want to position yourself as an expert, authority, advocate,
+if you want to create a loyal tribe of followers and have predictability, consistency, reliability
+with your cash, your sales, your business, your income, all in the next 35 days, go ahead, go to
+toddbrown.me forward slash E5. Talk about an extensive slide right here. Here you go. And so go to
+toddbrown.me forward slash E5. And it gets better.
+
+Here, I'm going to put my money where my mouth is. Here is a can't lose guarantee. Go ahead, get access today. Choose one of those payment options. Go through the entire training, download everything, start generating sales.
+
+And if within
+the next 30 days, you decide that it's not for you, let me know, and I'll give you a full refund. No questions asked, and you can still keep everything. That's how serious I am about what
+this can do for you. There's no fine print, no nonsense. You hold all the cards for any reason
+or no reason whatsoever, right?
+
+If you are unhappy, if you're not head over heels thrilled with the
+impact of this on your business, let us know and you'll get a complete refund. Go to toddbrown.me
+forward slash E5. Get enrolled right now. And it gets better because I've got some goodies for you. So I've got a bonus called the ultimate E5 funnel template set.
+
+What I'm going to give you is I'm
+giving you six of my personal real world E5 campaigns. You can swipe and model my real working
+funnels so that you can hit the ground running that right. These are campaigns that I created E5
+campaigns. You can model these bad boys. You can swipe and use these bad boys as jumping off points
+for you.
+
+And so go to toddbrown.me forward slash E5. And of course the marketer in me,
+it gets even better because you also get the ultimate email sequence swipe file. These are 15
+different email sequences to swipe model and use for any of your E5 campaigns. Now you can swipe real
+deal, complete sequences. You're not starting from scratch.
+
+These are not, uh, temp. Uh, these are not
+like templates. These are not like, you know, fill in the blank templates that somebody wrote. These
+are real campaigns for things like lead magnet follow-up, simple non-buy, all these you get in
+this bad boy. These are real sequences that we use in, um, in campaigns.
+
+And we're still not done. I got one more bonus for you guys and gals today. The ultimate director's cut funnel package. So
+for my own E5 funnels that have produced millions, you get the video scripts. So all the scripts,
+all the copy, you know, the, the, the, the arguments that I wrote, the leads, eight slide
+decks, two mind maps, a long form sales letters dissected over 14 videos, meaning that you're not
+just getting these campaigns.
+
+I'm breaking them down, dissecting them, explaining why I said what I
+said, when I said it, where I said it, what, why I did what I did, why we priced it the way we did. I'm giving you the full blown die sections in these bad boys. And so go ahead and grab this
+toddbrown.me forward slash E5. And so let me recap exactly what this offer is all about and everything
+that you're getting today. Uh, so that you can have, like I said, your own evergreen client generating
+campaign, uh, generating some bucks for you in the next 35 days.
+
+And so you get the entire E5 camp
+masterclass, the ultimate E5 funnel template set, the ultimate email sequence swipe file,
+the ultimate director's cut E5 campaign. And it's either six, uh, installments of 397,
+or you can save an additional 385 by making one payment of 1997. And you get that can't lose
+guarantee, go through the entire masterclass, download everything, put it to work and put it to
+the test. And if you're not blown away by the results in the next month, the next 30 days,
+keep it free. I'm that confident that you are going to love it.
+
+And so look, you watch this bad
+boy with me all this time. I don't know how long we've been going now at this point, I think a little
+bit over an hour. I know that you want a marketing campaign that, that sells, that converts, that brings
+you buyers, clients, grows your business. And you know, you really know that this is an excellent
+value. And so take advantage of the offer, the incredible bonuses, the can't lose guarantee
+and think about it like this to do that, by the way, go to toddbrown.me forward slash E5.
+
+I don't
+think I need to say that again, but I want you to think about it like this. Let's say that you're,
+you're marketing and selling a product for 499 bucks. And let's say that you get just 150 leads
+in your new E5 campaign. And let's say that you only make four sales. Well, right.
+
+Three sales,
+excuse me, three sales of 499 each is 1996. That pays for the entire investment of your E5
+masterclass. Three sales, excuse me, that should be four sales of 499. Four sales of 499, right? Pays
+for the entire investment in your E5 masterclass.
+
+Even at just four sales a month at 499 each,
+that's 23,952. That's a 1200% return on your investment. And again, I already showed you the
+amount of people that, right. He said, I'm at six figures. This is Lou.
+
+I'm at six figures. Like you said, kind of easily here is Adam. He went from a hundred K a year to over 116,000 per
+month. Here's Charles Kirkland, 63,000 in two months. Here's Pete Renzulli up to almost three K a day,
+right?
+
+Justin Trapp, right? Spent 509, generated 3,200. Sean made 10,000 in a weekend. Scott,
+I can't believe what I've created just from, from the first half of the course. Now really see the
+power of E5 campaign, uh, uh, camp as I implement the second half, go ahead, do this for yourself,
+grab this bad boy, right?
+
+Go to toddbrown.me forward slash E5. Just be sure to do it before
+this Sunday, April 24th at 11 59 PM Pacific time. That is the, uh, the deadline. And so go ahead,
+go to toddbrown.me forward slash E5. Just do it before the deadline.
+
+This offer expires this Sunday
+at, uh, 11 59 PM Pacific time. And so a couple of other things real quick before we wrap that I want
+to cover with you. I think I mentioned it earlier. Uh, and so, um, number one is, um, this, yes, I do
+believe there will be the recording, assuming that everything, assuming that I clicked all the buttons
+that I was supposed to click on this bad boy, I think there will be a recording. Uh, and so, um,
+so yes, uh, yes, this will, uh, this can be used in any type of marketing model.
+
+So it doesn't,
+you don't have to even put in any type of marketing model because this is not about the marketing
+model. There's no magic in the model. The magic is in the message, right? It doesn't, there's no
+magic in a, um, in a webpage. Like there's this, you know, people think there there's magic in having
+a video sales letter, right?
+
+There's no magic in the video sales letter. The magic is what gets said
+in that to show prospective clients or prospective buyers that you've got something different and
+superior to give them the result that they want. That's what they're looking for. That's what they
+need. And if that's missing, if you switch to a webinar, it's not going to fix it.
+
+If you switch
+to a long form sales letter, it's not going to fix it, right? If you switch to a launch, it's not going
+to fix it. Right. And so what you, what you need to recognize is that the magic is in the message. That's what you get with the E5, um, the E5 method.
+
+And so, uh, Deveshi said, uh, as an energetic and
+spiritual coach and course creator, I'm not clear what my mechanism could be. And so Deveshi inside
+the E5 camp masterclass, you'll go through a process that'll help you to uncover exactly what
+your mechanism is. And I'll tell you for everybody. So I'll answer this question. Cause I know that there
+are, uh, there's at least three people that are asking a similar question to that.
+
+Um, that as
+long as you are not selling a pure commodity, as long as you're not selling a pure commodity,
+like let's say a, uh, a glass of tap water, you can identify a unique mechanism. If you're selling a
+pure commodity, like a glass of tap water, this is not for you, right? Like if you're selling a pure
+commodity, if you're selling, um, if, if you're selling a pure commodity, this is not for you,
+but for everybody else, right? You can identify your methodology. What I want you to understand
+is that you can identify where we'll unpack, identify name and present your methodology.
+
+You just have to understand and learn, which you'll, you'll go through in the E5 camp masterclass,
+how to uncover that, how to identify that because it is there. There is a methodology. There is a
+process, right? Deveshi, you do something for your clients. You get them results and you get
+them results a certain way.
+
+There's a certain number of steps that you follow in a certain
+order. There's a process that you follow or a system that you follow. All we need to do is just
+identify what, what that is, unpack it. You'll go through what we call the interrogation process. And, uh, and then you'll understand, you'll understand identifying it.
+
+You'll understand naming
+it. Um, uh, and so Christian asked, do we get any access to people from your team, uh, consultants,
+or is this just printouts and links to make sure what we create for your guides actually has the
+magic. So if you want to work, uh, one-on-one, right? So we have a, we have the E5 camp masterclass. Um, if you want to work one-on-one with an E5 facilitator, you have that option.
+
+What I would
+suggest for you is that you go ahead, you take advantage of the, you grab the E5 camp masterclass,
+you'll get a, um, a welcome and introductory call. Let them know that you'd like information on
+upgrading from the E5 camp masterclass to what we call acquisition accelerator. And then they'll
+explain all the details for you, Christian, of, of how that works. Like I said, that is a one-on-one,
+one, um, multi-week program where it is done with you. Uh, certainly has a, has a significantly
+higher, uh, um, price tag than this does.
+
+But once you grab the E5 camp masterclass, you'll get a
+welcome call. Let them know that you're interested in getting more information about having your hand
+held and they'll explain all that for you. And so, uh, I already answered that. Uh, I believe that I
+answered, um, that no. So look, you don't have to use paid traffic, but I would tell you that you
+don't have to write this will convert regardless of the traffic source.
+
+So whether it's, you know,
+online advertising, whether it is social traffic, whether it is, uh, whether it is, um, you know,
+whether it is search engine rankings, it doesn't matter. It's not that this only converts with paid
+traffic. It's that you want to use paid traffic because paid traffic is going to give you the ability
+to scale, scale big and do it at your own pace in a way where everything is quantifiable and trackable
+so that, you know, every time you put a dollar into, um, Facebook or every time you put a dollar
+into, uh, uh, you know, uh, Google or something like that, you're going to get back three or four or
+five. And so, right. We, we love paid traffic.
+
+The reason why most people don't like paid traffic,
+like why a majority of entrepreneurs, you know, get scared of paid traffic is because
+they just don't know how to turn a dollar of, uh, of paid traffic and online advertising into
+two and three and $4 in sales. They just lack the ability, right? They just don't lack, they,
+they don't have the ability. They don't know how to do it. You're going to know how to do it.
+
+You're
+going to be doing it. And so, right. So that's why you're going to want to use paid traffic because
+paid traffic is kind of like, it allows you to just open it up. And once we see that, like, yeah,
+with 300 visitors, we're able to produce a whole bunch of sales for you. Well, why wouldn't we
+want to get 600 and 1800 and 5,000 visitors, you know, to your, to your side or whatever the number
+is, depending on your, your business and your model, that's what you want.
+
+But we first set
+up that campaign. We first set up that message. We first, right. We, we, we get you to the point
+where, yeah, our first few hundred, um, um, visitors were converting a whole bunch of sales
+for you. You're making money from that.
+
+You're acquiring clients or new buyers. Yeah. Then we scale
+it up and we do it slowly, incrementally so that you're confident, comfortable. And so
+that you're seeing this predictable flow of new buyers coming in. The other thing is that
+I said that, uh, what's a beautiful thing about this is that this is not a model that requires
+you to have, um, great copywriting skills.
+
+The reality is, is that, uh, you don't have to
+develop great copywriting skills to see wildly, uh, exciting benefits from the E5 method, because
+it's not based on great copy. It's not based on slick salesmanship. It's not based on crazy,
+you know, tactics. It's based on a specific structure that allows you as the expert, the
+authority, uh, to shine through in a way that is authentic, in a way that delivers value in
+a way that leads prospects to want to buy from you before you ever even present your offer,
+your product or solution. And it's a beautiful thing because it creates an all roads lead to
+you.
+
+In other words, they want the mechanism and they can only get the mechanism from you. They can't shop around. They can't go anywhere else. You just educated them. You just gave them
+insight.
+
+You just positioned yourself as an expert, as an authority. You didn't do anything obnoxious,
+sleazy, shady, or, or, or anything that you'd be embarrassed about. And you led prospects to want
+to buy from you. And that's why they do. And that's why these campaigns convert at such a
+high rate.
+
+And you're going to see it firsthand, right? How quickly you see it, which was another
+question that was asked is all up to, uh, you. It's really all about how quickly you're willing
+to go through the, um, the E5 camp masterclass, uh, do the, uh, do the worksheets. We do have all of
+our, um, E5 facilitators are in our Facebook group, which you get access to so that you can go over there
+and ask questions. You can have them look at your, your worksheet.
+
+Like it's an opportunity to get
+feedback, but it's all about, uh, it's all about you. Like I said, this is the system that is endorsed
+by more top online marketers than any other marketing system or customer client generation
+system out there today. This has produced more six and seven figure marketing campaigns for
+entrepreneurs, for coaches, consultants, authors, experts than any other method out there. And this
+thing has a five year plus track record. It's not a trend.
+
+It's not a fad. It's not something that's
+going to stop working tomorrow. It's something that has continued to produce time and time again
+for entrepreneurs, for experts, for coaches in 71 plus countries in a variety of markets, niches,
+and verticals. Now it's your turn. Go to toddbrown.me forward slash E5.
+
+You are going to love this. This will be a point in your life that you look back and you say, trust me, that was the moment
+that the game changed for me. That was the moment that my business began to take off. Go to toddbrown.me
+forward slash E5 and enjoy. I look forward to seeing your success story, seeing you in the Facebook
+group and watching you shine again.
+
+One more time, go to toddbrown.me forward slash E5. Get the E5
+camp masterclass today. Remember the deadline this Sunday, April 24th at 11 59 PM Pacific time. That is it. It's been a pleasure and honor.
+
+Thank you so much for hanging out with me. You are amazing. Love you guys. So appreciate you guys. I'm blessed to get to do what it is that I do.
+
+And I'm honored
+to be able to guide you, coach you and direct you. And so everybody, God bless. Have an amazing day. And we will talk soon. Go ahead.
+
+Toddbrown.me forward slash E5. Get the E5 camp masterclass. You're going to love it.

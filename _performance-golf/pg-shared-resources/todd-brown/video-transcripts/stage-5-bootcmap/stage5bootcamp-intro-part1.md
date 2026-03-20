@@ -1,0 +1,105 @@
+---
+title: "Stage5Bootcamp-Intro-Part1"
+date: 2024-10-28
+duration: 17m
+duration_seconds: 1049
+vimeo_id: 1023995263
+folder: "Stage 5 Bootcmap"
+source: vimeo
+tags:
+  - knowledge-base
+  - video-transcript
+  - vimeo
+---
+
+# Stage5Bootcamp-Intro-Part1
+
+**Date:** 2024-10-28 | **Duration:** 17m | **Folder:** Stage 5 Bootcmap
+
+---
+
+You are in for a treat. Buckle up. And I don't say that lightly. Buckle up. We have a tremendous amount that we are going to cover today.
+
+We're probably gonna go till about, uh, three ish. Of course. We're gonna stop. We're gonna have a bathroom break. We're gonna have lunch.
+
+Probably go to right around three ish, just so that you're prepared. And I was talking earlier to, uh, to Ian to the, to the crew that was here this morning. And I said, look, um, I'm so excited about this, um, this bootcamp because I truly believe that what it is that I'm gonna share with you today, throughout this entire bootcamp, can be a complete game changer for you in your marketing, can forever change the way that you think about and do marketing. And I do not say that lightly in order to cover stage five. I want you to understand why I say that, why I say that this can be, and I believe it will be a game changer for for many of you if you listen, if you truly pay attention, and if you have an open mind as I'm going through this.
+
+Because in order to really cover stage five, which as you're going to see is simple, it's not easy, but it is simple. In order to cover stage five, you really need to understand stage four. And in order to understand stage four, I really need to make sure that you understand really the heart and soul of my method of doing marketing. And so there is a tremendous amount of foundational things that we need to cover. And so by the end of this bootcamp, not only are you gonna understand how to craft a marketing message that converts in crowded, saturated, sophisticated markets, but you're really going to understand how to craft a marketing message that converts period.
+
+And so I want you to get ready for that. Now, the the funny thing is, I, you know, I'll tell you something just to deviate for one second. This is, here's a lesson for you, right? After all these years after, after, you know, two decades plus in the direct response marketing world, I still learn valuable marketing lessons, offer lessons, copy lessons, the whole nine. I I I'm a student just like you guys are.
+
+And so the really interesting thing is that, so we, um, we put up the, uh, we put up a little offer for, um, for this at a ridiculous price point for this bootcamp. And the deal was I just wanted people to come in live, right? That that was the, that was the deal for those of you that how many of you watched the, the full VSL? And so you saw that, right? The deal was like, you come in, you, you gotta be here live.
+
+I don't want you, you know, watching it at home. I want you to be here live because I ultimately want case studies and, and, uh, and whatnot from this. And so we ended up getting a tremendous number of people that were like, Hey, I'm super excited to get the recordings. And so in the spirit of integrity, right? We refunded everybody.
+
+We funded all. And so when I say to you like that, when the recordings of this are not gonna be for whatever the price point was that we, I meant it, I meant it. The lesson really is that you've gotta be much clearer in your terms when it comes to, right? And so it was only at the tail end of the offer that we were like, you have to be in attendance. You do not order this just for the recordings.
+
+And so, um, it was a painful decision, but the right, right decision, there's a lesson for you. Remember that, uh, the agenda for today, like I said, so look, this entire day is about, this, uh, is about stage five copy. And the, what we're gonna do is we're gonna go probably for about it. It depends. We'll see maybe about an hour and a half, maybe two hours.
+
+Then we're gonna take a quick bio break, quick bathroom break, come back, reconvene for another, uh, hour plus. Then we're gonna do lunch whenever. What time is lunch, Glenda? At noon. At noon.
+
+At noon. We're gonna take from noon to one. So we're gonna do a tight lunch, just an hour lunch. And if we finish a little bit earlier, uh, then cool, we're gonna, we're gonna then reconvene and we're gonna go until whatever, when I'm done, three o'clock, three 30, whatever that, whatever that means. There will be time in the end for questions, for dedicated questions.
+
+But if you do have a question throughout the bootcamp, raise your hand. Right? So this is, I don't, like, this is not about the, the quality of the recording in my presentation. This is about you guys getting what it is that I'm sharing with you here. And so it's more important to me that you ask your question, uh, if it's a pressing question, like ask your question, raise your hand.
+
+This is a, this can certainly, uh, um, be a discussion or turn into a little bit of a discussion. I would love that. And so don't be afraid to ask your questions after we're done. 3, 3 30, 6, whatever time that is, uh, you will have a little bit of, a little bit of a break before dinner. I highly recommend that.
+
+Uh, you take advantage of that, and you meet the folks that are here, the folks that come in, right? Spend some time, network. There are some great people in in the room here. Take advantage of that. And then we are going to reconvene for dinner.
+
+Glenda, what time is dinner? Six, six o'clock dinner. And then you'll enjoy dinner with us, and then you can hang out as long as you, as long as as you want afterwards and continue to, um, network. If before the bio break, you gotta use the bathroom, do your thing, right? Like don't, you know, like get up and use the bathroom.
+
+I wanna take just a second to, um, introduce a couple people. So Paul, for those of you that maybe don't know who Paul is, how many of you don't know who Paul is? Okay, so, oh, wow. Okay, so a little bit, I kind of know Paul, I kind of know Paul. Um, and so I, I just wanna say this very quickly.
+
+So with Paul, Paul is a wizard when it comes to not only the E five method, uh, but he's a wizard when it comes to copy persuasion storytelling, right? He is a guy that I would not hesitate to critique my copy, right? I mean, that, and I, I mean that wholeheartedly. I would have him look at my copy and tweak it. He's created, he's written multiple, um, sales letters.
+
+He's now an AI wizard with copy crazy already making, you know, complete ai. Like did I see that right? A complete AI sales funnel marketing funnel, like, and 30 K or something in the first, in four weeks or whatever. Yeah, like, and so if you wanna know how he did it, uh, there you go. Of course we've got, um, Teddy, who is, how many of you don't know who Teddy is?
+
+So, okay, so I'm gonna stop asking you. How many of you don't know who the team is? So, uh, Teddy has probably been in this business as long as I have now. We worked together many, many years ago, uh, with Rich, with Sherin. Teddy is a direct response.
+
+Uh, he is a direct response wizard strategist, but also an automation and tech phenom. And so this is the guy. There is, there is nothing, I don't believe there's anything that I've ever asked Teddy to do that. He was like, we can't do it. He's always like, we'll figure out how to do it, right?
+
+And so, um, and tell them today what you're, what you do, man. Uh, yes. I'm currently the Head of marketing for Peter Mond as of July, So and so, Teddy is now bringing us, you know, Teddy now claims that he can help us live to 140. And, and so, uh, and who else? So John is, is MIA, uh, John.
+
+You'll know John because he is got that thick Brooklyn accent. I'm just kidding. He's got that thick Irish accent. John, uh, was our director of marketing for many, many years. He originally started out working with, uh, he did some work with Dan Kennedy and then, uh, was a student and was an, an amazing student.
+
+Came over, was the director of marketing for our main company for a very long time. And then we saw a massive need within top one for media buying. And so we decided to take John and just put him into what today is known as the E five agency, where we, we started out primarily just working with top one clients. And now today, John's got, you know, some tremendous influencers and people that he, he works with. The beautiful thing about John is that he brings to the table a unique skill set, unique skill sets for media buying.
+
+And I'm sharing all this with you about the team so that if you've got needs above and beyond what we cover in the bootcamp, you know who to go to on our team as well as other people in a, in attendance. John brings a unique skillset to the table because he knows direct response. He's a direct response marketer who went into the media world. And so where he's an expert, and this is so exciting, he just released a book on this topic. This is so to me, like I love this.
+
+He's an expert at understanding the combination of marketing, performance, media performance, and economics. He understands how to develop hooks, he understands how to develop offers, he understands how to write copy. He understands how to do the, um, uh, creative on the media side as well as certainly the, the, the platforms. And he understands the economic side of the direct response game. And so he knows how in combination to look campaigns work to bring losers and make them winners, to take winners and make them grand slams.
+
+And so he is a guy that, right? He's not like, he's not the typical media buyer in that he's not in the nitty gritty details of, we need this pixel to change here. He knows all that, right? But he understands that you move the needle through marketing performance, media performance and economics. And so, uh, get that.
+
+Uh, of course in the back we've got Armani on the, uh, on the camera, right? And so those of you guys that need a, just a little plug for him, those of you, he does all of our video. He does all of our, uh, uh, all of our video, all of our photos, um, and whatnot. He actually works with one of our partner companies and does the, does stuff, uh, there as well. If any of you guys have any needs, he is phenomenal to say.
+
+The, um, least Jayden, his, uh, better half in the back is a, uh, phenomenal graphic designer. So a lot of, uh, so if you see a copy, if you end up getting a copy of the agenda or at the end of the bootcamp, I'm gonna give you a, we're gonna send out a link for you to download some assets. Don't judge Jayden's design work on those assets. 'cause she didn't do them. I did.
+
+And so understand that. All the nice looking things, all the logos, all the shirts, all the things that we do, you know, for our bootcamps and top one and whatnot, that all comes from, um, Jayden. And of course last but certainly not least, um, is Glenda. And Glenda is the one. Like, if you need anything, don't come to me.
+
+'cause I don't know, Glenda knows it all. Glenda controls it all. Glenda is, you know, I I would say that, you know, to me, Glenda is El hefe and so ish, I'm mixing there. I'm, I'm, I'm la la okay, okay. I botched it, I botched it.
+
+Nevertheless, right? If so, if you need anything, right? Doesn't matter what it is, anything, you go to Glenda and you'll be, you'll be well taken care of. I already said, I already talked about asking questions. So what we're not going to cover here and in this bootcamp, and we certainly can cover this after when we're chatting over lunch, you know, over dinner, whatever, we're not gonna be getting in the weeds with copy.
+
+What I mean by that is that we're not gonna be talking about phrases phraseology. We're not gonna be talking about how to craft the first sentence. We're not gonna be talking about, right? What to say in the third paragraph on the fourth page of, excuse me, of your VSL copy. I think that relatively that's all nonsense.
+
+Like it really is. You're gonna see what is not nonsense and what is the crux is everything else that I'm gonna show with show you today. So we're not gonna be getting into the weeds, the nitty gritty details on specific copy. If you have specific copy questions, you certainly can fire them. Uh, you know, away outside the, the bootcamp.
+
+You certainly can also talk to Paul. And of course we've got, you know, you guys heard me mention, um, you know, Donny French in the VSL, so that's Donnie right there. And so how great that I get to present what I first really kind of, my eyes, really a light bulb went off from him, and I get to present that to him. This is zero pressure there. Uh, but you know, Donnie is the number one copywriter in the golf space, hands down bar none.
+
+The company that he is growing right now is a behemoth. Is a behemoth. And so, um, if you've got copy questions, you know, in, in that regard, you can go to Donnie, you certainly go to Paul there. We're also not gonna be talking about marketing models. And what I mean by that are funnel models.
+
+So we're not gonna get into, you know, like, th this is the way that you do the VSL, this is the way that you do a sales letter. This is the way that you do a challenge. This is the way that you do a webinar. I'll tell you, and you're gonna see this in here, that the magic is not in the model. The magic is not in the model.
+
+The magic is in the message always. The magic is not in the model. The magic is in the message. Changing the marketing model will never fix a weak message, period, end of story. Yes, there are nuances with different models, there are nuances to doing a webinar when you're doing it live.
+
+There's nuances to doing a VSL, there's nuances to doing a challenge. But underneath all of those, the magic is in the message, is in what it is that we're gonna be talking about, excuse me, today and covering today. And so we're not gonna be getting into the marketing models relatively, I'll tell you relatively, we could certainly go down a rabbit hole here, but relatively, I don't care what marketing model you use. Like if you choose, if you go with a webinar because you are great live, you're great off the cuff, you're great when interacting with people, you're better that way, then God bless, roll with it. If you are not good in that arena and you are much better scripted, and therefore you tend to go with VSLs that are scripted where you're actually reading the, the script and you're able to do quality, voice, inflection, tone, pace, then god bless do that.
+
+I think that it is much more important to play to your strengths than it is to copy a marketing model that somebody else did, right? It's not wise to look at what another expert is doing and, and having success with that and say, that's the route that we're gonna go if you don't possess the same strengths and skill sets that they do. And so understand that ultimately you want to play the game that you can win. And so, right, of course there are some nuances to that. Like, look, I wouldn't, you know, I, I wouldn't be selling a, uh, a $10 book on a, you know, a four part launch series.
+
+I wouldn't be selling a $10 book on a live webinar, right? There are, are nuances, but ultimately what I want you to think about is play to your strengths. Play where you shine, focus on the skill sets that you, um, that you currently have, and leverage those skill sets and get better. I'm a big believer in, as a side note, I'm a big believer in improving on your strengths, playing to your strengths, and improving on your strengths than I am identifying your weaknesses and trying to strengthen those, right? I'll take, I'll take weaknesses and outsource 'em.
+
+Take weaknesses and hire around them. Play to your, um, to your strengths. I already told you at the very beginning what I promise you from this bootcamp. I promise that you're gonna walk out of here with a, an understanding of marketing. That if you fully grasp what it is that I share with you, you will be able to craft high conversion campaigns in any marketplace.
+
+In any marketplace. Now, this is going to require an open mind 'cause I'm definitely gonna share stuff with you, especially for those of you that maybe haven't studied much of my stuff. I'm definitely gonna share with you, um, some things that are seemingly controversial that go against the grain. Trust me, you can take it to the bank, right? There are others that talk about theory and concepts.
+
+I'm telling you what works from experience, from in the trenches experience. And so, uh.

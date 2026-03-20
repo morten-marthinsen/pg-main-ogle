@@ -1,0 +1,139 @@
+---
+title: "Stage5Bootcamp-Part8"
+date: 2024-10-29
+duration: 21m
+duration_seconds: 1279
+vimeo_id: 1024367178
+folder: "Stage 5 Bootcmap"
+source: vimeo
+tags:
+  - knowledge-base
+  - video-transcript
+  - vimeo
+---
+
+# Stage5Bootcamp-Part8
+
+**Date:** 2024-10-29 | **Duration:** 21m | **Folder:** Stage 5 Bootcmap
+
+---
+
+And so this is simple. I'm just gonna cover this in, in, in a couple minutes, but you're gonna get this, so you're gonna see this again. This is the flow of just kind of a general, a very general high level, level overview or outline of a stage five message. I'm gonna show you, this is without a catalyst. The lead introduced the unique mechanism, introduced the new root cause, future pace, outcome, credibility chunk.
+
+Hi, my name's Todd. Maybe you recognize my name. Argument one, proving the new root cause problem show what they think is the problem is only a symptom of a deeper root cause. Kind of gave you this example as a reminder. This is the, the issue is an X.
+
+The real issue is Y prove Y. The existing solutions won't fix this. This is part of that argument. Argument two. Proving the unique mechanism is the only effective solution.
+
+Segue into the offer. It's the general overview without, without a catalyst, with a catalyst's, just slightly different. The lead introduce the catalyst, uh, tie the catalyst to the problem. Um, symptoms. T is new and unique solution.
+
+Future pace. The outcome results. Credibility chunk, argument chunk number one, proving catalyst created the new root cause problem. Flush out the catalyst and the impact. Show how catalyst has created this new root cause.
+
+You see that this is right. The, the stage five VSL Show how catalyst has created this new root cause. The issue is no longer x. The issue is now y the issue is not copy anymore. The issue is not right.
+
+This, the issue is now y that you have an immature marketing message prove. Y the existing solutions won't fix new root cause problem. You get get it argument chunk two. Proving the unique mechanism is the only effective solution. Segue into the offer.
+
+Boom. What questions? None. Yes, were gonna ask him the Whole time. I love it.
+
+Go ahead. First and then one just Observation. Joel iWay did this very well with many webinars. So about three to four years ago, everybody, and I saw everybody wanted direct webinar, 90 minutes long. And what Joel did was he took the thing that they wanted and they were all looking for the next best framework for thing to use.
+
+And he said, okay, you want to direct selling webinar, but why? And you would get them to think through why they want it and basically teach them, show them how they're not ready for that yet, but they haven't even proven out their offer. And so before you get that webinar, you need to prove out your offer first. And so lemme introduce you to this mini webinar. And it's something they didn't even know that they wanted or needed and that he sold them on that concept of the mini.
+
+So even though it's the same, would you say that that's an example of they want a webinar and he's still, he's selling them a different version of the webinar, essentially? I would say no. I would say that that is more of a stage four message with an argument that proves why. Still let me say, I love Joel and Joel's amazing. And so this is not in any way a criticism of Joel.
+
+Uh, but I would say that it's stage four because Joel is ultimately giving an argument for why a mini webinar is a better solution for those particular people than is a full blown webinar. Yeah. And so not necessarily right. Not a not reframing the problem or, or anything like that. Um, still great, obviously, you know, Joel is super successful and, and great at what he does.
+
+But aha, answer the question. So I'm seeing now I've done this since some of my events, my three day virtual events and like that's why it fricking worked. Yeah. I just need to Double down. Yeah.
+
+But my, my question for you is, are there certain marketing tactics where you see this working and performing better? Um, or is it just, it just depends on what tactic you pick. Because I could see this working with virtual three day events. I can see it working with webinars, video sales letters, ads. It's just where it appears gonna be different.
+
+Are there certain marketing tactics that you Think better? Do you mean like message formats, This whole stage five, all these different things? Any specific tactics you recommend that Customers customer? No, I don't, I mean I, you know, I I would say the answer is no. The right answer to that is no.
+
+I, uh, I am, you know, I lean in favor of VSLs just because I think that you can use a VSL to sell anything. I really do. I believe that A VSL can be used to sell at, at, at any price point. Uh, you know, I'm a big proponent of VSLs and long form sales letters and that's it. And I think that for me personally, there is, I would say that, and this is one of the things that I've tried to drill into, you know, top one folks, um, is that there's value in picking, you know, one, two different models and staying with them.
+
+You know, I, I, you know, because you gain efficiency, you gain effectiveness, you learn, you test, you get better over time with those models. There's no need for, uh, you know, there's no need to chase multiple models because there's just wild inefficiencies in those different models. And so this seekers this Yeah, exactly. Like, oh, I hear the challenge is working and so let me do a challenge not to say there's anything wrong with the challenge. 'cause I know we're gonna be talking about that, but I just think that it, you know, over the long haul, especially if you're going to be creating multiple funnels for backend products and whatnot and offers, you really want to gain efficiency with the model.
+
+And when you start switching up the model, first of all, you're starting over. You don't know the nuance. There's always nuances in little, you know, there's always nuances from, you know, rich talking about when you do a replay, get the timestamp of the, of the nuggets and these little kind of nuances that are slight needle movers and, and lots of slight needle movers move the, the needle in a, in a big way. And so I'm just a big believer in stick to, uh, you know, one, two different models. I think two is sufficient because it allowed, like for me, long form sales letters can be used certainly for low ticket items.
+
+Um, and VSLs can be used for anything and everything. And so, make sense? Yeah. So you can, whether you're doing a, you know, like look if you across Different tactics, just Yeah, like if your sweet spot is like if you're great, you know, live interacting with people, then roll with it. Like do it, you know?
+
+Um, I think I'm probably, you know, I probably, I go with VSLs and long form sales letters for two reasons, probably. One is certainly because that combination, those two can be used to sell anything. Uh, but also 'cause I'm not great live, like, you know, you can see hence, you know, why I go off on multiple tangents and, you know, I appreciate that. Thank you. Um, yeah.
+
+Thousand law form from below price. Yeah. Like I, so I'm, look, I'm a believer in, you know, like I'm a believer, you know, I hit a sales letter and you know, you know, I'm like, wow, this sounds intriguing. Let me scroll down and see if, is this a $3,000 offer? 'cause if it is, I don't even want engage because I'm gonna want it and I'm gonna wind up spending $3,000 or agonizing over the fact that I'm not spending $3,000 when I should be spending.
+
+And so I don't even, right. And so for me, you know, I want to control the flow. Like I've never understood personally, uh, and I don't really have a whole lot of data that I can cite to back this up, but I don't get the whole, um, let's do A VSL and then put the scroll bar on the bottom for people to just scroll to because why would you, you know, that's like, you know, why would you do that then? Why'd you write all that copy? Right?
+
+You know what I mean? Like, 'cause then price out. I know I tried to do that in yours. I was like, First of all, yeah. Like, I'm not, ain't having it.
+
+You want to, you know, you wanna get to it, be patient. Yeah. Nope. Uh, and some, but great question. Did you, you have a couple questions?
+
+You sure? Yeah. Okay, good. So I, I I love the whole concept, um, but you've just told us that the guy understands, the person understands they had this problem. Mm-Hmm.
+
+And now you're telling us we have to convince them that they don't have that problem. They have another problem. Mm-Hmm. So I love the Idea. No, no, no.
+
+So let me be clear. Let, let me be clear. So this is, this is important. It's an important distinction. It might seem like a nuance, but it's not.
+
+So I'm not convincing them that no, you don't have that problem. Right? I'm just showing them that that's a symptom, that that's not the root problem. So in another, I'm not trying, they, they show up and they say, right, like, I've got a headache. I'm like, no, no, no, you don't have a headache.
+
+Come on, come on. You don't have a headache. You got knee pain, buddy. You got knee pain and you think that it's in, no, you just cleared it up for me. There you go.
+
+Yeah. That's a really, like, really like, you know, like, 'cause I'm, I could still leverage out the wazoo. Like, yeah, you got a, you know, a headache. It's radiating, it's, you know, and likely if you're like most people, you've probably have tried this, this, and this, and you're still dealing with the headaches. And really that's because what most people don't realize is that you know, the bacteria in your gut, uh, whatever.
+
+And so it makes sense. Yeah. And you said all that and I realized that, but it wasn't until you put it that way that Oh yeah, I don't have It that way. Yeah, I would almost, I, I think, let me see if I can make this blanket statement. I would almost say I would never, um, butt up against somebody and say like, nah, no, no, man, nah, you don't feel that way or catalyst.
+
+But the catalyst kind of does, the catalyst almost answered my question. Like, what's the best way to get the person to believe that the real problem is actually something other than what they think the Problem? Well, do you like, look, this is where it comes back to. Do you have an argument that you can, like, look, if you can, you show it. Like the catalyst can certainly be one way of like, this is why, you know, like this occurred and therefore it, you know, this is, this is now happening.
+
+You don't need a catalyst. It's like, look, if you, you know, I would, I would always say like, look, you know, again, for me personally, I always wanna lay my head on my pillow at night and know that I did good and know that no one's gonna be like, you made, you said this. And that's not really the root cause problem. Like, and so, you know, I, if I can't make an argument, I'm not gonna try. If I can't make an argument, I don't believe that there's an argument to be made for something, I'm not gonna try to make it just to make a sale.
+
+So this is where, for me, I would say, and for those, you know, for us that, that are, that are ethical, and again, no judgment for anybody, um, I would say that it becomes that much harder because Right. I'm not merely looking at like, what are the potential root cause problems that I could make a case for, right? It's, I wanna believe that I can, I wanna believe it and have that case come from a point of conviction and honesty for me. Right? And so, does that make sense?
+
+I totally, okay, good. Who else? Go ahead, Ian. Quick question. So for the call booking funnel, I i that we run, uh, I want to get more deliberate about, uh, using E five and having an argument and going deeper into the unique mechanism.
+
+I think we've been very surface level just using naming and not like really making an argument. Uh, should that argument be made in the ad and maybe the video ad and then on the landing page, we, we keep the, right now we have like a, a survey submission button, right? As you know, or do I need to like build a VSL or a long form sales letter onto that landing page? Like, where am I Making? No, I think that's, so for you, we're gonna talk about it like slow down a little bit.
+
+I think that you do a pretty good job when you show the map and you show like you're pulling from here and you can pull from here. Yeah. Right, right. Um, you know, um, and so we're gonna, we'll talk a little bit more about what competitors are saying. Like, look, let, let me say this.
+
+If you know, first and foremost, you really do want to confirm that your market is in stage five, and don't just get enamored with what I told you and immediately leap to level five, because again, a level five message or a stage five message is a more difficult message to present well, effectively than is, you know, a stage four, stage three, and, um, and so on. And so you might not be there yet. You know, you know, my gut tells me that you're just, you're at stage four. I could be wrong. My gut tells me that you're at stage four where a unique mechanism will do the trick, which you've got the name and you, you demonstrate it.
+
+And so for you, it's likely some other little needle movers that we need to fix. And so don't, don't, what I don't want you to do, I don't want you guys, especially you, you like, I you, I don't want you guys, you know, in top, like I'll, we'll tell you like we'll tell you have no fear when it's time to, to go. I'm not sure if you found this, but I found that in many ways with the, the pyramid and even the sophistication, um, chart that the truth is somewhere, somewhere in the middle because there's like many levels of sophistication and awareness within each level. Yep. And I found that like even with our ads, right?
+
+That sometimes having a very direct headline, but paired with a super indirect body copy and ad has sometimes even worked. So what are your, what are your thoughts on, on that? Why does that occur sometimes where people will, uh, like be drawn in with a very direct sort of, uh, hook? Yeah. But then they, they really wanna read from a, a, a less aware state.
+
+Yeah. Here's the honest answer. I don't know. You know, and but it goes back to the really, you know, there, look, I'm, there are a number of questions you could ask me, and I'm, and I'm not gonna know the answer. Like, I, I don't know why I would say to you, like, if we were you and I are partners, or I'm your marketing partner, I would say, I don't know why, who cares?
+
+Like, right? Like, who cares? I, you know, all I care about is what it's working and it's, it's the control and it's beating the, the others. I don't know why we can speculate and we can kind of make assumptions, but really at the end of the day, whether it doesn't really matter whether we get the we nail it or we just have an assumption or what whatnot, what does matter is what's working. And so that's why I'm, you know, like, look, I, I'm a also, for what it's worth, I am a big believer in, um, in testing, and I'm a big believer in testing with the perspective of, it's just an experiment.
+
+Like, meaning, like, it's just an experiment. I, I don't like look, you know, let's throw caution to the wind, so to speak. Let's take all the formulas and whatnot, and if we want to test something weird, something wacky, that's cool. And if it doesn't work, let, let, let's go into it just recognizing it's just an experiment. In other words, nobody, we're not gonna, I'm not gonna judge John if it doesn't do well.
+
+Like, don't judge me if it doesn't do well. Like right. We're gonna treat it as an experiment and we're gonna know that the majority of experiments aren't going to, uh, aren't going to improve results. The majority of experiments are not going to improve results. That's the nature of the beast, the beauty, right?
+
+That's the nature of this game. You have to understand this game is, you know, it's not 80 20, it's the revert, it's 2080. Think of it as like at two out of every test, 10 tests that you run are gonna be productive. Eight out of 10, the overwhelming majority are not gonna be productive. That's okay.
+
+The beauty is that we can continue to test to, um, to elevate the metrics that we want to, to we want to elevate. And so right there, you know, it's amazing how, you know, yes, there are times when a student client top one person can come to me and I'll give them, you know, an idea and it's a home run idea, but more often than not, uh, we'll give them four ideas and we'll test them, and one will be great, and the other three will be nothing does. And that's okay. That's the nature of the beast. That's, that's the game that we play.
+
+And I think that that's worth just kind of considering and pondering and recognizing later on that you know, that this is a game where, you know, like, it's kind of similar to, to use like baseball, you know, where, you know, you get, you strike out six outta 10 times, but you get a base hit four out of 10 times, you can, you're in the hall of fame, right? You strike out six outta 10 times, you get a hit, you know, a hit four outta 10 times, you're in the hall of fame, right? In here. Like, you know, you get, you know, two out of every 10 that are winners, man, you're gonna have a very successful journey as an entrepreneur, as a marketer, as so anybody else? Yes.
+
+Did I do, uh, no lingering questions. Don't be afraid to ask a question. Now's your chance. Fire away. You got a question?
+
+I wanna Record that last sentence that he said. Yeah, I mean, that's just the, you know, I'll, I'll never forget the conversation when, you know, so I believe it was that I had with Mark Ford when I think it was End of America, had just come out and I was like, you know, I, I think it was, uh, end of America and it was, you know, like Grand Slam home run. And I'm like, mark, when do you, you know, like when do you begin working on the next like sales letter? Like when are you working on the next one, man? Like, are you, you know, like, are you guys, you plan on working on that?
+
+And, and he's like, we are always working on the next one. He's like, eight out of 10 do not work. And that's when I was like, at Agora eight out 10, don't. And that's when I realized that, you know, I I, I understood that, you know, that's not the game that, you know, we're not playing this game of home runs. I also as a side note, right?
+
+That's why in the E five method there is, you know, there is engineering and then there is enhancing. Like in other words, you know, you're not, you don't engineer a home run campaign. You engineer a campaign and then enhance to a home run. And so we're, we play a game of iteration, direct response is a game of iteration. So, right?
+
+It's not a game of engineering home runs, it's a game of iterating to home runs. You have to start with a winner, right? You don't, you're not gonna turn a loser into a home run. You're not gonna turn a loser into a home run. That's like, I'll tell you that, right?
+
+For all of you, if you've got a complete dud, dump it, dump it. You're not gonna turn a dud into a home run. You start with a winner, you know, which something that shows the signs of life, so to speak. And then you iterate to a home run. It's a game of iteration.
+
+Shoot. What's a good way to just have a pulse sign when it's time to, to a stage five? Um, just like some obvious ones like you coaching space. But we have some clients like, um, a mom that, or someone that teaches, um, their target audience is moms who manage their family finances. Mm-Hmm.
+
+And she sells a debt system to get out debt. Um, and we know that she has some competitors, we have other info products. We have someone that teaches people how to become a sleep, uh, pediatric sleep coach and make on side. And so all these different markets are crowded. But I'm just trying to think through like, How do you know Four versus five?
+
+You just try four first. I would say that, um, you know, and again, this is not an exact, you know, but I would say, uh, you could use as somewhat of a loose rule that when the majority of campaigns that you're seeing from competitors that are leveraging direct response marketing are using a unique mechanism in there, that's a good indication. It's a good indication. So when the majority of competitors that are using direct response marketing are using a unique mechanism, that's, you're starting to see that the market is really becoming, call it, you know, and I don't care how big the market is or how many competitor the market is beginning, beginning to become saturated with stage four messages. So that's when, Well, there you go.
+
+I hope that you guys got, uh, a lot to think about and, and ponder. We're gonna obviously get you guys the recordings. We're gonna send you guys a, a link to a page for downloads, for some slides, some, some other stuff. Uh, and, uh, I really hope that you take to heart what it is that I shared and I more, more importantly to me, I hope that you implement that you take what it is that you learn and that you actually change what it is that you are doing. There's no value in learning anything if it doesn't change your actions.
+
+The value in learning is in the doing from what it is that you are learning. And I would really encourage you guys that if you don't go and learn more, until you've implemented what it is that you've already learned, what it is that you already know you should be doing. And I really gave you the heart and soul of how I approach marketing. I told you at the very beginning, right? I told you earlier, I was gonna really paint, you know, give you a, a broad and deep insight into how I think about marketing, how I approach marketing, how I approach marketing messages and arguments and all of that.
+
+And I did that. Now you need to use it and implement it. Don't go out and try to learn more. Use what it is that I've given you. Cool.
+
+A hundred percent. Yeah. Alright. Thank you guys.
