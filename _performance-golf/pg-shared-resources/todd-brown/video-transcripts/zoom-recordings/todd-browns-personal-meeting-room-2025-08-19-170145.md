@@ -1,0 +1,85 @@
+---
+title: "Todd Brown's Personal Meeting Room 2025-08-19 17:01:45"
+date: 2025-08-19
+duration: 18m
+duration_seconds: 1100
+vimeo_id: 1111394748
+folder: "Zoom Recordings"
+source: vimeo
+tags:
+  - knowledge-base
+  - video-transcript
+  - vimeo
+---
+
+# Todd Brown's Personal Meeting Room 2025-08-19 17:01:45
+
+**Date:** 2025-08-19 | **Duration:** 18m | **Folder:** Zoom Recordings
+
+---
+
+All right, gang. So I know, uh, I am prerecording this for you. Well, obviously I know that, uh, I know nobody is joining me, um, live today. So I'm prerecording this, um, for you guys. And so what I want to cover today is, as crazy as this is gonna sound coming from me, but is kind of five cool ways that, uh, I'm using ai, uh, for marketing optimization.
+
+And so these aren't, like, I'm not gonna cover the common stuff that, you know, I'm, I'm not gonna cover everything that, that I do, or everything that I use Claude or Chat or Gemini for. Uh, but I'm gonna cover five cool things that, um, maybe you haven't heard, maybe nobody's shared with you that I do, that I just think is, uh, is super valuable. And so I'm gonna go ahead and I'm gonna share my screen, and then I'm gonna open up this little, um, quick slide deck that I prepped for you. Now, I'm, I am gonna show you, excuse me, I'm gonna show you, um, you're gonna see some prompts on here. I eventually just stopped adding the prompts to the slides because I know that you can't do anything with the prompts on here.
+
+But I'll give you guys the, um, the prompts that are being used. Um, I did not come up with any of these prompts, so all of these prompts I found from somewhere or somebody pieced together for me, um, or something like that. And so, um, I don't wanna take credit for any of these prompts, but so the, the very first one that I want to, um, share with you, the very first thing, uh, cool way of using AI is first and foremost, is optimizing, um, all of your, um, prompts. And so, like, especially when you're doing research and copy engineering and whatnot. And so there's this, I, I believe if I remember this correctly, there was this weird Reddit post where some guy talked about whatever he tested, like a hundred and some odd different, um, different, uh, you know, like prompts.
+
+And he wasn't able to get what he wanted, and he ended up coming up with this, developing this, um, prompt optimizer prompt. And so basically, this is right, and the, the layout is all wacky anyway on this. So when I send you this prompt, you'll, you'll be able to see it. It's not gonna look like this jumbled mess that it is, um, on here. But basically what you do is you enter this prompt into whatever it is that you're using, Chachi, BT Claw doesn't matter.
+
+And then it'll ask you three questions. Excuse me. Actually, I believe it'll ask you, do you want to go, do you want to use, um, the detailed or basic, right? I always use detailed, detailed, excuse me, asks you, um, three questions. Um, and I think the first question is like, what platform are we optimizing the prompt for?
+
+Are we optimizing it for chat? GPT? Are we optimizing it for, um, for Claude? Uh, Actually, where is the, uh, lemme just see something here. Uh, three clarifying question format, simple.
+
+Uh, Okay. I don't remember exactly what, um, the three questions were, but I know that one of the questions, um, right, is what, what platform? I can't remember the second question. But the third question then is, ultimately, what is your prompt? And so that's where, so in other words, what you do is you paste this prompt into, let's call it chat, GPT.
+
+And then, um, it'll ask you detailed or basic, I've always say detailed. And then it's gonna ask you those three questions. What platform are you, uh, uh, are we optimizing this prompt for? I forget what the second question is. Uh, and, um, and then the third one is enter your prompt.
+
+So in other words, you, you enter the prompt that you wrote as the third, the answer to the third question, and then you press submit. And what the AI will do, chat, let's say, if that's what you're using, we'll go through and following these instructions that this guy created, this, this lyra prompt. Um, and then it'll, it will optimize your prompt, um, and give you a much better prompt. And I actually tested a, my prompt versus the optimize prompt to see the difference in output, and it was significant. And so I don't always use this, uh, this prompt optimizer prompt.
+
+Uh, but when I'm doing something important, like when I'm doing examination research, um, or copy, uh, you know, creating certain pieces of copy that I wanna reuse, um, and whatnot, I will use this prompt optimizer prompt. And so there you go. Again, if you wanna see the backstory, you could search Reddit lyra prompt, I believe, and you'll be able to, um, find it. Next thing, um, is doing a prospect awareness pyramid analysis. This is really just, uh, doing a prospect awareness analysis of your audience, and then ultimately, um, having AI tell you what percentage of the total addressable market is in each category so that you can identify if you wanted to, where is the biggest pool of, um, of people?
+
+In other words, are they, you know, are, are they problem aware? Are they, um, solution aware? Where are they in the product awareness? Um, pyramid analysis. Now for this, I believe, um, I use the not, I believe I use the, um, I use the deep research feature on, um, Gemini.
+
+Um, personally, I've just found that the deep research on Gemini is better than deep research. Uh, on, um, on Claude Chat, GPT, actually, in all fairness, I haven't tried the deep research, uh, with chat PT five, so I don't know, but I use the deep research on Gemini, and it will, it, it's, it's amazing what it will spit out for you, like a, a full blown report like, um, like you've never seen before, really. And so what a great fast way to use AI to do something that we would ordinarily, um, I don't wanna say guess at, but make a lot of assumptions. And so now you get to see what AI says about where, again, the majority of people in your audience fall in terms of, you know, levels of awareness, problem aware, you know, solution, product aware, solution aware, blah, blah, blah, all that. And so, um, that is, um, super cool, and of course, right, hopefully you understand the value.
+
+I know everybody on the team understands the value, but hopefully all the folks listening, uh, to these recordings understands the value of knowing, uh, who you're talking to and what their level of awareness really is. So that, uh, right, you can, you can, you know, engineer the message properly, um, for them. Next is, this is actually super cool, is, um, really, really simple, really quick. This will actually be a quick call today. Um, so, uh, but is exporting Amazon reviews, um, for similar products.
+
+So, um, so right, you don't have to have your own product on Amazon, right? Like the, the you go, you would find if there's a book on your topic. I'm not even saying, even though I wrote, um, similar products, I just mean like, look, if there are, like, if you sell a course on a topic, I, I would go and I would find the books on that topic, um, and I would export their reviews. I believe, if I remember correctly, you can only export a hundred reviews, but, um, if you go and you search for Amazon Review exporter, I think on the, like, uh, on the, um, like Chrome Store, um, you'll find a couple of, um, of free ones on there. I think one, they, I think they have upgrade options on there, but right.
+
+Um, and then very, very simple. You just go to the Amazon page and you click the, um, extension, and then it will ask you, you know, a couple questions and then you roll with it. It's Amazon that, uh, limits to a hundred reviews being exported. But what happens is you go there, go to a, you know, go to a, a, you know, a competitor or somebody that's selling a book on a similar topic, export the reviews. You could do the same thing with, right?
+
+Like another book, export a hundred reviews can do the next thing with, you know, uh, another book. Again, export, uh, the reviews, and then use those reviews up, upload those reviews to chat GPT and have chat GPT do an analysis on that, like you can see here, right? Um, and, uh, I love this prompt. The way that this is done, right? It says, summarize the key point, like using the reviews above for product, whatever it is, or book, whatever, right?
+
+Whatever it may be. Um, summarize the key points in the eight categories below in each category, uh, each, in each category, you should list five points with the ones that are most common first. Next to each key point, provide evidence of its commonality by ending each bullet point with the unique, with the number of times that the specific points showed up in the reviews. So in other words, right? Like what this will do for you is it'll spit out underneath these eight, it'll, it'll spit out, um, five points, like, and it'll show you, let's say, um, this appeared in 14, you know, 14 reviews.
+
+This one appeared in 28 reviews, this appeared in 10 reviews and so on. So that you can see really not just the, the, the, the major themes or the, the major common points, but you can see which ones are the most common, like appearing in the most amount of reviews. This alone is just, well, like, is worth its weight in gold, because as you can see here, you get to see things like, what were the customer objections? Like, what did, what did any customers mention things like, um, why they thought the product wasn't gonna work? Um, were, were customers doubting that, you know, like the, even with books, like, I don't think that this is true.
+
+I don't think that this can happen. I don't think that, I think you need a lot of money to do that, whatever it may be, right? And you'll see failed solutions. What have other, what are other things that customers tried before, um, to get the result that they want, um, tried and failed with before? Like, again, really, really, uh, really super valuable misconceptions that customer believed about the product, about the brand, about the author, uh, before they, uh, before they bought that.
+
+Now after buying, they know to not be true, right? Again, really, really valuable stuff in addition to the common and typical, um, things like pain points, you know, uh, benefits, desired outcomes, unique features, all that, all that kind of jazz. And so, super, super valuable. Um, if you do this, like I said, just go to the Amazon Chrome, excuse me, the Chrome store, the Chrome extension thing, search for, or you could just search for, um, Amazon review exporter, Amazon review exporter, Amazon reviews, exporter, you know, um, Google, excuse me, Chrome extension, and you'll find it. Boom.
+
+And you don't even need the pro version to, uh, to get started. And so, super, super cool there. Uh, next is right here. You could see I stopped including the, um, the, the prompt in there. Um, so one of the smartest things that you can do, uh, is to really analyze your email data, the performance of your email campaigns, both, you know, uh, automations, evergreen, you know, flows as well as, um, broadcasts.
+
+Um, and really specifically what I would say is, you know, analyzing which subject lines did the best so that you can take those subject lines and you can test those in your media creative. In other words, if you're running any kind of ads on Facebook, on, you know, on YouTube, on any platform for that matter, well, one of the smart smartest things that you can do is really to learn from which subject, subject lines got attention and got your emails opened, and then test those as headlines in your, um, in your media creative. So, right? So ultimately what you wanna do is you want to, you wanna be able to, um, export your, your best, your, your performance data, um, into typically a CSV file. And then you can upload that CSV file to, um, to chat or to Claude or whatever it is, and then have it run a simple analysis to find the top 10, you know, or top 15, uh, um, subject lines that got the highest open rate, right?
+
+You can give criteria like, right, we must have sent to 10,000 or more on our list, um, blah, blah, blah. And then right when it comes back and it, it, you know, and it lists out what those 10 or 15 are, then you could say for each, right? Um, can you expand on the hook? Give me an idea of what the, um, what the body of the ad would look like. Um, for each of those 10 or 15, however many you, uh, you, you, uh, have it list out for you.
+
+And so, analyzing your email data, specifically your subject lines that get the best open rate, and then using those in, um, your media creative, super, super smart. And the final one that I'm gonna share is, um, same thing is, is really just with funnel performance, is ultimately analyzing funnel performance, um, and pages, uh, and then having the AI give you ccro recommendations. Now for this, and I don't know it, I don't know if you can do this with just chat t or Claude, I use Poppy for this. I think it's P opp y ai. The poppy is basically like a drag and drop.
+
+You can, you can drag URLs, you know, you can drag images, you can drag audio files and then connect those to the chat window, like to chat, right? So imagine a blank canvas where I, I drag chat a chat window, right? And I can specify, I wanna use Claude for this, or I wanna use chat GPT for this drag, uh, right, uh, chat window. And then I can, now I can input this URL, this URL, this URL, right? Um, I can connect it, and then you just connect it to each of those, to the chat window.
+
+And then I can say, I want you to review the sales pages or review these pages that I've just attached and tell me when you're done, right? Boom. Okay, then I could feed it, I can, I can drag out the data that I exported on the funnel performance, like conversion rates, blah, blah, blah, blah, blah. I could attach that and then say, right, I've just attached the funnel performance data for each of these, um, pages, right? Confirm what, you know, confirm that you can see this, this, this data and tell me what you see.
+
+Boom. Yeah. Boom, boom, boom. Right? And then you can have it analyze, right?
+
+I want you to, um, operate and function like a highly skilled expert conversion rate optimization, uh, um, individual with 10 years of experience optimizing, blah, blah, blah. And my niche, my type of products, blah, blah, blah, blah, blah. And I want you to tell me what are the top 10 most, uh, uh, likely to be successful tests that you would recommend we run on this campaign to increase, you know, revenue, or you might, and then you might ask to increase a OV to increase sales conversions, right? Like, you can go down the, um, down the flow. And then I almost always end by asking like, um, uh, uh, right?
+
+If you had to only pick three that you feel would move the needle in the biggest way, um, which three tests would you run? Boom. And then there you go, right? And these may be things that you haven't even thought of that were kind of out of your purview, so to speak, um, that now you're fully aware of. And so there you go, analyzing funnel performance data and pages to get CRO, um, insights.
+
+And those are just five of the kind of the cool ways, right? Like, I'm not doing any, uh, other, you know, like I haven't done anything with agents yet. Um, uh, uh, haven't done any other, you know, I, we, we do have some custom GPTs built internally for our team that Paul Mata built using the E five method. Um, but um, I haven't built any, uh, custom gpt. Uh, and so, uh, I do use, um, chat for, uh, you know, very basic, uh, refining certain pieces of copy, generating some ideas for certain chunks, stuff like that.
+
+I'm still writing the majority of the copy, um, myself just because I enjoy it. Um, and these are just five of the ways that I think are kind of cool that, you know, just different, you know, cool ways to use AI to help with, um, marketing optimization. And so there you go. That's it. Quick call, easy, simple.
+
+Uh, but, uh, I hope that you take these bad boys and start playing around. I think that you'll find, I, you know, I certainly think that the, um, the Amazon review exporter, like the Amazon review is so super valuable because you get insights that you don't normally get from merely, um, sales pages or sales copy, like competitor sales pages, sales copy. We still do that analysis, right? We still, even if we've got prior sales pages, uh, or VSL scripts, we still use those and analyze those. But there's just a different layer, a different level, uh, different pieces, nuggets and gems that you get when you include, um, Amazon reviews in there, because it's in real language, right?
+
+It's like real people that are saying things the way that they would say it. It's not, hasn't been copy, you know, copy a fight or whatever you want to call it. And so there you go. But that is all she wrote for today. Uh, have a great day everybody, and I'll see you guys next week.
