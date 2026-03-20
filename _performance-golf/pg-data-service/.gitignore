@@ -1,0 +1,15 @@
+# Credentials (.env but not .env.example)
+.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Superpowers (specs/plans are working docs, not shipped artifacts)
+docs/superpowers/
