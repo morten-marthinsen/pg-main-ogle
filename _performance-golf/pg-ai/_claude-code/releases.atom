@@ -4,7 +4,37 @@
   <link type="text/html" rel="alternate" href="https://github.com/anthropics/claude-code/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/anthropics/claude-code/releases.atom"/>
   <title>Release notes from claude-code</title>
-  <updated>2026-03-18T22:28:45Z</updated>
+  <updated>2026-03-19T22:08:02Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/937253475/v2.1.80</id>
+    <updated>2026-03-19T22:08:48Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.80"/>
+    <title>v2.1.80</title>
+    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Added &lt;code&gt;rate_limits&lt;/code&gt; field to statusline scripts for displaying Claude.ai rate limit usage (5-hour and 7-day windows with &lt;code&gt;used_percentage&lt;/code&gt; and &lt;code&gt;resets_at&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;source: &#39;settings&#39;&lt;/code&gt; plugin marketplace source — declare plugin entries inline in settings.json&lt;/li&gt;
+&lt;li&gt;Added CLI tool usage detection to plugin tips, in addition to file pattern matching&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;effort&lt;/code&gt; frontmatter support for skills and slash commands to override the model effort level when invoked&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;--channels&lt;/code&gt; (research preview) — allow MCP servers to push messages into your session&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;--resume&lt;/code&gt; dropping parallel tool results — sessions with parallel tool calls now restore all tool_use/tool_result pairs instead of showing &lt;code&gt;[Tool result missing]&lt;/code&gt; placeholders&lt;/li&gt;
+&lt;li&gt;Fixed voice mode WebSocket failures caused by Cloudflare bot detection on non-browser TLS fingerprints&lt;/li&gt;
+&lt;li&gt;Fixed 400 errors when using fine-grained tool streaming through API proxies, Bedrock, or Vertex&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;/remote-control&lt;/code&gt; appearing for gateway and third-party provider deployments where it cannot function&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;/sandbox&lt;/code&gt; tab switching not responding to Tab or arrow keys&lt;/li&gt;
+&lt;li&gt;Improved responsiveness of &lt;code&gt;@&lt;/code&gt; file autocomplete in large git repositories&lt;/li&gt;
+&lt;li&gt;Improved &lt;code&gt;/effort&lt;/code&gt; to show what auto currently resolves to, matching the status bar indicator&lt;/li&gt;
+&lt;li&gt;Improved &lt;code&gt;/permissions&lt;/code&gt; — Tab and arrow keys now switch tabs from within a list&lt;/li&gt;
+&lt;li&gt;Improved background tasks panel — left arrow now closes from the list view&lt;/li&gt;
+&lt;li&gt;Simplified plugin install tips to use a single &lt;code&gt;/plugin install&lt;/code&gt; command instead of a two-step flow&lt;/li&gt;
+&lt;li&gt;Reduced memory usage on startup in large repositories (~80 MB saved on 250k-file repos)&lt;/li&gt;
+&lt;li&gt;Fixed managed settings (&lt;code&gt;enabledPlugins&lt;/code&gt;, &lt;code&gt;permissions.defaultMode&lt;/code&gt;, policy-set env vars) not being applied at startup when &lt;code&gt;remote-settings.json&lt;/code&gt; was cached from a prior session&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>ashwin-ant</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/937253475/v2.1.79</id>
     <updated>2026-03-18T22:29:36Z</updated>
@@ -366,48 +396,6 @@
 &lt;li&gt;Improved plugin-provided MCP server deduplication — servers that duplicate a manually-configured server (same command/URL) are now skipped, preventing duplicate connections and tool sets. Suppressions are shown in the &lt;code&gt;/plugin&lt;/code&gt; menu.&lt;/li&gt;
 &lt;li&gt;Updated &lt;code&gt;/debug&lt;/code&gt; to toggle debug logging on mid-session, since debug logs are no longer written by default&lt;/li&gt;
 &lt;li&gt;Removed startup notification noise for unauthenticated org-registered claude.ai connectors&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <author>
-      <name>ashwin-ant</name>
-    </author>
-    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:Repository/937253475/v2.1.70</id>
-    <updated>2026-03-06T01:20:02Z</updated>
-    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.70"/>
-    <title>v2.1.70</title>
-    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixed API 400 errors when using &lt;code&gt;ANTHROPIC_BASE_URL&lt;/code&gt; with a third-party gateway — tool search now correctly detects proxy endpoints and disables &lt;code&gt;tool_reference&lt;/code&gt; blocks&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;API Error: 400 This model does not support the effort parameter&lt;/code&gt; when using custom Bedrock inference profiles or other model identifiers not matching standard Claude naming patterns&lt;/li&gt;
-&lt;li&gt;Fixed empty model responses immediately after &lt;code&gt;ToolSearch&lt;/code&gt; — the server renders tool schemas with system-prompt-style tags at the prompt tail, which could confuse models into stopping early&lt;/li&gt;
-&lt;li&gt;Fixed prompt-cache bust when an MCP server with &lt;code&gt;instructions&lt;/code&gt; connects after the first turn&lt;/li&gt;
-&lt;li&gt;Fixed Enter inserting a newline instead of submitting when typing over a slow SSH connection&lt;/li&gt;
-&lt;li&gt;Fixed clipboard corrupting non-ASCII text (CJK, emoji) on Windows/WSL by using PowerShell &lt;code&gt;Set-Clipboard&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fixed extra VS Code windows opening at startup on Windows when running from the VS Code integrated terminal&lt;/li&gt;
-&lt;li&gt;Fixed voice mode failing on Windows native binary with &quot;native audio module could not be loaded&quot;&lt;/li&gt;
-&lt;li&gt;Fixed push-to-talk not activating on session start when &lt;code&gt;voiceEnabled: true&lt;/code&gt; was set in settings&lt;/li&gt;
-&lt;li&gt;Fixed markdown links containing &lt;code&gt;#NNN&lt;/code&gt; references incorrectly pointing to the current repository instead of the linked URL&lt;/li&gt;
-&lt;li&gt;Fixed repeated &quot;Model updated to Opus 4.6&quot; notification when a project&#39;s &lt;code&gt;.claude/settings.json&lt;/code&gt; has a legacy Opus model string pinned&lt;/li&gt;
-&lt;li&gt;Fixed plugins showing as inaccurately installed in &lt;code&gt;/plugin&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fixed plugins showing &quot;not found in marketplace&quot; errors on fresh startup by auto-refreshing after marketplace installation&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;/security-review&lt;/code&gt; command failing with &lt;code&gt;unknown option merge-base&lt;/code&gt; on older git versions&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;/color&lt;/code&gt; command having no way to reset back to the default color — &lt;code&gt;/color default&lt;/code&gt;, &lt;code&gt;/color gray&lt;/code&gt;, &lt;code&gt;/color reset&lt;/code&gt;, and &lt;code&gt;/color none&lt;/code&gt; now restore the default&lt;/li&gt;
-&lt;li&gt;Fixed a performance regression in the &lt;code&gt;AskUserQuestion&lt;/code&gt; preview dialog that re-ran markdown rendering on every keystroke in the notes input&lt;/li&gt;
-&lt;li&gt;Fixed feature flags read during early startup never refreshing their disk cache, causing stale values to persist across sessions&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;permissions.defaultMode&lt;/code&gt; settings values other than &lt;code&gt;acceptEdits&lt;/code&gt; or &lt;code&gt;plan&lt;/code&gt; being applied in Claude Code Remote environments — they are now ignored&lt;/li&gt;
-&lt;li&gt;Fixed skill listing being re-injected on every &lt;code&gt;--resume&lt;/code&gt; (~600 tokens saved per resume)&lt;/li&gt;
-&lt;li&gt;Fixed teleport marker not rendering in VS Code teleported sessions&lt;/li&gt;
-&lt;li&gt;Improved error message when microphone captures silence to distinguish from &quot;no speech detected&quot;&lt;/li&gt;
-&lt;li&gt;Improved compaction to preserve images in the summarizer request, allowing prompt cache reuse for faster and cheaper compaction&lt;/li&gt;
-&lt;li&gt;Improved &lt;code&gt;/rename&lt;/code&gt; to work while Claude is processing, instead of being silently queued&lt;/li&gt;
-&lt;li&gt;Reduced prompt input re-renders during turns by ~74%&lt;/li&gt;
-&lt;li&gt;Reduced startup memory by ~426KB for users without custom CA certificates&lt;/li&gt;
-&lt;li&gt;Reduced Remote Control &lt;code&gt;/poll&lt;/code&gt; rate to once per 10 minutes while connected (was 1–2s), cutting server load ~300×. Reconnection is unaffected — transport loss immediately wakes fast polling.&lt;/li&gt;
-&lt;li&gt;[VSCode] Added spark icon in VS Code activity bar that lists all Claude Code sessions, with sessions opening as full editors&lt;/li&gt;
-&lt;li&gt;[VSCode] Added full markdown document view for plans in VS Code, with support for adding comments to provide feedback&lt;/li&gt;
-&lt;li&gt;[VSCode] Added native MCP server management dialog — use &lt;code&gt;/mcp&lt;/code&gt; in the chat panel to enable/disable servers, reconnect, and manage OAuth authentication without switching to the terminal&lt;/li&gt;
 &lt;/ul&gt;</content>
     <author>
       <name>ashwin-ant</name>

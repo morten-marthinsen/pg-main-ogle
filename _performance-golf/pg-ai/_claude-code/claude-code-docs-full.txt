@@ -1605,6 +1605,26 @@ This page is generated from the [CHANGELOG.md on GitHub](https://github.com/anth
 
 Run `claude --version` to check your installed version.
 
+<Update label="2.1.80" description="March 19, 2026">
+  * Added `rate_limits` field to statusline scripts for displaying Claude.ai rate limit usage (5-hour and 7-day windows with `used_percentage` and `resets_at`)
+  * Added `source: 'settings'` plugin marketplace source — declare plugin entries inline in settings.json
+  * Added CLI tool usage detection to plugin tips, in addition to file pattern matching
+  * Added `effort` frontmatter support for skills and slash commands to override the model effort level when invoked
+  * Added `--channels` (research preview) — allow MCP servers to push messages into your session
+  * Fixed `--resume` dropping parallel tool results — sessions with parallel tool calls now restore all tool\_use/tool\_result pairs instead of showing `[Tool result missing]` placeholders
+  * Fixed voice mode WebSocket failures caused by Cloudflare bot detection on non-browser TLS fingerprints
+  * Fixed 400 errors when using fine-grained tool streaming through API proxies, Bedrock, or Vertex
+  * Fixed `/remote-control` appearing for gateway and third-party provider deployments where it cannot function
+  * Fixed `/sandbox` tab switching not responding to Tab or arrow keys
+  * Improved responsiveness of `@` file autocomplete in large git repositories
+  * Improved `/effort` to show what auto currently resolves to, matching the status bar indicator
+  * Improved `/permissions` — Tab and arrow keys now switch tabs from within a list
+  * Improved background tasks panel — left arrow now closes from the list view
+  * Simplified plugin install tips to use a single `/plugin install` command instead of a two-step flow
+  * Reduced memory usage on startup in large repositories (\~80 MB saved on 250k-file repos)
+  * Fixed managed settings (`enabledPlugins`, `permissions.defaultMode`, policy-set env vars) not being applied at startup when `remote-settings.json` was cached from a prior session
+</Update>
+
 <Update label="2.1.79" description="March 18, 2026">
   * Added `--console` flag to `claude auth login` for Anthropic Console (API billing) authentication
   * Added "Show turn duration" toggle to the `/config` menu
@@ -3997,6 +4017,664 @@ Run `claude --version` to check your installed version.
 </Update>
 
 
+# Push events into a running session with channels
+Source: https://code.claude.com/docs/en/channels
+
+Use channels to push messages, alerts, and webhooks into your Claude Code session from an MCP server. Forward CI results, chat messages, and monitoring events so Claude can react while you're away.
+
+<Note>
+  Channels are in [research preview](#research-preview) and require Claude Code v2.1.80 or later. They require claude.ai login. Console and API key authentication is not supported. Team and Enterprise organizations must [explicitly enable them](#enterprise-controls).
+</Note>
+
+A channel is an MCP server that pushes events into your running Claude Code session, so Claude can react to things that happen while you're not at the terminal. Channels can be two-way: Claude reads the event and replies back through the same channel, like a chat bridge. Events only arrive while the session is open, so for an always-on setup you run Claude in a background process or persistent terminal.
+
+You install a channel as a plugin and configure it with your own credentials. Telegram and Discord are included in the research preview.
+
+When Claude replies through a channel, you see the inbound message in your terminal but not the reply text. The terminal shows the tool call and a confirmation (like "sent"), and the actual reply appears on the other platform.
+
+This page covers:
+
+* [Supported channels](#supported-channels): Telegram and Discord setup
+* [Install and run a channel](#quickstart) with fakechat, a localhost demo
+* [Who can push messages](#security): sender allowlists and how you pair
+* [Enable channels for your organization](#enterprise-controls) on Team and Enterprise
+
+To build your own channel, see the [Channels reference](/en/channels-reference).
+
+## Supported channels
+
+Each supported channel is a plugin that requires [Bun](https://bun.sh). For a hands-on demo of the plugin flow before connecting a real platform, try the [fakechat quickstart](#quickstart).
+
+<Tabs>
+  <Tab title="Telegram">
+    View the full [Telegram plugin source](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/telegram).
+
+    <Steps>
+      <Step title="Create a Telegram bot">
+        Open [BotFather](https://t.me/BotFather) in Telegram and send `/newbot`. Give it a display name and a unique username ending in `bot`. Copy the token BotFather returns.
+      </Step>
+
+      <Step title="Install the plugin">
+        In Claude Code, run:
+
+        ```
+        /plugin install telegram@claude-plugins-official
+        ```
+      </Step>
+
+      <Step title="Configure your token">
+        Run the configure command with the token from BotFather:
+
+        ```
+        /telegram:configure <token>
+        ```
+
+        This saves it to `.claude/channels/telegram/.env` in your project. You can also set `TELEGRAM_BOT_TOKEN` in your shell environment before launching Claude Code.
+      </Step>
+
+      <Step title="Restart with channels enabled">
+        Exit Claude Code and restart with the channel flag. This starts the Telegram plugin, which begins polling for messages from your bot:
+
+        ```bash theme={null}
+        claude --channels plugin:telegram@claude-plugins-official
+        ```
+      </Step>
+
+      <Step title="Pair your account">
+        Open Telegram and send any message to your bot. The bot replies with a pairing code.
+
+        <Note>If your bot doesn't respond, make sure Claude Code is running with `--channels` from the previous step. The bot can only reply while the channel is active.</Note>
+
+        Back in Claude Code, run:
+
+        ```
+        /telegram:access pair <code>
+        ```
+
+        Then lock down access so only your account can send messages:
+
+        ```
+        /telegram:access policy allowlist
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Discord">
+    View the full [Discord plugin source](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/discord).
+
+    <Steps>
+      <Step title="Create a Discord bot">
+        Go to the [Discord Developer Portal](https://discord.com/developers/applications), click **New Application**, and name it. In the **Bot** section, create a username, then click **Reset Token** and copy the token.
+      </Step>
+
+      <Step title="Enable Message Content Intent">
+        In your bot's settings, scroll to **Privileged Gateway Intents** and enable **Message Content Intent**.
+      </Step>
+
+      <Step title="Invite the bot to your server">
+        Go to **OAuth2 > URL Generator**. Select the `bot` scope and enable these permissions:
+
+        * View Channels
+        * Send Messages
+        * Send Messages in Threads
+        * Read Message History
+        * Attach Files
+        * Add Reactions
+
+        Open the generated URL to add the bot to your server.
+      </Step>
+
+      <Step title="Install the plugin">
+        In Claude Code, run:
+
+        ```
+        /plugin install discord@claude-plugins-official
+        ```
+      </Step>
+
+      <Step title="Configure your token">
+        Run the configure command with the bot token you copied:
+
+        ```
+        /discord:configure <token>
+        ```
+
+        This saves it to `.claude/channels/discord/.env` in your project. You can also set `DISCORD_BOT_TOKEN` in your shell environment before launching Claude Code.
+      </Step>
+
+      <Step title="Restart with channels enabled">
+        Exit Claude Code and restart with the channel flag. This connects the Discord plugin so your bot can receive and respond to messages:
+
+        ```bash theme={null}
+        claude --channels plugin:discord@claude-plugins-official
+        ```
+      </Step>
+
+      <Step title="Pair your account">
+        DM your bot on Discord. The bot replies with a pairing code.
+
+        <Note>If your bot doesn't respond, make sure Claude Code is running with `--channels` from the previous step. The bot can only reply while the channel is active.</Note>
+
+        Back in Claude Code, run:
+
+        ```
+        /discord:access pair <code>
+        ```
+
+        Then lock down access so only your account can send messages:
+
+        ```
+        /discord:access policy allowlist
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+You can also [build your own channel](/en/channels-reference) for systems that don't have a plugin yet.
+
+## Quickstart
+
+Fakechat is an officially supported demo channel that runs a chat UI on localhost, with nothing to authenticate and no external service to configure.
+
+Once you install and enable fakechat, you can type in the browser and the message arrives in your Claude Code session. Claude replies, and the reply shows up back in the browser. After you've tested the fakechat interface, try out [Telegram](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/telegram) or [Discord](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/discord).
+
+To try the fakechat demo, you'll need:
+
+* Claude Code [installed and authenticated](/en/quickstart#step-1-install-claude-code) with a claude.ai account
+* [Bun](https://bun.sh) installed. The pre-built channel plugins are Bun scripts. Check with `bun --version`; if that fails, [install Bun](https://bun.sh/docs/installation).
+* **Team/Enterprise users**: your organization admin must [enable channels](#enterprise-controls) in managed settings
+
+<Steps>
+  <Step title="Install the fakechat channel plugin">
+    Start a Claude Code session and run the install command:
+
+    ```text theme={null}
+    /plugin install fakechat@claude-plugins-official
+    ```
+
+    Fakechat is in the `claude-plugins-official` marketplace, which is added automatically for most setups. If you don't have it, run `/plugin marketplace add anthropics/claude-plugins-official` first.
+  </Step>
+
+  <Step title="Restart with the channel enabled">
+    Exit Claude Code, then restart with `--channels` and pass the fakechat plugin you installed:
+
+    ```bash theme={null}
+    claude --channels plugin:fakechat@claude-plugins-official
+    ```
+
+    The fakechat server starts automatically.
+
+    <Tip>
+      You can pass several plugins to `--channels`, space-separated.
+    </Tip>
+  </Step>
+
+  <Step title="Push a message in">
+    Open the fakechat UI at [http://localhost:8787](http://localhost:8787) and type a message:
+
+    ```text theme={null}
+    hey, what's in my working directory?
+    ```
+
+    The message arrives in your Claude Code session as a `<channel source="fakechat">` event. Claude reads it, does the work, and calls fakechat's `reply` tool. The answer shows up in the chat UI.
+  </Step>
+</Steps>
+
+If Claude hits a permission prompt while you're away from the terminal, the session pauses until you approve locally. For unattended use, [`--dangerously-skip-permissions`](/en/permissions#permission-modes) bypasses prompts, but only use it in environments you trust.
+
+## Security
+
+Every approved channel plugin maintains a sender allowlist: only IDs you've added can push messages, and everyone else is silently dropped.
+
+Telegram and Discord bootstrap the list by pairing:
+
+1. Find your bot in Telegram or Discord and send it any message
+2. The bot replies with a pairing code
+3. In your Claude Code session, approve the code when prompted
+4. Your sender ID is added to the allowlist
+
+On top of that, you control which servers are enabled each session with `--channels`, and on Team and Enterprise plans your organization controls availability with [`channelsEnabled`](#enterprise-controls).
+
+Being in `.mcp.json` isn't enough to push messages: a server also has to be named in `--channels`.
+
+## Enterprise controls
+
+Channels are controlled by the `channelsEnabled` setting in [managed settings](/en/settings).
+
+| Plan type                  | Default behavior                                               |
+| :------------------------- | :------------------------------------------------------------- |
+| Pro / Max, no organization | Channels available; users opt in per session with `--channels` |
+| Team / Enterprise          | Channels disabled until an admin explicitly enables them       |
+
+### Enable channels for your organization
+
+Admins can enable channels from [**claude.ai → Admin settings → Claude Code → Channels**](https://claude.ai/admin-settings/claude-code), or by setting `channelsEnabled` to `true` in managed settings.
+
+Once enabled, users in your organization can use `--channels` to opt channel servers into individual sessions. If the setting is disabled or unset, the MCP server still connects and its tools work, but channel messages won't arrive. A startup warning tells the user to have an admin enable the setting.
+
+## Research preview
+
+Channels are a research preview feature. Availability is rolling out gradually, and the `--channels` flag syntax and protocol contract may change based on feedback.
+
+During the preview, `--channels` only accepts plugins from an Anthropic-maintained allowlist. The channel plugins in [claude-plugins-official](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins) are the approved set. If you pass something that isn't, Claude Code starts normally but the channel doesn't register, and the startup notice tells you why.
+
+To test a channel you're building, use `--dangerously-load-development-channels`. See [Test during the research preview](/en/channels-reference#test-during-the-research-preview) for information about testing custom channels that you build.
+
+Report issues or feedback on the [Claude Code GitHub repository](https://github.com/anthropics/claude-code/issues).
+
+## Next steps
+
+Once you have a channel running, explore these related features:
+
+* [Build your own channel](/en/channels-reference) for systems that don't have plugins yet
+* [Remote Control](/en/remote-control) to drive a local session from your phone instead of forwarding events into it
+* [Scheduled tasks](/en/scheduled-tasks) to poll on a timer instead of reacting to pushed events
+
+
+# Channels reference
+Source: https://code.claude.com/docs/en/channels-reference
+
+Build an MCP server that pushes webhooks, alerts, and chat messages into a Claude Code session. Reference for the channel contract: capability declaration, notification events, reply tools, and sender gating.
+
+<Note>
+  Channels are in [research preview](/en/channels#research-preview) and require Claude Code v2.1.80 or later. They require claude.ai login. Console and API key authentication is not supported. Team and Enterprise organizations must [explicitly enable them](/en/channels#enterprise-controls).
+</Note>
+
+A channel is an MCP server that pushes events into a Claude Code session so Claude can react to things happening outside the terminal.
+
+You can build a one-way or two-way channel. One-way channels forward alerts, webhooks, or monitoring events for Claude to act on. Two-way channels like chat bridges also [expose a reply tool](#expose-a-reply-tool) so Claude can send messages back.
+
+This page covers:
+
+* [Overview](#overview): how channels work
+* [What you need](#what-you-need): requirements and general steps
+* [Example: build a webhook receiver](#example-build-a-webhook-receiver): a minimal one-way walkthrough
+* [Server options](#server-options): the constructor fields
+* [Notification format](#notification-format): the event payload
+* [Expose a reply tool](#expose-a-reply-tool): let Claude send messages back
+* [Gate inbound messages](#gate-inbound-messages): sender checks to prevent prompt injection
+
+To use an existing channel instead of building one, see [Channels](/en/channels). Telegram, Discord, and fakechat are included in the research preview.
+
+## Overview
+
+A channel is an [MCP](https://modelcontextprotocol.io) server that runs on the same machine as Claude Code. Claude Code spawns it as a subprocess and communicates over stdio. Your channel server is the bridge between external systems and the Claude Code session:
+
+* **Chat platforms** (Telegram, Discord): your plugin runs locally and polls the platform's API for new messages. When someone DMs your bot, the plugin receives the message and forwards it to Claude. No URL to expose.
+* **Webhooks** (CI, monitoring): your server listens on a local HTTP port. External systems POST to that port, and your server pushes the payload to Claude.
+
+<img alt="Architecture diagram showing external systems connecting to your local channel server, which communicates with Claude Code over stdio" />
+
+## What you need
+
+The only hard requirement is the [`@modelcontextprotocol/sdk`](https://www.npmjs.com/package/@modelcontextprotocol/sdk) package and a Node.js-compatible runtime. [Bun](https://bun.sh), [Node](https://nodejs.org), and [Deno](https://deno.com) all work. The pre-built plugins in the research preview use Bun, but your channel doesn't have to.
+
+Your server needs to:
+
+1. Declare the `claude/channel` capability so Claude Code registers a notification listener
+2. Emit `notifications/claude/channel` events when something happens
+3. Connect over [stdio transport](https://modelcontextprotocol.io/docs/concepts/transports#standard-io) (Claude Code spawns your server as a subprocess)
+
+The [Server options](#server-options) and [Notification format](#notification-format) sections cover each of these in detail. See [Example: build a webhook receiver](#example-build-a-webhook-receiver) for a full walkthrough.
+
+During the research preview, custom channels aren't on the [approved allowlist](/en/channels#supported-channels). Use `--dangerously-load-development-channels` to test locally. See [Test during the research preview](#test-during-the-research-preview) for details.
+
+## Example: build a webhook receiver
+
+This walkthrough builds a single-file server that listens for HTTP requests and forwards them into your Claude Code session. By the end, anything that can send an HTTP POST, like a CI pipeline, a monitoring alert, or a `curl` command, can push events to Claude.
+
+This example uses [Bun](https://bun.sh) as the runtime for its built-in HTTP server and TypeScript support. You can use [Node](https://nodejs.org) or [Deno](https://deno.com) instead; the only requirement is the [MCP SDK](https://www.npmjs.com/package/@modelcontextprotocol/sdk).
+
+<Steps>
+  <Step title="Create the project">
+    Create a new directory and install the MCP SDK:
+
+    ```bash theme={null}
+    mkdir webhook-channel && cd webhook-channel
+    bun add @modelcontextprotocol/sdk
+    ```
+  </Step>
+
+  <Step title="Write the channel server">
+    Create a file called `webhook.ts`. This is your entire channel server: it connects to Claude Code over stdio, and it listens for HTTP POSTs on port 8788. When a request arrives, it pushes the body to Claude as a channel event.
+
+    ```ts title="webhook.ts" theme={null}
+    #!/usr/bin/env bun
+    import { Server } from '@modelcontextprotocol/sdk/server/index.js'
+    import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
+
+    // Create the MCP server and declare it as a channel
+    const mcp = new Server(
+      { name: 'webhook', version: '0.0.1' },
+      {
+        // this key is what makes it a channel — Claude Code registers a listener for it
+        capabilities: { experimental: { 'claude/channel': {} } },
+        // added to Claude's system prompt so it knows how to handle these events
+        instructions: 'Events from the webhook channel arrive as <channel source="webhook" ...>. They are one-way: read them and act, no reply expected.',
+      },
+    )
+
+    // Connect to Claude Code over stdio (Claude Code spawns this process)
+    await mcp.connect(new StdioServerTransport())
+
+    // Start an HTTP server that forwards every POST to Claude
+    Bun.serve({
+      port: 8788,  // any open port works
+      // localhost-only: nothing outside this machine can POST
+      hostname: '127.0.0.1',
+      async fetch(req) {
+        const body = await req.text()
+        await mcp.notification({
+          method: 'notifications/claude/channel',
+          params: {
+            content: body,  // becomes the body of the <channel> tag
+            // each key becomes a tag attribute, e.g. <channel path="/" method="POST">
+            meta: { path: new URL(req.url).pathname, method: req.method },
+          },
+        })
+        return new Response('ok')
+      },
+    })
+    ```
+
+    The file does three things in order:
+
+    * **Server configuration**: creates the MCP server with `claude/channel` in its capabilities, which is what tells Claude Code this is a channel. The [`instructions`](#server-options) string goes into Claude's system prompt: tell Claude what events to expect, whether to reply, and how to route replies if it should.
+    * **Stdio connection**: connects to Claude Code over stdin/stdout. This is standard for any [MCP server](https://modelcontextprotocol.io/docs/concepts/transports#standard-io): Claude Code spawns it as a subprocess.
+    * **HTTP listener**: starts a local web server on port 8788. Every POST body gets forwarded to Claude as a channel event via `mcp.notification()`. The `content` becomes the event body, and each `meta` entry becomes an attribute on the `<channel>` tag. The listener needs access to the `mcp` instance, so it runs in the same process. You could split it into separate modules for a larger project.
+  </Step>
+
+  <Step title="Register your server with Claude Code">
+    Add the server to `.mcp.json` so Claude Code knows how to start it. If you're adding it to a project-level `.mcp.json` in the same directory, use a relative path. If you're adding it to your user-level `~/.mcp.json`, use the full absolute path:
+
+    ```json title=".mcp.json" theme={null}
+    {
+      "mcpServers": {
+        "webhook": { "command": "bun", "args": ["./webhook.ts"] }
+      }
+    }
+    ```
+
+    Claude Code reads `.mcp.json` at startup and spawns each server as a subprocess.
+  </Step>
+
+  <Step title="Test it">
+    During the research preview, custom channels aren't on the allowlist, so start Claude Code with the development flag:
+
+    ```bash theme={null}
+    claude --dangerously-load-development-channels server:webhook
+    ```
+
+    When Claude Code starts, it reads `.mcp.json`, spawns your `webhook.ts` as a subprocess, and the HTTP listener starts automatically on the port you configured (8788 in this example). You don't need to run the server yourself.
+
+    If you see "blocked by org policy," your Team or Enterprise admin needs to [enable channels](/en/channels#enterprise-controls) first.
+
+    In a separate terminal, simulate a webhook by sending an HTTP POST with a message to your server. This example sends a CI failure alert to port 8788 (or whichever port you configured):
+
+    ```bash theme={null}
+    curl -X POST localhost:8788 -d "build failed on main: https://ci.example.com/run/1234"
+    ```
+
+    The payload arrives in your Claude Code session as a `<channel>` tag:
+
+    ```text theme={null}
+    <channel source="webhook" path="/" method="POST">build failed on main: https://ci.example.com/run/1234</channel>
+    ```
+
+    In your Claude Code terminal, you'll see Claude receive the message and start responding: reading files, running commands, or whatever the message calls for. This is a one-way channel, so Claude acts in your session but doesn't send anything back through the webhook. To add replies, see [Expose a reply tool](#expose-a-reply-tool).
+  </Step>
+</Steps>
+
+The [fakechat server](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/fakechat) extends this pattern with a web UI, file attachments, and a reply tool for two-way chat.
+
+## Test during the research preview
+
+During the research preview, every channel must be on the [approved allowlist](/en/channels#research-preview) to register. The development flag bypasses the allowlist for specific entries after a confirmation prompt. This example shows both entry types:
+
+```bash theme={null}
+# Testing a plugin you're developing
+claude --dangerously-load-development-channels plugin:yourplugin@yourmarketplace
+
+# Testing a bare .mcp.json server (no plugin wrapper yet)
+claude --dangerously-load-development-channels server:webhook
+```
+
+The bypass is per-entry. Combining this flag with `--channels` doesn't extend the bypass to the `--channels` entries. During the research preview, the approved allowlist is Anthropic-curated, so your channel stays on the development flag while you build and test.
+
+<Note>
+  This flag skips the allowlist only. The `channelsEnabled` organization policy still applies. Don't use it to run channels from untrusted sources.
+</Note>
+
+## Server options
+
+A channel sets these options in the [`Server`](https://modelcontextprotocol.io/docs/concepts/servers) constructor. The `instructions` and `capabilities.tools` fields are [standard MCP](https://modelcontextprotocol.io/docs/concepts/servers); `capabilities.experimental['claude/channel']` is the channel-specific addition:
+
+| Field                                         | Type     | Description                                                                                                                                                                                                                 |
+| :-------------------------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `capabilities.experimental['claude/channel']` | `object` | Required. Always `{}`. Presence registers the notification listener.                                                                                                                                                        |
+| `capabilities.tools`                          | `object` | Two-way only. Always `{}`. Standard MCP tool capability. See [Expose a reply tool](#expose-a-reply-tool).                                                                                                                   |
+| `instructions`                                | `string` | Recommended. Added to Claude's system prompt. Tell Claude what events to expect, what the `<channel>` tag attributes mean, whether to reply, and if so which tool to use and which attribute to pass back (like `chat_id`). |
+
+To create a one-way channel, omit `capabilities.tools`. This example shows a two-way setup with all three options set:
+
+```ts theme={null}
+import { Server } from '@modelcontextprotocol/sdk/server/index.js'
+
+const mcp = new Server(
+  { name: 'your-channel', version: '0.0.1' },
+  {
+    capabilities: {
+      experimental: { 'claude/channel': {} },  // registers the channel listener
+      tools: {},  // omit for one-way channels
+    },
+    // added to Claude's system prompt so it knows how to handle your events
+    instructions: 'Messages arrive as <channel source="your-channel" ...>. Reply with the reply tool.',
+  },
+)
+```
+
+To push an event, call `mcp.notification()` with method `notifications/claude/channel`. The params are in the next section.
+
+## Notification format
+
+Your server emits `notifications/claude/channel` with two params:
+
+| Field     | Type                     | Description                                                                                                                                                                                                                                                           |
+| :-------- | :----------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `content` | `string`                 | The event body. Delivered as the body of the `<channel>` tag.                                                                                                                                                                                                         |
+| `meta`    | `Record<string, string>` | Optional. Each entry becomes an attribute on the `<channel>` tag for routing context like chat ID, sender name, or alert severity. Keys must be identifiers: letters, digits, and underscores only. Keys containing hyphens or other characters are silently dropped. |
+
+Your server pushes events by calling `mcp.notification()` on the `Server` instance. This example pushes a CI failure alert with two meta keys:
+
+```ts theme={null}
+await mcp.notification({
+  method: 'notifications/claude/channel',
+  params: {
+    content: 'build failed on main: https://ci.example.com/run/1234',
+    meta: { severity: 'high', run_id: '1234' },
+  },
+})
+```
+
+The event arrives in Claude's context wrapped in a `<channel>` tag. The `source` attribute is set automatically from your server's configured name:
+
+```text theme={null}
+<channel source="your-channel" severity="high" run_id="1234">
+build failed on main: https://ci.example.com/run/1234
+</channel>
+```
+
+## Expose a reply tool
+
+If your channel is two-way, like a chat bridge rather than an alert forwarder, expose a standard [MCP tool](https://modelcontextprotocol.io/docs/concepts/tools) that Claude can call to send messages back. Nothing about the tool registration is channel-specific. A reply tool has three components:
+
+1. A `tools: {}` entry in your `Server` constructor capabilities so Claude Code discovers the tool
+2. Tool handlers that define the tool's schema and implement the send logic
+3. An `instructions` string in your `Server` constructor that tells Claude when and how to call the tool
+
+To add these to the [webhook receiver above](#example-build-a-webhook-receiver):
+
+<Steps>
+  <Step title="Enable tool discovery">
+    In your `Server` constructor in `webhook.ts`, add `tools: {}` to the capabilities so Claude Code knows your server offers tools:
+
+    ```ts theme={null}
+    capabilities: {
+      experimental: { 'claude/channel': {} },
+      tools: {},  // enables tool discovery
+    },
+    ```
+  </Step>
+
+  <Step title="Register the reply tool">
+    Add the following to `webhook.ts`. The `import` goes at the top of the file with your other imports; the two handlers go between the `Server` constructor and `mcp.connect()`. This registers a `reply` tool that Claude can call with a `chat_id` and `text`:
+
+    ```ts theme={null}
+    // Add this import at the top of webhook.ts
+    import { ListToolsRequestSchema, CallToolRequestSchema } from '@modelcontextprotocol/sdk/types.js'
+
+    // Claude queries this at startup to discover what tools your server offers
+    mcp.setRequestHandler(ListToolsRequestSchema, async () => ({
+      tools: [{
+        name: 'reply',
+        description: 'Send a message back over this channel',
+        // inputSchema tells Claude what arguments to pass
+        inputSchema: {
+          type: 'object',
+          properties: {
+            chat_id: { type: 'string', description: 'The conversation to reply in' },
+            text: { type: 'string', description: 'The message to send' },
+          },
+          required: ['chat_id', 'text'],
+        },
+      }],
+    }))
+
+    // Claude calls this when it wants to invoke a tool
+    mcp.setRequestHandler(CallToolRequestSchema, async req => {
+      if (req.params.name === 'reply') {
+        const { chat_id, text } = req.params.arguments as { chat_id: string; text: string }
+        // your platform's send API
+        await yourPlatform.send(chat_id, text)
+        return { content: [{ type: 'text', text: 'sent' }] }
+      }
+      throw new Error(`unknown tool: ${req.params.name}`)
+    })
+    ```
+  </Step>
+
+  <Step title="Update the instructions">
+    Update the `instructions` string in your `Server` constructor so Claude knows to route replies back through the tool. This example tells Claude to pass `chat_id` from the inbound tag:
+
+    ```ts theme={null}
+    instructions: 'Messages arrive as <channel source="webhook" chat_id="...">. Reply with the reply tool, passing the chat_id from the tag.'
+    ```
+  </Step>
+</Steps>
+
+Here's the complete `webhook.ts` with two-way support, combining the one-way receiver from the walkthrough with the reply tool additions:
+
+```ts title="Full webhook.ts with reply tool" expandable theme={null}
+#!/usr/bin/env bun
+import { Server } from '@modelcontextprotocol/sdk/server/index.js'
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
+import { ListToolsRequestSchema, CallToolRequestSchema } from '@modelcontextprotocol/sdk/types.js'
+
+const mcp = new Server(
+  { name: 'webhook', version: '0.0.1' },
+  {
+    capabilities: {
+      experimental: { 'claude/channel': {} },
+      tools: {},
+    },
+    instructions: 'Messages arrive as <channel source="webhook" chat_id="...">. Reply with the reply tool, passing the chat_id from the tag.',
+  },
+)
+
+mcp.setRequestHandler(ListToolsRequestSchema, async () => ({
+  tools: [{
+    name: 'reply',
+    description: 'Send a message back over this channel',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        chat_id: { type: 'string', description: 'The conversation to reply in' },
+        text: { type: 'string', description: 'The message to send' },
+      },
+      required: ['chat_id', 'text'],
+    },
+  }],
+}))
+
+mcp.setRequestHandler(CallToolRequestSchema, async req => {
+  if (req.params.name === 'reply') {
+    const { chat_id, text } = req.params.arguments as { chat_id: string; text: string }
+    // your platform's send API — replace with your real integration
+    console.error(`Reply to ${chat_id}: ${text}`)
+    return { content: [{ type: 'text', text: 'sent' }] }
+  }
+  throw new Error(`unknown tool: ${req.params.name}`)
+})
+
+await mcp.connect(new StdioServerTransport())
+
+let nextId = 1
+Bun.serve({
+  port: 8788,
+  hostname: '127.0.0.1',
+  async fetch(req) {
+    const body = await req.text()
+    const chat_id = String(nextId++)
+    await mcp.notification({
+      method: 'notifications/claude/channel',
+      params: {
+        content: body,
+        meta: { chat_id, path: new URL(req.url).pathname, method: req.method },
+      },
+    })
+    return new Response('ok')
+  },
+})
+```
+
+The [fakechat server](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/fakechat) shows a more complete example with file attachments and message editing.
+
+## Gate inbound messages
+
+An ungated channel is a prompt injection vector. Anyone who can reach your endpoint can put text in front of Claude. A channel listening to a chat platform or a public endpoint needs a real sender check before it emits anything.
+
+Check the sender against an allowlist before calling `mcp.notification()`. This example drops any message from a sender not in the set:
+
+```ts theme={null}
+const allowed = new Set(loadAllowlist())  // from your access.json or equivalent
+
+// inside your message handler, before emitting:
+if (!allowed.has(message.from.id)) {  // sender, not room
+  return  // drop silently
+}
+await mcp.notification({ ... })
+```
+
+Gate on the sender's identity, not the chat or room identity: `message.from.id` in the example, not `message.chat.id`. In group chats, these differ, and gating on the room would let anyone in an allowlisted group inject messages into the session.
+
+The [Telegram](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/telegram) and [Discord](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/discord) channels gate on a sender allowlist the same way. They bootstrap the list by pairing: the user DMs the bot, the bot replies with a pairing code, the user approves it in their Claude Code session, and their platform ID is added. See either implementation for the full pairing flow.
+
+## Package as a plugin
+
+To make your channel installable and shareable, wrap it in a [plugin](/en/plugins) and publish it to a [marketplace](/en/plugin-marketplaces). Users install it with `/plugin install`, then enable it per session with `--channels plugin:<name>@<marketplace>`.
+
+A channel published to your own marketplace still needs `--dangerously-load-development-channels` to run, since it isn't on the [approved allowlist](/en/channels#supported-channels). To get it added, [submit it to the official marketplace](/en/plugins#submit-your-plugin-to-the-official-marketplace). Channel plugins go through security review before being approved.
+
+## See also
+
+* [Channels](/en/channels) to install and use Telegram, Discord, or the fakechat demo, and to enable channels for a Team or Enterprise org
+* [Working channel implementations](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins) for complete server code with pairing flows, reply tools, and file attachments
+* [MCP](/en/mcp) for the underlying protocol that channel servers implement
+* [Plugins](/en/plugins) to package your channel so users can install it with `/plugin install`
+
+
 # Checkpointing
 Source: https://code.claude.com/docs/en/checkpointing
 
@@ -5016,60 +5694,62 @@ You can start sessions, pipe content, resume conversations, and manage updates w
 
 Customize Claude Code's behavior with these command-line flags:
 
-| Flag                                   | Description                                                                                                                                                                                                                                         | Example                                                                                            |
-| :------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
-| `--add-dir`                            | Add additional working directories for Claude to access (validates each path exists as a directory)                                                                                                                                                 | `claude --add-dir ../apps ../lib`                                                                  |
-| `--agent`                              | Specify an agent for the current session (overrides the `agent` setting)                                                                                                                                                                            | `claude --agent my-custom-agent`                                                                   |
-| `--agents`                             | Define custom subagents dynamically via JSON. Uses the same field names as subagent [frontmatter](/en/sub-agents#supported-frontmatter-fields), plus a `prompt` field for the agent's instructions                                                  | `claude --agents '{"reviewer":{"description":"Reviews code","prompt":"You are a code reviewer"}}'` |
-| `--allow-dangerously-skip-permissions` | Enable permission bypassing as an option without immediately activating it. Allows composing with `--permission-mode` (use with caution)                                                                                                            | `claude --permission-mode plan --allow-dangerously-skip-permissions`                               |
-| `--allowedTools`                       | Tools that execute without prompting for permission. See [permission rule syntax](/en/settings#permission-rule-syntax) for pattern matching. To restrict which tools are available, use `--tools` instead                                           | `"Bash(git log *)" "Bash(git diff *)" "Read"`                                                      |
-| `--append-system-prompt`               | Append custom text to the end of the default system prompt                                                                                                                                                                                          | `claude --append-system-prompt "Always use TypeScript"`                                            |
-| `--append-system-prompt-file`          | Load additional system prompt text from a file and append to the default prompt                                                                                                                                                                     | `claude --append-system-prompt-file ./extra-rules.txt`                                             |
-| `--betas`                              | Beta headers to include in API requests (API key users only)                                                                                                                                                                                        | `claude --betas interleaved-thinking`                                                              |
-| `--chrome`                             | Enable [Chrome browser integration](/en/chrome) for web automation and testing                                                                                                                                                                      | `claude --chrome`                                                                                  |
-| `--continue`, `-c`                     | Load the most recent conversation in the current directory                                                                                                                                                                                          | `claude --continue`                                                                                |
-| `--dangerously-skip-permissions`       | Skip permission prompts (use with caution). See [permission modes](/en/permissions#permission-modes) for what this does and does not skip                                                                                                           | `claude --dangerously-skip-permissions`                                                            |
-| `--debug`                              | Enable debug mode with optional category filtering (for example, `"api,hooks"` or `"!statsig,!file"`)                                                                                                                                               | `claude --debug "api,mcp"`                                                                         |
-| `--disable-slash-commands`             | Disable all skills and commands for this session                                                                                                                                                                                                    | `claude --disable-slash-commands`                                                                  |
-| `--disallowedTools`                    | Tools that are removed from the model's context and cannot be used                                                                                                                                                                                  | `"Bash(git log *)" "Bash(git diff *)" "Edit"`                                                      |
-| `--effort`                             | Set the [effort level](/en/model-config#adjust-effort-level) for the current session. Options: `low`, `medium`, `high`, `max` (Opus 4.6 only). Session-scoped and does not persist to settings                                                      | `claude --effort high`                                                                             |
-| `--fallback-model`                     | Enable automatic fallback to specified model when default model is overloaded (print mode only)                                                                                                                                                     | `claude -p --fallback-model sonnet "query"`                                                        |
-| `--fork-session`                       | When resuming, create a new session ID instead of reusing the original (use with `--resume` or `--continue`)                                                                                                                                        | `claude --resume abc123 --fork-session`                                                            |
-| `--from-pr`                            | Resume sessions linked to a specific GitHub PR. Accepts a PR number or URL. Sessions are automatically linked when created via `gh pr create`                                                                                                       | `claude --from-pr 123`                                                                             |
-| `--ide`                                | Automatically connect to IDE on startup if exactly one valid IDE is available                                                                                                                                                                       | `claude --ide`                                                                                     |
-| `--init`                               | Run initialization hooks and start interactive mode                                                                                                                                                                                                 | `claude --init`                                                                                    |
-| `--init-only`                          | Run initialization hooks and exit (no interactive session)                                                                                                                                                                                          | `claude --init-only`                                                                               |
-| `--include-partial-messages`           | Include partial streaming events in output (requires `--print` and `--output-format=stream-json`)                                                                                                                                                   | `claude -p --output-format stream-json --include-partial-messages "query"`                         |
-| `--input-format`                       | Specify input format for print mode (options: `text`, `stream-json`)                                                                                                                                                                                | `claude -p --output-format json --input-format stream-json`                                        |
-| `--json-schema`                        | Get validated JSON output matching a JSON Schema after agent completes its workflow (print mode only, see [structured outputs](https://platform.claude.com/docs/en/agent-sdk/structured-outputs))                                                   | `claude -p --json-schema '{"type":"object","properties":{...}}' "query"`                           |
-| `--maintenance`                        | Run maintenance hooks and exit                                                                                                                                                                                                                      | `claude --maintenance`                                                                             |
-| `--max-budget-usd`                     | Maximum dollar amount to spend on API calls before stopping (print mode only)                                                                                                                                                                       | `claude -p --max-budget-usd 5.00 "query"`                                                          |
-| `--max-turns`                          | Limit the number of agentic turns (print mode only). Exits with an error when the limit is reached. No limit by default                                                                                                                             | `claude -p --max-turns 3 "query"`                                                                  |
-| `--mcp-config`                         | Load MCP servers from JSON files or strings (space-separated)                                                                                                                                                                                       | `claude --mcp-config ./mcp.json`                                                                   |
-| `--model`                              | Sets the model for the current session with an alias for the latest model (`sonnet` or `opus`) or a model's full name                                                                                                                               | `claude --model claude-sonnet-4-6`                                                                 |
-| `--name`, `-n`                         | Set a display name for the session, shown in `/resume` and the terminal title. You can resume a named session with `claude --resume <name>`. <br /><br />[`/rename`](/en/commands) changes the name mid-session and also shows it on the prompt bar | `claude -n "my-feature-work"`                                                                      |
-| `--no-chrome`                          | Disable [Chrome browser integration](/en/chrome) for this session                                                                                                                                                                                   | `claude --no-chrome`                                                                               |
-| `--no-session-persistence`             | Disable session persistence so sessions are not saved to disk and cannot be resumed (print mode only)                                                                                                                                               | `claude -p --no-session-persistence "query"`                                                       |
-| `--output-format`                      | Specify output format for print mode (options: `text`, `json`, `stream-json`)                                                                                                                                                                       | `claude -p "query" --output-format json`                                                           |
-| `--permission-mode`                    | Begin in a specified [permission mode](/en/permissions#permission-modes)                                                                                                                                                                            | `claude --permission-mode plan`                                                                    |
-| `--permission-prompt-tool`             | Specify an MCP tool to handle permission prompts in non-interactive mode                                                                                                                                                                            | `claude -p --permission-prompt-tool mcp_auth_tool "query"`                                         |
-| `--plugin-dir`                         | Load plugins from a directory for this session only. Each flag takes one path. Repeat the flag for multiple directories: `--plugin-dir A --plugin-dir B`                                                                                            | `claude --plugin-dir ./my-plugins`                                                                 |
-| `--print`, `-p`                        | Print response without interactive mode (see [Agent SDK documentation](https://platform.claude.com/docs/en/agent-sdk/overview) for programmatic usage details)                                                                                      | `claude -p "query"`                                                                                |
-| `--remote`                             | Create a new [web session](/en/claude-code-on-the-web) on claude.ai with the provided task description                                                                                                                                              | `claude --remote "Fix the login bug"`                                                              |
-| `--remote-control`, `--rc`             | Start an interactive session with [Remote Control](/en/remote-control#interactive-session) enabled so you can also control it from claude.ai or the Claude app. Optionally pass a name for the session                                              | `claude --remote-control "My Project"`                                                             |
-| `--resume`, `-r`                       | Resume a specific session by ID or name, or show an interactive picker to choose a session                                                                                                                                                          | `claude --resume auth-refactor`                                                                    |
-| `--session-id`                         | Use a specific session ID for the conversation (must be a valid UUID)                                                                                                                                                                               | `claude --session-id "550e8400-e29b-41d4-a716-446655440000"`                                       |
-| `--setting-sources`                    | Comma-separated list of setting sources to load (`user`, `project`, `local`)                                                                                                                                                                        | `claude --setting-sources user,project`                                                            |
-| `--settings`                           | Path to a settings JSON file or a JSON string to load additional settings from                                                                                                                                                                      | `claude --settings ./settings.json`                                                                |
-| `--strict-mcp-config`                  | Only use MCP servers from `--mcp-config`, ignoring all other MCP configurations                                                                                                                                                                     | `claude --strict-mcp-config --mcp-config ./mcp.json`                                               |
-| `--system-prompt`                      | Replace the entire system prompt with custom text                                                                                                                                                                                                   | `claude --system-prompt "You are a Python expert"`                                                 |
-| `--system-prompt-file`                 | Load system prompt from a file, replacing the default prompt                                                                                                                                                                                        | `claude --system-prompt-file ./custom-prompt.txt`                                                  |
-| `--teleport`                           | Resume a [web session](/en/claude-code-on-the-web) in your local terminal                                                                                                                                                                           | `claude --teleport`                                                                                |
-| `--teammate-mode`                      | Set how [agent team](/en/agent-teams) teammates display: `auto` (default), `in-process`, or `tmux`. See [set up agent teams](/en/agent-teams#set-up-agent-teams)                                                                                    | `claude --teammate-mode in-process`                                                                |
-| `--tools`                              | Restrict which built-in tools Claude can use. Use `""` to disable all, `"default"` for all, or tool names like `"Bash,Edit,Read"`                                                                                                                   | `claude --tools "Bash,Edit,Read"`                                                                  |
-| `--verbose`                            | Enable verbose logging, shows full turn-by-turn output                                                                                                                                                                                              | `claude --verbose`                                                                                 |
-| `--version`, `-v`                      | Output the version number                                                                                                                                                                                                                           | `claude -v`                                                                                        |
-| `--worktree`, `-w`                     | Start Claude in an isolated [git worktree](/en/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees) at `<repo>/.claude/worktrees/<name>`. If no name is given, one is auto-generated                                              | `claude -w feature-auth`                                                                           |
+| Flag                                      | Description                                                                                                                                                                                                                                         | Example                                                                                            |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
+| `--add-dir`                               | Add additional working directories for Claude to access (validates each path exists as a directory)                                                                                                                                                 | `claude --add-dir ../apps ../lib`                                                                  |
+| `--agent`                                 | Specify an agent for the current session (overrides the `agent` setting)                                                                                                                                                                            | `claude --agent my-custom-agent`                                                                   |
+| `--agents`                                | Define custom subagents dynamically via JSON. Uses the same field names as subagent [frontmatter](/en/sub-agents#supported-frontmatter-fields), plus a `prompt` field for the agent's instructions                                                  | `claude --agents '{"reviewer":{"description":"Reviews code","prompt":"You are a code reviewer"}}'` |
+| `--allow-dangerously-skip-permissions`    | Enable permission bypassing as an option without immediately activating it. Allows composing with `--permission-mode` (use with caution)                                                                                                            | `claude --permission-mode plan --allow-dangerously-skip-permissions`                               |
+| `--allowedTools`                          | Tools that execute without prompting for permission. See [permission rule syntax](/en/settings#permission-rule-syntax) for pattern matching. To restrict which tools are available, use `--tools` instead                                           | `"Bash(git log *)" "Bash(git diff *)" "Read"`                                                      |
+| `--append-system-prompt`                  | Append custom text to the end of the default system prompt                                                                                                                                                                                          | `claude --append-system-prompt "Always use TypeScript"`                                            |
+| `--append-system-prompt-file`             | Load additional system prompt text from a file and append to the default prompt                                                                                                                                                                     | `claude --append-system-prompt-file ./extra-rules.txt`                                             |
+| `--betas`                                 | Beta headers to include in API requests (API key users only)                                                                                                                                                                                        | `claude --betas interleaved-thinking`                                                              |
+| `--channels`                              | Enable named [channel](/en/channels) servers to push messages into this session. Accepts space-separated `plugin:<name>@<marketplace>` entries from the [approved allowlist](/en/channels#supported-channels)                                       | `claude --channels plugin:fakechat@claude-plugins-official`                                        |
+| `--chrome`                                | Enable [Chrome browser integration](/en/chrome) for web automation and testing                                                                                                                                                                      | `claude --chrome`                                                                                  |
+| `--continue`, `-c`                        | Load the most recent conversation in the current directory                                                                                                                                                                                          | `claude --continue`                                                                                |
+| `--dangerously-load-development-channels` | Enable [channels](/en/channels-reference#test-during-the-research-preview) that are not on the approved allowlist, for local development. Accepts `plugin:<name>@<marketplace>` and `server:<name>` entries. Prompts for confirmation               | `claude --dangerously-load-development-channels server:webhook`                                    |
+| `--dangerously-skip-permissions`          | Skip permission prompts (use with caution). See [permission modes](/en/permissions#permission-modes) for what this does and does not skip                                                                                                           | `claude --dangerously-skip-permissions`                                                            |
+| `--debug`                                 | Enable debug mode with optional category filtering (for example, `"api,hooks"` or `"!statsig,!file"`)                                                                                                                                               | `claude --debug "api,mcp"`                                                                         |
+| `--disable-slash-commands`                | Disable all skills and commands for this session                                                                                                                                                                                                    | `claude --disable-slash-commands`                                                                  |
+| `--disallowedTools`                       | Tools that are removed from the model's context and cannot be used                                                                                                                                                                                  | `"Bash(git log *)" "Bash(git diff *)" "Edit"`                                                      |
+| `--effort`                                | Set the [effort level](/en/model-config#adjust-effort-level) for the current session. Options: `low`, `medium`, `high`, `max` (Opus 4.6 only). Session-scoped and does not persist to settings                                                      | `claude --effort high`                                                                             |
+| `--fallback-model`                        | Enable automatic fallback to specified model when default model is overloaded (print mode only)                                                                                                                                                     | `claude -p --fallback-model sonnet "query"`                                                        |
+| `--fork-session`                          | When resuming, create a new session ID instead of reusing the original (use with `--resume` or `--continue`)                                                                                                                                        | `claude --resume abc123 --fork-session`                                                            |
+| `--from-pr`                               | Resume sessions linked to a specific GitHub PR. Accepts a PR number or URL. Sessions are automatically linked when created via `gh pr create`                                                                                                       | `claude --from-pr 123`                                                                             |
+| `--ide`                                   | Automatically connect to IDE on startup if exactly one valid IDE is available                                                                                                                                                                       | `claude --ide`                                                                                     |
+| `--init`                                  | Run initialization hooks and start interactive mode                                                                                                                                                                                                 | `claude --init`                                                                                    |
+| `--init-only`                             | Run initialization hooks and exit (no interactive session)                                                                                                                                                                                          | `claude --init-only`                                                                               |
+| `--include-partial-messages`              | Include partial streaming events in output (requires `--print` and `--output-format=stream-json`)                                                                                                                                                   | `claude -p --output-format stream-json --include-partial-messages "query"`                         |
+| `--input-format`                          | Specify input format for print mode (options: `text`, `stream-json`)                                                                                                                                                                                | `claude -p --output-format json --input-format stream-json`                                        |
+| `--json-schema`                           | Get validated JSON output matching a JSON Schema after agent completes its workflow (print mode only, see [structured outputs](https://platform.claude.com/docs/en/agent-sdk/structured-outputs))                                                   | `claude -p --json-schema '{"type":"object","properties":{...}}' "query"`                           |
+| `--maintenance`                           | Run maintenance hooks and exit                                                                                                                                                                                                                      | `claude --maintenance`                                                                             |
+| `--max-budget-usd`                        | Maximum dollar amount to spend on API calls before stopping (print mode only)                                                                                                                                                                       | `claude -p --max-budget-usd 5.00 "query"`                                                          |
+| `--max-turns`                             | Limit the number of agentic turns (print mode only). Exits with an error when the limit is reached. No limit by default                                                                                                                             | `claude -p --max-turns 3 "query"`                                                                  |
+| `--mcp-config`                            | Load MCP servers from JSON files or strings (space-separated)                                                                                                                                                                                       | `claude --mcp-config ./mcp.json`                                                                   |
+| `--model`                                 | Sets the model for the current session with an alias for the latest model (`sonnet` or `opus`) or a model's full name                                                                                                                               | `claude --model claude-sonnet-4-6`                                                                 |
+| `--name`, `-n`                            | Set a display name for the session, shown in `/resume` and the terminal title. You can resume a named session with `claude --resume <name>`. <br /><br />[`/rename`](/en/commands) changes the name mid-session and also shows it on the prompt bar | `claude -n "my-feature-work"`                                                                      |
+| `--no-chrome`                             | Disable [Chrome browser integration](/en/chrome) for this session                                                                                                                                                                                   | `claude --no-chrome`                                                                               |
+| `--no-session-persistence`                | Disable session persistence so sessions are not saved to disk and cannot be resumed (print mode only)                                                                                                                                               | `claude -p --no-session-persistence "query"`                                                       |
+| `--output-format`                         | Specify output format for print mode (options: `text`, `json`, `stream-json`)                                                                                                                                                                       | `claude -p "query" --output-format json`                                                           |
+| `--permission-mode`                       | Begin in a specified [permission mode](/en/permissions#permission-modes)                                                                                                                                                                            | `claude --permission-mode plan`                                                                    |
+| `--permission-prompt-tool`                | Specify an MCP tool to handle permission prompts in non-interactive mode                                                                                                                                                                            | `claude -p --permission-prompt-tool mcp_auth_tool "query"`                                         |
+| `--plugin-dir`                            | Load plugins from a directory for this session only. Each flag takes one path. Repeat the flag for multiple directories: `--plugin-dir A --plugin-dir B`                                                                                            | `claude --plugin-dir ./my-plugins`                                                                 |
+| `--print`, `-p`                           | Print response without interactive mode (see [Agent SDK documentation](https://platform.claude.com/docs/en/agent-sdk/overview) for programmatic usage details)                                                                                      | `claude -p "query"`                                                                                |
+| `--remote`                                | Create a new [web session](/en/claude-code-on-the-web) on claude.ai with the provided task description                                                                                                                                              | `claude --remote "Fix the login bug"`                                                              |
+| `--remote-control`, `--rc`                | Start an interactive session with [Remote Control](/en/remote-control#interactive-session) enabled so you can also control it from claude.ai or the Claude app. Optionally pass a name for the session                                              | `claude --remote-control "My Project"`                                                             |
+| `--resume`, `-r`                          | Resume a specific session by ID or name, or show an interactive picker to choose a session                                                                                                                                                          | `claude --resume auth-refactor`                                                                    |
+| `--session-id`                            | Use a specific session ID for the conversation (must be a valid UUID)                                                                                                                                                                               | `claude --session-id "550e8400-e29b-41d4-a716-446655440000"`                                       |
+| `--setting-sources`                       | Comma-separated list of setting sources to load (`user`, `project`, `local`)                                                                                                                                                                        | `claude --setting-sources user,project`                                                            |
+| `--settings`                              | Path to a settings JSON file or a JSON string to load additional settings from                                                                                                                                                                      | `claude --settings ./settings.json`                                                                |
+| `--strict-mcp-config`                     | Only use MCP servers from `--mcp-config`, ignoring all other MCP configurations                                                                                                                                                                     | `claude --strict-mcp-config --mcp-config ./mcp.json`                                               |
+| `--system-prompt`                         | Replace the entire system prompt with custom text                                                                                                                                                                                                   | `claude --system-prompt "You are a Python expert"`                                                 |
+| `--system-prompt-file`                    | Load system prompt from a file, replacing the default prompt                                                                                                                                                                                        | `claude --system-prompt-file ./custom-prompt.txt`                                                  |
+| `--teleport`                              | Resume a [web session](/en/claude-code-on-the-web) in your local terminal                                                                                                                                                                           | `claude --teleport`                                                                                |
+| `--teammate-mode`                         | Set how [agent team](/en/agent-teams) teammates display: `auto` (default), `in-process`, or `tmux`. See [set up agent teams](/en/agent-teams#set-up-agent-teams)                                                                                    | `claude --teammate-mode in-process`                                                                |
+| `--tools`                                 | Restrict which built-in tools Claude can use. Use `""` to disable all, `"default"` for all, or tool names like `"Bash,Edit,Read"`                                                                                                                   | `claude --tools "Bash,Edit,Read"`                                                                  |
+| `--verbose`                               | Enable verbose logging, shows full turn-by-turn output                                                                                                                                                                                              | `claude --verbose`                                                                                 |
+| `--version`, `-v`                         | Output the version number                                                                                                                                                                                                                           | `claude -v`                                                                                        |
+| `--worktree`, `-w`                        | Start Claude in an isolated [git worktree](/en/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees) at `<repo>/.claude/worktrees/<name>`. If no name is given, one is auto-generated                                              | `claude -w feature-auth`                                                                           |
 
 ### System prompt flags
 
@@ -7764,7 +8444,7 @@ When you install, enable, or disable plugins during a session, run `/reload-plug
 /reload-plugins
 ```
 
-Claude Code reloads all active plugins and shows counts for reloaded commands, skills, agents, hooks, plugin MCP servers, and plugin LSP servers.
+Claude Code reloads all active plugins and shows counts for plugins, skills, agents, hooks, plugin MCP servers, and plugin LSP servers.
 
 ## Manage marketplaces
 
@@ -7955,7 +8635,7 @@ Claude Code supports the following environment variables to control its behavior
 | `CLAUDE_CODE_PLUGIN_GIT_TIMEOUT_MS`            | Timeout in milliseconds for git operations when installing or updating plugins (default: 120000). Increase this value for large repositories or slow network connections. See [Git operations time out](/en/plugin-marketplaces#git-operations-time-out)                                                                                                                                                                                                                                                                                                                                                         |
 | `CLAUDE_CODE_PLUGIN_SEED_DIR`                  | Path to one or more read-only plugin seed directories, separated by `:` on Unix or `;` on Windows. Use this to bundle a pre-populated plugins directory into a container image. Claude Code registers marketplaces from these directories at startup and uses pre-cached plugins without re-cloning. See [Pre-populate plugins for containers](/en/plugin-marketplaces#pre-populate-plugins-for-containers)                                                                                                                                                                                                      |
 | `CLAUDE_CODE_PROXY_RESOLVES_HOSTS`             | Set to `true` to allow the proxy to perform DNS resolution instead of the caller. Opt-in for environments where the proxy should handle hostname resolution                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS`      | Maximum time in milliseconds for [SessionEnd](/en/hooks#sessionend) hooks to complete (default: `1500`). Applies to both session exit and `/clear`. Per-hook `timeout` values are also capped by this budget                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS`      | Maximum time in milliseconds for [SessionEnd](/en/hooks#sessionend) hooks to complete (default: `1500`). Applies to session exit, `/clear`, and switching sessions via interactive `/resume`. Per-hook `timeout` values are also capped by this budget                                                                                                                                                                                                                                                                                                                                                           |
 | `CLAUDE_CODE_SHELL`                            | Override automatic shell detection. Useful when your login shell differs from your preferred working shell (for example, `bash` vs `zsh`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `CLAUDE_CODE_SHELL_PREFIX`                     | Command prefix to wrap all bash commands (for example, for logging or auditing). Example: `/path/to/logger.sh` will execute `/path/to/logger.sh <command>`                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `CLAUDE_CODE_SIMPLE`                           | Set to `1` to run with a minimal system prompt and only the Bash, file read, and file edit tools. Disables MCP tools, attachments, hooks, and CLAUDE.md files                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -10094,7 +10774,7 @@ The `matcher` field is a regex string that filters when hooks fire. Use `"*"`, `
 | :---------------------------------------------------------------------------------------------- | :------------------------ | :------------------------------------------------------------------------------------------------------------------------ |
 | `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PermissionRequest`                          | tool name                 | `Bash`, `Edit\|Write`, `mcp__.*`                                                                                          |
 | `SessionStart`                                                                                  | how the session started   | `startup`, `resume`, `clear`, `compact`                                                                                   |
-| `SessionEnd`                                                                                    | why the session ended     | `clear`, `logout`, `prompt_input_exit`, `bypass_permissions_disabled`, `other`                                            |
+| `SessionEnd`                                                                                    | why the session ended     | `clear`, `resume`, `logout`, `prompt_input_exit`, `bypass_permissions_disabled`, `other`                                  |
 | `Notification`                                                                                  | notification type         | `permission_prompt`, `idle_prompt`, `auth_success`, `elicitation_dialog`                                                  |
 | `SubagentStart`                                                                                 | agent type                | `Bash`, `Explore`, `Plan`, or custom agent names                                                                          |
 | `PreCompact`, `PostCompact`                                                                     | what triggered compaction | `manual`, `auto`                                                                                                          |
@@ -11569,6 +12249,7 @@ The `reason` field in the hook input indicates why the session ended:
 | Reason                        | Description                                |
 | :---------------------------- | :----------------------------------------- |
 | `clear`                       | Session cleared with `/clear` command      |
+| `resume`                      | Session switched via interactive `/resume` |
 | `logout`                      | User logged out                            |
 | `prompt_input_exit`           | User exited while prompt input was visible |
 | `bypass_permissions_disabled` | Bypass permissions mode was disabled       |
@@ -11590,7 +12271,7 @@ In addition to the [common input fields](#common-input-fields), SessionEnd hooks
 
 SessionEnd hooks have no decision control. They cannot block session termination but can perform cleanup tasks.
 
-SessionEnd hooks have a default timeout of 1.5 seconds. This applies to both session exit and `/clear`. If your hooks need more time, set the `CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS` environment variable to a higher value in milliseconds. Any per-hook `timeout` setting is also capped by this value.
+SessionEnd hooks have a default timeout of 1.5 seconds. This applies to session exit, `/clear`, and switching sessions via interactive `/resume`. If your hooks need more time, set the `CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS` environment variable to a higher value in milliseconds. Any per-hook `timeout` setting is also capped by this value.
 
 ```bash theme={null}
 CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS=5000 claude
@@ -12470,7 +13151,7 @@ Each event type matches on a specific field. Matchers support exact strings and 
 | :---------------------------------------------------------------------------------------------- | :------------------------ | :------------------------------------------------------------------------------------------------------------------------ |
 | `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PermissionRequest`                          | tool name                 | `Bash`, `Edit\|Write`, `mcp__.*`                                                                                          |
 | `SessionStart`                                                                                  | how the session started   | `startup`, `resume`, `clear`, `compact`                                                                                   |
-| `SessionEnd`                                                                                    | why the session ended     | `clear`, `logout`, `prompt_input_exit`, `bypass_permissions_disabled`, `other`                                            |
+| `SessionEnd`                                                                                    | why the session ended     | `clear`, `resume`, `logout`, `prompt_input_exit`, `bypass_permissions_disabled`, `other`                                  |
 | `Notification`                                                                                  | notification type         | `permission_prompt`, `idle_prompt`, `auth_success`, `elicitation_dialog`                                                  |
 | `SubagentStart`                                                                                 | agent type                | `Bash`, `Explore`, `Plan`, or custom agent names                                                                          |
 | `PreCompact`, `PostCompact`                                                                     | what triggered compaction | `manual`, `auto`                                                                                                          |
@@ -14123,6 +14804,7 @@ With MCP servers connected, you can ask Claude Code to:
 * **Query databases**: "Find emails of 10 random users who used feature ENG-4521, based on our PostgreSQL database."
 * **Integrate designs**: "Update our standard email template based on the new Figma designs that were posted in Slack"
 * **Automate workflows**: "Create Gmail drafts inviting these 10 users to a feedback session about the new feature."
+* **React to external events**: An MCP server can also act as a [channel](/en/channels) that pushes messages into your session, so Claude reacts to Telegram messages, Discord chats, or webhook events while you're away.
 
 ## Popular MCP servers
 
@@ -14227,6 +14909,10 @@ claude mcp remove github
 ### Dynamic tool updates
 
 Claude Code supports MCP `list_changed` notifications, allowing MCP servers to dynamically update their available tools, prompts, and resources without requiring you to disconnect and reconnect. When an MCP server sends a `list_changed` notification, Claude Code automatically refreshes the available capabilities from that server.
+
+### Push messages with channels
+
+An MCP server can also push messages directly into your session so Claude can react to external events like CI results, monitoring alerts, or chat messages. To enable this, your server declares the `claude/channel` capability and you opt it in with the `--channels` flag at startup. See [Channels](/en/channels) to use an officially supported channel, or [Channels reference](/en/channels-reference) to build your own.
 
 <Tip>
   Tips:
@@ -15840,8 +16526,9 @@ Three levels persist across sessions: **low**, **medium**, and **high**. A fourt
 * **`--effort` flag**: pass `low`, `medium`, `high`, or `max` to set the level for a single session when launching Claude Code
 * **Environment variable**: set `CLAUDE_CODE_EFFORT_LEVEL` to `low`, `medium`, `high`, `max`, or `auto`
 * **Settings**: set `effortLevel` in your settings file to `"low"`, `"medium"`, or `"high"`
+* **Skill and subagent frontmatter**: set `effort` in a [skill](/en/skills#frontmatter-reference) or [subagent](/en/sub-agents#supported-frontmatter-fields) markdown file to override the effort level when that skill or subagent runs
 
-The environment variable takes precedence, then your configured level, then the model default.
+The environment variable takes precedence over all other methods, then your configured level, then the model default. Frontmatter effort applies when that skill or subagent is active, overriding the session level but not the environment variable.
 
 Effort is supported on Opus 4.6 and Sonnet 4.6. The effort slider appears in `/model` when a supported model is selected. The current effort level is also displayed next to the logo and spinner, for example "with low effort", so you can confirm which setting is active without opening `/model`.
 
@@ -16756,19 +17443,19 @@ Choose your environment to get started. Most surfaces require a [Claude subscrip
       <Tab title="Native Install (Recommended)">
         **macOS, Linux, WSL:**
 
-        ```bash theme={null}
+        ```bash theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
         curl -fsSL https://claude.ai/install.sh | bash
         ```
 
         **Windows PowerShell:**
 
-        ```powershell theme={null}
+        ```powershell theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
         irm https://claude.ai/install.ps1 | iex
         ```
 
         **Windows CMD:**
 
-        ```batch theme={null}
+        ```batch theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
         curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
         ```
 
@@ -16780,7 +17467,7 @@ Choose your environment to get started. Most surfaces require a [Claude subscrip
       </Tab>
 
       <Tab title="Homebrew">
-        ```bash theme={null}
+        ```bash theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
         brew install --cask claude-code
         ```
 
@@ -16790,7 +17477,7 @@ Choose your environment to get started. Most surfaces require a [Claude subscrip
       </Tab>
 
       <Tab title="WinGet">
-        ```powershell theme={null}
+        ```powershell theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
         winget install Anthropic.ClaudeCode
         ```
 
@@ -16936,15 +17623,16 @@ Each surface connects to the same underlying Claude Code engine, so your CLAUDE.
 
 Beyond the [Terminal](/en/quickstart), [VS Code](/en/vs-code), [JetBrains](/en/jetbrains), [Desktop](/en/desktop), and [Web](/en/claude-code-on-the-web) environments above, Claude Code integrates with CI/CD, chat, and browser workflows:
 
-| I want to...                                             | Best option                                                                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Continue a local session from my phone or another device | [Remote Control](/en/remote-control)                                                                               |
-| Start a task locally, continue on mobile                 | [Web](/en/claude-code-on-the-web) or [Claude iOS app](https://apps.apple.com/app/claude-by-anthropic/id6473753684) |
-| Automate PR reviews and issue triage                     | [GitHub Actions](/en/github-actions) or [GitLab CI/CD](/en/gitlab-ci-cd)                                           |
-| Get automatic code review on every PR                    | [GitHub Code Review](/en/code-review)                                                                              |
-| Route bug reports from Slack to pull requests            | [Slack](/en/slack)                                                                                                 |
-| Debug live web applications                              | [Chrome](/en/chrome)                                                                                               |
-| Build custom agents for your own workflows               | [Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)                                                |
+| I want to...                                                          | Best option                                                                                                        |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Continue a local session from my phone or another device              | [Remote Control](/en/remote-control)                                                                               |
+| Push events from Telegram, Discord, or my own webhooks into a session | [Channels](/en/channels)                                                                                           |
+| Start a task locally, continue on mobile                              | [Web](/en/claude-code-on-the-web) or [Claude iOS app](https://apps.apple.com/app/claude-by-anthropic/id6473753684) |
+| Automate PR reviews and issue triage                                  | [GitHub Actions](/en/github-actions) or [GitLab CI/CD](/en/gitlab-ci-cd)                                           |
+| Get automatic code review on every PR                                 | [GitHub Code Review](/en/code-review)                                                                              |
+| Route bug reports from Slack to pull requests                         | [Slack](/en/slack)                                                                                                 |
+| Debug live web applications                                           | [Chrome](/en/chrome)                                                                                               |
+| Build custom agents for your own workflows                            | [Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)                                                |
 
 ## Next steps
 
@@ -17383,7 +18071,7 @@ Each plugin entry needs at minimum a `name` and `source` (where to fetch it from
 | `plugins` | array  | List of available plugins                                                                                                                                              | See below      |
 
 <Note>
-  **Reserved names**: The following marketplace names are reserved for official Anthropic use and cannot be used by third-party marketplaces: `claude-code-marketplace`, `claude-code-plugins`, `claude-plugins-official`, `anthropic-marketplace`, `anthropic-plugins`, `agent-skills`, `life-sciences`. Names that impersonate official marketplaces (like `official-claude-plugins` or `anthropic-tools-v2`) are also blocked.
+  **Reserved names**: The following marketplace names are reserved for official Anthropic use and cannot be used by third-party marketplaces: `claude-code-marketplace`, `claude-code-plugins`, `claude-plugins-official`, `anthropic-marketplace`, `anthropic-plugins`, `agent-skills`, `knowledge-work-plugins`, `life-sciences`. Names that impersonate official marketplaces (like `official-claude-plugins` or `anthropic-tools-v2`) are also blocked.
 </Note>
 
 ### Owner fields
@@ -18403,7 +19091,7 @@ claude --plugin-dir ./my-plugin
 
 When a `--plugin-dir` plugin has the same name as an installed marketplace plugin, the local copy takes precedence for that session. This lets you test changes to a plugin you already have installed without uninstalling it first. Marketplace plugins force-enabled by managed settings are the only exception and cannot be overridden.
 
-As you make changes to your plugin, run `/reload-plugins` to pick up the updates without restarting. This reloads commands, skills, agents, hooks, plugin MCP servers, and plugin LSP servers. Test your plugin components:
+As you make changes to your plugin, run `/reload-plugins` to pick up the updates without restarting. This reloads plugins, skills, agents, hooks, plugin MCP servers, and plugin LSP servers. Test your plugin components:
 
 * Try your skills with `/plugin-name:skill-name`
 * Check that agents appear in `/agents`
@@ -19837,6 +20525,7 @@ Common causes:
 ## Related resources
 
 * [Claude Code on the web](/en/claude-code-on-the-web): run sessions in Anthropic-managed cloud environments instead of on your machine
+* [Channels](/en/channels): forward Telegram or Discord into a session so Claude reacts to messages while you're away
 * [Authentication](/en/authentication): set up `/login` and manage credentials for claude.ai
 * [CLI reference](/en/cli-reference): full list of flags and commands including `claude remote-control`
 * [Security](/en/security): how Remote Control sessions fit into the Claude Code security model
@@ -20164,7 +20853,7 @@ Use /loop and the cron scheduling tools to run prompts repeatedly, poll for stat
   Scheduled tasks require Claude Code v2.1.72 or later. Check your version with `claude --version`.
 </Note>
 
-Scheduled tasks let Claude re-run a prompt automatically on an interval. Use them to poll a deployment, babysit a PR, check back on a long-running build, or remind yourself to do something later in the session.
+Scheduled tasks let Claude re-run a prompt automatically on an interval. Use them to poll a deployment, babysit a PR, check back on a long-running build, or remind yourself to do something later in the session. To react to events as they happen instead of polling, see [Channels](/en/channels): your CI can push the failure into the session directly.
 
 Tasks are session-scoped: they live in the current Claude Code process and are gone when you exit. For durable scheduling that survives restarts and runs without an active terminal session, see [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) or [GitHub Actions](/en/github-actions).
 
@@ -20770,6 +21459,7 @@ The `$schema` line in the example above points to the [official JSON schema](htt
 | `enableAllProjectMcpServers`      | Automatically approve all MCP servers defined in project `.mcp.json` files                                                                                                                                                                                                                                                   | `true`                                                                  |
 | `enabledMcpjsonServers`           | List of specific MCP servers from `.mcp.json` files to approve                                                                                                                                                                                                                                                               | `["memory", "github"]`                                                  |
 | `disabledMcpjsonServers`          | List of specific MCP servers from `.mcp.json` files to reject                                                                                                                                                                                                                                                                | `["filesystem"]`                                                        |
+| `channelsEnabled`                 | (Managed settings only) Allow [channels](/en/channels) for Team and Enterprise users. Unset or `false` blocks channel message delivery regardless of what users pass to `--channels`                                                                                                                                         | `true`                                                                  |
 | `allowedMcpServers`               | When set in managed-settings.json, allowlist of MCP servers users can configure. Undefined = no restrictions, empty array = lockdown. Applies to all scopes. Denylist takes precedence. See [Managed MCP configuration](/en/mcp#managed-mcp-configuration)                                                                   | `[{ "serverName": "github" }]`                                          |
 | `deniedMcpServers`                | When set in managed-settings.json, denylist of MCP servers that are explicitly blocked. Applies to all scopes including managed servers. Denylist takes precedence over allowlist. See [Managed MCP configuration](/en/mcp#managed-mcp-configuration)                                                                        | `[{ "serverName": "filesystem" }]`                                      |
 | `strictKnownMarketplaces`         | When set in managed-settings.json, allowlist of plugin marketplaces users can add. Undefined = no restrictions, empty array = lockdown. Applies to marketplace additions only. See [Managed marketplace restrictions](/en/plugin-marketplaces#managed-marketplace-restrictions)                                              | `[{ "source": "github", "repo": "acme-corp/plugins" }]`                 |
@@ -21189,7 +21879,7 @@ Defines additional marketplaces that should be made available for the repository
 
 **All supported source types**:
 
-The allowlist supports seven marketplace source types. Most sources use exact matching, while `hostPattern` uses regex matching against the marketplace host.
+The allowlist supports multiple marketplace source types. Most sources use exact matching, while `hostPattern` uses regex matching against the marketplace host.
 
 1. **GitHub repositories**:
 
@@ -23665,6 +24355,11 @@ Community projects like [ccstatusline](https://github.com/sirmalloc/ccstatusline
 * If you see corrupted text, try simplifying your script to plain text output
 * Multi-line status lines with escape codes are more prone to rendering issues than single-line plain text
 
+**Workspace trust required**
+
+* The status line command only runs if you've accepted the workspace trust dialog for the current directory. Because `statusLine` executes a shell command, it requires the same trust acceptance as hooks and other shell-executing settings.
+* If trust isn't accepted, you'll see the notification `statusline skipped · restart to fix` instead of your status line output. Restart Claude Code and accept the trust prompt to enable it.
+
 **Script errors or hangs**
 
 * Scripts that exit with non-zero codes or produce no output cause the status line to go blank
@@ -23796,7 +24491,7 @@ This walkthrough guides you through creating a user-level subagent with the `/ag
   </Step>
 
   <Step title="Configure memory">
-    Select **Enable** to give the subagent a [persistent memory directory](#enable-persistent-memory) at `~/.claude/agent-memory/`. The subagent uses this to accumulate insights across conversations, such as codebase patterns and recurring issues. Select **None** if you don't want the subagent to persist learnings.
+    Select **User scope** to give the subagent a [persistent memory directory](#enable-persistent-memory) at `~/.claude/agent-memory/`. The subagent uses this to accumulate insights across conversations, such as codebase patterns and recurring issues. Select **None** if you don't want the subagent to persist learnings.
   </Step>
 
   <Step title="Save and try it out">
@@ -23862,7 +24557,7 @@ claude --agents '{
 }'
 ```
 
-The `--agents` flag accepts JSON with the same [frontmatter](#supported-frontmatter-fields) fields as file-based subagents: `description`, `prompt`, `tools`, `disallowedTools`, `model`, `permissionMode`, `mcpServers`, `hooks`, `maxTurns`, `skills`, and `memory`. Use `prompt` for the system prompt, equivalent to the markdown body in file-based subagents.
+The `--agents` flag accepts JSON with the same [frontmatter](#supported-frontmatter-fields) fields as file-based subagents: `description`, `prompt`, `tools`, `disallowedTools`, `model`, `permissionMode`, `mcpServers`, `hooks`, `maxTurns`, `skills`, `memory`, `effort`, `background`, and `isolation`. Use `prompt` for the system prompt, equivalent to the markdown body in file-based subagents.
 
 **Plugin subagents** come from [plugins](/en/plugins) you've installed. They appear in `/agents` alongside your custom subagents. See the [plugin components reference](/en/plugins-reference#agents) for details on creating plugin subagents.
 
@@ -23910,6 +24605,7 @@ The following fields can be used in the YAML frontmatter. Only `name` and `descr
 | `hooks`           | No       | [Lifecycle hooks](#define-hooks-for-subagents) scoped to this subagent                                                                                                                                                                                                      |
 | `memory`          | No       | [Persistent memory scope](#enable-persistent-memory): `user`, `project`, or `local`. Enables cross-session learning                                                                                                                                                         |
 | `background`      | No       | Set to `true` to always run this subagent as a [background task](#run-subagents-in-foreground-or-background). Default: `false`                                                                                                                                              |
+| `effort`          | No       | Effort level when this subagent is active. Overrides the session effort level. Default: inherits from session. Options: `low`, `medium`, `high`, `max` (Opus 4.6 only)                                                                                                      |
 | `isolation`       | No       | Set to `worktree` to run the subagent in a temporary [git worktree](/en/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees), giving it an isolated copy of the repository. The worktree is automatically cleaned up if the subagent makes no changes     |
 
 ### Choose a model
