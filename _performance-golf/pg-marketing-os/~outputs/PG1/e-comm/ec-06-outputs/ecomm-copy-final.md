@@ -107,7 +107,7 @@ However, when you DO fix your root swing flaw, you are guaranteed to get better 
 
 ---
 
-**Header:** Traditional Instruction Addresses Your Symptoms, NOT The Root Cause.
+**Header:** The Step the Entire Industry Skipped.
 
 ---
 
@@ -121,7 +121,7 @@ However, when you DO fix your root swing flaw, you are guaranteed to get better 
 
 **Bottom Line: NONE of these methods address your root swing flaw.**
 
-Meaning: Every tip, every lesson, every app has been a prescription without a diagnosis.
+**Subhead:** Every approach in golf — every tip, every lesson, every app — has been a prescription without a diagnosis.
 
 That is the equivalent of a doctor prescribing treatment without ever running a diagnostic. When it comes to your health, you would NEVER do that. But that's the approach you're taking every single day with your golf game.
 
@@ -149,39 +149,18 @@ The average American golfer's handicap has stayed between 14.0 and 14.2 from 202
 
 ---
 
-The PG1 Smart System finds your root swing flaw and builds your entire improvement path around fixing it. One system. Six components. When the root swing flaw is addressed, improvement becomes inevitable.
+The PG1 Smart System finds your root swing flaw — then guides you through fixing it, step by step. When you address your root swing flaw, improvement becomes inevitable.
 
-Here is how it works.
+**FROM → TO**
 
-**Step 1: Complete Your Personalized Assessment**
-The system's first understanding of you — your game, your goals, your history.
-
-**Step 2: SwingScan AI Identifies Your Root Swing Flaw**
-Trained on 2M+ swings across 77+ documented flaw patterns. It reads what the human eye cannot see at full speed. Not 12 things to work on. One root swing flaw.
-
-**Step 3: You Get Your Smart Step**
-The one thing to work on right now. Not a list. Not a curriculum. The single correction that addresses your root swing flaw at this moment.
-
-**Step 4: Your Coach Validates and Guides (Smart Match)**
-A dedicated coach matched to your specific root swing flaw type. Not a marketplace gamble. A curated match who knows your diagnosis and guides your correction.
-
-**Step 5: The System Tracks and Adapts**
-As your root swing flaw resolves, the system sees it. Your plan adjusts. Your Smart Step evolves. The more you use it, the more it knows you.
-
-**Step 6: The System Finds Your Next Biggest Opportunity**
-Your driver root flaw is not your irons root flaw is not your short game root flaw. When one area resolves, the Smart System identifies the next biggest opportunity for improvement. Then the next.
-
----
-
-When the Smart System finds your root swing flaw and you start working on your Smart Step, improvement becomes inevitable.
-
-The swing thought that's been haunting you for months quiets down. Shots you couldn't hit last week start landing. The practice that used to feel random finally has direction — because every drill connects to the one flaw that matters.
-
-And it's just the beginning.
-
-Once your root swing flaw resolves, the Smart System identifies your next biggest opportunity for improvement. Then the next. Each one builds on the last. For as long as you want to play this game, the Smart System is finding the one thing that will make the biggest difference right now.
-
-That's not a 30-day program. That's a lifetime of good golf.
+| ❌ Before PG1 | ✅ With the Smart System |
+|---|---|
+| One-off tips | A game improvement system |
+| One-size-fits-all instruction | Personalized guidance |
+| Expensive face-to-face coaching | Accessible smart coaching |
+| Sifting through chaos and noise | Step-by-step clarity |
+| Getting stuck | Training that adapts as you improve |
+| Frustration and disappointment | Confidence and joy |
 
 ---
 
@@ -263,19 +242,21 @@ Every range session and every round feeds back into the Smart System. The more y
 
 **Prehead:** Who Built This
 
-**Header:** $5M+ Invested. 276 Team Members. 15 Countries.
+**Header:** $5M+ Invested to Solve One Problem With Your Golf Game.
 
-**Subhead:** The people behind the PG1 Smart System.
+**Subhead:** 276 team members. 15 countries. All focused on finding and fixing root swing flaws.
 
 ---
 
-**Brixton's Story**
+**A Letter From Brixton — Founder, Performance Golf**
 
-I was a +3 handicap. And I hit a wall. I did what every serious golfer does — hired instructors, bought training aids, watched everything. Nothing moved.
+I hit a wall with my golf game. I did what every golfer does — hired instructors, bought training aids, watched everything I could find. Nothing moved. I was stuck.
 
-Then one instructor found my ONE root swing flaw. Not a list of things to work on. One flaw. I dropped 5 shots in weeks.
+Then one instructor did something different. Instead of giving me another tip, he found my ONE root swing flaw. Not a list of things to work on. One flaw. And once I started working on that one thing, I dropped 5 shots in weeks.
 
-That is when I knew: finding the root swing flaw changes everything. And I spent the next several years — and over $5 million — building the system that gives every golfer what I got. Not from luck. From a system. The PG1 Smart System.
+That moment changed everything for me — not because of the score, but because the guessing stopped. I finally knew what was wrong. And I knew what to work on. For the first time, improvement felt inevitable.
+
+I spent the next several years — and over $5 million — building a system that gives every golfer that same moment. The moment you stop guessing and start knowing. That is the PG1 Smart System.
 
 ---
 
@@ -308,13 +289,7 @@ Kevin Weeks — *Golf Digest Top 50 Teacher — 10 years in a row*
 Derek Deminsky — *Regarded as the #1 ranked backspin instructor in the world*
 Craig Hanson — *Coach to over 100 Tour pros, winner of 14 Tour events*
 
----
-
-**The Technology**
-
-Built by the developer behind MyFitnessPal and the Weather Channel app. 1.4 million golfers already rely on the platform.
-
-**Proof:** Brixton +3 HCP story (SOC-02). $5M+ (DATA-01). 276 team, 15 countries. MyFitnessPal/Weather Channel (AUTH-02). 1.4M golfers. Coaches (AUTH-01 — GAP-02).
+**Proof:** Brixton founder story (SOC-02). $5M+ (DATA-01). 276 team, 15 countries. 1.4M golfers on platform. Coaches (AUTH-01).
 
 **Design:** Coach grid (3x2 desktop, scrollable mobile). Brixton callout box above. Data bar below. **GAP-02: Coach profiles MUST be populated before launch.**
 
@@ -362,29 +337,29 @@ Built by the developer behind MyFitnessPal and the Weather Channel app. 1.4 mill
 
 **Header:** What Happens After You Join
 
-**Subhead:** From sign-up to flaw resolution.
+**Subhead:** Here's what your first 90 days look like.
 
 ---
 
-**Day 1: Your Root Swing Flaw Is Found**
-Complete your assessment. Film your swing. SwingScan AI identifies your root swing flaw. For the first time, you know exactly what has been holding your game back.
-*Clarity. "So THAT is what it was."*
+**Day 1: The Smart System Finds Your Root Swing Flaw**
+Complete a quick assessment about your game, your goals, your history. Film your swing with your phone. SwingScan AI — trained on 2M+ swings across 77+ flaw patterns — identifies the one movement creating all the other problems. Not 12 things to work on. One root swing flaw. For the first time, you know exactly what has been holding your game back.
+*"So THAT is what it was."*
 
-**Week 1: You Get Your Smart Step**
-The Smart System gives you one thing to work on right now. Not a curriculum. Not a list. One drill, one focus, one correction — your Smart Step. Your matched coach (Smart Match) connects and validates the plan.
-*Direction. "I know what to work on — and why."*
+**Week 1: You Get Your Smart Step and Your Coach**
+The Smart System gives you one thing to work on right now. Not a curriculum. Not a list. One drill, one focus, one correction — your Smart Step. Smart Match pairs you with a dedicated coach based on your specific root swing flaw type. Not randomly assigned. A curated match who knows your diagnosis, reviews your swings, and guides your correction.
+*"I finally know what to work on — and I have someone guiding me through it."*
 
-**Month 1: Directed Practice**
-Every range session has a purpose. Every drill connects to your root swing flaw. The Progress Dashboard tracks your improvement — by flaw resolution, not just scores. Your Smart Step evolves as the flaw responds.
-*Momentum. "The practice means something now."*
+**Month 1: The Practice Starts Working**
+Every range session connects to your root swing flaw. Your Smart Step evolves as the flaw responds. You start feeling the difference — not because you are working harder, but because you are working on the one thing that actually matters.
+*"The practice actually means something now."*
 
-**Month 2-3: Compensations Dissolve**
-As your root swing flaw resolves, the compensations that have been masquerading as separate problems begin to dissolve on their own. The system sees it. Your coach confirms it.
-*Confidence. "I did not fix 12 things. I fixed one."*
+**Month 2-3: The Results Show Up**
+The shots start dropping. The scores start moving. The swing faults your instructors used to point out? They are quieting down on their own — because you fixed the root cause, not the symptoms. Your coach sees it. The dashboard confirms it.
+*"I did not fix 12 things. I fixed one — and the rest took care of themselves."*
 
-**Month 3+: The System Finds What Is Next**
-When the root swing flaw resolves, the Smart System identifies your next biggest opportunity for improvement. Your driver flaw is not your irons flaw is not your short game flaw. The cycle continues — for as long as you want to play this game.
-*Inevitability. "Improvement becomes inevitable."*
+**Month 3+: The System Keeps Going**
+The Smart System identifies your next biggest opportunity for improvement. Then the next. For as long as you want to play this game, the system is finding the one thing that will make the biggest difference right now.
+*"This is not a 30-day program. This is a lifetime of good golf."*
 
 **Design:** Horizontal timeline desktop, vertical mobile. Each milestone: time marker + event + feeling (italic). Progress bar. App UI screenshots. No CTA.
 
@@ -402,6 +377,10 @@ When the root swing flaw resolves, the Smart System identifies your next biggest
 
 ---
 
+Every approach does something useful. YouTube provides tips. Lessons provide instruction. Tracking apps provide data. AI apps provide analysis.
+
+None of them find your root swing flaw first. The PG1 Smart System does. Here is what that difference looks like.
+
 | Capability | YouTube | Lessons | Tracking Apps | AI Swing Apps | **PG1 Smart System** |
 |---|---|---|---|---|---|
 | **Finds Root Swing Flaw** | No | No | No | No | **Yes** — 77+ flaw patterns |
@@ -411,10 +390,6 @@ When the root swing flaw resolves, the Smart System identifies your next biggest
 | **Adapts as You Improve** | No | No | Basic | Basic | **Yes** — by flaw resolution |
 | **Root Swing Flaw First** | No | No | No | No | **Yes** — only one in golf |
 | **Cost** | Free-$30/mo | $150-350/hr | $200-500/yr | $100-300/yr | **$199/yr or $399 lifetime** |
-
-Every approach does something useful. YouTube provides tips. Lessons provide instruction. Tracking apps provide data. AI apps provide analysis.
-
-None of them find your root swing flaw first. The PG1 Smart System does.
 
 **Design:** 5-column table, PG1 column highlighted (Performance Orange). Check/X icons. Mobile: horizontal scroll. No competitor brand names.
 
@@ -428,18 +403,20 @@ None of them find your root swing flaw first. The PG1 Smart System does.
 
 **Prehead:** The Real Cost of Not Knowing
 
-**Header:** Add Up What You Have Already Spent.
+**Header:** You Have Spent a Lifetime on Fixes That Never Found the Problem.
 
 ---
 
-Think about the last three years.
+Lessons. Apps. Training aids. Different instructors — each one starting from scratch because nobody ever identified your root swing flaw.
+
+You know the feeling. You spend the money. You put in the work. And your handicap stays exactly where it was.
 
 **Private lessons:** $150-350 per session. Monthly? $1,800-4,200 per year.
 **Golf apps & subscriptions:** $200-900 per year.
-**Training aids:** $50-200 each. How many are in your garage?
-**Different instructors:** 3, 5, maybe 15 — each one starting from scratch because nobody found your root swing flaw.
+**Training aids:** $50-200 each. How many are in your garage right now?
+**Different instructors:** 3, 5, maybe 15 — every one treating symptoms.
 
-The average stuck golfer has spent **$2,000-5,000+** in the last three years on treatments that never addressed the root swing flaw.
+The average stuck golfer has spent **$2,000-5,000+** in the last three years on treatments that never found the root swing flaw.
 
 **PG1 Founders pricing: $399 once. Never pay again.**
 
@@ -459,9 +436,11 @@ That is less than two sessions with a PGA pro. And you get the complete Smart Sy
 
 **Header:** One Flaw. One Plan.
 
-**Subhead:** 1,000 memberships. Two options. The lowest price PG1 will ever be.
+**Subhead:** Improvement becomes inevitable.
 
 ---
+
+**1,000 Founders Club memberships. Two options. The lowest price PG1 will ever be.** When the 1,000 spots fill, this rate disappears. Yours is locked permanently.
 
 ### One System — Six Components
 
@@ -508,12 +487,6 @@ That is less than two sessions with a PGA pro. And you get the complete Smart Sy
 
 **[Join the Founders Club — Lifetime]**
 
----
-
-This is Founders pricing — the lowest PG1 will ever be. When the 1,000 spots fill, this rate disappears. Yours is locked permanently.
-
-One flaw. One plan. Improvement becomes inevitable.
-
 **Design:** Two-column pricing cards (desktop), stacked (mobile). Lifetime highlighted with Performance Orange border. Components shown as ONE system. Bonuses listed separately. Founders counter/badge. Dual CTAs.
 
 ---
@@ -530,13 +503,11 @@ One flaw. One plan. Improvement becomes inevitable.
 
 ---
 
-Try the PG1 Smart System for a full year. Let SwingScan find your root swing flaw. Work through your Smart Step. Connect with your matched coach.
+The Smart System will find your root swing flaw. It will give you your Smart Step. It will match you with a coach who knows your diagnosis. And your game will improve.
 
-If you are not satisfied for any reason — any reason at all — send one email and get every penny back. No hoops. No hassle. No hard feelings.
+We are so confident in that, we will give you 365 days to see it for yourself. If at any point during that year you want your money back — one email. Every penny returned. No hoops. No hassle.
 
 **365 days. Full refund. One email.**
-
-You have an entire year to let the Smart System prove itself.
 
 **Design:** Centered, single-focus. Guarantee seal/badge above header. Full-width. Generous whitespace. Performance Orange accent on badge.
 
@@ -569,8 +540,8 @@ Your coach pairing. The system matches you with a coach based on your specific r
 **How is this different from other golf apps?**
 Every golf app does one of three things: measures, prescribes, or analyzes. None of them find your root swing flaw first. The PG1 Smart System starts by finding your root swing flaw — then shows you exactly how to fix it. Zero of 9 competitors offer this.
 
-**What if I do not improve?**
-365-day guarantee. Try the Smart System for a full year. If you are not satisfied for any reason, one email, every penny back.
+**How fast will I see results?**
+Day 1 — you get your root swing flaw identified and your Smart Step. Most golfers feel the difference in their first practice session because they are working on the right thing for the first time. The 365-day guarantee gives you a full year to see the results for yourself.
 
 **Do I need special equipment?**
 No. Phone camera. Any angle. Range or course.
