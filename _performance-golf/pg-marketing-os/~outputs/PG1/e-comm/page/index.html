@@ -229,6 +229,9 @@
       inset: 0;
       background: url('https://shop.performancegolf.com/cdn/shop/files/BP_1994.jpg?v=1772658412&width=1200') center 30% / cover no-repeat;
       opacity: 0.3;
+      transform: translateX(-15%);
+      width: 130%;
+      left: 0;
     }
     .hero-bg::after {
       content: '';
@@ -251,7 +254,8 @@
     .hero h1 {
       color: var(--white);
       margin-bottom: var(--space-xl);
-      max-width: 900px;
+      max-width: 600px;
+      text-align: left;
     }
     .hero h1 em { font-style: normal; color: var(--orange); }
     .hero-subhead {
@@ -1147,11 +1151,12 @@
   ============================================= -->
   <section class="hero" id="hero">
     <div class="hero-bg" role="presentation" aria-hidden="true"></div>
-    <div class="hero-content">
-      <h1>PG1 Smart<br>System.</h1>
-      <p style="font-family:var(--font-sans); font-weight:800; font-size:clamp(28px,4vw,52px); line-height:1.0; letter-spacing:-0.02em; text-transform:uppercase; color:var(--white); margin-bottom:var(--space-xl); text-align:left; max-width:600px">The End of <span style="color:var(--orange)">Traditional</span> Instruction.</p>
-      <p class="hero-subhead">The PG1 Smart System finds your root swing flaw — the one movement creating every other problem in your swing — and gives you the one thing to work on right now to get better faster. One flaw. One plan. Improvement becomes inevitable.</p>
-      <div class="hero-actions">
+    <div class="hero-content" style="display:flex; flex-direction:column; align-items:flex-end">
+      <div style="max-width:600px; width:100%">
+        <h1 style="text-align:left">PG1 Smart<br>System.</h1>
+      </div>
+      <p class="hero-subhead" style="text-align:left; border-left:none; border-right:3px solid var(--orange)">The PG1 Smart System finds your root swing flaw — the one movement creating every other problem in your swing — and gives you the one thing to work on right now to get better faster. One flaw. One plan. Improvement becomes inevitable.</p>
+      <div class="hero-actions" style="align-items:flex-end">
         <a href="#pricing" class="btn btn--primary-lg">Join the Founders Club</a>
         <a href="#how-it-works" class="btn btn--ghost">See How It Works</a>
       </div>
