@@ -28,7 +28,7 @@
 **Subhead:** The first system in golf that finds your root swing flaw — then shows you step by step exactly how to fix it.
 
 **Value Proposition:**
-The PG1 Smart System finds your root swing flaw — the one movement creating every other problem in your swing — and gives you the one thing to work on right now to get better faster. One flaw. One plan. That's why **Improvement Is Inevitable**.
+The PG1 Smart System finds your root swing flaw and gives you the one thing to work on right now to fix it. Because when you fix one flaw with one plan... **improvement is inevitable**.
 
 **CTA:** Join the Founders Club
 
@@ -89,13 +89,21 @@ The PG1 Smart System ends that cycle. It finds your root swing flaw. Gives you o
 
 ---
 
-**Header:** Here's A Fact About Your Swing Flaws
+**Header:** What's Your ROOT Swing Flaw?
 
 ---
 
-Every golfer has three to five visible swing flaws — but you only have one ROOT swing flaw. And until you fix your ROOT flaw, you will never consistently improve at the game of golf... no matter how much you practice or play, no matter how many videos you watch, and no matter how much you pay for lessons and equipment.
+Every golfer has three to five visible swing flaws — but you only have one ROOT swing flaw, which is the one movement creating every other problem in your swing. When you don't fix your ROOT flaw, you will struggle to consistently improve your golf game, because every fix you try is treating a symptom, not the cause.
 
-However, when you DO fix your root swing flaw, you are guaranteed to get better — even if you don't have a lot of time to practice, want to invest a lot of money into your game, or have physical limitations.
+❌ No matter how much you practice or play
+❌ No matter how many videos you watch
+❌ No matter how much you pay for lessons and equipment
+
+When you DO fix your root swing flaw, you quickly start playing the golf you know you're capable of — because fixing the root cause of your problem, by default, eliminates 3-4 of your "symptom" swing faults.
+
+✅ Without spending a lot of time practicing
+✅ Without investing a lot of money into your game
+✅ Without aggravating injuries or pushing physical limitations
 
 **Design:** Full-width, dark background (PG Black #1D1A1A). Generous whitespace. Frame claim — binary argument as standalone section before problem.
 
