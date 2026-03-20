@@ -1,7 +1,6 @@
 """Domo API client.
 
-Canonical source: originally at /Users/patrickhayes/Development/domo/domo_client.py
-Copied into the project so consumers don't need DOMO_CLIENT_PATH.
+Bundled into the project so consumers don't need an external path dependency.
 
 Requires DOMO_CLIENT_ID and DOMO_CLIENT_SECRET in .env.
 """
@@ -52,7 +51,7 @@ class DomoClient:
         resp.raise_for_status()
         self.token = resp.json()["access_token"]
         self.granted_scopes = granted
-        print(f"Authenticated with scopes: {granted}")
+        # Authenticated with scopes: granted
 
     def _headers(self):
         return {"Authorization": f"Bearer {self.token}"}

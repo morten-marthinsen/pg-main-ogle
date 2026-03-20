@@ -32,6 +32,7 @@ ROOT = Path(__file__).parent
 
 _datasets_cache: dict | None = None
 _cards_cache: dict | None = None
+_adapter_cache: dict = {}
 
 # Adapter selection — change to "snowflake" when Snowflake replaces Domo (Q3/Q4 2026)
 ADAPTER = "domo"
@@ -56,10 +57,14 @@ def _load_cards() -> dict:
 
 
 def _get_adapter(dataset_id: str):
-    """Create adapter for the given dataset ID."""
+    """Get or create adapter for the given dataset ID. Cached to avoid re-authentication."""
+    if dataset_id in _adapter_cache:
+        return _adapter_cache[dataset_id]
     if ADAPTER == "domo":
         from adapters.domo import DomoAdapter
-        return DomoAdapter(dataset_id)
+        adapter = DomoAdapter(dataset_id)
+        _adapter_cache[dataset_id] = adapter
+        return adapter
     elif ADAPTER == "snowflake":
         raise NotImplementedError("Snowflake adapter not yet implemented.")
     else:

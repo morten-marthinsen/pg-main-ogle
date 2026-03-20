@@ -2,7 +2,7 @@
 
 > **Any agent consuming PG data service output MUST read this file before performing calculations.**
 >
-> **Rule: If a metric has a `do-not-derive` tag, use `get_enriched()` — do NOT recalculate it from raw columns.**
+> **Rule: If a metric has a `do-not-derive` tag, use `get_card()` — do NOT recalculate it from raw columns.**
 
 Machine-readable version: `catalog/data_dictionary.yaml` (mirrors OpenMetadata Glossary schema for Phase 5 import).
 
@@ -33,7 +33,7 @@ Domo Dataset → Adapter (fetch + Beast Modes) → API (strip PII) → Consumer
 ```
 
 - **Raw data** (`get_raw("ad_performance", ...)`): Source rows with PII stripped. `email_address_hash` available for customer counts.
-- **Enriched data** (`get_enriched(...)`): One row per ad with all metrics computed. PII stripped. Classification is consumer-side (not applied by the service).
+- **Enriched data** (`get_card("ad_performance_summary", ...)`): One row per ad with all metrics computed. PII stripped. Classification is consumer-side (not applied by the service).
 
 **Two row types exist in this dataset:**
 - Ad-metric rows (`Spend > 0`) — impressions, clicks, spend
@@ -43,7 +43,7 @@ These are aggregated separately and joined by ad name. Never mix them.
 
 ### Computed Metrics (Beast Modes)
 
-These are computed in the adapter layer. They **MUST** come from `get_enriched()`. Do not recalculate from raw data — the formulas have nuances that will produce wrong numbers if reimplemented.
+These are computed in the enrichment layer. They **MUST** come from `get_card()`. Do not recalculate from raw data — the formulas have nuances that will produce wrong numbers if reimplemented.
 
 ### Revenue & Profit
 

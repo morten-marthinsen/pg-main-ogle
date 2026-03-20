@@ -13,8 +13,8 @@
 # When adding a new dataset to datasets.yaml, add its terms here too.
 #
 # Tags:
-#   beast-mode      — Computed in Domo adapter, dies with Snowflake migration
-#   do-not-derive   — MUST come from get_enriched(), never hand-calculated from raw columns
+#   beast-mode      — Computed in enrichment module, survives backend switch
+#   do-not-derive   — MUST come from get_card(), never hand-calculated from raw columns
 #   classification  — Business rule applied in model layer (survives migration)
 #   raw             — Source column from Domo dataset, no transformation
 #   derived         — Computed from raw columns
