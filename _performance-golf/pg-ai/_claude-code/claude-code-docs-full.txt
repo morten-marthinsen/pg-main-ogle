@@ -1605,6 +1605,36 @@ This page is generated from the [CHANGELOG.md on GitHub](https://github.com/anth
 
 Run `claude --version` to check your installed version.
 
+<Update label="2.1.81" description="March 20, 2026">
+  * Added `--bare` flag for scripted `-p` calls — skips hooks, LSP, plugin sync, and skill directory walks; requires `ANTHROPIC_API_KEY` or an `apiKeyHelper` via `--settings` (OAuth and keychain auth disabled); auto-memory fully disabled
+  * Added `--channels` permission relay — channel servers that declare the permission capability can forward tool approval prompts to your phone
+  * Fixed multiple concurrent Claude Code sessions requiring repeated re-authentication when one session refreshes its OAuth token
+  * Fixed voice mode silently swallowing retry failures and showing a misleading "check your network" message instead of the actual error
+  * Fixed voice mode audio not recovering when the server silently drops the WebSocket connection
+  * Fixed `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS` not suppressing the structured-outputs beta header, causing 400 errors on proxy gateways forwarding to Vertex/Bedrock
+  * Fixed `--channels` bypass for Team/Enterprise orgs with no other managed settings configured
+  * Fixed a crash on Node.js 18
+  * Fixed unnecessary permission prompts for Bash commands containing dashes in strings
+  * Fixed plugin hooks blocking prompt submission when the plugin directory is deleted mid-session
+  * Fixed a race condition where background agent task output could hang indefinitely when the task completed between polling intervals
+  * Resuming a session that was in a worktree now switches back to that worktree
+  * Fixed `/btw` not including pasted text when used during an active response
+  * Fixed a race where fast Cmd+Tab followed by paste could beat the clipboard copy under tmux
+  * Fixed terminal tab title not updating with an auto-generated session description
+  * Fixed invisible hook attachments inflating the message count in transcript mode
+  * Fixed Remote Control sessions showing a generic title instead of deriving from the first prompt
+  * Fixed `/rename` not syncing the title for Remote Control sessions
+  * Fixed Remote Control `/exit` not reliably archiving the session
+  * Improved MCP read/search tool calls to collapse into a single "Queried `{server}`" line (expand with Ctrl+O)
+  * Improved `!` bash mode discoverability — Claude now suggests it when you need to run an interactive command
+  * Improved plugin freshness — ref-tracked plugins now re-clone on every load to pick up upstream changes
+  * Improved Remote Control session titles to refresh after your third message
+  * Updated MCP OAuth to support Client ID Metadata Document (CIMD / SEP-991) for servers without Dynamic Client Registration
+  * Changed plan mode to hide the "clear context" option by default (restore with `"showClearContextOnPlanAccept": true`)
+  * Disabled line-by-line response streaming on Windows (including WSL in Windows Terminal) due to rendering issues
+  * \[VSCode] Fixed Windows PATH inheritance for Bash tool when using Git Bash (regression in v2.1.78)
+</Update>
+
 <Update label="2.1.80" description="March 19, 2026">
   * Added `rate_limits` field to statusline scripts for displaying Claude.ai rate limit usage (5-hour and 7-day windows with `used_percentage` and `resets_at`)
   * Added `source: 'settings'` plugin marketplace source — declare plugin entries inline in settings.json
@@ -4028,6 +4058,8 @@ Use channels to push messages, alerts, and webhooks into your Claude Code sessio
 
 A channel is an MCP server that pushes events into your running Claude Code session, so Claude can react to things that happen while you're not at the terminal. Channels can be two-way: Claude reads the event and replies back through the same channel, like a chat bridge. Events only arrive while the session is open, so for an always-on setup you run Claude in a background process or persistent terminal.
 
+Unlike integrations that spawn a fresh cloud session or wait to be polled, the event arrives in the session you already have open: see [how channels compare](#how-channels-compare).
+
 You install a channel as a plugin and configure it with your own credentials. Telegram and Discord are included in the research preview.
 
 When Claude replies through a channel, you see the inbound message in your terminal but not the reply text. The terminal shows the tool call and a confirmation (like "sent"), and the actual reply appears on the other platform.
@@ -4038,6 +4070,7 @@ This page covers:
 * [Install and run a channel](#quickstart) with fakechat, a localhost demo
 * [Who can push messages](#security): sender allowlists and how you pair
 * [Enable channels for your organization](#enterprise-controls) on Team and Enterprise
+* [How channels compare](#how-channels-compare) to web sessions, Slack, MCP, and Remote Control
 
 To build your own channel, see the [Channels reference](/en/channels-reference).
 
@@ -4060,6 +4093,8 @@ Each supported channel is a plugin that requires [Bun](https://bun.sh). For a ha
         ```
         /plugin install telegram@claude-plugins-official
         ```
+
+        If Claude Code reports that the plugin is not found in any marketplace, run `/plugin marketplace add anthropics/claude-plugins-official` first and retry the install.
       </Step>
 
       <Step title="Configure your token">
@@ -4069,7 +4104,7 @@ Each supported channel is a plugin that requires [Bun](https://bun.sh). For a ha
         /telegram:configure <token>
         ```
 
-        This saves it to `.claude/channels/telegram/.env` in your project. You can also set `TELEGRAM_BOT_TOKEN` in your shell environment before launching Claude Code.
+        This saves it to `~/.claude/channels/telegram/.env`. You can also set `TELEGRAM_BOT_TOKEN` in your shell environment before launching Claude Code.
       </Step>
 
       <Step title="Restart with channels enabled">
@@ -4131,6 +4166,8 @@ Each supported channel is a plugin that requires [Bun](https://bun.sh). For a ha
         ```
         /plugin install discord@claude-plugins-official
         ```
+
+        If Claude Code reports that the plugin is not found in any marketplace, run `/plugin marketplace add anthropics/claude-plugins-official` first and retry the install.
       </Step>
 
       <Step title="Configure your token">
@@ -4140,7 +4177,7 @@ Each supported channel is a plugin that requires [Bun](https://bun.sh). For a ha
         /discord:configure <token>
         ```
 
-        This saves it to `.claude/channels/discord/.env` in your project. You can also set `DISCORD_BOT_TOKEN` in your shell environment before launching Claude Code.
+        This saves it to `~/.claude/channels/discord/.env`. You can also set `DISCORD_BOT_TOKEN` in your shell environment before launching Claude Code.
       </Step>
 
       <Step title="Restart with channels enabled">
@@ -4194,7 +4231,7 @@ To try the fakechat demo, you'll need:
     /plugin install fakechat@claude-plugins-official
     ```
 
-    Fakechat is in the `claude-plugins-official` marketplace, which is added automatically for most setups. If you don't have it, run `/plugin marketplace add anthropics/claude-plugins-official` first.
+    If Claude Code reports that the plugin is not found in any marketplace, run `/plugin marketplace add anthropics/claude-plugins-official` first and retry the install.
   </Step>
 
   <Step title="Restart with the channel enabled">
@@ -4263,6 +4300,22 @@ During the preview, `--channels` only accepts plugins from an Anthropic-maintain
 To test a channel you're building, use `--dangerously-load-development-channels`. See [Test during the research preview](/en/channels-reference#test-during-the-research-preview) for information about testing custom channels that you build.
 
 Report issues or feedback on the [Claude Code GitHub repository](https://github.com/anthropics/claude-code/issues).
+
+## How channels compare
+
+Several Claude Code features connect to systems outside the terminal, each suited to a different kind of work:
+
+| Feature                                              | What it does                                                          | Good for                                                  |
+| ---------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------- |
+| [Claude Code on the web](/en/claude-code-on-the-web) | Runs tasks in a fresh cloud sandbox, cloned from GitHub               | Delegating self-contained async work you check on later   |
+| [Claude in Slack](/en/slack)                         | Spawns a web session from an `@Claude` mention in a channel or thread | Starting tasks directly from team conversation context    |
+| Standard [MCP server](/en/mcp)                       | Claude queries it during a task; nothing is pushed to the session     | Giving Claude on-demand access to read or query a system  |
+| [Remote Control](/en/remote-control)                 | You drive your local session from claude.ai or the Claude mobile app  | Steering an in-progress session while away from your desk |
+
+Channels fill the gap in that list by pushing events from non-Claude sources into your already-running local session.
+
+* **Chat bridge**: ask Claude something from your phone via Telegram or Discord, and the answer comes back in the same chat while the work runs on your machine against your real files.
+* **[Webhook receiver](/en/channels-reference#example-build-a-webhook-receiver)**: a webhook from CI, your error tracker, a deploy pipeline, or other external service arrives where Claude already has your files open and remembers what you were debugging.
 
 ## Next steps
 
@@ -4387,7 +4440,7 @@ This example uses [Bun](https://bun.sh) as the runtime for its built-in HTTP ser
   </Step>
 
   <Step title="Register your server with Claude Code">
-    Add the server to `.mcp.json` so Claude Code knows how to start it. If you're adding it to a project-level `.mcp.json` in the same directory, use a relative path. If you're adding it to your user-level `~/.mcp.json`, use the full absolute path:
+    Add the server to your MCP config so Claude Code knows how to start it. For a project-level `.mcp.json` in the same directory, use a relative path. For user-level config in `~/.claude.json`, use the full absolute path so the server can be found from any project:
 
     ```json title=".mcp.json" theme={null}
     {
@@ -4397,7 +4450,7 @@ This example uses [Bun](https://bun.sh) as the runtime for its built-in HTTP ser
     }
     ```
 
-    Claude Code reads `.mcp.json` at startup and spawns each server as a subprocess.
+    Claude Code reads your MCP config at startup and spawns each server as a subprocess.
   </Step>
 
   <Step title="Test it">
@@ -4407,7 +4460,7 @@ This example uses [Bun](https://bun.sh) as the runtime for its built-in HTTP ser
     claude --dangerously-load-development-channels server:webhook
     ```
 
-    When Claude Code starts, it reads `.mcp.json`, spawns your `webhook.ts` as a subprocess, and the HTTP listener starts automatically on the port you configured (8788 in this example). You don't need to run the server yourself.
+    When Claude Code starts, it reads your MCP config, spawns your `webhook.ts` as a subprocess, and the HTTP listener starts automatically on the port you configured (8788 in this example). You don't need to run the server yourself.
 
     If you see "blocked by org policy," your Team or Enterprise admin needs to [enable channels](/en/channels#enterprise-controls) first.
 
@@ -5704,7 +5757,7 @@ Customize Claude Code's behavior with these command-line flags:
 | `--append-system-prompt`                  | Append custom text to the end of the default system prompt                                                                                                                                                                                          | `claude --append-system-prompt "Always use TypeScript"`                                            |
 | `--append-system-prompt-file`             | Load additional system prompt text from a file and append to the default prompt                                                                                                                                                                     | `claude --append-system-prompt-file ./extra-rules.txt`                                             |
 | `--betas`                                 | Beta headers to include in API requests (API key users only)                                                                                                                                                                                        | `claude --betas interleaved-thinking`                                                              |
-| `--channels`                              | Enable named [channel](/en/channels) servers to push messages into this session. Accepts space-separated `plugin:<name>@<marketplace>` entries from the [approved allowlist](/en/channels#supported-channels)                                       | `claude --channels plugin:fakechat@claude-plugins-official`                                        |
+| `--channels`                              | (Research preview) MCP servers whose [channel](/en/channels) notifications Claude should listen for in this session. Space-separated list of `plugin:<name>@<marketplace>` entries. Requires Claude.ai authentication                               | `claude --channels plugin:my-notifier@my-marketplace`                                              |
 | `--chrome`                                | Enable [Chrome browser integration](/en/chrome) for web automation and testing                                                                                                                                                                      | `claude --chrome`                                                                                  |
 | `--continue`, `-c`                        | Load the most recent conversation in the current directory                                                                                                                                                                                          | `claude --continue`                                                                                |
 | `--dangerously-load-development-channels` | Enable [channels](/en/channels-reference#test-during-the-research-preview) that are not on the approved allowlist, for local development. Accepts `plugin:<name>@<marketplace>` and `server:<name>` entries. Prompts for confirmation               | `claude --dangerously-load-development-channels server:webhook`                                    |
@@ -7737,9 +7790,10 @@ Organizations on Teams or Enterprise plans can manage desktop app behavior throu
 
 These settings are configured through the [admin settings console](https://claude.ai/admin-settings/claude-code):
 
-* **Enable or disable the Code tab**: control whether users in your organization can access Claude Code in the desktop app
+* **Code in the desktop**: control whether users in your organization can access Claude Code in the desktop app
+* **Code in the web**: enable or disable [web sessions](/en/claude-code-on-the-web) for your organization
+* **Remote Control**: enable or disable [Remote Control](/en/remote-control) for your organization
 * **Disable Bypass permissions mode**: prevent users in your organization from enabling bypass permissions mode
-* **Disable Claude Code on the web**: enable or disable remote sessions for your organization
 
 ### Managed settings
 
@@ -8170,12 +8224,12 @@ Think of it like adding an app store: adding the store gives you access to brows
 
 ## Official Anthropic marketplace
 
-The official Anthropic marketplace (`claude-plugins-official`) is automatically available when you start Claude Code. Run `/plugin` and go to the **Discover** tab to browse what's available.
+The official Anthropic marketplace (`claude-plugins-official`) is automatically available when you start Claude Code. Run `/plugin` and go to the **Discover** tab to browse what's available, or view the catalog at [claude.com/plugins](https://claude.com/plugins).
 
-To install a plugin from the official marketplace:
+To install a plugin from the official marketplace, use `/plugin install <name>@claude-plugins-official`. For example, to install the GitHub integration:
 
 ```shell theme={null}
-/plugin install plugin-name@claude-plugins-official
+/plugin install github@claude-plugins-official
 ```
 
 <Note>
@@ -8626,7 +8680,7 @@ Claude Code supports the following environment variables to control its behavior
 | `CLAUDE_CODE_EXIT_AFTER_STOP_DELAY`            | Time in milliseconds to wait after the query loop becomes idle before automatically exiting. Useful for automated workflows and scripts using SDK mode                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS`         | Set to `1` to enable [agent teams](/en/agent-teams). Agent teams are experimental and disabled by default                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS`      | Override the default token limit for file reads. Useful when you need to read larger files in full                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL`            | Skip auto-installation of IDE extensions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL`            | Skip auto-installation of IDE extensions. Equivalent to setting [`autoInstallIdeExtension`](/en/settings#global-config-settings) to `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `CLAUDE_CODE_MAX_OUTPUT_TOKENS`                | Set the maximum number of output tokens for most requests. Defaults and caps vary by model; see [max output tokens](https://platform.claude.com/docs/en/about-claude/models/overview#latest-models-comparison). Increasing this value reduces the effective context window available before [auto-compaction](/en/costs#reduce-token-usage) triggers.                                                                                                                                                                                                                                                            |
 | `CLAUDE_CODE_NEW_INIT`                         | Set to `true` to make `/init` run an interactive setup flow. The flow asks which files to generate, including CLAUDE.md, skills, and hooks, before exploring the codebase and writing them. Without this variable, `/init` generates a CLAUDE.md automatically without prompting.                                                                                                                                                                                                                                                                                                                                |
 | `CLAUDE_CODE_ORGANIZATION_UUID`                | Organization UUID for the authenticated user. Used by SDK callers to provide account information synchronously. Requires `CLAUDE_CODE_ACCOUNT_UUID` and `CLAUDE_CODE_USER_EMAIL` to also be set                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -8987,7 +9041,7 @@ Some features can seem similar. Here's how to tell them apart.
 
 Features can be defined at multiple levels: user-wide, per-project, via plugins, or through managed policies. You can also nest CLAUDE.md files in subdirectories or place skills in specific packages of a monorepo. When the same feature exists at multiple levels, here's how they layer:
 
-* **CLAUDE.md files** are additive: all levels contribute content to Claude's context simultaneously. Files from your working directory and above load at launch; subdirectories load as you work in them. When instructions conflict, Claude uses judgment to reconcile them, with more specific instructions typically taking precedence. See [how CLAUDE.md files load](/en/memory#how-claudemd-files-load).
+* **CLAUDE.md files** are additive: all levels contribute content to Claude's context simultaneously. Files from your working directory and above load at launch; subdirectories load as you work in them. When instructions conflict, Claude uses judgment to reconcile them, with more specific instructions typically taking precedence. See [how CLAUDE.md files load](/en/memory#how-claude-md-files-load).
 * **Skills and subagents** override by name: when the same name exists at multiple levels, one definition wins based on priority (managed > user > project for skills; managed > CLI flag > project > user > plugin for subagents). Plugin skills are [namespaced](/en/plugins#add-skills-to-your-plugin) to avoid conflicts. See [skill discovery](/en/skills#where-skills-live) and [subagent scope](/en/sub-agents#choose-the-subagent-scope).
 * **MCP servers** override by name: local > project > user. See [MCP scope](/en/mcp#scope-hierarchy-and-precedence).
 * **Hooks** merge: all registered hooks fire for their matching events regardless of source. See [hooks](/en/hooks).
@@ -9035,7 +9089,7 @@ Each feature loads at different points in your session. The tabs below explain w
 
     **What loads:** Full content of all CLAUDE.md files (managed, user, and project levels).
 
-    **Inheritance:** Claude reads CLAUDE.md files from your working directory up to the root, and discovers nested ones in subdirectories as it accesses those files. See [How CLAUDE.md files load](/en/memory#how-claudemd-files-load) for details.
+    **Inheritance:** Claude reads CLAUDE.md files from your working directory up to the root, and discovers nested ones in subdirectories as it accesses those files. See [How CLAUDE.md files load](/en/memory#how-claude-md-files-load) for details.
 
     <Tip>Keep CLAUDE.md under \~500 lines. Move reference material to skills, which load on-demand.</Tip>
   </Tab>
@@ -15903,7 +15957,7 @@ Each Claude Code session begins with a fresh context window. Two mechanisms carr
 
 This page covers how to:
 
-* [Write and organize CLAUDE.md files](#claudemd-files)
+* [Write and organize CLAUDE.md files](#claude-md-files)
 * [Scope rules to specific file types](#organize-rules-with-clauderules) with `.claude/rules/`
 * [Configure auto memory](#auto-memory) so Claude takes notes automatically
 * [Troubleshoot](#troubleshoot-memory-issues) when instructions aren't being followed
@@ -15938,7 +15992,7 @@ CLAUDE.md files can live in several locations, each with a different scope. More
 | **Project instructions** | `./CLAUDE.md` or `./.claude/CLAUDE.md`                                                                                                                                  | Team-shared instructions for the project            | Project architecture, coding standards, common workflows             | Team members via source control |
 | **User instructions**    | `~/.claude/CLAUDE.md`                                                                                                                                                   | Personal preferences for all projects               | Code styling preferences, personal tooling shortcuts                 | Just you (all projects)         |
 
-CLAUDE.md files in the directory hierarchy above the working directory are loaded in full at launch. CLAUDE.md files in subdirectories load on demand when Claude reads files in those directories. See [How CLAUDE.md files load](#how-claudemd-files-load) for the full resolution order.
+CLAUDE.md files in the directory hierarchy above the working directory are loaded in full at launch. CLAUDE.md files in subdirectories load on demand when Claude reads files in those directories. See [How CLAUDE.md files load](#how-claude-md-files-load) for the full resolution order.
 
 For large projects, you can break instructions into topic-specific files using [project rules](#organize-rules-with-clauderules). Rules let you scope instructions to specific file types or subdirectories.
 
@@ -15966,7 +16020,7 @@ CLAUDE.md files are loaded into the context window at the start of every session
 * "Run `npm test` before committing" instead of "Test your changes"
 * "API handlers live in `src/api/handlers/`" instead of "Keep files organized"
 
-**Consistency**: if two rules contradict each other, Claude may pick one arbitrarily. Review your CLAUDE.md files, nested CLAUDE.md files in subdirectories, and [`.claude/rules/`](#organize-rules-with-clauderules) periodically to remove outdated or conflicting instructions. In monorepos, use [`claudeMdExcludes`](#exclude-specific-claudemd-files) to skip CLAUDE.md files from other teams that aren't relevant to your work.
+**Consistency**: if two rules contradict each other, Claude may pick one arbitrarily. Review your CLAUDE.md files, nested CLAUDE.md files in subdirectories, and [`.claude/rules/`](#organize-rules-with-clauderules) periodically to remove outdated or conflicting instructions. In monorepos, use [`claudeMdExcludes`](#exclude-specific-claude-md-files) to skip CLAUDE.md files from other teams that aren't relevant to your work.
 
 ### Import additional files
 
@@ -16002,7 +16056,7 @@ Claude Code reads CLAUDE.md files by walking up the directory tree from your cur
 
 Claude also discovers CLAUDE.md files in subdirectories under your current working directory. Instead of loading them at launch, they are included when Claude reads files in those subdirectories.
 
-If you work in a large monorepo where other teams' CLAUDE.md files get picked up, use [`claudeMdExcludes`](#exclude-specific-claudemd-files) to skip them.
+If you work in a large monorepo where other teams' CLAUDE.md files get picked up, use [`claudeMdExcludes`](#exclude-specific-claude-md-files) to skip them.
 
 #### Load from additional directories
 
@@ -16232,7 +16286,7 @@ CLAUDE.md content is delivered as a user message after the system prompt, not as
 To debug:
 
 * Run `/memory` to verify your CLAUDE.md files are being loaded. If a file isn't listed, Claude can't see it.
-* Check that the relevant CLAUDE.md is in a location that gets loaded for your session (see [Choose where to put CLAUDE.md files](#choose-where-to-put-claudemd-files)).
+* Check that the relevant CLAUDE.md is in a location that gets loaded for your session (see [Choose where to put CLAUDE.md files](#choose-where-to-put-claude-md-files)).
 * Make instructions more specific. "Use 2-space indentation" works better than "format code nicely."
 * Look for conflicting instructions across CLAUDE.md files. If two files give different guidance for the same behavior, Claude may pick one arbitrarily.
 
@@ -17886,7 +17940,10 @@ Some settings are only effective in managed settings:
 | `sandbox.network.allowManagedDomainsOnly`      | When `true`, only `allowedDomains` and `WebFetch(domain:...)` allow rules from managed settings are respected. Non-allowed domains are blocked automatically without prompting the user. Denied domains still merge from all sources |
 | `sandbox.filesystem.allowManagedReadPathsOnly` | When `true`, only `allowRead` paths from managed settings are respected. `allowRead` entries from user, project, and local settings are ignored                                                                                      |
 | `strictKnownMarketplaces`                      | Controls which plugin marketplaces users can add. See [managed marketplace restrictions](/en/plugin-marketplaces#managed-marketplace-restrictions)                                                                                   |
-| `allow_remote_sessions`                        | When `true`, allows users to start [Remote Control](/en/remote-control) and [web sessions](/en/claude-code-on-the-web). Defaults to `true`. Set to `false` to prevent remote session access                                          |
+
+<Note>
+  Access to [Remote Control](/en/remote-control) and [web sessions](/en/claude-code-on-the-web) is not controlled by a managed settings key. On Team and Enterprise plans, an admin enables or disables these features in [Claude Code admin settings](https://claude.ai/admin-settings/claude-code).
+</Note>
 
 ## Settings precedence
 
@@ -18140,7 +18197,6 @@ Once a plugin is cloned or copied into the local machine, it is copied into the 
 | `url`         | object                          | `url`, `ref?`, `sha?`              | Git URL source                                                                      |
 | `git-subdir`  | object                          | `url`, `path`, `ref?`, `sha?`      | Subdirectory within a git repo. Clones sparsely to minimize bandwidth for monorepos |
 | `npm`         | object                          | `package`, `version?`, `registry?` | Installed via `npm install`                                                         |
-| `pip`         | object                          | `package`, `version?`, `registry?` | Installed via pip                                                                   |
 
 <Note>
   **Marketplace sources vs plugin sources**: These are different concepts that control different things.
@@ -20384,7 +20440,7 @@ This page covers setup, how to start and connect to sessions, and how Remote Con
 
 Before using Remote Control, confirm that your environment meets these conditions:
 
-* **Subscription**: available on Pro, Max, Team, and Enterprise plans. On Team and Enterprise, an admin must first enable the Remote Control toggle in [Claude Code admin settings](https://claude.ai/admin-settings/claude-code). API keys are not supported.
+* **Subscription**: available on Pro, Max, Team, and Enterprise plans. API keys are not supported. On Team and Enterprise, an admin must first enable the Remote Control toggle in [Claude Code admin settings](https://claude.ai/admin-settings/claude-code).
 * **Authentication**: run `claude` and use `/login` to sign in through claude.ai if you haven't already.
 * **Workspace trust**: run `claude` in your project directory at least once to accept the workspace trust dialog.
 
@@ -20502,10 +20558,10 @@ If none of these are set, run `/logout` then `/login` to refresh.
 
 ### "Remote Control is disabled by your organization's policy"
 
-This error has three distinct causes. The first is the most common on developer machines.
+This error has three distinct causes. Run `/status` first to see which login method and subscription you're using.
 
 * **You're authenticated with an API key or Console account**: Remote Control requires claude.ai OAuth. Run `/login` and choose the claude.ai option. If `ANTHROPIC_API_KEY` is set in your environment, unset it.
-* **Your Team or Enterprise admin hasn't enabled it**: Remote Control is off by default on these plans. An admin can turn it on at [claude.ai/admin-settings/claude-code](https://claude.ai/admin-settings/claude-code). The Remote Control toggle depends on the Claude Code on the web toggle on the same page; enable Claude Code on the web first if Remote Control appears unavailable.
+* **Your Team or Enterprise admin hasn't enabled it**: Remote Control is off by default on these plans. An admin can enable it at [claude.ai/admin-settings/claude-code](https://claude.ai/admin-settings/claude-code) by turning on the **Remote Control** toggle. This is a server-side organization setting, not a [managed settings](/en/permissions#managed-only-settings) key.
 * **The admin toggle is grayed out**: your organization has a data retention or compliance configuration that is incompatible with Remote Control. This cannot be changed from the admin panel. Contact Anthropic support to discuss options.
 
 ### "Remote credentials fetch failed"
@@ -20677,7 +20733,7 @@ The older `//path` prefix for absolute paths still works. If you previously used
 
 You can also deny write or read access using `sandbox.filesystem.denyWrite` and `sandbox.filesystem.denyRead`. These are merged with any paths from `Edit(...)` and `Read(...)` permission rules. To re-allow reading specific paths within a denied region, use `sandbox.filesystem.allowRead`, which takes precedence over `denyRead`. When `allowManagedReadPathsOnly` is enabled in managed settings, only managed `allowRead` entries are respected; user, project, and local `allowRead` entries are ignored.
 
-For example, to block reading from the entire home directory while still allowing reads from the current project:
+For example, to block reading from the entire home directory while still allowing reads from the current project, add this to your project's `.claude/settings.json`:
 
 ```json theme={null}
 {
@@ -20690,6 +20746,8 @@ For example, to block reading from the entire home directory while still allowin
   }
 }
 ```
+
+The `.` in `allowRead` resolves to the project root because this configuration lives in project settings. If you placed the same configuration in `~/.claude/settings.json`, `.` would resolve to `~/.claude` instead, and project files would remain blocked by the `denyRead` rule.
 
 <Tip>
   Not all commands are compatible with sandboxing out of the box. Some notes that may help you make the most out of the sandbox:
@@ -21158,7 +21216,7 @@ If your devices are enrolled in an MDM or endpoint management solution, endpoint
   </Step>
 
   <Step title="Define your settings">
-    Add your configuration as JSON. All [settings available in `settings.json`](/en/settings#available-settings) are supported, including [managed-only settings](/en/permissions#managed-only-settings) like `disableBypassPermissionsMode`.
+    Add your configuration as JSON. All [settings available in `settings.json`](/en/settings#available-settings) are supported, including [hooks](/en/hooks), [environment variables](/en/env-vars), and [managed-only settings](/en/permissions#managed-only-settings) like `disableBypassPermissionsMode`.
 
     This example enforces a permission deny list and prevents users from bypassing permissions:
 
@@ -21175,6 +21233,27 @@ If your devices are enrolled in an MDM or endpoint management solution, endpoint
       }
     }
     ```
+
+    Hooks use the same format as in `settings.json`.
+
+    This example runs an audit script after every file edit across the organization:
+
+    ```json theme={null}
+    {
+      "hooks": {
+        "PostToolUse": [
+          {
+            "matcher": "Edit|Write",
+            "hooks": [
+              { "type": "command", "command": "/usr/local/bin/audit-edit.sh" }
+            ]
+          }
+        ]
+      }
+    }
+    ```
+
+    Because hooks execute shell commands, users see a [security approval dialog](#security-approval-dialogs) before they're applied.
   </Step>
 
   <Step title="Save and deploy">
@@ -21482,12 +21561,14 @@ The `$schema` line in the example above points to the [official JSON schema](htt
 
 ### Global config settings
 
-These display preferences are stored in `~/.claude.json` rather than `settings.json`. Adding them to `settings.json` will trigger a schema validation error.
+These settings are stored in `~/.claude.json` rather than `settings.json`. Adding them to `settings.json` will trigger a schema validation error.
 
-| Key                          | Description                                                                                                                                                | Example |
-| :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |
-| `showTurnDuration`           | Show turn duration messages after responses, e.g. "Cooked for 1m 6s". Default: `true`. Appears in `/config` as **Show turn duration**                      | `false` |
-| `terminalProgressBarEnabled` | Show the terminal progress bar in supported terminals like Windows Terminal and iTerm2. Default: `true`. Appears in `/config` as **Terminal progress bar** | `false` |
+| Key                          | Description                                                                                                                                                                                                                                                                                                          | Example |
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |
+| `autoConnectIde`             | Automatically connect to a running IDE when Claude Code starts from an external terminal. Default: `false`. Appears in `/config` as **Auto-connect to IDE (external terminal)** when running outside a VS Code or JetBrains terminal                                                                                 | `true`  |
+| `autoInstallIdeExtension`    | Automatically install the Claude Code IDE extension when running from a VS Code terminal. Default: `true`. Appears in `/config` as **Auto-install IDE extension** when running inside a VS Code or JetBrains terminal. You can also set the [`CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL`](/en/env-vars) environment variable | `false` |
+| `showTurnDuration`           | Show turn duration messages after responses, e.g. "Cooked for 1m 6s". Default: `true`. Appears in `/config` as **Show turn duration**                                                                                                                                                                                | `false` |
+| `terminalProgressBarEnabled` | Show the terminal progress bar in supported terminals like Windows Terminal and iTerm2. Default: `true`. Appears in `/config` as **Terminal progress bar**                                                                                                                                                           | `false` |
 
 ### Worktree settings
 
@@ -21853,6 +21934,31 @@ Defines additional marketplaces that should be made available for the repository
 * `git`: Any git URL (uses `url`)
 * `directory`: Local filesystem path (uses `path`, for development only)
 * `hostPattern`: regex pattern to match marketplace hosts (uses `hostPattern`)
+* `settings`: inline marketplace declared directly in settings.json without a separate hosted repository (uses `name` and `plugins`)
+
+Use `source: 'settings'` to declare a small set of plugins inline without setting up a hosted marketplace repository. Plugins listed here must reference external sources such as GitHub or npm. You still need to enable each plugin separately in `enabledPlugins`.
+
+```json theme={null}
+{
+  "extraKnownMarketplaces": {
+    "team-tools": {
+      "source": {
+        "source": "settings",
+        "name": "team-tools",
+        "plugins": [
+          {
+            "name": "code-formatter",
+            "source": {
+              "source": "github",
+              "repo": "acme-corp/code-formatter"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+```
 
 #### `strictKnownMarketplaces`
 
@@ -22711,18 +22817,19 @@ Your skill instructions here...
 
 All fields are optional. Only `description` is recommended so Claude knows when to use the skill.
 
-| Field                      | Required    | Description                                                                                                                                           |
-| :------------------------- | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`                     | No          | Display name for the skill. If omitted, uses the directory name. Lowercase letters, numbers, and hyphens only (max 64 characters).                    |
-| `description`              | Recommended | What the skill does and when to use it. Claude uses this to decide when to apply the skill. If omitted, uses the first paragraph of markdown content. |
-| `argument-hint`            | No          | Hint shown during autocomplete to indicate expected arguments. Example: `[issue-number]` or `[filename] [format]`.                                    |
-| `disable-model-invocation` | No          | Set to `true` to prevent Claude from automatically loading this skill. Use for workflows you want to trigger manually with `/name`. Default: `false`. |
-| `user-invocable`           | No          | Set to `false` to hide from the `/` menu. Use for background knowledge users shouldn't invoke directly. Default: `true`.                              |
-| `allowed-tools`            | No          | Tools Claude can use without asking permission when this skill is active.                                                                             |
-| `model`                    | No          | Model to use when this skill is active.                                                                                                               |
-| `context`                  | No          | Set to `fork` to run in a forked subagent context.                                                                                                    |
-| `agent`                    | No          | Which subagent type to use when `context: fork` is set.                                                                                               |
-| `hooks`                    | No          | Hooks scoped to this skill's lifecycle. See [Hooks in skills and agents](/en/hooks#hooks-in-skills-and-agents) for configuration format.              |
+| Field                      | Required    | Description                                                                                                                                                                                                  |
+| :------------------------- | :---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                     | No          | Display name for the skill. If omitted, uses the directory name. Lowercase letters, numbers, and hyphens only (max 64 characters).                                                                           |
+| `description`              | Recommended | What the skill does and when to use it. Claude uses this to decide when to apply the skill. If omitted, uses the first paragraph of markdown content.                                                        |
+| `argument-hint`            | No          | Hint shown during autocomplete to indicate expected arguments. Example: `[issue-number]` or `[filename] [format]`.                                                                                           |
+| `disable-model-invocation` | No          | Set to `true` to prevent Claude from automatically loading this skill. Use for workflows you want to trigger manually with `/name`. Default: `false`.                                                        |
+| `user-invocable`           | No          | Set to `false` to hide from the `/` menu. Use for background knowledge users shouldn't invoke directly. Default: `true`.                                                                                     |
+| `allowed-tools`            | No          | Tools Claude can use without asking permission when this skill is active.                                                                                                                                    |
+| `model`                    | No          | Model to use when this skill is active.                                                                                                                                                                      |
+| `effort`                   | No          | [Effort level](/en/model-config#adjust-effort-level) when this skill is active. Overrides the session effort level. Default: inherits from session. Options: `low`, `medium`, `high`, `max` (Opus 4.6 only). |
+| `context`                  | No          | Set to `fork` to run in a forked subagent context.                                                                                                                                                           |
+| `agent`                    | No          | Which subagent type to use when `context: fork` is set.                                                                                                                                                      |
+| `hooks`                    | No          | Hooks scoped to this skill's lifecycle. See [Hooks in skills and agents](/en/hooks#hooks-in-skills-and-agents) for configuration format.                                                                     |
 
 #### Available string substitutions
 
@@ -22876,9 +22983,9 @@ Preserve all existing behavior and tests.
 
 ### Inject dynamic context
 
-The `!`command\`\` syntax runs shell commands before the skill content is sent to Claude. The command output replaces the placeholder, so Claude receives actual data, not the command itself.
+The `` !`<command>` `` syntax runs shell commands before the skill content is sent to Claude. The command output replaces the placeholder, so Claude receives actual data, not the command itself.
 
-This skill summarizes a pull request by fetching live PR data with the GitHub CLI. The `!`gh pr diff\`\` and other commands run first, and their output gets inserted into the prompt:
+This skill summarizes a pull request by fetching live PR data with the GitHub CLI. The `` !`gh pr diff` `` and other commands run first, and their output gets inserted into the prompt:
 
 ```yaml theme={null}
 ---
@@ -22900,7 +23007,7 @@ Summarize this pull request...
 
 When this skill runs:
 
-1. Each `!`command\`\` executes immediately (before Claude sees anything)
+1. Each `` !`<command>` `` executes immediately (before Claude sees anything)
 2. The output replaces the placeholder in the skill content
 3. Claude receives the fully-rendered prompt with actual PR data
 
@@ -23026,7 +23133,7 @@ Run the visualization script from your project root:
 
 ```bash
 python ~/.claude/skills/codebase-visualizer/scripts/visualize.py .
-```text
+```
 
 This creates `codebase-map.html` in the current directory and opens it in your default browser.
 
@@ -23595,32 +23702,34 @@ Your script runs after each new assistant message, when the permission mode chan
 
 Claude Code sends the following JSON fields to your script via stdin:
 
-| Field                                                                     | Description                                                                                                                                                                                  |
-| ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `model.id`, `model.display_name`                                          | Current model identifier and display name                                                                                                                                                    |
-| `cwd`, `workspace.current_dir`                                            | Current working directory. Both fields contain the same value; `workspace.current_dir` is preferred for consistency with `workspace.project_dir`.                                            |
-| `workspace.project_dir`                                                   | Directory where Claude Code was launched, which may differ from `cwd` if the working directory changes during a session                                                                      |
-| `cost.total_cost_usd`                                                     | Total session cost in USD                                                                                                                                                                    |
-| `cost.total_duration_ms`                                                  | Total wall-clock time since the session started, in milliseconds                                                                                                                             |
-| `cost.total_api_duration_ms`                                              | Total time spent waiting for API responses in milliseconds                                                                                                                                   |
-| `cost.total_lines_added`, `cost.total_lines_removed`                      | Lines of code changed                                                                                                                                                                        |
-| `context_window.total_input_tokens`, `context_window.total_output_tokens` | Cumulative token counts across the session                                                                                                                                                   |
-| `context_window.context_window_size`                                      | Maximum context window size in tokens. 200000 by default, or 1000000 for models with extended context.                                                                                       |
-| `context_window.used_percentage`                                          | Pre-calculated percentage of context window used                                                                                                                                             |
-| `context_window.remaining_percentage`                                     | Pre-calculated percentage of context window remaining                                                                                                                                        |
-| `context_window.current_usage`                                            | Token counts from the last API call, described in [context window fields](#context-window-fields)                                                                                            |
-| `exceeds_200k_tokens`                                                     | Whether the total token count (input, cache, and output tokens combined) from the most recent API response exceeds 200k. This is a fixed threshold regardless of actual context window size. |
-| `session_id`                                                              | Unique session identifier                                                                                                                                                                    |
-| `transcript_path`                                                         | Path to conversation transcript file                                                                                                                                                         |
-| `version`                                                                 | Claude Code version                                                                                                                                                                          |
-| `output_style.name`                                                       | Name of the current output style                                                                                                                                                             |
-| `vim.mode`                                                                | Current vim mode (`NORMAL` or `INSERT`) when [vim mode](/en/interactive-mode#vim-editor-mode) is enabled                                                                                     |
-| `agent.name`                                                              | Agent name when running with the `--agent` flag or agent settings configured                                                                                                                 |
-| `worktree.name`                                                           | Name of the active worktree. Present only during `--worktree` sessions                                                                                                                       |
-| `worktree.path`                                                           | Absolute path to the worktree directory                                                                                                                                                      |
-| `worktree.branch`                                                         | Git branch name for the worktree (for example, `"worktree-my-feature"`). Absent for hook-based worktrees                                                                                     |
-| `worktree.original_cwd`                                                   | The directory Claude was in before entering the worktree                                                                                                                                     |
-| `worktree.original_branch`                                                | Git branch checked out before entering the worktree. Absent for hook-based worktrees                                                                                                         |
+| Field                                                                            | Description                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `model.id`, `model.display_name`                                                 | Current model identifier and display name                                                                                                                                                    |
+| `cwd`, `workspace.current_dir`                                                   | Current working directory. Both fields contain the same value; `workspace.current_dir` is preferred for consistency with `workspace.project_dir`.                                            |
+| `workspace.project_dir`                                                          | Directory where Claude Code was launched, which may differ from `cwd` if the working directory changes during a session                                                                      |
+| `cost.total_cost_usd`                                                            | Total session cost in USD                                                                                                                                                                    |
+| `cost.total_duration_ms`                                                         | Total wall-clock time since the session started, in milliseconds                                                                                                                             |
+| `cost.total_api_duration_ms`                                                     | Total time spent waiting for API responses in milliseconds                                                                                                                                   |
+| `cost.total_lines_added`, `cost.total_lines_removed`                             | Lines of code changed                                                                                                                                                                        |
+| `context_window.total_input_tokens`, `context_window.total_output_tokens`        | Cumulative token counts across the session                                                                                                                                                   |
+| `context_window.context_window_size`                                             | Maximum context window size in tokens. 200000 by default, or 1000000 for models with extended context.                                                                                       |
+| `context_window.used_percentage`                                                 | Pre-calculated percentage of context window used                                                                                                                                             |
+| `context_window.remaining_percentage`                                            | Pre-calculated percentage of context window remaining                                                                                                                                        |
+| `context_window.current_usage`                                                   | Token counts from the last API call, described in [context window fields](#context-window-fields)                                                                                            |
+| `exceeds_200k_tokens`                                                            | Whether the total token count (input, cache, and output tokens combined) from the most recent API response exceeds 200k. This is a fixed threshold regardless of actual context window size. |
+| `rate_limits.five_hour.used_percentage`, `rate_limits.seven_day.used_percentage` | Percentage of the 5-hour or 7-day rate limit consumed, from 0 to 100                                                                                                                         |
+| `rate_limits.five_hour.resets_at`, `rate_limits.seven_day.resets_at`             | Unix epoch seconds when the 5-hour or 7-day rate limit window resets                                                                                                                         |
+| `session_id`                                                                     | Unique session identifier                                                                                                                                                                    |
+| `transcript_path`                                                                | Path to conversation transcript file                                                                                                                                                         |
+| `version`                                                                        | Claude Code version                                                                                                                                                                          |
+| `output_style.name`                                                              | Name of the current output style                                                                                                                                                             |
+| `vim.mode`                                                                       | Current vim mode (`NORMAL` or `INSERT`) when [vim mode](/en/interactive-mode#vim-editor-mode) is enabled                                                                                     |
+| `agent.name`                                                                     | Agent name when running with the `--agent` flag or agent settings configured                                                                                                                 |
+| `worktree.name`                                                                  | Name of the active worktree. Present only during `--worktree` sessions                                                                                                                       |
+| `worktree.path`                                                                  | Absolute path to the worktree directory                                                                                                                                                      |
+| `worktree.branch`                                                                | Git branch name for the worktree (for example, `"worktree-my-feature"`). Absent for hook-based worktrees                                                                                     |
+| `worktree.original_cwd`                                                          | The directory Claude was in before entering the worktree                                                                                                                                     |
+| `worktree.original_branch`                                                       | Git branch checked out before entering the worktree. Absent for hook-based worktrees                                                                                                         |
 
 <Accordion title="Full JSON schema">
   Your status line command receives this JSON structure via stdin:
@@ -23663,6 +23772,16 @@ Claude Code sends the following JSON fields to your script via stdin:
       }
     },
     "exceeds_200k_tokens": false,
+    "rate_limits": {
+      "five_hour": {
+        "used_percentage": 23.5,
+        "resets_at": 1738425600
+      },
+      "seven_day": {
+        "used_percentage": 41.2,
+        "resets_at": 1738857600
+      }
+    },
     "vim": {
       "mode": "NORMAL"
     },
@@ -23684,6 +23803,7 @@ Claude Code sends the following JSON fields to your script via stdin:
   * `vim`: appears only when vim mode is enabled
   * `agent`: appears only when running with the `--agent` flag or agent settings configured
   * `worktree`: appears only during `--worktree` sessions. When present, `branch` and `original_branch` may also be absent for hook-based worktrees
+  * `rate_limits`: appears only for Claude.ai subscribers (Pro/Max) after the first API response in the session. Each window (`five_hour`, `seven_day`) may be independently absent. Use `jq -r '.rate_limits.five_hour.used_percentage // empty'` to handle absence gracefully.
 
   **Fields that may be `null`**:
 
@@ -24128,6 +24248,72 @@ Each script gets the git remote URL, converts SSH format to HTTPS, and wraps the
       } catch {
           console.log(`[${model}]`);
       }
+  });
+  ```
+</CodeGroup>
+
+### Rate limit usage
+
+Display Claude.ai subscription rate limit usage in the status line. The `rate_limits` object contains `five_hour` (5-hour rolling window) and `seven_day` (weekly) windows. Each window provides `used_percentage` (0-100) and `resets_at` (Unix epoch seconds when the window resets).
+
+This field is only present for Claude.ai subscribers (Pro/Max) after the first API response. Each script handles the absent field gracefully:
+
+<CodeGroup>
+  ```bash Bash theme={null}
+  #!/bin/bash
+  input=$(cat)
+
+  MODEL=$(echo "$input" | jq -r '.model.display_name')
+  # "// empty" produces no output when rate_limits is absent
+  FIVE_H=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
+  WEEK=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')
+
+  LIMITS=""
+  [ -n "$FIVE_H" ] && LIMITS="5h: $(printf '%.0f' "$FIVE_H")%"
+  [ -n "$WEEK" ] && LIMITS="${LIMITS:+$LIMITS }7d: $(printf '%.0f' "$WEEK")%"
+
+  [ -n "$LIMITS" ] && echo "[$MODEL] | $LIMITS" || echo "[$MODEL]"
+  ```
+
+  ```python Python theme={null}
+  #!/usr/bin/env python3
+  import json, sys
+
+  data = json.load(sys.stdin)
+  model = data['model']['display_name']
+
+  parts = []
+  rate = data.get('rate_limits', {})
+  five_h = rate.get('five_hour', {}).get('used_percentage')
+  week = rate.get('seven_day', {}).get('used_percentage')
+
+  if five_h is not None:
+      parts.append(f"5h: {five_h:.0f}%")
+  if week is not None:
+      parts.append(f"7d: {week:.0f}%")
+
+  if parts:
+      print(f"[{model}] | {' '.join(parts)}")
+  else:
+      print(f"[{model}]")
+  ```
+
+  ```javascript Node.js theme={null}
+  #!/usr/bin/env node
+  let input = '';
+  process.stdin.on('data', chunk => input += chunk);
+  process.stdin.on('end', () => {
+      const data = JSON.parse(input);
+      const model = data.model.display_name;
+
+      const parts = [];
+      const fiveH = data.rate_limits?.five_hour?.used_percentage;
+      const week = data.rate_limits?.seven_day?.used_percentage;
+
+      if (fiveH != null) parts.push(`5h: ${Math.round(fiveH)}%`);
+      if (week != null) parts.push(`7d: ${Math.round(week)}%`);
+
+      console.log(parts.length ? `[${model}] | ${parts.join(' ')}` : `[${model}]`);
   });
   ```
 </CodeGroup>
@@ -24625,16 +24811,27 @@ You can control what subagents can do through tool access, permission modes, and
 
 Subagents can use any of Claude Code's [internal tools](/en/tools-reference). By default, subagents inherit all tools from the main conversation, including MCP tools.
 
-To restrict tools, use the `tools` field (allowlist) or `disallowedTools` field (denylist):
+To restrict tools, use either the `tools` field (allowlist) or the `disallowedTools` field (denylist). This example uses `tools` to exclusively allow Read, Grep, Glob, and Bash. The subagent can't edit files, write files, or use any MCP tools:
 
 ```yaml theme={null}
 ---
 name: safe-researcher
 description: Research agent with restricted capabilities
 tools: Read, Grep, Glob, Bash
+---
+```
+
+This example uses `disallowedTools` to inherit every tool from the main conversation except Write and Edit. The subagent keeps Bash, MCP tools, and everything else:
+
+```yaml theme={null}
+---
+name: no-writes
+description: Inherits every tool except file writes
 disallowedTools: Write, Edit
 ---
 ```
+
+If both are set, `disallowedTools` is applied first, then `tools` is resolved against the remaining pool. A tool listed in both is removed.
 
 #### Restrict which subagents can be spawned
 

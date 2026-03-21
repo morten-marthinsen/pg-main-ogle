@@ -25,11 +25,11 @@ import {
   type Attachment,
 } from 'discord.js'
 import { randomBytes } from 'crypto'
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, statSync, renameSync, realpathSync } from 'fs'
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, statSync, renameSync, realpathSync, chmodSync } from 'fs'
 import { homedir } from 'os'
 import { join, sep } from 'path'
 
-const STATE_DIR = join(homedir(), '.claude', 'channels', 'discord')
+const STATE_DIR = process.env.DISCORD_STATE_DIR ?? join(homedir(), '.claude', 'channels', 'discord')
 const ACCESS_FILE = join(STATE_DIR, 'access.json')
 const APPROVED_DIR = join(STATE_DIR, 'approved')
 const ENV_FILE = join(STATE_DIR, '.env')
@@ -37,6 +37,8 @@ const ENV_FILE = join(STATE_DIR, '.env')
 // Load ~/.claude/channels/discord/.env into process.env. Real env wins.
 // Plugin-spawned servers don't get an env block — this is where the token lives.
 try {
+  // Token is a credential — lock to owner. No-op on Windows (would need ACLs).
+  chmodSync(ENV_FILE, 0o600)
   for (const line of readFileSync(ENV_FILE, 'utf8').split('\n')) {
     const m = line.match(/^(\w+)=(.*)$/)
     if (m && process.env[m[1]] === undefined) process.env[m[1]] = m[2]
@@ -55,6 +57,15 @@ if (!TOKEN) {
   process.exit(1)
 }
 const INBOX_DIR = join(STATE_DIR, 'inbox')
+
+// Last-resort safety net — without these the process dies silently on any
+// unhandled promise rejection. With them it logs and keeps serving tools.
+process.on('unhandledRejection', err => {
+  process.stderr.write(`discord channel: unhandled rejection: ${err}\n`)
+})
+process.on('uncaughtException', err => {
+  process.stderr.write(`discord channel: uncaught exception: ${err}\n`)
+})
 
 const client = new Client({
   intents: [
@@ -340,7 +351,7 @@ function checkApprovals(): void {
   }
 }
 
-if (!STATIC) setInterval(checkApprovals, 5000)
+if (!STATIC) setInterval(checkApprovals, 5000).unref()
 
 // Discord caps messages at 2000 chars (hard limit — larger sends reject).
 // Split long replies, preferring paragraph boundaries when chunkMode is
@@ -421,7 +432,7 @@ const mcp = new Server(
       '',
       'Messages from Discord arrive as <channel source="discord" chat_id="..." message_id="..." user="..." ts="...">. If the tag has attachment_count, the attachments attribute lists name/type/size — call download_attachment(chat_id, message_id) to fetch them. Reply with the reply tool — pass chat_id back. Use reply_to (set to a message_id) only when replying to an earlier message; the latest message doesn\'t need a quote-reply, omit reply_to for normal responses.',
       '',
-      'reply accepts file paths (files: ["/abs/path.png"]) for attachments. Use react to add emoji reactions, and edit_message to update a message you previously sent (e.g. progress → result).',
+      'reply accepts file paths (files: ["/abs/path.png"]) for attachments. Use react to add emoji reactions, and edit_message for interim progress updates. Edits don\'t trigger push notifications — when a long task completes, send a new reply so the user\'s device pings.',
       '',
       "fetch_messages pulls real Discord history. Discord's search API isn't available to bots — if the user asks you to find an old message, fetch more history or ask them roughly when it was.",
       '',
@@ -469,7 +480,7 @@ mcp.setRequestHandler(ListToolsRequestSchema, async () => ({
     },
     {
       name: 'edit_message',
-      description: 'Edit a message the bot previously sent. Useful for progress updates (send "working…" then edit to the result).',
+      description: 'Edit a message the bot previously sent. Useful for interim progress updates. Edits don\'t trigger push notifications — send a new reply when a long task completes so the user\'s device pings.',
       inputSchema: {
         type: 'object',
         properties: {
@@ -635,6 +646,25 @@ mcp.setRequestHandler(CallToolRequestSchema, async req => {
 
 await mcp.connect(new StdioServerTransport())
 
+// When Claude Code closes the MCP connection, stdin gets EOF. Without this
+// the gateway stays connected as a zombie holding resources.
+let shuttingDown = false
+function shutdown(): void {
+  if (shuttingDown) return
+  shuttingDown = true
+  process.stderr.write('discord channel: shutting down\n')
+  setTimeout(() => process.exit(0), 2000)
+  void Promise.resolve(client.destroy()).finally(() => process.exit(0))
+}
+process.stdin.on('end', shutdown)
+process.stdin.on('close', shutdown)
+process.on('SIGTERM', shutdown)
+process.on('SIGINT', shutdown)
+
+client.on('error', err => {
+  process.stderr.write(`discord channel: client error: ${err}\n`)
+})
+
 client.on('messageCreate', msg => {
   if (msg.author.bot) return
   handleInbound(msg).catch(e => process.stderr.write(`discord: handleInbound failed: ${e}\n`))
@@ -683,7 +713,7 @@ async function handleInbound(msg: Message): Promise<void> {
   // forgeable by any allowlisted sender typing that string.
   const content = msg.content || (atts.length > 0 ? '(attachment)' : '')
 
-  void mcp.notification({
+  mcp.notification({
     method: 'notifications/claude/channel',
     params: {
       content,
@@ -696,6 +726,8 @@ async function handleInbound(msg: Message): Promise<void> {
         ...(atts.length > 0 ? { attachment_count: String(atts.length), attachments: atts.join('; ') } : {}),
       },
     },
+  }).catch(err => {
+    process.stderr.write(`discord channel: failed to deliver inbound to Claude: ${err}\n`)
   })
 }
 
@@ -703,4 +735,7 @@ client.once('ready', c => {
   process.stderr.write(`discord channel: gateway connected as ${c.user.tag}\n`)
 })
 
-await client.login(TOKEN)
+client.login(TOKEN).catch(err => {
+  process.stderr.write(`discord channel: login failed: ${err}\n`)
+  process.exit(1)
+})
