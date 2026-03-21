@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pg-orange: #FD3300;
+  --color-pg-dark-orange: #DB2C00;
+  --color-pg-black: #1D1A1A;
+  --color-pg-ui-gray: #7B726C;
+  --color-pg-stone: #B3AAA3;
+  --color-pg-pebble: #DFD9D5;
+  --color-pg-sand: #ECE9E4;
+  --color-pg-fog: #F4F2F0;
+  --color-pg-mist: #FCFAFA;
+  --color-pg-forest: #2E4734;
+  --color-pg-sky: #B2C6EB;
+  --color-pg-indigo: #4F41D5;
+  --color-pg-hi-vis: #E4F222;
+
+  --color-surface-base: #0D0C0C;
+  --color-surface-card: #171515;
+  --color-surface-elevated: #1F1C1C;
+  --color-surface-hover: #2A2626;
+
+  --font-sans: "ABC Repro", system-ui, -apple-system, sans-serif;
+  --font-serif: "GT Super Text", Georgia, serif;
+  --font-mono: "ABC Repro Mono", "SF Mono", monospace;
+}
+
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/repro/ABCRepro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/repro/ABCRepro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABC Repro";
+  src: url("/fonts/repro/ABCRepro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Super Text";
+  src: url("/fonts/gt-super-text/GT-Super-Text-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Super Text";
+  src: url("/fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABC Repro Mono";
+  src: url("/fonts/repro-mono/ABCReproMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface-base);
+    color: var(--color-pg-fog);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Metric numbers always use monospace */
+.metric-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: linear-gradient(135deg, rgba(23, 21, 21, 0.9) 0%, rgba(31, 28, 28, 0.7) 100%);
+  border: 1px solid rgba(179, 170, 163, 0.08);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(253, 51, 0, 0.15);
+  box-shadow: 0 0 30px rgba(253, 51, 0, 0.04);
+}
+
+/* Orange glow accent */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(253, 51, 0, 0.1), 0 0 60px rgba(253, 51, 0, 0.05);
+}
+
+/* Subtle grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(179, 170, 163, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(179, 170, 163, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(179, 170, 163, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(179, 170, 163, 0.35);
+}
+
+/* Animate in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }

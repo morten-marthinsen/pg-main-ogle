@@ -46,7 +46,7 @@
 
 **Testimonial Snippet:** "WOW — I never thought I'd lose my slice but it's gone. My ball flies very straight about 85% of the time and I've gained at least 20 yards now. HUGE difference." — Verified Buyer
 
-**Payment Options:** Affirm/Shop Pay available
+
 
 ---
 

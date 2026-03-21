@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG Marketing OS — System Flow</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --pg-orange: #FD3300;
+    --pg-dark-orange: #DB2C00;
+    --pg-black: #1D1A1A;
+    --pg-gray: #7B726C;
+    --pg-stone: #B3AAA3;
+    --pg-pebble: #DFD9D5;
+    --pg-sand: #ECE9E4;
+    --pg-fog: #F4F2F0;
+    --pg-mist: #FCFAFA;
+    --pg-forest: #2E4734;
+    --pg-indigo: #4F41D5;
+    --pg-sky: #B2C6EB;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--pg-black);
+    color: var(--pg-mist);
+    min-height: 100vh;
+    padding: 48px 24px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .header .brand {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--pg-orange);
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--pg-mist);
+    margin-bottom: 8px;
+  }
+  .header .sub {
+    font-size: 15px;
+    color: var(--pg-stone);
+    font-weight: 400;
+  }
+
+  /* Pipeline */
+  .pipeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  /* Phase block */
+  .phase {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 32px 36px;
+    position: relative;
+  }
+  .phase-number {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--pg-orange);
+    margin-bottom: 6px;
+  }
+  .phase-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--pg-mist);
+    margin-bottom: 6px;
+  }
+  .phase-desc {
+    font-size: 14px;
+    color: var(--pg-stone);
+    line-height: 1.6;
+    max-width: 700px;
+  }
+  .phase-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .skill-tag {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: rgba(253, 51, 0, 0.1);
+    color: var(--pg-orange);
+    border: 1px solid rgba(253, 51, 0, 0.2);
+  }
+
+  /* Handoff connector */
+  .handoff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 20px 0;
+    position: relative;
+  }
+  .handoff::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(253,51,0,0.3), var(--pg-orange), rgba(253,51,0,0.3));
+    z-index: 0;
+  }
+  .handoff-badge {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--pg-black);
+    border: 2px solid var(--pg-orange);
+    border-radius: 100px;
+    padding: 10px 22px;
+    white-space: nowrap;
+  }
+  .handoff-icon {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  .handoff-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--pg-orange);
+    letter-spacing: 0.5px;
+  }
+  .handoff-file {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--pg-stone);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+  }
+
+  /* Branch section */
+  .branch-label {
+    text-align: center;
+    margin: 8px 0 4px;
+  }
+  .branch-label span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pg-gray);
+  }
+
+  .branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 0;
+  }
+  .branch-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px 20px;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  .branch-card:hover {
+    border-color: rgba(253, 51, 0, 0.3);
+  }
+  .branch-card .bc-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--pg-mist);
+    margin-bottom: 4px;
+  }
+  .branch-card .bc-range {
+    font-size: 11px;
+    color: var(--pg-stone);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+  }
+
+  /* Highlight the main two engines */
+  .phase.highlight {
+    border-color: rgba(253, 51, 0, 0.25);
+    background: rgba(253, 51, 0, 0.04);
+  }
+
+  /* Arrow SVG */
+  .arrow-down {
+    width: 20px;
+    height: 20px;
+    fill: var(--pg-orange);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer p {
+    font-size: 12px;
+    color: var(--pg-gray);
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 24px 12px; }
+    .phase { padding: 24px 20px; }
+    .header h1 { font-size: 26px; }
+    .branch-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="brand">Performance Golf</div>
+    <h1>Marketing OS — System Flow</h1>
+    <div class="sub">Foundation pipeline → Campaign brief → Distribution engines</div>
+  </div>
+
+  <div class="pipeline">
+
+    <!-- PHASE 1: Deep Research -->
+    <div class="phase highlight">
+      <div class="phase-number">Phase 01 — Foundation</div>
+      <div class="phase-title">Deep Research</div>
+      <div class="phase-desc">
+        Campaign brief creation, market research, proof inventory. Identifies root angles, pain clusters, quote database, and competitive landscape.
+      </div>
+      <div class="phase-skills">
+        <span class="skill-tag">00 — Brief</span>
+        <span class="skill-tag">01 — Market Research</span>
+        <span class="skill-tag">02 — Proof Inventory</span>
+      </div>
+    </div>
+
+    <!-- Handoff 1 -->
+    <div class="handoff">
+      <div class="handoff-badge">
+        <span class="handoff-icon">
+          <svg class="arrow-down" viewBox="0 0 24 24"><path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="#FD3300" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div>
+          <div class="handoff-label">Handoff → Research Package</div>
+          <div class="handoff-file">FINAL_HANDOFF.md + proof-inventory.yaml</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 2: Core Message Engine -->
+    <div class="phase highlight">
+      <div class="phase-number">Phase 02 — Strategy</div>
+      <div class="phase-title">Core Message Engine</div>
+      <div class="phase-desc">
+        Transforms research into persuasion architecture. Root cause → mechanism → promise → big idea → offer → structure. Builds the strategic spine every downstream engine runs on.
+      </div>
+      <div class="phase-skills">
+        <span class="skill-tag">03 — Root Cause</span>
+        <span class="skill-tag">04 — Mechanism</span>
+        <span class="skill-tag">05 — Promise</span>
+        <span class="skill-tag">06 — Big Idea</span>
+        <span class="skill-tag">07 — Offer</span>
+        <span class="skill-tag">08 — Structure</span>
+        <span class="skill-tag">09 — Campaign Brief</span>
+      </div>
+    </div>
+
+    <!-- Handoff 2 — THE master handoff -->
+    <div class="handoff">
+      <div class="handoff-badge" style="border-width: 3px; padding: 12px 28px; background: rgba(253,51,0,0.06);">
+        <span class="handoff-icon">
+          <svg class="arrow-down" viewBox="0 0 24 24" style="width:24px;height:24px;"><path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="#FD3300" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div>
+          <div class="handoff-label" style="font-size: 14px;">Handoff → Campaign Brief</div>
+          <div class="handoff-file">campaign-brief.json — master handoff to ALL engines</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3: Long-Form Copy Engine -->
+    <div class="phase">
+      <div class="phase-number">Phase 03 — Long-Form Copy</div>
+      <div class="phase-title">VSL / Sales Letter Engine</div>
+      <div class="phase-desc">
+        Headlines → lead → story → body sections → close → assembly → editorial review. Produces the full long-form sales argument.
+      </div>
+      <div class="phase-skills">
+        <span class="skill-tag">Skills 10–20</span>
+        <span class="skill-tag">Headlines</span>
+        <span class="skill-tag">Lead</span>
+        <span class="skill-tag">Story</span>
+        <span class="skill-tag">Close</span>
+        <span class="skill-tag">Assembly</span>
+        <span class="skill-tag">Editorial</span>
+      </div>
+    </div>
+
+    <!-- Handoff 3 -->
+    <div class="handoff">
+      <div class="handoff-badge">
+        <span class="handoff-icon">
+          <svg class="arrow-down" viewBox="0 0 24 24"><path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="#FD3300" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div>
+          <div class="handoff-label">Handoff → Copy Brief</div>
+          <div class="handoff-file">campaign-assembly-package.json → final-draft.md</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 4: E-Commerce Engine -->
+    <div class="phase">
+      <div class="phase-number">Phase 04 — E-Commerce</div>
+      <div class="phase-title">E-Comm Copy Engine</div>
+      <div class="phase-desc">
+        Feature naming → hero copy → section copy → micro-scripts → assembly → editorial. Produces all product detail page copy.
+      </div>
+      <div class="phase-skills">
+        <span class="skill-tag">EC-00 to EC-06</span>
+        <span class="skill-tag">Feature Package</span>
+        <span class="skill-tag">Hero Copy</span>
+        <span class="skill-tag">Section Copy</span>
+        <span class="skill-tag">Assembly</span>
+      </div>
+    </div>
+
+    <!-- Handoff 4 -->
+    <div class="handoff">
+      <div class="handoff-badge">
+        <span class="handoff-icon">
+          <svg class="arrow-down" viewBox="0 0 24 24"><path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="#FD3300" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div>
+          <div class="handoff-label">Handoff → E-Comm Brief</div>
+          <div class="handoff-file">Assembled copy + design specs → Page Builder</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 5: Distribution Engines -->
+    <div class="phase">
+      <div class="phase-number">Phase 05 — Distribution</div>
+      <div class="phase-title">Distribution Engines</div>
+      <div class="phase-desc">
+        All downstream channels run off the Campaign Brief. Each engine has its own skill chain and handoff protocol.
+      </div>
+      <div class="branch-grid" style="margin-top: 20px;">
+        <div class="branch-card">
+          <div class="bc-name">Page Builder</div>
+          <div class="bc-range">Landing pages + PDPs</div>
+        </div>
+        <div class="branch-card">
+          <div class="bc-name">Upsells</div>
+          <div class="bc-range">U0 – U5</div>
+        </div>
+        <div class="branch-card">
+          <div class="bc-name">Checkout</div>
+          <div class="bc-range">CK-00 – CK-03</div>
+        </div>
+        <div class="branch-card">
+          <div class="bc-name">Emails</div>
+          <div class="bc-range">E0 – E4</div>
+        </div>
+        <div class="branch-card">
+          <div class="bc-name">Ads</div>
+          <div class="bc-range">A01 – A12</div>
+        </div>
+        <div class="branch-card">
+          <div class="bc-name">Advertorials</div>
+          <div class="bc-range">ADV-00 – ADV-05</div>
+        </div>
+        <div class="branch-card">
+          <div class="bc-name">Organic Social</div>
+          <div class="bc-range">S01 – S24</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Performance Golf Marketing OS v2.0 — Foundation → Strategy → Copy → Distribution</p>
+  </div>
+
+</div>
+
+</body>
+</html>

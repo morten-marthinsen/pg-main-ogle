@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "product": "SwingSmooth Pro",
+    "lastUpdated": "2026-03-19",
+    "dateRange": { "start": "2026-03-01", "end": "2026-03-19" },
+    "totalOrders": 691,
+    "totalRevenue": 229792.91,
+    "totalAOV": 332.55,
+    "primaryAOV": 235.38,
+    "upsellBoost": 97.17,
+    "upsellBoostPct": 0.413
+  },
+  "primary": {
+    "label": "Primary Offer",
+    "totalOrders": 691,
+    "totalRevenue": 162650.91,
+    "aovContribution": 235.38,
+    "aovPct": 0.708,
+    "skus": [
+      { "name": "Starter Kit (1 Bottle)", "units": 1, "price": 62.27, "orders": 41, "revenue": 2553.07, "aovContrib": 3.69, "pctOfStep": 0.059, "type": "Weighted Avg" },
+      { "name": "Performance Package (3 Bottles)", "units": 3, "price": 160.37, "orders": 232, "revenue": 37205.84, "aovContrib": 53.84, "pctOfStep": 0.336, "type": "Weighted Avg" },
+      { "name": "Total Swing Transformation (6 Bottles)", "units": 6, "price": 294.00, "orders": 418, "revenue": 122892.00, "aovContrib": 177.85, "pctOfStep": 0.605, "type": "OTP" }
+    ]
+  },
+  "upsells": [
+    {
+      "step": "UP1",
+      "label": "Upsell 1 — More SSP",
+      "regular": {
+        "label": "Regular",
+        "totalOrders": 220,
+        "totalRevenue": 52287.00,
+        "aovContribution": 75.67,
+        "takeRate": 0.318,
+        "skus": [
+          { "name": "3-Month Supply", "units": 3, "price": 147.00, "orders": 24, "revenue": 3528.00, "aovContrib": 5.11 },
+          { "name": "6-Month Supply", "units": 6, "price": 210.00, "orders": 47, "revenue": 9870.00, "aovContrib": 14.28 },
+          { "name": "9-Month Supply", "units": 9, "price": 261.00, "orders": 149, "revenue": 38889.00, "aovContrib": 56.28 }
+        ]
+      },
+      "downsell": {
+        "label": "Downsell — BOGO",
+        "totalOrders": 57,
+        "totalRevenue": 2793.00,
+        "aovContribution": 4.04,
+        "takeRate": 0.082,
+        "skus": [
+          { "name": "Buy 1 Get 1 Free", "units": 1, "price": 49.00, "orders": 57, "revenue": 2793.00, "aovContrib": 4.04 }
+        ]
+      },
+      "combinedTakeRate": 0.401,
+      "combinedAOV": 79.71,
+      "combinedAOVPct": 0.240
+    },
+    {
+      "step": "UP2",
+      "label": "Upsell 2 — KMM",
+      "regular": {
+        "label": "Kinetic Movement Method",
+        "totalOrders": 70,
+        "totalRevenue": 10430.00,
+        "aovContribution": 15.09,
+        "takeRate": 0.101,
+        "skus": [
+          { "name": "KMM Course", "units": 1, "price": 149.00, "orders": 70, "revenue": 10430.00, "aovContrib": 15.09 }
+        ]
+      },
+      "downsell": {
+        "label": "Off Season Swing Saver",
+        "totalOrders": 19,
+        "totalRevenue": 1425.00,
+        "aovContribution": 2.06,
+        "takeRate": 0.027,
+        "skus": [
+          { "name": "KMM Downsell", "units": 1, "price": 75.00, "orders": 19, "revenue": 1425.00, "aovContrib": 2.06 }
+        ]
+      },
+      "combinedTakeRate": 0.129,
+      "combinedAOV": 17.16,
+      "combinedAOVPct": 0.052
+    },
+    {
+      "step": "UP3",
+      "label": "Upsell 3 — Gift Cards",
+      "regular": {
+        "label": "Gift Cards",
+        "totalOrders": 3,
+        "totalRevenue": 207.00,
+        "aovContribution": 0.30,
+        "takeRate": 0.004,
+        "skus": [
+          { "name": "$100 Gift Card", "units": 1, "price": 69.00, "orders": 3, "revenue": 207.00, "aovContrib": 0.30 },
+          { "name": "$200 Gift Card", "units": 1, "price": 139.00, "orders": 0, "revenue": 0, "aovContrib": 0 },
+          { "name": "$500 Gift Card", "units": 1, "price": 349.00, "orders": 0, "revenue": 0, "aovContrib": 0 }
+        ]
+      },
+      "downsell": null,
+      "combinedTakeRate": 0.004,
+      "combinedAOV": 0.30,
+      "combinedAOVPct": 0.001
+    }
+  ],
+  "shipping": {
+    "totalRevenue": 1985.00,
+    "totalOrders": 33,
+    "methods": [
+      { "name": "3 Day Priority", "price": 55.00, "orders": 26, "revenue": 1430.00 },
+      { "name": "Next Day", "price": 120.00, "orders": 4, "revenue": 480.00 },
+      { "name": "2 Day Priority", "price": 37.50, "orders": 3, "revenue": 75.00 }
+    ]
+  },
+  "orderStatus": {
+    "complete": 675,
+    "refunded": 15,
+    "cancelled": 1
+  },
+  "skuDetail": {
+    "primaryBreakdown": [
+      { "name": "Starter Kit Sub ($62.10/mo)", "type": "Subscription", "units": 1, "pricePerUnit": 62.10, "totalPrice": 62.10, "orders": 40 },
+      { "name": "Starter Kit OTP ($69)", "type": "OTP", "units": 1, "pricePerUnit": 69.00, "totalPrice": 69.00, "orders": 1 },
+      { "name": "Performance Pkg Sub ($53.10/mo)", "type": "Subscription", "units": 3, "pricePerUnit": 53.10, "totalPrice": 159.30, "orders": 218 },
+      { "name": "Performance Pkg OTP ($59/ea)", "type": "OTP", "units": 3, "pricePerUnit": 59.00, "totalPrice": 177.00, "orders": 14 },
+      { "name": "Total Swing Transformation ($49/ea)", "type": "OTP", "units": 6, "pricePerUnit": 49.00, "totalPrice": 294.00, "orders": 418 }
+    ]
+  },
+  "benchmarks": {
+    "brainNiche": {
+      "name": "Brain Niche (Optimized)",
+      "primaryAOV": 221.51,
+      "totalAOV": 308.65,
+      "up1TakeRate": 0.329,
+      "up2TakeRate": 0.101,
+      "up3TakeRate": 0.028,
+      "upsellBoostPct": 0.393
+    },
+    "bloodSugar": {
+      "name": "Blood Sugar (Semi-Optimized)",
+      "primaryAOV": 171.18,
+      "totalAOV": 226.73,
+      "up1TakeRate": 0.176,
+      "up2TakeRate": 0.040,
+      "up3TakeRate": 0.018,
+      "upsellBoostPct": 0.324
+    }
+  },
+  "funnelFlow": {
+    "nodes": [
+      { "name": "1 Bottle", "column": 0, "value": 41 },
+      { "name": "3 Bottles", "column": 0, "value": 232 },
+      { "name": "6 Bottles", "column": 0, "value": 418 },
+      { "name": "3-Month ($147)", "column": 1, "value": 24 },
+      { "name": "6-Month ($210)", "column": 1, "value": 47 },
+      { "name": "9-Month ($261)", "column": 1, "value": 149 },
+      { "name": "BOGO ($49)", "column": 1, "value": 57 },
+      { "name": "No UP1", "column": 1, "value": 414 },
+      { "name": "KMM ($149)", "column": 2, "value": 69 },
+      { "name": "KMM DS ($75)", "column": 2, "value": 19 },
+      { "name": "No UP2", "column": 2, "value": 603 },
+      { "name": "Gift Card ($69)", "column": 3, "value": 3 },
+      { "name": "No UP3", "column": 3, "value": 688 }
+    ],
+    "links": [
+      { "source": "6 Bottles", "target": "9-Month ($261)", "value": 145 },
+      { "source": "6 Bottles", "target": "No UP1", "value": 227 },
+      { "source": "6 Bottles", "target": "BOGO ($49)", "value": 27 },
+      { "source": "6 Bottles", "target": "6-Month ($210)", "value": 16 },
+      { "source": "6 Bottles", "target": "3-Month ($147)", "value": 3 },
+      { "source": "3 Bottles", "target": "No UP1", "value": 161 },
+      { "source": "3 Bottles", "target": "6-Month ($210)", "value": 29 },
+      { "source": "3 Bottles", "target": "BOGO ($49)", "value": 27 },
+      { "source": "3 Bottles", "target": "3-Month ($147)", "value": 11 },
+      { "source": "3 Bottles", "target": "9-Month ($261)", "value": 4 },
+      { "source": "1 Bottle", "target": "No UP1", "value": 26 },
+      { "source": "1 Bottle", "target": "3-Month ($147)", "value": 10 },
+      { "source": "1 Bottle", "target": "BOGO ($49)", "value": 3 },
+      { "source": "1 Bottle", "target": "6-Month ($210)", "value": 2 },
+      { "source": "9-Month ($261)", "target": "KMM ($149)", "value": 44 },
+      { "source": "9-Month ($261)", "target": "No UP2", "value": 97 },
+      { "source": "9-Month ($261)", "target": "KMM DS ($75)", "value": 8 },
+      { "source": "6-Month ($210)", "target": "No UP2", "value": 39 },
+      { "source": "6-Month ($210)", "target": "KMM ($149)", "value": 5 },
+      { "source": "6-Month ($210)", "target": "KMM DS ($75)", "value": 3 },
+      { "source": "BOGO ($49)", "target": "No UP2", "value": 47 },
+      { "source": "BOGO ($49)", "target": "KMM ($149)", "value": 6 },
+      { "source": "BOGO ($49)", "target": "KMM DS ($75)", "value": 4 },
+      { "source": "3-Month ($147)", "target": "No UP2", "value": 19 },
+      { "source": "3-Month ($147)", "target": "KMM ($149)", "value": 3 },
+      { "source": "3-Month ($147)", "target": "KMM DS ($75)", "value": 2 },
+      { "source": "No UP1", "target": "No UP2", "value": 401 },
+      { "source": "No UP1", "target": "KMM ($149)", "value": 11 },
+      { "source": "No UP1", "target": "KMM DS ($75)", "value": 2 },
+      { "source": "KMM ($149)", "target": "No UP3", "value": 66 },
+      { "source": "KMM ($149)", "target": "Gift Card ($69)", "value": 3 },
+      { "source": "KMM DS ($75)", "target": "No UP3", "value": 19 },
+      { "source": "No UP2", "target": "No UP3", "value": 603 }
+    ]
+  }
+}
