@@ -93,13 +93,17 @@ The PG1 Smart System ends that cycle. It finds your root swing flaw. Gives you o
 
 ---
 
-Every golfer has three to five visible swing flaws — but you only have one ROOT swing flaw, which is the one movement creating every other problem in your swing. When you don't fix your ROOT flaw, you will struggle to consistently improve your golf game, because every fix you try is treating a symptom, not the cause.
+Your ROOT swing flaw is the root cause creating every other problem in your swing. When you don't fix your ROOT flaw, you struggle to consistently improve your golf game.
 
 ❌ No matter how much you practice or play
 ❌ No matter how many videos you watch
 ❌ No matter how much you pay for lessons and equipment
 
-When you DO fix your root swing flaw, you quickly start playing the golf you know you're capable of — because fixing the root cause of your problem, by default, eliminates 3-4 of your "symptom" swing faults.
+**Because every fix you try is treating your swing symptoms, not the root cause of your problems.**
+
+When you DO fix your root swing flaw, you quickly start playing the golf you know you're capable of.
+
+Because fixing the root cause of your problem automatically eliminates 3-4 of your "symptom" swing faults.
 
 ✅ Without spending a lot of time practicing
 ✅ Without investing a lot of money into your game
@@ -115,9 +119,13 @@ When you DO fix your root swing flaw, you quickly start playing the golf you kno
 
 ---
 
-**Header:** The Step the Entire Industry Skipped.
+**Header:** Your Forgotten Swing Flaw.
 
 ---
+
+Traditional golf instruction gives you lots of good information...
+
+**But no traditional training method finds and fixes your root swing flaw.**
 
 ❌ YouTube — great coaches giving great advice... that may or may not apply to your swing.
 
@@ -125,17 +133,15 @@ When you DO fix your root swing flaw, you quickly start playing the golf you kno
 
 ❌ Apps — give you data but no direction.
 
-❌ Drills — work on the range, fall apart on the course — because practicing the wrong thing won't fix the real problem.
+❌ Drills — work on the range, fall apart on the course — because practicing the wrong thing won't fix your real problem.
 
-**Bottom Line: NONE of these methods address your root swing flaw.**
+**Subhead:** Working on your swing without knowing your root swing flaw is like getting surgery without a diagnosis.
 
-**Subhead:** Every approach in golf — every tip, every lesson, every app — has been a prescription without a diagnosis.
-
-That is the equivalent of a doctor prescribing treatment without ever running a diagnostic. When it comes to your health, you would NEVER do that. But that's the approach you're taking every single day with your golf game.
+When it comes to your health, you would NEVER do that. But that's the approach you're taking every single day with your golf game.
 
 **And the numbers prove it.**
 
-The average American golfer's handicap has stayed between 14.0 and 14.2 from 2020 to 2025 (USGA/GHIN Handicap Data). Eighty-two million rounds posted. An explosion of instruction technology. And no improvement — because the entire industry skipped the diagnosis.
+In 1983, the average male golfer's handicap was 17. Today — after 40 years of equipment revolutions, launch monitors, swing apps, online instruction, and billions spent on coaching — it's 14. Three strokes. In four decades. And the middle of the bell curve hasn't moved at all: 48% of male golfers had a handicap between 10 and 20 in 1983. Today it's 49%. Simply because the entire industry skipped the diagnosis.
 
 **Proof:** Bobby Clampett / GolfWRX: 70% lesson failure stat (DISC-08). USGA/GHIN: handicap stagnation 14.0-14.2 (2020-2025, verified). 3.68M golfers with GHIN handicaps in 2025.
 
