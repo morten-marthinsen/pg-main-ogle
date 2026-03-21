@@ -18,10 +18,25 @@
         ]
       }
     ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/copy-principles-enforcer.sh"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
         "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/copy-post-audit.sh"
+          },
           {
             "type": "command",
             "command": "_performance-golf/pg-marketing-os/.hooks/dispatch-validator.sh"
