@@ -538,77 +538,123 @@
     }
 
     /* =============================================
-       THE SYSTEM — 6 COMPONENTS
+       THE SYSTEM — 6 COMPONENTS (FLOWCHART)
     ============================================= */
-    .components-grid {
-      display: grid;
-      gap: var(--space-md);
-    }
-    @media (min-width: 640px)  { .components-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .components-grid { grid-template-columns: repeat(3, 1fr); } }
-
-    .component-card {
-      background: var(--black);
-      border-radius: var(--radius-lg);
-      padding: var(--space-2xl) var(--space-xl);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    .flow {
+      max-width: 800px;
+      margin: 0 auto;
       position: relative;
-      overflow: hidden;
     }
-    .component-card::before {
+    .flow-step {
+      position: relative;
+      padding-left: 80px;
+      padding-bottom: var(--space-2xl);
+    }
+    .flow-step:last-child { padding-bottom: 0; }
+    /* Vertical connector line */
+    .flow-step::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--orange) 0%, rgba(253,51,0,0.3) 100%);
-      opacity: 0;
-      transition: opacity 0.35s ease;
+      left: 24px;
+      top: 48px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--orange), rgba(253,51,0,0.15));
     }
-    .component-card:hover {
-      border-color: rgba(253,51,0,0.3);
-      box-shadow: 0 16px 64px rgba(0,0,0,0.3), 0 0 0 1px rgba(253,51,0,0.15);
-      transform: translateY(-4px);
-    }
-    .component-card:hover::before { opacity: 1; }
-    .component-number {
+    .flow-step:last-child::before { display: none; }
+    .flow-number {
+      position: absolute;
+      left: 0; top: 0;
       width: 48px; height: 48px;
       border-radius: 50%;
-      background: transparent;
-      border: 2px solid var(--orange);
-      color: var(--orange);
+      background: var(--orange);
+      color: var(--white);
       font-weight: 800;
       font-size: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: var(--space-xl);
-      transition: all 0.35s ease;
+      z-index: 2;
+      box-shadow: 0 0 20px rgba(253,51,0,0.3);
     }
-    .component-card:hover .component-number {
-      background: var(--orange);
-      color: var(--white);
+    .flow-content {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl) var(--space-2xl);
+      transition: all 0.3s ease;
     }
-    .component-card h3 {
+    .flow-content:hover {
+      border-color: rgba(253,51,0,0.25);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+    }
+    .flow-content h3 {
       font-size: 20px;
       font-weight: 700;
-      margin-bottom: var(--space-sm);
       color: var(--white);
+      margin-bottom: var(--space-xs);
       letter-spacing: -0.01em;
     }
-    .component-role {
+    .flow-role {
       font-family: var(--font-mono);
       font-size: 11px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--orange);
-      font-style: normal;
-      margin-bottom: var(--space-lg);
+      margin-bottom: var(--space-md);
     }
-    .component-card p {
+    .flow-content p {
       font-size: 15px;
       line-height: 1.7;
       color: var(--stone);
+    }
+    /* Fork at step 2 */
+    .flow-fork {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+    @media (max-width: 640px) { .flow-fork { grid-template-columns: 1fr; } }
+    .flow-fork-path {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: var(--space-lg);
+    }
+    .flow-fork-path h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: var(--space-sm);
+    }
+    .flow-fork-path p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--stone);
+    }
+    .flow-merge {
+      text-align: center;
+      font-size: 14px;
+      color: var(--stone);
+      font-style: italic;
+      margin-top: var(--space-lg);
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    /* Arrow connector between steps */
+    .flow-arrow {
+      display: flex;
+      justify-content: center;
+      padding: var(--space-md) 0;
+      padding-left: 80px;
+    }
+    .flow-arrow svg {
+      width: 24px;
+      height: 24px;
+      color: var(--orange);
+      opacity: 0.5;
     }
     .system-connector {
       text-align: center;
@@ -1317,51 +1363,91 @@
   <section class="section section--dark" id="system" aria-labelledby="system-heading">
     <div class="container">
       <div class="section-header text-center">
-        <span class="label">One System. Six Components.</span>
-        <h2 id="system-heading" style="color:var(--white)">Everything Works Together.<br>Nothing Works Alone.</h2>
-        <p class="subhead" style="max-width:580px; margin:var(--space-md) auto 0; color:var(--stone)">One system with six components — each one feeding the next.</p>
+        <h2 id="system-heading" style="color:var(--white)">What You Get Inside PG1</h2>
+        <p class="subhead" style="max-width:580px; margin:var(--space-md) auto 0; color:var(--stone)">Six Components. One Smart System. Zero Guessing.</p>
       </div>
 
-      <div class="components-grid">
-        <div class="component-card">
-          <div class="component-number" aria-hidden="true">1</div>
-          <h3>Personalized Assessment</h3>
-          <p class="component-role">Entry point — gives the system its first understanding of you.</p>
-          <p>Your game. Your goals. Your history. The assessment creates the baseline the Smart System builds from. Without it, every recommendation would be generic. With it, everything that follows is built around YOUR game.</p>
+      <div class="flow">
+        <!-- Step 1 -->
+        <div class="flow-step">
+          <div class="flow-number" aria-hidden="true">1</div>
+          <div class="flow-content">
+            <h3>Personalized Assessment</h3>
+            <p class="flow-role">The fastest path to fixing your root swing flaw starts here.</p>
+            <p>The system gets to know your game — your swing, your goals, your history, your strengths, your frustrations. Then it builds the fastest path to fixing your root swing flaw, one Smart Step at a time. Without it, every recommendation would be generic. With it, every fix is built around YOUR game.</p>
+          </div>
         </div>
-        <div class="component-card">
-          <div class="component-number" aria-hidden="true">2</div>
-          <h3>SwingScan AI</h3>
-          <p class="component-role">Discovery — finds the root swing flaw.</p>
-          <p>Trained on 2M+ swings across 77+ documented flaw patterns. SwingScan identifies your root swing flaw — the one thing causing all the other problems. Film your swing with your phone. The system does the rest.</p>
+
+        <!-- Step 2: Fork — two separate cards -->
+        <div class="flow-step" style="padding-bottom:0">
+          <div class="flow-number" aria-hidden="true">2</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-lg)">
+            <div class="flow-content">
+              <p style="font-family:var(--font-sans); font-size:16px; font-weight:800; letter-spacing:-0.01em; text-transform:uppercase; color:var(--orange); margin-bottom:var(--space-lg); padding-bottom:var(--space-md); border-bottom:2px solid rgba(253,51,0,0.3)">I Want To Record My Swing</p>
+              <h3>SwingScan AI</h3>
+              <p class="flow-role">Discovery — finds your root swing flaw.</p>
+              <p>Film your swing with your phone. SwingScan AI — trained on 2M+ swings across 77+ flaw patterns — identifies your root swing flaw. The one thing causing all the other problems. Takes minutes.</p>
+            </div>
+            <div class="flow-content">
+              <p style="font-family:var(--font-sans); font-size:16px; font-weight:800; letter-spacing:-0.01em; text-transform:uppercase; color:var(--orange); margin-bottom:var(--space-lg); padding-bottom:var(--space-md); border-bottom:2px solid rgba(253,51,0,0.3)">I Don't Want To Record My Swing</p>
+              <h3>Choose Your Focus Area</h3>
+              <p class="flow-role">Pick your path — no filming required.</p>
+              <p>Pick the area of your game you want to improve — driver, irons, short game, putting — and the Smart System builds your improvement path from there.</p>
+            </div>
+          </div>
         </div>
-        <div class="component-card">
-          <div class="component-number" aria-hidden="true">3</div>
-          <h3>Your Smart Step</h3>
-          <p class="component-role">Direction — the one thing to work on right now.</p>
-          <p>Not a list of 12 corrections. One thing. The single drill, focus, or correction that addresses your root swing flaw at this moment. Your Smart Step evolves as your flaw resolves — the system decides what matters most right now.</p>
+        <!-- Spacer to reconnect the flow line -->
+        <div class="flow-step" style="padding-bottom:var(--space-2xl)">
+          <div style="height:var(--space-lg)"></div>
         </div>
-        <div class="component-card">
-          <div class="component-number" aria-hidden="true">4</div>
-          <h3>Progress Dashboard</h3>
-          <p class="component-role">Tracking — adaptive progress by root swing flaw.</p>
-          <p>Tracks your improvement by how your root swing flaw is responding — not just scores. You can see the flaw improving before the scorecard catches up. When the other swing faults start quieting down, the dashboard shows it happening.</p>
+
+        <!-- Step 3 -->
+        <div class="flow-step">
+          <div class="flow-number" aria-hidden="true">3</div>
+          <div class="flow-content">
+            <h3>Your Smart Step</h3>
+            <p class="flow-role">The one thing to work on right now.</p>
+            <p>Not a list of 12 corrections. One thing. The single drill, focus, or correction that matters most for your game right now. As you make progress, your Smart Step evolves — the system continuously identifies the next most important thing for you to work on.</p>
+          </div>
         </div>
-        <div class="component-card">
-          <div class="component-number" aria-hidden="true">5</div>
-          <h3>Dedicated Coach Access</h3>
-          <p class="component-role">Validation — a human who knows your diagnosis.</p>
-          <p>Smart Match pairs you with a coach based on your specific root swing flaw type — so the person guiding you actually specializes in fixing YOUR problem.</p>
+
+        <!-- Step 4 -->
+        <div class="flow-step">
+          <div class="flow-number" aria-hidden="true">4</div>
+          <div class="flow-content">
+            <h3>Progress Dashboard</h3>
+            <p class="flow-role">See your root swing flaw improving — before the scorecard catches up.</p>
+            <p>Your dashboard tracks how your root swing flaw is responding in real time. Not just scores — actual flaw improvement. You can see the progress happening before it shows up on the course. When the other swing faults start quieting down, the dashboard shows it.</p>
+          </div>
         </div>
-        <div class="component-card">
-          <div class="component-number" aria-hidden="true">6</div>
-          <h3>Drill &amp; Round Tracking</h3>
-          <p class="component-role">Feedback loop — practice and play feed the system.</p>
-          <p>Every range session and every round feeds back into the Smart System. The more you use it, the more it knows you.</p>
+
+        <!-- DONNIE CALLOUT — Step 4 -->
+        <div style="margin:var(--space-lg) 0 var(--space-lg) 80px; padding:var(--space-xl) var(--space-2xl); background:rgba(253,51,0,0.12); border:3px solid var(--orange); border-radius:var(--radius-lg); box-shadow:0 0 30px rgba(253,51,0,0.25), 0 0 60px rgba(253,51,0,0.1); text-align:center">
+          <p style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:var(--space-md); font-weight:700">QUESTION FOR DONNIE</p>
+          <p style="font-size:clamp(15px,1.6vw,17px); line-height:1.6; color:var(--stone); text-align:left">I'm not sure about this Step 4 copy for the Progress Dashboard because:<br><br><strong style="color:var(--white)">1.</strong> I'm not sure if it's actually accurate.<br><br><strong style="color:var(--white)">2.</strong> The fact that it mentions tracking progress on your root cause before it shows up on the course, while I know that's realistic and that's the way it will work, also introduces some degree of doubt. I think we should consider alternate positioning here for this fourth component.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flow-step">
+          <div class="flow-number" aria-hidden="true">5</div>
+          <div class="flow-content">
+            <h3>Connect With Your Coach</h3>
+            <p class="flow-role">A real coach who specializes in YOUR root swing flaw.</p>
+            <p>Smart Match pairs you with a dedicated coach based on your specific root swing flaw type. Not randomly assigned. A curated match who knows your diagnosis, reviews your swings, and guides your correction — so you are never figuring this out alone.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="flow-step">
+          <div class="flow-number" aria-hidden="true">6</div>
+          <div class="flow-content">
+            <h3>Drill &amp; Round Tracking</h3>
+            <p class="flow-role">The more you use it, the more it knows you.</p>
+            <p>Every range session and every round feeds back into the Smart System. The more you use it, the more it knows you — and the faster you improve. Practice data and on-course data together give the system a complete picture of your game, so every recommendation gets sharper over time.</p>
+          </div>
         </div>
       </div>
 
-      <p class="system-connector">Assessment → SwingScan → Smart Step → Coach → Dashboard → Tracking → Improvement</p>
     </div>
   </section>
 
@@ -1399,8 +1485,19 @@
         <div class="data-bar-item"><span class="num">1.4M</span><span class="lbl">Golfers on platform</span></div>
       </div>
 
-      <h3 class="text-center mb-xl">The Coaching Team</h3>
-      <p class="text-center" style="color:var(--gray-ui); max-width:580px; margin:0 auto var(--space-2xl); font-size:15px; line-height:1.7">The coaches behind the PG1 Smart System deliver your coaching directly. Smart Match pairs you with a coach based on your specific root swing flaw type — so the person guiding you actually specializes in fixing YOUR problem.</p>
+    </div>
+  </section>
+
+  <!-- =============================================
+       COACHING TEAM
+  ============================================= -->
+  <section class="section section--white" id="coaching-team" aria-labelledby="coaching-heading">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="label">Your Coaching Team</span>
+        <h2 id="coaching-heading">World-Class Coaches.<br>Matched to Your Root Swing Flaw.</h2>
+        <p class="subhead" style="max-width:580px; margin:var(--space-md) auto 0">Smart Match pairs you with a coach based on your specific root swing flaw type — so the person guiding you actually specializes in fixing YOUR problem.</p>
+      </div>
 
       <div class="coach-grid">
         <div class="coach-card">
@@ -1494,6 +1591,11 @@
         <h2 id="timeline-heading">What Happens After You Join</h2>
         <p class="subhead" style="max-width:480px; margin:var(--space-md) auto 0">Here's what your first 90 days look like.</p>
       </div>
+
+      <div style="margin:var(--space-xl) auto var(--space-2xl); max-width:700px; padding:var(--space-xl) var(--space-2xl); background:rgba(253,51,0,0.12); border:3px solid var(--orange); border-radius:var(--radius-lg); box-shadow:0 0 30px rgba(253,51,0,0.25), 0 0 60px rgba(253,51,0,0.1); text-align:center">
+        <p style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:var(--space-md); font-weight:700">NOTE FOR DONNIE</p>
+        <p style="font-size:clamp(15px,1.6vw,17px); line-height:1.6; color:var(--gray-ui)">This entire section's copy needs to be revised. I did not have a chance to edit it yet.</p>
+      </div>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-marker">
@@ -1564,8 +1666,8 @@
         <h2 id="comparison-heading">They Treat Symptoms.<br>The Smart System Finds the Cause.</h2>
       </div>
       <p style="font-size:clamp(16px,1.7vw,18px); line-height:1.75; max-width:620px; margin:0 auto var(--space-xl); text-align:center; color:var(--gray-ui)">
-        Every approach does something useful. YouTube provides tips. Lessons provide instruction. Tracking apps provide data. AI apps provide analysis.<br><br>
-        <strong style="color:var(--black)">None of them find your root swing flaw first. The PG1 Smart System does.</strong>
+        YouTube provides tips. Lessons provide instruction. Tracking apps provide data. AI apps provide analysis.<br><br>
+        <strong style="color:var(--black)">But none of them find and fix your root swing flaw. The PG1 Smart System does.</strong>
       </p>
       <div class="comparison-table-wrap">
         <table class="comparison-table">
@@ -1652,7 +1754,12 @@
         <h2 id="value-heading">You Have Spent a Lifetime on Fixes That Never Found the Problem.</h2>
       </div>
       <p style="font-size:clamp(16px,1.7vw,18px); line-height:1.75; text-align:center; color:var(--gray-ui); margin-bottom:var(--space-lg)">Lessons. Apps. Training aids. Different instructors — each one starting from scratch because nobody ever identified your root swing flaw.</p>
-      <p style="font-size:clamp(16px,1.7vw,18px); line-height:1.75; text-align:center; color:var(--gray-ui); margin-bottom:var(--space-2xl)">You know the feeling. You spend the money. You put in the work. And your handicap stays exactly where it was.</p>
+      <p style="font-size:clamp(16px,1.7vw,18px); line-height:1.75; text-align:center; color:var(--gray-ui); margin-bottom:var(--space-xl)">You know the feeling. You spend the money. You put in the work. And your handicap stays exactly where it was.</p>
+
+      <div style="margin:0 auto var(--space-2xl); max-width:700px; padding:var(--space-xl) var(--space-2xl); background:rgba(253,51,0,0.12); border:3px solid var(--orange); border-radius:var(--radius-lg); box-shadow:0 0 30px rgba(253,51,0,0.25), 0 0 60px rgba(253,51,0,0.1); text-align:center">
+        <p style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:var(--space-md); font-weight:700">NOTE FOR DONNIE</p>
+        <p style="font-size:clamp(15px,1.6vw,17px); line-height:1.6; color:var(--gray-ui)">This section needs to be revised. I did not have a chance to edit it.</p>
+      </div>
       <div class="value-stack">
         <div class="value-line">
           <span class="item">Private lessons</span>
@@ -1694,6 +1801,12 @@
         <h2 id="pricing-heading">One Flaw. One Plan.</h2>
         <p class="subhead" style="max-width:480px; margin:var(--space-md) auto 0">Improvement becomes inevitable.</p>
       </div>
+
+      <div style="margin:var(--space-xl) auto var(--space-xl); max-width:700px; padding:var(--space-xl) var(--space-2xl); background:rgba(253,51,0,0.12); border:3px solid var(--orange); border-radius:var(--radius-lg); box-shadow:0 0 30px rgba(253,51,0,0.25), 0 0 60px rgba(253,51,0,0.1); text-align:center">
+        <p style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:var(--space-md); font-weight:700">NOTE FOR DONNIE</p>
+        <p style="font-size:clamp(15px,1.6vw,17px); line-height:1.6; color:var(--gray-ui)">The "Improvement becomes inevitable" subheadline — I need a second set of eyes on it.</p>
+      </div>
+
       <p style="font-size:clamp(15px,1.6vw,17px); line-height:1.75; max-width:580px; margin:0 auto var(--space-2xl); text-align:center; color:var(--gray-ui)">
         <strong style="color:var(--black)">1,000 Founders Club memberships. Two options. The lowest price PG1 will ever be.</strong> When the 1,000 spots fill, this rate disappears. Yours is locked permanently.
       </p>
@@ -1778,7 +1891,7 @@
           <span class="seal-label">Day</span>
           <span class="seal-label">Guarantee</span>
         </div>
-        <h2 id="guarantee-heading">365 Days. Full Refund. One Email.</h2>
+        <h2 id="guarantee-heading">365-Day 100% Money Back Guarantee</h2>
         <p>The Smart System will find your root swing flaw. It will give you your Smart Step. It will match you with a coach who knows your diagnosis. And your game will improve.</p>
         <p>We are so confident in that, we will give you 365 days to see it for yourself. If at any point during that year you want your money back — one email. Every penny returned. No hoops. No hassle.</p>
         <p class="guarantee-tagline">365 days. Full refund. One email.</p>
@@ -1794,7 +1907,7 @@
     <div class="container">
       <div class="section-header text-center">
         <span class="label">Questions? Answers.</span>
-        <h2 id="faq-heading">Everything You Need to Know</h2>
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
       </div>
       <div class="faq-list">
 
@@ -1955,6 +2068,12 @@
         <span class="label">Is This For You?</span>
         <h2 id="usecases-heading">The Smart System Was Built for Golfers Who Have Tried Everything.</h2>
       </div>
+
+      <div style="margin:0 auto var(--space-2xl); max-width:700px; padding:var(--space-xl) var(--space-2xl); background:rgba(253,51,0,0.12); border:3px solid var(--orange); border-radius:var(--radius-lg); box-shadow:0 0 30px rgba(253,51,0,0.25), 0 0 60px rgba(253,51,0,0.1); text-align:center">
+        <p style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:var(--space-md); font-weight:700">NOTE FOR DONNIE</p>
+        <p style="font-size:clamp(15px,1.6vw,17px); line-height:1.6; color:var(--gray-ui)">This whole section can either be deleted or needs to be run against the deep research to confirm that these are the three personas we want to go after.</p>
+      </div>
+
       <div class="use-cases-grid">
         <div class="use-case-card">
           <p class="persona">The Plateau Player</p>
