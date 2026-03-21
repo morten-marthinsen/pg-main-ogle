@@ -214,7 +214,7 @@ Your game. Your goals. Your history. The assessment creates the baseline the Sma
 ### 2. SwingScan AI
 *Discovery — finds the root swing flaw.*
 
-Trained on 2M+ swings across 77+ documented flaw patterns. SwingScan identifies the one movement creating all your compensations. Film your swing with your phone. The system does the rest.
+Trained on 2M+ swings across 77+ documented flaw patterns. SwingScan identifies your root swing flaw — the one thing causing all the other problems. Film your swing with your phone. The system does the rest.
 
 ---
 
@@ -228,7 +228,7 @@ Not a list of 12 corrections. One thing. The single drill, focus, or correction 
 ### 4. Progress Dashboard
 *Tracking — adaptive progress by root swing flaw.*
 
-Tracks your improvement by flaw resolution, not just scores. You can see your root swing flaw improving before the scorecard catches up. When compensations dissolve, the dashboard shows it happening.
+Tracks your improvement by how your root swing flaw is responding — not just scores. You can see the flaw improving before the scorecard catches up. When the other swing faults start quieting down, the dashboard shows it happening.
 
 ---
 
@@ -278,7 +278,7 @@ I spent the next several years — and over $5 million — building a system tha
 
 **The Coaching Team**
 
-The coaches behind the PG1 Smart System built the diagnostic intelligence behind Smart Match — and deliver your coaching directly. Not random marketplace instructors. Smart Match pairs you with the coach whose expertise matches your specific root swing flaw type.
+The coaches behind the PG1 Smart System deliver your coaching directly. Smart Match pairs you with a coach based on your specific root swing flaw type — so the person guiding you actually specializes in fixing YOUR problem.
 
 **Main Coaches:**
 
@@ -395,7 +395,9 @@ The Smart System identifies your next biggest opportunity for improvement. Then 
 
 Every approach does something useful. YouTube provides tips. Lessons provide instruction. Tracking apps provide data. AI apps provide analysis.
 
-None of them find your root swing flaw first. The PG1 Smart System does. Here's What PG1 Total Game Transformation Looks Like
+None of them find your root swing flaw first. The PG1 Smart System does.
+
+**Here's What PG1 Total Game Transformation Looks Like**
 
 | Capability | YouTube | Lessons | Tracking Apps | AI Swing Apps | **PG1 Smart System** |
 |---|---|---|---|---|---|
@@ -545,16 +547,16 @@ We are so confident in that, we will give you 365 days to see it for yourself. I
 A personalized golf improvement system — not an app. Six integrated components that start by finding your root swing flaw and adapt the more you use it. The app is the delivery vehicle. The system is what makes it different.
 
 **How does the Smart System find my root swing flaw?**
-SwingScan AI is trained on 2M+ swings across 77+ documented flaw patterns. Film your swing with your phone. SwingScan identifies your root swing flaw — the one movement creating all your compensations. Your Smart Step is built from that identification.
+SwingScan AI is trained on 2M+ swings across 77+ documented flaw patterns. Film your swing with your phone. SwingScan identifies your root swing flaw — the one thing causing all the other problems in your swing. Your Smart Step is built from that identification.
 
 **What is a Smart Step?**
 The one thing to work on right now. Not a list of 12 corrections. The single drill, focus, or correction that addresses your root swing flaw at this moment. As your flaw resolves, your Smart Step evolves. The system decides what matters most, right now.
 
 **What is Smart Match?**
-Your coach pairing. The system matches you with a coach based on your specific root swing flaw type. Not randomly assigned. A curated match who understands your diagnosis and guides your correction.
+How you get matched with your coach. The system pairs you with a coach based on your specific root swing flaw type — so the person guiding you actually specializes in fixing your problem. Not randomly assigned.
 
 **How is this different from other golf apps?**
-Every golf app does one of three things: measures, prescribes, or analyzes. None of them find your root swing flaw first. The PG1 Smart System starts by finding your root swing flaw — then shows you exactly how to fix it. Zero of 9 competitors offer this.
+Every golf app does one of three things: measures, prescribes, or analyzes. None of them find your root swing flaw first. The PG1 Smart System starts by finding your root swing flaw — then shows you exactly how to fix it. Nobody else does this.
 
 **How fast will I see results?**
 Day 1 — you get your root swing flaw identified and your Smart Step. Most golfers feel the difference in their first practice session because they are working on the right thing for the first time. The 365-day guarantee gives you a full year to see the results for yourself.
@@ -568,11 +570,11 @@ Both include full access: all 6 system components, all 3 bonuses, every future f
 **What happens after the 1,000 Founders spots fill?**
 Founders Club closes permanently. Future members join at public pricing — significantly higher. Your Founders rate is locked forever, even as the platform adds features and the public price increases.
 
-**My driver root flaw and my irons root flaw — are they the same?**
-Not necessarily. Your root swing flaw varies by area of game. Driver root flaw is not the irons root flaw is not the short game root flaw. The Smart System addresses each area. This is an ongoing system, not a one-time fix.
+**Does the Smart System keep working after my root swing flaw is fixed?**
+Yes. Once your root swing flaw resolves, the Smart System identifies your next biggest opportunity for improvement. Then the next. This is an ongoing system — not a one-time fix. For as long as you want to play, the system is finding the one thing that will make the biggest difference right now.
 
 **Who are the coaches?**
-The PG1 coaching team includes Hank Haney (Tiger Woods' Former Coach), Martin Chuck, Erika Larkin, Andrew Rice, JT Thomas, Eric Cogorno, and Brian Mogg — supported by David Leadbetter, Rocco Mediate, Rick Smith, and Cameron McCormick. Each coach brings decades of elite-level experience. Smart Match pairs you with the coach best suited to your specific root swing flaw type.
+The PG1 coaching team includes Hank Haney (Tiger Woods' Former Coach), Martin Chuck, Erika Larkin, Andrew Rice, JT Thomas, Eric Cogorno, and Brian Mogg — supported by David Leadbetter, Rocco Mediate, Rick Smith, and Cameron McCormick. Smart Match pairs you with the coach who specializes in fixing your specific root swing flaw type.
 
 **Is my data private?**
 Yes. Your swing videos and data are used only for YOUR improvement. PG1 does not share individual user data.
