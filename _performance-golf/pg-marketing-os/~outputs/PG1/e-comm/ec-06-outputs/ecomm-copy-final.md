@@ -93,7 +93,7 @@ The PG1 Smart System ends that cycle. It finds your root swing flaw. Gives you o
 
 ---
 
-Your ROOT swing flaw is the root cause creating every other problem in your swing. When you don't fix your ROOT flaw, you struggle to consistently improve your golf game.
+Your ROOT swing flaw is the root cause of every other problem in your swing. When you don't fix your ROOT flaw, you struggle to consistently improve your golf game.
 
 ❌ No matter how much you practice or play
 ❌ No matter how many videos you watch
@@ -141,7 +141,9 @@ When it comes to your health, you would NEVER do that. But that's the approach y
 
 **And the numbers prove it.**
 
-In 1983, the average male golfer's handicap was 17. Today — after 40 years of equipment revolutions, launch monitors, swing apps, online instruction, and billions spent on coaching — it's 14. Three strokes. In four decades. And the middle of the bell curve hasn't moved at all: 48% of male golfers had a handicap between 10 and 20 in 1983. Today it's 49%. Simply because the entire industry skipped the diagnosis.
+In 1983, the average male golfer's handicap was 17. Today — after 40 years of equipment revolutions, launch monitors, swing apps, online instruction, and billions spent on coaching — it's 14. Three strokes in 40 years.
+
+Not only that, but there are only 1% more golfers who are 10-20 handicaps today (49%) than in 1983 (48%).
 
 **Proof:** Bobby Clampett / GolfWRX: 70% lesson failure stat (DISC-08). USGA/GHIN: handicap stagnation 14.0-14.2 (2020-2025, verified). 3.68M golfers with GHIN handicaps in 2025.
 
@@ -365,9 +367,7 @@ Craig Hanson — *Coach to over 100 Tour pros, winner of 14 Tour events*
 
 **Prehead:** Your First 90 Days
 
-**Header:** What Happens After You Join
-
-**Subhead:** Here's what your first 90 days look like.
+**Header:** The Guessing Stops on Day 1.
 
 ---
 
