@@ -29,6 +29,43 @@ There are two top-level directories:
 
 ## Universal Rules
 
+### Who the User Is
+
+Not a developer. Uses Claude Code, Codex, and Gemini CLI for marketing copywriting, sales funnel creation, and building tools for his businesses. Keep explanations simple — no unnecessary technical jargon. Direct communicator, zero tolerance for fluff or hedging.
+
+### Date/Time Rule — ET Is the Only Timezone That Matters
+
+The user is in Eastern time. The system clock runs UTC, which can be 4-5 hours ahead — meaning UTC may show a different date than what the user is actually living. Any time a request involves "today," a date, or a day of the week, run `TZ=America/New_York date` first. Use that output as the ground truth. Every time. No exceptions.
+
+### Only Change What You're Told to Change
+
+Never delete, remove, or restructure content unless the user explicitly tells you to. "Update" means correct in place. "Out of date" means fix it, not delete it. If you're about to remove something the user didn't mention removing — stop, and ask first.
+
+### Know Before You Speak
+
+**NEVER** tell the user to do something, ask if something needs doing, or state something as a fact without verifying it first. Always check the actual state (git status, file contents, etc.) before making any claim.
+
+### Working Style
+
+- Make edits and commit locally. Only push when the user says to, or when a stop hook requires it.
+- Be direct. No filler, no fluff.
+- When the user asks for a change, make it. Don't ask for confirmation unless there's genuine ambiguity.
+- The user prefers autonomous execution — interview upfront, then execute everything without interruption.
+- Always call out what's being committed before pushing to GitHub. Don't silently commit and push during iterative work.
+
+### File & Folder Naming
+
+- All lowercase
+- No spaces — use hyphens (`-`) instead
+
+### Bash Permissions
+
+**NEVER use `Bash(*)` wildcard.** Always use the granular curated Bash permission list so destructive commands (`rm`, `git reset --hard`, `git checkout --`, etc.) require user approval. The comprehensive list of non-destructive commands is in `.claude/settings.json`.
+
+### Continuous Improvement
+
+After any exchange where there's a significant learning, mistake, user correction, or breakthrough that would improve future sessions — update the relevant instruction file with a new rule or refinement. Don't wait to be asked.
+
 ### No Unverified Claims
 
 Never state anything as fact unless you have verified it in the current session. Search the internet. Read the file. Do not guess. Do not rely on training data. Do not offer to look it up — just look it up. Verify every claim, then show your proof. If verification fails, try another source. Exhaust every available tool before telling the user you could not verify.
@@ -172,4 +209,4 @@ Principles are extracted from real draft-to-final editing sessions. Each one tra
 
 **Data cards show the delta, not the baseline.** "14.2 average handicap" requires the reader to know if 14.2 is good or bad — it's a number without context. "3 strokes in 40 years" is self-contextualizing — the reader instantly knows 3 is almost nothing and 40 years is forever. "1%" is self-contextualizing — the reader knows 1% is negligible. The change is the story. The baseline is supporting context. Always lead with the delta.
 
-> **How this section grows:** After each draft-to-final editing session, trace each correction back to the psychological mechanism behind it. If the principle already exists here, the correction is a signal the principle wasn't followed. If the principle doesn't exist, write it: name the mechanism, explain why it works, and make it concrete enough that any writer could apply it without further instruction.
+> **How this section grows:** After each draft-to-final editing session, trace each correction back to the psychological mechanism behind it. If the principle already exists here, the correction is a signal the principle wasn't followed. If the principle doesn't exist, write it: name the mechanism, explain why it works, and make it concrete enough that any writer could apply it without further instruction. Principles must be rooted in human psychology and persuasion — NOT rigid "always do Y instead of X" substitution rules. A writer with 20 deep principles makes better judgment calls than one with 500 brittle rules. Structure as two tiers: (1) deep principles grounded in how humans process information, make decisions, and respond to persuasion — universal across all deliverables; (2) deliverable-specific patterns showing how those principles manifest in a particular format. The system must be tool/LLM-agnostic — written as craft knowledge any writer (human or AI) could apply.
