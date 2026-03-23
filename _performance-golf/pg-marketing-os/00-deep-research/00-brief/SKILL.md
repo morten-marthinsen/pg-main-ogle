@@ -7,6 +7,8 @@ description: >-
   any new project, onboarding a new client, or initializing a campaign. Trigger when
   users mention starting a new project, creating a brief, kicking off research, or
   initializing a campaign. This is the entry point for the entire pipeline.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # 00: PROJECT BRIEF
@@ -32,6 +34,13 @@ until the human signs off.
 - `[project]-brief.md` (Status: Draft) — for research pipeline
 
 **Unlocks:** Skill 01 (Research)
+
+**Success Criteria:**
+- Human-reviewed project brief approved
+- Product, audience, and competitive landscape defined
+- Tier (Full/Standard/Quick) confirmed
+- Soul.md seed document produced (for new projects)
+- Output file produced: `[project]-brief.md`
 
 ---
 

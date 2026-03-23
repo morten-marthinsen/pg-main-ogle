@@ -346,10 +346,17 @@ Thank You: "Here's how to get the most from [mechanism]"
 
 ---
 
+### SSR Pre-Screen Validation
+
+After U5 (Editorial) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `U5-upsell-editorial/skills/layer-4/4.4-ssr-prescreen-trigger.md`
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.4 | 2026-03-20 | Added SSR pre-screen validation reference (U5 (Editorial) terminal gate) |
 | 1.3 | 2026-02-27 | U3 (Downsell Writer) + U4 (Upsell Sequence Assembler) + U5 (Upsell Editorial) BUILT — 33 new files. U3: 5 layers, 8 microskills, Arena (generative_full_draft), ARO structure (Acknowledge→Reframe→Offer), 7 reframe-focused competitors, 4 reframe types. U4: 3 layers, 8 microskills, no Arena, 5 parallel validators (Sequence, Narrative Thread, Congruence Chain, Pricing Cascade, Speed), dual handoff (U5 + E0). U5: 4 layers, 9 microskills, Arena (editorial_revision), 7 upsell-specific editorial lenses, S1-S5 sequence-level criteria, 7.5 minimum threshold. Upsell Engine 6/6 = 100%. |
 | 1.2 | 2026-02-26 | Specimen vault expanded 18→26 (8 Goff specimens across 8 new verticals). Key integrations: EXTENDED_VIDEO flag for video scripts >2000w, LOSS_LEADER_MODE for low-FE funnels, DFY priority in U0, done-for-you narrative arc in U2. |
 | 1.1 | 2026-02-26 | U1 (Order Bump Writer) + U2 (1-Click Upsell Writer) BUILT — 25 new files. U1: 3 layers, 6 microskills, no Arena, 50-150w checkbox copy, 5-7 variants. U2: 5 layers, 14 microskills, Arena (generative_full_draft), CAIRO structure, 7 upsell-specific competitors, congruence scoring. |

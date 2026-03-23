@@ -237,9 +237,16 @@ Step 1: Contact → Step 2: Shipping → Step 3: Payment
 
 ---
 
+### SSR Pre-Screen Validation
+
+After CK-03 (Editorial) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `CK-03-checkout-editorial/skills/layer-4/4.3-ssr-prescreen-trigger.md`
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.2 | 2026-03-20 | Added SSR pre-screen validation reference (CK-03 (Editorial) terminal gate) |
 | 1.1 | 2026-03-09 | FULL BUILD: All 4 skills complete with AGENT.md, ANTI-DEGRADATION.md, and 31 microskills. CK-00 (9 microskills), CK-01 (7 microskills), CK-02 (7 microskills), CK-03 (8 microskills). |
 | 1.0 | 2026-03-09 | Initial creation — architecture, 5 Laws, 4 degradation patterns, skill pipeline, trust architecture, form micro-copy templates, checkout flow patterns, 4 v1 skill scaffolds. |

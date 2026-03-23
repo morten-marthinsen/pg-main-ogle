@@ -124,11 +124,11 @@ Project codes are short identifiers that uniquely name a campaign. They are assi
 - `RS1` — Roger's Swing (campaign 1)
 - `SPD` — Speed Distance
 - `SF2` — Straight Flight (campaign 2)
-- `ULV` — Ultra Liver
-- `BBW` — Billionaire Brain Wave
-- `EMM` — Emma (gut health)
-- `TRS` — Total Restore
-- `RL1` — Roger Love (campaign 1)
+- `NRG` — Energy Formula
+- `FCS` — Focus Supplement
+- `GHF` — Gut Health Formula
+- `DTX` — Detox Program
+- `VCE` — Voice Course (campaign 1)
 
 **Rules:**
 - Use the project code consistently across ALL outputs

@@ -3,7 +3,7 @@
 **Version:** 1.0
 **Created:** 2026-02-20
 **Vertical:** technology
-**Primary Clients:** Forbes Wireless, and similar
+**Primary Clients:** (per-project — technology/consumer tech verticals)
 **Display Name:** Technology / Consumer Tech
 
 ---

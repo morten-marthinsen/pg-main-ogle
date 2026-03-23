@@ -8,6 +8,8 @@ metadata:
   category: copywriting-element
   framework_count: 147
   updated: 2025-12-20
+skill_type: reference
+persuasion_profile: clarity only
 ---
 
 # Carlton Headlines

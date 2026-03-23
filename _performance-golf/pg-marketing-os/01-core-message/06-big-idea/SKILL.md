@@ -10,6 +10,8 @@ description: >-
   mention Big Idea, campaign concept, creative angle, hook concept, central thesis,
   or the one idea that drives the entire promotion. Requires promise output from
   Skill 05.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # 06: BIG IDEA GENERATION
@@ -26,6 +28,13 @@ orbit around it.
 
 **Output:** `big-idea-output.json`
 **Unlocks:** Skill 07 (Offer)
+
+**Success Criteria:**
+- Big Idea crystallized as a single compelling concept
+- Passes the "would someone share this at dinner?" test
+- Integrates root cause, mechanism, and promise into unified frame
+- Expression candidates scored via Expression Anchoring Protocol
+- Output file produced: `big-idea-output.json`
 
 ---
 

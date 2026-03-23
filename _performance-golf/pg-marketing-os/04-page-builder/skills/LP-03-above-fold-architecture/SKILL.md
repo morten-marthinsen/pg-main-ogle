@@ -8,6 +8,8 @@ description: >-
   display, ATC button, trust badges. Must answer three questions: What is this?
   Who is this for? Why should I care right now? Trigger when page brief and
   intelligence are ready and you need to architect the above-fold experience.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # LP-03 — Above-Fold Architecture

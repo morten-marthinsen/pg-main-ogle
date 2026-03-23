@@ -14,7 +14,7 @@ LP-14 has six specific failure modes — all related to the deceptive simplicity
 
 2. **Missing Threading:** CTA copy does not reference the page's primary promise or mechanism from LP-07. The CTA is the closing of the loop opened by the headline. If the headline promises "deeper sleep in 7 days" and the CTA says "Order Now," the threading is broken.
 
-3. **Candidate Collapse:** AI generates 3-4 CTA variants and presents them as sufficient. The 3-lens x 3-round system exists because the first few candidates are almost always generic. 9+ candidates minimum.
+3. **Candidate Collapse:** AI generates 3-4 CTA variants and presents them as sufficient. The 3-lens x 2-round + audience evaluation system exists because the first few candidates are almost always generic. 9+ candidates minimum.
 
 4. **P.S. That Introduces New Information:** P.S. copy should RESTATE the strongest benefit and remind of the guarantee. It should NOT introduce a new mechanism, a new benefit, a new proof point, or any claim not already present on the page. P.S. is a recency-bias anchor, not a new pitch.
 

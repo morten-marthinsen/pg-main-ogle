@@ -4,7 +4,7 @@ description: >-
   Seven-persona adversarial Arena competition for organic content quality control.
   Use when any production content (scripts, captions, carousels, threads) needs
   to be stress-tested through the Arena before finalization. Runs 7 specialized
-  personas through 3 competitive rounds to produce a synthesized output that
+  personas through 2 competitive rounds + audience evaluation to produce a synthesized output that
   incorporates the best elements from all perspectives. This is mandatory for
   all production content before final assembly (S14). Trigger when users mention
   Arena, content competition, quality testing, adversarial review, or stress-
@@ -25,6 +25,12 @@ This skill runs the full Arena competition on any content piece. It is MANDATORY
 **Output:** Arena Synthesis (synthesized content + competition log)
 **Requires:** Campaign Brief File (CBF) + Content Draft
 **Process:** 7 Personas × 2 Rounds + Audience Evaluation → Final Synthesis
+
+**Success Criteria:**
+- Full Arena competition completed (7 personas, all rounds)
+- 2 rounds of generation + critique + audience evaluation executed
+- Winning synthesis includes technique transfer from top entries
+- Output: Arena-winning content variants
 
 ## ANTI-DEGRADATION
 

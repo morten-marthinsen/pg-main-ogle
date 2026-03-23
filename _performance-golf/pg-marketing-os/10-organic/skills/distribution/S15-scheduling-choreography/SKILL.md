@@ -26,6 +26,12 @@ This skill transforms assembled content into a precisely timed, cross-platform d
 **Requires:** S14 Content Assembly output
 **Unlocks:** S16 Engagement Protocol
 
+**Success Criteria:**
+- Content calendar populated with dates, times, and platforms
+- Cross-platform sequencing avoids audience fatigue
+- Content mix balanced across awareness, engagement, conversion
+- Output: publishing schedule
+
 ---
 
 ## ANTI-DEGRADATION

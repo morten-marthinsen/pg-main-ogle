@@ -25,6 +25,12 @@ This skill transforms passive content publishing into active community building.
 **Requires:** S14 Content Assembly output + S15 Scheduling Choreography
 **Unlocks:** S17 Network Amplification coordination
 
+**Success Criteria:**
+- Response templates defined for common comment types
+- First-hour comment response strategy documented
+- Community interaction guidelines with tone examples
+- Output: engagement protocol document
+
 ---
 
 ## ANTI-DEGRADATION

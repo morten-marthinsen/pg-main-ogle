@@ -86,7 +86,7 @@ Agent receives validation result in context and can self-correct
 | `proportionality_check.py` | Package files with scores | Threshold clustering detection (>50% at minimums = gate-passing optimization) |
 | `token_estimator.py` | All file writes | Cumulative context tracking, zone classification (GREEN/YELLOW/ORANGE/RED/CRITICAL). Also emits event-driven reminders on zone transitions (Detector 6). |
 | `reminder_detector.py` | All file writes | Event-driven degradation detection: abbreviation patterns (Detector 4), rushing/undersized outputs (Detector 2), stale reads (Detector 7), synthesis from memory (Detector 1). Supports `--record-read <path>` flag for Read event tracking (see Known Limitation above). See `~system/protocols/EVENT-DRIVEN-REMINDERS.md`. |
-| `convergence_detector.py` | Arena output files (`arena/*-output.md`, `*-revised.md`, `scores*`) | Three-mode convergence detection: (1) Persona convergence — 5-gram overlap between persona outputs within a round (round-aware thresholds: 40%/50%/60% for rounds 1/2/3), (2) Round stagnation — score improvement <0.2 between rounds with same winner, (3) Output repetition — 3-sentence block appears twice in a single output. See `~system/protocols/CONVERGENCE-INTERVENTION-PROTOCOL.md`. |
+| `convergence_detector.py` | Arena output files (`arena/*-output.md`, `*-revised.md`, `scores*`) | Three-mode convergence detection: (1) Persona convergence — 5-gram overlap between persona outputs within a round (round-aware thresholds: 40%/50% for rounds 1/2 + audience evaluation), (2) Round stagnation — score improvement <0.2 between rounds with same winner, (3) Output repetition — 3-sentence block appears twice in a single output. See `~system/protocols/CONVERGENCE-INTERVENTION-PROTOCOL.md`. |
 
 ---
 

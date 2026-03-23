@@ -73,12 +73,12 @@ This file exists because **ad concept evaluation has its own degradation pattern
 
 Evaluate **complete ad concepts** through multi-persona adversarial competition to ensure only strong, integrated concepts advance to copy production (A07). The Ad Arena is the quality gate between creative development (A02-A05) and production execution (A07-A12).
 
-A06 answers the critical question: **"Which of these ad concepts will actually perform in market?"** — not based on a single evaluator's judgment, but on 7 specialized perspectives stress-tested across 3 adversarial rounds.
+A06 answers the critical question: **"Which of these ad concepts will actually perform in market?"** — not based on a single evaluator's judgment, but on 7 specialized perspectives stress-tested across 2 adversarial rounds + audience evaluation.
 
 **Success Criteria:**
 - All ad concepts from A02/A04/A05 assembled into complete concept bundles (hook + script + visual)
 - All 7 ad-specific personas loaded with specimens from `ad-persona-specimens/`
-- 3 full rounds of competition with critique-revise completed for every concept
+- 2 full rounds of competition with critique-revise + audience evaluation completed for every concept
 - All concepts scored against 7 ad-specific judging criteria with transparent evidence
 - Adversarial Critic identifies genuine weaknesses, not surface-level observations
 - 2-3 synthesis hybrids generated from Round 2 (FINAL) outputs
@@ -1770,7 +1770,7 @@ The only exception is if human EXPLICITLY requests a single round with documente
   LAYER_1_COMPLETE.yaml
   ROUND_1_COMPLETE.yaml
   ROUND_2_COMPLETE.yaml
-  ROUND_3_COMPLETE.yaml
+  AUDIENCE_EVALUATION_COMPLETE.yaml
   SYNTHESIS_COMPLETE.yaml
   HUMAN_SELECTION.yaml        (human selection -- BLOCKING)
   LAYER_4_COMPLETE.yaml
@@ -2062,7 +2062,7 @@ All A06 outputs go to the project output root:
           LAYER_1_COMPLETE.yaml
           ROUND_1_COMPLETE.yaml
           ROUND_2_COMPLETE.yaml
-          ROUND_3_COMPLETE.yaml
+          AUDIENCE_EVALUATION_COMPLETE.yaml
           SYNTHESIS_COMPLETE.yaml
           HUMAN_SELECTION.yaml
           LAYER_4_COMPLETE.yaml
@@ -2140,4 +2140,4 @@ Every evaluation must:
 
 This protocol exists because **single-evaluator, single-round concept evaluation consistently misses weaknesses that multi-persona adversarial evaluation catches.** A hook that seems brilliant in isolation fails when paired with a weak script. A concept that one evaluator loves gets exposed when 7 specialized lenses scrutinize it. And the best concepts emerge not from Round 1 impressions, but from the learning-improvement cycle across 2 rounds + audience evaluation where each persona absorbs what works from other lenses while maintaining their specialized perspective.
 
-The Ad Arena ensures that production investment (A07-A12) is directed only at concepts that have survived the most rigorous evaluation process available. Every dollar spent on production is spent on concepts that 7 specialized evaluators stress-tested across 3 adversarial rounds.
+The Ad Arena ensures that production investment (A07-A12) is directed only at concepts that have survived the most rigorous evaluation process available. Every dollar spent on production is spent on concepts that 7 specialized evaluators stress-tested across 2 adversarial rounds + audience evaluation.

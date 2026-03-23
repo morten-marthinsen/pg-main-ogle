@@ -25,6 +25,12 @@ This skill produces visual direction for thumbnails, video frames, carousel slid
 **Output:** Visual direction briefs for design execution
 **Prerequisite:** Campaign Brief File (CBF) required
 
+**Success Criteria:**
+- Visual direction brief produced for each content piece
+- Style references and mood boards included
+- Platform-specific dimension and format specs provided
+- Output: visual direction briefs
+
 ## ANTI-DEGRADATION
 
 - Read `S12-ANTI-DEGRADATION.md` before execution — structural enforcement rules

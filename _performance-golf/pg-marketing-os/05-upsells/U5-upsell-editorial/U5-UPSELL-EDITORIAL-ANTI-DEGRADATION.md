@@ -97,7 +97,7 @@ I WILL NOT: Invent gate statuses, skip baseline scoring, use direct fixes for P1
 │   ├── 2.1-revisions.md
 │   └── arena/  (if P1/P2 issues trigger Arena)
 │       ├── fix-group-1/
-│       │   ├── round-1/ through round-3/
+│       │   ├── round-1/ through round-2/ + audience-evaluation/
 │       │   └── synthesis/
 │       └── fix-group-N/
 ├── layer-4/

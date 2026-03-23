@@ -27,6 +27,12 @@ skill, not a drafting skill.
 **Output:** `campaign-assembly-package.json` + `assembled-draft.md` + `CAMPAIGN-ASSEMBLY-SUMMARY.md`
 **Unlocks:** Skill 20 (Editorial)
 
+**Success Criteria:**
+- All prose sections assembled into a single continuous script
+- Section transitions are seamless (no visible joints)
+- Threading verified across the full piece
+- Output: assembled VSL script produced
+
 ---
 
 ## ANTI-DEGRADATION

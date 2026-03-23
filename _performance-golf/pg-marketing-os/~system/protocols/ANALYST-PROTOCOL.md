@@ -165,6 +165,8 @@ analytical_brief:
       - modification: "[what the winner did differently]"
         criterion_affected: "[name]"
         impact: "[+X.X]"
+        effect_size: [X.XX]  # Cohen's d — magnitude of difference
+        significance: "[p < 0.05 | p < 0.01 | not significant | N too small]"
         evidence_winner: "[quote from winner's output]"
         evidence_runner_up: "[quote from runner-up's output]"
 
@@ -176,11 +178,14 @@ analytical_brief:
       - gap: "[what structural choice caused the gap]"
         criteria_affected: ["[criterion1]", "[criterion2]"]
         total_impact: "[+X.X combined]"
+        effect_size: [X.XX]  # Cohen's d
+        significance: "[p < 0.05 | p < 0.01 | not significant | N too small]"
 
   sibling_analysis:
     - pair: ["[persona1]", "[persona2]"]
       lens: "[shared focus area]"
       differentiator: "[what technique variant separated them]"
+      effect_size: [X.XX]  # Cohen's d across divergent criteria
       lesson: "[what this reveals about the optimal approach for this lens]"
 
   round_over_round:  # Rounds 2-3 only; omit for Round 1
@@ -190,12 +195,14 @@ analytical_brief:
         before: [X.X]
         after: [X.X]
         what_changed: "[specific technique modification]"
+        statistical_significance: "[p < 0.05 | not significant | N too small]"
     regressions:
       - persona: "[name]"
         criterion_regressed: "[name]"
         before: [X.X]
         after: [X.X]
         what_was_lost: "[specific technique or quality that degraded]"
+        statistical_significance: "[p < 0.05 | not significant | N too small]"
     winner_evolution: "[refinement of previous approach | fundamentally new approach]"
 
   technique_transfer_recommendations:
@@ -305,6 +312,47 @@ Write the Analytical Brief in YAML format per ANALYST-PROTOCOL.md schema.
 
 ---
 
+## STATISTICAL SIGNIFICANCE METHODOLOGY
+
+### Why Statistical Significance in the Arena
+
+When the Analyst reports that Competitor A scored 8.7 and Competitor B scored 8.4, the 0.3 delta may be signal or noise. Effect sizes and significance indicators add rigor to the Analytical Brief without requiring full inferential statistics.
+
+### Computing Cohen's d from Arena Scoring
+
+Cohen's d measures the standardized magnitude of difference between two competitors:
+
+```
+d = (Mean_A - Mean_B) / SD_pooled
+
+Where:
+  Mean_A = competitor A's average across the 7 judging criteria
+  Mean_B = competitor B's average across the 7 judging criteria
+  SD_pooled = sqrt((SD_A² + SD_B²) / 2)
+  SD_A, SD_B = standard deviation of each competitor's 7 criterion scores
+```
+
+### Interpretation Guide
+
+| Cohen's d | Arena Interpretation |
+|-----------|---------------------|
+| < 0.2 | Negligible — competitors are functionally equivalent on this dimension |
+| 0.2 - 0.5 | Small — detectable difference, but technique transfer may not be worth the voice-preservation risk |
+| 0.5 - 0.8 | Medium — meaningful difference, technique transfer recommended |
+| > 0.8 | Large — substantial gap, high-priority technique transfer |
+
+### When to Report Significance
+
+- **Report effect sizes (Cohen's d) always.** Effect sizes are descriptive and valid regardless of sample size.
+- **Report p-values only when N >= 7** (all competitors scored). With N=7 criteria per competitor, statistical power is limited. P-values serve as supplementary indicators, not inferential conclusions.
+- **When N < 7** (e.g., comparing on a single criterion), report "N too small" instead of a p-value.
+
+### Limitations
+
+Arena scoring has N=7 competitors scored on 7 criteria. This is a small-N context. Effect sizes should be treated as **descriptive indicators of practical difference magnitude**, not as inferential conclusions about population parameters. The Analyst uses them to prioritize which technique transfers matter most, not to make statistical claims.
+
+---
+
 ## TOKEN BUDGET
 
 | Component | Tokens (est.) | Notes |
@@ -340,3 +388,4 @@ Write the Analytical Brief in YAML format per ANALYST-PROTOCOL.md schema.
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-14 | Initial creation. 4 comparison frameworks (closest pair, maximum delta, sibling pairs, round-over-round). Analytical Brief YAML schema. Subagent prompt template. Token budget and tier application. From ASI-Arch Enhancement 1 spec. |
+| 1.1 | 2026-03-20 | Added statistical significance: effect_size (Cohen's d) and significance fields in closest_pair_analysis, maximum_delta_analysis, sibling_analysis, and round_over_round. New Statistical Significance Methodology section with computation method, interpretation guide, and limitations. |

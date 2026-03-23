@@ -24,6 +24,12 @@ This skill produces viral-worthy threads for X/Twitter and LinkedIn. Threads are
 **Output:** Complete thread with all tweets/posts
 **Prerequisite:** Campaign Brief File (CBF) required
 
+**Success Criteria:**
+- Thread opens with a strong hook that drives click-through
+- Each post adds new value and maintains momentum
+- Thread ends with engagement prompt or CTA
+- Output: complete thread content
+
 ## ANTI-DEGRADATION
 
 - Read `S11-ANTI-DEGRADATION.md` before execution — structural enforcement rules

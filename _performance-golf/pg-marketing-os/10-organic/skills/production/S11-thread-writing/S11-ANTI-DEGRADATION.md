@@ -56,7 +56,7 @@ timestamp: "[ISO 8601]"
 arena_results:
   thread_id: "[ID]"
   personas_competed: 7
-  rounds_completed: 3
+  rounds_completed: 2  # 2 rounds + audience evaluation
   synthesis_file: "[Path to synthesis]"
   human_selection_confirmed: true
 

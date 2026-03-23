@@ -25,6 +25,12 @@ This skill builds a calibrated scoring framework to predict content performance 
 **Output:** Virality Scoring Framework (VSF)
 **Unlocks:** S07: Campaign Brief (via Gate G06)
 
+**Success Criteria:**
+- Virality rubric defined with weighted dimensions
+- Content ideas scored against rubric
+- Top-scoring content prioritized for production
+- Output: scored content pipeline
+
 ## ANTI-DEGRADATION
 
 - Read `S06-VIRALITY-SCORING-ANTI-DEGRADATION.md` before execution — structural enforcement rules

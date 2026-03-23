@@ -28,6 +28,12 @@ concept — execute upstream decisions, do not reinterpret.
 2. Tool orchestration, not tool dependence (tools are swappable)
 3. Asset quality is binary: production-ready or rejected
 
+**Success Criteria:**
+- Visual assets produced or directed per visual brief
+- Video scripts have timing marks and shot descriptions
+- Platform specs met (aspect ratio, duration, file format)
+- Output: production-ready visual/video assets or briefs
+
 ---
 
 ## IDENTITY

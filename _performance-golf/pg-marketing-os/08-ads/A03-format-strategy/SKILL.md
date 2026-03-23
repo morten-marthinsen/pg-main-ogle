@@ -28,6 +28,12 @@ intelligence data. The output is a distribution plan, not just format labels.
 2. Format follows function (derived from hook needs + platform rewards + intelligence)
 3. The output is a distribution plan (complete creative volume plan)
 
+**Success Criteria:**
+- Platform-specific format recommendations produced
+- Format selections justified by competitive intelligence data
+- Budget allocation across formats defined
+- Output: format strategy document produced
+
 ---
 
 ## IDENTITY

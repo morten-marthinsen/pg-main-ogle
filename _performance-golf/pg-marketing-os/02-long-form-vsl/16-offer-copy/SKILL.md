@@ -26,6 +26,12 @@ anchor serves the conversion goal.
 **Output:** Offer section copy
 **Requires:** Campaign Brief (Skill 09), Product Introduction (Skill 15), Offer Package (Skill 07)
 
+**Success Criteria:**
+- Complete offer stack presented with value articulation per component
+- Price anchoring and value comparison established
+- Guarantee language is specific and confidence-building
+- Output: offer copy prose section produced
+
 ---
 
 ## ANTI-DEGRADATION

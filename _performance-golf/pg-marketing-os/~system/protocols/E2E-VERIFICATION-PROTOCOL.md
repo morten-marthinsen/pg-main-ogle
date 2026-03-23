@@ -540,6 +540,31 @@ All rules from AUDIENCE-AGENT-PROTOCOL.md apply, plus:
 2. **Evidence-based findings only.** Every issue must quote the specific passage AND the canonical reference it violates.
 3. **Severity must be justified.** P1 requires demonstrable impact on piece coherence. Don't escalate style preferences to structural failures.
 
+### Audience Agent Homogenization Detection
+
+When audience agents (Reader Mode evaluation) produce suspiciously uniform feedback, this indicates LLM homogenization rather than genuine consumer consensus. Three detection mechanisms:
+
+**Detection 1: Score Variance Check**
+- Compute SD of `purchase_intent_score` across all reader agents
+- **Flag if:** SD < 0.5 across all agents
+- **Signal:** Agents are scoring too uniformly — insufficient differentiation between personas
+
+**Detection 2: Pairwise Feedback Similarity**
+- Compare structural patterns in reader agent feedback (objection timelines, drop-off points, emotional arcs)
+- **Flag if:** >60% of agent pairs give structurally identical feedback (same drop-off points, same objections, same emotional arc shape)
+- **Signal:** Agents may be producing the same evaluation in different words
+
+**Detection 3: Segment Divergence Expectation**
+- Agents from different audience segments SHOULD disagree on some dimensions. A skeptical high-income professional and an emotionally-driven casual buyer should not produce identical objection timelines.
+- **Flag if:** Agents from 3+ different segments agree on ALL 8 dimensions with no meaningful divergence
+- **Signal:** Persona differentiation may have collapsed during generation
+
+**Remediation:**
+- When any flag fires, present to human with note: "Audience agent reactions show unusual uniformity — this may indicate model bias rather than genuine consumer consensus."
+- Include the specific flag(s) that fired and the evidence (e.g., "SD of purchase_intent_score = 0.3 across 5 agents")
+- Does NOT auto-reject the E2E verification results — this is an informational flag for human judgment
+- If homogenization is severe (all 3 flags fire), recommend re-running reader agents with increased temperature, stronger persona priming, or sequential isolation with context clearing between agents
+
 ### Forbidden Behaviors
 
 - Running E2E verification on incomplete assemblies (all assembly must be complete)
@@ -582,3 +607,4 @@ All rules from AUDIENCE-AGENT-PROTOCOL.md apply, plus:
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-18 | Initial creation as part of Harness Architecture Phase 6. Reader agent mode, continuity checker, 6 engine integration points, multi-piece special cases (email sequence, upsell sequence), token budget, model routing. |
+| 1.1 | 2026-03-20 | Added Audience Agent Homogenization Detection subsection — 3 detection mechanisms (score variance, pairwise similarity, segment divergence). Informational flags for human judgment, no auto-rejection. |

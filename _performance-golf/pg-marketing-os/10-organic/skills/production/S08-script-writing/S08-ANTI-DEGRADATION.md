@@ -85,7 +85,7 @@ status: PASS
 timestamp: "[ISO 8601]"
 
 arena_execution:
-  rounds_completed: 3
+  rounds_completed: 2  # 2 rounds + audience evaluation
   personas_competed: 7
   synthesis_complete: true
   human_selection_captured: true
@@ -303,13 +303,13 @@ human_approval:
 
 **Every script MUST:**
 - Be evaluated by all 7 organic personas (Volume Machine, Value Architect, Virality Engineer, Community Builder, Brand Purist, Algorithm Hacker, Storyteller)
-- Complete 3 full rounds
+- Complete 2 full rounds + audience evaluation
 - Generate synthesis pulling best elements from multiple personas
 - Capture human selection of final variant
 
 **Arena file MUST show:**
 ```yaml
-rounds: 3
+rounds: 2  # 2 rounds + audience evaluation
 personas: 7
 synthesis_variants: [list of hybrid options]
 human_selection: "[chosen variant]"

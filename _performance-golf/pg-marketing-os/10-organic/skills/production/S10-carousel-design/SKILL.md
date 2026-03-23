@@ -25,6 +25,12 @@ This skill produces carousel content optimized for saves, shares, and algorithmi
 **Output:** Complete carousel structure with copy for each slide
 **Prerequisite:** Campaign Brief File (CBF) required
 
+**Success Criteria:**
+- Carousel slides follow a clear narrative arc
+- Each slide delivers a single focused point
+- Final slide includes CTA or save-worthy summary
+- Output: carousel content with slide-by-slide copy
+
 ## ANTI-DEGRADATION
 
 - Read `S10-ANTI-DEGRADATION.md` before execution — structural enforcement rules

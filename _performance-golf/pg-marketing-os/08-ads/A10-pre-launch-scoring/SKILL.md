@@ -28,6 +28,12 @@ probability bands.
 2. Every score must trace to data (cite evidence from A01/A06/benchmarks)
 3. The goal is prioritization, not perfection (tier assignment matters)
 
+**Success Criteria:**
+- All variants scored against pre-launch criteria
+- Top variants ranked for launch priority
+- Weak variants flagged with specific improvement notes
+- Output: scored variant ranking with launch recommendations
+
 ---
 
 ## IDENTITY

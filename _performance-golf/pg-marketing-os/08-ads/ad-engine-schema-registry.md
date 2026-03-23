@@ -236,7 +236,7 @@ REQUIRED: treatment_type is one of 5 valid types
 
 | # | Section | Required Fields |
 |---|---------|----------------|
-| 1 | Arena Summary | total_rounds (=3), total_competitors (=7), concepts_evaluated, concepts_selected |
+| 1 | Arena Summary | total_rounds (=2 + audience evaluation), total_competitors (=7), concepts_evaluated, concepts_selected |
 | 2 | Selected Concepts | concepts[] (concept_id, hook_text, script_summary, visual_treatment, overall_score) |
 | 3 | Per-Round Results | rounds[] (round_number, competitors[], scores[], critic_feedback[]) |
 | 4 | Human Selection | selected_concept_ids[], human_notes |

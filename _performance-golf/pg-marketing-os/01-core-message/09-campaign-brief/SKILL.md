@@ -11,6 +11,8 @@ description: >-
   creative direction, and execution guidance. Trigger when users mention campaign
   brief, final brief, writing brief, or are ready to start writing copy. Requires
   all Skills 01-08 outputs.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # 09: CAMPAIGN BRIEF
@@ -26,6 +28,14 @@ Brief ensures every downstream writing skill has a single, coherent source of tr
 
 **Output:** Campaign Brief package
 **Unlocks:** Skills 10-20 (all long-form writing skills)
+
+**Success Criteria:**
+- All foundation outputs (Skills 01-08) synthesized into a single campaign brief
+- Brief is self-contained (readable without upstream packages)
+- Coherence audit passes across all dimensions
+- Creative direction defined (lead type, story type, emotional arc)
+- Propagation rules defined for all downstream skills
+- Output file produced: `campaign-brief-package.json`
 
 ---
 

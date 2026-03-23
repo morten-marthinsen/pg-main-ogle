@@ -9,6 +9,8 @@ description: >-
   examples), and strategic synthesis (actionable context). Trigger when page brief
   exists and you need conversion benchmarks and specimen matches for downstream
   architecture decisions.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # LP-01 — Conversion Intelligence Loader

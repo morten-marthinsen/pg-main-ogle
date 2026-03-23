@@ -24,6 +24,12 @@ description: >-
 **Upstream Dependencies:** S21-Persona Architect, S22-Account Strategy, S23-Network Coordination
 **Downstream Consumers:** Finance/Revenue Tracking, Master Brand Strategy, Campaign Execution
 
+**Success Criteria:**
+- Monetization pathways identified per influencer account
+- Revenue attribution model defined with tracking methods
+- Conversion funnel mapped from content to revenue
+- Output: monetization strategy document
+
 ## ANTI-DEGRADATION
 
 - Read `S24-ANTI-DEGRADATION.md` before execution — structural enforcement rules

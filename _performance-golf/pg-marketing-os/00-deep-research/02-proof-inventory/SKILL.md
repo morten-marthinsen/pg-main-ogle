@@ -10,6 +10,8 @@ description: >-
   can't support. Trigger when users mention proof inventory, testimonials,
   evidence audit, social proof, clinical proof, proof scoring, or promise ceiling.
   Requires research handoff from Skill 01.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # 02: PROOF INVENTORY
@@ -26,6 +28,14 @@ promise level the proof can support.
 
 **Output:** `proof-inventory-output.json`
 **Unlocks:** Skill 03 (Root Cause), Skill 18 (Proof Weaving)
+
+**Success Criteria:**
+- All testimonials extracted and scored by proof strength
+- Study documents cataloged with citation-ready summaries
+- Proof elements classified by type (testimonial, clinical, statistical, authority)
+- Gap analysis completed with severity scores
+- Promise ceiling calculated from available proof
+- Output file produced: `proof-inventory-output.json`
 
 ---
 

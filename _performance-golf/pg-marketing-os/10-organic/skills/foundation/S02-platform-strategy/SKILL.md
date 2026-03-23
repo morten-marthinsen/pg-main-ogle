@@ -24,6 +24,12 @@ This skill determines WHERE to focus and HOW to optimize for each platform's alg
 **Output:** Platform Strategy File (PSF)
 **Unlocks:** S03: Brand Voice (via Gate G02)
 
+**Success Criteria:**
+- Platform selection justified with audience-data rationale
+- Content format mix defined per platform
+- Posting cadence and timing windows established
+- Output: platform strategy document
+
 ## ANTI-DEGRADATION
 
 - Read `S02-PLATFORM-STRATEGY-ANTI-DEGRADATION.md` before execution — structural enforcement rules

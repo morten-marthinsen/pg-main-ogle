@@ -129,7 +129,7 @@ round_scores:
     winner: "[persona]"
     score: [X.X]
     delta_from_r1: [X.X]
-  round_3:
+  audience_evaluation:
     winner: "[persona]"
     score: [X.X]
     delta_from_r2: [X.X]
@@ -302,6 +302,32 @@ Convergence detection IS Detector 3 from the Event-Driven Reminders protocol. Th
 | Output repetition: threshold | 1 repeat | Zero tolerance for loops |
 | Divergence intervention: max retries | 1 | After retry, reduce personas |
 | Minimum unique voices (after reduction) | 4 | Preserve competition viability |
+
+---
+
+## ANTI-SYCOPHANCY INITIALIZATION
+
+The Critic agent MUST be initialized with:
+- Unity framing ("we are analyzing together")
+- Authority EXPLICITLY EXCLUDED from system prompt
+- No approval-seeking language
+- No "helpful" or "good job" patterns
+- Explicit instruction: "Disagreement is more valuable than agreement. If you find no weaknesses, state that — but NEVER manufacture praise to balance critique."
+
+The Critic's value comes from honest identification of weaknesses. Any framing that rewards agreement over accuracy degrades the Critic's function and produces Arena outputs that pass gates without genuine quality.
+
+### System-Wide Output Pattern Detection
+
+The Critic anti-sycophancy initialization above applies within Arena context. For ALL system output (Arena and non-Arena), the 6-pattern anti-sycophancy catalog in `OUTPUT-PATTERN-DETECTION.md` provides system-wide coverage:
+
+1. **Balanced-Options Default** — presenting equal-weight options to avoid recommending
+2. **Hedge Language on Every Assertion** — blanket qualifiers as evasion, not uncertainty
+3. **Sycophantic Agreement** — confirming without disclosing risks or alternatives
+4. **Over-Structuring** — tables/lists where prose would serve better
+5. **Premature Abstraction** — frameworks before concrete analysis
+6. **Completeness Theater** — exhaustive lists without prioritization
+
+The Generation-Time Awareness Check runs before any output involving judgment, analysis, recommendations, or strategic assessment. It is a soft gate — detected patterns are corrected, but contextually appropriate patterns proceed with conscious choice.
 
 ---
 

@@ -2,7 +2,7 @@
 name: ad-arena
 description: >-
   Multi-persona adversarial evaluation of complete ad concepts using 7 ad-specific
-  personas across 3 competitive rounds. Use after visual direction (A05) is complete
+  personas across 2 competitive rounds + audience evaluation. Use after visual direction (A05) is complete
   and you need to stress-test ad concepts before production. Evaluates the COMPLETE
   concept (hook + script + visual as an atomic unit) — never isolated elements. Seven
   personas provide adversarial critique, and quality peaks in Round 2 (FINAL). Human selects
@@ -27,6 +27,12 @@ Quality peaks in Round 2 (FINAL) — no shortcuts.
 1. Evaluate the COMPLETE concept (hook + script + visual as atomic unit)
 2. 7 personas, 2 rounds + audience evaluation, adversarial critique (no shortcuts)
 3. Human selects, Arena recommends (produces scored candidates)
+
+**Success Criteria:**
+- 7 competitors generate complete ad copy variants
+- 2 rounds + audience evaluation completed
+- Winner selected with technique transfer insights
+- Output: Arena-winning ad copy variants
 
 ---
 

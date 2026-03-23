@@ -158,7 +158,7 @@ The automated validation hooks adjust their behavior based on the declared tier:
 | Validator | Full | Standard | Quick |
 |-----------|------|----------|-------|
 | Gate validator | All gates enforced | All gates enforced | Layer 1 gates only |
-| Checkpoint validator | 3+ Arena rounds expected | 1+ Arena round expected | No Arena expected |
+| Checkpoint validator | 2 Arena rounds + audience evaluation expected | 1+ Arena round expected | No Arena expected |
 | Output validator | Full completeness check | Full completeness check | Basic presence check |
 | Schema validator | Full schema compliance | Full schema compliance | Required fields only |
 | Proportionality check | Active | Active | Disabled |

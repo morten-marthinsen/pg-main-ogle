@@ -29,6 +29,12 @@ by the body.
 2. Word count is physics, not suggestion (derived from speech rate)
 3. Modules are independent, scripts are not (swappable modules, coherent flow)
 
+**Success Criteria:**
+- Script structures defined for each selected format
+- Hook-body-CTA architecture mapped per variant
+- Timing/length constraints specified per platform
+- Output: script architecture package produced
+
 ---
 
 ## IDENTITY

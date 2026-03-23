@@ -1273,10 +1273,17 @@ Input validators (Layer 0) MUST verify field presence — not just file existenc
 
 ---
 
+### SSR Pre-Screen Validation
+
+After A10 (Pre-Launch Scoring) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `A10-pre-launch-scoring/skills/layer-4/4.4-ssr-prescreen-trigger.md`
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.8 | 2026-03-20 | Added SSR pre-screen validation reference (A10 (Pre-Launch Scoring) terminal gate) |
 | 1.7 | 2026-02-28 | Complete A08 production stack: Dropped Arcads (Veo 3.1 handles UGC natively) and Beatoven.ai (ElevenLabs covers music + SFX). Added Veo 3.1 UGC mode, ElevenLabs Eleven Music (text-to-music, 3s-5min, commercially licensed), ElevenLabs SFX (text-to-SFX, 30s). All 5 A08 categories now LIVE: image, video, voice, music, SFX. Zero PLANNED integrations remain. |
 | 1.6 | 2026-02-28 | Production integration map: Replaced placeholder tool references with live MCP servers. Gemini Media MCP (`gemini-media`) provides Nano Banana 2 (image), Nano Banana Pro (image), Imagen 4 (image), Veo 3.1 (video). Added tool reference with parameters, ad-specific usage patterns, and limitations. Status column added to MCP table (LIVE/PLANNED). |
 | 1.5 | 2026-02-27 | Meta Ad Spy integration: Tool-Assisted Scan mode for A01, dual-signal scoring, 5 new A01 microskills, impression-weighted analysis, downstream updates to A02/A10/A12, schema registry v1.1, 5 vertical config brand databases |

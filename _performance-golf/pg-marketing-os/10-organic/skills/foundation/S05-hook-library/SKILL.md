@@ -25,6 +25,12 @@ This skill builds a campaign-specific library of hooks calibrated to audience, p
 **Output:** Hook Library File (HLF)
 **Unlocks:** S06: Virality Scoring (via Gate G05)
 
+**Success Criteria:**
+- 20+ hooks generated across hook categories
+- Hooks scored and ranked by predicted engagement
+- Top hooks mapped to content types and platforms
+- Output: scored hook library
+
 ## ANTI-DEGRADATION
 
 - Read `S05-ANTI-DEGRADATION.md` before execution — structural enforcement rules

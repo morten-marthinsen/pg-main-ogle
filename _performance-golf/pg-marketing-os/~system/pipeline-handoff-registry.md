@@ -366,7 +366,7 @@ required:
   selected_headline: string          # Arena-selected winning headline (non-empty)
   headline_variants: array           # All Arena candidates (>=90 total generated)
   emotional_anchor: string           # Primary emotional hook of selected headline
-  arena_round_3_winner: string       # Persona that won final round
+  arena_audience_evaluation_winner: string  # Persona that won after audience evaluation
   arena_selection_verified: true     # BLOCKING — must be Arena output
   quality_score: number              # >= 8.5
 ```
@@ -753,7 +753,7 @@ Every handoff from an Arena skill (03-08, 10-18) MUST include:
 ```yaml
 arena_selection_verified: true
 human_selection_timestamp: "[ISO 8601]"
-arena_round_3_source: "[persona name or hybrid ID]"
+arena_audience_evaluation_source: "[persona name or hybrid ID]"
 ```
 
 **Validation rule for Skill 19 (Campaign Assembly):**
