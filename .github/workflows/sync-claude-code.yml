@@ -154,13 +154,22 @@ jobs:
             echo "needs_sync=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Restore repo cache
+        if: steps.sync.outputs.needs_sync == 'true'
+        uses: actions/cache@v4
+        with:
+          path: /tmp/repo-cache
+          key: ai-sync-repos-${{ github.run_id }}
+          restore-keys: |
+            ai-sync-repos-
+
       - name: Full checkout
         if: steps.sync.outputs.needs_sync == 'true'
         run: |
           git sparse-checkout disable
           git checkout .
 
-      - name: Download changed repos
+      - name: Sync changed repos (incremental)
         if: steps.sync.outputs.needs_sync == 'true'
         run: |
           sync_repo() {
@@ -169,6 +178,7 @@ jobs:
             local REPO="$3"
             local SYNC_DIR="${BASE_DIR}/${TOOL}"
             local SHAS_FILE="${SYNC_DIR}/repo-shas.txt"
+            local CACHE_DIR="/tmp/repo-cache/${TOOL}/${DIR}"
             mkdir -p "$SYNC_DIR"
             touch "$SHAS_FILE"
 
@@ -176,11 +186,25 @@ jobs:
               return
             fi
 
-            echo "Downloading: ${TOOL}/${DIR}"
-            rm -rf "${SYNC_DIR}/${DIR}"
-            git clone --depth 1 "https://github.com/${REPO}.git" "/tmp/${TOOL}-${DIR}"
-            rm -rf "/tmp/${TOOL}-${DIR}/.git"
-            mv "/tmp/${TOOL}-${DIR}" "${SYNC_DIR}/${DIR}"
+            # Incremental: fetch delta if cached, full clone only on first run
+            if [ -d "${CACHE_DIR}/.git" ]; then
+              echo "Fetching updates: ${TOOL}/${DIR}"
+              if ! git -C "$CACHE_DIR" fetch --depth 1 origin HEAD 2>/dev/null; then
+                echo "  Fetch failed, re-cloning: ${TOOL}/${DIR}"
+                rm -rf "$CACHE_DIR"
+                git clone --depth 1 "https://github.com/${REPO}.git" "$CACHE_DIR"
+              else
+                git -C "$CACHE_DIR" reset --hard FETCH_HEAD
+              fi
+            else
+              echo "First-time clone: ${TOOL}/${DIR}"
+              mkdir -p "$(dirname "$CACHE_DIR")"
+              git clone --depth 1 "https://github.com/${REPO}.git" "$CACHE_DIR"
+            fi
+
+            # Sync only actually-changed files to working tree
+            mkdir -p "${SYNC_DIR}/${DIR}"
+            rsync -a --delete --exclude='.git' "${CACHE_DIR}/" "${SYNC_DIR}/${DIR}/"
 
             grep -v "^${DIR}=" "$SHAS_FILE" > "$SHAS_FILE.tmp" 2>/dev/null || true
             local SHA
