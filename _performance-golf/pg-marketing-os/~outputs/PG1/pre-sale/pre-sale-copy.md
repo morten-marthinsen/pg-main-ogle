@@ -1,31 +1,51 @@
 # PG1 Pre-Sale Launch Page — Production Copy
 
 **Generated:** 2026-03-19
-**Updated:** 2026-03-19 (v3 — locked headline, qualification CTA, countdown timer, CMO feedback)
+**Updated:** 2026-03-20 (v4 — synced to final HTML build)
 **Voice:** Brixton, insider-to-insider
 **Page type:** Pre-sale content hub (Stages 1-2) — NOT a sales page
 
 ---
 
 # ===================================================================
-# ATF — PAGE HEADLINE + SUBHEAD
+# NAVIGATION
 # ===================================================================
 
 ---
 
-**Stage 1 Headline:** $5 Million to Answer One Question About Your Golf Game.
+**Logo:** Performance Golf (white, links to shop.performancegolf.com)
 
-**Stage 1 Subhead:** A six-part insider series. New episodes dropping now.
-
-**Stage 2 Headline:** The End of Traditional Instruction.
-
-**Stage 2 Subhead:** Brixton's keynote drops [DATE] at [TIME].
+**Nav CTA:** Apply for Your Seat *(scrolls to #keynote)*
 
 ---
 
 # ===================================================================
-# PAGE INTRO — BRIXTON'S VOICE
+# ATF — HERO SECTION
 # ===================================================================
+
+---
+
+**Badge:** Now Streaming *(mono font, orange, with pulsing dot)*
+
+**Headline:** $5 Million to Answer One Question About Your Golf Game.
+
+*(Note: "One Question" is in Performance Orange)*
+
+**Subhead:** A six-part insider series. New episodes dropping now.
+
+**Scroll Indicator:** Three animated chevrons (no text)
+
+---
+
+# ===================================================================
+# PAGE INTRO — BRIXTON'S LETTER
+# ===================================================================
+
+---
+
+**Label:** From the desk of Brixton Albert
+
+**Portrait:** Brixton Albert — CEO, Performance Golf *(photo with caption below)*
 
 ---
 
@@ -33,9 +53,9 @@ I owe you an honest conversation.
 
 For years, we gave you more content. More tips. More drills. More instructors telling you more things to work on. And you showed up — you practiced, you invested, you did everything a serious golfer is supposed to do.
 
-Your handicap stayed the same. So did millions of others.
+But the data tells a different story. USGA handicap averages haven't moved in five years — and our own internal numbers confirm it.
 
-That bothered me enough to spend $5 million and two years finding out why. I put 276 people across 15 countries behind a single question: *Why do dedicated golfers stay stuck — and what would it take to actually fix it?*
+That bothered me so much I committed $5 million and two years to finding out why. I put 276 people across 15 countries behind a single question: *Why do dedicated golfers stay stuck — and what would it take to actually fix it?*
 
 What we found changes the way I think about this game. It changes the way our entire coaching team thinks about instruction. And I believe it will change the way you think about your own improvement.
 
@@ -48,8 +68,14 @@ This is that series.
 ---
 
 # ===================================================================
-# EPISODE TEASERS
+# EPISODE GRID
 # ===================================================================
+
+---
+
+**Section Label:** The Series
+
+**Section Title:** Six Conversations
 
 ---
 
@@ -81,6 +107,8 @@ Every golfer has three to five visible swing flaws. Most of them are not the pro
 
 ## Episode 4: The Coaches
 
+**Coach Avatars:** Hank Haney, Martin Chuck, Erika Larkin, Andrew Rice, JT Thomas, Eric Cogorno, Brian Mogg *(overlapping circular photos)*
+
 Hank Haney. Martin Chuck. Erika Larkin. Andrew Rice. JT Thomas. Eric Cogorno. Brian Mogg — supported by David Leadbetter, Rocco Mediate, Rick Smith, and Cameron McCormick. These coaches are not endorsing something from a distance. They helped build it. This episode shows you what that collaboration produced and why these coaches agreed to put their names behind a system none of them would have imagined five years ago.
 
 *"The coaches who built this are the same ones who will work with you."*
@@ -104,20 +132,22 @@ Brixton. Direct to camera. No production. No script. In three days, he is going 
 ---
 
 # ===================================================================
-# THE QUESTION (Appears after Episode 3 drops)
+# THE QUESTION
 # ===================================================================
 
 ---
 
-**What is YOUR root swing flaw?**
+**Headline:** What is YOUR root swing flaw?
 
-Every golfer has three to five swing flaws.
+*(Note: "YOUR" is in Performance Orange)*
 
-Only one is the root.
+Every golfer has three to five visible swing flaws.
 
-Nobody has identified yours.
+Only one is the root cause.
 
-Yet.
+Most golfers go their entire life without ever identifying theirs.
+
+**Until now.**
 
 ---
 
@@ -127,34 +157,73 @@ Yet.
 
 ---
 
-## [DATE] | [TIME]
+**Date/Time Bar:** [Date] | [Time]
 
-Brixton built this presentation for the people inside his building. The team that spent two years and $5 million building what you have been watching in this series.
+**Presents Label:** PG Presents
 
-Now he is opening the doors.
+**Supertitle:** The Future of Golf Instruction
+
+**Subtitle (orange):** 1,000 Seats. By Application Only.
+
+**Subline (italic):** This is not a public product launch.
+
+---
+
+Brixton built this presentation for the Performance Golf team. The team that spent two years and $5 million building what you have been watching in this series.
+
+Now he is opening the doors — to 1,000 golfers.
 
 He is going to walk through everything — what the root swing flaw is, why it has been invisible to the entire golf instruction industry, and what his team built to finally address it.
 
-This is not a product launch. This is the moment when two years of work meets the golfers it was built for.
+**This is the moment when two years of work meets the golfers it was built for. Not everyone gets a seat.**
 
-Seats are limited. We are starting with golfers who are serious about their game.
+---
 
-**[Apply for Your Seat]**
+### Countdown Timer
 
-**Qualification (30 seconds):**
-1. Have you purchased from Performance Golf before? *(Yes / No — either is okay)*
-2. What is your current handicap or average score? *(Beginner / 100+ / 90-99 / 80-89 / 79 or below)*
-3. How committed are you to improving your game this year? *(Very / Somewhat / Just curious)*
-4. Do you agree that random tips and generic instruction have not worked for you? *(Yes / No)*
+[DAYS] : [HOURS] : [MINUTES] : [SECONDS]
 
-*After submission: "You're in. We'll send your keynote access to [email] before [DATE]. Keep watching the series — you'll want the full picture before the keynote drops."*
+---
 
-**Countdown:** [DAYS] : [HOURS] : [MINUTES] : [SECONDS] until keynote
+### Qualification Quiz
+
+**CTA Button:** Apply for Your Seat
+
+**Below button:** Seats are limited — we're starting with golfers who are serious about their game.
+
+**Quiz format:** Multi-step, one question at a time, 5 progress dots
+
+**Question 1 of 4:** Have you purchased from Performance Golf before?
+*(It's okay if you haven't — we're looking for golfers who are serious about improving)*
+- Yes
+- No
+
+**Question 2 of 4:** What is your current average score for 18 holes?
+- Under 80
+- 80–89
+- 90–99
+- 100+
+- I'm not sure
+
+**Question 3 of 4:** How committed are you to improving your game this year?
+- Very
+- Somewhat
+- Just curious
+
+**Question 4 of 4:** Do you agree that random tips and generic instruction have not worked for you?
+- Yes
+- No
+
+**Final Step:** If you're approved, where should we send your keynote access?
+- [Email input field]
+- **Button:** Reserve My Seat
+
+**Confirmation:** You're in. We'll send your keynote access to your email before [DATE]. Keep watching the series — you'll want the full picture before the keynote drops.
 
 ---
 
 # ===================================================================
-# PROOF STRIP (Stage 2 only — appears with Episodes 5-6)
+# PROOF STRIP
 # ===================================================================
 
 ---
@@ -183,7 +252,7 @@ I will have more to share at the keynote. For now — watch the series, and make
 
 ---
 
-*Performance Golf | [YEAR]*
+**Colophon:** Performance Golf | 2026
 
 ---
 
@@ -191,16 +260,32 @@ I will have more to share at the keynote. For now — watch the series, and make
 # COPY NOTES (internal — not for page)
 # ===================================================================
 
-**v2 changes:**
-- Eliminated choppy AI sentence patterns throughout. Sentences now build properly — compound where they should be compound, short where short earns authority.
-- Footer rewritten completely: no mention of "Founders Club," no mention of purchasing, no pricing, no offer framing. Just: 1,000 people, invited after the keynote, you want to be one of them. Fully blind tease.
-- Keynote section reframed: "This is not a product launch" explicitly stated. Removes any sales expectation. The keynote is positioned as a private presentation being opened to the audience.
-- Episode teasers expanded from 2 sentences to proper paragraphs that earn their length. Each teaser now builds a scene, not a bullet list.
-- Page intro strengthened: Brixton's voice is warmer, more reflective, longer where the emotion requires length.
+**v4 changes (synced to final HTML):**
+- Intro letter updated: "But the data tells a different story. USGA handicap averages haven't moved in five years — and our own internal numbers confirm it." replaces previous "Your handicap stayed the same. So did millions of others."
+- Intro letter updated: "That bothered me so much I committed $5 million..." replaces "That bothered me enough to spend $5 million..."
+- Added "From the desk of Brixton Albert" label above the letter
+- Portrait caption: "Brixton Albert — CEO, Performance Golf"
+- Root swing flaw section updated: "Most golfers go their entire life without ever identifying theirs." and "Until now." replace "Nobody has identified yours. Yet."
+- Keynote section completely restructured: "PG Presents" / "The Future of Golf Instruction" / "1,000 Seats. By Application Only." / "This is not a public product launch."
+- Keynote body: "Brixton built this presentation for the Performance Golf team." (not "the people inside his building")
+- Added: "Now he is opening the doors — to 1,000 golfers."
+- Added: "Not everyone gets a seat."
+- Qualification quiz updated: Q1 softening line changed, Q2 asks "average score for 18 holes" (not handicap), email step asks "If you're approved, where should we send your keynote access?", submit button is "Reserve My Seat"
+- Episode grid section label "The Series" and title "Six Conversations" added
+- Nav CTA "Apply for Your Seat" added
+- Hero badge "Now Streaming" added
+- Scroll indicator changed from text to three animated chevrons
+
+**v3 changes:**
+- Eliminated choppy AI sentence patterns throughout
+- Footer rewritten: no mention of "Founders Club," no pricing, no offer framing
+- Keynote section: "This is not a product launch" explicitly stated
+- Episode teasers expanded to proper paragraphs
+- Page intro strengthened with warmer, more reflective Brixton voice
 
 **Threading:**
 - "Root swing flaw" seeded in Episodes 3 and 5, The Question, and Keynote section
-- "The End of Traditional Instruction" held for Stage 2 headline only
+- "The Future of Golf Instruction" is the keynote supertitle
 - "Improvement becomes inevitable" deliberately ABSENT — belongs to keynote and Founders page
 - Binary Argument and locked mechanism paragraph NOT on this page
 - No pricing, no offer details, no product features, no "Founders Club" naming in copy
