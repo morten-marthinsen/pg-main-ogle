@@ -199,4 +199,20 @@ Or for standalone builds:
 
 ---
 
+### SSR Pre-Screen Validation
+
+After LP-17 (Conversion Audit) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `skills/LP-17-conversion-audit/skills/layer-4/4.4-ssr-prescreen-trigger.md`
+
+---
+
+## VERSION HISTORY
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.2 | 2026-03-20 | Added SSR pre-screen validation reference (LP-17 (Conversion Audit) terminal gate) |
+| 1.1 | 2026-03-06 | Updated with PDP Enhancement Layer, design tokens, component pattern library, specimen section extracts |
+| 1.0 | 2026-02-28 | Initial creation — 19-skill pipeline, 7 Laws, element taxonomy, specimen vault |
+
+---
+
 *For full skill definitions, see landing-page-engine-master-prd.md. For section flow templates, see landing-page-engine-master-blueprint.md.*

@@ -300,8 +300,15 @@ Skills 11 (Lead), 12 (Story), 17 (Close) have minimal ecom relevance — story-d
 
 ---
 
+### SSR Pre-Screen Validation
+
+After Skill 20 (Editorial) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `20-editorial/skills/layer-5/5.5-ssr-prescreen-trigger.md`
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1 | 2026-03-20 | Added SSR pre-screen validation reference (Skill 20 (Editorial) terminal gate) |
 | 1.0 | 2026-03-13 | Initial creation — 5 Laws, 6 degradation patterns, 11-skill pipeline, cascading prose pattern, model routing, context reservoir, section-by-section architecture, crossover map. |

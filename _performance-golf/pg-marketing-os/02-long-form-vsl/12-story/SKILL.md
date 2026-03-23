@@ -27,6 +27,13 @@ identification — the reader sees themselves in the story.
 **Output:** Story section copy
 **Requires:** Campaign Brief (Skill 09), Lead (Skill 11)
 
+**Success Criteria:**
+- Discovery story connects audience's experience to the product origin
+- Emotional arc builds from shared frustration to hope
+- Story elements are specific (names, dates, places — not generic)
+- Threading from lead section maintained
+- Output: story prose section produced
+
 ---
 
 ## ANTI-DEGRADATION

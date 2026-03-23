@@ -208,6 +208,30 @@ Gate-passing optimization occurs when the model targets scores to documented min
 
 ---
 
+## OVERRIDE CHANNEL
+
+Every commitment declaration MUST include abort criteria:
+
+"I commit to this execution plan AND I will PAUSE for human review if:
+- Confidence drops below 5
+- A required input file is missing or corrupted
+- Output quality falls below gate threshold after 2 attempts
+- Context zone transitions to RED or CRITICAL
+- An unexpected error occurs that affects downstream skills
+
+I will ABORT entirely if:
+- Required upstream data is fundamentally incompatible
+- The task requires capabilities outside this skill's scope
+- Safety or ethical concerns arise"
+
+This override channel ensures commitment declarations are bounded — the agent commits to the plan but retains structured exit points that require human involvement rather than silent degradation.
+
+### Decision Challenge — Outward-Facing Pushback
+
+The Override Channel above handles inward failure. The Decision Challenge Protocol (`DECISION-CHALLENGE-PROTOCOL.md`) handles outward disagreement — FLAG / BLOCK / CONVINCE ME escalation when the agent has material concerns about the operator's direction. See `~system/protocols/DECISION-CHALLENGE-PROTOCOL.md` for the full framework.
+
+---
+
 ## Version History
 
 | Version | Date | Changes |

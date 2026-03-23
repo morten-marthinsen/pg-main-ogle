@@ -1,7 +1,8 @@
 # Session End Protocol
 
-**Version:** 1.0
+**Version:** 1.1
 **Created:** 2026-03-17
+**Updated:** 2026-03-21
 **Purpose:** Standardized session wrap-up ensuring state persistence and clean handoff
 **Authority:** Referenced by SYSTEM-CORE.md — mandatory at the end of every session
 

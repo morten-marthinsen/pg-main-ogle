@@ -27,6 +27,13 @@ point in the copy — not random testimonial insertion.
 **Output:** Proof-woven copy with strategic placement annotations
 **Requires:** Campaign Brief (Skill 09), Complete Copy (Skills 10-17), Proof Inventory (Skill 02)
 
+**Success Criteria:**
+- Proof elements distributed across the full script (no proof deserts)
+- Each proof element matched to the claim it supports
+- Proof types varied (testimonial, clinical, statistical, authority)
+- No proof clustering in a single section
+- Output: proof-woven script produced
+
 ---
 
 ## ANTI-DEGRADATION

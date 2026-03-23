@@ -26,6 +26,12 @@ This skill coordinates a network of accounts (owned, partnered, or AI-driven) to
 **Requires:** S14 Content Assembly output + S15 Scheduling + S16 Engagement Protocol
 **Connects to:** S21-S24 (Influencer Network Sub-System)
 
+**Success Criteria:**
+- Amplification strategy defined per content piece
+- Cross-posting and repurposing plan documented
+- Collaboration and network opportunities identified
+- Output: amplification plan
+
 ---
 
 ## ANTI-DEGRADATION

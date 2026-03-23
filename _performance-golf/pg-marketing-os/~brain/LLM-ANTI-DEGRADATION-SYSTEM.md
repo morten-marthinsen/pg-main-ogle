@@ -136,28 +136,22 @@ Since LLMs can't proceduralize metacognition (self-monitoring), we externalize i
 
 ```yaml
 MC-CHECK:
+  # COMMITMENT DECLARATION — State this before executing
+  "I will now assess my execution state before proceeding."
+
   trigger: "[layer_entry | mid_layer | gate | output | context_threshold]"
 
-  confidence_assessment:
-    score: "[1-10]"
-    if_below_7: "PAUSE - identify uncertainty, re-read requirements"
+  commitment_declaration:
+    "Before proceeding, I declare:"
+    confidence_score: "[1-10]"
+    rushing_status: "I [am / am not] rushing. Evidence: [specific evidence]"
+    synthesis_status: "I [have / have not] actually read required files. Proof: [quote specific lines]"
+    completeness_status: "All required outputs [do / do not] exist."
 
-  rushing_detection:
-    skipping_file_reads: "[Y/N]"
-    synthesizing_from_memory: "[Y/N]"
-    abbreviating_outputs: "[Y/N]"
-    loose_rule_interpretation: "[Y/N]"
-    if_any_yes: "STOP - slow down, reread protocol from source"
-
-  synthesis_verification:
-    question: "Have I actually READ required files in THIS session?"
-    proof: "[Quote specific lines from files just read]"
-    if_no_proof: "HALT - go back and actually read the file"
-
-  completeness_check:
-    all_required_outputs_exist: "[Y/N]"
-    all_fields_populated: "[Y/N]"
-    if_any_no: "DO NOT claim completion - address gaps"
+  if_confidence_below_7: "I will PAUSE and identify uncertainty before continuing."
+  if_rushing: "I will STOP, slow down, and reread protocol from source."
+  if_no_read_proof: "I will HALT and go back to actually read the file."
+  if_incomplete: "I will NOT claim completion. I will address gaps now."
 
   result: "[PROCEED | PAUSE | HALT | SESSION_BREAK]"
 ```
@@ -166,10 +160,11 @@ MC-CHECK:
 
 ```
 MC-CHECK-LITE:
-- Confidence: [1-10]
-- Rushing: [Y/N]
-- Synthesizing: [Y/N]
-- Action: [PROCEED | SLOW_DOWN | STOP]
+  "I declare my current state:"
+  - Confidence: [1-10]
+  - "I [am / am not] rushing."
+  - "I [have / have not] synthesized from memory."
+  - Action: [PROCEED | SLOW_DOWN | STOP]
 ```
 
 ### Why MC-CHECK Alone Isn't Enough
@@ -836,6 +831,26 @@ Threshold clustering produces outputs that technically pass all gates but lack g
 
 **Prevention:**
 See CLAUDE-CORE.md PROPORTIONALITY CALIBRATION section for the 5 calibration rules.
+
+---
+
+## OVERRIDE CHANNEL
+
+Every commitment declaration MUST include abort criteria:
+
+"I commit to this execution plan AND I will PAUSE for human review if:
+- Confidence drops below 5
+- A required input file is missing or corrupted
+- Output quality falls below gate threshold after 2 attempts
+- Context zone transitions to RED or CRITICAL
+- An unexpected error occurs that affects downstream skills
+
+I will ABORT entirely if:
+- Required upstream data is fundamentally incompatible
+- The task requires capabilities outside this skill's scope
+- Safety or ethical concerns arise"
+
+This override channel ensures commitment declarations are bounded — the agent commits to the plan but retains structured exit points that require human involvement rather than silent degradation.
 
 ---
 

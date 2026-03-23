@@ -254,8 +254,15 @@ A02 (Hook Angles, optional)─┘                   ──→ ADV-02 (Body Copy)
 
 ---
 
+### SSR Pre-Screen Validation
+
+After ADV-05 (Editorial) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `ADV-05-advertorial-editorial/skills/layer-4/4.4-ssr-prescreen-trigger.md`
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1 | 2026-03-20 | Added SSR pre-screen validation reference (ADV-05 (Editorial) terminal gate) |
 | 1.0 | 2026-03-09 | Initial creation — architecture, 5 Laws, 6 degradation patterns, skill pipeline, advertorial type taxonomy, specimen vault (11 external URLs), 6 v1 skill scaffolds. |

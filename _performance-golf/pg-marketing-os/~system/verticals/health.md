@@ -3,7 +3,7 @@
 **Version:** 1.0
 **Created:** 2026-02-20
 **Vertical:** health
-**Primary Clients:** UpWellness, Ionix, Ultra Liver, and similar
+**Primary Clients:** (per-project — health/supplements/wellness verticals)
 **Display Name:** Health / Supplements / Wellness
 
 ---

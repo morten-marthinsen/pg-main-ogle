@@ -126,7 +126,7 @@ Gate status can ONLY be `PASS` or `FAIL`. Any other value means the gate file sh
 │   │   └── round-1-learning-brief.md
 │   ├── round-2/
 │   │   └── [same structure]
-│   ├── round-3/
+│   ├── audience-evaluation/
 │   │   └── [same structure]
 │   └── synthesis/
 │       ├── hybrid-a.md

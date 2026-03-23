@@ -7,6 +7,8 @@ description: >-
   for live competitor page scraping during execution. Trigger when page brief and
   conversion intelligence exist and you need competitive context before architecture
   decisions. Requires competitor URLs from user or LP-01 sourcing.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # LP-02 — Competitive Page Audit

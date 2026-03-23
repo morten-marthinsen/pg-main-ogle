@@ -9,6 +9,8 @@ description: >-
   Trigger when users mention promise, core promise, what we are promising, outcome
   claims, benefit statements, or calibrating the main claim. Requires mechanism
   package from Skill 04.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # 05: PROMISE CALIBRATION
@@ -25,6 +27,14 @@ skepticism. Too timid = ignored.
 
 **Output:** `promise-output.json`
 **Unlocks:** Skill 06 (Big Idea)
+
+**Success Criteria:**
+- Core promise articulated in audience language
+- Promise is specific, believable, and differentiated
+- Promise aligns with root cause and mechanism
+- Promise falls within proof-supported ceiling from Skill 02
+- Expression candidates scored via Expression Anchoring Protocol
+- Output file produced: `promise-output.json`
 
 ---
 

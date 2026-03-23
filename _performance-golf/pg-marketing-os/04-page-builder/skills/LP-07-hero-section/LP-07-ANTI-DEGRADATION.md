@@ -14,7 +14,7 @@ LP-07 has six specific failure modes — all related to the fact that this is th
 
 1. **Premature Lead Writing:** AI writes the lead before the headline is selected. The lead must reflect the selected headline's angle — writing both simultaneously produces a misaligned lead that serves no specific promise.
 
-2. **Candidate Collapse:** AI generates 3–4 headline variants (not 9+) and presents them as sufficient. The 3-lens × 3-round system exists specifically because the first 3 candidates are almost never the best.
+2. **Candidate Collapse:** AI generates 3–4 headline variants (not 9+) and presents them as sufficient. The 3-lens × 2-round + audience evaluation system exists specifically because the first 3 candidates are almost never the best.
 
 3. **Loop Blindness:** AI writes a lead that reads well but opens only 1–2 curiosity loops (or closes loops as it opens them). This produces early drop-off. 3+ open loops are measurable and required.
 

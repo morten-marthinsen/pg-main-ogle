@@ -10,6 +10,8 @@ description: >-
   real issue. Trigger when users mention root cause, underlying problem, real
   reason, villain identification, problem framing, or why conventional solutions
   fail. Requires research handoff from Skill 01.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # 03: ROOT CAUSE FRAMING
@@ -26,6 +28,14 @@ skill bridges the gap between symptom and cause.
 
 **Output:** `root-cause-package.yaml`
 **Unlocks:** Skill 04 (Mechanism)
+
+**Success Criteria:**
+- Root cause identified and distinguished from surface symptoms
+- Villain framing articulated (what/who is responsible)
+- Reframe narrative connects root cause to product solution
+- Root cause claims grounded in proof elements from the proof inventory (Skill 02)
+- Expression candidates scored via Expression Anchoring Protocol
+- Output file produced: `root-cause-package.yaml`
 
 ---
 

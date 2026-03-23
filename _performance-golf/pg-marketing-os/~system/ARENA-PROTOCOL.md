@@ -306,6 +306,8 @@ The Synthesizer Layer creates hybrid candidates by extracting the best **phrases
 5. **Hybrid Reconstruction** — WRITE (not splice) new outputs using best phrases as ingredients
 6. **Coherence Validation** — Ensure hybrids read naturally
 
+SYNTHESIS STANCE: We are now analyzing the Arena results together. Your job is honest integration of genuine strengths — not averaging, not blending, not diplomatic inclusion of weak elements. If a competitor's output has no elements worth preserving, say so directly. The goal is the strongest possible hybrid, not equal representation.
+
 ### Quality Thresholds
 
 - Hybrids must score **>= 8.0** to be presented

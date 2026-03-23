@@ -27,6 +27,12 @@ and feel that it is the natural, inevitable solution.
 **Output:** Product introduction section copy
 **Requires:** Campaign Brief (Skill 09), Mechanism Narrative (Skill 14)
 
+**Success Criteria:**
+- Product introduced as the natural solution to the established problem
+- Transition from mechanism to product feels inevitable, not jarring
+- Key features connected to mechanism (not just listed)
+- Output: product introduction prose section produced
+
 ---
 
 ## ANTI-DEGRADATION

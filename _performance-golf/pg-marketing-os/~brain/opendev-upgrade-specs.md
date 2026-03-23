@@ -1116,7 +1116,7 @@ Add convergence detection at three levels: Arena persona convergence, round-over
 # - Compare winner's score across rounds
 # - Flag if Round N winner score - Round N-1 winner score < 0.2
 # - AND if winning persona is the same across 2+ rounds
-# - This indicates the third round isn't adding value
+# - This indicates a round isn't adding value
 #
 # Mode 3: Output Repetition
 # - Within a single generation, detect paragraph-level repetition

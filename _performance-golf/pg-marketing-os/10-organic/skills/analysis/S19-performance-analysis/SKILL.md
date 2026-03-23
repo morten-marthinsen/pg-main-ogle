@@ -33,6 +33,12 @@ Convert platform analytics into calibrated performance assessments, identifying 
 - **Downstream:** Feeds insights to S20-learning-capture for system-level improvements
 - **Lateral:** References S05-virality-scoring for prediction calibration
 
+**Success Criteria:**
+- Performance data collected and normalized across platforms
+- Top-performing content identified with causal analysis
+- Underperforming content analyzed with improvement recommendations
+- Output: performance analysis report
+
 ## ANTI-DEGRADATION
 
 - Read `S19-ANTI-DEGRADATION.md` before execution — structural enforcement rules

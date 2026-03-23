@@ -26,6 +26,12 @@ This skill transforms a single piece of content into maximum distribution value.
 **Requires:** S14 Content Assembly output (original content)
 **Connects to:** Full pipeline for variant production (S08-S14 for each variant)
 
+**Success Criteria:**
+- Repurposing matrix maps each piece to derivative formats
+- Platform-specific adaptations maintain native feel
+- Voice consistency preserved across all variants
+- Output: repurposed content variants
+
 ---
 
 ## ANTI-DEGRADATION

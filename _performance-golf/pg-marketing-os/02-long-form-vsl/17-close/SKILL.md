@@ -26,6 +26,13 @@ promise, story — into a decisive moment that compels the reader to act now.
 **Output:** Close section copy with CTA
 **Requires:** Campaign Brief (Skill 09), Offer Copy (Skill 16)
 
+**Success Criteria:**
+- Urgency established without false scarcity
+- Final objection handling addresses remaining resistance
+- CTA is clear, specific, and compelling
+- Emotional arc reaches satisfying conclusion
+- Output: close prose section produced
+
 ---
 
 ## ANTI-DEGRADATION

@@ -11,6 +11,8 @@ description: >-
   verbatim quotes. Trigger when users mention research, market research, audience
   research, gathering quotes, competitive analysis, or building the evidence base
   for a promotion. Requires Soul.md from Skill 00.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # 01: DEEP RESEARCH
@@ -27,6 +29,13 @@ frustration, and desire. The research handoff feeds every downstream skill.
 
 **Output:** Research handoff package (market snapshot, avatar, competitive landscape, 1,000+ quotes)
 **Unlocks:** Skill 02 (Proof Inventory) and all downstream skills
+
+**Success Criteria:**
+- 1,000+ verbatim customer quotes harvested across all 6 research buckets
+- 5+ research sources scraped and synthesized
+- All NON-NEGOTIABLE THRESHOLDS per bucket met (Pain 300, Hope 250, Root Cause 200, Solutions Tried 150, Competitor Mechanism 100, Villain 75)
+- Market snapshot, avatar profile, and competitive landscape included
+- Output file produced: research handoff package at 100KB+ minimum
 
 ---
 

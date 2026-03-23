@@ -27,6 +27,13 @@ feel that they finally understand why they have been stuck.
 **Output:** Root cause narrative section copy
 **Requires:** Campaign Brief (Skill 09), Story (Skill 12), Root Cause Package (Skill 03)
 
+**Success Criteria:**
+- Root cause concept translated into narrative prose
+- Reader recognizes their own experience in the description
+- Villain framing is clear without being preachy
+- Foundation expressions anchored correctly
+- Output: root cause narrative prose section produced
+
 ---
 
 ## ANTI-DEGRADATION

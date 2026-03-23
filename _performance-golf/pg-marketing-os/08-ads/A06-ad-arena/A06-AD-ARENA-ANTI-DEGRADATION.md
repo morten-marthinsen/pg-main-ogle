@@ -13,7 +13,7 @@
 I HAVE READ THIS FILE: A06-AD-ARENA-ANTI-DEGRADATION.md v1.0
 I UNDERSTAND: All failure modes, forbidden rationalizations, and gate enforcement rules below.
 I WILL: Produce per-microskill output files for every microskill executed.
-I WILL NOT: Run fewer than 3 Arena rounds ("concepts look strong enough after Round 1"), evaluate hooks/scripts/visuals separately instead of as atomic integrated units, or run Arena without loading verbatim ad specimens for each persona (minimum 15 per persona).
+I WILL NOT: Run fewer than 2 Arena rounds + audience evaluation ("concepts look strong enough after Round 1"), evaluate hooks/scripts/visuals separately instead of as atomic integrated units, or run Arena without loading verbatim ad specimens for each persona (minimum 15 per persona).
 ```
 
 **Write this declaration to your first output file before executing any microskill.**
@@ -249,7 +249,7 @@ AD-ARENA-MC-CHECK:
 
   layer_verification:
     current_layer: [0 | 1 | 2 | 2.5 | 3 | 4]
-    current_round: [1 | 2 | 3 | post-arena | N/A]
+    current_round: [1 | 2 | audience-eval | post-arena | N/A]
     previous_checkpoint_exists: [Y/N]
     if_no: "STOP -- Cannot proceed without checkpoint file"
 
@@ -345,7 +345,7 @@ Multi-round Arena execution loses continuity without persistent state files. Wit
   layer-2-outputs/
     round-1/                # Round 1 evaluations
     round-2/                # Round 2 evaluations
-    round-3/                # Round 2 (FINAL) evaluations
+    audience-evaluation/    # Audience evaluation outputs
   layer-2.5-outputs/        # Synthesis hybrids
   layer-3-outputs/          # Human selection
   layer-4-outputs/          # Final packaging
@@ -359,7 +359,7 @@ skill: "A06-ad-arena"
 created: "[date]"
 last_updated: "[date]"
 current_layer: [0 | 1 | 2 | 2.5 | 3 | 4]
-current_round: [1 | 2 | 3 | post-arena | N/A]
+current_round: [1 | 2 | audience-eval | post-arena | N/A]
 status: "[INITIALIZING | IN_PROGRESS | BLOCKED | COMPLETE]"
 
 concepts_under_evaluation:
@@ -375,7 +375,7 @@ concepts_under_evaluation:
 arena_progress:
   round_1: "[PENDING | IN_PROGRESS | COMPLETE]"
   round_2: "[PENDING | IN_PROGRESS | COMPLETE]"
-  round_3: "[PENDING | IN_PROGRESS | COMPLETE]"
+  audience_evaluation: "[PENDING | IN_PROGRESS | COMPLETE]"
   synthesis: "[PENDING | IN_PROGRESS | COMPLETE]"
   human_selection: "[PENDING | AWAITING | RECEIVED]"
 
@@ -514,10 +514,10 @@ Every microskill execution MUST produce a dedicated output file. This prevents t
 | 2.3 | 2.3-revision-round-2 | layer-2-outputs/round-2/2.3-targeted-revision.md | 3KB |
 | 2.4 | 2.4-scoring-round-2 | layer-2-outputs/round-2/2.4-scoring.md | 5KB |
 | 2.5 | 2.5-learning-brief-round-2 | layer-2-outputs/round-2/2.5-cumulative-learning-brief.md | 3KB |
-| 2.1 | 2.1-persona-evaluation-round-3 | layer-2-outputs/round-3/2.1-persona-evaluations.md | 5KB |
-| 2.2 | 2.2-critique-round-3 | layer-2-outputs/round-3/2.2-adversarial-critique.md | 3KB |
-| 2.3 | 2.3-revision-round-3 | layer-2-outputs/round-3/2.3-targeted-revision.md | 3KB |
-| 2.4 | 2.4-scoring-round-3 | layer-2-outputs/round-3/2.4-final-scoring.md | 5KB |
+| 2.1 | 2.1-audience-evaluation | layer-2-outputs/audience-evaluation/2.1-audience-evaluations.md | 5KB |
+| 2.2 | 2.2-audience-critique | layer-2-outputs/audience-evaluation/2.2-audience-critique.md | 3KB |
+| 2.3 | 2.3-audience-revision | layer-2-outputs/audience-evaluation/2.3-targeted-revision.md | 3KB |
+| 2.4 | 2.4-audience-scoring | layer-2-outputs/audience-evaluation/2.4-final-scoring.md | 5KB |
 | 2.5 | 2.5.1-decomposition | layer-2.5-outputs/2.5.1-decomposition.md | 5KB |
 | 2.5 | 2.5.2-best-element-matrix | layer-2.5-outputs/2.5.2-best-element-matrix.md | 3KB |
 | 2.5 | 2.5.3-hybrid-reconstruction | layer-2.5-outputs/2.5.3-hybrid-reconstruction.md | 5KB |
@@ -803,7 +803,7 @@ diversity_verification:
 
 ## KEY INSIGHT
 
-> **"An ad concept is hook + script + visual as an atomic unit. Evaluating any element in isolation misses the integration quality that determines whether the ad actually works. The Arena evaluates complete concepts through 7 specialized lenses across 3 adversarial rounds. Cutting rounds, skipping personas, or evaluating without specimens are all protocol violations that lower the quality ceiling."**
+> **"An ad concept is hook + script + visual as an atomic unit. Evaluating any element in isolation misses the integration quality that determines whether the ad actually works. The Arena evaluates complete concepts through 7 specialized lenses across 2 adversarial rounds + audience evaluation. Cutting rounds, skipping personas, or evaluating without specimens are all protocol violations that lower the quality ceiling."**
 
 ---
 

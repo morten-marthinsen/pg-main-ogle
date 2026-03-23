@@ -1,8 +1,8 @@
 # CLAUDE-CORE — PROTOCOL REFERENCES (Full Reference)
 
-**Version:** 1.1
+**Version:** 1.6
 **Created:** 2026-03-08
-**Updated:** 2026-03-12
+**Updated:** 2026-03-22
 **Source:** Extracted from ~system/SYSTEM-CORE.md. Load at session start for orientation. During execution, load individual protocol files as needed.
 
 ---
@@ -131,6 +131,71 @@ These protocols are loaded at Layer 0 based on skill requirements:
 **Applied to:** Arena executions — all Arena skills (03-08, 10-18, 20)
 **Key rule:** Three detection modes: persona convergence (round-aware 5-gram overlap thresholds), round stagnation (score delta + same winner), output repetition (3-sentence block repeat). Automated detection via `.hooks/validators/convergence_detector.py`. Round 1 convergence = bad (intervene), Round 2 (FINAL) convergence = good (allow).
 
+### Fact-Change Propagation Protocol (v1.0)
+**Full protocol:** `~system/protocols/FACT-CHANGE-PROPAGATION-PROTOCOL.md`
+**Applied to:** Mid-pipeline human directives that change factual data points
+**Key rule:** When a human changes a fact (ingredient, dosage, claim, price) mid-pipeline, all downstream outputs referencing that fact must be flagged and updated. Prevents upstream-downstream data drift.
+
+### Material Change Taxonomy (v1.0)
+**Full protocol:** `~system/protocols/MATERIAL-CHANGE-TAXONOMY.md`
+**Applied to:** Pipeline change detection — companion to Fact-Change Propagation Protocol
+**Key rule:** Classifies what constitutes a material change (source values, strategic decisions, structural elements) that triggers propagation. Non-material changes do not require propagation.
+
+### Feedback Revision Protocol (v1.2)
+**Full protocol:** `~system/protocols/FEEDBACK-REVISION-PROTOCOL.md`
+**Applied to:** Interactive editing sessions — any time human provides revision feedback
+**Key rule:** Prevent "drift to raw model" during revisions by re-engaging skills, specimens, and anti-degradation rules based on revision severity. Revision severity classification determines whether to re-run the full skill or apply targeted edits.
+
+### Humanization Protocol (v1.1)
+**Full protocol:** `~system/protocols/HUMANIZATION-PROTOCOL.md`
+**Applied to:** All generation skills — structural AI pattern detection and elimination
+**Key rule:** Detect and eliminate structural AI patterns that survive word-level anti-slop enforcement. Human edits feed a living pattern library that makes the system progressively less AI-sounding with every campaign.
+
+### Kill Criteria Protocol (v1.0)
+**Full protocol:** `~system/protocols/KILL-CRITERIA-PROTOCOL.md`
+**Applied to:** Skill executions that fail to meet quality thresholds after iteration
+**Key rule:** Explicit thresholds for when to STOP iterating and escalate to human decision. Prevents infinite revision loops and wasted tokens on fundamentally broken outputs.
+
+### Decision Challenge Protocol (v1.0)
+**Full protocol:** `~system/protocols/DECISION-CHALLENGE-PROTOCOL.md`
+**Applied to:** Any moment the agent has material concerns about operator direction, resource commitment, or strategic allocation
+**Key rule:** 3-level escalation (FLAG / BLOCK / CONVINCE ME) with cross-session persistence. Converts agent from amplifier to thinking partner. Complements Override Channel (inward failure) with outward challenge to human decisions.
+
+### Output Pattern Detection (v1.0)
+**Full protocol:** `~system/protocols/OUTPUT-PATTERN-DETECTION.md`
+**Applied to:** All agent output involving judgment, analysis, recommendations, or strategic assessment (system-wide, not Arena-only)
+**Key rule:** 6-pattern anti-sycophancy catalog (Balanced-Options Default, Hedge Language, Sycophantic Agreement, Over-Structuring, Premature Abstraction, Completeness Theater). Generation-Time Awareness Check runs as soft gate before judgment-bearing output.
+
+### Output Path Resolution Protocol (v1.0)
+**Full protocol:** `~system/protocols/OUTPUT-PATH-RESOLUTION.md`
+**Applied to:** Every file-write and file-read operation involving project outputs
+**Key rule:** Resolves all `~outputs/[project-code]/` references to correct absolute path — either external `output_root` or legacy internal directory. Prevents cross-contamination in shared engine deployments.
+
+### SSR Pre-Screen Protocol (v1.0)
+**Full protocol:** `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`
+**Applied to:** Editorial/terminal skills across all applicable engines — runs after Arena, before media spend
+**Key rule:** Semantic Similarity Rating pre-screening runs synthetic consumer panels (75-100 personas) against finished copy to predict market response. Produces GO / REVISE / KILL recommendation with segment-stratified diagnostics.
+
+### E2E Verification Protocol (v1.0)
+**Full protocol:** `~system/protocols/E2E-VERIFICATION-PROTOCOL.md`
+**Applied to:** Post-assembly, before editorial — across ALL engines (not just VSL)
+**Key rule:** Reader agents (extended audience agent personas) read the complete assembled piece as a continuous customer experience. 8 continuous-experience dimensions, 6-dimension continuity check. Multi-piece support for email sequences, upsell sequences, ad variant sampling.
+
+### Session Startup Sequence (v1.1)
+**Full protocol:** `~system/protocols/STARTUP-SEQUENCE.md`
+**Applied to:** Every session start — mandatory 5-step initialization
+**Key rule:** Standardized session initialization: identify project, load state, verify context, set tier, confirm skill target. Referenced by SYSTEM-CORE.md. v1.1: Parameterized vault root path, output_root integration.
+
+### Session End Protocol (v1.1)
+**Full protocol:** `~system/protocols/SESSION-END.md`
+**Applied to:** Every session end — mandatory state persistence and handoff
+**Key rule:** Standardized session wrap-up ensuring progress file updates, learning capture, and clean handoff to next session. Referenced by SYSTEM-CORE.md. v1.1: Updated git commit step for external output support.
+
+### System Graduation Protocol (v2.0)
+**Full protocol:** `~system/protocols/SYSTEM-GRADUATION-PROTOCOL.md`
+**Applied to:** Vault-to-PG sync — managing divergence when PG graduates items
+**Key rule:** When PG graduates marketing-os items to their root/system level, vault keeps standalone copies. Graduation manifest tracks what has been promoted and where.
+
 ---
 
 ## INFRASTRUCTURE PROTOCOLS (Always Loaded)
@@ -157,6 +222,21 @@ These protocols are loaded as part of the core system infrastructure, not condit
 **Applied to:** Post-skill recovery when output is bad or later skills corrupt earlier outputs
 **Key rule:** Git snapshots at Layer 0 completion (pre-skill) and Layer 4 completion (post-skill). Manual creation required — hooks cannot detect skill boundaries.
 
+### Initializer Protocol (v1.1)
+**Full protocol:** `~system/protocols/INITIALIZER-PROTOCOL.md`
+**Applied to:** First session of a new project — one-time setup
+**Key rule:** 6-step project initialization: gather inputs, configure engines, create output directory structure (externally by default), initialize project-progress.json from pipeline-dag.json, store output_root, confirm readiness. v1.1: External output architecture with output_root prompt.
+
+### Session Orchestrator Protocol (v1.0)
+**Full protocol:** `~system/protocols/SESSION-ORCHESTRATOR.md`
+**Applied to:** Every session — automated skill sequencing within a session
+**Key rule:** 7-step continuous execution loop: read DAG, resolve next skill, present to human, load protocols, execute, advance, check gates. Pulls human in at gates instead of requiring manual navigation.
+
+### Parallel Engine Execution Protocol (v1.0)
+**Full protocol:** `~system/protocols/PARALLEL-ENGINE-PROTOCOL.md`
+**Applied to:** Post-Skill 09 — simultaneous branch engine execution
+**Key rule:** Worktree isolation for each engine, engine-scoped orchestrator, 3 modes (multi-agent parallel, staggered parallel, sequential fallback). Worktrees at `/tmp/mos-[project-code]-[engine-id]`. Multiplies throughput across up to 9 engines.
+
 ---
 
 ## ARENA INFRASTRUCTURE PROTOCOLS
@@ -177,6 +257,16 @@ These support the Arena system documented in `~system/ARENA-PROTOCOL.md`:
 **Full protocol:** `~system/protocols/ANALYTICAL-REASONING-CAPTURE.md`
 **Applied to:** Foundation skills producing analytical conclusions
 **Key rule:** Structured capture of reasoning chains, evidence, and decision rationale for downstream traceability.
+
+### Analyst Protocol (v1.0)
+**Full protocol:** `~system/protocols/ANALYST-PROTOCOL.md`
+**Applied to:** Arena executions — causal analysis between rounds
+**Key rule:** Structured Analytical Brief explaining WHY outputs scored differently. Compares closely related outputs that performed differently to isolate causal factors. Referenced by ARENA-CORE-PROTOCOL.md (Step 1E.5).
+
+### Audience Agent Protocol (v1.1)
+**Full protocol:** `~system/protocols/AUDIENCE-AGENT-PROTOCOL.md`
+**Applied to:** Arena executions (Arena Mode) and pre-editorial verification (Reader Mode)
+**Key rule:** First-person customer simulations from research data (VOC quotes, psychographic segments, belief inventories). Two modes: Arena Mode (per-variant feedback inside Arena) and Reader Mode (full-piece E2E verification). Closes the gap between craft quality and audience resonance.
 
 ---
 
@@ -219,3 +309,8 @@ These support the Arena system documented in `~system/ARENA-PROTOCOL.md`:
 |---------|------|---------|
 | 1.0 | 2026-03-08 | Initial creation. Extracted protocol references from SYSTEM-CORE.md. |
 | 1.1 | 2026-03-12 | Updated Self-Learning/Autoresearch to v1.1, added 3 new conditional protocols, Infrastructure/Arena/Specimen/Template sections |
+| 1.2 | 2026-03-20 | Added SSR Pre-Screen Protocol entry |
+| 1.3 | 2026-03-21 | Added 7 missing protocols: Fact-Change Propagation, Feedback Revision, Humanization, Kill Criteria, Session Startup, Session End, System Graduation |
+| 1.4 | 2026-03-21 | Added Output Path Resolution Protocol — external output architecture for shared engine sync safety |
+| 1.5 | 2026-03-22 | Added 7 Harness Architecture protocols (Phases 1-6): Analyst, Audience Agent, E2E Verification, Initializer, Material Change Taxonomy, Parallel Engine, Session Orchestrator. Fixed version refs for Session Startup (v1.1) and Session End (v1.1). |
+| 1.6 | 2026-03-22 | Added 4 missing protocols: Decision Challenge, Output Pattern Detection, Output Path Resolution, SSR Pre-Screen. Closes PI warning from structural audit. |

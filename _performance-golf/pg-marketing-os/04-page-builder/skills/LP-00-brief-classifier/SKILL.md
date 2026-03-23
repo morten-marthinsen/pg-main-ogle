@@ -8,6 +8,8 @@ description: >-
   vs. Standalone). Trigger when starting any landing page project or when a new
   product needs page type determination. This is the entry point for the entire
   Landing Page Engine.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # LP-00 — Brief & Page Type Classifier

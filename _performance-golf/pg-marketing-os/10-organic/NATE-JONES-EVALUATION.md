@@ -43,7 +43,7 @@ Complete protocol architecture:
 - Model Assignment Table (binding, non-negotiable)
 - Per-Microskill Output Protocol (7 universal rules)
 - Loading Protocol (7-step mandatory sequence)
-- Arena Protocol (7 personas, 3 rounds, synthesis rules)
+- Arena Protocol (7 personas, 2 rounds + audience evaluation, synthesis rules)
 - Gate Registry (11 gates with PASS/FAIL binary enforcement)
 - Context Load Management (4-zone system)
 
@@ -123,10 +123,10 @@ Complete output specification:
 |---|-----------|----------|----------------|
 | 1 | **Session Persistence** | **YES** | PROJECT-STATE.md, PROGRESS-LOG.md, checkpoint YAML files (`S[XX]_COMPLETE.yaml`), context load management with handoff protocol (4-zone system: GREEN/YELLOW/RED/CRITICAL) |
 | 2 | **Failure Mode Tables** | **YES** | Engine-level: 24-skill failure mode table in ORGANIC-ENGINE-ANTI-DEGRADATION.md (24 skills × 2-3 failure modes = 60+ failure modes documented). Per-skill: ANTI-DEGRADATION.md files contain skill-specific failure mode tables with Detection/Response columns. |
-| 3 | **Validation Presence** | **YES** | 11 gates (G01-G11) with binary PASS/FAIL. MC-CHECK metacognitive checkpoints (Content Quality, Arena Synthesis, Context Health). Virality Scoring Framework (5 dimensions, minimum 60). Arena validation (3 rounds, 7 personas). |
+| 3 | **Validation Presence** | **YES** | 11 gates (G01-G11) with binary PASS/FAIL. MC-CHECK metacognitive checkpoints (Content Quality, Arena Synthesis, Context Health). Virality Scoring Framework (5 dimensions, minimum 60). Arena validation (2 rounds + audience evaluation, 7 personas). |
 | 4 | **Clear Input/Output Spec** | **YES** | ~system/pipeline-handoff-registry.md defines exact data contracts for every skill-to-skill transition. organic/ORGANIC-SKILL-INDEX.md maps required fields per skill. Per-microskill output schemas in YAML/JSON. |
 | 5 | **Error Handling** | **YES** | HALT responses in all failure mode tables. Stale artifact cleanup (`_STALE_[timestamp]` renaming). Gate failure formatted responses. MC-CHECK triggers revision on any dimension failure. |
-| 6 | **State Tracking** | **YES** | Checkpoint files per gate. Execution logs per skill. Progress log per project. Context load percentage tracking. Arena round tracking (round 1/2/3 output files). |
+| 6 | **State Tracking** | **YES** | Checkpoint files per gate. Execution logs per skill. Progress log per project. Context load percentage tracking. Arena round tracking (round 1/2 output files). |
 
 **Score: 6/6.** All production principles implemented at both engine and skill level.
 

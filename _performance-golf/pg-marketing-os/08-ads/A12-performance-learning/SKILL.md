@@ -28,6 +28,12 @@ propagate them back into the engine so future campaigns start smarter.
 2. Learnings must be actionable (WHAT + WHY + HOW to apply)
 3. The loop must close (update engine files, not just reports)
 
+**Success Criteria:**
+- Performance data captured and analyzed
+- Winning patterns identified across variants
+- Learnings documented for next campaign iteration
+- Output: performance learning report
+
 ---
 
 ## IDENTITY

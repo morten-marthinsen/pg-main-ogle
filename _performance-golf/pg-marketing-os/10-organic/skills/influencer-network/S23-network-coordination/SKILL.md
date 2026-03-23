@@ -24,6 +24,12 @@ description: >-
 **Upstream Dependencies:** S21-Persona Architect (Persona Bibles), S22-Account Strategy (Individual strategies)
 **Downstream Consumers:** S24-Monetization Engine, Campaign Execution Teams
 
+**Success Criteria:**
+- Network activation plan with timing and sequencing
+- Content coordination schedule across all accounts
+- Cross-promotion opportunities mapped per campaign
+- Output: network coordination plan
+
 ## ANTI-DEGRADATION
 
 - Read `S23-ANTI-DEGRADATION.md` before execution — structural enforcement rules

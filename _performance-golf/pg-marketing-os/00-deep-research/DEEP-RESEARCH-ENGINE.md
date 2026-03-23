@@ -14,6 +14,8 @@
 - [ARCHITECTURE OVERVIEW](#architecture-overview)
 - [BRIEF ARCHITECTURE (Skill 00)](#brief-architecture-skill-00)
 - [RESEARCH ARCHITECTURE (Skill 01)](#research-architecture-skill-01)
+- [RAPID RESEARCH (Skill 01R)](#rapid-research-skill-01r)
+- [RAPID RESEARCH (Skill 01R)](#rapid-research-skill-01r)
 - [PROOF INVENTORY ARCHITECTURE (Skill 02)](#proof-inventory-architecture-skill-02)
 - [REFERENCE SOURCES](#reference-sources)
 - [SKILL BUILD STATUS](#skill-build-status)
@@ -89,12 +91,19 @@ Skill 00: Project Brief
   → Two outputs: Soul.md (seed) + [project]-brief.md (draft)
   → Human review checkpoint — nothing proceeds without sign-off
 
-Skill 01: Deep Research
+Skill 01: Deep Research (FULL)
   → 1,000+ verbatim quotes across 6 buckets (Pain, Hope, Root Cause,
     Solutions Tried, Competitor Mechanism, Villain)
   → Orchestrates 57 microskills across 4 layers
   → Uses MCP tools (Firecrawl, Apify) for live data collection
   → Output: Research handoff package (market snapshot, avatar, competitive landscape, quotes)
+
+Skill 01R: Rapid Research (ALTERNATE — targeted probe)
+  → 150-250 verbatim quotes across 4 buckets (Pain, Hope, Root Cause, Solutions Tried)
+  → Orchestrates 13 microskills across 4 phases
+  → 60-90 minute execution vs multi-hour for full research
+  → Output: RAPID-HANDOFF-[project-code].md
+  → Use for: hypothesis validation, opportunity scouting, lightweight campaigns
 
 Skill 02: Proof Inventory
   → Catalog, classify, and score all available proof elements
@@ -106,9 +115,13 @@ Skill 02: Proof Inventory
 ### Dependency Chain
 
 ```
-Operator Input ──→ Skill 00 (Brief) ──→ Skill 01 (Research) ──→ Skill 02 (Proof Inventory)
-                                     ──→ Skills 03-20 (all downstream skills)
-                                                              ──→ Skill 18 (Proof Weaving)
+                                     ┌──→ Skill 01 (Full Research) ──→ Skill 02 (Proof Inventory)
+                                     │                             ──→ Skills 03-20 (all downstream)
+Operator Input ──→ Skill 00 (Brief) ─┤
+                                     │
+                                     └──→ Skill 01R (Rapid Research) ──→ Lightweight Engines
+                                                                        (ads, emails, organic)
+                                                                     ──→ OR upgrade to Skill 01
 ```
 
 ### Integration Points
@@ -170,6 +183,75 @@ Operator Input ──→ Skill 00 (Brief) ──→ Skill 01 (Research) ──�
 
 ---
 
+## RAPID RESEARCH (Skill 01R)
+
+Skill 01R is a **lightweight alternative** to Skill 01 for targeted research probes. It produces 150-250 verbatim quotes in 60-90 minutes versus the 1,000+ quotes of full deep research.
+
+### When to Use 01R vs 01
+
+| Scenario | Use 01R | Use 01 |
+|----------|---------|--------|
+| Hypothesis validation | ✓ | |
+| Quick opportunity scouting | ✓ | |
+| Lightweight campaigns (ads, emails, organic) | ✓ | |
+| Full VSL or long-form sales page | | ✓ |
+| Comprehensive mechanism development | | ✓ |
+| Multi-engine campaign builds | | ✓ |
+| Promise ceiling calculation | | ✓ |
+
+### 01R Architecture
+
+```
+4-Phase Pipeline (vs. 4-Layer in full research):
+
+Phase 1: Rapid Intake
+  → 0.1-tool-discovery, 0.2-market-configurator
+  → Establishes MCP tools, derives market terminology
+
+Phase 2: Targeted Scraping
+  → 1.1 through 1.6 (source discovery → volume gate)
+  → Collects 150-250 quotes across 4 buckets
+  → GATE 0 (pre-scrape) + GATE 1 (volume check)
+
+Phase 3: Pattern Analysis
+  → 2.1 through 2.4 (patterns, hypotheses, language, opportunities)
+  → Extracts patterns, validates hypotheses, surfaces signals
+
+Phase 4: Rapid Handoff
+  → 3.1-handoff-assembly
+  → Compiles RAPID-HANDOFF-[project-code].md
+```
+
+### 01R Quote Thresholds
+
+| Bucket | Minimum | Notes |
+|--------|---------|-------|
+| Pain | 60 | Core suffering expressions |
+| Hope | 50 | Desired outcomes |
+| Root Cause | 30 | Why problem persists |
+| Solutions Tried | 20 | Failed attempts |
+| **Total** | **150** | Expansion triggers if below |
+
+**NOT COLLECTED in 01R:** Competitor Mechanism, Villain buckets (these require full deep research).
+
+### 01R Limitations
+
+- No Proof Inventory (Skill 02 not run)
+- No Promise Ceiling calculation
+- No Layer 2.5 synthesis (transformation pairs, WEB analysis)
+- No RSF Intelligence (expectation schema, latent resonance mapping)
+- 4 buckets vs 6 buckets
+- 150-250 quotes vs 1,000+ quotes
+
+### Upgrade Path
+
+01R output can serve as a "head start" for full deep research:
+- `quotes_validated.json` feeds into Skill 01 quote collection
+- `patterns.md` informs research direction
+- `hypothesis_verdicts.md` guides hypothesis refinement
+
+---
+
 ## PROOF INVENTORY ARCHITECTURE (Skill 02)
 
 ### Proof Categories
@@ -194,11 +276,15 @@ The proof inventory calculates a promise ceiling — the maximum claim level the
 - `00-brief/SKILL.md` — Brief skill entry point
 - `00-brief/research-brief-template.md` — Research brief template
 - `00-brief/soul-md-template.md` — Soul.md voice template
-- `01-research/SKILL.md` — Research skill entry point
+- `01-research/SKILL.md` — Research skill entry point (full)
 - `01-research/research-orchestrator.md` — Research orchestration architecture
 - `01-research/research-layer-specs.md` — Layer-by-layer microskill specs
 - `01-research/research-subagent-templates.md` — Subagent configuration templates
 - `01-research/research-output-protocol.md` — Output formatting and handoff protocol
+- `01R-rapid-research/SKILL.md` — Rapid research skill entry point
+- `01R-rapid-research/RAPID-ANTI-DEGRADATION.md` — Rapid research enforcement rules
+- `01R-rapid-research/RAPID-RESEARCH-AGENT.md` — Rapid research orchestrator
+- `01R-rapid-research/skills/` — 13 microskills across layers 0-3
 - `02-proof-inventory/SKILL.md` — Proof inventory skill entry point
 
 ---
@@ -209,9 +295,10 @@ The proof inventory calculates a promise ceiling — the maximum claim level the
 |-------|--------|-------|-------|
 | 00 — Project Brief | COMPLETE | SKILL.md, ANTI-DEGRADATION.md, templates | 2026-02-25 |
 | 01 — Deep Research | COMPLETE | SKILL.md, ANTI-DEGRADATION.md, orchestrator, layer specs, subagent templates, output protocol | 2026-02-25 |
+| 01R — Rapid Research | COMPLETE | SKILL.md, RAPID-ANTI-DEGRADATION.md, RAPID-RESEARCH-AGENT.md, 13 microskills (layers 0-3) | 2026-03-21 |
 | 02 — Proof Inventory | COMPLETE | SKILL.md, ANTI-DEGRADATION.md, microskills | 2026-02-25 |
 
-**All 3 skills fully built with SKILL.md (entry point), ANTI-DEGRADATION.md (structural enforcement), and supporting architecture files.**
+**All 4 skills fully built.** Skills 00, 01, and 02 have SKILL.md + ANTI-DEGRADATION.md + supporting files. Skill 01R is a lightweight alternate path with consolidated architecture (13 microskills vs 57 in full research).
 
 ---
 
@@ -220,3 +307,4 @@ The proof inventory calculates a promise ceiling — the maximum claim level the
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-13 | Initial creation — 5 Laws, 5 degradation patterns, skill pipeline, bucket architecture, proof inventory framework, integration points. |
+| 1.1 | 2026-03-21 | Added Skill 01R (Rapid Research) — lightweight alternate path with 13 microskills, 4 buckets, 150-250 quote target. Updated architecture diagrams, dependency chain, and build status. |

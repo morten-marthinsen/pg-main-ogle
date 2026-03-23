@@ -25,6 +25,12 @@ This skill codifies the unique voice that will cut through noise. Voice is not w
 **Output:** Brand Voice File (BVF)
 **Unlocks:** S04: Content Architecture (via Gate G03)
 
+**Success Criteria:**
+- Brand voice defined with on-voice and off-voice examples
+- Voice differentiated from top 3 competitors
+- Do/don't guidelines with concrete examples
+- Output: brand voice guide
+
 ## ANTI-DEGRADATION
 
 - Read `S03-BRAND-VOICE-ANTI-DEGRADATION.md` before execution — structural enforcement rules

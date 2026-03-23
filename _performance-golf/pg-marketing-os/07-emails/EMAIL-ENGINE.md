@@ -1827,10 +1827,17 @@ CAPTURE:
 
 ---
 
+### SSR Pre-Screen Validation
+
+After E4 (Editorial) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `E4-email-editorial/skills/layer-3/3.3-ssr-prescreen-trigger.md`
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1 | 2026-03-20 | Added SSR pre-screen validation reference (E4 (Editorial) terminal gate) |
 | 1.0 | 2026-02-21 | Initial creation — full Email Engine architecture. 5 skills (E0-E4), two operating modes, 7 body types, 18 SL formulas, Arena integration, specimen architecture, shared libraries, campaign templates, forbidden behaviors, anti-slop enforcement, session management, MC-CHECK enhancements, model assignment table, learning capture protocol. |
 
 ---

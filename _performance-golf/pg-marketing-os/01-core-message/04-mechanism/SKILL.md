@@ -9,6 +9,8 @@ description: >-
   explanation narrative, and naming anchoring score. Trigger when users mention
   mechanism, unique mechanism, how it works, proprietary process, named ingredient,
   or differentiating explanation. Requires root cause package from Skill 03.
+skill_type: technique
+persuasion_profile: commitment + moderate authority
 ---
 
 # 04: MECHANISM DEVELOPMENT
@@ -25,6 +27,14 @@ same claims as competitors.
 
 **Output:** `mechanism-package.json`
 **Unlocks:** Skill 05 (Promise)
+
+**Success Criteria:**
+- Unique mechanism identified and named
+- Mechanism explains HOW the product solves the root cause
+- Mechanism credibility supported by proof elements from the proof inventory (Skill 02)
+- Differentiation from competitor mechanisms established
+- Expression candidates scored via Expression Anchoring Protocol
+- Output file produced: `mechanism-package.json`
 
 ---
 

@@ -18,7 +18,7 @@ Last Updated: 2026-03-05
 
 Run the full 7-persona × 2-round + audience evaluation Arena competition on ANY content piece from S08-S12. This is the DEDICATED Arena skill that serves as the quality gate before S14 assembly.
 
-The Arena prevents single-context bias by evaluating content through 7 distinct lenses (Volume Machine, Value Architect, Virality Engineer, Community Builder, Brand Purist, Algorithm Hacker, Storyteller), with an adversarial Critic challenging convergence across 3 mandatory rounds.
+The Arena prevents single-context bias by evaluating content through 7 distinct lenses (Volume Machine, Value Architect, Virality Engineer, Community Builder, Brand Purist, Algorithm Hacker, Storyteller), with an adversarial Critic challenging convergence across 2 mandatory rounds + audience evaluation.
 
 **This skill is MANDATORY before S14 assembly for high-stakes content (primary videos, lead carousels, flagship threads).**
 
@@ -211,7 +211,7 @@ arena_results:
 - [ ] CBF loaded for brand context
 
 ### GATE_1_ARENA_ROUNDS_COMPLETE
-- [ ] 3 full rounds executed
+- [ ] 2 full rounds + audience evaluation executed
 - [ ] All 7 personas evaluated in each round
 - [ ] Critic challenged each round
 - [ ] Final scores compiled

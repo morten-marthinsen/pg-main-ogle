@@ -24,6 +24,12 @@ This skill produces scroll-stopping, engagement-driving captions for any platfor
 **Output:** Platform-ready captions
 **Prerequisite:** Campaign Brief File (CBF) required
 
+**Success Criteria:**
+- Captions written for each content piece in the calendar
+- Platform-specific formatting and character limits applied
+- CTA or engagement prompt included in every caption
+- Output: platform-ready captions
+
 ## ANTI-DEGRADATION
 
 - Read `S09-ANTI-DEGRADATION.md` before execution — structural enforcement rules

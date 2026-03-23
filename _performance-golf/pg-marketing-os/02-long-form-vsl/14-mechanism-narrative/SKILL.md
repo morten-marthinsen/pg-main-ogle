@@ -27,6 +27,13 @@ believe the solution can actually work for them.
 **Output:** Mechanism narrative section copy
 **Requires:** Campaign Brief (Skill 09), Root Cause Narrative (Skill 13), Mechanism Package (Skill 04)
 
+**Success Criteria:**
+- Mechanism explained in audience-appropriate language
+- Scientific credibility established without jargon overload
+- Reader understands HOW the solution works
+- Mechanism name used consistently (no drift from foundation)
+- Output: mechanism narrative prose section produced
+
 ---
 
 ## ANTI-DEGRADATION

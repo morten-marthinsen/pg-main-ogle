@@ -1,6 +1,14 @@
+# Personal/internal directories — never share outside vault
+~brain/
+~system/
+~outputs/
+
 # Project outputs (per-run artifacts, not engine code)
 outputs/*/
 !outputs/.gitkeep
+
+# Engine-internal research outputs (non-engine, per-project artifacts)
+00-deep-research/outputs/
 
 # Test results
 tests/results/

@@ -28,6 +28,12 @@ copy variants through modular swapping.
 2. Variants are the product (30+ through modular swapping)
 3. Word count is physics (hard limits from speech rate)
 
+**Success Criteria:**
+- Final ad copy produced for all selected formats
+- Copy matches script architecture specifications
+- Platform character/length limits respected
+- Output: production-ready ad copy files
+
 ---
 
 ## IDENTITY

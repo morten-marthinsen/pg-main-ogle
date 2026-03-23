@@ -305,8 +305,15 @@ Skills 11 (Lead), 12 (Story), 17 (Close) have minimal ecom relevance — story-d
 
 ---
 
+### SSR Pre-Screen Validation
+
+After EC-06 (Editorial) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `EC-06-ecomm-editorial/skills/layer-4/4.4-ssr-prescreen-trigger.md`
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1 | 2026-03-20 | Added SSR pre-screen validation reference (EC-06 (Editorial) terminal gate) |
 | 1.0 | 2026-03-09 | Initial creation — architecture, 5 Laws, 6 degradation patterns, skill pipeline, NLS PDP framework (19 sections), feature naming architecture, long-form crossover map, 7 v1 skill scaffolds. |

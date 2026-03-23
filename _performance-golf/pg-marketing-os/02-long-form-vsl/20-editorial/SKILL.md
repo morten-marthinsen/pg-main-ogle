@@ -26,6 +26,13 @@ packages the final polished piece ready for production.
 **Output:** Final polished copy + editorial report
 **Requires:** Complete proof-woven copy from Skill 18
 
+**Success Criteria:**
+- All P1/P2 issues from E2E verification addressed
+- Voice consistency maintained across the full script
+- Slop score at zero (no AI telltales)
+- Arena-quality revision for structural issues
+- Output: final polished VSL script produced
+
 ---
 
 ## ANTI-DEGRADATION

@@ -144,7 +144,7 @@ Check for stale output files from previous incomplete runs:
 - Engagement rate: Minimum 2% average engagement on content
 - Trust signals: Regular positive audience feedback, questions, requests
 - Content consistency: Minimum 3 months consistent posting
-- Value demonstration: Proven track record of helpful content
+- Value demonstration: Content that generated saves, shares, or DM questions — accounts without documented value signals see 40%+ refund rates on first offers
 - Audience requests: People asking for products/services
 
 **Readiness Assessment Per Persona Required:**

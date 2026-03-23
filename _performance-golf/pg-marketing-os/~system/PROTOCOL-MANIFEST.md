@@ -29,6 +29,7 @@ At skill transition (within session):
 
 | Priority | Category | Load Condition | Est. Tokens |
 |----------|----------|----------------|-------------|
+| 8 | Output Path Resolution (`OUTPUT-PATH-RESOLUTION.md`) | ALWAYS | ~1,300 |
 | 10 | The 7 Laws (SYSTEM-CORE §1) | ALWAYS | ~500 |
 | 15 | Core Anti-Degradation (SYSTEM-CORE §2-3) | ALWAYS | ~1,500 |
 | 20 | Mandatory Output Protocol | ALWAYS | ~800 |
@@ -52,6 +53,8 @@ At skill transition (within session):
 | 88 | Prose Quality Verification | IF skill_number in [11-17] | ~1,500 |
 | 90 | Active Recitation Protocol | IF tier in [Full, Standard] AND skill_number in [12, 15] | ~1,000 |
 | 92 | Foundation Integrity Check | IF between Session 4-5 AND tier != Quick | ~1,500 |
+| 93 | Output Pattern Detection | IF output involves judgment, analysis, or recommendations | ~1,200 |
+| 94 | Decision Challenge Protocol | ALWAYS (lightweight — fires on trigger, not pre-loaded in full) | ~800 |
 | 95 | Context Zone Reminders | IF zone != GREEN | ~500 |
 | 98 | MCP Tool Discovery | IF skill.mcp_tools != empty (see MCP-TOOL-REGISTRY.md) | ~200 |
 

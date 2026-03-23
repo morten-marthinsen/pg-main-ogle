@@ -343,7 +343,7 @@ All Organic Engine outputs go OUTSIDE the skill folders:
 
 ### Structural Violations
 6. Skipping foundation skills (S01-S07 are sequential, mandatory)
-7. Running fewer than 3 Arena rounds
+7. Running fewer than 2 Arena rounds
 8. Skipping any of the 7 Arena personas
 9. Proceeding without human selection after Arena
 10. Claiming skill completion without all output files
@@ -380,10 +380,17 @@ All Organic Engine outputs go OUTSIDE the skill folders:
 
 ---
 
+### SSR Pre-Screen Validation
+
+After S14 (Content Assembly) completes, SSR pre-screening runs per `~system/protocols/SSR-PRESCREEN-PROTOCOL.md`. A synthetic consumer panel (75-100 personas) evaluates the final output and produces a GO / REVISE / KILL recommendation with segment-stratified diagnostics. The SSR report is included in the output package. Trigger microskill: `skills/production/S14-content-assembly/skills/layer-4/4.4-ssr-prescreen-trigger.md`
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1 | 2026-03-20 | Added SSR pre-screen validation reference (S14 (Content Assembly) terminal gate) |
 | 1.0 | 2026-03-04 | Initial creation — migrated from standalone OrganicMarketingEngine into marketing-os sub-engine. 5 Laws (consolidated from 9), 7 degradation patterns, 24-skill pipeline, model assignment table, per-microskill output protocol, Arena integration, CopywritingEngine integration mode, loading protocol, gate registry, forbidden behaviors. |
 
 ---

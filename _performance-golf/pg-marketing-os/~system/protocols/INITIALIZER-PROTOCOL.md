@@ -27,9 +27,9 @@ Collect from the human (ask for anything not provided):
 
 | Input | Required | Example |
 |-------|----------|---------|
-| **Project code** | YES | `rsf-promo`, `pg-ta-2026`, `drdrew-choc` |
+| **Project code** | YES | `rsf-promo`, `pg-ta-2026`, `nrg-launch` |
 | **Project name** | YES | "RSF Golf Promotion", "Transformation Academy 2026" |
-| **Client** | YES | "Performance Golf", "Dr. Drew", "UpWellness" |
+| **Client** | YES | "Performance Golf", "Acme Health", "BrightPath" |
 | **Tier** | YES | Full / Standard / Quick |
 | **Active engines** | YES | Which branch engines this project uses (see Step 2) |
 | **Vertical** | NO | golf, health, finance, personal-dev, technology, or null |

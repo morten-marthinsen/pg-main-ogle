@@ -8,6 +8,8 @@ metadata:
   category: copywriting-element
   framework_count: 14
   updated: 2025-12-13
+skill_type: reference
+persuasion_profile: clarity only
 ---
 
 # Clayton Headlines

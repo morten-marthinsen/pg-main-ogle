@@ -25,6 +25,12 @@ This skill produces platform-native video scripts optimized for attention, reten
 **Requires:** Campaign Brief File (CBF)
 **Arena:** MANDATORY for all script production
 
+**Success Criteria:**
+- Video scripts produced for each hook in the library
+- Platform-specific length and format constraints met
+- Hook-body-CTA structure verified per script
+- Output: production-ready video scripts
+
 ## ANTI-DEGRADATION
 
 - Read `S08-ANTI-DEGRADATION.md` before execution — structural enforcement rules

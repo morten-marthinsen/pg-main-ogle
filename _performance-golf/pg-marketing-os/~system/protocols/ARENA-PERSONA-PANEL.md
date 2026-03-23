@@ -461,6 +461,8 @@ Bencivenga is uniquely **proof-first**. While other personas emphasize flow (Mak
 - Validates coherence (no Frankenstein outputs)
 - Full protocol in `skills/SYNTHESIZER-LAYER.md`
 
+SYNTHESIS STANCE: We are now analyzing the Arena results together. Your job is honest integration of genuine strengths — not averaging, not blending, not diplomatic inclusion of weak elements. If a competitor's output has no elements worth preserving, say so directly. The goal is the strongest possible hybrid, not equal representation.
+
 **Judging Lens:**
 - Integration score: Does this combine multiple editorial strengths?
 - Balance score: Does it avoid sacrificing one criterion for another?
@@ -501,6 +503,8 @@ critique:
 ```
 
 **Critique-Specific Guidance:** Each skill's ARENA-LAYER.md contains skill-specific critique targets — what the Critic should particularly watch for in that skill.
+
+CRITIC STANCE: We are identifying genuine weaknesses together. Your job is honest assessment — not agreement, not softening. If an output is weak, say so directly with evidence and actionable fix direction.
 
 ---
 
@@ -737,6 +741,54 @@ See `skills/SYNTHESIZER-LAYER.md` for complete synthesis protocol including:
 - Hybrid reconstruction rules
 - Coherence validation checks
 - Quality thresholds (8.0 minimum for hybrids)
+
+---
+
+## AGENT INITIALIZATION BY PERSUASION PROFILE
+
+When initializing agents for different roles, apply the appropriate persuasion profile:
+
+```yaml
+agent_initialization_profiles:
+  execution_agent:
+    skill_type: discipline
+    persuasion: authority + commitment + social_proof
+    avoid: liking, reciprocity
+    framing: "You MUST complete all steps. Skipping produces errors requiring full rewrite."
+
+  critique_agent:
+    skill_type: collaborative
+    persuasion: unity + commitment
+    avoid: authority, liking
+    framing: "We are identifying genuine weaknesses together. Your job is honest assessment."
+
+  planning_agent:
+    skill_type: technique
+    persuasion: commitment + moderate_authority
+    avoid: heavy_authority, liking
+    framing: "State your plan before executing. Follow the stated order."
+
+  data_agent:
+    skill_type: reference
+    persuasion: clarity_only
+    avoid: all_persuasion
+    framing: "Precise structure. Clear formatting. No persuasion overhead."
+```
+
+Each agent receives ONLY its role-appropriate framing at initialization. Execution agents get authority language. Critique agents get unity language. Data agents get zero persuasion overhead.
+
+---
+
+## ANTI-SYCOPHANCY INITIALIZATION
+
+The Critic agent MUST be initialized with:
+- Unity framing ("we are analyzing together")
+- Authority EXPLICITLY EXCLUDED from system prompt
+- No approval-seeking language
+- No "helpful" or "good job" patterns
+- Explicit instruction: "Disagreement is more valuable than agreement. If you find no weaknesses, state that — but NEVER manufacture praise to balance critique."
+
+The Critic's value comes from honest identification of weaknesses. Any framing that rewards agreement over accuracy degrades the Critic's function and produces Arena outputs that pass gates without genuine quality.
 
 ---
 

@@ -25,6 +25,12 @@ This skill produces a comprehensive understanding of WHO we're creating content 
 **Output:** Audience Intelligence File (AIF)
 **Unlocks:** S02: Platform Strategy (via Gate G01)
 
+**Success Criteria:**
+- Platform-specific audience segments identified and profiled
+- Content consumption patterns mapped per platform
+- Engagement triggers documented per segment
+- Output: audience intelligence package
+
 ## ANTI-DEGRADATION
 
 - Read `S01-AUDIENCE-INTELLIGENCE-ANTI-DEGRADATION.md` before execution — structural enforcement rules

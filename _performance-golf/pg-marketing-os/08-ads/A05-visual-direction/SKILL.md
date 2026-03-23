@@ -28,6 +28,12 @@ concrete production specs — specific or useless.
 2. Specific or useless (concrete production specs, not vague descriptions)
 3. Platform-native or invisible (calibrated to each platform's characteristics)
 
+**Success Criteria:**
+- Visual style defined per ad variant
+- Style references provided (mood boards or reference ads)
+- Platform-specific visual constraints addressed
+- Output: visual direction brief produced
+
 ---
 
 ## IDENTITY
