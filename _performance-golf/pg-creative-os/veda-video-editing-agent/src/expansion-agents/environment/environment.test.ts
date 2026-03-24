@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi, beforeAll, afterAll } from "vitest";
 import { environmentAgent, buildCompositeArgs } from "./index.js";
 import type { ExpansionContext, ExpansionDeps } from "../types.js";
 import type { ResolvedIntake, AiGenerationClient } from "../../types/pipeline.js";
@@ -7,6 +7,14 @@ import type { ResolvedIntake, AiGenerationClient } from "../../types/pipeline.js
 vi.mock("node:fs/promises", async () => {
   const actual = await vi.importActual<typeof import("node:fs/promises")>("node:fs/promises");
   return { ...actual, mkdir: vi.fn().mockResolvedValue(undefined) };
+});
+
+// Set GOOGLE_API_KEY for v2 pre-flight checks
+const origGoogleKey = process.env.GOOGLE_API_KEY;
+beforeAll(() => { process.env.GOOGLE_API_KEY = "test-key-for-preflight"; });
+afterAll(() => {
+  if (origGoogleKey !== undefined) process.env.GOOGLE_API_KEY = origGoogleKey;
+  else delete process.env.GOOGLE_API_KEY;
 });
 
 // ── Fixtures ────────────────────────────────────────────────────────────────
@@ -306,208 +314,151 @@ describe("environmentAgent.validate (v2 AI background)", () => {
   });
 });
 
-// ── v2 Execution ────────────────────────────────────────────────────────────
+// ── v2 Execution (Romeo's 5-step workflow) ──────────────────────────────────
 
-describe("environmentAgent.execute (v2 AI background)", () => {
-  it("SUCCESS for single AI variation", async () => {
+describe("environmentAgent.execute (v2 AI — Romeo workflow)", () => {
+  it("calls analyze_winning_ad.py as first step", async () => {
     const deps = makeV2Deps();
     const result = await environmentAgent.execute(makeV2Ctx(), deps);
+
+    // First step calls python3 with analyze_winning_ad.py
+    const calls = (deps.commandRunner.run as ReturnType<typeof vi.fn>).mock.calls;
+    expect(calls.length).toBeGreaterThanOrEqual(1);
+    expect(calls[0][0]).toBe("python3");
+    expect(calls[0][1][0]).toContain("analyze_winning_ad.py");
+  });
+
+  it("returns NEEDS_HUMAN_INPUT after brief generation (step 2 gate)", async () => {
+    const deps = makeV2Deps();
+    const result = await environmentAgent.execute(makeV2Ctx(), deps);
+
+    // Should stop at brief gate (after analyze + brief scripts run)
+    expect(result.status).toBe("NEEDS_HUMAN_INPUT");
+    if (result.status !== "NEEDS_HUMAN_INPUT") return;
+    expect(result.message).toContain("Brief generated");
+    expect(result.message).toContain("resume_from_step");
+  });
+
+  it("resumes from prompts step when resume_from_step is 'prompts'", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "prompts" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+
+    // Should call generate_video_prompts.py and stop at prompts gate
+    expect(result.status).toBe("NEEDS_HUMAN_INPUT");
+    if (result.status !== "NEEDS_HUMAN_INPUT") return;
+    expect(result.message).toContain("Prompts generated");
+  });
+
+  it("resumes from generate step when resume_from_step is 'generate'", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "generate" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+
+    // Should call generate_avatar_video.py and stop at generate gate
+    expect(result.status).toBe("NEEDS_HUMAN_INPUT");
+    if (result.status !== "NEEDS_HUMAN_INPUT") return;
+    expect(result.message).toContain("Videos generated");
+  });
+
+  it("returns SUCCESS with variations when resume_from_step is 'qa'", async () => {
+    // QA step probes output files — mock fileProber returns valid data
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "qa" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+
+    // fileProber.probe is mocked to succeed, so QA finds valid variation(s)
     expect(result.status).toBe("SUCCESS");
     if (result.status !== "SUCCESS") return;
     expect(result.data.variations).toHaveLength(1);
     expect(result.data.variations[0].variation_index).toBe(1);
-    expect(result.data.variations[0].file_path).toContain("variation_1.mp4");
+    expect(result.data.variations[0].edit_summary).toContain("Romeo workflow");
   });
 
-  it("calls 3-stage pipeline: segmentation → image generation → FFmpeg", async () => {
-    const deps = makeV2Deps();
-    await environmentAgent.execute(makeV2Ctx(), deps);
-
-    const aiClient = deps.aiClient!;
-    const generateFn = aiClient.generate as ReturnType<typeof vi.fn>;
-    expect(generateFn).toHaveBeenCalledTimes(2); // segmentation + image
-
-    // Stage 1: segmentation (uses extracted key frame, not source video)
-    const seg = generateFn.mock.calls[0][0];
-    expect(seg.type).toBe("segmentation");
-    expect(seg.model).toBe("birefnet");
-    expect(seg.style_reference).toContain("keyframe_t1.png");
-
-    // Stage 2: background generation
-    const bg = generateFn.mock.calls[1][0];
-    expect(bg.type).toBe("image");
-    expect(bg.model).toBe("flux");
-    expect(bg.prompt).toContain("golf course");
-
-    // Stage 3: FFmpeg composite (+1 call for key frame extraction)
-    expect(deps.commandRunner.run).toHaveBeenCalledTimes(2);
-    const ffCall = (deps.commandRunner.run as ReturnType<typeof vi.fn>).mock.calls[1];
-    expect(ffCall[0]).toBe("ffmpeg");
-    const ffArgs: string[] = ffCall[1];
-    expect(ffArgs).toContain("-filter_complex");
-    expect(ffArgs.some((a: string) => a.includes("alphamerge"))).toBe(true);
-  });
-
-  it("produces correct number of AI variations", async () => {
-    const deps = makeV2Deps();
-    const result = await environmentAgent.execute(makeV2Ctx({ variationCount: 3 }), deps);
-    expect(result.status).toBe("SUCCESS");
-    if (result.status !== "SUCCESS") return;
-    expect(result.data.variations).toHaveLength(3);
-
-    // 2 AI calls per variation (seg + bg), 1 FFmpeg per variation + 1 frame extraction
-    const generateFn = deps.aiClient!.generate as ReturnType<typeof vi.fn>;
-    expect(generateFn).toHaveBeenCalledTimes(6);
-    expect(deps.commandRunner.run).toHaveBeenCalledTimes(4);
-  });
-
-  it("includes background_prompt in edit_summary", async () => {
-    const deps = makeV2Deps();
+  it("FAILS on analyze script error", async () => {
+    const failRunner = {
+      run: vi.fn().mockResolvedValue({ exitCode: 1, stdout: "", stderr: "Gemini API error" }),
+    };
+    const deps = makeV2Deps({ commandRunner: failRunner });
     const result = await environmentAgent.execute(makeV2Ctx(), deps);
-    if (result.status !== "SUCCESS") return;
-    expect(result.data.variations[0].edit_summary).toContain("golf course");
-    expect(result.data.variations[0].edit_summary).toContain("AI environment");
-  });
 
-  it("passes source dimensions to Flux generation", async () => {
-    const deps = makeV2Deps();
-    await environmentAgent.execute(
-      makeV2Ctx({ sourceDims: { width: 1920, height: 1080 } }),
-      deps,
-    );
-    const generateFn = deps.aiClient!.generate as ReturnType<typeof vi.fn>;
-    const bgCall = generateFn.mock.calls[1][0];
-    expect(bgCall.width).toBe(1920);
-    expect(bgCall.height).toBe(1080);
-  });
-
-  it("passes style_reference_url to Flux when provided", async () => {
-    const deps = makeV2Deps();
-    await environmentAgent.execute(
-      makeV2Ctx({
-        editOperation: {
-          type: "environment_swap_ai",
-          background_prompt: "indoor studio",
-          style_reference_url: "https://example.com/ref.jpg",
-        },
-      }),
-      deps,
-    );
-    const generateFn = deps.aiClient!.generate as ReturnType<typeof vi.fn>;
-    const bgCall = generateFn.mock.calls[1][0];
-    expect(bgCall.style_reference).toBe("https://example.com/ref.jpg");
-  });
-
-  it("tracks cost across AI calls", async () => {
-    // Each mock call returns 0.01 cost — 2 calls per var × 3 vars = 0.06, > 0.05 threshold but < 0.5
-    const deps = makeV2Deps();
-    const result = await environmentAgent.execute(makeV2Ctx({ variationCount: 1 }), deps);
-    if (result.status !== "SUCCESS") return;
-    expect(result.data.variations[0].edit_summary).toContain("Cost: $0.02");
-  });
-
-  it("adds cost flag when total exceeds threshold", async () => {
-    const expensiveClient: AiGenerationClient = {
-      isAvailable: vi.fn(() => true),
-      generate: vi.fn(async (_req, outputDir: string) => ({
-        file_path: `${outputDir}/generated.png`,
-        cost_usd: 0.30,
-      })),
-    } as unknown as AiGenerationClient;
-
-    const deps = makeV2Deps({ aiClient: expensiveClient });
-    const result = await environmentAgent.execute(makeV2Ctx({ variationCount: 1 }), deps);
-    if (result.status !== "SUCCESS") return;
-    expect(result.data.durationFlags.length).toBeGreaterThan(0);
-    expect(result.data.durationFlags[0]).toContain("budget");
-  });
-
-  // ── Credential checks ──────────────────────────────────────────────────
-
-  it("FAILS when no aiClient provided", async () => {
-    const deps = makeV2Deps({ aiClient: undefined });
-    const result = await environmentAgent.execute(makeV2Ctx(), deps);
-    expect(result.status).toBe("FAILED");
-    if (result.status !== "FAILED") return;
-    expect(result.error_category).toBe("CREDENTIAL_ERROR");
-    expect(result.message).toContain("aiClient");
-  });
-
-  it("FAILS when segmentation not available", async () => {
-    const deps = makeV2Deps({ aiClient: createMockAiClient({ segmentation: false }) });
-    const result = await environmentAgent.execute(makeV2Ctx(), deps);
-    expect(result.status).toBe("FAILED");
-    if (result.status !== "FAILED") return;
-    expect(result.message).toContain("segmentation");
-  });
-
-  it("FAILS when image generation not available", async () => {
-    const deps = makeV2Deps({ aiClient: createMockAiClient({ image: false }) });
-    const result = await environmentAgent.execute(makeV2Ctx(), deps);
-    expect(result.status).toBe("FAILED");
-    if (result.status !== "FAILED") return;
-    expect(result.message).toContain("background generation");
-  });
-
-  // ── Error handling ─────────────────────────────────────────────────────
-
-  it("FAILS on AI generation error (batch stop)", async () => {
-    const failingClient: AiGenerationClient = {
-      isAvailable: vi.fn(() => true),
-      generate: vi.fn().mockRejectedValue(new Error("FAL quota exceeded")),
-    } as unknown as AiGenerationClient;
-
-    const deps = makeV2Deps({ aiClient: failingClient });
-    const result = await environmentAgent.execute(makeV2Ctx({ variationCount: 3 }), deps);
     expect(result.status).toBe("FAILED");
     if (result.status !== "FAILED") return;
     expect(result.error_category).toBe("AI_GENERATION_ERROR");
-    expect(result.message).toContain("FAL quota exceeded");
-    expect(result.message).toContain("0 of 3");
+    expect(result.message).toContain("analysis failed");
   });
 
-  it("FAILS on FFmpeg composite error", async () => {
-    // Frame extraction succeeds (call 1), composite fails (call 2)
-    let callCount = 0;
-    const compositeFailRunner = {
-      run: vi.fn().mockImplementation(() => {
-        callCount++;
-        if (callCount === 1) return Promise.resolve({ exitCode: 0, stdout: "", stderr: "" });
-        return Promise.resolve({ exitCode: 1, stdout: "", stderr: "FFmpeg error" });
-      }),
-    };
-    const deps = makeV2Deps({ commandRunner: compositeFailRunner });
-    const result = await environmentAgent.execute(makeV2Ctx(), deps);
+  it("FAILS with invalid resume_from_step", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "invalid_step" as any,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+
     expect(result.status).toBe("FAILED");
     if (result.status !== "FAILED") return;
-    expect(result.message).toContain("FFmpeg composite exited with code 1");
+    expect(result.message).toContain("Invalid resume_from_step");
   });
 
-  it("FAILS on FFmpeg composite throw", async () => {
-    const throwRunner = { run: vi.fn().mockRejectedValue(new Error("composite spawn failed")) };
-    const deps = makeV2Deps({ commandRunner: throwRunner });
-    const result = await environmentAgent.execute(makeV2Ctx(), deps);
-    expect(result.status).toBe("FAILED");
-    if (result.status !== "FAILED") return;
-    expect(result.message).toContain("composite spawn failed");
+  it("passes environments and avatar_reference_image to brief script", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "golf course",
+        environments: ["driving range", "clubhouse"],
+        avatar_reference_image: "/avatars/lauren.png",
+      },
+    });
+    await environmentAgent.execute(ctx, deps);
+
+    // Second call should be the brief generation script
+    const calls = (deps.commandRunner.run as ReturnType<typeof vi.fn>).mock.calls;
+    const briefCall = calls.find((c: any[]) => c[1]?.[0]?.includes("generate_expansion_brief"));
+    expect(briefCall).toBeDefined();
+    const args: string[] = briefCall![1];
+    expect(args).toContain("--environments");
+    expect(args).toContain("--avatar-image");
+    expect(args.some((a: string) => a.includes("driving range"))).toBe(true);
   });
 
-  it("batch-stops on second variation AI failure", async () => {
-    let callIdx = 0;
-    const failSecondVarClient: AiGenerationClient = {
-      isAvailable: vi.fn(() => true),
-      generate: vi.fn(async (_req, outputDir: string) => {
-        callIdx++;
-        if (callIdx > 2) throw new Error("quota hit"); // fails on var 2 stage 1
-        return { file_path: `${outputDir}/gen-${callIdx}.png`, cost_usd: 0.01 };
-      }),
-    } as unknown as AiGenerationClient;
+  it("skips analyze and brief when resuming from prompts", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "golf course",
+        resume_from_step: "prompts" as const,
+      },
+    });
+    await environmentAgent.execute(ctx, deps);
 
-    const deps = makeV2Deps({ aiClient: failSecondVarClient });
-    const result = await environmentAgent.execute(makeV2Ctx({ variationCount: 3 }), deps);
-    expect(result.status).toBe("FAILED");
-    if (result.status !== "FAILED") return;
-    expect(result.message).toContain("1 of 3 completed");
+    // Should only call generate_video_prompts.py — NOT analyze or brief
+    const calls = (deps.commandRunner.run as ReturnType<typeof vi.fn>).mock.calls;
+    expect(calls.length).toBe(1);
+    expect(calls[0][1][0]).toContain("generate_video_prompts.py");
   });
 });
 

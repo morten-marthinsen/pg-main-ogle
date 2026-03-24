@@ -818,6 +818,20 @@ Deep into the video.`;
 // ── IconikClient.getFilesStorage ─────────────────────────────────────────────
 
 describe("IconikClient.getFilesStorage", () => {
+  const origStorageId = process.env.ICONIK_STORAGE_ID;
+
+  beforeEach(() => {
+    process.env.ICONIK_STORAGE_ID = "be9c13ce-8dd3-11ec-8e6e-4eafb0a20354";
+  });
+
+  afterEach(() => {
+    if (origStorageId !== undefined) {
+      process.env.ICONIK_STORAGE_ID = origStorageId;
+    } else {
+      delete process.env.ICONIK_STORAGE_ID;
+    }
+  });
+
   it("returns storage id and method", async () => {
     const client = new IconikClient(TEST_CONFIG);
     mockFetch.mockResolvedValueOnce(
