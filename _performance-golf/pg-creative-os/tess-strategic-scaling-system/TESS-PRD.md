@@ -118,7 +118,7 @@ The Asset ID follows a 14-position format. Each position must be parsed into a s
 | 5 | Dimensions | F | `9x16`, `1080x1350` |
 | 6 | LengthTier | G | `30s`, `60s`, `180s`, `360s`, `360s+`, `xx` |
 | 7 | AdCategory | H | `nn`, `exv`, `exh`, `nnmu`, `prm`, `evg` (legacy: `ver`, `hor`) |
-| 8 | ExpansionType | I | `hs`, `ssr`, `dur`, `env`, `sp`, `dp`, `af`, `cf`, `xx` |
+| 8 | ExpansionType | I | `hs`, `hr`, `ssr`, `dur`, `env`, `sp`, `dp`, `af`, `cf`, `xx` |
 | 9 | AssetType | J | `pod`, `tlr`, `sad`, `bvo`, `avo` |
 | 10 | TalentCode | K | `haha`, `gamc`, `chog`, `mult` (4-letter codes; `mult` = 3+ talent actors) |
 | 11 | EditorInitials | L | `ca`, `jj`, `mm` (2-letter codes) |
@@ -348,6 +348,7 @@ When sufficient data exists, the system could recommend:
 | Code | Meaning |
 |------|---------|
 | `hs` | Hook Stack |
+| `hr` | Hook Refresh |
 | `ssr` | Scroll Stopper Refresh |
 | `dur` | Duration |
 | `env` | Environment |

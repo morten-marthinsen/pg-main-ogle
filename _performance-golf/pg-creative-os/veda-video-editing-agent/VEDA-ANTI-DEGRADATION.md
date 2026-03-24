@@ -55,7 +55,7 @@ BEFORE ANY PIPELINE OPERATION:
 
 ### Gate 4: Naming Convention Gate
 
-**Every Asset ID must comply with TESS-NAMING-CONVENTION.md v3.4.**
+**Every Asset ID must comply with TESS-NAMING-CONVENTION.md v3.10.**
 
 ```
 BEFORE GENERATING ANY ASSET ID:

@@ -65,7 +65,7 @@ After each phase report, also:
 
 1. **Root Angle Principle is sacred.** Every Script ID tests exactly ONE root angle. That binding is permanent and immutable. ALL expansions MUST preserve the root angle unchanged. If in doubt, ask the human. Never guess. A contaminated expansion makes the entire Script ID's performance data meaningless.
 
-2. **15-position naming convention compliance.** Every Asset ID must comply with TESS-NAMING-CONVENTION.md (v3.4). Position 7 (AdCategory) is the SOLE indicator of Net New vs Expansion — never use variation numbers for this. New assets use `exv`/`exh`, not legacy `ver`/`hor`.
+2. **15-position naming convention compliance.** Every Asset ID must comply with TESS-NAMING-CONVENTION.md (v3.10). Position 7 (AdCategory) is the SOLE indicator of Net New vs Expansion — never use variation numbers for this. New assets use `exv`/`exh`, not legacy `ver`/`hor`.
 
 3. **Human approval before external writes.** Enter plan mode before any change that modifies external systems (Iconik, Google Sheets, ClickUp). Show the plan, wait for approval.
 
@@ -94,7 +94,7 @@ After each phase report, also:
 
 | Reference | Location |
 |-----------|----------|
-| Naming Convention | `tess-strategic-scaling-system/TESS-NAMING-CONVENTION.md` (v3.4) |
+| Naming Convention | `tess-strategic-scaling-system/TESS-NAMING-CONVENTION.md` (v3.10) |
 | SSS Spreadsheet | ID: `1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U` |
 | Iconik API Docs | `tess-strategic-scaling-system/_reference/articles-training/iconik-rest-api/` |
 | Varg SDK | `https://github.com/vargHQ/sdk.git` (v0.4.0-alpha49) |

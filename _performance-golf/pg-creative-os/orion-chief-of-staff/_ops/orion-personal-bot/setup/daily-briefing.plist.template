@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Daily Briefing Pipeline — launchd template (macOS)
+  ===================================================
+  Runs the daily briefing pipeline at your configured times.
+  Replace all {{PLACEHOLDER}} values with your paths.
+
+  Default: 8:00am + 8:30am fallback (for late laptop opens).
+  Adjust StartCalendarInterval to match your schedule.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.performancegolf.{{BOT_NAME}}-briefing</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>{{DAILY_BRIEFING_DIR}}/.venv/bin/python3</string>
+        <string>{{DAILY_BRIEFING_DIR}}/daily_briefing.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>{{DAILY_BRIEFING_DIR}}</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+
+    <key>StartCalendarInterval</key>
+    <array>
+        <!-- Primary run -->
+        <dict>
+            <key>Hour</key><integer>8</integer>
+            <key>Minute</key><integer>0</integer>
+        </dict>
+        <!-- Fallback run (in case laptop wasn't open at 8am) -->
+        <dict>
+            <key>Hour</key><integer>8</integer>
+            <key>Minute</key><integer>30</integer>
+        </dict>
+    </array>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/{{BOT_NAME}}-briefing.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/{{BOT_NAME}}-briefing.err</string>
+</dict>
+</plist>

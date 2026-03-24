@@ -78,7 +78,8 @@ class SlackMonitorModule(BriefingModule):
             from .slack_helper import get_slack_client, fetch_unanswered_dms
             client = get_slack_client(self.env)
             lookback = mod_config.get("lookback_hours", 24)
-            messages = fetch_unanswered_dms(client, self.logger, lookback_hours=lookback)
+            exclude_names = mod_config.get("exclude_names", [])
+            messages = fetch_unanswered_dms(client, self.logger, lookback_hours=lookback, exclude_names=exclude_names)
             return {"messages": messages, "error": None}
         except Exception as e:
             self.logger.warning(f"[{self.key}] Slack fetch failed: {e}")

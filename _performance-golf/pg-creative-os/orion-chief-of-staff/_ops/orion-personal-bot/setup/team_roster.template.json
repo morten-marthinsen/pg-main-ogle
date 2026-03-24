@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "description": "Slack IDs and delegation context for team members you may delegate to. Copy to ../team_roster.json and fill in your team's details.",
+  "roster": {
+    "example_person_1": {
+      "name": "First Last",
+      "slack_id": "U0XXXXXXXXX",
+      "delegation_keywords": ["keyword1", "keyword2", "keyword3"]
+    },
+    "example_person_2": {
+      "name": "First Last",
+      "slack_id": "U0XXXXXXXXX",
+      "delegation_keywords": ["keyword1", "keyword2"]
+    }
+  }
+}

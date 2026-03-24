@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Pre-Call Nudge — launchd template (macOS)
+  ==========================================
+  Runs every 5 minutes. checkin.py --precall enforces Mon-Fri 9am-6pm internally
+  and deduplicates nudges per calendar event via .checkin-state.json.
+  Replace all {{PLACEHOLDER}} values with your paths.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.performancegolf.{{BOT_NAME}}-precall</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>{{BOT_DIR}}/.venv/bin/python3</string>
+        <string>{{BOT_DIR}}/checkin.py</string>
+        <string>--precall</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>{{BOT_DIR}}</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin</string>
+        <key>PYTHONPATH</key>
+        <string>{{BOT_DIR}}:{{DAILY_BRIEFING_DIR}}</string>
+    </dict>
+
+    <!-- Runs every 5 minutes -->
+    <key>StartInterval</key>
+    <integer>300</integer>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/{{BOT_NAME}}-precall.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/{{BOT_NAME}}-precall.err</string>
+</dict>
+</plist>

@@ -3,19 +3,19 @@
 ## Build State
 
 ```yaml
-version: 10.4
-last_session: 102
-last_date: 2026-03-16
-status: "S102 — Daily report outage fixed (3-day gap 3/14-3/16, WiFi-after-sleep retry added). Triage executed (4 rescheduled, 4 done, registry 373). B→A priority guard: synthetic scores respect tier boundaries (B=0.34 < A threshold 0.35), ClickUp due-tomorrow exception. Calendar cross-ref upgraded to entity-aware keyword matching. Feedback memory saved. Follow-up: real auto-approve (Phase 2), Inferred Tasks rename (Phase 3). Day 35/90."
+version: 10.12
+last_session: 120
+last_date: 2026-03-24
+status: "S120 — RS1 + SF2 CLM full update from team feedback (B4/B5/B6). SF2: pricing fixed ($299/$349), launch date → March 25, SF1 pause timing, 30+ funnel URLs, animation note. RS1: 12 asset URLs from Jenni's matrix, URL registry +7 entries. Both: Section 7b Influencer/UGC added. HTML boards + Surge deployed (3 URLs). M14 Production Sync built — ClickUp Production Calendar → registries → CLM sync → Surge auto-deploy. Gerry Carry UGC footage confirmed delivered."
 
 # 30/60/90 Status
-day_count: 35
+day_count: 43
 next_checkpoint: "Day 60 — 2026-04-10"
 russ_exit: "~2026-02-19 (Wed) — DONE"
 
 # Ops Status
-daily_briefing: "v2.1.0 — Network retry fix (6x 10s for WiFi-after-sleep). Calendar cross-ref upgraded to entity-aware keyword matching. B→A priority guard (synthetic scores respect tier boundaries). 16 modules, 0 failures."
-completed_registry: "LIVE — 373 entries, Phase 4-5 DONE. Staleness rule active (21d penalty, 35d hard reject)."
+daily_briefing: "v2.4.0 — M14 Production Sync added (S120). ClickUp Production Calendar → registries → CLM sync → Surge deploy chain. 19 modules total. Launchd schedule: 8:00am + 8:30am fallback. Network retry (6x 10s). B→A priority guard."
+completed_registry: "LIVE — 375 entries (mi-052/053 added S119). Staleness rule active (21d penalty, 35d hard reject)."
 persistent_actions: "LIVE v2.1 — Multi-factor ABC, 3 A-task cap, week-ahead Mon-Fri, capacity headers + Why column with PRD alignment tags."
 transcript_intelligence: "LIVE — 137 transcripts processed (60 legacy + 77 extracted). M9 MAX_TRANSCRIPTS_PER_RUN fixed to 3."
 transcript_sync: "LIVE — ClickUp API (5 min) + Fathom API (30 min), both launchd auto-sync. Plists updated to orion paths (S058)."
@@ -24,7 +24,7 @@ neco_autonomous: "LIVE v1.0 — nightly 10pm, quality gates working."
 gmail_oauth: DONE
 slack_bot: "UPGRADED — chat:write scope added to 'Orion - PG Creative Intel' (A0AH9B47PCY). M4/M5 live. slack_post_message allowlisted in Claude Code."
 slack_interface: "IN PROGRESS — Design decisions locked (S069): multi-turn Slack threads, DM to bot user, auto user-ID via Slack API, Slack-default output + optional Google Doc write. Needs: Slack Bolt app deployment (Railway/Render), Claude API key, Google OAuth for server. Plan: ~/.claude/plans/virtual-juggling-grove.md"
-orion_personal_bot: "LIVE v4.1 — Vision OCR added for image-based PDFs (S099b). When PyMuPDF text extraction yields <50 chars, renders pages as PNG and sends to Haiku Vision for OCR. Also fixed: pymupdf/python-docx installed into bot .venv (was system Python only), message re-fetch for file detection, debug logging. Vision OCR extracted 274 chars on test but Haiku agent didn't use it — DEBUGGING IN PROGRESS (see S099b next steps). 8 tools, 2 message shortcuts."
+orion_personal_bot: "LIVE v5.0 — S109: schedule write verification added (create_task now re-reads and confirms entry landed in data['schedule']). Hourly check-in live: delegation_engine (agent-first routing), checkin_state (codes + strike counts), checkin.py (task pulse + calendar + delegation ideas). 13 tools total: +fix_schedule, +trigger_checkin, +resolve_checkin_code, +send_slack_dm. Team roster: 4 Slack IDs. 2 new launchd plists (checkin + precall). 2 message shortcuts."
 orion_team_bot: "CREATIVE ADVISOR v2.1 LIVE — Google Docs formatting + revision rules added to system prompt (S092). Redeployed to Railway. 14 tools. Brixton intro sent. Plan: ~/.claude/plans/witty-baking-twilight.md"
 google_docs_mcp: "VERIFIED WORKING — @a-bonus/google-docs-mcp loads correctly. Tools available (readDocument, listTabs, etc.)."
 slack_webhook: "LIVE — Orion Daily Briefing app (A0AFW0Y3Z39), DM to Christopher only. .env SLACK_WEBHOOK_URL set."
@@ -32,9 +32,11 @@ google_calendar_mcp: "LIVE — M12 LIVE, Calendar API v3 with calendar.events sc
 triage_auto_approve: "LIVE — threshold 0.80, auto-approved items shown in M00 transparency list + M00a alerts."
 reconcile_cli: "NEW — python3 reconcile.py for end-of-day task reconciliation (d/r/s/a/q commands)."
 daily_snapshot: "NEW — .kb-daily-snapshot.json saved each run for What Changed delta tracking."
+triage_writer: "NEW — python3 triage_writer.py CLI for atomic triage persistence (reject/complete/schedule/batch/add-task). Replaces manual JSON editing. MANDATORY at end of every triage session."
+calendar_agenda: "NEW — python3 calendar_agenda.py CLI for adding agenda items to calendar events without notifying attendees (sendUpdates=none)."
 
 # Next Session (P0)
-next_session: "S103 — (1) Real auto-approve: make auto-approve write to KB (status→open, schedule date, priority tier). (2) 'Auto-Placed This Run' report section + 'Inferred Tasks' rename. (3) Post-John-call: integrate 30-Day Review feedback. (4) Push 30-Day Review to Google Doc. (5) Waiting On staleness filter."
+next_session: "S121 — (1) Verify M14 production sync runs clean in tomorrow's 8am pipeline. (2) RS1 Personas workstream (Section 4) — before Thu March 26 pre-production sync call. (3) SF2 CLM v2 feedback + Figma horizontal. (4) Verify entity-first calendar matching in pipeline run."
 
 # Active Challenges
 unresolved_block: []
@@ -187,6 +189,41 @@ Append-only history. New sessions are appended as they complete. Not required re
 | Weekly Update | End of week, "generate the update" | Creative Lead Update for John |
 | Handoff | Session end | Update Build State in this file |
 | Communications | `/wise-reply`, "help me respond" | Stakeholder-aware drafts (2-3 options + risk). Gate 3: DRAFTS ONLY. |
+| Triage | "let's triage", opening daily report | Two-pass triage workflow (see below). |
+
+### Triage Mode (Two-Pass Daily Brief)
+
+M00a ("Today at a Glance") shows orientation only — capacity, meetings, what changed, alerts. Tasks live exclusively in M0 (Action Items Tracker), which renders after Pending Review. This forces triage-first behavior.
+
+**Pass 1 — Triage conversation:**
+1. Read today's report from `_ops/daily-reports.nosync/{month}-{yy}-reports/{date}.md`
+2. Present M0b Pending Review items for Christopher's decisions
+3. After collecting all decisions, persist via `triage_writer.py` (MANDATORY — never end a triage session without running this):
+   ```bash
+   cd _performance-golf/pg-creative-os/orion-chief-of-staff/_ops/daily-briefing
+   python3 triage_writer.py batch --session S{NNN} <<'EOF'
+   {
+     "reject": ["ai-xxx", ...],
+     "complete": ["ai-yyy", ...],
+     "schedule": [{"id": "ai-zzz", "date": "2026-03-23", "priority": "B"}, ...],
+     "add_tasks": [{"text": "New task description", "date": "2026-03-20", "priority": "A"}]
+   }
+   EOF
+   ```
+   This atomically writes to `.kb-approvals.json`, `.kb-completed-registry.json`, `.kb-schedule.json`, `.kb-priorities.json`, and `.kb-triage-history.json` in one operation. **Never edit these JSON files manually.**
+   To look up item IDs, search `.transcript-kb.json` for the item text.
+
+**Pass 2 — Report rewrite:**
+When Christopher says "update the report":
+1. Read the report markdown
+2. Replace content between `<!-- M0b:START -->` and `<!-- M0b:END -->` with collapsed triage summary
+3. Replace content between `<!-- M0:START -->` and `<!-- M0:END -->` with updated Action Items Tracker reflecting all triage changes
+4. Write the file back in-place — this is the working brief for the day
+
+**Reason code taxonomy** for `record_decision()`:
+`piggyback_meeting`, `delegation`, `already_done`, `waiting_on_input`, `urgent_deadline`, `routine_scheduling`, `not_my_task`, `wrong_owner`, `automated_task`, `stale`, `calendar_crossref`
+
+**North Star**: Each triage decision trains Orion's pattern recognition. Over time, `auto_placement_candidates()` surfaces patterns with 3+ consistent decisions — these become auto-placement rules that reduce triage to a 30-second confirmation.
 
 ---
 

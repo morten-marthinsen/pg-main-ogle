@@ -2,7 +2,7 @@
 
 > Compressed historical sessions. For recent sessions, see `SESSION-LOG.md`.
 > Archive created: Session 013 (2026-02-09). Sessions 001-009 moved here.
-> Last updated: Session 093 (2026-03-13). Sessions 074c-089 archived.
+> Last updated: Session 117 (2026-03-22). Sessions 104-112 archived.
 
 ---
 
@@ -102,6 +102,32 @@
 | 087 | 2026-03-12 | Team bot creative advisor — planning | Product catalog mapped (14 products), 5-phase plan, user profiles + context-first workflow designed |
 | 088 | 2026-03-12 | Save Context shortcut — design + plan | 5 storage layers mapped, context-library/ design locked, 4-phase plan approved |
 | 089 | 2026-03-12 | Team bot creative advisor — EXECUTION | Phase 1-5 all complete. 14 tools (6 data + 5 creative + 3 Google Docs). Haiku→Sonnet. Deployed to Railway |
+| 090 | 2026-03-12 | Save Context shortcut — EXECUTION | Context library + kb_ops helper + agent tool + bot shortcut handler. 7 tools. Code complete |
+| 091 | 2026-03-12 | Save Context — Slack config + go live | Shortcut created in Slack, E2E test passed. Gap: bot can't read Google Doc content |
+| 092 | 2026-03-12 | Personal bot Google Doc fix + Team bot Docs rules + Brixton intro | Per-message URL injection prompt. Team bot formatting/revision rules. Brixton intro sent |
+| 093 | 2026-03-13 | Session log compression (6th) + Brixton intro + relationship capture | S074c-S089 archived. Working-relationship entry saved for Brixton |
+| 094 | 2026-03-13 | SF2 Launch Board — Figma board design & plan | 10-section structure locked. Orion owns launch boards. 3 memory files saved |
+| 095 | 2026-03-13 | SF2 Launch Board — Sections 1-3 content | Product Overview, Brand Thread Alignment, Research & VSL Messaging. Key Language table |
+| 096 | 2026-03-13 | SF2 Launch Board — Sections 4-6 | Personas 9→5 consolidated. Creative Matrix. Email/Backend Alignment |
+| 097 | 2026-03-13 | SF2 Launch Board — Sections 7-10 | Production, Launch Phase 1-3. All 10 sections complete |
+| 098 | 2026-03-13 | Personal Bot v4.0 — PDF/Word support + git sync | 41 files committed. PyMuPDF + python-docx. files:read scope added |
+| 099b | 2026-03-13 | Personal Bot — PDF E2E + Vision OCR | Image-based PDF OCR pipeline built (PyMuPDF→PNG→Haiku Vision). Agent not using extracted text |
+| 100 | 2026-03-13 | Triage Intelligence P0 + daily triage | Cross-reference filter LIVE. Auto-reconcile 31 items. Registry at 367 |
+| 101 | 2026-03-13 | SF2 Board — Full Figma build (Phase 6) | HTML board built, captured to Figma. John Hardesty VM feedback → 5 gaps addressed |
+| 101b | 2026-03-13 | SF2 Board — CEO card, vertical Figma, Surge prep | Section 00 "Brixton Start Here". Vertical variant. Deploy dir created |
+| 101c | 2026-03-13 | 30-Day Review markdown + Christopher feedback | 10 corrections applied. Brand deposit map ≠ SF2 board (key distinction) |
+| 102 | 2026-03-16 | Completed registry expansion + pipeline fixes | 373 entries. B→A guard, entity-aware calendar cross-ref. M9 MAX_TRANSCRIPTS fixed to 3 |
+| 104 | 2026-03-16 | PG1 Member Pricing checkout template | Digital checkout WPSS: $197 non-member / $97 member. PG1 = delivery vehicle. 3 Figma iterations |
+| 105 | 2026-03-17 | PG1 Voluntary Checkout — 4-page build | WPSS + 357 checkouts (Step 1 + Step 2). $29/mo PG1. April 6 deadline. All in Figma |
+| 106 | 2026-03-18 | Pipeline crash fix + 8:30am fallback + compression | check_network() logger fix. Launchd 8:00+8:30am. 7th compression (S090-S102) |
+| 107 | 2026-03-18 | Triage-first daily brief | M00a task rendering removed. Triage decision log extended (6 fields, 3 queries). Two-pass workflow documented |
+| 108 | 2026-03-18 | Sales page member/non-member pricing | WPSS + 357 full page clones with pricing choice CTA. Clone-don't-rebuild approach. 2 Figma frames |
+| 109 | 2026-03-18 | Personal bot schedule bug fix + hourly check-in | Silent write bug fixed (JSON top-level vs nested). Post-write verification. Check-in + pre-call plists |
+| 110 | 2026-03-19 | SF2 CLM v2 — full content refresh | 10→13 sections. E-com pivot (no VSL). $349 non-member pricing. Deployed pg-sf2-board-v2.surge.sh |
+| 111 | 2026-03-19 | Sales page Pricing Option Structure | Two-box radio selector (Thriver-inspired). 357 + WPSS. 4 feedback rounds. 3 Figma frames |
+| 112 | 2026-03-19 | RS1 CLM — full 12-section board build | 1,043-line content doc. 122KB HTML. 5 influencer themes locked with Donnie. Deployed pg-rs1-board.surge.sh |
+| 101c-b | 2026-03-13 | SF2 Board — Surge deploy + John gap sections | Deployed to pg-sf2-board.surge.sh. S4 Campaign Strategy + S9 Asset Registry added. 13 sections |
+| 102 | 2026-03-16 | Daily report outage fix + triage + pipeline upgrades | WiFi retry in check_network(). B→A priority guard. Entity-aware calendar cross-ref. Registry 373 |
 
 ---
 
@@ -369,6 +395,33 @@
 - **`_shared/context-library/`** — committed, available to all agents.
 - **Same propose-then-confirm DM flow** as Create Orion Task shortcut.
 
+### Session 092 — Prompt Injection Over Model Upgrade
+- **Per-message URL injection** rather than Haiku→Sonnet upgrade for Save Context Google Doc flows. Cheaper and more reliable.
+- **Replace-not-append for doc revisions** — team bot overwrites originals, doesn't create "revised" sections.
+
+### Session 094 — SF2 Launch Board Architecture
+- **Orion owns launch boards** (not Neco) — cross-functional strategic alignment is Orion's domain.
+- **5 personas per launch** (not 9) — each batch 1 variation targets one persona.
+- **Phase 1 expansions = hook stacks ONLY** (vertical). No horizontal environment changes.
+- **Phase 2 trigger = calendar-based** (2 weeks post-launch).
+- **3 launch phases**: Launch → Expansion & Optimization → Page & Funnel Optimization.
+
+### Session 096 — Persona Selection
+- **P5 Comeback Golfer > P9 Competitive Amateur** for launch persona #5. Market size, self-identification fit, emotional potency all favor Comeback Golfer.
+
+### Session 101 — Launch Board Build Method
+- **HTML → Figma Capture (via MCP)** — HTML file is portable artifact and future skill template.
+- **Board is proof of concept** for reusable SOP addressing John's campaign alignment + asset visibility gaps.
+
+### Session 101c — Brand Deposit Map Distinction
+- **Brand deposit map ≠ SF2 launch board.** SF2 = campaign alignment + asset visibility. Brand deposit map (influencer program, organic content) = separate unbuilt deliverable.
+- **Document framing**: Not about proving himself → about showing progress and stepping up to free John for higher-level work.
+
+### Session 102 — Priority Guard Architecture
+- **B→A boundary**: Synthetic scores must respect tier boundaries (B=0.34 < A threshold 0.35). No silent auto-promotion.
+- **ClickUp due-tomorrow exception**: Only case where B auto-promotes to A, with Why column note.
+- **Entity-aware calendar cross-ref**: Offer names (SF2, RS1, etc.) + keyword overlap replace character-sequence matching.
+
 ### Session 030-031 — Neco Autonomous Architecture
 - **Hybrid project state approach**: `project-state.yaml` in Neco root (machine-readable). Runner reads 3 sources: ClickUp tasks + project-state.yaml + reference files.
 - **Smart evaluation logic**: 5 scenarios — new work, LOCKED (skip), human_review (skip), IN_PROGRESS (continue), dependency-blocked (skip).
@@ -472,6 +525,22 @@
 | 087 | — | — (planning only) |
 | 088 | — | — (planning only) |
 | 089 | context/product-catalog.md, creative-frameworks.md, users/brixton.md (team-bot) | agent.py, data_sources.py (team-bot: creative tools + Google Docs) |
+| 090 | _shared/context-library/.gitkeep | kb_ops.py (save_context_file), agent.py (save_context tool), bot.py (shortcut handler) |
+| 091 | — | CLAUDE.md (Build State v9.2) |
+| 092 | — | bot.py (Google Doc URL extraction), agent.py (team-bot Docs rules) |
+| 093 | — | SESSION-LOG-ARCHIVE.md (compression), SESSION-LOG.md |
+| 094 | _ops/launch-boards/sf2/, 3 memory files | — |
+| 095 | sf2-launch-board-content.md (Sections 1-3) | CLAUDE.md (v9.4) |
+| 096 | — | sf2-launch-board-content.md (Sections 4-6), CLAUDE.md (v9.5) |
+| 097 | — | sf2-launch-board-content.md (Sections 7-10), CLAUDE.md (v9.6) |
+| 098 | — | bot.py (PDF/Word support), agent.py (file markers), requirements.txt |
+| 099b | — | bot.py (Vision OCR, message re-fetch, debug logging) |
+| 100 | 2026-03-13-chris-f-call-prep.md | triage_intelligence.py (filter_already_handled), m0b_pending_review.py, .kb-completed-registry.json |
+| 101 | sf2-launch-board.html | CLAUDE.md (v10.0) |
+| 101b | sf2-launch-board-figma.html, deploy/ | sf2-launch-board.html (Section 00), CLAUDE.md (v10.1) |
+| 101c | 031426-30-day-review-alignment-brief.md | CLAUDE.md (v10.2) |
+| 101c-b | — | deploy/index.html (new sections, font bumps, renumbering), CLAUDE.md (v10.3) |
+| 102 | feedback_task_placement_rules.md | daily_briefing.py (check_network retry), capacity_engine.py (B→A guard), triage_intelligence.py (entity-aware) |
 
 ---
 
@@ -528,3 +597,15 @@
 | Team bot creative advisor upgrade | S087 | S089 | Product catalog, creative frameworks, user profiles, 14 tools, Sonnet, Google Docs. Railway deployed. |
 | Save Context shortcut | S088 | S091 | Design → code → Slack config → LIVE. context-library/ + kb_ops + agent tool + bot handler. |
 | Session log compression (6th) | S093 | S093 | S074c-S089 archived. |
+| Save Context — Google Doc + E2E | S091 | S092 | Per-message URL injection. Google Doc reading gap closed. |
+| SF2 Launch Board — Full build | S094 | S101c-b | 10→13 sections, HTML+Figma+Surge, John VM feedback integrated, CEO card, 30-Day Review |
+| Personal Bot v4.0-4.1 | S098 | S099b | PDF/Word support, Vision OCR. Agent extraction gap remaining. |
+| Triage cross-reference filter | S100 | S100 | filter_already_handled() checks tracker + calendar + ClickUp. |
+| Completed task registry expansion | S102 | S102 | 373 entries. B→A guard, entity-aware calendar. |
+| Session log compression (7th) | S106 | S106 | S090-S102 archived. |
+| PG1 Voluntary Pricing — checkouts + sales pages | S104 | S111 | 4 checkout pages + 2 sales pages + Pricing Option Structure template. $29/mo PG1. April 6 deadline. Figma file geD8wYoIthYpFCGXbs29hk |
+| Triage-first daily brief | S107 | S107 | M00a stripped of tasks. Two-pass triage workflow. Reason code taxonomy (11 codes) |
+| Personal bot v5.0 — schedule verification + check-in | S109 | S109 | Silent schedule write bug fixed. Post-write verification. Hourly check-in + pre-call nudge. 13 tools total |
+| SF2 CLM v2 | S110 | S110 | 10→13 sections. E-com pivot. $349 non-member. 5 Key Themes. Surge deployed |
+| RS1 CLM v1 | S112 | S112 | 12 sections, 9 features, 5 influencer themes. Ecomm copy = primary source (Donnie). Surge deployed |
+| Session log compression (8th) | S117 | S117 | S104-S112 archived. |

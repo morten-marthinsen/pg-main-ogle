@@ -1,10 +1,10 @@
 # Neco — The NeuroCopy Agent — Session Log
 
-session_id: Neco-2026-03-11-v2.0-S045-BrixtonSocial-FounderVoice
-session_number: 045
+session_id: Neco-2026-03-24-v2.0-S047-SF2-NLCStaticReviewR2
+session_number: 047
 owner: Christopher Ogle
 started: 2026-02-07
-last_updated: 2026-03-11
+last_updated: 2026-03-24
 version: "2.0"
 
 ## Build State (per-project)
@@ -77,6 +77,18 @@ version: "2.0"
 - **S042 decisions**: (1) Comeback King renamed → The Fading Competitor (research: 95% active golfers, not comeback). (2) First from the Fairway selected as hero persona (social wound = #1 purchase trigger, matches active buyer behavior, strongest visual narrative for 90-120s social). (3) Fading Competitor's identity-erosion psychology powers the body of every ad; hero persona is the hook entry point.
 - **Next**: Source SPD VSL body copy, then write Script 1 — "Fast AND Straight" body angle, First from the Fairway hero, 5 persona hooks, three-column production format (Sub-Agent #5 protocol).
 
+### SF2 Static Ad Reviews (NLC)
+- **Status**: ROUND 2 REVIEWED — B/C copy changes written to Google Doc, ready for NLC
+- **Last touched**: S047
+- **Files**:
+  - `_projects/static-reviews/sf2/NLC-CREATIVE-REVIEW-R1-2026-03-18.md` (R1 report)
+  - `_projects/static-reviews/sf2/NLC-CREATIVE-REVIEW-R2-2026-03-23.md` (R2 report)
+  - `_projects/static-reviews/sf2-agency-copy-brief.md` (living copy brief — A+B+C)
+  - Google Doc: `1whrOrZY_TdHKTvw9k9oA4Mic3q6JW7eW581Gcg922xs`
+- **Critical flag (STILL OPEN)**: "Square-Speed Aero Head™" appeared in 5/10 R2 ads (B3, B5, C2, C3, C5). Correct name: "Slice-Fix SpeedTech™". Agency template still not updated.
+- **R2 summary**: 3 headlines replaced (B1→"Titanium Tames The Toe", B3→"Bad Swing? Good Drives", B5→"Stop Diagnosing Your Slice. Start Curing It."), all 10 bodies rewritten for sales page congruence, absolute claims removed (B4, B5), C series rewritten from engineering specs to consumer copy.
+- **Next**: NLC applies B/C copy changes → delivers all dimensions → final QA before launch.
+
 ### Brixton Social Content — Personal IG
 - **Status**: ROUND 1 DELIVERED — revised scripts in Google Doc, awaiting Brixton's final accept
 - **Last touched**: S045
@@ -88,6 +100,85 @@ version: "2.0"
 > **For history**: Sessions 001-036 archived in `SESSION-LOG-ARCHIVE.md`.
 > **Note**: S023 happened (resolved 3 sf2-0002 decisions, locked body v4) but was not logged. sf2-0002-body-v4-LOCKED.md confirms.
 > **Note**: S039-S040 happened in Obsidian vault (persona workshop + Figma handoff). Migrated to GitHub in S041.
+
+---
+
+## Session 047 — 2026-03-24 (SF2 — NLC Static Review R2: B & C Series Copy Gate)
+
+```yaml
+session_047:
+  date: 2026-03-24
+  session_id: Neco-2026-03-24-v2.0-S047-SF2-NLCStaticReviewR2
+  status: COMPLETE
+
+  context: |
+    NLC delivered Round 2: 10 new static ad images (B1-B5, C1-C5) for SF2.
+    New concepts (not revisions of R1). One dimension per concept (1200x1200)
+    for copy approval before scaling to all ad dimensions.
+    Brief (via Chris Fleeks) had copy not congruent with SF2 sales page.
+    "Blackfish Media" in filenames = PG (client name in NLC's system).
+
+  phases:
+    - "Phase 1: Copied 10 images from ~/Downloads to _projects/static-reviews/sf2/nlc-sf2-review-r2/. Read all 10 images visually."
+    - "Phase 2: Loaded SF2 PDP sales page copy, SF1 winning angles, R1 A-series feedback as sources of truth."
+    - "Phase 3: Reviewed all 10 ads against 5 criteria — sales page congruence, R1 compliance, SF1 proven angles, brand/copy quality, creative effectiveness."
+    - "Phase 4: Generated R2 review report (NLC-CREATIVE-REVIEW-R2-2026-03-23.md)."
+    - "Phase 5: Created living agency copy brief (sf2-agency-copy-brief.md) — B/C section + A section in one doc."
+    - "Phase 6: Wrote B/C copy changes into Google Doc (1whrOrZY_TdHKTvw9k9oA4Mic3q6JW7eW581Gcg922xs) for NLC delivery."
+
+  deliverables:
+    - "_projects/static-reviews/sf2/NLC-CREATIVE-REVIEW-R2-2026-03-23.md"
+    - "_projects/static-reviews/sf2-agency-copy-brief.md (renamed from sf2-a1-a5, now living doc)"
+    - "Google Doc updated with B1-C5 copy changes"
+
+  decisions:
+    - "CRITICAL REPEAT: 'Square-Speed Aero Head™' still in 5/10 ads — agency template not updated from R1."
+    - "C series flagged as brief-level issue (PG owns): engineering spec language, not consumer copy."
+    - "3 headlines replaced: B1→'Titanium Tames The Toe' (from PDP), B3→'Bad Swing? Good Drives' (from PDP), B5→'Stop Diagnosing Your Slice. Start Curing It.' (from R1 A4)."
+    - "All 10 bodies rewritten for sales page congruence — every rewrite sourced from SF2 PDP or SF1 proven angles."
+    - "B4 absolute claim 'Every swing.' → 'Swing after swing.' (same fix as R1)."
+    - "B5 absolute claim 'Every slice cause, cured' removed entirely."
+    - "Feature count confirmed as 7 (matching Google Doc A-series), not 6."
+    - "All CTAs preserved: B series = 'STOP SLICING TODAY' (cold), C series = 'SHOP SF2' (warm/retarget)."
+```
+
+---
+
+## Session 046 — 2026-03-18 (SF2 — NLC Static Creative Review + Skill)
+
+```yaml
+session_046:
+  date: 2026-03-18
+  session_id: Neco-2026-03-18-v2.0-S046-SF2-NLCStaticReview
+  status: COMPLETE
+
+  context: |
+    NLC/Blackfish Media delivered Round 1 static ad batch for SF2.
+    60 files across 15 unique concepts (A1-A5, B1-B5, C1-C5) in 7 dimensions.
+    Three root angles: The Club Does the Work (A), Straight and Long (B),
+    Engineered to End Your Slice (C). Brief sourced from Google Doc.
+
+  phases:
+    - "Phase 1: Set up review infrastructure — created nlc-sf2-review folder under Neco, moved 60 files via Finder."
+    - "Phase 2: Loaded brief from Google Doc, loaded PG brand refs + SF2 product specs, grouped 15 unique concepts, reviewed all images visually."
+    - "Phase 3: Generated structured feedback report — brief-level issues, must-fix execution issues, should-fix, what's working, correction table, recurring patterns."
+    - "Phase 4: Built static-ad-review skill to make this workflow reusable for future agency batches."
+    - "Phase 5: Created _projects/static-reviews/ directory structure, moved report to canonical location."
+
+  deliverables:
+    - "_projects/static-reviews/sf2/NLC-CREATIVE-REVIEW-R1-2026-03-18.md"
+    - "~/.claude/skills/static-ad-review/SKILL.md (new reusable skill)"
+
+  decisions:
+    - "CRITICAL: 'Square-Speed Aero Head™' in brief is the WRONG mechanism name — correct is 'Slice Fix Speed Technology™'. Flagged as brief-level issue (PG owns, not NLC)."
+    - "A2 uses 'Anti-Slice Speed Geometry Design' — incorrect feature name, should be 'Speed Geometry Toe Slot'."
+    - "B4 'Every swing' = absolute claim, flagged for softening."
+    - "Series B missing ///SF2 logo lock-up across all 5 ads."
+    - "A5 + B3 share identical headline — data split risk flagged."
+    - "A3 1200x1200 file is corrupted/empty — re-delivery required."
+    - "Report split into Brief-Level Issues (PG owns) vs Execution Issues (agency owns) — this structure locked into skill for all future reviews."
+    - "Static-reviews output path: neco-neurocopy-agent/_projects/static-reviews/{product}/"
+```
 
 ---
 

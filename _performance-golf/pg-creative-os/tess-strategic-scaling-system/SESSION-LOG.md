@@ -8,10 +8,10 @@
 ## Build State
 
 ```yaml
-session_number: 164
-last_updated: 2026-02-23
-version: "3.10"
-current_phase: S164 IN PROGRESS — Root Angle lookup complete (681/1102 updated). coha Google Doc add pending.
+session_number: 166
+last_updated: 2026-03-24
+version: "3.11"
+current_phase: S166 COMPLETE — Added Hook Refresh (hr) expansion type. Three-way sync complete (markdown + SSS Lookup Tables + Google Doc).
 
 sheet: "1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U" | Ad Level Tracking | 1102 rows (Jan 1–Feb 22, reset from full CSV) | Asset Registry | 776 rows | Raw_Daily_Data | 33,693 rows (Jan 1–Feb 22, 2026 — FULLY CURRENT)
 counts: W:35 P:161 U:359 T:441 | angles_clickup:149 angles_ref:3389 | assets:1102 | registry_assets:776 | root_angle_filled:681 root_angle_blank:421
@@ -40,6 +40,33 @@ next:
   5. [NOTE] 421 assets have no Root Angle (funnels not in ClickUp AD_DELIVERY_LIST_ID: 357/83, ossf/59, wpss/51, sf1/49, clst/44, ssts/38, pss/21, dqfe/18, gbf/16, pgf/10).
   6. [NOTE] pmax/microsoft/search ad rows are PERMANENTLY excluded by funnel filter + carryover filter. 357-0073-v0005 all-time spend is $14,524 (benchmark was ~$12,900 from pre-fix data — difference expected).
 ```
+
+---
+
+## Session 166 — 2026-03-24 — Hook Refresh (HR) Expansion Type + Three-Way Sync Rule
+
+**Date**: 2026-03-24
+**Status**: COMPLETE
+
+### What Happened
+- **New expansion type**: Added Hook Refresh (`hr`) — vertical expansion that refreshes the existing hook on a winning asset with new creative content (same position, new execution). Distinct from Hook Stack (`hs`) which stacks a new hook in front of the existing asset. Body and CTA unchanged (isolation principle).
+- **Markdown updates** (5 files): `TESS-NAMING-CONVENTION.md` (code table, operational definitions, exv description), `TESS-PRD.md` (inline enum + code table), `TESS-MICRO-SKILLS.md` (validation enum), `TESS-SUB-AGENTS.md` (schema enum + count 8→9), `TESS-MASTER-AGENT.md` (inline enum).
+- **SSS Google Sheet**: Added `hr` | Hook Refresh to Lookup Tables tab (P31:Q31). Updated header count 10→11. Domo will now resolve `hr` to "Hook Refresh".
+- **Google Doc** (`1q6Tm7XEukyq5ssYConJV0EoPXuGyYoWTsQW_4ivCAjA`): Deleted and re-inserted both expansion type tables (code table + operational definitions) with HR row. Updated exv description. Bumped version 3.7→3.11 with changelogs for v3.8–v3.11. Approach: `readDocument(json)` → Python index extraction → `deleteRange` → `insertTableWithData`.
+- **Three-way sync rule**: Added mandatory Change Management section to `TESS-NAMING-CONVENTION.md` and structural gate to `CLAUDE.md`. Any code table change must propagate to all three locations (markdown → SSS Lookup Tables → Google Doc). Full Google Doc ID now recorded.
+- **Version bump**: Naming Convention v3.10 → v3.11.
+
+### Files Changed
+- `TESS-NAMING-CONVENTION.md` — hr code table row, operational definition, exv description, Change Management section, version 3.11
+- `TESS-PRD.md` — hr in inline enum (line 121) + code table
+- `TESS-MICRO-SKILLS.md` — hr in validation enum (line 125)
+- `TESS-SUB-AGENTS.md` — hr in schema enum (line 220), expansion type count 8→9 (line 710)
+- `TESS-MASTER-AGENT.md` — hr in inline enum (line 1366)
+- `CLAUDE.md` — Code Table Three-Way Sync structural gate
+
+### External Changes
+- SSS Google Sheet → Lookup Tables tab: P19 count 10→11, P31:Q31 = hr | Hook Refresh
+- Naming Convention Google Doc: Code table (12 rows), Operational Definitions table (11 rows), exv description, title v3.11, changelog v3.8–v3.11
 
 ---
 
