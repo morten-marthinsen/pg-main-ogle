@@ -1,0 +1,205 @@
+# Daily Executive Briefing Configuration — Template
+# ==================================================
+# Copy this file to config.yaml and fill in your values.
+# Lines marked [SETUP] require your input. Everything else works out of the box.
+
+report:
+  output_dir: "../daily-reports"  # Base dir; script auto-creates monthly subfolders
+  timezone: "America/New_York"       # [SETUP] Your company's primary timezone (for Google Calendar API)
+  display_timezone: "America/New_York"  # [SETUP] Your local timezone for display (e.g., "Europe/London", "US/Pacific")
+
+ai:
+  model: "claude-sonnet-4-20250514"  # Anthropic model for AI-generated sections
+  max_tokens_per_module: 2000
+
+clickup:
+  exclude_statuses:
+    - approved
+    - closed
+    - done
+    - complete
+    - live
+
+modules:
+  # ── Core Modules (no external setup needed) ──
+
+  m00a_today_summary:
+    enabled: true
+    description: "Executive summary — Today at a Glance with time-slotted A/B/C tasks, capacity alerts, launch countdowns, and delta tracking"
+    setup_required: "---"
+
+  m00_overnight_summary:
+    enabled: true
+    description: "Receipt of transcripts processed overnight — names, item counts, flags"
+    setup_required: "---"
+
+  m0b_pending_review:
+    enabled: true
+    description: "Staging area for newly extracted action items — review and approve before they enter the main tracker"
+    setup_required: "---"
+
+  m0_persistent_actions:
+    enabled: true
+    description: "Persistent action items tracker — reads KB + manual items, groups by owner, flags overdue/stale. Items persist until explicitly resolved."
+    setup_required: "---"
+
+  m1_automation_scanner:
+    enabled: true
+    description: "Reviews task load, suggests automation/delegation opportunities"
+    setup_required: "---"
+    max_task_detail_fetch: 10
+
+  # ── Gmail Modules (require Gmail OAuth) ──
+
+  m2_golf_industry_intel:
+    enabled: false  # [SETUP] Enable after running: python3 setup/gmail_auth.py
+    description: "Parses Google Alert emails, summarizes industry news"
+    setup_required: "Gmail API OAuth"
+    gmail_query: "from:googlealerts-noreply@google.com subject:golf"  # [SETUP] Customize your Google Alert query
+    max_articles: 10
+    lookback_hours: 24
+
+  m3_golf_lexicon_builder:
+    enabled: false  # [SETUP] Enable if using M2 (Golf Industry Intel)
+    description: "Extracts copywriting terms from articles and auto-adds to lexicon"
+    setup_required: "Depends on M2"
+    lexicon_csv: "_reference/lexicon.csv"  # [SETUP] Path to your lexicon CSV (relative to agent root)
+    auto_add: true
+
+  # ── Slack Modules (require Slack OAuth) ──
+
+  m4_slack_monitor:
+    enabled: false  # [SETUP] Enable after running: python3 setup/slack_auth.py
+    description: "Scans Slack DMs, prioritizes, drafts response options"
+    setup_required: "Slack OAuth. Run: python3 setup/slack_auth.py"
+    channels: []  # [SETUP] Add channel IDs to monitor (empty = DMs only)
+    dm_scan: true
+    lookback_hours: 24
+    max_messages_per_run: 5
+    exclude_names: []  # [SETUP] Bot names to ignore (e.g., ["MyBot"])
+
+  m5_wise_reply_context:
+    enabled: false  # [SETUP] Enable if using M4 (Slack Monitor)
+    description: "Updates working-relationship files with patterns from processed messages"
+    setup_required: "Depends on M4 (Slack Monitor)"
+    working_relationships_dir: ""  # [SETUP] Path to your working-relationships directory (or leave empty to use default ~/.claude/memory/working-relationships/)
+    auto_append: true
+
+  # ── Newsletter Module (requires Gmail OAuth) ──
+
+  m6_ai_newsletter_digest:
+    enabled: false  # [SETUP] Enable after running: python3 setup/gmail_auth.py
+    description: "Summarizes newsletters from the last 24 hours, maps takeaways to objectives"
+    setup_required: "Gmail API OAuth"
+    gmail_query: "label:newsletters newer_than:1d"  # [SETUP] Customize your newsletter label/query
+
+  # ── ClickUp Module ──
+
+  m7_clickup_inbox:
+    enabled: false  # [SETUP] Enable and set your workspace_id
+    description: "Monitors ClickUp inbox, triages by priority, identifies auto-clear candidates"
+    setup_required: "ClickUp API token in .env"
+    workspace_id: ""  # [SETUP] Your ClickUp workspace ID
+
+  # ── Agent Status Module ──
+
+  m8_agent_status:
+    enabled: true
+    description: "Reads each agent's SESSION-LOG.md Build State and reports session, status, blockers, and next steps"
+    setup_required: "---"
+
+  # ── Transcript Intelligence (requires meeting transcripts) ──
+
+  m9_transcript_intelligence:
+    enabled: false  # [SETUP] Enable if you have a transcript sync pipeline
+    render: false  # Runs but decisions/signals render in M00 instead
+    description: "Extracts structured intelligence (action items, decisions, topics, people) from meeting transcripts into persistent KB"
+    setup_required: "Transcript sync pipeline"
+    max_transcripts_per_run: 3
+    transcripts_dir: "../meetings/transcripts"
+
+  m10_kb_analyzer:
+    enabled: false  # [SETUP] Enable if using M9 (Transcript Intelligence)
+    description: "Analyzes KB for patterns, gaps, risk/drift signals, and generates actionable recommendations"
+    setup_required: "Depends on M9 (Transcript Intelligence)"
+
+  m11_meeting_prep:
+    enabled: false
+    description: "Detects recurring meetings from transcript patterns, generates per-meeting prep briefs"
+    setup_required: "Depends on M9 (Transcript Intelligence)"
+    lookback_days: 30
+    max_prep_meetings: 3
+
+  # ── Triage Intelligence ──
+
+  triage_intelligence:
+    enabled: true
+    description: "Pre-scores pending items with learned triage patterns, calendar-aware day suggestions"
+    auto_reject: true
+    auto_approve: false
+    clickup_match_threshold: 0.55
+    min_decisions_for_auto: 50
+    day_type_rules:  # [SETUP] Customize your week structure
+      monday: strategic
+      tuesday: execution
+      wednesday: execution
+      thursday: execution
+      friday: execution
+      saturday: "off"
+      sunday: "off"
+
+  # ── Calendar Module (requires Google Calendar OAuth) ──
+
+  m12_daily_schedule:
+    enabled: false  # [SETUP] Enable after running: python3 setup/calendar_auth.py
+    render: false  # Runs (feeds M00a) but section hidden from report
+    description: "Fetches today's calendar, identifies focus blocks, generates schedule coaching"
+    setup_required: "Google Calendar OAuth. Run: python3 setup/calendar_auth.py"
+    include_tomorrow: true
+    week_ahead_days: 7
+
+  # ── Launch Board Modules (optional — for CLM/production tracking) ──
+
+  clm_sync:
+    enabled: false  # [SETUP] Enable if you manage CLM launch boards
+    description: "Syncs CLM URLs from Google Sheets + ClickUp"
+    setup_required: "Google Sheets OAuth. Run: python3 setup/sheets_auth.py"
+    registry_path: ""  # [SETUP] Path to your URL registry JSON
+    slack_channels: []
+    clickup_list_ids: []
+    lookback_hours: 24
+    auto_update_html: true
+
+  production_sync:
+    enabled: false  # [SETUP] Enable if you track production calendars
+    description: "Syncs shoot/production status from ClickUp Production Calendar to CLM boards"
+    production_calendar_list_id: ""  # [SETUP] ClickUp list ID for production calendar
+    footage_url_field_name: "Raw Footage (URL)"
+    offers: {}  # [SETUP] Define your offer configs (see config.yaml reference in SETUP.md)
+
+intelligence:
+  completed_registry: true
+  stale_pending_days: 21
+  stale_hard_reject_days: 35
+  capacity_engine: true
+  multi_factor_abc: true
+  auto_route_depends: true
+  week_ahead_view: true
+  launch_calendar: true
+  pre_allocate_triage: true
+  entity_calendar_match: true
+  auto_approve_threshold: 0.80
+  launch_indicators:
+    tags: ["launch", "milestone"]
+    list_ids: []
+  scorecard_keywords: []  # [SETUP] Add keywords relevant to your role/scorecard
+
+git_fetch:
+  enabled: true
+  remote: "origin"  # [SETUP] Your git remote name
+  branch: "main"
+  timeout_seconds: 10
+
+notifications:
+  slack_webhook_url: ""  # [SETUP] Incoming webhook URL for daily report delivery
+  email: ""

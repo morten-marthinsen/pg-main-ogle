@@ -156,7 +156,7 @@ The Variation ID uses the format `v` + 4-digit zero-padded number (e.g., `v0001`
 | Code | Meaning | Description |
 |------|---------|-------------|
 | `nn` | Net New | Brand new creative, original concept |
-| `exv` | Vertical Expansion | Vertical expansion of existing winner (i.e. Hook Stack, Scroll Stopper Refresh, Cutdown) |
+| `exv` | Vertical Expansion | Vertical expansion of existing winner (i.e. Hook Stack, Hook Refresh, Scroll Stopper Refresh, Cutdown) |
 | `exh` | Horizontal Expansion | Horizontal expansion of existing winner (i.e. Similar Presenter, Different Presenter, Environment Change (eg. Range to Simulator), Ad Format Change (i.e. Podcast), Copy Framework Change) |
 | `nnmu` | Net New Mashup | New creative combining existing elements |
 | `prm` | Promo | Winning asset modified to align with a specific promo (Position 15 promo code REQUIRED) |
@@ -182,6 +182,7 @@ The Variation ID uses the format `v` + 4-digit zero-padded number (e.g., `v0001`
 | Code | Meaning |
 |------|---------|
 | `hs` | Hook Stack |
+| `hr` | Hook Refresh |
 | `ssr` | Scroll Stopper Refresh |
 | `dur` | Duration |
 | `env` | Environment |
@@ -199,6 +200,7 @@ The Variation ID uses the format `v` + 4-digit zero-padded number (e.g., `v0001`
 | Code | Definition | Assembly (v1) | AI (v2+) |
 |------|-----------|---------------|----------|
 | `hs` | **Hook Stack** — Replace the opening hook (3-15 seconds) with a different hook while keeping the body and CTA unchanged. Tests which hook drives the best view rate. | Swap with pre-existing hook clips from library | Generate new hooks from text prompts |
+| `hr` | **Hook Refresh** — Refresh the existing hook on a winning asset with new creative content (same position, new execution). Unlike Hook Stack (which stacks a new hook in front of the existing asset), Hook Refresh replaces the hook itself with a reimagined version. Body and CTA remain unchanged (isolation principle — only variable is hook creative). Tests whether a fresh take on the same hook concept can extend the asset's life. | Re-shoot or re-edit the hook segment with new creative direction | AI-generate refreshed hook variations from source hook brief |
 | `ssr` | **Scroll Stopper Refresh** — Replace the first 0-3 seconds (the scroll-stopping moment) with a different attention-grabbing opener. Aligned with Domo 3-second view rate metric. | Swap from clip library | AI-generate attention elements |
 | `dur` | **Duration** — Reassemble the best segments of a source ad into a shorter or longer version. All duration variations share the EXACT same opening hook (isolation principle — only variable is LENGTH). Body content between hook and CTA is where cuts/reassembly happens. Veda can pull segments from anywhere in the source. CTA end cards 5-8s (usually 5s). Transcript Analyzer identifies optimal cut points while preserving root angle. | FFmpeg reassembly from source segments | N/A (pure editorial) |
 | `env` | **Environment** — Change the visual environment/setting while keeping presenter and script unchanged. | Swap background from footage library | AI-generated environments |
@@ -693,8 +695,28 @@ not yet in ClickUp. Only truly unknown root angle IDs will have blank root angle
 
 ---
 
-*Document Version: 3.10*
-*Last Updated: March 10, 2026*
+## Change Management — Three-Way Sync (MANDATORY)
+
+Any change to code tables (expansion types, ad categories, asset types, talent codes, editor codes, copywriter codes, country codes, funnel codes) MUST be synced across all three locations:
+
+| # | Location | What to Update | Why |
+|---|----------|---------------|-----|
+| 1 | `TESS-NAMING-CONVENTION.md` | Code tables + operational definitions | Markdown source of truth for all agents |
+| 2 | **SSS Google Sheet** → Lookup Tables tab | Corresponding lookup table section | Domo pulls display names from here — if missing, Domo shows raw codes |
+| 3 | **Naming Convention Google Doc** | Corresponding section in team-facing doc | Team reference — must match markdown |
+
+**SSS Google Sheet**: `1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U` → Lookup Tables tab
+**Naming Convention Google Doc**: `1q6Tm7XEukyq5ssYConJV0EoPXuGyYoWTsQW_4ivCAjA`
+
+**Sync order**: Always update markdown FIRST (source of truth), then Sheet, then Doc. If MCP tools are unavailable for Sheet/Doc updates, log as P0 pending items in SESSION-LOG.md.
+
+**Downstream impact**: The Lookup Tables tab feeds Domo dashboards. If a new code is not added to Lookup Tables, Domo will display the raw code instead of the human-readable display name. This affects the entire team's reporting.
+
+---
+
+*Document Version: 3.11*
+*Last Updated: March 24, 2026*
+*Changes v3.11: Added `hr` (Hook Refresh) expansion type code — vertical expansion that refreshes the existing hook on a winning asset with new creative content (same position, new execution). Distinct from Hook Stack (`hs`) which stacks a new hook in front of the existing asset. Body and CTA unchanged (isolation principle). Added Change Management section — three-way sync rule for code table changes (Markdown → SSS Lookup Tables → Google Doc).*
 *Changes v3.10: Added `dwai` (Diana West AI) talent code — AI-generated content using Diana West's likeness/voice. 45 active talents. Added `rv` (Romeo Valois) copywriter code — 8 active copywriters. Orion Session 075.*
 *Changes v3.9: Renamed "Script ID" (Position 2) to "Root Angle ID" throughout — reflects that this identifier anchors to a root angle, not a script. Added `tobr` (Todd Brown) to talent codes (43 active). Added `xxxx` (No Talent / Not Applicable) as special talent code — default for image assets unless specifically testing talent. Added speaking-roles-only clarification for talent codes. Updated Offer-Guru Mapping to note video-only applicability. Tess Session 148.*
 *Changes v3.8: Changed `mult` (Multiple Talent) threshold from 4+ actors to 3+ actors. With 3+ talents, performance attribution to any single talent is unreliable, so `mult` is the correct classification. Assets with 1-2 talents use the primary talent's code. Updated Sections 3.9, 3.15, 4.1. Tess Session TBD.*

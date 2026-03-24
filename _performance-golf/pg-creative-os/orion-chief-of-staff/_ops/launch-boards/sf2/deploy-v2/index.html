@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SF2 Forged Titanium Slice-Fix Driver — Launch Board v2</title>
+<style>
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Regular.woff2') format('woff2'); font-weight: 400; }
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Medium.woff2') format('woff2'); font-weight: 500; }
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Bold.woff2') format('woff2'); font-weight: 700; }
+  @font-face { font-family: 'GTSuperText'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/gt-super-text/GT-Super-Text-Book.woff2') format('woff2'); font-weight: 400; }
+  @font-face { font-family: 'GTSuperText'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'ABCReproMono'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro-mono/ABCReproMono-Regular.woff2') format('woff2'); font-weight: 400; }
+
+  :root {
+    --orange: #FD3300;
+    --dark-orange: #DB2C00;
+    --black: #1D1A1A;
+    --ui-gray: #7B726C;
+    --stone: #B3AAA3;
+    --pebble: #DFD9D5;
+    --sand: #ECE9E4;
+    --fog: #F4F2F0;
+    --mist: #FCFAFA;
+    --hi-vis: #E4F222;
+    --grass: #BCE9B1;
+    --forest: #2E4734;
+    --sky: #B2C6EB;
+    --indigo: #4F41D5;
+    --polo: #C5A6CA;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    background: var(--sand);
+    font-family: 'ABCRepro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--black);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  /* ── HEADER BAR ── */
+  .header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    height: 72px;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 24px;
+  }
+  .header-logo {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--orange);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .header-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(255,255,255,0.15);
+  }
+  .header-title {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-size: 24px;
+    color: white;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .header-meta {
+    margin-left: auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .header-badge {
+    background: var(--orange);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .header-date {
+    color: var(--stone);
+    font-size: 15px;
+    font-family: 'ABCReproMono', monospace;
+  }
+
+  /* ── SECTION NAV ── */
+  .section-nav {
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    z-index: 99;
+    height: 48px;
+    background: var(--fog);
+    border-bottom: 1px solid var(--pebble);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 4px;
+    overflow-x: auto;
+  }
+  .nav-item {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ui-gray);
+    padding: 6px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .nav-item:hover { background: var(--pebble); color: var(--black); }
+  .nav-arrow { color: var(--stone); font-size: 13px; padding: 0 2px; }
+  .nav-item.placeholder-nav { color: var(--stone); font-style: italic; }
+
+  /* ── BOARD CONTAINER ── */
+  .board {
+    margin-top: 120px;
+    display: flex;
+    gap: 32px;
+    padding: 32px 40px 40px;
+    height: calc(100vh - 120px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* ── SECTION COLUMN ── */
+  .section {
+    min-width: 520px;
+    max-width: 560px;
+    flex-shrink: 0;
+    background: var(--mist);
+    border-radius: 12px;
+    border: 1px solid var(--pebble);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .section.placeholder-section {
+    border: 2px dashed var(--stone);
+    background: var(--fog);
+  }
+
+  .section-header {
+    background: var(--black);
+    padding: 20px 24px 16px;
+    position: relative;
+  }
+  .section-number {
+    font-family: 'ABCReproMono', monospace;
+    font-size: 13px;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  .section-subtitle {
+    font-size: 14px;
+    color: var(--stone);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  .placeholder-section .section-header {
+    background: var(--ui-gray);
+  }
+  .placeholder-badge {
+    display: inline-block;
+    background: var(--hi-vis);
+    color: var(--black);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+  }
+
+  /* ── SECTION BODY ── */
+  .section-body {
+    padding: 20px 24px 24px;
+    overflow-y: auto;
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── CONTENT ELEMENTS ── */
+  h3 {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--black);
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  h3:first-child { margin-top: 0; }
+
+  h4 {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--black);
+    margin: 16px 0 8px;
+  }
+
+  p { margin-bottom: 10px; color: var(--black); }
+
+  .callout {
+    background: var(--fog);
+    border-left: 3px solid var(--orange);
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 15px;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout strong { color: var(--dark-orange); }
+  .callout-muted {
+    background: var(--fog);
+    border-left: 3px solid var(--stone);
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: var(--ui-gray);
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 14px;
+  }
+  th {
+    background: var(--sand);
+    text-align: left;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--ui-gray);
+    border-bottom: 2px solid var(--pebble);
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--sand);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .tag-orange { background: #FFF0EC; color: var(--dark-orange); }
+  .tag-green { background: #EDF7EB; color: #2D6A22; }
+  .tag-blue { background: #EBF0FA; color: var(--indigo); }
+  .tag-gray { background: var(--sand); color: var(--ui-gray); }
+  .tag-yellow { background: #FEFCE8; color: #92720A; }
+
+  .stat-row {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .stat-box {
+    flex: 1;
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--orange);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--ui-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .persona-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid var(--pebble);
+  }
+  .persona-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  .persona-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  .persona-desc {
+    font-size: 14px;
+    color: var(--ui-gray);
+    line-height: 1.5;
+  }
+  .persona-quote {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--forest);
+    margin-top: 8px;
+    padding-left: 10px;
+    border-left: 2px solid var(--grass);
+  }
+
+  .script-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0;
+    border-left: 3px solid var(--orange);
+  }
+  .script-id {
+    font-family: 'ABCReproMono', monospace;
+    font-size: 13px;
+    color: var(--orange);
+    font-weight: 700;
+  }
+  .script-name {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 4px 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--sand);
+    align-items: flex-start;
+  }
+  .timeline-date {
+    min-width: 80px;
+    font-family: 'ABCReproMono', monospace;
+    font-size: 13px;
+    color: var(--ui-gray);
+    padding-top: 2px;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .timeline-owner {
+    font-size: 13px;
+    color: var(--ui-gray);
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--pebble);
+    margin: 16px 0;
+  }
+
+  .feature-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--sand);
+  }
+  .feature-num {
+    min-width: 24px;
+    height: 24px;
+    background: var(--orange);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .feature-content { flex: 1; }
+  .feature-name { font-weight: 700; font-size: 15px; }
+  .feature-desc { font-size: 14px; color: var(--ui-gray); margin-top: 2px; }
+  .feature-new { font-size: 12px; color: var(--forest); font-weight: 600; margin-top: 2px; }
+
+  .coverage-cell { text-align: center; font-size: 13px; }
+  .coverage-strong { color: var(--orange); font-weight: 700; }
+  .coverage-light { color: var(--ui-gray); font-style: italic; }
+  .coverage-gap { color: var(--grass); font-weight: 600; font-size: 12px; }
+
+  .checklist-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+  .check-box {
+    min-width: 16px;
+    height: 16px;
+    border: 2px solid var(--pebble);
+    border-radius: 3px;
+    margin-top: 1px;
+  }
+  .check-box.done {
+    background: var(--grass);
+    border-color: var(--forest);
+  }
+
+  ul { padding-left: 18px; margin: 8px 0; }
+  li { margin-bottom: 4px; font-size: 14px; }
+
+  .placeholder-notice {
+    background: #FEFCE8;
+    border: 1px dashed #D4A90A;
+    border-radius: 8px;
+    padding: 14px;
+    margin: 12px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #92720A;
+  }
+  .placeholder-notice strong { color: #6B5208; }
+
+  .thread-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 8px 0;
+    border-left: 3px solid var(--forest);
+  }
+  .thread-card.t2 { border-left-color: var(--indigo); }
+  .thread-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .thread-card .thread-label { color: var(--forest); }
+  .thread-card.t2 .thread-label { color: var(--indigo); }
+
+  .open-item {
+    background: #FFF7F5;
+    border: 1px solid #FFDDD5;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin: 6px 0;
+    font-size: 14px;
+  }
+  .open-item strong { color: var(--dark-orange); }
+
+  .matrix-table th { font-size: 12px; padding: 6px 6px; }
+  .matrix-table td { font-size: 12px; padding: 6px 6px; text-align: center; }
+  .matrix-table td:first-child { text-align: left; font-weight: 600; }
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════ HEADER ════════════════ -->
+<div class="header">
+  <div class="header-logo">Performance Golf</div>
+  <div class="header-divider"></div>
+  <div class="header-title">SF2 Forged Titanium Slice-Fix Driver &mdash; Creative Launch Map</div>
+  <div class="header-meta">
+    <div class="header-badge">Launch: March 25</div>
+    <div class="header-date">Ads Due: Mar 20 &bull; Pre-Launch Call: Mar 19</div>
+  </div>
+</div>
+
+<!-- ════════════════ NAV ════════════════ -->
+<div class="section-nav">
+  <a class="nav-item" href="#s0" style="background:var(--orange);color:white;font-weight:700">Brixton Start Here</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s1">1. Product</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s2">2. Brand Threads</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s3">3. Research &amp; Sales Page</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s4">4. Personas</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s5">5. Creative Matrix</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s6">6. Email/Backend</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s7">7. Production</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s8">8. Phase 1: Launch</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s9">9. Phase 2: Expand</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s10">10. Phase 3: Optimize</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s11">11. Funnel Map</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s12">12. Testing Strategy</a>
+</div>
+
+<!-- ════════════════ BOARD ════════════════ -->
+<div class="board">
+
+<!-- ═══════ SECTION 0: CEO DIRECTION CARD ═══════ -->
+<div class="section" id="s0" style="min-width:440px;max-width:460px;border:2px solid var(--orange)">
+  <div class="section-header" style="background:var(--orange)">
+    <div class="section-number" style="color:rgba(255,255,255,0.7)">Brixton</div>
+    <div class="section-title">Start Here</div>
+    <div class="section-subtitle" style="color:rgba(255,255,255,0.85)">SF2 Launch &mdash; What you need to know</div>
+  </div>
+  <div class="section-body" style="overflow-y:auto">
+
+    <div style="margin-bottom:20px">
+      <div style="font-size: 14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Launch Status</div>
+      <table style="font-size: 15px">
+        <tr><td style="font-weight:600;width:40%">Product</td><td>SF2 Forged Titanium Slice-Fix Driver</td></tr>
+        <tr><td style="font-weight:600">Member Price</td><td style="font-weight:700;color:var(--orange)">$299</td></tr>
+        <tr><td style="font-weight:600">Non-Member Price</td><td>$349</td></tr>
+        <tr><td style="font-weight:600">Launch Date</td><td style="font-weight:700;color:var(--orange)">March 25</td></tr>
+        <tr><td style="font-weight:600">Pre-Launch Call</td><td>March 19</td></tr>
+        <tr><td style="font-weight:600">Ads Due</td><td>March 20</td></tr>
+        <tr><td style="font-weight:600">Batch 1 Ads</td><td>3 scripts &rarr; ~14 ad versions</td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size: 14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Content Status</div>
+      <table style="font-size: 15px">
+        <tr style="background:#e8f5e9"><td style="font-weight:700;color:var(--forest);width:40%">Shot / Available</td><td style="font-weight:700">7 assets</td></tr>
+        <tr style="background:#fff8e1"><td style="font-weight:700;color:var(--orange)">In Production</td><td style="font-weight:700">5 assets</td></tr>
+        <tr style="background:#fce4ec"><td style="font-weight:700;color:#c62828">Missing / TBD</td><td style="font-weight:700">3 assets</td></tr>
+      </table>
+      <div style="font-size: 14px;color:var(--ui-gray);margin-top:6px">Full breakdown &rarr; <a href="#s7" style="color:var(--orange)">Section 7: Production</a></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size: 14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">What to Shoot Next</div>
+      <ul style="font-size: 15px;padding-left:18px;line-height:1.7">
+        <li><strong>Slowmo closeup hits</strong> &mdash; hero shots for brand commercial</li>
+        <li><strong>Range session with SF2</strong> &mdash; authentic on-camera, your swing</li>
+        <li>Any <strong>"first reaction"</strong> moments with the club in hand</li>
+      </ul>
+      <div style="font-size: 14px;color:var(--ui-gray);margin-top:6px">Full shoot plan &rarr; <a href="#s7" style="color:var(--orange)">Section 7</a></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div style="font-size: 14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:10px">Your Guide to This Board</div>
+      <table style="font-size: 15px">
+        <tr><td style="font-weight:600;width:55%">Campaign message</td><td><a href="#s2" style="color:var(--orange)">Section 2</a></td></tr>
+        <tr><td style="font-weight:600">Key phrases to echo</td><td><a href="#s3" style="color:var(--orange)">Section 3</a></td></tr>
+        <tr><td style="font-weight:600">Who we&rsquo;re targeting</td><td><a href="#s4" style="color:var(--orange)">Section 4</a></td></tr>
+        <tr><td style="font-weight:600">Ad scripts &amp; hooks</td><td><a href="#s5" style="color:var(--orange)">Section 5</a></td></tr>
+        <tr><td style="font-weight:600">Funnel map &amp; core assets</td><td><a href="#s11" style="color:var(--orange)">Section 11</a></td></tr>
+        <tr><td style="font-weight:600">Testing strategy</td><td><a href="#s12" style="color:var(--orange)">Section 12</a></td></tr>
+        <tr><td style="font-weight:600">Production &amp; assets</td><td><a href="#s7" style="color:var(--orange)">Section 7</a></td></tr>
+        <tr><td style="font-weight:600">Launch timeline</td><td><a href="#s8" style="color:var(--orange)">Section 8</a></td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="callout-muted">
+      <strong style="color:var(--black)">Board Maintenance:</strong> This CLM is maintained manually by Orion (Creative OS agent). Updates happen at key milestones (pre-launch, post-launch, weekly review). <em>Future goal: automated status updates via ClickUp + Slack integrations.</em>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════ SECTION 0a: CAMPAIGN THEME ═══════ -->
+<div class="section" id="s0a">
+  <div class="section-header">
+    <div class="section-number">Section 0a</div>
+    <div class="section-title">Campaign Theme</div>
+    <div class="section-subtitle">The ONE core theme everything else stems from</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">Every ad, email, landing page, and sales page for the SF2 launch ladders up to this statement.</div>
+
+    <h3>Core Campaign Theme</h3>
+    <div style="background:var(--black);color:white;padding:20px 24px;border-radius:8px;font-size:19px;font-weight:600;line-height:1.5;margin:12px 0 20px;border-left:4px solid var(--orange)">
+      &ldquo;The slice-fixing driver that doesn&rsquo;t sacrifice distance.&rdquo;
+    </div>
+
+    <h3>The &ldquo;AND&rdquo; &mdash; Why This Theme Works</h3>
+    <p style="margin-bottom:10px">SF2 eliminates the tradeoff every slicer has accepted: fix the slice OR get distance &mdash; never both.</p>
+    <table>
+      <thead><tr><th>Pillar</th><th>What It Delivers</th><th>How</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">Pillar 1 &mdash; Slice Fix</td><td>6 SliceFix SpeedTech features auto-square the face</td><td>Toe lag is a physics problem. SF2 engineers around it.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">Pillar 2 &mdash; Distance</td><td>+20-30 yards with your current swing</td><td>Aerospace-grade titanium face = higher ball speed. Straighter flight = less spin = more roll.</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--stone);margin-top:8px">SF1 proved the slice fix works (60,000+ golfers). SF2 answers the #1 complaint: &ldquo;I love that my slice is gone, but I&rsquo;m getting outdriven.&rdquo; Aerospace-grade titanium eliminates the tradeoff.</p>
+
+    <div class="divider"></div>
+
+    <h3>The Research Reframe</h3>
+    <div style="background:#1a1a1a;padding:14px 20px;border-radius:6px;font-size:16px;font-style:italic;line-height:1.6;margin:8px 0 16px;border-left:3px solid var(--orange)">
+      &ldquo;The slice isn&rsquo;t a swing problem &mdash; it&rsquo;s a physics problem.&rdquo;
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Brand Thread Mapping</h3>
+    <table>
+      <thead><tr><th>Thread</th><th>Connection</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Thread 1: Smarter Journey</td><td>Equipment does the work, not your swing. &ldquo;Without changing a single thing about your swing.&rdquo;</td></tr>
+        <tr><td style="font-weight:600">Thread 2: Innovation</td><td>SR-71 Blackbird titanium story. 3-piece forged construction. SliceFix SpeedTech.</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--stone);margin-top:8px"><strong>Thread priority</strong>: VSL/long-form leads with Thread 2 (SR-71 hooks attention). Ads lead with Thread 1 (result-first).</p>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 1: PRODUCT OVERVIEW ═══════ -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <div class="section-number">Section 01</div>
+    <div class="section-title">Product Overview</div>
+    <div class="section-subtitle">What are we selling?</div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><td style="font-weight:600;width:35%">Product</td><td>SF2 Forged Titanium Slice-Fix Driver</td></tr>
+      <tr><td style="font-weight:600">Category</td><td>Golf's #1 Slice-Fix Driver Under $300</td></tr>
+      <tr><td style="font-weight:600">Technology</td><td>Slice-Fix SpeedTech™ (7 features)</td></tr>
+      <tr><td style="font-weight:600">Construction</td><td>3-piece forged titanium</td></tr>
+      <tr><td style="font-weight:600">Head Size</td><td>445cc (Speed Geometry shape)</td></tr>
+      <tr><td style="font-weight:600">Member Price</td><td style="font-weight:700;color:var(--orange)">$299</td></tr>
+      <tr><td style="font-weight:600">Non-Member Price</td><td>$349</td></tr>
+      <tr><td style="font-weight:600">COGS (Physical)</td><td><span class="tag tag-yellow">TBD — pending ops</span></td></tr>
+      <tr><td style="font-weight:600">Predecessor</td><td>SF1 (carbon fiber construction)</td></tr>
+    </table>
+
+    <div class="callout">
+      <strong>Root Angle (Verified):</strong> "The slice-fixing driver that doesn't sacrifice distance."
+    </div>
+
+    <h3>Key Promise</h3>
+    <p>Fix your slice AND gain 20-30 yards &mdash; without changing your swing.</p>
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-value">+20-30</div>
+        <div class="stat-label">Extra Yards</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">7</div>
+        <div class="stat-label">Features</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">60K+</div>
+        <div class="stat-label">SF1 Golfers</div>
+      </div>
+    </div>
+
+    <h3>Slice-Fix SpeedTech&#8482; &mdash; 7 Features</h3>
+
+    <div class="feature-row">
+      <div class="feature-num">1</div>
+      <div class="feature-content">
+        <div class="feature-name">Speed Geometry Toe Slot</div>
+        <div class="feature-desc">Aerodynamic slot carved into the toe reduces drag, accelerates toe through impact, squares face automatically without timing the release.</div>
+        <div class="feature-new">NEW TO SF2 &mdash; titanium enables aggressive slot geometry</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">2</div>
+      <div class="feature-content">
+        <div class="feature-name">Fast Face Construction</div>
+        <div class="feature-desc">3-piece forged titanium creates a thinner, faster face at max COR/CT (legal limit). Higher ball speed with the same swing speed. Straight shots also travel farther than slices &mdash; distance gains come two ways.</div>
+        <div class="feature-new">CORE ADVANTAGE &mdash; titanium allows thinner face without structural compromise</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">3</div>
+      <div class="feature-content">
+        <div class="feature-name">Counter-Slice Weighting</div>
+        <div class="feature-desc">Weight saved from the thin face is redistributed deep in the heel — draw biased CG that dynamically closes the face. Hits fairways even on bad swings.</div>
+        <div class="feature-new">UPGRADED &mdash; deeper/heavier than SF1 keel from titanium weight savings</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">4</div>
+      <div class="feature-content">
+        <div class="feature-name">AeroSquare Crown Channels</div>
+        <div class="feature-desc">Deeper directional-control channels with more aggressive angles than SF1, optimized for faster clubhead speed. Airflow itself helps close the face.</div>
+        <div class="feature-new">UPGRADED &mdash; deeper angles + re-engineered for titanium ball speed</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">5</div>
+      <div class="feature-content">
+        <div class="feature-name">Draw-Calibrated Face Angle</div>
+        <div class="feature-desc">Pre-set 3&deg; closed, but engineered to look square at address. No "hooked" appearance. Built-in margin for error on every swing.</div>
+        <div class="feature-new">RETAINED &mdash; titanium precision manufacturing holds tighter tolerances</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">6</div>
+      <div class="feature-content">
+        <div class="feature-name">Draw Spin Face Bulge</div>
+        <div class="feature-desc">Asymmetric bulge: flatter heel (less cut spin on heel hits) + rounder toe (more draw spin on toe hits). Mis-hits fly straighter AND farther.</div>
+        <div class="feature-new">UPGRADED &mdash; 3-piece forged allows zone-specific face geometry</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">7</div>
+      <div class="feature-content">
+        <div class="feature-name">445cc Speed Geometry Head</div>
+        <div class="feature-desc">Sleeker, lower-profile clamshell shape. Same 445cc as SF1, redesigned around titanium's properties for aerodynamic efficiency and more clubhead speed without swinging harder.</div>
+        <div class="feature-new">REDESIGNED &mdash; new shape optimized specifically for titanium</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Root Problem: Toe Lag</h3>
+    <p>The slice isn't a swing problem &mdash; it's a physics problem. The toe is farther from your hands, has more distance to travel, and naturally lags behind the heel. SF2's answer: don't fight the physics &mdash; engineer around it.</p>
+
+    <h3>SF1 &rarr; SF2 Upgrade Story</h3>
+    <table>
+      <thead><tr><th></th><th>SF1</th><th>SF2</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Material</td><td>Carbon fiber</td><td>3-piece forged titanium</td></tr>
+        <tr><td style="font-weight:600">Goal</td><td>Fix the slice</td><td>Fix slice + max distance</td></tr>
+        <tr><td style="font-weight:600">Ball Speed</td><td>Standard</td><td>+3 to 10 mph</td></tr>
+        <tr><td style="font-weight:600">Distance</td><td>Straighter, not longer</td><td>+20-30 yards</td></tr>
+        <tr><td style="font-weight:600">Result</td><td>"Proved it works"</td><td>"Feature stacking fully realized"</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Proof Points</h3>
+    <table>
+      <tr><td style="font-weight:600;width:30%">Hank Haney</td><td>Tiger's FORMER coach (2004&ndash;2010). 90,000+ amateur lessons. "Fixed more amateur slices than any other coach."</td></tr>
+      <tr><td style="font-weight:600">Chris McGinley</td><td>35+ yrs club innovation. Built clubs for Tiger Woods, Rory McIlroy, Jordan Spieth, Adam Scott. Now helping 700,000+ everyday golfers.</td></tr>
+      <tr><td style="font-weight:600">SF1 Track Record</td><td>50,000+ golfers transformed. Chronic slicers hitting draws first range session.</td></tr>
+      <tr><td style="font-weight:600">SR-71 Blackbird</td><td>$34M/plane ($290M today). Same aerospace-grade titanium class.</td></tr>
+    </table>
+
+    <h3>Offer Structure</h3>
+    <table>
+      <tr><td style="font-weight:600;width:35%">Member Price</td><td style="font-weight:700;color:var(--orange)">$299 (saves $50)</td></tr>
+      <tr><td style="font-weight:600">Non-Member Price</td><td>$349</td></tr>
+      <tr><td style="font-weight:600">Guarantee</td><td>365-Day Demo Period &mdash; Slice-Free Guarantee. Full refund, no questions asked.</td></tr>
+      <tr><td style="font-weight:600">Membership</td><td>PG1 renews every 30 days at $29/month. Cancel online anytime.</td></tr>
+      <tr><td style="font-weight:600">Shipping</td><td>Free for PG1 Members</td></tr>
+      <tr><td style="font-weight:600">COGS (Physical)</td><td><span class="tag tag-yellow">TBD &mdash; pending ops (needed for Omer/media buying)</span></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 2: BRAND THREAD ALIGNMENT ═══════ -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <div class="section-number">Section 02</div>
+    <div class="section-title">Brand Thread Alignment</div>
+    <div class="section-subtitle">How does SF2 fit the PG brand?</div>
+  </div>
+  <div class="section-body">
+    <div class="thread-card">
+      <div class="thread-label">Thread 1</div>
+      <h4 style="margin-top:0">Smarter Journey to Better Golf</h4>
+      <p>Equipment and technology make the game easier. You don't need to overhaul your swing. Smarter path, not harder work.</p>
+    </div>
+    <div class="thread-card t2">
+      <div class="thread-label">Thread 2</div>
+      <h4 style="margin-top:0">Innovation / Stories of Innovation</h4>
+      <p>Breakthrough engineering that solves problems Big Golf ignores. Aerospace materials, proprietary mechanisms, founder-led innovation.</p>
+    </div>
+
+    <h3>SF2 &times; Thread 1</h3>
+    <p>SF2 is a pure Thread 1 product. The entire pitch: <strong>your equipment should do the work, not your swing.</strong></p>
+    <table>
+      <thead><tr><th>Thread 1 Principle</th><th>SF2 Execution</th></tr></thead>
+      <tbody>
+        <tr><td>Equipment over swing changes</td><td>"The real solution isn't your swing &mdash; it's the equipment you're using."</td></tr>
+        <tr><td>Automation over manipulation</td><td>"You don't need manipulation &mdash; you need automation. A driver that squares the face FOR YOU."</td></tr>
+        <tr><td>Built for YOUR swing</td><td>"Engineering equipment built for YOUR swing, not a Tour pro's."</td></tr>
+        <tr><td>No effort required</td><td>20-30 yards with your current swing, your current swing speed</td></tr>
+      </tbody>
+    </table>
+
+    <h3>SF2 &times; Thread 2</h3>
+    <p>The innovation story creates belief. SR-71 origin, 3-piece forged titanium, Chris McGinley's credentials.</p>
+    <table>
+      <thead><tr><th>Thread 2 Principle</th><th>SF2 Execution</th></tr></thead>
+      <tbody>
+        <tr><td>Aerospace engineering</td><td>SR-71 titanium narrative. "$34M per plane because of this metal."</td></tr>
+        <tr><td>Unconventional R&amp;D</td><td>3-piece forged construction. "Big Golf doesn't forge 3 separate pieces to fix your slice."</td></tr>
+        <tr><td>Credentialed craftsman</td><td>Chris McGinley &mdash; 35+ years, built clubs for Tiger, Rory, Spieth, Adam Scott. Now engineering for 700,000+ everyday golfers.</td></tr>
+        <tr><td>Proprietary mechanism</td><td>Slice-Fix SpeedTech&#8482; (7 features, each named &amp; explained). Not "proprietary technology."</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Thread Interplay:</strong> Thread 2 creates belief (why it works). Thread 1 delivers the payoff (what it means for you). Never lead Thread 2 without landing Thread 1.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Category Creation Positioning</h3>
+    <div class="thread-card" style="border-left-color:var(--orange)">
+      <div class="thread-label" style="color:var(--orange)">PG Mission</div>
+      <p style="margin-top:4px;font-size: 14px">Performance Golf exists for one reason: to help you play better and love your game — without getting confused or changing what you already do well. We're the <strong>opposite of traditional golf companies.</strong></p>
+    </div>
+    <table style="margin-top:12px">
+      <thead><tr><th>Big-Name Drivers</th><th>SF2</th></tr></thead>
+      <tbody>
+        <tr><td>Designed for Tour pros</td><td>Designed for YOUR swing</td></tr>
+        <tr><td>$500&ndash;$600+</td><td>Under $300</td></tr>
+        <tr><td>1&ndash;2 slice-fix features</td><td>7 Slice-Fix features</td></tr>
+        <tr><td>Loses 8&ndash;20 yards (draw-bias)</td><td>Gains 20&ndash;30 yards</td></tr>
+        <tr><td>None or 30-day guarantee</td><td>365-Day Demo Period</td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">Category claim: <strong>"Golf's #1 Slice-Fix Driver Under $300"</strong> &mdash; always lead with Distance AND Accuracy. The AND is the innovation.</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 3: RESEARCH & SALES PAGE MESSAGING ═══════ -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <div class="section-number">Section 03</div>
+    <div class="section-title">Research &amp; Sales Page Messaging</div>
+    <div class="section-subtitle">Research findings &rarr; e-com page copy architecture</div>
+  </div>
+  <div class="section-body">
+    <div class="callout" style="border-left:4px solid var(--forest);background:#e8f5e9;padding:14px 20px;margin-bottom:20px">
+      <div style="font-weight:700;font-size: 15px;margin-bottom:6px">Research &rarr; Sales Page Bridge</div>
+      <div style="font-size: 15px">This section bridges Marketing OS research into the SF2 e-com page copy architecture. Every section of the sales page — and every ad, email, and organic asset downstream — connects back to the messaging architecture and key language locked here. Research PRD (350KB+, 1,000+ quotes) distilled into the core insights that drive the page, personas, scripts, and email.</div>
+    </div>
+
+    <h3>Top 8 Research Insights</h3>
+    <table>
+      <thead><tr><th>#</th><th>Insight</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td><strong>Slice = #1 pain.</strong> 96% want to eliminate it. Only 8% hit a draw.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td><strong>Tried everything, failed.</strong> Lessons, YouTube, swing overhauls &mdash; resignation + frustration.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td><strong>Distance is second desire.</strong> Fix slice first, then distance. SF2 answers both.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td><strong>Equipment solutions = low trust.</strong> "Draw-biased" = gimmick. Proof burden is high.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td><strong>SF1&rarr;SF2 upgrade = emotional.</strong> SF1 owners love slice fix, feel "left behind" on distance.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td><strong>"Without changing your swing"</strong> = most powerful qualifier. Removes effort barrier.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">7</td><td><strong>Big Golf = villain.</strong> $500+ for Tour pro drivers. "Built for YOUR swing" = tribal alignment.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">8</td><td><strong>SR-71 titanium passes believability.</strong> Tangible, verifiable origin story.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Messaging Architecture</h3>
+    <h4>Problem Framework</h4>
+    <ul>
+      <li><strong>Root cause:</strong> Toe lag &mdash; the toe lags behind the heel, leaves the face open</li>
+      <li><strong>Reframe:</strong> "A slice is about physics, not your swing"</li>
+      <li><strong>Villain:</strong> Big Golf builds for Tour pros with 500 balls/day for 20 years</li>
+      <li><strong>Failed solutions:</strong> Lessons, swing overhauls, single-feature "draw-biased" drivers</li>
+    </ul>
+    <h4>Solution Framework</h4>
+    <ul>
+      <li><strong>Claim:</strong> 7 features working together automatically square the face AND maximize distance</li>
+      <li><strong>Mechanism:</strong> Slice-Fix SpeedTech&#8482; (not "SliceFix Technology" &mdash; that's SF1)</li>
+      <li><strong>Headline:</strong> "Distance AND Accuracy (All-in-One!)" &mdash; the AND is the innovation</li>
+      <li><strong>Material:</strong> 3-piece forged titanium (SR-71 origin)</li>
+      <li><strong>Result:</strong> Distance AND accuracy &mdash; not a tradeoff</li>
+    </ul>
+
+    <h4>Countersell Data (PDP-Verified)</h4>
+    <table>
+      <thead><tr><th>Competitor Driver</th><th>Distance Performance</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>PING G440 SFT</td><td style="color:#c62828">Loses 8 yards vs standard</td><td>MyGolfSpy</td></tr>
+        <tr><td>Cobra DS-ADAPT MAX-D</td><td style="color:#c62828">Ranked 34th of 37 in distance</td><td>MyGolfSpy</td></tr>
+        <tr><td>Honma TW 767 Max</td><td style="color:#c62828">"One of slowest in testing"</td><td>MyGolfSpy</td></tr>
+        <tr><td style="font-weight:700;color:var(--forest)">SF2</td><td style="font-weight:700;color:var(--forest)">Gains 20&ndash;30 yards</td><td>Beta testing</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Proof Architecture</h4>
+    <table>
+      <tr><td style="font-weight:600;width:30%">Authority</td><td>Hank Haney &mdash; Tiger's FORMER coach (2004&ndash;2010). 90,000+ amateur lessons. Fixed more slices than any other coach.</td></tr>
+      <tr><td style="font-weight:600">Engineering</td><td>Chris McGinley &mdash; 35+ yrs, built for Tiger/Rory/Spieth/Scott. Now helping 700,000+ everyday golfers.</td></tr>
+      <tr><td style="font-weight:600">Social Proof</td><td>50,000+ SF1 golfers. 70% improve immediately with draw driver (Golf Digest).</td></tr>
+      <tr><td style="font-weight:600">Origin Proof</td><td>SR-71 narrative ($34M/plane)</td></tr>
+      <tr><td style="font-weight:600">Risk Reversal</td><td>365-Day Demo Period &mdash; Slice-Free Guarantee</td></tr>
+    </table>
+
+    <h3>Sales Page Messaging Arc</h3>
+    <div class="callout-muted" style="margin-bottom:10px">8 beats mapping the e-com page copy flow. Every section of the page should advance the reader through this arc.</div>
+    <table>
+      <thead><tr><th>Beat</th><th>Page Section</th><th>Core Message</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">1. Hook / Above-Fold</td><td>Hero + Sticky Header</td><td>"Fix your slice AND gain 20+ yards — without changing your swing." Lead with outcome. Establish credibility immediately (star rating, proof snippet).</td></tr>
+        <tr><td style="font-weight:600">2. Problem Agitation</td><td>Problem Section</td><td>"Distance OR Accuracy (Pick One.)" Big Golf's draw-bias drivers cost 8–20 yards. Until SF2, you were forced to choose. This is the villain frame.</td></tr>
+        <tr><td style="font-weight:600">3. Mechanism Reveal</td><td>The Solution</td><td>"Distance AND Accuracy (All-in-One!)" Slice-Fix SpeedTech&#8482; — 7 features that square the face AND maximize ball speed. The AND is the innovation.</td></tr>
+        <tr><td style="font-weight:600">4. Technology Deep-Dive</td><td>7 Features Section</td><td>"Kill The Slice. Keep The Speed." Each feature gets a headline + copy. "The Club Does The Work." Aerospace engineering made tangible.</td></tr>
+        <tr><td style="font-weight:600">5. Social Proof / Results</td><td>Testimonials + Timeline</td><td>"Finally, Fairways." Round 1 feel &rarr; Rounds 2–5 confidence &rarr; Month 1 freedom. Real testimonials with results data.</td></tr>
+        <tr><td style="font-weight:600">6. Expert Credibility</td><td>Authority Section</td><td>"Where Lessons Fail, This Club Won't." Chris McGinley (35+ yrs) + Hank Haney (Tiger's FORMER coach, 90K+ amateur lessons). Credentials land the mechanism.</td></tr>
+        <tr><td style="font-weight:600">7. Guarantee / Risk Reversal</td><td>Guarantee Section</td><td>"No Pain, All Gain." 365-Day Demo Period + Slice-Free Guarantee. Full refund, no questions asked. Removes last objection.</td></tr>
+        <tr><td style="font-weight:600">8. CTA / Close</td><td>Final CTA Block</td><td>"Stop Steering. Start Striping." Golf's #1 Slice-Fix Driver Under $300. $299 member (saves $50) / $349 non-member. Urgency + guarantee reminder.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Language &mdash; Must Echo Downstream</h3>
+    <table>
+      <thead><tr><th>Phrase</th><th>Why It's Locked</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">"Toe lag"</td><td>Named root cause &mdash; gives the problem a label</td></tr>
+        <tr><td style="font-weight:600">"Automation, not manipulation"</td><td>Core Thread 1 differentiator</td></tr>
+        <tr><td style="font-weight:600">"Seven features working together"</td><td>Differentiates from Big Golf's single-feature approach</td></tr>
+        <tr><td style="font-weight:600">"Slice-Fix SpeedTech&#8482;"</td><td>Proprietary mechanism name (not "SliceFix Technology" &mdash; that was SF1)</td></tr>
+        <tr><td style="font-weight:600">"Distance AND Accuracy (All-in-One!)"</td><td>The PDP headline. The AND is the innovation. Always lead with both.</td></tr>
+        <tr><td style="font-weight:600">"3-piece forged titanium"</td><td>Always "3-piece forged" &mdash; not just "titanium"</td></tr>
+        <tr><td style="font-weight:600">"20-30 yards without changing your swing"</td><td>Distance + qualifier always paired</td></tr>
+        <tr><td style="font-weight:600">"Built for YOUR swing"</td><td>Anti-Big Golf positioning</td></tr>
+        <tr><td style="font-weight:600">"Distance AND accuracy"</td><td>The AND is the innovation</td></tr>
+      </tbody>
+    </table>
+
+    <h3>E-Com Page URLs</h3>
+    <div class="callout-muted">
+      <strong>LIVE</strong> &mdash; All funnel paths active. Source: <a href="https://docs.google.com/spreadsheets/d/1IoRAi_lCVaRlSrotYvzht5nOKUZHZX8jno8ald7yz4w/edit" target="_blank" style="color:var(--orange)">GTM Launch Links - MASTER &rarr;</a>
+    </div>
+    <table>
+      <thead><tr><th>Page</th><th>Customer URL</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">PG.com PDP</td><td><a href="https://www.performancegolf.com/sf2" target="_blank" style="color:var(--orange)">performancegolf.com/sf2 &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Salespage</td><td><a href="https://shop.performancegolf.com/pages/sf2-driver-info" target="_blank" style="color:var(--orange)">shop.performancegolf.com/.../sf2-driver-info &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">VSL (Closed)</td><td><a href="https://www.performancegolf.com/sf2/video" target="_blank" style="color:var(--orange)">performancegolf.com/sf2/video &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">VSL (Open)</td><td><a href="https://www.performancegolf.com/sf2/video-b" target="_blank" style="color:var(--orange)">performancegolf.com/sf2/video-b &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Checkout</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/sf2-397299" target="_blank" style="color:var(--orange)">secure.performancegolf.com/.../sf2-397299 &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Upsell 1</td><td><a href="https://secure.performancegolf.com/sf2/upgrade/up1/ecomm/357" target="_blank" style="color:var(--orange)">sf2/upgrade/up1 &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Downsell 1</td><td><a href="https://secure.performancegolf.com/sf2/upgrade/ds1/ecomm/357" target="_blank" style="color:var(--orange)">sf2/upgrade/ds1 &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Upsell 2</td><td><a href="https://secure.performancegolf.com/sf2/upgrade/up2/ecomm/359" target="_blank" style="color:var(--orange)">sf2/upgrade/up2 &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Downsell 2</td><td><a href="https://secure.performancegolf.com/sf2/upgrade/ds2/ecomm/359" target="_blank" style="color:var(--orange)">sf2/upgrade/ds2 &rarr;</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 4: PERSONA & VALUE DRIVER MATRIX ═══════ -->
+<div class="section" id="s4">
+  <div class="section-header">
+    <div class="section-number">Section 04</div>
+    <div class="section-title">Persona &amp; Value Driver Matrix</div>
+    <div class="section-subtitle">Who are we targeting? 5 launch personas, 10 value drivers</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">
+      Each batch 1 ad variation targets one persona. Variation 1 &rarr; Persona 1, etc. Remaining personas move to Phase 2 expansion.
+    </div>
+
+    <div class="persona-card">
+      <img src="persona-images/p1-chronic-slicer.jpg" alt="P1 Chronic Slicer">
+      <div class="persona-name">P1 &mdash; The Chronic Slicer</div>
+      <div class="persona-desc">Slices every round. Tried lessons, YouTube, new grips &mdash; nothing sticks. Largest segment: 96% of recreational golfers slice.</div>
+      <div class="persona-quote">"I've tried everything. Nothing fixes my slice."</div>
+      <div style="margin-top:6px"><span class="tag tag-orange">Primary Emotion: Frustration + Shame</span></div>
+    </div>
+
+    <div class="persona-card">
+      <img src="persona-images/p2-equipment-skeptic.jpg" alt="P2 Equipment Skeptic">
+      <div class="persona-name">P2 &mdash; The Equipment Skeptic</div>
+      <div class="persona-desc">Burned by "miracle" golf products before. Needs overwhelming proof &mdash; credentialed authority + volume social proof.</div>
+      <div class="persona-quote">"I've been burned by golf gadgets before. Why would this be different?"</div>
+      <div style="margin-top:6px"><span class="tag tag-blue">Primary Emotion: Distrust + Guarded Hope</span></div>
+    </div>
+
+    <div class="persona-card">
+      <img src="persona-images/p3-tech-enthusiast.jpg" alt="P3 Tech Enthusiast">
+      <div class="persona-name">P3 &mdash; The Tech/Innovation Enthusiast</div>
+      <div class="persona-desc">Loves engineering stories, materials science. Early adopter who tells his foursome what he bought and why.</div>
+      <div class="persona-quote">"Aerospace-grade forged titanium? Tell me more about the engineering."</div>
+      <div style="margin-top:6px"><span class="tag tag-green">Primary Emotion: Wonder + Early-Adopter Pride</span></div>
+    </div>
+
+    <div class="persona-card">
+      <img src="persona-images/p4-weekend-warrior.jpg" alt="P4 Weekend Warrior">
+      <div class="persona-name">P4 &mdash; The Weekend Warrior</div>
+      <div class="persona-desc">Plays once a week or less. Not trying to go pro &mdash; just wants to enjoy the round and not embarrass himself off the tee.</div>
+      <div class="persona-quote">"I just want to have fun out there without dreading every tee shot."</div>
+      <div style="margin-top:6px"><span class="tag tag-yellow">Primary Emotion: Desire for Easy Enjoyment</span></div>
+    </div>
+
+    <div class="persona-card">
+      <img src="persona-images/p5-comeback-golfer.jpg" alt="P5 Comeback Golfer">
+      <div class="persona-name">P5 &mdash; The Comeback Golfer</div>
+      <div class="persona-desc">Used to play regularly. Life got in the way. Coming back now and doesn't want to start over with lessons.</div>
+      <div class="persona-quote">"I used to shoot in the 80s. I just need to get my drive back."</div>
+      <div style="margin-top:6px"><span class="tag tag-gray">Primary Emotion: Nostalgia + Eagerness</span></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>10 Value Drivers</h3>
+    <table>
+      <thead><tr><th>#</th><th>Driver</th><th>SF2 Fulfillment</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">V1</td><td style="font-weight:600">Pain Relief</td><td>7 features square the face without swing changes</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V2</td><td style="font-weight:600">Outcome</td><td>Distance AND Accuracy (All-in-One!) &mdash; not a tradeoff</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V3</td><td style="font-weight:600">Social Proof</td><td>50K+ SF1 golfers. 70% improve immediately with draw driver (Golf Digest).</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V4</td><td style="font-weight:600">Innovation</td><td>3-piece forged titanium, Slice-Fix SpeedTech&#8482; (7 named features)</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V5</td><td style="font-weight:600">Convenience</td><td>"Without changing your swing"</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V6</td><td style="font-weight:600">Identity</td><td>"Freedom to play REAL, slice-free golf"</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V7</td><td style="font-weight:600">Deal / Value</td><td>$299 member price (saves $50), 365-day guarantee</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V8</td><td style="font-weight:600">Gift-Worthiness</td><td>Phase 2 &mdash; seasonal campaigns</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V9</td><td style="font-weight:600">Contrarian</td><td>"Built for YOUR swing, not a Tour pro's"</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V10</td><td style="font-weight:600">Confidence</td><td>"Relaxed and confident from the tee box"</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Coverage Matrix</h3>
+    <table class="matrix-table">
+      <thead>
+        <tr><th></th><th>V1</th><th>V2</th><th>V3</th><th>V4</th><th>V5</th><th>V6</th><th>V9</th><th>V10</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P1 Slicer</td>
+          <td class="coverage-strong">0001, 0002</td>
+          <td class="coverage-light">0001</td>
+          <td></td><td></td>
+          <td class="coverage-strong">0001, 0002</td>
+          <td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>P2 Skeptic</td>
+          <td></td><td></td>
+          <td class="coverage-light">0002</td>
+          <td></td><td></td><td></td>
+          <td class="coverage-strong">0002</td><td></td>
+        </tr>
+        <tr>
+          <td>P3 Tech</td>
+          <td></td><td></td><td></td>
+          <td class="coverage-strong">0003</td>
+          <td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>P4 Warrior</td>
+          <td></td><td></td>
+          <td class="coverage-light">0002</td>
+          <td></td>
+          <td class="coverage-strong">0002</td>
+          <td class="coverage-gap">GAP</td>
+          <td></td>
+          <td class="coverage-gap">GAP</td>
+        </tr>
+        <tr>
+          <td>P5 Comeback</td>
+          <td class="coverage-gap">GAP</td>
+          <td class="coverage-gap">GAP</td>
+          <td class="coverage-light">0002</td>
+          <td></td>
+          <td class="coverage-gap">GAP</td>
+          <td class="coverage-strong">0002</td>
+          <td></td>
+          <td class="coverage-gap">GAP</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">"GAP" = high-potential intersection with no script coverage yet. First targets for Phase 2 hook stacks.</div>
+
+    <h3>Phase 2 Expansion Personas</h3>
+    <table>
+      <thead><tr><th>Persona</th><th>Why Deferred</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Peer-Influenced</td><td>Social proof baked into sf2-0002 &mdash; not a distinct lane</td></tr>
+        <tr><td style="font-weight:600">Smart Shopper</td><td>Overlaps Skeptic + Tech. Mechanism detail in body serves this.</td></tr>
+        <tr><td style="font-weight:600">Gift Buyer</td><td>Seasonal &mdash; Father's Day, Christmas. Not cold traffic launch.</td></tr>
+        <tr><td style="font-weight:600">Competitive Amateur</td><td>Mid-handicappers don't self-ID as slicers in cold traffic.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Pain Stats (PDP-Verified)</h3>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-value">96%</div><div class="stat-label">Golfers Slice (GolfTec)</div></div>
+      <div class="stat-box"><div class="stat-value">8%</div><div class="stat-label">Hit a Draw (GolfTec)</div></div>
+      <div class="stat-box"><div class="stat-value">70%</div><div class="stat-label">Improve Immediately w/ Draw Driver (Golf Digest)</div></div>
+    </div>
+    <div class="callout-muted" style="margin-top:8px">8&ndash;10 stroke difference between confident vs. unconfident driving (Golf Digest)</div>
+
+    <h3>SF2 Target Audience (PDP Definition)</h3>
+    <div class="callout" style="border-left-color:var(--forest)">
+      <strong>SF2 is for golfers who:</strong>
+      <ul style="margin-top:8px;padding-left:16px">
+        <li>Slice (or miss right) most of their drives</li>
+        <li>Have tried lessons, tips, YouTube &mdash; nothing worked</li>
+        <li>Lost distance with age and want it back</li>
+        <li>Are tired of being the shortest hitter in the group</li>
+        <li>Want to enjoy golf again</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 5: CREATIVE MATRIX & AD SCRIPTS ═══════ -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <div class="section-number">Section 05</div>
+    <div class="section-title">Creative Matrix &amp; Ad Scripts</div>
+    <div class="section-subtitle">What ads are we running? Script &rarr; persona &rarr; value driver mapping</div>
+  </div>
+  <div class="section-body">
+    <div class="script-card">
+      <div class="script-id">sf2-0001</div>
+      <div class="script-name">"Best Driver of the Year"</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Format</td><td>bvo (Human VO + B-Roll) &mdash; ~5 min long-form</td></tr>
+        <tr><td style="font-weight:600">Lead Thread</td><td><span class="tag tag-blue">Thread 2 (Innovation)</span> &rarr; <span class="tag tag-green">Thread 1 payoff</span></td></tr>
+        <tr><td style="font-weight:600">Status</td><td><span class="tag tag-green">v2 LOCKED</span></td></tr>
+      </table>
+      <h4>Hook Variations</h4>
+      <table>
+        <thead><tr><th>Var</th><th>Persona</th><th>Value Driver</th></tr></thead>
+        <tbody>
+          <tr><td>V1</td><td>General / Tech</td><td>V4 Innovation</td></tr>
+          <tr><td>V2</td><td>Chronic Slicer</td><td>V1 Pain + V5 Convenience</td></tr>
+          <tr><td>V3</td><td>Peer-Influenced</td><td>V3 Social Proof</td></tr>
+          <tr><td>V4</td><td>SF1 Upgraders</td><td>V4 Innovation (visual)</td></tr>
+          <tr><td>V5</td><td><span class="tag tag-gray">OPEN &mdash; Phase 2</span></td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="script-card">
+      <div class="script-id">sf2-0002</div>
+      <div class="script-name">"Most Popular Way" (Andromeda 5-Hook)</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Format</td><td>bvo &mdash; ~120s per variation. 5 hooks &rarr; 1 body.</td></tr>
+        <tr><td style="font-weight:600">Lead Thread</td><td><span class="tag tag-green">Thread 1 (Smarter Journey)</span></td></tr>
+        <tr><td style="font-weight:600">Status</td><td><span class="tag tag-green">v4 LOCKED</span></td></tr>
+        <tr><td style="font-weight:600">Strategy</td><td>Andromeda optimization &mdash; Meta matches hook to viewer</td></tr>
+      </table>
+      <h4>5 Persona-Specific Hooks</h4>
+      <table>
+        <thead><tr><th>Hook</th><th>Persona</th><th>VO</th><th>Entry Point</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;color:var(--orange)">H1</td><td>Chronic Slicer</td><td>On-cam</td><td>"If your slice has survived every fix..."</td></tr>
+          <tr><td style="font-weight:700;color:var(--orange)">H2</td><td>Equipment Skeptic</td><td>On-cam</td><td>"I used to roll my eyes at every 'miracle driver' ad"</td></tr>
+          <tr><td style="font-weight:700;color:var(--orange)">H3</td><td>Weekend Warrior</td><td>AIVO</td><td>"You used to love Saturday morning golf"</td></tr>
+          <tr><td style="font-weight:700;color:var(--orange)">H4</td><td>Comeback Golfer</td><td>AIVO</td><td>"There's a golfer somewhere inside you..."</td></tr>
+          <tr><td style="font-weight:700;color:var(--orange)">H5</td><td>Smart Shopper</td><td>Visual</td><td>"7 features. 50,000+ golfers. Zero swing changes."</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="script-card">
+      <div class="script-id">sf2-0003</div>
+      <div class="script-name">"Brand Values" (SF2 Commercial)</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Format</td><td>bvo (Brand commercial) &mdash; ~1:30-2:00</td></tr>
+        <tr><td style="font-weight:600">Lead Thread</td><td><span class="tag tag-blue">Thread 2 (Innovation)</span> &rarr; <span class="tag tag-green">Thread 1 close</span></td></tr>
+        <tr><td style="font-weight:600">Status</td><td><span class="tag tag-green">v3 Body LOCKED</span> / <span class="tag tag-yellow">Hooks DRAFT</span></td></tr>
+      </table>
+      <h4>5 Hooks (Mixed Branded + DR)</h4>
+      <table>
+        <thead><tr><th>Hook</th><th>Persona</th><th>Tone</th><th>Entry Point</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;color:var(--orange)">H1</td><td>Tech Enthusiast</td><td>Branded</td><td>"He's built clubs for the biggest names in golf"</td></tr>
+          <tr><td style="font-weight:700;color:var(--orange)">H2</td><td>Competitive Amateur</td><td>DR</td><td>"You don't need to fix your swing"</td></tr>
+          <tr><td style="font-weight:700;color:var(--orange)">H3</td><td>Chronic Slicer</td><td>Branded</td><td>"Good golf always starts with good drives"</td></tr>
+          <tr><td style="font-weight:700;color:var(--orange)">H4</td><td>Smart Shopper</td><td>DR</td><td>"Every major driver company engineers for the Tour"</td></tr>
+          <tr><td style="font-weight:700;color:var(--orange)">H5</td><td>Peer-Influenced</td><td>DR</td><td>"When 50,000+ golfers put down their big-brand drivers..."</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size: 14px;color:var(--ui-gray);margin-top:8px"><strong>Body arc (9 beats):</strong> Origin &rarr; Philosophy (Balance, Reliability, Speed) &rarr; Aerospace &rarr; McGinley &rarr; Engineering Rigor &rarr; Product Hero &rarr; Identity Shift &rarr; Proof Tease &rarr; CTA</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Persona Coverage Across Scripts</h3>
+    <table>
+      <thead><tr><th>Persona</th><th>0001</th><th>0002</th><th>0003</th><th>Coverage</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">P1 Chronic Slicer</td><td>V2 hook + body</td><td>H1</td><td>H3</td><td><span class="tag tag-green">Strong</span></td></tr>
+        <tr><td style="font-weight:600">P2 Equipment Skeptic</td><td>Body (proof)</td><td>H2</td><td>&mdash;</td><td><span class="tag tag-yellow">Moderate</span></td></tr>
+        <tr><td style="font-weight:600">P3 Tech Enthusiast</td><td>V1 hook</td><td>&mdash;</td><td>H1 + body</td><td><span class="tag tag-green">Strong</span></td></tr>
+        <tr><td style="font-weight:600">P4 Weekend Warrior</td><td>&mdash;</td><td>H3</td><td>&mdash;</td><td><span class="tag tag-orange">Light &mdash; P2 priority</span></td></tr>
+        <tr><td style="font-weight:600">P5 Comeback Golfer</td><td>&mdash;</td><td>H4</td><td>&mdash;</td><td><span class="tag tag-orange">Light &mdash; P2 priority</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Hook Bridge Strategy</h3>
+    <div class="callout" style="border-left-color:var(--forest);background:#e8f5e9">
+      <strong>How hooks connect to the shared body:</strong> Each persona-specific hook runs onto the same body in a way that still engages each persona as best we can. The shared body is written to be broadly relevant across all five slicers — the hook does the persona-specific entry, the body carries them through.
+    </div>
+    <div class="callout-muted">
+      <strong>Phase 2 expansion rule:</strong> Once a particular variation (persona) shows positive signs from data, we dig deeper — creating new content specifically targeted toward that persona. The hook stack is the testing mechanism; NNs (narrow narratives) are the follow-on investment.
+    </div>
+
+    <h3>Open Items</h3>
+    <div class="open-item"><strong>[GOLD ONE-LINER] &times;4</strong> across scripts &mdash; select proof bump clips</div>
+    <div class="open-item"><strong>[TESTIMONIAL] &times;3</strong> &mdash; from Shoot 3 + Jessi delivery</div>
+    <div class="open-item"><strong>sf2-0003 hooks</strong> &mdash; DRAFT, need Christopher final</div>
+    <div class="open-item"><strong>96% slice stat</strong> (sf2-0002 H5) &mdash; Source confirmed: GolfTec. Use "96% of golfers struggle with a slice (GolfTec)".</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 6: EMAIL/BACKEND ALIGNMENT ═══════ -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <div class="section-number">Section 06</div>
+    <div class="section-title">Email/Backend Alignment</div>
+    <div class="section-subtitle">Front-end &amp; back-end messaging consistency</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">
+      Email sequences, post-purchase flows, and abandoned cart messaging must echo the same core language as ads and VSL. Every touchpoint should feel like the same conversation. Key language reference: <a href="#s3" style="color:var(--orange)">Section 3 — Key Language</a>.
+    </div>
+
+    <h3>Email Sequences</h3>
+    <table>
+      <thead><tr><th>Sequence</th><th>Messaging Direction</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Pre-launch / Waitlist</td><td>Root angle + SF1&rarr;SF2 upgrade story. Lead with "Distance AND Accuracy" positioning.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Launch Announcement</td><td>Mirror VSL emotional arc. Open with pain (slice), reveal mechanism (Slice-Fix SpeedTech&#8482;), close on guarantee.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Cart Abandonment</td><td>Thread 1 + proof stack + 365-Day Demo Period guarantee. Lead with risk reversal.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Post-Purchase</td><td>Unboxing tips + range session prep. First email = confidence builder. Welcome to the SF2 family.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">SF1 &rarr; SF2 Upgrade</td><td>Audience: existing SF1 owners. Hook: "You fixed the slice. Now get the distance." Angle: they know it works — SF2 is the natural evolution. Specific drip content <span class="tag tag-yellow">TBD — Joey</span></td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Testimonial Drip</td><td>Short-form social proof emails. Match the proof arc from the VSL — early rounds (feel), mid rounds (confidence), long-term (scores). Specific drip content <span class="tag tag-yellow">TBD — Joey</span></td><td><span class="tag tag-gray">TBD</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Backend Checklist</h3>
+    <div class="checklist-item"><div class="check-box"></div><div>Landing page URLs configured in email links</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>UTM parameters aligned (ad &rarr; email &rarr; page)</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Cart abandonment trigger timing set</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Post-purchase automation active</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>SF1 customer segment tagged for upgrade sequence</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Member vs. non-member pricing toggle wired in email CTAs ($299 member / $349 non-member)</div></div>
+
+    <h3>Cross-Team Sync Points</h3>
+    <table>
+      <thead><tr><th>Sync</th><th>When</th><th>Who</th></tr></thead>
+      <tbody>
+        <tr><td>Email copy review vs ad scripts</td><td>Before March 20</td><td>Creative + Email</td></tr>
+        <tr><td>Landing page &rarr; email handoff test</td><td>Before launch</td><td>Email + Dev</td></tr>
+        <tr><td>Post-purchase flow activation</td><td>March 25</td><td>Email + Ops</td></tr>
+        <tr><td>SF1 upgrade segment targeting</td><td>Before launch</td><td>Email + Data</td></tr>
+        <tr><td>Testimonial + split test sections review</td><td>Before launch</td><td>Email + Creative (<a href="#s12" style="color:var(--orange)">see Section 12</a>)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 7: PRODUCTION & SHOOT PLAN ═══════ -->
+<div class="section" id="s7">
+  <div class="section-header">
+    <div class="section-number">Section 07</div>
+    <div class="section-title">Production &amp; Shoot Plan</div>
+    <div class="section-subtitle">What do we need to shoot? What footage exists?</div>
+  </div>
+  <div class="section-body">
+
+    <div class="callout" style="border-left:4px solid var(--orange);background:#fff8f0;padding:16px 20px;margin-bottom:24px">
+      <div style="font-weight:700;font-size: 17px;margin-bottom:12px">CEO Quick View: SF2 Content Status</div>
+      <table style="font-size: 15px">
+        <thead><tr><th>Category</th><th>Count</th><th>Items</th><th>Themes</th></tr></thead>
+        <tbody>
+          <tr style="background:#e8f5e9">
+            <td style="font-weight:700;color:var(--forest)">Shot / Available</td>
+            <td style="font-weight:700">6</td>
+            <td>McGinley lab footage, demo day footage, Brixton&rsquo;s dad full-round, Roger testimonials, lifestyle shoot (3/7), unboxing (Gerry), Gerry Carry UGC (<a href="https://icnk.io/u/rKpduI875RDT/" target="_blank" style="color:var(--orange)">Iconik &rarr;</a>)</td>
+            <td><span class="tag tag-green">Thread 1</span> <span class="tag tag-blue">Thread 2</span></td>
+          </tr>
+          <tr style="background:#fff8e1">
+            <td style="font-weight:700;color:var(--orange)">In Production</td>
+            <td style="font-weight:700">5</td>
+            <td>JoJo POV pickups (all week), Shoot 3 testimonials (Fri), Jessi animations (Mar 13), Jessi testimonial vids (Mar 13), Brixton range session (Mar 10-14)</td>
+            <td><span class="tag tag-green">Thread 1</span> <span class="tag tag-blue">Thread 2</span></td>
+          </tr>
+          <tr style="background:#fce4ec">
+            <td style="font-weight:700;color:#c62828">Missing / TBD</td>
+            <td style="font-weight:700">3</td>
+            <td>Slowmo closeup hits (equipment-dependent), SF2 feature carousel (static &mdash; Mar 18), email hero images/GIFs (Mar 18)</td>
+            <td><span class="tag tag-blue">Thread 2</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size: 14px;color:var(--ui-gray);margin-top:8px">Full details: shoot schedule, gap matrix, and organic asset registry below.</div>
+    </div>
+
+    <h3>3 Pre-Launch Shoots</h3>
+
+    <div class="script-card" style="border-left-color: var(--forest)">
+      <div style="font-weight:700;font-size: 16px;">Shoot 1: Gerry Unboxing</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Owner</td><td>JoJo Phillips</td></tr>
+        <tr><td style="font-weight:600">Talent</td><td>Gerry</td></tr>
+        <tr><td style="font-weight:600">When</td><td>Mon-Tue, March 10-11</td></tr>
+      </table>
+      <h4>Shot List</h4>
+      <ul>
+        <li>Grab package from front door / delivery moment</li>
+        <li>Full unboxing &mdash; genuine reactions, no script</li>
+        <li>Close-ups: crown, face angle, features, weight feel</li>
+        <li>POV / over-shoulder shots</li>
+        <li>Second take: re-box for "customer receiving it" reaction</li>
+      </ul>
+      <div class="callout-muted">Direction: Authentic > polished. Gerry IS the target market.</div>
+    </div>
+
+    <div class="script-card" style="border-left-color: var(--forest)">
+      <div style="font-weight:700;font-size: 16px;">Shoot 2: JoJo POV Pickups</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Owner</td><td>JoJo Phillips (self-capture)</td></tr>
+        <tr><td style="font-weight:600">When</td><td>All week, March 10-14</td></tr>
+        <tr><td style="font-weight:600">Equipment</td><td>Meta glasses, iPhone, cameras</td></tr>
+      </table>
+      <h4>Shot List</h4>
+      <ul>
+        <li>SF2 vs normal driver side-by-side</li>
+        <li>Face angle close-ups (3&deg; closed vs open)</li>
+        <li>POV range session &mdash; ball flight</li>
+        <li>Product handling: crown, sole, hosel, Speed Geometry Toe Slot</li>
+        <li>Slowmo closeup hits (if equipment allows)</li>
+        <li>Club in bag, freestyle creative shots</li>
+      </ul>
+    </div>
+
+    <div class="script-card" style="border-left-color: var(--forest)">
+      <div style="font-weight:700;font-size: 16px;">Shoot 3: Friday Testimonials</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Owner</td><td>JoJo Phillips</td></tr>
+        <tr><td style="font-weight:600">Talent</td><td>3 golfers (TBD)</td></tr>
+        <tr><td style="font-weight:600">When</td><td>Friday, March 14</td></tr>
+        <tr><td style="font-weight:600">Style</td><td>Man-on-the-street. NO scripted lines, zero coaching.</td></tr>
+      </table>
+      <p>Close-ups of facial reactions on hit + wide shot full swing + ball flight. Before/after: their driver vs SF2.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Incoming Assets</h3>
+    <table>
+      <thead><tr><th>Asset</th><th>Source</th><th>ETA</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Animations</td><td>Jessi</td><td>Mar 13</td><td><span class="tag tag-yellow">Arriving</span></td></tr>
+        <tr><td style="font-weight:600">Lifestyle shoot</td><td>Mar 7 shoot</td><td>Mar 9-10</td><td><span class="tag tag-yellow">Ingesting</span></td></tr>
+        <tr><td style="font-weight:600">Testimonial videos</td><td>Jessi</td><td>Mar 13</td><td><span class="tag tag-yellow">Arriving</span></td></tr>
+        <tr><td style="font-weight:600">Demo day footage</td><td>Existing</td><td><a href="https://app.iconik.io/collection/7cf670e8-2b61-11f0-b145-eac16711a957" target="_blank" style="color:var(--orange)">Iconik &rarr; B-Roll</a></td><td><span class="tag tag-green">Available</span></td></tr>
+        <tr><td style="font-weight:600">McGinley lab footage</td><td>Existing</td><td><a href="https://app.iconik.io/collection/7cf670e8-2b61-11f0-b145-eac16711a957" target="_blank" style="color:var(--orange)">Iconik &rarr; B-Roll</a></td><td><span class="tag tag-green">Available</span></td></tr>
+        <tr><td style="font-weight:600">Brixton's dad footage</td><td>JoJo folder</td><td>Available</td><td><span class="tag tag-yellow">Needs review</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Script &rarr; Footage Dependency</h3>
+    <table>
+      <thead><tr><th>Script</th><th>Primary Source</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">sf2-0001</td><td>Shoot 2 (pickups) + Shoot 3 (testimonials) + McGinley</td></tr>
+        <tr><td style="font-weight:600">sf2-0002</td><td>Shoot 3 (testimonials) + Shoot 2 (range POV) + lifestyle</td></tr>
+        <tr><td style="font-weight:600">sf2-0003</td><td>Shoot 2 (slowmo + product) + McGinley + lifestyle</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Organic &amp; Content Deliverables</h3>
+    <div class="callout">
+      <strong>Cross-Team Asset Registry.</strong> Every channel&rsquo;s SF2 content in one place &mdash; what&rsquo;s planned, what&rsquo;s produced, where to find it. Maintained by Fatima/Jesse, updated weekly during launch sprint.
+    </div>
+    <table>
+      <thead><tr><th>Deliverable</th><th>Owner</th><th>Type</th><th>Theme / Concept</th><th>ETA</th><th>Where to Find</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Brixton range session (SF2)</td><td>JoJo</td><td><span class="tag tag-green">Organic</span></td><td>CEO authenticity &mdash; Thread 1</td><td>Mar 10-14</td><td>JoJo shared folder</td><td><span class="tag tag-yellow">Shooting</span></td></tr>
+        <tr><td style="font-weight:600">Brixton&rsquo;s dad full round</td><td>JoJo</td><td><span class="tag tag-green">Organic</span></td><td>Real golfer &mdash; Thread 1</td><td>Available</td><td>JoJo shared folder</td><td><span class="tag tag-green">Available</span></td></tr>
+        <tr><td style="font-weight:600">McGinley lab walkthrough</td><td>JoJo</td><td><span class="tag tag-blue">Social</span></td><td>Innovation story &mdash; Thread 2</td><td>Available</td><td><a href="https://app.iconik.io/collection/7cf670e8-2b61-11f0-b145-eac16711a957" target="_blank" style="color:var(--orange)">Iconik &rarr; B-Roll</a></td><td><span class="tag tag-green">Available</span></td></tr>
+        <tr><td style="font-weight:600">Man-on-range UGC clips</td><td>JoJo / Fatima</td><td><span class="tag tag-green">Organic</span></td><td>Social proof &mdash; Thread 1</td><td>Mar 14</td><td><a href="https://icnk.io/u/qiqXaMcVojCA/" target="_blank" style="color:var(--orange)">Iconik &rarr; Testimonials</a></td><td><span class="tag tag-yellow">Planned</span></td></tr>
+        <tr><td style="font-weight:600">Product unboxing reel</td><td>JoJo</td><td><span class="tag tag-blue">Social</span></td><td>Anticipation / reveal &mdash; Thread 2</td><td>Mar 11</td><td><a href="https://icnk.io/u/rKpduI875RDT/" target="_blank" style="color:var(--orange)">Iconik &rarr; UGC Footage</a></td><td><span class="tag tag-green">Delivered &mdash; tagging</span></td></tr>
+        <tr><td style="font-weight:600">SF2 feature carousel (static)</td><td>Fatima / Jesse</td><td><span class="tag tag-blue">Social</span></td><td>7 features &mdash; Thread 2</td><td>Mar 18</td><td>Canva / Drive</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Customer testimonial clips</td><td>Jessi</td><td><span class="tag tag-green">Organic</span></td><td>Real results &mdash; Thread 1</td><td>Mar 13</td><td><a href="https://icnk.io/u/qiqXaMcVojCA/" target="_blank" style="color:var(--orange)">Iconik &rarr; Testimonials</a></td><td><span class="tag tag-yellow">Arriving</span></td></tr>
+        <tr><td style="font-weight:600">Email hero images / GIFs</td><td>Jesse</td><td><span class="tag tag-orange">Email</span></td><td>Match ad key language</td><td>Mar 18</td><td>Drive / Canva</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Gerry Carry SF2 UGC footage</td><td>JoJo</td><td><span class="tag tag-blue">UGC</span></td><td>Authentic golfer reaction &mdash; Thread 1</td><td>Delivered</td><td><a href="https://icnk.io/u/rKpduI875RDT/" target="_blank" style="color:var(--orange)">Iconik &rarr;</a></td><td><span class="tag tag-green">Delivered &mdash; tagging</span></td></tr>
+        <tr><td style="font-weight:600">Influencer SF2 reactions</td><td>JoJo</td><td><span class="tag tag-green">Organic</span></td><td>Authority + authenticity</td><td>Post-launch</td><td>TBD</td><td><span class="tag tag-gray">Phase 2</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">Theo (email), Fatima (social), and anyone building SF2 content: start here. Don&rsquo;t comb through Iconik &mdash; this is the single source.</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 7b: INFLUENCER & UGC ═══════ -->
+<div class="section" id="s7b">
+  <div class="section-header">
+    <div class="section-number">Section 7b</div>
+    <div class="section-title">Influencer &amp; UGC &mdash; Whitelisting &amp; Creator Management</div>
+    <div class="section-subtitle">Added March 24 per Sam Mercado&rsquo;s request (March 19 pre-launch call)</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">Media buying team needs to know at a glance which creator handles they can run ads under.</div>
+
+    <h3>Content Creators Roster</h3>
+    <p>Full roster with handles, platforms, and whitelisting status: <a href="https://docs.google.com/spreadsheets/d/1IRK9VhmDOVndDCynx_rbX8tkSk2NAdnj_LQk1S2qDBs/edit" target="_blank" style="color:var(--orange);font-weight:600">Content Creators Roster &rarr;</a></p>
+
+    <h3>SF2 Creator Tracking</h3>
+    <table>
+      <thead><tr><th>Creator</th><th>Handle</th><th>Whitelisting</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Gerry Carry</td><td><em>see roster</em></td><td style="color:var(--green);font-weight:600">Confirmed</td><td>Active</td><td>Referenced by Sam on March 19 call</td></tr>
+        <tr><td style="color:var(--stone);font-style:italic">Add creators as confirmed</td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted" style="margin-top:10px">Before launching any ad under a creator&rsquo;s handle, confirm whitelisting rights in the <a href="https://docs.google.com/spreadsheets/d/1IRK9VhmDOVndDCynx_rbX8tkSk2NAdnj_LQk1S2qDBs/edit" target="_blank" style="color:var(--orange)">Content Creators Roster</a>. Influencer/UGC is a primary focus for Phase 2 expansion (see Section 9).</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 8: PHASE 1 LAUNCH ═══════ -->
+<div class="section" id="s8">
+  <div class="section-header">
+    <div class="section-number">Section 08</div>
+    <div class="section-title">Phase 1 &mdash; Launch</div>
+    <div class="section-subtitle">Net new ads, budget, timeline, targeting</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Launch Timeline</h3>
+    <div class="timeline-item">
+      <div class="timeline-date" style="color:var(--forest);font-weight:700">Mar 9</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Email team reviews launch board (Sections 3, 6)</div>
+        <div class="timeline-owner">Theo + Christopher &mdash; T-14 alignment checkpoint</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 14</div>
+      <div class="timeline-content">
+        <div class="timeline-title">All footage captured</div>
+        <div class="timeline-owner">JoJo Phillips</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 13</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Animations + testimonial vids delivered</div>
+        <div class="timeline-owner">Jessi</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date" style="color:var(--forest);font-weight:700">DONE</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Ad scripts locked (all 3)</div>
+        <div class="timeline-owner">Christopher</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 20</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Ads built (post-production complete)</div>
+        <div class="timeline-owner">Creative team</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date" style="color:var(--orange);font-weight:700">Mar 19</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Pre-launch alignment call</div>
+        <div class="timeline-owner">Christopher &mdash; this board = the artifact</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date" style="color:var(--orange);font-weight:700">Mar 25</div>
+      <div class="timeline-content">
+        <div class="timeline-title">SF1 ads paused</div>
+        <div class="timeline-owner">Media team &mdash; prevents competing messaging</div>
+      </div>
+    </div>
+    <div class="timeline-item" style="border-bottom:none">
+      <div class="timeline-date" style="color:var(--orange);font-weight:700">Mar 25</div>
+      <div class="timeline-content">
+        <div class="timeline-title" style="font-size: 17px">LAUNCH</div>
+        <div class="timeline-owner">All teams &mdash; pushed from March 23</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Batch 1 Ad Lineup</h3>
+    <table>
+      <thead><tr><th>Ad</th><th>Hooks</th><th>Lead Thread</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">sf2-0001</td><td>4 locked + 1 open</td><td>Thread 2 &rarr; 1</td></tr>
+        <tr><td style="font-weight:600">sf2-0002</td><td>5 hooks (Andromeda)</td><td>Thread 1</td></tr>
+        <tr><td style="font-weight:600">sf2-0003</td><td>5 hooks (DRAFT)</td><td>Thread 2 &rarr; 1</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 14px;color:var(--ui-gray)">~14 unique ad versions entering the auction</p>
+
+    <h3>Platform &amp; Targeting</h3>
+    <table>
+      <tr><td style="font-weight:600;width:35%">Platform</td><td>Meta (Facebook + Instagram)</td></tr>
+      <tr><td style="font-weight:600">Format</td><td>Video (bvo)</td></tr>
+      <tr><td style="font-weight:600">Audience</td><td>Cold traffic (primary) + SF1 retargeting</td></tr>
+      <tr><td style="font-weight:600">Targeting</td><td>Broad + Andromeda (0002), Interest-based (0001, 0003)</td></tr>
+      <tr><td style="font-weight:600">Geographic</td><td>US (primary)</td></tr>
+    </table>
+
+    <h3>Budget &amp; Spend Plan</h3>
+    <div class="placeholder-notice">
+      <strong>Media Buying fills these numbers.</strong> Creative presents ad lineup + persona targeting. Media Buying brings budget constraints + performance thresholds.
+    </div>
+    <table>
+      <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Daily budget (launch week)</td><td><span class="tag tag-gray">$___/day</span></td></tr>
+        <tr><td style="font-weight:600">Target CPA</td><td><span class="tag tag-yellow">Range TBD — pending Omer. Affected by upsell take rate + AOV. More specific after ~200 sales.</span></td></tr>
+        <tr><td style="font-weight:600">Launch week total</td><td><span class="tag tag-gray">$___/day (Media Buying fills)</span></td></tr>
+        <tr><td style="font-weight:600">Scale trigger (CPA)</td><td><span class="tag tag-yellow">Range TBD — Omer to provide low end of acceptable CPA range</span></td></tr>
+        <tr><td style="font-weight:600">Kill trigger (CPA)</td><td><span class="tag tag-yellow">Range TBD — Omer to provide high end of acceptable CPA range</span></td></tr>
+        <tr><td style="font-weight:600">Physical COGS</td><td><span class="tag tag-yellow">TBD — needed from ops to finalise CPA targets</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Launch Week Monitoring</h3>
+    <table>
+      <thead><tr><th>Day</th><th>Check</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Day 1</td><td>All ads live, tracking firing</td><td>Fix broken tracking immediately</td></tr>
+        <tr><td style="font-weight:600">Day 2-3</td><td>Initial CPA + CTR by hook</td><td>Flag outliers</td></tr>
+        <tr><td style="font-weight:600">Day 4-5</td><td>Winning hooks identified</td><td>Shift budget to winners</td></tr>
+        <tr><td style="font-weight:600">Day 7</td><td>Week 1 review</td><td>Scale/pause/queue Phase 2</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Open Items</h3>
+    <div class="open-item"><strong>sf2-0003 hooks (5)</strong> &mdash; DRAFT, need Christopher final</div>
+    <div class="open-item"><strong>sf2-0001 V5 hook</strong> &mdash; OPEN for Phase 2</div>
+    <div class="open-item"><strong>Budget numbers</strong> &mdash; Media Buying to fill (Omer)</div>
+    <div class="open-item"><strong>Landing page URLs</strong> &mdash; inserted as pages go live</div>
+    <div class="open-item"><strong>Physical COGS</strong> &mdash; needed from ops before CPA targets can be set</div>
+
+    <div class="divider"></div>
+
+    <h3>Asset Links &mdash; Source of Truth</h3>
+    <div class="callout-muted" style="margin-bottom:12px">This board is the source of truth for SF2 asset links. The Google Sheet (2026 Master Creative Asset Matrix) is retired in favour of this section. All links pulled from the SF2 tab. — <em>Fatima request</em></div>
+    <table>
+      <thead><tr><th>Asset</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">ClickUp Project</td><td><a href="https://app.clickup.com/9014714949/v/li/901413579326" target="_blank" style="color:var(--orange)">SF2 ClickUp &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">UX Design &mdash; Figma Folder</td><td><a href="https://www.figma.com/files/team/1007318218030723756/project/544257585/SF2" target="_blank" style="color:var(--orange)">Figma SF2 Project &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">B-Roll (Iconik)</td><td><a href="https://app.iconik.io/collection/7cf670e8-2b61-11f0-b145-eac16711a957" target="_blank" style="color:var(--orange)">Iconik &rarr; B-Roll</a></td></tr>
+        <tr><td style="font-weight:600">Product Images (Iconik)</td><td><a href="https://app.iconik.io/collection/f2261362-db62-11f0-bb27-d258c11f3bcd" target="_blank" style="color:var(--orange)">Iconik &rarr; Product Images</a></td></tr>
+        <tr><td style="font-weight:600">Lifestyle Images (Iconik)</td><td><a href="https://app.iconik.io/collection/d3cd06da-1ca0-11f1-a2b0-1672ea3376fd" target="_blank" style="color:var(--orange)">Iconik &rarr; Lifestyle</a> &nbsp;|&nbsp; <a href="https://icnk.io/u/M8yNTAyXshl0/" target="_blank" style="color:var(--orange)">Share link</a></td></tr>
+        <tr><td style="font-weight:600">Testimonial Videos (Iconik)</td><td><a href="https://icnk.io/u/qiqXaMcVojCA/" target="_blank" style="color:var(--orange)">Iconik &rarr; Testimonials</a></td></tr>
+        <tr><td style="font-weight:600">Homepage Hero Video</td><td><a href="https://app.iconik.io/asset/8c77adba-0d75-11f1-8446-3e064b5d3074" target="_blank" style="color:var(--orange)">Iconik &rarr; Hero Edit</a></td></tr>
+        <tr><td style="font-weight:600">Renders &amp; Animations</td><td><a href="https://app.iconik.io/collection/58a3b3d6-1738-11f1-9834-76c8cea3cdab" target="_blank" style="color:var(--orange)">Iconik &rarr; Renders</a></td></tr>
+        <tr><td style="font-weight:600">PDP &amp; Sales Page Design Assets</td><td><a href="https://docs.google.com/spreadsheets/d/1Hj0qupkhQO3mnnCS5o1b5dvOCC1Msx71nWaw8fLHneI/edit?usp=sharing" target="_blank" style="color:var(--orange)">Google Sheets &rarr;</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 9: PHASE 2 EXPANSION ═══════ -->
+<div class="section" id="s9">
+  <div class="section-header">
+    <div class="section-number">Section 09</div>
+    <div class="section-title">Phase 2 &mdash; Expansion &amp; Optimization</div>
+    <div class="section-subtitle">Hook stacks, batch 2, creative optimization</div>
+  </div>
+  <div class="section-body">
+    <div class="callout">
+      <strong>Trigger:</strong> 2 weeks post-launch (~April 6, 2026). Requires 7+ days of Phase 1 performance data.
+    </div>
+
+    <h3>Hook Stacks (Vertical Expansion)</h3>
+    <div class="callout-muted">
+      Rule: Phase 1 expansions = hook stacks ONLY. No horizontal changes (new backgrounds, talent, formats). Vertical only &mdash; dig deeper into winning angles.
+    </div>
+    <p><strong>Cadence:</strong> Week 1 data &rarr; Copy team tickets Monday &rarr; Hooks delivered Friday &rarr; Launched weekend</p>
+
+    <h3>Priority Targets</h3>
+    <table>
+      <thead><tr><th>#</th><th>Persona</th><th>Gap</th><th>Hook Direction</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">Weekend Warrior</td><td>Single hook only</td><td>Convenience + enjoyment angles</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">Comeback Golfer</td><td>Single hook only</td><td>Identity recovery + nostalgia</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">Chronic Slicer</td><td>Well-covered but highest vol</td><td>New pain entry points</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">Equipment Skeptic</td><td>Moderate coverage</td><td>Deeper proof hooks</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Batch 2: Net New Scripts</h3>
+    <table>
+      <thead><tr><th>Direction</th><th>Trigger</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Winning hook &rarr; full script</td><td>Hook outperforms parent body</td></tr>
+        <tr><td style="font-weight:600">Weekend Warrior dedicated</td><td>H3 strong CTR, weak conversion</td></tr>
+        <tr><td style="font-weight:600">Comeback Golfer dedicated</td><td>H4 strong CTR, weak conversion</td></tr>
+        <tr><td style="font-weight:600">SF1 &rarr; SF2 upgrade</td><td>SF1 retargeting CPA is strong</td></tr>
+        <tr><td style="font-weight:600">Competitive Amateur</td><td>sf2-0003 H2 shows signal</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Creative Optimization Signals</h3>
+    <table>
+      <thead><tr><th>Signal</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>High CTR, low conversion</td><td>Hook works, body doesn't &mdash; test body variations</td></tr>
+        <tr><td>Low CTR, high conversion</td><td>Body converts, hook doesn't stop scroll &mdash; hook stack</td></tr>
+        <tr><td>One hook dominates</td><td>Scale budget + build hook stack around its angle</td></tr>
+        <tr><td>AIVO outperforms on-cam</td><td>Lean into AIVO for batch 2</td></tr>
+        <tr><td>On-cam outperforms AIVO</td><td>Double down Christopher on-camera</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Influencer Shoots</h3>
+    <table>
+      <tr><td style="font-weight:600;width:25%">Trigger</td><td>Phase 1 winning angles identified</td></tr>
+      <tr><td style="font-weight:600">Owner</td><td>JoJo Phillips</td></tr>
+      <tr><td style="font-weight:600">Format</td><td>UGC-style authentic reactions</td></tr>
+    </table>
+
+    <h3>Phase 2 Budget</h3>
+    <div class="placeholder-notice">
+      <strong>Media Buying fills post Phase 1.</strong> CPA range TBD — Omer provides range once Phase 1 data available (~200 sales). Scaling criteria informed by Phase 1 CPA and AOV/upsell performance.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 10: PHASE 3 PAGE & FUNNEL OPTIMIZATION ═══════ -->
+<div class="section" id="s10">
+  <div class="section-header">
+    <div class="section-number">Section 10</div>
+    <div class="section-title">Phase 3 &mdash; Page &amp; Funnel Optimization</div>
+    <div class="section-subtitle">Page performance, CRO integration, A/B testing</div>
+  </div>
+  <div class="section-body">
+    <div class="callout">
+      <strong>Trigger:</strong> Traffic threshold reached at <strong>Days 10&ndash;14</strong> post-launch. Tests queued for <strong>Weeks 3&ndash;4</strong>. Requires statistically significant traffic to landing pages + checkout.
+    </div>
+    <div class="callout-muted" style="margin-top:8px">Timeline fixed (Danielle): previous board showed conflicting dates (4&ndash;6 weeks and 7&ndash;14 days). Correct sequence: traffic threshold Days 10&ndash;14 &rarr; tests queued Weeks 3&ndash;4.</div>
+
+    <h3>What Phase 3 Optimizes</h3>
+    <table>
+      <thead><tr><th>Layer</th><th>Measured</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Landing Page (VSL Delay)</td><td>Play rate, watch time, scroll depth, bounce</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">Landing Page (VSL Expanded)</td><td>Same + section-level engagement</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">Sales Page (PDP)</td><td>Time on page, ATC rate, exit points</td><td>CRO</td></tr>
+        <tr><td style="font-weight:600">Checkout Flow</td><td>Cart abandonment, checkout completion, upsell take</td><td>CRO + Dev</td></tr>
+        <tr><td style="font-weight:600">Upsell/Downsell</td><td>Take rates per step, revenue per visitor</td><td>CRO</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Ad &rarr; Page Alignment</h3>
+    <table>
+      <thead><tr><th>Signal</th><th>Page Action</th></tr></thead>
+      <tbody>
+        <tr><td>Winning hook = convenience (T1)</td><td>Test convenience-led headline on LP</td></tr>
+        <tr><td>Winning hook = innovation (T2)</td><td>Test SR-71/titanium above-fold</td></tr>
+        <tr><td>High ad CTR, low page conversion</td><td>Messaging disconnect &mdash; align page to ad promise</td></tr>
+        <tr><td>One persona drives most conversions</td><td>Test persona-specific landing page</td></tr>
+        <tr><td>SF1 retargeting outperforms</td><td>Test SF1&rarr;SF2 upgrade landing page</td></tr>
+      </tbody>
+    </table>
+
+    <h3>A/B Testing Priorities</h3>
+    <table>
+      <thead><tr><th>#</th><th>Test</th><th>Hypothesis</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">Above-fold headline</td><td>Match winning ad angle &rarr; higher conversion</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">VSL thumbnail / play button</td><td>Higher play rate &rarr; more viewers reach offer</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">Price presentation</td><td>$299 member vs $349 non-member toggle &mdash; test emphasis/layout/placement</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">Social proof placement</td><td>50K+ stat above fold vs below VSL</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">Checkout flow length</td><td>1-step vs 2-step &mdash; friction vs commitment</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td style="font-weight:600">Upsell copy alignment</td><td>Match upsell to ad persona that drove click</td></tr>
+      </tbody>
+    </table>
+
+    <h3>CRO Integration Points</h3>
+    <table>
+      <thead><tr><th>Touchpoint</th><th>When</th><th>What CRO Needs</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Baseline metrics</td><td>Launch week</td><td>Page URLs, traffic volume, SF1 benchmarks</td></tr>
+        <tr><td style="font-weight:600">Initial data review</td><td>Day 7-14</td><td>Which ads driving traffic, persona breakdown</td></tr>
+        <tr><td style="font-weight:600">Test plan alignment</td><td>Start of Phase 3</td><td>Winning angles, persona data, creative direction</td></tr>
+        <tr><td style="font-weight:600">Results feedback loop</td><td>Ongoing</td><td>Page test results inform batch 2 ad messaging</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-muted">
+      CRO tickets submitted via ClickUp intake form (or /cro-ticket). Include: test hypothesis, winning ad data, specific change, success metric.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Shopify Launch Requirements</h3>
+    <table>
+      <thead><tr><th>Item</th><th>Status</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Member pricing live on Shopify ($299)</td><td><span class="tag tag-yellow">TBD &mdash; go-live date needed from dev</span></td><td>Dev / Shopify</td></tr>
+        <tr><td style="font-weight:600">Non-member pricing live on Shopify ($349)</td><td><span class="tag tag-yellow">TBD &mdash; go-live date needed from dev</span></td><td>Dev / Shopify</td></tr>
+        <tr><td style="font-weight:600">VSL app built for Shopify post-purchase</td><td><span class="tag tag-yellow">TBD &mdash; build timeline needed from dev</span></td><td>Dev</td></tr>
+      </tbody>
+    </table>
+
+    <h3>SF1 &rarr; SF2 Funnel Update Checklist</h3>
+    <div class="callout-muted" style="margin-bottom:10px">Danielle: which upsells/downsells need updating from SF1 to SF2? List TBD — pending CRO + dev inventory.</div>
+    <div class="checklist-item"><div class="check-box"></div><div>SF1 upsell 1 &mdash; <span class="tag tag-yellow">Update to SF2 TBD</span></div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>SF1 upsell 2 &mdash; <span class="tag tag-yellow">Update to SF2 TBD</span></div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>SF1 downsell 1 &mdash; <span class="tag tag-yellow">Update to SF2 TBD</span></div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>SF1 downsell 2 &mdash; <span class="tag tag-yellow">Update to SF2 TBD</span></div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Any email sequences referencing SF1 product page URLs &mdash; update to SF2</div></div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 11: FUNNEL MAP & CORE ASSETS ═══════ -->
+<div class="section" id="s11">
+  <div class="section-header">
+    <div class="section-number">Section 11</div>
+    <div class="section-title">Funnel Map &amp; Core Assets</div>
+    <div class="section-subtitle">Live funnel structure, offer details, pillar conversion assets</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">Ben (GTM) + Joey (Email): this section maps the full SF2 funnel. Source: <a href="https://docs.google.com/spreadsheets/d/1IoRAi_lCVaRlSrotYvzht5nOKUZHZX8jno8ald7yz4w/edit" target="_blank" style="color:var(--orange)">GTM Launch Links - MASTER &rarr;</a></div>
+
+    <h3>SF2 Funnel Flow &mdash; Customer Path</h3>
+    <table>
+      <thead><tr><th>Step</th><th>Page</th><th>URL</th><th>Key Metric</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">1. Entry</td><td>Ad &rarr; VSL (Closed/Delay)</td><td><a href="https://www.performancegolf.com/sf2/video" target="_blank" style="color:var(--orange)">sf2/video &rarr;</a></td><td>CTR, CPM</td></tr>
+        <tr><td style="font-weight:600">2. VSL</td><td>VSL (Open/Expanded)</td><td><a href="https://www.performancegolf.com/sf2/video-b" target="_blank" style="color:var(--orange)">sf2/video-b &rarr;</a></td><td>Play rate, watch %</td></tr>
+        <tr><td style="font-weight:600">3. Sales</td><td>SF2 PDP / Salespage</td><td><a href="https://shop.performancegolf.com/pages/sf2-driver-info" target="_blank" style="color:var(--orange)">sf2-driver-info &rarr;</a></td><td>ATC rate, time on page</td></tr>
+        <tr><td style="font-weight:600">4. Checkout</td><td>Checkout</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/sf2-397299" target="_blank" style="color:var(--orange)">sf2-397299 &rarr;</a></td><td>Abandonment, completion</td></tr>
+        <tr><td style="font-weight:600">5. Upsell 1</td><td>357 Upsell</td><td><a href="https://secure.performancegolf.com/sf2/upgrade/up1/ecomm/357" target="_blank" style="color:var(--orange)">up1/357 &rarr;</a></td><td>Take rate</td></tr>
+        <tr><td style="font-weight:600">6. Downsell 1</td><td>357 Downsell</td><td><a href="https://secure.performancegolf.com/sf2/upgrade/ds1/ecomm/357" target="_blank" style="color:var(--orange)">ds1/357 &rarr;</a></td><td>Take rate</td></tr>
+        <tr><td style="font-weight:600">7. Upsell 2</td><td>359 Upsell</td><td><a href="https://secure.performancegolf.com/sf2/upgrade/up2/ecomm/359" target="_blank" style="color:var(--orange)">up2/359 &rarr;</a></td><td>Take rate</td></tr>
+        <tr><td style="font-weight:600">8. Downsell 2</td><td>359 Downsell</td><td><a href="https://secure.performancegolf.com/sf2/upgrade/ds2/ecomm/359" target="_blank" style="color:var(--orange)">ds2/359 &rarr;</a></td><td>Take rate</td></tr>
+        <tr><td style="font-weight:600">9. Thank You</td><td>Thank You</td><td><a href="https://secure.performancegolf.com/sf2/thank-you" target="_blank" style="color:var(--orange)">sf2/thank-you &rarr;</a></td><td>&mdash;</td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted" style="margin-top:8px">Media &amp; Affiliate paths use the same structure with `-media-sc` and `-affiliate-sc` suffixes. See <a href="https://docs.google.com/spreadsheets/d/1IoRAi_lCVaRlSrotYvzht5nOKUZHZX8jno8ald7yz4w/edit" target="_blank" style="color:var(--orange)">GTM Launch Links</a> for full URLs.</div>
+
+    <div class="divider"></div>
+
+    <h3>Pillar Conversion Assets</h3>
+    <div class="callout-muted" style="margin-bottom:10px">Joey: these are the "pillar" pieces — the assets the whole funnel depends on. B-roll and short clips are listed in <a href="#s8" style="color:var(--orange)">Section 8 asset links</a>.</div>
+    <table>
+      <thead><tr><th>Asset</th><th>Type</th><th>Link / Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">VSL (Closed &mdash; Delay)</td><td>Video</td><td><span class="tag tag-yellow">TBD &mdash; link when live</span></td></tr>
+        <tr><td style="font-weight:600">VSL (Open &mdash; Expanded)</td><td>Video</td><td><span class="tag tag-yellow">TBD &mdash; link when live</span></td></tr>
+        <tr><td style="font-weight:600">SF2 PDP (Sales Page)</td><td>Page</td><td><span class="tag tag-yellow">TBD &mdash; link when live</span></td></tr>
+        <tr><td style="font-weight:600">McGinley Behind-the-Scenes</td><td>Video</td><td><a href="https://app.iconik.io/collection/7cf670e8-2b61-11f0-b145-eac16711a957" target="_blank" style="color:var(--orange)">Iconik &rarr; B-Roll</a></td></tr>
+        <tr><td style="font-weight:600">Homepage Hero Video Edit</td><td>Video</td><td><a href="https://app.iconik.io/asset/8c77adba-0d75-11f1-8446-3e064b5d3074" target="_blank" style="color:var(--orange)">Iconik &rarr; Hero Edit</a></td></tr>
+        <tr><td style="font-weight:600">Renders &amp; Animations</td><td>Motion</td><td><a href="https://app.iconik.io/collection/58a3b3d6-1738-11f1-9834-76c8cea3cdab" target="_blank" style="color:var(--orange)">Iconik &rarr; Renders</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 12: TESTING STRATEGY ═══════ -->
+<div class="section" id="s12">
+  <div class="section-header">
+    <div class="section-number">Section 12</div>
+    <div class="section-title">Testing Strategy</div>
+    <div class="section-subtitle">Ad/creative split tests + on-page A/B testing</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Ad &amp; Creative Split Tests</h3>
+    <div class="callout-muted" style="margin-bottom:10px">Joey: planned split tests at ad/copy level. Add any VSL lead variations or copy team tests here before launch so media buying can plan.</div>
+    <div class="placeholder-notice">
+      <strong>Split test plan TBD &mdash; pending copy team.</strong> Add: test name, hypothesis, what&rsquo;s being split (VSL lead, hook, body), owner, timeline.
+    </div>
+    <table>
+      <thead><tr><th>Test</th><th>What&rsquo;s Split</th><th>Hypothesis</th><th>Owner</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">VSL Lead A vs B</td><td>VSL opening 60s</td><td>Different lead angle &rarr; higher watch %</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-gray">Planned</span></td></tr>
+        <tr><td style="font-weight:600">Hook stack winner</td><td>sf2-0002 winning hook &rarr; dedicated script</td><td>Persona-specific body &rarr; higher CVR</td><td>Christopher + Morten</td><td><span class="tag tag-gray">Phase 2</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>On-Page A/B Tests (CRO)</h3>
+    <div class="callout-muted" style="margin-bottom:10px">Danielle: A/B testing on Shopify + landing pages. Traffic threshold at Days 10&ndash;14 &rarr; tests queued Weeks 3&ndash;4.</div>
+    <table>
+      <thead><tr><th>#</th><th>Test</th><th>Platform</th><th>Hypothesis</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">Above-fold headline</td><td>Landing Page</td><td>Match winning ad angle &rarr; higher CVR</td><td><span class="tag tag-gray">Queued wk 3&ndash;4</span></td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">Member/non-member toggle</td><td>Shopify PDP</td><td>Prominent toggle &rarr; more member conversions</td><td><span class="tag tag-yellow">Pending pricing go-live</span></td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">VSL thumbnail</td><td>Landing Page</td><td>Higher play rate &rarr; more viewers reach offer</td><td><span class="tag tag-gray">Queued wk 3&ndash;4</span></td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">Social proof placement</td><td>PDP</td><td>50K+ stat above fold vs below VSL</td><td><span class="tag tag-gray">Queued wk 3&ndash;4</span></td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">Checkout flow length</td><td>Shopify</td><td>1-step vs 2-step &mdash; friction vs commitment</td><td><span class="tag tag-gray">Queued wk 3&ndash;4</span></td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td style="font-weight:600">VSL app (post-purchase)</td><td>Shopify</td><td>Post-purchase VSL &rarr; higher upsell take rate</td><td><span class="tag tag-yellow">Pending build</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-muted">
+      CRO tickets: submit via ClickUp intake (or /cro-ticket). Required fields: test hypothesis, winning ad data, specific change, success metric, traffic estimate.
+    </div>
+  </div>
+</div>
+
+</div><!-- end .board -->
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 # SF2 Anti-Slice Driver — Launch Board Content Doc
 
 > **Purpose**: Single alignment artifact for the March 19th pre-launch call. Content doc feeds directly into Figma board.
-> **Launch Date**: March 23, 2026
+> **Launch Date**: March 25, 2026
 > **Ads Due**: March 20, 2026
 > **Pre-Launch Call**: March 19, 2026
 > **Owner**: Christopher Ogle (Interim Creative Lead)
@@ -17,7 +17,7 @@
 | Field | Details |
 |-------|---------|
 | **Product** | SF2 Anti-Slice Driver |
-| **Launch Date** | **March 23** |
+| **Launch Date** | **March 25** |
 | **Pre-Launch Call** | March 19 |
 | **Ads Due** | March 20 |
 | **Batch 1 Ads** | 3 scripts → ~14 ad versions |
@@ -44,12 +44,56 @@ Full shoot plan → Section 7
 
 | What You're Looking For | Where |
 |------------------------|-------|
+| Campaign theme (core statement) | Section 0a |
 | Campaign message | Section 2 |
 | Key phrases to echo | Section 3 |
 | Who we're targeting | Section 4 |
 | Ad scripts & hooks | Section 5 |
 | Production & assets | Section 7 |
+| Influencer/UGC whitelisting | Section 7b |
 | Launch timeline | Section 8 |
+
+---
+
+## Section 0a: Campaign Theme
+
+> **The ONE core theme everything else stems from.** Every ad, email, landing page, and sales page for the SF2 launch ladders up to this statement.
+
+### Core Campaign Theme
+
+> **"The slice-fixing driver that doesn't sacrifice distance."**
+
+### Root Angle
+
+> **"The slice-fixing driver that doesn't sacrifice distance."**
+
+Verified across: Research PRD, Backend VSL script, Funnel identification doc.
+
+### The "AND" — Why This Theme Works
+
+SF2 eliminates the tradeoff every slicer has accepted: fix the slice OR get distance — never both. The campaign theme is the "AND":
+
+| Pillar | What It Delivers | How |
+|--------|-----------------|-----|
+| **Pillar 1 — Slice Fix** | 6 SliceFix SpeedTech features automatically square the face | Toe lag is a physics problem, not a swing problem. SF2 engineers around it. |
+| **Pillar 2 — Distance** | +20-30 yards with your current swing | 3-piece forged aerospace-grade titanium face = higher ball speed. Straighter flight = less spin = more roll. |
+
+SF1 proved the slice fix works (60,000+ golfers). But SF1 owners said: "I love that my slice is gone, but I'm getting outdriven." SF2 answers that directly — same slice fix, now with serious distance. The "AND" is the innovation story: **aerospace-grade titanium eliminates the tradeoff.**
+
+### The Research Reframe
+
+> **"The slice isn't a swing problem — it's a physics problem."**
+
+Toe lag is the root cause. The toe is farther from your hands than the heel, so it has more distance to travel. Unless you manipulate the face closed (like Tour pros), you slice. SF2 engineers around the physics.
+
+### Brand Thread Mapping
+
+| Thread | How It Connects |
+|--------|----------------|
+| **Thread 1: Smarter Journey** | Equipment does the work, not your swing. "Without changing a single thing about your swing." |
+| **Thread 2: Innovation** | SR-71 Blackbird titanium story. 3-piece forged construction. SliceFix SpeedTech. |
+
+**Thread priority**: VSL/long-form leads with Thread 2 (SR-71 hooks attention), ads lead with Thread 1 (result-first: fix slice + distance).
 
 ---
 
@@ -131,12 +175,12 @@ The slice isn't a swing problem — it's a physics problem. The toe is farther f
 
 | Element | Details |
 |---------|---------|
-| **PG Member Price** | $249 (one payment, no payment plans) |
-| **Retail Price** | $399 |
+| **PG Member Price** | $299 (one payment, no payment plans) |
+| **Non-Member Price** | $349 |
 | **Stated Value** | $499 (driver) + $197 (bonus) = $696 |
 | **Guarantee** | 365-day "Demo Period" — full year to test, full refund + return shipping if not satisfied |
 | **Bonus** | Swing Speed Secrets Video Program — Hank Haney's Speed Slot Sequence (used with private celebrity clients, +3-7 mph swing speed, +25 yards) |
-| **Scarcity** | Initial release batch of 300 units. $249 price goes to $399 when batch sells out. |
+| **Scarcity** | Initial release batch of 300 units. $299 member price goes to $349 when batch sells out. |
 | **Shaft Options** | Pick your flex — same price, same technology |
 
 ---
@@ -251,7 +295,7 @@ Top insights from the SF2 research PRD (350KB+, 1,000+ verbatim quotes):
 4. **SF1 proof**: 60,000+ golfers, it worked → BUT distance complaint
 5. **SF2 reveal**: Titanium solves both → 6 features walkthrough
 6. **Social proof**: Testimonials — regular guys, 20+ yards, no swing changes
-7. **Close**: What would this mean for your game? → Price anchor → $249 offer → 365-day guarantee
+7. **Close**: What would this mean for your game? → Price anchor → $299 offer → 365-day guarantee
 
 ### Key Language — Downstream Creative Must Echo
 
@@ -270,21 +314,46 @@ These phrases and framings from the VSL should stay consistent across ads, email
 | **"Distance AND accuracy"** | The AND is the innovation. Previous tech forced a tradeoff. SF2 eliminates it. |
 | **"Feature stacking fully realized"** | SF2's positioning vs. SF1. SF1 proved it works. SF2 perfects it. |
 
-### Funnel Pages
+### Funnel Pages — Customer Path
 
-| Page | Owner | URL |
-|------|-------|-----|
-| Landing Page (VSL Delay) | TBD | _placeholder_ |
-| Landing Page (VSL Expanded) | TBD | _placeholder_ |
-| Sales Page (PDP) | TBD | _placeholder_ |
-| Checkout 1 | TBD | _placeholder_ |
-| Checkout 2 | TBD | _placeholder_ |
-| Upsell 1 | TBD | _placeholder_ |
-| Downsell 1 | TBD | _placeholder_ |
-| Upsell 2 | TBD | _placeholder_ |
-| Downsell 2 | TBD | _placeholder_ |
+| Page | URL |
+|------|-----|
+| PG.com PDP | `https://www.performancegolf.com/sf2` |
+| Salespage | `https://shop.performancegolf.com/pages/sf2-driver-info` |
+| PDP (Shop) | `https://shop.performancegolf.com/pages/sf2-driver-product` |
+| VSL (Closed/Delayed) | `https://www.performancegolf.com/sf2/video` |
+| VSL (Open/Expanded) | `https://www.performancegolf.com/sf2/video-b` |
+| Checkout | `https://secure.performancegolf.com/orderForms/ecomm/sf2-397299` |
+| Upsell 1 | `https://secure.performancegolf.com/sf2/upgrade/up1/ecomm/357` |
+| Downsell 1 | `https://secure.performancegolf.com/sf2/upgrade/ds1/ecomm/357` |
+| Upsell 2 | `https://secure.performancegolf.com/sf2/upgrade/up2/ecomm/359` |
+| Downsell 2 | `https://secure.performancegolf.com/sf2/upgrade/ds2/ecomm/359` |
+| Thank You | `https://secure.performancegolf.com/sf2/thank-you` |
 
-> **Note**: Page build status tracked in ClickUp. This table is for quick reference on call — URLs inserted as pages go live.
+### Funnel Pages — Media Path
+
+| Page | URL |
+|------|-----|
+| Media PDP | `https://shop.performancegolf.com/pages/sf2-driver-media-product-scc` |
+| Media Salespage | `https://shop.performancegolf.com/pages/sf2-driver-media-info-sc` |
+| Media VSL (Closed) | `https://www.performancegolf.com/sf2/media/video` |
+| Media VSL (Open) | `https://www.performancegolf.com/sf2/media/video-b` |
+| Media Checkout | `https://secure.performancegolf.com/orderForms/ecomm/sf2-397299-media-sc` |
+| Media UP1 → DS1 → UP2 → DS2 | Same as customer path with `-sc` suffix |
+| Media Thank You | `https://secure.performancegolf.com/media/sf2/thank-you` |
+
+### Funnel Pages — Affiliate Path
+
+| Page | URL |
+|------|-----|
+| Affiliate Salespage | `http://www.performancegolf.com/sf2/affiliate/info-sc` |
+| Affiliate VSL (Closed) | `https://www.performancegolf.com/sf2/affiliate/video` |
+| Affiliate VSL (Open) | `https://www.performancegolf.com/sf2/affiliate/video-b` |
+| Affiliate Checkout | `https://secure.performancegolf.com/orderForms/ecomm/sf2-397299-affiliate-sc` |
+| Affiliate UP1 → DS1 → UP2 → DS2 | Same as customer path with `-affiliate-sc` suffix |
+| Affiliate Thank You | `https://secure.performancegolf.com/affiliate/sf2/thank-you` |
+
+> **Source**: [GTM Launch Links - MASTER](https://docs.google.com/spreadsheets/d/1IoRAi_lCVaRlSrotYvzht5nOKUZHZX8jno8ald7yz4w/edit) (SF Driver 3.2026 tab). Page build status tracked in ClickUp.
 
 ---
 
@@ -321,7 +390,7 @@ These phrases and framings from the VSL should stay consistent across ads, email
 | V4 | **Innovation** | Cutting-edge engineering, aerospace-grade materials | 3-piece forged titanium, SliceFix SpeedTech, SR-71 pedigree |
 | V5 | **Convenience** | Fix the problem without the work | "Without changing a single thing about your swing" |
 | V6 | **Identity** | Stop feeling like you don't belong on the course | "Finally giving themselves the freedom to play REAL, slice-free golf" |
-| V7 | **Deal / Value** | Smart purchase, great price for what you get | $249 member price (vs $399 retail), 365-day guarantee |
+| V7 | **Deal / Value** | Smart purchase, great price for what you get | $299 member price (vs $349 non-member), 365-day guarantee |
 | V8 | **Gift-Worthiness** | The perfect golf gift that'll actually get used | Phase 2 — seasonal campaigns |
 | V9 | **Contrarian** | Reject the big-name drivers designed for pros | "Built for YOUR swing, not a Tour pro's" |
 | V10 | **Confidence** | Walk up to the tee relaxed instead of anxious | "Relaxed and confident from the tee box" |
@@ -504,7 +573,7 @@ The following phrases are locked across ads AND email. Email copy must use these
 |------|------|-----|
 | Email copy review against ad scripts | Before launch (by March 20) | Creative + Email team |
 | Landing page → email handoff test | Before launch | Email + Dev |
-| Post-purchase flow activation | Launch day (March 23) | Email + Ops |
+| Post-purchase flow activation | Launch day (March 25) | Email + Ops |
 | SF1 upgrade segment targeting | Before launch | Email + Data |
 
 > **For the March 19th call**: Email alignment is presented as the framework. Specific copy and automation details are finalized between March 19-22 with the email team. This section ensures nothing falls through the cracks.
@@ -515,13 +584,23 @@ The following phrases are locked across ads AND email. Email copy must use these
 
 > **Template note**: This section maps all required footage to shoots, identifies gaps, and tracks existing assets. In future launches, this section is populated AFTER the creative matrix (Section 5) confirms which scripts need which footage types. Production planning is driven by creative decisions — never the other way around.
 
+### Animation & Asset Consolidation Note
+
+> **Action item from March 19 pre-launch call**: Theontae flagged that the SF2 VSL contains animations not listed in the main SF2 animation doc. Some assets were manually screen-recorded from the VSL and re-uploaded to Canva. To find ALL SF2 animations, check both sources:
+>
+> 1. **SF2 PDP & Sales Page Design Assets**: [Google Sheet](https://docs.google.com/spreadsheets/d/1Hj0qupkhQO3mnnCS5o1b5dvOCC1Msx71nWaw8fLHneI/edit) — 28+ entries with Iconik URLs (hero carousel, feature animations, lifestyle shots)
+> 2. **2026 Master Creative Asset Matrix** (SF2 tab): [Google Sheet](https://docs.google.com/spreadsheets/d/1zr-329F3Q9d5pgOcWIB90BBRdCNoW_5CrQBn5ANgKnM/edit)
+> 3. For specific clips, tag **Fatima** and **Jesse** in the Go to Market channel
+>
+> **Production note (Donnie, March 18)**: Remove any animation shots that display undesirable slice visuals. All SF2 animations should convey a premium visual feel — no shots where the ball curves right or the face appears open.
+
 ### CEO Quick View: SF2 Content Status
 
 > Brixton-facing summary. Scan this to see what's been shot, what's in production, and what's missing — with theme tags.
 
 | Category | Count | Items | Themes |
 |----------|-------|-------|--------|
-| **Shot / Available** | 6 | McGinley lab footage, demo day footage, Brixton's dad full-round, Roger testimonials, lifestyle shoot (3/7), unboxing (Gerry) | Thread 1, Thread 2 |
+| **Shot / Available** | 7 | McGinley lab footage, demo day footage, Brixton's dad full-round, Roger testimonials, lifestyle shoot (3/7), unboxing (Gerry), Gerry Carry UGC ([Iconik](https://icnk.io/u/rKpduI875RDT/)) | Thread 1, Thread 2 |
 | **In Production** | 5 | JoJo POV pickups (all week), Shoot 3 testimonials (Fri), Jessi animations (Mar 13), Jessi testimonial vids (Mar 13), Brixton range session (Mar 10-14) | Thread 1, Thread 2 |
 | **Missing / TBD** | 3 | Slowmo closeup hits (equipment-dependent), SF2 feature carousel (static — Mar 18), email hero images/GIFs (Mar 18) | Thread 2 |
 
@@ -631,13 +710,33 @@ Which shoots feed which scripts — ensures nothing blocks post-production:
 | Brixton's dad full round | JoJo | Organic | Real golfer — Thread 1 | Available | JoJo shared folder | Available |
 | McGinley lab walkthrough | JoJo | Social | Innovation story — Thread 2 | Available | Iconik | Available |
 | Man-on-range UGC clips | JoJo / Fatima | Organic | Social proof — Thread 1 | Mar 14 | Shoot 3 folder | Planned |
-| Product unboxing reel | JoJo | Social | Anticipation / reveal — Thread 2 | Mar 11 | Shoot 1 folder | Shooting |
+| Product unboxing reel | JoJo | Social | Anticipation / reveal — Thread 2 | Mar 11 | [Iconik](https://icnk.io/u/rKpduI875RDT/) | Delivered — tagging in progress |
 | SF2 feature carousel (static) | Fatima / Jesse | Social | 6 features — Thread 2 | Mar 18 | Canva / Drive | TBD |
 | Customer testimonial clips | Jessi | Organic | Real results — Thread 1 | Mar 13 | Jessi delivery | Arriving |
 | Email hero images / GIFs | Jesse | Email | Match ad key language | Mar 18 | Drive / Canva | TBD |
+| Gerry Carry SF2 UGC footage | JoJo | UGC | Authentic golfer reaction — Thread 1 | Delivered | [Iconik](https://icnk.io/u/rKpduI875RDT/) | Delivered — tagging in progress |
 | Influencer SF2 reactions | JoJo | Organic | Authority + authenticity | Post-launch | TBD | Phase 2 |
 
 > Theo (email), Fatima (social), and anyone building SF2 content: start here. Don't comb through Iconik — this is the single source.
+
+---
+
+## Section 7b: Influencer & UGC — Whitelisting & Creator Management
+
+> **Added March 24 per Sam Mercado's request (March 19 pre-launch call)**: Media buying team needs to know at a glance which creator handles they can run ads under.
+
+### Content Creators Roster
+
+Full roster with handles, platforms, and whitelisting status: [Content Creators Roster](https://docs.google.com/spreadsheets/d/1IRK9VhmDOVndDCynx_rbX8tkSk2NAdnj_LQk1S2qDBs/edit)
+
+### SF2 Creator Tracking
+
+| Creator | Handle | Platform | Whitelisting Rights | Status | Notes |
+|---------|--------|----------|-------------------|--------|-------|
+| Gerry Carry | _see roster_ | _see roster_ | Confirmed | Active | Referenced by Sam on March 19 call |
+| _Add creators as confirmed_ | | | | | |
+
+> **Process**: Before launching any ad under a creator's handle, confirm whitelisting rights in the [Content Creators Roster](https://docs.google.com/spreadsheets/d/1IRK9VhmDOVndDCynx_rbX8tkSk2NAdnj_LQk1S2qDBs/edit). Influencer/UGC is a primary focus for Phase 2 expansion (see Section 9).
 
 ---
 
@@ -656,7 +755,8 @@ Which shoots feed which scripts — ensures nothing blocks post-production:
 | Ads built (post-production complete) | March 20 (Thu) | Creative team | Not started |
 | Pre-launch alignment call | March 19 (Wed) | Christopher | This board = the artifact |
 | Email sequences finalized | March 20-22 | Email team | Placeholder (Section 6) |
-| **LAUNCH** | **March 23 (Sun)** | **All teams** | — |
+| SF1 ads paused | **March 25 (Tue)** | Media team | Same day as SF2 launch — prevents competing messaging |
+| **LAUNCH** | **March 25 (Tue)** | **All teams** | Pushed from March 23 |
 
 ### Batch 1 Ad Lineup
 
@@ -709,13 +809,13 @@ sf2-0002 is structured specifically for Meta's Andromeda algorithm:
 | SF1 retargeting | VSL Expanded or PDP | Ad → VSL Expanded / PDP → Checkout |
 | Email (launch announcement) | VSL Delay or PDP | Email → VSL Delay / PDP → Checkout |
 
-> **Page URLs**: Placeholder (see Section 3 funnel table). Inserted as pages go live pre-launch.
+> **Page URLs**: Live — see Section 3 funnel tables (Customer, Media, Affiliate paths). Source: [GTM Launch Links - MASTER](https://docs.google.com/spreadsheets/d/1IoRAi_lCVaRlSrotYvzht5nOKUZHZX8jno8ald7yz4w/edit).
 
 ### Launch Week Monitoring Plan
 
 | Day | Check | Owner | Action |
 |-----|-------|-------|--------|
-| Day 1 (Sun) | All ads live, tracking firing | Media Buying + Dev | Fix any broken tracking immediately |
+| Day 1 (Tue) | All ads live, tracking firing | Media Buying + Dev | Fix any broken tracking immediately |
 | Day 2-3 | Initial CPA + CTR by ad/hook | Media Buying | Flag outliers (high or low) |
 | Day 4-5 | Winning hooks identified | Media Buying + Creative | Begin shifting budget toward winners |
 | Day 7 | Week 1 performance review | All teams | Decision: scale winners, pause losers, queue Phase 2 hook stacks |
@@ -730,7 +830,7 @@ sf2-0002 is structured specifically for Meta's Andromeda algorithm:
 | `[TESTIMONIAL]` placeholders (×3 across scripts) | PLACEHOLDER — from Shoot 3 + Jessi delivery | Creative |
 | 96% slice stat (sf2-0002 H5) | VERIFY — needs independent source | Christopher |
 | Budget numbers | PLACEHOLDER — Media Buying to fill | Media Buying |
-| Landing page URLs | PLACEHOLDER — inserted as pages go live | Dev |
+| Landing page URLs | DONE — all 3 funnel paths live (see Section 3) | Dev |
 
 ---
 
@@ -848,7 +948,7 @@ Ordered by expected impact — CRO team executes:
 |----------|------|-----------|
 | 1 | **Above-fold headline** | Match winning ad angle → higher page-to-checkout conversion |
 | 2 | **VSL thumbnail / play button treatment** | Higher play rate → more viewers reach the offer |
-| 3 | **Price presentation** | $249 member price anchor vs. $399 retail — test emphasis and layout |
+| 3 | **Price presentation** | $299 member price anchor vs. $349 non-member — test emphasis and layout |
 | 4 | **Social proof placement** | 60,000+ golfers stat above fold vs. below VSL — test trust timing |
 | 5 | **Checkout flow length** | 1-step vs. 2-step checkout — test friction vs. commitment |
 | 6 | **Upsell copy alignment** | Match upsell language to the ad persona that drove the click |

@@ -152,6 +152,8 @@ If ANY fail: HALT. Fix first. No `--no-verify`.
 
 **Bridge Gates (Tess → Veda/Neco):** Asset IDs must comply with 15-position naming. Root angles from SSS Column C only. Expansion types from TESS-NAMING-CONVENTION.md. Never fabricate.
 
+**Code Table Three-Way Sync (MANDATORY):** When ANY code table changes (expansion types, ad categories, asset types, talent, editor, copywriter, country, funnel codes), updates MUST propagate to all three locations: (1) `TESS-NAMING-CONVENTION.md` (source of truth), (2) SSS Google Sheet Lookup Tables tab (`1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U`) — Domo pulls from here, (3) Naming Convention Google Doc (`1q6Tm7XEukyq5ssYConJV0EoPXuGyYoWTsQW_4ivCAjA`). If MCP tools unavailable, log as P0 pending in SESSION-LOG.md. See TESS-NAMING-CONVENTION.md "Change Management" section for full details.
+
 **iCloud Git Guard:** Before/after git write commands: `ls -la .git/index*` — if `index 2` exists, `mv ".git/index 2" .git/index`.
 
 **Data Integrity:** NEVER fabricate names, codes, or definitions. If not found in docs or code, ASK.

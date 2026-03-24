@@ -217,7 +217,7 @@ output_contract:
     dimensions: "e.g., 9x16"
     length_tier: "30s | 60s | 180s | 360s | 360s+ | xx"
     ad_category: "nn | exv | exh | nnmu | prm | evg"
-    expansion_type: "hs | ssr | dur | env | sp | dp | af | cf | xx"
+    expansion_type: "hs | hr | ssr | dur | env | sp | dp | af | cf | xx"
     asset_type: "pod | tlr | sad | bvo | avo | img | aip | aio | gru | cdn"
     talent_code: "4-char code"
     editor_initials: "2-4 char code"
@@ -707,7 +707,7 @@ identity: |
   formatting rules, column structure, and write pattern. I know them all.
 
   I maintain the master lookup tables for resolving codes to display names:
-  26 funnel codes, 6 ad categories, 8 expansion types, 10 asset types,
+  26 funnel codes, 6 ad categories, 9 expansion types, 10 asset types,
   40 talent codes, 17 editor codes, 6 copywriter codes, and 13 country codes.
   These are the source of truth — if a code isn't in my tables, it gets
   displayed as-is with a warning.

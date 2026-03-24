@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RS1 Putter — Creative Launch Map</title>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+<style>
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Regular.woff2') format('woff2'); font-weight: 400; }
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Medium.woff2') format('woff2'); font-weight: 500; }
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Bold.woff2') format('woff2'); font-weight: 700; }
+  @font-face { font-family: 'GTSuperText'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/gt-super-text/GT-Super-Text-Book.woff2') format('woff2'); font-weight: 400; }
+  @font-face { font-family: 'GTSuperText'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'ABCReproMono'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro-mono/ABCReproMono-Regular.woff2') format('woff2'); font-weight: 400; }
+
+  :root {
+    --orange: #FD3300;
+    --dark-orange: #DB2C00;
+    --black: #1D1A1A;
+    --ui-gray: #7B726C;
+    --stone: #B3AAA3;
+    --pebble: #DFD9D5;
+    --sand: #ECE9E4;
+    --fog: #F4F2F0;
+    --mist: #FCFAFA;
+    --hi-vis: #E4F222;
+    --grass: #BCE9B1;
+    --forest: #2E4734;
+    --sky: #B2C6EB;
+    --indigo: #4F41D5;
+    --polo: #C5A6CA;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    background: var(--sand);
+    font-family: 'ABCRepro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--black);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  /* ── HEADER BAR ── */
+  .header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    height: 72px;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 24px;
+  }
+  .header-logo {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 700;
+    font-size:20px;
+    color: var(--orange);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .header-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(255,255,255,0.15);
+  }
+  .header-title {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-size:24px;
+    color: white;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .header-meta {
+    margin-left: auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .header-badge {
+    background: var(--orange);
+    color: white;
+    font-size:14px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .header-date {
+    color: var(--stone);
+    font-size:15px;
+    font-family: 'ABCReproMono', monospace;
+  }
+
+  /* ── SECTION NAV ── */
+  .section-nav {
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    z-index: 99;
+    height: 48px;
+    background: var(--fog);
+    border-bottom: 1px solid var(--pebble);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 4px;
+    overflow-x: auto;
+  }
+  .nav-item {
+    font-size:13px;
+    font-weight: 500;
+    color: var(--ui-gray);
+    padding: 6px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .nav-item:hover { background: var(--pebble); color: var(--black); }
+  .nav-arrow { color: var(--stone); font-size:13px; padding: 0 2px; }
+  .nav-item.placeholder-nav { color: var(--stone); font-style: italic; }
+
+  /* ── BOARD CONTAINER ── */
+  .board {
+    margin-top: 120px;
+    display: flex;
+    gap: 32px;
+    padding: 32px 40px 40px;
+    height: calc(100vh - 120px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* ── SECTION COLUMN ── */
+  .section {
+    min-width: 520px;
+    max-width: 560px;
+    flex-shrink: 0;
+    background: var(--mist);
+    border-radius: 12px;
+    border: 1px solid var(--pebble);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .section.placeholder-section {
+    border: 2px dashed var(--stone);
+    background: var(--fog);
+  }
+
+  .section-header {
+    background: var(--black);
+    padding: 20px 24px 16px;
+    position: relative;
+  }
+  .section-number {
+    font-family: 'ABCReproMono', monospace;
+    font-size:13px;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-size:22px;
+    color: white;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  .section-subtitle {
+    font-size:14px;
+    color: var(--stone);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  .placeholder-section .section-header {
+    background: var(--ui-gray);
+  }
+  .placeholder-badge {
+    display: inline-block;
+    background: var(--hi-vis);
+    color: var(--black);
+    font-size:12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+  }
+
+  /* ── SECTION BODY ── */
+  .section-body {
+    padding: 20px 24px 24px;
+    overflow-y: auto;
+    flex: 1;
+    font-size:15px;
+    line-height: 1.6;
+  }
+
+  /* ── CONTENT ELEMENTS ── */
+  h3 {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 700;
+    font-size:16px;
+    color: var(--black);
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  h3:first-child { margin-top: 0; }
+
+  h4 {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 500;
+    font-size:15px;
+    color: var(--black);
+    margin: 16px 0 8px;
+  }
+
+  p { margin-bottom: 10px; color: var(--black); }
+
+  .callout {
+    background: var(--fog);
+    border-left: 3px solid var(--orange);
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size:15px;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout strong { color: var(--dark-orange); }
+  .callout-muted {
+    background: var(--fog);
+    border-left: 3px solid var(--stone);
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size:14px;
+    color: var(--ui-gray);
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size:14px;
+  }
+  th {
+    background: var(--sand);
+    text-align: left;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size:13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--ui-gray);
+    border-bottom: 2px solid var(--pebble);
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--sand);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .tag {
+    display: inline-block;
+    font-size:12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .tag-orange { background: #FFF0EC; color: var(--dark-orange); }
+  .tag-green { background: #EDF7EB; color: #2D6A22; }
+  .tag-blue { background: #EBF0FA; color: var(--indigo); }
+  .tag-gray { background: var(--sand); color: var(--ui-gray); }
+  .tag-yellow { background: #FEFCE8; color: #92720A; }
+
+  .stat-row {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .stat-box {
+    flex: 1;
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .stat-value {
+    font-size:24px;
+    font-weight: 700;
+    color: var(--orange);
+  }
+  .stat-label {
+    font-size:12px;
+    color: var(--ui-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .persona-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid var(--pebble);
+  }
+  .persona-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  .persona-name {
+    font-weight: 700;
+    font-size:16px;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  .persona-desc {
+    font-size:14px;
+    color: var(--ui-gray);
+    line-height: 1.5;
+  }
+  .persona-quote {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-style: italic;
+    font-size:14px;
+    color: var(--forest);
+    margin-top: 8px;
+    padding-left: 10px;
+    border-left: 2px solid var(--grass);
+  }
+
+  .script-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0;
+    border-left: 3px solid var(--orange);
+  }
+  .script-id {
+    font-family: 'ABCReproMono', monospace;
+    font-size:13px;
+    color: var(--orange);
+    font-weight: 700;
+  }
+  .script-name {
+    font-weight: 700;
+    font-size:16px;
+    margin: 4px 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--sand);
+    align-items: flex-start;
+  }
+  .timeline-date {
+    min-width: 80px;
+    font-family: 'ABCReproMono', monospace;
+    font-size:13px;
+    color: var(--ui-gray);
+    padding-top: 2px;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-weight: 600;
+    font-size:15px;
+  }
+  .timeline-owner {
+    font-size:13px;
+    color: var(--ui-gray);
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--pebble);
+    margin: 16px 0;
+  }
+
+  .feature-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--sand);
+  }
+  .feature-num {
+    min-width: 24px;
+    height: 24px;
+    background: var(--orange);
+    color: white;
+    font-size:13px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .feature-content { flex: 1; }
+  .feature-name { font-weight: 700; font-size:15px; }
+  .feature-tagline { font-size:13px; color: var(--forest); font-weight: 600; font-style: italic; margin-top: 1px; }
+  .feature-desc { font-size:14px; color: var(--ui-gray); margin-top: 2px; }
+
+  .coverage-cell { text-align: center; font-size:13px; }
+  .coverage-strong { color: var(--orange); font-weight: 700; }
+  .coverage-light { color: var(--ui-gray); font-style: italic; }
+  .coverage-gap { color: var(--grass); font-weight: 600; font-size:12px; }
+
+  .checklist-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 6px 0;
+    font-size:14px;
+  }
+  .check-box {
+    min-width: 16px;
+    height: 16px;
+    border: 2px solid var(--pebble);
+    border-radius: 3px;
+    margin-top: 1px;
+  }
+  .check-box.done {
+    background: var(--grass);
+    border-color: var(--forest);
+  }
+
+  ul { padding-left: 18px; margin: 8px 0; }
+  li { margin-bottom: 4px; font-size:14px; }
+
+  .placeholder-notice {
+    background: #FEFCE8;
+    border: 1px dashed #D4A90A;
+    border-radius: 8px;
+    padding: 14px;
+    margin: 12px 0;
+    text-align: center;
+    font-size:14px;
+    color: #92720A;
+  }
+  .placeholder-notice strong { color: #6B5208; }
+
+  .thread-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 8px 0;
+    border-left: 3px solid var(--forest);
+  }
+  .thread-card.t2 { border-left-color: var(--indigo); }
+  .thread-label {
+    font-size:12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .thread-card .thread-label { color: var(--forest); }
+  .thread-card.t2 .thread-label { color: var(--indigo); }
+
+  .open-item {
+    background: #FFF7F5;
+    border: 1px solid #FFDDD5;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin: 6px 0;
+    font-size:14px;
+  }
+  .open-item strong { color: var(--dark-orange); }
+
+  .matrix-table th { font-size:12px; padding: 6px 6px; }
+  .matrix-table td { font-size:12px; padding: 6px 6px; text-align: center; }
+  .matrix-table td:first-child { text-align: left; font-weight: 600; }
+
+  .theme-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0;
+    border-left: 3px solid var(--indigo);
+  }
+  .theme-num {
+    display: inline-block;
+    min-width: 22px;
+    height: 22px;
+    background: var(--indigo);
+    color: white;
+    font-size:13px;
+    font-weight: 700;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    margin-right: 8px;
+  }
+  .theme-title {
+    font-weight: 700;
+    font-size:15px;
+    display: inline;
+  }
+  .theme-desc {
+    font-size:14px;
+    color: var(--ui-gray);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════ HEADER ════════════════ -->
+<div class="header">
+  <div class="header-logo">Performance Golf</div>
+  <div class="header-divider"></div>
+  <div class="header-title">RS1 Putter &mdash; Creative Launch Map</div>
+  <div class="header-meta">
+    <div class="header-badge">Launch: April 2026</div>
+    <div class="header-date">Campaign Theme: Mar 20 &bull; Owner: Christopher Ogle</div>
+  </div>
+</div>
+
+<!-- ════════════════ NAV ════════════════ -->
+<div class="section-nav">
+  <a class="nav-item" href="#s0" style="background:var(--orange);color:white;font-weight:700">Brixton &amp; John Start Here</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s1">1. Product</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s2">2. Brand Threads</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s3">3. Research &amp; Messaging</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item placeholder-nav" href="#s4">4. Personas (TBD)</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s5">5. Creative Matrix</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s6">6. Email/Backend</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s7">7. Production</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s8">8. Phase 1: Launch</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s9">9. Phase 2: Expand</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s10">10. Phase 3: Optimize</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s11">11. Funnel Map</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s12">12. Testing Strategy</a>
+</div>
+
+<!-- ════════════════ BOARD ════════════════ -->
+<div class="board">
+
+<!-- ═══════ SECTION 0: CEO DIRECTION CARD ═══════ -->
+<div class="section" id="s0" style="min-width:440px;max-width:460px;border:2px solid var(--orange)">
+  <div class="section-header" style="background:var(--orange)">
+    <div class="section-number" style="color:rgba(255,255,255,0.7)">Brixton &amp; John</div>
+    <div class="section-title">Start Here</div>
+    <div class="section-subtitle" style="color:rgba(255,255,255,0.85)">RS1 Putter Launch &mdash; What you need to know</div>
+  </div>
+  <div class="section-body" style="overflow-y:auto">
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Launch Status</div>
+      <table style="font-size:15px">
+        <tr><td style="font-weight:600;width:40%">Product</td><td>RS1 Putter</td></tr>
+        <tr><td style="font-weight:600">RS1 Price</td><td style="font-weight:700;color:var(--orange)">$399</td></tr>
+        <tr><td style="font-weight:600">RS1+ Price</td><td style="font-weight:700;color:var(--orange)">$429</td></tr>
+        <tr><td style="font-weight:600">Member Pricing</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Launch Month</td><td style="font-weight:700;color:var(--orange)">April 2026</td></tr>
+        <tr><td style="font-weight:600">Campaign Theme Start</td><td>March 20</td></tr>
+        <tr><td style="font-weight:600">Marketing Sample Ready</td><td>March 20</td></tr>
+        <tr><td style="font-weight:600">PDP UX Design</td><td>March 23 &ndash; April 1</td></tr>
+        <tr><td style="font-weight:600">Batch 1 Status</td><td>Pre-production &mdash; creative direction in development</td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Pricing</div>
+      <table style="font-size:15px">
+        <thead><tr><th>Model</th><th>Price</th><th>Shaft</th><th>Grip</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700">RS1</td><td style="font-weight:700;color:var(--orange)">$399</td><td>Stepless steel</td><td>Dual Pistol Rubber</td></tr>
+          <tr><td style="font-weight:700">RS1+</td><td style="font-weight:700;color:var(--orange)">$429</td><td>15mm low-torque graphite</td><td>Dual Pistol Polyurethane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--orange);margin-bottom:8px">5 Key Themes &mdash; Influencer Talking Points</div>
+      <table style="font-size:14px">
+        <tbody>
+          <tr><td style="font-weight:700;width:10%;text-align:center;color:var(--orange)">1</td><td style="font-weight:700;width:35%">Forward Axis Weighting</td><td>75%+ weight in front of shaft. Eliminates face drift. No other putter does this.</td></tr>
+          <tr><td style="font-weight:700;text-align:center;color:var(--orange)">2</td><td style="font-weight:700">"Pull it back, let it fall"</td><td>Gravity does the work. The putter wants to stay square through the stroke.</td></tr>
+          <tr><td style="font-weight:700;text-align:center;color:var(--orange)">3</td><td style="font-weight:700">Face-Down Balance</td><td>Place it face-down on a flat surface &mdash; it stays. Every other putter flops open.</td></tr>
+          <tr><td style="font-weight:700;text-align:center;color:var(--orange)">4</td><td style="font-weight:700">Chris McGinley&rsquo;s Story</td><td>30+ years designing clubs for 11 world #1 players. RS1 is his life&rsquo;s work.</td></tr>
+          <tr><td style="font-weight:700;text-align:center;color:var(--orange)">5</td><td style="font-weight:700">"Science of the Stroke"</td><td>RS1 helps your technique, not just better metal. Robot testing proves it.</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:14px;color:var(--ui-gray);margin-top:6px">Full influencer brief with video recommendations &rarr; <a href="#s7" style="color:var(--orange)">Section 7</a></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Content Status</div>
+      <table style="font-size:15px">
+        <tr style="background:#e8f5e9"><td style="font-weight:700;color:var(--forest);width:40%">Available</td><td style="font-weight:700">~6 assets</td></tr>
+        <tr style="background:#fff8e1"><td style="font-weight:700;color:var(--orange)">In Production</td><td style="font-weight:700">~3 assets</td></tr>
+        <tr style="background:#fce4ec"><td style="font-weight:700;color:#c62828">Missing / TBD</td><td style="font-weight:700">~37 assets</td></tr>
+      </table>
+      <div style="font-size:14px;color:var(--ui-gray);margin-top:6px">Full breakdown &rarr; <a href="#s7" style="color:var(--orange)">Section 7: Production</a></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">What to Shoot Next</div>
+      <ul style="font-size:15px;padding-left:18px;line-height:1.7">
+        <li><strong>Face-down balance demo</strong> &mdash; RS1 face-down on flat surface vs. competitor putter flopping open. The single most powerful visual proof.</li>
+        <li><strong>Putting green footage</strong> &mdash; on-course putting with the RS1, premium lifestyle feel</li>
+        <li><strong>Product close-ups</strong> &mdash; sole relief, crown detail, T-Trac alignment lines, grip profile, T-Wing tail</li>
+        <li><strong>Science of the Stroke videos</strong> &mdash; robot testing (face angle, arc comparison, roll consistency, gravity test)</li>
+        <li><strong>Chris McGinley lab video</strong> &mdash; full-width centerpiece for the credibility section</li>
+      </ul>
+      <div style="font-size:14px;color:var(--ui-gray);margin-top:6px">Full shoot plan &rarr; <a href="#s7" style="color:var(--orange)">Section 7</a></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:10px">Your Guide to This Board</div>
+      <table style="font-size:15px">
+        <tr><td style="font-weight:600;width:55%">Product identity + mechanism</td><td><a href="#s1" style="color:var(--orange)">Section 1</a></td></tr>
+        <tr><td style="font-weight:600">Brand thread alignment</td><td><a href="#s2" style="color:var(--orange)">Section 2</a></td></tr>
+        <tr><td style="font-weight:600">Research + key language</td><td><a href="#s3" style="color:var(--orange)">Section 3</a></td></tr>
+        <tr><td style="font-weight:600">Personas + value drivers</td><td><a href="#s4" style="color:var(--orange)">Section 4 (placeholder)</a></td></tr>
+        <tr><td style="font-weight:600">Creative direction lanes</td><td><a href="#s5" style="color:var(--orange)">Section 5</a></td></tr>
+        <tr><td style="font-weight:600">Email/backend alignment</td><td><a href="#s6" style="color:var(--orange)">Section 6</a></td></tr>
+        <tr><td style="font-weight:600">Production + assets</td><td><a href="#s7" style="color:var(--orange)">Section 7</a></td></tr>
+        <tr><td style="font-weight:600">Launch timeline + Phase 1</td><td><a href="#s8" style="color:var(--orange)">Section 8</a></td></tr>
+        <tr><td style="font-weight:600">Phase 2 expansion</td><td><a href="#s9" style="color:var(--orange)">Section 9</a></td></tr>
+        <tr><td style="font-weight:600">Page + funnel optimization</td><td><a href="#s10" style="color:var(--orange)">Section 10</a></td></tr>
+        <tr><td style="font-weight:600">Funnel map + core assets</td><td><a href="#s11" style="color:var(--orange)">Section 11</a></td></tr>
+        <tr><td style="font-weight:600">Testing strategy</td><td><a href="#s12" style="color:var(--orange)">Section 12</a></td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="callout-muted">
+      <strong style="color:var(--black)">Board Maintenance:</strong> This CLM is maintained manually by Orion (Creative OS agent). Updates happen at key milestones.
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════ SECTION 0a: CAMPAIGN THEME ═══════ -->
+<div class="section" id="s0a">
+  <div class="section-header">
+    <div class="section-number">Section 0a</div>
+    <div class="section-title">Campaign Theme</div>
+    <div class="section-subtitle">The ONE core theme everything else stems from</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">Every ad, email, landing page, influencer brief, and sales page for the RS1 launch ladders up to this statement. The 5 Key Themes (Section 00) are expressions of this theme across different contexts.</div>
+
+    <h3>Core Campaign Theme</h3>
+    <div style="background:var(--black);color:white;padding:20px 24px;border-radius:8px;font-size:19px;font-weight:600;line-height:1.5;margin:12px 0 20px;border-left:4px solid var(--orange)">
+      &ldquo;The first premium putter that eliminates face drift and works with your stroke, not against it.&rdquo;
+    </div>
+
+    <h3>Root Angle</h3>
+    <div style="background:#1a1a1a;color:var(--orange);padding:14px 20px;border-radius:6px;font-size:17px;font-weight:600;line-height:1.6;margin:8px 0 16px">
+      &ldquo;Gravity-Driven. Face-Controlled.&rdquo;<br>
+      &ldquo;Pull It Back, Let It Fall.&rdquo;
+    </div>
+
+    <h3>The &ldquo;AND&rdquo; &mdash; Why This Theme Works</h3>
+    <p style="margin-bottom:10px">The RS1 is the first putter that addresses <strong>both pillars</strong> of great putting simultaneously:</p>
+    <table>
+      <thead><tr><th>Pillar</th><th>What It Solves</th><th>How</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">Pillar 1 &mdash; Technology</td><td>Face drift (face drifting open/closed during stroke)</td><td>Forward Axis Weighting shifts 75% of head weight in front of shaft axis. Gravity holds the face square.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">Pillar 2 &mdash; Technique</td><td>The golfer fighting their own putter</td><td>Gravity-driven design creates a natural pendulum. The putter works WITH your stroke instead of against it.</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--stone);margin-top:8px">Every other putter addresses only one. Traditional rear-weighted putters fight you. LAB Golf neutralized the problem. RS1 goes beyond both &mdash; active gravitational face control that works with your natural stroke.</p>
+
+    <div class="divider"></div>
+
+    <h3>The Research Reframe</h3>
+    <div style="background:#1a1a1a;padding:14px 20px;border-radius:6px;font-size:16px;font-style:italic;line-height:1.6;margin:8px 0 16px;border-left:3px solid var(--orange)">
+      &ldquo;Your stroke was never the problem. Your putter&rsquo;s center of gravity was.&rdquo;
+    </div>
+    <p style="color:var(--stone)">32% of the addressable market blames their technique, not their equipment. This reframe converts self-blame into product demand.</p>
+
+    <div class="divider"></div>
+
+    <h3>How the 5 Key Themes Flow From This</h3>
+    <table>
+      <thead><tr><th>#</th><th>Key Theme</th><th>Connection to Core Theme</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">Forward Axis Weighting</td><td>The mechanism &mdash; HOW the putter eliminates face drift</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">&ldquo;Pull it back, let it fall&rdquo;</td><td>The micro-script &mdash; HOW it works with your stroke</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">Face-Down Balance</td><td>The visual proof &mdash; PROOF it eliminates face drift</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">Chris McGinley&rsquo;s Story</td><td>The credibility &mdash; WHO designed a putter that does both</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">&ldquo;Science of the Stroke&rdquo;</td><td>The evidence &mdash; PROOF it works with your stroke</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Source Materials</h3>
+    <table>
+      <thead><tr><th>Resource</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Product Innovation Deck</td><td><a href="https://docs.google.com/presentation/d/1N8KkZ5WUWWubuSQkr-jtMhaXyFqMV04l49L_zRoPJAg/edit" target="_blank" style="color:var(--orange)">Google Slides &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Loom Part 1</td><td><a href="https://www.loom.com/share/ebe7965ec18042d7aab48e20566682af" target="_blank" style="color:var(--orange)">Loom &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Loom Part 2</td><td><a href="https://www.loom.com/share/3996c2a10aa845e88e7d415c5bf0bb9e" target="_blank" style="color:var(--orange)">Loom &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">RS1 Copy Doc</td><td><a href="https://docs.google.com/document/d/1r5Uuz_m4tz9ov14Pvz24So5p9iTUhDSjYKMEcpyEggs/edit" target="_blank" style="color:var(--orange)">Google Doc &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">ClickUp Task</td><td><a href="https://app.clickup.com/t/86b8xu8zm" target="_blank" style="color:var(--orange)">RS1 Campaign Theme &rarr;</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 1: PRODUCT OVERVIEW ═══════ -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <div class="section-number">Section 01</div>
+    <div class="section-title">Product Overview</div>
+    <div class="section-subtitle">What are we selling?</div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><td style="font-weight:600;width:35%">Product</td><td>RS1 Putter</td></tr>
+      <tr><td style="font-weight:600">Full Name</td><td>RS1 Putter (RS1 = Roll Straight)</td></tr>
+      <tr><td style="font-weight:600">Category</td><td>Premium forward-weighted mallet putter</td></tr>
+      <tr><td style="font-weight:600">Technology</td><td>Roll Str8 Technology&trade; (9 features)</td></tr>
+      <tr><td style="font-weight:600">Hero Mechanism</td><td>Forward Axis Weighting</td></tr>
+      <tr><td style="font-weight:600">Construction</td><td>10-piece multi-material (CNC steel face, carbon composite crown, aluminum T-Wing tail)</td></tr>
+      <tr><td style="font-weight:600">Head Weight</td><td>360g (75%+ weight in front of shaft axis)</td></tr>
+      <tr><td style="font-weight:600">Lie Angle</td><td>74&deg; upright (4&deg; more than industry standard 70&deg;)</td></tr>
+      <tr><td style="font-weight:600">Loft</td><td>3.5&deg;</td></tr>
+      <tr><td style="font-weight:600">Length</td><td>35 inches</td></tr>
+      <tr><td style="font-weight:600">Designer</td><td>Chris McGinley &mdash; 30+ years, 11 world #1 players</td></tr>
+      <tr><td style="font-weight:600">RS1 Price</td><td style="font-weight:700;color:var(--orange)">$399</td></tr>
+      <tr><td style="font-weight:600">RS1+ Price</td><td style="font-weight:700;color:var(--orange)">$429</td></tr>
+      <tr><td style="font-weight:600">Member Pricing</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+    </table>
+
+    <div class="callout">
+      <strong>Root Angle:</strong> "Gravity-Driven. Face-Controlled." / "Pull It Back, Let It Fall."
+    </div>
+
+    <h3>Key Promise</h3>
+    <p><strong>Dual promise:</strong> Eliminates face drift AND improves your stroke.</p>
+    <ul>
+      <li><strong>Pillar 1 &mdash; Technology:</strong> Forward Axis Weighting places 75% of head weight in front of the shaft axis. Gravity holds the face square. Zero face drift.</li>
+      <li><strong>Pillar 2 &mdash; Technique:</strong> The design creates a natural pendulum motion &mdash; pull it back, let gravity pull it through. The putter assists the human stroke.</li>
+    </ul>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-value">75%+</div>
+        <div class="stat-label">Weight Forward</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">9</div>
+        <div class="stat-label">Features</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">10</div>
+        <div class="stat-label">Piece Construction</div>
+      </div>
+    </div>
+
+    <h3>Roll Str8 Technology&trade; &mdash; 9 Features</h3>
+
+    <div class="feature-row">
+      <div class="feature-num">1</div>
+      <div class="feature-content">
+        <div class="feature-name">Forward Axis Weighting</div>
+        <div class="feature-tagline">Forward weight fights face drift.</div>
+        <div class="feature-desc">75% of 360g head weight in front of shaft axis. CG shifts forward. Gravity keeps face square to target line. Zero face drift through the stroke.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">2</div>
+      <div class="feature-content">
+        <div class="feature-name">Face Down Balance</div>
+        <div class="feature-tagline">Gravitational face control.</div>
+        <div class="feature-desc">The only putter technology that dynamically counteracts the tendency to open the face. Face sits where it should, stays where it should, throughout the entire stroke.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">3</div>
+      <div class="feature-content">
+        <div class="feature-name">Square-to-Square 74&deg; Lie Angle</div>
+        <div class="feature-tagline">Less arc, less error.</div>
+        <div class="feature-desc">4 degrees more upright than standard. Shortens stroke arc. Less face rotation. Straighter path with less room for human error.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">4</div>
+      <div class="feature-content">
+        <div class="feature-name">10-Piece &ldquo;Hammerhead&rdquo; Construction</div>
+        <div class="feature-tagline">Ten pieces, one purpose.</div>
+        <div class="feature-desc">CNC-machined steel face, carbon composite crown, aluminum tail wings, plus seven other precision components. Every gram placed exactly where McGinley intended.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">5</div>
+      <div class="feature-content">
+        <div class="feature-name">Patented Dual Pistol Grip</div>
+        <div class="feature-tagline">Quiet hands, loud results.</div>
+        <div class="feature-desc">The only dual-sided pistol grip in golf. Flat top and bottom, large curved sides. Reduces grip pressure, minimizes wrist interference. Works for conventional, cross-hand, and claw grips.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">6</div>
+      <div class="feature-content">
+        <div class="feature-name">Face Forward Design</div>
+        <div class="feature-tagline">Full face, full confidence.</div>
+        <div class="feature-desc">Shaft sits behind the face. Full unobstructed visibility of the entire striking surface at address. No hosel, no shaft between your eyes and the face.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">7</div>
+      <div class="feature-content">
+        <div class="feature-name">T-Trac Alignment Lines</div>
+        <div class="feature-tagline">Line it up, lock it in.</div>
+        <div class="feature-desc">Three lines run tail-to-front, converging at a perpendicular face line. Laser in your face angle like a scope lining up a barrel.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">8</div>
+      <div class="feature-content">
+        <div class="feature-name">T-Wing Tail</div>
+        <div class="feature-tagline">Less tail weight, more face weight.</div>
+        <div class="feature-desc">Sculpted T-shaped tail saves weight from the rear and redistributes it forward. Lightweight aluminum removes mass from behind the shaft axis.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">9</div>
+      <div class="feature-content">
+        <div class="feature-name">Sculpted Sole Relief</div>
+        <div class="feature-tagline">Sculpted for scoring.</div>
+        <div class="feature-desc">Three zones of sole relief (front, middle, back) with rounded leading and trailing edges and a non-contact midsole. Glides back and through without snagging grass or dragging ground.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Root Problem: Face Drift</h3>
+    <p>In 95% of putters, most of the weight sits behind the shaft axis. This rear weighting pulls the face off the path of the intended target line. That is face drift &mdash; and it is arguably the biggest problem in putting.</p>
+    <h4>Two causes:</h4>
+    <ul>
+      <li><strong>Technology</strong> &mdash; The putter&rsquo;s rear weighting opens and closes the face on an arc during the stroke</li>
+      <li><strong>Technique</strong> &mdash; The player&rsquo;s natural tendency to control the face, often leaving it open or closed before impact</li>
+    </ul>
+    <p>The RS1 eliminates face drift at the source &mdash; by fixing both the technology and the technique simultaneously.</p>
+
+    <h3>Mechanism: Forward Axis Weighting</h3>
+    <table>
+      <thead><tr><th>Factor</th><th>Problem</th><th>RS1 Solution</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">#1: Technology</td><td>Rear-weighted putters place weight behind the shaft axis &mdash; the face drifts open</td><td>Forward Axis Weighting stabilizes the face by shifting CG forward. Gravity squares the face for you.</td></tr>
+        <tr><td style="font-weight:600">#2: Technique</td><td>The player&rsquo;s natural tendency to manipulate the clubface</td><td>Forward Axis Weighting counteracts face manipulation. 8 supporting features keep the face square to the target line longer.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Category Creation Positioning</h3>
+    <table>
+      <thead><tr><th>Attribute</th><th>Traditional Rear-Weighted</th><th>Zero-Torque (LAB Golf)</th><th>RS1 (Forward Axis Weighting)</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">CG Location</td><td>Behind shaft axis</td><td>At shaft axis (lie angle balanced)</td><td style="font-weight:600;color:var(--forest)">In front of shaft axis</td></tr>
+        <tr><td style="font-weight:600">Face Behavior</td><td>Drifts open &mdash; player compensates</td><td>Hangs neutral &mdash; passive stability</td><td style="font-weight:600;color:var(--forest)">Falls face-down &mdash; active face control</td></tr>
+        <tr><td style="font-weight:600">Face Control Type</td><td>None (golfer fights drift)</td><td>Passive (prevents twist)</td><td style="font-weight:600;color:var(--forest)">Active (gravity drives face toward square)</td></tr>
+        <tr><td style="font-weight:600">Technique Assist</td><td>None</td><td>None &mdash; player still controls face</td><td style="font-weight:600;color:var(--forest)">Yes &mdash; counteracts manipulation, creates natural pendulum</td></tr>
+        <tr><td style="font-weight:600">Adaptation Period</td><td>None (it&rsquo;s all they know)</td><td>2&ndash;8 weeks (&ldquo;torque hangover&rdquo;)</td><td style="font-weight:600;color:var(--forest)">None &mdash; works with existing stroke</td></tr>
+        <tr><td style="font-weight:600">Face Material</td><td>Steel (typically)</td><td>Aluminum</td><td style="font-weight:600;color:var(--forest)">CNC-machined steel</td></tr>
+        <tr><td style="font-weight:600">Price Range</td><td>$300&ndash;$469</td><td>$449&ndash;$649</td><td style="font-weight:600;color:var(--forest)">$399&ndash;$429</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Past, Present, Future</h3>
+    <table>
+      <thead><tr><th>Era</th><th>Technology</th><th>Face Behavior</th><th>Player&rsquo;s Job</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">THE PAST</td><td>Weight behind shaft axis</td><td>Face drifts open. Player relies on timing.</td><td>Control face rotation. Fight the physics.</td></tr>
+        <tr><td style="font-weight:600">THE PRESENT</td><td>Weight at shaft axis (LAB Golf)</td><td>Face hangs neutral. Passive stability.</td><td>Still must control face relative to target line.</td></tr>
+        <tr><td style="font-weight:600;color:var(--orange)">THE FUTURE</td><td style="font-weight:600">Weight in front of shaft axis (RS1)</td><td style="font-weight:600">Face falls square. Active gravitational force.</td><td style="font-weight:600">Pull it back, let it fall. Gravity does the work.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">LAB Golf changed the game. They solved the technology problem with zero-torque putters &mdash; but left an element of face control up to the player. The RS1&rsquo;s Forward Axis Weighting gives you the technology that prevents face drift AND creates a counteracting force that wants to keep the face square to the target line.</div>
+
+    <div class="divider"></div>
+
+    <h3>Key Proof Points</h3>
+    <table>
+      <tr><td style="font-weight:600;width:30%">Chris McGinley</td><td>30+ years of club design. Designs in the hands of 11 world #1 players. The RS1 is the putter he&rsquo;s always wanted to build.</td></tr>
+      <tr><td style="font-weight:600">Robot Testing</td><td>Head-to-head against traditional mallets &mdash; same stroke, same speed, same conditions. Face angle comparison, arc comparison, roll consistency, gravity test.</td></tr>
+      <tr><td style="font-weight:600">Face-Down Balance Test</td><td>Place the RS1 face-down on any flat surface. It stays. Every other putter flops open. Visual proof in 5 seconds.</td></tr>
+      <tr><td style="font-weight:600">Tour-Adjacent Credibility</td><td>McGinley worked alongside designers at the highest level for 30+ years. Equipment for 11 world #1 players.</td></tr>
+      <tr><td style="font-weight:600">Founders 500</td><td>Exclusive limited run of 500 RS1 putters with unique Performance Golf colorway. Influencer seeding creates built-in social proof.</td></tr>
+    </table>
+
+    <h3>Offer Structure</h3>
+    <table>
+      <tr><td style="font-weight:600;width:35%">RS1</td><td>$399 &mdash; stepless steel shaft, Dual Pistol Rubber Grip</td></tr>
+      <tr><td style="font-weight:600">RS1+</td><td>$429 &mdash; 15mm low-torque graphite shaft, Dual Pistol Polyurethane Grip</td></tr>
+      <tr><td style="font-weight:600">Guarantee</td><td>365-day Demo Period &mdash; play it for a full year, full refund if not satisfied</td></tr>
+      <tr><td style="font-weight:600">PG1 App</td><td>30-day free trial (world&rsquo;s smartest game improvement system). No subscription, no hidden fees.</td></tr>
+      <tr><td style="font-weight:600">Shipping</td><td>Free (US only)</td></tr>
+      <tr><td style="font-weight:600">Member Pricing</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+    </table>
+
+    <h3>SKU Table</h3>
+    <table>
+      <thead><tr><th>SKU</th><th>Model</th><th>Hand</th><th>Shaft</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>RS135RH</td><td>RS1</td><td>Right</td><td>Steel</td><td>$399</td></tr>
+        <tr><td>RS135LH</td><td>RS1</td><td>Left</td><td>Steel</td><td>$399</td></tr>
+        <tr><td>RS135RH-G</td><td>RS1+</td><td>Right</td><td>Graphite</td><td>$429</td></tr>
+        <tr><td>RS135LH-G</td><td>RS1+</td><td>Left</td><td>Graphite</td><td>$429</td></tr>
+        <tr><td>RS135RH-P</td><td>RS1 Founders</td><td>Right</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td>RS135LH-P</td><td>RS1 Founders</td><td>Left</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-yellow">TBD</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 2: BRAND THREAD ALIGNMENT ═══════ -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <div class="section-number">Section 02</div>
+    <div class="section-title">Brand Thread Alignment</div>
+    <div class="section-subtitle">How does RS1 fit the PG brand?</div>
+  </div>
+  <div class="section-body">
+    <div class="thread-card">
+      <div class="thread-label">Thread 1</div>
+      <h4 style="margin-top:0">Smarter Journey to Better Golf</h4>
+      <p>Equipment and technology make the game easier. You don&rsquo;t need to overhaul your technique or grind on the practice green. Smarter path, not harder work.</p>
+    </div>
+    <div class="thread-card t2">
+      <div class="thread-label">Thread 2</div>
+      <h4 style="margin-top:0">Innovation / Stories of Innovation</h4>
+      <p>Breakthrough engineering and unconventional R&amp;D that solves problems the putter industry has ignored. Forward-weighted design, 30+ years of expertise, and a founder-led innovation narrative.</p>
+    </div>
+
+    <h3>RS1 &times; Thread 1</h3>
+    <p>RS1 is a natural Thread 1 product. The pitch: <strong>your equipment should help your technique, not fight it.</strong></p>
+    <table>
+      <thead><tr><th>Thread 1 Principle</th><th>RS1 Execution</th></tr></thead>
+      <tbody>
+        <tr><td>Equipment over technique overhauls</td><td>&ldquo;Do less. Make more.&rdquo; &mdash; the putter works with the stroke you already have and makes it better</td></tr>
+        <tr><td>Automation over manipulation</td><td>Forward Axis Weighting creates a gravity-driven stroke. Pull it back, let it fall.</td></tr>
+        <tr><td>Built for YOUR stroke</td><td>Works with any stroke arc &mdash; conventional, cross-hand, claw. No adaptation period.</td></tr>
+        <tr><td>No effort required</td><td>&ldquo;You just pull the putter back, and let gravity pull it through.&rdquo; Zero face drift without changing your stroke.</td></tr>
+        <tr><td>Making the game easier</td><td>Technology that improves your technique. One less variable to think about on the green.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="border-left-color:var(--forest);background:#e8f5e9">
+      <strong style="color:var(--forest)">Thread 1 Headline:</strong> Do less. Make more. A putter that works with your stroke &mdash; not against it.
+    </div>
+
+    <h3>RS1 &times; Thread 2</h3>
+    <p>RS1 has a powerful Innovation thread. The Chris McGinley + evolutionary narrative is the anchor.</p>
+    <table>
+      <thead><tr><th>Thread 2 Principle</th><th>RS1 Execution</th></tr></thead>
+      <tbody>
+        <tr><td>Breakthrough mechanism</td><td>Forward Axis Weighting &mdash; a new category beyond zero torque. No other putter places 75% of weight in front of the shaft axis.</td></tr>
+        <tr><td>Proprietary system</td><td>Roll Str8 Technology &mdash; 9 features engineered as a system. 10-piece multi-material construction.</td></tr>
+        <tr><td>Industry evolution</td><td>100 years of rear-weighted putters causing face drift. LAB Golf solved half the problem. RS1 completes it.</td></tr>
+        <tr><td>Designer-led R&amp;D</td><td>Chris McGinley &mdash; 30+ years designing clubs for 11 world #1 players. The RS1 is his life&rsquo;s work.</td></tr>
+        <tr><td>Named root cause</td><td>&ldquo;Face drift&rdquo; &mdash; PG coins the consumer-friendly term for why putts miss.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="border-left-color:var(--indigo);background:#EBF0FA">
+      <strong style="color:var(--indigo)">Thread 2 Headline:</strong> 100 years of the wrong design. One engineer who spent 30 years fixing it. The RS1.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Root Angle to Thread Mapping</h3>
+    <div class="callout">
+      <strong>Root Angle:</strong> &ldquo;Gravity-Driven. Face-Controlled.&rdquo; / &ldquo;Pull It Back, Let It Fall.&rdquo;
+    </div>
+    <ul>
+      <li><strong>&ldquo;Gravity-Driven&rdquo;</strong> &mdash; Thread 2 (Forward Axis Weighting innovation makes gravity the mechanism)</li>
+      <li><strong>&ldquo;Face-Controlled&rdquo;</strong> &mdash; Thread 1 (the putter controls the face for you &mdash; do less, make more)</li>
+      <li><strong>&ldquo;Pull It Back, Let It Fall&rdquo;</strong> &mdash; Thread 1 (simplicity, no effort) AND Thread 2 (the physics that make it possible)</li>
+    </ul>
+
+    <h3>Brand Thread Priority for Creative</h3>
+    <table>
+      <thead><tr><th>Creative Context</th><th>Lead Thread</th><th>Support Thread</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">PDP / E-com page</td><td><span class="tag tag-blue">Thread 2</span> (mechanism depth)</td><td><span class="tag tag-green">Thread 1</span> (do less, make more)</td></tr>
+        <tr><td style="font-weight:600">Paid ads / Short-form</td><td><span class="tag tag-green">Thread 1</span> (result-first)</td><td><span class="tag tag-blue">Thread 2</span> (innovation as credibility)</td></tr>
+        <tr><td style="font-weight:600">McGinley content</td><td><span class="tag tag-blue">Thread 2</span> (engineering authority)</td><td><span class="tag tag-green">Thread 1</span> (implicit)</td></tr>
+        <tr><td style="font-weight:600">Testimonials / UGC</td><td><span class="tag tag-green">Thread 1</span> (real results)</td><td><span class="tag tag-blue">Thread 2</span> (implicit)</td></tr>
+        <tr><td style="font-weight:600">Retargeting / Email</td><td><span class="tag tag-green">Thread 1</span> (no stroke changes)</td><td><span class="tag tag-blue">Thread 2</span> (proof)</td></tr>
+        <tr><td style="font-weight:600">Founders 500</td><td><span class="tag tag-blue">Thread 2</span> (exclusive, innovation)</td><td><span class="tag tag-green">Thread 1</span> (be first)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Key creative principle:</strong> Thread 2 is the believability engine (the physics are real, the engineering is real, the evolution is real). Thread 1 is the emotional promise (less effort, more makes, gravity does the work). The PDP leads with Thread 2 and delivers the Thread 1 payoff. Ads invert: lead with Thread 1 result, support with Thread 2 credibility.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 3: RESEARCH & MESSAGING ═══════ -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <div class="section-number">Section 03</div>
+    <div class="section-title">Research &amp; Messaging</div>
+    <div class="section-subtitle">Research findings &rarr; messaging architecture &rarr; key language</div>
+  </div>
+  <div class="section-body">
+    <div class="callout" style="border-left:4px solid var(--forest);background:#e8f5e9;padding:14px 20px;margin-bottom:20px">
+      <div style="font-weight:700;font-size:15px;margin-bottom:6px">Marketing OS &rarr; Creative OS Bridge</div>
+      <div style="font-size:15px">This section bridges Marketing OS research into Creative OS execution. Every ad, email, and organic asset downstream connects back to the messaging architecture and key language locked here.</div>
+    </div>
+
+    <h3>Top 8 Research Insights</h3>
+    <p style="font-size:14px;color:var(--ui-gray);margin-bottom:8px">From deep research: 1,442 voice-of-customer quotes, 12 sources, 8 competitors analyzed, 137 proof elements inventoried.</p>
+    <table>
+      <thead><tr><th>#</th><th>Insight</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td><strong>Stage 4 Market (Mechanism Fatigue).</strong> LAB Golf&rsquo;s zero-torque was the Stage 3 breakthrough, but 4 major OEMs copied it in 18 months. Forward Axis Weighting enters at the exact inflection point.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td><strong>400K&ndash;600K golfers on the &ldquo;Putter Carousel.&rdquo;</strong> Buying and discarding putters every 6&ndash;18 months because every putter shares the same design flaw: rearward CG causing face drift.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td><strong>LAB Golf&rsquo;s lost majority is the primary capture opportunity.</strong> 55&ndash;65% of LAB-interested golfers blocked by tradeoffs (center-shaft aesthetics, aluminum face feel, 2&ndash;8 week adaptation, $449&ndash;$649 pricing).</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td><strong>Self-blame trap = #1 belief barrier.</strong> 32% of addressable market blames technique, not equipment. The reframe (&ldquo;your stroke was fine, your putter&rsquo;s CG was in the wrong place&rdquo;) is the most powerful belief shift.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td><strong>No brand has named why putts miss.</strong> &ldquo;Face drift&rdquo; as a consumer-friendly root cause term is completely unclaimed.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td><strong>Forward Axis Weighting occupies unclaimed white space.</strong> Only Axis1 (niche, minimal presence) uses forward CG. No major brand has claimed the territory.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">7</td><td><strong>Face-down balance test = most powerful proof device.</strong> In a Stage 4 market drowning in verbal claims, a 5-second visual demonstration bypasses all skepticism.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">8</td><td><strong>McGinley&rsquo;s credentials = the credibility bridge.</strong> PG has zero hardware credibility on its own. McGinley&rsquo;s 30+ years and 11 world #1 players authenticate every engineering claim.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Messaging Architecture</h3>
+    <h4>Problem Framework</h4>
+    <ul>
+      <li><strong>Root cause named:</strong> Face drift &mdash; putter face drifting open/closed due to rearward center of gravity</li>
+      <li><strong>Reframe:</strong> &ldquo;Your stroke was never the problem. Your putter&rsquo;s center of gravity was.&rdquo;</li>
+      <li><strong>Dual cause:</strong> Technology (rear weighting opens the face) + Technique (player&rsquo;s natural tendency to manipulate the clubface)</li>
+      <li><strong>Villain:</strong> 100 years of rear-weighted putters. The industry normalized face drift as a &ldquo;feature&rdquo; (toe flow) instead of the problem it is.</li>
+      <li><strong>Failed solutions:</strong> Technique changes, mental coaching, practice routines, and even zero-torque putters that solved the technology problem but left the player alone</li>
+    </ul>
+    <h4>Solution Framework</h4>
+    <ul>
+      <li><strong>Core claim:</strong> Forward Axis Weighting eliminates face drift AND improves your stroke &mdash; both pillars of great putting, in one putter</li>
+      <li><strong>Mechanism name:</strong> Forward Axis Weighting (within Roll Str8 Technology)</li>
+      <li><strong>Key differentiator:</strong> Active face control (gravity drives face toward square) vs. passive (zero torque prevents twist)</li>
+      <li><strong>Result frame:</strong> Technology AND technique &mdash; not a tradeoff. The first putter that helps both.</li>
+    </ul>
+
+    <h4>Proof Architecture</h4>
+    <table>
+      <thead><tr><th>Layer</th><th>Proof Element</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Credibility</td><td>Chris McGinley &mdash; 30+ years, 11 world #1 players</td><td><span class="tag tag-green">Available</span></td></tr>
+        <tr><td style="font-weight:600">Visual</td><td>Face-down balance test (face stays down vs. competitor flopping open)</td><td><span class="tag tag-orange">Needs shoot</span></td></tr>
+        <tr><td style="font-weight:600">Science</td><td>Robot testing &mdash; 4 video comparisons</td><td><span class="tag tag-orange">Needs shoot</span></td></tr>
+        <tr><td style="font-weight:600">Engineering</td><td>10-piece construction, 360g head, 75% forward weight, CNC steel face</td><td><span class="tag tag-green">Available (specs)</span></td></tr>
+        <tr><td style="font-weight:600">Social</td><td>Founders 500 influencer seeding, creator reviews</td><td><span class="tag tag-gray">Phase 1 post-launch</span></td></tr>
+        <tr><td style="font-weight:600">Data</td><td>Beta tester Arccos metrics (putts per round, SG:putting)</td><td><span class="tag tag-gray">Phase 2</span></td></tr>
+        <tr><td style="font-weight:600">Independent</td><td>SAM PuttLab submission, MyGolfSpy Most Wanted entry</td><td><span class="tag tag-gray">Phase 2-3</span></td></tr>
+        <tr><td style="font-weight:600">Risk Reversal</td><td>365-day Demo Period</td><td><span class="tag tag-green">Available</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Pain Stats</h3>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-value">95%</div><div class="stat-label">Putters with weight in the wrong place</div></div>
+      <div class="stat-box"><div class="stat-value">400K+</div><div class="stat-label">Golfers on the Putter Carousel</div></div>
+      <div class="stat-box"><div class="stat-value">32%</div><div class="stat-label">Blame technique, not equipment</div></div>
+    </div>
+
+    <h3>RS1 Target Audience</h3>
+    <div class="callout" style="border-left-color:var(--forest)">
+      <strong>RS1 is for golfers who:</strong>
+      <ul style="margin-top:8px;padding-left:16px">
+        <li>Hit the ball well tee-to-green but consistently lose 3&ndash;7 strokes per round on the putting surface</li>
+        <li>Have owned 3+ putters in the past 5 years and nothing sticks long-term</li>
+        <li>Know face control matters but haven&rsquo;t found equipment that solves the problem without compromises</li>
+        <li>Miss pattern skews directional (pushes and pulls) rather than purely distance-based</li>
+        <li>Are willing to invest $399+ for a putter backed by real engineering</li>
+      </ul>
+    </div>
+    <table>
+      <tr><td style="font-weight:600;width:20%">Primary</td><td>Serious amateurs (5&ndash;20 handicap). Research-driven. Spend $1,000+/year on golf. Age 30&ndash;60.</td></tr>
+      <tr><td style="font-weight:600">Secondary</td><td>Low-handicap and scratch golfers (0&ndash;5) including club champions and serious competitors.</td></tr>
+      <tr><td style="font-weight:600">Tertiary</td><td>Equipment enthusiasts and gear junkies who follow MyGolfSpy, GolfWRX, and putter-specific YouTube channels.</td></tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Key Language &mdash; Must Echo Downstream</h3>
+    <table>
+      <thead><tr><th>Phrase / Concept</th><th>Why It Matters</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">&ldquo;Face drift&rdquo;</td><td>Named root cause. Consumer-friendly term PG owns. Not &ldquo;toe flow&rdquo; or &ldquo;face opening.&rdquo;</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Forward Axis Weighting&rdquo;</td><td>Hero mechanism name. The #1 differentiator. Use consistently.</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Pull it back, let it fall&rdquo;</td><td>The promise in one line. Double entendre: let gravity work + let the ball fall in the hole.</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Conforms to the rules of golf&rdquo;</td><td>Compliance language. NEVER say &ldquo;legal&rdquo; or &ldquo;USGA.&rdquo;</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Gravity-driven&rdquo;</td><td>Describes how Forward Axis Weighting works. Gravity does the work, not the golfer.</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Do less. Make more.&rdquo;</td><td>The Thread 1 payoff. Four words that capture the product promise.</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Roll Str8 Technology&trade;&rdquo;</td><td>Umbrella technology brand. 9 features, one objective.</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Zero face drift&rdquo;</td><td>The benefit claim. RS1&rsquo;s version of LAB&rsquo;s &ldquo;zero torque.&rdquo;</td></tr>
+        <tr><td style="font-weight:600">&ldquo;9 features&rdquo;</td><td>Always &ldquo;9 features&rdquo; &mdash; not 6 or 7.</td></tr>
+        <tr><td style="font-weight:600">&ldquo;10-piece construction&rdquo;</td><td>Always &ldquo;10-piece&rdquo; &mdash; the precision engineering proof point.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Vocabulary Discipline</h3>
+    <table>
+      <thead><tr><th>Always Say</th><th>Never Say</th></tr></thead>
+      <tbody>
+        <tr><td>Face drift</td><td>Toe flow (in consumer-facing copy)</td></tr>
+        <tr><td>Forward Axis Weighting</td><td>Zero torque (in RS1 context)</td></tr>
+        <tr><td>Conforms to the rules of golf</td><td>Legal, USGA approved, USGA</td></tr>
+        <tr><td>Chris McGinley &mdash; 30+ years, 11 world #1 players</td><td>25 years (use 30+ per ecomm copy)</td></tr>
+        <tr><td>Tiger&rsquo;s FORMER coach (for Hank Haney references)</td><td>Tiger&rsquo;s coach</td></tr>
+        <tr><td>LAB Golf changed the game</td><td>Any adversarial LAB language</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Funnel Pages</h3>
+    <table>
+      <thead><tr><th>Page</th><th>Type</th><th>URL</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">PDP (with nav)</td><td>Site PDP</td><td><span class="tag tag-yellow">TBD</span></td><td>Design: Mar 23 &ndash; Apr 1</td></tr>
+        <tr><td style="font-weight:600">Founders Page</td><td>Customer funnel</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">PreSale Page</td><td>Customer funnel</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Sales Page</td><td>Customer / Media / Affiliate</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Checkout</td><td>All funnels</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Upsell 1</td><td>All funnels</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Upsell 2</td><td>All funnels</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-yellow">TBD</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">Sales Page and PDP share the same below-fold content, with different above-the-fold sections. Founders Page uses Founders 500 exclusive language and imagery.</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 4: PERSONA & VALUE DRIVER MATRIX — PLACEHOLDER ═══════ -->
+<div class="section placeholder-section" id="s4">
+  <div class="section-header">
+    <div class="section-number" style="color:rgba(255,255,255,0.7)">Section 04</div>
+    <div class="section-title">Persona &amp; Value Driver Matrix</div>
+    <div class="section-subtitle" style="color:rgba(255,255,255,0.75)">Who are we targeting? Personas, value drivers, and coverage matrix</div>
+    <div class="placeholder-badge">TBD &mdash; Separate Workstream</div>
+  </div>
+  <div class="section-body">
+    <div class="placeholder-notice">
+      <strong>Personas, value drivers, and coverage matrix will be developed as a separate workstream</strong> and added to the CLM once finalized. The structures below are ready to populate.
+    </div>
+
+    <h3>Launch Personas</h3>
+    <table>
+      <thead><tr><th>#</th><th>Persona</th><th>Who They Are</th><th>Primary Emotion</th><th>They&rsquo;d Say...</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>2</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>3</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>4</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>5</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Value Drivers</h3>
+    <table>
+      <thead><tr><th>#</th><th>Value Driver</th><th>Core Motivation</th><th>How RS1 Fulfills It</th></tr></thead>
+      <tbody>
+        <tr><td>V1</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>V2</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>V3</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>V4</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>V5</td><td style="color:var(--stone)">TBD</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Persona &times; Value Driver Coverage Matrix</h3>
+    <table class="matrix-table">
+      <thead><tr><th></th><th>V1</th><th>V2</th><th>V3</th><th>V4</th><th>V5</th></tr></thead>
+      <tbody>
+        <tr><td>Persona 1</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>Persona 2</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>Persona 3</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>Persona 4</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+        <tr><td>Persona 5</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td><td style="color:var(--stone)">&mdash;</td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">Reading this matrix: Each cell shows which locked script covers that intersection. Bold = primary coverage. Italic = secondary/light touch. Blank = uncovered (Phase 2 opportunity).</div>
+
+    <h3>Phase 2 Expansion Personas</h3>
+    <div class="placeholder-notice">
+      <strong>TBD</strong> &mdash; to be identified after Phase 1 performance data.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 5: CREATIVE MATRIX & AD SCRIPTS ═══════ -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <div class="section-number">Section 05</div>
+    <div class="section-title">Creative Matrix &amp; Ad Scripts</div>
+    <div class="section-subtitle">Creative direction lanes &amp; script placeholders</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">
+      Ad scripts are NOT written yet. This section contains creative direction lanes informed by research and messaging architecture. Scripts will be developed from these lanes once personas (Section 4) are confirmed and the creative team is briefed.
+    </div>
+
+    <h3>4 Creative Direction Lanes</h3>
+
+    <div class="script-card">
+      <div class="script-id">Lane 1</div>
+      <div class="script-name">&ldquo;The Problem Everyone Ignores&rdquo; &mdash; Face Drift Education</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Angle</td><td>Educate the audience on face drift &mdash; the unnamed problem costing them strokes. Name it, explain it, show why their current putter causes it.</td></tr>
+        <tr><td style="font-weight:600">Target Direction</td><td>Problem-aware golfers (32% of addressable market) who blame their technique. Solution-aware golfers comparing options.</td></tr>
+        <tr><td style="font-weight:600">Proof Elements</td><td>Face-down balance test (visual), weight distribution diagrams, &ldquo;95% of putters have weight in the wrong place&rdquo; stat</td></tr>
+        <tr><td style="font-weight:600">Suggested Format</td><td>Short-form education (60&ndash;90s). Opens with the problem reveal, builds to the mechanism, closes with the demo.</td></tr>
+        <tr><td style="font-weight:600">Brand Thread</td><td><span class="tag tag-blue">Thread 2 lead</span> (naming the root cause) with <span class="tag tag-green">Thread 1 payoff</span> (your stroke was fine all along)</td></tr>
+      </table>
+    </div>
+
+    <div class="script-card">
+      <div class="script-id">Lane 2</div>
+      <div class="script-name">&ldquo;Pull It Back, Let It Fall&rdquo; &mdash; Mechanism Demonstration</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Angle</td><td>Lead with the mechanism in action. Show the gravity-driven stroke. Let the physics speak.</td></tr>
+        <tr><td style="font-weight:600">Target Direction</td><td>Equipment enthusiasts and data-driven golfers. LAB-curious skeptics blocked by tradeoffs.</td></tr>
+        <tr><td style="font-weight:600">Proof Elements</td><td>Robot testing footage, face-down balance demo, side-by-side stroke comparisons, McGinley lab walkthrough</td></tr>
+        <tr><td style="font-weight:600">Suggested Format</td><td>Demo-first video (90&ndash;120s). Opens with the face-down balance test or robot footage, then explains why.</td></tr>
+        <tr><td style="font-weight:600">Brand Thread</td><td><span class="tag tag-green">Thread 1</span> + <span class="tag tag-blue">Thread 2</span> combined (the mechanism IS the simplicity)</td></tr>
+      </table>
+    </div>
+
+    <div class="script-card">
+      <div class="script-id">Lane 3</div>
+      <div class="script-name">&ldquo;100 Years of the Wrong Design&rdquo; &mdash; Evolution Narrative</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Angle</td><td>Tell the story of putting technology: 100 years of rear weighting, LAB Golf&rsquo;s breakthrough, and RS1 completing the evolution. Respectful of LAB, claims the next chapter.</td></tr>
+        <tr><td style="font-weight:600">Target Direction</td><td>Product-aware golfers evaluating options (26% of addressable market). Gear enthusiasts who follow MyGolfSpy and GolfWRX.</td></tr>
+        <tr><td style="font-weight:600">Proof Elements</td><td>Three-generation comparison (Past/Present/Future), McGinley credentials, engineering sophistication (10-piece construction)</td></tr>
+        <tr><td style="font-weight:600">Suggested Format</td><td>Long-form narrative (3&ndash;5 min). Historical arc builds credibility before the product reveal. McGinley as the narrator.</td></tr>
+        <tr><td style="font-weight:600">Brand Thread</td><td><span class="tag tag-blue">Thread 2 lead</span> (innovation narrative) with <span class="tag tag-green">Thread 1 close</span> (do less, make more)</td></tr>
+      </table>
+    </div>
+
+    <div class="script-card">
+      <div class="script-id">Lane 4</div>
+      <div class="script-name">&ldquo;Do Less. Make More.&rdquo; &mdash; Result/Feel Angle</div>
+      <table>
+        <tr><td style="font-weight:600;width:25%">Angle</td><td>Lead with the emotional payoff. Less effort. More makes. Confidence at address. The feeling of trusting the face.</td></tr>
+        <tr><td style="font-weight:600">Target Direction</td><td>Frustrated ball-strikers who lose 3&ndash;7 strokes on the green. Putter Carousel riders who&rsquo;ve tried everything.</td></tr>
+        <tr><td style="font-weight:600">Proof Elements</td><td>Lifestyle footage, on-course results, &ldquo;What to Expect&rdquo; benefits (zero face drift, consistent stroke, more makes inside 10 feet)</td></tr>
+        <tr><td style="font-weight:600">Suggested Format</td><td>Lifestyle-first brand ad (60&ndash;90s). Emotion before mechanism. Show the transformation, then briefly explain the physics.</td></tr>
+        <tr><td style="font-weight:600">Brand Thread</td><td><span class="tag tag-green">Thread 1 lead</span> (result-first, equipment does the work) with <span class="tag tag-blue">Thread 2 support</span> (innovation as credibility)</td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Hook Bridge Strategy</h3>
+    <div class="callout" style="border-left-color:var(--forest);background:#e8f5e9">
+      <strong>Andromeda optimization pattern (proven in SF2):</strong> Each creative lane spawns persona-specific hooks that connect to a shared body. Meta&rsquo;s algorithm matches the right hook to the right viewer.
+    </div>
+    <ul>
+      <li><strong>Phase 1:</strong> 1 hook per lane, all feeding shared bodies.</li>
+      <li><strong>Phase 2 expansion:</strong> Hook stacks (vertical) per winning lane. 3&ndash;5 new hooks per winning body. Vertical only &mdash; no new environments, formats, or talent in Phase 2.</li>
+      <li><strong>Phase 2 rule:</strong> 7-day data threshold, Monday tickets, Friday delivery.</li>
+    </ul>
+
+    <h3>Script Placeholders</h3>
+    <table>
+      <thead><tr><th>Script ID</th><th>Lane</th><th>Format</th><th>Length</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">rs1-0001</td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-yellow">Not started &mdash; awaiting persona confirmation</span></td></tr>
+        <tr><td style="font-weight:600">rs1-0002</td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-yellow">Not started</span></td></tr>
+        <tr><td style="font-weight:600">rs1-0003</td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-yellow">Not started</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">Scripts will be developed after Section 4 (personas) is finalized and creative team is briefed on the 4 lanes.</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 6: EMAIL/BACKEND ALIGNMENT ═══════ -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <div class="section-number">Section 06</div>
+    <div class="section-title">Email/Backend Alignment</div>
+    <div class="section-subtitle">Front-end &amp; back-end messaging consistency</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">
+      Email sequences, post-purchase flows, and abandoned cart messaging must echo the same core language as the ads and PDP. When a prospect clicks through from an RS1 ad and lands on the sales page, every touchpoint after that should feel like the same conversation. Key language reference: <a href="#s3" style="color:var(--orange)">Section 3 &mdash; Key Language</a>.
+    </div>
+
+    <h3>Key Language Alignment</h3>
+    <table>
+      <thead><tr><th>Phrase</th><th>Use In Email</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">&ldquo;Face drift&rdquo;</td><td>Problem emails &mdash; name the root cause</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Forward Axis Weighting&rdquo;</td><td>Mechanism emails &mdash; the hero differentiator</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Pull it back, let it fall&rdquo;</td><td>Benefit emails &mdash; the one-line promise</td></tr>
+        <tr><td style="font-weight:600">&ldquo;9 features working together&rdquo;</td><td>Not &ldquo;multiple features&rdquo; or &ldquo;advanced technology&rdquo;</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Roll Str8 Technology&rdquo;</td><td>Always &mdash; the umbrella brand</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Do less. Make more.&rdquo;</td><td>Thread 1 payoff &mdash; the emotional close</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Gravity-driven&rdquo;</td><td>Differentiator &mdash; gravity, not manipulation</td></tr>
+        <tr><td style="font-weight:600">&ldquo;30+ years. 11 world #1 players.&rdquo;</td><td>McGinley credibility &mdash; exact phrasing</td></tr>
+        <tr><td style="font-weight:600">&ldquo;365-day Demo Period&rdquo;</td><td>Risk reversal &mdash; not &ldquo;guarantee&rdquo; or &ldquo;money back&rdquo;</td></tr>
+        <tr><td style="font-weight:600">&ldquo;Conforms to the rules of golf&rdquo;</td><td>If compliance is mentioned. Never &ldquo;USGA.&rdquo;</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Email Sequences</h3>
+    <table>
+      <thead><tr><th>Sequence</th><th>Messaging Alignment</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Founders 500 Exclusive</td><td>Scarcity + insider access. First 500 units, exclusive colorway. Thread 2 lead (innovation, exclusivity).</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">PreSale Announcement</td><td>Root angle: &ldquo;Gravity-Driven. Face-Controlled.&rdquo; Evolutionary narrative. McGinley story.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Launch Announcement</td><td>Mirror PDP emotional arc: face drift problem, Forward Axis Weighting solution, face-down balance proof, offer.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Cart Abandonment</td><td>Lead with Thread 1 (gravity does the work, no stroke changes). Proof stack: McGinley + 365-day guarantee.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Post-Purchase Onboarding</td><td>&ldquo;What to expect&rdquo; &mdash; unboxing, first putting session tips, face-down balance test instruction, PG1 app access.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Testimonial / Social Proof Drip</td><td>Drip Founders 500 reactions, creator reviews, beta tester data. Match PDP proof structure.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Backend Checklist</h3>
+    <div class="checklist-item"><div class="check-box"></div><div>PDP and Sales Page URLs configured in email links</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>UTM parameters aligned (ad, email, page)</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Cart abandonment trigger timing set</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Post-purchase automation active</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Founders 500 segment tagged</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>SKU routing configured (6 SKUs &mdash; shaft selection + hand selection)</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Pricing toggle (RS1 $399 / RS1+ $429)</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Member pricing logic (if applicable)</div></div>
+
+    <h3>Cross-Team Sync Points</h3>
+    <table>
+      <thead><tr><th>Sync</th><th>When</th><th>Who</th></tr></thead>
+      <tbody>
+        <tr><td>Email copy review against PDP and ad language</td><td>Before launch</td><td>Creative + Email team</td></tr>
+        <tr><td>Landing page to email handoff test</td><td>Before launch</td><td>Email + Dev</td></tr>
+        <tr><td>Post-purchase flow activation</td><td>Launch day</td><td>Email + Ops</td></tr>
+        <tr><td>Founders 500 segment and sequencing</td><td>Before Founders launch</td><td>Email + Data</td></tr>
+        <tr><td>SKU routing test (6 SKUs, shaft/hand combos)</td><td>Before launch</td><td>Email + Dev + Ops</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 7: PRODUCTION & SHOOT PLAN ═══════ -->
+<div class="section" id="s7">
+  <div class="section-header">
+    <div class="section-number">Section 07</div>
+    <div class="section-title">Production &amp; Shoot Plan</div>
+    <div class="section-subtitle">What do we need to shoot? What assets exist?</div>
+  </div>
+  <div class="section-body">
+
+    <div class="callout" style="border-left:4px solid var(--orange);background:#fff8f0;padding:16px 20px;margin-bottom:24px">
+      <div style="font-weight:700;font-size:17px;margin-bottom:12px">CEO Quick View: RS1 Content Status</div>
+      <table style="font-size:15px">
+        <thead><tr><th>Category</th><th>Count</th><th>Items</th><th>Themes</th></tr></thead>
+        <tbody>
+          <tr style="background:#e8f5e9">
+            <td style="font-weight:700;color:var(--forest)">Available</td>
+            <td style="font-weight:700">~6</td>
+            <td>Jenni Nagel design files (.ai, .pdf), Iconik folder, product deck, creative pitch deck, product specs</td>
+            <td><span class="tag tag-blue">Thread 2</span></td>
+          </tr>
+          <tr style="background:#fff8e1">
+            <td style="font-weight:700;color:var(--orange)">In Production</td>
+            <td style="font-weight:700">~3</td>
+            <td>Product animations (10-piece explode), weight distribution diagrams, PDP UX design</td>
+            <td><span class="tag tag-blue">Thread 2</span></td>
+          </tr>
+          <tr style="background:#fce4ec">
+            <td style="font-weight:700;color:#c62828">Missing / TBD</td>
+            <td style="font-weight:700">~37</td>
+            <td>Full product photography suite, all lifestyle photography, McGinley lab video, robot testing videos (4), UGC, putting green footage, app screenshots, all graphic elements</td>
+            <td><span class="tag tag-green">Thread 1</span> <span class="tag tag-blue">Thread 2</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size:14px;color:var(--ui-gray);margin-top:8px">The RS1 is pre-launch. The majority of visual assets need to be produced. 46 total assets required.</div>
+    </div>
+
+    <h3>Asset Inventory Summary (46 Assets)</h3>
+    <table>
+      <thead><tr><th>Category</th><th>Count</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Videos &amp; Animations</td><td>11</td></tr>
+        <tr><td style="font-weight:600">Product Photography</td><td>19</td></tr>
+        <tr><td style="font-weight:600">Lifestyle Photography</td><td>8</td></tr>
+        <tr><td style="font-weight:600">App Screenshots</td><td>3</td></tr>
+        <tr><td style="font-weight:600">Graphics &amp; Design Elements</td><td>5</td></tr>
+        <tr><td style="font-weight:700">TOTAL</td><td style="font-weight:700">46</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Available Assets</h3>
+    <table>
+      <thead><tr><th>Asset</th><th>Source</th><th>Location</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Putter Head .ai</td><td>Jenni Nagel</td><td>Design files</td></tr>
+        <tr><td style="font-weight:600">R4.pdf</td><td>Jenni Nagel</td><td>Design files</td></tr>
+        <tr><td style="font-weight:600">Shaft Colors.pdf</td><td>Jenni Nagel</td><td>Design files</td></tr>
+        <tr><td style="font-weight:600">Product deck</td><td>Internal</td><td>Google Slides</td></tr>
+        <tr><td style="font-weight:600">Creative pitch deck</td><td>Internal</td><td>PDF</td></tr>
+        <tr><td style="font-weight:600">Existing Iconik footage</td><td>Iconik</td><td>Iconik RS1 folder</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Priority 1: Product Photography (11 Shots)</h3>
+    <table>
+      <thead><tr><th>#</th><th>Shot</th><th>Purpose</th><th>Urgency</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">Face-down balance demo (RS1 vs. competitor)</td><td>Hero proof &mdash; the single most important marketing asset</td><td><span class="tag tag-orange">CRITICAL</span></td></tr>
+        <tr><td>2</td><td style="font-weight:600">Address view (74&deg; lie angle with arc overlay)</td><td>PDP carousel + feature cards</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>3</td><td style="font-weight:600">Both SKUs beauty shot (RS1 + RS1+)</td><td>PDP hero + offer section</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>4</td><td style="font-weight:600">Sole relief underside view</td><td>Feature card</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>5</td><td style="font-weight:600">Crown detail (carbon composite woven)</td><td>Feature card</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>6</td><td style="font-weight:600">T-Trac alignment lines (low-angle DTL)</td><td>Feature card + alignment messaging</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>7</td><td style="font-weight:600">T-Wing tail rear view</td><td>Feature card</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>8</td><td style="font-weight:600">Grip close-up (dual-sided profile)</td><td>Feature card + PDP carousel</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>9</td><td style="font-weight:600">Face Forward design (address view)</td><td>Feature card</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>10</td><td style="font-weight:600">Three-panel evolution (traditional / LAB-style / RS1)</td><td>PDP carousel + evolution narrative</td><td><span class="tag tag-gray">MEDIUM</span></td></tr>
+        <tr><td>11</td><td style="font-weight:600">McGinley professional portrait (lab setting)</td><td>PDP carousel + credibility section</td><td><span class="tag tag-gray">MEDIUM</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Priority 2: Video &amp; Animation (11 Assets)</h3>
+    <table>
+      <thead><tr><th>#</th><th>Asset</th><th>Purpose</th><th>Urgency</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td style="font-weight:600">10-piece explode/reassemble animation</td><td>PDP hero carousel position 1</td><td><span class="tag tag-yellow">HIGH &mdash; in production</span></td></tr>
+        <tr><td>2</td><td style="font-weight:600">Problem animation (rear weight / face drift)</td><td>PDP carousel position 2</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>3</td><td style="font-weight:600">Solution animation (Forward Axis Weighting)</td><td>PDP carousel position 3</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>4</td><td style="font-weight:600">Forward Axis Weighting mechanism video</td><td>PDP solution section</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">Chris McGinley lab video (full-width)</td><td>PDP credibility section centerpiece</td><td><span class="tag tag-orange">CRITICAL</span></td></tr>
+        <tr><td>6</td><td style="font-weight:600">Robot testing V1: Face angle through stroke</td><td>PDP Science of the Stroke</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>7</td><td style="font-weight:600">Robot testing V2: Stroke arc comparison</td><td>PDP Science of the Stroke</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>8</td><td style="font-weight:600">Robot testing V3: Roll consistency (20 reps)</td><td>PDP Science of the Stroke</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>9</td><td style="font-weight:600">Robot testing V4: Gravity test</td><td>PDP Science of the Stroke</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td>10</td><td style="font-weight:600">Roll Str8 Roadshow organic video</td><td>PDP organic content section</td><td><span class="tag tag-gray">MEDIUM</span></td></tr>
+        <tr><td>11</td><td style="font-weight:600">UGC content collection</td><td>PDP proof carousel</td><td><span class="tag tag-gray">Phase 1 post-launch</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Priority 3: Lifestyle Photography (8 Images)</h3>
+    <table>
+      <thead><tr><th>#</th><th>Headline</th><th>Image Direction</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td style="font-weight:600">Zero Face Drift</td><td>Confident address over a short putt</td></tr>
+        <tr><td>2</td><td style="font-weight:600">A Consistent Stroke</td><td>Smooth mid-stroke, relaxed hands</td></tr>
+        <tr><td>3</td><td style="font-weight:600">More Makes Inside 10 Feet</td><td>Ball dropping into the cup</td></tr>
+        <tr><td>4</td><td style="font-weight:600">Confidence at Address</td><td>Golfer reading the green, locked in</td></tr>
+        <tr><td>5</td><td style="font-weight:600">Do Less, Make More</td><td>Putting with ease, minimal effort</td></tr>
+        <tr><td>6</td><td style="font-weight:600">Consistent by Design</td><td>Wide shot, beautiful course, golfer putting</td></tr>
+        <tr><td>7</td><td style="font-weight:600">Feel The Face</td><td>Moment of feel at impact or address</td></tr>
+        <tr><td>8</td><td style="font-weight:600">See The Line Before You Sink It</td><td>Alignment moment, eyes on the line</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Gap Matrix</h3>
+    <table>
+      <thead><tr><th>Gap</th><th>Available</th><th>In Production</th><th>Needs Shoot</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Face-down balance demo</td><td>No</td><td>No</td><td style="font-weight:700;color:var(--orange)">YES</td><td><span class="tag tag-orange">CRITICAL</span></td></tr>
+        <tr><td style="font-weight:600">McGinley lab video</td><td>Partial</td><td>No</td><td style="font-weight:700;color:var(--orange)">YES</td><td><span class="tag tag-orange">CRITICAL</span></td></tr>
+        <tr><td style="font-weight:600">Robot testing (4 videos)</td><td>No</td><td>No</td><td style="font-weight:700;color:var(--orange)">YES</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td style="font-weight:600">Product photography (11)</td><td>No</td><td>No</td><td style="font-weight:700;color:var(--orange)">YES</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td style="font-weight:600">Lifestyle photography (8)</td><td>No</td><td>No</td><td style="font-weight:700;color:var(--orange)">YES</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td style="font-weight:600">Animations (3)</td><td>No</td><td>YES (10-piece)</td><td>2 remaining</td><td><span class="tag tag-yellow">HIGH</span></td></tr>
+        <tr><td style="font-weight:600">PG1 app screenshots (3)</td><td>No</td><td>No</td><td style="font-weight:700;color:var(--orange)">YES</td><td><span class="tag tag-gray">MEDIUM</span></td></tr>
+        <tr><td style="font-weight:600">Graphics/design elements (5)</td><td>No</td><td>No</td><td style="font-weight:700;color:var(--orange)">YES (designer)</td><td><span class="tag tag-gray">MEDIUM</span></td></tr>
+        <tr><td style="font-weight:600">UGC content</td><td>No</td><td>No</td><td>Phase 1 post-launch</td><td><span class="tag tag-gray">MEDIUM</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Organic &amp; Content Deliverables Registry</h3>
+    <table>
+      <thead><tr><th>Deliverable</th><th>Owner</th><th>Type</th><th>Theme</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">McGinley origin story video</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-blue">Social / PDP</span></td><td>Innovation &mdash; Thread 2</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Face-down balance test clips</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-blue">Social / Ads</span></td><td>Visual proof &mdash; Thread 2</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">&ldquo;Pull It Back, Let It Fall&rdquo; demos</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-blue">Social</span></td><td>Mechanism &mdash; Thread 1+2</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Putting green lifestyle clips</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-green">Organic</span></td><td>Result/feel &mdash; Thread 1</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Product unboxing reel</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-blue">Social</span></td><td>Anticipation &mdash; Thread 2</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Founders 500 reveal content</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-blue">Social</span></td><td>Exclusivity &mdash; Thread 2</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Robot testing highlight reel</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-blue">Social / PDP</span></td><td>Science proof &mdash; Thread 2</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Influencer RS1 reactions</td><td><span class="tag tag-yellow">TBD</span></td><td><span class="tag tag-green">Organic</span></td><td>Authority + authenticity</td><td><span class="tag tag-gray">Phase 2</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Influencer Seeding Brief</h3>
+    <div class="callout" style="border-left-color:var(--indigo);background:#EBF0FA;padding:16px 20px;margin-bottom:16px">
+      <strong style="color:var(--indigo)">For John Hardesty&rsquo;s influencer outreach.</strong> These are the 5 key themes influencers should cover when creating RS1 content.
+    </div>
+    <p style="font-size:14px;color:var(--ui-gray);margin-bottom:12px"><strong>Recommended Video Types:</strong> Unboxing, putting demo, on-course usage, face-down balance test</p>
+
+    <div class="theme-card">
+      <div><span class="theme-num">1</span><div class="theme-title">Forward Axis Weighting</div></div>
+      <div class="theme-desc">75%+ weight in front of the shaft axis. Eliminates face drift. No other putter does this.</div>
+    </div>
+    <div class="theme-card">
+      <div><span class="theme-num">2</span><div class="theme-title">&ldquo;Pull it back, let it fall&rdquo;</div></div>
+      <div class="theme-desc">Gravity does the work. Show the natural pendulum stroke. The putter wants to stay square.</div>
+    </div>
+    <div class="theme-card">
+      <div><span class="theme-num">3</span><div class="theme-title">Face-Down Balance</div></div>
+      <div class="theme-desc">Place it face-down on a flat surface. It stays. Every other putter flops open. Visual proof.</div>
+    </div>
+    <div class="theme-card">
+      <div><span class="theme-num">4</span><div class="theme-title">Chris McGinley&rsquo;s Story</div></div>
+      <div class="theme-desc">30+ years designing clubs for 11 world #1 players. RS1 is his life&rsquo;s work.</div>
+    </div>
+    <div class="theme-card">
+      <div><span class="theme-num">5</span><div class="theme-title">&ldquo;Science of the Stroke&rdquo;</div></div>
+      <div class="theme-desc">RS1 helps your technique, not just better metal. Reference robot testing videos.</div>
+    </div>
+    <div class="callout-muted" style="margin-top:12px">
+      <strong>Throughline:</strong> Themes 1&ndash;3 = technology. Themes 4&ndash;5 = story/technique.<br>
+      <strong>Compliance:</strong> &ldquo;Conforms to the rules of golf&rdquo; &mdash; mention if asked, not a primary talking point.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Asset Links &mdash; Source of Truth</h3>
+    <table>
+      <thead><tr><th>System</th><th>Link / Details</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">ClickUp</td><td><a href="https://app.clickup.com/9014714949/v/li/901413807288" target="_blank" style="color:var(--orange)">ClickUp &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Product Innovation Deck</td><td><a href="https://docs.google.com/presentation/d/1N8KkZ5WUWWubuSQkr-jtMhaXyFqMV04l49L_zRoPJAg/edit" target="_blank" style="color:var(--orange)">Google Slides &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Copy Doc</td><td><a href="https://docs.google.com/document/d/1r5Uuz_m4tz9ov14Pvz24So5p9iTUhDSjYKMEcpyEggs/edit" target="_blank" style="color:var(--orange)">Google Doc &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Loom Part 1</td><td><a href="https://www.loom.com/share/ebe7965ec18042d7aab48e20566682af" target="_blank" style="color:var(--orange)">Loom &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Loom Part 2</td><td><a href="https://www.loom.com/share/3996c2a10aa845e88e7d415c5bf0bb9e" target="_blank" style="color:var(--orange)">Loom &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Figma</td><td><a href="https://www.figma.com/files/team/1007318218030723756/project/545953457/RS1" target="_blank" style="color:var(--orange)">Figma &rarr;</a></td></tr>
+        <tr><td style="font-weight:600">Iconik</td><td>RS1 folder</td></tr>
+        <tr><td style="font-weight:600">Jenni Nagel Files</td><td>Design files (.ai, .pdf source assets)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 7b: INFLUENCER & UGC ═══════ -->
+<div class="section" id="s7b">
+  <div class="section-header">
+    <div class="section-number">Section 7b</div>
+    <div class="section-title">Influencer &amp; UGC &mdash; Whitelisting &amp; Creator Management</div>
+    <div class="section-subtitle">Added March 24 per Sam Mercado&rsquo;s request (SF2 pre-launch call, March 19)</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">Media buying team needs to know at a glance which creator handles they can run ads under. Applies to all product launches.</div>
+
+    <h3>Content Creators Roster</h3>
+    <p>Full roster with handles, platforms, and whitelisting status: <a href="https://docs.google.com/spreadsheets/d/1IRK9VhmDOVndDCynx_rbX8tkSk2NAdnj_LQk1S2qDBs/edit" target="_blank" style="color:var(--orange);font-weight:600">Content Creators Roster &rarr;</a></p>
+
+    <h3>RS1 Creator Tracking</h3>
+    <table>
+      <thead><tr><th>Creator</th><th>Handle</th><th>Whitelisting</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td style="color:var(--stone);font-style:italic">Add creators as confirmed</td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted" style="margin-top:10px">Influencers receiving custom RS1 putters should use the <strong>5 Key Themes</strong> from Section 00 as talking points. See also Section 7 influencer brief for recommended video types. John Hardesty is coordinating outreach &mdash; handles and rights will be added as partnerships are confirmed.</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 8: PHASE 1 LAUNCH ═══════ -->
+<div class="section" id="s8">
+  <div class="section-header">
+    <div class="section-number">Section 08</div>
+    <div class="section-title">Phase 1 &mdash; Launch</div>
+    <div class="section-subtitle">Timeline, batch 1 creative, targeting, budget</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Launch Timeline</h3>
+    <div class="timeline-item">
+      <div class="timeline-date" style="color:var(--forest);font-weight:700">Mar 20</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Campaign theme start + marketing sample ready</div>
+        <div class="timeline-owner">Creative + Product</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 23</div>
+      <div class="timeline-content">
+        <div class="timeline-title">PDP UX design begins</div>
+        <div class="timeline-owner">Design</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 1</div>
+      <div class="timeline-content">
+        <div class="timeline-title">PDP UX design complete</div>
+        <div class="timeline-owner">Design</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 9</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Place PO</div>
+        <div class="timeline-owner">Ops</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 22</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Factory ready</div>
+        <div class="timeline-owner">Manufacturing</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date" style="color:var(--ui-gray)">Apr 9 &ndash; May 4</div>
+      <div class="timeline-content">
+        <div class="timeline-title">PO production</div>
+        <div class="timeline-owner">Manufacturing</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date" style="color:var(--orange);font-weight:700"><span class="tag tag-yellow">TBD</span></div>
+      <div class="timeline-content">
+        <div class="timeline-title">Founders 500 launch (before general launch)</div>
+        <div class="timeline-owner">All teams</div>
+      </div>
+    </div>
+    <div class="timeline-item" style="border-bottom:none">
+      <div class="timeline-date" style="color:var(--orange);font-weight:700">Apr 2026</div>
+      <div class="timeline-content">
+        <div class="timeline-title" style="font-size:17px">GENERAL LAUNCH</div>
+        <div class="timeline-owner">All teams &mdash; exact date TBD</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Batch 1 Ad Directions</h3>
+    <div class="callout-muted">Batch 1 creative directions draw from the 4 lanes in Section 5. No locked scripts yet &mdash; these are the directions to brief.</div>
+    <table>
+      <thead><tr><th>Direction</th><th>Lane</th><th>Persona Target</th><th>Lead Thread</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Face drift education</td><td>Lane 1</td><td>Problem-aware / self-blamers</td><td><span class="tag tag-blue">Thread 2</span></td></tr>
+        <tr><td style="font-weight:600">Mechanism demonstration</td><td>Lane 2</td><td>Equipment enthusiasts / LAB-curious</td><td><span class="tag tag-green">T1</span> + <span class="tag tag-blue">T2</span></td></tr>
+        <tr><td style="font-weight:600">Evolution narrative</td><td>Lane 3</td><td>Product-aware / gear junkies</td><td><span class="tag tag-blue">Thread 2</span></td></tr>
+        <tr><td style="font-weight:600">Result/feel lifestyle</td><td>Lane 4</td><td>Frustrated ball-strikers / carousel riders</td><td><span class="tag tag-green">Thread 1</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Platform &amp; Targeting</h3>
+    <table>
+      <tr><td style="font-weight:600;width:35%">Primary Platform</td><td>Meta (Facebook + Instagram)</td></tr>
+      <tr><td style="font-weight:600">Audience Type</td><td>Cold traffic (primary) + putter-interest audiences</td></tr>
+      <tr><td style="font-weight:600">Targeting</td><td>Putter-specific interests (LAB Golf, Scotty Cameron, MyGolfSpy, GolfWRX), golf equipment enthusiasts, premium golfer demographics</td></tr>
+      <tr><td style="font-weight:600">Geographic</td><td>US (primary)</td></tr>
+      <tr><td style="font-weight:600">Retargeting</td><td>PG customer list, Founders 500 waitlist</td></tr>
+    </table>
+
+    <h3>Budget Placeholders</h3>
+    <div class="placeholder-notice">
+      <strong>Media Buying fills these numbers.</strong> Creative presents ad lineup + persona targeting. Media Buying brings budget constraints + performance thresholds.
+    </div>
+    <table>
+      <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Daily budget (launch week)</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Target CPA</td><td><span class="tag tag-yellow">TBD &mdash; no RS1 benchmark</span></td></tr>
+        <tr><td style="font-weight:600">COGS</td><td><span class="tag tag-yellow">TBD &mdash; confirm per-unit cost</span></td></tr>
+        <tr><td style="font-weight:600">Launch week total</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Scale trigger</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Kill trigger</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Funnel Routing</h3>
+    <table>
+      <thead><tr><th>Traffic Source</th><th>Entry Point</th><th>Flow</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Cold traffic (ads)</td><td>Sales Page</td><td>Ad &rarr; Sales Page &rarr; Checkout &rarr; Upsells</td></tr>
+        <tr><td style="font-weight:600">PG customers (email)</td><td>PDP or Sales Page</td><td>Email &rarr; PDP/Sales &rarr; Checkout &rarr; Upsells</td></tr>
+        <tr><td style="font-weight:600">Founders 500</td><td>Founders Page</td><td>Founders &rarr; Checkout &rarr; Upsells</td></tr>
+        <tr><td style="font-weight:600">Media funnels</td><td>Sales Page (no nav)</td><td>Ad &rarr; Sales &rarr; Checkout &rarr; Upsells &rarr; PDP</td></tr>
+        <tr><td style="font-weight:600">Affiliate</td><td>Sales Page</td><td>Affiliate &rarr; Sales &rarr; Checkout &rarr; Upsells</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Launch Week Monitoring</h3>
+    <table>
+      <thead><tr><th>Day</th><th>Check</th><th>Owner</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Day 1</td><td>All ads live, tracking firing</td><td>Media Buying + Dev</td><td>Fix broken tracking immediately</td></tr>
+        <tr><td style="font-weight:600">Day 2-3</td><td>Initial CPA + CTR by ad/direction</td><td>Media Buying</td><td>Flag outliers</td></tr>
+        <tr><td style="font-weight:600">Day 4-5</td><td>Winning directions identified</td><td>Media Buying + Creative</td><td>Begin shifting budget toward winners</td></tr>
+        <tr><td style="font-weight:600">Day 7</td><td>Week 1 performance review</td><td>All teams</td><td>Decision: scale winners, pause losers, queue Phase 2</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Open Items / Placeholders</h3>
+    <div class="open-item"><strong>Exact launch date</strong> &mdash; <span class="tag tag-yellow">TBD</span> (Ops / Leadership)</div>
+    <div class="open-item"><strong>Ad scripts</strong> &mdash; Not started &mdash; awaiting persona confirmation (Creative)</div>
+    <div class="open-item"><strong>Budget numbers</strong> &mdash; <span class="tag tag-yellow">TBD</span> (Media Buying)</div>
+    <div class="open-item"><strong>COGS per unit</strong> &mdash; <span class="tag tag-yellow">TBD</span> (Ops)</div>
+    <div class="open-item"><strong>Page URLs</strong> &mdash; <span class="tag tag-yellow">TBD</span> &mdash; PDP design starts Mar 23 (Dev)</div>
+    <div class="open-item"><strong>Member pricing</strong> &mdash; <span class="tag tag-yellow">TBD</span> (Ops / Leadership)</div>
+    <div class="open-item"><strong>Founders 500 pricing and terms</strong> &mdash; <span class="tag tag-yellow">TBD</span> (Leadership)</div>
+    <div class="open-item"><strong>Influencer seeding list</strong> &mdash; <span class="tag tag-yellow">TBD</span> (John Hardesty)</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 9: PHASE 2 EXPANSION ═══════ -->
+<div class="section" id="s9">
+  <div class="section-header">
+    <div class="section-number">Section 09</div>
+    <div class="section-title">Phase 2 &mdash; Expansion &amp; Optimization</div>
+    <div class="section-subtitle">Hook stacks, batch 2, creative optimization</div>
+  </div>
+  <div class="section-body">
+    <div class="callout">
+      <strong>Trigger:</strong> 2 weeks post-launch. Requires 7+ days of Phase 1 performance data. Decision meeting: Day 7 performance review queues Phase 2 priorities.
+    </div>
+
+    <h3>Vertical Hook Stacks First</h3>
+    <div class="callout-muted">
+      Rule: Phase 2 expansions = hook stacks ONLY (vertical). No horizontal environment changes (new backgrounds, new talent, new formats). Vertical only &mdash; dig deeper into winning angles.
+    </div>
+    <p><strong>Cadence:</strong> Week 1 data &rarr; Copy team tickets <strong>Monday</strong> &rarr; Hooks delivered <strong>Friday</strong> &rarr; Launched by <strong>weekend</strong></p>
+
+    <h3>Founders 500 Social Proof Campaign</h3>
+    <p>Once Founders 500 units ship and influencer content starts posting:</p>
+    <ul>
+      <li>Compile influencer reaction clips into social proof ads</li>
+      <li>&ldquo;500 golfers. One putter. See why they chose it first.&rdquo;</li>
+      <li>UGC-style compilation for Meta</li>
+      <li>Individual influencer clips as standalone ads</li>
+    </ul>
+
+    <h3>Influencer Seeding Results</h3>
+    <ul>
+      <li>Track which influencer themes resonate (face-down balance test likely to be most shared)</li>
+      <li>Extract top-performing clips for paid amplification</li>
+      <li>Map influencer content to the 4 creative lanes &mdash; which lane did their content naturally gravitate toward?</li>
+    </ul>
+
+    <h3>Batch 2: Net New Script Directions</h3>
+    <table>
+      <thead><tr><th>Script Direction</th><th>Trigger</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Winning hook &rarr; full script</td><td>Hook outperforms its parent body</td><td>Extract winning angle into standalone ad</td></tr>
+        <tr><td style="font-weight:600">Founders 500 social proof script</td><td>Influencer content available</td><td>Compilation of real golfers reacting to RS1</td></tr>
+        <tr><td style="font-weight:600">McGinley deep-dive</td><td>If McGinley content drives high engagement</td><td>Extended engineering story &mdash; the 30-year journey</td></tr>
+        <tr><td style="font-weight:600">Face-down balance challenge</td><td>If demo content goes viral</td><td>&ldquo;Try this with your putter&rdquo; &mdash; user-generated proof</td></tr>
+        <tr><td style="font-weight:600">LAB-to-RS1 conversion script</td><td>If LAB-audience targeting performs</td><td>Respectful comparison &mdash; &ldquo;You believed in face stability. Here&rsquo;s the next chapter.&rdquo;</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Creative Optimization Signals</h3>
+    <table>
+      <thead><tr><th>Signal</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>High CTR, low conversion</td><td>Hook works, body doesn&rsquo;t land. Test new body variations.</td></tr>
+        <tr><td>Low CTR, high conversion</td><td>Body converts but hook doesn&rsquo;t stop the scroll. Hook stack.</td></tr>
+        <tr><td>One lane dominates</td><td>Scale budget. Build hook stack around that lane.</td></tr>
+        <tr><td>Face-down balance content outperforms</td><td>Double down on visual proof. Every ad leads with the demo.</td></tr>
+        <tr><td>McGinley content outperforms</td><td>Expand engineering authority. More lab footage.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Phase 2 Budget</h3>
+    <div class="placeholder-notice">
+      <strong>Media Buying fills post Phase 1.</strong> Scaling criteria informed by Phase 1 CPA and AOV/upsell performance.
+    </div>
+    <table>
+      <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Daily budget (Phase 2)</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Scale criteria</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">New creative budget</td><td><span class="tag tag-yellow">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Influencer budget</td><td><span class="tag tag-yellow">TBD &mdash; managed by John Hardesty</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 10: PHASE 3 PAGE & FUNNEL OPTIMIZATION ═══════ -->
+<div class="section" id="s10">
+  <div class="section-header">
+    <div class="section-number">Section 10</div>
+    <div class="section-title">Phase 3 &mdash; Page &amp; Funnel Optimization</div>
+    <div class="section-subtitle">Page performance, CRO integration, A/B testing</div>
+  </div>
+  <div class="section-body">
+    <div class="callout">
+      <strong>Trigger:</strong> Traffic threshold reached at <strong>Days 10&ndash;14</strong> post-launch. Tests queued for <strong>Weeks 3&ndash;4</strong>. Requires statistically significant traffic to landing pages + checkout.
+    </div>
+
+    <h3>What Phase 3 Optimizes</h3>
+    <table>
+      <thead><tr><th>Layer</th><th>Measured</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">PDP</td><td>Time on page, scroll depth, ATC rate, exit points, carousel engagement</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">Sales Page</td><td>Same as PDP + section-level engagement</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">Founders Page</td><td>Conversion rate, exclusivity messaging effectiveness</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">Checkout flow</td><td>Cart abandonment rate, checkout completion, shaft/hand selection UX</td><td>CRO + Dev</td></tr>
+        <tr><td style="font-weight:600">Upsell sequence</td><td>Take rates per step, revenue per visitor</td><td>CRO</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Ad &rarr; Page Alignment</h3>
+    <table>
+      <thead><tr><th>Signal</th><th>Page Action</th></tr></thead>
+      <tbody>
+        <tr><td>Winning ad leads with face drift education (Lane 1)</td><td>Test education-led headline on PDP above-fold</td></tr>
+        <tr><td>Winning ad leads with mechanism demo (Lane 2)</td><td>Test face-down balance hero video above-fold</td></tr>
+        <tr><td>Winning ad leads with evolution narrative (Lane 3)</td><td>Test Past/Present/Future above-fold framing</td></tr>
+        <tr><td>Winning ad leads with result/feel (Lane 4)</td><td>Test &ldquo;Do Less. Make More.&rdquo; above-fold headline</td></tr>
+        <tr><td>High ad CTR but low page conversion</td><td>Messaging disconnect &mdash; align page to ad promise</td></tr>
+        <tr><td>Specific persona driving most conversions</td><td>Test persona-specific landing page variation</td></tr>
+      </tbody>
+    </table>
+
+    <h3>A/B Testing Priorities</h3>
+    <table>
+      <thead><tr><th>#</th><th>Test</th><th>Hypothesis</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">Face-down balance placement</td><td>Face-down balance demo in hero carousel vs. dedicated BTF section &mdash; test which drives more engagement</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">McGinley section prominence</td><td>McGinley credibility section higher on page vs. current BTF-05 position &mdash; test trust impact on conversion</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">Price presentation ($399/$429)</td><td>Side-by-side SKU cards vs. tabbed/toggle &mdash; test ATC rate and shaft selection clarity</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">Above-fold headline</td><td>Match winning ad angle to page headline &mdash; test conversion lift</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">Evolution section</td><td>Past/Present/Future section included vs. removed &mdash; test whether education improves or slows conversion</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td style="font-weight:600">Social proof timing</td><td>Founders 500 / influencer proof above fold vs. below mechanism sections &mdash; test trust timing</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Shopify Launch Requirements</h3>
+    <table>
+      <thead><tr><th>Requirement</th><th>Details</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Member/non-member pricing</td><td><span class="tag tag-yellow">TBD &mdash; pricing logic to be confirmed</span></td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Shaft selection UX</td><td>RS1 (steel) vs. RS1+ (graphite) toggle or selector</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Hand selection UX</td><td>Right / Left selector</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">6 SKU routing</td><td>RS135RH, RS135LH, RS135RH-G, RS135LH-G, RS135RH-P, RS135LH-P</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">PDP with nav (site)</td><td>Standard PDP in site navigation</td><td>Design: Mar 23 &ndash; Apr 1</td></tr>
+        <tr><td style="font-weight:600">Sales page without nav</td><td>Same below-fold, different ATF (media/affiliate)</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Founders page</td><td>Founders 500 exclusive language/imagery</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>CRO Integration Points</h3>
+    <table>
+      <thead><tr><th>Touchpoint</th><th>When</th><th>What CRO Needs From Creative</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Baseline metrics handoff</td><td>Launch week</td><td>Page URLs, expected traffic, conversion benchmarks</td></tr>
+        <tr><td style="font-weight:600">Initial data review</td><td>Days 10-14</td><td>Which ads are driving traffic, persona breakdown</td></tr>
+        <tr><td style="font-weight:600">Test plan alignment</td><td>Weeks 3-4</td><td>Winning ad angles, persona data, creative direction for page variations</td></tr>
+        <tr><td style="font-weight:600">Test execution</td><td>Phase 3 ongoing</td><td>Page copy variations aligned with winning messaging</td></tr>
+        <tr><td style="font-weight:600">Results feedback loop</td><td>Phase 3 ongoing</td><td>Page test results inform Phase 2 batch 2 ad messaging</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-muted">
+      CRO tickets submitted via ClickUp intake form (or /cro-ticket). Include: test hypothesis, winning ad data, specific copy/layout change, success metric.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 11: FUNNEL MAP & CORE ASSETS ═══════ -->
+<div class="section" id="s11">
+  <div class="section-header">
+    <div class="section-number">Section 11</div>
+    <div class="section-title">Funnel Map &amp; Core Assets</div>
+    <div class="section-subtitle">Live funnel structure, offer details, pillar conversion assets</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Full Funnel Flow</h3>
+
+    <h4>Customer Funnel (Founders, PreSale, Sales)</h4>
+    <div class="callout" style="font-family:'ABCReproMono',monospace;font-size:14px;line-height:1.8;border-left-color:var(--forest);background:#e8f5e9">
+      Founders Page &rarr; Checkout &rarr; Upsell 1 &rarr; Upsell 2<br>
+      PreSale Page &rarr; Checkout &rarr; Upsell 1 &rarr; Upsell 2<br>
+      Sales Page &rarr; Checkout &rarr; Upsell 1 &rarr; Upsell 2
+    </div>
+
+    <h4>Media Funnel (Ads &rarr; Sales)</h4>
+    <div class="callout" style="font-family:'ABCReproMono',monospace;font-size:14px;line-height:1.8;border-left-color:var(--indigo);background:#EBF0FA">
+      Ad &rarr; Sales Page (no nav) &rarr; Checkout &rarr; Upsell 1 &rarr; Upsell 2 &rarr; PDP (no nav)
+    </div>
+
+    <h4>Affiliate Funnel</h4>
+    <div class="callout" style="font-family:'ABCReproMono',monospace;font-size:14px;line-height:1.8;border-left-color:var(--orange)">
+      Affiliate Link &rarr; Sales Page &rarr; Checkout &rarr; Upsell 1 &rarr; Upsell 2
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Funnel Pages Detail</h3>
+    <table>
+      <thead><tr><th>Page</th><th>Funnel(s)</th><th>URL</th><th>Key Metric</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Founders Page</td><td>Customer (Founders 500)</td><td><span class="tag tag-yellow">TBD</span></td><td>Conversion rate, sell-through of 500 units</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">PreSale Page</td><td>Customer (PreSale)</td><td><span class="tag tag-yellow">TBD</span></td><td>Conversion rate, waitlist-to-purchase</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Sales Page</td><td>Customer / Media / Affiliate</td><td><span class="tag tag-yellow">TBD</span></td><td>Conversion rate, time on page, scroll depth</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">PDP (with nav)</td><td>Site</td><td><span class="tag tag-yellow">TBD</span></td><td>ATC rate, time on page, carousel engagement</td><td>Design: Mar 23 &ndash; Apr 1</td></tr>
+        <tr><td style="font-weight:600">PDP (no nav)</td><td>Media (post-upsell)</td><td><span class="tag tag-yellow">TBD</span></td><td>ATC rate (secondary conversion)</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Checkout</td><td>All</td><td><span class="tag tag-yellow">TBD</span></td><td>Completion rate, shaft/hand selection clarity</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Upsell 1</td><td>All</td><td><span class="tag tag-yellow">TBD</span></td><td>Take rate, revenue per visitor</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Upsell 2</td><td>All</td><td><span class="tag tag-yellow">TBD</span></td><td>Take rate, revenue per visitor</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">Sales Page and PDP share the same below-fold content (mechanism, features, McGinley, robot testing, offer). Different above-the-fold sections. Founders Page uses Founders 500 exclusive language and imagery.</div>
+
+    <div class="divider"></div>
+
+    <h3>Pillar Conversion Assets</h3>
+    <table>
+      <thead><tr><th>Asset</th><th>Purpose</th><th>Priority</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">PDP / Sales Page</td><td>Primary conversion vehicle &mdash; full product story</td><td><span class="tag tag-orange">CRITICAL</span></td><td>Copy assembled, design not started</td></tr>
+        <tr><td style="font-weight:600">McGinley Lab Video</td><td>Credibility centerpiece &mdash; full-width in BTF-05</td><td><span class="tag tag-orange">CRITICAL</span></td><td><span class="tag tag-orange">Needs shoot</span></td></tr>
+        <tr><td style="font-weight:600">Robot Testing Videos (4)</td><td>Science proof &mdash; &ldquo;Science of the Stroke&rdquo; section</td><td><span class="tag tag-yellow">HIGH</span></td><td><span class="tag tag-orange">Needs shoot</span></td></tr>
+        <tr><td style="font-weight:600">Face-Down Balance Demo</td><td>Visual proof &mdash; hero carousel + standalone asset</td><td><span class="tag tag-orange">CRITICAL</span></td><td><span class="tag tag-orange">Needs shoot</span></td></tr>
+        <tr><td style="font-weight:600">10-Piece Explode Animation</td><td>Engineering sophistication &mdash; hero carousel position 1</td><td><span class="tag tag-yellow">HIGH</span></td><td><span class="tag tag-yellow">In production</span></td></tr>
+        <tr><td style="font-weight:600">Product Photography Suite</td><td>PDP carousel, feature cards, offer section</td><td><span class="tag tag-yellow">HIGH</span></td><td><span class="tag tag-orange">Needs shoot</span></td></tr>
+        <tr><td style="font-weight:600">Founders 500 Content</td><td>Social proof &mdash; post-launch, feeds back into PDP</td><td><span class="tag tag-gray">MEDIUM</span></td><td><span class="tag tag-gray">Phase 1 post-launch</span></td></tr>
+        <tr><td style="font-weight:600">Lifestyle Photography (8)</td><td>&ldquo;What to Expect&rdquo; section</td><td><span class="tag tag-gray">MEDIUM</span></td><td><span class="tag tag-orange">Needs shoot</span></td></tr>
+        <tr><td style="font-weight:600">PG1 App Screenshots (3)</td><td>App trial CTA support</td><td><span class="tag tag-gray">LOW</span></td><td><span class="tag tag-gray">Needs capture</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 12: TESTING STRATEGY ═══════ -->
+<div class="section" id="s12">
+  <div class="section-header">
+    <div class="section-number">Section 12</div>
+    <div class="section-title">Testing Strategy</div>
+    <div class="section-subtitle">Pre-launch creative testing + on-page A/B testing</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Pre-Launch Creative Testing</h3>
+    <table>
+      <thead><tr><th>Test</th><th>What&rsquo;s Being Tested</th><th>Method</th><th>Timing</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Creative lane validation</td><td>Which of the 4 creative lanes resonates strongest in cold traffic</td><td>A/B across lanes with matched budgets</td><td>Launch week</td></tr>
+        <tr><td style="font-weight:600">Hook format testing</td><td>On-camera vs. AIVO vs. visual-only hooks</td><td>Andromeda multi-hook per body</td><td>Launch week</td></tr>
+        <tr><td style="font-weight:600">Face-down balance placement</td><td>Demo as hook opener vs. mid-body proof element</td><td>Split within winning lane</td><td>Week 2</td></tr>
+        <tr><td style="font-weight:600">McGinley credibility timing</td><td>McGinley name/credentials in hook vs. body only</td><td>Hook variant testing</td><td>Week 2</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>On-Page A/B Tests (Phase 3)</h3>
+    <table>
+      <thead><tr><th>Test</th><th>Hypothesis</th><th>Priority</th><th>Timing</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">ATF headline match to winning ad lane</td><td>Alignment improves conversion</td><td style="font-weight:700;color:var(--orange)">1</td><td>Weeks 3-4</td></tr>
+        <tr><td style="font-weight:600">Face-down balance hero placement</td><td>Above-fold demo increases engagement</td><td style="font-weight:700;color:var(--orange)">2</td><td>Weeks 3-4</td></tr>
+        <tr><td style="font-weight:600">McGinley section position</td><td>Higher placement increases trust</td><td style="font-weight:700;color:var(--orange)">3</td><td>Weeks 4-6</td></tr>
+        <tr><td style="font-weight:600">Price presentation (side-by-side vs. toggle)</td><td>Clearer SKU comparison increases ATC</td><td style="font-weight:700;color:var(--orange)">4</td><td>Weeks 4-6</td></tr>
+        <tr><td style="font-weight:600">Founders proof integration</td><td>Influencer/Founders clips on PDP increases conversion</td><td style="font-weight:700;color:var(--orange)">5</td><td>When content available</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Copy Team Test Plan</h3>
+    <table>
+      <thead><tr><th>Area</th><th>Tests Planned</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Headline variants</td><td>3&ndash;5 per winning lane</td><td><span class="tag tag-gray">Not started &mdash; awaiting launch data</span></td></tr>
+        <tr><td style="font-weight:600">CTA copy</td><td>&ldquo;Get My RS1 Today&rdquo; vs. alternatives</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Subhead variants</td><td>DSI variations on key promise</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Email subject lines</td><td>A/B across launch sequence</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Media Buying Test Plan</h3>
+    <table>
+      <thead><tr><th>Area</th><th>Tests Planned</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Audience targeting</td><td>Putter-specific vs. broad golf vs. LAB Golf interest</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Platform</td><td>Meta primary, potential YouTube/TikTok Phase 2</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Budget allocation</td><td>Even split across lanes vs. weighted to historical putter data</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Dayparting</td><td>Standard vs. evening/weekend</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Testing Cadence</h3>
+    <table>
+      <thead><tr><th>Phase</th><th>Timing</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Launch Week</td><td>Days 1&ndash;7</td><td>Ad creative lane validation, hook format testing</td></tr>
+        <tr><td style="font-weight:600">Weeks 2&ndash;3</td><td>Days 8&ndash;21</td><td>Hook stacks on winners, face-down balance placement, McGinley timing</td></tr>
+        <tr><td style="font-weight:600">Weeks 3&ndash;6</td><td>Days 21&ndash;42</td><td>Page-level A/B tests, funnel optimization, CRO integration</td></tr>
+        <tr><td style="font-weight:600">Month 2+</td><td>Ongoing</td><td>Continuous optimization, batch 2 creative, social proof integration</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-muted">
+      CRO tickets: submit via ClickUp intake (or /cro-ticket). Required fields: test hypothesis, winning ad data, specific change, success metric, traffic estimate.
+    </div>
+  </div>
+</div>
+
+</div><!-- end .board -->
+
+</body>
+</html>

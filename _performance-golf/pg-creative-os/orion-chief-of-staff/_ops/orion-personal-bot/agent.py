@@ -28,12 +28,17 @@ from kb_ops import (
     complete_task,
     create_task,
     find_open_tasks,
+    fix_schedule_task,
     get_day_tasks,
     read_google_doc,
     reschedule_task,
     save_context_file,
+    send_slack_dm,
     suggest_schedule,
 )
+from checkin import run_checkin
+from checkin_state import clear_suggestion, resolve_suggestion
+from delegation_engine import build_agent_prompt, build_human_dm
 
 logger = logging.getLogger(__name__)
 
@@ -224,6 +229,80 @@ TOOLS = [
             "required": ["doc_url_or_id"],
         },
     },
+    {
+        "name": "fix_schedule",
+        "description": (
+            "Manually fix a task's scheduled date in .kb-schedule.json. "
+            "Use when a task exists in the KB but has no scheduled date, "
+            "or when Christopher says a task should be on a specific day but isn't showing up."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "task_id": {
+                    "type": "string",
+                    "description": "The task ID (e.g., mi-057)",
+                },
+                "scheduled_date": {
+                    "type": "string",
+                    "description": "ISO date to schedule (YYYY-MM-DD) or day name (tomorrow, monday)",
+                },
+            },
+            "required": ["task_id", "scheduled_date"],
+        },
+    },
+    {
+        "name": "trigger_checkin",
+        "description": (
+            "Trigger an immediate check-in message — posts the task pulse + delegation ideas "
+            "to Christopher's Slack DM right now, regardless of the hourly schedule. "
+            "Use when Christopher says 'check in', 'what should I work on', or 'where do I stand'."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+        },
+    },
+    {
+        "name": "resolve_checkin_code",
+        "description": (
+            "Look up a check-in suggestion code (e.g., '01', '02') and return the full "
+            "agent prompt or human Slack DM draft for Christopher to approve. "
+            "Use when Christopher replies with a 2-digit number to a check-in message."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "2-digit suggestion code (e.g., '01', '02')",
+                },
+            },
+            "required": ["code"],
+        },
+    },
+    {
+        "name": "send_slack_dm",
+        "description": (
+            "Send a Slack DM to a team member. Only call this AFTER Christopher has "
+            "explicitly approved the message draft. Never send without approval."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "slack_id": {
+                    "type": "string",
+                    "description": "Slack user ID of the recipient (e.g., U0AGMC1EMM4)",
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The message text to send",
+                },
+            },
+            "required": ["slack_id", "message"],
+        },
+    },
 ]
 
 
@@ -271,9 +350,16 @@ def execute_tool(tool_name: str, tool_input: dict) -> str:
                 scheduled_date=sched,
                 priority_tier=tier,
             )
+            verified = item.get("_schedule_verified")
+            if sched and not verified:
+                sched_status = f"SCHEDULE WRITE FAILED — intended {sched}, not saved. Run /fix-schedule {item['id']} {sched} to recover."
+            elif verified:
+                sched_status = f"{verified} (verified)"
+            else:
+                sched_status = "unscheduled"
             return (
                 f"Created task {item['id']}: {title}\n"
-                f"Scheduled: {sched or 'unscheduled'}, Tier: {tier or 'auto'}"
+                f"Scheduled: {sched_status}, Tier: {tier or 'auto'}"
             )
 
         elif tool_name == "reschedule_task":
@@ -329,6 +415,62 @@ def execute_tool(tool_name: str, tool_input: dict) -> str:
                 doc_id = raw.strip()
             content = read_google_doc(doc_id)
             return content
+
+        elif tool_name == "fix_schedule":
+            task_id = tool_input["task_id"]
+            raw_date = tool_input["scheduled_date"]
+            success, result_date = fix_schedule_task(task_id, raw_date)
+            if success:
+                return f"Scheduled {task_id} to {result_date} (verified in KB)."
+            else:
+                return f"Fix failed for {task_id}: {result_date}"
+
+        elif tool_name == "trigger_checkin":
+            msg = run_checkin(force=True)
+            if msg:
+                return "Check-in posted to your Slack DM."
+            return "Check-in skipped — no open tasks or posting failed."
+
+        elif tool_name == "resolve_checkin_code":
+            code = tool_input["code"].strip().zfill(2)
+            suggestion = resolve_suggestion(code)
+            if not suggestion:
+                return f"No suggestion found for code {code}. The check-in may have expired — send 'check in' to get a fresh one."
+
+            task_id = suggestion["task_id"]
+            task_text = suggestion["task_text"]
+            stype = suggestion["type"]
+            target = suggestion["target"]
+
+            if stype == "agent":
+                # Build full agent prompt
+                task = {"id": task_id, "text": task_text}
+                prompt = build_agent_prompt(task, target)
+                return (
+                    f"*{code} → {target} prompt ready*\n\n"
+                    f"```\n{prompt}\n```\n\n"
+                    f"Copy this into a {target} Claude Code session. "
+                    f"Reply *confirmed* once you've kicked it off and I'll clear this from your list."
+                )
+            elif stype == "human":
+                slack_id = suggestion.get("slack_id", "")
+                task = {"id": task_id, "text": task_text}
+                dm_draft = build_human_dm(task, target)
+                return (
+                    f"*{code} → DM draft for {target}*\n\n"
+                    f"{dm_draft}\n\n"
+                    f"Reply *send* to send this, or edit the draft first."
+                )
+            else:
+                return f"Code {code} is marked 'keep' — no delegation to run."
+
+        elif tool_name == "send_slack_dm":
+            slack_id = tool_input["slack_id"]
+            message = tool_input["message"]
+            success = send_slack_dm(slack_id, message)
+            if success:
+                return f"DM sent to {slack_id}."
+            return f"DM send failed to {slack_id} — check logs."
 
         else:
             return f"Unknown tool: {tool_name}"
@@ -638,6 +780,22 @@ specific position (A1, B2) refers to — answer from the task list above.
 before creating.
 
 **Rescheduling**: When he wants to move a task, confirm and use reschedule_task.
+
+**Check-in trigger**: When he says "check in", "where do I stand", or "what should I work on", \
+call trigger_checkin immediately — it posts the full task pulse + delegation ideas to his DM.
+
+**2-digit code replies**: If he replies with a number like "01" or "02", he is approving a \
+check-in suggestion. Call resolve_checkin_code with that code to generate the full agent prompt \
+or human DM draft. Present it and wait for "confirmed" (agent) or "send" (human DM) before acting.
+
+**Delegation approvals**: \
+- If he says "confirmed" after seeing an agent prompt → clear the suggestion from state (call \
+  clear_suggestion with the task_id from the suggestion), tell him it's cleared from his list. \
+- If he says "send" after seeing a human DM draft → call send_slack_dm with the slack_id and \
+  message from the suggestion, then clear_suggestion. Never send without explicit "send" approval.
+
+**Fix schedule**: When he says a task isn't showing up or "fix schedule for [task]", \
+use fix_schedule to write the correct date.
 
 **General conversation**: You can discuss tasks, priorities, strategy. If he corrects \
 you about task rankings, defer to what he sees in his daily report — he's the authority.

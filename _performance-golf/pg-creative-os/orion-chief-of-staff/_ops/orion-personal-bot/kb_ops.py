@@ -149,12 +149,23 @@ def create_task(
     _save_manual_items(data)
 
     # Add to schedule
+    schedule_verified = None
     if scheduled_date:
         schedule = load_schedule()
         schedule[item_id] = scheduled_date
         save_schedule(schedule)
+        # Verify the entry actually landed in the file
+        verified = load_schedule()
+        if verified.get(item_id) == scheduled_date:
+            schedule_verified = scheduled_date
+        else:
+            logger.error(
+                f"Schedule write verification FAILED for {item_id}: "
+                f"expected {scheduled_date}, got {verified.get(item_id)!r}"
+            )
 
-    logger.info(f"Created task {item_id}: {title} (scheduled: {scheduled_date})")
+    item["_schedule_verified"] = schedule_verified
+    logger.info(f"Created task {item_id}: {title} (scheduled: {scheduled_date}, verified: {schedule_verified})")
     return item
 
 
@@ -532,3 +543,57 @@ def reschedule_task(item_id: str, new_date_str: str) -> bool:
     schedule[item_id] = new_date.isoformat()
     save_schedule(schedule)
     return True
+
+
+def fix_schedule_task(item_id: str, date_str: str) -> tuple[bool, str]:
+    """Write a schedule entry for a task, even if it wasn't previously scheduled.
+
+    Unlike reschedule_task, this works for unscheduled tasks too.
+    Verifies the write by re-reading the file.
+
+    Returns:
+        (True, date_iso) on success
+        (False, error_message) on failure
+    """
+    try:
+        new_date = parse_day(date_str, date.today())
+    except ValueError:
+        try:
+            new_date = date.fromisoformat(date_str)
+        except ValueError:
+            return False, f"Could not parse date: {date_str!r}"
+
+    date_iso = new_date.isoformat()
+    schedule = load_schedule()
+    schedule[item_id] = date_iso
+    save_schedule(schedule)
+
+    # Verify
+    verified = load_schedule()
+    if verified.get(item_id) == date_iso:
+        logger.info(f"fix_schedule_task: {item_id} → {date_iso} (verified)")
+        return True, date_iso
+    else:
+        logger.error(f"fix_schedule_task: write verification failed for {item_id}")
+        return False, f"Write failed — expected {date_iso}, got {verified.get(item_id)!r}"
+
+
+def send_slack_dm(slack_id: str, message: str) -> bool:
+    """Send a Slack DM to a user by their Slack ID.
+
+    Uses SLACK_BOT_TOKEN from environment. Returns True on success.
+    """
+    import os
+    token = os.environ.get("SLACK_BOT_TOKEN", "")
+    if not token:
+        logger.error("send_slack_dm: SLACK_BOT_TOKEN not set")
+        return False
+    try:
+        from slack_sdk import WebClient
+        client = WebClient(token=token)
+        client.chat_postMessage(channel=slack_id, text=message)
+        logger.info(f"send_slack_dm: DM sent to {slack_id}")
+        return True
+    except Exception as e:
+        logger.error(f"send_slack_dm: failed to DM {slack_id}: {e}")
+        return False

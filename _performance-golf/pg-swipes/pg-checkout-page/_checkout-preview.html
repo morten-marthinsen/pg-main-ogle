@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375, initial-scale=1.0">
+<title>WPSS Checkout 2-Page — PG1 Member Pricing Template</title>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #212529;
+    width: 375px;
+    margin: 0 auto;
+  }
+
+  /* ===== TIMER BAR ===== */
+  .timer {
+    background: #f9f9f9;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    margin: 15px;
+    overflow: hidden;
+  }
+  .timer-countdown {
+    border-bottom: 1px solid #b1b1bb;
+    text-align: center;
+    padding: 12px 16px;
+  }
+  .timer-countdown .time {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #dd0000;
+  }
+  .timer-headline {
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 17px;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+  }
+  .timer-headline strong { font-weight: 700; }
+
+  /* ===== SECTION LABELS ===== */
+  .section-label {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #333;
+    padding: 15px 15px 5px;
+    font-weight: 600;
+  }
+
+  /* ===== SELECTION BOXES ===== */
+  .selection-box {
+    margin: 8px 15px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Current Selection (Non-Member = green border) */
+  .selection-box.current {
+    border: 2px solid #3b9d4b;
+  }
+  .selection-box.current .box-header {
+    background: #3b9d4b;
+    padding: 10px 20px;
+  }
+  .selection-box.current .box-header span {
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  .selection-box.current .box-body {
+    padding: 18px 22px 20px;
+  }
+  .selection-box .product-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2px;
+  }
+  .selection-box .product-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #009624;
+    margin-bottom: 12px;
+  }
+  .selection-box .benefits {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+  .selection-box .benefits p { margin-bottom: 0; }
+
+  /* Buttons */
+  .btn-selected {
+    background: #eee;
+    border: 1px solid #846a2f;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #9b9b9a;
+    cursor: default;
+    display: inline-block;
+  }
+  .btn-gold {
+    background: linear-gradient(to bottom, #f5dca2, #efc158);
+    border: 1px solid #846a2f;
+    border-radius: 3px;
+    padding: 10px 28px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+  }
+
+  /* Upgrade Box (Member = gray border) */
+  .selection-box.upgrade {
+    border: 2px solid #ddd;
+    background: #fbfbfb;
+  }
+  .selection-box.upgrade .box-body {
+    padding: 22px 18px;
+  }
+  .upgrade-headline {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0038ef;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .upgrade-product {
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    color: #000;
+    margin-bottom: 4px;
+  }
+  .upgrade-price {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 16px;
+  }
+  .upgrade-price .strike {
+    text-decoration: line-through;
+    color: #999;
+  }
+  .upgrade-price .green {
+    font-weight: 700;
+    color: #009624;
+  }
+
+  /* Why Upgrade section */
+  .why-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 14px 0;
+  }
+  .why-section .arrow {
+    font-size: 24px;
+    color: #333;
+  }
+  .why-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.1;
+    color: #050505;
+  }
+
+  .upgrade-body-text {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 12px;
+  }
+  .upgrade-body-text strong { font-weight: 700; }
+
+  .discount-label {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .discount-label .red {
+    font-weight: 700;
+    color: #e10000;
+  }
+
+  /* PG1 Vehicle Section (inside member box) */
+  .pg1-vehicle-section {
+    background: #f0f7f0;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+  .pg1-vehicle-section p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  .pg1-terms {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ===== PG1 APP IMAGE + BULLETS ===== */
+  .pg1-image-placeholder {
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 15px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+  }
+
+  .bullet-list {
+    padding: 0 15px;
+    list-style: none;
+  }
+  .bullet-list li {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #000;
+  }
+  .bullet-list li .check-icon {
+    flex-shrink: 0;
+    color: #009624;
+    font-size: 14px;
+    margin-top: 1px;
+  }
+  .bullet-list li strong {
+    font-weight: 700;
+  }
+
+  .instant-access {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #009624;
+    padding: 12px 0;
+  }
+
+  /* ===== FORM FIELDS ===== */
+  .form-section {
+    padding: 15px;
+  }
+  .form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .form-field {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 13px;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 6px;
+    background: #fff;
+  }
+  .form-row {
+    display: flex;
+    gap: 6px;
+  }
+  .form-row .form-field { flex: 1; }
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar {
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+  }
+  .trust-bar strong { font-weight: 700; }
+  .trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 15px;
+    flex-wrap: wrap;
+  }
+  .trust-badges .badge {
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 11px;
+    color: #666;
+  }
+
+  /* ===== ORDER BUMPS (matches live Checkout Champ styling) ===== */
+  .order-bump {
+    margin: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+  }
+  .order-bump .bump-content {
+    padding: 16px;
+  }
+  .order-bump h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #000;
+    text-align: center;
+  }
+  .order-bump .bump-subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #000;
+    line-height: 1.3;
+  }
+  .order-bump p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  .order-bump .bump-image {
+    background: #e9e9e9;
+    text-align: center;
+    padding: 20px;
+    margin: 8px 0;
+    color: #999;
+    font-size: 12px;
+  }
+  .order-bump .bump-checkbox {
+    background: #fff9c4;
+    border-top: 2px solid #f39c12;
+    padding: 12px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .order-bump .bump-checkbox input {
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: #e10000;
+  }
+  .order-bump .bump-checkbox-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #c00;
+    line-height: 1.4;
+  }
+  .order-bump .bump-checkbox-label .price {
+    color: #000;
+  }
+
+  /* ===== ORDER SUMMARY ===== */
+  .order-summary {
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px;
+    background: #fff;
+  }
+  .order-summary h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .line-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+    font-size: 13px;
+  }
+  .total-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0;
+    border-top: 2px solid #000;
+    margin-top: 6px;
+    font-size: 17px;
+    font-weight: 800;
+  }
+
+  /* ===== CHECKBOXES ===== */
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 6px 15px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #333;
+  }
+  .checkbox-row input { margin-top: 2px; flex-shrink: 0; }
+
+  /* ===== CTA BUTTON ===== */
+  .cta-button {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 12px 15px;
+    padding: 16px;
+    background: linear-gradient(to bottom, #f5dca2, #efc158);
+    border: 1px solid #846a2f;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* ===== GUARANTEE ===== */
+  .guarantee-section {
+    margin: 15px;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .guarantee-section h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #000;
+  }
+  .guarantee-section p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonial {
+    margin: 8px 15px;
+    padding: 14px;
+    background: #fff;
+    border-left: 3px solid #009624;
+    border-radius: 0 6px 6px 0;
+  }
+  .testimonial blockquote {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    color: #000;
+  }
+  .testimonial .author {
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+  }
+  .testimonial .stars { color: #f1c40f; font-size: 14px; }
+
+  /* ===== FINE PRINT ===== */
+  .fine-print {
+    font-size: 10px;
+    color: #999;
+    line-height: 1.5;
+    padding: 10px 15px;
+  }
+
+  /* ===== DEV NOTES ===== */
+  .dev-note {
+    background: #fff3cd;
+    border-left: 3px solid #ffc107;
+    padding: 10px 12px;
+    margin: 10px 15px;
+    font-size: 11px;
+    color: #856404;
+    border-radius: 0 4px 4px 0;
+    line-height: 1.4;
+  }
+  .dev-note strong { color: #664d03; }
+
+  .discussion-box {
+    background: #e8f4fd;
+    border: 1px solid #3498db;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 15px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .discussion-box h4 { color: #2980b9; margin-bottom: 8px; font-size: 14px; }
+  .discussion-box ol { padding-left: 16px; }
+  .discussion-box li { margin-bottom: 4px; }
+
+  /* ===== STEP DIVIDER ===== */
+  .step-divider {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+
+  .divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== STEP 1 ==================== -->
+
+<div class="timer">
+  <div class="timer-countdown">
+    <span class="time">06:66</span>
+  </div>
+  <div class="timer-headline">
+    Claim Your <strong>51% Discount</strong> And Unlock<br>
+    Your Pendulum Swing For Effortless,<br>
+    Free-Flowing, Zero-Thinking Golf
+  </div>
+</div>
+
+<div class="instant-access">- Instant Online Access -</div>
+
+<div class="section-label">CHECKOUT STEP 1 OF 2</div>
+
+<div class="form-section">
+  <div class="form-label">Enter your contact details to get started:</div>
+  <div class="form-field">First name</div>
+  <div class="form-field">Last name</div>
+  <div class="form-field">Email: Required For Order Confirmation and Updates</div>
+  <div class="form-field">Phone: Required For Order Notifications</div>
+</div>
+
+<div style="padding:0 15px 15px;">
+  <button class="cta-button" style="width:100%; margin:0;">Next Step >></button>
+</div>
+
+<div class="trust-badges">
+  <span class="badge">🔒 Secure Checkout</span>
+  <span class="badge">💳 256-bit SSL</span>
+  <span class="badge">✅ 365-Day Guarantee</span>
+</div>
+
+<!-- ==================== STEP 2 ==================== -->
+<div class="step-divider">▼ STEP 2 ▼</div>
+
+<div class="timer">
+  <div class="timer-countdown">
+    <span class="time">06:66</span>
+  </div>
+  <div class="timer-headline">
+    Claim Your <strong>51% Discount</strong> And Unlock<br>
+    Your Pendulum Swing For Effortless,<br>
+    Free-Flowing, Zero-Thinking Golf
+  </div>
+</div>
+
+<div class="section-label">MAKE YOUR SELECTION</div>
+
+<!-- NON-MEMBER: Current Selection style -->
+<div class="selection-box current">
+  <div class="box-header"><span>NON-MEMBER PRICING — YOUR CURRENT SELECTION</span></div>
+  <div class="box-body">
+    <div class="product-name">Pendulum Swing Sequence Video Training</div>
+    <div class="product-price" style="font-size:18px;">$197</div>
+    <div class="benefits">
+      <p>✔ Full Pendulum Swing Sequence Video Training</p>
+      <p>✔ Pendulum Power Video Series</p>
+      <p>✔ Pendulum Swing LIVESTREAM Q&A</p>
+      <p>✔ Access via Performance Golf Members Area</p>
+      <p>✔ 365-Day Money-Back Guarantee</p>
+    </div>
+    <span class="btn-selected">Selected</span>
+  </div>
+</div>
+
+<!-- MEMBER: Upgrade style -->
+<div class="selection-box upgrade">
+  <div class="box-body">
+    <div class="upgrade-headline">Save $100 Today With<br>PG1™ Member Pricing</div>
+    <div class="upgrade-product">PG1™ Member Pricing</div>
+    <div class="upgrade-price"><span class="strike">$197</span> <span class="green">$97</span></div>
+
+    <span class="btn-gold">Select</span>
+
+    <div class="why-section">
+      <span class="arrow">⬇</span>
+      <h3>Why Choose<br>Member Pricing?</h3>
+      <span class="arrow">⬇</span>
+    </div>
+
+    <div class="upgrade-body-text">
+      Your Pendulum Swing Sequence is delivered through the <strong>PG1™ app</strong> — so you get the <strong>same training</strong> at a <strong>lower price</strong>, plus:
+    </div>
+
+    <div class="pg1-vehicle-section">
+      <p>✔ <strong>Personalized coaching</strong> from PGA professionals</p>
+      <p>✔ <strong>A complete practice plan</strong> built around YOUR goals, schedule & skill level</p>
+      <p>✔ <strong>Step-by-step guidance</strong> (not random drills)</p>
+      <p>✔ <strong>Track your progress</strong> and know what to work on next</p>
+      <p>✔ <strong>Daily recommendations</strong> that adapt as you improve</p>
+      <p style="margin-top:12px;">Your Pendulum Swing Sequence lives inside PG1™ — alongside personalized coaching that helps you actually <strong>USE</strong> what you learn.</p>
+      <div class="pg1-terms"><strong>14-day FREE trial included.</strong> Then $39/mo. Cancel anytime with 1 click. No lock-in contracts.</div>
+    </div>
+
+    <div class="discount-label">
+      (Most Popular, Biggest Savings)<br>
+      <span class="red">$100 DISCOUNT APPLIED</span>
+    </div>
+
+    <span class="btn-gold">Select</span>
+  </div>
+</div>
+
+<div class="dev-note">
+  <strong>DEV NOTE:</strong> Non-member is auto-checked by default ($197). When user selects Member Pricing, order summary updates to $97 and PG1 subscription terms apply.
+</div>
+
+<!-- PG1 APP IMAGE -->
+<div class="pg1-image-placeholder">
+  [PG1 App Screenshot — Phone mockups showing Swing Analysis, Training Plan, Dashboard]<br><br>
+  <strong style="font-size:24px; color:#000;">PG1</strong>
+</div>
+
+<!-- BULLET LIST -->
+<ul class="bullet-list">
+  <li><span class="check-icon">✔</span><span><strong>Get 1-on-1 focused guidance</strong> from PGA coaching professionals</span></li>
+  <li><span class="check-icon">✔</span><span><strong>See your progress</strong> in real-time with personalized tracking</span></li>
+  <li><span class="check-icon">✔</span><span><strong>Know exactly what to practice next</strong> with plans built around your body, goals & time</span></li>
+  <li><span class="check-icon">✔</span><span><strong>Dial-in every area of your game</strong> with customized step-by-step instruction for irons, putting, driver, and more!</span></li>
+  <li><span class="check-icon">✔</span><span><strong>Track every shot you hit</strong> with SmartScoring GPS</span></li>
+  <li><span class="check-icon">✔</span><span><strong>Build momentum and continue shaving strokes</strong> with daily recommendations based on where your game is at</span></li>
+</ul>
+
+<div class="instant-access">- Instant Online Access -</div>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<div class="form-section">
+  <div class="form-label">CONTACT INFORMATION</div>
+  <div class="form-field">First name</div>
+  <div class="form-field">Last name</div>
+  <div class="form-field">Email: Required For Order Confirmation and Updates</div>
+  <div class="form-field">Phone: Required For Order Notifications</div>
+</div>
+
+<!-- BILLING -->
+<div class="form-section" style="padding-top:0;">
+  <div class="form-label">BILLING ADDRESS</div>
+  <div class="form-field">Address</div>
+  <div class="form-field">Apartment, Suite, etc. (optional)</div>
+  <div class="form-field">City</div>
+  <div class="form-field">Country</div>
+  <div class="form-row">
+    <div class="form-field">State</div>
+    <div class="form-field">Zip code</div>
+  </div>
+</div>
+
+<!-- PAYMENT -->
+<div class="form-section" style="padding-top:0;">
+  <div class="form-label">PAYMENT &nbsp;&nbsp;💳</div>
+  <div class="form-field">Card number</div>
+  <div class="form-row">
+    <div class="form-field">Month</div>
+    <div class="form-field">Year</div>
+    <div class="form-field">CVV</div>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <strong>Trusted By 1,500,000+ Golfers Worldwide (And Counting)</strong><br>
+  You're Protected By Our 365-Day Money-Back Guarantee!
+</div>
+
+<div class="trust-badges">
+  <span class="badge">🔒 Secure</span>
+  <span class="badge">💳 SSL</span>
+  <span class="badge">✅ Guarantee</span>
+  <span class="badge">⭐ 1.5M+ Golfers</span>
+</div>
+
+<div class="divider"></div>
+
+<!-- ORDER BUMPS (styled to match live Checkout Champ page) -->
+
+<!-- BUMP 1: Swing Circle Trainer (physical product — matches live page) -->
+<div class="order-bump">
+  <div class="bump-content">
+    <h4>THE ULTIMATE COMBINATION</h4>
+    <div class="bump-subtitle">The Only Swing Circle Trainer Made By A Busy Woman For A Busy Woman To Groove A Perfect Pendulum Swing</div>
+    <div class="bump-subtitle">Instant Feedback For Your Swing Circle – Anywhere, Anytime</div>
+    <div class="bump-image">[Product Image: PSS + Swing Circle Trainer "Best Combination"]</div>
+    <p>✔ <strong>5-Minute Practice Sessions</strong> – between meetings, while dinner cooks, or any time you can catch a break</p>
+    <p>✔ <strong>No Range Trips Required</strong> – groove your Pendulum Swing circle & flow from anywhere</p>
+    <p>✔ <strong>Instant Feedback While You Warm Up</strong> – walk onto any tee box with quiet confidence</p>
+    <p>✔ <strong>Protect Your Progress</strong> – even when life gets crazy busy</p>
+    <p>My most successful busy women tell me this is how you groove your swing circle into your game without adding more stress to your packed life.</p>
+    <p>Add it now for just <strong>$79</strong> (regular $149) and you'll never need another range session to keep your swing sharp. Plus it's backed by a <strong>365-day money back guarantee</strong>.</p>
+    <p>Check the box below to make sure you don't miss the fastest and easiest way to groove perfect tempo, add speed to every club, and feel pure confidence every time you swing.</p>
+    <p style="font-size:12px; font-style:italic;">(We can only make this offer now, <strong>for NEW Pendulum Swing Sequence students.</strong> This offer is not available at ANY other time or place.) My most successful members choose this upgrade.</p>
+  </div>
+  <div class="bump-checkbox">
+    <input type="checkbox">
+    <span class="bump-checkbox-label">Yes, Please ADD The Swing Circle Trainer, Risk Free To My Order (<span class="price">$79</span>). I Either LOVE It, Or I Don't Pay.</span>
+  </div>
+</div>
+
+<!-- BUMP 2: Pro Edition POV Lessons (NEW — replaces Pro Edition tier) -->
+<div class="order-bump">
+  <div class="bump-content">
+    <h4>ONE-TIME SPECIAL OFFER:</h4>
+    <div class="bump-subtitle">Unlock 4 Private "Point of View" Lessons</div>
+    <div class="bump-image">[Screenshot from POV Lessons with female golfers]</div>
+    <p>Go behind the scenes and watch me walk <strong>4 different female golfers</strong> through a <strong>"point of view" lesson</strong> on how to unlock your effortless, free-flowing, distance-producing pendulum swing using the 3-step sequence.</p>
+    <p>My most successful new students choose this option because it helps you <strong>SEE and FEEL</strong> me teach the sequence in the program so you can get immediate, fast results as soon as you try it yourself.</p>
+    <p>Through watching these <strong>4 PRIVATE POV lessons</strong> with other female students, you'll INSTANTLY recognize why this is the first and ONLY training designed specifically for women and how OUR bodies move.</p>
+  </div>
+  <div class="bump-checkbox">
+    <input type="checkbox">
+    <span class="bump-checkbox-label">Yes, Please ADD The POV Lessons To My Order (<span class="price">$32</span>). I Either LOVE It, Or I Don't Pay.</span>
+  </div>
+</div>
+
+<!-- BUMP 3: Swing Circle Optimizer -->
+<div class="order-bump">
+  <div class="bump-content">
+    <h4>ONE-TIME SPECIAL OFFER:</h4>
+    <div class="bump-subtitle">Master YOUR Natural Shot Shape For Predictable Ballflight</div>
+    <p><strong>You already know your Swing Circle. Now it's time to OPTIMIZE it…</strong></p>
+    <p><strong>Inside Your Swing Circle Optimizer lesson,</strong> you'll discover the shot-shaping specifics we didn't have time to cover earlier, like:</p>
+    <div class="bump-image">[Screenshots from Swing Circle Optimizer lesson]</div>
+    <p>✔ <strong>Your optimal ball position</strong> – Know exactly where to place the ball for YOUR swing circle</p>
+    <p>✔ <strong>Your natural shot shape</strong> – Discover whether your body is built for a draw, fade, or BOTH</p>
+    <p>✔ <strong>Your hidden power source</strong> – The specific move in the transition that unlocks effortless distance</p>
+    <p>✔ <strong>The biggest mistake most women make</strong> – and the simple adjustment that prevents it</p>
+    <p>The Pendulum Swing Sequence helps you hit it pure. This Swing Circle Optimizer lesson helps you <strong>hit shots WHERE YOU WANT them to go</strong>.</p>
+  </div>
+  <div class="bump-checkbox">
+    <input type="checkbox">
+    <span class="bump-checkbox-label">Yes, Please add Erika's Swing Circle Optimizers for repeatable ballflight and more fairways / greens in regulation (<span class="price">$39</span>). I either LOVE It, or I pay NOTHING.</span>
+  </div>
+</div>
+
+<!-- BUMP 4: Gear & Equipment Guide -->
+<div class="order-bump">
+  <div class="bump-content">
+    <h4>ONE-TIME SPECIAL OFFER:</h4>
+    <div class="bump-subtitle">Your Confidential Golf Gear & Equipment Guide For Women ONLY!<br><em>(Includes Over $1000 of My Exclusive Discount Codes)</em></div>
+    <p>Alright ladies, I know you want to look good and have the best gear built by woman for woman. That's why I compiled ALL my best discount codes for the gear & equipment I use everyday. Everything in this guide is Pendulum Swing Approved, and I guarantee these brands will make you feel & look your best out on the links.</p>
+    <p><em>Get this golf gear & women's only equipment guide if you want to swing it in style this season!</em></p>
+  </div>
+  <div class="bump-checkbox">
+    <input type="checkbox">
+    <span class="bump-checkbox-label">Yes, Please Send Me $1000 Worth of Discount Codes In Erika's Gear Guide (<span class="price">$29</span>). I Either LOVE It, Or I Keep It And Pay Nothing.</span>
+  </div>
+</div>
+
+<!-- BUMP 5: Cheat Sheets -->
+<div class="order-bump">
+  <div class="bump-content">
+    <h4>ONE-TIME SPECIAL OFFER:</h4>
+    <div class="bump-subtitle">Get Your Pendulum Swing Sequence "Cheat" Sheets So You Don't Need Your Phone To Practice The Drills!</div>
+    <p>With this professionally designed cheat sheet, you'll never need to watch a video at the range again. It's like having me by your side, giving step-by-step bullet points on exactly what you need to work on each time you go to practice.</p>
+    <p><em>Add The Pendulum Swing Sequence Cheat Sheets To Your Order — And You'll Never Forget Anything You Need To Unlock Your Pendulum Swing (And Keep It Smooth!)</em></p>
+  </div>
+  <div class="bump-checkbox">
+    <input type="checkbox">
+    <span class="bump-checkbox-label">Give Me The Cheat Sheets Erika Guarantees Will Make Practice More Efficient (<span class="price">$19</span>). I Either LOVE It, Or I Keep It And Pay Nothing.</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ORDER SUMMARY -->
+<div class="order-summary">
+  <h3>ORDER SUMMARY</h3>
+  <div class="dev-note" style="margin:0 0 10px 0; padding:8px 10px;">
+    <strong>DEV:</strong> Dynamically reflects Member or Non-Member pricing. Below = MEMBER selected.
+  </div>
+  <div class="line-item"><span>Pendulum Swing Sequence (Member)</span><span>$97.00</span></div>
+  <div class="line-item"><span>POV Lessons</span><span>$32.00</span></div>
+  <div class="line-item"><span>Pendulum Swing Trainer</span><span>$79.00</span></div>
+  <div class="line-item"><span>Swing Circle Optimizer</span><span>$39.00</span></div>
+  <div class="line-item"><span>Gear Guide</span><span>$29.00</span></div>
+  <div class="line-item"><span>Cheat Sheets</span><span>$19.00</span></div>
+  <div class="line-item"><span>Sales Tax</span><span>$0.00</span></div>
+  <div class="total-line"><span>Total</span><span>$295.00</span></div>
+</div>
+
+<div class="dev-note">
+  <strong>DEV:</strong> If NON-MEMBER selected → "Pendulum Swing Sequence (Non-Member) $197.00", total = $395.00. PG1 subscription line hidden.
+</div>
+
+<!-- TERMS -->
+<div class="checkbox-row">
+  <input type="checkbox"> <span>I agree to <u>terms and conditions</u></span>
+</div>
+<div class="checkbox-row">
+  <input type="checkbox" checked> <span>Yes, give me instant online access to the Pendulum Swing Sequence. I will also receive important text notifications about my Performance Golf account*</span>
+</div>
+
+<div style="padding:0 15px;">
+  <button class="cta-button" style="width:100%; margin:12px 0;">Pay Securely Now & Awaken My Pendulum Swing</button>
+</div>
+
+<div class="trust-bar">
+  <strong>Trusted By 1,500,000+ Golfers Worldwide (And Counting)</strong><br>
+  You're Protected By Our 365-Day Money-Back Guarantee!
+</div>
+
+<div class="trust-badges">
+  <span class="badge">🔒 Secure</span>
+  <span class="badge">💳 SSL</span>
+  <span class="badge">✅ Guarantee</span>
+</div>
+
+<div class="fine-print">
+  *By checking the box above, you agree to the Terms and Privacy Policy and to receive text notifications on 39587 from Performance Golf to the mobile number provided. Msg freq will vary. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to cancel. Reply HELP for help. You'll be billed once for today's purchase. If you selected Member Pricing, your order includes a 14-day free trial to PG1™. After 14 days, your PG1 membership continues at $39/month. You can cancel anytime by emailing support@performancegolf.com or with 1 click inside the PG1 app.
+</div>
+
+<!-- GUARANTEE -->
+<div class="guarantee-section">
+  <h4>🛡️ 365-Day Money-Back Guarantee</h4>
+  <p><strong>Trusted By 1,500,000+ Golfers Around The World</strong></p>
+  <p style="margin-top:8px;">Put this training to the test risk-free. If at any time within the next 365 days you're not fully satisfied, send us an email and receive a 100% full and prompt refund.</p>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonial">
+  <blockquote>"I've struggled with fat shots for years. Today, after using Martin's sequence, I poured 15 shots in a row. Dead center of the clubface."</blockquote>
+  <div class="author">— Daniel G.</div>
+  <div class="stars">★★★★★</div>
+</div>
+<div class="testimonial">
+  <blockquote>"I watched Martin Chuck's video training and I don't think I've missed a ball since. This should have been my first lesson before I learned anything else."</blockquote>
+  <div class="author">— Mark W.</div>
+  <div class="stars">★★★★★</div>
+</div>
+<div class="testimonial">
+  <blockquote>"If I had a dollar for every thin shot I've hit, I'd be rich. Today Martin got me to hit like 10 flushed shots with my 5 iron. That's something I've never done."</blockquote>
+  <div class="author">— Kevin G.</div>
+  <div class="stars">★★★★★</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- DISCUSSION POINTS -->
+<div class="discussion-box">
+  <h4>📋 Discussion Points for Leadership</h4>
+  <ol>
+    <li><strong>$197 / $97 pricing</strong> — matches VSL. Member = VSL price. Non-member = public price.</li>
+    <li><strong>Auto-check</strong> — Non-member ($197) default. Member ($97) as no-brainer switch?</li>
+    <li><strong>PG1 terms checkbox</strong> — explicit checkbox needed, or fine print sufficient?</li>
+    <li><strong>POV Lessons bump</strong> — $32 price point correct?</li>
+    <li><strong>PG1 rate</strong> — $39/mo confirmed post-Scratch Club?</li>
+  </ol>
+</div>
+
+<div style="height:30px;"></div>
+
+</body>
+</html>

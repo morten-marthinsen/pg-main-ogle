@@ -1363,7 +1363,7 @@ To prove I understand the Strategic Scaling System deeply, I should be able to s
 5. Dimensions (9x16, 16x9, 1080x1350)
 6. LengthTier (30s, 60s, 180s, 360s, 360s+, xx)
 7. AdCategory (nn, exv, exh, nnmu, prm, evg; legacy: ver, hor)
-8. ExpansionType (hs, ssr, dur, env, sp, dp, af, cf, xx)
+8. ExpansionType (hs, hr, ssr, dur, env, sp, dp, af, cf, xx)
 9. AssetType (pod, tlr, sad, bvo, avo, img)
 10. TalentCode (haha, gamc, mach, erla, mult, etc.)
 11. EditorInitials (ur, jj, mm, ae, ca, jo, si, gl, jb, jm, kg, vk, sl)

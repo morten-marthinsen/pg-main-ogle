@@ -13,7 +13,7 @@
 
 Veda is the creative execution arm of the Strategic Scaling System for Performance Golf's advertising operations. Veda's primary input flow is Tess-driven: Tess identifies expansion opportunities from data, recommends specific actions, and the human approves. Veda then executes with precision — pulling source material from the Iconik DAM, editing via assembly or AI-enhanced methods, and uploading finished assets with correct naming and metadata. Veda also accepts direct manual input from human team members.
 
-**Primary Goal**: Transform creative direction into production-ready ad assets that comply with the 15-position naming convention (v3.3), preserve root angle integrity, and are uploaded to Iconik with correct metadata for the creative operations team to review and launch.
+**Primary Goal**: Transform creative direction into production-ready ad assets that comply with the 15-position naming convention (v3.10), preserve root angle integrity, and are uploaded to Iconik with correct metadata for the creative operations team to review and launch.
 
 **Current Scope (v1)**: Veda is an automated editor. It receives direction (from Tess recommendations approved by human, or direct manual input), edits assets via assembly (FFmpeg) or AI-enhanced methods, generates 15-position Asset IDs programmatically, uploads finished assets to Iconik, and updates the SSS spreadsheet after launch. Creative Ops handles ClickUp task management and Google Doc tickets.
 
@@ -474,7 +474,7 @@ All errors are logged with:
 
 ### 9.1 15-Position Format
 
-Veda generates Asset IDs following the format defined in `TESS-NAMING-CONVENTION.md` (v3.3). The naming convention document in the Tess project directory is the single source of truth.
+Veda generates Asset IDs following the format defined in `TESS-NAMING-CONVENTION.md` (v3.10). The naming convention document in the Tess project directory is the single source of truth.
 
 **Format**: `[Funnel]-[ScriptID]-[VariationID]-[Platform]-[Dimensions]-[LengthTier]-[AdCategory]-[ExpansionType]-[AssetType]-[TalentCode]-[EditorInitials]-[CopywriterInitials]-[CountryCode]-[CreationDate]-[PromoName]`
 
@@ -834,7 +834,7 @@ UX trajectory for leadership visibility into the Strategic Planning Mode:
 |---------|------|--------|---------|
 | 1.0 | 2026-02-03 | Christopher Ogle + Claude (Session 004) | Initial PRD — executive summary, success criteria, Root Angle compliance, input/output specs, execution pipeline, naming convention, edit method selection, integration requirements, error handling, acceptance criteria, future enhancements |
 | 1.1 | 2026-02-04 | Christopher Ogle + Claude (Session 006) | Corrected execution pipeline to match actual Creative Ops workflow. Added Strategic Planning Mode (weekly Monday + ad-hoc), ClickUp 9-status workflow, Iconik editor folder structure, scope boundaries (v1 DOES/SHALL NOT), ad ticket format with Ad Format → Asset Type mapping. Moved Google Doc/ClickUp creation to v2+. Split Asset ID generation: variation numbers reserved at Step 3, full IDs at Step 6. Tracking update moved to after launch only. Added 4 new Asset Type codes (aip, aio, gru, cdn). Updated success criteria, error handling with output validation, acceptance criteria. Session attribution added throughout. |
-| 1.2 | 2026-02-05 | Christopher Ogle + Claude (Session 007) | 15-position naming convention (v3.3) with Country Code at Position 13. Tess-driven mode established as primary input flow with intake checklist (Tess pre-fills, human approves + fills gaps). Expansion type operational definitions refined: Hook Stack 3-15s, Scroll Stopper 0-3s (Domo alignment), Duration = reassembly with same opening hook (isolation principle) + Transcript Analyzer for cut points, Environment = real footage + AI (v2+), Similar/Different Presenter = AI in v2+, Copy Framework = proven frameworks. Added duration flag at 50% hook-to-target ratio. ROOT_ANGLE_ERROR now triggers transcript-based 3 suggestions. CTA end cards 5-8s. bvo renamed to "Human VO + B-Roll". Copywriter codes 2-4 letters. Added Country Codes table (15.5), Strategic Planning Dashboard roadmap (14.6). MICRO-SKILLS renamed to SUB-AGENTS. |
+| 1.2 | 2026-02-05 | Christopher Ogle + Claude (Session 007) | 15-position naming convention (v3.10) with Country Code at Position 13. Tess-driven mode established as primary input flow with intake checklist (Tess pre-fills, human approves + fills gaps). Expansion type operational definitions refined: Hook Stack 3-15s, Scroll Stopper 0-3s (Domo alignment), Duration = reassembly with same opening hook (isolation principle) + Transcript Analyzer for cut points, Environment = real footage + AI (v2+), Similar/Different Presenter = AI in v2+, Copy Framework = proven frameworks. Added duration flag at 50% hook-to-target ratio. ROOT_ANGLE_ERROR now triggers transcript-based 3 suggestions. CTA end cards 5-8s. bvo renamed to "Human VO + B-Roll". Copywriter codes 2-4 letters. Added Country Codes table (15.5), Strategic Planning Dashboard roadmap (14.6). MICRO-SKILLS renamed to SUB-AGENTS. |
 
 ---
 

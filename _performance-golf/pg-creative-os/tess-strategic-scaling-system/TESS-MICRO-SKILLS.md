@@ -122,7 +122,7 @@ parsed:
 | 5 | Dimensions | Matches pattern: `\d+x\d+` |
 | 6 | LengthTier | One of: `30s`, `60s`, `180s`, `360s`, `360s+`, `xx` |
 | 7 | AdCategory | One of: `nn`, `exv`, `exh`, `nnmu`, `prm`, `evg` (legacy accepted: `ver`, `hor`) |
-| 8 | ExpansionType | One of: `hs`, `ssr`, `dur`, `env`, `sp`, `dp`, `af`, `cf`, `xx` |
+| 8 | ExpansionType | One of: `hs`, `hr`, `ssr`, `dur`, `env`, `sp`, `dp`, `af`, `cf`, `xx` |
 | 9 | AssetType | One of: `pod`, `tlr`, `sad`, `bvo`, `avo` |
 | 10 | TalentCode | 4-character string (lookup against talent table; `mult` = 3+ talent actors) |
 | 11 | EditorInitials | 2-character string (lookup against editor table) |
