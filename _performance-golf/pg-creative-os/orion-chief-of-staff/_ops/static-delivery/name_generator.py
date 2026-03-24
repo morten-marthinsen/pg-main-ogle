@@ -238,6 +238,16 @@ def generate_names(
     # Talent: images → "xxxx"
     talent = "xxxx"
 
+    # Promo name (Position 15) — required for prm, forbidden for evg
+    promo_name = ""
+    if ad_category == "prm":
+        promo_raw = _get_field_dropdown(task, "promo name") or _get_field_text(task, "promo name") or ""
+        promo_name = promo_raw.lower().strip().replace(" ", "")
+        if not promo_name:
+            print("WARNING: Ad Category is 'prm' but no Promo Name found — Position 15 will be empty")
+    elif ad_category == "evg":
+        promo_name = ""  # evg must NOT have promo code
+
     # Generate filenames
     variations = [f"v{v:04d}" for v in range(var_start, var_end + 1)]
     filenames = []
@@ -260,6 +270,8 @@ def generate_names(
                 country,
                 delivery_date,
             ]
+            if promo_name:
+                parts.append(promo_name)
             filename = "-".join(parts) + extension
             filenames.append({
                 "variation": var_id,
@@ -278,6 +290,7 @@ def generate_names(
         "editor": editor_code,
         "copywriter": copywriter_code,
         "country": country,
+        "promo_name": promo_name,
         "total_files": len(filenames),
         "filenames": filenames,
     }

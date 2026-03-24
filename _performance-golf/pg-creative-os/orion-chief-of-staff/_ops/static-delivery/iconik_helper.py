@@ -16,6 +16,8 @@ GCS_STORAGE_ID = "be9c13ce-8dd3-11ec-8e6e-4eafb0a20354"
 class IconikClient:
     def __init__(self, app_id: str, auth_token: str, base_url: str = "https://app.iconik.io/API"):
         self.base_url = base_url.rstrip("/")
+        # Base domain for pagination next_url (which already includes /API/)
+        self.base_domain = self.base_url.rsplit("/API", 1)[0]
         self.headers = {
             "App-ID": app_id,
             "Auth-Token": auth_token,
@@ -45,7 +47,9 @@ class IconikClient:
         )
         resp.raise_for_status()
         data = resp.json()
-        return data["id"], data["user_id"]
+        # Application Token auth returns created_by_user instead of user_id
+        user_id = data.get("user_id") or data.get("created_by_user", "")
+        return data["id"], user_id
 
     def create_format(self, asset_id: str, user_id: str, media_type: str, storage_method: str) -> str:
         """Create a format entry for an asset. Returns format_id."""
@@ -107,58 +111,33 @@ class IconikClient:
         data = resp.json()
         return data["id"], data["upload_url"]
 
-    # ── GCS Upload (resumable protocol) ──────────────────────────────────
+    # ── File Upload (pre-signed URL) ─────────────────────────────────────
 
-    def upload_to_gcs(
+    def upload_file_data(
         self, upload_url: str, file_path: str, file_size: int,
         asset_id: str, file_id: str,
     ) -> None:
-        """Upload file to GCS via Iconik's resumable upload protocol.
+        """Upload file data to the pre-signed URL provided by Iconik.
 
-        1. POST signed URL with x-goog-resumable: start → get upload ID
-        2. PUT file data to signed URL + &upload_id=<id>
-        3. POST to Iconik compose endpoint to finalize GCS object
+        Works with both S3 and GCS pre-signed URLs — just a simple PUT.
         """
-        # Step 1: Initiate resumable upload
-        init_resp = requests.post(
-            upload_url,
-            headers={
-                "content-length": "0",
-                "x-goog-resumable": "start",
-            },
-        )
-        if init_resp.status_code not in (200, 201):
-            raise RuntimeError(f"GCS resumable init failed ({init_resp.status_code}): {init_resp.text}")
+        import mimetypes as mt
+        mime, _ = mt.guess_type(file_path)
+        content_type = mime or "application/octet-stream"
 
-        upload_id = init_resp.headers.get("x-guploader-uploadid")
-        if not upload_id:
-            raise RuntimeError("GCS resumable init: missing X-GUploader-UploadID header")
-
-        # Step 2: PUT file data
         with open(file_path, "rb") as f:
             file_data = f.read()
 
-        put_url = upload_url + "&upload_id=" + upload_id
         put_resp = requests.put(
-            put_url,
+            upload_url,
             headers={
                 "content-length": str(file_size),
-                "content-type": "application/octet-stream",
+                "content-type": content_type,
             },
             data=file_data,
         )
         if not put_resp.ok:
-            raise RuntimeError(f"GCS upload PUT failed ({put_resp.status_code}): {put_resp.text}")
-
-        # Step 3: Compose endpoint
-        compose_url = f"{self.base_url}/files/v1/assets/{asset_id}/files/{file_id}/multipart/gcs/compose_url/"
-        compose_resp = requests.post(
-            compose_url,
-            headers=self.headers,
-            json={"parts_group": None, "content_type": "application/octet-stream"},
-        )
-        if not compose_resp.ok:
-            raise RuntimeError(f"Iconik GCS compose failed ({compose_resp.status_code}): {compose_resp.text}")
+            raise RuntimeError(f"Upload PUT failed ({put_resp.status_code}): {put_resp.text[:200]}")
 
     # ── Finalize ─────────────────────────────────────────────────────────
 
@@ -204,7 +183,7 @@ class IconikClient:
         file_id, upload_url = self.create_file_entry(
             asset_id, file_name, file_size, format_id, file_set_id, storage_id,
         )
-        self.upload_to_gcs(upload_url, file_path, file_size, asset_id, file_id)
+        self.upload_file_data(upload_url, file_path, file_size, asset_id, file_id)
         self.finalize_upload(asset_id, file_id)
 
         if collection_id:
@@ -226,7 +205,8 @@ class IconikClient:
             for o in data.get("objects", []):
                 all_subs.append({"id": o["id"], "title": o["title"]})
             next_url = data.get("next_url")
-            url = f"{self.base_url}{next_url}" if next_url else None
+            # next_url already includes /API/ prefix, so use base_domain
+            url = f"{self.base_domain}{next_url}" if next_url else None
 
         return all_subs
 
@@ -271,6 +251,7 @@ class IconikClient:
             for o in data.get("objects", []):
                 all_assets.append({"id": o["id"], "title": o["title"]})
             next_url = data.get("next_url")
-            url = f"{self.base_url}{next_url}" if next_url else None
+            # next_url already includes /API/ prefix, so use base_domain
+            url = f"{self.base_domain}{next_url}" if next_url else None
 
         return all_assets
