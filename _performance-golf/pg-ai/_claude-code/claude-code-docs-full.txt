@@ -5559,6 +5559,10 @@ verification is not enabled by default.
 Enable repository access verification and/or withhold your name from your shared
 sessions by going to Settings > Claude Code > Sharing settings.
 
+## Schedule recurring tasks
+
+Run Claude on a recurring schedule to automate work like daily PR reviews, dependency audits, and CI failure analysis. See [Schedule tasks on the web](/en/web-scheduled-tasks) for the full guide.
+
 ## Managing sessions
 
 ### Archiving sessions
@@ -6431,6 +6435,7 @@ In the table below, `<arg>` indicates a required argument and `[arg]` indicates 
 | `/review`                                | Deprecated. Install the [`code-review` plugin](https://github.com/anthropics/claude-code-marketplace/blob/main/code-review/README.md) instead: `claude plugin install code-review@claude-code-marketplace`                                                                                                                                              |
 | `/rewind`                                | Rewind the conversation and/or code to a previous point, or summarize from a selected message. See [checkpointing](/en/checkpointing). Alias: `/checkpoint`                                                                                                                                                                                             |
 | `/sandbox`                               | Toggle [sandbox mode](/en/sandboxing). Available on supported platforms only                                                                                                                                                                                                                                                                            |
+| `/schedule [description]`                | Create, update, list, or run [Cloud scheduled tasks](/en/web-scheduled-tasks). Claude walks you through the setup conversationally                                                                                                                                                                                                                      |
 | `/security-review`                       | Analyze pending changes on the current branch for security vulnerabilities. Reviews the git diff and identifies risks like injection, auth issues, and data exposure                                                                                                                                                                                    |
 | `/skills`                                | List available [skills](/en/skills)                                                                                                                                                                                                                                                                                                                     |
 | `/stats`                                 | Visualize daily usage, session history, streaks, and model preferences                                                                                                                                                                                                                                                                                  |
@@ -7353,6 +7358,25 @@ Suppose you need Claude's output in a specific format, especially when integrati
 
 ***
 
+## Run Claude on a schedule
+
+Suppose you want Claude to handle a task automatically on a recurring basis, like reviewing open PRs every morning, auditing dependencies weekly, or checking for CI failures overnight.
+
+Pick a scheduling option based on where you want the task to run:
+
+| Option                                                          | Where it runs                     | Best for                                                                                                      |
+| :-------------------------------------------------------------- | :-------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| [Cloud scheduled tasks](/en/web-scheduled-tasks)                | Anthropic-managed infrastructure  | Tasks that should run even when your computer is off. Configure at [claude.ai/code](https://claude.ai/code).  |
+| [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) | Your machine, via the desktop app | Tasks that need direct access to local files, tools, or uncommitted changes.                                  |
+| [GitHub Actions](/en/github-actions)                            | Your CI pipeline                  | Tasks tied to repo events like opened PRs, or cron schedules that should live alongside your workflow config. |
+| [`/loop`](/en/scheduled-tasks)                                  | The current CLI session           | Quick polling while a session is open. Tasks are cancelled when you exit.                                     |
+
+<Tip>
+  When writing prompts for scheduled tasks, be explicit about what success looks like and what to do with results. The task runs autonomously, so it can't ask clarifying questions. For example: "Review open PRs labeled `needs-review`, leave inline comments on any issues, and post a summary in the `#eng-reviews` Slack channel."
+</Tip>
+
+***
+
 ## Ask Claude about its capabilities
 
 Claude has built-in access to its documentation and can answer questions about its own features and limitations.
@@ -7719,7 +7743,7 @@ All environment variables can be checked into `settings.json` ([read more](/en/s
 # Use Claude Code Desktop
 Source: https://code.claude.com/docs/en/desktop
 
-Get more out of Claude Code Desktop: parallel sessions with Git isolation, visual diff review, app previews, PR monitoring, permission modes, connectors, and enterprise configuration.
+Get more out of Claude Code Desktop: computer use, Dispatch sessions from your phone, parallel sessions with Git isolation, visual diff review, app previews, PR monitoring, connectors, and enterprise configuration.
 
 The Code tab within the Claude Desktop app lets you use Claude Code through a graphical interface instead of the terminal.
 
@@ -7727,8 +7751,10 @@ Desktop adds these capabilities on top of the standard Claude Code experience:
 
 * [Visual diff review](#review-changes-with-diff-view) with inline comments
 * [Live app preview](#preview-your-app) with dev servers
+* [Computer use](#let-claude-use-your-computer) to open apps and control your screen on macOS
 * [GitHub PR monitoring](#monitor-pull-request-status) with auto-fix and auto-merge
 * [Parallel sessions](#work-in-parallel-with-sessions) with automatic Git worktree isolation
+* [Dispatch](#sessions-from-dispatch) integration: send a task from your phone, get a session here
 * [Scheduled tasks](#schedule-recurring-tasks) that run Claude on a recurring schedule
 * [Connectors](#connect-external-tools) for GitHub, Slack, Linear, and more
 * Local, [SSH](#ssh-sessions), and [cloud](#run-long-running-tasks-remotely) environments
@@ -7737,7 +7763,7 @@ Desktop adds these capabilities on top of the standard Claude Code experience:
   New to Desktop? Start with [Get started](/en/desktop-quickstart) to install the app and make your first edit.
 </Tip>
 
-This page covers [working with code](#work-with-code), [managing sessions](#manage-sessions), [extending Claude Code](#extend-claude-code), [scheduled tasks](#schedule-recurring-tasks), and [configuration](#environment-configuration). It also includes a [CLI comparison](#coming-from-the-cli) and [troubleshooting](#troubleshooting).
+This page covers [working with code](#work-with-code), [computer use](#let-claude-use-your-computer), [managing sessions](#manage-sessions), [extending Claude Code](#extend-claude-code), [scheduled tasks](#schedule-recurring-tasks), and [configuration](#environment-configuration). It also includes a [CLI comparison](#coming-from-the-cli) and [troubleshooting](#troubleshooting).
 
 ## Start a session
 
@@ -7836,9 +7862,62 @@ Use the **Auto-fix** and **Auto-merge** toggles in the CI status bar to enable e
   PR monitoring requires the [GitHub CLI (`gh`)](https://cli.github.com/) to be installed and authenticated on your machine. If `gh` is not installed, Desktop prompts you to install it the first time you try to create a PR.
 </Note>
 
+## Let Claude use your computer
+
+Computer use lets Claude open your apps, control your screen, and work directly on your machine the way you would. Ask Claude to test a native app in the iOS simulator, interact with a desktop tool that has no CLI, or automate something that only works through a GUI.
+
+<Note>
+  Computer use is a research preview on macOS that requires a Pro or Max plan. It is not available on Team or Enterprise plans. The Claude Desktop app must be running.
+</Note>
+
+Computer use is off by default. [Enable it in Settings](#enable-computer-use) and grant the required macOS permissions before Claude can control your screen.
+
+<Warning>
+  Unlike the [sandboxed Bash tool](/en/sandboxing), computer use runs on your actual desktop with access to whatever you approve. Claude checks each action and flags potential prompt injection from on-screen content, but the trust boundary is different. See the [computer use safety guide](https://support.claude.com/en/articles/14128542) for best practices.
+</Warning>
+
+### When computer use applies
+
+Claude has several ways to interact with an app or service, and computer use is the broadest and slowest. It tries the most precise tool first:
+
+* If you have a [connector](#connect-external-tools) for a service, Claude uses the connector.
+* If the task is a shell command, Claude uses Bash.
+* If the task is browser work and you have [Claude in Chrome](/en/chrome) set up, Claude uses that.
+* If none of those apply, Claude uses computer use.
+
+The [per-app access tiers](#app-permissions) reinforce this: browsers are capped at view-only, and terminals and IDEs at click-only, steering Claude toward the dedicated tool even when computer use is active. Screen control is reserved for things nothing else can reach, like native apps, hardware control panels, the iOS simulator, or proprietary tools without an API.
+
+### Enable computer use
+
+Computer use is off by default. If you ask Claude to do something that needs it while it's off, Claude tells you it could do the task if you enable computer use in Settings. To enable it, open **Settings > Desktop app > General** and toggle **Computer use** on. Before the toggle takes effect, you need to grant two macOS system permissions:
+
+* **Accessibility**: lets Claude click, type, and scroll
+* **Screen Recording**: lets Claude see what's on your screen
+
+The Settings page shows the current status of each permission. If either is denied, click the badge to open the relevant System Settings pane.
+
+### App permissions
+
+The first time Claude needs to use an app, a prompt appears in your session. Click **Allow for this session** or **Deny**. Approvals last for the current session, or 30 minutes in [Dispatch-spawned sessions](#sessions-from-dispatch).
+
+The prompt also shows what level of control Claude gets for that app. These tiers are fixed by app category and can't be changed:
+
+| Tier         | What Claude can do                                       | Applies to                  |
+| :----------- | :------------------------------------------------------- | :-------------------------- |
+| View only    | See the app in screenshots                               | Browsers, trading platforms |
+| Click only   | Click and scroll, but not type or use keyboard shortcuts | Terminals, IDEs             |
+| Full control | Click, type, drag, and use keyboard shortcuts            | Everything else             |
+
+Apps with broad reach like Terminal, Finder, and System Settings show an extra warning in the prompt so you know what approving them grants.
+
+You can configure two settings in **Settings > Desktop app > General**:
+
+* **Denied apps**: add apps here to reject them without prompting. Claude may still affect a denied app indirectly through actions in an allowed app, but it can't interact with the denied app directly.
+* **Unhide apps when Claude finishes**: while Claude is working, your other windows are hidden so it interacts with only the approved app. When Claude finishes, hidden windows are restored unless you turn this setting off.
+
 ## Manage sessions
 
-Each session is an independent conversation with its own context and changes. You can run multiple sessions in parallel or send work to the cloud.
+Each session is an independent conversation with its own context and changes. You can run multiple sessions in parallel, send work to the cloud, or let Dispatch start sessions for you from your phone.
 
 ### Work in parallel with sessions
 
@@ -7867,13 +7946,27 @@ The **Continue in** menu, accessible from the VS Code icon in the bottom right o
 * **Claude Code on the Web**: sends your local session to continue running remotely. Desktop pushes your branch, generates a summary of the conversation, and creates a new remote session with the full context. You can then choose to archive the local session or keep it. This requires a clean working tree, and is not available for SSH sessions.
 * **Your IDE**: opens your project in a supported IDE at the current working directory.
 
+### Sessions from Dispatch
+
+[Dispatch](https://support.claude.com/en/articles/13947068) is a persistent conversation with Claude that lives in the [Cowork](https://claude.com/product/cowork#dispatch-and-computer-use) tab. You message Dispatch a task, and it decides how to handle it.
+
+A task can end up as a Code session in two ways: you ask for one directly, such as "open a Claude Code session and fix the login bug", or Dispatch decides the task is development work and spawns one on its own. Tasks that typically route to Code include fixing bugs, updating dependencies, running tests, or opening pull requests. Research, document editing, and spreadsheet work stay in Cowork.
+
+Either way, the Code session appears in the Code tab's sidebar with a **Dispatch** badge. You get a push notification on your phone when it finishes or needs your approval.
+
+If you have [computer use](#let-claude-use-your-computer) enabled, Dispatch-spawned Code sessions can use it too. App approvals in those sessions expire after 30 minutes and re-prompt, rather than lasting the full session like regular Code sessions.
+
+For setup, pairing, and Dispatch settings, see the [Dispatch help article](https://support.claude.com/en/articles/13947068). Dispatch requires a Pro or Max plan and is not available on Team or Enterprise plans.
+
+Dispatch is one of several ways to work with Claude when you're away from your terminal. See [Platforms and integrations](/en/platforms#work-when-you-are-away-from-your-terminal) to compare it with Remote Control, Channels, Slack, and scheduled tasks.
+
 ## Extend Claude Code
 
 Connect external services, add reusable workflows, customize Claude's behavior, and configure preview servers.
 
 ### Connect external tools
 
-For local and [SSH](#ssh-sessions) sessions, click the **+** button next to the prompt box and select **Connectors** to add integrations like Google Calendar, Slack, GitHub, Linear, Notion, and more. You can add connectors before or during a session. Connectors are not available for remote sessions.
+For local and [SSH](#ssh-sessions) sessions, click the **+** button next to the prompt box and select **Connectors** to add integrations like Google Calendar, Slack, GitHub, Linear, Notion, and more. You can add connectors before or during a session. The **+** button is not available in remote sessions, but [scheduled tasks](/en/web-scheduled-tasks) configure connectors at task creation time.
 
 To manage or disconnect connectors, go to Settings → Connectors in the desktop app, or select **Manage connectors** from the Connectors menu in the prompt box.
 
@@ -8036,15 +8129,42 @@ These configurations show common setups for different project types:
 
 ## Schedule recurring tasks
 
-Scheduled tasks start a new local session automatically at a time and frequency you choose. Use them for recurring work like daily code reviews, dependency update checks, or morning briefings that pull from your calendar and inbox.
+By default, scheduled tasks start a new session automatically at a time and frequency you choose. Use them for recurring work like daily code reviews, dependency update checks, or morning briefings that pull from your calendar and inbox.
 
-Tasks run on your machine, so the desktop app must be open and your computer awake for them to fire. See [How scheduled tasks run](#how-scheduled-tasks-run) for details on missed runs and catch-up behavior.
+### Compare scheduling options
+
+Claude Code offers three ways to schedule recurring work:
+
+|                            | [Cloud](/en/web-scheduled-tasks) | [Desktop](/en/desktop#schedule-recurring-tasks) | [`/loop`](/en/scheduled-tasks) |
+| :------------------------- | :------------------------------- | :---------------------------------------------- | :----------------------------- |
+| Runs on                    | Anthropic cloud                  | Your machine                                    | Your machine                   |
+| Requires machine on        | No                               | Yes                                             | Yes                            |
+| Requires open session      | No                               | No                                              | Yes                            |
+| Persistent across restarts | Yes                              | Yes                                             | No (session-scoped)            |
+| Access to local files      | No (fresh clone)                 | Yes                                             | Yes                            |
+| MCP servers                | Connectors configured per task   | [Config files](/en/mcp) and connectors          | Inherits from session          |
+| Permission prompts         | No (runs autonomously)           | Configurable per task                           | Inherits from session          |
+| Customizable schedule      | Via `/schedule` in the CLI       | Yes                                             | Yes                            |
+| Minimum interval           | 1 hour                           | 1 minute                                        | 1 minute                       |
+
+<Tip>
+  Use **cloud tasks** for work that should run reliably without your machine. Use **Desktop tasks** when you need access to local files and tools. Use **`/loop`** for quick polling during a session.
+</Tip>
+
+The Schedule page supports two kinds of tasks:
+
+* **Local tasks**: run on your machine. They have direct access to your local files and tools, but the desktop app must be open and your computer awake for them to run.
+* **Remote tasks**: run on Anthropic-managed cloud infrastructure. They keep running even when your computer is off, but work against a fresh clone of your repository rather than your local checkout.
+
+Both kinds appear in the same task grid. Click **New task** to pick which kind to create. The rest of this section covers local tasks; for remote tasks, see [Cloud scheduled tasks](/en/web-scheduled-tasks).
+
+See [How scheduled tasks run](#how-scheduled-tasks-run) for details on missed runs and catch-up behavior for local tasks.
 
 <Note>
-  By default, scheduled tasks run against whatever state your working directory is in, including uncommitted changes. Enable the worktree toggle in the prompt input to give each run its own isolated Git worktree, the same way [parallel sessions](#work-in-parallel-with-sessions) work.
+  By default, local scheduled tasks run against whatever state your working directory is in, including uncommitted changes. Enable the worktree toggle in the prompt input to give each run its own isolated Git worktree, the same way [parallel sessions](#work-in-parallel-with-sessions) work.
 </Note>
 
-To create a scheduled task, click **Schedule** in the sidebar, then **+ New task**. Configure these fields:
+To create a local scheduled task, click **Schedule** in the sidebar, click **New task**, and choose **New local task**. Configure these fields:
 
 | Field       | Description                                                                                                                                                                                                              |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -8067,11 +8187,11 @@ For intervals the picker doesn't offer (every 15 minutes, first of each month, e
 
 ### How scheduled tasks run
 
-Scheduled tasks run locally on your machine. Desktop checks the schedule every minute while the app is open and starts a fresh session when a task is due, independent of any manual sessions you have open. Each task gets a fixed delay of up to 10 minutes after the scheduled time to stagger API traffic. The delay is deterministic: the same task always starts at the same offset.
+Local scheduled tasks run on your machine. Desktop checks the schedule every minute while the app is open and starts a fresh session when a task is due, independent of any manual sessions you have open. Each task gets a fixed delay of up to 10 minutes after the scheduled time to stagger API traffic. The delay is deterministic: the same task always starts at the same offset.
 
 When a task fires, you get a desktop notification and a new session appears under a **Scheduled** section in the sidebar. Open it to see what Claude did, review changes, or respond to permission prompts. The session works like any other: Claude can edit files, run commands, create commits, and open pull requests.
 
-Tasks only run while the desktop app is running and your computer is awake. If your computer sleeps through a scheduled time, the run is skipped. To prevent idle-sleep, enable **Keep computer awake** in Settings under **Desktop app → General**. Closing the laptop lid still puts it to sleep.
+Tasks only run while the desktop app is running and your computer is awake. If your computer sleeps through a scheduled time, the run is skipped. To prevent idle-sleep, enable **Keep computer awake** in Settings under **Desktop app → General**. Closing the laptop lid still puts it to sleep. For tasks that need to run even when your computer is off, use a [remote task](/en/web-scheduled-tasks) instead.
 
 ### Missed runs
 
@@ -8202,16 +8322,16 @@ This table shows the desktop app equivalent for common CLI flags. Flags not list
 
 | CLI                                   | Desktop equivalent                                                                                                                       |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `--model sonnet`                      | model dropdown next to the send button, before starting a session                                                                        |
-| `--resume`, `--continue`              | click a session in the sidebar                                                                                                           |
-| `--permission-mode`                   | mode selector next to the send button                                                                                                    |
+| `--model sonnet`                      | Model dropdown next to the send button, before starting a session                                                                        |
+| `--resume`, `--continue`              | Click a session in the sidebar                                                                                                           |
+| `--permission-mode`                   | Mode selector next to the send button                                                                                                    |
 | `--dangerously-skip-permissions`      | Bypass permissions mode. Enable in Settings → Claude Code → "Allow bypass permissions mode". Enterprise admins can disable this setting. |
-| `--add-dir`                           | add multiple repos with the **+** button in remote sessions                                                                              |
-| `--allowedTools`, `--disallowedTools` | not available in Desktop                                                                                                                 |
-| `--verbose`                           | not available. Check system logs: Console.app on macOS, Event Viewer → Windows Logs → Application on Windows                             |
-| `--print`, `--output-format`          | not available. Desktop is interactive only.                                                                                              |
-| `ANTHROPIC_MODEL` env var             | model dropdown next to the send button                                                                                                   |
-| `MAX_THINKING_TOKENS` env var         | set in shell profile; applies to local sessions. See [environment configuration](#environment-configuration).                            |
+| `--add-dir`                           | Add multiple repos with the **+** button in remote sessions                                                                              |
+| `--allowedTools`, `--disallowedTools` | Not available in Desktop                                                                                                                 |
+| `--verbose`                           | Not available. Check system logs: Console.app on macOS, Event Viewer → Windows Logs → Application on Windows                             |
+| `--print`, `--output-format`          | Not available. Desktop is interactive only.                                                                                              |
+| `ANTHROPIC_MODEL` env var             | Model dropdown next to the send button                                                                                                   |
+| `MAX_THINKING_TOKENS` env var         | Set in shell profile; applies to local sessions. See [environment configuration](#environment-configuration).                            |
 
 ### Shared configuration
 
@@ -8233,17 +8353,19 @@ This table compares core capabilities between the CLI and Desktop. For a full li
 
 | Feature                                               | CLI                                                       | Desktop                                                                                     |
 | ----------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Permission modes                                      | all modes including `dontAsk`                             | Ask permissions, Auto accept edits, Plan mode, and Bypass permissions via Settings          |
+| Permission modes                                      | All modes including `dontAsk`                             | Ask permissions, Auto accept edits, Plan mode, and Bypass permissions via Settings          |
 | `--dangerously-skip-permissions`                      | CLI flag                                                  | Bypass permissions mode. Enable in Settings → Claude Code → "Allow bypass permissions mode" |
-| [Third-party providers](/en/third-party-integrations) | Bedrock, Vertex, Foundry                                  | not available. Desktop connects to Anthropic's API directly.                                |
-| [MCP servers](/en/mcp)                                | configure in settings files                               | Connectors UI for local and SSH sessions, or settings files                                 |
-| [Plugins](/en/plugins)                                | `/plugin` command                                         | plugin manager UI                                                                           |
-| @mention files                                        | text-based                                                | with autocomplete                                                                           |
-| File attachments                                      | not available                                             | images, PDFs                                                                                |
-| Session isolation                                     | [`--worktree`](/en/cli-reference) flag                    | automatic worktrees                                                                         |
-| Multiple sessions                                     | separate terminals                                        | sidebar tabs                                                                                |
-| Recurring tasks                                       | cron jobs, CI pipelines                                   | [scheduled tasks](#schedule-recurring-tasks)                                                |
-| Scripting and automation                              | [`--print`](/en/cli-reference), [Agent SDK](/en/headless) | not available                                                                               |
+| [Third-party providers](/en/third-party-integrations) | Bedrock, Vertex, Foundry                                  | Not available. Desktop connects to Anthropic's API directly.                                |
+| [MCP servers](/en/mcp)                                | Configure in settings files                               | Connectors UI for local and SSH sessions, or settings files                                 |
+| [Plugins](/en/plugins)                                | `/plugin` command                                         | Plugin manager UI                                                                           |
+| @mention files                                        | Text-based                                                | With autocomplete                                                                           |
+| File attachments                                      | Not available                                             | Images, PDFs                                                                                |
+| Session isolation                                     | [`--worktree`](/en/cli-reference) flag                    | Automatic worktrees                                                                         |
+| Multiple sessions                                     | Separate terminals                                        | Sidebar tabs                                                                                |
+| Recurring tasks                                       | Cron jobs, CI pipelines                                   | [Scheduled tasks](#schedule-recurring-tasks)                                                |
+| Computer use                                          | Not available                                             | [App and screen control](#let-claude-use-your-computer) on macOS                            |
+| Dispatch integration                                  | Not available                                             | [Dispatch sessions](#sessions-from-dispatch) in the sidebar                                 |
+| Scripting and automation                              | [`--print`](/en/cli-reference), [Agent SDK](/en/headless) | Not available                                                                               |
 
 ### What's not available in Desktop
 
@@ -17884,19 +18006,19 @@ Choose your environment to get started. Most surfaces require a [Claude subscrip
       <Tab title="Native Install (Recommended)">
         **macOS, Linux, WSL:**
 
-        ```bash theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
+        ```bash theme={null}
         curl -fsSL https://claude.ai/install.sh | bash
         ```
 
         **Windows PowerShell:**
 
-        ```powershell theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
+        ```powershell theme={null}
         irm https://claude.ai/install.ps1 | iex
         ```
 
         **Windows CMD:**
 
-        ```batch theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
+        ```batch theme={null}
         curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
         ```
 
@@ -17908,7 +18030,7 @@ Choose your environment to get started. Most surfaces require a [Claude subscrip
       </Tab>
 
       <Tab title="Homebrew">
-        ```bash theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
+        ```bash theme={null}
         brew install --cask claude-code
         ```
 
@@ -17918,7 +18040,7 @@ Choose your environment to get started. Most surfaces require a [Claude subscrip
       </Tab>
 
       <Tab title="WinGet">
-        ```powershell theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null} theme={null}
+        ```powershell theme={null}
         winget install Anthropic.ClaudeCode
         ```
 
@@ -18048,10 +18170,19 @@ Here are some of the ways you can use Claude Code:
     See the [CLI reference](/en/cli-reference) for the full set of commands and flags.
   </Accordion>
 
+  <Accordion title="Schedule recurring tasks" icon="clock">
+    Run Claude on a schedule to automate work that repeats: morning PR reviews, overnight CI failure analysis, weekly dependency audits, or syncing docs after PRs merge.
+
+    * [Cloud scheduled tasks](/en/web-scheduled-tasks) run on Anthropic-managed infrastructure, so they keep running even when your computer is off. Create them from the web, the Desktop app, or by running `/schedule` in the CLI.
+    * [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) run on your machine, with direct access to your local files and tools
+    * [`/loop`](/en/scheduled-tasks) repeats a prompt within a CLI session for quick polling
+  </Accordion>
+
   <Accordion title="Work from anywhere" icon="globe">
     Sessions aren't tied to a single surface. Move work between environments as your context changes:
 
     * Step away from your desk and keep working from your phone or any browser with [Remote Control](/en/remote-control)
+    * Message [Dispatch](/en/desktop#sessions-from-dispatch) a task from your phone and open the Desktop session it creates
     * Kick off a long-running task on the [web](/en/claude-code-on-the-web) or [iOS app](https://apps.apple.com/app/claude-by-anthropic/id6473753684), then pull it into your terminal with `/teleport`
     * Hand off a terminal session to the [Desktop app](/en/desktop) with `/desktop` for visual diff review
     * Route tasks from team chat: mention `@Claude` in [Slack](/en/slack) with a bug report and get a pull request back
@@ -18064,16 +18195,17 @@ Each surface connects to the same underlying Claude Code engine, so your CLAUDE.
 
 Beyond the [Terminal](/en/quickstart), [VS Code](/en/vs-code), [JetBrains](/en/jetbrains), [Desktop](/en/desktop), and [Web](/en/claude-code-on-the-web) environments above, Claude Code integrates with CI/CD, chat, and browser workflows:
 
-| I want to...                                                          | Best option                                                                                                        |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Continue a local session from my phone or another device              | [Remote Control](/en/remote-control)                                                                               |
-| Push events from Telegram, Discord, or my own webhooks into a session | [Channels](/en/channels)                                                                                           |
-| Start a task locally, continue on mobile                              | [Web](/en/claude-code-on-the-web) or [Claude iOS app](https://apps.apple.com/app/claude-by-anthropic/id6473753684) |
-| Automate PR reviews and issue triage                                  | [GitHub Actions](/en/github-actions) or [GitLab CI/CD](/en/gitlab-ci-cd)                                           |
-| Get automatic code review on every PR                                 | [GitHub Code Review](/en/code-review)                                                                              |
-| Route bug reports from Slack to pull requests                         | [Slack](/en/slack)                                                                                                 |
-| Debug live web applications                                           | [Chrome](/en/chrome)                                                                                               |
-| Build custom agents for your own workflows                            | [Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)                                                |
+| I want to...                                                          | Best option                                                                                                         |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Continue a local session from my phone or another device              | [Remote Control](/en/remote-control)                                                                                |
+| Push events from Telegram, Discord, or my own webhooks into a session | [Channels](/en/channels)                                                                                            |
+| Start a task locally, continue on mobile                              | [Web](/en/claude-code-on-the-web) or [Claude iOS app](https://apps.apple.com/app/claude-by-anthropic/id6473753684)  |
+| Run Claude on a recurring schedule                                    | [Cloud scheduled tasks](/en/web-scheduled-tasks) or [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) |
+| Automate PR reviews and issue triage                                  | [GitHub Actions](/en/github-actions) or [GitLab CI/CD](/en/gitlab-ci-cd)                                            |
+| Get automatic code review on every PR                                 | [GitHub Code Review](/en/code-review)                                                                               |
+| Route bug reports from Slack to pull requests                         | [Slack](/en/slack)                                                                                                  |
+| Debug live web applications                                           | [Chrome](/en/chrome)                                                                                                |
+| Build custom agents for your own workflows                            | [Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)                                                 |
 
 ## Next steps
 
@@ -18285,6 +18417,8 @@ Add these rules to the `deny` array in your settings or use the `--disallowedToo
 
 Skipping the prompt does not bypass permission rules. Deny and ask rules are still evaluated after a hook returns `"allow"`, so a matching deny rule still blocks the call. This preserves the deny-first precedence described in [Manage permissions](#manage-permissions), including deny rules set in managed settings.
 
+A blocking hook also takes precedence over allow rules. A hook that exits with code 2 stops the tool call before permission rules are evaluated, so the block applies even when an allow rule would otherwise let the call proceed. To run all Bash commands without prompts except for a few you want blocked, add `"Bash"` to your allow list and register a PreToolUse hook that rejects those specific commands. See [Block edits to protected files](/en/hooks-guide#block-edits-to-protected-files) for a hook script you can adapt.
+
 ## Working directories
 
 By default, Claude has access to files in the directory where it was launched. You can extend this access:
@@ -18357,6 +18491,83 @@ This [repository](https://github.com/anthropics/claude-code/tree/main/examples/s
 * [Authentication](/en/authentication): set up user access to Claude Code
 * [Security](/en/security): security safeguards and best practices
 * [Hooks](/en/hooks-guide): automate workflows and extend permission evaluation
+
+
+# Platforms and integrations
+Source: https://code.claude.com/docs/en/platforms
+
+Choose where to run Claude Code and what to connect it to. Compare the CLI, Desktop, VS Code, JetBrains, web, and integrations like Chrome, Slack, and CI/CD.
+
+Claude Code runs the same underlying engine everywhere, but each surface is tuned for a different way of working. This page helps you pick the right platform for your workflow and connect the tools you already use.
+
+## Where to run Claude Code
+
+Choose a platform based on how you like to work and where your project lives.
+
+| Platform                          | Best for                                                                                           | What you get                                                                                                                                         |
+| :-------------------------------- | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [CLI](/en/quickstart)             | Terminal workflows, scripting, remote servers                                                      | Full feature set, [Agent SDK](/en/headless), third-party providers                                                                                   |
+| [Desktop](/en/desktop)            | Visual review, parallel sessions, managed setup                                                    | Diff viewer, app preview, [computer use](/en/desktop#let-claude-use-your-computer) and [Dispatch](/en/desktop#sessions-from-dispatch) on Pro and Max |
+| [VS Code](/en/vs-code)            | Working inside VS Code without switching to a terminal                                             | Inline diffs, integrated terminal, file context                                                                                                      |
+| [JetBrains](/en/jetbrains)        | Working inside IntelliJ, PyCharm, WebStorm, or other JetBrains IDEs                                | Diff viewer, selection sharing, terminal session                                                                                                     |
+| [Web](/en/claude-code-on-the-web) | Long-running tasks that don't need much steering, or work that should continue when you're offline | Anthropic-managed cloud, continues after you disconnect                                                                                              |
+
+The CLI is the most complete surface for terminal-native work: scripting, third-party providers, and the Agent SDK are CLI-only. Desktop and the IDE extensions trade some CLI-only features for visual review and tighter editor integration. The web runs in Anthropic's cloud, so tasks keep going after you disconnect.
+
+You can mix surfaces on the same project. Configuration, project memory, and MCP servers are shared across the local surfaces.
+
+## Connect your tools
+
+Integrations let Claude work with services outside your codebase.
+
+| Integration                          | What it does                                       | Use it for                                                       |
+| :----------------------------------- | :------------------------------------------------- | :--------------------------------------------------------------- |
+| [Chrome](/en/chrome)                 | Controls your browser with your logged-in sessions | Testing web apps, filling forms, automating sites without an API |
+| [GitHub Actions](/en/github-actions) | Runs Claude in your CI pipeline                    | Automated PR reviews, issue triage, scheduled maintenance        |
+| [GitLab CI/CD](/en/gitlab-ci-cd)     | Same as GitHub Actions for GitLab                  | CI-driven automation on GitLab                                   |
+| [Code Review](/en/code-review)       | Reviews every PR automatically                     | Catching bugs before human review                                |
+| [Slack](/en/slack)                   | Responds to `@Claude` mentions in your channels    | Turning bug reports into pull requests from team chat            |
+
+For integrations not listed here, [MCP servers](/en/mcp) and [connectors](/en/desktop#connect-external-tools) let you connect almost anything: Linear, Notion, Google Drive, or your own internal APIs.
+
+## Work when you are away from your terminal
+
+Claude Code offers several ways to work when you're not at your terminal. They differ in what triggers the work, where Claude runs, and how much you need to set up.
+
+|                                                | Trigger                                                                                        | Claude runs on                                                                                                   | Setup                                                                                                                                | Best for                                                      |
+| :--------------------------------------------- | :--------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------ |
+| [Dispatch](/en/desktop#sessions-from-dispatch) | Message a task from the Claude mobile app                                                      | Your machine (Desktop)                                                                                           | [Pair the mobile app with Desktop](https://support.claude.com/en/articles/13947068)                                                  | Delegating work while you're away, minimal setup              |
+| [Remote Control](/en/remote-control)           | Drive a running session from [claude.ai/code](https://claude.ai/code) or the Claude mobile app | Your machine (CLI or VS Code)                                                                                    | Run `claude remote-control`                                                                                                          | Steering in-progress work from another device                 |
+| [Channels](/en/channels)                       | Push events from a chat app like Telegram or Discord, or your own server                       | Your machine (CLI)                                                                                               | [Install a channel plugin](/en/channels#quickstart) or [build your own](/en/channels-reference)                                      | Reacting to external events like CI failures or chat messages |
+| [Slack](/en/slack)                             | Mention `@Claude` in a team channel                                                            | Anthropic cloud                                                                                                  | [Install the Slack app](/en/slack#setting-up-claude-code-in-slack) with [Claude Code on the web](/en/claude-code-on-the-web) enabled | PRs and reviews from team chat                                |
+| [Scheduled tasks](/en/scheduled-tasks)         | Set a schedule                                                                                 | [CLI](/en/scheduled-tasks), [Desktop](/en/desktop#schedule-recurring-tasks), or [cloud](/en/web-scheduled-tasks) | Pick a frequency                                                                                                                     | Recurring automation like daily reviews                       |
+
+If you're not sure where to start, [install the CLI](/en/quickstart) and run it in a project directory. If you'd rather not use a terminal, [Desktop](/en/desktop-quickstart) gives you the same engine with a graphical interface.
+
+## Related resources
+
+### Platforms
+
+* [CLI quickstart](/en/quickstart): install and run your first command in the terminal
+* [Desktop](/en/desktop): visual diff review, parallel sessions, computer use, and Dispatch
+* [VS Code](/en/vs-code): the Claude Code extension inside your editor
+* [JetBrains](/en/jetbrains): the extension for IntelliJ, PyCharm, and other JetBrains IDEs
+* [Claude Code on the web](/en/claude-code-on-the-web): cloud sessions that keep running when you disconnect
+
+### Integrations
+
+* [Chrome](/en/chrome): automate browser tasks with your logged-in sessions
+* [GitHub Actions](/en/github-actions): run Claude in your CI pipeline
+* [GitLab CI/CD](/en/gitlab-ci-cd): the same for GitLab
+* [Code Review](/en/code-review): automatic review on every pull request
+* [Slack](/en/slack): send tasks from team chat, get PRs back
+
+### Remote access
+
+* [Dispatch](/en/desktop#sessions-from-dispatch): message a task from your phone and it can spawn a Desktop session
+* [Remote Control](/en/remote-control): drive a running session from your phone or browser
+* [Channels](/en/channels): push events from chat apps or your own servers into a session
+* [Scheduled tasks](/en/scheduled-tasks): run prompts on a recurring schedule
 
 
 # Create and distribute a plugin marketplace
@@ -18456,7 +18667,7 @@ This example creates a marketplace with one plugin: a `/quality-review` skill fo
     Select some code in your editor and run your new command.
 
     ```shell theme={null}
-    /review
+    /quality-review
     ```
   </Step>
 </Steps>
@@ -20971,10 +21182,23 @@ Common causes:
 * Network or proxy issue: a firewall or proxy may be blocking the outbound HTTPS request. Remote Control requires access to the Anthropic API on port 443.
 * Session creation failed: if you also see `Session creation failed — see debug log`, the failure happened earlier in setup. Check that your subscription is active.
 
+## Choose the right approach
+
+Claude Code offers several ways to work when you're not at your terminal. They differ in what triggers the work, where Claude runs, and how much you need to set up.
+
+|                                                | Trigger                                                                                        | Claude runs on                                                                                                   | Setup                                                                                                                                | Best for                                                      |
+| :--------------------------------------------- | :--------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------ |
+| [Dispatch](/en/desktop#sessions-from-dispatch) | Message a task from the Claude mobile app                                                      | Your machine (Desktop)                                                                                           | [Pair the mobile app with Desktop](https://support.claude.com/en/articles/13947068)                                                  | Delegating work while you're away, minimal setup              |
+| [Remote Control](/en/remote-control)           | Drive a running session from [claude.ai/code](https://claude.ai/code) or the Claude mobile app | Your machine (CLI or VS Code)                                                                                    | Run `claude remote-control`                                                                                                          | Steering in-progress work from another device                 |
+| [Channels](/en/channels)                       | Push events from a chat app like Telegram or Discord, or your own server                       | Your machine (CLI)                                                                                               | [Install a channel plugin](/en/channels#quickstart) or [build your own](/en/channels-reference)                                      | Reacting to external events like CI failures or chat messages |
+| [Slack](/en/slack)                             | Mention `@Claude` in a team channel                                                            | Anthropic cloud                                                                                                  | [Install the Slack app](/en/slack#setting-up-claude-code-in-slack) with [Claude Code on the web](/en/claude-code-on-the-web) enabled | PRs and reviews from team chat                                |
+| [Scheduled tasks](/en/scheduled-tasks)         | Set a schedule                                                                                 | [CLI](/en/scheduled-tasks), [Desktop](/en/desktop#schedule-recurring-tasks), or [cloud](/en/web-scheduled-tasks) | Pick a frequency                                                                                                                     | Recurring automation like daily reviews                       |
+
 ## Related resources
 
 * [Claude Code on the web](/en/claude-code-on-the-web): run sessions in Anthropic-managed cloud environments instead of on your machine
 * [Channels](/en/channels): forward Telegram or Discord into a session so Claude reacts to messages while you're away
+* [Dispatch](/en/desktop#sessions-from-dispatch): message a task from your phone and it can spawn a Desktop session to handle it
 * [Authentication](/en/authentication): set up `/login` and manage credentials for claude.ai
 * [CLI reference](/en/cli-reference): full list of flags and commands including `claude remote-control`
 * [Security](/en/security): how Remote Control sessions fit into the Claude Code security model
@@ -21287,6 +21511,13 @@ For implementation details and source code, visit the [GitHub repository](https:
 * **Compatibility**: Some tools that require specific system access patterns may need configuration adjustments, or may even need to be run outside of the sandbox
 * **Platform support**: Supports macOS, Linux, and WSL2. WSL1 is not supported. Native Windows support is planned.
 
+## What sandboxing does not cover
+
+The sandbox isolates Bash subprocesses. Other tools operate under different boundaries:
+
+* **Built-in file tools**: Read, Edit, and Write use the permission system directly rather than running through the sandbox. See [permissions](/en/permissions).
+* **Computer use on Desktop**: when Claude opens apps and controls your screen on macOS, it runs on your actual desktop rather than in an isolated environment. Per-app permission prompts gate each application. See [computer use](/en/desktop#let-claude-use-your-computer).
+
 ## See also
 
 * [Security](/en/security) - Comprehensive security features and best practices
@@ -21306,7 +21537,27 @@ Use /loop and the cron scheduling tools to run prompts repeatedly, poll for stat
 
 Scheduled tasks let Claude re-run a prompt automatically on an interval. Use them to poll a deployment, babysit a PR, check back on a long-running build, or remind yourself to do something later in the session. To react to events as they happen instead of polling, see [Channels](/en/channels): your CI can push the failure into the session directly.
 
-Tasks are session-scoped: they live in the current Claude Code process and are gone when you exit. For durable scheduling that survives restarts and runs without an active terminal session, see [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) or [GitHub Actions](/en/github-actions).
+Tasks are session-scoped: they live in the current Claude Code process and are gone when you exit. For durable scheduling that survives restarts, use [Cloud](/en/web-scheduled-tasks) or [Desktop](/en/desktop#schedule-recurring-tasks) scheduled tasks, or [GitHub Actions](/en/github-actions).
+
+## Compare scheduling options
+
+Claude Code offers three ways to schedule recurring work:
+
+|                            | [Cloud](/en/web-scheduled-tasks) | [Desktop](/en/desktop#schedule-recurring-tasks) | [`/loop`](/en/scheduled-tasks) |
+| :------------------------- | :------------------------------- | :---------------------------------------------- | :----------------------------- |
+| Runs on                    | Anthropic cloud                  | Your machine                                    | Your machine                   |
+| Requires machine on        | No                               | Yes                                             | Yes                            |
+| Requires open session      | No                               | No                                              | Yes                            |
+| Persistent across restarts | Yes                              | Yes                                             | No (session-scoped)            |
+| Access to local files      | No (fresh clone)                 | Yes                                             | Yes                            |
+| MCP servers                | Connectors configured per task   | [Config files](/en/mcp) and connectors          | Inherits from session          |
+| Permission prompts         | No (runs autonomously)           | Configurable per task                           | Inherits from session          |
+| Customizable schedule      | Via `/schedule` in the CLI       | Yes                                             | Yes                            |
+| Minimum interval           | 1 hour                           | 1 minute                                        | 1 minute                       |
+
+<Tip>
+  Use **cloud tasks** for work that should run reliably without your machine. Use **Desktop tasks** when you need access to local files and tools. Use **`/loop`** for quick polling during a session.
+</Tip>
 
 ## Schedule a recurring prompt with /loop
 
@@ -21393,7 +21644,7 @@ The offset is derived from the task ID, so the same task always gets the same of
 
 ### Three-day expiry
 
-Recurring tasks automatically expire 3 days after creation. The task fires one final time, then deletes itself. This bounds how long a forgotten loop can run. If you need a recurring task to last longer, cancel and recreate it before it expires, or use [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) for durable scheduling.
+Recurring tasks automatically expire 3 days after creation. The task fires one final time, then deletes itself. This bounds how long a forgotten loop can run. If you need a recurring task to last longer, cancel and recreate it before it expires, or use [Cloud scheduled tasks](/en/web-scheduled-tasks) or [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) for durable scheduling.
 
 ## Cron expression reference
 
@@ -21424,7 +21675,11 @@ Session-scoped scheduling has inherent constraints:
 * No catch-up for missed fires. If a task's scheduled time passes while Claude is busy on a long-running request, it fires once when Claude becomes idle, not once per missed interval.
 * No persistence across restarts. Restarting Claude Code clears all session-scoped tasks.
 
-For cron-driven automation that needs to run unattended, use a [GitHub Actions workflow](/en/github-actions) with a `schedule` trigger, or [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) if you want a graphical setup flow.
+For cron-driven automation that needs to run unattended:
+
+* [Cloud scheduled tasks](/en/web-scheduled-tasks): run on Anthropic-managed infrastructure
+* [GitHub Actions](/en/github-actions): use a `schedule` trigger in CI
+* [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks): run locally on your machine
 
 
 # Security
@@ -27771,6 +28026,159 @@ Now that you have Claude Code set up in VS Code:
 * [Explore common workflows](/en/common-workflows) to get the most out of Claude Code
 * [Set up MCP servers](/en/mcp) to extend Claude's capabilities with external tools. Add servers using the CLI, then manage them with `/mcp` in the chat panel.
 * [Configure Claude Code settings](/en/settings) to customize allowed commands, hooks, and more. These settings are shared between the extension and CLI.
+
+
+# Schedule tasks on the web
+Source: https://code.claude.com/docs/en/web-scheduled-tasks
+
+Automate recurring work with cloud scheduled tasks
+
+A scheduled task runs a prompt on a recurring cadence using Anthropic-managed infrastructure. Tasks keep working even when your computer is off.
+
+A few examples of recurring work you can automate:
+
+* Reviewing open pull requests each morning
+* Analyzing CI failures overnight and surfacing summaries
+* Syncing documentation after PRs merge
+* Running dependency audits every week
+
+Scheduled tasks are available to all Claude Code on the web users, including Pro, Max, Team, and Enterprise.
+
+## Compare scheduling options
+
+Claude Code offers three ways to schedule recurring work:
+
+|                            | [Cloud](/en/web-scheduled-tasks) | [Desktop](/en/desktop#schedule-recurring-tasks) | [`/loop`](/en/scheduled-tasks) |
+| :------------------------- | :------------------------------- | :---------------------------------------------- | :----------------------------- |
+| Runs on                    | Anthropic cloud                  | Your machine                                    | Your machine                   |
+| Requires machine on        | No                               | Yes                                             | Yes                            |
+| Requires open session      | No                               | No                                              | Yes                            |
+| Persistent across restarts | Yes                              | Yes                                             | No (session-scoped)            |
+| Access to local files      | No (fresh clone)                 | Yes                                             | Yes                            |
+| MCP servers                | Connectors configured per task   | [Config files](/en/mcp) and connectors          | Inherits from session          |
+| Permission prompts         | No (runs autonomously)           | Configurable per task                           | Inherits from session          |
+| Customizable schedule      | Via `/schedule` in the CLI       | Yes                                             | Yes                            |
+| Minimum interval           | 1 hour                           | 1 minute                                        | 1 minute                       |
+
+<Tip>
+  Use **cloud tasks** for work that should run reliably without your machine. Use **Desktop tasks** when you need access to local files and tools. Use **`/loop`** for quick polling during a session.
+</Tip>
+
+## Create a scheduled task
+
+You can create a scheduled task from three places:
+
+* **Web**: visit [claude.ai/code/scheduled](https://claude.ai/code/scheduled) and click **New scheduled task**
+* **Desktop app**: open the **Schedule** page, click **New task**, and choose **New remote task**. See [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) for details.
+* **CLI**: run `/schedule` in any session. Claude walks you through the setup conversationally. You can also pass a description directly, like `/schedule daily PR review at 9am`.
+
+The web and Desktop entry points open a form. The CLI collects the same information through a guided conversation.
+
+The steps below walk through the web interface.
+
+<Steps>
+  <Step title="Open the creation form">
+    Visit [claude.ai/code/scheduled](https://claude.ai/code/scheduled) and click **New scheduled task**.
+  </Step>
+
+  <Step title="Name the task and write the prompt">
+    Give the task a descriptive name and write the prompt Claude runs each time. The prompt is the most important part: the task runs autonomously, so the prompt must be self-contained and explicit about what to do and what success looks like.
+
+    The prompt input includes a model selector. Claude uses this model for each run of the task.
+  </Step>
+
+  <Step title="Select repositories">
+    Add one or more GitHub repositories for Claude to work in. Each repository is cloned at the start of a run, starting from the default branch. Claude creates `claude/`-prefixed branches for its changes. To allow pushes to any branch, enable **Allow unrestricted branch pushes** for that repository.
+  </Step>
+
+  <Step title="Select an environment">
+    Select a [cloud environment](/en/claude-code-on-the-web#cloud-environment) for the task. Environments control what the cloud session has access to:
+
+    * **Network access**: set the level of internet access available during each run
+    * **Environment variables**: provide API keys, tokens, or other secrets Claude can use
+    * **Setup script**: run install commands before each session starts, like installing dependencies or configuring tools
+
+    A **Default** environment is available out of the box. To use a custom environment, [create one](/en/claude-code-on-the-web#cloud-environment) before creating the task.
+  </Step>
+
+  <Step title="Choose a schedule">
+    Pick how often the task runs from the [frequency options](#frequency-options). The default is daily at 9:00 AM in your local time zone. Tasks may run a few minutes after their scheduled time due to stagger.
+
+    If the preset options don't fit your needs, pick the closest one and update the schedule from the CLI with `/schedule update` to set a specific schedule.
+  </Step>
+
+  <Step title="Review connectors">
+    All of your connected [MCP connectors](/en/mcp) are included by default. Remove any that the task doesn't need. Connectors give Claude access to external services like Slack, Linear, or Google Drive during each run.
+  </Step>
+
+  <Step title="Create the task">
+    Click **Create**. The task appears in the scheduled tasks list and runs automatically at the next scheduled time. Each run creates a new session alongside your other sessions, where you can see what Claude did, review changes, and create a pull request. To trigger a run immediately, click **Run now** from the task's detail page.
+  </Step>
+</Steps>
+
+### Frequency options
+
+The schedule picker offers preset frequencies that handle time zone conversion for you. Pick a time in your local zone and the task runs at that wall-clock time regardless of where the cloud infrastructure is located.
+
+<Note>
+  Tasks may run a few minutes after their scheduled time. The offset is consistent for each task.
+</Note>
+
+| Frequency | Description                                                                |
+| :-------- | :------------------------------------------------------------------------- |
+| Hourly    | Runs every hour.                                                           |
+| Daily     | Runs once per day at the time you specify. Defaults to 9:00 AM local time. |
+| Weekdays  | Same as Daily but skips Saturday and Sunday.                               |
+| Weekly    | Runs once per week on the day and time you specify.                        |
+
+For custom intervals like every 2 hours or first of each month, pick the closest preset and update the schedule from the CLI with `/schedule update` to set a specific schedule.
+
+### Repositories and branch permissions
+
+Each repository you add is cloned on every run. Claude starts from the repository's default branch unless your prompt specifies otherwise.
+
+By default, Claude can only push to branches prefixed with `claude/`. This prevents scheduled tasks from accidentally modifying protected or long-lived branches.
+
+To remove this restriction for a specific repository, enable **Allow unrestricted branch pushes** for that repository when creating or editing the task.
+
+### Connectors
+
+Scheduled tasks can use your connected MCP connectors to read from and write to external services during each run. For example, a task that triages support requests might read from a Slack channel and create issues in Linear.
+
+When you create a task, all of your currently connected connectors are included by default. Remove any that aren't needed to limit which tools Claude has access to during the run. You can also add connectors directly from the task form.
+
+To manage or add connectors outside of the task form, visit **Settings > Connectors** on claude.ai or use `/schedule update` in the CLI.
+
+### Environments
+
+Each task runs in a [cloud environment](/en/claude-code-on-the-web#cloud-environment) that controls network access, environment variables, and setup scripts. Configure environments before creating a task to give Claude access to APIs, install dependencies, or restrict network scope. See [cloud environment](/en/claude-code-on-the-web#cloud-environment) for the full setup guide.
+
+## Manage scheduled tasks
+
+Click a task in the **Scheduled** list to open its detail page. The detail page shows the task's repositories, connectors, prompt, schedule, and a list of past runs.
+
+### View and interact with runs
+
+Click any run to open it as a full session. From there you can see what Claude did, review changes, create a pull request, or continue the conversation. Each run session works like any other session: use the dropdown menu next to the session title to rename, archive, or delete it.
+
+### Edit and control tasks
+
+From the task detail page you can:
+
+* Click **Run now** to start a run immediately without waiting for the next scheduled time.
+* Use the toggle in the **Repeats** section to pause or resume the schedule. Paused tasks keep their configuration but don't run until you re-enable them.
+* Click the edit icon to change the name, prompt, schedule, repositories, environment, or connectors.
+* Click the delete icon to remove the task. Past sessions created by the task remain in your session list.
+
+You can also manage tasks from the CLI with `/schedule`. Run `/schedule list` to see all tasks, `/schedule update` to change a task, or `/schedule run` to trigger one immediately.
+
+## Related resources
+
+* [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks): schedule tasks that run on your machine with access to local files. The Desktop app's **Schedule** page shows both local and remote tasks in the same grid.
+* [`/loop` and CLI scheduled tasks](/en/scheduled-tasks): lightweight scheduling within a CLI session
+* [Cloud environment](/en/claude-code-on-the-web#cloud-environment): configure the runtime environment for cloud tasks
+* [MCP connectors](/en/mcp): connect external services like Slack, Linear, and Google Drive
+* [GitHub Actions](/en/github-actions): run Claude in your CI pipeline on repo events
 
 
 # Zero data retention
