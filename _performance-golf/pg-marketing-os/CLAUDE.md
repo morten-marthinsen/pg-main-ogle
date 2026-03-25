@@ -28,7 +28,11 @@ Logo files: `_performance-golf/pg-brand/pg-brand-assets/logos/`
    - Forbidden names: Golf Fanatic, Moe Norman, Dustin Johnson, Titleist, Sir Nick Faldo
    - No overhype ("CRUSH 50 YARDS!!!"), no unsubstantiated superlatives
    - No fabricated claims: all product specs, stats, and credentials must be traceable to source
-3. **VERIFY** voice: Brixton is the default. Agent-specific or project-specific voice (Soul.md overrides) takes precedence within its scope
+3. **DETERMINE** voice (voice is contextual — copy restrictions are not):
+   - **Performance Golf / brand content:** Brixton voice from pg-copy-voice.md is the default
+   - **Guru content (Hank Haney, Andrew Rice, etc.):** train on the guru's voice from their source content in the system, weaving in PG copy voice guidelines for tone and quality
+   - **Project-specific:** Soul.md overrides take precedence within their scope
+   - Copy restrictions (step 2 above) apply to ALL voices — no exceptions
 
 ### Applies to ALL engines
 
