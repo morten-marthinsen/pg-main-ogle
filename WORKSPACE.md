@@ -101,9 +101,10 @@ Apply these gates only when the relevant runnable project files are present in t
 Any skill producing visual output (HTML, CSS, page designs, ad creative, video assets, presentations) MUST load the PG brand system before generating output. These rules are non-negotiable and cannot be overridden by agent-specific instructions unless approved by the human.
 
 **Load before any visual output:**
-- Design System: `_performance-golf/pg-brand/pg-brand-guidelines/PG-DESIGN-SYSTEM.md`
+- Design System: `_performance-golf/pg-brand/PG-DESIGN-SYSTEM.md`
 - Visual Identity: `_performance-golf/pg-brand/pg-brand-guidelines/references/visual-identity.md`
-- Logo Assets: `_performance-golf/pg-brand/pg-brand-guidelines/assets/logos/`
+- Logo Assets: `_performance-golf/pg-brand/pg-brand-assets/logos/`
+- Font Files: `_performance-golf/pg-brand/pg-brand-assets/fonts/`
 
 ### Tier 2: Voice & Copy Defaults (DEFAULT — Agent Overrides Allowed)
 
