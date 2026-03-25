@@ -8,8 +8,7 @@
   "engines": [
     { "id": "main_pipeline", "name": "Main Pipeline", "skills": ["00","01","02","03","04","05","06","07","08","09"], "entry": "00", "exit": "09" },
     { "id": "long_form_vsl", "name": "Long-Form VSL", "skills": ["10","11","12","13","14","15","16","17","18","19","20"], "entry": "10", "exit": "20", "depends_on_engine": "main_pipeline" },
-    { "id": "e_comm", "name": "E-Commerce", "skills": ["EC-00","EC-01","EC-02","EC-03","EC-04","EC-05","EC-06"], "entry": "EC-00", "exit": "EC-06", "depends_on_engine": "main_pipeline" },
-    { "id": "page_builder", "name": "Page Builder", "skills": ["LP-07","LP-08","LP-09","LP-10","LP-11","LP-12","LP-13","LP-14"], "entry": "LP-07", "exit": "LP-14", "depends_on_engine": "main_pipeline" },
+    { "id": "page_builder", "name": "Page Builder", "skills": ["LP-00","LP-01","LP-02","LP-03","LP-04","LP-05","LP-06","LP-07","LP-08","LP-09","LP-10","LP-11","LP-12","LP-13","LP-14","LP-15","LP-16","LP-17","LP-18","PDP-01","PDP-02","PDP-03","PDP-04","PDP-05","PDP-06","PDP-07","PDP-08","PDP-16","PDP-17"], "entry": "LP-00", "exit": "LP-17", "depends_on_engine": "main_pipeline" },
     { "id": "upsells", "name": "Upsells", "skills": ["U0","U1","U2","U3","U4","U5"], "entry": "U0", "exit": "U5", "depends_on_engine": "main_pipeline" },
     { "id": "checkout", "name": "Checkout", "skills": ["CK-00","CK-01","CK-02","CK-03"], "entry": "CK-00", "exit": "CK-03", "depends_on_engine": "main_pipeline" },
     { "id": "emails", "name": "Emails", "skills": ["E0","E1","E2","E3","E4"], "entry": "E0", "exit": "E4", "depends_on_engine": "main_pipeline" },
@@ -43,13 +42,12 @@
     { "id": "19", "name": "campaign-assembly", "engine": "long_form_vsl", "depends_on": ["17", "18"], "arena": false, "generates_copy": false, "model": "opus" },
     { "id": "20", "name": "editorial", "engine": "long_form_vsl", "depends_on": ["19"], "arena": true, "generates_copy": false, "model": "opus", "gate_after": "G-20" },
 
-    { "id": "EC-00", "name": "e-comm-strategist", "engine": "e_comm", "depends_on": ["09"], "arena": false, "generates_copy": false, "model": "opus" },
-    { "id": "EC-01", "name": "feature-naming", "engine": "e_comm", "depends_on": ["EC-00"], "arena": true, "generates_copy": false, "model": "opus" },
-    { "id": "EC-02", "name": "hero-value-prop", "engine": "e_comm", "depends_on": ["EC-01"], "arena": true, "generates_copy": true, "model": "sonnet" },
-    { "id": "EC-03", "name": "section-copy", "engine": "e_comm", "depends_on": ["EC-01"], "arena": true, "generates_copy": true, "model": "sonnet" },
-    { "id": "EC-04", "name": "micro-scripts", "engine": "e_comm", "depends_on": ["EC-01"], "arena": true, "generates_copy": true, "model": "sonnet" },
-    { "id": "EC-05", "name": "assembly", "engine": "e_comm", "depends_on": ["EC-02", "EC-03", "EC-04"], "arena": false, "generates_copy": false, "model": "opus" },
-    { "id": "EC-06", "name": "editorial", "engine": "e_comm", "depends_on": ["EC-05"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "PDP-01", "name": "pdp-strategist", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": false, "model": "opus" },
+    { "id": "PDP-02", "name": "feature-naming", "engine": "page_builder", "depends_on": ["PDP-01"], "arena": true, "generates_copy": false, "model": "opus" },
+    { "id": "PDP-03", "name": "hero-carousel-buybox", "engine": "page_builder", "depends_on": ["PDP-02"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "PDP-07", "name": "btf-section-writer", "engine": "page_builder", "depends_on": ["PDP-02"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "PDP-08", "name": "micro-scripts", "engine": "page_builder", "depends_on": ["PDP-02"], "arena": true, "generates_copy": true, "model": "sonnet" },
+    { "id": "PDP-17", "name": "pdp-editorial", "engine": "page_builder", "depends_on": ["LP-15"], "arena": false, "generates_copy": false, "model": "opus" },
 
     { "id": "LP-07", "name": "hero-section", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
     { "id": "LP-08", "name": "trust-elements", "engine": "page_builder", "depends_on": ["09"], "arena": false, "generates_copy": true, "model": "sonnet" },
@@ -152,7 +150,7 @@
     {
       "id": "G-09",
       "after_skill": "09",
-      "blocks_skills": ["10", "18", "EC-00", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U0", "CK-00", "E0", "A01", "ADV-00"],
+      "blocks_skills": ["10", "18", "PDP-01", "LP-00", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U0", "CK-00", "E0", "A01", "ADV-00"],
       "description": "Review campaign brief — LAST strategic checkpoint before copy generation",
       "type": "human_review",
       "requires": "All 10 coherence dimensions scored >= minimums, state = PASS"
@@ -221,7 +219,7 @@
       "name": "Branch Engine Launch",
       "description": "After Skill 09 + gate G-09 passes, all branch engine entry points become eligible simultaneously. VSL Skill 10 and Skill 18 (proof-weaving) also start here.",
       "trigger": { "skill_completed": "09", "gate_passed": "G-09" },
-      "members": ["10", "18", "EC-00", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U0", "CK-00", "E0", "A01", "ADV-00"]
+      "members": ["10", "18", "PDP-01", "LP-00", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U0", "CK-00", "E0", "A01", "ADV-00"]
     },
     {
       "id": "PG-VSL-PROOF",
@@ -232,12 +230,12 @@
       "convergence": "19"
     },
     {
-      "id": "PG-ECOMM-WRITE",
-      "name": "E-Comm Copy Generation",
-      "description": "EC-02, EC-03, EC-04 run in parallel after EC-01 (feature naming) completes.",
-      "trigger": { "skill_completed": "EC-01" },
-      "members": ["EC-02", "EC-03", "EC-04"],
-      "convergence": "EC-05"
+      "id": "PG-PDP-WRITE",
+      "name": "PDP Copy Generation",
+      "description": "PDP-03, PDP-07, PDP-08 run in parallel after PDP-02 (feature naming) completes.",
+      "trigger": { "skill_completed": "PDP-02" },
+      "members": ["PDP-03", "PDP-07", "PDP-08"],
+      "convergence": "LP-15"
     },
     {
       "id": "PG-LPB-ELEMENTS",
@@ -296,11 +294,11 @@
   "model_routing": {
     "opus": {
       "description": "Opus 4.6 — strategy, analysis, assembly, editorial, adversarial evaluation",
-      "skills": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "19", "20", "EC-00", "EC-01", "EC-05", "EC-06", "U0", "U4", "U5", "CK-00", "CK-03", "E0", "E3", "E4", "A01", "A02", "A03", "A05", "A08", "A09", "A10", "A11", "A12", "ADV-00", "ADV-04", "ADV-05", "S01", "S02", "S03", "S04", "S05", "S06", "S07", "S12", "S14", "S15", "S16", "S17", "S18", "S19", "S20", "S21", "S22", "S23", "S24"]
+      "skills": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "19", "20", "PDP-01", "PDP-02", "PDP-17", "U0", "U4", "U5", "CK-00", "CK-03", "E0", "E3", "E4", "A01", "A02", "A03", "A05", "A08", "A09", "A10", "A11", "A12", "ADV-00", "ADV-04", "ADV-05", "S01", "S02", "S03", "S04", "S05", "S06", "S07", "S12", "S14", "S15", "S16", "S17", "S18", "S19", "S20", "S21", "S22", "S23", "S24"]
     },
     "sonnet": {
       "description": "Sonnet 4.5 — copy generation, Arena generative_full_draft, persona simulation",
-      "skills": ["10", "11", "12", "13", "14", "15", "16", "17", "18", "EC-02", "EC-03", "EC-04", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U1", "U2", "U3", "CK-01", "CK-02", "E1", "E2", "A04", "A06", "A07", "ADV-01", "ADV-02", "ADV-03", "S08", "S09", "S10", "S11", "S13"]
+      "skills": ["10", "11", "12", "13", "14", "15", "16", "17", "18", "PDP-03", "PDP-07", "PDP-08", "LP-07", "LP-08", "LP-09", "LP-10", "LP-11", "LP-12", "LP-13", "LP-14", "U1", "U2", "U3", "CK-01", "CK-02", "E1", "E2", "A04", "A06", "A07", "ADV-01", "ADV-02", "ADV-03", "S08", "S09", "S10", "S11", "S13"]
     }
   },
 
@@ -344,7 +342,7 @@
       { "id": "P3", "name": "Campaign Architecture", "skills": ["07", "08", "09"], "description": "Offer stack → structure → campaign brief. Final strategic checkpoint." },
       { "id": "P4", "name": "Copy Generation", "skills": ["10", "11", "12", "13", "14", "15", "16", "17", "18"], "description": "VSL narrative cascade (10→17) + proof weaving (18). Prose cascades through each skill." },
       { "id": "P5", "name": "Assembly & Editorial", "skills": ["19", "20"], "description": "Full draft assembly + Arena editorial pass." },
-      { "id": "P6", "name": "Branch Engines", "skills": ["EC-*", "LP-*", "U*", "CK-*", "E*", "A*", "ADV-*", "S*"], "description": "All branch engines execute in parallel after Skill 09. Internal skills run sequentially within each engine." }
+      { "id": "P6", "name": "Branch Engines", "skills": ["PDP-*", "LP-*", "U*", "CK-*", "E*", "A*", "ADV-*", "S*"], "description": "All branch engines execute in parallel after Skill 09. Internal skills run sequentially within each engine." }
     ]
   },
 
@@ -353,7 +351,7 @@
     "dependencies": [
       { "from": "U4", "to": "E0", "type": "optional", "description": "Upsell sequence architecture informs email follow-up strategy" },
       { "from": "CK-00", "to": "U1", "type": "optional", "description": "Checkout strategy provides order bump placement spec" },
-      { "from": "EC-05", "to": "LP-07", "type": "optional", "description": "E-comm assembled copy can feed page builder for implementation" },
+      { "from": "LP-15", "to": "LP-07", "type": "optional", "description": "PDP assembled copy can inform LP element writers" },
       { "from": "A02", "to": "ADV-00", "type": "optional", "description": "Ad hook angles can be adapted for advertorial opens" },
       { "from": "09", "to": "S07", "type": "mode_a", "description": "In Mode A (downstream), organic S07 consumes campaign-brief from Skill 09" }
     ]

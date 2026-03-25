@@ -68,6 +68,18 @@ Transform the strategic offer architecture (from Skill 11) and the product intro
 | 3 | Refinement + 10-principle validation | opus | Judgment-heavy evaluation |
 | 4 | Validation + packaging | sonnet | Assembly from existing content |
 
+### Layer 2.5: Arena (MANDATORY FILE READS)
+
+**BEFORE generating ANY Arena competitor output, READ these files:**
+
+1. `16-offer-copy/ARENA-LAYER.md` — skill-specific criteria and weights
+2. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+3. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
+
 ---
 
 ## TEACHING FOUNDATIONS

@@ -199,7 +199,12 @@ PRE-EXECUTION:
 LAYER 0: Strategy + feature package + NLS patterns loaded
 LAYER 1: Headline approach + carousel plan + highlights selected
 LAYER 2: 5+ headline/subhead pairs + complete hero section generated
-LAYER 2.5: Arena complete + human selection received
+LAYER 2.5 (ARENA -- MANDATORY):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
+[ ] Arena complete + human selection received
 LAYER 4: Scroll-stop validated + word budgets met + hero-copy-draft.md packaged
 
 ON CONTEXT RESUME:

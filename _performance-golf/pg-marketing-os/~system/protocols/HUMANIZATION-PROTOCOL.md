@@ -243,8 +243,8 @@ The 12 structural patterns (and all future patterns) are NOT editorial-specific.
 | Engine | Enforcement Level | Which Patterns | When |
 |--------|------------------|----------------|------|
 | **02-long-form-vsl** | FULL — all 12 patterns, structural pass mandatory | All | Layer 4 (post-generation, pre-output) |
-| **03-e-comm** | FULL — all applicable patterns | All except P4 (emphasis markers less relevant for scan-read copy) | Post-generation section review |
-| **04-page-builder** | MODERATE — section-level patterns | P1, P2, P3, P9, P10 (sentence and section patterns) | During section assembly |
+| **04-page-builder (LP)** | MODERATE — section-level patterns | P1, P2, P3, P9, P10 (sentence and section patterns) | During section assembly |
+| **04-page-builder (PDP)** | FULL — all applicable patterns | All except P4 (emphasis markers less relevant for scan-read copy) | Post-generation section review |
 | **05-upsells** | FULL — short-form is MORE susceptible | All | Post-generation review |
 | **06-checkout** | MODERATE — transactional copy is shorter | P1, P2, P7, P9 | Post-generation review |
 | **07-emails** | FULL | All | Post-generation review |

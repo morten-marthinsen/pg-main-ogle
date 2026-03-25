@@ -34,7 +34,7 @@
 
   engine-packs/                          # Pre-curated 2-3KB selections per engine
     vsl-pack.md                          # VSL engine (Skills 10-17)
-    ecomm-pack.md                        # E-comm engine (EC-01 to EC-04)
+    ecomm-pack.md                        # PDP pipeline (PDP-02, PDP-03, PDP-07, PDP-08)
     email-pack.md                        # Email engine (E1, E2)
     ads-pack.md                          # Ads engine (A07)
     advertorial-pack.md                  # Advertorial engine (ADV-01 to ADV-03)
@@ -76,7 +76,7 @@ Pre-AI human copy from master copywriters. Mined for "distinctly human" passages
 | Engine | Pack File | Copy-Gen Skills | Loader Count | Status |
 |--------|-----------|-----------------|--------------|--------|
 | 02-long-form-vsl | vsl-pack.md | 10, 11, 12, 13, 14, 15, 16, 17 | 8 | Deployed |
-| 03-e-comm | ecomm-pack.md | EC-01, EC-02, EC-03, EC-04 | 4 | Deployed |
+| 04-page-builder (PDP) | ecomm-pack.md | PDP-02, PDP-03, PDP-07, PDP-08 | 4 | Deployed |
 | 04-page-builder | page-builder-pack.md | LP-07 through LP-14 | 8 | Deployed |
 | 05-upsells | upsell-pack.md | U1, U2, U3 | 3 | Deployed |
 | 06-checkout | checkout-pack.md | CK-01, CK-02 | 2 | Deployed |

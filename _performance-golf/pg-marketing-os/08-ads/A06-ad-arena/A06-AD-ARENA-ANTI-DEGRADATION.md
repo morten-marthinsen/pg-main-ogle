@@ -118,6 +118,18 @@ completeness:
   all_concepts_critiqued: true
   all_concepts_revised: true
   all_concepts_scored: true
+
+persona_verification:
+  personas_loaded_from: "~system/protocols/ARENA-PERSONA-PANEL.md"
+  personas_used:
+    - Makepeace
+    - Halbert
+    - Schwartz
+    - Ogilvy
+    - Clemens
+    - Bencivenga
+    - The Architect
+  all_match_protocol: true  # FALSE = HALT — fabrication detected
 ```
 
 ```yaml
@@ -579,10 +591,15 @@ LAYER 1 (CONCEPT ASSEMBLY):
 [ ] Concept bundles validated (no isolated element evaluations)
 [ ] LAYER_1_COMPLETE.yaml created
 
+LAYER 2 PRE-ARENA (MANDATORY FILE READS):
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
+
 LAYER 2 ROUND 1 (ARENA):
 [ ] All 7 personas evaluated all concepts (no skipped personas)
 [ ] Concepts evaluated as integrated units (not isolated elements)
-[ ] Adversarial Critic identified ONE weakness per concept
+[ ] Adversarial Critic produced assessment (weakness_found or no_material_weakness) + strength_note per concept
 [ ] Targeted revision completed based on critique
 [ ] All concepts scored against 7 criteria with evidence
 [ ] Platform-specific adjustments applied (TikTok/Meta/YouTube/Display)
@@ -592,7 +609,7 @@ LAYER 2 ROUND 1 (ARENA):
 LAYER 2 ROUND 2 (ARENA):
 [ ] Analytical Brief distributed to all 7 personas
 [ ] All 7 personas re-evaluated with learning integration
-[ ] Adversarial Critic re-critiqued (found weaknesses in improved concepts)
+[ ] Adversarial Critic re-critiqued (honest assessment of improved concepts — may report no_material_weakness)
 [ ] Targeted revision completed
 [ ] All concepts scored (genuine improvement, not inflation)
 [ ] Cumulative Analytical Brief generated
@@ -765,7 +782,7 @@ diversity_verification:
 
 **Why This Fails:** Self-critique is weak — the model finds surface-level issues or none. Cross-persona critique drifts toward consensus instead of adversarial challenge.
 
-**Fix:** Dedicated adversarial Critic agent with NO generation context. The Critic receives outputs BLIND, evaluates against the SAME 7 criteria as scoring, and identifies ONE weakest element per concept with actionable fix direction.
+**Fix:** Dedicated adversarial Critic agent with NO generation context. The Critic receives outputs BLIND, evaluates against the SAME 7 criteria as scoring. If a material weakness exists, identifies the SINGLE most impactful one per concept with actionable fix direction. If no element materially underperforms, reports `no_material_weakness` with a `strength_note`. Do not manufacture weaknesses to justify the role.
 
 ### Pattern 5: Consensus Drift
 

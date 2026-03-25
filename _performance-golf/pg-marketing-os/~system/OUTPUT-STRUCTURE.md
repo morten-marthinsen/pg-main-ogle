@@ -79,18 +79,17 @@ All skill outputs for a project are stored under a project-code directory:
       upsell-sequence.json
       upsell-copy/
 
-    # E-Comm Engine Outputs (Skills EC-00–EC-06)
-    e-comm/
-      ecomm-strategy.yaml
+    # PDP Pipeline Outputs (Skills PDP-01–PDP-17, via 04-page-builder)
+    pdp/
+      pdp-strategy.yaml
       feature-package.json
-      ecomm-copy/
+      pdp-copy/
         hero-copy-draft.md
         section-copy-package.json
         section-copy-assembled.md
         micro-scripts.json
-      ecomm-copy-assembled.md
-      page-builder-handoff.yaml
-      ecomm-copy-final.md
+      pdp-copy-assembled.md
+      pdp-copy-final.md
 
     # Advertorial Engine Outputs (Skills ADV-00–ADV-05)
     advertorial/

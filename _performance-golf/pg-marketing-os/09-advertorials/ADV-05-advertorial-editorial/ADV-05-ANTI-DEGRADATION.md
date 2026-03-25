@@ -189,7 +189,13 @@ PRE-EXECUTION:
 LAYER 0: Assembled piece + specimens + strategy loaded
 LAYER 1: Fresh smell test run, hook re-validated
 LAYER 2: Revisions generated, compliance polished
-LAYER 2.5: Arena completed, human selected
+LAYER 2.5 (ARENA):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
+[ ] All 7 competitors generated
+[ ] Arena completed, human selected
 LAYER 4: Quality scored >= 8.0, word count verified, final packaged
 
 POST-EXECUTION:

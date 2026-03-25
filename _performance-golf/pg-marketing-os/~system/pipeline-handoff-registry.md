@@ -650,12 +650,12 @@ required:
 
 ---
 
-### CROSS-ENGINE 5: Campaign Brief → E-Comm Engine
+### CROSS-ENGINE 5: Campaign Brief → PDP Pipeline
 
 **Producer:** Skill 09 (Campaign Brief)
-**Consumer:** EC-00 (E-Comm Strategist, Downstream Mode)
+**Consumer:** PDP-01 (PDP Strategist, Downstream Mode)
 **File:** `campaign-brief.json` (same as Handoff 9)
-**Additional EC-00 requirements:** EC-00 extracts product details, mechanism, feature seeds, audience, voice
+**Additional PDP-01 requirements:** PDP-01 extracts product details, mechanism, feature seeds, audience, voice
 
 ---
 
@@ -677,13 +677,13 @@ required:
 
 ---
 
-### CROSS-ENGINE 8: E-Comm Assembly → Page Builder
+### CROSS-ENGINE 8: PDP Assembly → LP Pipeline (Internal to 04-page-builder)
 
-**Producer:** EC-05 (E-Comm Assembly)
-**Consumer:** LP-00 (Brief Classifier)
-**File:** `ecomm-copy-assembled.md` + `page-builder-handoff.yaml`
-**Path:** `[project]/e-comm/ecomm-copy-assembled.md`
-**Additional LP-00 requirements:** LP-00 receives fully polished ecom copy + section-by-section design specs
+**Producer:** LP-15 (Page Assembly, PDP path)
+**Consumer:** LP-00 (Brief Classifier) — when LP pipeline runs after PDP
+**File:** `pdp-copy-assembled.md`
+**Path:** `[project]/pdp/pdp-copy-assembled.md`
+**Note:** This is now an internal handoff within 04-page-builder. PDP and LP pipelines share the same engine but can run independently.
 
 ---
 

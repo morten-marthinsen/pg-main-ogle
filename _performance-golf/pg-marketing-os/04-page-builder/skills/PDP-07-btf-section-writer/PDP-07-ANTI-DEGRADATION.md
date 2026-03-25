@@ -186,3 +186,18 @@ PDP-07-MC-CHECK:
 | Competitor brand naming | Real brand name appears in comparison chart | Replace with category term ("Leading Brand A") | Non-negotiable — no escalation needed, just fix it |
 | Missing proof specificity | "Clinically studied" used when specific study data exists in brief | Replace with specific citation (journal, year, sample size) | If brief lacks specifics, use best available language and flag gap |
 | Above-fold repetition | BTF section echoes carousel slide text | Rewrite to extend and deepen carousel content, not repeat it | Compare against PDP-03 carousel-architecture.md to identify what was already covered |
+
+---
+
+## IMPLEMENTATION CHECKLIST — ARENA
+
+```
+LAYER 2.5 (ARENA -- MANDATORY):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
+[ ] All 7 competitors generated BTF section copy packages
+[ ] All packages scored against criteria
+[ ] Human selection received (BLOCKING)
+```

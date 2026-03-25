@@ -64,7 +64,7 @@ This matrix defines what gets re-loaded at each severity level before the revisi
 | Context Layer | Level 1: Light Edit | Level 2: Structural Revision | Level 3: Full Regeneration |
 |---------------|--------------------|-----------------------------|---------------------------|
 | **Anti-Degradation Rules** | ALWAYS loaded | ALWAYS loaded | ALWAYS loaded |
-| **Feature Name Registry** | ALWAYS loaded | ALWAYS loaded | Re-derived from EC-01 |
+| **Feature Name Registry** | ALWAYS loaded | ALWAYS loaded | Re-derived from PDP-02 |
 | **Voice/Soul Constraints** | Referenced (not re-loaded) | Re-loaded from specimen | Full re-load + recalibration |
 | **Teachings** | Not re-loaded | Re-loaded for affected skill | Full re-load all skills |
 | **Skill Spec (AGENT.md)** | Not re-loaded | Re-loaded for affected skill | Re-loaded for all affected skills |
@@ -81,7 +81,7 @@ These constraints apply at EVERY severity level, including Light Edit:
 ```yaml
 always_enforced:
   - anti_degradation_rules: "Read and acknowledge before ANY revision"
-  - feature_name_lock: "EC-01 names are exact unless Level 1 explicitly renames"
+  - feature_name_lock: "PDP-02 names are exact unless Level 1 explicitly renames"
   - anti_slop_lexicon: "Banned words cannot be introduced at any level"
   - proof_preservation: "Proof elements cannot be removed unless explicitly requested"
   - scan_optimization: "Revised sections must pass 3-5 second scan test"
@@ -121,13 +121,13 @@ BASED ON classification:
 
 Level 1:
   1. Read anti-degradation file for this skill
-  2. Confirm feature name registry (EC-01 names)
+  2. Confirm feature name registry (PDP-02 names)
   3. Reference (not re-load) voice constraints
   4. Proceed to edit
 
 Level 2:
   1. Read anti-degradation file for this skill
-  2. Confirm feature name registry (EC-01 names)
+  2. Confirm feature name registry (PDP-02 names)
   3. Re-load AGENT.md for the affected skill
   4. Re-load teachings loader output for the affected skill
   5. Re-load relevant context reservoir sections
@@ -211,7 +211,7 @@ Level 3:
 | "The feedback implies I should also improve..." | Do what was asked, nothing more | LIMIT scope to explicit feedback |
 | "While I'm here, I'll also fix..." | Scope creep degrades quality | STOP — only revise what was requested |
 | "This reads better without the proof" | Proof converts. It stays. | KEEP proof, reposition if needed |
-| "A simpler feature name would be..." | Feature names are locked (EC-01) | DO NOT change unless Level 1 rename |
+| "A simpler feature name would be..." | Feature names are locked (PDP-02) | DO NOT change unless Level 1 rename |
 | "I don't need to re-load the skill spec for this" | Skill spec prevents structural drift | RE-LOAD at Level 2+ |
 | "The teachings don't apply to this revision" | Teachings prevent principle violations | RE-LOAD at Level 2+ |
 | "The anti-degradation file is the same as last time" | It must be RE-READ, not remembered | RE-READ at every revision |
@@ -232,7 +232,7 @@ Level 3:
 │  BUT these constraints ALWAYS apply regardless:         │
 │  - Anti-degradation rules (structural enforcement)      │
 │  - Voice/Soul constraints (voice register)              │
-│  - Feature name locks (EC-01 registry)                  │
+│  - Feature name locks (PDP-02 registry)                  │
 │  - Anti-slop lexicon (banned words)                     │
 │  - Scan optimization (ecom-specific)                    │
 │  - Proof preservation (unless explicit removal)         │
@@ -260,15 +260,15 @@ Level 3:
 - Expression anchors: TIER1 expressions from Skill 06 cannot be changed at Level 1 — that's a Level 2 minimum
 - Active Recitation: If Level 2 revision changes strategic anchors, recitation file must be updated
 
-### E-Commerce Engine (03-e-comm)
+### PDP Pipeline (04-page-builder, PDP-01 to PDP-17)
 
 | Severity | What Re-Loads | Engine-Specific Rules |
 |----------|--------------|----------------------|
 | Level 1 | Anti-degradation, feature name registry | Feature names are LOCKED at Level 1 (except explicit rename requests) |
 | Level 2 | AGENT.md, teachings, context reservoir, specimens | Scan optimization must be re-checked on all revised sections |
-| Level 3 | Everything + Arena re-run | Feature hierarchy may change — EC-01 must be re-run before downstream |
+| Level 3 | Everything + Arena re-run | Feature hierarchy may change — PDP-02 must be re-run before downstream |
 
-**E-Comm Specific Constraints:**
+**PDP-Specific Constraints:**
 - Feature names: Locked at all levels unless Level 1 explicitly renames. If a feature IS renamed, ALL sections using that name must be updated (page-wide find-replace)
 - Scan optimization: Every revised section must be re-tested for 3-5 second comprehension
 - Proof density: Proof cannot be removed during any revision level
@@ -288,8 +288,8 @@ revision_log:
   - id: "REV-001"
     timestamp: "ISO timestamp"
     severity: 1  # 1, 2, or 3
-    engine: "03-e-comm"
-    skill: "EC-02-hero-value-prop"
+    engine: "04-page-builder"
+    skill: "PDP-03-hero-carousel-buybox"
     section: "hero_headline"
     feedback: "Make the headline more specific — include a number"
     context_reloaded:

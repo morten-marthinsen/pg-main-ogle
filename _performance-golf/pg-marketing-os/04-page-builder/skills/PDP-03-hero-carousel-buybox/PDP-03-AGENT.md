@@ -229,6 +229,18 @@ Each carousel slide's copy direction must be:
 | 3.2-3.4 | Buy box audit + carousel check + anti-slop | sonnet |
 | 4 | Package assembly | haiku |
 
+### Layer 2.5: Arena (MANDATORY FILE READS)
+
+**BEFORE generating ANY Arena competitor output, READ these files:**
+
+1. `04-page-builder/skills/PDP-03-hero-carousel-buybox/ARENA-LAYER.md` — skill-specific criteria and weights
+2. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+3. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
+
 ---
 
 ## FORBIDDEN BEHAVIORS

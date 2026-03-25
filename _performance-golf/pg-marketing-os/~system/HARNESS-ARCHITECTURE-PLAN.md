@@ -370,7 +370,7 @@ Key design decisions:
 ```
 After Skill 09 completes:
   ├── 02-long-form-vsl (Skills 10-17, sequential — prose cascades)
-  ├── 03-e-comm (EC-01 through EC-04, sequential)
+  ├── 04-page-builder/PDP (PDP-01 through PDP-17, sequential)
   ├── 04-page-builder (LP-07 through LP-14, sequential)
   ├── 05-upsells (U1-U3, sequential)
   ├── 06-checkout (CK-01, CK-02, sequential)
@@ -407,7 +407,7 @@ After assembly skills complete and before editorial skills execute (across ALL e
 1. "Reader agents" (audience agent personas in Reader Mode) read the FULL assembled piece as a continuous customer experience
 2. Report: drop-off points, emotional arc breaks, objection gaps, voice drift, pacing failures, threading issues
 3. "Continuity checker" validates voice register, expression anchoring, naming consistency, narrative threading, tone escalation, proof distribution
-4. Results feed into each engine's editorial skill (Skill 20, EC-06, U5, CK-03, E4, ADV-05) as additional Layer 0 input
+4. Results feed into each engine's editorial skill (Skill 20, PDP-17, U5, CK-03, E4, ADV-05) as additional Layer 0 input
 5. P1 issues from E2E verification MUST receive Arena treatment in editorial
 
 Key design decisions:

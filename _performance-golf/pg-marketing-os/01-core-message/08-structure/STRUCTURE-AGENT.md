@@ -64,6 +64,18 @@ This agent is a **workflow orchestrator**. It delegates to microskills and valid
 | 3 | Validation + coherence check | opus | Judgment-heavy evaluation |
 | 4 | Output packaging | sonnet | Assembly from existing content |
 
+### Layer 2.5: Arena (MANDATORY FILE READS)
+
+**BEFORE generating ANY Arena competitor output, READ these files:**
+
+1. `08-structure/ARENA-LAYER.md` — skill-specific criteria and weights
+2. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+3. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
+
 ---
 
 ## TEACHING FOUNDATIONS

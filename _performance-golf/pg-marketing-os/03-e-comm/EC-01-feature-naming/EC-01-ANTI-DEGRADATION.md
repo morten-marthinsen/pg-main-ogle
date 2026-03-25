@@ -308,6 +308,10 @@ LAYER 2 (NAMING):
 [ ] LAYER_2_COMPLETE.yaml created
 
 LAYER 2.5 (ARENA -- MANDATORY):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
 [ ] All 7 competitors generated naming packages
 [ ] All packages scored against 7 criteria
 [ ] Human selection received (BLOCKING)

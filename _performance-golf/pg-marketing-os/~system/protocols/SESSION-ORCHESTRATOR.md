@@ -124,7 +124,7 @@ This happens after Skill 09 (campaign brief gate) when branch engines unlock.
 BRANCH ENGINES UNLOCKED — [N] skills across [M] engines eligible:
 
   Long-Form VSL:    Skill 10 (headlines) + Skill 18 (proof-weaving)
-  E-Commerce:       EC-00 (strategist)
+  PDP Pipeline:     PDP-01 (strategist)
   Page Builder:     LP-07 through LP-14 (8 element writers)
   Upsells:          U0 (strategist)
   Checkout:         CK-00 (strategist)

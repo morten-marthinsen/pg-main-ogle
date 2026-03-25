@@ -123,7 +123,7 @@ Some skills deviate from the default layer-to-role mapping because their cogniti
 | **Email (E0-E4)** | Sonnet 4.5 | None — all generation-heavy |
 | **Organic (S01-S24)** | Sonnet 4.5 | S09 (Intelligence) → Opus |
 | **Upsell (U0-U5)** | Sonnet 4.5 | U0 (Upsell Strategy) → Opus |
-| **E-Commerce (03-e-comm)** | Sonnet 4.5 | Strategic skills → Opus |
+| **PDP Pipeline (04-page-builder)** | Sonnet 4.5 | PDP-01 (Strategy) → Opus |
 | **Checkout (06-checkout)** | Sonnet 4.5 | — |
 | **Advertorials (09-advertorials)** | Sonnet 4.5 | — |
 

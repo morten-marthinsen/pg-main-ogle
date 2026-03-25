@@ -125,6 +125,21 @@ FORBIDDEN: "improved", "better", "close to passing"
 
 ---
 
+## IMPLEMENTATION CHECKLIST — ARENA
+
+```
+LAYER 2.5 (ARENA -- MANDATORY):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
+[ ] All 7 competitors generated editorial revision packages
+[ ] All packages scored against criteria
+[ ] Human selection received (BLOCKING)
+```
+
+---
+
 ## PER-MICROSKILL OUTPUT PROTOCOL
 
 | Layer | Microskill | Output File | Min Size |

@@ -168,7 +168,7 @@ The majority of skills use NO external MCP tools. These skills should NOT trigge
 |--------|----------------------|----------------|
 | Foundation (00-09) | 01 (Research: Firecrawl, Apify, Exa, Perplexity) | 00, 02-09 |
 | Long-form (10-20) | None | 10-20 |
-| E-Commerce (EC-00-06) | None | EC-00 to EC-06 |
+| PDP Pipeline (PDP-01-17) | None | PDP-01 to PDP-17 |
 | Upsell (U0-U5) | None | U0-U5 |
 | Checkout (CK-00-03) | None | CK-00 to CK-03 |
 | Email (E0-E4) | None | E0-E4 |

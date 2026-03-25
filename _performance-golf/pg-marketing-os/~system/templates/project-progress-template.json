@@ -59,26 +59,12 @@
       }
     },
 
-    "e_comm": {
-      "name": "E-Commerce",
-      "status": "pending",
-      "depends_on": ["09"],
-      "skills": {
-        "EC-00": { "name": "e-comm-strategist", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
-        "EC-01": { "name": "feature-naming", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
-        "EC-02": { "name": "hero-value-prop", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
-        "EC-03": { "name": "section-copy", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
-        "EC-04": { "name": "micro-scripts", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
-        "EC-05": { "name": "assembly", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
-        "EC-06": { "name": "editorial", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
-      }
-    },
-
     "page_builder": {
       "name": "Page Builder",
       "status": "pending",
       "depends_on": ["09"],
       "skills": {
+        "LP-00": { "name": "brief-classifier", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
         "LP-07": { "name": "hero-section", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
         "LP-08": { "name": "trust-elements", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
         "LP-09": { "name": "benefits-features", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
@@ -86,7 +72,14 @@
         "LP-11": { "name": "offer-pricing", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
         "LP-12": { "name": "faq-objections", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
         "LP-13": { "name": "urgency-scarcity", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
-        "LP-14": { "name": "cta-optimizer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true }
+        "LP-14": { "name": "cta-optimizer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "generates_copy": true },
+        "LP-15": { "name": "page-assembly", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "PDP-01": { "name": "pdp-strategist", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null },
+        "PDP-02": { "name": "feature-naming", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true },
+        "PDP-03": { "name": "hero-carousel-buybox", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "PDP-07": { "name": "btf-section-writer", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "PDP-08": { "name": "micro-scripts", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null, "arena": true, "generates_copy": true },
+        "PDP-17": { "name": "pdp-editorial", "status": "pending", "gate": null, "output_path": null, "completed_date": null, "session": null }
       }
     },
 
@@ -226,6 +219,22 @@
   },
 
   "active_engines": [],
+
+  "cost_tracking": {
+    "currency": "USD",
+    "sessions": [],
+    "per_skill": {},
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "total_estimated_cost": 0.00,
+    "notes": "Populated by Session End Protocol. Per-skill entries added as skills complete."
+  },
+
+  "evaluator_captures": {
+    "enabled": true,
+    "capture_path": "evaluator-captures/",
+    "notes": "All Critic, Judge, Audience Agent, and Analyst outputs captured verbatim for future calibration specimen curation."
+  },
 
   "notes": []
 }

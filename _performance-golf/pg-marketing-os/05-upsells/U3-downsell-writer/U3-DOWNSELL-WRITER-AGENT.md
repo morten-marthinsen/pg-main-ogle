@@ -91,6 +91,18 @@ Write the 300-1000 word downsell page — the page shown when a buyer DECLINES a
 
 **These assignments are BINDING. Do not substitute models.**
 
+### Layer 2.5: Arena (MANDATORY FILE READS)
+
+**BEFORE generating ANY Arena competitor output, READ these files:**
+
+1. `skills/layer-3/U3-ARENA-LAYER.md` — skill-specific criteria and weights
+2. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+3. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
+
 ---
 
 ## TWO OPERATING MODES
