@@ -1,8 +1,8 @@
 # CLAUDE-CORE — PROTOCOL REFERENCES (Full Reference)
 
-**Version:** 1.6
+**Version:** 1.7
 **Created:** 2026-03-08
-**Updated:** 2026-03-22
+**Updated:** 2026-03-25
 **Source:** Extracted from ~system/SYSTEM-CORE.md. Load at session start for orientation. During execution, load individual protocol files as needed.
 
 ---
@@ -186,10 +186,10 @@ These protocols are loaded at Layer 0 based on skill requirements:
 **Applied to:** Every session start — mandatory 5-step initialization
 **Key rule:** Standardized session initialization: identify project, load state, verify context, set tier, confirm skill target. Referenced by SYSTEM-CORE.md. v1.1: Parameterized vault root path, output_root integration.
 
-### Session End Protocol (v1.1)
+### Session End Protocol (v1.2)
 **Full protocol:** `~system/protocols/SESSION-END.md`
 **Applied to:** Every session end — mandatory state persistence and handoff
-**Key rule:** Standardized session wrap-up ensuring progress file updates, learning capture, and clean handoff to next session. Referenced by SYSTEM-CORE.md. v1.1: Updated git commit step for external output support.
+**Key rule:** Standardized session wrap-up ensuring progress file updates, learning capture, and clean handoff to next session. Referenced by SYSTEM-CORE.md. v1.1: Updated git commit step for external output support. v1.2: Added Step 4 cost tracking per session (Harness Upgrade U3).
 
 ### System Graduation Protocol (v2.0)
 **Full protocol:** `~system/protocols/SYSTEM-GRADUATION-PROTOCOL.md`
@@ -258,6 +258,11 @@ These support the Arena system documented in `~system/ARENA-PROTOCOL.md`:
 **Applied to:** Foundation skills producing analytical conclusions
 **Key rule:** Structured capture of reasoning chains, evidence, and decision rationale for downstream traceability.
 
+### Evaluator Capture Protocol (v1.0)
+**Full protocol:** `~system/protocols/EVALUATOR-CAPTURE-PROTOCOL.md`
+**Applied to:** All Arena executions — captures evaluator outputs during competition
+**Key rule:** Captures all evaluator outputs (Critic, Judge, Audience Agent, Analyst) verbatim during Arena execution for future calibration specimen curation.
+
 ### Analyst Protocol (v1.0)
 **Full protocol:** `~system/protocols/ANALYST-PROTOCOL.md`
 **Applied to:** Arena executions — causal analysis between rounds
@@ -314,3 +319,4 @@ These support the Arena system documented in `~system/ARENA-PROTOCOL.md`:
 | 1.4 | 2026-03-21 | Added Output Path Resolution Protocol — external output architecture for shared engine sync safety |
 | 1.5 | 2026-03-22 | Added 7 Harness Architecture protocols (Phases 1-6): Analyst, Audience Agent, E2E Verification, Initializer, Material Change Taxonomy, Parallel Engine, Session Orchestrator. Fixed version refs for Session Startup (v1.1) and Session End (v1.1). |
 | 1.6 | 2026-03-22 | Added 4 missing protocols: Decision Challenge, Output Pattern Detection, Output Path Resolution, SSR Pre-Screen. Closes PI warning from structural audit. |
+| 1.7 | 2026-03-25 | Added Evaluator Capture Protocol (Harness Upgrade U2) to Arena Infrastructure section. |

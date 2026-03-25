@@ -241,7 +241,20 @@ SYNTHESIZE the outputs from Root Cause, Mechanism, and Promise skills into compe
 | 3 | Tournament selection + RSF scoring + marketplace check | opus | Judgment-heavy multi-dimensional evaluation |
 | 3.7 | Schema distance calculator | opus | Analytical calculation (CNI/BCI/LNI/IGC) |
 | 3.8 | Anchor-to-distance ratio | opus | Resolution accessibility analysis |
+| 2.5 | Arena (7 competitors × 2 rounds + audience evaluation) | opus | Maximum quality generation |
 | 4 | Output packaging + handoffs | sonnet | Assembly from existing content |
+
+### Layer 2.5: Arena (MANDATORY FILE READS)
+
+**BEFORE generating ANY Arena competitor output, READ these files:**
+
+1. `06-big-idea/ARENA-LAYER.md` — skill-specific criteria and weights
+2. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+3. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
 
 ---
 

@@ -160,6 +160,25 @@ Fresh start every time. Stale artifacts from failed runs are dangerous — espec
 
 ---
 
+## ARENA EXECUTION CHECKLIST
+
+```
+LAYER 2.5 (ARENA -- MANDATORY, CANNOT BE SKIPPED):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
+[ ] All 7 competitors generated across 2 rounds + audience evaluation
+[ ] Adversarial critique completed each round
+[ ] Targeted revision completed each round
+[ ] Post-Arena Synthesis: 2-3 hybrids created
+[ ] 9-10 candidates presented to human
+[ ] Human selection received (BLOCKING)
+[ ] ARENA_COMPLETE.yaml created
+```
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |

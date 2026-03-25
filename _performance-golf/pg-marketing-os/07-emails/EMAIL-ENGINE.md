@@ -904,7 +904,7 @@ The E1 Arena runs for EACH email in the sequence. A 7-email launch produces 7 se
 ROUND 1:
   1A: 7 Competitors each generate full email per body type assignment
       - Each loads: body-type specimens (System 1) + persona voice (System 2) + bridge specimens
-  1B: Critic identifies ONE weakness per email (focus: bridge, ratio, voice, body type compliance)
+  1B: Critic assesses each email (focus: bridge, ratio, voice, body type compliance). At most ONE weakness per email; may report no_material_weakness with strength_note.
   1C: Targeted revision
   1D: Scoring against 7 email-specific criteria
   1E: Ranking

@@ -91,6 +91,18 @@ This agent operates in **7 body type modes**. The mode is determined by the blue
 | 2.6 | Synthesizer (2-3 hybrids) | opus | Phrase-level hybrid creation |
 | 3 | Validation + output | sonnet | Mechanical validation + assembly |
 
+### Layer 2.5: Arena (MANDATORY FILE READS)
+
+**BEFORE generating ANY Arena competitor output, READ these files:**
+
+1. `ARENA-LAYER.md` — skill-specific criteria and weights
+2. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+3. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
+
 ---
 
 ## THE 7 BODY TYPE MODES

@@ -43,6 +43,7 @@ At skill transition (within session):
 | 60 | Skill-Index file (`skill-index/XX-name.md`) | PER SKILL (if exists) | varies |
 | 65 | `ARENA-PROTOCOL.md` | IF skill.arena == true | ~8,000 |
 | 68 | `ARENA-CORE-PROTOCOL.md` | IF skill.arena == true | ~5,000 |
+| 69 | `EVALUATOR-CAPTURE-PROTOCOL.md` | IF skill.arena == true | ~1,500 |
 | 70 | `SPECIMEN-GUIDE.md` | IF skill.generates_copy == true | ~4,000 |
 | 72 | `PERSONA-VOICE-LOADING-PROTOCOL.md` | IF skill.generates_copy == true | ~2,000 |
 | 75 | Vertical profile (`verticals/[vertical].md`) | IF vertical != null | ~2,000 |
@@ -95,17 +96,19 @@ Each skill has a loading profile at `~system/skill-loading-profiles/[id]-[name].
 | Campaign Assembly | 19 | no | no | yes | no | main-pipeline | none |
 | Editorial | 20 | no | no | yes | no | main-pipeline | none |
 
-### E-Commerce Engine (EC-00 to EC-06)
+### PDP Pipeline (04-page-builder, PDP-01 to PDP-17)
+
+*Merged from former 03-e-comm engine (2026-03-24). See `03-e-comm/DEPRECATED.md` for full mapping.*
 
 | Skill | ID | Arena | Generates Copy | Consumes Upstream | Engine | MCP Tools |
 |-------|----|-------|---------------|-------------------|--------|-----------|
-| E-Comm Strategist | EC-00 | no | no | yes | e-comm | none |
-| Feature Naming | EC-01 | yes | no | yes | e-comm | none |
-| Hero Value Prop | EC-02 | yes | yes | yes | e-comm | none |
-| Section Copy | EC-03 | yes | yes | yes | e-comm | none |
-| Micro Scripts | EC-04 | yes | yes | yes | e-comm | none |
-| Assembly | EC-05 | no | no | yes | e-comm | none |
-| Editorial | EC-06 | no | no | yes | e-comm | none |
+| PDP Strategist | PDP-01 | no | no | yes | page-builder | none |
+| Feature Naming | PDP-02 | yes | no | yes | page-builder | none |
+| Hero Carousel Buybox | PDP-03 | yes | yes | yes | page-builder | none |
+| BTF Section Writer | PDP-07 | yes | yes | yes | page-builder | none |
+| Micro Scripts | PDP-08 | yes | yes | yes | page-builder | none |
+| Page Assembly (PDP path) | LP-15 | no | no | yes | page-builder | none |
+| PDP Editorial | PDP-17 | no | no | yes | page-builder | none |
 
 ### Upsell Engine (U0-U5)
 
@@ -215,7 +218,7 @@ Biggest savings: branch engine skills and early foundation skills that currently
 | Engine | Master File | Applies To |
 |--------|------------|------------|
 | main-pipeline | (none — SYSTEM-CORE is sufficient) | Skills 00-20 |
-| e-comm | `03-e-comm/E-COMM-ENGINE.md` | EC-00 to EC-06 |
+| page-builder (PDP) | `04-page-builder/PDP-ENGINE.md` | PDP-01 to PDP-17 |
 | upsell | (skill-level ANTI-DEGRADATION only) | U0-U5 |
 | checkout | `06-checkout/CHECKOUT-ENGINE.md` | CK-00 to CK-03 |
 | email | `07-emails/EMAIL-ENGINE.md` | E0-E4 |

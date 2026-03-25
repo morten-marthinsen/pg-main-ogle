@@ -47,8 +47,8 @@ BRANCH ENGINES UNLOCKED — [N] engines eligible for parallel execution.
 PARALLEL MODE AVAILABLE:
   Primary engine (stays on main): Long-Form VSL (recommended — longest critical path)
   Parallel engines (worktrees):
-    - E-Commerce (EC-00 through EC-06)
-    - Page Builder (LP-07 through LP-14)
+    - Page Builder — LP pipeline (LP-00 through LP-18)
+    - Page Builder — PDP pipeline (PDP-01 through PDP-17)
     - Upsells (U0 through U5)
     - [etc.]
 
@@ -162,7 +162,7 @@ Every engine agent has access to these committed files (inherited from main via 
 
 | Resource | Path | Purpose |
 |----------|------|---------|
-| Engine Master File | `[engine-dir]/[ENGINE].md` (e.g., `03-e-comm/E-COMM-ENGINE.md`) | Engine-level instructions |
+| Engine Master File | `[engine-dir]/[ENGINE].md` (e.g., `04-page-builder/PDP-ENGINE.md`) | Engine-level instructions |
 | Engine AGENT.md | `[engine-dir]/AGENT.md` | Engine navigation |
 | Skill Loading Profiles | `~system/skill-loading-profiles/[engine-skill-ids].yaml` | Per-skill protocol requirements |
 | Skill Directories | `[engine-dir]/skills/` | SKILL.md, microskills, layers |
@@ -224,22 +224,22 @@ Example: `~outputs/choc-drv/e-comm/engine-status.json`
 ```json
 {
   "$schema": "engine-status-v1.0",
-  "engine_id": "e_comm",
-  "engine_name": "E-Commerce",
+  "engine_id": "page_builder_pdp",
+  "engine_name": "Page Builder (PDP Pipeline)",
   "project_code": "choc-drv",
-  "worktree_branch": "parallel/choc-drv/e_comm",
+  "worktree_branch": "parallel/choc-drv/page_builder_pdp",
   "created": "2026-03-18T10:00:00Z",
   "last_updated": "2026-03-18T14:30:00Z",
   "status": "in_progress",
 
   "skills": {
-    "EC-00": { "status": "completed", "output_path": "~outputs/choc-drv/e-comm/ec-00-strategist.json", "completed_date": "2026-03-18T10:45:00Z" },
-    "EC-01": { "status": "completed", "output_path": "~outputs/choc-drv/e-comm/ec-01-feature-naming.json", "completed_date": "2026-03-18T11:30:00Z" },
-    "EC-02": { "status": "in_progress", "output_path": null, "completed_date": null },
-    "EC-03": { "status": "pending", "output_path": null, "completed_date": null },
-    "EC-04": { "status": "pending", "output_path": null, "completed_date": null },
-    "EC-05": { "status": "pending", "output_path": null, "completed_date": null },
-    "EC-06": { "status": "pending", "output_path": null, "completed_date": null }
+    "PDP-01": { "status": "completed", "output_path": "~outputs/choc-drv/pdp/pdp-01-strategist.json", "completed_date": "2026-03-18T10:45:00Z" },
+    "PDP-02": { "status": "completed", "output_path": "~outputs/choc-drv/pdp/pdp-02-feature-naming.json", "completed_date": "2026-03-18T11:30:00Z" },
+    "PDP-03": { "status": "in_progress", "output_path": null, "completed_date": null },
+    "PDP-07": { "status": "pending", "output_path": null, "completed_date": null },
+    "PDP-08": { "status": "pending", "output_path": null, "completed_date": null },
+    "LP-15": { "status": "pending", "output_path": null, "completed_date": null },
+    "PDP-17": { "status": "pending", "output_path": null, "completed_date": null }
   },
 
   "gates": [],
@@ -248,7 +248,7 @@ Example: `~outputs/choc-drv/e-comm/engine-status.json`
     {
       "session": 1,
       "started": "2026-03-18T10:00:00Z",
-      "skills_completed": ["EC-00", "EC-01"]
+      "skills_completed": ["PDP-01", "PDP-02"]
     }
   ]
 }
@@ -322,7 +322,7 @@ No strict ordering required — engines write to separate output subdirectories.
 |-------------|-------------|--------|
 | Upsells (U4) | Emails (E0) | Upsell sequence informs email strategy |
 | Checkout (CK-00) | Upsells (U1) | Checkout strategy provides order bump placement |
-| E-Commerce (EC-05) | Page Builder (LP-07) | Assembled e-comm copy feeds page builder |
+| PDP Assembly (LP-15) | LP Pipeline (LP-07) | PDP assembled copy can inform LP element writers |
 | Ads (A02) | Advertorials (ADV-00) | Ad hooks can be adapted for advertorial opens |
 
 These are OPTIONAL — no merge will fail without them. The benefit is that later-reviewed engines can incorporate earlier-reviewed outputs.

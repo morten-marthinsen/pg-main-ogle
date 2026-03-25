@@ -58,6 +58,18 @@ This agent is a **workflow orchestrator**. It edits and refines -- it does not r
 | 2.5 | Arena (7 competitors x 2 rounds + audience evaluation) | opus | Maximum quality editorial |
 | 4 | Quality scoring + feature consistency + packaging | sonnet | Final evaluation |
 
+### Layer 2.5: Arena (MANDATORY FILE READS)
+
+**BEFORE generating ANY Arena competitor output, READ these files:**
+
+1. `03-e-comm/EC-06-ecomm-editorial/ARENA-LAYER.md` — skill-specific criteria and weights
+2. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+3. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
+
 ---
 
 ## STATE MACHINE

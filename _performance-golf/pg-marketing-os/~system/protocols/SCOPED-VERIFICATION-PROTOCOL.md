@@ -288,18 +288,18 @@ When 3 passes fail to converge:
 
 ## Post-Assembly Convergence Loop
 
-**Added in v1.2.** A 4-pass verification step that runs between EC-05 (Assembly) and EC-06 (Editorial). Assembly is the first time all copy sections exist in a single file — making it the earliest point where cross-section consistency, argument flow, and fact propagation can be verified holistically.
+**Added in v1.2.** A 4-pass verification step that runs between LP-15 PDP Assembly and PDP-17 (Editorial). Assembly is the first time all copy sections exist in a single file — making it the earliest point where cross-section consistency, argument flow, and fact propagation can be verified holistically.
 
 ### Why This Exists
 
-Individual section copy (EC-03) is verified in isolation. Assembly (EC-05) concatenates sections into a complete page. But concatenation introduces failure modes that per-section verification cannot catch: contradictory claims across sections, inconsistent voice register, repeated proof points, stale facts that propagated from upstream packages, and argument flow breaks at section boundaries.
+Individual section copy (PDP-07) is verified in isolation. Assembly (LP-15 PDP path) concatenates sections into a complete page. But concatenation introduces failure modes that per-section verification cannot catch: contradictory claims across sections, inconsistent voice register, repeated proof points, stale facts that propagated from upstream packages, and argument flow breaks at section boundaries.
 
-Without a post-assembly check, these issues reach Editorial (EC-06), where the Arena competitors inherit them and the editorial pass tries to fix structural problems with surface-level polish.
+Without a post-assembly check, these issues reach Editorial (PDP-17), where the Arena competitors inherit them and the editorial pass tries to fix structural problems with surface-level polish.
 
 ### The 4 Passes
 
 ```
-Post-Assembly Convergence Loop (between EC-05 and EC-06):
+Post-Assembly Convergence Loop (between LP-15 PDP Assembly and PDP-17 Editorial):
 
   Pass 1 — VERIFY (Fact + Constraint Check):
     Load: assembled page + fact-changes.yaml + constraint-ledger.yaml
@@ -336,7 +336,7 @@ Post-Assembly Convergence Loop (between EC-05 and EC-06):
       - Apply all remaining fixes from Passes 1-3
       - Verify fixes didn't introduce new issues
       - Confirm materiality: only Category 1-3 fixes applied
-    → Output: verified assembled page ready for EC-06 Editorial
+    → Output: verified assembled page ready for PDP-17 Editorial
 ```
 
 ### Convergence Rules
@@ -352,7 +352,7 @@ Post-Assembly Convergence Loop (between EC-05 and EC-06):
 |------|-------------------|
 | **Full** | All 4 passes mandatory |
 | **Standard** | Pass 1 (Verify) + Pass 2 (Attack) only |
-| **Quick** | Skip entirely — relies on EC-06 editorial to catch issues |
+| **Quick** | Skip entirely — relies on PDP-17 editorial to catch issues |
 
 ### Dependencies
 
@@ -368,4 +368,4 @@ Post-Assembly Convergence Loop (between EC-05 and EC-06):
 |---------|------|---------|
 | 1.0 | 2026-03-07 | Initial creation — Layer 2 verification architecture with 5 verification points, tier-based depth, binary question format |
 | 1.1 | 2026-03-12 | Added Validation Convergence Loop — iterative Layer 3 validation with 3-pass maximum and human escalation |
-| 1.2 | 2026-03-15 | Added Material Change Taxonomy (4-category classification with materiality test) and Post-Assembly Convergence Loop (4-pass Verify → Attack → Pre-Mortem → Revise between EC-05 and EC-06) |
+| 1.2 | 2026-03-15 | Added Material Change Taxonomy (4-category classification with materiality test) and Post-Assembly Convergence Loop (4-pass Verify → Attack → Pre-Mortem → Revise between LP-15 PDP Assembly and PDP-17 Editorial) |

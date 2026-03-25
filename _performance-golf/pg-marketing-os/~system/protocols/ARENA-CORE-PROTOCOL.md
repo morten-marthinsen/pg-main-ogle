@@ -1,8 +1,8 @@
 # ~system/protocols/ARENA-CORE-PROTOCOL.md — Shared Execution Protocol
 
-**Version:** 2.0
+**Version:** 2.3
 **Created:** 2026-02-05
-**Updated:** 2026-02-05
+**Updated:** 2026-03-25
 **Purpose:** Shared execution protocol for ALL 16 Arena Layers. Defines 2-round + audience evaluation multi-round competition, adversarial critique-revise phase, Synthesizer-as-Competitor (7th competitor), analytical briefs, context management, MC-CHECK integration, emergency protocols, Agent Team execution mode, and Effort Protocol integration.
 
 **Authority:** This file has EQUAL authority to ~system/SYSTEM-CORE.md. All Arena-Layer files reference this protocol.
@@ -68,31 +68,37 @@ The Architect plays TWO distinct roles:
 The Critic is a DEDICATED adversarial role that uses the SAME 7 skill-specific criteria as the judge. For each output:
 
 1. **Evaluate against all 7 skill-specific criteria** (from the skill's ARENA-LAYER.md)
-2. **Identify the ONE weakest element** — forces prioritization, not a laundry list
-3. **Map weakness to a specific criterion** — must name which criterion is underperforming
-4. **Provide actionable fix direction** — concrete, specific, implementable guidance
-5. **Score the weakness severity** — 1-10 (10 = catastrophic, 1 = minor)
+2. **Assess whether each criterion is met** — honest evaluation, not assumption that weaknesses exist
+3. **If a material weakness exists: identify the SINGLE most impactful one** — forces prioritization, not a laundry list
+4. **Map weakness to a specific criterion** — must name which criterion is underperforming
+5. **Provide actionable fix direction** — concrete, specific, implementable guidance
+6. **Score the weakness severity** — 1-10 (10 = catastrophic, 1 = minor)
+7. **If NO material weakness exists: report "no material weakness"** — do not manufacture a weakness to justify the role
 
 ### Critique Output Format (Per Competitor)
 
 ```yaml
 critique:
   competitor: "[persona name]"
-  weakest_criterion: "[specific criterion from skill's 7]"
-  weakness_description: "[what specifically fails]"
-  severity: [1-10]
-  evidence: "[quote from output that demonstrates weakness]"
-  fix_direction: "[specific, actionable fix — not vague 'make it better']"
+  assessment: "weakness_found" | "no_material_weakness"
+  weakest_criterion: "[specific criterion from skill's 7]"  # null if no_material_weakness
+  weakness_description: "[what specifically fails]"  # null if no_material_weakness
+  severity: [1-10]  # null if no_material_weakness
+  evidence: "[quote from output that demonstrates weakness]"  # null if no_material_weakness
+  fix_direction: "[specific, actionable fix — not vague 'make it better']"  # null if no_material_weakness
+  strength_note: "[brief note on what this output does well — required for BOTH assessments]"
 ```
 
 ### Critique Constraints
 
-- **ONE weakness per output** — forces the Critic to prioritize the most impactful issue
-- **Must cite evidence** — quote the specific passage that demonstrates the weakness
+- **At most ONE weakness per output** — forces the Critic to prioritize the most impactful issue. If no element materially underperforms, report `no_material_weakness`.
+- **Must cite evidence** — quote the specific passage that demonstrates the weakness (when one exists)
 - **Must be actionable** — "improve flow" is rejected; "add a bridge sentence between paragraph 3 and 4 to maintain momentum after the mechanism reveal" is accepted
 - **Cannot contradict skill criteria** — the Critic uses the SAME criteria the judge uses
+- **Must include strength_note** — even when reporting a weakness, acknowledge what the output does well. This anchors the Critic's judgment and prevents manufactured negativity.
+- **Do NOT manufacture weaknesses** — if the output genuinely meets all 7 criteria at a high level, `no_material_weakness` is the correct assessment. Reporting a fabricated weakness is worse than reporting none.
 
-CRITIC STANCE: We are identifying genuine weaknesses together. Your job is honest assessment — not agreement, not softening. If an output is weak, say so directly with evidence and actionable fix direction.
+CRITIC STANCE: Your job is honest, calibrated assessment. Evaluate whether each element achieves its stated purpose. If an element falls materially short, identify it directly with evidence and actionable fix direction. If the output is genuinely strong across all criteria, say so — do not invent problems to justify your role. The most valuable thing a Critic can do is tell the truth, whether that truth is "this is weak here" or "this is ready."
 
 ---
 
@@ -116,8 +122,8 @@ ROUND 1:
 
   1B: Adversarial Critique
       - The Critic evaluates ALL 7 outputs
-      - Identifies ONE weakest element per output
-      - Maps to specific criterion, provides fix direction
+      - Identifies at most ONE weakest element per output; reports no_material_weakness if genuinely strong
+      - When weakness found: maps to specific criterion, provides fix direction
 
   1C: Targeted Revision
       - Each competitor receives their critique
@@ -1002,10 +1008,17 @@ The Critic's value comes from honest identification of weaknesses. Any framing t
 
 ---
 
+## EVALUATOR OUTPUT CAPTURE
+
+See `EVALUATOR-CAPTURE-PROTOCOL.md` for evaluator output capture during Arena execution. All evaluator outputs (Critic, Judge, Audience Agent, Analyst) are captured verbatim for future calibration specimen curation.
+
+---
+
 ## VERSION HISTORY
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.3 | 2026-03-25 | Neutral evaluator framing (Harness Upgrade U2): Critic can report no_material_weakness, added strength_note, rewritten CRITIC STANCE. Added evaluator capture reference. |
 | 2.2 | 2026-03-07 | SINGLE-CONTEXT HARDENING (Upgrade 3.6): Added Single-Context Arena Hardening section — reduced personas (7→4 in single-context), fresh voice sample loading before each persona, programmatic n-gram similarity check post-round. Raises single-context ceiling from B+ toward A-. |
 | 2.1 | 2026-03-06 | DIVERSITY ENFORCEMENT: Added Variant Diversity Audit step (1A.1/2B.1/3B.1) between generation and critique in each round — classifies outputs, pairwise convergence check, Divergence Protocol if >3 convergent pairs. Added Competitive Distance (10% weight) and Pattern Break Bonus (5% weight) as new evaluation dimensions. Added Memorability Test (1D.1) post-scoring. Reference: `~system/protocols/ARENA-DIVERSITY-PROTOCOL.md`. |
 | 2.0 | 2026-02-05 | AGENT TEAMS + EFFORT PROTOCOL: Added Agent Team Execution Mode (team architecture with 7 persona teammates + Critic + Judge as separate agents, persona agent prompt package spec, agent team round flow, context compression elimination in team mode, single-context fallback). Added Effort Protocol Integration (arena-specific effort mapping, what max effort means for generation with 6-point pre-generation checklist). Addresses three root quality constraints: persona contamination, no extended reasoning during generation, context pressure degradation. |

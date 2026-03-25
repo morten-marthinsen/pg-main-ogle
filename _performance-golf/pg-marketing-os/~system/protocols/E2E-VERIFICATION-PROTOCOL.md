@@ -3,7 +3,7 @@
 **Version:** 1.0
 **Created:** 2026-03-18
 **Purpose:** Full-piece reader agent evaluation and continuity verification. Runs after assembly, before editorial, across ALL engines. Reader agents (extended audience agent personas) read the complete assembled piece as a continuous customer experience — detecting drop-off points, emotional arc breaks, objection gaps, voice inconsistencies, and pacing failures that per-section evaluation cannot catch.
-**Authority:** Referenced by editorial skills (Skill 20, EC-06, U5, CK-03, E4, ADV-05). Extends AUDIENCE-AGENT-PROTOCOL.md with Reader Mode.
+**Authority:** Referenced by editorial skills (Skill 20, PDP-17, U5, CK-03, E4, ADV-05). Extends AUDIENCE-AGENT-PROTOCOL.md with Reader Mode.
 
 ---
 
@@ -30,7 +30,7 @@ E2E verification runs at a specific point in each engine's pipeline: **after ass
 | Engine | Assembly Skill | E2E Verification | Editorial Skill |
 |--------|---------------|-----------------|----------------|
 | Long-Form VSL | 19 (campaign-assembly) | Runs here | 20 (editorial) |
-| E-Commerce | EC-05 (assembly) | Runs here | EC-06 (editorial) |
+| PDP Pipeline | LP-15 (PDP assembly) | Runs here | PDP-17 (editorial) |
 | Upsells | U4 (upsell-assembler) | Runs here | U5 (editorial) |
 | Checkout | CK-01 + CK-02 (both complete) | Runs here | CK-03 (editorial) |
 | Emails | E3 (sequence-assembler) | Runs here | E4 (editorial) |
@@ -379,7 +379,7 @@ e2e_verification_report:
 | Editorial Skill | Where E2E Report Loads | How It's Used |
 |----------------|----------------------|---------------|
 | **Skill 20** (VSL Editorial) | Layer 0 upstream loading | P1/P2 issues from E2E report fed into Layer 1 issue identification alongside Skill 20's 6 legendary lenses. Drop-off points map to engagement issues; voice drift maps to voice consistency audit. |
-| **EC-06** (E-Comm Editorial) | Layer 0 upstream loading | E2E report feeds the 6-lens audit (Layer 1). Drop-off points → Scan Optimization audit (Lens 1). Voice issues → Feature Naming Consistency audit (Lens 3). Proof gaps → Proof Density audit (Lens 2). |
+| **PDP-17** (PDP Editorial) | Layer 0 upstream loading | E2E report feeds the 6-lens audit (Layer 1). Drop-off points → Scan Optimization audit (Lens 1). Voice issues → Feature Naming Consistency audit (Lens 3). Proof gaps → Proof Density audit (Lens 2). |
 | **U5** (Upsell Editorial) | Layer 0 upstream loading | E2E report verifies congruence chain across the multi-piece upsell sequence. Reader journey across order-bump → upsell → downsell checks the emotional escalation pattern. |
 | **CK-03** (Checkout Editorial) | Layer 0 upstream loading | E2E report feeds trust density audit. Reader objection timeline maps to checkout-specific friction points. Voice consistency verifies the checkout feels like the same brand as the main offer. |
 | **E4** (Email Editorial) | Layer 0 upstream loading | E2E report verifies campaign-level criteria (C1-C5). Reader journey across the email sequence checks emotional arc, subject-to-body consistency, and voice stability across N emails. |
@@ -424,7 +424,7 @@ e2e_verification_report:
 ## EXECUTION FLOW
 
 ```
-Assembly skill completes (e.g., Skill 19, EC-05, U4, E3, ADV-04)
+Assembly skill completes (e.g., Skill 19, LP-15 PDP path, U4, E3, ADV-04)
     ↓
 Orchestrator resolves editorial skill as next eligible
     ↓

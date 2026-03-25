@@ -1,8 +1,8 @@
 # Session End Protocol
 
-**Version:** 1.1
+**Version:** 1.2
 **Created:** 2026-03-17
-**Updated:** 2026-03-21
+**Updated:** 2026-03-25
 **Purpose:** Standardized session wrap-up ensuring state persistence and clean handoff
 **Authority:** Referenced by SYSTEM-CORE.md — mandatory at the end of every session
 
@@ -49,7 +49,25 @@ Update `~outputs/[project-code]/project-progress.json`:
    - If context reservoir was created: update `context_reservoir` block
    - If foundation integrity check was run: update that block
 
-4. **Set `last_updated` to current timestamp**
+4. **Cost tracking update:**
+   ```json
+   {
+     "session": N,
+     "skills_executed": ["XX", "YY"],
+     "estimated_input_tokens": 0,
+     "estimated_output_tokens": 0,
+     "estimated_cost_usd": 0.00,
+     "models_used": ["opus-4.6", "sonnet-4.5"],
+     "arena_runs": 0,
+     "audience_eval_runs": 0
+   }
+   ```
+   - Append to `cost_tracking.sessions` array
+   - Update `cost_tracking.total_*` running totals
+   - For Arena skills: add per-skill entry to `cost_tracking.per_skill` with model and token breakdown
+   - Estimates are acceptable — exact counts not required. Use conversation token counters if available.
+
+5. **Set `last_updated` to current timestamp**
 
 ---
 
@@ -131,3 +149,5 @@ If you detect the context window is getting tight:
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-17 | Initial creation as part of Harness Architecture Phase 2. |
+| 1.1 | 2026-03-21 | Updated git commit step for external output support. |
+| 1.2 | 2026-03-25 | Added Step 4: cost tracking per session (Harness Upgrade U3). |

@@ -481,6 +481,66 @@ BEFORE creating FINAL_HANDOFF.md:
     PROCEED with assembly (NOT synthesis)
 ```
 
+### GATE 3 POST-ASSEMBLY VALIDATION (v1.1 — added 2026-03-25)
+
+**Root cause:** On 2026-03-25, a previous session under context pressure wrote a 10KB summary and called it FINAL_HANDOFF.md, then rubber-stamped GATE_3_VERIFIED.yaml. The file was 5% of the required 200KB minimum, missing 12 of 16 required sections, and was nearly sent to client.
+
+**HARD ENFORCEMENT — AUTOMATED (hook-enforced, cannot be bypassed):**
+
+```
+THE FOLLOWING ARE ENFORCED BY handoff_validator.py VIA dispatch-validator.sh.
+CLAUDE CANNOT WRITE THESE FILES WITHOUT PASSING ALL CHECKS.
+THE HOOK WILL BLOCK THE WRITE AND RETURN AN ERROR.
+
+FINAL_HANDOFF.md HARD BLOCKERS (BLOCKING — write rejected if any fail):
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │  1. FILE SIZE >= 200,000 bytes (200KB absolute minimum)              │
+  │     - The 3.2-A skill specifies 200-500KB output                     │
+  │     - A file under 200KB is ALWAYS a summary, never a full assembly  │
+  │                                                                       │
+  │  2. LINE COUNT >= 1,500 lines                                        │
+  │     - Full assembly with quote database cannot be under 1,500 lines  │
+  │                                                                       │
+  │  3. ALL 16 SECTIONS PRESENT (from 3.2-A output schema):             │
+  │     - Business Context, Executive Summary, Research Statistics       │
+  │     - E5 Examination, Top Opportunities, Opportunity Map             │
+  │     - Bucket Analysis, Pain-Hope Pairs, RC-Mechanism Pairs           │
+  │     - Competitive Landscape, Audience Map, Strategic Recommendations │
+  │     - Counter-Positioning Playbook, Full Quote Database              │
+  │     - Methodology/Validation, Hypothesis Validation                  │
+  │                                                                       │
+  │  4. NO FORBIDDEN ABBREVIATION MARKERS                                │
+  │     - "… +", "[see ", "refer to ", "summary only", "abbreviated"     │
+  │     - "for brevity", "condensed version"                             │
+  └──────────────────────────────────────────────────────────────────────┘
+
+GATE_3_VERIFIED.yaml HARD BLOCKER (BLOCKING — write rejected if fail):
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │  GATE_3_VERIFIED.yaml CANNOT be created UNLESS FINAL_HANDOFF.md     │
+  │  passes ALL 4 checks above.                                         │
+  │                                                                       │
+  │  This prevents rubber-stamping the gate on an incomplete handoff.   │
+  └──────────────────────────────────────────────────────────────────────┘
+```
+
+**MANDATORY ASSEMBLY PROTOCOL (from 3.2-A):**
+```
+FINAL_HANDOFF.md MUST be assembled via the 4-phase chunked assembly protocol:
+  - Phase 1: Input verification + quote bank preparation
+  - Phase 2: Sections 0-8 assembly (first 8 writes)
+  - Phase 3: Sections 9-16 assembly (next 5-7 writes)
+  - Phase 4: Final validation pass
+
+  TOTAL WRITES: 10-15 sequential Write tool calls
+  SINGLE-WRITE ASSEMBLY IS FORBIDDEN — it always produces a summary.
+
+  IF context window is too small to complete all 4 phases:
+    DO NOT attempt partial assembly.
+    DO NOT write a summary and call it FINAL_HANDOFF.md.
+    INSTEAD: Write SESSION-HANDOFF.md noting "Layer 3 artifacts complete,
+    FINAL_HANDOFF.md assembly requires fresh session with full context."
+```
+
 ---
 
 ## REAL-TIME QUOTE COUNTER PROTOCOL

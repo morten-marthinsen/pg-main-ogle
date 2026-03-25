@@ -59,7 +59,7 @@ This file exists because **ad concept evaluation has its own degradation pattern
 
 1. **Evaluating hooks in isolation** -- The model evaluates the hook separately from the script and visual, then averages the scores. This misses the INTEGRATION quality. A hook that creates an expectation the script doesn't fulfill scores well in isolation but fails as a concept.
 2. **Personas without specimens** -- The model generates persona evaluations based on persona descriptions without loading actual winning ad specimens. Descriptive personas produce generic evaluations. Specimen-loaded personas produce grounded evaluations with specific reference points.
-3. **Consensus-seeking instead of adversarial** -- The model drifts toward consensus in later rounds. All 7 personas start agreeing. The adversarial Critic exists precisely to prevent this — identifying the ONE weakest element per concept even when the overall score is high.
+3. **Consensus-seeking instead of adversarial** -- The model drifts toward consensus in later rounds. All 7 personas start agreeing. The adversarial Critic exists precisely to prevent this — providing honest calibrated assessment per concept even when the overall score is high. If a material weakness exists, the Critic identifies the SINGLE most impactful one. If no element materially underperforms, the Critic reports `no_material_weakness`.
 4. **Scoring inflation** -- The model inflates scores across rounds as familiarity increases. Round 2 (FINAL) scores should reflect genuine quality improvement from learning, not grade inflation from repeated exposure.
 5. **Platform blindness in evaluation** -- The model evaluates ad concepts against generic quality criteria without accounting for platform-specific demands. A concept scoring 9/10 on visual-copy coherence might be 4/10 on TikTok platform nativeness if it feels like a TV commercial.
 6. **Single-round shortcuts** -- The model declares concepts "strong enough" after Round 1, skipping the learning-improvement cycle that produces peak output in Round 2 (FINAL). The best evaluations emerge from the adversarial process, not from initial impressions.
@@ -139,7 +139,7 @@ The Ad Arena uses 7 ad-specific personas — distinct from the CopywritingEngine
 |------|-----------|
 | **Purpose** | Dedicated adversarial quality enforcement |
 | **Method** | Uses SAME 7 ad-specific judging criteria as the scoring system |
-| **Output** | ONE weakest element per concept evaluation, mapped to specific criterion, with actionable fix direction |
+| **Output** | Assessment (weakness_found or no_material_weakness) per concept evaluation + strength_note. When weakness found: mapped to specific criterion with actionable fix direction |
 | **Key Question** | "Would I stop scrolling? If not, why specifically?" |
 | **NOT** | Self-critique (weak), consensus-seeking (biased), or laundry-list feedback |
 
@@ -591,6 +591,17 @@ FORBIDDEN:
   - Changing model mid-round without logging the switch
 ```
 
+### Arena Execution (MANDATORY FILE READS)
+
+**BEFORE generating ANY persona evaluation output, READ these files:**
+
+1. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+2. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
+
 ---
 
 ## STATE MACHINE
@@ -983,7 +994,7 @@ persona_evaluation:
 | Skill | File | Function | Model |
 |-------|------|----------|-------|
 | 2.1 | `2.1-round1-persona-evaluation.md` | All 7 personas independently evaluate each concept. Each persona produces a complete evaluation per the format above. The Architect generates an integrated evaluation (not synthesis of others). Specimens MUST be referenced. | opus |
-| 2.2 | `2.2-round1-adversarial-critique.md` | The Critic evaluates ALL persona outputs for each concept. Identifies ONE weakest element per persona evaluation per concept. Maps to specific criterion. Provides actionable fix direction. Must cite evidence from the evaluation. | opus |
+| 2.2 | `2.2-round1-adversarial-critique.md` | The Critic evaluates ALL persona outputs for each concept. If a material weakness exists, identifies the SINGLE most impactful one per persona evaluation per concept. Maps to specific criterion. Provides actionable fix direction. If no material weakness, reports no_material_weakness with strength_note. | opus |
 | 2.3 | `2.2-round + audience evaluation1-targeted-revision.md` | Each persona receives their critique and revises ONLY the identified weakness. Revision must address the specific fix direction. Persona perspective MUST be maintained during revision. Maximum scope: targeted fix, not complete re-evaluation. | opus |
 | 2.4 | `2.4-round1-scoring.md` | Revised evaluations scored against 7 ad-specific criteria. Weighted totals calculated. All 7 personas ranked per concept. Cross-concept comparison produced. | opus |
 | 2.5 | `2.5-round1-learning-brief.md` | Analytical Brief generated: winner's techniques extracted, persona-specific feedback for each non-winner, scoring gaps identified, voice preservation notes for each persona (absorb TECHNIQUES not PERSPECTIVE). | opus |
@@ -1049,7 +1060,7 @@ round_1_learnings:
 | Skill | File | Function | Model |
 |-------|------|----------|-------|
 | 2.6 | `2.6-round2-persona-evaluation.md` | All 7 personas receive the Analytical Brief. Each persona re-evaluates each concept incorporating learned techniques. Key rule: Absorb TECHNIQUES, not PERSPECTIVE. The DR Strategist learning from The UGC Native's authenticity insights doesn't make the DR Strategist abandon conversion focus — it integrates authenticity INTO the conversion evaluation. Each persona notes which techniques they integrated. | opus |
-| 2.7 | `2.7-round2-adversarial-critique.md` | Same Critic protocol as Round 1. Critic checks if previous-round weaknesses were addressed. Identifies NEW weakest element (may differ from Round 1). | opus |
+| 2.7 | `2.7-round2-adversarial-critique.md` | Same Critic protocol as Round 1. Critic checks if previous-round weaknesses were addressed. If material weakness exists, identifies SINGLE most impactful NEW weakness (may differ from Round 1). May report no_material_weakness. | opus |
 | 2.8 | `2.8-round2-targeted-revision.md` | Same revision protocol as Round 1. | opus |
 | 2.9 | `2.9-round2-scoring.md` | Same scoring protocol. Track improvement from Round 1 -> Round 2 per persona per concept. Flag any score DECREASES for investigation. | opus |
 | 2.10 | `2.10-round2-cumulative-learning-brief.md` | Cumulative Analytical Brief combining Round 1 + Round 2 learnings. Identifies persistent strengths across rounds. Identifies persistent weaknesses across rounds. Notes techniques that produced the biggest improvements. | opus |
@@ -1585,7 +1596,7 @@ If Agent Teams is not available:
 |---|-----------|---------|---------------|
 | 1 | **Pre-Arena** | Before Round 1 starts | All concept bundles assembled? All specimens loaded? All 7 ad-specific criteria understood? |
 | 2 | **Post-R1-Evaluation** | After 7 personas evaluate in Round 1 | All 7 evaluations complete per concept? No abbreviations? Persona perspectives distinct? Specimens referenced? |
-| 3 | **Post-R1-Critique** | After critique phase | All critiques have evidence? Fix directions actionable? ONE weakness per evaluation? |
+| 3 | **Post-R1-Critique** | After critique phase | All critiques have evidence? Fix directions actionable? At most ONE weakness per evaluation? Assessment + strength_note present? |
 | 4 | **Post-R1-Scoring** | After Round 1 scoring | All 7 scored on all 7 criteria? Analytical Brief generated? Deal-breaker thresholds checked? |
 | 5 | **Post-R2-Evaluation** | After Round 2 evaluation | Analytical Brief techniques integrated? Persona perspectives preserved? Improvement from R1? |
 | 6 | **Post-R2-Scoring** | After Round 2 scoring | Score improvement tracking complete? Cumulative Analytical Brief generated? |
@@ -2082,7 +2093,7 @@ The Ad Arena (A06) adapts the CopywritingEngine Arena protocol (~system/protocol
 | Element | Same |
 |---------|------|
 | 2-round + audience evaluation mandatory structure | Yes |
-| Adversarial Critic role (ONE weakness per output) | Yes |
+| Adversarial Critic role (at most ONE weakness per output; may report no_material_weakness) | Yes |
 | Analytical Brief between rounds (techniques not voice/perspective) | Yes |
 | Architect dual role (competitor + post-arena hybrid creator) | Yes |
 | Context compression between rounds | Yes |

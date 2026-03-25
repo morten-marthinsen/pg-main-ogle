@@ -58,6 +58,32 @@
 
 ---
 
+### Failure Pattern: Arena Persona Fabrication (2026-03-25) — SEVERITY: CRITICAL
+
+**What happened:** During Skill 03 (Root Cause) re-execution, the Arena Layer 2.5 was executed with **completely fabricated personas** (invented names like "Marcus Webster," "Dr. Alena Vasquez," "Dr. Richard Stern") instead of the real system personas (Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect). The entire Arena output — 7 competitors, 2 rounds, scoring, hybrids, and human selection — was generated from fabricated personas. Checkpoint files (ARENA_COMPLETE.yaml, LAYER_3_COMPLETE.yaml) were created containing fabricated data. Layer 3 validation and Layer 4 packaging were built on the fabricated Arena output.
+
+**Root cause:** The AGENT.md and ANTI-DEGRADATION.md described Arena requirements ("7 competitors × 2 rounds") but did NOT contain hardcoded file paths forcing the AI to READ the actual Arena protocol files before execution. The AI saw the DESCRIPTION of what the Arena should produce and generated the structure from that description, filling in fabricated personas because the real persona definitions were never loaded. This is the Microskill Synthesis Trap applied to Arena — the AI synthesized Arena-shaped output without reading the Arena spec files.
+
+**The gap in the reference chain:**
+- `ROOT-CAUSE-AGENT.md` said "Arena (7 competitors × 2 rounds)" — no file path
+- `ROOT-CAUSE-ANTI-DEGRADATION.md` said "All 7 competitors generated" — no file path
+- `ARENA-LAYER.md` existed at the skill level with the correct references — but was never loaded
+- `~system/protocols/ARENA-CORE-PROTOCOL.md` defined the real personas — but was never loaded
+- `~system/protocols/ARENA-PERSONA-PANEL.md` had full persona specs — but was never loaded
+
+**Fix (applied 2026-03-25 — 32 files patched):**
+1. All 16 AGENT.md files updated with hardcoded `MANDATORY READ:` paths to Arena protocol files
+2. All 16 ANTI-DEGRADATION.md files updated with Arena file read checklist items
+3. All 16 ARENA_COMPLETE.yaml templates updated with persona verification block
+4. Created `~system/protocols/ARENA-ANTI-DEGRADATION.md` (195 lines) centralizing all Arena anti-degradation rules
+5. Persona name verification added: if personas don't match protocol → HALT — fabrication detected
+
+**Lesson:** ANY execution step that can be described without reading its spec file WILL eventually be fabricated. Every step needs a hardcoded file path that forces a file read. Descriptions enable fabrication. File paths enforce execution. This is the same principle as "READ before you execute" (Law #1 in SYSTEM-CORE.md) but applied to the file reference chain itself — it's not enough to tell the AI to read; the path to what it must read must be explicit and unambiguous.
+
+**Broader principle:** Audit every AGENT.md for steps that describe behavior without linking to source spec files. If a step says "do X" but doesn't say "READ file Y first," that step is vulnerable to fabrication.
+
+---
+
 ### Success Pattern: Verbatim Specimen Injection (2026-02-02)
 
 **Innovation:** Loading VERBATIM text from TIER1 elite controls as "statistical attractors" — exact token sequences reshape probability distributions toward elite patterns.

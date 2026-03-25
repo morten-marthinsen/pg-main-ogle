@@ -1,8 +1,8 @@
 # LandingPageEngine — LANDING-PAGE-ENGINE.md (Router)
 
-**Version:** 1.1
+**Version:** 1.2
 **Created:** 2026-02-28
-**Updated:** 2026-03-06
+**Updated:** 2026-03-24 — Unified PDP Engine (E-Comm Copy + Page Builder merge)
 **Purpose:** Route to the correct reference file for your skill type. Slim router — all detail lives in subfiles.
 
 ---
@@ -29,7 +29,7 @@ The CopywritingEngine generates the **words**. The Landing Page Engine generates
 | **reference/design-principles.md** | LP-03, LP-04, LP-15, LP-17 | 10 conversion design principles extracted from specimens |
 | **reference/visual-hierarchy.md** | LP-03, LP-07 | 5 above-fold patterns, section flow templates, CTA placement rules |
 | **reference/typography-reference.md** | LP-07, LP-14 | Headline/subhead/CTA copy patterns from real pages |
-| **PDP-ENGINE.md** | All PDP skill executions (Type B / Hybrid) | PDP Laws, routing, PDP skill directory, PDP model assignment, Baymard/NLS integration |
+| **PDP-ENGINE.md** | All PDP skill executions (Type B / Hybrid) | **Unified PDP Engine** — 10 Laws, 6 Degradation Patterns, complete copy + build pipeline (PDP-01 through PDP-17), feature naming architecture, micro-script architecture, arena architecture (4 fires), brand compliance (conditional), NLS/Baymard integration |
 | **reference/PDP-BEST-PRACTICES-REFERENCE.md** | PDP-03 through PDP-16 | 10-Thumbnail Story Architecture, BTF Section Templates, Baymard/NN-g findings, PDP Specimen Library |
 | **reference/design-tokens-reference.md** | ALL page generation skills (LP-07+, LP-15, PDP-03+) | Real design tokens (colors, fonts, spacing, buttons) from 6 S-tier specimens. Prevents "generic AI website" output. |
 | **reference/component-pattern-library.md** | ALL page generation skills (LP-07+, LP-15, PDP-03+) | 13 clean HTML/CSS component templates (hero, buy box, testimonials, FAQ, etc.) with CSS custom properties. Tier 2 code specimens. |
@@ -139,17 +139,21 @@ LP-00 classifies page type via 7-signal checklist. Classification governs every 
 | LP-17 | Conversion Audit | LP-17-conversion-audit/ | Built |
 | LP-18 | A/B Test Plan | LP-18-ab-test-plan/ | Built |
 
-### PDP Enhancement Layer (Type B / Hybrid only — replaces LP skills where PDP diverges)
-| # | Skill | Folder | Replaces | Status |
-|---|-------|--------|----------|--------|
-| PDP-03 | Hero Carousel + Buy Box Architect | PDP-03-hero-carousel-buybox/ | LP-03 | Built |
-| PDP-04 | BTF Section Sequencer | PDP-04-btf-section-sequencer/ | LP-04 | Built |
-| PDP-05 | Social Proof + Review System | PDP-05-social-proof-review-system/ | LP-05, LP-10 | Built |
-| PDP-06 | Offer/Buy Box Writer | PDP-06-offer-buybox-writer/ | LP-06, LP-11, LP-14 | Built |
-| PDP-07 | BTF Section Writer | PDP-07-btf-section-writer/ | LP-07, LP-09 (partial) | Built |
-| PDP-16 | PDP Mobile + Conversion Audit | PDP-16-mobile-conversion-audit/ | LP-16, LP-17 | Built |
+### Unified PDP Engine (Type B / Hybrid only — complete copy + build pipeline)
+| # | Skill | Folder | Phase | Arena? | Status |
+|---|-------|--------|-------|--------|--------|
+| PDP-01 | E-Comm Strategist | PDP-01-ecomm-strategist/ | Strategy | No | Built |
+| PDP-02 | Feature Naming & Scoping | PDP-02-feature-naming/ | Feature Architecture | Yes | Built |
+| PDP-03 | Hero Carousel + Buy Box (Copy + Design) | PDP-03-hero-carousel-buybox/ | Above-Fold | Yes | Built |
+| PDP-04 | BTF Section Sequencer | PDP-04-btf-section-sequencer/ | BTF Architecture | No | Built |
+| PDP-05 | Social Proof + Review System | PDP-05-social-proof-review-system/ | BTF Writing | No | Built |
+| PDP-06 | Offer/Buy Box Writer | PDP-06-offer-buybox-writer/ | BTF Writing | No | Built |
+| PDP-07 | BTF Section Writer (Copy + Design) | PDP-07-btf-section-writer/ | BTF Writing | Yes | Built |
+| PDP-08 | Micro-Script Writer | PDP-08-micro-scripts/ | Micro-Scripts | No | Built |
+| PDP-16 | PDP Mobile + Conversion Audit | PDP-16-mobile-conversion-audit/ | Audit | No | Built |
+| PDP-17 | E-Comm Editorial | PDP-17-editorial/ | Editorial | Yes | Built |
 
-*See PDP-ENGINE.md for full PDP routing, laws, and loading protocol.*
+*See PDP-ENGINE.md for full unified PDP routing, 10 laws, 6 degradation patterns, arena architecture, and loading protocol.*
 
 ---
 
@@ -209,6 +213,7 @@ After LP-17 (Conversion Audit) completes, SSR pre-screening runs per `~system/pr
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.3 | 2026-03-24 | **Unified PDP Engine merge.** PDP skill directory expanded: PDP-01 (E-Comm Strategist), PDP-02 (Feature Naming), PDP-03 (enhanced with hero copy), PDP-07 (enhanced with section copy), PDP-08 (Micro-Scripts), PDP-17 (E-Comm Editorial). 4 arena fires. E-Comm Copy Engine (03-e-comm) absorbed into page builder. |
 | 1.2 | 2026-03-20 | Added SSR pre-screen validation reference (LP-17 (Conversion Audit) terminal gate) |
 | 1.1 | 2026-03-06 | Updated with PDP Enhancement Layer, design tokens, component pattern library, specimen section extracts |
 | 1.0 | 2026-02-28 | Initial creation — 19-skill pipeline, 7 Laws, element taxonomy, specimen vault |

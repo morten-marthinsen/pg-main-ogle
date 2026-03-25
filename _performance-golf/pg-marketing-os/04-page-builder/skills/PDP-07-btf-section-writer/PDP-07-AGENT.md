@@ -223,6 +223,18 @@ PDP-04 assigned specific word count targets per section. PDP-07 must write withi
 | 3.3 | Proof density verification | sonnet |
 | 4 | Package assembly | haiku |
 
+### Layer 2.5: Arena (MANDATORY FILE READS)
+
+**BEFORE generating ANY Arena competitor output, READ these files:**
+
+1. `04-page-builder/skills/PDP-07-btf-section-writer/ARENA-LAYER.md` — skill-specific criteria and weights
+2. `~system/protocols/ARENA-CORE-PROTOCOL.md` — execution protocol
+3. `~system/protocols/ARENA-PERSONA-PANEL.md` — persona specifications
+
+**VERIFY personas match protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect**
+
+**If personas don't match → HALT — FABRICATION DETECTED**
+
 ---
 
 ## FORBIDDEN BEHAVIORS
