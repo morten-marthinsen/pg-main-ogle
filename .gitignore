@@ -64,8 +64,8 @@ __MACOSX/
 # ========== PLAYWRIGHT MCP (local browser automation artifacts) ==========
 .playwright-mcp/
 
-# ========== ROOT MCP CONFIG (local override — shared config is in .claude/mcp.json) ==========
-.mcp.json
+# ========== ROOT MCP CONFIG (shared — uses ${ENV_VAR} references, no secrets) ==========
+# .mcp.json is committed. Team members set API keys as env vars on their machine.
 
 # ========== DATA SERVICE LOCAL SCRATCH ==========
 _performance-golf/pg-data-service/_local/
