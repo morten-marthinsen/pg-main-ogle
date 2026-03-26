@@ -280,6 +280,10 @@
         "hooks": [
           {
             "type": "command",
+            "command": ".claude/hooks/memory-reminders.sh"
+          },
+          {
+            "type": "command",
             "command": "_performance-golf/pg-marketing-os/.hooks/reset-token-state.sh"
           },
           {
