@@ -3,25 +3,32 @@
  *
  * Two modes:
  *   v1 ("environment_swap"): Basic FFmpeg overlay — places source on a new background clip.
- *   v2 ("environment_swap_ai"): AI-generated environments via FAL segmentation + generation.
+ *   v2 ("environment_swap_ai"): Romeo's 5-step Gemini-based workflow with approval gates.
  *
- * v2 3-stage AI pipeline:
- *   1. FAL BiRefNet — background segmentation (extract foreground from key frame)
- *   2. FAL Flux — generate background image from background_prompt
- *   3. FFmpeg composite — layer source video on generated background
+ * v2 multi-step workflow (replaces Christopher's paused FAL BiRefNet approach):
+ *   1. Analyze — Gemini video analysis of winning ad (visual blueprint)
+ *   2. Brief — Generate expansion brief with environment templates
+ *   3. Prompts — Provider-specific prompt generation (Kling O3 / Veo 3.1 rules)
+ *   4. Generate — Avatar video generation with character consistency
+ *   5. QA — Probe outputs, verify format
+ *
+ * Each step returns NEEDS_HUMAN_INPUT at approval gates.
+ * Supports resume_from_step to re-enter at the correct step after human approval.
  *
  * Creative intelligence:
  * - Environment change must not shift emotional context of root angle
- * - A "credibility" angle in a studio looks different in a casual setting — assess compatibility
- * - v1 is limited to clip library; v2 uses AI segmentation + generation
+ * - Avatar consistency: same person across all environments (elements-based)
+ * - Emotional tone MUST match script content
+ * - No micro-choreography (kills naturalism) — direct overall energy instead
  *
- * Uses: ffmpeg-executor buildEnvironmentSwapArgs()
+ * Uses: ffmpeg-executor buildEnvironmentSwapArgs(), python-runner for Romeo's scripts
  */
 
 import { join } from "node:path";
 import { mkdir } from "node:fs/promises";
 import { ensureICloudSafeDir } from "../../utils/icloud-safe-dir.js";
 import { buildEnvironmentSwapArgs } from "../../utils/ffmpeg-executor.js";
+import { runPythonScript } from "../../utils/python-runner.js";
 import type {
   ExpansionAgent,
   ExpansionContext,
@@ -30,7 +37,7 @@ import type {
   ExpansionValidationResult,
 } from "../types.js";
 import type { SubAgentResult } from "../../types/sub-agent.js";
-import type { AssembledVariation } from "../../types/pipeline.js";
+import type { AssembledVariation, EnvironmentStep } from "../../types/pipeline.js";
 
 // ── Validation ──────────────────────────────────────────────────────────────
 
@@ -137,224 +144,229 @@ async function executeV1(
   };
 }
 
-// ── v2 Execution (AI-generated background) ──────────────────────────────────
+// ── v2 Execution (Romeo's 5-step Gemini-based workflow) ──────────────────────
+
+/** Step order for the multi-step workflow. */
+const STEP_ORDER: EnvironmentStep[] = ["analyze", "brief", "prompts", "generate", "qa"];
 
 async function executeV2(
   ctx: ExpansionContext,
   deps: ExpansionDeps,
 ): Promise<SubAgentResult<ExpansionResult>> {
-  // ── Prerequisite: aiClient must be available ────────────────────────────
-
-  if (!deps.aiClient) {
-    return {
-      status: "FAILED",
-      error_category: "CREDENTIAL_ERROR",
-      severity: "error",
-      message:
-        "AI environment swap requires AI client (FAL for segmentation + image generation). " +
-        "No aiClient provided in dependencies.",
-      recovery_action: "halt",
-      context: { step: "environment_swap_ai" },
-    };
-  }
-
-  const client = deps.aiClient;
-
-  if (!client.isAvailable("segmentation")) {
-    return {
-      status: "FAILED",
-      error_category: "CREDENTIAL_ERROR",
-      severity: "error",
-      message:
-        "FAL credentials not configured. Required for background segmentation (BiRefNet). Set FAL_KEY.",
-      recovery_action: "halt",
-      context: { step: "environment_swap_ai" },
-    };
-  }
-
-  if (!client.isAvailable("image")) {
-    return {
-      status: "FAILED",
-      error_category: "CREDENTIAL_ERROR",
-      severity: "error",
-      message:
-        "FAL credentials not configured. Required for background generation (Flux). Set FAL_KEY.",
-      recovery_action: "halt",
-      context: { step: "environment_swap_ai" },
-    };
-  }
-
-  // ── Extract operation fields ────────────────────────────────────────────
-
   const op = ctx.editOperation as {
     type: "environment_swap_ai";
     background_prompt: string;
     style_reference_url?: string;
+    resume_from_step?: EnvironmentStep;
+    environments?: string[];
+    avatar_reference_image?: string;
+    hook_transcripts?: string[];
   };
 
-  const variations: AssembledVariation[] = [];
-  const durationFlags: string[] = [];
-  let totalCost = 0;
+  // Determine starting step (supports resume after human approval gates)
+  const startStep = op.resume_from_step ?? "analyze";
+  const startIndex = STEP_ORDER.indexOf(startStep);
 
-  // ── Generate variations ─────────────────────────────────────────────────
-
-  // Extract a key frame from the source video for BiRefNet (processes images, not video)
-  const keyFramePath = join(ctx.outputDir, "keyframe_t1.png");
-  try {
-    const extractArgs = [
-      "-y", "-i", ctx.sourceFile,
-      "-ss", "1",          // 1 second in (skip black intro frames)
-      "-frames:v", "1",
-      "-q:v", "2",
-      keyFramePath,
-    ];
-    const extractResult = await deps.commandRunner.run("ffmpeg", extractArgs);
-    if (extractResult.exitCode !== 0) {
-      return {
-        status: "FAILED",
-        error_category: "EDIT_ERROR",
-        severity: "error",
-        message: `Key frame extraction failed: ${extractResult.stderr.slice(0, 500)}`,
-        recovery_action: "halt",
-        context: { step: "environment_swap_ai" },
-      };
-    }
-  } catch (err) {
+  if (startIndex < 0) {
     return {
       status: "FAILED",
-      error_category: "EDIT_ERROR",
+      error_category: "VALIDATION_ERROR",
       severity: "error",
-      message: `Key frame extraction failed: ${err instanceof Error ? err.message : String(err)}`,
+      message: `Invalid resume_from_step: "${startStep}". Valid: ${STEP_ORDER.join(", ")}`,
       recovery_action: "halt",
       context: { step: "environment_swap_ai" },
     };
   }
 
-  for (let i = 0; i < ctx.variationCount; i++) {
-    const varIndex = i + 1;
-    const varDir = join(ctx.outputDir, `var_${varIndex}`);
-    const outputFile = join(ctx.outputDir, `variation_${varIndex}.mp4`);
+  // ── Step 1: Analyze ─────────────────────────────────────────────────────
+  // Gemini video analysis of winning ad — extracts visual blueprint.
+  if (startIndex <= 0) {
+    const analyzeArgs: string[] = [
+      "--video", ctx.sourceFile,
+      "--output-dir", ctx.outputDir,
+    ];
 
-    try {
-      // Ensure variation subdirectory exists for AI client file downloads
-      await mkdir(varDir, { recursive: true });
+    const result = await runPythonScript(deps, "analyze_winning_ad.py", analyzeArgs);
 
-      // Stage 1: Background segmentation via FAL BiRefNet
-      // Extracts foreground mask from key frame (extracted above)
-      const segResult = await client.generate(
-        {
-          type: "segmentation",
-          prompt: "Extract foreground subject from video frame",
-          model: "birefnet",
-          style_reference: keyFramePath,
-        },
-        varDir,
-      );
-      totalCost += segResult.cost_usd;
-
-      // Stage 2: Background generation via FAL Flux
-      const bgPrompt = buildBackgroundPrompt(op.background_prompt, varIndex);
-      const bgResult = await client.generate(
-        {
-          type: "image",
-          prompt: bgPrompt,
-          model: "flux",
-          width: ctx.sourceDims?.width ?? 1080,
-          height: ctx.sourceDims?.height ?? 1920,
-          ...(op.style_reference_url
-            ? { style_reference: op.style_reference_url }
-            : {}),
-        },
-        varDir,
-      );
-      totalCost += bgResult.cost_usd;
-
-      // Stage 3: FFmpeg composite — layer source on generated background using mask
-      const compositeArgs = buildCompositeArgs(
-        ctx.sourceFile,
-        bgResult.file_path,
-        segResult.file_path,
-        outputFile,
-        ctx.sourceDims,
-      );
-
-      let ffResult: { exitCode: number; stdout: string; stderr: string };
-      try {
-        ffResult = await deps.commandRunner.run("ffmpeg", compositeArgs);
-      } catch (err) {
-        return {
-          status: "FAILED",
-          error_category: "EDIT_ERROR",
-          severity: "error",
-          message: `FFmpeg composite failed: ${err instanceof Error ? err.message : String(err)}`,
-          recovery_action: "halt",
-          context: { step: "environment_swap_ai" },
-        };
-      }
-
-      if (ffResult.exitCode !== 0) {
-        return {
-          status: "FAILED",
-          error_category: "EDIT_ERROR",
-          severity: "error",
-          message: `FFmpeg composite exited with code ${ffResult.exitCode}: ${ffResult.stderr.slice(0, 500)}`,
-          recovery_action: "halt",
-          context: { step: "environment_swap_ai" },
-        };
-      }
-
-      variations.push({
-        variation_index: varIndex,
-        file_path: outputFile,
-        duration_seconds: ctx.sourceDuration ?? 0,
-        resolution: ctx.sourceDims
-          ? `${ctx.sourceDims.width}x${ctx.sourceDims.height}`
-          : "1080x1920",
-        edit_summary:
-          `AI environment (v${varIndex}): BiRefNet segmentation → Flux background "${op.background_prompt.slice(0, 60)}" → FFmpeg composite. ` +
-          `Cost: $${totalCost.toFixed(2)}`,
-        root_angle_preserved: true,
-      });
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-
-      // Batch stop on first failure — AI generation is expensive
+    if (result.exitCode !== 0) {
       return {
         status: "FAILED",
         error_category: "AI_GENERATION_ERROR",
         severity: "error",
-        message:
-          `AI environment generation failed at variation ${varIndex}: ${message.slice(0, 500)}. ` +
-          `${variations.length} of ${ctx.variationCount} completed before failure.`,
+        message: `Winning ad analysis failed: ${result.stderr.slice(0, 500)}`,
         recovery_action: "halt",
         context: { step: "environment_swap_ai" },
       };
     }
   }
 
-  // ── Cost flag ───────────────────────────────────────────────────────────
+  // ── Step 2: Brief ───────────────────────────────────────────────────────
+  // Generate expansion brief with environment templates + naming convention.
+  if (startIndex <= 1) {
+    const briefArgs: string[] = [
+      "--analysis", join(ctx.outputDir, "winning_ad_analysis.json"),
+      "--output-dir", ctx.outputDir,
+      "--background-prompt", op.background_prompt,
+    ];
 
-  if (totalCost > 0.5) {
-    durationFlags.push(
-      `Total AI environment cost: $${totalCost.toFixed(2)} for ${ctx.variationCount} variations — review for budget alignment`,
-    );
+    if (op.environments?.length) {
+      briefArgs.push("--environments", JSON.stringify(op.environments));
+    }
+    if (op.avatar_reference_image) {
+      briefArgs.push("--avatar-image", op.avatar_reference_image);
+    }
+    if (op.hook_transcripts?.length) {
+      briefArgs.push("--hook-transcripts", JSON.stringify(op.hook_transcripts));
+    }
+
+    const result = await runPythonScript(deps, "generate_expansion_brief.py", briefArgs);
+
+    if (result.exitCode !== 0) {
+      return {
+        status: "FAILED",
+        error_category: "AI_GENERATION_ERROR",
+        severity: "error",
+        message: `Brief generation failed: ${result.stderr.slice(0, 500)}`,
+        recovery_action: "halt",
+        context: { step: "environment_swap_ai" },
+      };
+    }
+
+    // GATE: Human reviews brief before proceeding to prompt generation
+    if (!op.resume_from_step || startIndex === 1) {
+      return {
+        status: "NEEDS_HUMAN_INPUT",
+        message:
+          `Brief generated at ${join(ctx.outputDir, "brief.md")}. ` +
+          "Review the brief, then resume with resume_from_step: 'prompts'.",
+        context: { step: "environment_swap_ai" },
+      };
+    }
+  }
+
+  // ── Step 3: Prompts ─────────────────────────────────────────────────────
+  // Provider-specific prompt generation (Kling O3 600-char / Veo 3.1 800-char rules).
+  if (startIndex <= 2) {
+    const promptArgs: string[] = [
+      "--brief", join(ctx.outputDir, "brief.md"),
+      "--output-dir", ctx.outputDir,
+    ];
+
+    const analysisPath = join(ctx.outputDir, "winning_ad_analysis.json");
+    promptArgs.push("--analysis", analysisPath);
+
+    const result = await runPythonScript(deps, "generate_video_prompts.py", promptArgs);
+
+    if (result.exitCode !== 0) {
+      return {
+        status: "FAILED",
+        error_category: "AI_GENERATION_ERROR",
+        severity: "error",
+        message: `Prompt generation failed: ${result.stderr.slice(0, 500)}`,
+        recovery_action: "halt",
+        context: { step: "environment_swap_ai" },
+      };
+    }
+
+    // GATE: Human reviews prompts in Airtable before generation
+    if (!op.resume_from_step || startIndex === 2) {
+      return {
+        status: "NEEDS_HUMAN_INPUT",
+        message:
+          "Prompts generated and logged to Airtable. " +
+          "Review prompts in Airtable, approve frames, then resume with resume_from_step: 'generate'.",
+        context: { step: "environment_swap_ai" },
+      };
+    }
+  }
+
+  // ── Step 4: Generate ────────────────────────────────────────────────────
+  // Avatar video generation via Kling O3 / Veo 3.1 with character consistency.
+  if (startIndex <= 3) {
+    const generateArgs: string[] = [
+      "--output-dir", ctx.outputDir,
+      "--mode", "video",
+    ];
+
+    if (op.avatar_reference_image) {
+      generateArgs.push("--avatar-image", op.avatar_reference_image);
+    }
+
+    const result = await runPythonScript(deps, "generate_avatar_video.py", generateArgs);
+
+    if (result.exitCode !== 0) {
+      return {
+        status: "FAILED",
+        error_category: "AI_GENERATION_ERROR",
+        severity: "error",
+        message: `Video generation failed: ${result.stderr.slice(0, 500)}`,
+        recovery_action: "halt",
+        context: { step: "environment_swap_ai" },
+      };
+    }
+
+    // GATE: Human reviews generated videos before QA
+    if (!op.resume_from_step || startIndex === 3) {
+      return {
+        status: "NEEDS_HUMAN_INPUT",
+        message:
+          "Videos generated. Review output in Airtable (approve/reject per variation), " +
+          "then resume with resume_from_step: 'qa'.",
+        context: { step: "environment_swap_ai" },
+      };
+    }
+  }
+
+  // ── Step 5: QA ──────────────────────────────────────────────────────────
+  // Probe output files, verify format, build variation list.
+  const variations: AssembledVariation[] = [];
+
+  // Scan output directory for generated video files
+  for (let i = 0; i < ctx.variationCount; i++) {
+    const varIndex = i + 1;
+    const outputFile = join(ctx.outputDir, `variation_${varIndex}.mp4`);
+
+    // Probe the output file if available
+    let duration = ctx.sourceDuration ?? 0;
+    let resolution = ctx.sourceDims
+      ? `${ctx.sourceDims.width}x${ctx.sourceDims.height}`
+      : "1080x1920";
+
+    try {
+      const probeResult = await deps.fileProber.probe(outputFile);
+      duration = probeResult.duration_seconds;
+      resolution = `${probeResult.width}x${probeResult.height}`;
+    } catch {
+      // File may not exist if fewer variations were generated than requested — skip
+      continue;
+    }
+
+    variations.push({
+      variation_index: varIndex,
+      file_path: outputFile,
+      duration_seconds: duration,
+      resolution,
+      edit_summary:
+        `AI environment v2 (Romeo workflow): Gemini analysis → brief → prompts → ${op.background_prompt.slice(0, 40)}`,
+      root_angle_preserved: true,
+    });
+  }
+
+  if (variations.length === 0) {
+    return {
+      status: "FAILED",
+      error_category: "OUTPUT_VALIDATION_ERROR",
+      severity: "error",
+      message: "No output files found after generation. Check output directory.",
+      recovery_action: "halt",
+      context: { step: "environment_swap_ai" },
+    };
   }
 
   return {
     status: "SUCCESS",
-    data: { variations, durationFlags },
+    data: { variations, durationFlags: [] },
   };
-}
-
-// ── Background Prompt Builder ───────────────────────────────────────────────
-
-function buildBackgroundPrompt(basePrompt: string, variationIndex: number): string {
-  return (
-    `Generate a photorealistic background environment: ${basePrompt}. ` +
-    `Suitable for compositing a person in foreground. ` +
-    `Well-lit, consistent perspective, no people. ` +
-    `Variation ${variationIndex}.`
-  );
 }
 
 // ── FFmpeg Composite Args ───────────────────────────────────────────────────
@@ -397,12 +409,56 @@ export function buildCompositeArgs(
   ];
 }
 
+// ── Pre-flight (Quality Engine V4: Execution Guardrails) ─────────────────────
+
+async function preflight(
+  ctx: ExpansionContext,
+  deps: ExpansionDeps,
+): Promise<SubAgentResult<void> | null> {
+  // Verify source file is probed as valid video
+  if (ctx.sourceFile && deps.fileProber) {
+    try {
+      await deps.fileProber.probe(ctx.sourceFile);
+    } catch {
+      return {
+        status: "FAILED",
+        error_category: "VALIDATION_ERROR",
+        severity: "error",
+        message: `Pre-flight FAILED: source file "${ctx.sourceFile}" could not be probed. File may not exist or is not a valid video.`,
+        recovery_action: "halt",
+        context: { step: "environment_swap" },
+      };
+    }
+  }
+
+  // For v2 AI workflow: verify Google API key is set before expensive Gemini calls
+  if (ctx.editOperation.type === "environment_swap_ai") {
+    const hasGoogleKey = !!process.env.GOOGLE_API_KEY;
+    if (!hasGoogleKey) {
+      return {
+        status: "FAILED",
+        error_category: "CREDENTIAL_ERROR",
+        severity: "error",
+        message: "Pre-flight FAILED: GOOGLE_API_KEY not set. Required for Gemini video analysis and prompt generation.",
+        recovery_action: "halt",
+        context: { step: "environment_swap_ai" },
+      };
+    }
+  }
+
+  return null; // All checks passed
+}
+
 // ── Execution Router ────────────────────────────────────────────────────────
 
 async function execute(
   ctx: ExpansionContext,
   deps: ExpansionDeps,
 ): Promise<SubAgentResult<ExpansionResult>> {
+  // Pre-flight checks (Quality Engine V4: Execution Guardrails)
+  const preflightResult = await preflight(ctx, deps);
+  if (preflightResult) return preflightResult as SubAgentResult<ExpansionResult>;
+
   try { await ensureICloudSafeDir(ctx.outputDir); } catch { /* let downstream surface error */ }
 
   if (ctx.editOperation.type === "environment_swap") {

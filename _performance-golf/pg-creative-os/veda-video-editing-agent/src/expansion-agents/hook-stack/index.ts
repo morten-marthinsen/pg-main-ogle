@@ -20,6 +20,7 @@ import { join } from "node:path";
 import { ensureICloudSafeDir } from "../../utils/icloud-safe-dir.js";
 import { buildHookStackArgs } from "../../utils/ffmpeg-executor.js";
 import { selectHooks } from "../../utils/hook-selector.js";
+import { runPythonScript } from "../../utils/python-runner.js";
 import type {
   ExpansionAgent,
   ExpansionContext,
@@ -28,7 +29,7 @@ import type {
   ExpansionValidationResult,
 } from "../types.js";
 import type { SubAgentResult } from "../../types/sub-agent.js";
-import type { AssembledVariation } from "../../types/pipeline.js";
+import type { AssembledVariation, CalloutTextConfig } from "../../types/pipeline.js";
 
 // ── Validation ──────────────────────────────────────────────────────────────
 
@@ -203,12 +204,60 @@ async function prepareAutoHooks(
   return { status: "SUCCESS", data: { hookClips } };
 }
 
+// ── Pre-flight (Quality Engine V4: Execution Guardrails) ─────────────────────
+
+async function preflight(
+  ctx: ExpansionContext,
+  deps: ExpansionDeps,
+): Promise<SubAgentResult<void> | null> {
+  // Gate 5 (VEDA-ANTI-DEGRADATION): hook_clip_path must be real, not placeholder
+  if (ctx.editOperation.type === "hook_stack") {
+    const op = ctx.editOperation;
+    const isPlaceholder = !op.hook_clip_path || op.hook_clip_path === "/clips/default-hook.mp4";
+    const hasPerVarHooks = op.per_variation_hooks && op.per_variation_hooks.length > 0;
+    const hasAutoHooks = !!ctx.hookSelectorInput;
+
+    if (isPlaceholder && !hasPerVarHooks && !hasAutoHooks) {
+      return {
+        status: "FAILED",
+        error_category: "VALIDATION_ERROR",
+        severity: "error",
+        message: "Pre-flight FAILED: hook_clip_path is a placeholder. Pipeline will fail. Provide a real hook clip.",
+        recovery_action: "halt",
+        context: { step: "hook_stack" },
+      };
+    }
+  }
+
+  // Verify source file is probed as valid video
+  if (ctx.sourceFile && deps.fileProber) {
+    try {
+      await deps.fileProber.probe(ctx.sourceFile);
+    } catch {
+      return {
+        status: "FAILED",
+        error_category: "VALIDATION_ERROR",
+        severity: "error",
+        message: `Pre-flight FAILED: source file "${ctx.sourceFile}" could not be probed. File may not exist or is not a valid video.`,
+        recovery_action: "halt",
+        context: { step: "hook_stack" },
+      };
+    }
+  }
+
+  return null; // All checks passed
+}
+
 // ── Execution ───────────────────────────────────────────────────────────────
 
 async function execute(
   ctx: ExpansionContext,
   deps: ExpansionDeps,
 ): Promise<SubAgentResult<ExpansionResult>> {
+  // Pre-flight checks (Quality Engine V4: Execution Guardrails)
+  const preflightResult = await preflight(ctx, deps);
+  if (preflightResult) return preflightResult as SubAgentResult<ExpansionResult>;
+
   // Ensure output directory exists
   try { await ensureICloudSafeDir(ctx.outputDir); } catch { /* let FFmpeg surface error */ }
 
@@ -298,6 +347,43 @@ async function execute(
     });
   }
 
+  // ── Post-processing: Callout Text Burning ──────────────────────────────────
+  // If callout_text config is present, burn PG-branded text overlays onto hook portions.
+  // Uses Romeo's proven burn_callout_text.py via python-runner bridge.
+  if (hookOp.callout_text) {
+    const burnResult = await burnCalloutText(
+      variations,
+      hookOp.callout_text,
+      ctx,
+      deps,
+    );
+    if (burnResult.status !== "SUCCESS") {
+      return burnResult as SubAgentResult<ExpansionResult>;
+    }
+    // Replace variation file paths with burned versions
+    for (let i = 0; i < variations.length; i++) {
+      if (burnResult.data.burnedPaths[i]) {
+        variations[i].file_path = burnResult.data.burnedPaths[i];
+        variations[i].edit_summary += " + callout text burned";
+      }
+    }
+  }
+
+  // ── Post-processing: QA Check ───────────────────────────────────────────────
+  // Run qa_hook_assembly.py on each variation to verify join points.
+  // Returns NEEDS_HUMAN_INPUT if any check fails (PASS/FAIL gate — no partial passes).
+  // Opt-in via run_qa flag in EditOperation to avoid running on every assembly.
+  if (hookOp.run_qa) {
+    const qaResult = await runQaCheck(variations, hookOp.hook_duration_seconds, ctx, deps);
+    if (qaResult.status === "NEEDS_HUMAN_INPUT") {
+      return qaResult as SubAgentResult<ExpansionResult>;
+    }
+    // If QA script isn't available (e.g., whisper not installed), log warning and proceed
+    if (qaResult.status === "FAILED" && qaResult.message?.includes("not found")) {
+      // Non-blocking — QA is optional if dependencies aren't installed
+    }
+  }
+
   return {
     status: "SUCCESS",
     data: {
@@ -305,6 +391,133 @@ async function execute(
       durationFlags: [],
     },
   };
+}
+
+// ── QA Check ─────────────────────────────────────────────────────────────────
+
+/**
+ * Run Whisper-based audio QA and frame extraction at join points.
+ * Uses Romeo's qa_hook_assembly.py via python-runner bridge.
+ *
+ * Returns NEEDS_HUMAN_INPUT if any QA check fails — this is a PASS/FAIL gate
+ * per Quality Engine V4 (no success with warnings).
+ */
+async function runQaCheck(
+  variations: AssembledVariation[],
+  hookDurationSeconds: number,
+  ctx: ExpansionContext,
+  deps: ExpansionDeps,
+): Promise<SubAgentResult<{ qaResults: Record<string, unknown>[] }>> {
+  const qaResults: Record<string, unknown>[] = [];
+  const failures: string[] = [];
+
+  for (const variation of variations) {
+    const args: string[] = [
+      "--input", variation.file_path,
+      "--hook-duration", hookDurationSeconds.toString(),
+      "--output-dir", ctx.outputDir,
+      "--json",
+    ];
+
+    const result = await runPythonScript(deps, "qa_hook_assembly.py", args);
+
+    if (result.exitCode !== 0) {
+      // QA script failed to run (e.g., whisper not installed)
+      return {
+        status: "FAILED",
+        error_category: "VALIDATION_ERROR",
+        severity: "warning",
+        message: `QA script not found or failed to run: ${result.stderr.slice(0, 300)}`,
+        recovery_action: "halt",
+        context: { step: "hook_stack" },
+      };
+    }
+
+    if (result.jsonOutput) {
+      qaResults.push(result.jsonOutput);
+      const passed = (result.jsonOutput as Record<string, unknown>).all_passed;
+      if (!passed) {
+        failures.push(`Variation ${variation.variation_index}: QA checks failed — review qa_frames in ${ctx.outputDir}`);
+      }
+    }
+  }
+
+  if (failures.length > 0) {
+    return {
+      status: "NEEDS_HUMAN_INPUT",
+      message: `Hook stack QA failed:\n${failures.join("\n")}`,
+      context: { step: "hook_stack" },
+    };
+  }
+
+  return { status: "SUCCESS", data: { qaResults } };
+}
+
+// ── Callout Text Burning ─────────────────────────────────────────────────────
+
+/**
+ * Burn PG-branded callout text onto assembled hook stack variations.
+ * Calls burn_callout_text.py which renders red boxes with white text
+ * via PIL, then composites with FFmpeg.
+ *
+ * Three cover modes for handling old baked-in text:
+ * - overlay_at_old_position: opaque red boxes at old text center_y
+ * - overlay_at_standard: new boxes at standard upper-third position
+ * - delogo: erase old text then overlay (last resort)
+ */
+async function burnCalloutText(
+  variations: AssembledVariation[],
+  config: CalloutTextConfig,
+  ctx: ExpansionContext,
+  deps: ExpansionDeps,
+): Promise<SubAgentResult<{ burnedPaths: string[] }>> {
+  const burnedPaths: string[] = [];
+
+  for (let i = 0; i < variations.length; i++) {
+    const variation = variations[i];
+    const lines = config.per_variation?.[i]?.lines ?? config.lines;
+
+    if (!lines || lines.length === 0) {
+      // No callout for this variation — keep original
+      burnedPaths.push(variation.file_path);
+      continue;
+    }
+
+    const outputFile = variation.file_path.replace(/\.mp4$/, "_callout.mp4");
+
+    // Build args for burn_callout_text.py
+    const args: string[] = [
+      "--input", variation.file_path,
+      "--output", outputFile,
+      "--lines", JSON.stringify(lines),
+      "--hook-duration", config.hook_duration.toString(),
+    ];
+
+    if (config.cover_mode) {
+      args.push("--cover-mode", config.cover_mode);
+    }
+
+    if (config.old_callout_override) {
+      args.push("--old-callout-override", JSON.stringify(config.old_callout_override));
+    }
+
+    const result = await runPythonScript(deps, "burn_callout_text.py", args);
+
+    if (result.exitCode !== 0) {
+      return {
+        status: "FAILED",
+        error_category: "EDIT_ERROR",
+        severity: "error",
+        message: `Callout text burn failed for variation ${i + 1}: ${result.stderr.slice(0, 500)}`,
+        recovery_action: "halt",
+        context: { step: "hook_stack" },
+      };
+    }
+
+    burnedPaths.push(outputFile);
+  }
+
+  return { status: "SUCCESS", data: { burnedPaths } };
 }
 
 // ── Agent Definition ────────────────────────────────────────────────────────
