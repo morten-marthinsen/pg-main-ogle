@@ -460,6 +460,192 @@ describe("environmentAgent.execute (v2 AI — Romeo workflow)", () => {
     expect(calls.length).toBe(1);
     expect(calls[0][1][0]).toContain("generate_video_prompts.py");
   });
+
+  it("produces correct number of variations at QA step", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      variationCount: 3,
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "qa" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+    expect(result.status).toBe("SUCCESS");
+    if (result.status !== "SUCCESS") return;
+    expect(result.data.variations).toHaveLength(3);
+    // 4 calls: 1 pre-flight probe + 3 variation probes
+    expect(deps.fileProber.probe).toHaveBeenCalledTimes(4);
+  });
+
+  it("includes background_prompt in edit_summary", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course with mountain backdrop",
+        resume_from_step: "qa" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+    expect(result.status).toBe("SUCCESS");
+    if (result.status !== "SUCCESS") return;
+    expect(result.data.variations[0].edit_summary).toContain("sunny golf course");
+  });
+
+  it("FAILS when no variations found after QA probe", async () => {
+    // Pre-flight probe succeeds (source file), but variation probes fail (no output files)
+    let callCount = 0;
+    const selectiveProber = {
+      probe: vi.fn().mockImplementation((path: string) => {
+        callCount++;
+        if (callCount === 1) {
+          // First call is pre-flight on source file — succeed
+          return Promise.resolve({ duration_seconds: 30, width: 1080, height: 1920 });
+        }
+        // Subsequent calls are variation file probes — fail
+        return Promise.reject(new Error("ENOENT"));
+      }),
+    };
+    const deps = makeV2Deps({ fileProber: selectiveProber });
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "qa" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+    expect(result.status).toBe("FAILED");
+    if (result.status !== "FAILED") return;
+    expect(result.error_category).toBe("OUTPUT_VALIDATION_ERROR");
+  });
+
+  it("FAILS on brief generation script error", async () => {
+    let callCount = 0;
+    const mixedRunner = {
+      run: vi.fn().mockImplementation(() => {
+        callCount++;
+        if (callCount === 2) return Promise.resolve({ exitCode: 1, stdout: "", stderr: "Brief generation error" });
+        return Promise.resolve({ exitCode: 0, stdout: "", stderr: "" });
+      }),
+    };
+    const deps = makeV2Deps({ commandRunner: mixedRunner });
+    const result = await environmentAgent.execute(makeV2Ctx(), deps);
+    expect(result.status).toBe("FAILED");
+    if (result.status !== "FAILED") return;
+    expect(result.message).toContain("Brief generation failed");
+  });
+
+  it("FAILS on prompt generation script error", async () => {
+    const failRunner = {
+      run: vi.fn().mockResolvedValue({ exitCode: 1, stdout: "", stderr: "Prompt gen error" }),
+    };
+    const deps = makeV2Deps({ commandRunner: failRunner });
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "golf course",
+        resume_from_step: "prompts" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+    expect(result.status).toBe("FAILED");
+    if (result.status !== "FAILED") return;
+    expect(result.message).toContain("Prompt generation failed");
+  });
+
+  it("FAILS on video generation script error", async () => {
+    const failRunner = {
+      run: vi.fn().mockResolvedValue({ exitCode: 1, stdout: "", stderr: "Kling API error" }),
+    };
+    const deps = makeV2Deps({ commandRunner: failRunner });
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "golf course",
+        resume_from_step: "generate" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+    expect(result.status).toBe("FAILED");
+    if (result.status !== "FAILED") return;
+    expect(result.message).toContain("Video generation failed");
+  });
+
+  it("FAILS pre-flight when GOOGLE_API_KEY not set", async () => {
+    const origKey = process.env.GOOGLE_API_KEY;
+    delete process.env.GOOGLE_API_KEY;
+    try {
+      const deps = makeV2Deps();
+      const result = await environmentAgent.execute(makeV2Ctx(), deps);
+      expect(result.status).toBe("FAILED");
+      if (result.status !== "FAILED") return;
+      expect(result.error_category).toBe("CREDENTIAL_ERROR");
+      expect(result.message).toContain("GOOGLE_API_KEY");
+    } finally {
+      if (origKey !== undefined) process.env.GOOGLE_API_KEY = origKey;
+      else process.env.GOOGLE_API_KEY = "test-key-for-preflight";
+    }
+  });
+
+  it("FAILS pre-flight when source file cannot be probed", async () => {
+    const failProber = { probe: vi.fn().mockRejectedValue(new Error("not a video")) };
+    const deps = makeV2Deps({ fileProber: failProber });
+    const result = await environmentAgent.execute(makeV2Ctx(), deps);
+    expect(result.status).toBe("FAILED");
+    if (result.status !== "FAILED") return;
+    expect(result.message).toContain("Pre-flight FAILED");
+  });
+
+  it("returns empty durationFlags on success", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "qa" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+    expect(result.status).toBe("SUCCESS");
+    if (result.status !== "SUCCESS") return;
+    expect(result.data.durationFlags).toHaveLength(0);
+  });
+
+  it("preserves root_angle_preserved flag on variations", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "qa" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+    expect(result.status).toBe("SUCCESS");
+    if (result.status !== "SUCCESS") return;
+    expect(result.data.variations[0].root_angle_preserved).toBe(true);
+  });
+
+  it("generates output paths in outputDir for v2", async () => {
+    const deps = makeV2Deps();
+    const ctx = makeV2Ctx({
+      outputDir: "/custom/v2/output",
+      variationCount: 2,
+      editOperation: {
+        type: "environment_swap_ai",
+        background_prompt: "sunny golf course",
+        resume_from_step: "qa" as const,
+      },
+    });
+    const result = await environmentAgent.execute(ctx, deps);
+    expect(result.status).toBe("SUCCESS");
+    if (result.status !== "SUCCESS") return;
+    expect(result.data.variations[0].file_path).toBe("/custom/v2/output/variation_1.mp4");
+    expect(result.data.variations[1].file_path).toBe("/custom/v2/output/variation_2.mp4");
+  });
 });
 
 // ── buildCompositeArgs ──────────────────────────────────────────────────────
