@@ -1,9 +1,11 @@
 {
   "mcpServers": {
     "figma": {
+      "type": "http",
       "url": "https://mcp.figma.com/mcp"
     },
     "clickup": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "@hauptsache.net/clickup-mcp@latest"],
       "env": {
@@ -11,14 +13,17 @@
       }
     },
     "google-docs": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "@a-bonus/google-docs-mcp"]
     },
     "fathom": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "fathom-mcp"]
     },
     "firecrawl-mcp": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "firecrawl-mcp"],
       "env": {
@@ -26,10 +31,11 @@
       }
     },
     "apify": {
+      "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@anthropic-ai/mcp-server-apify"],
+      "args": ["-y", "@apify/actors-mcp-server"],
       "env": {
-        "APIFY_API_TOKEN": "${APIFY_API_TOKEN}"
+        "APIFY_TOKEN": "${APIFY_TOKEN}"
       }
     },
     "exa": {
@@ -37,6 +43,7 @@
       "url": "https://mcp.exa.ai/mcp?exaApiKey=${EXA_API_KEY}&tools=web_search_exa,get_code_context_exa,crawling_exa,company_research_exa,linkedin_search_exa,deep_researcher_start,deep_researcher_check"
     },
     "perplexity": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "perplexity-mcp"],
       "env": {
@@ -58,10 +65,12 @@
       }
     },
     "playwright": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "@playwright/mcp"]
     },
     "context7": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp@latest"]
     }
