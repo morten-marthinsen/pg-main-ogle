@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PG1 — Performance Golf</title>
+  <meta name="description" content="Brixton's Billion Dollar Bet On The Golf Industry">
+
+  <!-- Google Fonts Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==================== @FONT-FACE ==================== */
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Regular.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Medium.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Bold.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Super Text';
+      src: url('fonts/gt-super-text/GT-Super-Text-Book.woff2') format('woff2'),
+           url('fonts/gt-super-text/GT-Super-Text-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Super Text';
+      src: url('fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2') format('woff2'),
+           url('fonts/gt-super-text/GT-Super-Text-Book-Italic.woff') format('woff');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro Mono';
+      src: url('fonts/repro-mono/ABCReproMono-Regular.woff2') format('woff2'),
+           url('fonts/repro-mono/ABCReproMono-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ==================== CSS VARIABLES ==================== */
+
+    :root {
+      /* Colors — Primary */
+      --pg-orange: #FD3300;
+      --pg-dark-orange: #DB2C00;
+      --pg-black: #1D1A1A;
+      --pg-ui-gray: #7B726C;
+
+      /* Colors — Neutrals */
+      --pg-stone: #B3AAA3;
+      --pg-pebble: #DFD9D5;
+      --pg-sand: #ECE9E4;
+      --pg-fog: #F4F2F0;
+      --pg-mist: #FCFAFA;
+
+      /* Colors — Secondary */
+      --pg-hi-vis: #E4F222;
+      --pg-grass: #BCE9B1;
+      --pg-forest: #2E4734;
+      --pg-sky: #B2C6EB;
+      --pg-indigo: #4F41D5;
+      --pg-polo: #C5A6CA;
+
+      /* Typography — Families */
+      --pg-font-heading: 'Repro', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --pg-font-display: 'GT Super Text', Georgia, 'Times New Roman', serif;
+      --pg-font-mono: 'Repro Mono', 'DM Mono', 'Courier New', monospace;
+
+      /* Typography — Scale */
+      --pg-text-hero: clamp(3rem, 10vw, 8rem);
+      --pg-text-7xl: 4.5rem;
+      --pg-text-6xl: 3.75rem;
+      --pg-text-5xl: 3rem;
+      --pg-text-4xl: 2.25rem;
+      --pg-text-3xl: 1.875rem;
+      --pg-text-2xl: 1.5rem;
+      --pg-text-xl: 1.25rem;
+      --pg-text-base: 1rem;
+      --pg-text-sm: 0.875rem;
+      --pg-text-xs: 0.75rem;
+      --pg-text-2xs: 0.625rem;
+
+      /* Spacing */
+      --pg-space-0: 0;
+      --pg-space-1: 0.25rem;
+      --pg-space-2: 0.5rem;
+      --pg-space-3: 0.75rem;
+      --pg-space-4: 1rem;
+      --pg-space-5: 1.25rem;
+      --pg-space-6: 1.5rem;
+      --pg-space-8: 2rem;
+      --pg-space-10: 2.5rem;
+      --pg-space-12: 3rem;
+      --pg-space-16: 4rem;
+      --pg-space-20: 5rem;
+      --pg-space-24: 6rem;
+      --pg-space-32: 8rem;
+      --pg-space-xs: var(--pg-space-1);
+      --pg-space-sm: var(--pg-space-2);
+      --pg-space-md: var(--pg-space-4);
+      --pg-space-lg: var(--pg-space-6);
+      --pg-space-xl: var(--pg-space-8);
+      --pg-space-2xl: var(--pg-space-12);
+      --pg-space-3xl: var(--pg-space-16);
+      --pg-space-4xl: var(--pg-space-24);
+
+      /* Borders */
+      --pg-radius: 4px;
+      --pg-radius-sm: 2px;
+      --pg-radius-md: 8px;
+      --pg-radius-lg: 12px;
+      --pg-radius-full: 9999px;
+
+      /* Shadows */
+      --pg-shadow-sm: 0 1px 2px 0 rgba(29, 26, 26, 0.05);
+      --pg-shadow: 0 1px 3px 0 rgba(29, 26, 26, 0.1), 0 1px 2px -1px rgba(29, 26, 26, 0.1);
+      --pg-shadow-md: 0 4px 6px -1px rgba(29, 26, 26, 0.1), 0 2px 4px -2px rgba(29, 26, 26, 0.1);
+      --pg-shadow-lg: 0 10px 15px -3px rgba(29, 26, 26, 0.1), 0 4px 6px -4px rgba(29, 26, 26, 0.1);
+      --pg-shadow-orange: 0 4px 14px 0 rgba(253, 51, 0, 0.25);
+
+      /* Transitions */
+      --pg-transition-fast: 150ms ease;
+      --pg-transition-base: 200ms ease;
+      --pg-transition-slow: 300ms ease;
+      --pg-transition-slower: 500ms ease;
+
+      /* Containers */
+      --pg-container-sm: 640px;
+      --pg-container-md: 768px;
+      --pg-container-lg: 1024px;
+      --pg-container-xl: 1280px;
+      --pg-container-2xl: 1536px;
+    }
+
+    /* ==================== RESET ==================== */
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background-color: var(--pg-orange);
+      color: var(--pg-mist);
+    }
+
+    /* ==================== BASE ==================== */
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--pg-mist);
+      color: var(--pg-black);
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ==================== HEADER ==================== */
+
+    .pg-header {
+      background-color: var(--pg-mist);
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    .pg-header__logo {
+      height: 20px;
+      width: auto;
+    }
+
+    /* ==================== PRESS BAR ==================== */
+
+    .pg-press-bar {
+      background-color: #2A2725;
+      padding: 12px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 20px;
+    }
+
+    .pg-press-bar__label {
+      font-family: var(--pg-font-mono);
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pg-stone);
+      white-space: nowrap;
+    }
+
+    .pg-press-bar__logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 18px;
+    }
+
+    .pg-press-bar__publication {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      color: var(--pg-stone);
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .pg-press-bar__publication--golf-digest {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .pg-press-bar__publication--golfweek {
+      font-family: var(--pg-font-heading);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .pg-press-bar__publication--sports-illustrated {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .pg-press-bar__publication--espn {
+      font-family: var(--pg-font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .pg-press-bar__publication--golf {
+      font-family: var(--pg-font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ==================== MAIN CONTENT ==================== */
+
+    .pg-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    /* ==================== EXCLUSIVE BADGE ==================== */
+
+    .pg-badge {
+      display: inline-block;
+      background-color: var(--pg-orange);
+      color: var(--pg-mist);
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 10px 32px;
+      border-radius: 0;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    /* ==================== VIDEO THUMBNAIL ==================== */
+
+    .pg-video {
+      width: 100%;
+      max-width: none;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      border: 2px solid var(--pg-black);
+      border-radius: 0;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #2A2725;
+    }
+
+    .pg-video::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('images/video-thumbnail.webp');
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      transform: scale(1.05);
+    }
+
+    .pg-video:hover::before {
+      filter: blur(6px);
+    }
+
+    .pg-video__overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .pg-video__stamp {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: clamp(20px, 5vw, 40px);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pg-orange);
+      border: 3px solid var(--pg-orange);
+      padding: 6px 18px;
+      transform: rotate(-12deg);
+      opacity: 0.9;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 0 2px rgba(253, 51, 0, 0.3);
+      background: rgba(29, 26, 26, 0.4);
+      position: absolute;
+      top: 12%;
+      left: 8%;
+    }
+
+    .pg-video__play-icon {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--pg-mist);
+      font-size: 48px;
+      line-height: 1;
+      opacity: 0.9;
+    }
+
+    .pg-video__play-icon span {
+      font-family: var(--pg-font-heading);
+      font-weight: 300;
+    }
+
+    .pg-video__play-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid var(--pg-mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--pg-mist);
+      box-shadow: 0 0 20px rgba(228, 242, 34, 0.6), 0 0 40px rgba(228, 242, 34, 0.3);
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    .pg-video__play-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--pg-black);
+      margin-left: 4px;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(228, 242, 34, 0.5), 0 0 40px rgba(228, 242, 34, 0.2);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 35px rgba(228, 242, 34, 0.8), 0 0 70px rgba(228, 242, 34, 0.4);
+        transform: scale(1.08);
+      }
+    }
+
+    .pg-video__label {
+      font-family: var(--pg-font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pg-mist);
+      margin-top: 4px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    /* ==================== HEADLINE AREA ==================== */
+
+    .pg-headline-area {
+      text-align: center;
+      max-width: 480px;
+      margin-top: 32px;
+      padding: 0 16px 80px;
+    }
+
+    .pg-prehead {
+      font-family: var(--pg-font-display);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.4;
+      color: var(--pg-black);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .pg-mobile-br {
+      display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      .pg-mobile-br {
+        display: block;
+      }
+    }
+
+    .pg-headline {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--pg-black);
+      letter-spacing: -0.03em;
+      margin-top: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .pg-headline {
+        font-size: 48px;
+      }
+
+      .pg-prehead {
+        font-size: 22px;
+      }
+
+      .pg-video {
+        max-width: 720px;
+      }
+
+      .pg-headline-area {
+        max-width: 560px;
+      }
+    }
+
+    /* ==================== FOOTER ==================== */
+
+    .pg-footer {
+      background-color: var(--pg-black);
+      padding: 48px 16px 32px;
+      text-align: center;
+    }
+
+    .pg-footer__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pg-footer__logo {
+      width: 200px;
+      height: auto;
+    }
+
+    .pg-footer__contact {
+      margin-top: 16px;
+    }
+
+    .pg-footer__email {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-stone);
+    }
+
+    .pg-footer__email a {
+      color: var(--pg-stone);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__email a:hover {
+      color: var(--pg-mist);
+    }
+
+    .pg-footer__phone {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-stone);
+      margin-top: 8px;
+    }
+
+    .pg-footer__divider {
+      border: none;
+      border-top: 1px solid #333;
+      max-width: 360px;
+      margin: 24px auto;
+    }
+
+    .pg-footer__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pg-footer__nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .pg-footer__nav-link {
+      font-family: var(--pg-font-mono);
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pg-ui-gray);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__nav-link:hover {
+      color: var(--pg-mist);
+    }
+
+    .pg-footer__copyright {
+      font-family: var(--pg-font-heading);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      margin-top: 16px;
+      order: 1;
+    }
+
+    .pg-footer__phone a {
+      color: var(--pg-stone);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__phone a:hover {
+      color: var(--pg-mist);
+    }
+
+    /* Footer desktop layout */
+    @media screen and (min-width: 768px) {
+      .pg-footer {
+        padding: 32px 40px 24px;
+        text-align: left;
+      }
+
+      .pg-footer__top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .pg-footer__logo {
+        width: 260px;
+      }
+
+      .pg-footer__contact {
+        margin-top: 0;
+        text-align: right;
+      }
+
+      .pg-footer__divider {
+        max-width: none;
+        margin: 24px 0;
+      }
+
+      .pg-footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .pg-footer__copyright {
+        margin-top: 0;
+        order: 0;
+      }
+
+      .pg-footer__nav {
+        gap: 20px;
+      }
+    }
+
+    /* ==================== FOCUS STATES ==================== */
+
+    :focus-visible {
+      outline: 2px solid var(--pg-orange);
+      outline-offset: 2px;
+    }
+
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    .pg-video:focus-visible {
+      outline: 3px solid var(--pg-orange);
+      outline-offset: 2px;
+    }
+
+    /* ==================== SKIP LINK ==================== */
+
+    .pg-skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--pg-orange);
+      color: var(--pg-mist);
+      padding: 8px 16px;
+      z-index: 100;
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: top 200ms ease;
+    }
+
+    .pg-skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="pg-skip-link">Skip to main content</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="pg-header">
+    <svg class="pg-header__logo" viewBox="0 0 541 196" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>Performance Golf</title>
+      <path fill="#1D1A1A" d="M285,28v140c0,15.43927,12.56055,28,28,28h200c15.43945,0,28-12.56073,28-28v-60c0-15.43927-12.56055-28-28-28h-123v36h85v24h-124V56h185V0h-223c-15.43945,0-28,12.56073-28,28Z"/>
+      <path fill="#1D1A1A" d="M256,113V28c0-15.43927-12.56055-28-28-28H0v196h66V56h124v34h-100v51h138c15.43945,0,28-12.56073,28-28Z"/>
+    </svg>
+  </header>
+
+  <!-- ==================== PRESS BAR ==================== -->
+  <div class="pg-press-bar" role="complementary" aria-label="As featured in">
+    <span class="pg-press-bar__label">As Featured In:</span>
+    <div class="pg-press-bar__logos">
+      <span class="pg-press-bar__publication pg-press-bar__publication--golf-digest">GolfDigest</span>
+      <span class="pg-press-bar__publication pg-press-bar__publication--golfweek">Golfweek</span>
+      <span class="pg-press-bar__publication pg-press-bar__publication--sports-illustrated">Sports Illustrated</span>
+      <span class="pg-press-bar__publication pg-press-bar__publication--espn">ESPN</span>
+      <span class="pg-press-bar__publication pg-press-bar__publication--golf">GOLF</span>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="pg-main" id="main-content">
+
+    <!-- Exclusive Badge -->
+    <span class="pg-badge">Exclusive</span>
+
+    <!-- Video Thumbnail -->
+    <div class="pg-video" role="button" tabindex="0" aria-label="Play video">
+      <div class="pg-video__overlay">
+        <span class="pg-video__stamp">Top Secret</span>
+        <div class="pg-video__play-icon">
+          <span>&#187;</span>
+          <div class="pg-video__play-btn">
+            <svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
+          </div>
+          <span>&#171;</span>
+        </div>
+        <span class="pg-video__label">Press Play</span>
+      </div>
+    </div>
+
+    <!-- Headline Area -->
+    <div class="pg-headline-area">
+      <p class="pg-prehead">New Keynote: Top Coaches Are Calling This $5,000,000 Breakthrough</p>
+      <h1 class="pg-headline">The End Of<br>Traditional Instruction</h1>
+    </div>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="pg-footer">
+    <div class="pg-footer__top">
+      <svg class="pg-footer__logo" viewBox="0 0 1327.04337 71.30005" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="#FCFAFA" d="M99.60459,11.18568v48.92857c0,5.39587,4.38978,9.78571,9.78571,9.78571h69.89796c5.39593,0,9.78571-4.38985,9.78571-9.78571v-20.96939c0-5.39587-4.38978-9.78571-9.78571-9.78571h-42.98724v12.58163h29.70663v8.38776h-43.33673v-29.35714h64.65561V1.39996h-77.93622c-5.39593,0-9.78571,4.38985-9.78571,9.78571Z"/>
+        <path fill="#FCFAFA" d="M89.46939,40.89231V11.18568c0-5.39587-4.38978-9.78571-9.78571-9.78571H0v68.5h23.06633V20.97139h43.33673v11.88265H31.45408v17.82398h48.22959c5.39593,0,9.78571-4.38985,9.78571-9.78571Z"/>
+        <path fill="#FCFAFA" d="M1125.38614,64.47168l.67993,5.42847h10.87695l-.10034-36.30518h-32.90479v11.10986h18.45679l-.23315.93188c-2.3291,9.31348-11.49268,13.55542-19.021,13.55542-12.30371,0-20.57031-9.44092-20.57031-23.49268,0-14.1106,8.2666-23.59131,20.57031-23.59131,7.54395,0,13.88818,3.70459,17.47632,10.18213h15.92212C1131.50211,8.51221,1118.80142.00024,1103.14054.00024c-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61401-10.09985,25.73511,0,10.07788,3.58667,19.18652,10.09937,25.64819,6.46851,6.41797,15.52588,9.95239,25.50366,9.95239,9.85059,0,15.58691-3.47559,21.06885-7.34766l1.02148-.72144.15527,1.24072Z"/>
+        <path fill="#FCFAFA" d="M787.47672,1.3999l-25.79907,68.5h14.94067l5.32568-15.57788.17358-.50732h29.00635l.17163.51123,5.22949,15.57397h15.98193L806.52188,1.3999h-19.04517ZM807.67276,42.70483h-22.00684l.3833-1.01489,9.40015-24.89502.18213-.48193.51514-.00317.39453-.00244.2644-.00146.51465-.00293.18799.47925,9.76318,24.89893.40137,1.02368Z"/>
+        <polygon fill="#FCFAFA" points="1238.41861 1.3999 1223.2377 1.3999 1223.2377 69.8999 1270.39005 69.8999 1270.39005 58.49194 1239.16861 58.49194 1238.41861 58.49194 1238.41861 57.74194 1238.41861 1.3999"/>
+        <polygon fill="#FCFAFA" points="1001.48355 13.55786 1001.48355 12.80786 1002.23355 12.80786 1038.03751 12.80786 1038.03751 1.3999 986.70011 1.3999 986.70011 69.8999 1038.03751 69.8999 1038.03751 58.49194 1002.23355 58.49194 1001.48355 58.49194 1001.48355 57.74194 1001.48355 41.95483 1001.48355 41.20483 1002.23355 41.20483 1034.95963 41.20483 1034.95963 30.09497 1002.23355 30.09497 1001.48355 30.09497 1001.48355 29.34497 1001.48355 13.55786"/>
+        <path fill="#FCFAFA" d="M645.1503,1.40015h-36.80664v68.5h15.08154v-25.19531h5.30249l.22485.27075,20.69946,24.92456h18.04663l-21.04614-24.03955-.99854-1.14062,1.51221-.10181c13.60522-.91675,22.05688-9.16577,22.05688-21.52808,0-12.77075-9.89917-21.68994-24.07275-21.68994ZM642.66837,33.59497h-19.24316V12.80786h19.14404c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07617,10.39355Z"/>
+        <path fill="#FCFAFA" d="M945.13516.00024c-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61401-10.09985,25.73511,0,10.07788,3.58667,19.18652,10.09937,25.64819,6.46851,6.41797,15.52588,9.95239,25.50366,9.95239,15.67578,0,28.38257-8.51221,33.41382-22.29004h-15.92383c-3.59131,6.47754-9.94067,10.18213-17.48999,10.18213-12.30396,0-20.5708-9.44092-20.5708-23.49268,0-14.1106,8.26685-23.59131,20.5708-23.59131,7.5437,0,13.8877,3.70459,17.47583,10.18213h15.92261C973.49674,8.51221,960.79605.00024,945.13516.00024Z"/>
+        <path fill="#FCFAFA" d="M1179.94083,0c-9.98242,0-19.03955,3.53857-25.50342,9.96411-6.51294,6.47461-10.09985,15.61426-10.09985,25.7356,0,10.07764,3.58667,19.18628,10.09937,25.64795,6.46851,6.41772,15.52588,9.95215,25.50391,9.95215,20.68408,0,35.69678-14.97192,35.69678-35.6001,0-10.11475-3.60327-19.25391-10.14575-25.73462-6.48779-6.42603-15.56201-9.96509-25.55103-9.96509ZM1179.94083,59.19189c-12.30396,0-20.57056-9.44067-20.57056-23.49219,0-14.11108,8.2666-23.5918,20.57056-23.5918,12.35986,0,20.66406,9.48071,20.66406,23.5918,0,14.05151-8.3042,23.49219-20.66406,23.49219Z"/>
+        <polygon fill="#FCFAFA" points="855.4335 22.29004 855.88468 22.29004 856.0961 22.68872 881.1293 69.8999 901.09195 69.8999 901.09195 1.3999 886.61051 1.3999 886.89493 48.25513 886.89957 49.00977 886.14493 49.00977 885.49063 49.00977 885.02579 49.00977 884.819 48.59351 861.3776 1.3999 839.34366 1.3999 839.34366 69.8999 854.02823 69.8999 854.02823 23.04004 854.02823 22.29004 854.77823 22.29004 855.4335 22.29004"/>
+        <polygon fill="#FCFAFA" points="741.4545 69.8999 755.54337 69.8999 755.54337 1.3999 734.11148 1.3999 718.80631 33.17114 718.60123 33.59668 718.12906 33.5957 717.9462 33.59521 717.45523 33.59448 716.98477 33.59375 716.78043 33.16992 701.47525 1.3999 680.04337 1.3999 680.04337 69.8999 694.13223 69.8999 694.13223 23.04028 694.13223 22.29028 694.88223 22.29028 695.56778 22.29028 696.03995 22.29028 696.24405 22.71606 716.51554 65 719.0712 65 739.34244 22.71582 739.54654 22.29004 740.01871 22.29004 740.7045 22.29004 741.4545 22.29004 741.4545 23.04004 741.4545 69.8999"/>
+        <polygon fill="#FCFAFA" points="361.02701 13.55786 361.02701 12.80786 361.77701 12.80786 397.58097 12.80786 397.58097 1.3999 346.24356 1.3999 346.24356 69.8999 397.58097 69.8999 397.58097 58.49194 361.77701 58.49194 361.02701 58.49194 361.02701 57.74194 361.02701 41.95483 361.02701 41.20483 361.77701 41.20483 394.50308 41.20483 394.50308 30.09497 361.77701 30.09497 361.02701 30.09497 361.02701 29.34497 361.02701 13.55786"/>
+        <path fill="#FCFAFA" d="M590.59781,9.96509c-6.48779-6.42603-15.56201-9.96509-25.55103-9.96509-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61426-10.09985,25.7356,0,10.07764,3.58667,19.18628,10.09937,25.64795,6.46851,6.41772,15.52588,9.95215,25.50366,9.95215,20.68408,0,35.69678-14.97192,35.69678-35.6001,0-10.11475-3.60327-19.25391-10.14575-25.73462ZM565.04679,59.19189c-12.30396,0-20.57056-9.44067-20.57056-23.49219,0-14.11108,8.2666-23.5918,20.57056-23.5918,12.35986,0,20.66406,9.48071,20.66406,23.5918,0,14.05151-8.3042,23.49219-20.66406,23.49219Z"/>
+        <path fill="#FCFAFA" d="M314.85391,44.70483c14.92505,0,24.56909-8.48438,24.56909-21.61499,0-12.77075-9.89893-21.68994-24.07251-21.68994h-36.80713v68.5h15.08179v-25.19507h21.22876ZM293.62515,32.84497V12.80786h19.1438c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07593,10.39355h-19.24316v-.75Z"/>
+        <path fill="#FCFAFA" d="M443.8505,1.40015h-36.80664v68.5h15.08154v-25.19531h5.30249l.22485.27075,20.69946,24.92456h18.04663l-21.04614-24.03955-.99854-1.14062,1.51221-.10181c13.60522-.91675,22.05688-9.16577,22.05688-21.52808,0-12.77075-9.89917-21.68994-24.07275-21.68994ZM441.36856,33.59497h-19.24316V12.80786h19.14404c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07617,10.39355Z"/>
+        <polygon fill="#FCFAFA" points="1323.76627 41.20483 1323.76627 30.09497 1293.72183 30.09497 1292.97183 30.09497 1292.97183 29.34497 1292.97183 13.55786 1292.97183 12.80786 1293.72183 12.80786 1327.04337 12.80786 1327.04337 1.3999 1277.9899 1.3999 1277.9899 69.8999 1292.97183 69.8999 1292.97183 41.95483 1292.97183 41.20483 1293.72183 41.20483 1323.76627 41.20483"/>
+        <polygon fill="#FCFAFA" points="522.42105 41.20483 522.42105 30.09497 492.37589 30.09497 491.62589 30.09497 491.62589 29.34497 491.62589 13.55786 491.62589 12.80786 492.37589 12.80786 525.69766 12.80786 525.69766 1.3999 476.64347 1.3999 476.64347 69.8999 491.62589 69.8999 491.62589 41.95483 491.62589 41.20483 492.37589 41.20483 522.42105 41.20483"/>
+      </svg>
+
+      <div class="pg-footer__contact">
+        <p class="pg-footer__email"><a href="mailto:support@performancegolf.com">support@performancegolf.com</a></p>
+        <p class="pg-footer__phone"><a href="tel:1-833-741-4653">1-833-PG1-GOLF</a></p>
+      </div>
+    </div>
+
+    <hr class="pg-footer__divider">
+
+    <div class="pg-footer__bottom">
+      <p class="pg-footer__copyright">&copy; Copyright 2026 Performance Golf</p>
+
+      <nav aria-label="Footer navigation">
+        <ul class="pg-footer__nav">
+          <li><a href="#" class="pg-footer__nav-link">Home</a></li>
+          <li><a href="#" class="pg-footer__nav-link">About</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Contact</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Privacy</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    var video = document.querySelector('.pg-video');
+    video.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        video.click();
+      }
+    });
+  </script>
+
+</body>
+</html>

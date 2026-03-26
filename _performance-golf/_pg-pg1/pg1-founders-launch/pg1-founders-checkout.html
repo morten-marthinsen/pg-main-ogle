@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PG1 Founders Checkout — Performance Golf</title>
+  <meta name="description" content="Join PG1 as a Founding Member — Your Personalized Path to Better Golf">
+
+  <!-- Google Fonts Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==================== @FONT-FACE ==================== */
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Regular.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Medium.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Bold.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Super Text';
+      src: url('fonts/gt-super-text/GT-Super-Text-Book.woff2') format('woff2'),
+           url('fonts/gt-super-text/GT-Super-Text-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Super Text';
+      src: url('fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2') format('woff2'),
+           url('fonts/gt-super-text/GT-Super-Text-Book-Italic.woff') format('woff');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro Mono';
+      src: url('fonts/repro-mono/ABCReproMono-Regular.woff2') format('woff2'),
+           url('fonts/repro-mono/ABCReproMono-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ==================== CSS VARIABLES ==================== */
+
+    :root {
+      /* Colors — Primary */
+      --pg-orange: #FD3300;
+      --pg-dark-orange: #DB2C00;
+      --pg-black: #1D1A1A;
+      --pg-ui-gray: #7B726C;
+
+      /* Colors — Neutrals */
+      --pg-stone: #B3AAA3;
+      --pg-pebble: #DFD9D5;
+      --pg-sand: #ECE9E4;
+      --pg-fog: #F4F2F0;
+      --pg-mist: #FCFAFA;
+
+      /* Colors — Secondary */
+      --pg-hi-vis: #E4F222;
+      --pg-grass: #BCE9B1;
+      --pg-forest: #2E4734;
+      --pg-sky: #B2C6EB;
+      --pg-indigo: #4F41D5;
+      --pg-polo: #C5A6CA;
+
+      /* Typography — Families */
+      --pg-font-heading: 'Repro', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --pg-font-display: 'GT Super Text', Georgia, 'Times New Roman', serif;
+      --pg-font-mono: 'Repro Mono', 'DM Mono', 'Courier New', monospace;
+
+      /* Typography — Scale */
+      --pg-text-hero: clamp(3rem, 10vw, 8rem);
+      --pg-text-7xl: 4.5rem;
+      --pg-text-6xl: 3.75rem;
+      --pg-text-5xl: 3rem;
+      --pg-text-4xl: 2.25rem;
+      --pg-text-3xl: 1.875rem;
+      --pg-text-2xl: 1.5rem;
+      --pg-text-xl: 1.25rem;
+      --pg-text-base: 1rem;
+      --pg-text-sm: 0.875rem;
+      --pg-text-xs: 0.75rem;
+      --pg-text-2xs: 0.625rem;
+
+      /* Spacing */
+      --pg-space-0: 0;
+      --pg-space-1: 0.25rem;
+      --pg-space-2: 0.5rem;
+      --pg-space-3: 0.75rem;
+      --pg-space-4: 1rem;
+      --pg-space-5: 1.25rem;
+      --pg-space-6: 1.5rem;
+      --pg-space-8: 2rem;
+      --pg-space-10: 2.5rem;
+      --pg-space-12: 3rem;
+      --pg-space-16: 4rem;
+      --pg-space-20: 5rem;
+      --pg-space-24: 6rem;
+      --pg-space-32: 8rem;
+      --pg-space-xs: var(--pg-space-1);
+      --pg-space-sm: var(--pg-space-2);
+      --pg-space-md: var(--pg-space-4);
+      --pg-space-lg: var(--pg-space-6);
+      --pg-space-xl: var(--pg-space-8);
+      --pg-space-2xl: var(--pg-space-12);
+      --pg-space-3xl: var(--pg-space-16);
+      --pg-space-4xl: var(--pg-space-24);
+
+      /* Borders */
+      --pg-radius: 4px;
+      --pg-radius-sm: 2px;
+      --pg-radius-md: 8px;
+      --pg-radius-lg: 12px;
+      --pg-radius-full: 9999px;
+
+      /* Shadows */
+      --pg-shadow-sm: 0 1px 2px 0 rgba(29, 26, 26, 0.05);
+      --pg-shadow: 0 1px 3px 0 rgba(29, 26, 26, 0.1), 0 1px 2px -1px rgba(29, 26, 26, 0.1);
+      --pg-shadow-md: 0 4px 6px -1px rgba(29, 26, 26, 0.1), 0 2px 4px -2px rgba(29, 26, 26, 0.1);
+      --pg-shadow-lg: 0 10px 15px -3px rgba(29, 26, 26, 0.1), 0 4px 6px -4px rgba(29, 26, 26, 0.1);
+      --pg-shadow-orange: 0 4px 14px 0 rgba(253, 51, 0, 0.25);
+
+      /* Transitions */
+      --pg-transition-fast: 150ms ease;
+      --pg-transition-base: 200ms ease;
+      --pg-transition-slow: 300ms ease;
+      --pg-transition-slower: 500ms ease;
+
+      /* Containers */
+      --pg-container-sm: 640px;
+      --pg-container-md: 768px;
+      --pg-container-lg: 1024px;
+      --pg-container-xl: 1280px;
+      --pg-container-2xl: 1536px;
+    }
+
+    /* ==================== RESET ==================== */
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background-color: var(--pg-orange);
+      color: var(--pg-mist);
+    }
+
+    /* ==================== BASE ==================== */
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--pg-mist);
+      color: var(--pg-black);
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ==================== CHECKOUT CONTAINER ==================== */
+
+    .pg-checkout {
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 16px;
+      flex: 1;
+    }
+
+    /* ==================== HEADER ==================== */
+
+    .pg-header {
+      background-color: var(--pg-mist);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--pg-pebble);
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .pg-header__logo {
+      height: 28px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .pg-header__phone-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pg-header__phone-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .pg-header__phone-text {
+      text-align: right;
+    }
+
+    .pg-header__phone-label {
+      font-family: var(--pg-font-heading);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      line-height: 1.3;
+    }
+
+    .pg-header__phone-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: end;
+      gap: 0 5px;
+      text-decoration: none;
+      color: inherit;
+      line-height: 1.25;
+    }
+
+    .pg-header__phone-grid:hover .pg-header__phone-prefix,
+    .pg-header__phone-grid:hover .pg-header__phone-code--main {
+      color: var(--pg-orange);
+    }
+
+    .pg-header__phone-prefix {
+      font-family: var(--pg-font-heading);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--pg-black);
+      transition: color var(--pg-transition-base);
+    }
+
+    .pg-header__phone-code {
+      font-family: var(--pg-font-mono);
+      letter-spacing: 0.02em;
+    }
+
+    .pg-header__phone-code--main {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--pg-black);
+      transition: color var(--pg-transition-base);
+    }
+
+    .pg-header__phone-code--sub {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+    }
+
+    /* ==================== SOCIAL PROOF BAR ==================== */
+
+    .pg-social-proof {
+      border: 1px solid var(--pg-stone);
+      border-radius: var(--pg-radius);
+      padding: 12px 16px;
+      margin: 16px auto;
+      max-width: 640px;
+      width: calc(100% - 32px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .pg-social-proof__icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .pg-social-proof__text {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--pg-black);
+      line-height: 1.4;
+    }
+
+    .pg-social-proof__timer {
+      font-weight: 700;
+      color: var(--pg-orange);
+    }
+
+    /* ==================== OFFER SELECTION ==================== */
+
+    .pg-offers {
+      margin-top: 8px;
+      margin-bottom: 32px;
+    }
+
+    .pg-offer {
+      position: relative;
+      cursor: pointer;
+      transition: all var(--pg-transition-base);
+    }
+
+    .pg-offer__radio {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+    }
+
+    /* Lifetime Offer — Premium Design */
+    .pg-offer--lifetime {
+      border: 2px solid var(--pg-pebble);
+      border-radius: var(--pg-radius-md);
+      padding: 28px 24px;
+      background: var(--pg-mist);
+      margin-bottom: 12px;
+    }
+
+    .pg-offer--lifetime.pg-offer--selected {
+      border-color: var(--pg-orange);
+      box-shadow: var(--pg-shadow-orange);
+      background: #fff;
+    }
+
+    .pg-offer__header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .pg-offer__pretitle {
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .pg-offer__title {
+      font-family: var(--pg-font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--pg-black);
+      line-height: 1.2;
+    }
+
+    .pg-offer__body {
+      margin-bottom: 24px;
+    }
+
+    .pg-offer__body p {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-black);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .pg-offer__body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pg-offer__pricing-info {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .pg-offer__pricing-name {
+      font-family: var(--pg-font-heading);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--pg-black);
+      line-height: 1.2;
+    }
+
+    .pg-offer__pricing-amount {
+      font-family: var(--pg-font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pg-black);
+      margin-top: 2px;
+    }
+
+    .pg-offer__cta {
+      display: block;
+      width: 100%;
+      background: var(--pg-orange);
+      color: var(--pg-mist);
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-align: center;
+      padding: 16px 20px;
+      border: none;
+      border-radius: var(--pg-radius);
+      cursor: pointer;
+      transition: background var(--pg-transition-base);
+      line-height: 1.3;
+    }
+
+    .pg-offer__cta:hover {
+      background: var(--pg-dark-orange);
+    }
+
+    .pg-offer__guarantee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .pg-offer__guarantee-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-offer__guarantee-text {
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--pg-ui-gray);
+      line-height: 1.4;
+    }
+
+    /* Annual Offer — Simpler Design */
+    .pg-offer--annual {
+      border: 1px solid var(--pg-pebble);
+      border-radius: var(--pg-radius-md);
+      padding: 20px 24px;
+      background: var(--pg-fog);
+    }
+
+    .pg-offer--annual.pg-offer--selected {
+      border: 2px solid var(--pg-orange);
+      box-shadow: var(--pg-shadow-orange);
+      background: #fff;
+    }
+
+    .pg-offer--annual .pg-offer__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pg-offer--annual .pg-offer__info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pg-offer--annual .pg-offer__title {
+      font-size: 16px;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .pg-offer--annual .pg-offer__price {
+      font-family: var(--pg-font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pg-black);
+      margin-top: 2px;
+    }
+
+    .pg-offer__select-btn {
+      display: inline-block;
+      background: var(--pg-black);
+      color: var(--pg-mist);
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 10px 24px;
+      border: none;
+      border-radius: var(--pg-radius);
+      cursor: pointer;
+      transition: background var(--pg-transition-base);
+      flex-shrink: 0;
+    }
+
+    .pg-offer__select-btn:hover {
+      background: var(--pg-ui-gray);
+    }
+
+    /* Button color states when offers toggle */
+    .pg-offer__cta--deselected {
+      background: var(--pg-black);
+    }
+
+    .pg-offer__cta--deselected:hover {
+      background: var(--pg-ui-gray);
+    }
+
+    .pg-offer__select-btn--active {
+      background: var(--pg-orange);
+    }
+
+    .pg-offer__select-btn--active:hover {
+      background: var(--pg-dark-orange);
+    }
+
+    .pg-offer--annual .pg-offer__guarantee {
+      margin-top: 14px;
+    }
+
+    /* ==================== FORM SECTIONS ==================== */
+
+    .pg-form-section {
+      margin-bottom: 28px;
+    }
+
+    .pg-form-section__heading {
+      font-family: var(--pg-font-heading);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--pg-black);
+      margin-bottom: 12px;
+    }
+
+    /* ==================== FORM INPUTS ==================== */
+
+    .pg-field {
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .pg-field--half {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .pg-field--third {
+      display: grid;
+      grid-template-columns: 1fr minmax(80px, 0.6fr) minmax(80px, 0.6fr);
+      gap: 12px;
+    }
+
+    .pg-input {
+      width: 100%;
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-black);
+      background: var(--pg-mist);
+      border: 1px solid var(--pg-stone);
+      border-radius: var(--pg-radius);
+      padding: 18px 16px 8px;
+      transition: border-color var(--pg-transition-base), box-shadow var(--pg-transition-base);
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .pg-input::placeholder {
+      color: transparent;
+    }
+
+    .pg-input:placeholder-shown + .pg-input-label {
+      font-size: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-input:focus + .pg-input-label,
+    .pg-input:not(:placeholder-shown) + .pg-input-label {
+      font-size: 11px;
+      top: 8px;
+      transform: translateY(0);
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-input:focus {
+      outline: none;
+      border-color: var(--pg-orange);
+      box-shadow: 0 0 0 3px rgba(253, 51, 0, 0.1);
+    }
+
+    .pg-input-label {
+      position: absolute;
+      left: 16px;
+      top: 8px;
+      font-family: var(--pg-font-heading);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      pointer-events: none;
+      transition: all var(--pg-transition-fast);
+      line-height: 1;
+    }
+
+    .pg-input-wrapper {
+      position: relative;
+    }
+
+    .pg-input-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: var(--pg-ui-gray);
+      pointer-events: none;
+    }
+
+    .pg-input--with-icon {
+      padding-right: 40px;
+    }
+
+    /* Select / Dropdown */
+    .pg-select {
+      width: 100%;
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-black);
+      background: var(--pg-mist);
+      border: 1px solid var(--pg-stone);
+      border-radius: var(--pg-radius);
+      padding: 18px 36px 8px 16px;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237B726C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      cursor: pointer;
+      transition: border-color var(--pg-transition-base), box-shadow var(--pg-transition-base);
+    }
+
+    .pg-select:focus {
+      outline: none;
+      border-color: var(--pg-orange);
+      box-shadow: 0 0 0 3px rgba(253, 51, 0, 0.1);
+    }
+
+    .pg-select-label {
+      position: absolute;
+      left: 16px;
+      top: 8px;
+      font-family: var(--pg-font-heading);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .pg-select-wrapper {
+      position: relative;
+    }
+
+    /* ==================== PAYMENT SECTION ==================== */
+
+    .pg-payment__secure {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .pg-payment__lock-icon {
+      width: 14px;
+      height: 14px;
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-payment__secure-text {
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-payment__method {
+      border: 1px solid var(--pg-stone);
+      border-radius: var(--pg-radius);
+      overflow: hidden;
+    }
+
+    .pg-payment__method-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      background: var(--pg-fog);
+      border-bottom: 1px solid var(--pg-pebble);
+    }
+
+    .pg-payment__method-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pg-payment__radio-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid var(--pg-indigo);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .pg-payment__radio-dot::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--pg-indigo);
+    }
+
+    .pg-payment__method-label {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--pg-black);
+    }
+
+    .pg-payment__card-icons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .pg-payment__card-svg {
+      width: 38px;
+      height: 24px;
+      flex-shrink: 0;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .pg-payment__fields {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .pg-payment__express {
+      display: flex;
+      gap: 8px;
+      padding: 0 16px 16px;
+    }
+
+    .pg-payment__express-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 12px;
+      border: 1px solid var(--pg-pebble);
+      border-radius: var(--pg-radius);
+      background: var(--pg-mist);
+      cursor: pointer;
+      transition: border-color var(--pg-transition-base);
+      font-family: var(--pg-font-heading);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--pg-black);
+    }
+
+    .pg-payment__express-btn:hover {
+      border-color: var(--pg-stone);
+    }
+
+    /* ==================== ORDER SUMMARY ==================== */
+
+    .pg-summary {
+      border-top: 1px solid var(--pg-pebble);
+      padding-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    .pg-summary__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+
+    .pg-summary__heading {
+      font-family: var(--pg-font-heading);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--pg-black);
+    }
+
+    .pg-summary__toggle {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-indigo);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .pg-summary__toggle-arrow {
+      width: 12px;
+      height: 12px;
+      transition: transform var(--pg-transition-base);
+    }
+
+    .pg-summary__toggle-arrow--collapsed {
+      transform: rotate(180deg);
+    }
+
+    .pg-summary__content {
+      overflow: hidden;
+      transition: max-height var(--pg-transition-slow);
+    }
+
+    .pg-summary__content--collapsed {
+      max-height: 0;
+    }
+
+    .pg-summary__product {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .pg-summary__product-image {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--pg-radius-md);
+      border: 1px solid var(--pg-pebble);
+      background: var(--pg-fog);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .pg-summary__product-image svg {
+      width: 24px;
+      height: 24px;
+      color: var(--pg-orange);
+    }
+
+    .pg-summary__product-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pg-summary__product-name {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--pg-black);
+      line-height: 1.3;
+    }
+
+    .pg-summary__product-detail {
+      font-family: var(--pg-font-heading);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      line-height: 1.3;
+    }
+
+    .pg-summary__product-price {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-black);
+      flex-shrink: 0;
+    }
+
+    .pg-summary__divider {
+      border: none;
+      border-top: 1px solid var(--pg-pebble);
+      margin: 16px 0;
+    }
+
+    .pg-summary__line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .pg-summary__line-label {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-black);
+    }
+
+    .pg-summary__line-value {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-black);
+      text-align: right;
+    }
+
+    .pg-summary__total {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--pg-pebble);
+      margin-top: 8px;
+    }
+
+    .pg-summary__total-label {
+      font-family: var(--pg-font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pg-black);
+    }
+
+    .pg-summary__total-value {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .pg-summary__total-currency {
+      font-family: var(--pg-font-heading);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-summary__total-amount {
+      font-family: var(--pg-font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pg-black);
+    }
+
+    .pg-summary__recurring {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      margin-top: 4px;
+    }
+
+    .pg-summary__recurring-text {
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-summary__recurring-value {
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+    }
+
+    /* ==================== TERMS CHECKBOX ==================== */
+
+    .pg-terms {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .pg-terms__checkbox {
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      border: 2px solid var(--pg-stone);
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-top: 1px;
+      position: relative;
+      transition: all var(--pg-transition-fast);
+    }
+
+    .pg-terms__checkbox:checked {
+      background: var(--pg-indigo);
+      border-color: var(--pg-indigo);
+    }
+
+    .pg-terms__checkbox:checked::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      width: 5px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .pg-terms__label {
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--pg-black);
+      line-height: 1.4;
+    }
+
+    .pg-terms__link {
+      color: var(--pg-indigo);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .pg-terms__link:hover {
+      color: var(--pg-dark-orange);
+    }
+
+    /* ==================== CTA BUTTON ==================== */
+
+    .pg-cta {
+      display: block;
+      width: 100%;
+      background: var(--pg-orange);
+      color: var(--pg-mist);
+      font-family: var(--pg-font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: var(--pg-shadow-orange);
+      transition: background var(--pg-transition-base), box-shadow var(--pg-transition-base), transform var(--pg-transition-base);
+      margin-bottom: 40px;
+    }
+
+    .pg-cta:hover {
+      background: var(--pg-dark-orange);
+      box-shadow: 0 6px 20px 0 rgba(253, 51, 0, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .pg-cta:active {
+      transform: translateY(0);
+    }
+
+    /* ==================== FOOTER ==================== */
+
+    .pg-footer {
+      background-color: var(--pg-black);
+      padding: 48px 16px 32px;
+      text-align: center;
+    }
+
+    .pg-footer__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pg-footer__logo {
+      width: 200px;
+      height: auto;
+    }
+
+    .pg-footer__contact {
+      margin-top: 16px;
+    }
+
+    .pg-footer__email {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-stone);
+    }
+
+    .pg-footer__email a {
+      color: var(--pg-stone);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__email a:hover {
+      color: var(--pg-mist);
+    }
+
+    .pg-footer__phone {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-stone);
+      margin-top: 8px;
+    }
+
+    .pg-footer__phone a {
+      color: var(--pg-stone);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__phone a:hover {
+      color: var(--pg-mist);
+    }
+
+    .pg-footer__divider {
+      border: none;
+      border-top: 1px solid #333;
+      max-width: 360px;
+      margin: 24px auto;
+    }
+
+    .pg-footer__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pg-footer__nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .pg-footer__nav-link {
+      font-family: var(--pg-font-mono);
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pg-ui-gray);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__nav-link:hover {
+      color: var(--pg-mist);
+    }
+
+    .pg-footer__copyright {
+      font-family: var(--pg-font-heading);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      margin-top: 16px;
+      order: 1;
+    }
+
+    /* Footer desktop layout */
+    @media screen and (min-width: 768px) {
+      .pg-footer {
+        padding: 32px 40px 24px;
+        text-align: left;
+      }
+
+      .pg-footer__top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .pg-footer__logo {
+        width: 260px;
+      }
+
+      .pg-footer__contact {
+        margin-top: 0;
+        text-align: right;
+      }
+
+      .pg-footer__divider {
+        max-width: none;
+        margin: 24px 0;
+      }
+
+      .pg-footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .pg-footer__copyright {
+        margin-top: 0;
+        order: 0;
+      }
+
+      .pg-footer__nav {
+        gap: 20px;
+      }
+    }
+
+    /* ==================== FOCUS STATES ==================== */
+
+    :focus-visible {
+      outline: 2px solid var(--pg-orange);
+      outline-offset: 2px;
+    }
+
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* ==================== SKIP LINK ==================== */
+
+    .pg-skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--pg-orange);
+      color: var(--pg-mist);
+      padding: 8px 16px;
+      z-index: 100;
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: top 200ms ease;
+    }
+
+    .pg-skip-link:focus {
+      top: 0;
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+
+    @media screen and (max-width: 480px) {
+      .pg-header {
+        padding: 10px 12px;
+      }
+
+      .pg-header__phone-prefix,
+      .pg-header__phone-code--main,
+      .pg-header__phone-code--sub {
+        font-size: 14px;
+      }
+
+      .pg-offer--lifetime {
+        padding: 20px 16px;
+      }
+
+      .pg-offer--annual {
+        padding: 16px;
+      }
+
+      .pg-offer__cta {
+        font-size: 12px;
+        padding: 14px 16px;
+      }
+
+      .pg-field--third {
+        grid-template-columns: 1fr;
+      }
+
+      .pg-summary__product-name {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="pg-skip-link">Skip to main content</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="pg-header" role="banner">
+    <svg class="pg-header__logo" viewBox="0 0 541 196" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>Performance Golf</title>
+      <path fill="#1D1A1A" d="M285,28v140c0,15.43927,12.56055,28,28,28h200c15.43945,0,28-12.56073,28-28v-60c0-15.43927-12.56055-28-28-28h-123v36h85v24h-124V56h185V0h-223c-15.43945,0-28,12.56073-28,28Z"/>
+      <path fill="#1D1A1A" d="M256,113V28c0-15.43927-12.56055-28-28-28H0v196h66V56h124v34h-100v51h138c15.43945,0,28-12.56073,28-28Z"/>
+    </svg>
+
+    <div class="pg-header__phone-group">
+      <!-- Phone icon -->
+      <svg class="pg-header__phone-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" stroke="#1D1A1A" stroke-width="2.5" fill="none"/>
+        <path d="M16.5 14.5c0-.55.45-1 1-1h2.5c.55 0 1 .45 1 1l.5 4c0 .55-.45 1-1 1l-1.5.5c1 3 3.5 5.5 6.5 6.5l.5-1.5c0-.55.45-1 1-1l4 .5c.55 0 1 .45 1 1v2.5c0 .55-.45 1-1 1C22 33.5 14.5 26 14.5 16.5z" fill="#1D1A1A"/>
+      </svg>
+
+      <div class="pg-header__phone-text">
+        <span class="pg-header__phone-label">Order or Ask Questions by Phone:</span>
+        <a href="tel:18337414653" class="pg-header__phone-grid">
+          <span class="pg-header__phone-prefix">1 (833)</span>
+          <span class="pg-header__phone-code pg-header__phone-code--main">PG1-GOLF</span>
+          <span aria-hidden="true"></span>
+          <span class="pg-header__phone-code pg-header__phone-code--sub">741-4653</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== SOCIAL PROOF BAR ==================== -->
+  <div class="pg-social-proof" role="status" aria-live="polite">
+    <svg class="pg-social-proof__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="#1D1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="3" stroke="#1D1A1A" stroke-width="2"/>
+    </svg>
+    <span class="pg-social-proof__text">
+      <span id="viewer-count">14</span> Other Golfers Are Viewing This Offer Right Now - <span class="pg-social-proof__timer" id="countdown-timer">8:57</span>
+    </span>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="pg-checkout" id="main-content">
+
+    <!-- ==================== OFFER SELECTION ==================== -->
+    <div class="pg-offers" role="radiogroup" aria-label="Membership plan selection">
+
+      <!-- Lifetime Offer — Auto-Selected -->
+      <div class="pg-offer pg-offer--lifetime pg-offer--selected" data-offer="lifetime" role="radio" aria-checked="true" tabindex="0">
+        <input type="radio" name="plan" value="lifetime" class="pg-offer__radio" id="plan-lifetime" checked>
+
+        <div class="pg-offer__header">
+          <p class="pg-offer__pretitle">Special Offer For</p>
+          <h2 class="pg-offer__title">PG1 Founding Members Only</h2>
+        </div>
+
+        <div class="pg-offer__body">
+          <p>PG1 personalizes every aspect of your game improvement, so you know you're working on the right thing, in the right order, at the right time to make the fastest improvement for YOUR game.</p>
+          <p>As a PG1 Founding Member, to thank you for believing in our vision that golfers deserve personalized instruction, we want to offer you LIFETIME ACCESS to PG1.</p>
+          <p>No subscriptions. No surprise charges. Just ONE payment today unlocks a lifetime of great golf.</p>
+          <p>(When you upgrade today, you get ungated access to all current PG1 features&hellip; plus EVERY feature we release FOREVER!)</p>
+        </div>
+
+        <div class="pg-offer__pricing-info">
+          <p class="pg-offer__pricing-name">PG1 Founders Member &ndash; Lifetime</p>
+          <p class="pg-offer__pricing-amount">$399 / one-time payment</p>
+        </div>
+
+        <button type="button" class="pg-offer__cta" aria-label="Select lifetime membership">YES, UPGRADE MY FOUNDERS MEMBERSHIP TO PG1 LIFETIME!</button>
+
+        <div class="pg-offer__guarantee">
+          <svg class="pg-offer__guarantee-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="pg-offer__guarantee-text">365-Day PG1 Promise &amp;<br>100% Money-Back Guarantee</span>
+        </div>
+      </div>
+
+      <!-- Annual Offer — Secondary -->
+      <div class="pg-offer pg-offer--annual" data-offer="annual" role="radio" aria-checked="false" tabindex="0">
+        <input type="radio" name="plan" value="annual" class="pg-offer__radio" id="plan-annual">
+
+        <div class="pg-offer__row">
+          <div class="pg-offer__info">
+            <h2 class="pg-offer__title">PG1 Founders Member &ndash; Annual</h2>
+            <p class="pg-offer__price">$199 / year</p>
+          </div>
+          <button type="button" class="pg-offer__select-btn" aria-label="Select annual membership">SELECT</button>
+        </div>
+
+        <div class="pg-offer__guarantee">
+          <svg class="pg-offer__guarantee-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="pg-offer__guarantee-text">365-Day PG1 Promise &amp;<br>100% Money-Back Guarantee</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== CHECKOUT FORM ==================== -->
+    <form id="checkout-form" novalidate>
+
+    <!-- ==================== CONTACT ==================== -->
+    <div class="pg-form-section">
+      <h3 class="pg-form-section__heading">Contact</h3>
+      <div class="pg-field">
+        <div class="pg-input-wrapper">
+          <input type="email" id="email" class="pg-input" placeholder="Email" required autocomplete="email">
+          <label for="email" class="pg-input-label">Email: Required for Order Confirmation and Updates</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== BILLING ADDRESS ==================== -->
+    <div class="pg-form-section">
+      <h3 class="pg-form-section__heading">Billing Address</h3>
+
+      <!-- Country -->
+      <div class="pg-field">
+        <div class="pg-select-wrapper">
+          <label for="country" class="pg-select-label">Country/region</label>
+          <select id="country" class="pg-select" autocomplete="country">
+            <option value="US" selected>United States</option>
+            <option value="CA">Canada</option>
+            <option value="GB">United Kingdom</option>
+            <option value="AU">Australia</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- First / Last Name -->
+      <div class="pg-field pg-field--half">
+        <div class="pg-input-wrapper">
+          <input type="text" id="first-name" class="pg-input" placeholder="First name" required autocomplete="given-name">
+          <label for="first-name" class="pg-input-label">First name</label>
+        </div>
+        <div class="pg-input-wrapper">
+          <input type="text" id="last-name" class="pg-input" placeholder="Last name" required autocomplete="family-name">
+          <label for="last-name" class="pg-input-label">Last name</label>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="pg-field">
+        <div class="pg-input-wrapper">
+          <input type="text" id="address" class="pg-input pg-input--with-icon" placeholder="Address" required autocomplete="address-line1">
+          <label for="address" class="pg-input-label">Address</label>
+          <svg class="pg-input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+            <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Apartment -->
+      <div class="pg-field">
+        <div class="pg-input-wrapper">
+          <input type="text" id="apartment" class="pg-input" placeholder="Apartment" autocomplete="address-line2">
+          <label for="apartment" class="pg-input-label">Apartment, suite, etc. (optional)</label>
+        </div>
+      </div>
+
+      <!-- City / State / Zip -->
+      <div class="pg-field pg-field--third">
+        <div class="pg-input-wrapper">
+          <input type="text" id="city" class="pg-input" placeholder="City" required autocomplete="address-level2">
+          <label for="city" class="pg-input-label">City</label>
+        </div>
+        <div class="pg-select-wrapper">
+          <label for="state" class="pg-select-label">State</label>
+          <select id="state" class="pg-select" required autocomplete="address-level1">
+            <option value="" disabled selected></option>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+          </select>
+        </div>
+        <div class="pg-input-wrapper">
+          <input type="text" id="zip" class="pg-input" placeholder="Zip code" required autocomplete="postal-code">
+          <label for="zip" class="pg-input-label">Zip Code</label>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="pg-field">
+        <div class="pg-input-wrapper">
+          <input type="tel" id="phone" class="pg-input pg-input--with-icon" placeholder="Phone" required autocomplete="tel">
+          <label for="phone" class="pg-input-label">Phone: Required for Order Notifications</label>
+          <svg class="pg-input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAYMENT ==================== -->
+    <div class="pg-form-section">
+      <h3 class="pg-form-section__heading">Payment</h3>
+
+      <div class="pg-payment__secure">
+        <svg class="pg-payment__lock-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="pg-payment__secure-text">All transactions are secure and encrypted</span>
+      </div>
+
+      <div class="pg-payment__method">
+        <div class="pg-payment__method-header">
+          <div class="pg-payment__method-left">
+            <span class="pg-payment__radio-dot" aria-hidden="true"></span>
+            <span class="pg-payment__method-label">Credit card</span>
+          </div>
+          <div class="pg-payment__card-icons">
+            <!-- Visa -->
+            <svg class="pg-payment__card-svg" viewBox="0 0 750 471" aria-label="Visa">
+              <rect width="750" height="471" rx="40" fill="#1A1F71"/>
+              <path d="M278.2 334.2h-60.6l37.8-233.9h60.6L278.2 334.2zM524.5 105.5c-12-4.5-30.8-9.4-54.3-9.4-59.9 0-102.1 30.2-102.4 73.4-.3 32 30.1 49.8 53.1 60.4 23.6 10.9 31.6 17.8 31.5 27.5-.2 14.9-18.9 21.6-36.3 21.6-24.3 0-37.2-3.4-57.1-11.7l-7.8-3.5-8.5 49.8c14.2 6.2 40.4 11.6 67.6 11.9 63.7 0 105.1-29.8 105.5-75.9.2-25.3-15.9-44.6-50.9-60.5-21.2-10.3-34.2-17.2-34.1-27.6 0-9.3 11-19.2 34.7-19.2 19.8-.3 34.2 4 45.4 8.5l5.4 2.6 8.2-47.9zM661.6 100.3h-46.9c-14.5 0-25.4 4-31.8 18.5l-90.1 204.1h63.7s10.4-27.4 12.8-33.4l77.6.1c1.8 7.8 7.4 33.3 7.4 33.3H713L661.6 100.3zm-74.7 189.7c5-12.8 24.2-62.1 24.2-62.1-.4.6 5-12.9 8-21.3l4.1 19.2s11.6 53.1 14.1 64.2h-50.4zM187.1 100.3l-59.3 159.3-6.3-30.8c-11-35.3-45.3-73.5-83.6-92.6l54.3 197.8h64.1l95.3-233.7h-64.5z" fill="#fff"/>
+              <path d="M124.7 100.3H28.3l-.8 4.5c76 18.4 126.3 62.8 147.2 116.2L153.1 119c-3.7-14.2-14.3-18.3-28.4-18.7z" fill="#F9A533"/>
+            </svg>
+            <!-- Mastercard -->
+            <svg class="pg-payment__card-svg" viewBox="0 0 750 471" aria-label="Mastercard">
+              <rect width="750" height="471" rx="40" fill="#252525"/>
+              <circle cx="299" cy="235.5" r="140" fill="#EB001B"/>
+              <circle cx="451" cy="235.5" r="140" fill="#F79E1B"/>
+              <path d="M375 131.4a140 140 0 0150 104.1 140 140 0 01-50 104.1 140 140 0 01-50-104.1 140 140 0 0150-104.1z" fill="#FF5F00"/>
+            </svg>
+            <!-- American Express -->
+            <svg class="pg-payment__card-svg" viewBox="0 0 750 471" aria-label="American Express">
+              <rect width="750" height="471" rx="40" fill="#006FCF"/>
+              <path d="M0 235.5h750" stroke="#fff" stroke-width="2" opacity="0"/>
+              <text x="375" y="260" text-anchor="middle" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="140" font-weight="700" letter-spacing="4">AMEX</text>
+            </svg>
+            <!-- Discover -->
+            <svg class="pg-payment__card-svg" viewBox="0 0 750 471" aria-label="Discover">
+              <rect width="750" height="471" rx="40" fill="#F4F4F4"/>
+              <path d="M0 235h750v196a40 40 0 01-40 40H40a40 40 0 01-40-40V235z" fill="#F47216"/>
+              <circle cx="475" cy="235" r="100" fill="#F47216"/>
+              <text x="300" y="260" text-anchor="middle" fill="#231F20" font-family="Arial,Helvetica,sans-serif" font-size="95" font-weight="700" letter-spacing="2">DISCOVER</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="pg-payment__fields">
+          <div class="pg-input-wrapper">
+            <input type="text" id="card-number" class="pg-input pg-input--with-icon" placeholder="Card number" required autocomplete="cc-number" inputmode="numeric">
+            <label for="card-number" class="pg-input-label">Card number</label>
+            <svg class="pg-input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M1 10h22" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+
+          <div class="pg-field--half" style="margin-bottom: 0;">
+            <div class="pg-input-wrapper">
+              <input type="text" id="expiry" class="pg-input" placeholder="Expiration date" required autocomplete="cc-exp" inputmode="numeric">
+              <label for="expiry" class="pg-input-label">Expiration date</label>
+            </div>
+            <div class="pg-input-wrapper">
+              <input type="text" id="security-code" class="pg-input pg-input--with-icon" placeholder="Security code" required autocomplete="cc-csc" inputmode="numeric">
+              <label for="security-code" class="pg-input-label">Security code</label>
+              <svg class="pg-input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="pg-input-wrapper">
+            <input type="text" id="card-name" class="pg-input" placeholder="Name on card" required autocomplete="cc-name">
+            <label for="card-name" class="pg-input-label">Name on card</label>
+          </div>
+        </div>
+
+        <!-- Express Payment Options -->
+        <div class="pg-payment__express">
+          <button type="button" class="pg-payment__express-btn" aria-label="Pay with Apple Pay">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            Apple Pay
+          </button>
+          <button type="button" class="pg-payment__express-btn" aria-label="Pay with Google Pay">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+            Google Pay
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== ORDER SUMMARY ==================== -->
+    <div class="pg-summary">
+      <div class="pg-summary__header">
+        <h3 class="pg-summary__heading">Order summary</h3>
+        <button class="pg-summary__toggle" type="button" id="summary-toggle" aria-expanded="true" aria-controls="summary-content">
+          <span id="summary-toggle-text">Hide</span>
+          <svg class="pg-summary__toggle-arrow" id="summary-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="pg-summary__content" id="summary-content">
+        <!-- Product Row -->
+        <div class="pg-summary__product">
+          <div class="pg-summary__product-image">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="pg-summary__product-info">
+            <p class="pg-summary__product-name" id="summary-product-name">PG1 Lifetime Membership</p>
+            <p class="pg-summary__product-detail" id="summary-product-detail">Founding Member — One-Time Payment</p>
+          </div>
+          <span class="pg-summary__product-price" id="summary-product-price">$399.00</span>
+        </div>
+
+        <!-- Subtotal -->
+        <hr class="pg-summary__divider">
+        <div class="pg-summary__line">
+          <span class="pg-summary__line-label" id="summary-subtotal-label">Subtotal</span>
+          <span class="pg-summary__line-value" id="summary-subtotal">$399.00</span>
+        </div>
+      </div>
+
+      <!-- Total (always visible) -->
+      <div class="pg-summary__total">
+        <span class="pg-summary__total-label">Total</span>
+        <div class="pg-summary__total-value">
+          <span class="pg-summary__total-currency">USD</span>
+          <span class="pg-summary__total-amount" id="summary-total">$399.00</span>
+        </div>
+      </div>
+
+      <!-- Recurring subtotal (annual only) -->
+      <div class="pg-summary__recurring" id="summary-recurring" style="display: none;">
+        <span class="pg-summary__recurring-text">Recurring subtotal</span>
+        <span class="pg-summary__recurring-value">$199.00 every 365 days</span>
+      </div>
+    </div>
+
+    </form>
+
+    <!-- ==================== TERMS ==================== -->
+    <label class="pg-terms" for="terms-checkbox">
+      <input type="checkbox" id="terms-checkbox" class="pg-terms__checkbox" checked>
+      <span class="pg-terms__label">I agree to the <a href="#" class="pg-terms__link">terms and conditions</a></span>
+    </label>
+
+    <!-- ==================== CTA BUTTON ==================== -->
+    <button type="button" class="pg-cta" id="checkout-cta">JOIN PG1 TODAY!</button>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="pg-footer">
+    <div class="pg-footer__top">
+      <svg class="pg-footer__logo" viewBox="0 0 1327.04337 71.30005" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="#FCFAFA" d="M99.60459,11.18568v48.92857c0,5.39587,4.38978,9.78571,9.78571,9.78571h69.89796c5.39593,0,9.78571-4.38985,9.78571-9.78571v-20.96939c0-5.39587-4.38978-9.78571-9.78571-9.78571h-42.98724v12.58163h29.70663v8.38776h-43.33673v-29.35714h64.65561V1.39996h-77.93622c-5.39593,0-9.78571,4.38985-9.78571,9.78571Z"/>
+        <path fill="#FCFAFA" d="M89.46939,40.89231V11.18568c0-5.39587-4.38978-9.78571-9.78571-9.78571H0v68.5h23.06633V20.97139h43.33673v11.88265H31.45408v17.82398h48.22959c5.39593,0,9.78571-4.38985,9.78571-9.78571Z"/>
+        <path fill="#FCFAFA" d="M1125.38614,64.47168l.67993,5.42847h10.87695l-.10034-36.30518h-32.90479v11.10986h18.45679l-.23315.93188c-2.3291,9.31348-11.49268,13.55542-19.021,13.55542-12.30371,0-20.57031-9.44092-20.57031-23.49268,0-14.1106,8.2666-23.59131,20.57031-23.59131,7.54395,0,13.88818,3.70459,17.47632,10.18213h15.92212C1131.50211,8.51221,1118.80142.00024,1103.14054.00024c-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61401-10.09985,25.73511,0,10.07788,3.58667,19.18652,10.09937,25.64819,6.46851,6.41797,15.52588,9.95239,25.50366,9.95239,9.85059,0,15.58691-3.47559,21.06885-7.34766l1.02148-.72144.15527,1.24072Z"/>
+        <path fill="#FCFAFA" d="M787.47672,1.3999l-25.79907,68.5h14.94067l5.32568-15.57788.17358-.50732h29.00635l.17163.51123,5.22949,15.57397h15.98193L806.52188,1.3999h-19.04517ZM807.67276,42.70483h-22.00684l.3833-1.01489,9.40015-24.89502.18213-.48193.51514-.00317.39453-.00244.2644-.00146.51465-.00293.18799.47925,9.76318,24.89893.40137,1.02368Z"/>
+        <polygon fill="#FCFAFA" points="1238.41861 1.3999 1223.2377 1.3999 1223.2377 69.8999 1270.39005 69.8999 1270.39005 58.49194 1239.16861 58.49194 1238.41861 58.49194 1238.41861 57.74194 1238.41861 1.3999"/>
+        <polygon fill="#FCFAFA" points="1001.48355 13.55786 1001.48355 12.80786 1002.23355 12.80786 1038.03751 12.80786 1038.03751 1.3999 986.70011 1.3999 986.70011 69.8999 1038.03751 69.8999 1038.03751 58.49194 1002.23355 58.49194 1001.48355 58.49194 1001.48355 57.74194 1001.48355 41.95483 1001.48355 41.20483 1002.23355 41.20483 1034.95963 41.20483 1034.95963 30.09497 1002.23355 30.09497 1001.48355 30.09497 1001.48355 29.34497 1001.48355 13.55786"/>
+        <path fill="#FCFAFA" d="M645.1503,1.40015h-36.80664v68.5h15.08154v-25.19531h5.30249l.22485.27075,20.69946,24.92456h18.04663l-21.04614-24.03955-.99854-1.14062,1.51221-.10181c13.60522-.91675,22.05688-9.16577,22.05688-21.52808,0-12.77075-9.89917-21.68994-24.07275-21.68994ZM642.66837,33.59497h-19.24316V12.80786h19.14404c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07617,10.39355Z"/>
+        <path fill="#FCFAFA" d="M945.13516.00024c-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61401-10.09985,25.73511,0,10.07788,3.58667,19.18652,10.09937,25.64819,6.46851,6.41797,15.52588,9.95239,25.50366,9.95239,15.67578,0,28.38257-8.51221,33.41382-22.29004h-15.92383c-3.59131,6.47754-9.94067,10.18213-17.48999,10.18213-12.30396,0-20.5708-9.44092-20.5708-23.49268,0-14.1106,8.26685-23.59131,20.5708-23.59131,7.5437,0,13.8877,3.70459,17.47583,10.18213h15.92261C973.49674,8.51221,960.79605.00024,945.13516.00024Z"/>
+        <path fill="#FCFAFA" d="M1179.94083,0c-9.98242,0-19.03955,3.53857-25.50342,9.96411-6.51294,6.47461-10.09985,15.61426-10.09985,25.7356,0,10.07764,3.58667,19.18628,10.09937,25.64795,6.46851,6.41772,15.52588,9.95215,25.50391,9.95215,20.68408,0,35.69678-14.97192,35.69678-35.6001,0-10.11475-3.60327-19.25391-10.14575-25.73462-6.48779-6.42603-15.56201-9.96509-25.55103-9.96509ZM1179.94083,59.19189c-12.30396,0-20.57056-9.44067-20.57056-23.49219,0-14.11108,8.2666-23.5918,20.57056-23.5918,12.35986,0,20.66406,9.48071,20.66406,23.5918,0,14.05151-8.3042,23.49219-20.66406,23.49219Z"/>
+        <polygon fill="#FCFAFA" points="855.4335 22.29004 855.88468 22.29004 856.0961 22.68872 881.1293 69.8999 901.09195 69.8999 901.09195 1.3999 886.61051 1.3999 886.89493 48.25513 886.89957 49.00977 886.14493 49.00977 885.49063 49.00977 885.02579 49.00977 884.819 48.59351 861.3776 1.3999 839.34366 1.3999 839.34366 69.8999 854.02823 69.8999 854.02823 23.04004 854.02823 22.29004 854.77823 22.29004 855.4335 22.29004"/>
+        <polygon fill="#FCFAFA" points="741.4545 69.8999 755.54337 69.8999 755.54337 1.3999 734.11148 1.3999 718.80631 33.17114 718.60123 33.59668 718.12906 33.5957 717.9462 33.59521 717.45523 33.59448 716.98477 33.59375 716.78043 33.16992 701.47525 1.3999 680.04337 1.3999 680.04337 69.8999 694.13223 69.8999 694.13223 23.04028 694.13223 22.29028 694.88223 22.29028 695.56778 22.29028 696.03995 22.29028 696.24405 22.71606 716.51554 65 719.0712 65 739.34244 22.71582 739.54654 22.29004 740.01871 22.29004 740.7045 22.29004 741.4545 22.29004 741.4545 23.04004 741.4545 69.8999"/>
+        <polygon fill="#FCFAFA" points="361.02701 13.55786 361.02701 12.80786 361.77701 12.80786 397.58097 12.80786 397.58097 1.3999 346.24356 1.3999 346.24356 69.8999 397.58097 69.8999 397.58097 58.49194 361.77701 58.49194 361.02701 58.49194 361.02701 57.74194 361.02701 41.95483 361.02701 41.20483 361.77701 41.20483 394.50308 41.20483 394.50308 30.09497 361.77701 30.09497 361.02701 30.09497 361.02701 29.34497 361.02701 13.55786"/>
+        <path fill="#FCFAFA" d="M590.59781,9.96509c-6.48779-6.42603-15.56201-9.96509-25.55103-9.96509-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61426-10.09985,25.7356,0,10.07764,3.58667,19.18628,10.09937,25.64795,6.46851,6.41772,15.52588,9.95215,25.50366,9.95215,20.68408,0,35.69678-14.97192,35.69678-35.6001,0-10.11475-3.60327-19.25391-10.14575-25.73462ZM565.04679,59.19189c-12.30396,0-20.57056-9.44067-20.57056-23.49219,0-14.11108,8.2666-23.5918,20.57056-23.5918,12.35986,0,20.66406,9.48071,20.66406,23.5918,0,14.05151-8.3042,23.49219-20.66406,23.49219Z"/>
+        <path fill="#FCFAFA" d="M314.85391,44.70483c14.92505,0,24.56909-8.48438,24.56909-21.61499,0-12.77075-9.89893-21.68994-24.07251-21.68994h-36.80713v68.5h15.08179v-25.19507h21.22876ZM293.62515,32.84497V12.80786h19.1438c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07593,10.39355h-19.24316v-.75Z"/>
+        <path fill="#FCFAFA" d="M443.8505,1.40015h-36.80664v68.5h15.08154v-25.19531h5.30249l.22485.27075,20.69946,24.92456h18.04663l-21.04614-24.03955-.99854-1.14062,1.51221-.10181c13.60522-.91675,22.05688-9.16577,22.05688-21.52808,0-12.77075-9.89917-21.68994-24.07275-21.68994ZM441.36856,33.59497h-19.24316V12.80786h19.14404c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07617,10.39355Z"/>
+        <polygon fill="#FCFAFA" points="1323.76627 41.20483 1323.76627 30.09497 1293.72183 30.09497 1292.97183 30.09497 1292.97183 29.34497 1292.97183 13.55786 1292.97183 12.80786 1293.72183 12.80786 1327.04337 12.80786 1327.04337 1.3999 1277.9899 1.3999 1277.9899 69.8999 1292.97183 69.8999 1292.97183 41.95483 1292.97183 41.20483 1293.72183 41.20483 1323.76627 41.20483"/>
+        <polygon fill="#FCFAFA" points="522.42105 41.20483 522.42105 30.09497 492.37589 30.09497 491.62589 30.09497 491.62589 29.34497 491.62589 13.55786 491.62589 12.80786 492.37589 12.80786 525.69766 12.80786 525.69766 1.3999 476.64347 1.3999 476.64347 69.8999 491.62589 69.8999 491.62589 41.95483 491.62589 41.20483 492.37589 41.20483 522.42105 41.20483"/>
+      </svg>
+
+      <div class="pg-footer__contact">
+        <p class="pg-footer__email"><a href="mailto:support@performancegolf.com">support@performancegolf.com</a></p>
+        <p class="pg-footer__phone"><a href="tel:18337414653">1-833-PG1-GOLF</a></p>
+      </div>
+    </div>
+
+    <hr class="pg-footer__divider">
+
+    <div class="pg-footer__bottom">
+      <p class="pg-footer__copyright">&copy; Copyright 2026 Performance Golf</p>
+
+      <nav aria-label="Footer navigation">
+        <ul class="pg-footer__nav">
+          <li><a href="#" class="pg-footer__nav-link">Home</a></li>
+          <li><a href="#" class="pg-footer__nav-link">About</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Contact</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Privacy</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    /* ==================== OFFER SELECTION ==================== */
+
+    var offers = document.querySelectorAll('.pg-offer');
+    var lifetimeOffer = document.querySelector('[data-offer="lifetime"]');
+    var annualOffer = document.querySelector('[data-offer="annual"]');
+
+    function selectOffer(offerType) {
+      var lifetimeCta = document.querySelector('.pg-offer--lifetime .pg-offer__cta');
+      var annualBtn = document.querySelector('.pg-offer__select-btn');
+
+      offers.forEach(function(offer) {
+        var isSelected = offer.getAttribute('data-offer') === offerType;
+        offer.classList.toggle('pg-offer--selected', isSelected);
+        offer.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+        var radio = offer.querySelector('.pg-offer__radio');
+        if (radio) radio.checked = isSelected;
+      });
+
+      // Toggle button colors based on selection
+      if (offerType === 'lifetime') {
+        lifetimeCta.classList.remove('pg-offer__cta--deselected');
+        annualBtn.classList.remove('pg-offer__select-btn--active');
+      } else {
+        lifetimeCta.classList.add('pg-offer__cta--deselected');
+        annualBtn.classList.add('pg-offer__select-btn--active');
+      }
+
+      updateOrderSummary(offerType);
+    }
+
+    offers.forEach(function(offer) {
+      offer.addEventListener('click', function(e) {
+        // Don't double-fire if clicking a button inside
+        selectOffer(this.getAttribute('data-offer'));
+      });
+      offer.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          selectOffer(this.getAttribute('data-offer'));
+        }
+      });
+    });
+
+    function updateOrderSummary(offerType) {
+      var productName = document.getElementById('summary-product-name');
+      var productDetail = document.getElementById('summary-product-detail');
+      var productPrice = document.getElementById('summary-product-price');
+      var subtotal = document.getElementById('summary-subtotal');
+      var subtotalLabel = document.getElementById('summary-subtotal-label');
+      var total = document.getElementById('summary-total');
+      var recurring = document.getElementById('summary-recurring');
+
+      if (offerType === 'lifetime') {
+        productName.textContent = 'PG1 Lifetime Membership';
+        productDetail.textContent = 'Founding Member \u2014 One-Time Payment';
+        productPrice.textContent = '$399.00';
+        subtotalLabel.textContent = 'Subtotal';
+        subtotal.textContent = '$399.00';
+        total.textContent = '$399.00';
+        recurring.style.display = 'none';
+      } else {
+        productName.textContent = 'PG1 Founders Member \u2013 Annual';
+        productDetail.textContent = 'Founding Member \u2014 Billed Annually';
+        productPrice.textContent = '$199.00/yr';
+        subtotalLabel.textContent = 'Subtotal';
+        subtotal.textContent = '$199.00';
+        total.textContent = '$199.00';
+        recurring.style.display = 'flex';
+      }
+    }
+
+    /* ==================== SOCIAL PROOF TIMER ==================== */
+
+    var timerEl = document.getElementById('countdown-timer');
+    var viewerEl = document.getElementById('viewer-count');
+    var totalSeconds = 8 * 60 + 57; // 8:57
+
+    function updateTimer() {
+      if (totalSeconds <= 0) {
+        totalSeconds = 9 * 60 + Math.floor(Math.random() * 59);
+      }
+      totalSeconds--;
+      var minutes = Math.floor(totalSeconds / 60);
+      var seconds = totalSeconds % 60;
+      timerEl.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+    }
+
+    function updateViewerCount() {
+      var count = 12 + Math.floor(Math.random() * 7); // 12-18
+      viewerEl.textContent = count;
+    }
+
+    setInterval(updateTimer, 1000);
+    setInterval(updateViewerCount, 4000 + Math.random() * 3000);
+
+    /* ==================== OFFER BUTTON HANDLERS ==================== */
+
+    document.querySelectorAll('.pg-offer__cta, .pg-offer__select-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var offer = this.closest('.pg-offer');
+        selectOffer(offer.getAttribute('data-offer'));
+      });
+    });
+
+    /* ==================== ORDER SUMMARY TOGGLE ==================== */
+
+    var summaryToggle = document.getElementById('summary-toggle');
+    var summaryContent = document.getElementById('summary-content');
+    var summaryToggleText = document.getElementById('summary-toggle-text');
+    var summaryArrow = document.getElementById('summary-arrow');
+    var summaryExpanded = true;
+
+    // Initialize max-height for smooth first animation
+    summaryContent.style.maxHeight = summaryContent.scrollHeight + 'px';
+
+    summaryToggle.addEventListener('click', function() {
+      summaryExpanded = !summaryExpanded;
+      if (summaryExpanded) {
+        summaryContent.style.maxHeight = summaryContent.scrollHeight + 'px';
+        summaryToggleText.textContent = 'Hide';
+        summaryArrow.classList.remove('pg-summary__toggle-arrow--collapsed');
+        this.setAttribute('aria-expanded', 'true');
+      } else {
+        summaryContent.style.maxHeight = '0';
+        summaryToggleText.textContent = 'Show';
+        summaryArrow.classList.add('pg-summary__toggle-arrow--collapsed');
+        this.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    /* ==================== CHECKOUT BUTTON ==================== */
+
+    document.getElementById('checkout-cta').addEventListener('click', function() {
+      var form = document.getElementById('checkout-form');
+      var requiredFields = form.querySelectorAll('[required]');
+      var firstInvalid = null;
+
+      requiredFields.forEach(function(field) {
+        if (!field.value.trim()) {
+          field.style.borderColor = 'var(--pg-orange)';
+          field.style.boxShadow = '0 0 0 3px rgba(253, 51, 0, 0.15)';
+          if (!firstInvalid) firstInvalid = field;
+        } else {
+          field.style.borderColor = '';
+          field.style.boxShadow = '';
+        }
+      });
+
+      if (firstInvalid) {
+        firstInvalid.focus();
+        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      var termsCheckbox = document.getElementById('terms-checkbox');
+      if (!termsCheckbox.checked) {
+        termsCheckbox.focus();
+        return;
+      }
+
+      // Form is valid — in production this would submit to payment processor
+      this.textContent = 'Processing...';
+      this.disabled = true;
+      this.style.opacity = '0.7';
+    });
+  </script>
+
+</body>
+</html>
