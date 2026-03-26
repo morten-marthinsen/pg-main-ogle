@@ -20,6 +20,7 @@ import type {
 } from "../types/pipeline.js";
 import type { SubAgentResult } from "../types/sub-agent.js";
 import type { IconikClient } from "../utils/iconik-client.js";
+import type { AirtableClient } from "../utils/airtable-client.js";
 import type { SelectHooksInput } from "../utils/hook-selector.js";
 
 // ── Context ─────────────────────────────────────────────────────────────────
@@ -53,6 +54,7 @@ export interface ExpansionDeps {
   iconikClient?: IconikClient;
   sheetsReader?: SheetsReader;
   aiClient?: AiGenerationClient;
+  airtableClient?: AirtableClient;
   spreadsheetId?: string;
 }
 

@@ -430,15 +430,43 @@ export interface ExportManagerOutput {
   failures: string[];
 }
 
+// ── Callout Text Types ──────────────────────────────────────────────────────
+
+/** Configuration for burning PG-branded callout text onto hook portions. */
+export interface CalloutTextConfig {
+  /** Text lines to render (each line gets its own red box). */
+  lines: string[];
+  /** Hook duration in seconds (callout visible for min(4.5s, hook_duration - 0.5s)). */
+  hook_duration: number;
+  /** Cover mode for handling old baked-in callout text.
+   *  - "overlay_at_old_position": opaque red boxes at old text center_y (recommended)
+   *  - "overlay_at_standard": new boxes at standard upper-third position
+   *  - "delogo": erase old text then overlay (last resort — creates artifacts) */
+  cover_mode?: "overlay_at_old_position" | "overlay_at_standard" | "delogo";
+  /** Override config when source has baked-in old callout text. */
+  old_callout_override?: {
+    center_y: number;
+    min_box_widths?: number[];
+    min_total_height?: number;
+  };
+  /** Per-variation callout lines (overrides top-level `lines` for specific variations). */
+  per_variation?: Array<{ lines: string[] }>;
+}
+
+// ── Environment Expansion Types ─────────────────────────────────────────────
+
+/** Steps in the environment v2 multi-step workflow. Used for resume_from_step. */
+export type EnvironmentStep = "analyze" | "brief" | "prompts" | "generate" | "qa";
+
 // ── Assembly Editor Types ───────────────────────────────────────────────────
 
 /** Expansion-specific edit instruction for assembly_editor. */
 export type EditOperation =
   | { type: "duration_cutdown"; cut_plan: CutPlan }
-  | { type: "hook_stack"; hook_clip_path: string; hook_duration_seconds: number; per_variation_hooks?: Array<{ hook_clip_path: string; hook_duration_seconds: number }> }
+  | { type: "hook_stack"; hook_clip_path: string; hook_duration_seconds: number; per_variation_hooks?: Array<{ hook_clip_path: string; hook_duration_seconds: number }>; callout_text?: CalloutTextConfig; run_qa?: boolean }
   | { type: "scroll_stopper"; opener_clip_path: string; opener_duration_seconds: number }
   | { type: "environment_swap"; environment_clip_path: string }
-  | { type: "environment_swap_ai"; background_prompt: string; style_reference_url?: string }
+  | { type: "environment_swap_ai"; background_prompt: string; style_reference_url?: string; resume_from_step?: EnvironmentStep; environments?: string[]; avatar_reference_image?: string; hook_transcripts?: string[] }
   | { type: "ad_format"; target_dimensions: string; target_duration_seconds: number }
   | { type: "similar_presenter"; presenter_image_url: string; script_text: string; voice_id?: string }
   | { type: "different_presenter"; presenter_image_url: string; script_text: string; voice_id?: string; target_demographics?: { gender?: string; age_range?: string; ethnicity?: string } }
@@ -463,6 +491,14 @@ export interface AssembledVariation {
   resolution: string;
   edit_summary: string;
   root_angle_preserved: boolean;
+  /** QA checks that passed (Quality Engine V4 output contract). */
+  quality_checks_passed?: string[];
+  /** QA checks that failed — empty if all passed. */
+  quality_checks_failed?: string[];
+  /** AI generation cost in USD (for env v2 and other AI-powered agents). */
+  generation_cost_usd?: number;
+  /** Processing time in milliseconds. */
+  processing_time_ms?: number;
 }
 
 /** Output for ffmpeg-executor. */

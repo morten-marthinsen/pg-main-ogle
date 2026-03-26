@@ -757,6 +757,7 @@ impl AgentControl {
                 .as_ref()
                 .map(ToString::to_string)
                 .unwrap_or_else(|| thread_id.to_string());
+<<<<<<< HEAD
             agents.push(ListedAgent {
                 agent_name,
                 agent_status: thread.agent_status().await,
@@ -764,6 +765,16 @@ impl AgentControl {
                     .last_task_message
                     .clone()
                     .or(last_task_message_for_thread(thread.as_ref()).await),
+=======
+            let last_task_message = match metadata.last_task_message.clone() {
+                Some(last_task_message) => Some(last_task_message),
+                None => last_task_message_for_thread(thread.as_ref()).await,
+            };
+            agents.push(ListedAgent {
+                agent_name,
+                agent_status: thread.agent_status().await,
+                last_task_message,
+>>>>>>> origin/main
             });
         }
 
@@ -811,12 +822,18 @@ impl AgentControl {
                 return;
             };
             let child_thread = state.get_thread(child_thread_id).await.ok();
+<<<<<<< HEAD
             if let Some(child_agent_path) = child_agent_path
+=======
+            let message = format_subagent_notification_message(child_reference.as_str(), &status);
+            if child_agent_path.is_some()
+>>>>>>> origin/main
                 && child_thread
                     .as_ref()
                     .map(|thread| thread.enabled(Feature::MultiAgentV2))
                     .unwrap_or(true)
             {
+<<<<<<< HEAD
                 let AgentStatus::Completed(Some(content)) = &status else {
                     return;
                 };
@@ -840,6 +857,27 @@ impl AgentControl {
                             content.clone(),
                         ),
                     )
+=======
+                let Some(child_agent_path) = child_agent_path.clone() else {
+                    return;
+                };
+                let Some(parent_agent_path) = child_agent_path
+                    .as_str()
+                    .rsplit_once('/')
+                    .and_then(|(parent, _)| AgentPath::try_from(parent).ok())
+                else {
+                    return;
+                };
+                let communication = InterAgentCommunication::new(
+                    child_agent_path,
+                    parent_agent_path,
+                    Vec::new(),
+                    message,
+                    /*trigger_turn*/ false,
+                );
+                let _ = control
+                    .send_inter_agent_communication(parent_thread_id, communication)
+>>>>>>> origin/main
                     .await;
                 return;
             }
@@ -847,10 +885,7 @@ impl AgentControl {
                 return;
             };
             parent_thread
-                .inject_user_message_without_turn(format_subagent_notification_message(
-                    child_reference.as_str(),
-                    &status,
-                ))
+                .inject_user_message_without_turn(message)
                 .await;
         });
     }
@@ -1110,7 +1145,11 @@ fn last_task_message_from_item(item: &ResponseItem) -> Option<String> {
     }
 
     match item {
+<<<<<<< HEAD
         ResponseItem::Message { role, content, .. } if role == "user" => {
+=======
+        ResponseItem::Message { role, .. } if role == "user" => {
+>>>>>>> origin/main
             let Some(TurnItem::UserMessage(message)) = parse_turn_item(item) else {
                 return None;
             };

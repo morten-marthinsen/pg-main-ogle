@@ -3599,6 +3599,7 @@ impl ChatComposer {
 
     fn mention_items(&self) -> Vec<MentionItem> {
         let mut mentions = Vec::new();
+<<<<<<< HEAD
         let plugin_namespaces: HashSet<String> =
             self.plugins.as_ref().map_or_else(HashSet::new, |plugins| {
                 plugins
@@ -3625,6 +3626,8 @@ impl ChatComposer {
                     .collect()
             });
 
+=======
+>>>>>>> origin/main
         if let Some(skills) = self.skills.as_ref() {
             for skill in skills {
                 let is_plugin_namespaced_skill =
@@ -3802,7 +3805,7 @@ impl ChatComposer {
 
     #[cfg(not(target_os = "linux"))]
     fn schedule_space_hold_timer(flag: Arc<AtomicBool>, frame: Option<FrameRequester>) {
-        const HOLD_DELAY_MILLIS: u64 = 500;
+        const HOLD_DELAY_MILLIS: u64 = 1_000;
         if let Ok(handle) = Handle::try_current() {
             let flag_clone = flag;
             let frame_clone = frame;
@@ -3890,7 +3893,7 @@ impl ChatComposer {
         }
     }
 
-    /// Called when the 500ms space hold timeout elapses.
+    /// Called when the 1s space hold timeout elapses.
     ///
     /// On terminals without key-release reporting, this only transitions into voice capture if we
     /// observed repeated Space events while pending; otherwise the keypress is treated as a typed
@@ -5443,7 +5446,11 @@ mod tests {
     }
 
     #[test]
+<<<<<<< HEAD
     fn mention_items_hide_plugin_owned_skill_and_app_duplicates() {
+=======
+    fn mention_items_show_plugin_owned_skill_and_app_duplicates() {
+>>>>>>> origin/main
         let (tx, _rx) = unbounded_channel::<AppEvent>();
         let sender = AppEventSender::new(tx);
         let mut composer = ChatComposer::new(
@@ -5506,6 +5513,7 @@ mod tests {
         }));
 
         let mentions = composer.mention_items();
+<<<<<<< HEAD
         assert_eq!(mentions.len(), 1);
         assert_eq!(mentions[0].display_name, "Google Calendar".to_string());
         assert_eq!(mentions[0].category_tag, Some("[Plugin]".to_string()));
@@ -5513,6 +5521,22 @@ mod tests {
             mentions[0].path,
             Some("plugin://google-calendar@debug".to_string())
         );
+=======
+        assert_eq!(mentions.len(), 3);
+        assert_eq!(mentions[0].category_tag, Some("[Skill]".to_string()));
+        assert_eq!(
+            mentions[0].path,
+            Some("/tmp/repo/google-calendar/SKILL.md".to_string())
+        );
+        assert_eq!(mentions[0].display_name, "Google Calendar".to_string());
+        assert_eq!(mentions[1].category_tag, Some("[Plugin]".to_string()));
+        assert_eq!(
+            mentions[1].path,
+            Some("plugin://google-calendar@debug".to_string())
+        );
+        assert_eq!(mentions[2].category_tag, Some("[App]".to_string()));
+        assert_eq!(mentions[2].path, Some("app://google_calendar".to_string()));
+>>>>>>> origin/main
     }
 
     #[test]

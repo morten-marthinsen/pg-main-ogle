@@ -30,7 +30,6 @@ use crate::hook_runtime::record_additional_contexts;
 use crate::hook_runtime::record_pending_input;
 use crate::models_manager::manager::ModelsManager;
 use crate::protocol::EventMsg;
-use crate::protocol::TokenUsage;
 use crate::protocol::TurnAbortReason;
 use crate::protocol::TurnAbortedEvent;
 use crate::protocol::TurnCompleteEvent;
@@ -192,11 +191,6 @@ impl Session {
         let cancellation_token = CancellationToken::new();
         let done = Arc::new(Notify::new());
 
-        let timer = turn_context
-            .session_telemetry
-            .start_timer(TURN_E2E_DURATION_METRIC, &[])
-            .ok();
-
         let done_clone = Arc::clone(&done);
         let handle = {
             let session_ctx = Arc::new(SessionTaskContext::new(Arc::clone(self)));
@@ -236,6 +230,21 @@ impl Session {
             )
         };
 
+        let queued_response_items = self.take_queued_response_items_for_next_turn().await;
+        let mut active = self.active_turn.lock().await;
+        let mut turn = ActiveTurn::default();
+        let mut turn_state = turn.turn_state.lock().await;
+        turn_state.token_usage_at_turn_start = token_usage_at_turn_start;
+        for item in queued_response_items {
+            turn_state.push_pending_input(item);
+        }
+        drop(turn_state);
+
+        let timer = turn_context
+            .session_telemetry
+            .start_timer(TURN_E2E_DURATION_METRIC, &[])
+            .ok();
+
         let running_task = RunningTask {
             done,
             handle: Arc::new(AbortOnDropHandle::new(handle)),
@@ -245,7 +254,23 @@ impl Session {
             turn_context: Arc::clone(&turn_context),
             _timer: timer,
         };
-        self.register_new_active_task(running_task, token_usage_at_turn_start)
+        turn.add_task(running_task);
+        *active = Some(turn);
+    }
+
+    pub(crate) async fn ensure_task_for_queued_response_items(self: &Arc<Self>) {
+        if !self.has_queued_response_items_for_next_turn().await {
+            return;
+        }
+
+        if self.active_turn.lock().await.is_some() {
+            return;
+        }
+
+        let turn_context = self.new_default_turn().await;
+        self.maybe_emit_unknown_model_warning_for_turn(turn_context.as_ref())
+            .await;
+        self.start_task(turn_context, Vec::new(), RegularTask::new())
             .await;
     }
 
@@ -406,6 +431,7 @@ impl Session {
         self.send_event(turn_context.as_ref(), event).await;
     }
 
+<<<<<<< HEAD
     async fn register_new_active_task(
         &self,
         task: RunningTask,
@@ -423,6 +449,8 @@ impl Session {
         *active = Some(turn);
     }
 
+=======
+>>>>>>> origin/main
     async fn take_active_turn(&self) -> Option<ActiveTurn> {
         let mut active = self.active_turn.lock().await;
         active.take()

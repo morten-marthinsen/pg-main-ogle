@@ -115,8 +115,15 @@
         "source": "local",
         "path": "./plugins/linear"
       },
+<<<<<<< HEAD
       "installPolicy": "AVAILABLE",
       "authPolicy": "ON_INSTALL",
+=======
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+>>>>>>> origin/main
       "category": "Productivity"
     }
   ]
@@ -142,7 +149,13 @@
   - `source` (`string`): Use `local` for this repo workflow.
   - `path` (`string`): Relative plugin path based on the marketplace root.
     - Repo plugin: `./plugins/<plugin-name>`
+<<<<<<< HEAD
     - Local plugin in `~/.agents/plugins/marketplace.json`: `./.codex/plugins/<plugin-name>`
+=======
+    - Local plugin in `~/.agents/plugins/marketplace.json`: `./plugins/<plugin-name>`
+  - The same relative path convention is used for both repo-rooted and home-rooted marketplaces.
+    - Example: with `~/.agents/plugins/marketplace.json`, `./plugins/<plugin-name>` resolves to `~/plugins/<plugin-name>`.
+>>>>>>> origin/main
 - `policy` (`object`): Marketplace policy block. Always include it.
   - `installation` (`string`): Availability policy.
     - Allowed values: `NOT_AVAILABLE`, `AVAILABLE`, `INSTALLED_BY_DEFAULT`

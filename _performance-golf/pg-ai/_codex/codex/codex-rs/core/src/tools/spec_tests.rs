@@ -550,7 +550,12 @@ fn test_build_specs_multi_agent_v2_uses_task_names_and_hides_resume() {
         &tools,
         &[
             "spawn_agent",
+<<<<<<< HEAD
             "send_input",
+=======
+            "send_message",
+            "assign_task",
+>>>>>>> origin/main
             "wait_agent",
             "close_agent",
             "list_agents",
@@ -584,9 +589,9 @@ fn test_build_specs_multi_agent_v2_uses_task_names_and_hides_resume() {
         json!(["agent_id", "task_name", "nickname"])
     );
 
-    let send_input = find_tool(&tools, "send_input");
-    let ToolSpec::Function(ResponsesApiTool { parameters, .. }) = &send_input.spec else {
-        panic!("send_input should be a function tool");
+    let send_message = find_tool(&tools, "send_message");
+    let ToolSpec::Function(ResponsesApiTool { parameters, .. }) = &send_message.spec else {
+        panic!("send_message should be a function tool");
     };
     let JsonSchema::Object {
         properties,
@@ -594,10 +599,33 @@ fn test_build_specs_multi_agent_v2_uses_task_names_and_hides_resume() {
         ..
     } = parameters
     else {
-        panic!("send_input should use object params");
+        panic!("send_message should use object params");
     };
     assert!(properties.contains_key("target"));
-    assert_eq!(required.as_ref(), Some(&vec!["target".to_string()]));
+    assert!(!properties.contains_key("message"));
+    assert_eq!(
+        required.as_ref(),
+        Some(&vec!["target".to_string(), "items".to_string()])
+    );
+
+    let assign_task = find_tool(&tools, "assign_task");
+    let ToolSpec::Function(ResponsesApiTool { parameters, .. }) = &assign_task.spec else {
+        panic!("assign_task should be a function tool");
+    };
+    let JsonSchema::Object {
+        properties,
+        required,
+        ..
+    } = parameters
+    else {
+        panic!("assign_task should use object params");
+    };
+    assert!(properties.contains_key("target"));
+    assert!(!properties.contains_key("message"));
+    assert_eq!(
+        required.as_ref(),
+        Some(&vec!["target".to_string(), "items".to_string()])
+    );
 
     let wait_agent = find_tool(&tools, "wait_agent");
     let ToolSpec::Function(ResponsesApiTool {
@@ -624,6 +652,36 @@ fn test_build_specs_multi_agent_v2_uses_task_names_and_hides_resume() {
     assert_eq!(
         output_schema["properties"]["message"]["description"],
         json!("Brief wait summary without the agent's final content.")
+<<<<<<< HEAD
+    );
+
+    let list_agents = find_tool(&tools, "list_agents");
+    let ToolSpec::Function(ResponsesApiTool {
+        parameters,
+        output_schema,
+        ..
+    }) = &list_agents.spec
+    else {
+        panic!("list_agents should be a function tool");
+    };
+    let JsonSchema::Object {
+        properties,
+        required,
+        ..
+    } = parameters
+    else {
+        panic!("list_agents should use object params");
+    };
+    assert!(properties.contains_key("path_prefix"));
+    assert_eq!(required.as_ref(), None);
+    let output_schema = output_schema
+        .as_ref()
+        .expect("list_agents should define output schema");
+    assert_eq!(
+        output_schema["properties"]["agents"]["items"]["required"],
+        json!(["agent_name", "agent_status", "last_task_message"])
+=======
+>>>>>>> origin/main
     );
 
     let list_agents = find_tool(&tools, "list_agents");
@@ -652,6 +710,7 @@ fn test_build_specs_multi_agent_v2_uses_task_names_and_hides_resume() {
         output_schema["properties"]["agents"]["items"]["required"],
         json!(["agent_name", "agent_status", "last_task_message"])
     );
+    assert_lacks_tool_name(&tools, "send_input");
     assert_lacks_tool_name(&tools, "resume_agent");
 }
 
@@ -1833,6 +1892,7 @@ fn search_tool_description_lists_each_codex_apps_connector_once() {
     let model_info = search_capable_model_info();
     let mut features = Features::with_defaults();
     features.enable(Feature::Apps);
+    features.enable(Feature::ToolSearch);
     let available_models = Vec::new();
     let tools_config = ToolsConfig::new(&ToolsConfigParams {
         model_info: &model_info,
@@ -1951,7 +2011,7 @@ fn search_tool_description_lists_each_codex_apps_connector_once() {
 }
 
 #[test]
-fn search_tool_requires_model_capability_only() {
+fn search_tool_requires_model_capability_and_feature_flag() {
     let model_info = search_capable_model_info();
     let app_tools = Some(HashMap::from([(
         "mcp__codex_apps__calendar_create_event".to_string(),
@@ -1987,6 +2047,22 @@ fn search_tool_requires_model_capability_only() {
     });
     let (tools, _) = build_specs(&tools_config, None, app_tools.clone(), &[]).build();
     assert_lacks_tool_name(&tools, TOOL_SEARCH_TOOL_NAME);
+
+    let available_models = Vec::new();
+    let tools_config = ToolsConfig::new(&ToolsConfigParams {
+        model_info: &model_info,
+        available_models: &available_models,
+        features: &features,
+        web_search_mode: Some(WebSearchMode::Cached),
+        session_source: SessionSource::Cli,
+        sandbox_policy: &SandboxPolicy::DangerFullAccess,
+        windows_sandbox_level: WindowsSandboxLevel::Disabled,
+    });
+    let (tools, _) = build_specs(&tools_config, None, app_tools.clone(), &[]).build();
+    assert_lacks_tool_name(&tools, TOOL_SEARCH_TOOL_NAME);
+
+    let mut features = Features::with_defaults();
+    features.enable(Feature::ToolSearch);
     let available_models = Vec::new();
     let tools_config = ToolsConfig::new(&ToolsConfigParams {
         model_info: &model_info,
@@ -2005,7 +2081,8 @@ fn search_tool_requires_model_capability_only() {
 fn tool_suggest_is_not_registered_without_feature_flag() {
     let model_info = search_capable_model_info();
     let mut features = Features::with_defaults();
-    features.enable(Feature::Apps);
+    features.enable(Feature::ToolSearch);
+    features.disable(Feature::ToolSuggest);
     let available_models = Vec::new();
     let tools_config = ToolsConfig::new(&ToolsConfigParams {
         model_info: &model_info,
@@ -2037,10 +2114,56 @@ fn tool_suggest_is_not_registered_without_feature_flag() {
 }
 
 #[test]
+fn tool_suggest_requires_apps_and_plugins_features() {
+    let model_info = search_capable_model_info();
+    let discoverable_tools = Some(vec![discoverable_connector(
+        "connector_2128aebfecb84f64a069897515042a44",
+        "Google Calendar",
+        "Plan events and schedules.",
+    )]);
+    let available_models = Vec::new();
+
+    for disabled_feature in [Feature::Apps, Feature::Plugins] {
+        let mut features = Features::with_defaults();
+        features.enable(Feature::ToolSearch);
+        features.enable(Feature::ToolSuggest);
+        features.enable(Feature::Apps);
+        features.enable(Feature::Plugins);
+        features.disable(disabled_feature);
+
+        let tools_config = ToolsConfig::new(&ToolsConfigParams {
+            model_info: &model_info,
+            available_models: &available_models,
+            features: &features,
+            web_search_mode: Some(WebSearchMode::Cached),
+            session_source: SessionSource::Cli,
+            sandbox_policy: &SandboxPolicy::DangerFullAccess,
+            windows_sandbox_level: WindowsSandboxLevel::Disabled,
+        });
+        let (tools, _) = build_specs_with_discoverable_tools(
+            &tools_config,
+            None,
+            None,
+            discoverable_tools.clone(),
+            &[],
+        )
+        .build();
+
+        assert!(
+            !tools
+                .iter()
+                .any(|tool| tool_name(&tool.spec) == TOOL_SUGGEST_TOOL_NAME),
+            "tool_suggest should be absent when {disabled_feature:?} is disabled"
+        );
+    }
+}
+
+#[test]
 fn search_tool_description_handles_no_enabled_apps() {
     let model_info = search_capable_model_info();
     let mut features = Features::with_defaults();
     features.enable(Feature::Apps);
+    features.enable(Feature::ToolSearch);
     let available_models = Vec::new();
     let tools_config = ToolsConfig::new(&ToolsConfigParams {
         model_info: &model_info,
@@ -2067,6 +2190,7 @@ fn search_tool_description_falls_back_to_connector_name_without_description() {
     let model_info = search_capable_model_info();
     let mut features = Features::with_defaults();
     features.enable(Feature::Apps);
+    features.enable(Feature::ToolSearch);
     let available_models = Vec::new();
     let tools_config = ToolsConfig::new(&ToolsConfigParams {
         model_info: &model_info,
@@ -2115,6 +2239,7 @@ fn search_tool_registers_namespaced_app_tool_aliases() {
     let model_info = search_capable_model_info();
     let mut features = Features::with_defaults();
     features.enable(Feature::Apps);
+    features.enable(Feature::ToolSearch);
     let available_models = Vec::new();
     let tools_config = ToolsConfig::new(&ToolsConfigParams {
         model_info: &model_info,
@@ -2180,6 +2305,8 @@ fn tool_suggest_description_lists_discoverable_tools() {
     let model_info = search_capable_model_info();
     let mut features = Features::with_defaults();
     features.enable(Feature::Apps);
+    features.enable(Feature::Plugins);
+    features.enable(Feature::ToolSearch);
     features.enable(Feature::ToolSuggest);
     let available_models = Vec::new();
     let tools_config = ToolsConfig::new(&ToolsConfigParams {

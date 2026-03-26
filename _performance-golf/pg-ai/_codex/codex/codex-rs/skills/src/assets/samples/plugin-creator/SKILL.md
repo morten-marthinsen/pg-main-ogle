@@ -26,6 +26,18 @@ python3 .agents/skills/plugin-creator/scripts/create_basic_plugin.py <plugin-nam
 python3 .agents/skills/plugin-creator/scripts/create_basic_plugin.py my-plugin --with-marketplace
 ```
 
+<<<<<<< HEAD
+=======
+For a home-local plugin, treat `<home>` as the root and use:
+
+```bash
+python3 .agents/skills/plugin-creator/scripts/create_basic_plugin.py my-plugin \
+  --path ~/plugins \
+  --marketplace-path ~/.agents/plugins/marketplace.json \
+  --with-marketplace
+```
+
+>>>>>>> origin/main
 4. Generate/adjust optional companion folders as needed:
 
 ```bash
@@ -37,6 +49,10 @@ python3 .agents/skills/plugin-creator/scripts/create_basic_plugin.py my-plugin -
 
 ## What this skill creates
 
+<<<<<<< HEAD
+=======
+- If the user has not made the plugin location explicit, ask whether they want a repo-local plugin or a home-local plugin before generating marketplace entries.
+>>>>>>> origin/main
 - Creates plugin root at `/<parent-plugin-directory>/<plugin-name>/`.
 - Always creates `/<parent-plugin-directory>/<plugin-name>/.codex-plugin/plugin.json`.
 - Fills the manifest with the full schema shape, placeholder values, and the complete `interface` section.
@@ -58,6 +74,11 @@ python3 .agents/skills/plugin-creator/scripts/create_basic_plugin.py my-plugin -
 ## Marketplace workflow
 
 - `marketplace.json` always lives at `<repo-root>/.agents/plugins/marketplace.json`.
+<<<<<<< HEAD
+=======
+- For a home-local plugin, use the same convention with `<home>` as the root:
+  `~/.agents/plugins/marketplace.json` plus `./plugins/<plugin-name>`.
+>>>>>>> origin/main
 - Marketplace root metadata supports top-level `name` plus optional `interface.displayName`.
 - Treat plugin order in `plugins[]` as render order in Codex. Append new entries unless a user explicitly asks to reorder the list.
 - `displayName` belongs inside the marketplace `interface` object, not individual `plugins[]` entries.

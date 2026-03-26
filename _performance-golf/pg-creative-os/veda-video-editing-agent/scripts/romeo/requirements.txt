@@ -1,0 +1,20 @@
+# Python dependencies for Romeo's expansion agent scripts
+# Install: pip install -r scripts/romeo/requirements.txt
+
+# burn_callout_text.py — PG-branded text overlay burning
+Pillow>=10.0.0
+
+# qa_hook_assembly.py — Whisper-based audio QA at join points
+openai-whisper>=20231117
+
+# analyze_winning_ad.py — Gemini video analysis
+google-genai>=1.0.0
+
+# generate_video_prompts.py — Provider-specific prompt generation
+# (also uses google-genai)
+
+# generate_avatar_video.py — Kling O3 + Veo 3.1 generation
+fal-client>=0.5.0
+
+# Airtable integration (log_to_airtable, prompt/video tracking)
+pyairtable>=2.0.0
