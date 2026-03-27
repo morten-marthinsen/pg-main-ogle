@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "skill": "2.4-C Mechanism Mapper (NAME + ARTICULATION format)",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "100 COMPETITOR_MECHANISM quotes + competitor_offer_analysis.json",
+    "note": "Layer 2 upgrade of Layer 1 mechanism_map — adds NAME + ARTICULATION format and exclusion notes"
+  },
+  "total_mechanisms": 18,
+  "mechanisms": [
+    {
+      "id": "M-01",
+      "name": "Tour-Validated Performance System",
+      "owner": "Titleist (Pro V1 / Pro V1x)",
+      "articulation": "Multi-layer urethane construction validated by more professional wins than any other ball. The implicit claim: if tour players choose it, it's the best ball for everyone.",
+      "quote_count": 50,
+      "exclusion_note": "DO NOT position iON+ as a tour ball or claim tour-level spin control. This is Titleist's territory. Instead, reframe: tour optimization is WRONG for your swing speed.",
+      "articulation_gap": "None — Titleist articulates this extremely well. But the gap is that their articulation is WRONG for 70% of golfers."
+    },
+    {
+      "id": "M-02",
+      "name": "Direct-to-Consumer Premium",
+      "owner": "Vice, Snell",
+      "articulation": "Same construction as premium balls, sold directly without retail markup, at roughly half the price. The claim: you're paying for the name, not the ball.",
+      "quote_count": 8,
+      "exclusion_note": "DO NOT lead with DTC/value messaging — Vice owns this frame. iON+ leads with ENGINEERING for specific swing speeds, not 'same ball cheaper.'",
+      "articulation_gap": "Vice never explains WHY their ball works for any specific golfer. It's always comparative ('like Pro V1 but cheaper'). No mechanism for matching to swing type."
+    },
+    {
+      "id": "M-03",
+      "name": "Warehouse Value Play",
+      "owner": "Kirkland (Costco)",
+      "articulation": "Premium 3-piece urethane construction at commodity pricing through Costco's distribution model. The claim: why pay more?",
+      "quote_count": 16,
+      "exclusion_note": "DO NOT compete on price alone. Kirkland owns rock-bottom pricing. iON+ needs to separate from Kirkland by performance credibility.",
+      "articulation_gap": "Large — Kirkland has no performance story. No testing data, no swing-speed matching, no mechanism beyond 'cheap and decent.' Performance complaints are common."
+    },
+    {
+      "id": "M-04",
+      "name": "Swing-Specific Fitting System",
+      "owner": "Bridgestone",
+      "articulation": "Proprietary ball fitting algorithm that matches ball model to swing characteristics, delivered through free demo day events.",
+      "quote_count": 5,
+      "exclusion_note": "CAN reference ball fitting concept — but frame iON+ as ALREADY fitted for your swing speed range. No fitting event needed. The engineering IS the fitting.",
+      "articulation_gap": "Bridgestone's fitting is perceived as biased (fitters recommend Bridgestone regardless of data). The CONCEPT of matching ball to swing is right. The EXECUTION is compromised by brand capture."
+    },
+    {
+      "id": "M-05",
+      "name": "Compression-First Feel System",
+      "owner": "Callaway (Supersoft / Chrome Soft)",
+      "articulation": "Ultra-low compression core engineered for the softest feel in golf. HEX aerodynamics for consistent flight.",
+      "quote_count": 12,
+      "exclusion_note": "CAN claim soft feel but DO NOT make it the lead story. Callaway owns 'softest ball.' iON+ leads with distance.",
+      "articulation_gap": "Callaway connects compression to feel but NOT to distance optimization. No explanation of how compression affects distance for different swing speeds."
+    },
+    {
+      "id": "M-06",
+      "name": "5-Layer Performance Architecture",
+      "owner": "TaylorMade (TP5)",
+      "articulation": "Only 5-piece construction in golf with dedicated speed, spin, and feel layers.",
+      "quote_count": 15,
+      "exclusion_note": "DO NOT compete on layer count. More layers ≠ better performance for average swing speeds.",
+      "articulation_gap": "TM explains the TECHNOLOGY (5 layers) but not the BENEFIT (what it means for your game). Feature-heavy, benefit-light."
+    },
+    {
+      "id": "M-07",
+      "name": "Precision Engineering with Value",
+      "owner": "Srixon (Z-Star / Q-Star / Soft Feel)",
+      "articulation": "FastLayer DG core with graduating softness from center to edge. Japanese precision engineering at competitive pricing.",
+      "quote_count": 18,
+      "exclusion_note": "CAN reference core technology concepts. Srixon is respected but not dominant. Differentiate through swing-speed specificity.",
+      "articulation_gap": "Srixon has good technology articulation but weak brand positioning. Known more for sales/deals than for performance leadership."
+    },
+    {
+      "id": "M-08",
+      "name": "Retail-Owned Premium",
+      "owner": "Maxfli (Dick's Sporting Goods)",
+      "articulation": "Tour-level urethane construction sold through owned retail at aggressive pricing. No middleman markup.",
+      "quote_count": 4,
+      "exclusion_note": "Similar to Vice — don't compete on 'same ball cheaper.' Maxfli has no unique mechanism claim.",
+      "articulation_gap": "Large — Maxfli is a strong value product with zero mechanism differentiation. Just 'good and cheap.'"
+    },
+    {
+      "id": "M-09",
+      "name": "Wilson Budget/Value Line",
+      "owner": "Wilson",
+      "articulation": "Affordable golf balls from a trusted American sports brand. Multiple tiers from budget to mid-premium.",
+      "quote_count": 7,
+      "exclusion_note": "Wilson operates below iON+ price point. Not a direct competitor but represents the 'cheap ball' segment iON+ needs to differentiate from.",
+      "articulation_gap": "Wilson has no performance mechanism story. It's brand trust + price."
+    },
+    {
+      "id": "M-10",
+      "name": "Tour Player Endorsement",
+      "owner": "Multiple (Titleist, Callaway, TaylorMade, Bridgestone)",
+      "articulation": "Tour player X uses this ball, therefore it's the best ball. Endorsement = validation.",
+      "quote_count": 21,
+      "exclusion_note": "DO NOT use tour endorsement as a mechanism. iON+ is NOT a tour ball and shouldn't pretend to be. Use independent robot testing instead.",
+      "articulation_gap": "Tour endorsement assumes the amateur should play what the pro plays. The OPPOSITE is true for swing speed optimization."
+    },
+    {
+      "id": "M-11",
+      "name": "Triple Track Alignment System",
+      "owner": "Callaway (Chrome Soft)",
+      "articulation": "Three-line visual alignment aid on the ball for putting accuracy.",
+      "quote_count": 3,
+      "exclusion_note": "iON+ has SUPERIOR visual alignment technology. Don't ignore Triple Track — acknowledge it, then differentiate. iON+ alignment works for BOTH tee shots and putting. Triple Track is putting only.",
+      "articulation_gap": "Triple Track is positioned as a nice-to-have feature, not a core technology. No one has built a SYSTEM around visual alignment."
+    },
+    {
+      "id": "M-12",
+      "name": "Compression Matching",
+      "owner": "No single owner (generic category)",
+      "articulation": "Match your ball's compression to your swing speed. Low compression for slow speeds, high compression for fast speeds.",
+      "quote_count": 4,
+      "exclusion_note": "CAN reference compression matching — it supports the iON+ engineering story. But iON+ goes BEYOND compression to total ball engineering.",
+      "articulation_gap": "No brand owns this as a positioning. It's generic advice. iON+ can own the specific range (80-95mph) with specific data."
+    },
+    {
+      "id": "M-13",
+      "name": "Dimple Aerodynamics",
+      "owner": "No single owner",
+      "articulation": "Proprietary dimple patterns reduce drag and optimize flight characteristics.",
+      "quote_count": 3,
+      "exclusion_note": "Generic technology claim. iON+ should reference aerodynamics only as supporting engineering, not as a lead mechanism.",
+      "articulation_gap": "Every ball has dimples. No brand has differentiated here in a way golfers remember."
+    },
+    {
+      "id": "M-14",
+      "name": "Snell Design Philosophy",
+      "owner": "Snell Golf (Dean Snell)",
+      "articulation": "Designed by a former Titleist VP of ball engineering. The insider who left and built a better ball for less.",
+      "quote_count": 2,
+      "exclusion_note": "Snell's 'insider' story is compelling but small-scale. iON+ has a different origin story (PG's engineering investment + independent testing).",
+      "articulation_gap": "Snell has a great founder story but limited marketing reach. Not a primary competitor."
+    },
+    {
+      "id": "M-15",
+      "name": "Robot/Lab Testing Claims",
+      "owner": "No single owner (iON+ can OWN this)",
+      "articulation": "Independent robot testing at certified laboratories to validate performance claims.",
+      "quote_count": 1,
+      "exclusion_note": "THIS IS iON+'s TERRITORY TO CLAIM. No competitor leads with independent third-party robot testing as their primary proof mechanism. Golf Laboratories data is the credibility anchor.",
+      "articulation_gap": "MASSIVE — no brand has made independent testing the CENTER of their positioning. Most cite their own internal testing or vague claims. iON+ can own 'independently tested, independently proven.'"
+    },
+    {
+      "id": "M-16",
+      "name": "Launch Monitor Validation",
+      "owner": "No single owner (community-driven)",
+      "articulation": "Personal launch monitor testing (Trackman, GCQuad) as the ultimate arbiter of ball performance.",
+      "quote_count": 2,
+      "exclusion_note": "CAN reference launch monitor data to support claims. The community already trusts this methodology.",
+      "articulation_gap": "This is consumer behavior, not a brand mechanism. But iON+ can align with it: 'Don't trust our marketing. Test it on your launch monitor.'"
+    },
+    {
+      "id": "M-17",
+      "name": "Multi-Layer Construction (generic)",
+      "owner": "No single owner",
+      "articulation": "More layers = more specialized performance. Each layer serves a different function.",
+      "quote_count": 5,
+      "exclusion_note": "Don't lead with layer count. Explain what the 3-piece construction DOES for their swing speed.",
+      "articulation_gap": "Generic claim that every multi-piece ball makes. Needs translation into benefit language."
+    },
+    {
+      "id": "M-18",
+      "name": "Urethane vs. Ionomer Cover Debate",
+      "owner": "No single owner (industry conversation)",
+      "articulation": "Urethane covers provide more greenside spin, ionomer covers are more durable. Urethane = premium, ionomer = budget.",
+      "quote_count": 6,
+      "exclusion_note": "CRITICAL to reframe. iON+ is ionomer by design, not by compromise. The ionomer cover REDUCES driver spin which INCREASES distance for moderate swing speeds. This is engineering, not cost-cutting.",
+      "articulation_gap": "The market frames this as a quality hierarchy (urethane > ionomer). Nobody has reframed ionomer as the OPTIMAL choice for most golfers' swing speeds."
+    }
+  ],
+  "ion_plus_unique_mechanism_opportunities": [
+    "Swing-Speed Optimized Engineering — no competitor owns this specific positioning",
+    "Independent Robot Testing as primary proof — Golf Laboratories is credibility gold",
+    "Dual-Purpose Visual Alignment System — tee shot AND putting alignment in one design",
+    "Ionomer-by-Design — reframe ionomer from 'cheaper' to 'better for YOUR speed'"
+  ]
+}

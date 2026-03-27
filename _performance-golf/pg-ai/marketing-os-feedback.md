@@ -935,4 +935,121 @@ This retrospective surfaced several behaviors that should become permanent opera
 
 ---
 
-*Written 2026-03-26 by Claude (Opus 4.6) at Ben's request. This is diagnostic only — no changes made. Updated with comprehensive MCP audit, comparison data, and improvement plan.*
+## Session 3: Gate 1 → Layer 2 → Layer 2.5 (2026-03-27)
+
+**Duration:** ~1 session
+**Outcome:** Gate 1 passed, Layer 2 intelligence analysis complete (9 files), Layer 2.5 synthesis complete (7 files), Gate 2.5 human review — REVISE with significant feedback.
+
+### What Went Well
+- Picked up from RESUME.md efficiently — no path confusion, no "where is everything"
+- Verified actual quote counts from files (didn't trust the claimed numbers — checked)
+- Built Gate 1 structural artifacts programmatically (Python script for consolidation, IDs, pairs, mechanism map)
+- Produced all Layer 2 intelligence analysis in a single pass (9 Gate 2 files)
+- Layer 2.5 synthesis produced all 7 artifacts
+
+### What Went Wrong — Ben's Feedback on SYNTHESIS_VALIDATION.md
+
+**Issue 16: Weak/unsupported claim about ionomer vs urethane (EP-004)**
+The educational pair framed ionomer as categorically better than urethane. This is not scientifically defensible as a general claim. The CORRECT framing: iON+ specifically (with its engineering at 95mph) outperforms ProV1 in distance and softness — confirmed by designer call data. The win is product-specific, not material-category-specific.
+
+**Rule:** Never make category-level claims (ionomer > urethane) when the evidence is product-specific. Cite the specific product data, not the material type.
+
+**Issue 17: Missing hope vs pain market assessment**
+The emotional tag distribution data was presented but never INTERPRETED through the WORKSPACE.md copywriting principle about matching frame to market emotional state. The data shows this is a mixed-to-hope-leaning market (solution-aware, actively comparing), which should change the copy approach: solution leads, problem section is shorter. This analysis was completely absent.
+
+**Rule:** Always interpret emotional data through the WORKSPACE.md copywriting lens. Raw data without strategic interpretation is useless to the copywriter.
+
+**Issue 18: Confidence levels too low**
+Ben's standard: anything below 90% confidence is untrustworthy. The validation doc had artifacts at 85% and even 75% (categorization). Either improve the methodology to raise confidence, or don't present artifacts below the trust threshold.
+
+**Rule:** Minimum confidence threshold is 90%. Below that, the artifact needs rework before presentation. Don't present low-confidence work as "done with caveats" — fix it first.
+
+**Issue 19: Frame claim presented for approval instead of validated by research**
+The frame claim "Your golf ball is designed for someone else's swing" was presented to Ben for approval. His response: "why the fuck are you asking me? this must be validated by research." The frame claim should emerge from the data and be PRESENTED with evidence, not offered as a suggestion for human evaluation.
+
+**Rule:** Frame claims are research outputs, not proposals. Present them with supporting evidence and confidence level. Don't ask "does this land?" — show WHY it lands based on the data.
+
+**Issue 20: EP-001 ("not good enough for premium ball") doesn't apply to iON+**
+iON+ is NOT a premium ball. The "you need to be good enough" misconception is irrelevant to a $30 ionomer ball. The real educational points: (1) ball choice matters for distance/spin, (2) performance varies massively between balls, (3) age-related decline can be partially offset by ball optimization.
+
+**Rule:** Every educational frame must be tested against iON+'s actual positioning. If the misconception doesn't apply to the product, it's not useful.
+
+**Issue 21: Age-decline framing risks pigeon-holing to older golfers**
+Leading with aging narrows the audience. While 55-65 is the core demo, the distance/spin/value message applies to any golfer with 80-95mph swing speed regardless of age.
+
+**Rule:** Use age as supporting context, not as the lead. The primary frame should be speed-based (80-95mph), not age-based (55+).
+
+**Issue 22: Ball fitting misconception is too niche**
+The Bridgestone-ball-fitting-bias educational pair serves a tiny segment. Most golfers have never been to a ball fitting event.
+
+**Rule:** Educational pairs should address beliefs held by a LARGE segment of the market, not niche experiences.
+
+### What the Review Cycle Fixed
+
+Ben's feedback forced 3 revision rounds on SYNTHESIS_VALIDATION.md before approval. Each round eliminated lazy thinking:
+
+**Round 1:** Killed EP-001 (premium ball "good enough" — irrelevant to a $30 ball), killed the original frame claim ("your ball is designed for someone else's swing" — too clever, not grounded), added hope vs pain market assessment (solution-aware market, proof converts, not pain storytelling), raised all confidence thresholds to 90%+.
+
+**Round 2:** Killed EP-004 again — the revised version still wasted time explaining that premium balls are better for good players. Ben's point: these golfers are ALREADY price shopping. They don't need to be told ProV1 is good and expensive. They know. Replaced with spin/accuracy education — something they DON'T already know.
+
+**Round 3:** Frame claim simplified. Ben's direction: "YOUR BALL MATTERS (and you don't have to pay through the nose to get a great one)." Two pillars: (1) ball choice creates 10-30 yards of distance difference, (2) $30/dozen gets you a great ball. Simple, actionable, not overthought.
+
+**Result:** APPROVED. The review cycle turned a mediocre first draft into a sharp, product-relevant synthesis. The system worked — but only because the human checkpoint forced revision. Without Ben's feedback, the original frame claim and educational pairs would have propagated through Layer 3 and into copy. This validates the mandatory human checkpoint at Gate 2.5.
+
+### From Session 3
+16. **Never make category claims (ionomer > urethane) when evidence is product-specific.** Cite the product data, not the material type.
+17. **Always interpret emotional data through WORKSPACE.md copy principles.** Hope vs pain market assessment must be explicit — it changes the entire copy approach.
+18. **Minimum confidence threshold is 90%.** Below that, rework the artifact. Don't present low-confidence work as acceptable.
+19. **Frame claims are research outputs, not proposals.** Present with evidence. Don't ask the human to validate — show the validation.
+20. **Test every educational frame against the product's actual positioning.** If the misconception doesn't apply to iON+, kill it.
+21. **Lead with speed (80-95mph), not age (55+).** Age is context, speed is the primary frame.
+22. **Educational pairs must address widely-held beliefs, not niche experiences.**
+23. **Don't explain what the audience already knows.** If they're price-shopping, don't educate them that premium balls are expensive. Meet them where they are.
+24. **Frame claims should be simple and actionable.** "Your ball matters + fair price" beats "your ball is designed for someone else's swing." Clever loses to clear.
+25. **The human checkpoint at Gate 2.5 is load-bearing.** First-draft synthesis had multiple strategic errors that would have poisoned Layer 3 and copy. The review cycle is not a formality — it's where the work gets good.
+
+---
+
+## Session 4: Layer 2.8 RSF → Layer 3 → Gate 3 → FINAL_HANDOFF.md Assembly (2026-03-27)
+
+**Duration:** Continuation of Session 3 + fresh session after context compression
+**Outcome:** Layer 2.8 RSF complete, Layer 3 complete (7 files), Gate 3 PASS, FINAL_HANDOFF.md assembled — 554KB, 5,613 lines, 18 sections, 1,080 quotes. Research pipeline COMPLETE.
+
+### What Went Well
+
+- **RESUME.md cross-session handoff worked perfectly.** After context compression, the resume doc + PROJECT-STATE.md provided everything needed to pick up exactly where we left off. No lost context, no repeated work, no confusion about what was done vs. what was next.
+- **Gate 3 pre-assembly checklist caught everything before assembly started.** Every artifact verified, every count checked. No mid-assembly surprises.
+- **Python assembly script was the correct approach for a 554KB document.** The scored_quotes.json alone is 948KB — far too large to hold in conversation context. The script reads all 35+ source files directly from disk, formats them into the required structure, and writes the output. No context window limitations, no truncated quotes, no missed sections.
+- **All 1,080 quotes included on first pass.** Verified by automated count: P:302, H:250, RC:201, ST:152, CM:100, V:75. Every quote has its ID, source, emotional tags, priority, and composite score.
+- **554KB / 5,613 lines on first attempt.** Well above the 200KB / 1,500 line minimums. The prior session's 10KB summary disaster (documented in ENFORCEMENT-GATES.md) was specifically prevented by the script approach.
+- **No new analysis generated.** Every piece of content traces to a source artifact. The assembly script is a formatter, not a synthesizer.
+- **RSF layer (2.8) produced genuinely useful intelligence.** The FSSIT candidates and unnamed emotions (equipment grief, brand shame, choice paralysis guilt, competitive mortality) are deeply insightful and directly usable by the copy engine. The whitespace zones and schema violation opportunities give Engine 01 specific positioning territory to claim.
+
+### What Could Be Better
+
+**Issue 23: Context compression requires careful handoff docs**
+When a research project spans 3+ sessions and exceeds context limits, the compression summary becomes the single point of failure. If the resume doc is incomplete or the compression summary misses key details, the next session starts blind. This session's resume doc was thorough, but the approach is fragile — it depends on the AI writing a good handoff before running out of context.
+
+**Rule:** When approaching context limits mid-project, write the RESUME.md update FIRST (before the context gets critical), not last. The resume doc is more important than finishing the current sub-task.
+
+**Issue 24: Forbidden marker validation has false positive problem with verbatim quotes**
+The post-assembly validation flagged "refer to" as a forbidden abbreviation marker. But all 3 matches were inside verbatim golfer quotes (e.g., "Prefer to use Callaway supersofts"). These are natural language, not abbreviation markers like "refer to the full document for details."
+
+**Rule:** When validating for forbidden abbreviation markers, verify each match is actually an abbreviation pattern, not natural language inside a verbatim quote. Matches inside blockquote lines (`>`) that contain golfer speech patterns are almost certainly false positives.
+
+**Issue 25: Assembly script approach should be the standard, not an improvisation**
+The Python assembly script worked perfectly but was built ad-hoc. For any FINAL_HANDOFF.md assembly, this should be the documented standard approach — not "10-15 sequential Write calls" which risks context exhaustion and truncation.
+
+**Rule:** FINAL_HANDOFF.md assembly should ALWAYS use a Python script that reads all source artifacts from disk. The "10-15 Write calls" protocol in the spec was designed to prevent single-write summaries, but a script that produces a verified 554KB file from source data is strictly superior. The spec's intent (complete assembly, not summary) is better served by the script approach than by sequential Write calls that risk context degradation.
+
+### From Session 4
+
+26. **For FINAL_HANDOFF.md assembly, use a Python script that reads all artifacts from disk.** Don't attempt to hold 948KB+ of quotes in conversation context. The script approach guarantees completeness and is verifiable.
+27. **Write the RESUME.md handoff doc BEFORE context gets critical.** The resume doc is the cross-session lifeline. If context runs out before it's written, the next session starts from scratch.
+28. **Forbidden marker validation needs false positive awareness.** Verbatim quotes from golfers will contain natural language that matches marker patterns ("refer to," "for brevity"). Validate that matches are actual abbreviation patterns, not speech inside blockquotes.
+29. **The assembly script should be committed alongside FINAL_HANDOFF.md.** It's documentation of exactly how the handoff was produced, and it's rerunnable if artifacts are updated.
+30. **RSF intelligence (Layer 2.8) is high-value input for Engine 01.** The FSSIT candidates, whitespace zones, and schema violations directly inform Big Idea generation. Don't let Engine 01 skip this section — it's where the non-obvious positioning insights live.
+
+---
+
+*Written 2026-03-26 by Claude (Opus 4.6) at Ben's request. Updated 2026-03-27 with Session 3 and Session 4 feedback. This is diagnostic only — no changes made to the research system itself.*

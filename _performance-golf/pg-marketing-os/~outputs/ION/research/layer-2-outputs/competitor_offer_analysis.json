@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "skill": "2.4-E Competitor Offer Analyzer",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "100 COMPETITOR_MECHANISM quotes + 152 SOLUTIONS_TRIED quotes + market intelligence"
+  },
+  "competitors": [
+    {
+      "name": "Titleist Pro V1 / Pro V1x",
+      "tier": "Premium ($55/dozen)",
+      "claimed_root_cause": "Performance comes from the most advanced multi-layer construction and urethane cover technology",
+      "marketing_message": "The #1 ball in golf — chosen by more tour players than any other",
+      "implicit_belief": "If the best players play it, it must be the best ball for everyone",
+      "mechanism": {
+        "name": "Tour-Validated Performance System",
+        "articulation": "Multi-layer urethane construction with proprietary core technology, validated by more professional wins than any other ball"
+      },
+      "deliverables": ["3 or 4-piece urethane construction", "Consistent flight", "Greenside spin control", "Soft feel"],
+      "price": "$54.99/dozen",
+      "guarantee": "None (implicit brand trust)",
+      "guarantee_rating": "WEAK",
+      "weakness": "Designed for 105+ mph swing speeds. At 80-95mph, the high spin that gives tour players control actually COSTS amateur golfers distance. They're paying premium for a ball that actively hurts their game.",
+      "evidence_ids": ["CM-001", "CM-007", "CM-008", "V-003", "V-037", "RC-014", "RC-026"]
+    },
+    {
+      "name": "Vice Pro / Pro Plus",
+      "tier": "DTC Mid-Premium ($26-33/dozen)",
+      "claimed_root_cause": "Premium performance is being gatekept by traditional brands — DTC removes the middleman",
+      "marketing_message": "Premium golf balls at a fair price, direct from the manufacturer",
+      "implicit_belief": "The same ball technology costs less when you cut out the pro shop and retail markup",
+      "mechanism": {
+        "name": "Direct-to-Consumer Premium",
+        "articulation": "Cast urethane cover, multi-layer construction comparable to Pro V1, sold direct at roughly half the price"
+      },
+      "deliverables": ["3-piece urethane construction", "Multiple compression options", "Custom logo ordering", "Bulk pricing"],
+      "price": "$26-33/dozen (volume discounts available)",
+      "guarantee": "None specific",
+      "guarantee_rating": "WEAK",
+      "weakness": "Still positions as 'almost as good as Pro V1 for less money' — a compromise frame. Doesn't solve the fundamental problem of swing-speed matching. Durability concerns persist.",
+      "evidence_ids": ["CM-003", "CM-009", "ST-009", "ST-017", "V-022", "V-026", "H-011"]
+    },
+    {
+      "name": "Kirkland Signature (Costco)",
+      "tier": "Value ($28/2 dozen)",
+      "claimed_root_cause": "Golf ball pricing is inflated — same technology can be offered at warehouse prices",
+      "marketing_message": "Premium performance at Costco prices",
+      "implicit_belief": "If you're smart with money, you don't need to pay Titleist prices",
+      "mechanism": {
+        "name": "Warehouse Value Play",
+        "articulation": "3-piece urethane construction at commodity pricing through Costco's distribution model"
+      },
+      "deliverables": ["3-piece urethane construction", "Costco availability", "Multi-pack value"],
+      "price": "$28/2 dozen ($14/dozen)",
+      "guarantee": "Costco return policy",
+      "guarantee_rating": "STRONG (Costco satisfaction guarantee)",
+      "weakness": "Performance inconsistency. Multiple golfers report significant distance loss ('lost 30 yards', 'whiffleball a mile high'). High spin causes problems for moderate swing speeds. Feels harder than premium alternatives.",
+      "evidence_ids": ["CM-004", "CM-007", "CM-015", "ST-001", "ST-010", "V-009", "V-042"]
+    },
+    {
+      "name": "Callaway Supersoft / Chrome Soft",
+      "tier": "Mid ($22/dozen) to Premium ($47/dozen)",
+      "claimed_root_cause": "Golfers need a soft-feeling ball that's easy to launch",
+      "marketing_message": "Feel the difference with the softest balls in golf",
+      "implicit_belief": "Soft feel = better feel = better golf",
+      "mechanism": {
+        "name": "Compression-First Feel System",
+        "articulation": "Low compression core engineered for soft feel on every shot, with HEX aerodynamics for consistent flight"
+      },
+      "deliverables": ["Ultra-low compression (Supersoft)", "Triple Track alignment (Chrome Soft)", "Soft feel emphasis"],
+      "price": "$22-47/dozen depending on model",
+      "guarantee": "None specific",
+      "guarantee_rating": "WEAK",
+      "weakness": "Supersoft is positioned as a 'beginner' ball which creates a ceiling. Chrome Soft is premium-priced and competes directly with Pro V1. Neither is specifically positioned for swing-speed optimization. Durability complaints on Supersoft.",
+      "evidence_ids": ["CM-087", "CM-088", "H-016", "ST-006", "V-021"]
+    },
+    {
+      "name": "Bridgestone e6 / e12 / Tour B",
+      "tier": "Mid ($22/dozen) to Premium ($45/dozen)",
+      "claimed_root_cause": "Every golfer needs the RIGHT ball for their game — ball fitting is the answer",
+      "marketing_message": "Find your fit — the right ball for your swing",
+      "implicit_belief": "Ball fitting (Bridgestone's fitting events) is the path to finding the right ball",
+      "mechanism": {
+        "name": "Swing-Specific Fitting System",
+        "articulation": "Proprietary ball fitting algorithm that matches ball model to swing characteristics, validated through demo day events"
+      },
+      "deliverables": ["Multiple models for different swing types", "Free fitting events", "Reactiv cover technology"],
+      "price": "$22-45/dozen",
+      "guarantee": "Free fitting",
+      "guarantee_rating": "MEDIUM",
+      "weakness": "Fitting events are perceived as brand-biased sales pitches. Multiple golfers report being told their data shows Pro V1 is better but being given Bridgestone anyway. The fitting mechanism is good in theory but undermined by brand capture.",
+      "evidence_ids": ["RC-024", "V-036", "V-014", "V-072", "CM-002"]
+    },
+    {
+      "name": "Srixon Z-Star / Q-Star / Soft Feel",
+      "tier": "Mid ($20/dozen) to Premium ($42/dozen)",
+      "claimed_root_cause": "Japanese engineering precision creates better ball performance",
+      "marketing_message": "The ball the insiders play",
+      "implicit_belief": "Knowledgeable golfers choose Srixon — it's the 'smart' alternative to Titleist",
+      "mechanism": {
+        "name": "Precision Engineering with Value",
+        "articulation": "FastLayer core technology with graduating softness from center to edge, frequently on sale creating strong value perception"
+      },
+      "deliverables": ["FastLayer DG core technology", "Multiple tier options", "Frequent promotions/sales"],
+      "price": "$20-42/dozen (frequently on sale)",
+      "guarantee": "None specific",
+      "guarantee_rating": "WEAK",
+      "weakness": "Strong product but weak brand positioning in US market. Known primarily as a value play ('Srixon is always on sale'). Not specifically positioned for any swing speed segment.",
+      "evidence_ids": ["CM-088", "ST-011", "ST-012", "V-015", "V-028"]
+    },
+    {
+      "name": "TaylorMade TP5 / Tour Response / Soft Response",
+      "tier": "Mid ($25/dozen) to Premium ($50/dozen)",
+      "claimed_root_cause": "More layers = more performance",
+      "marketing_message": "5-layer performance for total game improvement",
+      "implicit_belief": "The most advanced construction (5 layers) delivers the best performance",
+      "mechanism": {
+        "name": "5-Layer Performance Architecture",
+        "articulation": "Only 5-piece construction in golf, with dedicated layers for speed, spin, and feel"
+      },
+      "deliverables": ["Unique 5-piece construction (TP5)", "Speed layer system", "Tour Response mid-tier option"],
+      "price": "$25-50/dozen",
+      "guarantee": "None specific",
+      "guarantee_rating": "WEAK",
+      "weakness": "5-layer construction is a feature, not a benefit. Golfers don't experience 'layers' — they experience distance and feel. The technology messaging requires translation that TM doesn't always provide.",
+      "evidence_ids": ["CM-006", "V-017", "V-044", "ST-013"]
+    },
+    {
+      "name": "Maxfli Tour / Tour X (Dick's Sporting Goods)",
+      "tier": "Mid ($27/dozen with promotions)",
+      "claimed_root_cause": "Premium performance doesn't require premium pricing when sold through owned retail",
+      "marketing_message": "Tour-level performance at a fraction of the price",
+      "implicit_belief": "Dick's owns the brand so there's no middleman markup",
+      "mechanism": {
+        "name": "Retail-Owned Premium",
+        "articulation": "Urethane cover construction sold through Dick's/Golf Galaxy ecosystem at aggressive pricing"
+      },
+      "deliverables": ["3-piece urethane construction", "Dick's/Golf Galaxy availability", "Bulk pricing promotions"],
+      "price": "$27/dozen (4-dozen deal at ~$27/doz)",
+      "guarantee": "None specific",
+      "guarantee_rating": "WEAK",
+      "weakness": "Strong value proposition but limited to Dick's ecosystem. Perceived as a 'store brand' by some golfers. No unique technology or mechanism claim.",
+      "evidence_ids": ["ST-003", "CM-005", "CM-010", "V-038"]
+    }
+  ],
+  "sin_intelligence": {
+    "SUPERIOR": {
+      "what_would_beat_market": "A ball that is SPECIFICALLY ENGINEERED for 80-95mph swing speeds (not adapted from a tour ball), INDEPENDENTLY TESTED by a third-party lab (not the manufacturer), with a UNIQUE FEATURE no competitor has (visual alignment technology). Nobody in the market has all three.",
+      "gap_analysis": "Pro V1 has brand trust but wrong speed range. Vice has price but no unique mechanism. Kirkland has price but poor performance. Bridgestone has fitting but brand-biased. Nobody combines swing-speed engineering + independent proof + unique technology."
+    },
+    "IRRESISTIBLE": {
+      "what_creates_urgency": "The realization that every round played with the wrong ball is yards left on the table. Not future yards — yards they're losing RIGHT NOW. Combined with the fact that aging makes this worse, not better. Every season that passes, the gap between 'wrong ball' and 'right ball' grows wider.",
+      "urgency_triggers": [
+        "Age-related distance decline is accelerating — each year matters more",
+        "Golf ball prices are only going up — lock in value now",
+        "Every round with the wrong ball is measurable performance left behind"
+      ]
+    },
+    "NO_BRAINER": {
+      "what_removes_all_risk": "Robot testing data that proves the claim before they buy. At $30/dozen (vs $55 for Pro V1), the financial risk is negligible. If one dozen doesn't convince them, they've spent less than the cost of a single sleeve of Pro V1s. The data removes belief risk. The price removes financial risk.",
+      "risk_reversal_elements": [
+        "Independent Golf Laboratories data — proof before purchase",
+        "Price point ($30 vs $55) — trying it costs less than what they're currently paying",
+        "Consumable product — if they don't like it, they finish the dozen and move on"
+      ]
+    }
+  }
+}

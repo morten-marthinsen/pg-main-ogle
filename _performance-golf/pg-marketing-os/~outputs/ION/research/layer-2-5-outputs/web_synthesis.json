@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "skill": "2.5-C WEB Synthesizer (Vic Schwab Framework)",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "web_analysis.json + 1,080 quotes"
+  },
+  "wants": {
+    "GAIN": [
+      {
+        "want": "Gain 5-15 yards of distance they thought was lost to aging",
+        "evidence_ids": ["P-253", "H-236", "CM-002"],
+        "prospect_language": "I immediately saw 10ish yards improvement"
+      },
+      {
+        "want": "Gain confidence that their ball choice is objectively right",
+        "evidence_ids": ["RC-024", "ST-109"],
+        "prospect_language": "I changed based on clubhead speed... saw immediate results"
+      },
+      {
+        "want": "Gain savings of $20-25/dozen vs. premium balls",
+        "evidence_ids": ["CM-003", "ST-003", "H-016"],
+        "prospect_language": "I love the $25-30 USD balls"
+      }
+    ],
+    "BE": [
+      {
+        "want": "Be the smart golfer who plays the right ball — not the most expensive one",
+        "evidence_ids": ["V-024", "ST-003"],
+        "prospect_language": "I have really nice golf equipment without paying those ridiculous prices"
+      },
+      {
+        "want": "Be competitive with playing partners despite aging",
+        "evidence_ids": ["P-001", "P-264"],
+        "prospect_language": "Every now and then, I'll play a round that reminds me of the old days"
+      }
+    ],
+    "DO": [
+      {
+        "want": "Stop guessing about ball choice and commit to one ball",
+        "evidence_ids": ["H-011", "ST-009"],
+        "prospect_language": "I buy 10 dozen logo balls in March every year and play them all season"
+      },
+      {
+        "want": "Play one ball for every shot — no 'water ball' needed",
+        "evidence_ids": ["CM-004", "RC-023"],
+        "prospect_language": "Par 5, no water, no OB... PROV1. Par 3 over water... Kirkland"
+      }
+    ],
+    "SAVE": [
+      {
+        "want": "Save money without sacrificing performance",
+        "evidence_ids": ["V-005", "CM-003", "ST-017"],
+        "prospect_language": "Nearly the same performance, half the price"
+      },
+      {
+        "want": "Save time spent testing different balls each season",
+        "evidence_ids": ["V-021", "V-031"],
+        "prospect_language": "I've been experimenting this year..."
+      }
+    ],
+    "AVOID": [
+      {
+        "want": "Avoid feeling like a sucker paying $55/dozen",
+        "evidence_ids": ["V-035", "V-037", "H-013"],
+        "prospect_language": "For 95% of golfers, prov1s are an insane purchase"
+      },
+      {
+        "want": "Avoid the shame of being told 'you're not good enough' for a ball",
+        "evidence_ids": ["V-003", "RC-026"],
+        "prospect_language": "Stop wasting your money. You're not good enough."
+      },
+      {
+        "want": "Avoid the anxiety of losing a $5 ball in the water",
+        "evidence_ids": ["CM-004", "V-043"],
+        "prospect_language": "I don't feel nearly as bad when I dump one in the water"
+      }
+    ]
+  },
+  "emotions": {
+    "GAIN": [
+      {
+        "emotion": "Excitement of finding unexpected distance",
+        "evidence_ids": ["H-225", "CM-002"],
+        "prospect_language": "I hit the longest drive I've ever hit on this hole"
+      }
+    ],
+    "BE": [
+      {
+        "emotion": "Pride in making a data-driven decision",
+        "evidence_ids": ["ST-109", "RC-024"],
+        "prospect_language": "I changed based on clubhead speed"
+      }
+    ],
+    "DO": [
+      {
+        "emotion": "Relief of ending the search",
+        "evidence_ids": ["ST-009", "H-011"],
+        "prospect_language": "Got my hands on a sleeve and fell in love"
+      }
+    ],
+    "SAVE": [
+      {
+        "emotion": "Satisfaction of beating the pricing game",
+        "evidence_ids": ["CM-003", "V-024"],
+        "prospect_language": "Without paying those ridiculous prices"
+      }
+    ],
+    "AVOID": [
+      {
+        "emotion": "Fear of becoming the golfer who has to quit",
+        "evidence_ids": ["P-263", "P-001"],
+        "prospect_language": "Had to give up golf completely and it was devastating"
+      },
+      {
+        "emotion": "Resentment toward industry exploitation",
+        "evidence_ids": ["V-035", "V-018"],
+        "prospect_language": "The entire golf ball industry is a scam"
+      }
+    ]
+  },
+  "beliefs": {
+    "GAIN": [
+      {
+        "belief": "The right ball CAN recover some lost distance",
+        "alignable": true,
+        "evidence_ids": ["CM-002", "H-236"]
+      }
+    ],
+    "BE": [
+      {
+        "belief": "Expensive = better quality (brand = trust)",
+        "alignable": false,
+        "challengeable": true,
+        "evidence_ids": ["V-002", "V-022"]
+      }
+    ],
+    "DO": [
+      {
+        "belief": "Trial and error is the only way to find the right ball",
+        "alignable": false,
+        "challengeable": true,
+        "evidence_ids": ["V-021", "ST-123"]
+      }
+    ],
+    "SAVE": [
+      {
+        "belief": "DTC/value balls are close to premium but not quite there",
+        "alignable": true,
+        "evidence_ids": ["CM-003", "ST-017"]
+      }
+    ],
+    "AVOID": [
+      {
+        "belief": "Distance loss is 100% caused by aging — ball can't help",
+        "alignable": false,
+        "challengeable": true,
+        "evidence_ids": ["P-253", "P-255"]
+      }
+    ]
+  }
+}

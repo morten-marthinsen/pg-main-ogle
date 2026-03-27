@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "skill": "2.8-A Expectation Schema Mapper",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "competitor_offer_analysis.json + market_intelligence.md + market_sophistication.json + scored_quotes.json + market_config.yaml",
+    "total_patterns_mapped": 18,
+    "whitespace_zones": 5,
+    "schema_violation_opportunities": 7
+  },
+  "expectation_patterns": [
+    {
+      "id": "EP-01",
+      "pattern": "Distance claims ('longer off the tee')",
+      "category": "performance_promise",
+      "who_uses_it": ["Titleist", "Callaway", "TaylorMade", "Bridgestone", "Srixon", "Vice", "Kirkland"],
+      "staleness_index": 9,
+      "staleness_evidence": "Every single ball brand leads with distance. Audience is numb — 'distance balls' as a category is a punchline. Golfers have tested so many 'distance' balls that the claim triggers skepticism, not curiosity.",
+      "audience_response": "Skeptical. They've heard it from everyone. 'Sure, they all say that.' Only SPECIFIC numbers (not 'farther' but '239.3 yards at 95mph') break through.",
+      "quote_evidence": ["V-035", "RC-061", "P-075"]
+    },
+    {
+      "id": "EP-02",
+      "pattern": "Soft feel claims ('softest ball in golf')",
+      "category": "performance_promise",
+      "who_uses_it": ["Callaway Supersoft", "Srixon Soft Feel", "TaylorMade Soft Response", "Vice Pro"],
+      "staleness_index": 8,
+      "staleness_evidence": "Four major brands have 'soft' in their product NAME. The word has lost all meaning. Golfers describe feel in more specific terms — 'clicky', 'mushy', 'solid off the putter face' — that marketing doesn't match.",
+      "audience_response": "Mildly interested but not persuaded. Feel is secondary to distance. Claiming 'soft' is table stakes, not differentiation.",
+      "quote_evidence": ["CM-088", "H-016", "ST-017"]
+    },
+    {
+      "id": "EP-03",
+      "pattern": "Tour player endorsement ('played by more tour pros')",
+      "category": "authority_proof",
+      "who_uses_it": ["Titleist", "Callaway", "TaylorMade", "Bridgestone"],
+      "staleness_index": 9,
+      "staleness_evidence": "The audience has internalized that tour endorsement = paid sponsorship, not genuine recommendation. 'The pros play it' no longer transfers trust. Multiple quotes show golfers explicitly rejecting tour-based reasoning.",
+      "audience_response": "Cynical. 'Of course they play it — they're paid to.' Tour endorsement actually triggers the 'not good enough' shame response in amateur golfers.",
+      "quote_evidence": ["V-037", "V-003", "V-041"]
+    },
+    {
+      "id": "EP-04",
+      "pattern": "Construction superiority ('5-piece', '3-piece urethane', 'multi-layer')",
+      "category": "technical_mechanism",
+      "who_uses_it": ["TaylorMade", "Titleist", "Callaway", "Vice", "Snell"],
+      "staleness_index": 7,
+      "staleness_evidence": "Informed golfers can recite layer counts and cover materials. But they can't connect construction to performance outcomes. 'It's a 4-piece urethane ball' is meaningless without 'and here's what that means for YOUR drives.'",
+      "audience_response": "Informed but unmoved. They know the terminology but it doesn't drive purchase decisions. It's a tiebreaker, not a lead.",
+      "quote_evidence": ["RC-001", "H-008", "V-002"]
+    },
+    {
+      "id": "EP-05",
+      "pattern": "ProV1 comparison ('performs like ProV1 at half the price')",
+      "category": "value_positioning",
+      "who_uses_it": ["Vice", "Maxfli", "Kirkland", "Snell"],
+      "staleness_index": 8,
+      "staleness_evidence": "Every DTC brand has made this exact claim. The audience has absorbed it — 'Vice is basically ProV1 for less' is common knowledge. The comparison frame no longer differentiates; it's become the default DTC positioning.",
+      "audience_response": "Accepted but not exciting. They believe cheaper balls CAN match ProV1. What they want now is a ball that's specifically RIGHT for them — not just 'as good as ProV1.'",
+      "quote_evidence": ["CM-003", "CM-005", "ST-003", "V-022"]
+    },
+    {
+      "id": "EP-06",
+      "pattern": "Price comparison ('$X less per dozen')",
+      "category": "value_positioning",
+      "who_uses_it": ["Vice", "Kirkland", "Maxfli", "Wilson"],
+      "staleness_index": 7,
+      "staleness_evidence": "Per-dozen price comparison is the default value frame. Every budget/DTC brand uses it. Golfers have already done this math. Leading with 'save $25/dozen' positions you in the value tier, not the performance tier.",
+      "audience_response": "Acknowledged but doesn't excite. They know they can save money. What they want is permission to save WITHOUT feeling like they're compromising.",
+      "quote_evidence": ["ST-017", "RC-023", "H-009"]
+    },
+    {
+      "id": "EP-07",
+      "pattern": "Ball fitting events ('get fitted for the right ball')",
+      "category": "authority_proof",
+      "who_uses_it": ["Bridgestone"],
+      "staleness_index": 5,
+      "staleness_evidence": "Ball fitting is a relatively fresh concept but Bridgestone has captured it as a brand-biased sales channel. Moderate staleness — the concept resonates but the execution is distrusted.",
+      "audience_response": "Interested but wary. They like the idea of matching ball to swing. They distrust the execution when the fitter works for a ball brand.",
+      "quote_evidence": ["RC-024", "V-036"]
+    },
+    {
+      "id": "EP-08",
+      "pattern": "YouTube review format ('I tested X balls so you don't have to')",
+      "category": "proof_format",
+      "who_uses_it": ["MyGolfSpy", "TXG", "Rick Shiels", "various YouTubers"],
+      "staleness_index": 6,
+      "staleness_evidence": "YouTube ball comparisons are a genre now. Golfers watch them but acknowledge the testing methodology varies wildly. Some trust robot data, some trust feel tests, some trust nothing.",
+      "audience_response": "Engaged but not fully trusting. They consume the content but recognize conflicts of interest and methodology differences.",
+      "quote_evidence": ["P-206", "CM-093", "H-203"]
+    },
+    {
+      "id": "EP-09",
+      "pattern": "Compression matching advice ('low compression for slow swing')",
+      "category": "technical_mechanism",
+      "who_uses_it": ["Generic advice across forums and YouTube"],
+      "staleness_index": 6,
+      "staleness_evidence": "The compression-speed matching framework is widely known. But the actual data defies conventional wisdom — some high-compression balls perform best at mid-swing speeds. The simple 'low compression = slow swing' advice is being challenged by data.",
+      "audience_response": "Accepted as conventional wisdom but shaken by contradictory data. Golfers who've tested on launch monitors know the advice is oversimplified.",
+      "quote_evidence": ["RC-017", "RC-144", "RC-148"]
+    },
+    {
+      "id": "EP-10",
+      "pattern": "Handicap-based ball selection ('play ProV1 when you break 80')",
+      "category": "authority_advice",
+      "who_uses_it": ["Pro shop staff", "online forums", "YouTube"],
+      "staleness_index": 7,
+      "staleness_evidence": "The 'what handicap should I play X ball' question appears dozens of times in the data. The advice is consistently handicap-framed, not speed-framed. This creates the shame dynamic: 'you're not good enough for that ball.'",
+      "audience_response": "Internalized and resented. They follow the advice but feel judged by it. The handicap frame makes ball selection about worthiness, not optimization.",
+      "quote_evidence": ["V-003", "V-037", "ST-002", "P-083"]
+    },
+    {
+      "id": "EP-11",
+      "pattern": "Used/recycled premium balls as value play",
+      "category": "value_positioning",
+      "who_uses_it": ["LostGolfBalls.com", "Amazon resellers", "forum advice"],
+      "staleness_index": 5,
+      "staleness_evidence": "A well-known lifehack among value-conscious golfers. Not brand-driven — it's community-driven advice. Moderate staleness; still feels like an insider tip to newer golfers.",
+      "audience_response": "Embraced by budget-conscious golfers. But it doesn't solve the 'right ball for my swing' problem — it just makes the wrong ball cheaper.",
+      "quote_evidence": ["H-009", "H-018", "V-034"]
+    },
+    {
+      "id": "EP-12",
+      "pattern": "Brand loyalty messaging ('trusted by generations')",
+      "category": "authority_proof",
+      "who_uses_it": ["Titleist", "Callaway"],
+      "staleness_index": 8,
+      "staleness_evidence": "Legacy brand messaging is the establishment default. But golfers are actively rebelling — Vice, Kirkland, and Maxfli gains prove loyalty is eroding. The 'trust the brand' message reinforces the pricing resentment.",
+      "audience_response": "Increasingly rejected. Brand loyalty is being replaced by data-driven selection. 'I don't care about the name, show me the numbers.'",
+      "quote_evidence": ["CM-011", "V-038", "CM-005"]
+    },
+    {
+      "id": "EP-13",
+      "pattern": "Aerodynamics/dimple claims ('optimized flight')",
+      "category": "technical_mechanism",
+      "who_uses_it": ["Callaway (HEX)", "Titleist (spherically-tiled)"],
+      "staleness_index": 7,
+      "staleness_evidence": "Every ball has dimples. Aerodynamic claims are generic and unverifiable by the consumer. Nobody chooses a ball because of its dimple pattern.",
+      "audience_response": "Ignored. Not a purchase driver. Background noise in marketing materials.",
+      "quote_evidence": []
+    },
+    {
+      "id": "EP-14",
+      "pattern": "Alignment lines (Triple Track, sidestamp)",
+      "category": "feature_highlight",
+      "who_uses_it": ["Callaway (Triple Track)"],
+      "staleness_index": 4,
+      "staleness_evidence": "Triple Track is the only significant alignment marketing. The concept is YOUNG — low staleness. But it's positioned as a nice-to-have feature, not a core technology. Nobody has made alignment the centerpiece of a ball's identity.",
+      "audience_response": "Divided. Some golfers love alignment marks. Others find them distracting. The opportunity: position alignment as ENGINEERED TECHNOLOGY, not decoration.",
+      "quote_evidence": ["H-188"]
+    },
+    {
+      "id": "EP-15",
+      "pattern": "Subscription/bulk buying model",
+      "category": "purchase_model",
+      "who_uses_it": ["Vice (direct site)", "Amazon Subscribe & Save"],
+      "staleness_index": 4,
+      "staleness_evidence": "Subscription is a relatively new model in golf balls. Vice pioneered it. Not yet saturated but growing. Golfers who've committed to a ball appreciate the convenience.",
+      "audience_response": "Neutral to positive. Not a primary driver but a friction-reducer for committed buyers.",
+      "quote_evidence": ["H-011", "V-014"]
+    },
+    {
+      "id": "EP-16",
+      "pattern": "Spin rate data as proof",
+      "category": "proof_format",
+      "who_uses_it": ["Launch monitor reviewers", "MyGolfSpy", "YouTube testers"],
+      "staleness_index": 5,
+      "staleness_evidence": "Spin rate data is becoming mainstream as personal launch monitors proliferate. Informed golfers cite specific RPM numbers. The format is trusted but the interpretation varies.",
+      "audience_response": "Trusted by data-oriented golfers. But many don't know what the numbers MEAN for their game. Data without translation is noise.",
+      "quote_evidence": ["P-012", "RC-148", "V-044"]
+    },
+    {
+      "id": "EP-17",
+      "pattern": "Money-back guarantee on golf balls",
+      "category": "risk_reversal",
+      "who_uses_it": ["None prominently (Costco return policy is the closest)"],
+      "staleness_index": 2,
+      "staleness_evidence": "Almost no golf ball brand offers a meaningful performance guarantee. Costco's return policy is used as a de facto guarantee. This is near-virgin territory for risk reversal.",
+      "audience_response": "Would be unexpected and welcome. The low price of iON+ already reduces risk, but a guarantee would be schema-violating.",
+      "quote_evidence": []
+    },
+    {
+      "id": "EP-18",
+      "pattern": "Independent third-party robot testing as primary proof",
+      "category": "proof_format",
+      "who_uses_it": ["MyGolfSpy (editorial)", "No ball brand leads with this"],
+      "staleness_index": 2,
+      "staleness_evidence": "No golf ball brand leads with INDEPENDENT testing as their primary proof mechanism. Brands cite internal testing or commissioned studies. Third-party robot data (Golf Laboratories) as the CENTERPIECE of positioning is unprecedented.",
+      "audience_response": "Would be highly credible. Golfers already trust MyGolfSpy robot data. A brand that says 'don't trust us, trust the independent lab' would violate every expectation of how ball brands market themselves.",
+      "quote_evidence": ["RC-014", "CM-002"]
+    }
+  ],
+  "whitespace_zones": [
+    {
+      "id": "WZ-01",
+      "zone": "Swing-speed-specific ball engineering as PRIMARY identity",
+      "description": "No ball brand's PRIMARY identity is 'engineered for a specific swing speed range.' Bridgestone approaches this with fitting events but they're brand-captured. The idea of a ball that IS its speed range — 'this ball IS 80-95mph' — doesn't exist.",
+      "schema_distance": 8,
+      "opportunity": "iON+ can own '80-95mph' the way Titleist owns 'tour performance.' Make the speed range the brand identity, not a compatibility note in fine print."
+    },
+    {
+      "id": "WZ-02",
+      "zone": "Visual alignment as an ENGINEERED SYSTEM",
+      "description": "Triple Track is a feature on one model. Nobody has made alignment a TECHNOLOGY — a complete system for both tee-to-green visualization. The concept of alignment as 'engineered performance technology' (not 'a line on the ball') doesn't exist in golf ball marketing.",
+      "schema_distance": 9,
+      "opportunity": "iON+ can create an entirely new category. 'Visual Alignment Technology' as a named, engineered system. The audience draws Sharpie lines — give them an engineered solution."
+    },
+    {
+      "id": "WZ-03",
+      "zone": "Independent testing as the BRAND'S OWN proof standard",
+      "description": "No ball brand leads with 'we don't ask you to trust our marketing. We ask you to trust an independent lab.' Every brand says 'trust us.' The schema violation: a brand that says 'don't trust us — trust the data.'",
+      "schema_distance": 9,
+      "opportunity": "Golf Laboratories robot data at 95mph is the credibility weapon no competitor has deployed at this level. Make it the centerpiece, not supporting evidence."
+    },
+    {
+      "id": "WZ-04",
+      "zone": "Ball choice framed as RECOVERY, not optimization",
+      "description": "Every ball brand frames their product as 'optimize your game.' Nobody frames it as 'RECOVER what you lost.' The recovery narrative — getting back yards you thought aging took — is emotionally different from optimization. Recovery implies something was taken and can be returned. Optimization implies incremental improvement.",
+      "schema_distance": 7,
+      "opportunity": "For the 45-70 age range, 'recovery' is more emotionally resonant than 'optimization.' You're not making their game slightly better — you're giving back something they lost."
+    },
+    {
+      "id": "WZ-05",
+      "zone": "Ball brand that VALIDATES price resentment instead of ignoring it",
+      "description": "Every ball brand either charges premium and ignores the backlash (Titleist), or positions as 'cheaper alternative' which implies compromise. No brand has said 'the pricing IS a scam, and here's what a fair ball costs.' Validating the resentment instead of defending against it is a schema violation.",
+      "schema_distance": 8,
+      "opportunity": "iON+ can be the brand that says what golfers already think: you've been overpaying. Not 'we're cheaper.' We're FAIR. The industry isn't."
+    }
+  ],
+  "schema_violation_opportunities": [
+    {
+      "id": "SVO-01",
+      "violation": "Lead with independent testing, not brand claims",
+      "expected_schema": "Brand says 'our ball is the best' → consumer evaluates",
+      "violated_schema": "Brand says 'don't trust us — here's what the independent lab measured' → consumer trusts the process",
+      "predicted_impact": "HIGH — breaks the adversarial brand/consumer dynamic. Positions iON+ as on the golfer's side, not selling to them."
+    },
+    {
+      "id": "SVO-02",
+      "violation": "Name the swing speed range as the brand identity",
+      "expected_schema": "Ball marketed to 'all golfers' or 'tour-level players'",
+      "violated_schema": "Ball marketed to '80-95mph swing speeds — specifically. Not adapted, not compatible. Engineered FOR this range.'",
+      "predicted_impact": "HIGH — exclusivity through specificity. Golfers in the range feel SEEN. Golfers outside it aren't the target and that's fine."
+    },
+    {
+      "id": "SVO-03",
+      "violation": "Validate pricing resentment openly",
+      "expected_schema": "Brand defends its pricing or ignores the conversation",
+      "violated_schema": "Brand says 'you're right — $55 for a ball most golfers can't fully use is wrong. Here's what fair looks like.'",
+      "predicted_impact": "HIGH — alignment with the audience's existing belief. They already think it. iON+ just says it out loud."
+    },
+    {
+      "id": "SVO-04",
+      "violation": "Frame as recovery, not optimization",
+      "expected_schema": "'Play our ball and optimize your performance'",
+      "violated_schema": "'Play our ball and get back the yards you thought aging took from you'",
+      "predicted_impact": "MODERATE-HIGH — emotionally different from optimization. Recovery implies something was wrongfully taken and can be restored."
+    },
+    {
+      "id": "SVO-05",
+      "violation": "Alignment as engineered technology, not decorative feature",
+      "expected_schema": "Alignment lines are a nice-to-have (Callaway Triple Track)",
+      "violated_schema": "Alignment is a SYSTEM — engineered for both tee shots and putting, designed to improve accuracy across your entire game",
+      "predicted_impact": "MODERATE — creates a new category. Requires education but once understood, it's a genuine differentiator."
+    },
+    {
+      "id": "SVO-06",
+      "violation": "Speed-matching replaces handicap-gating",
+      "expected_schema": "'What handicap should I play this ball?' → shame-based selection",
+      "violated_schema": "'What's your swing speed?' → data-based selection. No judgment. No worthiness test. Just physics.'",
+      "predicted_impact": "HIGH — removes the shame dynamic that the entire industry has created. Replaces 'are you good enough?' with 'what speed do you swing?'"
+    },
+    {
+      "id": "SVO-07",
+      "violation": "Ionomer positioned as engineering choice, not cost compromise",
+      "expected_schema": "Ionomer = budget ball. Urethane = real ball.",
+      "violated_schema": "Ionomer at this speed range OUTPERFORMS urethane in distance because it reduces the excess spin that costs yards. This isn't compromise. It's optimization.",
+      "predicted_impact": "MODERATE — requires the Golf Laboratories data to back it up. Won't work as a claim alone. With data, it's a powerful reframe."
+    }
+  ],
+  "schema_summary": "The golf ball marketing landscape is dominated by stale patterns: distance claims everyone makes, feel claims everyone makes, tour endorsements nobody trusts anymore, ProV1 comparisons that have become the default DTC positioning, and handicap-based selection advice that creates shame. The audience is Stage 4 skeptical — they've heard it all. The whitespace is in SPECIFICITY (swing speed as primary identity), PROOF FORMAT (independent lab testing as the brand's own standard), CATEGORY CREATION (visual alignment as engineered technology), EMOTIONAL FRAMING (recovery vs. optimization), and PRICE HONESTY (validating resentment instead of defending pricing). iON+ has the ingredients to violate every major schema simultaneously: a ball engineered for a specific speed range, proven by an independent lab, with a technology no competitor has, positioned as recovering what was lost, at a price that validates what golfers already believe about the industry."
+}

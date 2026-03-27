@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "skill": "2.2-F Belief Excavator (E5 Tool 2B)",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "1,080 quotes + web_analysis.json"
+  },
+  "beliefs_about_why": {
+    "category": "WHY the problem exists",
+    "beliefs": [
+      {
+        "belief": "Distance loss is a natural consequence of aging — nothing can reverse it",
+        "prevalence": "Very high (dominant narrative in PAIN bucket)",
+        "classification": "Alignable — then redirectable",
+        "alignment_strategy": "Yes, swing speed declines with age. That's real. But here's what no one tells you: the ball you're playing is designed for a swing speed you no longer have. You're losing yards to age AND to your ball. One of those you can't control. The other you can fix today.",
+        "evidence_ids": ["P-253", "P-255", "P-259", "P-270"],
+        "evidence_quotes": [
+          "I have lost close to 50 yards since then (most of it since hitting age 70). It is a huge shock.",
+          "I just turned 50, have dropped 15 mph in the last 5 years"
+        ]
+      },
+      {
+        "belief": "Golf equipment is overpriced because manufacturers exploit golfers' addiction to the game",
+        "prevalence": "High (dominant in VILLAIN bucket)",
+        "classification": "Alignable",
+        "alignment_strategy": "Agree completely. The golf industry charges premium prices because golfers will pay them. iON+ is built to break that cycle — tour-level engineering at a price that respects your wallet.",
+        "evidence_ids": ["V-005", "V-018", "V-035", "V-006"],
+        "evidence_quotes": [
+          "The entire golf ball industry is a scam. They all cost close to the same to make",
+          "I'll be damned if I'll ever pay $3-5 for a premium golf ball"
+        ]
+      },
+      {
+        "belief": "The ball doesn't matter as much as swing mechanics",
+        "prevalence": "Moderate (split opinion)",
+        "classification": "Challengeable",
+        "challenge_strategy": "Swing mechanics matter more for SOME things. But ball choice determines how much of your swing speed becomes distance. A swing at 90mph with the wrong ball = 220 yards. The same swing with the right ball = 235 yards. Same swing. Different ball. 15 yards.",
+        "evidence_ids": ["H-006", "RC-020", "RC-014"],
+        "evidence_quotes": [
+          "Some of my best rounds have been with a Wilson staff, some of my worst rounds have been with a ProV1",
+          "I play ProV1 because I love the action around the green. I bought a launch monitor and it shows I lose 10 yards on drives"
+        ]
+      }
+    ]
+  },
+  "beliefs_about_what": {
+    "category": "WHAT works and doesn't work",
+    "beliefs": [
+      {
+        "belief": "Pro V1 is the best golf ball for everyone",
+        "prevalence": "Very high (cultural default)",
+        "classification": "Challengeable",
+        "challenge_strategy": "Pro V1 is the best ball for golfers with 105+ mph swing speed who need maximum greenside spin. For the 70% of golfers with swing speeds under 100mph, Pro V1 creates excess spin that COSTS distance. It's not the best ball — it's the most famous ball. Those are different things.",
+        "evidence_ids": ["CM-001", "V-022", "RC-026", "V-037"],
+        "evidence_quotes": [
+          "I know alot of golfers who won't play with anything but pro v and their swing speed is about 80mph. What a waste",
+          "For 95% of golfers, prov1s are an insane purchase"
+        ]
+      },
+      {
+        "belief": "Urethane cover balls are inherently superior to ionomer balls",
+        "prevalence": "High among informed golfers",
+        "classification": "Challengeable",
+        "challenge_strategy": "Urethane provides more greenside spin — a real advantage IF your swing generates enough speed to compress the ball. For 80-95mph swing speeds, an engineered ionomer ball can actually outperform urethane because it reduces the excess driver spin that costs distance. Cover material is ONE variable — total engineering is what matters.",
+        "evidence_ids": ["RC-001", "RC-140", "V-002", "H-008"],
+        "evidence_quotes": [
+          "I will die on this hill but I think everyone should play a urethane cover ball",
+          "The lower level Titleist balls are just an objectively bad value. They're cheap ionomer balls that they charge way more for because they say 'Titleist'"
+        ]
+      },
+      {
+        "belief": "DTC golf balls (Vice, Maxfli) are 90-95% as good as premium balls at half the price",
+        "prevalence": "Growing (converts are vocal evangelists)",
+        "classification": "Alignable — then surpassable",
+        "alignment_strategy": "DTC brands proved the pricing model is broken. But 'almost as good for less money' is still a compromise framing. iON+ isn't a cheaper alternative — it's a better-engineered ball for YOUR swing speed. It beat Pro V1 in independent distance testing at 95mph. This isn't value — it's performance.",
+        "evidence_ids": ["CM-003", "ST-003", "H-009", "ST-017"],
+        "evidence_quotes": [
+          "Instead of ProV1 at $55, play Vice at $26. Nearly the same performance, half the price",
+          "Maxfli Tour X feels and reacts no different than a ProV1x"
+        ]
+      }
+    ]
+  },
+  "beliefs_about_who": {
+    "category": "WHO can solve the problem",
+    "beliefs": [
+      {
+        "belief": "Only established ball manufacturers (Titleist, Callaway, Bridgestone) can make a real golf ball",
+        "prevalence": "High (brand trust is the primary barrier)",
+        "classification": "Challengeable",
+        "challenge_strategy": "Vice proved a non-traditional manufacturer could make a competitive ball. Snell (designed by a former Titleist VP) proved pedigree matters more than brand name. iON+ was engineered by the same caliber of ball designers and INDEPENDENTLY TESTED at Golf Laboratories. The robot doesn't care about the logo on the box.",
+        "evidence_ids": ["V-022", "V-045", "CM-011"],
+        "evidence_quotes": [
+          "I tried so hard to be a Snell and Vice guy. The prov1 is really just that much better",
+          "I thought Vice is a marketing company?",
+          "The 3 main brands I sell is Titleist, Callaway and Srixon. Titleist brand names sells itself"
+        ]
+      },
+      {
+        "belief": "Ball fitters are biased toward their own brand",
+        "prevalence": "Moderate (Bridgestone fitting events are widely known to be brand-biased)",
+        "classification": "Alignable",
+        "alignment_strategy": "Agree. Bridgestone fitters recommend Bridgestone. Titleist fitters recommend Titleist. Independent robot testing at Golf Laboratories has no brand bias — the machine measures what happens to the ball, period.",
+        "evidence_ids": ["RC-024", "V-036"],
+        "evidence_quotes": [
+          "I went for a Bridgestone Ball Fitting today. Going in, I knew they would be able to set me up with a better ball",
+          "The Bridgestone rep actually told me that my stats are better with the Pro-v1s... but gave me sleeves of Bridgestone"
+        ]
+      }
+    ]
+  },
+  "beliefs_about_how": {
+    "category": "HOW solutions should work",
+    "beliefs": [
+      {
+        "belief": "You should play the same ball the touring pros play",
+        "prevalence": "High (aspirational purchasing)",
+        "classification": "Challengeable",
+        "challenge_strategy": "Tour pros swing at 115-125mph. You swing at 85-95mph. The ball they need (high spin for control at high speed) is the OPPOSITE of the ball you need (low spin for distance at moderate speed). Playing their ball is like wearing their shoes — same product, wrong fit.",
+        "evidence_ids": ["V-037", "V-003", "RC-026"],
+        "evidence_quotes": [
+          "For 95% of golfers, prov1s are an insane purchase. Basically unless you're near scratch it's a pure luxury/flex"
+        ]
+      },
+      {
+        "belief": "The way to find the right ball is trial and error",
+        "prevalence": "High (dominant discovery method)",
+        "classification": "Challengeable",
+        "challenge_strategy": "Trial and error is the default because nothing better exists. But when you know your swing speed, ball selection becomes objective — data, not guessing. Robot testing at your speed tells you exactly which ball performs best. That's how iON+ was designed — for specific swing speed ranges, validated by independent testing.",
+        "evidence_ids": ["V-021", "ST-006", "ST-123", "V-031"],
+        "evidence_quotes": [
+          "I've been experimenting this year, using Bridgestone e12 & Callaway super soft. I'll use one brand for 8-10 rounds, then the other",
+          "Swing speed: Absolutely no idea. Ball: Currently trying to decide between prov1 (used), Maxfli Tour, or Vice Pro"
+        ]
+      },
+      {
+        "belief": "Compression rating is the key to ball selection",
+        "prevalence": "Moderate among informed golfers",
+        "classification": "Alignable — then expandable",
+        "alignment_strategy": "Compression matters — but it's ONE factor. Total ball engineering (core, mantle, cover, dimple design) determines how YOUR swing speed translates to distance, spin, and feel. iON+ was engineered as a SYSTEM for 80-95mph swing speeds, not just a compression number.",
+        "evidence_ids": ["RC-017", "RC-144", "RC-148"],
+        "evidence_quotes": [
+          "I was surprised that some of the highest compression balls performed the best for mid-swing speed"
+        ]
+      }
+    ]
+  },
+  "strategic_implications": {
+    "most_exploitable_belief": "The skill-level frame for ball selection (you need to be 'good enough' for a ball) — reframe to swing-speed matching. This removes shame, makes it objective, and positions iON+ as the scientific answer.",
+    "strongest_alignable_belief": "Golf equipment is overpriced — lean into this aggressively. iON+ isn't cheap, it's fair. The industry charges $50+ because they can, not because the ball costs that much to make.",
+    "biggest_belief_gap": "No one has connected 'wrong ball for your speed' to 'the distance you thought you lost to aging.' This is the frame claim. Not all your lost distance is age. Some of it is your ball."
+  }
+}
