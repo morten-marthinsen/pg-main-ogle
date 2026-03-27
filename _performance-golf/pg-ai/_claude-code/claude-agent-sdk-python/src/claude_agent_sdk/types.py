@@ -41,6 +41,18 @@ class SystemPromptFile(TypedDict):
     path: str
 
 
+class TaskBudget(TypedDict):
+    """API-side task budget in tokens.
+
+    When set, the model is made aware of its remaining token budget so it can
+    pace tool use and wrap up before the limit. Sent as
+    ``output_config.task_budget`` with the ``task-budgets-2026-03-13`` beta
+    header.
+    """
+
+    total: int
+
+
 class ToolsPreset(TypedDict):
     """Tools preset configuration."""
 
@@ -903,6 +915,7 @@ class ResultMessage:
     structured_output: Any = None
     model_usage: dict[str, Any] | None = None
     permission_denials: list[Any] | None = None
+    errors: list[str] | None = None
     uuid: str | None = None
 
 
@@ -1124,6 +1137,10 @@ class ClaudeAgentOptions:
     # When enabled, files can be rewound to their state at any user message
     # using `ClaudeSDKClient.rewind_files()`.
     enable_file_checkpointing: bool = False
+    # API-side task budget in tokens. When set, the model is made aware of
+    # its remaining token budget so it can pace tool use and wrap up before
+    # the limit.
+    task_budget: TaskBudget | None = None
 
 
 # SDK Control Protocol
