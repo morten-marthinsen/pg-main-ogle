@@ -1,6 +1,7 @@
 #!/bin/bash
 # Memory Reminders — SessionStart Hook
-# Reads the current user's MEMORY.md and surfaces any lines tagged "REMIND".
+# Reads the current user's MEMORY.md and surfaces all Project entries
+# plus any lines tagged "REMIND" at session start.
 # Each user has their own memory directory under ~/.claude/projects/, so
 # reminders are per-user even though this hook is shared in the repo.
 
@@ -19,33 +20,43 @@ if [ ! -f "$MEMORY_INDEX" ]; then
   exit 0
 fi
 
-# Extract lines containing "REMIND" (case-insensitive)
-REMIND_LINES=$(grep -i "REMIND" "$MEMORY_INDEX" 2>/dev/null)
+OUTPUT=""
 
-if [ -z "$REMIND_LINES" ]; then
-  exit 0
+# --- Surface all Project entries ---
+# Extract lines between "## Project" and the next "##" heading
+PROJECT_LINES=$(sed -n '/^## Project$/,/^## /{/^## Project$/d; /^## /d; /^$/d; p;}' "$MEMORY_INDEX" 2>/dev/null)
+
+if [ -n "$PROJECT_LINES" ]; then
+  OUTPUT="## Active Projects\n\nThese are your current active projects from memory:\n"
+  while IFS= read -r line; do
+    LINKED_FILE=$(echo "$line" | sed -n 's/.*(\([^)]*\.md\)).*/\1/p')
+    DISPLAY=$(echo "$line" | sed 's/^- //')
+
+    if [ -n "$LINKED_FILE" ] && [ -f "$MEMORY_DIR/$LINKED_FILE" ]; then
+      CONTENT=$(sed -n '/^---$/,/^---$/d; /^$/d; p' "$MEMORY_DIR/$LINKED_FILE" | head -5)
+      OUTPUT="$OUTPUT\n- $DISPLAY\n"
+      if [ -n "$CONTENT" ]; then
+        OUTPUT="$OUTPUT  > $CONTENT\n"
+      fi
+    else
+      OUTPUT="$OUTPUT\n- $DISPLAY\n"
+    fi
+  done <<< "$PROJECT_LINES"
 fi
 
-# Build the reminder output
-OUTPUT="## Session Reminders\n\nThe following items from your memory require attention:\n"
+# --- Surface any REMIND-tagged lines from any section ---
+REMIND_LINES=$(grep -i "REMIND" "$MEMORY_INDEX" 2>/dev/null)
 
-while IFS= read -r line; do
-  # Extract the linked filename if present: [Title](filename.md)
-  LINKED_FILE=$(echo "$line" | sed -n 's/.*(\([^)]*\.md\)).*/\1/p')
+if [ -n "$REMIND_LINES" ]; then
+  OUTPUT="$OUTPUT\n## Reminders\n"
+  while IFS= read -r line; do
+    DISPLAY=$(echo "$line" | sed 's/^- //')
+    OUTPUT="$OUTPUT\n- $DISPLAY\n"
+  done <<< "$REMIND_LINES"
+fi
 
-  if [ -n "$LINKED_FILE" ] && [ -f "$MEMORY_DIR/$LINKED_FILE" ]; then
-    # Read the memory file content (skip frontmatter)
-    CONTENT=$(sed -n '/^---$/,/^---$/d; /^$/d; p' "$MEMORY_DIR/$LINKED_FILE" | head -10)
-    # Clean up the index line (remove markdown link syntax for display)
-    DISPLAY=$(echo "$line" | sed 's/^- //')
-    OUTPUT="$OUTPUT\n$DISPLAY\n"
-    if [ -n "$CONTENT" ]; then
-      OUTPUT="$OUTPUT> $CONTENT\n"
-    fi
-  else
-    DISPLAY=$(echo "$line" | sed 's/^- //')
-    OUTPUT="$OUTPUT\n$DISPLAY\n"
-  fi
-done <<< "$REMIND_LINES"
+if [ -z "$OUTPUT" ]; then
+  exit 0
+fi
 
 echo -e "$OUTPUT"
