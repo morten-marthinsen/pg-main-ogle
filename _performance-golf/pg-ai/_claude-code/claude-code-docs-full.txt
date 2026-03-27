@@ -183,9 +183,10 @@ This removes the shared team resources. When the lead runs cleanup, it checks fo
 
 ### Enforce quality gates with hooks
 
-Use [hooks](/en/hooks) to enforce rules when teammates finish work or tasks complete:
+Use [hooks](/en/hooks) to enforce rules when teammates finish work or tasks are created or completed:
 
 * [`TeammateIdle`](/en/hooks#teammateidle): runs when a teammate is about to go idle. Exit with code 2 to send feedback and keep the teammate working.
+* [`TaskCreated`](/en/hooks#taskcreated): runs when a task is being created. Exit with code 2 to prevent creation and send feedback.
 * [`TaskCompleted`](/en/hooks#taskcompleted): runs when a task is being marked complete. Exit with code 2 to prevent completion and send feedback.
 
 ## How agent teams work
@@ -1039,7 +1040,7 @@ Most best practices are based on one constraint: Claude's context window fills u
 
 Claude's context window holds your entire conversation, including every message, every file Claude reads, and every command output. However, this can fill up fast. A single debugging session or codebase exploration might generate and consume tens of thousands of tokens.
 
-This matters since LLM performance degrades as context fills. When the context window is getting full, Claude may start "forgetting" earlier instructions or making more mistakes. The context window is the most important resource to manage. Track context usage continuously with a [custom status line](/en/statusline), and see [Reduce token usage](/en/costs#reduce-token-usage) for strategies on reducing token usage.
+This matters since LLM performance degrades as context fills. When the context window is getting full, Claude may start "forgetting" earlier instructions or making more mistakes. The context window is the most important resource to manage. To see how a session fills up in practice, [watch an interactive walkthrough](/en/context-window) of what loads at startup and what each file read costs. Track context usage continuously with a [custom status line](/en/statusline), and see [Reduce token usage](/en/costs#reduce-token-usage) for strategies on reducing token usage.
 
 ***
 
@@ -5632,7 +5633,7 @@ Claude Code on the web is available in research preview to:
 
 1. Visit [claude.ai/code](https://claude.ai/code)
 2. Connect your GitHub account
-3. Install the Claude GitHub app in your repositories
+3. Install the Claude GitHub App in your repositories
 4. Select your default environment
 5. Submit your coding task
 6. Review changes in diff view, iterate with comments, then create a pull request
@@ -5661,6 +5662,30 @@ From the diff view, you can:
 * Continue iterating with Claude based on what you see
 
 This lets you refine changes through multiple rounds of feedback without creating draft PRs or switching to GitHub.
+
+## Auto-fix pull requests
+
+Claude can watch a pull request and automatically respond to CI failures and review comments. Claude subscribes to GitHub activity on the PR, and when a check fails or a reviewer leaves a comment, Claude investigates and pushes a fix if one is clear.
+
+<Note>
+  Auto-fix requires the Claude GitHub App to be installed on your repository. If you haven't already, install it from the [GitHub App page](https://github.com/apps/claude) or when prompted during [setup](#getting-started).
+</Note>
+
+There are a few ways to turn on auto-fix depending on where the PR came from and what device you're using:
+
+* **PRs created in Claude Code on the web**: open the CI status bar and select **Auto-fix**
+* **From the mobile app**: tell Claude to auto-fix the PR, for example "watch this PR and fix any CI failures or review comments"
+* **Any existing PR**: paste the PR URL into a session and tell Claude to auto-fix it
+
+### How Claude responds to PR activity
+
+When auto-fix is active, Claude receives GitHub events for the PR including new review comments and CI check failures. For each event, Claude investigates and decides how to proceed:
+
+* **Clear fixes**: if Claude is confident in a fix and it doesn't conflict with earlier instructions, Claude makes the change, pushes it, and explains what was done in the session
+* **Ambiguous requests**: if a reviewer's comment could be interpreted multiple ways or involves something architecturally significant, Claude asks you before acting
+* **Duplicate or no-action events**: if an event is a duplicate or requires no change, Claude notes it in the session and moves on
+
+Claude may reply to review comment threads on GitHub as part of resolving them. These replies are posted using your GitHub account, so they appear under your username, but each reply is labeled as coming from Claude Code so reviewers know it was written by the agent and not by you directly.
 
 ## Moving tasks between web and terminal
 
@@ -7348,6 +7373,20 @@ To clean up worktrees outside of a Claude session, use [manual worktree manageme
   Add `.claude/worktrees/` to your `.gitignore` to prevent worktree contents from appearing as untracked files in your main repository.
 </Tip>
 
+### Copy gitignored files to worktrees
+
+Git worktrees are fresh checkouts, so they don't include untracked files like `.env` or `.env.local` from your main repository. To automatically copy these files when Claude creates a worktree, add a `.worktreeinclude` file to your project root.
+
+The file uses `.gitignore` syntax to list which files to copy. Only files that match a pattern and are also gitignored get copied, so tracked files are never duplicated.
+
+```text .worktreeinclude theme={null}
+.env
+.env.local
+config/secrets.json
+```
+
+This applies to worktrees created with `--worktree`, subagent worktrees, and parallel sessions in the [desktop app](/en/desktop#work-in-parallel-with-sessions).
+
 ### Manage worktrees manually
 
 For more control over worktree location and branch configuration, create worktrees with Git directly. This is useful when you need to check out a specific existing branch or place the worktree outside the repository.
@@ -7643,6 +7682,39 @@ what are the limitations of Claude Code?
 </CardGroup>
 
 
+# Explore the context window
+Source: https://code.claude.com/docs/en/context-window
+
+An interactive simulation of how Claude Code's context window fills during a session. See what loads automatically, what each file read costs, and when rules and hooks fire.
+
+Claude Code's context window holds everything Claude knows about your session: your instructions, the files it reads, its own responses, and content that never appears in your terminal. The timeline below walks through what loads and when. See [the written breakdown](#what-the-timeline-shows) for the same content as a list.
+
+<ContextWindow />
+
+## What the timeline shows
+
+The session walks through a realistic flow with representative token counts:
+
+* **Before you type anything**: CLAUDE.md, auto memory, MCP tool names, and skill descriptions all load into context. Your own setup may add more here, like an [output style](/en/output-styles) or text from [`--append-system-prompt`](/en/cli-reference), which both go into the system prompt the same way.
+* **As Claude works**: each file read adds to context, [path-scoped rules](/en/memory#path-specific-rules) load automatically alongside matching files, and a [PostToolUse hook](/en/hooks-guide) fires after each edit.
+* **The follow-up prompt**: a [subagent](/en/sub-agents) handles the research in its own separate context window, so the large file reads stay out of yours. Only the summary and a small metadata trailer come back.
+* **At the end**: `/compact` replaces the conversation with a structured summary. Most startup content reloads automatically. The [skill](/en/skills) listing is the one exception.
+
+## Check your own session
+
+The visualization uses representative numbers. To see your actual context usage at any point, run `/context` for a live breakdown by category with optimization suggestions. Run `/memory` to check which CLAUDE.md and auto memory files loaded at startup.
+
+## Related resources
+
+For deeper coverage of the features shown in the timeline, see these pages:
+
+* [Extend Claude Code](/en/features-overview): when to use CLAUDE.md vs skills vs rules vs hooks vs MCP
+* [Store instructions and memories](/en/memory): CLAUDE.md hierarchy and auto memory
+* [Subagents](/en/sub-agents): delegate research to a separate context window
+* [Best practices](/en/best-practices): managing context as your primary constraint
+* [Reduce token usage](/en/costs#reduce-token-usage): strategies for keeping context usage low
+
+
 # Manage costs effectively
 Source: https://code.claude.com/docs/en/costs
 
@@ -7741,11 +7813,10 @@ Sonnet handles most coding tasks well and costs less than Opus. Reserve Opus for
 
 ### Reduce MCP server overhead
 
-Each MCP server adds tool definitions to your context, even when idle. Run `/context` to see what's consuming space.
+MCP tool definitions are [deferred by default](/en/mcp#scale-with-mcp-tool-search), so only tool names enter context until Claude uses a specific tool. Run `/context` to see what's consuming space.
 
-* **Prefer CLI tools when available**: Tools like `gh`, `aws`, `gcloud`, and `sentry-cli` are more context-efficient than MCP servers because they don't add persistent tool definitions. Claude can run CLI commands directly without the overhead.
+* **Prefer CLI tools when available**: Tools like `gh`, `aws`, `gcloud`, and `sentry-cli` are still more context-efficient than MCP servers because they don't add any per-tool listing. Claude can run CLI commands directly.
 * **Disable unused servers**: Run `/mcp` to see configured servers and disable any you're not actively using.
-* **Tool search is automatic**: When MCP tool descriptions exceed 10% of your context window, Claude Code automatically defers them and loads tools on-demand via [tool search](/en/mcp#scale-with-mcp-tool-search). Since deferred tools only enter context when actually used, a lower threshold means fewer idle tool definitions consuming space. Set a lower threshold with `ENABLE_TOOL_SEARCH=auto:<N>` (for example, `auto:5` triggers when tools exceed 5% of your context window).
 
 ### Install code intelligence plugins for typed languages
 
@@ -8126,6 +8197,8 @@ Each session is an independent conversation with its own context and changes. Yo
 Click **+ New session** in the sidebar to work on multiple tasks in parallel. For Git repositories, each session gets its own isolated copy of your project using [Git worktrees](/en/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees), so changes in one session don't affect other sessions until you commit them.
 
 Worktrees are stored in `<project-root>/.claude/worktrees/` by default. You can change this to a custom directory in Settings → Claude Code under "Worktree location". You can also set a branch prefix that gets prepended to every worktree branch name, which is useful for keeping Claude-created branches organized. To remove a worktree when you're done, hover over the session in the sidebar and click the archive icon.
+
+To include gitignored files like `.env` in new worktrees, create a [`.worktreeinclude` file](/en/common-workflows#copy-gitignored-files-to-worktrees) in your project root.
 
 <Note>
   Session isolation requires [Git](https://git-scm.com/downloads). Most Macs include Git by default. Run `git --version` in Terminal to check. On Windows, Git is required for the Code tab to work: [download Git for Windows](https://git-scm.com/downloads/win), install it, and restart the app. If you run into Git errors, try a Cowork session to help troubleshoot your setup.
@@ -9398,6 +9471,7 @@ Claude Code supports the following environment variables to control its behavior
 | `CLAUDE_CODE_USE_VERTEX`                                | Use [Vertex](/en/google-vertex-ai)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `CLAUDE_CONFIG_DIR`                                     | Customize where Claude Code stores its configuration and data files                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `CLAUDE_ENV_FILE`                                       | Path to a shell script that Claude Code sources before each Bash command. Use to persist virtualenv or conda activation across commands. Also populated dynamically by [SessionStart](/en/hooks#persist-environment-variables), [CwdChanged](/en/hooks#cwdchanged), and [FileChanged](/en/hooks#filechanged) hooks                                                                                                                                                                                                                                                                                               |
+| `CLAUDE_STREAM_IDLE_TIMEOUT_MS`                         | Timeout in milliseconds before the streaming idle watchdog closes a stalled connection. Default: `90000` (90 seconds). Increase this value if long-running tools or slow networks cause premature timeout errors                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `DISABLE_AUTOUPDATER`                                   | Set to `1` to disable automatic updates.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `DISABLE_COST_WARNINGS`                                 | Set to `1` to disable cost warning messages                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `DISABLE_ERROR_REPORTING`                               | Set to `1` to opt out of Sentry error reporting                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -9408,7 +9482,7 @@ Claude Code supports the following environment variables to control its behavior
 | `DISABLE_PROMPT_CACHING_OPUS`                           | Set to `1` to disable prompt caching for Opus models                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `DISABLE_PROMPT_CACHING_SONNET`                         | Set to `1` to disable prompt caching for Sonnet models                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `DISABLE_TELEMETRY`                                     | Set to `1` to opt out of Statsig telemetry (note that Statsig events do not include user data like code, file paths, or bash commands)                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `ENABLE_CLAUDEAI_MCP_SERVERS`                           | Set to `false` to disable [claude.ai MCP servers](/en/mcp#use-mcp-servers-from-claudeai) in Claude Code. Enabled by default for logged-in users                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `ENABLE_CLAUDEAI_MCP_SERVERS`                           | Set to `false` to disable [claude.ai MCP servers](/en/mcp#use-mcp-servers-from-claude-ai) in Claude Code. Enabled by default for logged-in users                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `ENABLE_TOOL_SEARCH`                                    | Controls [MCP tool search](/en/mcp#scale-with-mcp-tool-search). Unset: enabled by default, but disabled when `ANTHROPIC_BASE_URL` points to a non-first-party host. Values: `true` (always on including proxies), `auto` (enables at 10% context), `auto:N` (custom threshold, e.g., `auto:5` for 5%), `false` (disabled)                                                                                                                                                                                                                                                                                        |
 | `FORCE_AUTOUPDATE_PLUGINS`                              | Set to `true` to force plugin auto-updates even when the main auto-updater is disabled via `DISABLE_AUTOUPDATER`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `HTTP_PROXY`                                            | Specify HTTP proxy server for network connections                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -9752,7 +9826,7 @@ For example, you might use CLAUDE.md for project conventions, a skill for your d
 
 ## Understand context costs
 
-Every feature you add consumes some of Claude's context. Too much can fill up your context window, but it can also add noise that makes Claude less effective; skills may not trigger correctly, or Claude may lose track of your conventions. Understanding these trade-offs helps you build an effective setup.
+Every feature you add consumes some of Claude's context. Too much can fill up your context window, but it can also add noise that makes Claude less effective; skills may not trigger correctly, or Claude may lose track of your conventions. Understanding these trade-offs helps you build an effective setup. For an interactive view of how these features combine in a running session, see [Explore the context window](/en/context-window).
 
 ### Context cost by feature
 
@@ -9762,7 +9836,7 @@ Each feature has a different loading strategy and context cost:
 | --------------- | ------------------------- | --------------------------------------------- | -------------------------------------------- |
 | **CLAUDE.md**   | Session start             | Full content                                  | Every request                                |
 | **Skills**      | Session start + when used | Descriptions at start, full content when used | Low (descriptions every request)\*           |
-| **MCP servers** | Session start             | All tool definitions and schemas              | Every request                                |
+| **MCP servers** | Session start             | Tool names; full schemas on demand            | Low until a tool is used                     |
 | **Subagents**   | When spawned              | Fresh context with specified skills           | Isolated from main session                   |
 | **Hooks**       | On trigger                | Nothing (runs externally)                     | Zero, unless hook returns additional context |
 
@@ -9772,7 +9846,7 @@ Each feature has a different loading strategy and context cost:
 
 Each feature loads at different points in your session. The tabs below explain when each one loads and what goes into context.
 
-<img alt="Context loading: CLAUDE.md and MCP load at session start and stay in every request. Skills load descriptions at start, full content on invocation. Subagents get isolated context. Hooks run externally." />
+<img alt="Context loading: CLAUDE.md loads at session start and stays in every request. MCP tool names load at start with full schemas deferred until use. Skills load descriptions at start, full content on invocation. Subagents get isolated context. Hooks run externally." />
 
 <Tabs>
   <Tab title="CLAUDE.md">
@@ -9804,9 +9878,9 @@ Each feature loads at different points in your session. The tabs below explain w
   <Tab title="MCP servers">
     **When:** Session start.
 
-    **What loads:** All tool definitions and JSON schemas from connected servers.
+    **What loads:** Tool names from connected servers. Full JSON schemas stay deferred until Claude needs a specific tool.
 
-    **Context cost:** [Tool search](/en/mcp#scale-with-mcp-tool-search) (enabled by default) loads MCP tools up to 10% of context and defers the rest until needed.
+    **Context cost:** [Tool search](/en/mcp#scale-with-mcp-tool-search) is on by default, so idle MCP tools consume minimal context.
 
     **Reliability note:** MCP connections can fail silently mid-session. If a server disconnects, its tools disappear without warning. Claude may try to use a tool that no longer exists. If you notice Claude failing to use an MCP tool it previously could access, check the connection with `/mcp`.
 
@@ -11395,7 +11469,7 @@ Hooks fire at specific points during a Claude Code session. When an event fires 
 
 <div>
   <Frame>
-    <img alt="Hook lifecycle diagram showing the sequence of hooks from SessionStart through the agentic loop (PreToolUse, PermissionRequest, PostToolUse, SubagentStart/Stop, TaskCompleted) to Stop or StopFailure, TeammateIdle, PreCompact, PostCompact, and SessionEnd, with Elicitation and ElicitationResult nested inside MCP tool execution and WorktreeCreate, WorktreeRemove, Notification, ConfigChange, InstructionsLoaded, CwdChanged, and FileChanged as standalone async events" />
+    <img alt="Hook lifecycle diagram showing the sequence of hooks from SessionStart through the agentic loop (PreToolUse, PermissionRequest, PostToolUse, SubagentStart/Stop, TaskCreated, TaskCompleted) to Stop or StopFailure, TeammateIdle, PreCompact, PostCompact, and SessionEnd, with Elicitation and ElicitationResult nested inside MCP tool execution and WorktreeCreate, WorktreeRemove, Notification, ConfigChange, InstructionsLoaded, CwdChanged, and FileChanged as standalone async events" />
   </Frame>
 </div>
 
@@ -11412,10 +11486,11 @@ The table below summarizes when each event fires. The [Hook events](#hook-events
 | `Notification`       | When Claude Code sends a notification                                                                                                                  |
 | `SubagentStart`      | When a subagent is spawned                                                                                                                             |
 | `SubagentStop`       | When a subagent finishes                                                                                                                               |
+| `TaskCreated`        | When a task is being created via `TaskCreate`                                                                                                          |
+| `TaskCompleted`      | When a task is being marked as completed                                                                                                               |
 | `Stop`               | When Claude finishes responding                                                                                                                        |
 | `StopFailure`        | When the turn ends due to an API error. Output and exit code are ignored                                                                               |
 | `TeammateIdle`       | When an [agent team](/en/agent-teams) teammate is about to go idle                                                                                     |
-| `TaskCompleted`      | When a task is being marked as completed                                                                                                               |
 | `InstructionsLoaded` | When a CLAUDE.md or `.claude/rules/*.md` file is loaded into context. Fires at session start and when files are lazily loaded during a session         |
 | `ConfigChange`       | When a configuration file changes during a session                                                                                                     |
 | `CwdChanged`         | When the working directory changes, for example when Claude executes a `cd` command. Useful for reactive environment management with tools like direnv |
@@ -11545,23 +11620,23 @@ For details on settings file resolution, see [settings](/en/settings). Enterpris
 
 The `matcher` field is a regex string that filters when hooks fire. Use `"*"`, `""`, or omit `matcher` entirely to match all occurrences. Each event type matches on a different field:
 
-| Event                                                                                           | What the matcher filters                | Example matcher values                                                                                                    |
-| :---------------------------------------------------------------------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-| `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PermissionRequest`                          | tool name                               | `Bash`, `Edit\|Write`, `mcp__.*`                                                                                          |
-| `SessionStart`                                                                                  | how the session started                 | `startup`, `resume`, `clear`, `compact`                                                                                   |
-| `SessionEnd`                                                                                    | why the session ended                   | `clear`, `resume`, `logout`, `prompt_input_exit`, `bypass_permissions_disabled`, `other`                                  |
-| `Notification`                                                                                  | notification type                       | `permission_prompt`, `idle_prompt`, `auth_success`, `elicitation_dialog`                                                  |
-| `SubagentStart`                                                                                 | agent type                              | `Bash`, `Explore`, `Plan`, or custom agent names                                                                          |
-| `PreCompact`, `PostCompact`                                                                     | what triggered compaction               | `manual`, `auto`                                                                                                          |
-| `SubagentStop`                                                                                  | agent type                              | same values as `SubagentStart`                                                                                            |
-| `ConfigChange`                                                                                  | configuration source                    | `user_settings`, `project_settings`, `local_settings`, `policy_settings`, `skills`                                        |
-| `CwdChanged`                                                                                    | no matcher support                      | always fires on every directory change                                                                                    |
-| `FileChanged`                                                                                   | filename (basename of the changed file) | `.envrc`, `.env`, any filename you want to watch                                                                          |
-| `StopFailure`                                                                                   | error type                              | `rate_limit`, `authentication_failed`, `billing_error`, `invalid_request`, `server_error`, `max_output_tokens`, `unknown` |
-| `InstructionsLoaded`                                                                            | load reason                             | `session_start`, `nested_traversal`, `path_glob_match`, `include`, `compact`                                              |
-| `Elicitation`                                                                                   | MCP server name                         | your configured MCP server names                                                                                          |
-| `ElicitationResult`                                                                             | MCP server name                         | same values as `Elicitation`                                                                                              |
-| `UserPromptSubmit`, `Stop`, `TeammateIdle`, `TaskCompleted`, `WorktreeCreate`, `WorktreeRemove` | no matcher support                      | always fires on every occurrence                                                                                          |
+| Event                                                                                                          | What the matcher filters                | Example matcher values                                                                                                    |
+| :------------------------------------------------------------------------------------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PermissionRequest`                                         | tool name                               | `Bash`, `Edit\|Write`, `mcp__.*`                                                                                          |
+| `SessionStart`                                                                                                 | how the session started                 | `startup`, `resume`, `clear`, `compact`                                                                                   |
+| `SessionEnd`                                                                                                   | why the session ended                   | `clear`, `resume`, `logout`, `prompt_input_exit`, `bypass_permissions_disabled`, `other`                                  |
+| `Notification`                                                                                                 | notification type                       | `permission_prompt`, `idle_prompt`, `auth_success`, `elicitation_dialog`                                                  |
+| `SubagentStart`                                                                                                | agent type                              | `Bash`, `Explore`, `Plan`, or custom agent names                                                                          |
+| `PreCompact`, `PostCompact`                                                                                    | what triggered compaction               | `manual`, `auto`                                                                                                          |
+| `SubagentStop`                                                                                                 | agent type                              | same values as `SubagentStart`                                                                                            |
+| `ConfigChange`                                                                                                 | configuration source                    | `user_settings`, `project_settings`, `local_settings`, `policy_settings`, `skills`                                        |
+| `CwdChanged`                                                                                                   | no matcher support                      | always fires on every directory change                                                                                    |
+| `FileChanged`                                                                                                  | filename (basename of the changed file) | `.envrc`, `.env`, any filename you want to watch                                                                          |
+| `StopFailure`                                                                                                  | error type                              | `rate_limit`, `authentication_failed`, `billing_error`, `invalid_request`, `server_error`, `max_output_tokens`, `unknown` |
+| `InstructionsLoaded`                                                                                           | load reason                             | `session_start`, `nested_traversal`, `path_glob_match`, `include`, `compact`                                              |
+| `Elicitation`                                                                                                  | MCP server name                         | your configured MCP server names                                                                                          |
+| `ElicitationResult`                                                                                            | MCP server name                         | same values as `Elicitation`                                                                                              |
+| `UserPromptSubmit`, `Stop`, `TeammateIdle`, `TaskCreated`, `TaskCompleted`, `WorktreeCreate`, `WorktreeRemove` | no matcher support                      | always fires on every occurrence                                                                                          |
 
 The matcher is a regex, so `Edit|Write` matches either tool and `Notebook.*` matches any tool starting with Notebook. The matcher runs against a field from the [JSON input](#hook-input-and-output) that Claude Code sends to your hook on stdin. For tool events, that field is `tool_name`. Each [hook event](#hook-events) section lists the full set of matcher values and the input schema for that event.
 
@@ -11585,7 +11660,7 @@ This example runs a linting script only when Claude writes or edits a file:
 }
 ```
 
-`UserPromptSubmit`, `Stop`, `TeammateIdle`, `TaskCompleted`, `WorktreeCreate`, `WorktreeRemove`, and `CwdChanged` don't support matchers and always fire on every occurrence. If you add a `matcher` field to these events, it is silently ignored.
+`UserPromptSubmit`, `Stop`, `TeammateIdle`, `TaskCreated`, `TaskCompleted`, `WorktreeCreate`, `WorktreeRemove`, and `CwdChanged` don't support matchers and always fire on every occurrence. If you add a `matcher` field to these events, it is silently ignored.
 
 #### Match MCP tools
 
@@ -11899,6 +11974,7 @@ Exit code 2 is the way a hook signals "stop, don't do this." The effect depends 
 | `Stop`               | Yes        | Prevents Claude from stopping, continues the conversation                     |
 | `SubagentStop`       | Yes        | Prevents the subagent from stopping                                           |
 | `TeammateIdle`       | Yes        | Prevents the teammate from going idle (teammate continues working)            |
+| `TaskCreated`        | Yes        | Prevents the task from being created                                          |
 | `TaskCompleted`      | Yes        | Prevents the task from being marked as completed                              |
 | `ConfigChange`       | Yes        | Blocks the configuration change from taking effect (except `policy_settings`) |
 | `StopFailure`        | No         | Output and exit code are ignored                                              |
@@ -11966,7 +12042,7 @@ Not every event supports blocking or controlling behavior through JSON. The even
 | Events                                                                                                                      | Decision pattern               | Key fields                                                                                                                                                          |
 | :-------------------------------------------------------------------------------------------------------------------------- | :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | UserPromptSubmit, PostToolUse, PostToolUseFailure, Stop, SubagentStop, ConfigChange                                         | Top-level `decision`           | `decision: "block"`, `reason`                                                                                                                                       |
-| TeammateIdle, TaskCompleted                                                                                                 | Exit code or `continue: false` | Exit code 2 blocks the action with stderr feedback. JSON `{"continue": false, "stopReason": "..."}` also stops the teammate entirely, matching `Stop` hook behavior |
+| TeammateIdle, TaskCreated, TaskCompleted                                                                                    | Exit code or `continue: false` | Exit code 2 blocks the action with stderr feedback. JSON `{"continue": false, "stopReason": "..."}` also stops the teammate entirely, matching `Stop` hook behavior |
 | PreToolUse                                                                                                                  | `hookSpecificOutput`           | `permissionDecision` (allow/deny/ask), `permissionDecisionReason`                                                                                                   |
 | PermissionRequest                                                                                                           | `hookSpecificOutput`           | `decision.behavior` (allow/deny)                                                                                                                                    |
 | WorktreeCreate                                                                                                              | path return                    | Command hook prints path on stdout; HTTP hook returns `hookSpecificOutput.worktreePath`. Hook failure or missing path fails creation                                |
@@ -12642,6 +12718,117 @@ In addition to the [common input fields](#common-input-fields), SubagentStop hoo
 
 SubagentStop hooks use the same decision control format as [Stop hooks](#stop-decision-control).
 
+### TaskCreated
+
+Runs when a task is being created via the `TaskCreate` tool. Use this to enforce naming conventions, require task descriptions, or prevent certain tasks from being created.
+
+When a `TaskCreated` hook exits with code 2, the task is not created and the stderr message is fed back to the model as feedback. To stop the teammate entirely instead of re-running it, return JSON with `{"continue": false, "stopReason": "..."}`. TaskCreated hooks do not support matchers and fire on every occurrence.
+
+#### TaskCreated input
+
+In addition to the [common input fields](#common-input-fields), TaskCreated hooks receive `task_id`, `task_subject`, and optionally `task_description`, `teammate_name`, and `team_name`.
+
+```json theme={null}
+{
+  "session_id": "abc123",
+  "transcript_path": "/Users/.../.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "cwd": "/Users/...",
+  "permission_mode": "default",
+  "hook_event_name": "TaskCreated",
+  "task_id": "task-001",
+  "task_subject": "Implement user authentication",
+  "task_description": "Add login and signup endpoints",
+  "teammate_name": "implementer",
+  "team_name": "my-project"
+}
+```
+
+| Field              | Description                                           |
+| :----------------- | :---------------------------------------------------- |
+| `task_id`          | Identifier of the task being created                  |
+| `task_subject`     | Title of the task                                     |
+| `task_description` | Detailed description of the task. May be absent       |
+| `teammate_name`    | Name of the teammate creating the task. May be absent |
+| `team_name`        | Name of the team. May be absent                       |
+
+#### TaskCreated decision control
+
+TaskCreated hooks support two ways to control task creation:
+
+* **Exit code 2**: the task is not created and the stderr message is fed back to the model as feedback.
+* **JSON `{"continue": false, "stopReason": "..."}`**: stops the teammate entirely, matching `Stop` hook behavior. The `stopReason` is shown to the user.
+
+This example blocks tasks whose subjects don't follow the required format:
+
+```bash theme={null}
+#!/bin/bash
+INPUT=$(cat)
+TASK_SUBJECT=$(echo "$INPUT" | jq -r '.task_subject')
+
+if [[ ! "$TASK_SUBJECT" =~ ^\[TICKET-[0-9]+\] ]]; then
+  echo "Task subject must start with a ticket number, e.g. '[TICKET-123] Add feature'" >&2
+  exit 2
+fi
+
+exit 0
+```
+
+### TaskCompleted
+
+Runs when a task is being marked as completed. This fires in two situations: when any agent explicitly marks a task as completed through the TaskUpdate tool, or when an [agent team](/en/agent-teams) teammate finishes its turn with in-progress tasks. Use this to enforce completion criteria like passing tests or lint checks before a task can close.
+
+When a `TaskCompleted` hook exits with code 2, the task is not marked as completed and the stderr message is fed back to the model as feedback. To stop the teammate entirely instead of re-running it, return JSON with `{"continue": false, "stopReason": "..."}`. TaskCompleted hooks do not support matchers and fire on every occurrence.
+
+#### TaskCompleted input
+
+In addition to the [common input fields](#common-input-fields), TaskCompleted hooks receive `task_id`, `task_subject`, and optionally `task_description`, `teammate_name`, and `team_name`.
+
+```json theme={null}
+{
+  "session_id": "abc123",
+  "transcript_path": "/Users/.../.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "cwd": "/Users/...",
+  "permission_mode": "default",
+  "hook_event_name": "TaskCompleted",
+  "task_id": "task-001",
+  "task_subject": "Implement user authentication",
+  "task_description": "Add login and signup endpoints",
+  "teammate_name": "implementer",
+  "team_name": "my-project"
+}
+```
+
+| Field              | Description                                             |
+| :----------------- | :------------------------------------------------------ |
+| `task_id`          | Identifier of the task being completed                  |
+| `task_subject`     | Title of the task                                       |
+| `task_description` | Detailed description of the task. May be absent         |
+| `teammate_name`    | Name of the teammate completing the task. May be absent |
+| `team_name`        | Name of the team. May be absent                         |
+
+#### TaskCompleted decision control
+
+TaskCompleted hooks support two ways to control task completion:
+
+* **Exit code 2**: the task is not marked as completed and the stderr message is fed back to the model as feedback.
+* **JSON `{"continue": false, "stopReason": "..."}`**: stops the teammate entirely, matching `Stop` hook behavior. The `stopReason` is shown to the user.
+
+This example runs tests and blocks task completion if they fail:
+
+```bash theme={null}
+#!/bin/bash
+INPUT=$(cat)
+TASK_SUBJECT=$(echo "$INPUT" | jq -r '.task_subject')
+
+# Run the test suite
+if ! npm test 2>&1; then
+  echo "Tests not passing. Fix failing tests before completing: $TASK_SUBJECT" >&2
+  exit 2
+fi
+
+exit 0
+```
+
 ### Stop
 
 Runs when the main Claude Code agent has finished responding. Does not run if
@@ -12749,62 +12936,6 @@ This example checks that a build artifact exists before allowing a teammate to g
 
 if [ ! -f "./dist/output.js" ]; then
   echo "Build artifact missing. Run the build before stopping." >&2
-  exit 2
-fi
-
-exit 0
-```
-
-### TaskCompleted
-
-Runs when a task is being marked as completed. This fires in two situations: when any agent explicitly marks a task as completed through the TaskUpdate tool, or when an [agent team](/en/agent-teams) teammate finishes its turn with in-progress tasks. Use this to enforce completion criteria like passing tests or lint checks before a task can close.
-
-When a `TaskCompleted` hook exits with code 2, the task is not marked as completed and the stderr message is fed back to the model as feedback. To stop the teammate entirely instead of re-running it, return JSON with `{"continue": false, "stopReason": "..."}`. TaskCompleted hooks do not support matchers and fire on every occurrence.
-
-#### TaskCompleted input
-
-In addition to the [common input fields](#common-input-fields), TaskCompleted hooks receive `task_id`, `task_subject`, and optionally `task_description`, `teammate_name`, and `team_name`.
-
-```json theme={null}
-{
-  "session_id": "abc123",
-  "transcript_path": "/Users/.../.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
-  "cwd": "/Users/...",
-  "permission_mode": "default",
-  "hook_event_name": "TaskCompleted",
-  "task_id": "task-001",
-  "task_subject": "Implement user authentication",
-  "task_description": "Add login and signup endpoints",
-  "teammate_name": "implementer",
-  "team_name": "my-project"
-}
-```
-
-| Field              | Description                                             |
-| :----------------- | :------------------------------------------------------ |
-| `task_id`          | Identifier of the task being completed                  |
-| `task_subject`     | Title of the task                                       |
-| `task_description` | Detailed description of the task. May be absent         |
-| `teammate_name`    | Name of the teammate completing the task. May be absent |
-| `team_name`        | Name of the team. May be absent                         |
-
-#### TaskCompleted decision control
-
-TaskCompleted hooks support two ways to control task completion:
-
-* **Exit code 2**: the task is not marked as completed and the stderr message is fed back to the model as feedback.
-* **JSON `{"continue": false, "stopReason": "..."}`**: stops the teammate entirely, matching `Stop` hook behavior. The `stopReason` is shown to the user.
-
-This example runs tests and blocks task completion if they fail:
-
-```bash theme={null}
-#!/bin/bash
-INPUT=$(cat)
-TASK_SUBJECT=$(echo "$INPUT" | jq -r '.task_subject')
-
-# Run the test suite
-if ! npm test 2>&1; then
-  echo "Tests not passing. Fix failing tests before completing: $TASK_SUBJECT" >&2
   exit 2
 fi
 
@@ -13258,6 +13389,7 @@ Events that support all four hook types (`command`, `http`, `prompt`, and `agent
 * `Stop`
 * `SubagentStop`
 * `TaskCompleted`
+* `TaskCreated`
 * `UserPromptSubmit`
 
 Events that support `command` and `http` hooks but not `prompt` or `agent`:
@@ -13951,10 +14083,11 @@ Hook events fire at specific lifecycle points in Claude Code. When an event fire
 | `Notification`       | When Claude Code sends a notification                                                                                                                  |
 | `SubagentStart`      | When a subagent is spawned                                                                                                                             |
 | `SubagentStop`       | When a subagent finishes                                                                                                                               |
+| `TaskCreated`        | When a task is being created via `TaskCreate`                                                                                                          |
+| `TaskCompleted`      | When a task is being marked as completed                                                                                                               |
 | `Stop`               | When Claude finishes responding                                                                                                                        |
 | `StopFailure`        | When the turn ends due to an API error. Output and exit code are ignored                                                                               |
 | `TeammateIdle`       | When an [agent team](/en/agent-teams) teammate is about to go idle                                                                                     |
-| `TaskCompleted`      | When a task is being marked as completed                                                                                                               |
 | `InstructionsLoaded` | When a CLAUDE.md or `.claude/rules/*.md` file is loaded into context. Fires at session start and when files are lazily loaded during a session         |
 | `ConfigChange`       | When a configuration file changes during a session                                                                                                     |
 | `CwdChanged`         | When the working directory changes, for example when Claude executes a `cd` command. Useful for reactive environment management with tools like direnv |
@@ -14073,22 +14206,22 @@ The `"Edit|Write"` matcher is a regex pattern that matches the tool name. The ho
 
 Each event type matches on a specific field. Matchers support exact strings and regex patterns:
 
-| Event                                                                                                         | What the matcher filters                | Example matcher values                                                                                                    |
-| :------------------------------------------------------------------------------------------------------------ | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-| `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PermissionRequest`                                        | tool name                               | `Bash`, `Edit\|Write`, `mcp__.*`                                                                                          |
-| `SessionStart`                                                                                                | how the session started                 | `startup`, `resume`, `clear`, `compact`                                                                                   |
-| `SessionEnd`                                                                                                  | why the session ended                   | `clear`, `resume`, `logout`, `prompt_input_exit`, `bypass_permissions_disabled`, `other`                                  |
-| `Notification`                                                                                                | notification type                       | `permission_prompt`, `idle_prompt`, `auth_success`, `elicitation_dialog`                                                  |
-| `SubagentStart`                                                                                               | agent type                              | `Bash`, `Explore`, `Plan`, or custom agent names                                                                          |
-| `PreCompact`, `PostCompact`                                                                                   | what triggered compaction               | `manual`, `auto`                                                                                                          |
-| `SubagentStop`                                                                                                | agent type                              | same values as `SubagentStart`                                                                                            |
-| `ConfigChange`                                                                                                | configuration source                    | `user_settings`, `project_settings`, `local_settings`, `policy_settings`, `skills`                                        |
-| `StopFailure`                                                                                                 | error type                              | `rate_limit`, `authentication_failed`, `billing_error`, `invalid_request`, `server_error`, `max_output_tokens`, `unknown` |
-| `InstructionsLoaded`                                                                                          | load reason                             | `session_start`, `nested_traversal`, `path_glob_match`, `include`, `compact`                                              |
-| `Elicitation`                                                                                                 | MCP server name                         | your configured MCP server names                                                                                          |
-| `ElicitationResult`                                                                                           | MCP server name                         | same values as `Elicitation`                                                                                              |
-| `FileChanged`                                                                                                 | filename (basename of the changed file) | `.envrc`, `.env`, any filename you want to watch                                                                          |
-| `UserPromptSubmit`, `Stop`, `TeammateIdle`, `TaskCompleted`, `WorktreeCreate`, `WorktreeRemove`, `CwdChanged` | no matcher support                      | always fires on every occurrence                                                                                          |
+| Event                                                                                                                        | What the matcher filters                | Example matcher values                                                                                                    |
+| :--------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PermissionRequest`                                                       | tool name                               | `Bash`, `Edit\|Write`, `mcp__.*`                                                                                          |
+| `SessionStart`                                                                                                               | how the session started                 | `startup`, `resume`, `clear`, `compact`                                                                                   |
+| `SessionEnd`                                                                                                                 | why the session ended                   | `clear`, `resume`, `logout`, `prompt_input_exit`, `bypass_permissions_disabled`, `other`                                  |
+| `Notification`                                                                                                               | notification type                       | `permission_prompt`, `idle_prompt`, `auth_success`, `elicitation_dialog`                                                  |
+| `SubagentStart`                                                                                                              | agent type                              | `Bash`, `Explore`, `Plan`, or custom agent names                                                                          |
+| `PreCompact`, `PostCompact`                                                                                                  | what triggered compaction               | `manual`, `auto`                                                                                                          |
+| `SubagentStop`                                                                                                               | agent type                              | same values as `SubagentStart`                                                                                            |
+| `ConfigChange`                                                                                                               | configuration source                    | `user_settings`, `project_settings`, `local_settings`, `policy_settings`, `skills`                                        |
+| `StopFailure`                                                                                                                | error type                              | `rate_limit`, `authentication_failed`, `billing_error`, `invalid_request`, `server_error`, `max_output_tokens`, `unknown` |
+| `InstructionsLoaded`                                                                                                         | load reason                             | `session_start`, `nested_traversal`, `path_glob_match`, `include`, `compact`                                              |
+| `Elicitation`                                                                                                                | MCP server name                         | your configured MCP server names                                                                                          |
+| `ElicitationResult`                                                                                                          | MCP server name                         | same values as `Elicitation`                                                                                              |
+| `FileChanged`                                                                                                                | filename (basename of the changed file) | `.envrc`, `.env`, any filename you want to watch                                                                          |
+| `UserPromptSubmit`, `Stop`, `TeammateIdle`, `TaskCreated`, `TaskCompleted`, `WorktreeCreate`, `WorktreeRemove`, `CwdChanged` | no matcher support                      | always fires on every occurrence                                                                                          |
 
 A few more examples showing matchers on different event types:
 
@@ -14432,7 +14565,7 @@ When you run `claude` in a directory, Claude Code gains access to:
 * **Your terminal.** Any command you could run: build tools, git, package managers, system utilities, scripts. If you can do it from the command line, Claude can too.
 * **Your git state.** Current branch, uncommitted changes, and recent commit history.
 * **Your [CLAUDE.md](/en/memory).** A markdown file where you store project-specific instructions, conventions, and context that Claude should know every session.
-* **[Auto memory](/en/memory#auto-memory).** Learnings Claude saves automatically as you work, like project patterns and your preferences. The first 200 lines of MEMORY.md are loaded at the start of each session.
+* **[Auto memory](/en/memory#auto-memory).** Learnings Claude saves automatically as you work, like project patterns and your preferences. The first 200 lines or 25KB of MEMORY.md, whichever comes first, load at the start of each session.
 * **Extensions you configure.** [MCP servers](/en/mcp) for external services, [skills](/en/skills) for workflows, [subagents](/en/sub-agents) for delegated work, and [Claude in Chrome](/en/chrome) for browser interaction.
 
 Because Claude sees your whole project, it can work across it. When you ask Claude to "fix the authentication bug," it searches for relevant files, reads multiple files to understand context, makes coordinated edits across them, runs tests to verify the fix, and commits the changes if you ask. This is different from inline code assistants that only see the current file.
@@ -14489,13 +14622,15 @@ This creates a new session ID while preserving the conversation history up to th
 
 Claude's context window holds your conversation history, file contents, command outputs, [CLAUDE.md](/en/memory), [auto memory](/en/memory#auto-memory), loaded skills, and system instructions. As you work, context fills up. Claude compacts automatically, but instructions from early in the conversation can get lost. Put persistent rules in CLAUDE.md, and run `/context` to see what's using space.
 
+For an interactive walkthrough of what loads and when, see [Explore the context window](/en/context-window).
+
 #### When context fills up
 
 Claude Code manages context automatically as you approach the limit. It clears older tool outputs first, then summarizes the conversation if needed. Your requests and key code snippets are preserved; detailed instructions from early in the conversation may be lost. Put persistent rules in CLAUDE.md rather than relying on conversation history.
 
 To control what's preserved during compaction, add a "Compact Instructions" section to CLAUDE.md or run `/compact` with a focus (like `/compact focus on the API changes`).
 
-Run `/context` to see what's using space. MCP servers add tool definitions to every request, so a few servers can consume significant context before you start working. Run `/mcp` to check per-server costs.
+Run `/context` to see what's using space. MCP tool definitions are deferred by default and loaded on demand via [tool search](/en/mcp#scale-with-mcp-tool-search), so only tool names consume context until Claude uses a specific tool. Run `/mcp` to check per-server costs.
 
 #### Manage context with skills and subagents
 
@@ -14667,14 +14802,14 @@ Complete reference for keyboard shortcuts, input modes, and interactive features
 
 ### Text editing
 
-| Shortcut                 | Description                  | Context                                                                                                       |
-| :----------------------- | :--------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| `Ctrl+K`                 | Delete to end of line        | Stores deleted text for pasting                                                                               |
-| `Ctrl+U`                 | Delete entire line           | Stores deleted text for pasting                                                                               |
-| `Ctrl+Y`                 | Paste deleted text           | Paste text deleted with `Ctrl+K` or `Ctrl+U`                                                                  |
-| `Alt+Y` (after `Ctrl+Y`) | Cycle paste history          | After pasting, cycle through previously deleted text. Requires [Option as Meta](#keyboard-shortcuts) on macOS |
-| `Alt+B`                  | Move cursor back one word    | Word navigation. Requires [Option as Meta](#keyboard-shortcuts) on macOS                                      |
-| `Alt+F`                  | Move cursor forward one word | Word navigation. Requires [Option as Meta](#keyboard-shortcuts) on macOS                                      |
+| Shortcut                 | Description                      | Context                                                                                                       |
+| :----------------------- | :------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| `Ctrl+K`                 | Delete to end of line            | Stores deleted text for pasting                                                                               |
+| `Ctrl+U`                 | Delete from cursor to line start | Stores deleted text for pasting. Repeat to clear across lines in multiline input                              |
+| `Ctrl+Y`                 | Paste deleted text               | Paste text deleted with `Ctrl+K` or `Ctrl+U`                                                                  |
+| `Alt+Y` (after `Ctrl+Y`) | Cycle paste history              | After pasting, cycle through previously deleted text. Requires [Option as Meta](#keyboard-shortcuts) on macOS |
+| `Alt+B`                  | Move cursor back one word        | Word navigation. Requires [Option as Meta](#keyboard-shortcuts) on macOS                                      |
+| `Alt+F`                  | Move cursor forward one word     | Word navigation. Requires [Option as Meta](#keyboard-shortcuts) on macOS                                      |
 
 ### Theme and display
 
@@ -15200,19 +15335,20 @@ Actions for navigating command history:
 
 Actions available in the `Chat` context:
 
-| Action                | Default                   | Description                |
-| :-------------------- | :------------------------ | :------------------------- |
-| `chat:cancel`         | Escape                    | Cancel current input       |
-| `chat:killAgents`     | Ctrl+X Ctrl+K             | Kill all background agents |
-| `chat:cycleMode`      | Shift+Tab\*               | Cycle permission modes     |
-| `chat:modelPicker`    | Cmd+P / Meta+P            | Open model picker          |
-| `chat:fastMode`       | Meta+O                    | Toggle fast mode           |
-| `chat:thinkingToggle` | Cmd+T / Meta+T            | Toggle extended thinking   |
-| `chat:submit`         | Enter                     | Submit message             |
-| `chat:undo`           | Ctrl+\_                   | Undo last action           |
-| `chat:externalEditor` | Ctrl+G, Ctrl+X Ctrl+E     | Open in external editor    |
-| `chat:stash`          | Ctrl+S                    | Stash current prompt       |
-| `chat:imagePaste`     | Ctrl+V (Alt+V on Windows) | Paste image                |
+| Action                | Default                   | Description                         |
+| :-------------------- | :------------------------ | :---------------------------------- |
+| `chat:cancel`         | Escape                    | Cancel current input                |
+| `chat:killAgents`     | Ctrl+X Ctrl+K             | Kill all background agents          |
+| `chat:cycleMode`      | Shift+Tab\*               | Cycle permission modes              |
+| `chat:modelPicker`    | Cmd+P / Meta+P            | Open model picker                   |
+| `chat:fastMode`       | Meta+O                    | Toggle fast mode                    |
+| `chat:thinkingToggle` | Cmd+T / Meta+T            | Toggle extended thinking            |
+| `chat:submit`         | Enter                     | Submit message                      |
+| `chat:newline`        | (unbound)                 | Insert a newline without submitting |
+| `chat:undo`           | Ctrl+\_                   | Undo last action                    |
+| `chat:externalEditor` | Ctrl+G, Ctrl+X Ctrl+E     | Open in external editor             |
+| `chat:stash`          | Ctrl+S                    | Stash current prompt                |
+| `chat:imagePaste`     | Ctrl+V (Alt+V on Windows) | Paste image                         |
 
 \*On Windows without VT mode (Node \<24.2.0/\<22.17.0, Bun \<1.2.23), defaults to Meta+M.
 
@@ -15458,6 +15594,25 @@ Set an action to `null` to unbind a default shortcut:
   ]
 }
 ```
+
+This also works for chord bindings. Unbinding every chord that shares a prefix frees that prefix for use as a single-key binding:
+
+```json theme={null}
+{
+  "bindings": [
+    {
+      "context": "Chat",
+      "bindings": {
+        "ctrl+x ctrl+k": null,
+        "ctrl+x ctrl+e": null,
+        "ctrl+x": "chat:newline"
+      }
+    }
+  ]
+}
+```
+
+If you unbind some but not all chords on a prefix, pressing the prefix still enters chord-wait mode for the remaining bindings.
 
 ## Reserved shortcuts
 
@@ -16028,6 +16183,8 @@ Select your scope based on:
 
 MCP server configurations follow a clear precedence hierarchy. When servers with the same name exist at multiple scopes, the system resolves conflicts by prioritizing local-scoped servers first, followed by project-scoped servers, and finally user-scoped servers. This design ensures that personal configurations can override shared ones when needed.
 
+If a server is configured both locally and through a [claude.ai connector](#use-mcp-servers-from-claude-ai), the local configuration takes precedence and the connector entry is skipped.
+
 ### Environment variable expansion in `.mcp.json`
 
 Claude Code supports environment variable expansion in `.mcp.json` files, allowing teams to share configurations while maintaining flexibility for machine-specific paths and sensitive values like API keys.
@@ -16561,16 +16718,13 @@ MCP servers can expose resources that you can reference using @ mentions, simila
 
 ## Scale with MCP Tool Search
 
-When you have many MCP servers configured, tool definitions can consume a significant portion of your context window. MCP Tool Search solves this by dynamically loading tools on-demand instead of preloading all of them.
+Tool search keeps MCP context usage low by deferring tool definitions until Claude needs them. Only tool names load at session start, so adding more MCP servers has minimal impact on your context window.
 
 ### How it works
 
-Claude Code automatically enables Tool Search when your MCP tool descriptions would consume more than 10% of the context window. You can [adjust this threshold](#configure-tool-search) or disable tool search entirely. When triggered:
+Tool search is enabled by default. MCP tools are deferred rather than loaded into context upfront, and Claude uses a search tool to discover relevant ones when a task needs them. Only the tools Claude actually uses enter context. From your perspective, MCP tools work exactly as before.
 
-1. MCP tools are deferred rather than loaded into context upfront
-2. Claude uses a search tool to discover relevant MCP tools when needed
-3. Only the tools Claude actually needs are loaded into context
-4. MCP tools continue to work exactly as before from your perspective
+If you prefer threshold-based loading, set `ENABLE_TOOL_SEARCH=auto` to load schemas upfront when they fit within 10% of the context window and defer only the overflow. See [Configure tool search](#configure-tool-search) for all options.
 
 ### For MCP server authors
 
@@ -16581,6 +16735,8 @@ Add clear, descriptive server instructions that explain:
 * What category of tasks your tools handle
 * When Claude should search for your tools
 * Key capabilities your server provides
+
+Claude Code truncates tool descriptions and server instructions at 2KB each. Keep them concise to avoid truncation, and put critical details near the start.
 
 ### Configure tool search
 
@@ -16910,7 +17066,7 @@ Claude Code has two complementary memory systems. Both are loaded at the start o
 | **Who writes it**    | You                                               | Claude                                                           |
 | **What it contains** | Instructions and rules                            | Learnings and patterns                                           |
 | **Scope**            | Project, user, or org                             | Per working tree                                                 |
-| **Loaded into**      | Every session                                     | Every session (first 200 lines)                                  |
+| **Loaded into**      | Every session                                     | Every session (first 200 lines or 25KB)                          |
 | **Use for**          | Coding standards, workflows, project architecture | Build commands, debugging insights, preferences Claude discovers |
 
 Use CLAUDE.md files when you want to guide Claude's behavior. Auto memory lets Claude learn from your corrections without manual effort.
@@ -16947,7 +17103,7 @@ A project CLAUDE.md can be stored in either `./CLAUDE.md` or `./.claude/CLAUDE.m
 
 ### Write effective instructions
 
-CLAUDE.md files are loaded into the context window at the start of every session, consuming tokens alongside your conversation. Because they're context rather than enforced configuration, how you write instructions affects how reliably Claude follows them. Specific, concise, well-structured instructions work best.
+CLAUDE.md files are loaded into the context window at the start of every session, consuming tokens alongside your conversation. The [context window visualization](/en/context-window) shows where CLAUDE.md loads relative to the rest of the startup context. Because they're context rather than enforced configuration, how you write instructions affects how reliably Claude follows them. Specific, concise, well-structured instructions work best.
 
 **Size**: target under 200 lines per CLAUDE.md file. Longer files consume more context and reduce adherence. If your instructions are growing large, split them using [imports](#import-additional-files) or [`.claude/rules/`](#organize-rules-with-claude/rules/) files.
 
@@ -17210,9 +17366,9 @@ Auto memory is machine-local. All worktrees and subdirectories within the same g
 
 ### How it works
 
-The first 200 lines of `MEMORY.md` are loaded at the start of every conversation. Content beyond line 200 is not loaded at session start. Claude keeps `MEMORY.md` concise by moving detailed notes into separate topic files.
+The first 200 lines of `MEMORY.md`, or the first 25KB, whichever comes first, are loaded at the start of every conversation. Content beyond that threshold is not loaded at session start. Claude keeps `MEMORY.md` concise by moving detailed notes into separate topic files.
 
-This 200-line limit applies only to `MEMORY.md`. CLAUDE.md files are loaded in full regardless of length, though shorter files produce better adherence.
+This limit applies only to `MEMORY.md`. CLAUDE.md files are loaded in full regardless of length, though shorter files produce better adherence.
 
 Topic files like `debugging.md` or `patterns.md` are not loaded at startup. Claude reads them on demand using its standard file tools when it needs the information.
 
@@ -19235,15 +19391,16 @@ For organizations that need centralized control over Claude Code configuration, 
 
 Some settings are only effective in managed settings:
 
-| Setting                                        | Description                                                                                                                                                                                                                          |
-| :--------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `allowManagedPermissionRulesOnly`              | When `true`, prevents user and project settings from defining `allow`, `ask`, or `deny` permission rules. Only rules in managed settings apply                                                                                       |
-| `allowManagedHooksOnly`                        | When `true`, prevents loading of user, project, and plugin hooks. Only managed hooks and SDK hooks are allowed                                                                                                                       |
-| `allowManagedMcpServersOnly`                   | When `true`, only `allowedMcpServers` from managed settings are respected. `deniedMcpServers` still merges from all sources. See [Managed MCP configuration](/en/mcp#managed-mcp-configuration)                                      |
-| `blockedMarketplaces`                          | Blocklist of marketplace sources. Blocked sources are checked before downloading, so they never touch the filesystem. See [managed marketplace restrictions](/en/plugin-marketplaces#managed-marketplace-restrictions)               |
-| `sandbox.network.allowManagedDomainsOnly`      | When `true`, only `allowedDomains` and `WebFetch(domain:...)` allow rules from managed settings are respected. Non-allowed domains are blocked automatically without prompting the user. Denied domains still merge from all sources |
-| `sandbox.filesystem.allowManagedReadPathsOnly` | When `true`, only `allowRead` paths from managed settings are respected. `allowRead` entries from user, project, and local settings are ignored                                                                                      |
-| `strictKnownMarketplaces`                      | Controls which plugin marketplaces users can add. See [managed marketplace restrictions](/en/plugin-marketplaces#managed-marketplace-restrictions)                                                                                   |
+| Setting                                        | Description                                                                                                                                                                                                                                 |
+| :--------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `allowManagedPermissionRulesOnly`              | When `true`, prevents user and project settings from defining `allow`, `ask`, or `deny` permission rules. Only rules in managed settings apply                                                                                              |
+| `allowManagedHooksOnly`                        | When `true`, prevents loading of user, project, and plugin hooks. Only managed hooks and SDK hooks are allowed                                                                                                                              |
+| `allowManagedMcpServersOnly`                   | When `true`, only `allowedMcpServers` from managed settings are respected. `deniedMcpServers` still merges from all sources. See [Managed MCP configuration](/en/mcp#managed-mcp-configuration)                                             |
+| `allowedChannelPlugins`                        | Allowlist of channel plugins that may push messages. Replaces the default Anthropic allowlist when set. Requires `channelsEnabled: true`. See [Restrict which channel plugins can run](/en/channels#restrict-which-channel-plugins-can-run) |
+| `blockedMarketplaces`                          | Blocklist of marketplace sources. Blocked sources are checked before downloading, so they never touch the filesystem. See [managed marketplace restrictions](/en/plugin-marketplaces#managed-marketplace-restrictions)                      |
+| `sandbox.network.allowManagedDomainsOnly`      | When `true`, only `allowedDomains` and `WebFetch(domain:...)` allow rules from managed settings are respected. Non-allowed domains are blocked automatically without prompting the user. Denied domains still merge from all sources        |
+| `sandbox.filesystem.allowManagedReadPathsOnly` | When `true`, only `allowRead` paths from managed settings are respected. `allowRead` entries from user, project, and local settings are ignored                                                                                             |
+| `strictKnownMarketplaces`                      | Controls which plugin marketplaces users can add. See [managed marketplace restrictions](/en/plugin-marketplaces#managed-marketplace-restrictions)                                                                                          |
 
 <Note>
   Access to [Remote Control](/en/remote-control) and [web sessions](/en/claude-code-on-the-web) is not controlled by a managed settings key. On Team and Enterprise plans, an admin enables or disables these features in [Claude Code admin settings](https://claude.ai/admin-settings/claude-code).
@@ -20904,10 +21061,11 @@ Plugin hooks respond to the same lifecycle events as [user-defined hooks](/en/ho
 | `Notification`       | When Claude Code sends a notification                                                                                                                  |
 | `SubagentStart`      | When a subagent is spawned                                                                                                                             |
 | `SubagentStop`       | When a subagent finishes                                                                                                                               |
+| `TaskCreated`        | When a task is being created via `TaskCreate`                                                                                                          |
+| `TaskCompleted`      | When a task is being marked as completed                                                                                                               |
 | `Stop`               | When Claude finishes responding                                                                                                                        |
 | `StopFailure`        | When the turn ends due to an API error. Output and exit code are ignored                                                                               |
 | `TeammateIdle`       | When an [agent team](/en/agent-teams) teammate is about to go idle                                                                                     |
-| `TaskCompleted`      | When a task is being marked as completed                                                                                                               |
 | `InstructionsLoaded` | When a CLAUDE.md or `.claude/rules/*.md` file is loaded into context. Fires at session start and when files are lazily loaded during a session         |
 | `ConfigChange`       | When a configuration file changes during a session                                                                                                     |
 | `CwdChanged`         | When the working directory changes, for example when Claude executes a `cd` command. Useful for reactive environment management with tools like direnv |
@@ -22092,6 +22250,18 @@ Use Remote Control when you're in the middle of local work and want to keep goin
 * **Extended network outage**: if your machine is awake but unable to reach the network for more than roughly 10 minutes, the session times out and the process exits. Run `claude remote-control` again to start a new session.
 
 ## Troubleshooting
+
+### "Remote Control requires a claude.ai subscription"
+
+You're not authenticated with a claude.ai account. Run `claude auth login` and choose the claude.ai option. If `ANTHROPIC_API_KEY` is set in your environment, unset it first.
+
+### "Remote Control requires a full-scope login token"
+
+You're authenticated with a long-lived token from `claude setup-token` or the `CLAUDE_CODE_OAUTH_TOKEN` environment variable. These tokens are limited to inference-only and cannot establish Remote Control sessions. Run `claude auth login` to authenticate with a full-scope session token instead.
+
+### "Unable to determine your organization for Remote Control eligibility"
+
+Your cached account information is stale or incomplete. Run `claude auth login` to refresh it.
 
 ### "Remote Control is not yet enabled for your account"
 
@@ -23889,19 +24059,19 @@ To install Claude Code, use one of the following methods:
   <Tab title="Native Install (Recommended)">
     **macOS, Linux, WSL:**
 
-    ```bash theme={null} theme={null} theme={null} theme={null}
+    ```bash theme={null}
     curl -fsSL https://claude.ai/install.sh | bash
     ```
 
     **Windows PowerShell:**
 
-    ```powershell theme={null} theme={null} theme={null} theme={null}
+    ```powershell theme={null}
     irm https://claude.ai/install.ps1 | iex
     ```
 
     **Windows CMD:**
 
-    ```batch theme={null} theme={null} theme={null} theme={null}
+    ```batch theme={null}
     curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
     ```
 
@@ -23913,7 +24083,7 @@ To install Claude Code, use one of the following methods:
   </Tab>
 
   <Tab title="Homebrew">
-    ```bash theme={null} theme={null} theme={null} theme={null}
+    ```bash theme={null}
     brew install --cask claude-code
     ```
 
@@ -23923,7 +24093,7 @@ To install Claude Code, use one of the following methods:
   </Tab>
 
   <Tab title="WinGet">
-    ```powershell theme={null} theme={null} theme={null} theme={null}
+    ```powershell theme={null}
     winget install Anthropic.ClaudeCode
     ```
 
@@ -24439,20 +24609,21 @@ Your skill instructions here...
 
 All fields are optional. Only `description` is recommended so Claude knows when to use the skill.
 
-| Field                      | Required    | Description                                                                                                                                                                                                                |
-| :------------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`                     | No          | Display name for the skill. If omitted, uses the directory name. Lowercase letters, numbers, and hyphens only (max 64 characters).                                                                                         |
-| `description`              | Recommended | What the skill does and when to use it. Claude uses this to decide when to apply the skill. If omitted, uses the first paragraph of markdown content.                                                                      |
-| `argument-hint`            | No          | Hint shown during autocomplete to indicate expected arguments. Example: `[issue-number]` or `[filename] [format]`.                                                                                                         |
-| `disable-model-invocation` | No          | Set to `true` to prevent Claude from automatically loading this skill. Use for workflows you want to trigger manually with `/name`. Default: `false`.                                                                      |
-| `user-invocable`           | No          | Set to `false` to hide from the `/` menu. Use for background knowledge users shouldn't invoke directly. Default: `true`.                                                                                                   |
-| `allowed-tools`            | No          | Tools Claude can use without asking permission when this skill is active.                                                                                                                                                  |
-| `model`                    | No          | Model to use when this skill is active.                                                                                                                                                                                    |
-| `effort`                   | No          | [Effort level](/en/model-config#adjust-effort-level) when this skill is active. Overrides the session effort level. Default: inherits from session. Options: `low`, `medium`, `high`, `max` (Opus 4.6 only).               |
-| `context`                  | No          | Set to `fork` to run in a forked subagent context.                                                                                                                                                                         |
-| `agent`                    | No          | Which subagent type to use when `context: fork` is set.                                                                                                                                                                    |
-| `hooks`                    | No          | Hooks scoped to this skill's lifecycle. See [Hooks in skills and agents](/en/hooks#hooks-in-skills-and-agents) for configuration format.                                                                                   |
-| `shell`                    | No          | Shell to use for `` !`command` `` blocks in this skill. Accepts `bash` (default) or `powershell`. Setting `powershell` runs inline shell commands via PowerShell on Windows. Requires `CLAUDE_CODE_USE_POWERSHELL_TOOL=1`. |
+| Field                      | Required    | Description                                                                                                                                                                                                                                                                               |
+| :------------------------- | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                     | No          | Display name for the skill. If omitted, uses the directory name. Lowercase letters, numbers, and hyphens only (max 64 characters).                                                                                                                                                        |
+| `description`              | Recommended | What the skill does and when to use it. Claude uses this to decide when to apply the skill. If omitted, uses the first paragraph of markdown content.                                                                                                                                     |
+| `argument-hint`            | No          | Hint shown during autocomplete to indicate expected arguments. Example: `[issue-number]` or `[filename] [format]`.                                                                                                                                                                        |
+| `disable-model-invocation` | No          | Set to `true` to prevent Claude from automatically loading this skill. Use for workflows you want to trigger manually with `/name`. Default: `false`.                                                                                                                                     |
+| `user-invocable`           | No          | Set to `false` to hide from the `/` menu. Use for background knowledge users shouldn't invoke directly. Default: `true`.                                                                                                                                                                  |
+| `allowed-tools`            | No          | Tools Claude can use without asking permission when this skill is active.                                                                                                                                                                                                                 |
+| `model`                    | No          | Model to use when this skill is active.                                                                                                                                                                                                                                                   |
+| `effort`                   | No          | [Effort level](/en/model-config#adjust-effort-level) when this skill is active. Overrides the session effort level. Default: inherits from session. Options: `low`, `medium`, `high`, `max` (Opus 4.6 only).                                                                              |
+| `context`                  | No          | Set to `fork` to run in a forked subagent context.                                                                                                                                                                                                                                        |
+| `agent`                    | No          | Which subagent type to use when `context: fork` is set.                                                                                                                                                                                                                                   |
+| `hooks`                    | No          | Hooks scoped to this skill's lifecycle. See [Hooks in skills and agents](/en/hooks#hooks-in-skills-and-agents) for configuration format.                                                                                                                                                  |
+| `paths`                    | No          | Glob patterns that limit when this skill is activated. Accepts a comma-separated string or a YAML list. When set, Claude loads the skill automatically only when working with files matching the patterns. Uses the same format as [path-specific rules](/en/memory#path-specific-rules). |
+| `shell`                    | No          | Shell to use for `` !`command` `` blocks in this skill. Accepts `bash` (default) or `powershell`. Setting `powershell` runs inline shell commands via PowerShell on Windows. Requires `CLAUDE_CODE_USE_POWERSHELL_TOOL=1`.                                                                |
 
 #### Available string substitutions
 
@@ -26188,7 +26359,7 @@ Source: https://code.claude.com/docs/en/sub-agents
 
 Create and use specialized AI subagents in Claude Code for task-specific workflows and improved context management.
 
-Subagents are specialized AI assistants that handle specific types of tasks. Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions. When Claude encounters a task that matches a subagent's description, it delegates to that subagent, which works independently and returns results.
+Subagents are specialized AI assistants that handle specific types of tasks. Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions. When Claude encounters a task that matches a subagent's description, it delegates to that subagent, which works independently and returns results. To see the context savings in practice, the [context window visualization](/en/context-window) walks through a session where a subagent handles research in its own separate window.
 
 <Note>
   If you need multiple agents working in parallel and communicating with each other, see [agent teams](/en/agent-teams) instead. Subagents work within a single session; agent teams coordinate across separate sessions.
@@ -26581,7 +26752,7 @@ Choose a scope based on how broadly the memory should apply:
 When memory is enabled:
 
 * The subagent's system prompt includes instructions for reading and writing to the memory directory.
-* The subagent's system prompt also includes the first 200 lines of `MEMORY.md` in the memory directory, with instructions to curate `MEMORY.md` if it exceeds 200 lines.
+* The subagent's system prompt also includes the first 200 lines or 25KB of `MEMORY.md` in the memory directory, whichever comes first, with instructions to curate `MEMORY.md` if it exceeds that limit.
 * Read, Write, and Edit tools are automatically enabled so the subagent can manage its memory files.
 
 ##### Persistent memory tips

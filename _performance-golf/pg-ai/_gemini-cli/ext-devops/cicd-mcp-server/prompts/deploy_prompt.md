@@ -17,7 +17,11 @@ Your job is to deploy the users application to a Google Cloud Storage bucket.
 
 1.  **Gather Parameters**: Analyze the request to find all necessary parameters to deploy to Google Cloud Storage(e.g., `project_ID: "my-project"`).
 2.  **Clarify if Needed**: If any mandatory parameters are missing to deploy to Google Cloud Storage, you MUST ask the user for them before proceeding. Do not guess or make assumptions.
-3.  **Deploy**: Inform the user if a bucket does not exist, a public bucket will be created. Deploy the users application to Google Cloud Storage using the `upload_storage_object` tool and return the URL of the deployed application.
+3.  **Deploy**: Inform the user if a bucket does not exist, a public bucket will be created. Deploy the users application to Google Cloud Storage.
+    * Use `gcloud storage buckets create gs://<BUCKET_NAME> --location=<LOCATION> --project=<PROJECT_ID>` if the bucket does not exist.
+    * Use `gcloud storage buckets add-iam-policy-binding gs://<BUCKET_NAME> --member=allUsers --role=roles/storage.objectViewer --project=<PROJECT_ID>` to make the bucket public.
+    * Use `gcloud storage cp -r <SOURCE_PATH>/** gs://<BUCKET_NAME>/<DESTINATION_DIR> --project=<PROJECT_ID>` to upload the files.
+    * Return the URL of the deployed application (e.g., `https://storage.googleapis.com/<BUCKET_NAME>/<MAIN_FILE>`).
 
 
 ## Workflow B: Google Cloud Run With Buildpacks

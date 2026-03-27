@@ -388,13 +388,13 @@ Each section links to Markdown twins under the product path (e.g., `/apps-sdk/<s
 ## Apps SDK — Concepts
 - [MCP](https://developers.openai.com/apps-sdk/concepts/mcp-server.md): Understand how the Model Context Protocol works with Apps SDK.
 - [UI guidelines](https://developers.openai.com/apps-sdk/concepts/ui-guidelines.md): Guidelines for designing beautiful ChatGPT apps.
-- [User Interaction](https://developers.openai.com/apps-sdk/concepts/user-interaction.md): How users find, engage with, activate and manage apps that are available in ChatGPT.
+- [User Interaction](https://developers.openai.com/apps-sdk/concepts/user-interaction.md): How users find, engage with, activate, and manage app experiences in ChatGPT.
 - [UX principles](https://developers.openai.com/apps-sdk/concepts/ux-principles.md): Principles for building great ChatGPT apps.
 
 ## Apps SDK — Deploy
 - [Deploy your app](https://developers.openai.com/apps-sdk/deploy.md): Learn how to deploy your MCP server
 - [Connect from ChatGPT](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt.md): Connect your app to ChatGPT clients.
-- [Submit and maintain your app](https://developers.openai.com/apps-sdk/deploy/submission.md): Learn how to submit your app to the ChatGPT Apps Directory and iterate over time.
+- [Submit and maintain your app](https://developers.openai.com/apps-sdk/deploy/submission.md): Learn how to submit your app to the ChatGPT Apps Directory and Codex Plugin Directory.
 - [Test your integration](https://developers.openai.com/apps-sdk/deploy/testing.md): Testing strategies for Apps SDK apps.
 - [Troubleshooting](https://developers.openai.com/apps-sdk/deploy/troubleshooting.md): Troubleshoot issues in Apps SDK apps.
 
@@ -491,6 +491,9 @@ Each section links to Markdown twins under the product path (e.g., `/apps-sdk/<s
 - [Custom instructions with AGENTS.md](https://developers.openai.com/codex/guides/agents-md.md): Give Codex extra instructions and context for your project
 - [Use Codex with the Agents SDK](https://developers.openai.com/codex/guides/agents-sdk.md): Invoke Codex as an MCP server to build multi-agent development workflows
 
+## Codex — Hooks
+- [Hooks](https://developers.openai.com/codex/hooks.md): Run deterministic scripts during the Codex lifecycle
+
 ## Codex — Ide
 - [Codex IDE extension](https://developers.openai.com/codex/ide.md): Pair with Codex in your IDE
 - [Codex IDE extension commands](https://developers.openai.com/codex/ide/commands.md): Reference for Codex IDE extension commands and keyboard shortcuts
@@ -520,6 +523,9 @@ Each section links to Markdown twins under the product path (e.g., `/apps-sdk/<s
 
 ## Codex — Overview
 - [Codex](https://developers.openai.com/codex/overview.md): One agent for everywhere you code
+
+## Codex — Plugins
+- [Plugins](https://developers.openai.com/codex/plugins.md): Package and distribute Codex skills and app integrations as plugins
 
 ## Codex — Pricing
 - [Codex Pricing](https://developers.openai.com/codex/pricing.md): Codex is included in your ChatGPT Plus, Pro, Business, Edu, or Enterprise plan
