@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.2.85
+
+- Added `reloadPlugins()` SDK method to reload plugins and receive refreshed commands, agents, and MCP server status
+- Fixed PreToolUse hooks with `permissionDecision: "ask"` being ignored in SDK mode
+- Updated to parity with Claude Code v2.1.85
+
+## 0.2.84
+
+- Added `taskBudget` option for API-side token budget awareness, allowing the model to pace tool use within a token limit
+- Added `enableChannel()` method and `capabilities` field on `McpServerStatus` for SDK-driven MCP channel activation
+- Exported `EffortLevel` type (`'low' | 'medium' | 'high' | 'max'`) for consumers to reference effort values directly
+- Fixed showing "[Request interrupted by user]" for errors that were not caused by user interruption
+- Updated to parity with Claude Code v2.1.84
+
 ## 0.2.83
 
 - Added `seed_read_state` control subtype to seed `readFileState` with `{path, mtime}` so `Edit` works after the originating `Read` was removed from context

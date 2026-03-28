@@ -3,33 +3,31 @@
  * Copyright 2026 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { buildSeatbeltArgs } from './seatbeltArgsBuilder.js';
-import * as sandboxManager from '../../services/sandboxManager.js';
+import * as fsUtils from '../utils/fsUtils.js';
 import fs from 'node:fs';
 import os from 'node:os';
 
+vi.mock('../utils/fsUtils.js', async () => {
+  const actual = await vi.importActual('../utils/fsUtils.js');
+  return {
+    ...actual,
+    tryRealpath: vi.fn((p) => p),
+    resolveGitWorktreePaths: vi.fn(() => ({})),
+  };
+});
+
 describe('seatbeltArgsBuilder', () => {
-  beforeEach(() => {
+  afterEach(() => {
     vi.restoreAllMocks();
   });
 
-<<<<<<< HEAD
-  it('should allow network when networkAccess is true', () => {
-    const args = buildSeatbeltArgs({ workspace: '/test', networkAccess: true });
-    const profile = args[1];
-    expect(profile).toContain('(allow network-outbound)');
-  });
-=======
   describe('buildSeatbeltArgs', () => {
-    it('should build a strict allowlist profile allowing the workspace via param', async () => {
-      // Mock tryRealpath to just return the path for testing
-      vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(
-        async (p) => p,
-      );
->>>>>>> origin/main
+    it('should build a strict allowlist profile allowing the workspace via param', () => {
+      vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => p);
 
-      const args = await buildSeatbeltArgs({
+      const args = buildSeatbeltArgs({
         workspace: '/Users/test/workspace',
       });
 
@@ -46,11 +44,9 @@ describe('seatbeltArgsBuilder', () => {
       expect(args).toContain(`TMPDIR=${os.tmpdir()}`);
     });
 
-    it('should allow network when networkAccess is true', async () => {
-      vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(
-        async (p) => p,
-      );
-      const args = await buildSeatbeltArgs({
+    it('should allow network when networkAccess is true', () => {
+      vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => p);
+      const args = buildSeatbeltArgs({
         workspace: '/test',
         networkAccess: true,
       });
@@ -59,10 +55,8 @@ describe('seatbeltArgsBuilder', () => {
     });
 
     describe('governance files', () => {
-      it('should inject explicit deny rules for governance files', async () => {
-        vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(async (p) =>
-          p.toString(),
-        );
+      it('should inject explicit deny rules for governance files', () => {
+        vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => p.toString());
         vi.spyOn(fs, 'existsSync').mockReturnValue(true);
         vi.spyOn(fs, 'lstatSync').mockImplementation(
           (p) =>
@@ -72,35 +66,29 @@ describe('seatbeltArgsBuilder', () => {
             }) as unknown as fs.Stats,
         );
 
-        const args = await buildSeatbeltArgs({
-          workspace: '/Users/test/workspace',
+        const args = buildSeatbeltArgs({
+          workspace: '/test/workspace',
         });
         const profile = args[1];
 
-        // .gitignore should be a literal deny
         expect(args).toContain('-D');
-        expect(args).toContain(
-          'GOVERNANCE_FILE_0=/Users/test/workspace/.gitignore',
-        );
+        expect(args).toContain('GOVERNANCE_FILE_0=/test/workspace/.gitignore');
         expect(profile).toContain(
           '(deny file-write* (literal (param "GOVERNANCE_FILE_0")))',
         );
 
-        // .git should be a subpath deny
-        expect(args).toContain('GOVERNANCE_FILE_2=/Users/test/workspace/.git');
+        expect(args).toContain('GOVERNANCE_FILE_2=/test/workspace/.git');
         expect(profile).toContain(
           '(deny file-write* (subpath (param "GOVERNANCE_FILE_2")))',
         );
       });
 
-      it('should protect both the symlink and the real path if they differ', async () => {
-        vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(
-          async (p) => {
-            if (p === '/test/workspace/.gitignore')
-              return '/test/real/.gitignore';
-            return p.toString();
-          },
-        );
+      it('should protect both the symlink and the real path if they differ', () => {
+        vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => {
+          if (p === '/test/workspace/.gitignore')
+            return '/test/real/.gitignore';
+          return p.toString();
+        });
         vi.spyOn(fs, 'existsSync').mockReturnValue(true);
         vi.spyOn(fs, 'lstatSync').mockImplementation(
           () =>
@@ -110,7 +98,7 @@ describe('seatbeltArgsBuilder', () => {
             }) as unknown as fs.Stats,
         );
 
-        const args = await buildSeatbeltArgs({ workspace: '/test/workspace' });
+        const args = buildSeatbeltArgs({ workspace: '/test/workspace' });
         const profile = args[1];
 
         expect(args).toContain('GOVERNANCE_FILE_0=/test/workspace/.gitignore');
@@ -125,15 +113,13 @@ describe('seatbeltArgsBuilder', () => {
     });
 
     describe('allowedPaths', () => {
-      it('should parameterize allowed paths and normalize them', async () => {
-        vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(
-          async (p) => {
-            if (p === '/test/symlink') return '/test/real_path';
-            return p;
-          },
-        );
+      it('should parameterize allowed paths and normalize them', () => {
+        vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => {
+          if (p === '/test/symlink') return '/test/real_path';
+          return p;
+        });
 
-        const args = await buildSeatbeltArgs({
+        const args = buildSeatbeltArgs({
           workspace: '/test',
           allowedPaths: ['/custom/path1', '/test/symlink'],
         });
@@ -149,12 +135,10 @@ describe('seatbeltArgsBuilder', () => {
     });
 
     describe('forbiddenPaths', () => {
-      it('should parameterize forbidden paths and explicitly deny them', async () => {
-        vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(
-          async (p) => p,
-        );
+      it('should parameterize forbidden paths and explicitly deny them', () => {
+        vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => p);
 
-        const args = await buildSeatbeltArgs({
+        const args = buildSeatbeltArgs({
           workspace: '/test',
           forbiddenPaths: ['/secret/path'],
         });
@@ -169,22 +153,21 @@ describe('seatbeltArgsBuilder', () => {
         );
       });
 
-      it('resolves forbidden symlink paths to their real paths', async () => {
-        vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(
-          async (p) => {
-            if (p === '/test/symlink') return '/test/real_path';
-            return p;
-          },
-        );
+      it('resolves forbidden symlink paths to their real paths', () => {
+        vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => {
+          if (p === '/test/symlink' || p === '/test/missing-dir') {
+            return '/test/real_path';
+          }
+          return p;
+        });
 
-        const args = await buildSeatbeltArgs({
+        const args = buildSeatbeltArgs({
           workspace: '/test',
           forbiddenPaths: ['/test/symlink'],
         });
 
         const profile = args[1];
 
-        // The builder should resolve the symlink and explicitly deny the real target path
         expect(args).toContain('-D');
         expect(args).toContain('FORBIDDEN_PATH_0=/test/real_path');
         expect(profile).toContain(
@@ -192,12 +175,10 @@ describe('seatbeltArgsBuilder', () => {
         );
       });
 
-      it('explicitly denies non-existent forbidden paths to prevent creation', async () => {
-        vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(
-          async (p) => p,
-        );
+      it('explicitly denies non-existent forbidden paths to prevent creation', () => {
+        vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => p);
 
-        const args = await buildSeatbeltArgs({
+        const args = buildSeatbeltArgs({
           workspace: '/test',
           forbiddenPaths: ['/test/missing-dir/missing-file.txt'],
         });
@@ -213,12 +194,10 @@ describe('seatbeltArgsBuilder', () => {
         );
       });
 
-      it('should override allowed paths if a path is also in forbidden paths', async () => {
-        vi.spyOn(sandboxManager, 'tryRealpath').mockImplementation(
-          async (p) => p,
-        );
+      it('should override allowed paths if a path is also in forbidden paths', () => {
+        vi.mocked(fsUtils.tryRealpath).mockImplementation((p) => p);
 
-        const args = await buildSeatbeltArgs({
+        const args = buildSeatbeltArgs({
           workspace: '/test',
           allowedPaths: ['/custom/path1'],
           forbiddenPaths: ['/custom/path1'],
@@ -234,75 +213,10 @@ describe('seatbeltArgsBuilder', () => {
         expect(profile).toContain(allowString);
         expect(profile).toContain(denyString);
 
-        // Verify ordering: The explicit deny must appear AFTER the explicit allow in the profile string
-        // Seatbelt rules are evaluated in order where the latest rule matching a path wins
         const allowIndex = profile.indexOf(allowString);
         const denyIndex = profile.indexOf(denyString);
         expect(denyIndex).toBeGreaterThan(allowIndex);
       });
-    });
-  });
-
-  describe('governance files', () => {
-    it('should inject explicit deny rules for governance files', () => {
-      vi.spyOn(fs, 'realpathSync').mockImplementation((p) => p.toString());
-      vi.spyOn(fs, 'existsSync').mockReturnValue(true);
-      vi.spyOn(fs, 'lstatSync').mockImplementation(
-        (p) =>
-          ({
-            isDirectory: () => p.toString().endsWith('.git'),
-            isFile: () => !p.toString().endsWith('.git'),
-          }) as unknown as fs.Stats,
-      );
-
-      const args = buildSeatbeltArgs({ workspace: '/Users/test/workspace' });
-      const profile = args[1];
-
-      // .gitignore should be a literal deny
-      expect(args).toContain('-D');
-      expect(args).toContain(
-        'GOVERNANCE_FILE_0=/Users/test/workspace/.gitignore',
-      );
-      expect(profile).toContain(
-        '(deny file-write* (literal (param "GOVERNANCE_FILE_0")))',
-      );
-
-      // .git should be a subpath deny
-      expect(args).toContain('GOVERNANCE_FILE_2=/Users/test/workspace/.git');
-      expect(profile).toContain(
-        '(deny file-write* (subpath (param "GOVERNANCE_FILE_2")))',
-      );
-
-      vi.restoreAllMocks();
-    });
-
-    it('should protect both the symlink and the real path if they differ', () => {
-      vi.spyOn(fs, 'realpathSync').mockImplementation((p) => {
-        if (p === '/test/workspace/.gitignore') return '/test/real/.gitignore';
-        return p.toString();
-      });
-      vi.spyOn(fs, 'existsSync').mockReturnValue(true);
-      vi.spyOn(fs, 'lstatSync').mockImplementation(
-        () =>
-          ({
-            isDirectory: () => false,
-            isFile: () => true,
-          }) as unknown as fs.Stats,
-      );
-
-      const args = buildSeatbeltArgs({ workspace: '/test/workspace' });
-      const profile = args[1];
-
-      expect(args).toContain('GOVERNANCE_FILE_0=/test/workspace/.gitignore');
-      expect(args).toContain('REAL_GOVERNANCE_FILE_0=/test/real/.gitignore');
-      expect(profile).toContain(
-        '(deny file-write* (literal (param "GOVERNANCE_FILE_0")))',
-      );
-      expect(profile).toContain(
-        '(deny file-write* (literal (param "REAL_GOVERNANCE_FILE_0")))',
-      );
-
-      vi.restoreAllMocks();
     });
   });
 });
