@@ -64,8 +64,9 @@ __MACOSX/
 # ========== PLAYWRIGHT MCP (local browser automation artifacts) ==========
 .playwright-mcp/
 
-# ========== ROOT MCP CONFIG (local override — shared config is in .claude/mcp.json) ==========
-.mcp.json
+# ========== ROOT MCP CONFIG ==========
+# .mcp.json is committed — it's the shared MCP config (moved from .claude/mcp.json).
+# Team members set API keys as env vars on their machine.
 
 # ========== CONVERSATION SCREENSHOTS (session artifacts, not team resources) ==========
 /*.png

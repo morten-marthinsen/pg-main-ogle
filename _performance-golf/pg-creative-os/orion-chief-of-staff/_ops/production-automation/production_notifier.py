@@ -246,7 +246,12 @@ class ProductionNotifier:
 
         # Config
         self.list_id = self.cfg["clickup"]["production_calendar_list_id"]
-        self.slack_channel = self.cfg["slack"]["production_channel"]
+        self.slack_channel = os.environ.get("SLACK_PRODUCTION_CHANNEL") or self.cfg["slack"].get("production_channel", "")
+        if not self.slack_channel or self.slack_channel == "REPLACE_WITH_CHANNEL_ID":
+            raise RuntimeError(
+                "Slack production channel not configured. "
+                "Set SLACK_PRODUCTION_CHANNEL env var or update slack.production_channel in config.yaml."
+            )
         self.footage_url_field = self.cfg["clickup"].get("footage_url_field_name", "Raw Footage (URL)")
 
     def run(self) -> dict:
