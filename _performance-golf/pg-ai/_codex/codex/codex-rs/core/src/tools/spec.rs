@@ -1,6 +1,3 @@
-use crate::client_common::tools::FreeformTool;
-use crate::client_common::tools::FreeformToolFormat;
-use crate::client_common::tools::ResponsesApiTool;
 use crate::client_common::tools::ToolSpec;
 use crate::config::AgentRoleConfig;
 use crate::mcp::CODEX_APPS_MCP_SERVER_NAME;
@@ -46,9 +43,13 @@ use codex_protocol::openai_models::WebSearchToolType;
 use codex_protocol::protocol::SandboxPolicy;
 use codex_protocol::protocol::SessionSource;
 use codex_protocol::protocol::SubAgentSource;
-use codex_tools::parse_mcp_tool;
-pub use codex_tools::parse_tool_input_schema;
+use codex_tools::FreeformTool;
+use codex_tools::FreeformToolFormat;
+use codex_tools::ResponsesApiTool;
+use codex_tools::dynamic_tool_to_responses_api_tool;
+use codex_tools::mcp_tool_to_responses_api_tool;
 use codex_utils_absolute_path::AbsolutePathBuf;
+use codex_utils_template::Template;
 use serde::Deserialize;
 use serde::Serialize;
 use serde_json::Value as JsonValue;
@@ -56,16 +57,27 @@ use serde_json::json;
 use std::collections::BTreeMap;
 use std::collections::HashMap;
 use std::path::PathBuf;
+use std::sync::LazyLock;
 
 pub type JsonSchema = codex_tools::JsonSchema;
 
 #[cfg(test)]
 pub(crate) use codex_tools::mcp_call_tool_result_output_schema;
 
-const TOOL_SEARCH_DESCRIPTION_TEMPLATE: &str =
+const TOOL_SEARCH_DESCRIPTION_TEMPLATE_SOURCE: &str =
     include_str!("../../templates/search_tool/tool_description.md");
-const TOOL_SUGGEST_DESCRIPTION_TEMPLATE: &str =
+const TOOL_SEARCH_DESCRIPTION_TEMPLATE_KEY: &str = "app_descriptions";
+static TOOL_SEARCH_DESCRIPTION_TEMPLATE: LazyLock<Template> = LazyLock::new(|| {
+    Template::parse(TOOL_SEARCH_DESCRIPTION_TEMPLATE_SOURCE)
+        .unwrap_or_else(|err| panic!("tool_search description template must parse: {err}"))
+});
+const TOOL_SUGGEST_DESCRIPTION_TEMPLATE_SOURCE: &str =
     include_str!("../../templates/search_tool/tool_suggest_description.md");
+const TOOL_SUGGEST_DESCRIPTION_TEMPLATE_KEY: &str = "discoverable_tools";
+static TOOL_SUGGEST_DESCRIPTION_TEMPLATE: LazyLock<Template> = LazyLock::new(|| {
+    Template::parse(TOOL_SUGGEST_DESCRIPTION_TEMPLATE_SOURCE)
+        .unwrap_or_else(|err| panic!("tool_suggest description template must parse: {err}"))
+});
 const WEB_SEARCH_CONTENT_TYPES: [&str; 2] = ["text", "image"];
 
 fn unified_exec_output_schema() -> JsonValue {
@@ -1950,8 +1962,12 @@ fn create_tool_search_tool(app_tools: &HashMap<String, ToolInfo>) -> ToolSpec {
             .join("\n")
     };
 
-    let description =
-        TOOL_SEARCH_DESCRIPTION_TEMPLATE.replace("{{app_descriptions}}", app_descriptions.as_str());
+    let description = TOOL_SEARCH_DESCRIPTION_TEMPLATE
+        .render([(
+            TOOL_SEARCH_DESCRIPTION_TEMPLATE_KEY,
+            app_descriptions.as_str(),
+        )])
+        .unwrap_or_else(|err| panic!("tool_search description template must render: {err}"));
 
     ToolSpec::ToolSearch {
         execution: "client".to_string(),
@@ -2006,10 +2022,13 @@ fn create_tool_suggest_tool(discoverable_tools: &[DiscoverableTool]) -> ToolSpec
             },
         ),
     ]);
-    let description = TOOL_SUGGEST_DESCRIPTION_TEMPLATE.replace(
-        "{{discoverable_tools}}",
-        format_discoverable_tools(discoverable_tools).as_str(),
-    );
+    let discoverable_tools = format_discoverable_tools(discoverable_tools);
+    let description = TOOL_SUGGEST_DESCRIPTION_TEMPLATE
+        .render([(
+            TOOL_SUGGEST_DESCRIPTION_TEMPLATE_KEY,
+            discoverable_tools.as_str(),
+        )])
+        .unwrap_or_else(|err| panic!("tool_suggest description template must render: {err}"));
 
     ToolSpec::Function(ResponsesApiTool {
         name: TOOL_SUGGEST_TOOL_NAME.to_string(),
@@ -2362,53 +2381,6 @@ fn push_tool_spec(
     }
 }
 
-pub(crate) fn mcp_tool_to_openai_tool(
-    fully_qualified_name: String,
-    tool: rmcp::model::Tool,
-) -> Result<ResponsesApiTool, serde_json::Error> {
-    let parsed_tool = parse_mcp_tool(&tool)?;
-
-    Ok(ResponsesApiTool {
-        name: fully_qualified_name,
-        description: parsed_tool.description,
-        strict: false,
-        defer_loading: None,
-        parameters: parsed_tool.input_schema,
-        output_schema: Some(parsed_tool.output_schema),
-    })
-}
-
-pub(crate) fn mcp_tool_to_deferred_openai_tool(
-    name: String,
-    tool: rmcp::model::Tool,
-) -> Result<ResponsesApiTool, serde_json::Error> {
-    let parsed_tool = parse_mcp_tool(&tool)?;
-
-    Ok(ResponsesApiTool {
-        name,
-        description: parsed_tool.description,
-        strict: false,
-        defer_loading: Some(true),
-        parameters: parsed_tool.input_schema,
-        output_schema: None,
-    })
-}
-
-fn dynamic_tool_to_openai_tool(
-    tool: &DynamicToolSpec,
-) -> Result<ResponsesApiTool, serde_json::Error> {
-    let input_schema = parse_tool_input_schema(&tool.input_schema)?;
-
-    Ok(ResponsesApiTool {
-        name: tool.name.clone(),
-        description: tool.description.clone(),
-        strict: false,
-        defer_loading: None,
-        parameters: input_schema,
-        output_schema: None,
-    })
-}
-
 /// Builds the tool registry builder while collecting tool specs for later serialization.
 #[cfg(test)]
 pub(crate) fn build_specs(
@@ -2417,7 +2389,13 @@ pub(crate) fn build_specs(
     app_tools: Option<HashMap<String, ToolInfo>>,
     dynamic_tools: &[DynamicToolSpec],
 ) -> ToolRegistryBuilder {
-    build_specs_with_discoverable_tools(config, mcp_tools, app_tools, None, dynamic_tools)
+    build_specs_with_discoverable_tools(
+        config,
+        mcp_tools,
+        app_tools,
+        /*discoverable_tools*/ None,
+        dynamic_tools,
+    )
 }
 
 pub(crate) fn build_specs_with_discoverable_tools(
@@ -2451,15 +2429,10 @@ pub(crate) fn build_specs_with_discoverable_tools(
     use crate::tools::handlers::multi_agents::SendInputHandler;
     use crate::tools::handlers::multi_agents::SpawnAgentHandler;
     use crate::tools::handlers::multi_agents::WaitAgentHandler;
-<<<<<<< HEAD
-    use crate::tools::handlers::multi_agents_v2::ListAgentsHandler as ListAgentsHandlerV2;
-    use crate::tools::handlers::multi_agents_v2::SendInputHandler as SendInputHandlerV2;
-=======
     use crate::tools::handlers::multi_agents_v2::AssignTaskHandler as AssignTaskHandlerV2;
     use crate::tools::handlers::multi_agents_v2::CloseAgentHandler as CloseAgentHandlerV2;
     use crate::tools::handlers::multi_agents_v2::ListAgentsHandler as ListAgentsHandlerV2;
     use crate::tools::handlers::multi_agents_v2::SendMessageHandler as SendMessageHandlerV2;
->>>>>>> origin/main
     use crate::tools::handlers::multi_agents_v2::SpawnAgentHandler as SpawnAgentHandlerV2;
     use crate::tools::handlers::multi_agents_v2::WaitAgentHandler as WaitAgentHandlerV2;
     use std::sync::Arc;
@@ -2839,12 +2812,8 @@ pub(crate) fn build_specs_with_discoverable_tools(
                 config.code_mode_enabled,
             );
             builder.register_handler("spawn_agent", Arc::new(SpawnAgentHandlerV2));
-<<<<<<< HEAD
-            builder.register_handler("send_input", Arc::new(SendInputHandlerV2));
-=======
             builder.register_handler("send_message", Arc::new(SendMessageHandlerV2));
             builder.register_handler("assign_task", Arc::new(AssignTaskHandlerV2));
->>>>>>> origin/main
             builder.register_handler("wait_agent", Arc::new(WaitAgentHandlerV2));
             builder.register_handler("close_agent", Arc::new(CloseAgentHandlerV2));
             builder.register_handler("list_agents", Arc::new(ListAgentsHandlerV2));
@@ -2912,7 +2881,7 @@ pub(crate) fn build_specs_with_discoverable_tools(
         entries.sort_by(|a, b| a.0.cmp(&b.0));
 
         for (name, tool) in entries.into_iter() {
-            match mcp_tool_to_openai_tool(name.clone(), tool.clone()) {
+            match mcp_tool_to_responses_api_tool(name.clone(), &tool) {
                 Ok(converted_tool) => {
                     push_tool_spec(
                         &mut builder,
@@ -2931,7 +2900,7 @@ pub(crate) fn build_specs_with_discoverable_tools(
 
     if !dynamic_tools.is_empty() {
         for tool in dynamic_tools {
-            match dynamic_tool_to_openai_tool(tool) {
+            match dynamic_tool_to_responses_api_tool(tool) {
                 Ok(converted_tool) => {
                     push_tool_spec(
                         &mut builder,

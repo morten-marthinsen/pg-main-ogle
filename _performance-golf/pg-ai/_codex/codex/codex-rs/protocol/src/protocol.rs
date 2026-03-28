@@ -512,6 +512,15 @@ pub enum Op {
     ListModels,
 }
 
+impl From<Vec<UserInput>> for Op {
+    fn from(value: Vec<UserInput>) -> Self {
+        Op::UserInput {
+            items: value,
+            final_output_json_schema: None,
+        }
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, JsonSchema, TS)]
 pub struct InterAgentCommunication {
     pub author: AgentPath,
@@ -519,10 +528,7 @@ pub struct InterAgentCommunication {
     #[serde(default)]
     pub other_recipients: Vec<AgentPath>,
     pub content: String,
-<<<<<<< HEAD
-=======
     pub trigger_turn: bool,
->>>>>>> origin/main
 }
 
 impl InterAgentCommunication {
@@ -531,20 +537,14 @@ impl InterAgentCommunication {
         recipient: AgentPath,
         other_recipients: Vec<AgentPath>,
         content: String,
-<<<<<<< HEAD
-=======
         trigger_turn: bool,
->>>>>>> origin/main
     ) -> Self {
         Self {
             author,
             recipient,
             other_recipients,
             content,
-<<<<<<< HEAD
-=======
             trigger_turn,
->>>>>>> origin/main
         }
     }
 
@@ -561,11 +561,7 @@ impl InterAgentCommunication {
         Self::from_message_content(content).is_some()
     }
 
-<<<<<<< HEAD
-    fn from_message_content(content: &[ContentItem]) -> Option<Self> {
-=======
     pub fn from_message_content(content: &[ContentItem]) -> Option<Self> {
->>>>>>> origin/main
         match content {
             [ContentItem::InputText { text }] | [ContentItem::OutputText { text }] => {
                 serde_json::from_str(text).ok()
@@ -4295,7 +4291,7 @@ mod tests {
             }),
         };
 
-        let legacy_events = event.as_legacy_events(false);
+        let legacy_events = event.as_legacy_events(/*show_raw_agent_reasoning*/ false);
         assert_eq!(legacy_events.len(), 1);
         match &legacy_events[0] {
             EventMsg::WebSearchBegin(event) => assert_eq!(event.call_id, "search-1"),
@@ -4311,7 +4307,11 @@ mod tests {
             item: TurnItem::UserMessage(UserMessageItem::new(&[])),
         };
 
-        assert!(event.as_legacy_events(false).is_empty());
+        assert!(
+            event
+                .as_legacy_events(/*show_raw_agent_reasoning*/ false)
+                .is_empty()
+        );
     }
 
     #[test]
@@ -4328,7 +4328,7 @@ mod tests {
             }),
         };
 
-        let legacy_events = event.as_legacy_events(false);
+        let legacy_events = event.as_legacy_events(/*show_raw_agent_reasoning*/ false);
         assert_eq!(legacy_events.len(), 1);
         match &legacy_events[0] {
             EventMsg::ImageGenerationBegin(event) => assert_eq!(event.call_id, "ig-1"),
@@ -4350,7 +4350,7 @@ mod tests {
             }),
         };
 
-        let legacy_events = event.as_legacy_events(false);
+        let legacy_events = event.as_legacy_events(/*show_raw_agent_reasoning*/ false);
         assert_eq!(legacy_events.len(), 1);
         match &legacy_events[0] {
             EventMsg::ImageGenerationEnd(event) => {
@@ -4765,8 +4765,9 @@ mod tests {
             total_tokens: 10,
         });
 
-        let info = TokenUsageInfo::new_or_append(&initial, &last, None)
-            .expect("new_or_append should return info");
+        let info =
+            TokenUsageInfo::new_or_append(&initial, &last, /*model_context_window*/ None)
+                .expect("new_or_append should return info");
 
         assert_eq!(info.model_context_window, Some(258_400));
     }

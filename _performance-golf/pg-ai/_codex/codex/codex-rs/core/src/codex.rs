@@ -3980,17 +3980,6 @@ impl Session {
         }
     }
 
-    pub(crate) async fn pending_input_snapshot(&self) -> Vec<ResponseInputItem> {
-        let active = self.active_turn.lock().await;
-        match active.as_ref() {
-            Some(at) => {
-                let ts = at.turn_state.lock().await;
-                ts.pending_input_snapshot()
-            }
-            None => Vec::with_capacity(0),
-        }
-    }
-
     /// Queue response items to be injected into the next active turn created for this session.
     pub(crate) async fn queue_response_items_for_next_turn(&self, items: Vec<ResponseInputItem>) {
         if items.is_empty() {
@@ -4003,12 +3992,6 @@ impl Session {
 
     pub(crate) async fn take_queued_response_items_for_next_turn(&self) -> Vec<ResponseInputItem> {
         std::mem::take(&mut *self.idle_pending_input.lock().await)
-    }
-
-    pub(crate) async fn queued_response_items_for_next_turn_snapshot(
-        &self,
-    ) -> Vec<ResponseInputItem> {
-        self.idle_pending_input.lock().await.clone()
     }
 
     pub(crate) async fn has_queued_response_items_for_next_turn(&self) -> bool {
@@ -4677,8 +4660,6 @@ mod handlers {
                 })
                 .await;
             }
-<<<<<<< HEAD
-=======
         }
     }
 
@@ -4702,31 +4683,7 @@ mod handlers {
                 .await;
             sess.spawn_task(turn_context, Vec::new(), crate::tasks::RegularTask::new())
                 .await;
->>>>>>> origin/main
         }
-    }
-
-    pub async fn inter_agent_communication(
-        sess: &Arc<Session>,
-        sub_id: String,
-        communication: InterAgentCommunication,
-    ) {
-        let pending_item = communication.to_response_input_item();
-        if sess
-            .inject_response_items(vec![pending_item.clone()])
-            .await
-            .is_ok()
-        {
-            return;
-        }
-
-        let turn_context = sess.new_default_turn_with_sub_id(sub_id).await;
-        sess.maybe_emit_unknown_model_warning_for_turn(turn_context.as_ref())
-            .await;
-        sess.queue_response_items_for_next_turn(vec![pending_item])
-            .await;
-        sess.spawn_task(turn_context, Vec::new(), crate::tasks::RegularTask::new())
-            .await;
     }
 
     pub async fn run_user_shell_command(sess: &Arc<Session>, sub_id: String, command: String) {

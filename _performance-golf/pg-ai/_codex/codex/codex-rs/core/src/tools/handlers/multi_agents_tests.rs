@@ -21,15 +21,10 @@ use crate::state::TaskKind;
 use crate::tasks::SessionTask;
 use crate::tasks::SessionTaskContext;
 use crate::tools::context::ToolOutput;
-<<<<<<< HEAD
-use crate::tools::handlers::multi_agents_v2::ListAgentsHandler as ListAgentsHandlerV2;
-use crate::tools::handlers::multi_agents_v2::SendInputHandler as SendInputHandlerV2;
-=======
 use crate::tools::handlers::multi_agents_v2::AssignTaskHandler as AssignTaskHandlerV2;
 use crate::tools::handlers::multi_agents_v2::CloseAgentHandler as CloseAgentHandlerV2;
 use crate::tools::handlers::multi_agents_v2::ListAgentsHandler as ListAgentsHandlerV2;
 use crate::tools::handlers::multi_agents_v2::SendMessageHandler as SendMessageHandlerV2;
->>>>>>> origin/main
 use crate::tools::handlers::multi_agents_v2::SpawnAgentHandler as SpawnAgentHandlerV2;
 use crate::tools::handlers::multi_agents_v2::WaitAgentHandler as WaitAgentHandlerV2;
 use crate::turn_diff_tracker::TurnDiffTracker;
@@ -87,7 +82,7 @@ fn parse_agent_id(id: &str) -> ThreadId {
 fn thread_manager() -> ThreadManager {
     ThreadManager::with_models_provider_for_tests(
         CodexAuth::from_api_key("dummy"),
-        built_in_model_providers(/* openai_base_url */ None)["openai"].clone(),
+        built_in_model_providers(/* openai_base_url */ /*openai_base_url*/ None)["openai"].clone(),
     )
 }
 
@@ -252,7 +247,8 @@ async fn spawn_agent_uses_explorer_role_and_preserves_approval_policy() {
     let manager = thread_manager();
     session.services.agent_control = manager.agent_control();
     let mut config = (*turn.config).clone();
-    let provider = built_in_model_providers(/* openai_base_url */ None)["ollama"].clone();
+    let provider =
+        built_in_model_providers(/* openai_base_url */ /*openai_base_url*/ None)["ollama"].clone();
     config.model_provider_id = "ollama".to_string();
     config.model_provider = provider.clone();
     config
@@ -441,12 +437,20 @@ async fn multi_agent_v2_spawn_returns_path_and_send_message_accepts_relative_pat
         child_snapshot.session_source.get_agent_path().as_deref(),
         Some("/root/test_process")
     );
+    assert!(manager.captured_ops().iter().any(|(id, op)| {
+        *id == child_thread_id
+            && matches!(
+                op,
+                Op::InterAgentCommunication { communication }
+                    if communication.author == AgentPath::root()
+                        && communication.recipient.as_str() == "/root/test_process"
+                        && communication.other_recipients.is_empty()
+                        && communication.content == "inspect this repo"
+                        && communication.trigger_turn
+            )
+    }));
 
-<<<<<<< HEAD
-    SendInputHandlerV2
-=======
     SendMessageHandlerV2
->>>>>>> origin/main
         .handle(invocation(
             session.clone(),
             turn.clone(),
@@ -457,11 +461,7 @@ async fn multi_agent_v2_spawn_returns_path_and_send_message_accepts_relative_pat
             })),
         ))
         .await
-<<<<<<< HEAD
-        .expect("send_input should accept v2 path");
-=======
         .expect("send_message should accept v2 path");
->>>>>>> origin/main
 
     assert!(manager.captured_ops().iter().any(|(id, op)| {
         *id == child_thread_id
@@ -472,10 +472,7 @@ async fn multi_agent_v2_spawn_returns_path_and_send_message_accepts_relative_pat
                         && communication.recipient.as_str() == "/root/test_process"
                         && communication.other_recipients.is_empty()
                         && communication.content == "continue"
-<<<<<<< HEAD
-=======
                         && !communication.trigger_turn
->>>>>>> origin/main
             )
     }));
 }
@@ -506,7 +503,8 @@ async fn multi_agent_v2_send_message_accepts_root_target_from_child() {
             vec![UserInput::Text {
                 text: "inspect this repo".to_string(),
                 text_elements: Vec::new(),
-            }],
+            }]
+            .into(),
             Some(SessionSource::SubAgent(SubAgentSource::ThreadSpawn {
                 parent_thread_id: root.thread_id,
                 depth: 1,
@@ -670,7 +668,8 @@ async fn multi_agent_v2_list_agents_filters_by_relative_path_prefix() {
             vec![UserInput::Text {
                 text: "research".to_string(),
                 text_elements: Vec::new(),
-            }],
+            }]
+            .into(),
             Some(SessionSource::SubAgent(SubAgentSource::ThreadSpawn {
                 parent_thread_id: root.thread_id,
                 depth: 1,
@@ -690,7 +689,8 @@ async fn multi_agent_v2_list_agents_filters_by_relative_path_prefix() {
             vec![UserInput::Text {
                 text: "build".to_string(),
                 text_elements: Vec::new(),
-            }],
+            }]
+            .into(),
             Some(SessionSource::SubAgent(SubAgentSource::ThreadSpawn {
                 parent_thread_id: root.thread_id,
                 depth: 2,
@@ -796,11 +796,7 @@ async fn multi_agent_v2_list_agents_omits_closed_agents() {
 }
 
 #[tokio::test]
-<<<<<<< HEAD
-async fn multi_agent_v2_send_input_accepts_structured_items() {
-=======
 async fn multi_agent_v2_send_message_rejects_structured_items() {
->>>>>>> origin/main
     let (mut session, mut turn) = make_session_and_context().await;
     let manager = thread_manager();
     let root = manager
@@ -836,11 +832,7 @@ async fn multi_agent_v2_send_message_rejects_structured_items() {
     let invocation = invocation(
         session,
         turn,
-<<<<<<< HEAD
-        "send_input",
-=======
         "send_message",
->>>>>>> origin/main
         function_payload(json!({
             "target": agent_id.to_string(),
             "items": [
@@ -850,35 +842,6 @@ async fn multi_agent_v2_send_message_rejects_structured_items() {
         })),
     );
 
-<<<<<<< HEAD
-    SendInputHandlerV2
-        .handle(invocation)
-        .await
-        .expect("structured items should be accepted in v2");
-
-    let expected = Op::UserInput {
-        items: vec![
-            UserInput::Mention {
-                name: "drive".to_string(),
-                path: "app://google_drive".to_string(),
-            },
-            UserInput::Text {
-                text: "read the folder".to_string(),
-                text_elements: Vec::new(),
-            },
-        ],
-        final_output_json_schema: None,
-    };
-    let captured = manager
-        .captured_ops()
-        .into_iter()
-        .find(|(id, op)| *id == agent_id && *op == expected);
-    assert_eq!(captured, Some((agent_id, expected)));
-}
-
-#[tokio::test]
-async fn multi_agent_v2_send_input_interrupts_busy_child_without_losing_message() {
-=======
     let Err(err) = SendMessageHandlerV2.handle(invocation).await else {
         panic!("structured items should be rejected in v2");
     };
@@ -892,7 +855,6 @@ async fn multi_agent_v2_send_input_interrupts_busy_child_without_losing_message(
 
 #[tokio::test]
 async fn multi_agent_v2_send_message_interrupts_busy_child_without_triggering_turn() {
->>>>>>> origin/main
     let (mut session, mut turn) = make_session_and_context().await;
     let manager = thread_manager();
     let root = manager
@@ -944,16 +906,6 @@ async fn multi_agent_v2_send_message_interrupts_busy_child_without_triggering_tu
         )
         .await;
 
-<<<<<<< HEAD
-    SendInputHandlerV2
-        .handle(invocation(
-            session,
-            turn,
-            "send_input",
-            function_payload(json!({
-                "target": agent_id.to_string(),
-                "message": "continue",
-=======
     SendMessageHandlerV2
         .handle(invocation(
             session.clone(),
@@ -962,14 +914,10 @@ async fn multi_agent_v2_send_message_interrupts_busy_child_without_triggering_tu
             function_payload(json!({
                 "target": agent_id.to_string(),
                 "items": [{"type": "text", "text": "continue"}],
->>>>>>> origin/main
                 "interrupt": true
             })),
         ))
         .await
-<<<<<<< HEAD
-        .expect("interrupting v2 send_input should succeed");
-=======
         .expect("interrupting v2 send_message should succeed");
 
     let ops = manager.captured_ops();
@@ -1015,7 +963,7 @@ async fn multi_agent_v2_send_message_interrupts_busy_child_without_triggering_tu
                     AgentPath::try_from("/root/worker").expect("agent path"),
                     Vec::new(),
                     "continue".to_string(),
-                    false,
+                    /*trigger_turn*/ false,
                 ),
             );
             let saw_user_message = history_items.iter().any(|item| {
@@ -1113,7 +1061,6 @@ async fn multi_agent_v2_assign_task_interrupts_busy_child_without_losing_message
         ))
         .await
         .expect("interrupting v2 assign_task should succeed");
->>>>>>> origin/main
 
     let ops = manager.captured_ops();
     let ops_for_agent: Vec<&Op> = ops
@@ -1131,17 +1078,6 @@ async fn multi_agent_v2_assign_task_interrupts_busy_child_without_losing_message
                     && communication.content == "continue"
         )
     }));
-<<<<<<< HEAD
-    assert!(!ops_for_agent.iter().any(|op| matches!(
-        op,
-        Op::UserInput { items, .. }
-            if items.iter().any(|item| matches!(
-                item,
-                UserInput::Text { text, .. } if text == "continue"
-            ))
-    )));
-=======
->>>>>>> origin/main
 
     timeout(Duration::from_secs(5), async {
         loop {
@@ -1159,10 +1095,7 @@ async fn multi_agent_v2_assign_task_interrupts_busy_child_without_losing_message
                     AgentPath::try_from("/root/worker").expect("agent path"),
                     Vec::new(),
                     "continue".to_string(),
-<<<<<<< HEAD
-=======
-                    true,
->>>>>>> origin/main
+                    /*trigger_turn*/ true,
                 ),
             );
             let saw_user_message = history_items.iter().any(|item| {
@@ -1183,11 +1116,7 @@ async fn multi_agent_v2_assign_task_interrupts_busy_child_without_losing_message
         }
     })
     .await
-<<<<<<< HEAD
-    .expect("interrupting v2 send_input should preserve the redirected message");
-=======
     .expect("interrupting v2 assign_task should preserve the redirected message");
->>>>>>> origin/main
 
     let _ = thread
         .submit(Op::Shutdown {})
@@ -1708,8 +1637,8 @@ async fn resume_agent_restores_closed_agent_and_accepts_send_input() {
                 phase: None,
             })]),
             AuthManager::from_auth_for_testing(CodexAuth::from_api_key("dummy")),
-            false,
-            None,
+            /*persist_extended_history*/ false,
+            /*parent_trace*/ None,
         )
         .await
         .expect("start thread");
@@ -2629,7 +2558,7 @@ async fn build_agent_resume_config_clears_base_instructions() {
         .set(AskForApproval::OnRequest)
         .expect("approval policy set");
 
-    let config = build_agent_resume_config(&turn, 0).expect("resume config");
+    let config = build_agent_resume_config(&turn, /*child_depth*/ 0).expect("resume config");
 
     let mut expected = (*turn.config).clone();
     expected.base_instructions = None;
