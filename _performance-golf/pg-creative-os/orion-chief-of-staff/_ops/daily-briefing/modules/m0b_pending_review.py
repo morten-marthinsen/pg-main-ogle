@@ -70,10 +70,52 @@ class PendingReviewModule(BriefingModule):
         except (json.JSONDecodeError, KeyError):
             return {"pending": [], "grouped": {}, "active_items": [], "schedule": {}, "prefs": {}, "session_blocks": {}}
 
-        pending = [
+        all_pending = [
             item for item in kb.get("action_items", [])
             if item.get("status") == "pending"
         ]
+
+        # Freshness filter: only show TRIAGE items from meetings since the cutoff date.
+        # The cutoff is min(yesterday, last_run_date) — computed by M9 and shared
+        # via receipt. Items older than the cutoff are auto-expired.
+        #
+        # EXCEPTION: Waiting On items (depends_on set) are NEVER auto-expired.
+        # They persist until explicitly resolved — they represent things Christopher
+        # is waiting on from other people, which don't expire on a daily cycle.
+        m9_receipt = self.shared_state.get("m9_receipt", {})
+        expired_count = 0
+        if m9_receipt.get("ran"):
+            cutoff_str = m9_receipt.get("cutoff_date")
+            if cutoff_str:
+                pending = [
+                    item for item in all_pending
+                    if item.get("source_date", "") >= cutoff_str
+                    or item.get("depends_on")  # Waiting On items always pass through
+                ]
+                old_items = [
+                    item for item in all_pending
+                    if item.get("source_date", "") < cutoff_str
+                    and not item.get("depends_on")  # Never expire Waiting On items
+                ]
+                # Auto-expire old untriaged triage items
+                for item in old_items:
+                    item["status"] = "expired"
+                expired_count = len(old_items)
+                if expired_count:
+                    try:
+                        save_kb(kb)
+                        self.logger.info(
+                            f"[{self.key}] Auto-expired {expired_count} old pending item(s) "
+                            f"(source_date < {cutoff_str}, excludes Waiting On)"
+                        )
+                    except Exception:
+                        pass
+            else:
+                # No cutoff (first run ever) — show everything
+                pending = all_pending
+        else:
+            # M9 didn't run — show all pending as fallback
+            pending = all_pending
 
         # Filter items with explicit approval/rejection decisions (belt-and-suspenders)
         approvals_ids = set()

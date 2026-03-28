@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375, initial-scale=1.0">
+<title>OSSF Checkout Step 2 — PG1 Member Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Helvetica, Arial, sans-serif; background: #fff; color: #212529; width: 375px; margin: 0 auto; }
+
+  /* Header */
+  .header-bar { display: flex; justify-content: space-between; align-items: center; padding: 8px 15px; background: #1a1a1a; color: #fff; font-size: 12px; }
+  .nav-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; border-bottom: 1px solid #eee; }
+  .nav-bar .logo { font-weight: 700; font-size: 14px; color: #000; display: flex; align-items: center; gap: 6px; }
+  .nav-bar .logo .pg-icon { background: #000; color: #fff; font-size: 9px; font-weight: 700; padding: 3px 5px; border-radius: 2px; }
+  .nav-bar .trust-header { font-size: 10px; color: #666; display: flex; align-items: center; gap: 4px; }
+
+  /* Section Labels */
+  .section-label { font-size: 14px; letter-spacing: 1px; color: #333; padding: 15px 15px 8px; font-weight: 700; }
+
+  /* Selection Boxes */
+  .selection-box { margin: 8px 15px; border-radius: 6px; overflow: hidden; }
+  .selection-box.current { border: 2px solid #3b9d4b; }
+  .selection-box.current .box-header { background: #3b9d4b; padding: 10px 20px; }
+  .selection-box.current .box-header span { font-size: 12px; color: #fff; letter-spacing: 0.5px; font-weight: 600; }
+  .selection-box.current .box-body { padding: 18px 20px; }
+  .selection-box .product-name { font-size: 17px; font-weight: 700; color: #000; margin-bottom: 2px; }
+  .selection-box .product-price { font-size: 20px; font-weight: 700; color: #333; margin-bottom: 12px; }
+  .selection-box .benefits { font-size: 15px; line-height: 1.5; margin-bottom: 14px; }
+  .selection-box .benefits p { margin-bottom: 2px; }
+  .btn-selected { background: #eee; border: 1px solid #aaa; border-radius: 3px; padding: 10px 24px; font-size: 14px; color: #999; cursor: default; display: inline-block; }
+  .btn-gold { background: linear-gradient(to bottom, #f5dca2, #efc158); border: 1px solid #846a2f; border-radius: 3px; padding: 10px 28px; font-size: 14px; color: #000; cursor: pointer; display: inline-block; font-weight: 600; }
+
+  /* Member Box */
+  .selection-box.upgrade { border: 2px solid #ddd; background: #fbfbfb; }
+  .selection-box.upgrade .box-body { padding: 20px 18px; }
+  .upgrade-headline { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #0038ef; text-align: center; line-height: 1.2; margin-bottom: 8px; }
+  .upgrade-product { font-size: 17px; font-weight: 700; color: #000; margin-bottom: 2px; }
+  .upgrade-price { font-size: 18px; color: #000; margin-bottom: 4px; }
+  .upgrade-price .strike { text-decoration: line-through; color: #999; }
+  .upgrade-price .green { font-weight: 700; color: #009624; font-size: 20px; }
+  .upgrade-price-note { font-size: 13px; color: #666; font-style: italic; margin-bottom: 14px; }
+
+  /* Why Section */
+  .why-section { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 16px 0; }
+  .why-section .arrow { font-size: 22px; color: #333; }
+  .why-section h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 24px; text-align: center; line-height: 1.1; color: #050505; }
+
+  .upgrade-body-text { font-size: 15px; line-height: 1.5; color: #000; margin-bottom: 12px; }
+  .upgrade-body-text strong { font-weight: 700; }
+
+  /* PG1 Vehicle Section */
+  .pg1-vehicle-section { background: #f0f7f0; border-radius: 6px; padding: 16px; margin: 14px 0; }
+  .pg1-vehicle-section p { font-size: 14px; line-height: 1.5; color: #000; margin-bottom: 6px; }
+  .pg1-terms { font-size: 13px; color: #555; margin-top: 10px; line-height: 1.4; }
+  .pg1-terms strong { color: #000; }
+
+  .discount-label { font-size: 15px; margin-bottom: 8px; text-align: center; }
+  .discount-label .red { font-weight: 700; color: #e10000; }
+
+  /* PG1 Image + Bullets */
+  .pg1-image-placeholder { background: #f0f0f0; border-radius: 8px; padding: 30px; margin: 12px 15px; text-align: center; color: #999; font-size: 13px; }
+  .bullet-list { padding: 0 15px; list-style: none; }
+  .bullet-list li { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 1.3; color: #000; }
+  .bullet-list li .check-icon { flex-shrink: 0; color: #009624; font-size: 14px; margin-top: 1px; }
+  .instant-access { text-align: center; font-family: 'Roboto', sans-serif; font-size: 14px; color: #009624; padding: 10px 0; }
+
+  /* Form */
+  .form-section { padding: 15px; }
+  .form-label { font-size: 13px; font-weight: 700; color: #333; letter-spacing: 0.5px; margin-bottom: 10px; }
+  .form-field { width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 12px 13px; font-size: 14px; color: #999; margin-bottom: 6px; background: #fff; }
+  .form-row { display: flex; gap: 6px; }
+  .form-row .form-field { flex: 1; }
+
+  /* Trust */
+  .trust-bar { text-align: center; padding: 12px 15px; font-size: 13px; color: #333; line-height: 1.4; }
+  .trust-bar strong { font-weight: 700; }
+  .trust-badges { display: flex; justify-content: center; gap: 8px; padding: 8px 15px; flex-wrap: wrap; }
+  .trust-badge-placeholder { background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; padding: 6px 10px; font-size: 10px; color: #666; text-align: center; line-height: 1.3; }
+
+  /* Order Bumps */
+  .order-bump { margin: 10px 15px; border: 1px solid #ddd; overflow: hidden; background: #fff; }
+  .order-bump .bump-content { padding: 16px; }
+  .order-bump h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: #c00; text-align: center; text-transform: uppercase; }
+  .order-bump .bump-subtitle { font-size: 14px; font-weight: 700; text-align: center; margin-bottom: 10px; color: #000; line-height: 1.3; }
+  .order-bump p { font-size: 13px; line-height: 1.5; color: #333; margin-bottom: 6px; }
+  .order-bump .bump-image { background: #e9e9e9; text-align: center; padding: 20px; margin: 8px 0; color: #999; font-size: 12px; border-radius: 4px; }
+  .order-bump .bump-checkbox { background: #fff9c4; border-top: 2px solid #f39c12; padding: 12px 14px; display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+  .order-bump .bump-checkbox input { margin-top: 3px; flex-shrink: 0; accent-color: #e10000; width: 16px; height: 16px; }
+  .order-bump .bump-checkbox-label { font-size: 13px; font-weight: 700; color: #c00; line-height: 1.4; }
+  .order-bump .bump-checkbox-label .price { color: #000; }
+
+  /* Order Summary */
+  .order-summary { margin: 15px; border: 1px solid #ddd; border-radius: 6px; padding: 16px; background: #fff; }
+  .order-summary h3 { font-size: 14px; letter-spacing: 1px; margin-bottom: 12px; font-weight: 700; }
+  .line-item { display: flex; justify-content: space-between; padding: 4px 0; font-size: 13px; }
+  .line-item.pg1-line { color: #212529; font-weight: 600; }
+  .total-line { display: flex; justify-content: space-between; padding: 10px 0 0; border-top: 2px solid #000; margin-top: 6px; font-size: 18px; font-weight: 800; }
+
+  /* Checkboxes */
+  .checkbox-row { display: flex; align-items: flex-start; gap: 8px; padding: 6px 15px; font-size: 12px; line-height: 1.4; color: #333; }
+  .checkbox-row input { margin-top: 2px; flex-shrink: 0; }
+
+  /* CTA */
+  .cta-button { display: block; width: 100%; padding: 18px; background: linear-gradient(to bottom, #f5dca2, #efc158); border: 1px solid #846a2f; border-radius: 5px; font-size: 17px; font-weight: 700; color: #000; text-align: center; cursor: pointer; }
+
+  /* Guarantee */
+  .guarantee-section { margin: 15px; padding: 16px; background: #f9f9f9; border-radius: 6px; text-align: center; }
+  .guarantee-section h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: #000; }
+  .guarantee-section p { font-size: 13px; color: #555; line-height: 1.5; }
+
+  /* Testimonials */
+  .testimonial { margin: 8px 15px; padding: 14px; background: #fff; border-left: 3px solid #009624; border-radius: 0 6px 6px 0; }
+  .testimonial blockquote { font-size: 13px; font-style: italic; line-height: 1.5; margin-bottom: 6px; color: #000; }
+  .testimonial .author { font-size: 12px; font-weight: 700; color: #333; }
+  .testimonial .stars { color: #f1c40f; font-size: 14px; }
+
+  .fine-print { font-size: 10px; color: #999; line-height: 1.5; padding: 10px 15px; }
+  .divider { height: 1px; background: #e0e0e0; margin: 15px; }
+  .footer { padding: 20px 15px; text-align: center; font-size: 11px; color: #999; border-top: 1px solid #eee; margin-top: 10px; }
+  .footer a { color: #999; text-decoration: none; }
+</style>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script></head>
+<body>
+
+<!-- HEADER -->
+<div class="header-bar">
+  <span><strong>Need Help?</strong> support@performancegolf.com</span>
+</div>
+<div class="nav-bar">
+  <div class="logo"><span class="pg-icon">PG</span> PERFORMANCE GOLF</div>
+  <div class="trust-header">🔒 SECURE CHECKOUT</div>
+</div>
+
+<!-- MAKE YOUR SELECTION -->
+<div class="section-label">MAKE YOUR SELECTION</div>
+
+<!-- NON-MEMBER BOX (Selected by default) -->
+<div class="selection-box current">
+  <div class="box-header"><span>NON-MEMBER PRICING — YOUR CURRENT SELECTION</span></div>
+  <div class="box-body">
+    <div class="product-name">One Shot Slice Fix Video Training</div>
+    <div class="product-price">$197</div>
+    <div class="benefits">
+      <p>✔ Full One Shot Slice Fix Video Training</p>
+      <p>✔ Slice Fix LIVESTREAM Q&A with Hank Haney</p>
+      <p>✔ IN PERSON Tiger Experience (one entry)</p>
+      <p>✔ Access via Performance Golf Members Area</p>
+      <p>✔ 365-Day Money-Back Guarantee</p>
+    </div>
+    <span class="btn-selected">Selected</span>
+  </div>
+</div>
+
+<!-- MEMBER BOX -->
+<div class="selection-box upgrade">
+  <div class="box-body">
+    <div class="upgrade-headline">Save $150 Today With<br>PG1™ Member Pricing</div>
+    <div class="upgrade-product">One Shot Slice Fix Video Training</div>
+    <div class="upgrade-price"><span class="strike">$197</span> <span class="green">$47</span></div>
+    <div class="upgrade-price-note">the price you just saw in the video</div>
+
+    <span class="btn-gold">Select</span>
+
+    <div class="why-section">
+      <span class="arrow">⬇</span>
+      <h3>Why Choose<br>Member Pricing?</h3>
+      <span class="arrow">⬇</span>
+    </div>
+
+    <div class="upgrade-body-text">
+      Your One Shot Slice Fix is delivered through the <strong>PG1™ app</strong> — so you get the <strong>same training</strong> at a <strong>lower price</strong>, plus:
+    </div>
+
+    <div class="pg1-vehicle-section">
+      <p>✔ <strong>Exclusive Hank Haney "point of view" video lessons</strong> — watch 4 different golfers through the 1-Shot Slice Fix</p>
+      <p>✔ <strong>Personalized coaching</strong> from a top-ranked PGA professional</p>
+      <p>✔ <strong>A complete practice plan</strong> built around YOUR goals, schedule & skill level</p>
+      <p>✔ <strong>Step-by-step guidance</strong> — not random drills</p>
+      <p>✔ <strong>Track your progress</strong> and know what to work on next</p>
+      <p>✔ <strong>Daily recommendations</strong> that adapt as you improve</p>
+      <p style="margin-top:10px;">Your One Shot Slice Fix lives inside PG1™ — alongside personalized coaching that helps you actually <strong>USE</strong> what you learn.</p>
+      <div class="pg1-terms"><strong>7-day FREE trial included.</strong> Then $29/mo. Cancel anytime with 1 click. No lock-in contracts.</div>
+    </div>
+
+    <!-- PG1 IMAGE -->
+    <div class="pg1-image-placeholder" style="margin: 12px 0;">
+      [PG1 App Screenshots — Phone mockups showing Training Plan, Swing Analysis, Dashboard]<br><br>
+      <strong style="font-size:22px; color:#000;">PG1™</strong>
+    </div>
+
+    <div class="discount-label">
+      <strong>(Most Popular — Biggest Savings)</strong><br>
+      <span class="red">$150 DISCOUNT APPLIED</span>
+    </div>
+
+    <span class="btn-gold">Select</span>
+  </div>
+</div>
+
+<!-- PRODUCT BULLETS -->
+<div class="section-label">With Member Pricing You Get:</div>
+<ul class="bullet-list">
+  <li><span class="check-icon">✔</span><span><strong>One Shot Slice Fix Video Training</strong></span></li>
+  <li><span class="check-icon">✔</span><span><strong>BONUS:</strong> Slice Fix LIVESTREAM Q&A with Hank Haney (FREE)</span></li>
+  <li><span class="check-icon">✔</span><span><strong>BONUS:</strong> IN PERSON Tiger Experience (one entry) (FREE)</span></li>
+  <li><span class="check-icon">✔</span><span><strong>BONUS:</strong> PG1™ app access — personalized coaching, progress tracking & daily recommendations (7 days FREE, then $29/mo. Cancel anytime.)</span></li>
+  <li><span class="check-icon">✔</span><span><strong>365-Day Money-Back Guarantee</strong></span></li>
+</ul>
+
+<div class="instant-access">- Instant Online Access -</div>
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<div class="form-section">
+  <div class="form-label">CONTACT INFORMATION</div>
+  <div class="form-row">
+    <div class="form-field">First name</div>
+    <div class="form-field">Last name</div>
+  </div>
+  <div class="form-field">Email: Required for Order Confirmation and Updates</div>
+  <div class="form-field">Phone: Required for Order Notifications</div>
+</div>
+
+<!-- BILLING -->
+<div class="form-section" style="padding-top:0;">
+  <div class="form-label">BILLING ADDRESS</div>
+  <div class="form-field">Address</div>
+  <div class="form-field">Apartment, Suite, etc. (optional)</div>
+  <div class="form-field">City</div>
+  <div class="form-row">
+    <div class="form-field">Country</div>
+    <div class="form-field">State</div>
+  </div>
+  <div class="form-field">Zip code</div>
+</div>
+
+<!-- PAYMENT -->
+<div class="form-section" style="padding-top:0;">
+  <div class="form-label">PAYMENT &nbsp;&nbsp;💳</div>
+  <div class="form-field">Card number</div>
+  <div class="form-row">
+    <div class="form-field">Month</div>
+    <div class="form-field">Year</div>
+    <div class="form-field">CVV</div>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <strong>Trusted By 1,500,000+ Golfers Worldwide (And Counting)</strong><br>
+  You're Protected By Our 365-Day Money-Back Guarantee!
+</div>
+<div class="trust-badges">
+  <div class="trust-badge-placeholder">🔒 McAfee<br>SECURE</div>
+  <div class="trust-badge-placeholder">✓ TrustedSite<br>CERTIFIED SECURE</div>
+  <div class="trust-badge-placeholder">✓ Norton<br>Secured</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- BUMP 1: Compression Masterclass -->
+<div class="order-bump">
+  <div class="bump-content">
+    <h4>ONE-TIME SPECIAL OFFER:</h4>
+    <div class="bump-subtitle">Secret Technique Revealed to Hit Your Irons Flush…Every. Single. Time</div>
+    <div class="bump-image">[Product Image: Compression Masterclass]</div>
+  </div>
+  <div class="bump-checkbox">
+    <input type="checkbox">
+    <span class="bump-checkbox-label">Yes, Please ADD The Compression Masterclass, Risk Free To My Order (<span class="price">$67</span>). I Either LOVE It, Or I Don't Pay.</span>
+  </div>
+</div>
+
+<!-- BUMP 2: Cheat Sheets -->
+<div class="order-bump">
+  <div class="bump-content">
+    <h4>ONE-TIME SPECIAL OFFER:</h4>
+    <div class="bump-subtitle">Get Your One Shot Slice Fix Cheat Sheets So You Don't Need Your Phone To Practice!</div>
+  </div>
+  <div class="bump-checkbox">
+    <input type="checkbox">
+    <span class="bump-checkbox-label">Give Me The Cheat Sheets (<span class="price">$19</span>). I Either LOVE Them, Or I Keep Them And Pay Nothing.</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ORDER SUMMARY -->
+<div class="order-summary">
+  <h3>ORDER SUMMARY</h3>
+  <div class="line-item"><span>One Shot Slice Fix (Member Price)</span><span>$47.00</span></div>
+  <div class="line-item pg1-line"><span>PG1 App - 7 Days FREE, then $29/mo</span><span>$0.00</span></div>
+  <div class="line-item"><span>Sales Tax</span><span>$0.00</span></div>
+  <div class="total-line"><span>Total</span><span>$47.00</span></div>
+</div>
+
+<!-- TERMS -->
+<div class="checkbox-row">
+  <input type="checkbox"> <span>I agree to <u>terms and conditions</u></span>
+</div>
+<div class="checkbox-row">
+  <input type="checkbox" checked> <span>Yes, give me instant access to the One Shot Slice Fix. I also agree to receive important text notifications about my Performance Golf account*</span>
+</div>
+
+<div style="padding:0 15px;">
+  <button class="cta-button" style="width:100%; margin:12px 0;">Pay Securely Now &amp; Fix My Slice</button>
+</div>
+
+<div class="trust-bar">
+  <strong>Trusted By 1,500,000+ Golfers Worldwide (And Counting)</strong><br>
+  You're Protected By Our 365-Day Money-Back Guarantee!
+</div>
+<div class="trust-badges">
+  <div class="trust-badge-placeholder">🔒 McAfee SECURE</div>
+  <div class="trust-badge-placeholder">✓ TrustedSite</div>
+  <div class="trust-badge-placeholder">✓ Norton Secured</div>
+</div>
+
+<div class="fine-print">
+  *By checking the box above, you agree to the Terms and Privacy Policy and to receive text notifications on 39587 from Performance Golf to the mobile number provided. Msg freq will vary. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to cancel. Reply HELP for help. You'll be billed once for today's purchase. If you selected Member Pricing, your order includes a 7-day free trial to PG1™. After 7 days, your PG1 membership continues at $29/month. You can cancel anytime by emailing support@performancegolf.com or with 1 click inside the PG1 app.
+</div>
+
+<!-- GUARANTEE -->
+<div class="guarantee-section">
+  <h4>🛡️ 365-Day Money-Back Guarantee</h4>
+  <p><strong>Unconditional Refund Policy Trusted By 1,500,000+ Golfers Around The World</strong></p>
+  <p style="margin-top:8px;">Put this training to the test risk-free. If at any time within the next 365 days you're not fully satisfied, send us an email and receive a 100% full and prompt refund.</p>
+</div>
+
+<!-- TESTIMONIALS -->
+<!-- TODO: Add OSSF-specific testimonials here -->
+<!--
+<div class="testimonial">
+  <blockquote>"[OSSF testimonial text]"</blockquote>
+  <div class="author">— [Name]</div>
+  <div class="stars">★★★★★</div>
+</div>
+-->
+
+<div class="footer">
+  © Copyright 2025 Performance Golf |
+  <a href="#">Privacy Policy</a> |
+  <a href="#">Terms Of Service</a> |
+  <a href="#">Contact Us</a> |
+  <a href="#">Return Policy</a>
+</div>
+
+</body>
+</html>

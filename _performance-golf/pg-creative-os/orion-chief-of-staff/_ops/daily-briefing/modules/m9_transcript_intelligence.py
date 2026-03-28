@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Module 9: Transcript Intelligence Extractor
 
 Replaces m9_transcript_prd_recommender.py with full-text structured extraction.
@@ -37,8 +39,9 @@ DAILY_BRIEFING_DIR = MODULES_DIR.parent
 TRANSCRIPTS_DIR = MODULES_DIR.parent.parent / "meetings" / "transcripts"
 OLD_STATE_FILE = DAILY_BRIEFING_DIR / ".m9-state.json"
 
-MAX_TRANSCRIPTS_PER_RUN = 3  # default; overridden by config.yaml max_transcripts_per_run
+MAX_TRANSCRIPTS_PER_RUN = 0  # 0 = unlimited — process every new transcript every run
 LONG_TRANSCRIPT_THRESHOLD = 2000  # lines
+LONG_TRANSCRIPT_API_TIMEOUT = 180  # seconds — extended timeout for transcripts > LONG_TRANSCRIPT_THRESHOLD
 INTER_CALL_DELAY = 65  # seconds between AI calls to respect rate limits
 
 
@@ -115,23 +118,71 @@ def _extract_date_from_path(rel_path: str) -> str:
     return date.today().isoformat()
 
 
-def _find_new_transcripts(kb: dict) -> list:
-    """Find transcript .md files not yet in KB processed or legacy_processed."""
+def _compute_cutoff(kb: dict) -> date | None:
+    """Compute the cutoff date for transcript processing.
+
+    Returns the earliest meeting date to process. Transcripts with meeting
+    dates before this are skipped. Uses min(yesterday, last_run_date) so:
+    - Normal day: cutoff = yesterday (process yesterday's meetings)
+    - Multiple runs same day: cutoff = yesterday (still shows yesterday's items)
+    - Missed a day: cutoff = last_run_date (catches both missed + current day)
+
+    Returns None on first-ever run (process everything).
+    """
+    last_run_str = kb["extraction_state"].get("last_run")
+    if not last_run_str:
+        return None
+    today = date.today()
+    yesterday = today - timedelta(days=1)
+    last_run_date = datetime.fromisoformat(last_run_str).date()
+    return min(yesterday, last_run_date)
+
+
+def _find_new_transcripts(kb: dict, cutoff: date | None = None, logger=None) -> tuple:
+    """Find transcript .md files to process since the cutoff date.
+
+    Only returns transcripts with meeting dates on or after the cutoff.
+    Transcripts older than the cutoff are auto-marked as processed without
+    extraction (safety net: if a run was missed, the next run picks up
+    everything since the last success).
+
+    Returns (new_files, auto_marked_paths).
+    """
     state = kb["extraction_state"]
     processed = set(state.get("processed", []))
     legacy = set(state.get("legacy_processed", []))
     all_processed = processed | legacy
 
     new_files = []
+    auto_marked = []
     if not TRANSCRIPTS_DIR.exists():
-        return new_files
+        return new_files, auto_marked
 
     for md_file in sorted(TRANSCRIPTS_DIR.rglob("*.md"), reverse=True):
         rel = str(md_file.relative_to(TRANSCRIPTS_DIR))
-        if rel not in all_processed:
-            new_files.append((rel, md_file))
+        if rel in all_processed:
+            continue
 
-    return new_files
+        # Date filter: skip transcripts from before the cutoff
+        if cutoff:
+            transcript_date_str = _extract_date_from_path(rel)
+            try:
+                transcript_date = date.fromisoformat(transcript_date_str)
+            except ValueError:
+                transcript_date = date.today()
+
+            if transcript_date < cutoff:
+                auto_marked.append(rel)
+                if logger:
+                    logger.info(
+                        f"[m9_transcript_intelligence] Auto-skipped {rel} "
+                        f"(meeting {transcript_date} < cutoff {cutoff})"
+                    )
+                continue
+
+        new_files.append((rel, md_file))
+
+    return new_files, auto_marked
 
 
 def _migrate_legacy_state(kb: dict, logger) -> bool:
@@ -204,6 +255,7 @@ class TranscriptIntelligenceModule(BriefingModule):
     name = "Transcript Intelligence"
     key = "m9_transcript_intelligence"
     setup_required = "—"
+    module_timeout = 2700  # 45 min — processes all transcripts with rate limit spacing
 
     def fetch_data(self) -> Any:
         kb = load_kb()
@@ -211,15 +263,31 @@ class TranscriptIntelligenceModule(BriefingModule):
         # Migrate legacy state on first run
         migrated = _migrate_legacy_state(kb, self.logger)
 
-        new_transcripts = _find_new_transcripts(kb)
+        # Compute cutoff once — shared with M0b via receipt
+        cutoff = _compute_cutoff(kb)
+
+        new_transcripts, auto_marked = _find_new_transcripts(kb, cutoff, self.logger)
+
+        # Auto-mark old transcripts as processed (skipped by date filter)
+        if auto_marked:
+            for rel in auto_marked:
+                kb["extraction_state"]["processed"].append(rel)
+            save_kb(kb)
+            self.logger.info(
+                f"[{self.key}] Auto-marked {len(auto_marked)} old transcript(s) as processed"
+            )
+
         self.logger.info(
             f"[{self.key}] Found {len(new_transcripts)} new transcript(s), "
             f"{len(kb['extraction_state'].get('processed', []))} processed, "
             f"{len(kb['extraction_state'].get('legacy_processed', []))} legacy"
         )
 
-        # Cap at MAX_TRANSCRIPTS_PER_RUN
-        to_process = new_transcripts[:MAX_TRANSCRIPTS_PER_RUN]
+        # Process all new transcripts (MAX_TRANSCRIPTS_PER_RUN=0 means unlimited)
+        if MAX_TRANSCRIPTS_PER_RUN > 0:
+            to_process = new_transcripts[:MAX_TRANSCRIPTS_PER_RUN]
+        else:
+            to_process = new_transcripts
         overflow = len(new_transcripts) - len(to_process)
 
         results = []
@@ -238,6 +306,7 @@ class TranscriptIntelligenceModule(BriefingModule):
             "transcripts": results,
             "overflow": overflow,
             "migrated": migrated,
+            "cutoff_date": cutoff.isoformat() if cutoff else None,
         }
 
     def analyze(self, data: Any) -> str:
@@ -250,14 +319,53 @@ class TranscriptIntelligenceModule(BriefingModule):
         if not transcripts and not migrated:
             stats = kb_stats(kb)
             total = stats["transcripts_processed"] + stats["legacy_processed"]
-            # Write empty receipt so M00 knows M9 ran but found nothing
+
+            # Reconstruct receipt from KB for transcripts processed since cutoff
+            # (they may have been processed in an earlier run today)
+            cutoff_str = data.get("cutoff_date")
+            prior_receipts = []
+            if cutoff_str:
+                for rel in kb["extraction_state"].get("processed", []):
+                    t_date = _extract_date_from_path(rel)
+                    if t_date >= cutoff_str:
+                        stem = Path(rel).stem
+                        friendly = stem[7:].replace("-", " ").title() if len(stem) > 7 else stem
+                        ai_count = sum(
+                            1 for item in kb.get("action_items", [])
+                            if item.get("source_transcript") == rel
+                        )
+                        dc_count = sum(
+                            1 for item in kb.get("decisions", [])
+                            if item.get("source_transcript") == rel
+                        )
+                        prior_receipts.append({
+                            "rel_path": rel,
+                            "friendly_name": friendly,
+                            "meeting_date": t_date,
+                            "action_items_added": ai_count,
+                            "decisions_added": dc_count,
+                            "scorecard_signals": 0,
+                            "parse_failed": False,
+                        })
+
+            total_actions = sum(t["action_items_added"] for t in prior_receipts)
+            total_decisions = sum(t["decisions_added"] for t in prior_receipts)
+
             self.shared_state["m9_receipt"] = {
-                "transcripts": [],
-                "total_new_actions": 0,
-                "total_new_decisions": 0,
+                "transcripts": prior_receipts,
+                "total_new_actions": total_actions,
+                "total_new_decisions": total_decisions,
                 "overflow": 0,
                 "ran": True,
+                "cutoff_date": cutoff_str,
             }
+
+            if prior_receipts:
+                return (
+                    f"_{len(prior_receipts)} transcript(s) processed (earlier run)._ "
+                    f"({total} transcripts tracked | "
+                    f"KB: {stats['total_items']} items)\n"
+                )
             return (
                 f"_No new transcripts since last run._ "
                 f"({total} transcripts tracked | "
@@ -289,13 +397,16 @@ class TranscriptIntelligenceModule(BriefingModule):
                 )
                 time.sleep(INTER_CALL_DELAY)
 
+            is_long = t["line_count"] > LONG_TRANSCRIPT_THRESHOLD
             self.logger.info(
                 f"[{self.key}] Extracting: {rel} ({t['line_count']} lines)"
+                + (f" [extended timeout: {LONG_TRANSCRIPT_API_TIMEOUT}s]" if is_long else "")
             )
 
             try:
                 # Structured extraction via AI
                 extraction = self.call_anthropic(
+                    timeout=LONG_TRANSCRIPT_API_TIMEOUT if is_long else 0,
                     system_prompt=(
                         "You are Orion, a strategic Chief of Staff extracting intelligence "
                         "from meeting transcripts for Christopher Ogle, Interim Creative Lead "
@@ -491,13 +602,14 @@ class TranscriptIntelligenceModule(BriefingModule):
         kb["extraction_state"]["last_run"] = datetime.now().isoformat()
         save_kb(kb)
 
-        # Write receipt to shared_state for M00
+        # Write receipt to shared_state for M00 and M0b
         self.shared_state["m9_receipt"] = {
             "transcripts": per_transcript_receipts,
             "total_new_actions": total_new_actions,
             "total_new_decisions": total_new_decisions,
             "overflow": overflow,
             "ran": True,
+            "cutoff_date": data.get("cutoff_date"),
             "decision_summaries": all_decision_summaries,
             "signal_summaries": all_signal_summaries,
         }

@@ -81,19 +81,11 @@ class OvernightSummaryModule(BriefingModule):
         if overflow:
             lines.append(f"\n_{overflow} additional transcript{'s' if overflow != 1 else ''} queued for next run._")
 
-        # Decisions Made (moved here from M9 Transcript Intelligence section)
-        decision_summaries = receipt.get("decision_summaries", [])
-        if decision_summaries:
-            lines.append(f"\n**Decisions Made ({len(decision_summaries)}):**")
-            for d in decision_summaries[:10]:
-                lines.append(d)
+        # Decisions Made — REMOVED S125: not actionable, Christopher skims over it.
+        # Data still extracted by M9 into KB for Chief of Staff Analyzer to consume.
 
-        # Scorecard Signals (moved here from M9 Transcript Intelligence section)
-        signal_summaries = receipt.get("signal_summaries", [])
-        if signal_summaries:
-            lines.append(f"\n**Scorecard Signals ({len(signal_summaries)}):**")
-            for s in signal_summaries:
-                lines.append(s)
+        # Scorecard Signals — REMOVED S125: redundant with Chief of Staff Analyzer section.
+        # Signals still extracted by M9 into KB and routed to scorecard-progress.md.
 
         # Auto-approved items summary (Phase 5)
         if auto_approved:

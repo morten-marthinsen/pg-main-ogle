@@ -153,8 +153,9 @@ cd "$BRIEFING_DIR"
 START_TIME=$(date +%s)
 
 # Run the briefing pipeline — redirect to log file directly (no tee piping)
-# Pipeline watchdog: 10 min max (600s). Prevents indefinite hangs from blocking next day's run.
-PIPELINE_TIMEOUT=600
+# Pipeline watchdog: 1 hour max (3600s). M9 transcript processing needs time for all
+# transcripts with rate limit spacing (~185s per transcript). Prevents indefinite hangs.
+PIPELINE_TIMEOUT=3600
 log "Running: .venv/bin/python3 daily_briefing.py (Python 3.12) [timeout: ${PIPELINE_TIMEOUT}s]"
 
 # macOS doesn't have `timeout` — use background + kill pattern

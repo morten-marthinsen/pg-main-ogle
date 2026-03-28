@@ -18,6 +18,7 @@ from .m11_meeting_prep import MeetingPrepModule
 from .m12_daily_schedule import DailyScheduleModule
 from .m13_clm_sync import CLMSyncModule
 from .m14_production_sync import ProductionSyncModule
+from .m15_data_fetch import DataFetchModule
 
 # Ordered list of all modules — execution order.
 # M00a runs LAST (needs all other modules' shared_state) but renders FIRST.
@@ -33,13 +34,14 @@ MODULE_REGISTRY = [
     ("m5_wise_reply_context", WiseReplyContextModule),
     ("m6_ai_newsletter_digest", AINewsletterDigestModule),
     ("m7_clickup_inbox", ClickUpInboxModule),
-    ("m8_agent_status", AgentStatusModule),
     ("m9_transcript_intelligence", TranscriptIntelligenceModule),
-    ("m10_kb_analyzer", KBAnalyzerModule),
+    ("m10_kb_analyzer", KBAnalyzerModule),  # Chief of Staff Analyzer — above Agent Status (S125)
+    ("clm_sync", CLMSyncModule),        # CLM URL Sync — right after Analyzer (S125)
+    ("production_sync", ProductionSyncModule),  # Production Sync — right after CLM (S125)
+    ("m8_agent_status", AgentStatusModule),  # Agent Status — moved below Analyzer (S125)
     ("m11_meeting_prep", MeetingPrepModule),
     ("m12_daily_schedule", DailyScheduleModule),
-    ("m13_clm_sync", CLMSyncModule),
-    ("m14_production_sync", ProductionSyncModule),
+    ("m15_data_fetch", DataFetchModule),
     # M00a runs last but display_first=True — inserted at top of report
     ("m00a_today_summary", TodaySummaryModule),
 ]

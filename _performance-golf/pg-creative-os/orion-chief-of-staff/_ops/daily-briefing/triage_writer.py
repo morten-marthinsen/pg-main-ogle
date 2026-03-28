@@ -171,6 +171,8 @@ def apply_schedules(items: list, session: str) -> int:
         }
 
     priorities = load_json(PRIORITIES_PATH)
+    if "priorities" not in priorities:
+        priorities["priorities"] = {}
 
     count = 0
     for item in items:
@@ -188,8 +190,8 @@ def apply_schedules(items: list, session: str) -> int:
         # Write to schedule
         schedule["schedule"][item_id] = sched_date
 
-        # Write to priorities
-        priorities[item_id] = {"_priority_override": priority}
+        # Write to priorities (bot reads from "priorities" key as simple strings)
+        priorities["priorities"][item_id] = priority
 
         count += 1
 
@@ -237,9 +239,11 @@ def add_manual_task(text: str, sched_date: str, priority: str, session: str) -> 
     schedule["last_updated"] = date.today().isoformat()
     atomic_write(SCHEDULE_PATH, schedule)
 
-    # Set priority
+    # Set priority (bot reads from "priorities" key as simple strings)
     priorities = load_json(PRIORITIES_PATH)
-    priorities[new_id] = {"_priority_override": priority}
+    if "priorities" not in priorities:
+        priorities["priorities"] = {}
+    priorities["priorities"][new_id] = priority
     atomic_write(PRIORITIES_PATH, priorities)
 
     return new_id
@@ -342,6 +346,56 @@ def cmd_batch(args):
     print(f"Persisted: {', '.join(parts) if parts else 'no changes'}")
 
 
+def sync_today_priorities(priority_map: dict, session: str) -> tuple:
+    """Sync all of today's priorities and clean up completed/rejected items from schedule.
+
+    Args:
+        priority_map: dict mapping item_id -> priority letter ("A"/"B"/"C")
+                      for ALL items on today's final Action Items Tracker
+        session: session ID for audit trail
+
+    Returns:
+        (synced_count, cleaned_count)
+    """
+    today_iso = date.today().isoformat()
+
+    # 1. Write all priority overrides
+    priorities = load_json(PRIORITIES_PATH)
+    if "priorities" not in priorities:
+        priorities["priorities"] = {}
+    for item_id, prio in priority_map.items():
+        priorities["priorities"][item_id] = prio
+    atomic_write(PRIORITIES_PATH, priorities)
+
+    # 2. Clean up completed/rejected items from today's schedule
+    schedule = load_json(SCHEDULE_PATH)
+    sched = schedule.get("schedule", {})
+    registry = load_json(REGISTRY_PATH)
+    completed_ids = {e.get("id") for e in registry.get("entries", [])}
+    approvals = load_json(APPROVALS_PATH)
+    rejected_ids = {k for k, v in approvals.get("approvals", {}).items() if v == "rejected"}
+    done_ids = completed_ids | rejected_ids
+
+    cleaned = []
+    for item_id in list(sched.keys()):
+        if sched[item_id] == today_iso and item_id in done_ids and item_id not in priority_map:
+            del sched[item_id]
+            cleaned.append(item_id)
+
+    if cleaned:
+        schedule["last_updated"] = today_iso
+        atomic_write(SCHEDULE_PATH, schedule)
+
+    return len(priority_map), len(cleaned)
+
+
+def cmd_sync_today(args):
+    data = json.load(sys.stdin)
+    priority_map = data  # expects {"item_id": "B", ...}
+    synced, cleaned = sync_today_priorities(priority_map, args.session)
+    print(f"Synced: {synced} priorities written, {cleaned} completed items cleaned from schedule")
+
+
 def cmd_add_task(args):
     new_id = add_manual_task(args.text, args.date, args.priority, args.session)
     print(f"Created: {new_id} — '{args.text}' → {args.date} as {args.priority}")
@@ -375,6 +429,11 @@ def main():
     p_batch = sub.add_parser("batch", help="Batch mode — reads JSON from stdin")
     p_batch.add_argument("--session", required=True, help="Session ID")
     p_batch.set_defaults(func=cmd_batch)
+
+    # sync-today
+    p_sync = sub.add_parser("sync-today", help="Sync today's priorities from final Action Items Tracker")
+    p_sync.add_argument("--session", required=True, help="Session ID")
+    p_sync.set_defaults(func=cmd_sync_today)
 
     # add-task
     p_add = sub.add_parser("add-task", help="Add a new manual task")

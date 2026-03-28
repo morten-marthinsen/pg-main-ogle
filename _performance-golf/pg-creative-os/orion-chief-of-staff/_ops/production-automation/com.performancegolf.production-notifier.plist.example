@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Production Calendar Notifier — launchd config template.
+  Copy this file to com.performancegolf.production-notifier.plist,
+  replace __REPO_ROOT__ with your actual repo path, then load:
+    cp com.performancegolf.production-notifier.plist.example com.performancegolf.production-notifier.plist
+    sed -i '' "s|__REPO_ROOT__|$(pwd)/../../../..|g" com.performancegolf.production-notifier.plist
+    cp com.performancegolf.production-notifier.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.performancegolf.production-notifier.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.performancegolf.production-notifier</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>__REPO_ROOT__/_performance-golf/pg-creative-os/orion-chief-of-staff/_ops/production-automation/run-production-notifier.sh</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>300</integer>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>__REPO_ROOT__/_performance-golf/pg-creative-os/orion-chief-of-staff/_ops/production-automation/logs/launchd-stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>__REPO_ROOT__/_performance-golf/pg-creative-os/orion-chief-of-staff/_ops/production-automation/logs/launchd-stderr.log</string>
+</dict>
+</plist>

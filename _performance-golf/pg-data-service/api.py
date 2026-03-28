@@ -1,7 +1,8 @@
+from __future__ import annotations
 """PG Data Service — Public API for programmatic access.
 
 Usage:
-    from api import get_card, get_raw, list_cards, list_datasets
+    from api import get_card, get_raw, load_dataruns, list_cards, list_datasets
 
     # See available cards and datasets
     list_cards()
@@ -13,6 +14,9 @@ Usage:
 
     # Raw data (PII stripped, all columns otherwise)
     df = get_raw("ad_performance", "2026-01-01", "2026-03-15")
+
+    # Load from local dataruns/ (pre-fetched daily CSVs — no API call)
+    df = load_dataruns("2026-01-01", "2026-03-24")
 
 All functions strip PII before returning. No escape hatch.
 """
@@ -215,3 +219,53 @@ def get_card(
             f"Card {card_name!r} has unknown output mode {output_mode!r}. "
             f"Expected 'daily' or 'summary'."
         )
+
+
+def load_dataruns(
+    date_from: str,
+    date_to: str,
+    clean_columns: bool = True,
+) -> pd.DataFrame:
+    """Load ad performance data from local dataruns/ CSVs for a date range.
+
+    This is the primary data source for TESS and other agents — reads
+    pre-fetched daily CSVs instead of hitting the Domo API.
+
+    Args:
+        date_from: Start date (YYYY-MM-DD)
+        date_to: End date (YYYY-MM-DD)
+        clean_columns: If True (default), strip <BR> and newlines from column names
+
+    Returns:
+        DataFrame with all daily rows in the date range, concatenated.
+        Empty DataFrame if no data files found.
+    """
+    dataruns_dir = ROOT / "dataruns"
+    start = datetime.strptime(date_from, "%Y-%m-%d")
+    end = datetime.strptime(date_to, "%Y-%m-%d")
+
+    frames = []
+    current = start
+    while current <= end:
+        date_str = current.strftime("%Y-%m-%d")
+        month_str = current.strftime("%Y-%m")
+        csv_path = dataruns_dir / month_str / f"{date_str}.csv"
+
+        if csv_path.exists():
+            df = pd.read_csv(csv_path)
+            frames.append(df)
+
+        current += timedelta(days=1)
+
+    if not frames:
+        return pd.DataFrame()
+
+    combined = pd.concat(frames, ignore_index=True)
+
+    if clean_columns:
+        combined.columns = [
+            col.replace("<BR>", " ").replace("\n", " ").strip()
+            for col in combined.columns
+        ]
+
+    return combined

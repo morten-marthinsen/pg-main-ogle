@@ -23,6 +23,7 @@
 | **ElevenLabs API** | — | — | Optional | — | Voice dubbing (international expansion agent) |
 | **Higgsfield API** | — | — | Optional | — | Character generation (presenter-gen expansion agent) |
 | **Figma MCP** | Optional | — | — | Optional | Design context, launch boards, static image briefs |
+| **Miro MCP** | Optional | — | — | — | Quiz board visuals (DQFE1), quiz structure design, screen flows |
 
 ---
 
@@ -38,9 +39,10 @@ These are configured in the repo's `.claude/mcp.json` and load automatically in 
 
 ### ClickUp
 - **What it does:** Read tasks, custom fields, assignees, statuses
-- **Which agents:** Orion (task sync, triage intelligence), Tess (asset registry sync)
+- **Which agents:** Orion (task sync, triage intelligence, CRO tickets), Tess (asset registry sync)
 - **Portable:** Yes — uses `npx`, read-only mode
-- **Env var:** `CLICKUP_API_KEY` (in shell environment or `.env`)
+- **Env var:** `CLICKUP_API_TOKEN` (in shell environment — must be set locally, NOT committed)
+- **Setup:** Get your personal API token from ClickUp Settings → Apps → API Token. Add `export CLICKUP_API_TOKEN="pk_..."` to your `~/.zshrc`.
 - **Verify:** `ToolSearch("clickup")` in Claude Code — tools should load. Try reading a known task ID.
 
 ### Google Docs
@@ -48,6 +50,15 @@ These are configured in the repo's `.claude/mcp.json` and load automatically in 
 - **Which agents:** Orion (context saving, doc enrichment)
 - **Portable:** Yes — uses `npx`
 - **Verify:** `ToolSearch("google-docs")` in Claude Code — tools should load
+
+### Miro
+- **What it does:** Read/write Miro boards — quiz screen flows, wireframes, visual layouts
+- **Which agents:** Orion (quiz design, DQFE1 quiz board management)
+- **Portable:** Yes — uses `npx`
+- **Env var:** `MIRO_API_TOKEN` (in shell environment — must be set locally, NOT committed)
+- **Setup:** Go to https://miro.com/app/settings/user-profile/apps → Create new app → Enable `boards:read` + `boards:write` scopes → Install to your team → Copy the access token. Add `export MIRO_API_TOKEN="eyJ..."` to your `~/.zshrc`.
+- **Key board:** DQFE1 Quiz — Board ID `uXjVJg9rBMw=` (https://miro.com/app/board/uXjVJg9rBMw=/)
+- **Verify:** `ToolSearch("miro")` in Claude Code — tools should load. Or test via API: `curl -H "Authorization: Bearer $MIRO_API_TOKEN" https://api.miro.com/v2/boards?limit=5`
 
 ### Fathom
 - **What it does:** Read meeting transcripts from Fathom
@@ -150,6 +161,7 @@ These are NOT MCP servers — they're direct API integrations configured via `.e
 | **Orion** | ClickUp API | No task sync, no transcript extraction. Major capability loss. |
 | **Orion** | Anthropic API | No AI-generated draft responses (M4). Falls back to template-based output. |
 | **Orion** | Google Sheets | No SSS data in daily report. Critical. |
+| **Orion** | Miro API | Cannot read/write quiz boards. Quiz design work blocked — must fall back to screenshots + manual Miro editing. |
 | **Tess** | Google Sheets | Cannot read/write SSS. Pipeline non-functional. |
 | **Tess** | ClickUp API | No asset registry sync. Pipeline still works for data analysis. |
 | **Veda** | Iconik | Cannot download source videos or upload finished assets. Pipeline non-functional for production. Can still run tests and dry-run. |
@@ -173,7 +185,7 @@ Run through this list to confirm your environment is ready:
 7. [ ] **Tess deps:** `cd tess-strategic-scaling-system && pip install -r requirements.txt`
 8. [ ] **Orion deps:** `cd orion-chief-of-staff/_ops/daily-briefing && pip install -r requirements.txt`
 9. [ ] **Orion bot deps:** `cd orion-chief-of-staff/_ops/orion-personal-bot && pip install -r requirements.txt`
-10. [ ] **MCP servers load:** Open Claude Code, run `ToolSearch("clickup")` — tools appear
+10. [ ] **MCP servers load:** Open Claude Code, run `ToolSearch("clickup")` and `ToolSearch("miro")` — tools appear
 11. [ ] **Veda `.env`:** Copy `.env.template` → `.env`, fill in Iconik + FAL credentials
 12. [ ] **Orion `.env`:** Create `.env` files in daily-briefing and orion-personal-bot directories
 13. [ ] **Service account key** (Veda): Place your `*-sa-key.json` in the Veda directory
@@ -185,3 +197,5 @@ Run through this list to confirm your environment is ready:
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-18 | Initial creation. Maps all external tools across 4 agents with critical/optional flags, cost estimates, and verification steps. |
+| 1.1 | 2026-03-25 | Added Miro MCP server (quiz board design). Fixed ClickUp env var passthrough (CLICKUP_API_TOKEN was missing from mcp.json). Added Miro to tool matrix, "Can I Run Without" matrix, and setup checklist. |
+| 1.2 | 2026-03-26 | Google Sheets OAuth upgraded from `spreadsheets.readonly` to `spreadsheets` (full read/write). Required for Intake Auto-ID Generator CP spreadsheet write. |

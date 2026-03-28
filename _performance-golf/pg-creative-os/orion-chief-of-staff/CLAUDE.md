@@ -3,28 +3,30 @@
 ## Build State
 
 ```yaml
-version: 10.12
-last_session: 120
-last_date: 2026-03-24
-status: "S120 — RS1 + SF2 CLM full update from team feedback (B4/B5/B6). SF2: pricing fixed ($299/$349), launch date → March 25, SF1 pause timing, 30+ funnel URLs, animation note. RS1: 12 asset URLs from Jenni's matrix, URL registry +7 entries. Both: Section 7b Influencer/UGC added. HTML boards + Surge deployed (3 URLs). M14 Production Sync built — ClickUp Production Calendar → registries → CLM sync → Surge auto-deploy. Gerry Carry UGC footage confirmed delivered."
+version: 10.21
+last_session: 135
+last_date: 2026-03-27
+status: "S135 — Production team automation: analyzed transcript, designed 8-phase plan, built Phase 0 docs + Phase 1 notifier. production_notifier.py dry-run tested (26 subtasks, 0 errors, URL gate working). State seeded. NOT LIVE — needs Slack channel ID + Christopher approval before activation. Session log needs compression (800+ lines)."
 
 # 30/60/90 Status
-day_count: 43
+day_count: 44
 next_checkpoint: "Day 60 — 2026-04-10"
 russ_exit: "~2026-02-19 (Wed) — DONE"
 
 # Ops Status
-daily_briefing: "v2.4.0 — M14 Production Sync added (S120). ClickUp Production Calendar → registries → CLM sync → Surge deploy chain. 19 modules total. Launchd schedule: 8:00am + 8:30am fallback. Network retry (6x 10s). B→A priority guard."
+daily_briefing: "v2.7.1 — S128: Fixed M13/M14 config key mismatch (registry keys aligned to config). M13 CLM Sync + M14 Production Sync now truly enabled. Added ClickUp list + Slack channel data sources to M13. S126: M4/M5 DISABLED. 18 modules (15 active, 3 pending). Pipeline watchdog 3600s. Launchd 8:00am + 8:30am."
+data_service: "LIVE — pg-data-service with Domo adapter. M15 daily fetch + load_dataruns() for TESS. Backfilled Jan 1–Mar 24 (83 days, ~55K rows). Dataruns gitignored (local-only). Python 3.9 compat fixed."
+tess_dashboard: "IN PROGRESS — Next.js 14 Vercel app. Phases 1-5 DONE + Phase 6 partial ('Start in Veda' button live with CLI command modal + copy-to-clipboard). ROAS outlier fix applied (spend >= $2,500 filter). Veda env set up (npm, TS build, .env with Iconik creds). Blocker: Google service account key needed for full pipeline test. 16 CP spreadsheets mapped in spreadsheet-registry.ts. Plan: ~/.claude/plans/jolly-swimming-cherny.md. Remaining: GCP service account → full hook stack test → Vercel deploy."
 completed_registry: "LIVE — 375 entries (mi-052/053 added S119). Staleness rule active (21d penalty, 35d hard reject)."
 persistent_actions: "LIVE v2.1 — Multi-factor ABC, 3 A-task cap, week-ahead Mon-Fri, capacity headers + Why column with PRD alignment tags."
-transcript_intelligence: "LIVE — 137 transcripts processed (60 legacy + 77 extracted). M9 MAX_TRANSCRIPTS_PER_RUN fixed to 3."
+transcript_intelligence: "LIVE v2.1 — 1034 transcripts processed (60 legacy + 974 extracted). Freshness filter: cutoff = min(yesterday, last_run_date). M9 auto-skips transcripts older than cutoff. M0b auto-expires old TRIAGE items but NEVER Waiting On items (depends_on). Receipt reconstructed from KB for multi-run days. Unlimited transcripts per run within window. Module timeout 2700s, long-transcript API timeout 180s."
 transcript_sync: "LIVE — ClickUp API (5 min) + Fathom API (30 min), both launchd auto-sync. Plists updated to orion paths (S058)."
 kb_delegation: "LIVE — apply_overrides supports dict-style overrides."
 neco_autonomous: "LIVE v1.0 — nightly 10pm, quality gates working."
 gmail_oauth: DONE
-slack_bot: "UPGRADED — chat:write scope added to 'Orion - PG Creative Intel' (A0AH9B47PCY). M4/M5 live. slack_post_message allowlisted in Claude Code."
+slack_bot: "UPGRADED — chat:write scope added to 'Orion - PG Creative Intel' (A0AH9B47PCY). M4/M5 DISABLED (S126). slack_post_message allowlisted in Claude Code."
 slack_interface: "IN PROGRESS — Design decisions locked (S069): multi-turn Slack threads, DM to bot user, auto user-ID via Slack API, Slack-default output + optional Google Doc write. Needs: Slack Bolt app deployment (Railway/Render), Claude API key, Google OAuth for server. Plan: ~/.claude/plans/virtual-juggling-grove.md"
-orion_personal_bot: "LIVE v5.0 — S109: schedule write verification added (create_task now re-reads and confirms entry landed in data['schedule']). Hourly check-in live: delegation_engine (agent-first routing), checkin_state (codes + strike counts), checkin.py (task pulse + calendar + delegation ideas). 13 tools total: +fix_schedule, +trigger_checkin, +resolve_checkin_code, +send_slack_dm. Team roster: 4 Slack IDs. 2 new launchd plists (checkin + precall). 2 message shortcuts."
+orion_personal_bot: "LIVE v5.1 — S126: Item IDs hidden from display output (format: 'A1 → Task name'). System prompt formatting rule added. Priority sync fixed (triage_writer was writing wrong format — bot reads 'priorities' key as simple strings, writer was putting dicts at top level). 13 tools total. Hourly check-in live."
 orion_team_bot: "CREATIVE ADVISOR v2.1 LIVE — Google Docs formatting + revision rules added to system prompt (S092). Redeployed to Railway. 14 tools. Brixton intro sent. Plan: ~/.claude/plans/witty-baking-twilight.md"
 google_docs_mcp: "VERIFIED WORKING — @a-bonus/google-docs-mcp loads correctly. Tools available (readDocument, listTabs, etc.)."
 slack_webhook: "LIVE — Orion Daily Briefing app (A0AFW0Y3Z39), DM to Christopher only. .env SLACK_WEBHOOK_URL set."
@@ -32,11 +34,13 @@ google_calendar_mcp: "LIVE — M12 LIVE, Calendar API v3 with calendar.events sc
 triage_auto_approve: "LIVE — threshold 0.80, auto-approved items shown in M00 transparency list + M00a alerts."
 reconcile_cli: "NEW — python3 reconcile.py for end-of-day task reconciliation (d/r/s/a/q commands)."
 daily_snapshot: "NEW — .kb-daily-snapshot.json saved each run for What Changed delta tracking."
-triage_writer: "NEW — python3 triage_writer.py CLI for atomic triage persistence (reject/complete/schedule/batch/add-task). Replaces manual JSON editing. MANDATORY at end of every triage session."
+triage_writer: "UPGRADED v1.1 — S126: +sync-today command (writes all today's priorities to .kb-priorities.json + cleans completed items from schedule). Fixed priority format bug (was writing top-level dicts, bot reads 'priorities' key as simple strings). 6 commands: reject/complete/schedule/batch/sync-today/add-task. MANDATORY at end of every triage session."
 calendar_agenda: "NEW — python3 calendar_agenda.py CLI for adding agenda items to calendar events without notifying attendees (sendUpdates=none)."
+static_delivery: "LIVE v1.1 — deliver.py + name_generator.py + iconik_helper.py. NLC filename parsing, Iconik S3 upload, ClickUp 'Final Assets' field write. Script does NOT change ClickUp task status (human-only). SOP: README.md for Fatima. E2E tested S121 (task 86b8qem80, 35 files). Safety fix S123: removed all status-change code."
+production_automation: "BUILT, NOT LIVE — S135: production_notifier.py + config.yaml + launcher + launchd plist + SETUP-PHASE0.md. Dry-run tested (26 subtasks, 0 errors, URL gate working). State seeded with 26 existing completions. Needs: (1) Slack channel ID from Christopher, (2) explicit approval to activate. 8-phase plan at ~/.claude/plans/serene-kindling-oasis.md. Phase 0 (ClickUp form) + Phase 1 (notifier) ready. Phases 2-7 planned for future weeks."
 
 # Next Session (P0)
-next_session: "S121 — (1) Verify M14 production sync runs clean in tomorrow's 8am pipeline. (2) RS1 Personas workstream (Section 4) — before Thu March 26 pre-production sync call. (3) SF2 CLM v2 feedback + Figma horizontal. (4) Verify entity-first calendar matching in pipeline run."
+next_session: "S136 — (1) MANDATORY: Compress SESSION-LOG.md (800+ lines, threshold 500). (2) Production automation: get Slack channel ID from Christopher, test live notification, activate launchd. (3) Phase 0: Christopher creates ClickUp form per SETUP-PHASE0.md instructions. (4) Draft unified RS1 influencer brief (target: ~April 2). (5) Move OSSF/CLST Figma files to correct team project folders."
 
 # Active Challenges
 unresolved_block: []
@@ -213,6 +217,16 @@ M00a ("Today at a Glance") shows orientation only — capacity, meetings, what c
    This atomically writes to `.kb-approvals.json`, `.kb-completed-registry.json`, `.kb-schedule.json`, `.kb-priorities.json`, and `.kb-triage-history.json` in one operation. **Never edit these JSON files manually.**
    To look up item IDs, search `.transcript-kb.json` for the item text.
 
+4. **After report rewrite, sync today's priorities** (MANDATORY — ensures Orion Personal Bot matches):
+   ```bash
+   python3 triage_writer.py sync-today --session S{NNN} <<'EOF'
+   {"item_id_1": "B", "item_id_2": "A", ...}
+   EOF
+   ```
+   Pass a JSON map of ALL item IDs on today's final Action Items Tracker with their A/B/C tier.
+   This writes priority overrides to `.kb-priorities.json` and cleans completed/rejected items from `.kb-schedule.json`.
+   Without this step, the Orion Personal Bot falls back to algorithmic scoring and shows different priorities.
+
 **Pass 2 — Report rewrite:**
 When Christopher says "update the report":
 1. Read the report markdown
@@ -258,6 +272,9 @@ Unresolved BLOCK/CONVINCE ME persist across sessions until resolved.
 | Google Doc | ID: `1TRbAh5rA2Rb_RNNTApK89_k_5Zqn3uTnmZEQFFY8Nwc` |
 | SSS Spreadsheet | ID: `1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U` |
 | LOMS Library | `../_shared/loms-library/` |
+| DQFE1 Quiz Doc | Google Doc ID: `1a5_3-zCjzjZrZ8HazXqd-LIPTcaWBF-k0EeJefi8xAw` |
+| DQFE1 Quiz Board (Miro) | Board ID: `uXjVJg9rBMw=` — https://miro.com/app/board/uXjVJg9rBMw=/ |
+| CRO Ticket (Quiz 3.0) | ClickUp: `86b920zy2` — DQFE1 \| V3.0 \| Root Swing Flaw Quiz |
 
 ---
 

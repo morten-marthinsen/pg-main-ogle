@@ -16,14 +16,16 @@
 | Field | Details |
 |-------|---------|
 | **Product** | RS1 Putter |
-| **Launch Month** | April 2026 |
+| **Founders Edition Launch** | April 27, 2026 |
+| **Stock Edition Launch (cold traffic)** | May 20, 2026 |
+| **Ad Copy Review** | ~April 1, 2026 |
 | **Campaign Theme Start** | March 20 |
 | **Marketing Sample Ready** | March 20 |
 | **PDP UX Design** | March 23 - April 1 |
 | **Place PO** | April 9 |
 | **Factory Ready** | April 22 |
 | **PO Production** | April 9 - May 4 |
-| **Batch 1 Status** | Pre-production — creative direction in development |
+| **Batch 1 Status** | Pre-production — personas confirmed, influencer brief in development |
 
 ### Pricing
 
@@ -99,7 +101,7 @@ This CLM is maintained manually by Orion (Creative OS agent). Updates happen at 
 
 ### Core Campaign Theme
 
-> **"The first premium putter that eliminates face drift and works with your stroke, not against it."**
+> **"The only premium putter with forward axis weighting that eliminates face drift and improves your stroke at the same time."**
 
 ### Root Angle
 
@@ -133,6 +135,21 @@ This is the most powerful belief shift available. 32% of the addressable market 
 | 4 | **Chris McGinley's Story** | The credibility — WHO designed a putter that does both |
 | 5 | **"Science of the Stroke"** | The evidence — PROOF it works with your stroke (robot testing) |
 
+#### Theme 5 Sub-Angle: 125 Years of Putter Evolution
+
+> **Source:** Chris McGinley on pre-production call (2026-03-26). Confirmed by Donnie as "batch one, top of funnel, pure education YouTube video plus ad." JoJo purchased an actual Schenectady putter on eBay for filming.
+
+| Era | Milestone | What Changed |
+|-----|-----------|-------------|
+| ~1900 | **Schenectady Putter** | First attempt at better putter balance. 125 years ago. |
+| 1966 | **Ping Anser** | Starting point of modern golf putters. Advanced putter design. |
+| Modern | **LAB Golf** | Better balancing system — zero torque. Solved the technology problem but left face control to the player. |
+| Now | **RS1** | Stood on all their shoulders. Forward axis weighting doesn't just prevent face drift — it creates a counteracting force that improves the golfer's stroke. Fixes technology AND technique. |
+
+**Narrative framing:** "We're not bashing competitors. We're saying thank you — you took care of a big piece for us. And we took it further." (Donnie, pre-production call)
+
+**Content opportunity:** Full 125-year evolution education video with the actual Schenectady putter as a prop. Donnie: "That's gonna be like the Ping behind-the-scenes video."
+
 ### Source Materials
 
 | Resource | Link |
@@ -152,9 +169,9 @@ This is the most powerful belief shift available. 32% of the addressable market 
 | Field | Details |
 |-------|---------|
 | **Product** | RS1 Putter |
-| **Full Name** | RS1 Putter (RS1 = Roll Straight) |
+| **Full Name** | RS1 Putter (RS1 = Roll Str8) |
 | **Category** | Premium forward-weighted mallet putter |
-| **Technology** | Roll Straight Technology (Roll Str8 Technology TM) |
+| **Technology** | Roll Str8 Technology™ |
 | **Hero Mechanism** | Forward Axis Weighting |
 | **Construction** | 10-piece multi-material (CNC steel face, carbon composite crown, aluminum T-Wing tail) |
 | **Head Weight** | 360g (75%+ weight in front of shaft axis) |
@@ -194,7 +211,7 @@ The RS1 is the first putter that addresses both pillars of great putting: the ri
 
 **The result**: You pull the putter back, and let gravity pull it through. That's how Forward Axis Weighting fixes face drift and improves your stroke at the same time.
 
-### Roll Str8 Technology TM — Nine Features, One Objective: Roll Straight
+### Roll Str8 Technology™ — Nine Features, One Objective
 
 | # | Feature | Tagline | What It Does |
 |---|---------|---------|-------------|
@@ -428,7 +445,7 @@ These phrases and framings are locked across all RS1 touchpoints. Ads, email, or
 | **"Conforms to the rules of golf"** | Compliance language. NEVER say "legal" or "USGA." |
 | **"Gravity-driven"** | Describes how Forward Axis Weighting works. Gravity does the work, not the golfer. |
 | **"Do less. Make more."** | The Thread 1 payoff. Four words that capture the product promise. |
-| **"Roll Straight Technology" / "Roll Str8 Technology TM"** | Umbrella technology brand. 9 features, one objective. |
+| **"Roll Str8 Technology™"** | Umbrella technology brand. 9 features, one objective. Forward Axis Weighting is the hero feature within this umbrella. FAW outperformed Roll Str8 in research testing as the "golden thread." |
 | **"Zero face drift"** | The benefit claim. RS1's version of LAB's "zero torque." Different physics, different claim. |
 | **"9 features"** | Always "9 features" — not 6 or 7. Per ecomm copy (primary source). |
 | **"10-piece construction"** | Always "10-piece" — the precision engineering proof point. |
@@ -460,51 +477,79 @@ These phrases and framings are locked across all RS1 touchpoints. Ads, email, or
 
 ---
 
-## Section 4: Persona & Value Driver Matrix — PLACEHOLDER
+## Section 4: Persona & Value Driver Matrix
 
-> **Template note**: Personas, value drivers, and coverage matrix will be developed as a separate workstream and added to the CLM once finalized. The structures below are ready to populate.
+> **Source**: All personas derived from RS1 primary research — 1,247 verified quotes from GolfWRX (39.1%), Reddit r/golf (25%), TheSandTrap (14.3%), MyGolfSpy (9.9%). Zero AI fabrication. Each persona maps to a scored opportunity in the RS1 research handoff.
+>
+> **Validated**: Pre-production call 2026-03-26. Donnie: "These personas are money... deeply validated research." McGinley: "I think they're great. I love them." Handicap discussion: personas span the spectrum — McGinley confirmed putting challenges are universal from tour players to 25-handicappers. Emphasis on messaging alignment over precise handicap categorization.
 
 ### Launch Personas
 
 | # | Persona | Who They Are | Primary Emotion | They'd Say... |
 |---|---------|-------------|-----------------|---------------|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
+| P1 | **The Self-Blamer** | Convinced their putting problems are their fault — bad hands, bad stroke, bad nerves. Tried lessons, drills, YouTube fixes. Nothing sticks because they're solving the wrong problem. RS1's most powerful reframe: "Your stroke was fine. Your putter's center of gravity was in the wrong place." | Shame + Resignation | "I'm just a bad putter. I've accepted it." |
+| P2 | **The Three-Putt Killer** | Solid ball-striker who hits greens but bleeds strokes on the putting surface. Walks off 18 thinking "if I'd just made three more putts..." Knows putting is costing 3–7 strokes per round but can't pinpoint why. | Frustration + Score Anxiety | "I hit 12 greens yesterday and still shot 84. Three-putting is destroying my game." |
+| P3 | **The LAB-Curious Holdout** | Already researched face-stability technology. Looked at LAB Golf seriously — maybe even tried one. But couldn't get past the unconventional look, aluminum face feel, adaptation period, or $449–$649 price. Pre-sold on the problem, waiting for a better answer. | Informed Frustration + Guarded Hope | "I get what LAB is doing. But I can't play something that looks like that — and I shouldn't have to relearn my stroke for a $500 putter." |
+| P4 | **The Pressure Choker** | Putts great on the practice green. Falls apart on the course. Hands tighten over 4-footers with buddies watching. The yips show up when it counts — not because of technique, but because small muscles fail under pressure and a rear-weighted putter amplifies every twitch. | Anxiety + Dread | "My heart pounds over a 4-footer. I can't commit. On the practice green I'm a different player." |
+| P5 | **The Putter Carousel Rider** | Has owned 3–5+ putters in the last few years. Scotty Cameron, Spider, Odyssey, back to Scotty. Each one "worked for a month" then stopped. Starting to wonder if ANY putter can fix their putting — but secretly still hoping the next one will. | Skepticism + Exhausted Hope | "I thought it was the putter — kept switching — only to realize it's me. But maybe it was the putter all along." |
+
+#### Research Backing — Opportunity Scores
+
+| Persona | Quote Volume | Pain Intensity | Market Size | RS1 Fit | Competition Gap | Total Score |
+|---------|-------------|----------------|-------------|---------|-----------------|-------------|
+| P1 Self-Blamer | 47+ | 8/10 | 8/10 (32% of market) | 10/10 | 9/10 | **35/40** (Priority #1) |
+| P2 Three-Putt | 340+ | 10/10 | 10/10 (largest) | 9/10 | 6/10 | **35/40** (Priority #2) |
+| P3 LAB-Curious | 55-65% blocked | 8/10 | 6/10 | 10/10 | 9/10 | **33/40** (Priority #3) |
+| P4 Pressure | 76+ | 10/10 | 6/10 | 8/10 | 7/10 | **31/40** (Priority #5) |
+| P5 Carousel | 42+ | — | — | — | — | Key insight: every putter they tried shared the same rear-CG flaw |
+
+#### Persona → Creative Lane Mapping
+
+| Persona | Primary Lane | Why |
+|---------|-------------|-----|
+| P1 Self-Blamer | Lane 1: "The Problem Everyone Ignores" | Face drift revelation removes self-blame |
+| P2 Three-Putt | Lane 4: "Do Less. Make More." | Score impact + effortless solution |
+| P3 LAB-Curious | Lane 3: "100 Years of Wrong Design" | Evolution narrative (Traditional → LAB → RS1) |
+| P4 Pressure | Lane 4: "Do Less. Make More." | Gravity pendulum = large muscles, no fight |
+| P5 Carousel | Lane 1: "The Problem Everyone Ignores" | Explains why all previous putters failed |
 
 ### Value Drivers
 
 | # | Value Driver | Core Motivation | How RS1 Fulfills It |
 |---|-------------|-----------------|---------------------|
-| V1 | | | |
-| V2 | | | |
-| V3 | | | |
-| V4 | | | |
-| V5 | | | |
+| V1 | **Blame Removal** | "It's not me, it's the equipment" — relief from years of self-blame | Face drift reframe: your stroke was fine, your putter's CG was in the wrong place |
+| V2 | **Score Impact** | Eliminate 3–7 strokes per round lost on the green | Forward Axis Weighting keeps face square → fewer three-putts, more makes inside 6 feet |
+| V3 | **Effortless Confidence** | Stand over a putt without dread, let the stroke happen | Gravity-driven pendulum: "Pull it back, let it fall" — large muscles only, zero fight |
+| V4 | **Better Tech, No Compromise** | Want LAB-level innovation without the tradeoffs | Forward-weighted > zero-torque. Natural look, steel face feel, $50–$100 less than LAB |
+| V5 | **Visible Proof** | "Show me, don't tell me" — skeptic needs demonstrable evidence | The Table Test (face-down balance), robot testing data, Chris McGinley's 30-year pedigree |
 
-### Persona x Value Driver Coverage Matrix
+### Persona × Value Driver Coverage Matrix
 
-| | V1 | V2 | V3 | V4 | V5 |
+| | V1 Blame Removal | V2 Score Impact | V3 Effortless | V4 Better Tech | V5 Visible Proof |
 |---|---|---|---|---|---|
-| **Persona 1** | | | | | |
-| **Persona 2** | | | | | |
-| **Persona 3** | | | | | |
-| **Persona 4** | | | | | |
-| **Persona 5** | | | | | |
+| **P1 Self-Blamer** | **Lane 1** | Lane 1 | *Lane 4* | — | Lane 1 |
+| **P2 Three-Putt** | *Lane 1* | **Lane 4** | Lane 4 | — | *Lane 2* |
+| **P3 LAB-Curious** | — | *Lane 3* | Lane 3 | **Lane 3** | Lane 2 |
+| **P4 Pressure** | Lane 1 | *Lane 4* | **Lane 4** | — | *Lane 2* |
+| **P5 Carousel** | **Lane 1** | Lane 1 | — | *Lane 3* | **Lane 2** |
 
-> **Reading this matrix**: Each cell shows which locked script covers that intersection. Bold = primary coverage. Italic = secondary/light touch. Blank = uncovered (Phase 2 opportunity).
+> **Reading this matrix**: Each cell shows which creative lane covers that persona×driver intersection. **Bold** = primary coverage. *Italic* = secondary/light touch. Blank = uncovered (Phase 2 opportunity).
 
 ### Phase 2 Expansion Personas
 
-TBD — to be identified after Phase 1 performance data.
+To be identified after Phase 1 performance data. Candidates deferred from Phase 1:
+
+| Persona | Rationale for Deferral |
+|---------|----------------------|
+| Distance Control Struggler | 68 quotes — real pain, but symptom that lives inside P2 (Three-Putt Killer) |
+| Premium Status Buyer | Overlaps with P5 (Carousel Rider) — premium positioning is a value driver, not a persona |
+| Face Alignment Confused | 52 quotes — symptom mapping to P1 (Self-Blamer). Same person, different language |
 
 ---
 
 ## Section 5: Creative Matrix & Ad Scripts
 
-> **Template note**: Ad scripts are NOT written yet. This section contains creative direction lanes informed by research and Soul.md. Scripts will be developed from these lanes once personas (Section 4) are confirmed and the creative team is briefed.
+> Ad scripts are NOT written yet. This section contains creative direction lanes informed by research and messaging architecture. Personas confirmed (Section 4) — scripts will be developed from these lanes once the creative team is briefed and ad copy review begins (~April 1).
 
 ### Creative Direction Lanes (4)
 
@@ -560,7 +605,7 @@ Each creative lane will spawn persona-specific hooks that connect to a shared bo
 
 | Script ID | Lane | Format | Length | Status |
 |-----------|------|--------|--------|--------|
-| rs1-0001 | TBD | TBD | TBD | Not started — awaiting persona confirmation |
+| rs1-0001 | TBD | TBD | TBD | Not started — personas confirmed — ad copy review ~April 1 |
 | rs1-0002 | TBD | TBD | TBD | Not started |
 | rs1-0003 | TBD | TBD | TBD | Not started |
 
@@ -771,23 +816,68 @@ From the RS1 Visual Asset List:
 | Iconik | RS1 folder | Existing footage and assets |
 | Jenni Nagel Files | Design files | .ai, .pdf source assets |
 
-### Influencer Seeding Brief
+### Influencer Brief Strategy
 
-> For John Hardesty's influencer outreach. These are the 5 key themes influencers should cover when creating RS1 content.
+> **Decision (pre-production call 2026-03-26):** ONE unified brief for all influencers. Not persona-specific briefs — not scalable. One core brief that ensures all influencers speak the same language, aligned to the 5 key themes. Persona-specific shot lists layer on top for targeted talent.
+>
+> **Timeline:** Within 5-7 days of the call (target: ~April 2, 2026)
+>
+> **Urgency:** John Hardesty managing 40 custom putters going to influencers now. Unboxing project first, then 2-3 additional videos per influencer over the next few weeks. Needs brief ASAP.
 
-**Recommended Video Types**: Unboxing, putting demo, on-course usage, face-down balance test
+**Recommended Video Types**: Unboxing + Table Test combo, putting demo, on-course usage, 120fps overhead comparison, hallway challenge
 
-**5 Key Themes (Donnie-Approved):**
+**5 Key Themes (Donnie-Approved, prioritized in order):**
 
 1. **Forward Axis Weighting** — 75%+ weight in front of the shaft axis. Eliminates face drift. No other putter does this.
 2. **"Pull it back, let it fall"** — gravity does the work. Show the natural pendulum stroke. The putter wants to stay square.
 3. **Face-Down Balance** — place it face-down on a flat surface. It stays. Every other putter flops open. Visual proof.
 4. **Chris McGinley's Story** — 30+ years designing clubs for 11 world #1 players. RS1 is his life's work.
-5. **"Science of the Stroke"** — RS1 helps your technique, not just better metal. Reference robot testing videos.
+5. **"Science of the Stroke" + 125-Year Evolution** — RS1 helps your technique, not just better metal. Robot testing proof. Schenectady (1900) → Ping (1966) → LAB → RS1 narrative.
+
+**Table Test Instructions (from McGinley, pre-production call):**
+- Shaft must roll on table edge, NOT the grip (grips aren't round)
+- Also works on fingers — hold in several fingers, not one
+- JoJo: Use as pattern interrupt hook during unboxing ("I was told to try this test...")
+- Coaching tip: "This is the test" format works better than "look at this feature"
 
 **Throughline**: Themes 1-3 = technology. Themes 4-5 = story/technique.
 
 **Compliance**: "Conforms to the rules of golf" — mention if asked, not a primary talking point.
+
+### Filming Concepts (from pre-production call 2026-03-26)
+
+| # | Concept | Owner | Status | Notes |
+|---|---------|-------|--------|-------|
+| 1 | **Table Test (face-down balance)** | JoJo | Filmed | "Looks absolutely sick." On table + on fingers. |
+| 2 | **Unboxing + Table Test combo** | Influencers | Brief needed | Pattern interrupt hook: "I was told to try this..." |
+| 3 | **Schenectady Putter education video** | JoJo + McGinley | Putter purchased | 125-year evolution piece. Donnie: "batch one, top of funnel" |
+| 4 | **Laser/scope alignment (T-Trac)** | JoJo | Not yet filmed | Low angle shot — T-Trac lines look like a gun scope. Donnie's concept. |
+| 5 | **Hallway Challenge** | Donnie + JoJo | Location scouted | Longest hallway in the world (Boca Raton). LED lights + RS1 putting. "Waiting for viral." |
+| 6 | **Robot testing re-shoot (4 videos)** | JoJo + McGinley | Scheduled | GC Quad Max at Reflex. Re-film at higher quality than iPhone originals. |
+| 7 | **Salt Flats / Death Valley stunt** | JoJo | Exploring | Furnace Creek golf course (lowest altitude on planet). Dramatic visual. |
+| 8 | **Parallax studio (April 15)** | JoJo | Booked — 8 hours | Volume/parallax capability. "Putting in Times Square / on the moon." |
+| 9 | **Overhead 120fps comparison** | Influencers (UGC) | Brief needed | Tripod pointing down, RS1 vs their putter at 120fps. Shows arc + face angle difference. |
+| 10 | **Raw testimonials** | JoJo | 10-15 already filmed | People using RS1 and talking about it on camera. |
+
+### Equipment Available at Reflex
+
+| Equipment | Available | Notes |
+|-----------|-----------|-------|
+| **GC Quad Max** | YES | Putting module + full swing. Primary launch monitor. |
+| **Robot** | YES | Key for proof videos. |
+| **Quintic** | NO | User unfriendly, hard to export data. |
+| **SAM PuttLab** | NO | Could potentially arrange a separate proof shoot location. |
+
+> **Impact:** Some proof shoot concepts from Donnie's original plan need adjustment. GC Quad Max + Robot are the two primary proof tools. SAM PuttLab visual data (putter path diagrams) not available unless a separate location is arranged.
+
+### Ad-to-Footage Workflow (confirmed by JoJo, pre-production call)
+
+1. Christopher writes ads/scripts based on personas + themes
+2. JoJo reviews against available footage inventory
+3. If footage gaps exist → schedule targeted shoots
+4. JoJo casts talent to fit personas, shoots in appropriate locations
+5. On shoot day: JoJo experiments/augments beyond the shot list
+6. **Key timing:** Ad copy review ~April 1 → footage gaps identified → shoots scheduled before Founders launch (April 27)
 
 ---
 
@@ -885,7 +975,7 @@ Batch 1 creative directions draw from the 4 lanes in Section 5. No locked script
 | Item | Status | Owner |
 |------|--------|-------|
 | Exact launch date | TBD | Ops / Leadership |
-| Ad scripts | Not started — awaiting persona confirmation | Creative |
+| Ad scripts | Not started — personas confirmed — ad copy review ~April 1 | Creative |
 | Budget numbers | TBD | Media Buying |
 | COGS per unit | TBD | Ops |
 | Page URLs | TBD — PDP design starts March 23 | Dev |

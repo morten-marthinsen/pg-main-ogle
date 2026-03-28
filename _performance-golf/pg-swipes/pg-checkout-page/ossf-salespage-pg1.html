@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=395, initial-scale=1.0">
+<title>OSSF Sales Page Pricing CTA — PG1 Member Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #1d1a1a;
+    width: 395px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── PRICING HEADER ── */
+  .pricing-header {
+    text-align: center;
+    padding: 30px 20px 0;
+  }
+  .pricing-header .nonmember-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1a1a;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .pricing-header .member-price {
+    font-size: 30px;
+    font-weight: 800;
+    color: #e10000;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .pricing-header .save-subtitle {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  /* ── ONLY AT PG PILL ── */
+  .only-at-pg {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  .only-at-pg .pg-logo {
+    background: #fff;
+    color: #1a1a1a;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 4px;
+    border-radius: 2px;
+    line-height: 1;
+  }
+
+  /* ── INSTANT ACCESS LABEL ── */
+  .instant-access {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 20px 24px;
+  }
+  .instant-access svg {
+    flex-shrink: 0;
+  }
+
+  /* ── PRICING OPTION CARDS ── */
+  .pos-wrapper {
+    padding: 0 16px;
+  }
+  .pos-box {
+    border: 2px solid #d9d9d9;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .pos-box.pos-active {
+    border-color: #fd3300;
+  }
+  .pos-box-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .pos-radio {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pos-active .pos-radio {
+    border-color: #fd3300;
+  }
+  .pos-radio-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fd3300;
+    display: none;
+  }
+  .pos-active .pos-radio-dot {
+    display: block;
+  }
+  .pos-box-label {
+    flex: 1;
+  }
+  .pos-box-label h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 2px 0;
+    color: #1d1a1a;
+  }
+  .pos-box-label p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+  }
+  .pos-box-price {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .pos-box-price .pos-strike {
+    text-decoration: line-through;
+    color: #7b726c;
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  .pos-box-price .pos-amount {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1d1a1a;
+  }
+  .pos-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+    border-radius: 3px;
+  }
+  .pos-badge-value {
+    background: #10A854;
+    color: #fff;
+  }
+
+  /* ── BENEFITS LIST ── */
+  .pos-benefits {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+  .pos-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .pos-benefit .check {
+    font-size: 15px;
+    color: #10A854;
+    flex-shrink: 0;
+    margin-top: 1px;
+    line-height: 1.4;
+  }
+  .pos-benefit span {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+  }
+  .pos-benefit span strong {
+    color: #1d1a1a;
+  }
+
+  /* ── MEMBER EXTRAS ── */
+  .pos-member-extra {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+  }
+  .pos-member-extra-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+  }
+
+  /* ── TOTAL BAR ── */
+  .pos-total {
+    background: #f6f5f1;
+    padding: 14px 16px;
+    margin-top: 14px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pos-total-label {
+    font-size: 14px;
+    color: #1d1a1a;
+  }
+  .pos-total-label .pos-total-amount {
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+  }
+  .pos-total-label .pos-total-strike {
+    text-decoration: line-through;
+    color: #7b726c;
+    font-size: 16px;
+    margin-right: 6px;
+  }
+  .pos-save-badge {
+    background: #10A854;
+    color: #fff;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  /* ── PG1 NOTE ── */
+  .pos-pg1-note {
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+  .pos-pg1-note strong {
+    color: #333;
+  }
+
+  /* ── CTA BUTTON ── */
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: calc(100% - 32px);
+    margin: 20px auto;
+    padding: 18px 24px;
+    background: linear-gradient(180deg, #f0ff91, #f5c644 100%);
+    border: 1px solid #b38b22;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    font-family: inherit;
+    line-height: 1.3;
+  }
+  .cta-button:hover {
+    background: linear-gradient(180deg, #e8f580, #e8b83a 100%);
+    color: #000;
+    text-decoration: none;
+  }
+  .cta-button svg, .cta-button img {
+    flex-shrink: 0;
+  }
+
+  /* ── TRUST BADGES ── */
+  .trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 8px 20px 16px;
+    align-items: stretch;
+  }
+  .trust-badge {
+    flex: 1;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 11px;
+    color: #555;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  .trust-badge .badge-icon {
+    font-size: 20px;
+    color: #10A854;
+  }
+  .trust-badge strong {
+    color: #333;
+    font-size: 12px;
+  }
+
+  /* ── GUARANTEE LINK ── */
+  .guarantee-link {
+    text-align: center;
+    padding: 4px 20px 20px;
+    font-size: 14px;
+  }
+  .guarantee-link a {
+    color: #10A854;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .guarantee-link a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── TESTIMONIAL PLACEHOLDER ── */
+  .testimonial-placeholder {
+    margin: 0 16px 24px;
+    padding: 20px;
+    background: #fafafa;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    font-style: italic;
+  }
+</style>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+
+<!-- PRICING HEADER -->
+<div class="pricing-header">
+  <div class="nonmember-price">NON MEMBER PRICE: $197</div>
+  <div class="member-price">NEW MEMBER PRICE: $47</div>
+  <div class="save-subtitle">(Save 76% today with this one-time special offer for new students)</div>
+  <div class="only-at-pg">
+    ONLY AT <span class="pg-logo">PG</span>
+  </div>
+</div>
+
+<!-- INSTANT ACCESS -->
+<div class="instant-access">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+  AVAILABLE NOW FOR INSTANT ONLINE ACCESS
+</div>
+
+<!-- PRICING OPTION CARDS -->
+<div class="pos-wrapper">
+
+  <!-- OPTION 1: NON-MEMBER PRICING (default selected) -->
+  <div class="pos-box pos-active" id="pos-nonmember" onclick="posSelect('nonmember')">
+    <div class="pos-box-header">
+      <div class="pos-radio"><div class="pos-radio-dot"></div></div>
+      <div class="pos-box-label">
+        <h4>Non-Member Pricing</h4>
+        <p>One Shot Slice Fix Video Training</p>
+      </div>
+      <div class="pos-box-price">
+        <span class="pos-amount">$197</span>
+      </div>
+    </div>
+    <div class="pos-benefits">
+      <div class="pos-benefit">
+        <span class="check">&#10004;</span>
+        <span>365-Day Money-Back Guarantee</span>
+      </div>
+      <div class="pos-benefit">
+        <span class="check">&#10004;</span>
+        <span>Instant Online Access</span>
+      </div>
+      <div class="pos-benefit">
+        <span class="check">&#10004;</span>
+        <span>100% Secure Checkout</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION 2: NEW MEMBER PRICING -->
+  <div class="pos-box" id="pos-member" onclick="posSelect('member')">
+    <div class="pos-box-header">
+      <div class="pos-radio"><div class="pos-radio-dot"></div></div>
+      <div class="pos-box-label">
+        <h4>New Member Pricing</h4>
+        <p>One Shot Slice Fix Video Training</p>
+      </div>
+      <div class="pos-box-price">
+        <span class="pos-strike">$197</span>
+        <span class="pos-amount">$47</span>
+        <br>
+        <span class="pos-badge pos-badge-value">BEST VALUE</span>
+      </div>
+    </div>
+    <div class="pos-benefits">
+      <div class="pos-benefit">
+        <span class="check">&#10004;</span>
+        <span>365-Day Money-Back Guarantee</span>
+      </div>
+      <div class="pos-benefit">
+        <span class="check">&#10004;</span>
+        <span>Instant Online Access</span>
+      </div>
+      <div class="pos-benefit">
+        <span class="check">&#10004;</span>
+        <span>100% Secure Checkout</span>
+      </div>
+      <div class="pos-member-extra">
+        <p class="pos-member-extra-title">PLUS — delivered through the PG1 Game Improvement App experience:</p>
+        <div class="pos-benefit">
+          <span class="check">&#10004;</span>
+          <span>Personalized coaching from a top-ranked PGA professional</span>
+        </div>
+        <div class="pos-benefit">
+          <span class="check">&#10004;</span>
+          <span>A complete practice plan built around YOUR goals, schedule &amp; skill level</span>
+        </div>
+        <div class="pos-benefit">
+          <span class="check">&#10004;</span>
+          <span>Step-by-step guidance — not random drills</span>
+        </div>
+        <div class="pos-benefit">
+          <span class="check">&#10004;</span>
+          <span>Track your progress and know what to work on next</span>
+        </div>
+        <div class="pos-benefit">
+          <span class="check">&#10004;</span>
+          <span>Daily recommendations that adapt as you improve</span>
+        </div>
+      </div>
+    </div>
+    <div class="pos-total">
+      <div class="pos-total-label">
+        Total Price
+        <span class="pos-total-amount"><span class="pos-total-strike">$197</span> $47</span>
+      </div>
+      <div class="pos-save-badge">YOU SAVE $150</div>
+    </div>
+    <p class="pos-pg1-note"><strong>PG1 App — 7 Days FREE</strong>, then $29/mo.<br>Cancel anytime with 1 click.</p>
+  </div>
+
+  <!-- CTA BUTTON -->
+  <a href="#NON-MEMBER-CHECKOUT-URL" class="cta-button" id="pos-cart-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    <span id="pos-cart-text">Yes, Fix My Slice Now For $197</span>
+  </a>
+</div>
+
+<!-- TRUST BADGES -->
+<div class="trust-badges">
+  <div class="trust-badge">
+    <span class="badge-icon">&#128737;</span>
+    <strong>365-Day</strong>
+    100% Money-Back<br>Guarantee
+  </div>
+  <div class="trust-badge">
+    <span class="badge-icon">&#128274;</span>
+    <strong>100% Protected</strong>
+    100% Secured
+  </div>
+</div>
+
+<!-- GUARANTEE LINK -->
+<div class="guarantee-link">
+  <a href="#">+ Tap to see guarantee details</a>
+</div>
+
+<!-- TESTIMONIAL PLACEHOLDER -->
+<div class="testimonial-placeholder">
+  <!-- TODO: Insert OSSF-specific testimonials here -->
+  [OSSF Testimonial Placeholder — Replace with customer testimonial content]
+</div>
+
+<!-- PRICING TOGGLE SCRIPT -->
+<script>
+  function posSelect(option) {
+    var nm = document.getElementById('pos-nonmember');
+    var m = document.getElementById('pos-member');
+    var btn = document.getElementById('pos-cart-btn');
+    var btnText = document.getElementById('pos-cart-text');
+    if (option === 'member') {
+      nm.classList.remove('pos-active');
+      m.classList.add('pos-active');
+      btn.href = '#MEMBER-CHECKOUT-URL';
+      btnText.textContent = 'Yes, Fix My Slice Now For $47';
+    } else {
+      m.classList.remove('pos-active');
+      nm.classList.add('pos-active');
+      btn.href = '#NON-MEMBER-CHECKOUT-URL';
+      btnText.textContent = 'Yes, Fix My Slice Now For $197';
+    }
+  }
+</script>
+
+</body>
+</html>

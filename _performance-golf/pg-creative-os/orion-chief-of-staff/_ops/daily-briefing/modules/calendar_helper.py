@@ -143,7 +143,7 @@ def format_time(dt: Optional[datetime], **kwargs) -> str:
     """Format a datetime for display (e.g., '9:30 AM').
 
     Times are already in the correct display timezone because the Calendar API
-    is called with display_timezone from config (defaults to Europe/Lisbon).
+    is called with display_timezone from config (defaults to America/New_York).
     """
     if dt is None:
         return "All day"
@@ -184,7 +184,7 @@ def append_agenda_item(service, event_id: str, agenda_item: str,
 
 
 def find_event_by_name(service, event_name: str, target_date: date,
-                       timezone: str = "Europe/Lisbon") -> Optional[dict]:
+                       timezone: str = "America/New_York") -> Optional[dict]:
     """Find an event by partial name match on a given date. Returns raw event or None."""
     events = fetch_events_for_date(service, target_date, timezone)
     for ev in events:
