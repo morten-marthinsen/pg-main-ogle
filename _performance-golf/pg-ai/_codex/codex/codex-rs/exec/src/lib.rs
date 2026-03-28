@@ -640,7 +640,14 @@ async fn run_exec_session(args: ExecRunArgs) -> anyhow::Result<()> {
     // is using.
     event_processor.print_config_summary(&config, &prompt_summary, &session_configured);
     if !json_mode && let Some(message) = codex_core::config::system_bwrap_warning() {
+<<<<<<< HEAD
+        let _ = event_processor.process_event(Event {
+            id: String::new(),
+            msg: EventMsg::Warning(codex_protocol::protocol::WarningEvent { message }),
+        });
+=======
         event_processor.process_warning(message);
+>>>>>>> origin/main
     }
 
     info!("Codex initialized with event: {session_configured:?}");

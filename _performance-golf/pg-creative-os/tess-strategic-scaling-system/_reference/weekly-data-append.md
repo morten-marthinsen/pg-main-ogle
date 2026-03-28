@@ -172,11 +172,57 @@ If the QUERY formula breaks, it's likely due to:
 
 ---
 
+## Automated Data Pipeline (LIVE — March 2026)
+
+As of March 2026, the manual CSV export process above is **replaced** by pg-data-service + Orion daily briefing automation.
+
+### How It Works
+
+1. **Daily fetch (automatic)**: Orion daily briefing module M15 pulls yesterday's ad performance from Domo API each morning and saves it to `pg-data-service/dataruns/YYYY-MM/YYYY-MM-DD.csv`
+2. **TESS reads from dataruns/**: Instead of manual CSV exports, TESS loads data directly from the local dataruns/ directory
+
+### TESS Data Access
+
+```python
+import sys
+sys.path.insert(0, "/path/to/pg-data-service")  # or relative path from your script
+from api import load_dataruns
+
+# Load any date range — reads from local CSVs, no API call
+df = load_dataruns("2026-03-17", "2026-03-23")  # Last week
+df = load_dataruns("2026-01-01", "2026-03-24")  # Full history
+
+# Columns (29, clean names — no <BR> artifacts):
+# Ad, Day, Spend, Net Revenue, Net ROAS, NC Net ROAS, Cost / # SC Trials,
+# CPA, NC CPA, Net Loss Per Trial, Fixed Refund NLPT, NC %, Gross Revenue,
+# Gross ROAS, CVR, NC CVR%, RC CVR%, AOV, NC AOV, RC AOV, CPC, CTR, CPM,
+# Orders, # SC Trials Started, NC Orders, Clicks, Impressions, Fixed Refund Net Revenue
+```
+
+### Data Coverage
+
+- **Backfilled**: Jan 1, 2026 through March 24, 2026 (83 days, ~55K rows)
+- **Daily append**: Each morning via Orion M15 module
+- **Dedup**: Files are per-day; if already fetched, the pipeline skips
+- **Status**: Visible in daily briefing under "Fetch Status" section
+
+### Backfill (if needed)
+
+```bash
+cd pg-data-service
+python3 scripts/backfill.py                          # Jan 1 to yesterday
+python3 scripts/backfill.py --from 2026-04-01        # Custom start
+python3 scripts/backfill.py --from 2026-04-01 --to 2026-04-07  # Custom range
+```
+
+---
+
 ## Future Enhancements
 
-1. **Domo API Integration** - Automate the entire process
+1. ~~**Domo API Integration** - Automate the entire process~~ — DONE (pg-data-service + M15)
 2. **Net Loss Per Trial** - Add weighted average NLPT calculation (pending methodology confirmation)
 3. **Automated Alerts** - Notify when ads hit performance thresholds
+4. **SSS Spreadsheet Auto-Sync** - Auto-append daily data to Raw_Daily_Data tab (eliminates manual import step)
 
 ---
 
@@ -185,7 +231,11 @@ If the QUERY formula breaks, it's likely due to:
 | File | Location |
 |------|----------|
 | SSS Spreadsheet | [Google Sheets Link](https://docs.google.com/spreadsheets/d/1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U/edit) |
-| Domo CSV Exports | `tess-strategic-scaling-system/_reference/domo-csvs/` (repo-relative) |
+| Dataruns (automated) | `pg-data-service/dataruns/YYYY-MM/YYYY-MM-DD.csv` |
+| Domo CSV Exports (legacy) | `tess-strategic-scaling-system/_reference/domo-csvs/` (repo-relative) |
+| Data Service API | `pg-data-service/api.py` — `load_dataruns()`, `get_card()`, `get_raw()` |
+| Backfill Script | `pg-data-service/scripts/backfill.py` |
+| Daily Fetch Module | `orion-chief-of-staff/_ops/daily-briefing/modules/m15_data_fetch.py` |
 | This Documentation | `tess-strategic-scaling-system/_reference/weekly-data-append.md` (this file) |
 
 ---
@@ -196,4 +246,5 @@ If the QUERY formula breaks, it's likely due to:
 |------|--------|
 | 2026-01-21 | Initial documentation created |
 | 2026-01-21 | Imported first dataset (Jan 1-21, 2026): 14,885 daily rows |
+| 2026-03-25 | Automated pipeline live: pg-data-service daily fetch via Orion M15, `load_dataruns()` API for TESS. Manual CSV process retired. |
 

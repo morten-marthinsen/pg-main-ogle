@@ -38,7 +38,7 @@ LAUNCH_BOARDS_DIR = Path(__file__).resolve().parent.parent.parent / "launch-boar
 
 class ProductionSyncModule(BriefingModule):
     name = "Production Sync"
-    key = "m14_production_sync"
+    key = "production_sync"
     setup_required = "ClickUp API token in .env (CLICKUP_API_TOKEN)"
 
     def fetch_data(self) -> Any:

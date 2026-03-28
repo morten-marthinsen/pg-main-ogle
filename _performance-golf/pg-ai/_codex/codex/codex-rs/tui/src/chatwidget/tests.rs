@@ -7081,6 +7081,8 @@ fn render_bottom_popup(chat: &ChatWidget, width: u16) -> String {
     lines.join("\n")
 }
 
+<<<<<<< HEAD
+=======
 fn strip_osc8_for_snapshot(text: &str) -> String {
     // Snapshots should assert the visible popup text, not terminal hyperlink escapes.
     let bytes = text.as_bytes();
@@ -7115,6 +7117,7 @@ fn strip_osc8_for_snapshot(text: &str) -> String {
     stripped
 }
 
+>>>>>>> origin/main
 fn plugins_test_absolute_path(path: &str) -> AbsolutePathBuf {
     std::env::temp_dir()
         .join("codex-plugin-menu-tests")
@@ -7193,7 +7196,10 @@ fn plugins_test_repo_marketplace(plugins: Vec<PluginSummary>) -> PluginMarketpla
 fn plugins_test_response(marketplaces: Vec<PluginMarketplaceEntry>) -> PluginListResponse {
     PluginListResponse {
         marketplaces,
+<<<<<<< HEAD
+=======
         marketplace_load_errors: Vec::new(),
+>>>>>>> origin/main
         remote_sync_error: None,
         featured_plugin_ids: Vec::new(),
     }
@@ -7271,7 +7277,11 @@ async fn plugins_popup_loading_state_snapshot() {
 }
 
 #[tokio::test]
+<<<<<<< HEAD
+async fn plugins_popup_snapshot_shows_all_marketplaces_and_preserves_response_order() {
+=======
 async fn plugins_popup_snapshot_shows_all_marketplaces_and_sorts_installed_then_name() {
+>>>>>>> origin/main
     let (mut chat, _rx, _op_rx) = make_chatwidget_manual(None).await;
     chat.set_feature_enabled(Feature::Plugins, true);
 
@@ -7324,6 +7334,15 @@ async fn plugins_popup_snapshot_shows_all_marketplaces_and_sorts_installed_then_
         "expected /plugins to include non-curated marketplaces, got:\n{popup}"
     );
     assert!(
+<<<<<<< HEAD
+        plugins_test_popup_row_position(&popup, "Bravo Search")
+            < plugins_test_popup_row_position(&popup, "Alpha Sync")
+            && plugins_test_popup_row_position(&popup, "Alpha Sync")
+                < plugins_test_popup_row_position(&popup, "Starter")
+            && plugins_test_popup_row_position(&popup, "Starter")
+                < plugins_test_popup_row_position(&popup, "Hidden Repo Plugin"),
+        "expected /plugins rows to keep response order, got:\n{popup}"
+=======
         plugins_test_popup_row_position(&popup, "Alpha Sync")
             < plugins_test_popup_row_position(&popup, "Bravo Search")
             && plugins_test_popup_row_position(&popup, "Bravo Search")
@@ -7331,6 +7350,7 @@ async fn plugins_popup_snapshot_shows_all_marketplaces_and_sorts_installed_then_
             && plugins_test_popup_row_position(&popup, "Hidden Repo Plugin")
                 < plugins_test_popup_row_position(&popup, "Starter"),
         "expected /plugins rows to sort installed plugins first, then alphabetically, got:\n{popup}"
+>>>>>>> origin/main
     );
 }
 
@@ -7368,6 +7388,9 @@ async fn plugin_detail_popup_snapshot_shows_install_actions_and_capability_summa
     );
 
     let popup = render_bottom_popup(&chat, 100);
+<<<<<<< HEAD
+    assert_snapshot!("plugin_detail_popup_installable", popup);
+=======
     assert_snapshot!(
         "plugin_detail_popup_installable",
         strip_osc8_for_snapshot(&popup)
@@ -7416,6 +7439,7 @@ async fn plugin_detail_popup_hides_disclosure_for_installed_plugins() {
         "plugin_detail_popup_installed",
         strip_osc8_for_snapshot(&popup)
     );
+>>>>>>> origin/main
 }
 
 #[tokio::test]
@@ -7490,7 +7514,11 @@ async fn plugins_popup_refresh_replaces_selection_with_first_row() {
         "expected refresh to rebuild the popup from the new first row, got:\n{after}"
     );
     assert!(
+<<<<<<< HEAD
+        after.contains("Slack · ChatGPT Marketplace"),
+=======
         after.contains("Slack"),
+>>>>>>> origin/main
         "expected refreshed popup to include the updated plugin list, got:\n{after}"
     );
 }
@@ -7526,7 +7554,11 @@ async fn plugins_popup_refreshes_installed_counts_after_install() {
         "expected initial installed count before refresh, got:\n{before}"
     );
     assert!(
+<<<<<<< HEAD
+        before.contains("Can be installed"),
+=======
         before.contains("Available"),
+>>>>>>> origin/main
         "expected pre-install popup copy before refresh, got:\n{before}"
     );
 
@@ -7559,7 +7591,11 @@ async fn plugins_popup_refreshes_installed_counts_after_install() {
         "expected /plugins to refresh installed counts after install, got:\n{after}"
     );
     assert!(
+<<<<<<< HEAD
+        after.contains("Installed. Press Enter to view plugin details."),
+=======
         after.contains("Installed   Press Enter to view plugin details."),
+>>>>>>> origin/main
         "expected refreshed selected row copy to reflect the installed plugin state, got:\n{after}"
     );
 }
@@ -7607,7 +7643,12 @@ async fn plugins_popup_search_filters_visible_rows_snapshot() {
     let popup = render_bottom_popup(&chat, 100);
     assert_snapshot!("plugins_popup_search_filtered", popup);
     assert!(
+<<<<<<< HEAD
+        !popup.contains("Calendar · ChatGPT Marketplace")
+            && !popup.contains("Drive · ChatGPT Marketplace"),
+=======
         !popup.contains("Calendar") && !popup.contains("Drive"),
+>>>>>>> origin/main
         "expected search to leave only matching rows visible, got:\n{popup}"
     );
 }
@@ -7659,7 +7700,12 @@ async fn plugins_popup_search_no_matches_and_backspace_restores_results() {
 
     let restored = render_bottom_popup(&chat, 100);
     assert!(
+<<<<<<< HEAD
+        restored.contains("Calendar · ChatGPT Marketplace")
+            && restored.contains("Slack · ChatGPT Marketplace"),
+=======
         restored.contains("Calendar") && restored.contains("Slack"),
+>>>>>>> origin/main
         "expected clearing the query to restore the plugin rows, got:\n{restored}"
     );
     assert!(

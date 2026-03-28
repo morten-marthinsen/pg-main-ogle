@@ -1,9 +1,14 @@
 use super::*;
 use base64::Engine;
 use base64::engine::general_purpose::STANDARD as BASE64_STANDARD;
+<<<<<<< HEAD
+use codex_git::GhostCommit;
+use codex_protocol::AgentPath;
+=======
 use codex_git_utils::GhostCommit;
 use codex_protocol::AgentPath;
 use codex_protocol::config_types::ReasoningSummary;
+>>>>>>> origin/main
 use codex_protocol::models::BaseInstructions;
 use codex_protocol::models::ContentItem;
 use codex_protocol::models::FunctionCallOutputBody;
@@ -17,12 +22,16 @@ use codex_protocol::models::ReasoningItemContent;
 use codex_protocol::models::ReasoningItemReasoningSummary;
 use codex_protocol::openai_models::InputModality;
 use codex_protocol::openai_models::default_input_modalities;
+<<<<<<< HEAD
+use codex_protocol::protocol::InterAgentCommunication;
+=======
 use codex_protocol::protocol::AskForApproval;
 use codex_protocol::protocol::InterAgentCommunication;
 use codex_protocol::protocol::SandboxPolicy;
 use codex_protocol::protocol::TurnContextItem;
 use codex_utils_output_truncation::TruncationPolicy;
 use codex_utils_output_truncation::truncate_text;
+>>>>>>> origin/main
 use image::ImageBuffer;
 use image::ImageFormat;
 use image::Rgba;
@@ -51,7 +60,10 @@ fn inter_agent_assistant_msg(text: &str) -> ResponseItem {
         AgentPath::root().join("worker").unwrap(),
         Vec::new(),
         text.to_string(),
+<<<<<<< HEAD
+=======
         true,
+>>>>>>> origin/main
     );
     ResponseItem::Message {
         id: None,
@@ -309,6 +321,8 @@ fn inter_agent_assistant_messages_are_turn_boundaries() {
 }
 
 #[test]
+<<<<<<< HEAD
+=======
 fn for_prompt_preserves_inter_agent_assistant_messages() {
     let item = inter_agent_assistant_msg("continue");
     let history = create_history_with_items(vec![item.clone()]);
@@ -318,6 +332,7 @@ fn for_prompt_preserves_inter_agent_assistant_messages() {
 }
 
 #[test]
+>>>>>>> origin/main
 fn drop_last_n_user_turns_treats_inter_agent_assistant_messages_as_instruction_turns() {
     let first_turn = user_input_text_msg("first");
     let first_reply = assistant_msg("done");

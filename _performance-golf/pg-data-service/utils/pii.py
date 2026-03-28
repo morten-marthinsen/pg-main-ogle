@@ -1,4 +1,5 @@
 """PII stripping utility — strips PII columns from DataFrames before any output."""
+from __future__ import annotations
 
 import yaml
 import pandas as pd

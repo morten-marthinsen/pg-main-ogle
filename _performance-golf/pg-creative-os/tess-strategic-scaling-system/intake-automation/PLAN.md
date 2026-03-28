@@ -1,129 +1,135 @@
-# Plan: ClickUp Intake Form -> Asset Registry Auto-Sync with Auto-ID Generation
+# Intake Auto-ID Generator — Implementation Record
 
-## Context
+## What This Does
 
-When someone submits the Ad Backlog Intake Form in ClickUp, a new task is created in the intake list. Currently, the submitter must manually look up the next available Asset ID from spreadsheets and type it into the form -- error-prone and slow. This automation will:
-1. Detect new form submissions (tasks without valid Asset IDs)
-2. Auto-generate the next available Asset ID by reading the Asset Registry
-3. Update the ClickUp task name with the generated ID
-4. Write the asset row to the Google Sheets Asset Registry tab
+When someone submits the Ad Backlog Intake Form in ClickUp, a new task is created. This automation detects new tasks without valid Ad IDs, reads the correct Creative Performance (CP) spreadsheet to find the highest existing ID, generates the next sequential one, and updates the ClickUp task name.
 
-## Approach: Python Polling Script (launchd, every 2 min)
+## Architecture
 
-**Why polling over webhook**: Reuses existing `registry_sync.py` Python code directly (no porting to JavaScript), follows the established launchd pattern (Orion daily, Tess weekly), and is easy to debug. Form submissions are low-frequency (a few/day), so a 2-minute delay is acceptable. Upgrade path to real-time Apps Script webhook exists if needed later.
+Python polling script via launchd (every 2 min):
+```
+ClickUp Form → Task created → Script polls → Reads CP sheet → Generates next ID → Updates task name
+```
 
-## Existing Code to Reuse
+## Data Source
 
-| Function / Class | File | What it does |
-|---|---|---|
-| `get_next_root_angle_id(offer)` | `registry_sync.py:534` | Reads Asset Registry, returns next 4-digit root angle ID |
-| `get_next_variation_id(offer, root_angle_id)` | `registry_sync.py:571` | Returns next variation ID (e.g., "v0010") |
-| `_build_sheets_creds()` | `registry_sync.py:74` | Google Sheets OAuth via MCP token |
-| `RegistryRow` dataclass | `registry_sync.py:134` | 18-column row model (A-R) |
-| `_write_rows()` | `registry_sync.py:438` | Appends rows to Asset Registry tab |
-| `_read_existing_ids()` | `registry_sync.py:413` | Reads Column D for dedup |
-| Custom field helpers | `registry_sync.py:473-526` | Extract text, dropdown, URL, users fields from tasks |
+**Creative Performance (CP) spreadsheets** (16 per-product sheets, read-only):
+- Digital: PGB, DQFE1, DQFE, PGF, HTKT, OSSF, PG1, SSTS (+ WPSS shares DQFE sheet)
+- Physical: 357, CLST, DF1, SF1, SF2, SPD, SSP, WDG1
+- Products without CP sheets flagged for manual ID
 
-**All source files at**: `_performance-golf/pg-creative-os/tess-strategic-scaling-system/` (relative to repo root)
+**NOT the SSS Asset Registry** — CP sheets are the current source of truth. SSS consolidation is future work.
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| `config.yaml` | Funnel-to-spreadsheet mapping (34 entries), ClickUp field names, tab names |
+| `intake_id_generator.py` | Main script — `IntakeIDGenerator` class with CP reader + ClickUp client |
+| `run-intake-id.sh` | Shell wrapper (loads .env, runs Python via Orion venv, logs) |
+| `.env` | Symlink → `../../orion-chief-of-staff/_ops/daily-briefing/.env` |
+| `logs/` | Runtime logs (gitignored) |
+| `~/Library/LaunchAgents/com.performancegolf.intake-id.plist` | Launchd job (120s interval) |
+
+## ClickUp Integration (Verified via API)
+
+- **List**: Ad Backlog (`901413749270`) in Creative > Advertising
+- **Form**: `https://performancegolf.clickup.com/forms/9014714949/f/8cn38j5-62614/NNYCH9IZES3FXZNI0T`
+
+### Custom Fields Used
+
+| Field | Type | Purpose |
+|-------|------|---------|
+| Product Funnel(s) | labels (multi-select) | Funnel code — UUID resolved to label (e.g., "OSSF (One Shot Slice Fix)" → `ossf`) |
+| Ad Category | dropdown | NN, NNMU, EXV, EXH, PRM, EVG |
+| Expansion AD ID | short_text | Parent ID for expansions (e.g., "ossf-0466 v0322") |
+| Ad Format | dropdown | Video, Static, HTML5 |
+| Full Ad ID | — | Does not exist as a custom field yet. Script updates task name instead. |
+
+## ID Format
+
+Positions 1-3 of the 15-position naming convention: `{funnel}-{root_angle_id}-v{variation}`
+
+| Type | Root Angle Format | Example |
+|------|------------------|---------|
+| Video | 4-digit numeric | `sf2-0008-v0001` |
+| Static | `i` + 3-digit | `sf2-i004-v0001` |
+| HTML5 | `h` + 3-digit | `sf2-h002-v0001` |
 
 ## ID Generation Logic
 
-### Net New (Ad Category = "NN")
-1. Read **Offer/Funnel** dropdown -> e.g., "dqfe"
-2. Call `get_next_root_angle_id("dqfe")` -> e.g., "0037"
-3. Variation is always `v0001` for new angles
-4. Asset ID = `dqfe-0037-v0001`
-5. Task name updated to `dqfe-0037-v0001`
+**Net New** (Ad Category = NN/NNMU):
+1. Parse funnel code from Product Funnel(s) label
+2. Read CP sheet → find max root angle ID for that funnel + asset type
+3. Increment → assign with `v0001`
 
-### Expansion (Ad Category = "EXV", "EXH", etc.)
-1. Read **"Ad ID for Expansion"** field -> e.g., "DQFE-0036-v0003"
-2. Parse: offer = "dqfe", root_angle_id = "0036"
-3. Call `get_next_variation_id("dqfe", "0036")` -> e.g., "v0010"
-4. Asset ID = `dqfe-0036-v0010`
-5. Task name updated to `dqfe-0036-v0010`
+**Expansion** (Ad Category = EXV/EXH/etc.):
+1. Parse parent root angle from Expansion AD ID field
+2. Read CP sheet → find max variation for that root angle
+3. Increment variation number
 
-### Detection of Unprocessed Tasks
-- Task name does NOT match `{offer}-{root_angle_id}-v{NNNN}` regex patterns
-- Once processed, the task name IS the Asset ID (self-documenting)
+## Already-Processed Detection
 
-## Form Fields (Confirmed Available)
+A task is skipped if:
+- Full Ad ID field has a valid `{funnel}-{root_angle}-v{NNNN}` value, OR
+- Task name starts with an ID pattern (handles periods, spaces, ranges)
 
-| Field | Type | Used For |
-|---|---|---|
-| Offer/Funnel | Dropdown | Offer code for ID generation |
-| Ad Category | Dropdown | Determines NN vs. expansion type (EXV, EXH, etc.) |
-| Ad ID for Expansion | Text | Parent asset ID for expansions (e.g., "DQFE-0036-v0003") |
-| Ad Root Angle Name | Text | Root angle name (Col F) |
-| Ad Format | Dropdown | Media type (Col E) |
-| Hypothesis | Text | Notes/Description (Col H) |
-| Copywriter | People | Copywriter (Col I) |
-| Script Doc (URL) | URL | Script Doc (Col K) |
-| Ad Category | Dropdown | Ad Category (Col Q) |
+## CLI
 
-## Implementation Phases
+```bash
+# Scan all CP sheets and report max IDs
+python3 intake_id_generator.py --config config.yaml --test-sheets
 
-### Phase 1: Resolve Intake List ID + Validate Fields
-- Use ClickUp API to resolve list ID from URL `8cn38j5-33374`
-- Fetch the list's custom fields via API to confirm exact field names
-- Verify "Ad ID for Expansion" field exists and get its field ID
-- **Output**: Confirmed list ID + complete field name mapping
+# Dry run — show what would be assigned without writing
+python3 intake_id_generator.py --config config.yaml --dry-run
 
-### Phase 2: Create `intake_id_generator.py`
-**New file**: `tess_micro_skills/ingestion/intake_id_generator.py`
+# Process one task (live test)
+python3 intake_id_generator.py --config config.yaml --limit 1
 
-```
-class IntakeIDGenerator:
-    __init__(api_token, intake_list_id, dry_run)
-    run() -> summary dict
-    _fetch_unprocessed_tasks() -> list of tasks without valid Asset ID names
-    _determine_id_type(task) -> "new" or "expansion" based on Ad Category
-    _generate_asset_id(task) -> (offer, root_angle_id, variation_id, asset_id)
-    _parse_expansion_parent(field_value) -> (offer, root_angle_id)
-    _update_task_name(task_id, asset_id) -> PUT /task/{id}
-    _write_registry_row(task, asset_id_parts) -> append to Asset Registry
+# Full run (what launchd executes)
+python3 intake_id_generator.py --config config.yaml
 ```
 
-Imports from `registry_sync`:
-- `get_next_root_angle_id`, `get_next_variation_id`
-- `_build_sheets_creds`, `RegistryRow`, `SPREADSHEET_ID`, `REGISTRY_TAB`
-- Custom field extraction helpers
+## Test Results (2026-03-26)
 
-Includes:
-- `--dry-run` flag for safe testing
-- File lock (`/tmp/intake_id_generator.lock`) to prevent overlapping runs
-- Logging with timestamps
-- CLI: `python -m tess_micro_skills.ingestion.intake_id_generator [--dry-run]`
+- `--test-sheets`: All 16 CP sheets scanned. Max IDs correctly identified (SF2: 0007, OSSF: 0741, SSTS: 0765, etc.)
+- `--dry-run`: 56 existing tasks in Ad Backlog, all 56 correctly detected as already-processed. 0 false positives.
 
-### Phase 3: Shell Wrapper + launchd Job
-- `run-intake-id.sh` -- loads `.env`, runs script, logs output (pattern from `run-orion-daily.sh`)
-- `com.performancegolf.intake-id.plist` -- `StartInterval: 120` (2 min), same PATH/env as existing plists
-- Logs to `logs/intake-id-stdout.log` and `logs/intake-id-stderr.log`
+## Dependencies
 
-### Phase 4: Test End-to-End
-1. `--dry-run` against real intake list tasks
-2. Single live test on a test task -- verify task name updates + registry row appears
-3. Install launchd: `launchctl load ~/Library/LaunchAgents/com.performancegolf.intake-id.plist`
-4. Submit a real form and watch it flow through within ~2 min
+- Orion's `.venv` (Python 3.12 + requests, google-api-python-client, pyyaml)
+- Orion's `.env` (CLICKUP_API_TOKEN, SHEETS_CREDENTIALS_PATH, SHEETS_TOKEN_PATH)
+- Orion's `auth/` directory (sheets_token.json)
 
-## Race Condition Handling
-- File lock prevents overlapping script runs
-- launchd ensures single instance
-- The polling script is the ONLY writer for intake-generated IDs
-- Existing `RegistryWebhook.gs` writes for delivered tasks (different lifecycle stage) -- no conflict
+## CP Spreadsheet Write (Added S127 — 2026-03-26)
 
-## Verification
-1. `python intake_id_generator.py --dry-run` -- shows what would be generated without changing anything
-2. Check Asset Registry tab for new row after live test
-3. Check ClickUp task name was updated correctly
-4. Monitor `logs/intake-id-*.log` for errors over first few days
-5. Use Google Sheets MCP to read Asset Registry and confirm row data matches expectations
+After assigning an ID, the script appends rows to the relevant CP spreadsheet's "Video Ads" (or "Static Image Ads" / "HTML5 Ads") tab to reserve the IDs immediately. This prevents race conditions where someone else could reuse the same root angle ID.
 
-## Resume Prompt for Next Session
-```
-Resume Tess intake automation build. Read the plan at:
-_performance-golf/pg-creative-os/tess-strategic-scaling-system/intake-automation/PLAN.md
-Start at Phase 1: Resolve Intake List ID from ClickUp URL 8cn38j5-33374.
-ClickUp form URL: https://performancegolf.clickup.com/forms/9014714949/f/8cn38j5-62614/NNYCH9IZES3FXZNI0T
-Intake list URL: https://app.clickup.com/9014714949/v/l/8cn38j5-33374?pr=90144281236
-Asset Registry: https://docs.google.com/spreadsheets/d/1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U/edit?gid=846884983
-```
+**Columns written:** A (Full Variation ID), B (Root Angle ID), C (Root Angle Name from form), D (Ad Category)
+
+**Example:** For a 5-variation Net New submission:
+| A | B | C | D |
+|---|---|---|---|
+| dqfe1-0014-v0001 | dqfe1-0014 | DQFE1 v3.0 RSF Trailer | NN |
+| dqfe1-0014-v0002 | dqfe1-0014 | DQFE1 v3.0 RSF Trailer | NN |
+| ... | ... | ... | ... |
+
+**Sheets OAuth scope:** Upgraded from `spreadsheets.readonly` to `spreadsheets` (full read/write). Token re-authed 2026-03-26.
+
+**Task naming:** Uses variation range format: `{funnel}-{root_angle}-v{first}-v{last}` (e.g., `dqfe1-0014-v0001-v0005`). Reads "Total # of Assets" field from ClickUp form to determine range.
+
+## First Live Test (2026-03-26)
+
+- **Ticket:** DQFE1 v3.0 RSF Trailer (Ad Backlog task `86b931zqp`)
+- **ID assigned:** `dqfe1-0014-v0001-v0005`
+- **CP sheet updated:** 5 rows appended to DQFE1 "Video Ads" tab
+- **Result:** End-to-end success. Form → ClickUp task → Auto-ID → CP write.
+- **Known gap:** Copywriter field not on the Ad Backlog form (Fatima to add).
+- **Known gap:** "Full Ad ID" custom field doesn't exist on Ad Backlog list yet (non-blocking — ID goes in task name).
+
+## What This Does NOT Do
+
+- Does NOT write to SSS Asset Registry (future work)
+- Does NOT change ClickUp task status
+- Does NOT generate positions 4-15 of the naming convention
+- Does NOT populate the Copywriter field (not on the form yet — Fatima adding)

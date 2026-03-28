@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PG Brand Fonts */
+@font-face {
+  font-family: "Repro";
+  src: url("/fonts/ABCRepro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Repro";
+  src: url("/fonts/ABCRepro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Repro";
+  src: url("/fonts/ABCRepro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Repro Mono";
+  src: url("/fonts/ABCReproMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Dark Theme — matches pg-ai-revolution.vercel.app */
+:root {
+  --background: #1D1A1A;
+  --surface: #272322;
+  --surface-alt: #302B2A;
+  --foreground: #FCFAFA;
+  --border: #3E3836;
+  --border-light: #504947;
+  --sidebar-bg: #1D1A1A;
+  --sidebar-fg: #FCFAFA;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Repro", "DM Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Override Tremor card backgrounds for dark theme */
+.tremor-Card-root {
+  --tw-bg-opacity: 1;
+  background-color: var(--surface) !important;
+  border-color: var(--border) !important;
+}
+
+/* Override Tremor table for dark theme */
+.tremor-TableHead-root .tremor-TableHeaderCell-root {
+  border-color: var(--border) !important;
+}
+.tremor-TableBody-root .tremor-TableRow-root {
+  border-color: var(--border) !important;
+}
+.tremor-TableCell-root {
+  color: var(--foreground) !important;
+}
+.tremor-TableHeaderCell-root {
+  color: #7B726C !important;
+}
+
+/* Override Tremor text colors for dark theme */
+.tremor-Metric-root {
+  color: var(--foreground) !important;
+}
+.tremor-Title-root {
+  color: var(--foreground) !important;
+}
+.tremor-Text-root {
+  color: #B3AAA3 !important;
+}
+
+/* Chart axis labels, tick text, legend — all white for dark theme */
+.recharts-cartesian-axis-tick-value {
+  fill: #FCFAFA !important;
+}
+.recharts-cartesian-axis-line,
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #3E3836 !important;
+}
+.recharts-legend-item-text {
+  color: #FCFAFA !important;
+}
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: #272322 !important;
+  border-color: #3E3836 !important;
+}
+.recharts-tooltip-label {
+  color: #FCFAFA !important;
+}
+.recharts-tooltip-item {
+  color: #FCFAFA !important;
+}
+
+/* Tremor chart labels and legends */
+.tremor-DonutChart-label {
+  fill: #FCFAFA !important;
+}
+[class*="tremor"][class*="Legend"] span,
+[class*="tremor"][class*="legend"] span {
+  color: #FCFAFA !important;
+}
+
+/* Tremor BarList / BarChart text */
+.tremor-BarChart-root text {
+  fill: #FCFAFA !important;
+}
+
+/* === PG BRAND COLOR OVERRIDES FOR CHARTS === */
+
+/* Donut center number — white on dark background */
+text[dominant-baseline] {
+  fill: #FCFAFA !important;
+}
+.recharts-text {
+  fill: #FCFAFA !important;
+}
+
+/* All SVG text inside charts — white */
+svg text, svg tspan {
+  fill: #FCFAFA !important;
+}

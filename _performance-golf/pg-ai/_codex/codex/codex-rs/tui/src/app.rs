@@ -3195,7 +3195,10 @@ impl App {
                     if let Err(err) = self.refresh_in_memory_config_from_disk().await {
                         tracing::warn!(error = %err, "failed to refresh config after plugin install");
                     }
+<<<<<<< HEAD
+=======
                     self.chat_widget.refresh_plugin_mentions();
+>>>>>>> origin/main
                     self.chat_widget.submit_op(Op::ReloadUserConfig);
                 }
                 let should_refresh_plugin_detail = self.chat_widget.on_plugin_install_loaded(
@@ -3650,7 +3653,10 @@ impl App {
                             "failed to refresh config after plugin uninstall"
                         );
                     }
+<<<<<<< HEAD
+=======
                     self.chat_widget.refresh_plugin_mentions();
+>>>>>>> origin/main
                     self.chat_widget.submit_op(Op::ReloadUserConfig);
                 }
                 self.chat_widget.on_plugin_uninstall_loaded(

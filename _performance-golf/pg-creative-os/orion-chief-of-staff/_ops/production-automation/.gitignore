@@ -1,0 +1,11 @@
+# Secrets
+.env
+
+# Local state (not shareable — machine-specific notification tracking)
+.production-notifier-state.json
+
+# Logs
+logs/
+
+# Launchd plist (machine-specific paths — use .plist.example as template)
+*.plist

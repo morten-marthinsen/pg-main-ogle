@@ -1025,6 +1025,8 @@ fn active_turn_not_steerable_turn_error(error: &TypedRequestError) -> Option<App
     .then_some(turn_error)
 }
 
+<<<<<<< HEAD
+=======
 fn active_turn_missing_steer_error(error: &TypedRequestError) -> bool {
     let TypedRequestError::Server { source, .. } = error else {
         return false;
@@ -1032,6 +1034,7 @@ fn active_turn_missing_steer_error(error: &TypedRequestError) -> bool {
     source.message == "no active turn to steer"
 }
 
+>>>>>>> origin/main
 impl App {
     pub fn chatwidget_init_for_forked_or_resumed_thread(
         &self,
@@ -2078,12 +2081,18 @@ impl App {
                         .turn_steer(thread_id, turn_id, items.to_vec())
                         .await
                     {
+<<<<<<< HEAD
+                        Ok(_) => {}
+=======
                         Ok(_) => return Ok(true),
+>>>>>>> origin/main
                         Err(error) => {
                             if let Some(turn_error) = active_turn_not_steerable_turn_error(&error) {
                                 if !self.chat_widget.enqueue_rejected_steer() {
                                     self.chat_widget.add_error_message(turn_error.message);
                                 }
+<<<<<<< HEAD
+=======
                                 return Ok(true);
                             } else if active_turn_missing_steer_error(&error) {
                                 if let Some(channel) = self.thread_event_channels.get(&thread_id) {
@@ -2091,13 +2100,18 @@ impl App {
                                     store.clear_active_turn_id();
                                 }
                                 should_start_turn = true;
+>>>>>>> origin/main
                             } else {
                                 return Err(error.into());
                             }
                         }
                     }
+<<<<<<< HEAD
+                } else {
+=======
                 }
                 if should_start_turn {
+>>>>>>> origin/main
                     app_server
                         .turn_start(
                             thread_id,
@@ -3970,7 +3984,10 @@ impl App {
                     if let Err(err) = self.refresh_in_memory_config_from_disk().await {
                         tracing::warn!(error = %err, "failed to refresh config after plugin install");
                     }
+<<<<<<< HEAD
+=======
                     self.chat_widget.refresh_plugin_mentions();
+>>>>>>> origin/main
                     self.chat_widget.submit_op(AppCommand::reload_user_config());
                 }
                 let should_refresh_plugin_detail = self.chat_widget.on_plugin_install_loaded(
@@ -4448,7 +4465,10 @@ impl App {
                             "failed to refresh config after plugin uninstall"
                         );
                     }
+<<<<<<< HEAD
+=======
                     self.chat_widget.refresh_plugin_mentions();
+>>>>>>> origin/main
                     self.chat_widget.submit_op(AppCommand::reload_user_config());
                 }
                 self.chat_widget.on_plugin_uninstall_loaded(
@@ -8659,6 +8679,8 @@ guardian_approval = true
     }
 
     #[test]
+<<<<<<< HEAD
+=======
     fn active_turn_missing_steer_error_detects_stale_turn_race() {
         let error = TypedRequestError::Server {
             method: "turn/steer".to_string(),
@@ -8674,6 +8696,7 @@ guardian_approval = true
     }
 
     #[test]
+>>>>>>> origin/main
     fn select_model_availability_nux_uses_existing_model_order_as_priority() {
         let mut presets = all_model_presets();
         presets.iter_mut().for_each(|preset| {

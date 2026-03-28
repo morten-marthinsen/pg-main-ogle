@@ -23,9 +23,12 @@ use codex_app_server_protocol::PluginSummary;
 use codex_app_server_protocol::PluginUninstallResponse;
 use codex_features::Feature;
 use codex_utils_absolute_path::AbsolutePathBuf;
+<<<<<<< HEAD
+=======
 use ratatui::buffer::Buffer;
 use ratatui::layout::Rect;
 use ratatui::prelude::Widget;
+>>>>>>> origin/main
 use ratatui::style::Stylize;
 use ratatui::text::Line;
 use ratatui::widgets::Paragraph;
@@ -33,6 +36,8 @@ use ratatui::widgets::WidgetRef;
 use ratatui::widgets::Wrap;
 
 const PLUGINS_SELECTION_VIEW_ID: &str = "plugins-selection";
+<<<<<<< HEAD
+=======
 const LOADING_ANIMATION_DELAY: Duration = Duration::from_secs(1);
 const LOADING_ANIMATION_INTERVAL: Duration = Duration::from_millis(100);
 
@@ -118,6 +123,7 @@ impl Renderable for PluginDisclosureLine {
             .unwrap_or(u16::MAX)
     }
 }
+>>>>>>> origin/main
 
 #[derive(Debug, Clone, Default)]
 pub(super) enum PluginsCacheState {
@@ -420,6 +426,16 @@ impl ChatWidget {
         } else {
             "Install the required Apps in ChatGPT to continue:"
         };
+<<<<<<< HEAD
+        let description = app
+            .description
+            .as_deref()
+            .map(str::trim)
+            .filter(|value| !value.is_empty())
+            .map(str::to_string);
+
+=======
+>>>>>>> origin/main
         let mut header = ColumnRenderable::new();
         header.push(Line::from("Plugins".bold()));
         header.push(Line::from(
@@ -430,7 +446,16 @@ impl ChatWidget {
         ));
         header.push(Line::from(status_label.dim()));
 
+<<<<<<< HEAD
+        let mut items = vec![SelectionItem {
+            name: app.name.clone(),
+            description,
+            is_disabled: true,
+            ..Default::default()
+        }];
+=======
         let mut items = Vec::new();
+>>>>>>> origin/main
 
         if let Some(install_url) = app.install_url.clone() {
             let install_label = if is_installed {
@@ -440,7 +465,13 @@ impl ChatWidget {
             };
             items.push(SelectionItem {
                 name: install_label.to_string(),
+<<<<<<< HEAD
+                description: Some(
+                    "Open the same ChatGPT app management link used by /apps.".to_string(),
+                ),
+=======
                 description: Some("Open the ChatGPT app management page".to_string()),
+>>>>>>> origin/main
                 selected_description: Some("Open the app page in your browser.".to_string()),
                 actions: vec![Box::new(move |tx| {
                     tx.send(AppEvent::OpenUrlInBrowser {
@@ -451,7 +482,11 @@ impl ChatWidget {
             });
         } else {
             items.push(SelectionItem {
+<<<<<<< HEAD
+                name: "ChatGPT link unavailable".to_string(),
+=======
                 name: "ChatGPT apps link unavailable".to_string(),
+>>>>>>> origin/main
                 description: Some("This app did not provide an install/manage URL.".to_string()),
                 is_disabled: true,
                 ..Default::default()
@@ -635,6 +670,52 @@ impl ChatWidget {
             items: vec![SelectionItem {
                 name: "Uninstalling plugin...".to_string(),
                 description: Some("This updates when the plugin removal completes.".to_string()),
+                is_disabled: true,
+                ..Default::default()
+            }],
+            ..Default::default()
+        }
+    }
+
+    fn plugin_install_loading_popup_params(
+        &self,
+        plugin_display_name: &str,
+    ) -> SelectionViewParams {
+        let mut header = ColumnRenderable::new();
+        header.push(Line::from("Plugins".bold()));
+        header.push(Line::from(
+            format!("Installing {plugin_display_name}...").dim(),
+        ));
+
+        SelectionViewParams {
+            view_id: Some(PLUGINS_SELECTION_VIEW_ID),
+            header: Box::new(header),
+            items: vec![SelectionItem {
+                name: "Installing plugin...".to_string(),
+                description: Some("This updates when plugin installation completes.".to_string()),
+                is_disabled: true,
+                ..Default::default()
+            }],
+            ..Default::default()
+        }
+    }
+
+    fn plugin_uninstall_loading_popup_params(
+        &self,
+        plugin_display_name: &str,
+    ) -> SelectionViewParams {
+        let mut header = ColumnRenderable::new();
+        header.push(Line::from("Plugins".bold()));
+        header.push(Line::from(
+            format!("Uninstalling {plugin_display_name}...").dim(),
+        ));
+
+        SelectionViewParams {
+            view_id: Some(PLUGINS_SELECTION_VIEW_ID),
+            header: Box::new(header),
+            items: vec![SelectionItem {
+                name: "Uninstalling plugin...".to_string(),
+                description: Some("This updates when plugin removal completes.".to_string()),
                 is_disabled: true,
                 ..Default::default()
             }],

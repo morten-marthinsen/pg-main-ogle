@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375, initial-scale=1.0">
+<title>CLST Checkout Step 1 — PG1 Member Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Helvetica, Arial, sans-serif; background: #fff; color: #212529; width: 375px; margin: 0 auto; }
+
+  /* Header */
+  .header-bar { display: flex; justify-content: space-between; align-items: center; padding: 8px 15px; background: #1a1a1a; color: #fff; font-size: 12px; }
+  .nav-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; border-bottom: 1px solid #eee; }
+  .nav-bar .logo { font-weight: 700; font-size: 14px; color: #000; display: flex; align-items: center; gap: 6px; }
+  .nav-bar .logo .pg-icon { background: #000; color: #fff; font-size: 9px; font-weight: 700; padding: 3px 5px; border-radius: 2px; }
+  .nav-bar .secure-label { font-size: 12px; color: #666; }
+
+  /* Product Section */
+  .product-section { padding: 15px; }
+  .product-heading { font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px; }
+
+  /* Bonus List */
+  .bonus-list { list-style: none; padding: 0; margin-bottom: 16px; }
+  .bonus-list li { display: flex; gap: 8px; align-items: flex-start; padding: 5px 0; font-size: 14px; line-height: 1.4; color: #000; }
+  .bonus-list li .check { color: #333; flex-shrink: 0; font-size: 14px; }
+  .bonus-list li strong { font-weight: 700; }
+
+  /* Product Image */
+  .product-image-area { background: #f5f5f5; border-radius: 8px; padding: 30px 20px; margin: 0 15px 15px; text-align: center; }
+  .product-image-area .main-product { font-size: 14px; color: #666; margin-bottom: 10px; }
+  .product-image-area .bonus-thumbs { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+  .product-image-area .bonus-thumb { background: #e0e0e0; border-radius: 4px; padding: 8px; font-size: 9px; color: #888; text-align: center; width: 70px; }
+  .instant-access { text-align: center; font-family: 'Roboto', sans-serif; font-size: 14px; color: #009624; padding: 8px 0; }
+
+  /* Step Label + Form */
+  .step-label { font-size: 16px; letter-spacing: 1px; color: #333; padding: 15px 15px 5px; font-weight: 700; }
+  .form-section { padding: 15px; }
+  .form-label { font-size: 14px; font-weight: 700; color: #333; margin-bottom: 12px; }
+  .form-field { width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 14px 13px; font-size: 14px; color: #999; margin-bottom: 8px; background: #fff; }
+  .form-row { display: flex; gap: 8px; }
+  .form-row .form-field { flex: 1; }
+
+  /* CTA */
+  .cta-button { display: block; width: 100%; padding: 18px; background: #3b9d4b; border: none; border-radius: 5px; font-size: 20px; font-weight: 700; color: #fff; text-align: center; cursor: pointer; }
+
+  /* Trust */
+  .trust-badges { display: flex; justify-content: center; gap: 12px; padding: 16px 15px; }
+  .trust-badge-placeholder { background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; padding: 8px 12px; font-size: 10px; color: #666; text-align: center; line-height: 1.3; }
+
+  .footer { padding: 20px 15px; text-align: center; font-size: 11px; color: #999; border-top: 1px solid #eee; margin-top: 20px; }
+  .footer a { color: #999; text-decoration: none; }
+</style>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script></head>
+<body>
+
+<!-- HEADER -->
+<div class="header-bar">
+  <span><strong>Need Help?</strong> support@performancegolf.com</span>
+</div>
+<div class="nav-bar">
+  <div class="logo"><span class="pg-icon">PG</span> PERFORMANCE GOLF</div>
+  <div class="secure-label">🔒 SECURE CHECKOUT</div>
+</div>
+
+<!-- STEP 1 LABEL -->
+<div class="step-label">CHECKOUT STEP 1 OF 2</div>
+
+<!-- PRODUCT IMAGES -->
+<div class="product-image-area">
+  <div class="main-product">[Click Stick — Product Image]</div>
+  <div style="font-size:24px; margin: 8px 0;">+</div>
+  <div class="bonus-thumbs">
+    <div class="bonus-thumb">Perfect Practice Training</div>
+    <div class="bonus-thumb">10-Click Challenge</div>
+    <div class="bonus-thumb">Ball-Striking Basics</div>
+  </div>
+</div>
+
+<!-- PRODUCT SECTION (NO PRICING) -->
+<div class="product-section">
+  <div class="product-heading">THE CLICK STICK</div>
+
+  <ul class="bonus-list">
+    <li><span class="check">✓</span><span><strong>Release Speed And Eliminate Mis-Hits</strong> With The Click Stick</span></li>
+    <li><span class="check">✓</span><span><strong>Free Bonus:</strong> The Click Stick Perfect Practice Video Training</span></li>
+    <li><span class="check">✓</span><span><strong>Free Bonus:</strong> The 10-Click Challenge Video Training</span></li>
+    <li><span class="check">✓</span><span><strong>Free Bonus:</strong> Better Ball-Striking Basics Video Training</span></li>
+    <li><span class="check">✓</span><span><strong>Free Bonus:</strong> $500 Credit to the VIP Golf Experience of a Lifetime</span></li>
+  </ul>
+</div>
+
+<div class="form-section">
+  <div class="form-label">Enter your contact details to get started:</div>
+  <div class="form-row">
+    <div class="form-field">First name</div>
+    <div class="form-field">Last name</div>
+  </div>
+  <div class="form-field">Email</div>
+  <div class="form-field" style="display:flex; align-items:center; gap:8px;">
+    <span style="color:#333; font-size:13px;">🇺🇸 +1</span>
+    <span>Phone: Required for Order Notifications</span>
+  </div>
+</div>
+
+<div style="padding: 0 15px 20px;">
+  <button class="cta-button">Next Step »</button>
+</div>
+
+<!-- TRUST BADGES -->
+<div class="trust-badges">
+  <div class="trust-badge-placeholder">🔒 McAfee<br>SECURE</div>
+  <div class="trust-badge-placeholder">✓ TrustedSite<br>CERTIFIED SECURE</div>
+  <div class="trust-badge-placeholder">✓ Norton<br>Secured</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © Copyright 2025 Performance Golf |
+  <a href="#">Privacy Policy</a> |
+  <a href="#">Terms Of Service</a> |
+  <a href="#">Contact Us</a> |
+  <a href="#">Return Policy</a>
+</div>
+
+</body>
+</html>

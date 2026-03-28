@@ -102,7 +102,7 @@ And Stick More Greens With The 357 Fairway Hybrid
 | |
 | Most golfers choose this option because you can **SEE and FEEL** how to use the 357 to hit high-flying approach shots that land soft on the green — making you more confident and consistent **before your new Fairway Hybrid even arrives at your door.** |
 | |
-| **14-day FREE trial included.** Then $39/mo. |
+| **14-day FREE trial included.** Then $29/mo. |
 | Cancel anytime with 1 click. No lock-in contracts. |
 | |
 | **(Most Popular — Biggest Savings)** |
@@ -155,7 +155,7 @@ You save **$150** on your 357 today, your POV lessons are included, and your 14-
 
 - **FREE Bonus: Make more progress in 2 days than most golfers make in 2 years** with a $500 Credit toward a VIP Golf Experience — Work one-on-one with a Top 25 PGA coach using the Immersion Method to eliminate your "root" swing flaw during this dream golf vacation
 
-- **FREE Bonus: Shave 5+ strokes off your handicap in just one month** with the World's Smartest Game Improvement App — 14 days FREE, then $39/month. Cancel anytime. This app tracks your on-course data FOR YOU with shot-tracking GPS and gives personalized feedback specifically for YOUR game
+- **FREE Bonus: Shave 5+ strokes off your handicap in just one month** with the World's Smartest Game Improvement App — 14 days FREE, then $29/month. Cancel anytime. This app tracks your on-course data FOR YOU with shot-tracking GPS and gives personalized feedback specifically for YOUR game
 
 > [DEV NOTE: The PG1/app bonus line only appears if MEMBER pricing is selected. If NON-MEMBER, this line changes to: "FREE Bonus: 14-Day Access to The World's Smartest Game Improvement App"]
 
@@ -282,7 +282,7 @@ You save **$150** on your 357 today, your POV lessons are included, and your 14-
 | Item | Price |
 |------|-------|
 | 357 Fairway Hybrid [Right Hand / Stiff] | $249.00 |
-| PG1 — 14 day trial (Free today), then $39/mo | $0.00 |
+| PG1 — 14 day trial (Free today), then $29/mo | $0.00 |
 | Free Shipping | $0.00 |
 | 359 Fairway (if checked) | $149.00 |
 | Sales Tax | $0.00 |
@@ -306,7 +306,7 @@ You're Protected By Our 365-Day Money-Back Guarantee!
 
 ## Fine Print
 
-*By checking the box above, you agree to the Terms and Privacy Policy. You'll be billed once for today's purchase. If you selected Member Pricing, your order includes a 14-day free trial to PG1™. After 14 days, your PG1 membership continues at $39/month. You can cancel your PG1 membership anytime by emailing support@performancegolf.com or with 1 click inside the PG1 app.*
+*By checking the box above, you agree to the Terms and Privacy Policy. You'll be billed once for today's purchase. If you selected Member Pricing, your order includes a 14-day free trial to PG1™. After 14 days, your PG1 membership continues at $29/month. You can cancel your PG1 membership anytime by emailing support@performancegolf.com or with 1 click inside the PG1 app.*
 
 > [DEV NOTE: If non-member selected, the PG1 sentences in fine print do not appear. Replace "Scratch Club" references from current page with "PG1" throughout.]
 
@@ -322,7 +322,7 @@ You're Protected By Our 365-Day Money-Back Guarantee!
 >
 > 4. **POV lessons bundled into member box** — Currently POV lessons are part of "Pro Edition" ($40 more). Now they're included FREE in the member pricing tier as part of the PG1 experience. This connects POV lessons → PG1, making PG1 feel more valuable.
 >
-> 5. **"Scratch Club" → "PG1"** — All references to Scratch Club replaced with PG1. Rate changes from $29/mo to $39/mo.
+> 5. **"Scratch Club" → "PG1"** — All references to Scratch Club replaced with PG1. Rate changes from $29/mo to $29/mo.
 >
 > 6. **359 combo bump stays** — The "Ultimate Combination" order bump for the 359 fairway ($149) remains unchanged.
 >

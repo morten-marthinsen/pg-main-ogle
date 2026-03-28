@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=395, initial-scale=1.0">
+<title>CLST Sales Page — PG1 Member Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #1d1a1a;
+    width: 395px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .content-area {
+    padding: 0 26px;
+  }
+
+  /* ── RATING BAR ── */
+  .rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 26px 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1d1a1a;
+  }
+  .rating-bar .stars {
+    color: #f5a623;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  /* ── PRODUCT TITLE ── */
+  .product-title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #000;
+    padding: 12px 26px 0;
+  }
+
+  /* ── SHORT DESCRIPTION ── */
+  .short-desc {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #1d1a1a;
+    padding: 12px 26px 0;
+  }
+
+  /* ── PRICE LINE ── */
+  .price-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px 0;
+    flex-wrap: wrap;
+  }
+  .price-line .price-text {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1d1a1a;
+  }
+  .price-line .price-text .strike {
+    text-decoration: line-through;
+    color: #7b726c;
+  }
+  .price-line .price-text .bold-price {
+    font-weight: 700;
+  }
+  .save-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #f9cccc;
+    color: #e10000;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 40px;
+    white-space: nowrap;
+  }
+
+  /* ── HURRY CALLOUT ── */
+  .hurry-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e10000;
+    background: #fdf2f2;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 14px 26px 0;
+    min-height: 66px;
+  }
+  .hurry-box .hurry-text {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #e10000;
+    line-height: 1.4;
+    flex: 1;
+    padding-right: 10px;
+  }
+  .hurry-box .hurry-timer {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #e10000;
+    flex-shrink: 0;
+  }
+
+  /* ── BENEFIT BULLETS ── */
+  .benefit-bullets {
+    list-style: none;
+    padding: 18px 26px 0;
+  }
+  .benefit-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #1d1a1a;
+  }
+  .benefit-bullets li:last-child {
+    margin-bottom: 0;
+  }
+  .benefit-bullets li strong {
+    font-weight: 700;
+  }
+  .check-circle {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: #3b9d4b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  /* ── PRICING OPTION BOXES ── */
+  .pricing-box {
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 26px 0;
+  }
+  .pricing-box.nonmember {
+    border: 2px solid #fd3300;
+  }
+  .pricing-box.member {
+    border: 2px solid #d9d9d9;
+  }
+  .pricing-box-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .radio-outer {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .radio-outer.selected {
+    border-color: #fd3300;
+  }
+  .radio-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fd3300;
+  }
+  .pricing-box-label {
+    flex: 1;
+  }
+  .pricing-box-label h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1d1a1a;
+    margin: 0 0 2px 0;
+  }
+  .pricing-box-label .product-sub {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #555;
+    margin: 0;
+  }
+  .pricing-box-price {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .pricing-box-price .amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #1d1a1a;
+  }
+  .pricing-box-price .strike-price {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: line-through;
+    color: #7b726c;
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  .pricing-box-price .bold-price {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #1d1a1a;
+  }
+  .best-value-badge {
+    display: inline-block;
+    background: #64a264;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-top: 4px;
+  }
+
+  /* Pricing box divider */
+  .pricing-divider {
+    height: 1px;
+    background: #eee;
+    margin: 14px 0;
+  }
+
+  /* Pricing box bullets */
+  .pricing-bullets {
+    list-style: none;
+    padding: 0;
+  }
+  .pricing-bullets li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #7b726c;
+    padding: 3px 0;
+    line-height: 1.4;
+  }
+  .pricing-bullets li strong {
+    font-weight: 700;
+    color: #1d1a1a;
+  }
+
+  /* Member extras */
+  .member-extras-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #1b5e20;
+    margin: 14px 0 10px;
+  }
+
+  /* Price summary bar */
+  .price-summary-bar {
+    background: #f6f5f1;
+    padding: 16px;
+    margin-top: 14px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .price-summary-left {
+    font-family: 'Poppins', sans-serif;
+  }
+  .price-summary-left .label {
+    font-size: 15px;
+    font-weight: 400;
+    color: #1d1a1a;
+  }
+  .price-summary-left .prices {
+    display: block;
+    margin-top: 2px;
+  }
+  .price-summary-left .prices .strike {
+    text-decoration: line-through;
+    color: #7b726c;
+    font-size: 16px;
+    margin-right: 6px;
+  }
+  .price-summary-left .prices .final {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1d1a1a;
+  }
+  .save-badge {
+    background: #64a264;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  /* Cancel line */
+  .cancel-line {
+    border-top: 1px solid #eee;
+    padding-top: 11px;
+    margin-top: 14px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #555;
+  }
+  .cancel-line strong {
+    color: #333;
+    font-weight: 700;
+  }
+
+  /* ── CTA BUTTON ── */
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 52px);
+    margin: 20px auto 0;
+    padding: 0;
+    height: 60px;
+    background: #e9932e;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── TRUST ICONS ── */
+  .trust-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 18px 26px 0;
+  }
+  .trust-icon-item {
+    flex: 1;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #555;
+    line-height: 1.3;
+  }
+  .trust-icon-item .icon-placeholder {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .bottom-divider {
+    height: 1px;
+    background: #eee;
+    margin: 20px 26px 0;
+  }
+</style>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+
+<!-- RATING BAR -->
+<div class="rating-bar">
+  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  <span>Rated <strong>4.8</strong> based on 3,700+ happy reviews</span>
+</div>
+
+<!-- PRODUCT TITLE -->
+<div class="product-title">THE CLICK STICK</div>
+
+<!-- SHORT DESCRIPTION -->
+<div class="short-desc">The Quickest, Easiest Way For Amateur Golfers To Release Speed And Eliminate Mis-Hits</div>
+
+<!-- PRICE LINE -->
+<div class="price-line">
+  <span class="price-text">Get your Click Stick from <span class="strike">$299</span> <span class="bold-price">$139</span></span>
+  <span class="save-pill">Save <strong>$160</strong></span>
+</div>
+
+<!-- HURRY CALLOUT -->
+<div class="hurry-box">
+  <span class="hurry-text">Hurry! Claim Your 54% Discount + Get 4 Exclusive Bonuses before time runs out!</span>
+  <span class="hurry-timer">07:06</span>
+</div>
+
+<!-- BENEFIT BULLETS -->
+<ul class="benefit-bullets">
+  <li><span class="check-circle">&#10003;</span><span><strong>Eliminate mis-hits</strong> so you can feel the satisfying "click" of a perfect release every time</span></li>
+  <li><span class="check-circle">&#10003;</span><span><strong>Release speed and add distance</strong> without swinging harder or changing your mechanics</span></li>
+  <li><span class="check-circle">&#10003;</span><span><strong>Get instant auditory feedback</strong> — one sound tells you everything about your release</span></li>
+  <li><span class="check-circle">&#10003;</span><span><strong>Stop guessing</strong> whether you're releasing correctly — the Click Stick confirms it</span></li>
+  <li><span class="check-circle">&#10003;</span><span><strong>Practice anywhere</strong> — 5-minute sessions at home, the office, or the range</span></li>
+  <li><span class="check-circle">&#10003;</span><span><strong>Don't choose between distance OR accuracy</strong> — with the Click Stick, you get BOTH</span></li>
+</ul>
+
+<!-- NON-MEMBER PRICING BOX (selected state) -->
+<div class="pricing-box nonmember">
+  <div class="pricing-box-header">
+    <div class="radio-outer selected"><div class="radio-dot"></div></div>
+    <div class="pricing-box-label">
+      <h4>NON-MEMBER PRICING</h4>
+      <p class="product-sub">The Click Stick</p>
+    </div>
+    <div class="pricing-box-price">
+      <span class="amount">$299</span>
+    </div>
+  </div>
+  <div class="pricing-divider"></div>
+  <ul class="pricing-bullets">
+    <li>&#10004; Fast &amp; Free U.S. Shipping</li>
+    <li>&#10004; 365-Day Return Warranty</li>
+    <li>&#10004; 100% Secure Checkout</li>
+  </ul>
+</div>
+
+<!-- NEW MEMBER PRICING BOX (unselected state) -->
+<div class="pricing-box member">
+  <div class="pricing-box-header">
+    <div class="radio-outer"><div class="radio-dot" style="display:none;"></div></div>
+    <div class="pricing-box-label">
+      <h4>NEW MEMBER PRICING</h4>
+      <p class="product-sub">The Click Stick</p>
+    </div>
+    <div class="pricing-box-price">
+      <span class="strike-price">$299</span>
+      <span class="bold-price">$139</span>
+      <br>
+      <span class="best-value-badge">BEST VALUE</span>
+    </div>
+  </div>
+  <div class="pricing-divider"></div>
+  <ul class="pricing-bullets">
+    <li>&#10004; Fast &amp; Free U.S. Shipping</li>
+    <li>&#10004; 365-Day Return Warranty</li>
+    <li>&#10004; 100% Secure Checkout</li>
+  </ul>
+  <p class="member-extras-title">PLUS — the complete PG1 Game Improvement App experience:</p>
+  <ul class="pricing-bullets">
+    <li>&#10004; <strong>Exclusive "Point of View" Lessons</strong> — see how to use your new Click Stick before it even arrives at your door</li>
+    <li>&#10004; <strong>Personalized coaching</strong> from top-ranked PGA professionals</li>
+    <li>&#10004; <strong>Shot-tracking GPS</strong> — tracks your on-course data FOR YOU</li>
+    <li>&#10004; <strong>A complete practice plan</strong> built around YOUR goals, schedule &amp; skill level</li>
+    <li>&#10004; <strong>Track your progress</strong> and know what to work on next</li>
+  </ul>
+
+  <!-- Price summary bar -->
+  <div class="price-summary-bar">
+    <div class="price-summary-left">
+      <span class="label">Total Price</span>
+      <span class="prices"><span class="strike">$299</span><span class="final">$139</span></span>
+    </div>
+    <div class="save-badge">YOU SAVE $160</div>
+  </div>
+
+  <!-- Cancel line -->
+  <div class="cancel-line">
+    <strong>PG1 App — 7 Days FREE</strong>, then $29/mo. Cancel anytime with 1 click.
+  </div>
+</div>
+
+<!-- CTA BUTTON -->
+<button class="cta-button">ADD TO CART — $299.00</button>
+
+<!-- TRUST ICONS -->
+<div class="trust-icons">
+  <div class="trust-icon-item">
+    <div class="icon-placeholder">&#128737;</div>
+    365 Day Money<br>Back Guarantee
+  </div>
+  <div class="trust-icon-item">
+    <div class="icon-placeholder">&#128666;</div>
+    Free Shipping<br>Across The USA
+  </div>
+  <div class="trust-icon-item">
+    <div class="icon-placeholder">&#128274;</div>
+    100% Secure<br>Checkout
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="bottom-divider"></div>
+
+</body>
+</html>

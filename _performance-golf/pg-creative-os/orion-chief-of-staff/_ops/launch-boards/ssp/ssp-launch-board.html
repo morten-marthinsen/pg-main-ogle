@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSP Swing Smooth Pro — Creative Launch Map</title>
+<style>
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Regular.woff2') format('woff2'); font-weight: 400; }
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Medium.woff2') format('woff2'); font-weight: 500; }
+  @font-face { font-family: 'ABCRepro'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro/ABCRepro-Bold.woff2') format('woff2'); font-weight: 700; }
+  @font-face { font-family: 'GTSuperText'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/gt-super-text/GT-Super-Text-Book.woff2') format('woff2'); font-weight: 400; }
+  @font-face { font-family: 'GTSuperText'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'ABCReproMono'; src: url('../../../../../../pg-skills/pg-brand-guidelines/assets/fonts/repro-mono/ABCReproMono-Regular.woff2') format('woff2'); font-weight: 400; }
+
+  :root {
+    --orange: #FD3300;
+    --dark-orange: #DB2C00;
+    --black: #1D1A1A;
+    --ui-gray: #7B726C;
+    --stone: #B3AAA3;
+    --pebble: #DFD9D5;
+    --sand: #ECE9E4;
+    --fog: #F4F2F0;
+    --mist: #FCFAFA;
+    --hi-vis: #E4F222;
+    --grass: #BCE9B1;
+    --forest: #2E4734;
+    --sky: #B2C6EB;
+    --indigo: #4F41D5;
+    --polo: #C5A6CA;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    background: var(--sand);
+    font-family: 'ABCRepro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--black);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  /* ── HEADER BAR ── */
+  .header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    height: 72px;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 24px;
+  }
+  .header-logo {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--orange);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .header-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(255,255,255,0.15);
+  }
+  .header-title {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-size: 24px;
+    color: white;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .header-meta {
+    margin-left: auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .header-badge {
+    background: var(--orange);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .header-date {
+    color: var(--stone);
+    font-size: 15px;
+    font-family: 'ABCReproMono', monospace;
+  }
+
+  /* ── SECTION NAV ── */
+  .section-nav {
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    z-index: 99;
+    height: 48px;
+    background: var(--fog);
+    border-bottom: 1px solid var(--pebble);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 4px;
+    overflow-x: auto;
+  }
+  .nav-item {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ui-gray);
+    padding: 6px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .nav-item:hover { background: var(--pebble); color: var(--black); }
+  .nav-arrow { color: var(--stone); font-size: 13px; padding: 0 2px; }
+
+  /* ── BOARD CONTAINER ── */
+  .board {
+    margin-top: 120px;
+    display: flex;
+    gap: 32px;
+    padding: 32px 40px 40px;
+    height: calc(100vh - 120px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* ── SECTION COLUMN ── */
+  .section {
+    min-width: 520px;
+    max-width: 560px;
+    flex-shrink: 0;
+    background: var(--mist);
+    border-radius: 12px;
+    border: 1px solid var(--pebble);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .section-header {
+    background: var(--black);
+    padding: 20px 24px 16px;
+    position: relative;
+  }
+  .section-number {
+    font-family: 'ABCReproMono', monospace;
+    font-size: 13px;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  .section-subtitle {
+    font-size: 14px;
+    color: var(--stone);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── SECTION BODY ── */
+  .section-body {
+    padding: 20px 24px 24px;
+    overflow-y: auto;
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── CONTENT ELEMENTS ── */
+  h3 {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--black);
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  h3:first-child { margin-top: 0; }
+
+  h4 {
+    font-family: 'ABCRepro', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--black);
+    margin: 16px 0 8px;
+  }
+
+  p { margin-bottom: 10px; color: var(--black); }
+
+  .callout {
+    background: var(--fog);
+    border-left: 3px solid var(--orange);
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 15px;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout strong { color: var(--dark-orange); }
+  .callout-muted {
+    background: var(--fog);
+    border-left: 3px solid var(--stone);
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: var(--ui-gray);
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 14px;
+  }
+  th {
+    background: var(--sand);
+    text-align: left;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--ui-gray);
+    border-bottom: 2px solid var(--pebble);
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--sand);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .tag-orange { background: #FFF0EC; color: var(--dark-orange); }
+  .tag-green { background: #EDF7EB; color: #2D6A22; }
+  .tag-blue { background: #EBF0FA; color: var(--indigo); }
+  .tag-gray { background: var(--sand); color: var(--ui-gray); }
+  .tag-yellow { background: #FEFCE8; color: #92720A; }
+
+  .stat-row {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .stat-box {
+    flex: 1;
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--orange);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--ui-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .persona-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid var(--pebble);
+  }
+  .persona-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  .persona-desc {
+    font-size: 14px;
+    color: var(--ui-gray);
+    line-height: 1.5;
+  }
+  .persona-quote {
+    font-family: 'GTSuperText', Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--forest);
+    margin-top: 8px;
+    padding-left: 10px;
+    border-left: 2px solid var(--grass);
+  }
+
+  .script-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0;
+    border-left: 3px solid var(--orange);
+  }
+  .script-id {
+    font-family: 'ABCReproMono', monospace;
+    font-size: 13px;
+    color: var(--orange);
+    font-weight: 700;
+  }
+  .script-name {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 4px 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--sand);
+    align-items: flex-start;
+  }
+  .timeline-date {
+    min-width: 80px;
+    font-family: 'ABCReproMono', monospace;
+    font-size: 13px;
+    color: var(--ui-gray);
+    padding-top: 2px;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .timeline-owner {
+    font-size: 13px;
+    color: var(--ui-gray);
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--pebble);
+    margin: 16px 0;
+  }
+
+  .feature-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--sand);
+  }
+  .feature-num {
+    min-width: 24px;
+    height: 24px;
+    background: var(--orange);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .feature-content { flex: 1; }
+  .feature-name { font-weight: 700; font-size: 15px; }
+  .feature-desc { font-size: 14px; color: var(--ui-gray); margin-top: 2px; }
+
+  .coverage-cell { text-align: center; font-size: 13px; }
+  .coverage-strong { color: var(--orange); font-weight: 700; }
+  .coverage-light { color: var(--ui-gray); font-style: italic; }
+
+  .checklist-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+  .check-box {
+    min-width: 16px;
+    height: 16px;
+    border: 2px solid var(--pebble);
+    border-radius: 3px;
+    margin-top: 1px;
+  }
+  .check-box.done {
+    background: var(--grass);
+    border-color: var(--forest);
+  }
+
+  ul { padding-left: 18px; margin: 8px 0; }
+  li { margin-bottom: 4px; font-size: 14px; }
+
+  .placeholder-notice {
+    background: #FEFCE8;
+    border: 1px dashed #D4A90A;
+    border-radius: 8px;
+    padding: 14px;
+    margin: 12px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #92720A;
+  }
+  .placeholder-notice strong { color: #6B5208; }
+
+  .thread-card {
+    background: var(--fog);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 8px 0;
+    border-left: 3px solid var(--forest);
+  }
+  .thread-card.t2 { border-left-color: var(--indigo); }
+  .thread-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .thread-card .thread-label { color: var(--forest); }
+  .thread-card.t2 .thread-label { color: var(--indigo); }
+
+  .open-item {
+    background: #FFF7F5;
+    border: 1px solid #FFDDD5;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin: 6px 0;
+    font-size: 14px;
+  }
+  .open-item strong { color: var(--dark-orange); }
+
+  .matrix-table th { font-size: 12px; padding: 6px 6px; }
+  .matrix-table td { font-size: 12px; padding: 6px 6px; text-align: center; }
+  .matrix-table td:first-child { text-align: left; font-weight: 600; }
+
+  .compliance-banner {
+    background: #FFF0EC;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: var(--dark-orange);
+    line-height: 1.6;
+  }
+  .compliance-banner strong { color: var(--orange); }
+
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .funnel-diagram {
+    background: var(--black);
+    color: var(--stone);
+    font-family: 'ABCReproMono', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 12px 0;
+    white-space: pre;
+    overflow-x: auto;
+  }
+  .funnel-diagram .highlight { color: var(--orange); font-weight: 700; }
+  .funnel-diagram .label { color: white; }
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════ HEADER ════════════════ -->
+<div class="header">
+  <div class="header-logo">Performance Golf</div>
+  <div class="header-divider"></div>
+  <div class="header-title">SSP Swing Smooth Pro &mdash; Creative Launch Map</div>
+  <div class="header-meta">
+    <div class="header-badge">Phase 2</div>
+    <div class="header-date">Ads Live: Mar 11 &bull; Product Launch: Feb 2026</div>
+  </div>
+</div>
+
+<!-- ════════════════ NAV ════════════════ -->
+<div class="section-nav">
+  <a class="nav-item" href="#s00" style="background:var(--orange);color:white;font-weight:700">00 Start Here</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s0a">0a. Theme</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s1">1. Product</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s2">2. Brand Threads</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s3">3. Research &amp; VSL</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s4">4. Personas</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s5">5. Creative Matrix</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s6">6. Email/Backend</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s7">7. Production</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s7b">7b. Influencer</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s8">8. Phase 1</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s9">9. Phase 2</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s10">10. Phase 3</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s11">11. Funnel Map</a>
+  <span class="nav-arrow">&rarr;</span>
+  <a class="nav-item" href="#s12">12. Testing</a>
+</div>
+
+<!-- ════════════════ BOARD ════════════════ -->
+<div class="board">
+
+<!-- ═══════ SECTION 00: CEO DIRECTION CARD ═══════ -->
+<div class="section" id="s00" style="min-width:480px;max-width:520px;border:2px solid var(--orange)">
+  <div class="section-header" style="background:var(--orange)">
+    <div class="section-number" style="color:rgba(255,255,255,0.7)">Section 00</div>
+    <div class="section-title">Brixton &amp; John &mdash; Start Here</div>
+    <div class="section-subtitle" style="color:rgba(255,255,255,0.85)">CEO + CMO direction card &mdash; highest-level status &amp; funnel stacking overview</div>
+  </div>
+  <div class="section-body" style="overflow-y:auto">
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Launch Status</div>
+      <table style="font-size:15px">
+        <tr><td style="font-weight:600;width:40%">Product</td><td>Swing Smooth Pro (SSP)</td></tr>
+        <tr><td style="font-weight:600">Category</td><td>Premium triple-action flexibility supplement for golfers 45+</td></tr>
+        <tr><td style="font-weight:600">Authority</td><td>Dr. Troy Van Biezen &mdash; Scottie Scheffler&rsquo;s performance coach, Tiger&rsquo;s 2019 Masters recovery</td></tr>
+        <tr><td style="font-weight:600">Product Launch</td><td style="font-weight:700;color:var(--orange)">February 2026</td></tr>
+        <tr><td style="font-weight:600">Paid Ads Live</td><td style="font-weight:700;color:var(--orange)">March 11, 2026</td></tr>
+        <tr><td style="font-weight:600">Phase 1 Status</td><td><span class="tag tag-green">Complete</span> &mdash; 14 days of ad data, 36 active ad variants</td></tr>
+        <tr><td style="font-weight:600">Phase 2 Status</td><td><span class="tag tag-yellow">Planning</span> &mdash; funnel stacking expansion</td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Phase 1 Performance (Mar 1&ndash;19)</div>
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-value">$229.8K</div>
+          <div class="stat-label">Total Revenue</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">691</div>
+          <div class="stat-label">Orders</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">$332.55</div>
+          <div class="stat-label">Avg Order Value</div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-value">$235.38</div>
+          <div class="stat-label">Primary AOV</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">40.1%</div>
+          <div class="stat-label">Upsell 1 Take</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">41.3%</div>
+          <div class="stat-label">Upsell Boost</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Pricing</div>
+      <table style="font-size:15px">
+        <tr style="background:#EDF7EB"><td style="font-weight:700;width:50%">Starter Kit (1 bottle)</td><td style="font-weight:700">$62.27</td></tr>
+        <tr><td style="font-weight:600">Performance Package (3 bottles)</td><td style="font-weight:700">$160.37</td></tr>
+        <tr style="background:#FFF0EC"><td style="font-weight:700;color:var(--orange)">Total Swing Transformation (6 bottles)</td><td style="font-weight:700;color:var(--orange)">$294.00 &mdash; 60% of orders</td></tr>
+      </table>
+      <div style="font-size:13px;color:var(--ui-gray);margin-top:4px">Subscribe &amp; Save option available at checkout.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Content Status</div>
+      <table style="font-size:15px">
+        <tr style="background:#e8f5e9"><td style="font-weight:700;color:var(--forest);width:40%">Available</td><td style="font-weight:700">~10 assets</td></tr>
+        <tr style="background:#fff8e1"><td style="font-weight:700;color:var(--orange)">In Production / Partial</td><td style="font-weight:700">~4 assets</td></tr>
+        <tr style="background:#fce4ec"><td style="font-weight:700;color:#c62828">VO Only / Need Stock</td><td style="font-weight:700">~2 assets</td></tr>
+        <tr><td style="font-weight:600;color:var(--ui-gray)">Deprioritized</td><td>1 (SSP-v0007 Tai Chi)</td></tr>
+      </table>
+      <div style="font-size:14px;color:var(--ui-gray);margin-top:6px">Full breakdown &rarr; <a href="#s7">Section 7: Production</a></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:8px">Funnel Stacking Overview &mdash; What&rsquo;s Next</div>
+      <p style="font-size:14px">Phase 2 creates multiple parallel funnel flows targeting different personas with tailored landing experiences.</p>
+      <table>
+        <thead><tr><th>Funnel Flow</th><th>Target Segment</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:600">VSL Funnel</td><td>TBD &mdash; post-Donnie alignment</td><td><span class="tag tag-green">Existing</span></td></tr>
+          <tr><td style="font-weight:600">Salespage Funnel</td><td>TBD &mdash; post-Donnie alignment</td><td><span class="tag tag-green">Existing</span></td></tr>
+          <tr><td style="font-weight:600">PDP Funnel</td><td>TBD &mdash; post-Donnie alignment</td><td><span class="tag tag-green">Existing</span></td></tr>
+          <tr><td style="font-weight:600">Advertorial Funnel</td><td>TBD &mdash; post-Donnie alignment</td><td><span class="tag tag-yellow">Planned (Phase 2)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--ui-gray);margin-bottom:10px">Your Guide to This Board</div>
+      <table style="font-size:15px">
+        <tr><td style="font-weight:600;width:55%">Campaign theme (core statement)</td><td><a href="#s0a">Section 0a</a></td></tr>
+        <tr><td style="font-weight:600">Product identity + mechanism</td><td><a href="#s1">Section 1</a></td></tr>
+        <tr><td style="font-weight:600">Brand thread alignment</td><td><a href="#s2">Section 2</a></td></tr>
+        <tr><td style="font-weight:600">Research + key language</td><td><a href="#s3">Section 3</a></td></tr>
+        <tr><td style="font-weight:600">Personas + value drivers</td><td><a href="#s4">Section 4</a></td></tr>
+        <tr><td style="font-weight:600">Creative matrix + ad scripts</td><td><a href="#s5">Section 5</a></td></tr>
+        <tr><td style="font-weight:600">Email/backend alignment</td><td><a href="#s6">Section 6</a></td></tr>
+        <tr><td style="font-weight:600">Production + assets</td><td><a href="#s7">Section 7</a></td></tr>
+        <tr><td style="font-weight:600">Influencer/UGC whitelisting</td><td><a href="#s7b">Section 7b</a></td></tr>
+        <tr><td style="font-weight:600">Phase 1 launch (historical)</td><td><a href="#s8">Section 8</a></td></tr>
+        <tr><td style="font-weight:600">Phase 2 funnel stacking plan</td><td><a href="#s9">Section 9</a></td></tr>
+        <tr><td style="font-weight:600">Phase 3 cross-funnel optimization</td><td><a href="#s10">Section 10</a></td></tr>
+        <tr><td style="font-weight:600">Funnel map + all URLs</td><td><a href="#s11">Section 11</a></td></tr>
+        <tr><td style="font-weight:600">Testing strategy</td><td><a href="#s12">Section 12</a></td></tr>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="callout-muted">
+      <strong style="color:var(--black)">Board Maintenance:</strong> This CLM is maintained by Orion (Creative OS agent). URL registry syncs daily via M13 pipeline module. Content updates at key milestones.
+    </div>
+
+    <div class="compliance-banner">
+      <strong>FDA Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. All product claims in this CLM use approved language only. Do NOT make direct regeneration or reversal claims.
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════ SECTION 0a: CAMPAIGN THEME ═══════ -->
+<div class="section" id="s0a">
+  <div class="section-header">
+    <div class="section-number">Section 0a</div>
+    <div class="section-title">Campaign Theme</div>
+    <div class="section-subtitle">The ONE core theme everything else stems from</div>
+  </div>
+  <div class="section-body">
+    <div class="callout-muted">Every ad, email, landing page, influencer brief, and sales page for SSP ladders up to this statement.</div>
+
+    <h3>Core Campaign Theme</h3>
+    <div style="background:var(--black);color:white;padding:20px 24px;border-radius:8px;font-size:19px;font-weight:600;line-height:1.5;margin:12px 0 20px;border-left:4px solid var(--orange)">
+      &ldquo;The world&rsquo;s first triple-action flexibility formula &mdash; built with the same precision Dr. Troy uses in his Tour-level performance program.&rdquo;
+    </div>
+
+    <h3>Root Angle</h3>
+    <div style="background:var(--fog);padding:16px 20px;border-radius:8px;margin:8px 0 16px;border-left:3px solid var(--orange)">
+      <div style="font-size:18px;font-weight:700;color:var(--orange);line-height:1.4">&ldquo;Your 15th Club &mdash; YOUR BODY&rdquo;</div>
+      <div style="font-size:16px;font-weight:600;color:var(--black);margin-top:4px">&ldquo;Stuck Joints&rdquo; &mdash; the hidden root cause stealing your swing</div>
+    </div>
+
+    <h3>The &ldquo;AND&rdquo; &mdash; Why This Theme Works</h3>
+    <p style="font-size:14px">SSP addresses both pillars of golf performance decline simultaneously:</p>
+    <table>
+      <thead><tr><th>Pillar</th><th>What It Solves</th><th>How</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;color:var(--orange)">Pillar 1 &mdash; Root Cause</td>
+          <td>&ldquo;Stuck joints&rdquo; &mdash; MMP protein enzymes that build up starting around age 45, gluing the swing stiff from the inside out</td>
+          <td>Three patented compounds: AprèsFlex (alarm), ExceptionHYAL Jump (hydration), UC-II (protection)</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;color:var(--orange)">Pillar 2 &mdash; The Body</td>
+          <td>Your body is the &ldquo;15th club&rdquo; &mdash; controls consistency, tempo, distance, and your swing</td>
+          <td>Dr. Troy&rsquo;s approach treats the body as the primary performance variable</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>The Research Reframe</h3>
+    <div style="background:#1a1a1a;color:white;padding:14px 20px;border-radius:6px;font-size:16px;font-style:italic;line-height:1.6;margin:8px 0 16px;border-left:3px solid var(--orange)">
+      &ldquo;You&rsquo;re NOT losing flexibility just because you&rsquo;re &lsquo;getting older.&rsquo; Flexibility loss in golfers is caused by something much deeper &mdash; a problematic protein that builds up in your joints and literally glues your swing stiff from the inside out.&rdquo;
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Key Angles Flow</h3>
+    <table>
+      <thead><tr><th>#</th><th>Angle</th><th>Connection to Core Theme</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">Stuck Joints</td><td>The named root cause &mdash; the thing they didn&rsquo;t know was happening</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">Dr. Troy&rsquo;s Credibility</td><td>Scottie Scheffler&rsquo;s coach, Tiger&rsquo;s recovery engineer, 50,000+ recreational golfers</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">Your Joint System</td><td>Education: how healthy joints work (cartilage, synovial fluid, connective tissue)</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">MMP Termites</td><td>The mechanism &mdash; the three-layer breakdown causing stuck joints</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">Why Everything Else Fails</td><td>Counter-sell: painkillers, glucosamine, cortisone, surgery all miss root cause</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td style="font-weight:600">&ldquo;First and Only&rdquo;</td><td>Three patented compounds never before combined</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">7</td><td style="font-weight:600">Three Ingredients</td><td>AprèsFlex (alarm), ExceptionHYAL Jump (hydration), UC-II (protection)</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">8</td><td style="font-weight:600">Transformation Timeline</td><td>5 days relief, 8 weeks fluid, 6 months restored</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Source Materials</h3>
+    <table>
+      <tr><td style="font-weight:600;width:40%">SSP Core Messaging Angles</td><td><code>_pg-supplements/pg-ssp/ssp-core-messaging-angles.md</code></td></tr>
+      <tr><td style="font-weight:600">SSP VSL Script</td><td><code>_pg-supplements/pg-ssp/ssp-vsl-script.md</code></td></tr>
+      <tr><td style="font-weight:600">SSP VSL Master Doc</td><td><a href="https://docs.google.com/document/d/1ZAGXCp2LALsMmR8RCL8Izi1t8A80pAhJpQK0o27mFAY/edit" target="_blank">Google Doc</a></td></tr>
+      <tr><td style="font-weight:600">ClickUp Project</td><td><a href="https://app.clickup.com/9014714949/v/li/901413466112" target="_blank">ClickUp SSP</a></td></tr>
+      <tr><td style="font-weight:600">UX Design (Figma)</td><td><a href="https://www.figma.com/files/project/526467920" target="_blank">Figma SSP Project</a></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 1: PRODUCT OVERVIEW ═══════ -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <div class="section-number">Section 01</div>
+    <div class="section-title">Product Overview</div>
+    <div class="section-subtitle">What are we selling?</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Product Identity</h3>
+    <table>
+      <tr><td style="font-weight:600;width:35%">Product</td><td>Swing Smooth Pro (SSP)</td></tr>
+      <tr><td style="font-weight:600">Full Name</td><td>SwingSmooth Pro</td></tr>
+      <tr><td style="font-weight:600">Category</td><td>Premium triple-action flexibility supplement for golfers 45+</td></tr>
+      <tr><td style="font-weight:600">Form</td><td>Daily capsule</td></tr>
+      <tr><td style="font-weight:600">Authority</td><td>Dr. Troy Van Biezen</td></tr>
+      <tr><td style="font-weight:600">Manufacturing</td><td>Eagle Labs (cGMP-certified, U.S.)</td></tr>
+      <tr><td style="font-weight:600">Key Ingredients</td><td>AprèsFlex (100mg), ExceptionHYAL Jump (200mg), UC-II (40mg)</td></tr>
+    </table>
+
+    <div class="callout">
+      <strong>Root Angle (Verified):</strong> &ldquo;Your 15th Club &mdash; YOUR BODY.&rdquo; &ldquo;Stuck joints&rdquo; are stealing your swing &mdash; a specific, fixable biological breakdown, not age.
+    </div>
+
+    <h3>Key Promise</h3>
+    <p>Fix &ldquo;stuck joints&rdquo; &mdash; the hidden root cause of lost distance, stiffness, and inconsistency &mdash; with the world&rsquo;s first triple-action flexibility formula.</p>
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-value">5 days</div>
+        <div class="stat-label">Feel Relief</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">8 weeks</div>
+        <div class="stat-label">Move Fluidly</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">6 months</div>
+        <div class="stat-label">Restored</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Mechanism: Triple-Action Flexibility Formula</h3>
+    <p style="font-size:14px">Three patented, clinical-grade compounds &mdash; never before combined &mdash; each targeting a different layer of joint breakdown:</p>
+
+    <div class="feature-row">
+      <div class="feature-num">1</div>
+      <div class="feature-content">
+        <div class="feature-name">AprèsFlex (100mg) &mdash; &ldquo;The Mobility Molecule&rdquo;</div>
+        <div class="feature-desc">Quiets the muscle guarding alarm so your body stops slamming on the brakes. <strong>Layer 1: Connective tissue stiffness.</strong> 15% comfort in 5 days. 45% flexibility, 50% less stiffness by Day 30.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">2</div>
+      <div class="feature-content">
+        <div class="feature-name">ExceptionHYAL Jump (200mg) &mdash; Full-Spectrum Joint Hydration</div>
+        <div class="feature-desc">Rehydrates joints with all 3 molecular sizes of clinical-grade hyaluronic acid. <strong>Layer 2: Synovial fluid depletion.</strong> 40% relief in 8 weeks. 520.9% greater improvement than placebo.</div>
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature-num">3</div>
+      <div class="feature-content">
+        <div class="feature-name">UC-II (40mg) &mdash; &ldquo;The Protector Protein&rdquo;</div>
+        <div class="feature-desc">Retrains the immune system to stop sending MMP &ldquo;termites&rdquo; to attack healthy cartilage. <strong>Layer 3: Cartilage breakdown.</strong> 25% greater relief than glucosamine/chondroitin. 23% less stiffness by Day 180.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>The Root Problem: Stuck Joints</h3>
+    <p style="font-size:14px">&ldquo;Stuck joints&rdquo; is a systemic breakdown caused by MMP protein enzymes that build up starting around age 45. Golf accelerates it &mdash; swinging a golf club causes nearly 3x more joint impact than running.</p>
+    <ul>
+      <li><strong>Gnaw through cartilage</strong> &mdash; both damaged and healthy tissue</li>
+      <li><strong>Drain synovial fluid</strong> &mdash; chew holes that let natural lubricant leak out</li>
+      <li><strong>Stiffen connective tissue</strong> &mdash; turn loose, flexible tissue into dried-out, ragged elastic</li>
+      <li><strong>Trigger muscle guarding</strong> &mdash; neurological reflex tells your body &ldquo;DANGER &mdash; STOP MOVING&rdquo;</li>
+    </ul>
+    <p style="font-size:14px;color:var(--dark-orange);font-weight:600;margin-top:8px">Result: Every year you lose 2&ndash;3 degrees of rotation. Backswing gets shorter. Contact suffers. Consistency deteriorates.</p>
+
+    <div class="divider"></div>
+
+    <h3>Key Proof Points</h3>
+    <table>
+      <tr><td style="font-weight:600;width:30%">Dr. Troy Van Biezen</td><td>Scottie Scheffler&rsquo;s personal performance coach since age 14. Engineered Tiger Woods&rsquo; 12-month recovery plan (won 2019 Masters). 22+ years. 50,000+ recreational golfers.</td></tr>
+      <tr><td style="font-weight:600">Harvard Study</td><td>Nearly 4,000 people &mdash; no convincing evidence glucosamine/chondroitin made any meaningful difference</td></tr>
+      <tr><td style="font-weight:600">JAMA Audit</td><td>More than 90% of supplements&rsquo; ingredients don&rsquo;t match what&rsquo;s promised on the label</td></tr>
+      <tr><td style="font-weight:600">Cortisone Study</td><td>Patients who relied on cortisone were 62% more likely to feel worse than those who did nothing</td></tr>
+      <tr><td style="font-weight:600">&ldquo;First and Only&rdquo;</td><td>First company to bring patented, full-spectrum ExceptionHYAL Jump to the U.S. First to combine all three compounds.</td></tr>
+      <tr><td style="font-weight:600">Clinical Studies</td><td>All three ingredients independently validated in randomized, double-blind, placebo-controlled studies</td></tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Offer Structure</h3>
+    <table>
+      <tr><td style="font-weight:600;width:40%">Starter Kit</td><td>1 bottle &mdash; $62.27</td></tr>
+      <tr><td style="font-weight:600">Performance Package</td><td>3 bottles &mdash; $160.37</td></tr>
+      <tr><td style="font-weight:700;color:var(--orange)">Total Swing Transformation</td><td style="font-weight:700;color:var(--orange)">6 bottles &mdash; $294.00 (60% of orders)</td></tr>
+      <tr><td style="font-weight:600">Subscribe &amp; Save</td><td>Available at checkout</td></tr>
+      <tr><td style="font-weight:600">Guarantee</td><td>Money-back guarantee &mdash; full refund</td></tr>
+      <tr><td style="font-weight:600">Upsell 1</td><td>More SSP (3/6/9-month) &mdash; 40.1% take rate</td></tr>
+      <tr><td style="font-weight:600">Upsell 2</td><td>Kinetic Movement Method &mdash; 12.9% take rate</td></tr>
+      <tr><td style="font-weight:600">Upsell 3</td><td>Gift cards &mdash; 0.4% take rate</td></tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <div class="compliance-banner">
+      <strong>FDA Disclaimer (MANDATORY on all customer-facing materials):</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.<br><br>
+      <strong>Approved claim patterns:</strong><br>
+      &bull; &ldquo;A recent randomized, double-blind study found it <em>can support</em> turning back the clock...&rdquo; (attribute to study)<br>
+      &bull; &ldquo;Some scientists <em>believe</em>, based on their clinical testing, you could fully restore...&rdquo; (attribute to scientists)<br>
+      &bull; NEVER say &ldquo;regenerates&rdquo; or &ldquo;reverses damage&rdquo; directly
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════ SECTION 2: BRAND THREAD ALIGNMENT ═══════ -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <div class="section-number">Section 02</div>
+    <div class="section-title">Brand Thread Alignment</div>
+    <div class="section-subtitle">How SSP maps to PG&rsquo;s two brand threads</div>
+  </div>
+  <div class="section-body">
+
+    <h3>PG Brand Threads</h3>
+    <div class="thread-card">
+      <div class="thread-label">Thread 1: Smarter Journey to Better Golf</div>
+      <p style="font-size:14px;margin:0">Your body and equipment make the game easier &mdash; you don&rsquo;t need to overhaul your swing or grind on the range. Smarter path, not harder work.</p>
+    </div>
+    <div class="thread-card t2">
+      <div class="thread-label">Thread 2: Innovation / Stories of Innovation</div>
+      <p style="font-size:14px;margin:0">Breakthrough science and unconventional R&amp;D that solves problems the mainstream ignores. Clinical-grade ingredients, patented formulas, authority-led innovation.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Thread 1: Smarter Journey &rarr; SSP</h3>
+    <table>
+      <thead><tr><th>Thread 1 Principle</th><th>SSP Execution</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Body over swing changes</td><td>&ldquo;Your BODY Controls: Your Consistency... Your Tempo... Your Distance... And Most Important... YOUR SWING!&rdquo;</td></tr>
+        <tr><td style="font-weight:600">Automation over effort</td><td>Take a daily capsule &mdash; no exercises, no stretching routines, no rehab programs</td></tr>
+        <tr><td style="font-weight:600">Fix root cause, not symptoms</td><td>&ldquo;None of these medical interventions address what&rsquo;s really happening inside your joints.&rdquo;</td></tr>
+        <tr><td style="font-weight:600">No effort required</td><td>&ldquo;Every morning you take SwingSmooth Pro, you&rsquo;re depositing money into your body&rsquo;s bank account&rdquo;</td></tr>
+        <tr><td style="font-weight:600">Making the game easier</td><td>Rotation returns, swing smooths out, consistency comes back &mdash; from a daily capsule</td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="font-size:14px"><strong>Thread 1 headline:</strong> Your body is your 15th club. Fix the root cause. Get your swing back.</div>
+
+    <div class="divider"></div>
+
+    <h3>Thread 2: Innovation &rarr; SSP</h3>
+    <table>
+      <thead><tr><th>Thread 2 Principle</th><th>SSP Execution</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Breakthrough formula</td><td>&ldquo;World&rsquo;s first triple-action flexibility formula&rdquo; &mdash; three patented compounds never before combined</td></tr>
+        <tr><td style="font-weight:600">Proprietary ingredients</td><td>AprèsFlex, ExceptionHYAL Jump, UC-II &mdash; all patented, trademarked, clinically tested</td></tr>
+        <tr><td style="font-weight:600">Mainstream can&rsquo;t/won&rsquo;t</td><td>&ldquo;More than 90% of supplements&rsquo; ingredients don&rsquo;t match what&rsquo;s promised on the label&rdquo; (JAMA)</td></tr>
+        <tr><td style="font-weight:600">Authority-led R&amp;D</td><td>Dr. Troy Van Biezen &mdash; Scottie Scheffler&rsquo;s coach, Tiger&rsquo;s recovery engineer, 50,000+ golfers</td></tr>
+        <tr><td style="font-weight:600">Named root cause</td><td>&ldquo;Stuck joints&rdquo; / MMP &ldquo;termites&rdquo; &mdash; consumer-friendly term for why flexibility declines</td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="font-size:14px"><strong>Thread 2 headline:</strong> Scottie Scheffler&rsquo;s performance coach spent 22 years perfecting this formula. You&rsquo;re the first to get it.</div>
+
+    <div class="divider"></div>
+
+    <h3>Root Angle to Thread Mapping</h3>
+    <ul>
+      <li><strong>&ldquo;Your 15th Club&rdquo;</strong> &rarr; Thread 1 (body is the most important equipment)</li>
+      <li><strong>&ldquo;Stuck Joints&rdquo;</strong> &rarr; Thread 2 (names the root cause no one else has identified)</li>
+      <li><strong>&ldquo;Triple-Action Formula&rdquo;</strong> &rarr; Thread 2 (the science) AND Thread 1 (a daily capsule does the work)</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>Brand Thread Priority for Creative</h3>
+    <table>
+      <thead><tr><th>Creative Context</th><th>Lead Thread</th><th>Support Thread</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">VSL / Long-form sales</td><td>Thread 2 (Dr. Troy, clinical science, &ldquo;first and only&rdquo;)</td><td>Thread 1 (body is the 15th club)</td></tr>
+        <tr><td style="font-weight:600">Paid ads / Short-form</td><td>Thread 1 (result-first: stuck joints &rarr; smooth swing &rarr; more distance)</td><td>Thread 2 (Dr. Troy credibility)</td></tr>
+        <tr><td style="font-weight:600">Dr. Troy content</td><td>Thread 2 (authority, clinical background)</td><td>Thread 1 (built for recreational golfers)</td></tr>
+        <tr><td style="font-weight:600">Testimonials / UGC</td><td>Thread 1 (real golfers, real results)</td><td>Thread 2 (the science works)</td></tr>
+        <tr><td style="font-weight:600">Retargeting / Email</td><td>Thread 1 (daily capsule, no effort, guaranteed)</td><td>Thread 2 (patented ingredients, clinical studies)</td></tr>
+        <tr><td style="font-weight:600">Advertorial</td><td>Thread 2 (educational &mdash; MMP mechanism, clinical evidence)</td><td>Thread 1 (one daily capsule)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-muted">
+      <strong style="color:var(--black)">Key creative principle:</strong> Thread 2 is the believability engine (clinical studies, patented ingredients, Dr. Troy). Thread 1 is the emotional promise (fix your body, fix your game, no effort required). VSL leads with Thread 2. Ads invert: lead with Thread 1 result.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 3: RESEARCH & VSL MESSAGING ═══════ -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <div class="section-number">Section 03</div>
+    <div class="section-title">Research &amp; VSL Messaging</div>
+    <div class="section-subtitle">Marketing OS to Creative OS bridge &mdash; messaging architecture &amp; key language</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Research Executive Summary</h3>
+    <ul>
+      <li><strong>&ldquo;Stuck joints&rdquo; is the named root cause.</strong> MMP enzymes &mdash; not age, not wear and tear. Most powerful belief shift available.</li>
+      <li><strong>Golf is an impact sport.</strong> Nearly 3x more joint impact than running. Creates urgency.</li>
+      <li><strong>Everything else has failed.</strong> Harvard study (4K people, no evidence for glucosamine), JAMA audit (90% label mismatch).</li>
+      <li><strong>Dr. Troy bridges skepticism.</strong> Scottie + Tiger + 50K recreational golfers.</li>
+      <li><strong>Three layers require three solutions.</strong> Single-ingredient supplements can&rsquo;t address all three layers.</li>
+      <li><strong>&ldquo;First and Only&rdquo; is the differentiator.</strong> First to bring ExceptionHYAL Jump to the U.S.</li>
+      <li><strong>Transformation timeline creates hope.</strong> 5 days &rarr; 8 weeks &rarr; 6 months. &ldquo;Biological Benjamin Button.&rdquo;</li>
+      <li><strong>Subscribe &amp; Save = compounding effect.</strong> Like compound interest for your body.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>Messaging Architecture</h3>
+    <h4>Problem Framework</h4>
+    <ul>
+      <li><strong>Root cause:</strong> &ldquo;Stuck joints&rdquo; &mdash; MMP enzymes building up from age 45</li>
+      <li><strong>Reframe:</strong> &ldquo;You&rsquo;re NOT losing flexibility because you&rsquo;re getting older&rdquo;</li>
+      <li><strong>Villain:</strong> Mainstream supplements (90% label mismatch), painkillers, cortisone, surgery</li>
+      <li><strong>Failed solutions:</strong> Glucosamine (Harvard: no evidence), stretching, foam rolling, icing</li>
+    </ul>
+
+    <h4>Solution Framework</h4>
+    <ul>
+      <li><strong>Core claim:</strong> Three patented compounds, never before combined</li>
+      <li><strong>Mechanism:</strong> Triple-action flexibility formula</li>
+      <li><strong>Authority:</strong> Dr. Troy &mdash; from hockey injury to Scottie&rsquo;s performance coach</li>
+      <li><strong>Differentiator:</strong> &ldquo;World&rsquo;s first and only&rdquo; &mdash; Lonza, Gerenzano, Eagle Labs</li>
+      <li><strong>Result frame:</strong> Sequential unlock &mdash; alarm off (5 days), rehydrate (8 weeks), protect (6 months)</li>
+    </ul>
+
+    <h4>Emotional Arc (VSL Sequence)</h4>
+    <table>
+      <thead><tr><th>#</th><th>Beat</th><th>Content</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">Hook</td><td>Rotation question / &ldquo;Pop&rdquo; test / Pain recognition</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">Authority</td><td>Dr. Troy&rsquo;s origin story (hockey injury &rarr; prevention)</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">Education</td><td>How healthy joints work (cartilage, synovial fluid, connective tissue)</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">Root Cause</td><td>MMP &ldquo;termites&rdquo; &mdash; three-layer breakdown</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">Counter-Sell</td><td>Everything else fails (painkillers, glucosamine, cortisone, surgery)</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td style="font-weight:600">Solution</td><td>Three patented ingredients &mdash; AprèsFlex, ExceptionHYAL Jump, UC-II</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">7</td><td style="font-weight:600">Product Reveal</td><td>SwingSmooth Pro &mdash; &ldquo;world&rsquo;s first triple-action flexibility formula&rdquo;</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">8</td><td style="font-weight:600">Transformation</td><td>5 days &rarr; 8 weeks &rarr; 6 months (&ldquo;Biological Benjamin Button&rdquo;)</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">9</td><td style="font-weight:600">Close</td><td>Compounding effect &rarr; pricing &rarr; guarantee &rarr; urgency</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Key Language &mdash; Downstream Creative Must Echo</h3>
+    <table>
+      <thead><tr><th>Phrase / Concept</th><th>Why It Matters</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700">&ldquo;Stuck joints&rdquo;</td><td>Named root cause. Gives the problem a label.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Your 15th club &mdash; YOUR BODY&rdquo;</td><td>Core reframe. Shifts from equipment/technique to body.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;MMP termites&rdquo;</td><td>Visual metaphor for the mechanism.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Triple-action flexibility formula&rdquo;</td><td>Product descriptor. Not &ldquo;joint supplement&rdquo; or &ldquo;pill.&rdquo;</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Glues your swing stiff from the inside out&rdquo;</td><td>The consequence in visceral language.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Muscle guarding alarm&rdquo;</td><td>Why you feel locked up.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Three patented compounds, never before combined&rdquo;</td><td>Differentiator from every other supplement.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Biological Benjamin Button&rdquo;</td><td>Aspirational transformation frame. Attribute to studies only.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;5 days... 8 weeks... 6 months&rdquo;</td><td>Transformation timeline. Specific milestones.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Scottie Scheffler&rsquo;s performance coach&rdquo;</td><td>Authority proof in one line.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Compound Flexibility Effect&rdquo;</td><td>Justifies ongoing use and Subscribe &amp; Save.</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Pop, crack, or grind&rdquo;</td><td>Self-diagnosis trigger.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Funnel Pages &mdash; Customer Path</h3>
+    <table>
+      <thead><tr><th>Page</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">PG.com PDP</td><td><a href="https://shop.performancegolf.com/products/swingsmooth-pro" target="_blank">swingsmooth-pro</a></td></tr>
+        <tr><td style="font-weight:600">Salespage</td><td><a href="https://shop.performancegolf.com/pages/swing-smooth-pro-info" target="_blank">swing-smooth-pro-info</a></td></tr>
+        <tr><td style="font-weight:600">Customer PDP</td><td><a href="https://shop.performancegolf.com/pages/swingsmooth-pro-product" target="_blank">swingsmooth-pro-product</a></td></tr>
+        <tr><td style="font-weight:600">VSL (Closed)</td><td><a href="https://www.performancegolf.com/swing-smooth-pro/video" target="_blank">swing-smooth-pro/video</a></td></tr>
+        <tr><td style="font-weight:600">VSL (Open)</td><td><a href="https://www.performancegolf.com/swing-smooth-pro/video-b" target="_blank">swing-smooth-pro/video-b</a></td></tr>
+        <tr><td style="font-weight:600">Checkout (S&amp;S)</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/swing-smooth-pro-ss-39769" target="_blank">swing-smooth-pro-ss-39769</a></td></tr>
+        <tr><td style="font-weight:600">Checkout (No S&amp;S)</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/swing-smooth-pro-39769" target="_blank">swing-smooth-pro-39769</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 4: PERSONA & VALUE DRIVER MATRIX ═══════ -->
+<div class="section" id="s4">
+  <div class="section-header">
+    <div class="section-number">Section 04</div>
+    <div class="section-title">Persona &amp; Value Driver Matrix</div>
+    <div class="section-subtitle">Who we&rsquo;re targeting and what motivates them</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Launch Personas</h3>
+
+    <div class="persona-card">
+      <div class="persona-name"><span style="color:var(--orange);font-family:'ABCReproMono',monospace;font-size:13px;margin-right:6px">P1</span> The Competitor</div>
+      <div class="persona-desc">Golfer being outplayed by buddies who practice less. Identity tied to performance. Can&rsquo;t accept losing.</div>
+      <div style="font-size:13px;margin-top:6px"><span class="tag tag-orange">Shame</span> <span class="tag tag-blue">VSL Funnel</span></div>
+      <div class="persona-quote">&ldquo;My buddy who barely practices is outdriving me by 30 yards. What happened?&rdquo;</div>
+    </div>
+
+    <div class="persona-card">
+      <div class="persona-name"><span style="color:var(--orange);font-family:'ABCReproMono',monospace;font-size:13px;margin-right:6px">P2</span> The Declining Athlete</div>
+      <div class="persona-desc">Watching his body betray him year over year. Shorter backswing, more stiffness, less distance. Resists admitting age is a factor.</div>
+      <div style="font-size:13px;margin-top:6px"><span class="tag tag-orange">Fear</span> <span class="tag tag-blue">Salespage Funnel</span></div>
+      <div class="persona-quote">&ldquo;I used to swing smooth without thinking about it. Now I have to warm up for 20 minutes just to feel normal.&rdquo;</div>
+    </div>
+
+    <div class="persona-card">
+      <div class="persona-name"><span style="color:var(--orange);font-family:'ABCReproMono',monospace;font-size:13px;margin-right:6px">P3</span> The Tried-Everything Skeptic</div>
+      <div class="persona-desc">Has spent money on lessons, equipment, supplements, stretching routines. Nothing lasted. Deeply skeptical but still searching.</div>
+      <div style="font-size:13px;margin-top:6px"><span class="tag tag-orange">Frustration</span> <span class="tag tag-blue">Advertorial Funnel</span></div>
+      <div class="persona-quote">&ldquo;I&rsquo;ve tried glucosamine, turmeric, fish oil &mdash; none of it did anything. Why would this be different?&rdquo;</div>
+    </div>
+
+    <div class="persona-card">
+      <div class="persona-name"><span style="color:var(--orange);font-family:'ABCReproMono',monospace;font-size:13px;margin-right:6px">P4</span> The Nostalgic</div>
+      <div class="persona-desc">Remembers his prime &mdash; the effortless swing, the long drives, the consistent rounds. Mourning the loss of something that defined him.</div>
+      <div style="font-size:13px;margin-top:6px"><span class="tag tag-orange">Nostalgia</span> <span class="tag tag-blue">VSL Funnel</span></div>
+      <div class="persona-quote">&ldquo;I look at old photos from tournaments and I don&rsquo;t recognize that golfer anymore.&rdquo;</div>
+    </div>
+
+    <div class="persona-card">
+      <div class="persona-name"><span style="color:var(--orange);font-family:'ABCReproMono',monospace;font-size:13px;margin-right:6px">P5</span> The Solution Seeker</div>
+      <div class="persona-desc">Optimistic, proactive, open to new approaches. Less emotional, more rational. Wants to find the right answer and commit.</div>
+      <div style="font-size:13px;margin-top:6px"><span class="tag tag-green">Hope</span> <span class="tag tag-blue">PDP Funnel</span></div>
+      <div class="persona-quote">&ldquo;If there&rsquo;s a real root cause, I want to fix it. Just tell me what to do.&rdquo;</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Value Drivers</h3>
+    <table>
+      <thead><tr><th>#</th><th>Value Driver</th><th>Core Motivation</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">V1</td><td style="font-weight:600">Distance Recovery</td><td>Get back the yards they&rsquo;ve lost (15-25 yards)</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V2</td><td style="font-weight:600">Pain-Free Golf</td><td>Play 18 without aching. 15% comfort in 5 days.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V3</td><td style="font-weight:600">Consistency</td><td>Stop the round-to-round rollercoaster. Fluid joints = repeatable mechanics.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V4</td><td style="font-weight:600">Social Standing</td><td>Keep up with (or beat) their playing group.</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">V5</td><td style="font-weight:600">Longevity</td><td>Keep playing golf for years. &ldquo;Compound Flexibility Effect.&rdquo;</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Persona x Value Driver Coverage</h3>
+    <table class="matrix-table">
+      <thead><tr><th></th><th>V1: Distance</th><th>V2: Pain-Free</th><th>V3: Consistency</th><th>V4: Social</th><th>V5: Longevity</th></tr></thead>
+      <tbody>
+        <tr><td>1: Competitor</td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"></td></tr>
+        <tr><td>2: Declining</td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td></tr>
+        <tr><td>3: Skeptic</td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td></tr>
+        <tr><td>4: Nostalgic</td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td></tr>
+        <tr><td>5: Seeker</td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Persona x Funnel Stacking Map</h3>
+    <table>
+      <thead><tr><th>Persona</th><th>Primary Flow</th><th>Ad Creative Style</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">1: Competitor</td><td>VSL Funnel</td><td>Pain-focused hooks (Concepts 2, 7)</td></tr>
+        <tr><td style="font-weight:600">2: Declining Athlete</td><td>Salespage Funnel</td><td>Pain-focused hooks (Concepts 1, 3, 5)</td></tr>
+        <tr><td style="font-weight:600">3: Tried-Everything</td><td>Advertorial Funnel</td><td>Education hooks (Concepts 4, 9) + Dr. Troy</td></tr>
+        <tr><td style="font-weight:600">4: Nostalgic</td><td>VSL Funnel</td><td>Desire-focused hooks (Concepts 6, 8, 10)</td></tr>
+        <tr><td style="font-weight:600">5: Solution Seeker</td><td>PDP Funnel</td><td>Desire-focused hooks (Concepts 11, 12, 13)</td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">Funnel stacking assignments are the initial framework. Final mapping depends on Donnie alignment meeting outcomes and Phase 1 performance data.</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 5: CREATIVE MATRIX & AD SCRIPTS ═══════ -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <div class="section-number">Section 05</div>
+    <div class="section-title">Creative Matrix &amp; Ad Scripts</div>
+    <div class="section-subtitle">Phase 1 inventory + Phase 2 creative direction lanes</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Phase 1 &mdash; Video Ad Scripts (Batch 1)</h3>
+    <div class="script-card">
+      <div class="script-id">SSP-v0001</div>
+      <div class="script-name">Dr Style Rotation</div>
+      <div style="font-size:13px;color:var(--ui-gray)">Dr. Troy on-camera &bull; VSL funnel &bull; <span class="tag tag-green">Have footage</span></div>
+    </div>
+    <div class="script-card">
+      <div class="script-id">SSP-v0002</div>
+      <div class="script-name">Dr Style Simple Trick</div>
+      <div style="font-size:13px;color:var(--ui-gray)">Dr. Troy on-camera &bull; VSL funnel &bull; <span class="tag tag-green">Have footage</span></div>
+    </div>
+    <div class="script-card">
+      <div class="script-id">SSP-v0003</div>
+      <div class="script-name">Dr Style Metaphor</div>
+      <div style="font-size:13px;color:var(--ui-gray)">Dr. Troy VO + B-roll &bull; VSL funnel &bull; <span class="tag tag-yellow">Partial &mdash; missing B-roll</span></div>
+    </div>
+    <div class="script-card">
+      <div class="script-id">SSP-v0004</div>
+      <div class="script-name">Dr Style One Factor</div>
+      <div style="font-size:13px;color:var(--ui-gray)">Dr. Troy on-camera &bull; VSL funnel &bull; <span class="tag tag-yellow">Partial &mdash; missing walk &amp; talk</span></div>
+    </div>
+    <div class="script-card">
+      <div class="script-id">SSP-v0005</div>
+      <div class="script-name">Dr Style Pains &amp; Problems</div>
+      <div style="font-size:13px;color:var(--ui-gray)">VO + stock &bull; VSL funnel &bull; <span class="tag tag-yellow">VO only &mdash; need stock/AI</span></div>
+    </div>
+    <div class="script-card">
+      <div class="script-id">SSP-v0006</div>
+      <div class="script-name">Dr Style Timeline</div>
+      <div style="font-size:13px;color:var(--ui-gray)">VO + stock &bull; VSL funnel &bull; <span class="tag tag-yellow">VO only &mdash; need AI hooks</span></div>
+    </div>
+    <div class="script-card" style="border-left-color:var(--stone);opacity:0.65">
+      <div class="script-id" style="color:var(--stone)">SSP-v0007</div>
+      <div class="script-name">Product Ad Tai Chi</div>
+      <div style="font-size:13px;color:var(--ui-gray)">Product ad &bull; Ecomm &bull; <span class="tag tag-gray">Deprioritized</span></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Influencer Ad Concepts (13)</h3>
+    <h4>Pain-Focused (7)</h4>
+    <table>
+      <thead><tr><th>#</th><th>Concept</th><th>NeuroCopy</th><th>Persona</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">The Pop Test</td><td>FOCUS + FEAR</td><td>P2</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">Outplayed by Your Buddy</td><td>SHAME + FEAR</td><td>P1</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">The 3-Degree Thief</td><td>LOSS + FEAR</td><td>P2</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">The Glue Inside You</td><td>EDUCATION + FEAR</td><td>P3</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">The Rotation Test</td><td>FOCUS + FEAR</td><td>P2</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td style="font-weight:600">The Old Photo</td><td>NOSTALGIA + LOSS</td><td>P4</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">7</td><td style="font-weight:600">The Club You Don&rsquo;t Hit</td><td>LOSS + SHAME</td><td>P1</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Desire-Focused (5) + Open Format (1)</h4>
+    <table>
+      <thead><tr><th>#</th><th>Concept</th><th>NeuroCopy</th><th>Persona</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">8</td><td style="font-weight:600">The Morning After</td><td>EMOTION + RELIEF</td><td>P4</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">9</td><td style="font-weight:600">Your Swing Isn&rsquo;t Broken</td><td>HOPE + REFRAME</td><td>P3</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">10</td><td style="font-weight:600">The Timeline Transformation</td><td>DESIRE + PROOF</td><td>P4</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">11</td><td style="font-weight:600">Scottie&rsquo;s Secret Weapon</td><td>AUTHORITY + ASPIRATION</td><td>P5</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">12</td><td style="font-weight:600">The Full Commit</td><td>COMMITMENT + IDENTITY</td><td>P5</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">13</td><td style="font-weight:600">General Unboxing</td><td>CURIOSITY</td><td>P5</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Creative Direction Lanes (Phase 2)</h3>
+
+    <div class="script-card">
+      <div class="script-id">Lane 1</div>
+      <div class="script-name">&ldquo;Stuck Joints Education&rdquo; &mdash; Root Cause Reveal</div>
+      <div style="font-size:13px;color:var(--ui-gray);margin-top:4px">Target: Advertorial + Salespage &bull; Personas P3, P2 &bull; Thread 2 lead</div>
+      <div style="font-size:14px;margin-top:6px">Educate on stuck joints &mdash; name the problem, explain MMP mechanism, show why nothing else has worked. Short-form education (60&ndash;90s).</div>
+    </div>
+
+    <div class="script-card">
+      <div class="script-id">Lane 2</div>
+      <div class="script-name">&ldquo;Dr. Troy&rsquo;s Authority&rdquo; &mdash; Credibility-Led</div>
+      <div style="font-size:13px;color:var(--ui-gray);margin-top:4px">Target: VSL + Salespage &bull; Personas P5, P1 &bull; Thread 2 lead</div>
+      <div style="font-size:14px;margin-top:6px">Lead with who Dr. Troy is. Scottie, Tiger, 50,000 recreational golfers. Then: &ldquo;here&rsquo;s what he formulated for you.&rdquo; On-camera (60&ndash;120s).</div>
+    </div>
+
+    <div class="script-card">
+      <div class="script-id">Lane 3</div>
+      <div class="script-name">&ldquo;The Transformation Timeline&rdquo; &mdash; Hope-Forward</div>
+      <div style="font-size:13px;color:var(--ui-gray);margin-top:4px">Target: PDP + Salespage &bull; Personas P4, P2 &bull; Thread 1 lead</div>
+      <div style="font-size:14px;margin-top:6px">Lead with the payoff. 5 days &rarr; 8 weeks &rarr; 6 months. Paint the picture. Lifestyle/transformation (45&ndash;90s). Emotion before mechanism.</div>
+    </div>
+
+    <div class="script-card">
+      <div class="script-id">Lane 4</div>
+      <div class="script-name">&ldquo;The Counter-Sell&rdquo; &mdash; Why Everything Else Fails</div>
+      <div style="font-size:13px;color:var(--ui-gray);margin-top:4px">Target: Advertorial + VSL &bull; Persona P3 &bull; Thread 2 lead</div>
+      <div style="font-size:14px;margin-top:6px">Stack the failed solutions: painkillers, glucosamine, cortisone, surgery. Then: &ldquo;none address the root cause.&rdquo; Education + counter-sell (90&ndash;120s).</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Hook Bridge Strategy</h3>
+    <ul>
+      <li><strong>Phase 1:</strong> 1 hook per lane, all feeding shared bodies. Meta&rsquo;s algorithm matches right hook to right viewer.</li>
+      <li><strong>Phase 2 expansion:</strong> Hook stacks (vertical) per winning lane. 3&ndash;5 new hooks per winning body.</li>
+      <li><strong>Phase 2 rule:</strong> 7-day data threshold, Monday tickets, Friday delivery.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 6: EMAIL/BACKEND ALIGNMENT ═══════ -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <div class="section-number">Section 06</div>
+    <div class="section-title">Email/Backend Alignment</div>
+    <div class="section-subtitle">Front-end (ads/pages) and back-end (email/automation) messaging consistency</div>
+  </div>
+  <div class="section-body">
+
+    <div class="callout-muted">With funnel stacking, prospects enter from multiple paths. Every touchpoint after the click must feel like the same conversation. The entry experience differs by persona; the backend converges.</div>
+
+    <h3>Key Language Alignment</h3>
+    <p style="font-size:14px">These phrases are locked across ads AND email. Email copy must use these exact framings:</p>
+    <table>
+      <thead><tr><th>Phrase</th><th>Use In Email</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700">&ldquo;Stuck joints&rdquo;</td><td>Problem emails &mdash; name the root cause</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Your 15th club&rdquo;</td><td>Reframe emails &mdash; shift to body</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Triple-action flexibility formula&rdquo;</td><td>Product descriptor &mdash; not &ldquo;joint supplement&rdquo;</td></tr>
+        <tr><td style="font-weight:700">&ldquo;MMP termites&rdquo;</td><td>Mechanism emails &mdash; tangible science</td></tr>
+        <tr><td style="font-weight:700">&ldquo;5 days... 8 weeks... 6 months&rdquo;</td><td>Transformation timeline</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Scottie Scheffler&rsquo;s coach&rdquo;</td><td>Authority proof &mdash; one-line credibility</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Compound Flexibility Effect&rdquo;</td><td>S&amp;S renewal &mdash; compound interest for your body</td></tr>
+        <tr><td style="font-weight:700">&ldquo;Pop, crack, or grind&rdquo;</td><td>Re-engagement &mdash; self-diagnosis trigger</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Email Sequence Framework</h3>
+    <table>
+      <thead><tr><th>Sequence</th><th>Messaging Alignment</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Pre-Launch / Waitlist</td><td>Root angle: &ldquo;Your 15th Club.&rdquo; Dr. Troy story. &ldquo;Stuck joints&rdquo; introduction.</td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td style="font-weight:600">Launch Announcement</td><td>Mirror VSL arc: stuck joints &rarr; MMP &rarr; triple-action &rarr; offer</td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td style="font-weight:600">Cart Abandonment</td><td>Thread 1 lead (daily capsule, no effort). Proof stack: Dr. Troy + clinical studies + guarantee.</td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td style="font-weight:600">Post-Purchase</td><td>&ldquo;What to expect&rdquo;: 5-day &rarr; 8-week &rarr; 6-month timeline. Subscribe &amp; Save benefits.</td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td style="font-weight:600">S&amp;S Renewal</td><td>&ldquo;Compound Flexibility Effect&rdquo; &mdash; don&rsquo;t stop now.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Testimonial Drip</td><td>Real golfer stories mapped to each persona.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Win-Back</td><td>&ldquo;Your joints remember&rdquo; &mdash; restart the compound effect. Pop Test hook.</td><td><span class="tag tag-gray">TBD</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Backend Coordination Checklist</h3>
+    <div class="checklist-item"><div class="check-box"></div><div>Funnel-specific UTM parameters aligned (ad &rarr; page &rarr; email)</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Cart abandonment triggers per funnel flow</div></div>
+    <div class="checklist-item"><div class="check-box done"></div><div>Post-purchase automation active</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>S&amp;S renewal messaging sequence</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Win-back sequence for lapsed S&amp;S</div></div>
+    <div class="checklist-item"><div class="check-box"></div><div>Persona-based email segmentation</div></div>
+
+    <div class="divider"></div>
+
+    <h3>Cross-Team Sync Points</h3>
+    <table>
+      <thead><tr><th>Sync</th><th>When</th><th>Who</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Email copy review vs VSL/ad language</td><td>Before Phase 2 creative launch</td><td>Creative + Email</td></tr>
+        <tr><td style="font-weight:600">Per-funnel UTM alignment</td><td>Before funnel stacking goes live</td><td>Email + Dev + Media</td></tr>
+        <tr><td style="font-weight:600">S&amp;S renewal sequence build</td><td>Before first renewal cycle</td><td>Email + Creative</td></tr>
+        <tr><td style="font-weight:600">Persona segmentation setup</td><td>After funnel stacking audiences defined</td><td>Email + Data + Media</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 7: PRODUCTION & SHOOT PLAN ═══════ -->
+<div class="section" id="s7">
+  <div class="section-header">
+    <div class="section-number">Section 07</div>
+    <div class="section-title">Production &amp; Shoot Plan</div>
+    <div class="section-subtitle">Visual assets, gaps, and Phase 2 footage needs</div>
+  </div>
+  <div class="section-body">
+
+    <h3>CEO Quick View: Content Status</h3>
+    <table style="font-size:15px">
+      <tr style="background:#e8f5e9"><td style="font-weight:700;color:var(--forest);width:40%">Available</td><td style="font-weight:700">10+ assets</td></tr>
+      <tr style="background:#fff8e1"><td style="font-weight:700;color:var(--orange)">Partial / In Production</td><td style="font-weight:700">4 assets</td></tr>
+      <tr style="background:#fce4ec"><td style="font-weight:700;color:#c62828">VO Only / Need Stock</td><td style="font-weight:700">2 assets</td></tr>
+      <tr><td style="font-weight:600;color:var(--ui-gray)">Deprioritized</td><td>1 (SSP-v0007)</td></tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Available Assets</h3>
+    <table>
+      <thead><tr><th>Asset</th><th>POC</th><th>Location</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">ClickUp Project</td><td>Jenni</td><td><a href="https://app.clickup.com/9014714949/v/li/901413466112" target="_blank">ClickUp SSP</a></td></tr>
+        <tr><td style="font-weight:600">Dr Troy Shoot / Lifestyle</td><td>JoJo</td><td><a href="https://app.iconik.io/collection/fe30a3ec-c498-11f0-a529-3ae89419fd83" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">Product Images</td><td>JoJo</td><td><a href="https://app.iconik.io/collection/fe31cfe2-c498-11f0-8e97-4629f72f1daf" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">B-Roll</td><td>JoJo</td><td><a href="https://app.iconik.io/collection/fe267412-c498-11f0-a529-3ae89419fd83" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">Testimonial Vids (Raw)</td><td>Jessi</td><td><a href="https://app.iconik.io/collection/fe3246d4-c498-11f0-a529-3ae89419fd83" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">Testimonial Vids (Edited)</td><td>Jessi</td><td><a href="https://app.iconik.io/collection/fe3360dc-c498-11f0-a529-3ae89419fd83" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">Renders &amp; Animations</td><td>Pierson</td><td><a href="https://app.iconik.io/collection/1fb97c12-f231-11f0-96c8-a609d6205064" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">Body Animation</td><td>JoJo</td><td><a href="https://app.iconik.io/collection/332b93e2-06aa-11f1-896a-5a93e2c3485c" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">Homepage Hero Video</td><td>JoJo</td><td><a href="https://app.iconik.io/asset/a271de8a-0d96-11f1-960a-92eeb9a82e43" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">UX Design (Figma)</td><td>Tim</td><td><a href="https://www.figma.com/files/project/526467920" target="_blank">Figma</a></td></tr>
+        <tr><td style="font-weight:600">Master Asset Matrix</td><td>Jenni</td><td><a href="https://docs.google.com/spreadsheets/d/1zr-329F3Q9d5pgOcWIB90BBRdCNoW_5CrQBn5ANgKnM/edit" target="_blank">Google Sheet</a></td></tr>
+        <tr><td style="font-weight:600">Pre-Sale Video (Master)</td><td>&mdash;</td><td><a href="https://app.iconik.io/asset/94b9090c-c4d1-11f0-a01c-d64fd77526df" target="_blank">Iconik</a></td></tr>
+        <tr><td style="font-weight:600">Safe Zone Guide (4x5)</td><td>&mdash;</td><td><a href="https://app.iconik.io/asset/ad0347e2-0055-11f1-b646-f270e8322e23" target="_blank">Iconik</a></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Footage Gaps &mdash; JoJo&rsquo;s Team (No Dr. Troy)</h3>
+    <table>
+      <thead><tr><th>Item</th><th>Description</th><th>For Ad</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Elmer&rsquo;s Glue</td><td>Squeeze bottle / two sticks glued together</td><td>v0003 Hook 3</td></tr>
+        <tr><td style="font-weight:600">Leaky Bucket</td><td>Bucket with hole, water flowing out</td><td>v0003 Hook 4</td></tr>
+        <tr><td style="font-weight:600">Rice Crispies ASMR</td><td>Cereal in milk with HOT MIC</td><td>v0003 Hook 5</td></tr>
+        <tr><td style="font-weight:600">Oil Change</td><td>Dirty oil draining (or stock)</td><td>v0003 Hook 6</td></tr>
+        <tr><td style="font-weight:600">Golfer Rotation Interviews</td><td>15-20 golfers answering rotation questions</td><td>v0001 Scene 2</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Footage Gaps &mdash; Dr. Troy Shoot</h3>
+    <table>
+      <thead><tr><th>Item</th><th>Description</th><th>For Ad</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Walk &amp; Talk</td><td>Natural walking conversation in clinic</td><td>v0003, v0004</td></tr>
+        <tr><td style="font-weight:600">&ldquo;POP&rdquo; Back Crack</td><td>Rotation drill with mic&rsquo;d audio (ASMR)</td><td>v0001 Hook 2</td></tr>
+        <tr><td style="font-weight:600">Mirror Scene</td><td>Staring at reflection, shame expression</td><td>v0004 Intro 1</td></tr>
+        <tr><td style="font-weight:600">Banana Props</td><td>Holding ripe vs rotten banana, peeling</td><td>v0001 Hooks 3-4</td></tr>
+        <tr><td style="font-weight:600">Stretching / Strength / Cardio</td><td>Various exercise demonstrations</td><td>v0002 Hooks 1-3</td></tr>
+        <tr><td style="font-weight:600">Resistance Band</td><td>Exercises with band</td><td>v0004 Intro 2</td></tr>
+        <tr><td style="font-weight:600">Hip Skeleton</td><td>Seated cross-legged holding skeleton model</td><td>v0004 Intro 3</td></tr>
+        <tr><td style="font-weight:600">Kettlebell</td><td>Single-leg KB step-ups</td><td>v0004 Intro 4</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Phase 2 Footage Needs</h3>
+    <table>
+      <thead><tr><th>Funnel Flow</th><th>What&rsquo;s Missing</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Advertorial</td><td>Editorial-style Dr. Troy content. Whiteboard/diagram footage. Third-party feel.</td><td><span class="tag tag-orange">High</span></td></tr>
+        <tr><td style="font-weight:600">PDP-specific</td><td>Product close-ups, unboxing, ingredient sourcing visuals (Lonza, Gerenzano, Eagle Labs).</td><td><span class="tag tag-yellow">Medium</span></td></tr>
+        <tr><td style="font-weight:600">Testimonial compilation</td><td>Extended customer testimonials. Need variety (age, handicap, region).</td><td><span class="tag tag-yellow">Medium</span></td></tr>
+        <tr><td style="font-weight:600">Lifestyle/transformation</td><td>Before/after rotation demos. &ldquo;Smooth swing&rdquo; footage. Morning routine with SSP.</td><td><span class="tag tag-orange">High</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 7b: INFLUENCER & UGC ═══════ -->
+<div class="section" id="s7b">
+  <div class="section-header">
+    <div class="section-number">Section 7b</div>
+    <div class="section-title">Influencer &amp; UGC</div>
+    <div class="section-subtitle">Creator relationships, whitelisting rights, and UGC creative</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Content Creators Roster</h3>
+    <p>Full roster with handles, platforms, and whitelisting status: <a href="https://docs.google.com/spreadsheets/d/1IRK9VhmDOVndDCynx_rbX8tkSk2NAdnj_LQk1S2qDBs/edit" target="_blank">Content Creators Roster (Google Sheets)</a></p>
+
+    <div class="divider"></div>
+
+    <h3>SSP Creator Tracking</h3>
+    <div class="placeholder-notice">
+      <strong>Awaiting confirmed creators.</strong> Add creators as confirmed from the roster.
+    </div>
+
+    <div class="callout">
+      <strong>Creative brief reference:</strong> Full SSP influencer creative brief with 13 ad concepts at <code>neco-neurocopy-agent/_projects/influencer-briefs/ssp-influencer-creative-brief-template.md</code>. JoJo Phillips (<code>jojo@performancegolfzone.com</code>) is the production coordinator.
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Influencer Content Guidelines</h3>
+    <ul>
+      <li>Product must be visible at some point (holding bottle, on counter)</li>
+      <li>Authentic settings (golf course, home, garage, car)</li>
+      <li>15&ndash;60 seconds (sweet spot: 30&ndash;45 seconds)</li>
+      <li>Vertical format preferred (9:16 for social)</li>
+      <li><strong>Do NOT</strong> show product images or B-roll in VSL funnel ads (blind ads)</li>
+      <li>FDA disclaimer must appear on screen during any claim segment</li>
+      <li>Tone: conversational, NOT salesy &mdash; &ldquo;like telling a friend&rdquo;</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 8: PHASE 1 — LAUNCH (HISTORICAL) ═══════ -->
+<div class="section" id="s8">
+  <div class="section-header">
+    <div class="section-number">Section 08</div>
+    <div class="section-title">Phase 1 &mdash; Launch (Historical)</div>
+    <div class="section-subtitle">What launched and how it performed. Phase 1 is complete.</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Launch Timeline</h3>
+    <div class="timeline-item">
+      <div class="timeline-date">Feb 2026</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Product Launch (funnel live)</div>
+        <div class="timeline-owner"><span class="tag tag-green">Complete</span></div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Feb 2026</div>
+      <div class="timeline-content">
+        <div class="timeline-title">GTM sheet tab created</div>
+        <div class="timeline-owner"><span class="tag tag-green">Complete</span></div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Pre-Feb</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Waitlist / hype phase</div>
+        <div class="timeline-owner"><span class="tag tag-green">Complete</span></div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 11</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Paid ads live</div>
+        <div class="timeline-owner"><span class="tag tag-green">Complete</span></div>
+      </div>
+    </div>
+    <div class="timeline-item" style="border-bottom:none">
+      <div class="timeline-date">Mar 11&ndash;24</div>
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 1 data collection (14 days)</div>
+        <div class="timeline-owner"><span class="tag tag-green">Complete</span></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Batch 1 Ad Summary</h3>
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-value">7</div>
+        <div class="stat-label">Video Scripts</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">13</div>
+        <div class="stat-label">Influencer Concepts</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">36</div>
+        <div class="stat-label">Active Ad Variants</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Phase 1 Performance (Mar 11&ndash;24)</h3>
+    <table>
+      <tr><td style="font-weight:600;width:40%">Days Live</td><td style="font-weight:700">14</td></tr>
+      <tr><td style="font-weight:600">Active Ad Variants</td><td style="font-weight:700">36 <span style="font-weight:400;color:var(--forest)">(71% increase from launch day)</span></td></tr>
+      <tr><td style="font-weight:600">Revenue (Mar 1&ndash;19)</td><td style="font-weight:700;color:var(--orange)">$229,792.91</td></tr>
+      <tr><td style="font-weight:600">Total Orders</td><td style="font-weight:700">691</td></tr>
+      <tr><td style="font-weight:600">Average Order Value</td><td style="font-weight:700">$332.55</td></tr>
+      <tr><td style="font-weight:600">Primary AOV</td><td style="font-weight:700">$235.38</td></tr>
+      <tr><td style="font-weight:600">Upsell Boost</td><td style="font-weight:700">$97.17 (41.3%)</td></tr>
+      <tr><td style="font-weight:600">Upsell 1 Take Rate</td><td>40.1% (more SSP)</td></tr>
+      <tr><td style="font-weight:600">Upsell 2 Take Rate</td><td>12.9% (Kinetic Movement Method)</td></tr>
+      <tr><td style="font-weight:600">Upsell 3 Take Rate</td><td>0.4% (gift cards)</td></tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Phase 1 Platform &amp; Targeting</h3>
+    <table>
+      <tr><td style="font-weight:600;width:35%">Primary Platform</td><td>Meta (Facebook + Instagram)</td></tr>
+      <tr><td style="font-weight:600">Ad Formats</td><td>Video (Dr. Troy on-camera, VO + stock), UGC/Influencer</td></tr>
+      <tr><td style="font-weight:600">Geographic</td><td>US (primary)</td></tr>
+      <tr><td style="font-weight:600">Funnel Flows Active</td><td>VSL, Salespage, PDP (Customer + Media + Affiliate paths)</td></tr>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Phase 1 Key Learnings</h3>
+    <div class="callout-muted">To be populated with specific creative performance insights. This data informs Phase 2 funnel stacking decisions.</div>
+    <table>
+      <thead><tr><th>Question</th><th>Phase 1 Answer</th><th>Phase 2 Implication</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Which ad concepts are winning?</td><td><span class="tag tag-gray">TBD &mdash; review Domo</span></td><td>Winners get hook stacks; losers get cut</td></tr>
+        <tr><td style="font-weight:600">Which funnel path converts best?</td><td><span class="tag tag-gray">TBD</span></td><td>Best path gets more budget</td></tr>
+        <tr><td style="font-weight:600">Which persona is responding?</td><td><span class="tag tag-gray">TBD</span></td><td>Winning personas get dedicated funnels</td></tr>
+        <tr><td style="font-weight:600">Optimal ad length?</td><td><span class="tag tag-gray">TBD</span></td><td>Informs Phase 2 script lengths</td></tr>
+        <tr><td style="font-weight:600">VSL vs salespage vs PDP?</td><td><span class="tag tag-gray">TBD</span></td><td>Core funnel stacking decision</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 9: PHASE 2 — FUNNEL STACKING ═══════ -->
+<div class="section" id="s9" style="min-width:560px;max-width:600px;border:2px solid var(--orange)">
+  <div class="section-header" style="background:linear-gradient(135deg, var(--black) 0%, #2d1a1a 100%)">
+    <div class="section-number" style="color:var(--orange)">Section 09 &mdash; THE CORE</div>
+    <div class="section-title">Phase 2 &mdash; Funnel Stacking Expansion</div>
+    <div class="section-subtitle" style="color:rgba(255,255,255,0.85)">Multiple parallel funnel flows targeting different personas with tailored landing experiences</div>
+  </div>
+  <div class="section-body">
+
+    <div class="callout">
+      <strong>Principle:</strong> Instead of routing all traffic to a single funnel, funnel stacking creates parallel paths optimized for different buyer types. Entry differs by persona; backend converges.
+    </div>
+
+    <h3>Phase 2 Trigger</h3>
+    <ul>
+      <li><strong>When:</strong> Post-Donnie alignment meeting (March 25, 2026)</li>
+      <li><strong>Prerequisite:</strong> Phase 1 performance data (March 11&ndash;24) analyzed</li>
+      <li><strong>Decision:</strong> Which personas get which funnel flows, which creative feeds each</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>Funnel Stacking Architecture</h3>
+    <table>
+      <thead><tr><th>Funnel Flow</th><th>Target Persona(s)</th><th>Existing?</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700">VSL Funnel</td><td>P1: Competitor, P4: Nostalgic</td><td><span class="tag tag-green">Phase 1</span></td></tr>
+        <tr><td style="font-weight:700">Salespage Funnel</td><td>P2: Declining Athlete</td><td><span class="tag tag-green">Phase 1</span></td></tr>
+        <tr><td style="font-weight:700">PDP Funnel</td><td>P5: Solution Seeker</td><td><span class="tag tag-green">Phase 1</span></td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">Advertorial Funnel</td><td>P3: Tried-Everything Skeptic</td><td><span class="tag tag-orange">New &mdash; Phase 2</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Persona-to-Funnel Routing</h3>
+    <table class="matrix-table">
+      <thead><tr><th></th><th>VSL</th><th>Salespage</th><th>PDP</th><th>Advertorial</th></tr></thead>
+      <tbody>
+        <tr><td>1: Competitor</td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"></td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td></tr>
+        <tr><td>2: Declining</td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"></td><td class="coverage-cell"></td></tr>
+        <tr><td>3: Skeptic</td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-light">Secondary</span></td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td></tr>
+        <tr><td>4: Nostalgic</td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"></td><td class="coverage-cell"></td><td class="coverage-cell"></td></tr>
+        <tr><td>5: Seeker</td><td class="coverage-cell"></td><td class="coverage-cell"></td><td class="coverage-cell"><span class="coverage-strong">PRIMARY</span></td><td class="coverage-cell"></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Per-Funnel Creative Needs</h3>
+
+    <h4>VSL Funnel</h4>
+    <table>
+      <thead><tr><th>Need</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Existing VSL (closed/open)</td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td>Hook stacks for winning VSL ads</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td>Persona-specific hooks (Competitor: C2, C7)</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td>Persona-specific hooks (Nostalgic: C6, C8, C10)</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+
+    <h4>Salespage Funnel</h4>
+    <table>
+      <thead><tr><th>Need</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Existing salespage</td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td>Education-focused ad hooks (C1, C3, C5)</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td>Lane 1 (Stuck Joints Education) creative</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+
+    <h4>PDP Funnel</h4>
+    <table>
+      <thead><tr><th>Need</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Existing PDP</td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td>Clinical-proof ad hooks (C11, C12, C13)</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td>Product-forward creative</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+
+    <h4>Advertorial Funnel (NEW BUILD)</h4>
+    <table>
+      <thead><tr><th>Need</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Advertorial landing page</td><td><span class="tag tag-orange">Not built</span></td></tr>
+        <tr><td>Advertorial ad creative</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td>Dr. Troy educational footage</td><td><span class="tag tag-yellow">Partial</span></td></tr>
+        <tr><td>Counter-sell proof assets</td><td><span class="tag tag-green">Available</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Vertical Hook Stacks (Phase 2 Rule)</h3>
+    <div class="callout">
+      <strong>Rule:</strong> Phase 2 = hook stacks ONLY (vertical). No horizontal environment changes. Dig deeper into winning angles.
+    </div>
+    <p style="font-size:14px"><strong>Cadence:</strong> Phase 1 data analyzed &rarr; Copy team creates hook stack tickets <strong>Monday</strong> &rarr; Hooks delivered <strong>Friday</strong> &rarr; Launched by <strong>weekend</strong>.</p>
+
+    <div class="divider"></div>
+
+    <h3>Optimization Signals</h3>
+    <table>
+      <thead><tr><th>Signal</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">High CTR, low conversion</td><td>Hook works, landing page doesn&rsquo;t match. Align page to winning ad promise.</td></tr>
+        <tr><td style="font-weight:600">Low CTR, high conversion</td><td>Body converts but hook doesn&rsquo;t stop scroll. Hook stack needed.</td></tr>
+        <tr><td style="font-weight:600">One persona dominates</td><td>Scale budget. Build hook stack around winning concepts.</td></tr>
+        <tr><td style="font-weight:600">Advertorial outperforms</td><td>Double down on editorial content.</td></tr>
+        <tr><td style="font-weight:600">VSL underperforms for persona</td><td>Test that persona on salespage or PDP instead.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Open Items (Post-Donnie Meeting)</h3>
+    <div class="open-item"><strong>1.</strong> Final persona-to-funnel assignments &mdash; <span class="tag tag-gray">Awaiting Donnie alignment</span></div>
+    <div class="open-item"><strong>2.</strong> Advertorial page build &mdash; <span class="tag tag-gray">TBD</span> (Dev + Creative)</div>
+    <div class="open-item"><strong>3.</strong> Budget allocation per funnel flow &mdash; <span class="tag tag-gray">TBD</span> (Media Buying)</div>
+    <div class="open-item"><strong>4.</strong> Funnel-specific UTM structure &mdash; <span class="tag tag-gray">TBD</span> (Dev + Media)</div>
+    <div class="open-item"><strong>5.</strong> Phase 2 creative timeline &mdash; <span class="tag tag-gray">TBD</span> (Creative)</div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 10: PHASE 3 — CROSS-FUNNEL OPTIMIZATION ═══════ -->
+<div class="section" id="s10">
+  <div class="section-header">
+    <div class="section-number">Section 10</div>
+    <div class="section-title">Phase 3 &mdash; Cross-Funnel Optimization</div>
+    <div class="section-subtitle">Optimizes across all stacked funnels after sufficient traffic data</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Timeline</h3>
+    <ul>
+      <li><strong>Weeks 3&ndash;4 post-funnel stacking:</strong> Traffic threshold reached</li>
+      <li><strong>Prerequisite:</strong> Statistically significant traffic to each funnel flow</li>
+      <li><strong>Decision:</strong> Creative + CRO review per-funnel performance together</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>What Phase 3 Optimizes</h3>
+    <table>
+      <thead><tr><th>Layer</th><th>What&rsquo;s Measured</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">VSL flow</td><td>Watch time, drop-off, conversion rate, open vs closed</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">Salespage flow</td><td>Time on page, scroll depth, section engagement, conversion</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">PDP flow</td><td>ATC rate, time on page, S&amp;S vs single purchase</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">Advertorial flow</td><td>Click-through to salespage/VSL, time on page, bounce</td><td>CRO + Creative</td></tr>
+        <tr><td style="font-weight:600">Checkout flow</td><td>Cart abandonment, S&amp;S selection, package selection (1/3/6)</td><td>CRO + Dev</td></tr>
+        <tr><td style="font-weight:600">Upsell sequence</td><td>Take rates (UP1: 40.1%, UP2: 12.9%, UP3: 0.4%), RPV</td><td>CRO</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Cross-Funnel Comparison</h3>
+    <table class="matrix-table">
+      <thead><tr><th>Metric</th><th>VSL</th><th>Salespage</th><th>PDP</th><th>Advertorial</th></tr></thead>
+      <tbody>
+        <tr><td>Conversion Rate</td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td>AOV</td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td>S&amp;S Rate</td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td>CPA</td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td>LTV (projected)</td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td><td><span class="tag tag-gray">TBD</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout-muted">This table is the Phase 3 scoreboard. Populated as data accumulates. Budget reallocation decisions come from this data.</div>
+
+    <div class="divider"></div>
+
+    <h3>Ad-to-Page Messaging Alignment</h3>
+    <table>
+      <thead><tr><th>Signal</th><th>Page Action</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Winning ad leads with education</td><td>Test education-led headline on salespage above-fold</td></tr>
+        <tr><td style="font-weight:600">Winning ad leads with authority</td><td>Test Dr. Troy hero video above-fold</td></tr>
+        <tr><td style="font-weight:600">Winning ad leads with transformation</td><td>Test 5-day &rarr; 8-week &rarr; 6-month progression above-fold</td></tr>
+        <tr><td style="font-weight:600">Winning ad leads with counter-sell</td><td>Test &ldquo;Why everything else fails&rdquo; framing on advertorial</td></tr>
+        <tr><td style="font-weight:600">High ad CTR, low page conversion</td><td>Messaging disconnect &mdash; realign page to ad promise</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>A/B Testing Priorities</h3>
+    <table>
+      <thead><tr><th>P</th><th>Test</th><th>Hypothesis</th><th>Funnel</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">VSL open vs closed</td><td>Open converts better for Seekers; closed for Skeptics</td><td>VSL</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">Salespage headline</td><td>Match winning ad angle &rarr; conversion lift</td><td>Salespage</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">PDP S&amp;S prominence</td><td>Highlighting S&amp;S increases subscription rate</td><td>PDP</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">Advertorial length</td><td>Short (800 words) vs long (2000 words)</td><td>Advertorial</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">Package presentation</td><td>6-bottle default vs 3-bottle default &mdash; AOV impact</td><td>Checkout</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">6</td><td style="font-weight:600">Dr. Troy placement</td><td>Higher on page vs current &mdash; trust impact</td><td>All pages</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-muted">
+      CRO tickets: submit via ClickUp intake (or <code>/cro-ticket</code>). Required: test hypothesis, winning ad data, specific change, success metric, which funnel flow.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 11: FUNNEL MAP & CORE ASSETS ═══════ -->
+<div class="section" id="s11" style="min-width:600px;max-width:640px">
+  <div class="section-header">
+    <div class="section-number">Section 11</div>
+    <div class="section-title">Funnel Map &amp; Core Assets</div>
+    <div class="section-subtitle">Full funnel architecture with all URLs across all paths</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Funnel Stacking Diagram</h3>
+    <div class="funnel-diagram"><span class="label">              AD CREATIVE LAYER</span>
+  <span class="highlight">(Persona-specific hooks → funnel routing)</span>
+        │          │          │          │
+   ┌────▼───┐ ┌────▼───┐ ┌────▼───┐ ┌────▼────┐
+   │  <span class="highlight">VSL</span>   │ │ <span class="highlight">Sales</span>  │ │  <span class="highlight">PDP</span>   │ │<span class="highlight">Adverto-</span>│
+   │ Funnel │ │  page  │ │ Funnel │ │ rial    │
+   └────┬───┘ └────┬───┘ └────┬───┘ └────┬────┘
+        │          │          │          │
+   <span class="highlight">Persona 1</span>  <span class="highlight">Persona 2</span>  <span class="highlight">Persona 5</span>  <span class="highlight">Persona 3</span>
+   <span class="highlight">Persona 4</span>
+        │          │          │          │
+        ▼          ▼          ▼          ▼
+   ┌─────────────────────────────────────────────┐
+   │          <span class="label">SHARED CHECKOUT FLOW</span>              │
+   │  Checkout (S&amp;S / No S&amp;S)                    │
+   │  → <span class="highlight">UP1</span> More SSP (40.1%)                    │
+   │  → DS1                                      │
+   │  → <span class="highlight">UP2</span> Kinetic Movement (12.9%)             │
+   │  → DS2                                      │
+   │  → <span class="highlight">UP3</span> Gift Card (0.4%)                    │
+   │  → Thank You                                │
+   └─────────────────────────────────────────────┘</div>
+
+    <div class="divider"></div>
+
+    <h3>Customer Path</h3>
+    <table>
+      <thead><tr><th>Page</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">PG.com PDP</td><td><a href="https://shop.performancegolf.com/products/swingsmooth-pro" target="_blank">shop.performancegolf.com/products/swingsmooth-pro</a></td></tr>
+        <tr><td style="font-weight:600">Waitlist/Hype</td><td><a href="https://www.performancegolf.com/swing-smooth-pro-waitlist" target="_blank">performancegolf.com/swing-smooth-pro-waitlist</a></td></tr>
+        <tr><td style="font-weight:600">Customer Salespage</td><td><a href="https://shop.performancegolf.com/pages/swing-smooth-pro-info" target="_blank">swing-smooth-pro-info</a></td></tr>
+        <tr><td style="font-weight:600">Customer PDP</td><td><a href="https://shop.performancegolf.com/pages/swingsmooth-pro-product" target="_blank">swingsmooth-pro-product</a></td></tr>
+        <tr><td style="font-weight:600">VSL (Closed)</td><td><a href="https://www.performancegolf.com/swing-smooth-pro/video" target="_blank">swing-smooth-pro/video</a></td></tr>
+        <tr><td style="font-weight:600">VSL (Open)</td><td><a href="https://www.performancegolf.com/swing-smooth-pro/video-b" target="_blank">swing-smooth-pro/video-b</a></td></tr>
+        <tr><td style="font-weight:600">Checkout (S&amp;S)</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/swing-smooth-pro-ss-39769" target="_blank">swing-smooth-pro-ss-39769</a></td></tr>
+        <tr><td style="font-weight:600">Checkout (No S&amp;S)</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/swing-smooth-pro-39769" target="_blank">swing-smooth-pro-39769</a></td></tr>
+        <tr><td style="font-weight:600">Upsell 1 (Static)</td><td><a href="https://secure.performancegolf.com/swing-smooth-pro/upgrade/up1/ecomm/swing-smooth-pro" target="_blank">up1/ecomm/swing-smooth-pro</a></td></tr>
+        <tr><td style="font-weight:600">Upsell 1 (Dynamic)</td><td><a href="https://secure.performancegolf.com/swing-smooth-pro/upgrade/up1/ecomm/swing-smooth-pro-b" target="_blank">up1/ecomm/swing-smooth-pro-b</a></td></tr>
+        <tr><td style="font-weight:600">Downsell 1</td><td><a href="https://secure.performancegolf.com/swing-smooth-pro/upgrade/ds1/ecomm/swing-smooth-pro" target="_blank">ds1/ecomm/swing-smooth-pro</a></td></tr>
+        <tr><td style="font-weight:600">Upsell 2</td><td><a href="https://secure.performancegolf.com/swing-smooth-pro/upgrade/up2/off-season-swing-saver" target="_blank">up2/off-season-swing-saver</a></td></tr>
+        <tr><td style="font-weight:600">Downsell 2</td><td><a href="https://secure.performancegolf.com/swing-smooth-pro/upgrade/ds2/off-season-swing-saver" target="_blank">ds2/off-season-swing-saver</a></td></tr>
+        <tr><td style="font-weight:600">Upsell 3</td><td><a href="https://secure.performancegolf.com/swing-smooth-pro/upgrade/up3/gift-card" target="_blank">up3/gift-card</a></td></tr>
+        <tr><td style="font-weight:600">Thank You</td><td><a href="https://secure.performancegolf.com/swing-smooth-pro/thank-you" target="_blank">swing-smooth-pro/thank-you</a></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Media Path</h3>
+    <table>
+      <thead><tr><th>Page</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Media Salespage</td><td><a href="https://shop.performancegolf.com/pages/swing-smooth-pro-media-info-sc" target="_blank">swing-smooth-pro-media-info-sc</a></td></tr>
+        <tr><td style="font-weight:600">Media PDP</td><td><a href="https://shop.performancegolf.com/pages/swingsmooth-pro-media-product-sc" target="_blank">swingsmooth-pro-media-product-sc</a></td></tr>
+        <tr><td style="font-weight:600">Media VSL (Closed)</td><td><a href="https://www.performancegolf.com/swing-smooth-pro/media/video-sc" target="_blank">media/video-sc</a></td></tr>
+        <tr><td style="font-weight:600">Media VSL (Open)</td><td><a href="https://www.performancegolf.com/swing-smooth-pro/media/video-sc-b" target="_blank">media/video-sc-b</a></td></tr>
+        <tr><td style="font-weight:600">Media Checkout (S&amp;S)</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/swing-smooth-pro-ss-39769-media-sc" target="_blank">swing-smooth-pro-ss-39769-media-sc</a></td></tr>
+        <tr><td style="font-weight:600">Media Checkout (No S&amp;S)</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/swing-smooth-pro-39769-media-sc" target="_blank">swing-smooth-pro-39769-media-sc</a></td></tr>
+        <tr><td style="font-weight:600">Media Thank You</td><td><a href="https://secure.performancegolf.com/media/swing-smooth-pro/thank-you" target="_blank">media/swing-smooth-pro/thank-you</a></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Affiliate Path</h3>
+    <table>
+      <thead><tr><th>Page</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Affiliate Salespage</td><td><span class="tag tag-gray">TBD</span></td></tr>
+        <tr><td style="font-weight:600">Affiliate VSL (Closed)</td><td><a href="https://www.performancegolf.com/swing-smooth-pro/affiliate/video-sc" target="_blank">affiliate/video-sc</a></td></tr>
+        <tr><td style="font-weight:600">Affiliate VSL (Open)</td><td><a href="https://www.performancegolf.com/swing-smooth-pro/affiliate/video-sc-b" target="_blank">affiliate/video-sc-b</a></td></tr>
+        <tr><td style="font-weight:600">Affiliate Checkout (S&amp;S)</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/swing-smooth-pro-ss-39769-affiliate-sc" target="_blank">swing-smooth-pro-ss-39769-affiliate-sc</a></td></tr>
+        <tr><td style="font-weight:600">Affiliate Checkout (No S&amp;S)</td><td><a href="https://secure.performancegolf.com/orderForms/ecomm/swing-smooth-pro-39769-affiliate-sc" target="_blank">swing-smooth-pro-39769-affiliate-sc</a></td></tr>
+        <tr><td style="font-weight:600">Affiliate Thank You</td><td><a href="https://secure.performancegolf.com/affiliate/swing-smooth-pro/thank-you" target="_blank">affiliate/swing-smooth-pro/thank-you</a></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Pillar Conversion Assets</h3>
+    <table>
+      <thead><tr><th>Asset</th><th>Purpose</th><th>Priority</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">VSL (Closed/Open)</td><td>Primary conversion for emotional buyers</td><td><span class="tag tag-orange">Critical</span></td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td style="font-weight:600">Salespage</td><td>Education-heavy for mechanism-curious</td><td><span class="tag tag-orange">Critical</span></td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td style="font-weight:600">PDP</td><td>Direct product info for rational buyers</td><td><span class="tag tag-yellow">High</span></td><td><span class="tag tag-green">Live</span></td></tr>
+        <tr><td style="font-weight:600">Advertorial</td><td>Pre-sell for skeptical buyers</td><td><span class="tag tag-yellow">High</span></td><td><span class="tag tag-orange">Not built</span></td></tr>
+        <tr><td style="font-weight:600">Dr. Troy Authority</td><td>Credibility centerpiece</td><td><span class="tag tag-yellow">High</span></td><td><span class="tag tag-yellow">Partial</span></td></tr>
+        <tr><td style="font-weight:600">Testimonial Compilation</td><td>Social proof for all funnels</td><td><span class="tag tag-gray">Medium</span></td><td><span class="tag tag-green">Available</span></td></tr>
+        <tr><td style="font-weight:600">Product Photography</td><td>PDP carousel, email, social</td><td><span class="tag tag-gray">Medium</span></td><td><span class="tag tag-green">Available</span></td></tr>
+        <tr><td style="font-weight:600">Clinical Data Visualizations</td><td>Ingredient proof for PDP + advertorial</td><td><span class="tag tag-gray">Medium</span></td><td><span class="tag tag-orange">Not built</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════ SECTION 12: TESTING STRATEGY ═══════ -->
+<div class="section" id="s12">
+  <div class="section-header">
+    <div class="section-number">Section 12</div>
+    <div class="section-title">Testing Strategy</div>
+    <div class="section-subtitle">Phase 2 funnel stacking launch + Phase 3 cross-funnel optimization</div>
+  </div>
+  <div class="section-body">
+
+    <h3>Phase 2 Creative Testing</h3>
+    <table>
+      <thead><tr><th>Test</th><th>Method</th><th>Timing</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Persona-to-funnel routing</td><td>A/B split by persona segment</td><td>Funnel stacking launch</td></tr>
+        <tr><td style="font-weight:600">Hook format by funnel</td><td>Multi-hook per body, per funnel</td><td>Funnel stacking launch</td></tr>
+        <tr><td style="font-weight:600">Advertorial vs direct</td><td>New vs existing flow comparison</td><td>Phase 2 week 2+</td></tr>
+        <tr><td style="font-weight:600">Creative lane validation</td><td>Matched budgets across lanes per funnel</td><td>Phase 2 weeks 1&ndash;2</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Phase 3 On-Page A/B Tests</h3>
+    <table>
+      <thead><tr><th>P</th><th>Test</th><th>Hypothesis</th><th>Timing</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">1</td><td style="font-weight:600">VSL open vs closed by persona</td><td>Different personas respond to different VSL formats</td><td>Weeks 3&ndash;4</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">2</td><td style="font-weight:600">Salespage headline match</td><td>Alignment with winning ad improves conversion</td><td>Weeks 3&ndash;4</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">3</td><td style="font-weight:600">PDP S&amp;S default</td><td>S&amp;S default increases subscription rate</td><td>Weeks 4&ndash;6</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">4</td><td style="font-weight:600">Advertorial length</td><td>Short (800w) vs long (2000w)</td><td>Week 4+</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">5</td><td style="font-weight:600">Package presentation</td><td>6-bottle default vs 3-bottle default &mdash; AOV</td><td>Weeks 4&ndash;6</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Copy Team Test Plan</h3>
+    <table>
+      <thead><tr><th>Area</th><th>Tests Planned</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Per-funnel headlines</td><td>3&ndash;5 per winning lane per funnel flow</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">CTA copy by persona</td><td>&ldquo;Fix Your Stuck Joints&rdquo; vs &ldquo;Get SwingSmooth Pro&rdquo; vs &ldquo;Start Your Transformation&rdquo;</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Advertorial headline/angle</td><td>3 variants: education vs authority vs counter-sell</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Email subject lines</td><td>A/B across persona-based segments</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Media Buying Test Plan</h3>
+    <table>
+      <thead><tr><th>Area</th><th>Tests Planned</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600">Per-funnel budget allocation</td><td>Even split vs weighted by Phase 1 winners</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Persona-based targeting</td><td>Interest vs lookalike vs broad per persona</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Platform by funnel</td><td>Meta primary; YouTube for VSL (longer content)</td><td><span class="tag tag-gray">Not started</span></td></tr>
+        <tr><td style="font-weight:600">Dayparting by persona</td><td>Standard vs evening/weekend</td><td><span class="tag tag-gray">Not started</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <h3>Testing Cadence</h3>
+    <table>
+      <thead><tr><th>Phase</th><th>Timing</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--orange)">Funnel Stacking Launch</td><td>Weeks 1&ndash;2</td><td>Persona-to-funnel routing, creative lane validation</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">Phase 2 Optimization</td><td>Weeks 2&ndash;4</td><td>Hook stacks on winners, advertorial performance</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">Phase 3 Page Tests</td><td>Weeks 4&ndash;8</td><td>On-page A/B tests, CRO integration, checkout</td></tr>
+        <tr><td style="font-weight:700;color:var(--orange)">Ongoing</td><td>Month 2+</td><td>Per-funnel optimization, S&amp;S rate, LTV tracking</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-muted">
+      CRO tickets: submit via ClickUp intake (or <code>/cro-ticket</code>). Required fields: test hypothesis, winning ad data, specific change, success metric, traffic estimate.
+    </div>
+  </div>
+</div>
+
+</div><!-- end .board -->
+
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</body>
+</html>

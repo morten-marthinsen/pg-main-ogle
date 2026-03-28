@@ -428,8 +428,12 @@ fn test_build_specs_multi_agent_v2_uses_task_names_and_hides_resume() {
         &tools,
         &[
             "spawn_agent",
+<<<<<<< HEAD
+            "send_input",
+=======
             "send_message",
             "assign_task",
+>>>>>>> origin/main
             "wait_agent",
             "close_agent",
             "list_agents",
@@ -526,6 +530,36 @@ fn test_build_specs_multi_agent_v2_uses_task_names_and_hides_resume() {
     assert_eq!(
         output_schema["properties"]["message"]["description"],
         json!("Brief wait summary without the agent's final content.")
+<<<<<<< HEAD
+    );
+
+    let list_agents = find_tool(&tools, "list_agents");
+    let ToolSpec::Function(ResponsesApiTool {
+        parameters,
+        output_schema,
+        ..
+    }) = &list_agents.spec
+    else {
+        panic!("list_agents should be a function tool");
+    };
+    let JsonSchema::Object {
+        properties,
+        required,
+        ..
+    } = parameters
+    else {
+        panic!("list_agents should use object params");
+    };
+    assert!(properties.contains_key("path_prefix"));
+    assert_eq!(required.as_ref(), None);
+    let output_schema = output_schema
+        .as_ref()
+        .expect("list_agents should define output schema");
+    assert_eq!(
+        output_schema["properties"]["agents"]["items"]["required"],
+        json!(["agent_name", "agent_status", "last_task_message"])
+=======
+>>>>>>> origin/main
     );
 
     let list_agents = find_tool(&tools, "list_agents");

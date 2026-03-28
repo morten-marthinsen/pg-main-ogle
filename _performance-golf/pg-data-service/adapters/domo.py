@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Domo adapter — dumb pipe that fetches raw rows.
 
 All business logic (aggregation, Beast Modes) lives in enrichments/.

@@ -111,6 +111,37 @@ export function getShellDeclaration(
           description:
             'Set to true if this command should be run in the background (e.g. for long-running servers or watchers). The command will be started, allowed to run for a brief moment to check for immediate errors, and then moved to the background.',
         },
+<<<<<<< HEAD
+        [PARAM_ADDITIONAL_PERMISSIONS]: {
+          type: 'object',
+          description:
+            'Sandbox permissions for the command. Use this to request additional sandboxed filesystem or network permissions if a previous command failed with "Operation not permitted".',
+          properties: {
+            network: {
+              type: 'boolean',
+              description:
+                'Set to true to enable network access for this command.',
+            },
+            fileSystem: {
+              type: 'object',
+              properties: {
+                read: {
+                  type: 'array',
+                  items: { type: 'string' },
+                  description:
+                    'List of additional absolute paths to allow reading.',
+                },
+                write: {
+                  type: 'array',
+                  items: { type: 'string' },
+                  description:
+                    'List of additional absolute paths to allow writing.',
+                },
+              },
+            },
+          },
+        },
+=======
         ...(enableToolSandboxing
           ? {
               [PARAM_ADDITIONAL_PERMISSIONS]: {
@@ -144,6 +175,7 @@ export function getShellDeclaration(
               },
             }
           : {}),
+>>>>>>> origin/main
       },
       required: [SHELL_PARAM_COMMAND],
     },

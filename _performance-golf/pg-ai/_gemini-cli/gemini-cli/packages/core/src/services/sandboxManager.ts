@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+<<<<<<< HEAD
+import os from 'node:os';
+import path from 'node:path';
+=======
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
@@ -16,6 +20,7 @@ import {
   isDangerousCommand as isWindowsDangerousCommand,
 } from '../sandbox/windows/commandSafety.js';
 import { isNodeError } from '../utils/errors.js';
+>>>>>>> origin/main
 import {
   sanitizeEnvironment,
   getSecureSanitizationConfig,
@@ -309,6 +314,8 @@ export function sanitizePaths(paths?: string[]): string[] | undefined {
 
   return Array.from(uniquePathsMap.values());
 }
+<<<<<<< HEAD
+=======
 
 /**
  * Resolves symlinks for a given path to prevent sandbox escapes.
@@ -330,4 +337,5 @@ export async function tryRealpath(p: string): Promise<string> {
   }
 }
 
+>>>>>>> origin/main
 export { createSandboxManager } from './sandboxManagerFactory.js';

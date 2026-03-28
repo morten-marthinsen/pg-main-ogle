@@ -66,3 +66,9 @@ __MACOSX/
 
 # ========== ROOT MCP CONFIG (local override — shared config is in .claude/mcp.json) ==========
 .mcp.json
+
+# ========== CONVERSATION SCREENSHOTS (session artifacts, not team resources) ==========
+/*.png
+
+# ========== BACKUP FILES ==========
+*.bak

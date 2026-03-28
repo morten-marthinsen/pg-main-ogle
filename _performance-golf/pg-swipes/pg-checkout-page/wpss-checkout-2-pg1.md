@@ -71,7 +71,7 @@ Free-Flowing, Zero-Thinking Golf
 | |
 | Your Pendulum Swing Sequence lives inside PG1™ — alongside personalized coaching that helps you actually **USE** what you learn. |
 | |
-| **14-day FREE trial included.** Then $39/mo. |
+| **14-day FREE trial included.** Then $29/mo. |
 | Cancel anytime with 1 click. No lock-in contracts. |
 | |
 | **(Most Popular — Biggest Savings)** |
@@ -106,7 +106,7 @@ The best part? You save **$100** on your Pendulum Swing Sequence today, and your
 
 - **BONUS: Pendulum Swing LIVESTREAM Q&A (FREE)**
 
-- **BONUS: Access your training through the PG1™ app** — personalized coaching, progress tracking, and daily recommendations included with your membership (14 days FREE, then $39/month. Cancel anytime.)
+- **BONUS: Access your training through the PG1™ app** — personalized coaching, progress tracking, and daily recommendations included with your membership (14 days FREE, then $29/month. Cancel anytime.)
 
 > [DEV NOTE: The PG1 bonus line only appears if MEMBER pricing is selected. If NON-MEMBER is selected, this line does not appear.]
 
@@ -279,7 +279,7 @@ You're Protected By Our 365-Day Money-Back Guarantee!
 | Item | Price |
 |------|-------|
 | Pendulum Swing Sequence (Member Price) | $97.00 |
-| PG1 — 14 day trial (Free today), then $39/mo | $0.00 |
+| PG1 — 14 day trial (Free today), then $29/mo | $0.00 |
 | POV Lessons | $32.00 |
 | Pendulum Swing Trainer | $79.00 |
 | Swing Circle Optimizer Lesson | $39.00 |
@@ -308,7 +308,7 @@ You're Protected By Our 365-Day Money-Back Guarantee!
 
 ## Fine Print
 
-*By checking the box above, you agree to the Terms and Privacy Policy and to receive text notifications on 39587 from Performance Golf to the mobile number provided. Msg freq will vary. Consent is not a condition of the purchase of goods or services. Message and data rates may apply. Reply STOP to cancel. Reply HELP for help. You'll be billed once for today's purchase. If you selected Member Pricing, your order includes a 14-day free trial to PG1™. After 14 days, your PG1 membership continues at $39/month. You can cancel your PG1 membership anytime by emailing support@performancegolf.com or with 1 click inside the PG1 app.*
+*By checking the box above, you agree to the Terms and Privacy Policy and to receive text notifications on 39587 from Performance Golf to the mobile number provided. Msg freq will vary. Consent is not a condition of the purchase of goods or services. Message and data rates may apply. Reply STOP to cancel. Reply HELP for help. You'll be billed once for today's purchase. If you selected Member Pricing, your order includes a 14-day free trial to PG1™. After 14 days, your PG1 membership continues at $29/month. You can cancel your PG1 membership anytime by emailing support@performancegolf.com or with 1 click inside the PG1 app.*
 
 > [DEV NOTE: If non-member selected, the PG1 sentences in fine print do not appear.]
 

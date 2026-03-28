@@ -1,0 +1,41 @@
+# Production Calendar Notifier Configuration
+# Monitors ClickUp Production Calendar for subtask completions
+# and posts notifications to Slack when footage is ready for tagging.
+
+clickup:
+  production_calendar_list_id: "901413170440"
+  workspace_id: "9014714949"
+  footage_url_field_name: "Raw Footage (URL)"
+
+  # Custom field names (verified via API 2026-03-27)
+  fields:
+    product_funnels: "Product Funnel(s)"    # labels (multi-select)
+    shoot_type: "Shoot Type"                # labels
+    talent: "Talent"                        # labels
+    raw_footage_url: "Raw Footage (URL)"    # url
+    edited_assets_url: "Edited/Final Asset(s) (URL)"  # url
+    script_doc_url: "Script/Copy Doc (URL)" # url
+
+slack:
+  # Production Calendar Slack channel for notifications
+  # UPDATE THIS with the actual channel ID (e.g., C0XXXXXXX)
+  # To find channel ID: right-click channel in Slack → "View channel details" → scroll to bottom
+  production_channel: "REPLACE_WITH_CHANNEL_ID"
+
+  # Optional: per-product GTM channels for tag-complete notifications
+  # gtm_channels:
+  #   rs1: "C0XXXXXXX"
+  #   sf2: "C0XXXXXXX"
+
+# Notification settings
+notifications:
+  # Subtask names that trigger notifications (case-insensitive, partial match)
+  trigger_subtasks:
+    - "ingest"
+
+  # URL gate: only notify if parent task has an Iconik/footage URL
+  require_url: true
+
+# Polling interval (seconds) — launchd StartInterval controls actual scheduling.
+# This is for documentation/logging context only.
+poll_interval: 300  # 5 minutes

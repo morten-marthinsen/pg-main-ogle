@@ -1,6 +1,6 @@
 # Static Ad Delivery Automation
 
-Automates the static image delivery process: generates PG naming convention filenames from ClickUp, renames downloaded NLC files, uploads to Iconik, and updates ClickUp — all in one command.
+Automates the static image delivery process: generates PG naming convention filenames from ClickUp, renames downloaded NLC files, uploads to Iconik, and writes the Iconik URL back to ClickUp — all in one command. The script does **not** change the ClickUp task status. You review the result and move the task yourself.
 
 **Time savings:** ~45-60 min manual process → ~5 min automated.
 
@@ -21,13 +21,13 @@ source .venv/bin/activate
 python deliver.py --task TASK_ID --source ~/Downloads/YOUR_NLC_FOLDER/
 ```
 
-That's it. The script handles naming, uploading to Iconik, and updating ClickUp.
+That's it. The script handles naming, uploading to Iconik, and writing the Iconik URL to ClickUp. **You** move the task status in ClickUp after reviewing.
 
 ---
 
 ## What This Does
 
-This tool takes a ClickUp task ID for an approved static ad delivery, reads the task's custom fields (offer, angle, dimensions, editor, copywriter, country), generates properly formatted PG filenames using the 15-position naming convention, renames the downloaded NLC files to match, uploads them to the correct Iconik subcollection, writes the Iconik URL back to ClickUp, and moves the ticket to "Delivered."
+This tool takes a ClickUp task ID for an approved static ad delivery, reads the task's custom fields (offer, angle, dimensions, editor, copywriter, country), generates properly formatted PG filenames using the 15-position naming convention, renames the downloaded NLC files to match, uploads them to the correct Iconik subcollection, and writes the Iconik URL back to the ClickUp "Final Assets" field. The script stops there — you review everything and move the task status yourself.
 
 ---
 
@@ -39,7 +39,7 @@ This tool takes a ClickUp task ID for an approved static ad delivery, reads the 
 | 2 | Download the image zip from the NLC/Blackfish portal to your Downloads folder | 2-3 min |
 | 3 | Open Terminal, run one command (see Quick Reference above) | 30 sec |
 | 4 | Review the output — it shows every file renamed and uploaded | 1 min |
-| 5 | Done. ClickUp is updated, Iconik has the files. | - |
+| 5 | Check ClickUp — Iconik URL is in "Final Assets." Move the task status yourself. | 1 min |
 
 ---
 
@@ -167,7 +167,7 @@ Review the mapping carefully before running the full pipeline.
 
 ### Full Pipeline
 
-Rename files + upload to Iconik + update ClickUp:
+Rename files + upload to Iconik + write Iconik URL to ClickUp:
 
 ```bash
 python deliver.py --task TASK_ID --source ~/Downloads/YOUR_NLC_FOLDER/
@@ -196,7 +196,6 @@ The script will extract the zip automatically.
 | Flag | What It Does |
 |------|-------------|
 | `--date YYYYMMDD` | Override the delivery date (default: today) |
-| `--skip-status` | Skip moving the ClickUp ticket to "Delivered" |
 | `--skip-upload` | Rename files but don't upload to Iconik |
 | `--dry-run` | Preview the rename mapping without changing anything |
 | `--names-only` | Preview generated filenames without renaming or uploading |
@@ -234,10 +233,11 @@ When you run the full pipeline, you'll see 6 phases:
       If a file fails, it retries up to 3 times automatically.
 
 [6/6] Writing Iconik URL back to ClickUp...
-      Updates the "Final Assets" field and moves status to "Delivered."
+      Updates the "Final Assets" field. Does NOT change task status.
 
-DELIVERY COMPLETE
+UPLOAD COMPLETE
       Summary with total files uploaded and the Iconik collection URL.
+      You review the result, then move the task status in ClickUp yourself.
 ```
 
 ---
@@ -294,7 +294,6 @@ If an upload fails partway through (internet issue, Iconik timeout), just run th
 | `python3: command not found` | Python is not installed. See Step 1 |
 | `ModuleNotFoundError: No module named 'requests'` | You forgot to activate the virtual environment. Run: `source .venv/bin/activate` |
 | `Failed to update ClickUp field` | The "Final Assets" custom field might be named differently. Copy the Iconik URL from the output and paste it manually |
-| `Failed to update status` | The "Delivered" status might be named differently in this ClickUp space. Update it manually |
 
 ---
 

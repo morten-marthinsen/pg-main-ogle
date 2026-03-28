@@ -17,9 +17,6 @@ Usage:
     # Rename only, skip Iconik upload
     python deliver.py --task 86b8qem80 --source ~/Downloads/nlc-files/ --skip-upload
 
-    # Skip ClickUp status update (useful during testing)
-    python deliver.py --task 86b8qem80 --source ~/Downloads/nlc-files/ --skip-status
-
     # Override delivery date (default: today)
     python deliver.py --task 86b8qem80 --source ~/Downloads/nlc-files/ --date 20260313
 """
@@ -274,7 +271,6 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Show what would happen without making changes")
     parser.add_argument("--date", help="Delivery date YYYYMMDD (default: today)")
     parser.add_argument("--skip-upload", action="store_true", help="Rename files but skip Iconik upload")
-    parser.add_argument("--skip-status", action="store_true", help="Skip ClickUp status update to 'Delivered'")
     args = parser.parse_args()
 
     # Load .env from script directory
@@ -450,25 +446,14 @@ def main():
             print(f"  --  'Final Assets' custom field not found — paste URL manually:")
             print(f"      {collection_url}")
 
-        # Update task status to "Delivered"
-        if not args.skip_status:
-            status_resp = req.put(
-                f"https://api.clickup.com/api/v2/task/{args.task}",
-                headers=headers,
-                json={"status": "delivered"},
-            )
-            if status_resp.ok:
-                print(f"  OK  Task status updated to 'Delivered'")
-            else:
-                print(f"  XX  Failed to update status ({status_resp.status_code}) — update manually in ClickUp")
-        else:
-            print(f"  --  Skipping status update (--skip-status)")
+        # NOTE: Script does NOT change ClickUp task status.
+        # The human reviews the upload and moves the task manually.
     else:
         print(f"  XX  Failed to re-fetch task: {task_resp.status_code}")
 
     # ── Summary ──────────────────────────────────────────────────────────
     print(f"\n{'='*70}")
-    print(f"DELIVERY COMPLETE")
+    print(f"UPLOAD COMPLETE — review in ClickUp, then move status manually")
     print(f"  Task: {result['task_name']}")
     print(f"  Files: {uploaded}/{len(renamed_files)} uploaded")
     if not args.skip_upload:

@@ -4677,6 +4677,8 @@ mod handlers {
                 })
                 .await;
             }
+<<<<<<< HEAD
+=======
         }
     }
 
@@ -4700,7 +4702,31 @@ mod handlers {
                 .await;
             sess.spawn_task(turn_context, Vec::new(), crate::tasks::RegularTask::new())
                 .await;
+>>>>>>> origin/main
         }
+    }
+
+    pub async fn inter_agent_communication(
+        sess: &Arc<Session>,
+        sub_id: String,
+        communication: InterAgentCommunication,
+    ) {
+        let pending_item = communication.to_response_input_item();
+        if sess
+            .inject_response_items(vec![pending_item.clone()])
+            .await
+            .is_ok()
+        {
+            return;
+        }
+
+        let turn_context = sess.new_default_turn_with_sub_id(sub_id).await;
+        sess.maybe_emit_unknown_model_warning_for_turn(turn_context.as_ref())
+            .await;
+        sess.queue_response_items_for_next_turn(vec![pending_item])
+            .await;
+        sess.spawn_task(turn_context, Vec::new(), crate::tasks::RegularTask::new())
+            .await;
     }
 
     pub async fn run_user_shell_command(sess: &Arc<Session>, sub_id: String, command: String) {

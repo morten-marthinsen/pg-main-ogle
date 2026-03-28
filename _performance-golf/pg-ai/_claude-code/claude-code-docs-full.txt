@@ -8630,12 +8630,20 @@ This table compares core capabilities between the CLI and Desktop. For a full li
 
 | Feature                                               | CLI                                                       | Desktop                                                                                     |
 | ----------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+<<<<<<< HEAD
+| Permission modes                                      | All modes including `dontAsk`                             | Ask permissions, Auto accept edits, Plan mode, and Bypass permissions via Settings          |
+=======
 | Permission modes                                      | All modes including `dontAsk`                             | Ask permissions, Auto accept edits, Plan mode, Auto, and Bypass permissions via Settings    |
+>>>>>>> origin/main
 | `--dangerously-skip-permissions`                      | CLI flag                                                  | Bypass permissions mode. Enable in Settings → Claude Code → "Allow bypass permissions mode" |
 | [Third-party providers](/en/third-party-integrations) | Bedrock, Vertex, Foundry                                  | Not available. Desktop connects to Anthropic's API directly.                                |
 | [MCP servers](/en/mcp)                                | Configure in settings files                               | Connectors UI for local and SSH sessions, or settings files                                 |
 | [Plugins](/en/plugins)                                | `/plugin` command                                         | Plugin manager UI                                                                           |
+<<<<<<< HEAD
+| @mention files                                        | Text-based                                                | With autocomplete                                                                           |
+=======
 | @mention files                                        | Text-based                                                | With autocomplete; local and SSH sessions only                                              |
+>>>>>>> origin/main
 | File attachments                                      | Not available                                             | Images, PDFs                                                                                |
 | Session isolation                                     | [`--worktree`](/en/cli-reference) flag                    | Automatic worktrees                                                                         |
 | Multiple sessions                                     | Separate terminals                                        | Sidebar tabs                                                                                |
@@ -18843,6 +18851,19 @@ Each surface connects to the same underlying Claude Code engine, so your CLAUDE.
 
 Beyond the [Terminal](/en/quickstart), [VS Code](/en/vs-code), [JetBrains](/en/jetbrains), [Desktop](/en/desktop), and [Web](/en/claude-code-on-the-web) environments above, Claude Code integrates with CI/CD, chat, and browser workflows:
 
+<<<<<<< HEAD
+| I want to...                                                          | Best option                                                                                                         |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Continue a local session from my phone or another device              | [Remote Control](/en/remote-control)                                                                                |
+| Push events from Telegram, Discord, or my own webhooks into a session | [Channels](/en/channels)                                                                                            |
+| Start a task locally, continue on mobile                              | [Web](/en/claude-code-on-the-web) or [Claude iOS app](https://apps.apple.com/app/claude-by-anthropic/id6473753684)  |
+| Run Claude on a recurring schedule                                    | [Cloud scheduled tasks](/en/web-scheduled-tasks) or [Desktop scheduled tasks](/en/desktop#schedule-recurring-tasks) |
+| Automate PR reviews and issue triage                                  | [GitHub Actions](/en/github-actions) or [GitLab CI/CD](/en/gitlab-ci-cd)                                            |
+| Get automatic code review on every PR                                 | [GitHub Code Review](/en/code-review)                                                                               |
+| Route bug reports from Slack to pull requests                         | [Slack](/en/slack)                                                                                                  |
+| Debug live web applications                                           | [Chrome](/en/chrome)                                                                                                |
+| Build custom agents for your own workflows                            | [Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)                                                 |
+=======
 | I want to...                                                                    | Best option                                                                                                         |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Continue a local session from my phone or another device                        | [Remote Control](/en/remote-control)                                                                                |
@@ -18854,6 +18875,7 @@ Beyond the [Terminal](/en/quickstart), [VS Code](/en/vs-code), [JetBrains](/en/j
 | Route bug reports from Slack to pull requests                                   | [Slack](/en/slack)                                                                                                  |
 | Debug live web applications                                                     | [Chrome](/en/chrome)                                                                                                |
 | Build custom agents for your own workflows                                      | [Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)                                                 |
+>>>>>>> origin/main
 
 ## Next steps
 
@@ -22309,7 +22331,11 @@ Claude Code offers several ways to work when you're not at your terminal. They d
 ## Related resources
 
 * [Claude Code on the web](/en/claude-code-on-the-web): run sessions in Anthropic-managed cloud environments instead of on your machine
+<<<<<<< HEAD
+* [Channels](/en/channels): forward Telegram or Discord into a session so Claude reacts to messages while you're away
+=======
 * [Channels](/en/channels): forward Telegram, Discord, or iMessage into a session so Claude reacts to messages while you're away
+>>>>>>> origin/main
 * [Dispatch](/en/desktop#sessions-from-dispatch): message a task from your phone and it can spawn a Desktop session to handle it
 * [Authentication](/en/authentication): set up `/login` and manage credentials for claude.ai
 * [CLI reference](/en/cli-reference): full list of flags and commands including `claude remote-control`

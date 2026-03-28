@@ -1,0 +1,151 @@
+# Intake Auto-ID Generator Configuration
+# Maps funnel codes to Creative Performance spreadsheets for next-ID lookup.
+
+clickup:
+  intake_list_id: "901413749270"
+  workspace_id: "9014714949"
+  # Custom field names as they appear on the ClickUp list (verified via API)
+  fields:
+    product_funnels: "Product Funnel(s)"    # labels type (multi-select UUIDs)
+    ad_category: "Ad Category"              # dropdown
+    expansion_ad_id: "Expansion AD ID"      # short_text
+    ad_format: "Ad Format"                  # dropdown: Video, Static, HTML5
+    full_ad_id: "Full Ad ID"               # does NOT exist yet — script skips if missing
+    root_angle_name: "Ad Root Angle Name"   # text
+
+# Tab names in CP spreadsheets (standardized across all sheets)
+sheet_tabs:
+  video: "Video Ads"
+  static: "Static Image Ads"
+  html5: "HTML5 Ads"
+
+# Column layout in CP spreadsheets:
+#   A = Full Variation ID (e.g., sf2-0001-v0001)
+#   B = Root Angle ID (e.g., sf2-0001)
+#   C = Root Angle Name
+#   D = Ad Category
+# Script reads Column B to find the max root angle ID per asset type.
+
+# Root angle ID format rules:
+#   Video:  {funnel}-{4-digit numeric}  e.g., sf2-0001
+#   Static: {funnel}-i{3-digit numeric} e.g., sf2-i001
+#   HTML5:  {funnel}-h{3-digit numeric} e.g., sf2-h001
+
+# Polling interval (seconds) — launchd StartInterval controls this,
+# but the script uses it for logging context.
+poll_interval: 120
+
+# Lock file to prevent overlapping runs
+lock_file: "/tmp/intake-id-generator.lock"
+
+# Funnel-to-CP-spreadsheet mapping
+# Products with spreadsheet_id: null have no CP sheet — flagged for manual ID.
+funnels:
+  # ── Digital Products ──
+  pgb:
+    name: "Beginners Program"
+    spreadsheet_id: "1oBtJ4W7AanZdi6lgskbTvDU2GBN_ARp6EAOKcoLbIAE"
+  dqfe1:
+    name: "General Golf Quiz for PG1"
+    spreadsheet_id: "11CRt2A6vZm7pQIfpj4_cJjXTNd3_y_Y3psgFsCadO6g"
+  dqfe:
+    name: "Swing Circle Quiz SSTS/WPSS"
+    spreadsheet_id: "1mb4PBXEH-bwgPtASrO--8k-zh_yrN0MgsC5vmO0O_xg"
+  pgf:
+    name: "Fitness Program"
+    spreadsheet_id: "1Pa7Yc_5qRlvsYhrhRj7W3nhO5K--x9oSTEsax5gwWqM"
+  htkt:
+    name: "High Ticket Golf School"
+    spreadsheet_id: "1PsHwHxYeS2M3cc0zPhD6VpyXGwN9UlxaA9qtWlUmy54"
+  ossf:
+    name: "One Shot Slice Fix"
+    spreadsheet_id: "1osaqCjvxim7-_vr8bDC76w7IW_e0ImBIa-AWxQNPudc"
+  pg1:
+    name: "PG Mobile App"
+    spreadsheet_id: "1A-jY_Wz_dz3QOZc5q7eJPKQ_xZ-T6qlUyUoPXWCcxAc"
+  ssts:
+    name: "Simple Strike Sequence"
+    spreadsheet_id: "1KM-KZae17Kmmwxo0tg1i-D8WGprFdn2WthAlj7r1PA0"
+  # WPSS shares the DQFE CP sheet (titled "Swing Circle Quiz for SSTS/WPSS")
+  wpss:
+    name: "Women's Pendulum Swing Sequence"
+    spreadsheet_id: "1mb4PBXEH-bwgPtASrO--8k-zh_yrN0MgsC5vmO0O_xg"
+  srsw:
+    name: "Smart Distance System"
+    spreadsheet_id: null
+  ssdp:
+    name: "Senior Swing Distance Program"
+    spreadsheet_id: null
+
+  # ── Physical Products ──
+  "357":
+    name: "357 Fairway Hybrid"
+    spreadsheet_id: "1kHWciP5tLYUh96Gx4X-L0yFgOEJPCGVs8T86sebbWP4"
+  clst:
+    name: "Click Stick"
+    spreadsheet_id: "1LcN8ltDBFJ4R1PeYeWcfkExO9FUeAOsT7Pxo-F0RuW8"
+  df1:
+    name: "DrawForce"
+    spreadsheet_id: "1_xJ9zwLjZgVSRrNZfwt6rdD6yAP9JqfGKmLYcMyekvs"
+  sf1:
+    name: "SF1 Driver"
+    spreadsheet_id: "1_5BgNNQgkouBSVF0TSWJ1kEysof8FDO_-4m6iiuS_xo"
+  sf2:
+    name: "SF2 Driver"
+    spreadsheet_id: "1fHcMtpHO_oNNdxRdG0LmKkt2fsvrObavGyDcbhPtHPQ"
+  spd:
+    name: "SpeedTrac"
+    spreadsheet_id: "1_iqT3wY9YvrENKaCENI3HnnPWDtglekh18ZfEoD08JI"
+  ssp:
+    name: "SwingSmooth PRO Supplement"
+    spreadsheet_id: "1kOvFQl_w_YJDzaNRd3Un0QBhSqczLdMExbjTbednRLs"
+  wdg1:
+    name: "ONE.1 Wedge"
+    spreadsheet_id: "1AJllFezb3mWGSP6yXR6i0cuAcVCaQCmVod4jIj1HNcg"
+  rs1:
+    name: "RS1 Putter"
+    spreadsheet_id: null
+  gbf:
+    name: "General Black Friday Collections"
+    spreadsheet_id: null
+  ghd:
+    name: "General Holiday Collections"
+    spreadsheet_id: null
+  pio:
+    name: "iON+ Golf Ball"
+    spreadsheet_id: null
+  pll:
+    name: "Lil' Legends Toddler Set"
+    spreadsheet_id: null
+  thr:
+    name: "The Thriver"
+    spreadsheet_id: null
+  wdgs:
+    name: "ONE.S Wedge"
+    spreadsheet_id: null
+
+  # ── Additional ClickUp labels (no CP sheets) ──
+  "359":
+    name: "359 Fairway Hybrid"
+    spreadsheet_id: null
+  chi1:
+    name: "ONE Chipper"
+    spreadsheet_id: null
+  pios:
+    name: "iONs Golf Ball"
+    spreadsheet_id: null
+  sqp:
+    name: "SQ Putter"
+    spreadsheet_id: null
+  clpp:
+    name: "Category Landing Page - Physical"
+    spreadsheet_id: null
+  clpd:
+    name: "Category Landing Page - Digital"
+    spreadsheet_id: null
+  clpm:
+    name: "Category Landing Page - Mixed"
+    spreadsheet_id: null
+  ssg:
+    name: "Straight Shootin Golf"
+    spreadsheet_id: null

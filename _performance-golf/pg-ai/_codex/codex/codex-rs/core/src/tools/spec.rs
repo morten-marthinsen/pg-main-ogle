@@ -2451,10 +2451,15 @@ pub(crate) fn build_specs_with_discoverable_tools(
     use crate::tools::handlers::multi_agents::SendInputHandler;
     use crate::tools::handlers::multi_agents::SpawnAgentHandler;
     use crate::tools::handlers::multi_agents::WaitAgentHandler;
+<<<<<<< HEAD
+    use crate::tools::handlers::multi_agents_v2::ListAgentsHandler as ListAgentsHandlerV2;
+    use crate::tools::handlers::multi_agents_v2::SendInputHandler as SendInputHandlerV2;
+=======
     use crate::tools::handlers::multi_agents_v2::AssignTaskHandler as AssignTaskHandlerV2;
     use crate::tools::handlers::multi_agents_v2::CloseAgentHandler as CloseAgentHandlerV2;
     use crate::tools::handlers::multi_agents_v2::ListAgentsHandler as ListAgentsHandlerV2;
     use crate::tools::handlers::multi_agents_v2::SendMessageHandler as SendMessageHandlerV2;
+>>>>>>> origin/main
     use crate::tools::handlers::multi_agents_v2::SpawnAgentHandler as SpawnAgentHandlerV2;
     use crate::tools::handlers::multi_agents_v2::WaitAgentHandler as WaitAgentHandlerV2;
     use std::sync::Arc;
@@ -2834,8 +2839,12 @@ pub(crate) fn build_specs_with_discoverable_tools(
                 config.code_mode_enabled,
             );
             builder.register_handler("spawn_agent", Arc::new(SpawnAgentHandlerV2));
+<<<<<<< HEAD
+            builder.register_handler("send_input", Arc::new(SendInputHandlerV2));
+=======
             builder.register_handler("send_message", Arc::new(SendMessageHandlerV2));
             builder.register_handler("assign_task", Arc::new(AssignTaskHandlerV2));
+>>>>>>> origin/main
             builder.register_handler("wait_agent", Arc::new(WaitAgentHandlerV2));
             builder.register_handler("close_agent", Arc::new(CloseAgentHandlerV2));
             builder.register_handler("list_agents", Arc::new(ListAgentsHandlerV2));

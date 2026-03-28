@@ -319,7 +319,7 @@ def execute_tool(tool_name: str, tool_input: dict) -> str:
                 return "No tasks scheduled for today."
             lines = []
             for pos, info in sorted(id_map.items()):
-                lines.append(f"{pos}: {info['text']} (id: {info['id']})")
+                lines.append(f"{pos} → {info['text']}")
             return "\n".join(lines)
 
         elif tool_name == "complete_task":
@@ -775,6 +775,10 @@ This is a two-step process: (1) identify and confirm, (2) execute after approval
 
 **Queries**: When he asks about today's tasks, what's on the schedule, or what a \
 specific position (A1, B2) refers to — answer from the task list above.
+
+**Formatting**: Never show item IDs (ai-xxx, mi-xxx) in responses. Christopher doesn't \
+need to see internal codes. Format task lists as: "A1 → Task description". Use the \
+Task ID Map internally for tool calls only.
 
 **Task creation**: When he wants to add a task, confirm the title and scheduling \
 before creating.

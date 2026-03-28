@@ -519,7 +519,10 @@ pub struct InterAgentCommunication {
     #[serde(default)]
     pub other_recipients: Vec<AgentPath>,
     pub content: String,
+<<<<<<< HEAD
+=======
     pub trigger_turn: bool,
+>>>>>>> origin/main
 }
 
 impl InterAgentCommunication {
@@ -528,14 +531,20 @@ impl InterAgentCommunication {
         recipient: AgentPath,
         other_recipients: Vec<AgentPath>,
         content: String,
+<<<<<<< HEAD
+=======
         trigger_turn: bool,
+>>>>>>> origin/main
     ) -> Self {
         Self {
             author,
             recipient,
             other_recipients,
             content,
+<<<<<<< HEAD
+=======
             trigger_turn,
+>>>>>>> origin/main
         }
     }
 
@@ -552,7 +561,11 @@ impl InterAgentCommunication {
         Self::from_message_content(content).is_some()
     }
 
+<<<<<<< HEAD
+    fn from_message_content(content: &[ContentItem]) -> Option<Self> {
+=======
     pub fn from_message_content(content: &[ContentItem]) -> Option<Self> {
+>>>>>>> origin/main
         match content {
             [ContentItem::InputText { text }] | [ContentItem::OutputText { text }] => {
                 serde_json::from_str(text).ok()

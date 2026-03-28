@@ -92,7 +92,7 @@ Free-Flowing, Zero-Thinking Golf
 | |
 | Your Pendulum Swing Sequence lives inside PG1™ — alongside personalized coaching that helps you actually **USE** what you learn. |
 | |
-| **14-day FREE trial included.** Then $39/mo. |
+| **14-day FREE trial included.** Then $29/mo. |
 | Cancel anytime with 1 click. No lock-in contracts. |
 | |
 | **(Most Popular — Biggest Savings)** |
@@ -103,7 +103,7 @@ Free-Flowing, Zero-Thinking Golf
 
 > [DEV NOTE: When MEMBER is selected, display the PG1 terms agreement checkbox below:]
 >
-> [ ] I understand that my Pendulum Swing Sequence will be delivered through the PG1™ app. My 14-day free trial begins today. After 14 days, my PG1 membership continues at $39/month. I can cancel anytime.
+> [ ] I understand that my Pendulum Swing Sequence will be delivered through the PG1™ app. My 14-day free trial begins today. After 14 days, my PG1 membership continues at $29/month. I can cancel anytime.
 >
 > [DISCUSSION POINT FOR LEADERSHIP: Is this checkbox required? Or is the disclosure in the member pricing box + fine print sufficient? Legal decision.]
 
@@ -121,7 +121,7 @@ Free-Flowing, Zero-Thinking Golf
 
 - **BONUS: Pendulum Swing LIVESTREAM Q&A (FREE)**
 
-- **BONUS: Access your training through the PG1™ app** — personalized coaching, progress tracking, and daily recommendations included with your membership (14 days FREE, then $39/month. Cancel anytime.)
+- **BONUS: Access your training through the PG1™ app** — personalized coaching, progress tracking, and daily recommendations included with your membership (14 days FREE, then $29/month. Cancel anytime.)
 
 - **365-Day Money-Back Guarantee**
 
@@ -296,9 +296,9 @@ You're Protected By Our 365-Day Money-Back Guarantee!
 
 [trust badges]
 
-*By checking the box above, you agree to the Terms and Privacy Policy and to receive text notifications on 39587 from Performance Golf to the mobile number provided. Msg freq will vary. Consent is not a condition of the purchase of goods or services. Message and data rates may apply. Reply STOP to cancel. Reply HELP for help. You'll be billed once for today's purchase. If you selected Member Pricing, your order includes a 14-day free trial to PG1™. After 14 days, your PG1 membership continues at $39/month. You can cancel your PG1 membership anytime by emailing support@performancegolf.com or with 1 click inside the PG1 app.
+*By checking the box above, you agree to the Terms and Privacy Policy and to receive text notifications on 39587 from Performance Golf to the mobile number provided. Msg freq will vary. Consent is not a condition of the purchase of goods or services. Message and data rates may apply. Reply STOP to cancel. Reply HELP for help. You'll be billed once for today's purchase. If you selected Member Pricing, your order includes a 14-day free trial to PG1™. After 14 days, your PG1 membership continues at $29/month. You can cancel your PG1 membership anytime by emailing support@performancegolf.com or with 1 click inside the PG1 app.
 
-> [DEV NOTE: Updated fine print from Scratch Club ($29/mo, 14-day trial) to PG1 ($39/mo, 14-day trial). Added conditional language for member vs non-member. If non-member selected, PG1 subscription sentence does not appear.]
+> [DEV NOTE: Updated fine print from Scratch Club ($29/mo, 14-day trial) to PG1 ($29/mo, 14-day trial). Added conditional language for member vs non-member. If non-member selected, PG1 subscription sentence does not appear.]
 
 ---
 
@@ -332,4 +332,4 @@ Put this training to the test completely risk-free, and watch how it improves yo
 2. **Auto-check behavior** — Template shows non-member ($197) as default. Customer sees the higher price first, then switches to member ($97) as the no-brainer. Is this the right UX, or should member be auto-checked?
 3. **PG1 terms checkbox** — Should there be an explicit checkbox for PG1 membership agreement, or is the disclosure in the member box + fine print sufficient? Legal decision.
 4. **Pro Edition as order bump** — POV lessons moved to $32 bump. Is this the right price point and position?
-5. **PG1 subscription rate** — Template uses $39/mo (from current PG1 quiz checkout). Confirm this is the correct rate post-Scratch Club elimination.
+5. **PG1 subscription rate** — Template uses $29/mo (from current PG1 quiz checkout). Confirm this is the correct rate post-Scratch Club elimination.

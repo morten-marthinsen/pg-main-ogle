@@ -1,0 +1,219 @@
+# Orion Daily Executive Briefing Configuration
+# ============================================
+
+report:
+  output_dir: "../daily-reports"  # Base dir; script auto-creates monthly subfolders (e.g., feb-26-reports/)
+  timezone: "America/New_York"       # Google Calendar API source timezone
+  display_timezone: "America/New_York"  # Override with your local timezone (e.g., "Europe/Lisbon", "America/Los_Angeles")
+
+ai:
+  model: "claude-sonnet-4-20250514"
+  max_tokens_per_module: 2000
+
+clickup:
+  exclude_statuses:
+    - approved
+    - closed
+    - done
+    - complete
+    - live
+
+modules:
+  m00a_today_summary:
+    enabled: true
+    description: "Executive summary — Today at a Glance with time-slotted A/B/C tasks, capacity alerts, launch countdowns, and delta tracking"
+    setup_required: "---"
+
+  m00_overnight_summary:
+    enabled: true
+    description: "Receipt of transcripts processed overnight — names, item counts, flags"
+    setup_required: "---"
+
+  m0b_pending_review:
+    enabled: true
+    description: "Staging area for newly extracted action items — Christopher reviews and approves before they enter the main tracker"
+    setup_required: "---"
+
+  m0_persistent_actions:
+    enabled: true
+    description: "Persistent action items tracker — reads KB + manual items, groups by owner, flags overdue/stale. Items persist until explicitly resolved."
+    setup_required: "—"
+
+  m1_automation_scanner:
+    enabled: true
+    description: "Reviews task load, suggests automation/delegation opportunities"
+    setup_required: "—"
+    max_task_detail_fetch: 10
+
+  m2_golf_industry_intel:
+    enabled: true
+    description: "Parses Google Alert emails, summarizes golf industry news"
+    setup_required: "Gmail API OAuth"
+    gmail_query: "from:googlealerts-noreply@google.com subject:golf"
+    max_articles: 10
+    lookback_hours: 24
+
+  m3_golf_lexicon_builder:
+    enabled: true
+    description: "Extracts 10 golf copywriting terms from articles and auto-adds to lexicon"
+    setup_required: "—"
+    lexicon_csv: "_reference/pg-golf-lexicon.csv"
+    auto_add: true  # Auto-add all 10 suggestions instead of waiting for manual approval
+
+  m4_slack_monitor:
+    enabled: false  # S125: Removed from report — not actionable. Re-enable when better use case identified.
+    description: "Scans Slack DMs, prioritizes, drafts 3 response options (Wise Reply)"
+    setup_required: "Slack OAuth. Run: python3 auth/slack_auth.py"
+    channels: []
+    dm_scan: true
+    lookback_hours: 24
+    max_messages_per_run: 5
+    exclude_names: ["Orion"]  # Ignore DMs from bots matching these names
+
+  m5_wise_reply_context:
+    enabled: false  # S125: Removed from report — too vague, not actionable. Depends on M4.
+    description: "Updates working-relationship files with patterns from processed messages"
+    setup_required: "Depends on M4 (Slack Monitor)"
+    working_relationships_dir: ""  # Set to your local working-relationships path (e.g., "~/.claude/projects/<your-project>/memory/working-relationships/")
+    auto_append: true
+
+  m6_ai_newsletter_digest:
+    enabled: true
+    description: "Summarizes newsletters from the last 24 hours, maps takeaways to PRD objectives"
+    setup_required: "Gmail API OAuth"
+    gmail_query: "label:newsletters newer_than:1d"
+
+  m7_clickup_inbox:
+    enabled: true
+    description: "Monitors ClickUp inbox, triages by priority, identifies auto-clear candidates"
+    setup_required: "—"
+    workspace_id: "9014714949"
+
+  m8_agent_status:
+    enabled: true
+    description: "Reads each agent's SESSION-LOG.md Build State and reports session, status, blockers, and next steps"
+    setup_required: "—"
+
+  m9_transcript_intelligence:
+    enabled: true
+    render: false  # Runs (Phase 1, updates KB) but decisions/signals now render in M00
+    description: "Extracts structured intelligence (action items, decisions, topics, people, scorecard signals) from new meeting transcripts into persistent KB"
+    setup_required: "—"
+    max_transcripts_per_run: 0  # 0 = unlimited — process every new transcript every run
+    transcripts_dir: "../meetings/transcripts"
+
+  m10_kb_analyzer:
+    enabled: true
+    description: "Analyzes KB for patterns, scorecard gaps, risk/drift signals, and generates actionable recommendations with closed-loop tracking"
+    setup_required: "Depends on M9 (Transcript Intelligence)"
+
+  m11_meeting_prep:
+    enabled: false  # Removed — Christopher doesn't use this for call prep
+    description: "Detects recurring meetings from transcript patterns, generates per-meeting prep briefs with KB context"
+    setup_required: "Depends on M9 (Transcript Intelligence)"
+    lookback_days: 30
+    max_prep_meetings: 3
+
+  triage_intelligence:
+    enabled: true
+    description: "Pre-scores pending items with learned triage patterns, ClickUp cross-ref, and calendar-aware day suggestions"
+    auto_reject: true
+    auto_approve: false
+    clickup_match_threshold: 0.55
+    min_decisions_for_auto: 50
+    day_type_rules:
+      monday: strategic
+      tuesday: execution
+      wednesday: execution
+      thursday: execution
+      friday: execution
+      saturday: "off"
+      sunday: "off"
+
+  m12_daily_schedule:
+    enabled: true
+    render: false  # Runs (feeds M00a focus time/meeting data) but section removed from report
+    description: "Fetches today's calendar, identifies focus blocks, generates AI schedule coaching"
+    setup_required: "Google Calendar OAuth. Run: python3 auth/calendar_auth.py"
+    include_tomorrow: true
+    week_ahead_days: 7
+
+  clm_sync:
+    enabled: true
+    description: "Syncs RS1 CLM URLs from GTM Launch Links sheet, ClickUp, and Slack"
+    setup_required: "Google Sheets OAuth. Run: python3 auth/sheets_auth.py"
+    registry_path: "../launch-boards/rs1/rs1-url-registry.json"
+    slack_channels: ["product-rs1-putter-launch"]
+    clickup_list_ids: ["901413807288"]
+    lookback_hours: 24
+    auto_update_html: true
+
+  m15_data_fetch:
+    enabled: true
+    description: "Fetches yesterday's ad performance data from Domo via pg-data-service and saves to dataruns/"
+    setup_required: "pg-data-service .env with DOMO_CLIENT_ID and DOMO_CLIENT_SECRET"
+
+  production_sync:
+    enabled: true
+    description: "Syncs shoot/production status from ClickUp Production Calendar to CLM boards"
+    production_calendar_list_id: "901413170440"
+    footage_url_field_name: "Raw Footage (URL)"
+    offers:
+      sf2:
+        prefix: "SF2"
+        registry_path: "sf2/sf2-production-registry.json"
+        clm_content_path: "sf2/sf2-launch-board-content.md"
+        html_file: "sf2-launch-board-v2.html"
+        deploy_dir: "deploy-v2"
+        surge_domains:
+          - "pg-sf2-board.surge.sh"
+          - "pg-sf2-board-v2.surge.sh"
+      rs1:
+        prefix: "RS1"
+        registry_path: "rs1/rs1-production-registry.json"
+        clm_content_path: "rs1/rs1-launch-board-content.md"
+        html_file: "rs1-launch-board.html"
+        deploy_dir: "deploy"
+        surge_domains:
+          - "pg-rs1-board.surge.sh"
+
+intelligence:
+  completed_registry: true
+  stale_pending_days: 21
+  stale_hard_reject_days: 35
+  capacity_engine: true
+  multi_factor_abc: true
+  auto_route_depends: true
+  week_ahead_view: true
+  launch_calendar: true
+  pre_allocate_triage: true
+  entity_calendar_match: true
+  auto_approve_threshold: 0.80
+  launch_indicators:
+    tags: ["launch", "milestone"]
+    list_ids: []
+  scorecard_keywords:
+    - "hiring"
+    - "RS1"
+    - "Creative OS"
+    - "Spark Book"
+    - "delegation"
+    - "brand-paid"
+    - "AI tools"
+    - "SpeedTrack"
+    - "SF2"
+    - "Figma"
+    - "automation"
+    - "Romeo"
+    - "Nate Jones"
+    - "Donnie"
+
+git_fetch:
+  enabled: true
+  remote: "pg-main"
+  branch: "main"
+  timeout_seconds: 10
+
+notifications:
+  slack_webhook_url: ""
+  email: ""

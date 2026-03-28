@@ -8,4 +8,7 @@ export * from './file-system-test-helpers.js';
 export * from './fixtures/agents.js';
 export * from './mock-utils.js';
 export * from './test-mcp-server.js';
+<<<<<<< HEAD
+=======
 export * from './test-rig.js';
+>>>>>>> origin/main

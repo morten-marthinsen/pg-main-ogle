@@ -3,7 +3,7 @@ from __future__ import annotations
 """Orion Hourly Check-in — builds and posts the scannable task pulse to Christopher's Slack DM.
 
 Can be run two ways:
-  1. Via launchd (scheduled, hourly 9am-6pm Mon-Fri Lisbon)
+  1. Via launchd (scheduled, hourly 9am-6pm Mon-Fri local time)
   2. Via agent.py (manual trigger: Christopher says "check in")
   3. Pre-call nudge mode: python3 checkin.py --precall
 
@@ -55,13 +55,13 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [checkin] %(levelnam
 logger = logging.getLogger("checkin")
 
 # ── Config ────────────────────────────────────────────────────────────────────
-LISBON_TZ = ZoneInfo("Europe/Lisbon")
-CHECKIN_HOUR_START = 9   # 9am Lisbon
-CHECKIN_HOUR_END = 18    # 6pm Lisbon (last check-in fires AT 18:00)
+LOCAL_TZ = ZoneInfo(os.environ.get("ORION_TIMEZONE", "America/New_York"))
+CHECKIN_HOUR_START = 9   # 9am local time
+CHECKIN_HOUR_END = 18    # 6pm local time (last check-in fires AT 18:00)
 WORK_WEEKDAYS = {0, 1, 2, 3, 4}  # Mon-Fri
 OWNER_SLACK_ID = os.environ.get("OWNER_SLACK_ID", "")
 SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN", "")
-CALENDAR_TZ = "Europe/Lisbon"
+CALENDAR_TZ = os.environ.get("ORION_TIMEZONE", "America/New_York")
 
 # Calendar credentials from daily-briefing
 CALENDAR_ENV = {
@@ -73,8 +73,8 @@ CALENDAR_ENV = {
 # ── Schedule guard ────────────────────────────────────────────────────────────
 
 def should_run() -> bool:
-    """Return True if it's a weekday and within 9am-6pm Lisbon."""
-    now = datetime.now(LISBON_TZ)
+    """Return True if it's a weekday and within 9am-6pm local time."""
+    now = datetime.now(LOCAL_TZ)
     if now.weekday() not in WORK_WEEKDAYS:
         return False
     if not (CHECKIN_HOUR_START <= now.hour <= CHECKIN_HOUR_END):
@@ -89,7 +89,7 @@ def _get_upcoming_events(minutes_ahead: int = 120) -> list[dict]:
     try:
         service = get_calendar_service(CALENDAR_ENV)
         events_raw = fetch_events_for_date(service, date.today(), timezone=CALENDAR_TZ)
-        now = datetime.now(LISBON_TZ).replace(tzinfo=None)
+        now = datetime.now(LOCAL_TZ).replace(tzinfo=None)
         cutoff = now + timedelta(minutes=minutes_ahead)
 
         upcoming = []
@@ -111,7 +111,7 @@ def _get_events_starting_in_window(min_minutes: int = 25, max_minutes: int = 35)
     try:
         service = get_calendar_service(CALENDAR_ENV)
         events_raw = fetch_events_for_date(service, date.today(), timezone=CALENDAR_TZ)
-        now = datetime.now(LISBON_TZ).replace(tzinfo=None)
+        now = datetime.now(LOCAL_TZ).replace(tzinfo=None)
         window_start = now + timedelta(minutes=min_minutes)
         window_end = now + timedelta(minutes=max_minutes)
 
@@ -147,7 +147,7 @@ def build_checkin_message(tasks: list[dict], upcoming_events: list[dict]) -> tup
 
     suggestions_list is what gets saved to checkin_state for code-based replies.
     """
-    now = datetime.now(LISBON_TZ)
+    now = datetime.now(LOCAL_TZ)
     hour_label = now.strftime("%-I:%M %p")
 
     lines = [f"*Orion Check-in — {hour_label}*"]
@@ -171,6 +171,8 @@ def build_checkin_message(tasks: list[dict], upcoming_events: list[dict]) -> tup
 
     for task in tasks:
         tier = task.get("_tier", task.get("_priority_override", "B"))
+        rank = task.get("_tier_rank", "")
+        pos = f"{tier}{rank}"
         title = task.get("text", "")
         short = title[:50] + "…" if len(title) > 50 else title
 
@@ -187,11 +189,11 @@ def build_checkin_message(tasks: list[dict], upcoming_events: list[dict]) -> tup
                 "proof": opp["proof"],
             })
             suggestion_lines.append(
-                f"  *{tier}* — {short}\n"
+                f"  *{pos}* — {short}\n"
                 f"       → `{code}` {opp['one_liner']} — type *{code}* to run"
             )
         else:
-            lines.append(f"  *{tier}* — {short} _(keep — your call)_")
+            lines.append(f"  *{pos}* — {short} _(keep — your call)_")
 
     lines.extend(suggestion_lines)
 

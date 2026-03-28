@@ -26,6 +26,7 @@ class BriefingModule(ABC):
     name: str = "Base Module"
     key: str = "base"
     setup_required: str = ""
+    module_timeout: int = 0  # per-module override; 0 = use MODULE_TIMEOUT default
 
     def __init__(self, config: dict, env: dict, logger: logging.Logger, shared_state: dict = None):
         self.config = config
@@ -47,8 +48,9 @@ class BriefingModule(ABC):
         Returns markdown string for the report section."""
 
     def call_anthropic(self, system_prompt: str, user_content: str,
-                       max_tokens: int = 2000) -> str:
-        """Shared Anthropic API call with retry on 429 rate limits."""
+                       max_tokens: int = 2000, timeout: int = 0) -> str:
+        """Shared Anthropic API call with retry on 429 rate limits.
+        timeout: per-call timeout in seconds. 0 = use default ANTHROPIC_TIMEOUT."""
         try:
             import anthropic
         except ImportError:
@@ -58,8 +60,9 @@ class BriefingModule(ABC):
         if not api_key:
             return "_ANTHROPIC_API_KEY not set in .env_"
 
+        effective_timeout = timeout if timeout > 0 else ANTHROPIC_TIMEOUT
         model = self.config.get("ai", {}).get("model", "claude-sonnet-4-20250514")
-        client = anthropic.Anthropic(api_key=api_key, timeout=ANTHROPIC_TIMEOUT)
+        client = anthropic.Anthropic(api_key=api_key, timeout=effective_timeout)
 
         for attempt in range(MAX_RETRIES):
             try:
@@ -124,16 +127,19 @@ class BriefingModule(ABC):
     def run(self) -> str:
         """Full module execution: fetch -> analyze -> format.
         Never raises — catches all exceptions for error isolation.
-        Enforces MODULE_TIMEOUT to prevent any single module from hanging the pipeline."""
+        Enforces module timeout to prevent any single module from hanging the pipeline.
+        Uses self.module_timeout if set, otherwise MODULE_TIMEOUT default."""
+
+        effective_timeout = self.module_timeout if self.module_timeout > 0 else MODULE_TIMEOUT
 
         def _timeout_handler(signum, frame):
-            raise TimeoutError(f"Module {self.key} exceeded {MODULE_TIMEOUT}s timeout")
+            raise TimeoutError(f"Module {self.key} exceeded {effective_timeout}s timeout")
 
         try:
             self.logger.info(f"[{self.key}] Starting...")
             # Set per-module alarm (SIGALRM) — only works on Unix
             old_handler = signal.signal(signal.SIGALRM, _timeout_handler)
-            signal.alarm(MODULE_TIMEOUT)
+            signal.alarm(effective_timeout)
             try:
                 self._data = self.fetch_data()
                 self._analysis = self.analyze(self._data)
