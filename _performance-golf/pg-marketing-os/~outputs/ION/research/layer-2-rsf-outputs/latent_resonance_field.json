@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "skill": "2.8-B Latent Resonance Identifier",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "scored_quotes.json + belief_inventory.json + market_intelligence.md + now_after_grid.json + transformation_pairs.json + market_config.yaml",
+    "expressed_vs_latent_gaps": 5,
+    "unnamed_emotions": 4,
+    "identity_tensions": 3,
+    "fssit_candidates": 7
+  },
+  "expressed_vs_latent_gaps": [
+    {
+      "id": "GAP-01",
+      "expressed": "I'm losing distance because I'm getting older",
+      "latent": "I'm terrified that I'm becoming the golfer who has to give up the game — and every shorter drive is another step toward that reality",
+      "evidence_chain": [
+        "P-253: 'I have lost close to 50 yards. It is a huge shock.' — The word 'shock' signals this is more than performance frustration. It's existential.",
+        "P-263: 'My uncle had to give up golf completely and it was devastating.' — The uncle story is told as a warning. The narrator fears becoming the uncle.",
+        "P-257: 'My mind writes checks my body can't cash.' — The mind/body split reveals a person who still IDENTIFIES as capable but is betrayed by their physicality.",
+        "P-001: 'It's not fair to play with a team as I just can't hold my own.' — 'Not fair' is justice language. This isn't disappointment — it's a perceived injustice that threatens social belonging."
+      ],
+      "confidence": 0.92,
+      "messaging_implication": "Never say 'you're getting older.' They know. Name the FEAR beneath the distance loss: losing the game, losing the social connection, losing the identity. Then offer recovery — not of youth, but of capability."
+    },
+    {
+      "id": "GAP-02",
+      "expressed": "ProV1 is too expensive — I want to find something cheaper",
+      "latent": "I feel like a sucker for paying premium prices for a ball that might not even be right for me, but I'm afraid that cheaper means worse and I'll be judged for playing a 'bad' ball",
+      "evidence_chain": [
+        "V-037: 'prov1s are an insane purchase. Pure luxury/flex.' — 'Flex' is social status language. The purchase is about identity, not performance.",
+        "ST-017: 'I don't feel nearly as bad when I dump one in the water.' — Emotional relief from NOT losing expensive balls. The premium price creates anxiety on every shot.",
+        "V-003: 'Stop wasting your money. You're not good enough.' — Being TOLD you're wasting money is shameful. The latent fear: what if they're right?",
+        "CM-004: 'Par 5, no water...PROV1. Par 3 over water...Kirkland.' — Two-ball system reveals the internal conflict: wanting to play premium but not being able to afford the anxiety."
+      ],
+      "confidence": 0.90,
+      "messaging_implication": "Don't position iON+ as 'cheaper than ProV1.' Position it as 'the ball that removes the anxiety.' One ball, every hole, no mental math about which ball to play based on the hazard ahead."
+    },
+    {
+      "id": "GAP-03",
+      "expressed": "I've been experimenting with different balls this year",
+      "latent": "I'm exhausted by the search and I just want someone to tell me what's right for MY game — but I don't trust anyone to give me unbiased advice",
+      "evidence_chain": [
+        "V-021: 'I've been experimenting this year, using Bridgestone e12 & Callaway super soft. I'll use one brand for 8-10 rounds, then the other.' — 8-10 round experiments are WORK. This isn't fun shopping — it's a research project born from frustration.",
+        "V-031: 'Swing speed: Absolutely no idea. Ball: Currently trying to decide between prov1 (used), Maxfli Tour, or Vice Pro.' — Doesn't know swing speed, can't choose between 3 balls. The expressed 'deciding' masks the latent 'drowning.'",
+        "V-036: 'Bridgestone rep told me ProV1 was better... gave me Bridgestone anyway.' — Trust destroyed. The one system designed to help (ball fitting) is compromised by commercial interest."
+      ],
+      "confidence": 0.88,
+      "messaging_implication": "Independent robot testing data at 95mph is the trust-breaker. It's not a brand telling them what to buy — it's a machine showing them what works. The data is the advisor they've been looking for."
+    },
+    {
+      "id": "GAP-04",
+      "expressed": "Ball choice doesn't really matter for most golfers",
+      "latent": "I HOPE ball choice doesn't matter because if it does, I've been making the wrong choice for years and wasting performance I could have had",
+      "evidence_chain": [
+        "H-006: 'Some of my best rounds have been with a Wilson staff, some of my worst with a ProV1.' — Using anecdotal round-to-round variance to argue ball doesn't matter. But launch monitor data consistently shows 10-15 yard differences.",
+        "P-075: 'Balls matter but.. not really.' — The hedging ('but.. not really') reveals internal conflict. They suspect it matters but don't want it to be true.",
+        "RC-061: 'Most people couldn't hit the same ball within 5 yards on back to back swings, so the difference a ball makes is moot.' — Logical argument that masks an emotional position: if ball choice matters, I've been wrong."
+      ],
+      "confidence": 0.85,
+      "messaging_implication": "The frame claim 'your ball matters' has to overcome this defensive belief. Don't argue. SHOW. The 30-yard difference (ST-010 Kirkland) and 10-yard improvement (CM-002 fitted ball) are inarguable. Let the data dissolve the defense."
+    },
+    {
+      "id": "GAP-05",
+      "expressed": "I play ProV1 because it's the best ball",
+      "latent": "I play ProV1 because everyone else does and I don't want to look like I can't afford it or don't know what I'm doing",
+      "evidence_chain": [
+        "RC-026: 'I know golfers who won't play with anything but pro v... get ready for a fight.' — 'Ready for a fight' — brand loyalty as IDENTITY. Challenging their ball choice feels like a personal attack.",
+        "V-022: 'I tried so hard to be a Snell and Vice guy. The prov1 is really just that much better.' — 'Tried so hard' implies effort to escape, followed by return. Stockholm syndrome with a golf ball.",
+        "V-037: 'Pure luxury/flex.' — Peer recognition that ProV1 choice is social signaling, not performance optimization."
+      ],
+      "confidence": 0.85,
+      "messaging_implication": "Don't attack ProV1 directly. Acknowledge it's a great ball — for the right swing speed. Then let the data show that for THEIR speed, a different engineering approach works better. The exit from ProV1 loyalty needs to feel like a SMART choice, not a cheap one."
+    }
+  ],
+  "unnamed_emotions": [
+    {
+      "id": "UE-01",
+      "emotion": "Equipment grief — mourning the golfer you used to be through the equipment that used to work",
+      "description": "Golfers describe their declining distance with the specificity of a medical report. 'Me at 30: Driver 280. At 67: Driver 210.' This isn't frustration. It's grief — a measured, documented loss of a former self. The numbers are a timeline of decline. Each data point is a funeral for a version of themselves that's gone.",
+      "evidence_ids": ["P-255", "P-253", "P-259", "P-264", "P-270"],
+      "why_unnamed": "Golf culture doesn't have language for equipment-related grief. They can say 'I lost distance.' They can't say 'I'm grieving the golfer I was at 40.' The emotion has no name in their vocabulary.",
+      "recognition_potential": 9
+    },
+    {
+      "id": "UE-02",
+      "emotion": "Brand shame — the private knowledge that you're paying for a name, not for performance that fits your game",
+      "description": "Golfers who play ProV1 at 80mph know, somewhere, that the ball isn't optimized for their swing. But admitting it means admitting they've been wrong — potentially for years, potentially for thousands of dollars. The shame isn't about money. It's about having been fooled by marketing they consider themselves too smart to fall for.",
+      "evidence_ids": ["RC-026", "V-037", "V-003", "RC-024"],
+      "why_unnamed": "Admitting brand shame means admitting gullibility. Golfers who pride themselves on being informed consumers can't say 'I bought ProV1 because of the name.' So they say 'it just feels better' — an unfalsifiable claim that protects the ego.",
+      "recognition_potential": 8
+    },
+    {
+      "id": "UE-03",
+      "emotion": "Choice paralysis guilt — feeling stupid for not being able to pick a golf ball when you've been playing for 30 years",
+      "description": "Experienced golfers who still can't choose a ball feel this acutely. They've played thousands of rounds but can't answer 'what ball should I play?' with confidence. The guilt: this should be simple. I should know this by now. Why don't I?",
+      "evidence_ids": ["V-031", "V-021", "H-031", "V-025"],
+      "why_unnamed": "Admitting confusion after decades of playing feels incompetent. They frame it as 'experimenting' (positive) instead of 'I still don't know' (shameful).",
+      "recognition_potential": 7
+    },
+    {
+      "id": "UE-04",
+      "emotion": "Competitive mortality — the growing awareness that you're approaching the day you can no longer compete, and every round might be closer to the last than you think",
+      "description": "The uncle who 'had to give up golf completely and it was devastating' is not a story about someone else. It's a preview of the narrator's own future. Every golfer who tells this story is doing a threat assessment: how far am I from that? The emotion isn't sympathy for the uncle — it's fear for themselves.",
+      "evidence_ids": ["P-263", "P-001", "P-261", "P-257"],
+      "why_unnamed": "Naming it means acknowledging an endpoint. Golfers don't say 'I'm afraid I'll have to stop playing.' They say 'I'm losing distance' — the symptom, not the fear.",
+      "recognition_potential": 9
+    }
+  ],
+  "identity_tensions": [
+    {
+      "id": "IT-01",
+      "who_they_want_to_be": "A smart, informed golfer who makes data-driven equipment decisions",
+      "who_they_fear_they_are": "A sucker who's been overpaying for marketing hype for years",
+      "tension_evidence": [
+        "V-035: 'The entire golf ball industry is a scam. They all cost close to the same to make.' — Seeing the scam but still participating in it.",
+        "V-037: 'prov1s are an insane purchase. Pure luxury/flex.' — Recognizing the irrationality but observing others (and possibly themselves) still doing it.",
+        "ST-002: 'I'm not good enough for an expensive ball to make a difference for me.' — Self-awareness that stings. They know the expensive ball isn't serving them."
+      ],
+      "resolution_path": "iON+ resolves this tension by BEING the smart choice. Independent data, engineered for their speed, fair price. Playing iON+ IS the data-driven decision. It turns the 'sucker' fear into 'I figured it out before everyone else.'"
+    },
+    {
+      "id": "IT-02",
+      "who_they_want_to_be": "A golfer who still has it — competitive, capable, enjoying the game",
+      "who_they_fear_they_are": "A golfer whose best days are behind them and whose game is in irreversible decline",
+      "tension_evidence": [
+        "P-264: 'I'm 68, crazy fit, etc.' — 'Crazy fit' is a declaration of defiance. They're fighting the narrative of decline.",
+        "P-268: 'Now I crush one, check the distance, and it's 250.' — Subjective feeling of power ('crush') contradicted by objective reality (250, not the 280 they used to hit).",
+        "P-257: 'My mind writes checks my body can't cash.' — The mind still identifies as the younger golfer. The body won't cooperate."
+      ],
+      "resolution_path": "iON+ doesn't reverse aging. It recovers the BALL-CAUSED portion of distance loss. The message: you can't get 30 back. But you can get 10-15 back. And that's the difference between 'I can't keep up' and 'I'm still in the game.'"
+    },
+    {
+      "id": "IT-03",
+      "who_they_want_to_be": "Someone who doesn't care about brand names and buys on merit",
+      "who_they_fear_they_are": "Someone who would feel embarrassed pulling a non-premium ball out of their bag in front of their foursome",
+      "tension_evidence": [
+        "CM-004: 'Par 5, no water...PROV1. Par 3 over water...Kirkland.' — Hiding the budget ball. Using it only when nobody will see it in the water.",
+        "V-022: 'I tried so hard to be a Snell and Vice guy.' — 'Tried so hard' — the effort of resisting social pressure to play premium.",
+        "H-013: 'Why are you as a 20 handicapper muni hacker playing a ball that costs 1/6 of the round?' — Social judgment for playing premium when you 'shouldn't.' Judgment goes both directions."
+      ],
+      "resolution_path": "iON+ needs to be a ball they're PROUD to pull out. The visual alignment system, the PG brand, the robot data — these give them something to SAY when asked 'what ball is that?' The answer isn't 'a cheaper ball.' It's 'a ball that beat ProV1 at my swing speed in independent testing.'"
+    }
+  ],
+  "fssit_candidates": [
+    {
+      "id": "FSSIT-01",
+      "statement": "Your ball matters. More than you think. And you don't have to spend $55 to get a great one.",
+      "recognition_strength": 9,
+      "target_gap": "GAP-04 (ball doesn't matter) + GAP-02 (price anxiety)",
+      "why_resonates": "Two beliefs they hold simultaneously: 'ball doesn't matter' (defensive) and 'I hate paying $55' (resentful). Naming both in one sentence — yes it matters, AND you're overpaying — resolves both tensions at once.",
+      "evidence_ids": ["P-075", "V-005", "CM-002", "ST-010"]
+    },
+    {
+      "id": "FSSIT-02",
+      "statement": "You're not losing distance just to age. Your ball is costing you yards too.",
+      "recognition_strength": 8,
+      "target_gap": "GAP-01 (distance loss = aging only)",
+      "why_resonates": "They've accepted distance loss as inevitable. Hearing that SOME of it is recoverable through ball choice creates a 'wait, what?' moment. It doesn't deny aging — it introduces a second, fixable cause.",
+      "evidence_ids": ["P-253", "RC-014", "CM-002"]
+    },
+    {
+      "id": "FSSIT-03",
+      "statement": "The golf ball industry charges $55 because they can. Not because the ball costs that much to make.",
+      "recognition_strength": 9,
+      "target_gap": "GAP-02 (pricing resentment)",
+      "why_resonates": "They already believe this (V-035: 'they all cost close to the same to make'). Hearing a BRAND say it — instead of defending pricing — creates immediate trust through alignment. The brand is on their side.",
+      "evidence_ids": ["V-035", "V-005", "V-018"]
+    },
+    {
+      "id": "FSSIT-04",
+      "statement": "You don't need to be 'good enough' for the right ball. You need a ball that's engineered for your swing speed.",
+      "recognition_strength": 8,
+      "target_gap": "IT-01 (smart golfer vs. sucker) + expressed shame about skill-gating",
+      "why_resonates": "Reframes ball selection from a worthiness test (handicap-based) to a physics question (speed-based). Removes shame. Replaces it with empowerment. They've been asking the wrong question.",
+      "evidence_ids": ["V-003", "RC-026", "ST-109"]
+    },
+    {
+      "id": "FSSIT-05",
+      "statement": "Every round with the wrong ball, you're leaving yards on the fairway that you could have had.",
+      "recognition_strength": 7,
+      "target_gap": "GAP-04 (ball doesn't matter) — makes the cost immediate and per-round",
+      "why_resonates": "Converts an abstract concept ('ball choice matters') into a concrete, recurring loss. Not 'someday you'll benefit' — EVERY ROUND you're losing. The accumulation creates urgency.",
+      "evidence_ids": ["RC-014", "ST-010", "CM-002"]
+    },
+    {
+      "id": "FSSIT-06",
+      "statement": "The robot doesn't care about the logo on the ball. It measures what happens when club meets ball. Here's what happened at 95mph.",
+      "recognition_strength": 8,
+      "target_gap": "GAP-03 (trust deficit) + IT-01 (data-driven identity)",
+      "why_resonates": "In a market full of brand claims and biased fitters, 'the robot doesn't care' is the anti-marketing message. It appeals to their identity as informed consumers and removes the adversarial brand/consumer dynamic.",
+      "evidence_ids": ["RC-014", "CM-002", "V-036"]
+    },
+    {
+      "id": "FSSIT-07",
+      "statement": "You've been playing a ball designed for a 115mph swing. You swing at 90. That's not a character flaw. It's just the wrong tool.",
+      "recognition_strength": 7,
+      "target_gap": "IT-01 + GAP-05 (ProV1 loyalty as identity)",
+      "why_resonates": "Explicitly removes shame ('not a character flaw') and reframes the problem as mechanical ('wrong tool'). Gives them permission to switch without feeling like they're admitting failure.",
+      "evidence_ids": ["RC-026", "V-037", "V-003"]
+    }
+  ],
+  "cultural_timing": [
+    {
+      "signal": "DTC disruption wave has primed the market",
+      "description": "Vice, Warby Parker, Dollar Shave Club, Casper — consumers are already conditioned to believe DTC brands can match or beat incumbents. Golf is 5 years behind other categories but catching up fast. The audience is ready for 'premium quality from a non-traditional brand' in golf balls.",
+      "momentum": "Increasing"
+    },
+    {
+      "signal": "Launch monitor proliferation democratizes ball testing",
+      "description": "Personal launch monitors (FlightScope Mevo, Rapsodo, Garmin R10) are making ball-to-ball comparison accessible. Golfers can now VERIFY performance claims themselves. This favors brands with real data behind their claims.",
+      "momentum": "Increasing rapidly"
+    },
+    {
+      "signal": "Golf ball price increases accelerating resentment",
+      "description": "ProV1 went from $48 to $55 in recent years. Each increase adds fuel to the pricing resentment fire. The next price increase is a marketing event for every value-positioned competitor.",
+      "momentum": "Increasing"
+    },
+    {
+      "signal": "Aging boomer golfer population peaking",
+      "description": "The largest cohort of recreational golfers is entering the 55-70 age range where distance loss becomes acute. This is the biggest addressable audience for a speed-optimized ball in the sport's history.",
+      "momentum": "Stable-to-increasing through 2030"
+    }
+  ],
+  "resonance_summary": "The latent emotional landscape of the golf ball buyer is dominated by five tensions: (1) distance loss experienced as grief, not just frustration — they're mourning a former version of themselves; (2) pricing resentment layered with shame at having been a willing participant in the exploitation; (3) search exhaustion masked as 'experimentation' — they're drowning in options and trust nobody; (4) a defensive belief that ball choice doesn't matter, held in place by the fear that if it does, they've been wrong for years; (5) ProV1 loyalty as social identity, not performance optimization, creating internal conflict when evidence contradicts the choice. The deepest resonance opportunity is at the intersection of these tensions: a message that says 'your ball matters, you've been overpaying, here's proof from an independent lab, and switching isn't admitting failure — it's being smart.' The FSSIT candidates that score highest combine VALIDATION (you're right to be frustrated) with RELIEF (the solution is simple) and EVIDENCE (data, not claims). The audience doesn't need more promises. They need someone to confirm what they already suspect — and show them the data."
+}

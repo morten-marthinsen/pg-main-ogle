@@ -161,7 +161,7 @@ This skill uses `arena_mode: editorial_revision`:
 - **Competitors generate REVISIONS** of existing copy (per critique issues from Layer 2)
 - Per-issue competition — each issue gets its own Arena
 - **7 competitors** (6 personas + The Architect) generating revision candidates
-- **Adversarial critique** before scoring (The Critic identifies ONE weakest element per revision)
+- **Adversarial critique** before scoring (The Critic identifies at most ONE weakest element per revision; may report no_material_weakness if revision is genuinely strong)
 - **Targeted revision** (each competitor refines their fix)
 - **Human selection** from 9-10 candidates per issue (7 pure + 2-3 hybrids)
 

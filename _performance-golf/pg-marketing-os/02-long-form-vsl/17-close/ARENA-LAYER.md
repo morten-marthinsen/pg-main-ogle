@@ -253,7 +253,7 @@ This skill uses `arena_mode: generative_full_draft`:
 - Upstream packages (root cause, mechanism, promise, big idea, structure) are the primary input
 - Competitors are NOT constrained to follow the Layer 2 draft's specific approach
 - **7 competitors** (6 personas + The Architect) generating independently
-- **Adversarial critique** before scoring (The Critic identifies ONE weakest element per output)
+- **Adversarial critique** before scoring (The Critic identifies at most ONE weakest element per output; may report no_material_weakness if output is genuinely strong)
 - **Targeted revision** (each competitor fixes their identified weakness)
 - **2 rounds** of competition with audience evaluation + analytical briefs between rounds
 - **Post-arena synthesis** (Layer 2.6) creating 2-3 phrase-level hybrids

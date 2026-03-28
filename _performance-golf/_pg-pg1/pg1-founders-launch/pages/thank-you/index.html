@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation — PG1 Pulse | Performance Golf</title>
+  <meta name="description" content="Thank you for joining PG1 Pulse - Your order confirmation">
+
+  <!-- Google Fonts Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==================== @FONT-FACE ==================== */
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Regular.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Medium.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro';
+      src: url('fonts/repro/ABCRepro-Bold.woff2') format('woff2'),
+           url('fonts/repro/ABCRepro-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Super Text';
+      src: url('fonts/gt-super-text/GT-Super-Text-Book.woff2') format('woff2'),
+           url('fonts/gt-super-text/GT-Super-Text-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Super Text';
+      src: url('fonts/gt-super-text/GT-Super-Text-Book-Italic.woff2') format('woff2'),
+           url('fonts/gt-super-text/GT-Super-Text-Book-Italic.woff') format('woff');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Repro Mono';
+      src: url('fonts/repro-mono/ABCReproMono-Regular.woff2') format('woff2'),
+           url('fonts/repro-mono/ABCReproMono-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ==================== CSS VARIABLES ==================== */
+
+    :root {
+      --pg-orange: #FD3300;
+      --pg-dark-orange: #DB2C00;
+      --pg-black: #1D1A1A;
+      --pg-ui-gray: #7B726C;
+      --pg-stone: #B3AAA3;
+      --pg-pebble: #DFD9D5;
+      --pg-sand: #ECE9E4;
+      --pg-fog: #F4F2F0;
+      --pg-mist: #FCFAFA;
+      --pg-hi-vis: #E4F222;
+      --pg-grass: #BCE9B1;
+      --pg-forest: #2E4734;
+      --pg-sky: #B2C6EB;
+      --pg-indigo: #4F41D5;
+      --pg-polo: #C5A6CA;
+      --pg-font-heading: 'Repro', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --pg-font-display: 'GT Super Text', Georgia, 'Times New Roman', serif;
+      --pg-font-mono: 'Repro Mono', 'DM Mono', 'Courier New', monospace;
+      --pg-radius: 4px;
+      --pg-radius-sm: 2px;
+      --pg-radius-md: 8px;
+      --pg-radius-lg: 12px;
+      --pg-radius-full: 3999px;
+      --pg-shadow-sm: 0 1px 2px 0 rgba(29, 26, 26, 0.05);
+      --pg-shadow: 0 1px 3px 0 rgba(29, 26, 26, 0.1), 0 1px 2px -1px rgba(29, 26, 26, 0.1);
+      --pg-shadow-md: 0 4px 6px -1px rgba(29, 26, 26, 0.1), 0 2px 4px -2px rgba(29, 26, 26, 0.1);
+      --pg-shadow-lg: 0 10px 15px -3px rgba(29, 26, 26, 0.1), 0 4px 6px -4px rgba(29, 26, 26, 0.1);
+      --pg-shadow-orange: 0 4px 14px 0 rgba(253, 51, 0, 0.25);
+    }
+
+    /* ==================== RESET ==================== */
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background-color: var(--pg-orange);
+      color: var(--pg-mist);
+    }
+
+    /* ==================== BASE ==================== */
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--pg-mist);
+      color: var(--pg-black);
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ==================== HEADER ==================== */
+
+    .pg-header {
+      background-color: var(--pg-mist);
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+    }
+
+    .pg-header__logo {
+      height: 24px;
+      width: auto;
+    }
+
+    /* ==================== PAGE WRAPPER ==================== */
+
+    .pg-page {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ==================== HERO HEADLINE ==================== */
+
+    .pg-hero {
+      text-align: center;
+      padding: 32px 0 24px;
+    }
+
+    .pg-hero__title {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--pg-black);
+    }
+
+    .pg-hero__title span {
+      color: var(--pg-orange);
+    }
+
+    /* ==================== ORDER SUMMARY ==================== */
+
+    .pg-order-summary {
+      border: 1px solid var(--pg-pebble);
+      border-radius: var(--pg-radius-md);
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+
+    .pg-order-summary__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--pg-pebble);
+    }
+
+    .pg-order-summary__pg-logo {
+      height: 16px;
+      width: auto;
+    }
+
+    .pg-order-summary__lock {
+      width: 16px;
+      height: 16px;
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-order-summary__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--pg-pebble);
+    }
+
+    .pg-order-summary__toggle-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--pg-indigo);
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .pg-order-summary__toggle-left svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .pg-order-summary__toggle-price {
+      font-family: var(--pg-font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--pg-black);
+    }
+
+    .pg-order-summary__body {
+      padding: 16px;
+    }
+
+    .pg-order-summary__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--pg-pebble);
+      margin-bottom: 16px;
+    }
+
+    .pg-order-summary__thumb {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .pg-order-summary__thumb-img {
+      width: 48px;
+      height: 48px;
+      background-color: var(--pg-sand);
+      border-radius: var(--pg-radius);
+      border: 1px solid var(--pg-pebble);
+    }
+
+    .pg-order-summary__thumb-badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--pg-ui-gray);
+      color: white;
+      border-radius: 50%;
+      font-family: var(--pg-font-heading);
+      font-size: 11px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pg-order-summary__item-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pg-order-summary__item-name {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--pg-black);
+      line-height: 1.3;
+    }
+
+    .pg-order-summary__item-bonus {
+      font-family: var(--pg-font-heading);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      margin-top: 2px;
+    }
+
+    .pg-order-summary__item-price {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-black);
+      flex-shrink: 0;
+    }
+
+    .pg-order-summary__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      color: var(--pg-black);
+    }
+
+    .pg-order-summary__row--total {
+      padding-top: 16px;
+      margin-top: 12px;
+      border-top: 1px solid var(--pg-pebble);
+    }
+
+    .pg-order-summary__row--total .pg-order-summary__row-label {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .pg-order-summary__row--total .pg-order-summary__row-value {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .pg-order-summary__row-label {
+      font-weight: 400;
+    }
+
+    .pg-order-summary__row-value {
+      font-weight: 400;
+    }
+
+    .pg-order-summary__row-currency {
+      font-size: 12px;
+      color: var(--pg-ui-gray);
+      margin-right: 4px;
+    }
+
+    .pg-order-summary__recurring {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0 0;
+      font-family: var(--pg-font-heading);
+      font-size: 13px;
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-order-summary__recurring-label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .pg-order-summary__recurring-label svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* ==================== THANK YOU ==================== */
+
+    .pg-thankyou {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+
+    .pg-thankyou__icon {
+      width: 48px;
+      height: 48px;
+      border: 2px solid var(--pg-black);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .pg-thankyou__icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--pg-black);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .pg-thankyou__text h2 {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--pg-black);
+      line-height: 1.2;
+    }
+
+    .pg-thankyou__text p {
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--pg-ui-gray);
+      margin-top: 2px;
+    }
+
+    /* ==================== CUSTOMER INFO ==================== */
+
+    .pg-customer {
+      margin-bottom: 24px;
+    }
+
+    .pg-customer__title {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--pg-black);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .pg-customer__section {
+      margin-bottom: 16px;
+    }
+
+    .pg-customer__label {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--pg-black);
+      margin-bottom: 4px;
+    }
+
+    .pg-customer__value {
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--pg-black);
+      line-height: 1.5;
+    }
+
+    .pg-customer__payment {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pg-customer__card-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #006FCF;
+      color: white;
+      font-family: var(--pg-font-heading);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 3px 5px;
+      border-radius: 2px;
+      line-height: 1;
+    }
+
+    /* ==================== CHANGE INFO ==================== */
+
+    .pg-change-info {
+      border-top: 1px solid var(--pg-pebble);
+      padding-top: 16px;
+      margin-bottom: 40px;
+    }
+
+    .pg-change-info p {
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--pg-black);
+      line-height: 1.5;
+    }
+
+    .pg-change-info a {
+      color: var(--pg-indigo);
+      text-decoration: underline;
+    }
+
+    .pg-change-info a:hover {
+      color: var(--pg-black);
+    }
+
+    /* ==================== STEP SECTIONS ==================== */
+
+    .pg-step {
+      margin-bottom: 40px;
+    }
+
+    .pg-step__heading {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--pg-black);
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    /* ==================== APP DOWNLOAD CARD ==================== */
+
+    .pg-app-card {
+      border: 1px solid var(--pg-pebble);
+      border-radius: var(--pg-radius-md);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .pg-app-card__label {
+      font-family: var(--pg-font-heading);
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--pg-black);
+      margin-bottom: 12px;
+    }
+
+    .pg-app-card__badge {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .pg-app-card__badge-link {
+      display: inline-block;
+      background-color: var(--pg-black);
+      color: white;
+      border-radius: var(--pg-radius-md);
+      padding: 10px 24px;
+      font-family: var(--pg-font-heading);
+      font-size: 16px;
+      font-weight: 500;
+      transition: opacity 200ms ease;
+      min-width: 180px;
+      text-align: center;
+    }
+
+    .pg-app-card__badge-link:hover {
+      opacity: 0.85;
+    }
+
+    .pg-app-card__badge-small {
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin-bottom: 2px;
+    }
+
+    .pg-app-card__badge-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .pg-app-card__badge-icon {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .pg-app-card__member {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--pg-black);
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+
+    .pg-app-card__login {
+      display: inline-block;
+      background-color: var(--pg-orange);
+      color: white;
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 12px 48px;
+      border-radius: var(--pg-radius);
+      border: none;
+      cursor: pointer;
+      transition: background-color 200ms ease;
+    }
+
+    .pg-app-card__login:hover {
+      background-color: var(--pg-dark-orange);
+    }
+
+    /* ==================== EXCLUSIVE OFFER CARD ==================== */
+
+    .pg-offer-card {
+      border: 1px solid var(--pg-pebble);
+      border-radius: var(--pg-radius-md);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .pg-offer-card__title {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--pg-black);
+      margin-bottom: 16px;
+    }
+
+    .pg-offer-card__promo {
+      background-color: var(--pg-sand);
+      border-radius: var(--pg-radius);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    .pg-offer-card__save {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--pg-black);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .pg-offer-card__save span {
+      color: var(--pg-orange);
+    }
+
+    .pg-offer-card__on {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--pg-black);
+      text-transform: uppercase;
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    .pg-offer-card__code {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--pg-black);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 12px;
+    }
+
+    .pg-offer-card__btn {
+      display: inline-block;
+      background-color: var(--pg-orange);
+      color: white;
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 12px 48px;
+      border-radius: var(--pg-radius);
+      border: none;
+      cursor: pointer;
+      transition: background-color 200ms ease;
+    }
+
+    .pg-offer-card__btn:hover {
+      background-color: var(--pg-dark-orange);
+    }
+
+    /* ==================== SALES COPY ==================== */
+
+    .pg-sales-copy {
+      margin-bottom: 40px;
+    }
+
+    .pg-sales-copy__heading {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--pg-black);
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .pg-sales-copy__body {
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--pg-black);
+      line-height: 1.6;
+    }
+
+    .pg-sales-copy__body p + p {
+      margin-top: 16px;
+    }
+
+    /* ==================== BEST SELLERS ==================== */
+
+    .pg-best-sellers {
+      margin-bottom: 40px;
+    }
+
+    .pg-best-sellers__title {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--pg-black);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .pg-product {
+      text-align: center;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--pg-pebble);
+    }
+
+    .pg-product:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .pg-product__image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background-color: var(--pg-sand);
+      border-radius: var(--pg-radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .pg-product__image-placeholder {
+      font-family: var(--pg-font-heading);
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--pg-ui-gray);
+    }
+
+    .pg-product__name {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--pg-black);
+      margin-bottom: 8px;
+    }
+
+    .pg-product__desc {
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--pg-black);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .pg-product__btn {
+      display: inline-block;
+      background-color: var(--pg-orange);
+      color: white;
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 12px 32px;
+      border-radius: var(--pg-radius);
+      border: none;
+      cursor: pointer;
+      line-height: 1.4;
+      transition: background-color 200ms ease;
+    }
+
+    .pg-product__btn:hover {
+      background-color: var(--pg-dark-orange);
+    }
+
+    /* ==================== NEED HELP CARD ==================== */
+
+    .pg-help-card {
+      border: 1px solid var(--pg-pebble);
+      border-radius: var(--pg-radius-md);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .pg-help-card__title {
+      font-family: var(--pg-font-heading);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--pg-black);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .pg-help-card__text {
+      font-family: var(--pg-font-heading);
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--pg-black);
+      line-height: 1.5;
+    }
+
+    .pg-help-card__text a {
+      color: var(--pg-indigo);
+      text-decoration: underline;
+    }
+
+    .pg-help-card__text a:hover {
+      color: var(--pg-black);
+    }
+
+    .pg-help-card__block {
+      margin-bottom: 16px;
+    }
+
+    .pg-help-card__block:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================== FOOTER ==================== */
+
+    .pg-footer {
+      background-color: var(--pg-black);
+      padding: 48px 16px 32px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .pg-footer__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pg-footer__logo {
+      width: 200px;
+      height: auto;
+    }
+
+    .pg-footer__contact {
+      margin-top: 16px;
+    }
+
+    .pg-footer__email {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-stone);
+    }
+
+    .pg-footer__email a {
+      color: var(--pg-stone);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__email a:hover {
+      color: var(--pg-mist);
+    }
+
+    .pg-footer__phone {
+      font-family: var(--pg-font-heading);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pg-stone);
+      margin-top: 8px;
+    }
+
+    .pg-footer__phone a {
+      color: var(--pg-stone);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__phone a:hover {
+      color: var(--pg-mist);
+    }
+
+    .pg-footer__divider {
+      border: none;
+      border-top: 1px solid #333;
+      max-width: 360px;
+      margin: 24px auto;
+    }
+
+    .pg-footer__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pg-footer__nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .pg-footer__nav-link {
+      font-family: var(--pg-font-mono);
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pg-ui-gray);
+      transition: color 200ms ease;
+    }
+
+    .pg-footer__nav-link:hover {
+      color: var(--pg-mist);
+    }
+
+    .pg-footer__copyright {
+      font-family: var(--pg-font-heading);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--pg-ui-gray);
+      margin-top: 16px;
+      order: 1;
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+
+    @media screen and (min-width: 768px) {
+      .pg-hero__title {
+        font-size: 36px;
+      }
+
+      .pg-step__heading {
+        font-size: 24px;
+      }
+
+      .pg-sales-copy__heading {
+        font-size: 28px;
+      }
+
+      .pg-footer {
+        padding: 32px 40px 24px;
+        text-align: left;
+      }
+
+      .pg-footer__top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .pg-footer__logo {
+        width: 260px;
+      }
+
+      .pg-footer__contact {
+        margin-top: 0;
+        text-align: right;
+      }
+
+      .pg-footer__divider {
+        max-width: none;
+        margin: 24px 0;
+      }
+
+      .pg-footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .pg-footer__copyright {
+        margin-top: 0;
+        order: 0;
+      }
+
+      .pg-footer__nav {
+        gap: 20px;
+      }
+    }
+
+    /* ==================== FOCUS STATES ==================== */
+
+    :focus-visible {
+      outline: 2px solid var(--pg-orange);
+      outline-offset: 2px;
+    }
+
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="pg-header">
+    <svg class="pg-header__logo" viewBox="0 0 541 196" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Performance Golf">
+      <title>Performance Golf</title>
+      <path fill="#1D1A1A" d="M285,28v140c0,15.43927,12.56055,28,28,28h200c15.43945,0,28-12.56073,28-28v-60c0-15.43927-12.56055-28-28-28h-123v36h85v24h-124V56h185V0h-223c-15.43945,0-28,12.56073-28,28Z"/>
+      <path fill="#1D1A1A" d="M256,113V28c0-15.43927-12.56055-28-28-28H0v196h66V56h124v34h-100v51h138c15.43945,0,28-12.56073,28-28Z"/>
+    </svg>
+  </header>
+
+  <!-- ==================== PAGE CONTENT ==================== -->
+  <div class="pg-page">
+
+    <!-- ==================== HERO HEADLINE ==================== -->
+    <section class="pg-hero">
+      <h1 class="pg-hero__title">Congrats On Joining<br><span>PG1 Pulse!</span></h1>
+    </section>
+
+    <!-- ==================== ORDER SUMMARY ==================== -->
+    <section class="pg-order-summary">
+      <div class="pg-order-summary__header">
+        <svg class="pg-order-summary__pg-logo" viewBox="0 0 541 196" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill="#1D1A1A" d="M285,28v140c0,15.43927,12.56055,28,28,28h200c15.43945,0,28-12.56073,28-28v-60c0-15.43927-12.56055-28-28-28h-123v36h85v24h-124V56h185V0h-223c-15.43945,0-28,12.56073-28,28Z"/>
+          <path fill="#1D1A1A" d="M256,113V28c0-15.43927-12.56055-28-28-28H0v196h66V56h124v34h-100v51h138c15.43945,0,28-12.56073,28-28Z"/>
+        </svg>
+        <svg class="pg-order-summary__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+
+      <div class="pg-order-summary__toggle">
+        <span class="pg-order-summary__toggle-left">
+          Order summary
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </span>
+        <span class="pg-order-summary__toggle-price">$399.00</span>
+      </div>
+
+      <div class="pg-order-summary__body">
+        <!-- Line Item -->
+        <div class="pg-order-summary__item">
+          <div class="pg-order-summary__thumb">
+            <div class="pg-order-summary__thumb-img"></div>
+            <span class="pg-order-summary__thumb-badge">1</span>
+          </div>
+          <div class="pg-order-summary__item-details">
+            <p class="pg-order-summary__item-name">PG1 Lifetime Membership</p>
+            <p class="pg-order-summary__item-bonus">Founding Member — One-Time Payment</p>
+          </div>
+          <span class="pg-order-summary__item-price">$399.00</span>
+        </div>
+
+        <!-- Subtotal -->
+        <div class="pg-order-summary__row">
+          <span class="pg-order-summary__row-label">Subtotal</span>
+          <span class="pg-order-summary__row-value">$399.00</span>
+        </div>
+
+        <!-- Total -->
+        <div class="pg-order-summary__row pg-order-summary__row--total">
+          <span class="pg-order-summary__row-label">Total</span>
+          <span class="pg-order-summary__row-value">
+            <span class="pg-order-summary__row-currency">USD</span>$399.00
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THANK YOU ==================== -->
+    <section class="pg-thankyou">
+      <div class="pg-thankyou__icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <div class="pg-thankyou__text">
+        <h2>Thank you, Timothy!</h2>
+        <p>Confirmation #0MWRUK98J</p>
+      </div>
+    </section>
+
+    <!-- ==================== CUSTOMER INFORMATION ==================== -->
+    <section class="pg-customer">
+      <h3 class="pg-customer__title">Customer Information</h3>
+
+      <div class="pg-customer__section">
+        <p class="pg-customer__label">Contact information</p>
+        <p class="pg-customer__value">tim@performancegolf.com</p>
+      </div>
+
+      <div class="pg-customer__section">
+        <p class="pg-customer__label">Payment method</p>
+        <div class="pg-customer__payment">
+          <span class="pg-customer__card-icon">AMEX</span>
+          <span class="pg-customer__value">&bull;&bull;&bull;&bull; 6002 $399.00 USD</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CHANGE INFO ==================== -->
+    <div class="pg-change-info">
+      <p>Need to change your information?<br>Reach out to us <a href="mailto:support@performancegolf.com">here</a>.</p>
+    </div>
+
+    <!-- ==================== STEP 1: APP DOWNLOAD ==================== -->
+    <section class="pg-step">
+      <h2 class="pg-step__heading">Step 1: Access Your PG1 Pulse Inside The Performance Golf App</h2>
+
+      <div class="pg-app-card">
+        <p class="pg-app-card__label">Get the iPhone App</p>
+        <div class="pg-app-card__badge">
+          <a href="#" class="pg-app-card__badge-link">
+            <span class="pg-app-card__badge-small">Download on the</span>
+            <span class="pg-app-card__badge-name">
+              <span class="pg-app-card__badge-icon">&#63743;</span> App Store
+            </span>
+          </a>
+        </div>
+
+        <p class="pg-app-card__label">Get the Android App</p>
+        <div class="pg-app-card__badge">
+          <a href="#" class="pg-app-card__badge-link">
+            <span class="pg-app-card__badge-small">GET IT ON</span>
+            <span class="pg-app-card__badge-name">
+              <span class="pg-app-card__badge-icon">&#9654;</span> Google Play
+            </span>
+          </a>
+        </div>
+
+        <p class="pg-app-card__member">Already A Member?</p>
+        <a href="#" class="pg-app-card__login">Login</a>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 2: EXCLUSIVE OFFER ==================== -->
+    <section class="pg-step">
+      <h2 class="pg-step__heading">Step 2: Take Advantage Of Your Exclusive Member-Only Offer!</h2>
+
+      <div class="pg-offer-card">
+        <p class="pg-offer-card__title">Take advantage of your exclusive offer!</p>
+        <div class="pg-offer-card__promo">
+          <p class="pg-offer-card__save">SAVE <span>$50</span></p>
+          <p class="pg-offer-card__on">ON ANY PG<br>PRODUCTS</p>
+          <p class="pg-offer-card__code">USE CODE: 50OFF</p>
+        </div>
+        <a href="#" class="pg-offer-card__btn">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- ==================== SALES COPY ==================== -->
+    <section class="pg-sales-copy">
+      <h2 class="pg-sales-copy__heading">These Smart Training Tools Accelerate Your Game Even Faster</h2>
+      <div class="pg-sales-copy__body">
+        <p>Imagine having the exact clubs and training tools that physically FORCE you into the correct positions while mastering your ONE personalized path...</p>
+        <p>So you never waste practice going through the wrong motions... and instead make pure, flush contact that launches the ball farther than ever from day ONE.</p>
+      </div>
+    </section>
+
+    <!-- ==================== SHOP BEST SELLERS ==================== -->
+    <section class="pg-best-sellers">
+      <h2 class="pg-best-sellers__title">Shop Best Sellers</h2>
+
+      <!-- Product 1: 357 Super 7-Wood -->
+      <div class="pg-product">
+        <div class="pg-product__image">
+          <span class="pg-product__image-placeholder">[357 Super 7-Wood Image]</span>
+        </div>
+        <h3 class="pg-product__name">357 Super 7-Wood</h3>
+        <p class="pg-product__desc">Launch, reach, and stick 2x more greens with the first-ever 7-wood engineered for senior golfers.</p>
+        <a href="#" class="pg-product__btn">SAVE $50 TODAY<br>(Use Code: 50OFF)</a>
+      </div>
+
+      <!-- Product 2: SF1 Slice-Fix Driver -->
+      <div class="pg-product">
+        <div class="pg-product__image">
+          <span class="pg-product__image-placeholder">[SF1 Slice-Fix Driver Image]</span>
+        </div>
+        <h3 class="pg-product__name">SF1 Slice-Fix Driver</h3>
+        <p class="pg-product__desc">The only driver with 7 unique features all working together to fix the root cause of your slice &ndash; FOR YOU!</p>
+        <a href="#" class="pg-product__btn">SAVE $50 TODAY<br>(Use Code: 50OFF)</a>
+      </div>
+
+      <!-- Product 3: Click Stick -->
+      <div class="pg-product">
+        <div class="pg-product__image">
+          <span class="pg-product__image-placeholder">[Click Stick Image]</span>
+        </div>
+        <h3 class="pg-product__name">Click Stick</h3>
+        <p class="pg-product__desc">Dial in your Tour-Level Release to master your clubface control, dial in your consistency, and groove a smooth-as-butter tempo.</p>
+        <a href="#" class="pg-product__btn">SAVE $50 TODAY<br>(Use Code: 50OFF)</a>
+      </div>
+
+      <!-- Product 4: SpeedTrak -->
+      <div class="pg-product">
+        <div class="pg-product__image">
+          <span class="pg-product__image-placeholder">[SpeedTrak Image]</span>
+        </div>
+        <h3 class="pg-product__name">SpeedTrak</h3>
+        <p class="pg-product__desc">The world&rsquo;s first swing trainer specifically designed to help amateur golfers gain speed AND dial in face control at the same time.</p>
+        <a href="#" class="pg-product__btn">SAVE $50 TODAY<br>(Use Code: 50OFF)</a>
+      </div>
+
+      <!-- Product 5: ONE.1 Wedge -->
+      <div class="pg-product">
+        <div class="pg-product__image">
+          <span class="pg-product__image-placeholder">[ONE.1 Wedge Image]</span>
+        </div>
+        <h3 class="pg-product__name">ONE.1 Wedge</h3>
+        <p class="pg-product__desc">New &ldquo;un-chunkable&rdquo; wedge that glides through ANY lie (even on bad swings!)</p>
+        <a href="#" class="pg-product__btn">SAVE $50 TODAY<br>(Use Code: 50OFF)</a>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 3: NEED HELP ==================== -->
+    <section class="pg-step">
+      <h2 class="pg-step__heading">Step 3: Reach Out To Your Coach Or Our Friendly Customer Success Team Any Time You Need ANYTHING!</h2>
+
+      <div class="pg-help-card">
+        <h3 class="pg-help-card__title">Need Help?</h3>
+        <div class="pg-help-card__block">
+          <p class="pg-help-card__text">Tap here to email us:<br><a href="mailto:support@performancegolf.com">support@performancegolf.com</a></p>
+        </div>
+        <div class="pg-help-card__block">
+          <p class="pg-help-card__text">Tap here to call us:<br><a href="tel:1-833-523-5760">1 (833) 523-5760</a></p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.pg-page -->
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="pg-footer">
+    <div class="pg-footer__top">
+      <svg class="pg-footer__logo" viewBox="0 0 1327.04337 71.30005" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="#FCFAFA" d="M99.60459,11.18568v48.92857c0,5.39587,4.38978,9.78571,9.78571,9.78571h69.89796c5.39593,0,9.78571-4.38985,9.78571-9.78571v-20.96939c0-5.39587-4.38978-9.78571-9.78571-9.78571h-42.98724v12.58163h29.70663v8.38776h-43.33673v-29.35714h64.65561V1.33996h-77.93622c-5.39593,0-9.78571,4.38985-9.78571,9.78571Z"/>
+        <path fill="#FCFAFA" d="M89.46939,40.89231V11.18568c0-5.39587-4.38978-9.78571-9.78571-9.78571H0v68.5h23.06633V20.97139h43.33673v11.88265H31.45408v17.82398h48.22959c5.39593,0,9.78571-4.38985,9.78571-9.78571Z"/>
+        <path fill="#FCFAFA" d="M1125.38614,64.47168l.67993,5.42847h10.87695l-.10034-36.30518h-32.90479v11.10986h18.45679l-.23315.93188c-2.3291,9.31348-11.49268,13.55542-19.021,13.55542-12.30371,0-20.57031-9.44092-20.57031-23.49268,0-14.1106,8.2666-23.59131,20.57031-23.59131,7.54395,0,13.88818,3.70459,17.47632,10.18213h15.92212C1131.50211,8.51221,1118.80142.00024,1103.14054.00024c-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61401-10.09985,25.73511,0,10.07788,3.58667,19.18652,10.09937,25.64819,6.46851,6.41797,15.52588,9.95239,25.50366,9.95239,9.85059,0,15.58691-3.47559,21.06885-7.34766l1.02148-.72144.15527,1.24072Z"/>
+        <path fill="#FCFAFA" d="M787.47672,1.3399l-25.79907,68.5h14.94067l5.32568-15.57788.17358-.50732h29.00635l.17163.51123,5.22949,15.57397h15.98193L806.52188,1.3399h-19.04517ZM807.67276,42.70483h-22.00684l.3833-1.01489,9.40015-24.89502.18213-.48193.51514-.00317.39453-.00244.2644-.00146.51465-.00293.18799.47925,9.76318,24.89893.40137,1.02368Z"/>
+        <polygon fill="#FCFAFA" points="1238.41861 1.3399 1223.2377 1.3399 1223.2377 69.8399 1270.39005 69.8399 1270.39005 58.49194 1239.16861 58.49194 1238.41861 58.49194 1238.41861 57.74194 1238.41861 1.3399"/>
+        <polygon fill="#FCFAFA" points="1001.48355 13.55786 1001.48355 12.80786 1002.23355 12.80786 1038.03751 12.80786 1038.03751 1.3399 986.70011 1.3399 986.70011 69.8399 1038.03751 69.8399 1038.03751 58.49194 1002.23355 58.49194 1001.48355 58.49194 1001.48355 57.74194 1001.48355 41.95483 1001.48355 41.20483 1002.23355 41.20483 1034.95963 41.20483 1034.95963 30.09497 1002.23355 30.09497 1001.48355 30.09497 1001.48355 29.34497 1001.48355 13.55786"/>
+        <path fill="#FCFAFA" d="M645.1503,1.40015h-36.80664v68.5h15.08154v-25.19531h5.30249l.22485.27075,20.69946,24.92456h18.04663l-21.04614-24.03955-.99854-1.14062,1.51221-.10181c13.60522-.91675,22.05688-9.16577,22.05688-21.52808,0-12.77075-9.89917-21.68994-24.07275-21.68994ZM642.66837,33.59497h-19.24316V12.80786h19.14404c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07617,10.39355Z"/>
+        <path fill="#FCFAFA" d="M945.13516.00024c-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61401-10.09985,25.73511,0,10.07788,3.58667,19.18652,10.09937,25.64819,6.46851,6.41797,15.52588,9.95239,25.50366,9.95239,15.67578,0,28.38257-8.51221,33.41382-22.29004h-15.92383c-3.59131,6.47754-9.94067,10.18213-17.48399,10.18213-12.30396,0-20.5708-9.44092-20.5708-23.49268,0-14.1106,8.26685-23.59131,20.5708-23.59131,7.5437,0,13.8877,3.70459,17.47583,10.18213h15.92261C973.49674,8.51221,960.79605.00024,945.13516.00024Z"/>
+        <path fill="#FCFAFA" d="M1179.94083,0c-9.98242,0-19.03955,3.53857-25.50342,9.96411-6.51294,6.47461-10.09985,15.61426-10.09985,25.7356,0,10.07764,3.58667,19.18628,10.09937,25.64795,6.46851,6.41772,15.52588,9.95215,25.50391,9.95215,20.68408,0,35.69678-14.97192,35.69678-35.6001,0-10.11475-3.60327-19.25391-10.14575-25.73462-6.48779-6.42603-15.56201-9.96509-25.55103-9.96509ZM1179.94083,59.19189c-12.30396,0-20.57056-9.44067-20.57056-23.49219,0-14.11108,8.2666-23.5918,20.57056-23.5918,12.35986,0,20.66406,9.48071,20.66406,23.5918,0,14.05151-8.3042,23.49219-20.66406,23.49219Z"/>
+        <polygon fill="#FCFAFA" points="855.4335 22.29004 855.88468 22.29004 856.0961 22.68872 881.1293 69.8399 901.09195 69.8399 901.09195 1.3399 886.61051 1.3399 886.89493 48.25513 886.89957 49.00977 886.14493 49.00977 885.49063 49.00977 885.02579 49.00977 884.819 48.59351 861.3776 1.3399 839.34366 1.3399 839.34366 69.8399 854.02823 69.8399 854.02823 23.04004 854.02823 22.29004 854.77823 22.29004 855.4335 22.29004"/>
+        <polygon fill="#FCFAFA" points="741.4545 69.8399 755.54337 69.8399 755.54337 1.3399 734.11148 1.3399 718.80631 33.17114 718.60123 33.59668 718.12906 33.5957 717.9462 33.59521 717.45523 33.59448 716.98477 33.59375 716.78043 33.16992 701.47525 1.3399 680.04337 1.3399 680.04337 69.8399 694.13223 69.8399 694.13223 23.04028 694.13223 22.29028 694.88223 22.29028 695.56778 22.29028 696.03995 22.29028 696.24405 22.71606 716.51554 65 719.0712 65 739.34244 22.71582 739.54654 22.29004 740.01871 22.29004 740.7045 22.29004 741.4545 22.29004 741.4545 23.04004 741.4545 69.8399"/>
+        <polygon fill="#FCFAFA" points="361.02701 13.55786 361.02701 12.80786 361.77701 12.80786 397.58097 12.80786 397.58097 1.3399 346.24356 1.3399 346.24356 69.8399 397.58097 69.8399 397.58097 58.49194 361.77701 58.49194 361.02701 58.49194 361.02701 57.74194 361.02701 41.95483 361.02701 41.20483 361.77701 41.20483 394.50308 41.20483 394.50308 30.09497 361.77701 30.09497 361.02701 30.09497 361.02701 29.34497 361.02701 13.55786"/>
+        <path fill="#FCFAFA" d="M590.59781,9.96509c-6.48779-6.42603-15.56201-9.96509-25.55103-9.96509-9.98218,0-19.03955,3.53857-25.50317,9.96411-6.51294,6.47461-10.09985,15.61426-10.09985,25.7356,0,10.07764,3.58667,19.18628,10.09937,25.64795,6.46851,6.41772,15.52588,9.95215,25.50366,9.95215,20.68408,0,35.69678-14.97192,35.69678-35.6001,0-10.11475-3.60327-19.25391-10.14575-25.73462ZM565.04679,59.19189c-12.30396,0-20.57056-9.44067-20.57056-23.49219,0-14.11108,8.2666-23.5918,20.57056-23.5918,12.35986,0,20.66406,9.48071,20.66406,23.5918,0,14.05151-8.3042,23.49219-20.66406,23.49219Z"/>
+        <path fill="#FCFAFA" d="M314.85391,44.70483c14.92505,0,24.56909-8.48438,24.56909-21.61499,0-12.77075-9.89893-21.68994-24.07251-21.68994h-36.80713v68.5h15.08179v-25.19507h21.22876ZM293.62515,32.84497V12.80786h19.1438c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07593,10.39355h-19.24316v-.75Z"/>
+        <path fill="#FCFAFA" d="M443.8505,1.40015h-36.80664v68.5h15.08154v-25.19531h5.30249l.22485.27075,20.69946,24.92456h18.04663l-21.04614-24.03955-.99854-1.14062,1.51221-.10181c13.60522-.91675,22.05688-9.16577,22.05688-21.52808,0-12.77075-9.89917-21.68994-24.07275-21.68994ZM441.36856,33.59497h-19.24316V12.80786h19.14404c6.78882,0,11.17529,4.07959,11.17529,10.39355,0,6.2168-4.45117,10.39355-11.07617,10.39355Z"/>
+        <polygon fill="#FCFAFA" points="1323.76627 41.20483 1323.76627 30.09497 1293.72183 30.09497 1292.97183 30.09497 1292.97183 29.34497 1292.97183 13.55786 1292.97183 12.80786 1293.72183 12.80786 1327.04337 12.80786 1327.04337 1.3399 1277.9899 1.3399 1277.9899 69.8399 1292.97183 69.8399 1292.97183 41.95483 1292.97183 41.20483 1293.72183 41.20483 1323.76627 41.20483"/>
+        <polygon fill="#FCFAFA" points="522.42105 41.20483 522.42105 30.09497 492.37589 30.09497 491.62589 30.09497 491.62589 29.34497 491.62589 13.55786 491.62589 12.80786 492.37589 12.80786 525.69766 12.80786 525.69766 1.3399 476.64347 1.3399 476.64347 69.8399 491.62589 69.8399 491.62589 41.95483 491.62589 41.20483 492.37589 41.20483 522.42105 41.20483"/>
+      </svg>
+
+      <div class="pg-footer__contact">
+        <p class="pg-footer__email"><a href="mailto:support@performancegolf.com">support@performancegolf.com</a></p>
+        <p class="pg-footer__phone"><a href="tel:1-833-741-4653">1-833-PG1-GOLF</a></p>
+      </div>
+    </div>
+
+    <hr class="pg-footer__divider">
+
+    <div class="pg-footer__bottom">
+      <p class="pg-footer__copyright">&copy; Copyright 2026 Performance Golf</p>
+
+      <nav aria-label="Footer navigation">
+        <ul class="pg-footer__nav">
+          <li><a href="#" class="pg-footer__nav-link">Home</a></li>
+          <li><a href="#" class="pg-footer__nav-link">About</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Contact</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Privacy</a></li>
+          <li><a href="#" class="pg-footer__nav-link">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

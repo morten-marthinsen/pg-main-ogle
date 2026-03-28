@@ -329,6 +329,10 @@ LAYER 2 / PHASE B (EXPRESSION — approved concepts only):
 [ ] MODEL: opus (Fix 10)
 
 LAYER 2.5 (ARENA — MANDATORY, CANNOT BE SKIPPED):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
 [ ] All 7 competitors generated (Round 1)
 [ ] Adversarial critique completed (Round 1)
 [ ] Targeted revision completed (Round 1)
@@ -429,6 +433,18 @@ verification:
   all_2_rounds_completed: true
   critique_before_scoring: true
   human_selection_received: true
+
+persona_verification:
+  personas_loaded_from: "~system/protocols/ARENA-PERSONA-PANEL.md"
+  personas_used:
+    - Makepeace
+    - Halbert
+    - Schwartz
+    - Ogilvy
+    - Clemens
+    - Bencivenga
+    - The Architect
+  all_match_protocol: true  # FALSE = HALT — fabrication detected
 ```
 
 ### Checkpoint Progression (Updated)

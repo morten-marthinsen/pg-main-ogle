@@ -498,148 +498,9 @@ fn summarize_sandbox_policy(sandbox_policy: &SandboxPolicy) -> String {
                     .iter()
                     .map(|path| path.to_string_lossy().to_string()),
             );
-<<<<<<< HEAD
-        }
-    }
-
-    fn render_hook_completed(&self, event: HookCompletedEvent) {
-        if !Self::should_print_hook_completed(&event) {
-            return;
-        }
-
-        let event_name = Self::hook_event_name(event.run.event_name);
-        let status = Self::hook_status_name(event.run.status);
-        ts_msg!(
-            self,
-            "{} {} ({status})",
-            "hook".style(self.magenta),
-            event_name
-        );
-
-        for entry in event.run.entries {
-            let prefix = Self::hook_entry_prefix(entry.kind);
-            eprintln!("  {prefix} {}", entry.text);
-        }
-    }
-
-    fn should_print_hook_started(event: &HookStartedEvent) -> bool {
-        event
-            .run
-            .status_message
-            .as_deref()
-            .is_some_and(|status_message| !status_message.trim().is_empty())
-    }
-
-    fn should_print_hook_completed(event: &HookCompletedEvent) -> bool {
-        event.run.status != HookRunStatus::Completed || !event.run.entries.is_empty()
-    }
-
-    fn hook_event_name(event_name: HookEventName) -> &'static str {
-        match event_name {
-            HookEventName::PreToolUse => "PreToolUse",
-            HookEventName::SessionStart => "SessionStart",
-            HookEventName::UserPromptSubmit => "UserPromptSubmit",
-            HookEventName::Stop => "Stop",
-        }
-    }
-
-    fn hook_status_name(status: HookRunStatus) -> &'static str {
-        match status {
-            HookRunStatus::Running => "running",
-            HookRunStatus::Completed => "completed",
-            HookRunStatus::Failed => "failed",
-            HookRunStatus::Blocked => "blocked",
-            HookRunStatus::Stopped => "stopped",
-        }
-    }
-
-    fn hook_entry_prefix(kind: HookOutputEntryKind) -> &'static str {
-        match kind {
-            HookOutputEntryKind::Warning => "warning:",
-            HookOutputEntryKind::Stop => "stop:",
-            HookOutputEntryKind::Feedback => "feedback:",
-            HookOutputEntryKind::Context => "context:",
-            HookOutputEntryKind::Error => "error:",
-        }
-    }
-
-    fn is_silent_event(msg: &EventMsg) -> bool {
-        match msg {
-            EventMsg::HookStarted(event) => !Self::should_print_hook_started(event),
-            EventMsg::HookCompleted(event) => !Self::should_print_hook_completed(event),
-            _ => matches!(
-                msg,
-                EventMsg::ThreadNameUpdated(_)
-                    | EventMsg::TokenCount(_)
-                    | EventMsg::TurnStarted(_)
-                    | EventMsg::ExecApprovalRequest(_)
-                    | EventMsg::ApplyPatchApprovalRequest(_)
-                    | EventMsg::TerminalInteraction(_)
-                    | EventMsg::ExecCommandOutputDelta(_)
-                    | EventMsg::GetHistoryEntryResponse(_)
-                    | EventMsg::McpListToolsResponse(_)
-                    | EventMsg::ListCustomPromptsResponse(_)
-                    | EventMsg::ListSkillsResponse(_)
-                    | EventMsg::RawResponseItem(_)
-                    | EventMsg::UserMessage(_)
-                    | EventMsg::EnteredReviewMode(_)
-                    | EventMsg::ExitedReviewMode(_)
-                    | EventMsg::AgentMessageDelta(_)
-                    | EventMsg::AgentReasoningDelta(_)
-                    | EventMsg::AgentReasoningRawContentDelta(_)
-                    | EventMsg::ItemStarted(_)
-                    | EventMsg::ItemCompleted(_)
-                    | EventMsg::AgentMessageContentDelta(_)
-                    | EventMsg::PlanDelta(_)
-                    | EventMsg::ReasoningContentDelta(_)
-                    | EventMsg::ReasoningRawContentDelta(_)
-                    | EventMsg::SkillsUpdateAvailable
-                    | EventMsg::UndoCompleted(_)
-                    | EventMsg::UndoStarted(_)
-                    | EventMsg::ThreadRolledBack(_)
-                    | EventMsg::RequestUserInput(_)
-                    | EventMsg::RequestPermissions(_)
-                    | EventMsg::DynamicToolCallRequest(_)
-                    | EventMsg::DynamicToolCallResponse(_)
-                    | EventMsg::GuardianAssessment(_)
-            ),
-        }
-    }
-
-    fn should_interrupt_progress(msg: &EventMsg) -> bool {
-        if let EventMsg::HookCompleted(event) = msg {
-            return Self::should_print_hook_completed(event);
-        }
-        matches!(
-            msg,
-            EventMsg::Error(_)
-                | EventMsg::Warning(_)
-                | EventMsg::GuardianAssessment(_)
-                | EventMsg::DeprecationNotice(_)
-                | EventMsg::StreamError(_)
-                | EventMsg::TurnComplete(_)
-                | EventMsg::ShutdownComplete
-        )
-    }
-
-    fn finish_progress_line(&mut self) {
-        if self.progress_active {
-            self.progress_active = false;
-            self.progress_last_len = 0;
-            self.progress_done = false;
-            if self.use_ansi_cursor {
-                if self.progress_anchor {
-                    eprintln!("\u{1b}[1A\u{1b}[1G\u{1b}[2K");
-                } else {
-                    eprintln!("\u{1b}[1G\u{1b}[2K");
-                }
-            } else {
-                eprintln!();
-=======
             summary.push_str(&format!(" [{}]", writable_entries.join(", ")));
             if *network_access {
                 summary.push_str(" (network access enabled)");
->>>>>>> origin/main
             }
             summary
         }
@@ -721,8 +582,8 @@ mod tests {
     fn suppresses_final_stdout_message_when_both_streams_are_terminals() {
         assert!(!should_print_final_message_to_stdout(
             Some("hello"),
-            true,
-            true
+            /*stdout_is_terminal*/ true,
+            /*stderr_is_terminal*/ true
         ));
     }
 
@@ -730,8 +591,8 @@ mod tests {
     fn prints_final_stdout_message_when_stdout_is_not_terminal() {
         assert!(should_print_final_message_to_stdout(
             Some("hello"),
-            false,
-            true
+            /*stdout_is_terminal*/ false,
+            /*stderr_is_terminal*/ true
         ));
     }
 
@@ -739,23 +600,26 @@ mod tests {
     fn prints_final_stdout_message_when_stderr_is_not_terminal() {
         assert!(should_print_final_message_to_stdout(
             Some("hello"),
-            true,
-            false
+            /*stdout_is_terminal*/ true,
+            /*stderr_is_terminal*/ false
         ));
     }
 
     #[test]
     fn suppresses_final_stdout_message_when_missing() {
-        assert!(!should_print_final_message_to_stdout(None, false, false));
+        assert!(!should_print_final_message_to_stdout(
+            /*final_message*/ None, /*stdout_is_terminal*/ false,
+            /*stderr_is_terminal*/ false
+        ));
     }
 
     #[test]
     fn prints_final_tty_message_when_not_yet_rendered() {
         assert!(should_print_final_message_to_tty(
             Some("hello"),
-            false,
-            true,
-            true
+            /*final_message_rendered*/ false,
+            /*stdout_is_terminal*/ true,
+            /*stderr_is_terminal*/ true
         ));
     }
 
@@ -763,9 +627,9 @@ mod tests {
     fn suppresses_final_tty_message_when_already_rendered() {
         assert!(!should_print_final_message_to_tty(
             Some("hello"),
-            true,
-            true,
-            true
+            /*final_message_rendered*/ true,
+            /*stdout_is_terminal*/ true,
+            /*stderr_is_terminal*/ true
         ));
     }
 

@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "product_name": "iON+ Golf Ball",
+    "category": "Physical Product — Consumable Golf Ball (3-piece ionomer)",
+    "context": "Golf Equipment — Distance Performance / Ball Selection / Amateur Golf",
+    "generated_date": "2026-03-26",
+    "skill": "1.0-A Context Expander v2.0"
+  },
+
+  "primary_research_topics": [
+    {
+      "topic": "Distance loss frustration among amateur golfers",
+      "description": "How recreational golfers describe their experience of losing distance off the tee — the emotional language, the physical sensations, and the identity impact of watching drives get shorter over time",
+      "why_important": "Distance is the hero claim for iON+. We need the exact words golfers use to describe this pain — not marketing language, their language. This feeds the Pain bucket directly.",
+      "expected_sources": ["Reddit r/golf", "GolfWRX Forums", "YouTube golf ball review comments"]
+    },
+    {
+      "topic": "Golf ball spin and slice connection",
+      "description": "How amateur golfers understand (or misunderstand) the relationship between their golf ball and their slice. Do they know the ball contributes to spin? Do they blame their swing only? Do they understand the difference between driver spin and wedge spin?",
+      "why_important": "The iON+ product deck leads with 'too much spin causing slices and lost distance.' If golfers don't connect ball choice to spin/slice, we need to educate them (root cause framing). If they already know, we validate and solve. This feeds Root Cause bucket.",
+      "expected_sources": ["Reddit r/golf", "GolfWRX Forums", "MyGolfSpy articles and comments"]
+    },
+    {
+      "topic": "Golf ball purchase decision-making process",
+      "description": "How amateur golfers choose their golf ball — what criteria they use, what influences them, whether they research or grab-and-go, whether they stick with one ball or experiment frequently",
+      "why_important": "Understanding the decision process reveals what levers to pull in copy. If golfers are impulsive buyers, the page needs different architecture than if they're methodical researchers.",
+      "expected_sources": ["Reddit r/golf", "Amazon golf ball reviews", "Facebook Golf Groups"]
+    },
+    {
+      "topic": "Price sensitivity in the mid-tier golf ball market",
+      "description": "How golfers talk about golf ball pricing — what they consider 'expensive,' what feels like a fair price, the emotional reaction to paying $50+/dozen vs $25/dozen, whether they see price as a proxy for quality",
+      "why_important": "iON+ is $29.99-$34.99/dozen. We need to understand whether this price point triggers 'cheap = bad' skepticism or 'finally reasonable' relief. Feeds Price & Value aspect and Hope bucket.",
+      "expected_sources": ["Reddit r/golf", "Amazon reviews", "GolfWRX Forums", "Facebook Golf Groups"]
+    },
+    {
+      "topic": "Brand loyalty and switching resistance in golf balls",
+      "description": "How loyal are amateur golfers to their current ball? What makes them switch? What stops them? Do they identify with their ball brand? Is switching perceived as risky?",
+      "why_important": "PG is a new entrant — golfers need to switch FROM something. Understanding switching friction reveals the exact objections we need to overcome. This feeds Solutions Tried and Competitor Mechanism buckets.",
+      "expected_sources": ["Reddit r/golf", "GolfWRX Forums", "MyGolfSpy comments"]
+    },
+    {
+      "topic": "Swing speed awareness and ball fitting knowledge",
+      "description": "Do amateur golfers know their swing speed? Do they know it matters for ball selection? Do they understand compression ratings? How confused or informed are they about matching ball to swing speed?",
+      "why_important": "iON+ is engineered for 80-95mph swing speeds. If golfers don't know their swing speed, the 'right ball for your swing' message needs education first. If they do know, it's a direct match claim.",
+      "expected_sources": ["Reddit r/golf", "GolfWRX Forums", "YouTube golf ball fitting videos"]
+    },
+    {
+      "topic": "Ionomer vs urethane perception among amateur golfers",
+      "description": "What do amateur golfers think about ionomer vs urethane cover materials? Do they associate ionomer with 'cheap'? Do they understand the performance differences? Do they see urethane as inherently superior?",
+      "why_important": "iON+ is a 3-piece ionomer ball competing in a market where urethane = premium. If ionomer carries a stigma, we need to reframe it. If golfers don't care about cover material, it's a non-issue. Feeds Root Cause and Competitor Mechanism.",
+      "expected_sources": ["GolfWRX Forums", "Reddit r/golf", "MyGolfSpy"]
+    },
+    {
+      "topic": "Golf ball alignment marks and putting aids",
+      "description": "Do golfers draw their own lines on balls? Do they use alignment features? Do they think alignment marks help? Is this a major or minor consideration in ball choice?",
+      "why_important": "iON+'s visual alignment technology is its most unique feature. We need to know if this is a top-of-mind need (lead differentiator) or a latent one (needs activation). Directly validates Hypothesis #3.",
+      "expected_sources": ["Reddit r/golf", "YouTube putting videos and comments", "GolfWRX Forums"]
+    },
+    {
+      "topic": "Age-related distance loss and equipment adaptation",
+      "description": "How golfers 50+ talk about losing distance as they age — the emotional weight, the identity shift, and what equipment changes they make (or consider) to compensate",
+      "why_important": "PG's core audience is 40-65+. Age-related distance loss is likely a powerful emotional trigger that connects equipment choice to identity. This feeds Pain and Hope buckets with high emotional intensity.",
+      "expected_sources": ["Reddit r/golf", "GolfWRX Forums", "The Hackers Paradise Forum", "Facebook Golf Groups"]
+    },
+    {
+      "topic": "Golf ball loss patterns and cost-per-round psychology",
+      "description": "How often golfers lose balls, how they think about the cost, whether they play cheaper balls because they expect to lose them, whether they play 'found balls' or 'water balls' on certain holes",
+      "why_important": "If golfers are mentally budgeting for ball loss, price-per-dozen is really price-per-usable-ball. This reframes the value proposition and feeds Pain and Price & Value.",
+      "expected_sources": ["Reddit r/golf", "Amazon reviews", "Facebook Golf Groups"]
+    },
+    {
+      "topic": "Robot testing and independent ball testing credibility",
+      "description": "How golfers perceive robot testing data, MyGolfSpy testing, Golf Laboratories testing — do they trust it? Do they find it more credible than player testimonials? Do they understand what the numbers mean?",
+      "why_important": "iON+'s hero proof is Golf Laboratories robot testing at 95mph. If golfers trust robot testing, it's the credibility anchor. If they're skeptical ('robots don't hit like humans'), we need a different proof strategy.",
+      "expected_sources": ["MyGolfSpy comments", "Reddit r/golf", "GolfWRX Forums", "YouTube testing video comments"]
+    },
+    {
+      "topic": "Direct-to-consumer golf ball brands perception",
+      "description": "How golfers feel about DTC golf ball brands like Vice, Snell, Cut — do they trust them? Do they see them as legitimate alternatives to Titleist/Callaway? What's the experience of switching to a DTC ball?",
+      "why_important": "PG is essentially a DTC golf ball entrant. The DTC golf ball market has precedent (Vice disrupted). Understanding this perception reveals whether PG benefits from the DTC trend or needs to overcome additional trust barriers.",
+      "expected_sources": ["Reddit r/golf", "GolfWRX Forums", "Amazon reviews for Vice/Snell/Cut"]
+    },
+    {
+      "topic": "Golf ball feel — what it actually means to amateur golfers",
+      "description": "When golfers say a ball 'feels good' or 'feels bad' — what are they actually describing? Sound at impact? Softness off the putter? Feedback through hands? Compression sensation? Is 'feel' a real performance factor or a psychological preference?",
+      "why_important": "iON+ claims 'soft feel.' We need to understand what feel means in the golfer's language so we use their definition, not ours. Feeds Feel & Sound aspect.",
+      "expected_sources": ["Reddit r/golf", "GolfWRX Forums", "Amazon golf ball reviews", "YouTube ball review comments"]
+    },
+    {
+      "topic": "The 'good enough' golfer identity and equipment shame",
+      "description": "How average golfers talk about their skill level in relation to their equipment choices — do they feel they're 'not good enough' for premium balls? Do they feel judged for playing cheap balls? Is there status anxiety around equipment?",
+      "why_important": "Identity is a core persuasion lever. If golfers feel equipment shame (either direction — too cheap or too premium for their skill), that's powerful emotional territory. Feeds Identity section of emotional context.",
+      "expected_sources": ["Reddit r/golf", "GolfWRX Forums", "Facebook Golf Groups", "The Hackers Paradise Forum"]
+    }
+  ],
+
+  "category_specific_topics": [
+    {
+      "topic": "Golf ball compression rating confusion",
+      "description": "How golfers understand (or misunderstand) compression ratings — do they know what the numbers mean? Do they match compression to swing speed? Do they use compression as a buying criteria or ignore it?",
+      "unique_to_category": true
+    },
+    {
+      "topic": "Golf ball dimple pattern and aerodynamics awareness",
+      "description": "Do golfers pay attention to dimple pattern claims? Do they believe dimple design affects performance? Is this a selling point or marketing noise for the average golfer?",
+      "unique_to_category": true
+    },
+    {
+      "topic": "Golf ball construction layers (2-piece vs 3-piece vs 4-piece)",
+      "description": "What do amateur golfers think more layers means? Do they associate more layers with better performance? Do they understand why construction matters for their game?",
+      "unique_to_category": true
+    },
+    {
+      "topic": "Greenside spin vs driver spin tradeoff perception",
+      "description": "How golfers think about the tradeoff between wanting low spin off the tee (distance) and high spin around the green (control). Do they feel they have to choose? Do they believe a mid-tier ball can do both?",
+      "unique_to_category": true
+    },
+    {
+      "topic": "Golf ball fitting — awareness and adoption",
+      "description": "Do amateur golfers know ball fitting exists? Have they done it? Do they think it's worth it? Do they see it as something only serious players do? Is it a barrier or an opportunity?",
+      "unique_to_category": true
+    },
+    {
+      "topic": "Seasonal and weather-related ball performance discussions",
+      "description": "How golfers talk about ball performance in cold weather, wet conditions, altitude — do they switch balls by season? Do they notice performance differences? This is golf-specific context that affects purchase patterns.",
+      "unique_to_category": true
+    },
+    {
+      "topic": "Golf ball color and visibility preferences",
+      "description": "The matte vs gloss debate, yellow vs white, high-visibility options — do golfers care about color? Is it a differentiator or irrelevant? iON+ uses a specific visual system that interacts with color perception.",
+      "unique_to_category": true
+    }
+  ],
+
+  "competitor_context_topics": [
+    {
+      "topic": "Callaway ERC Soft positioning and reception",
+      "competitors_to_analyze": ["Callaway ERC Soft"],
+      "angles": [
+        "How do golfers perceive ERC Soft's Triple Track alignment system?",
+        "What complaints exist about ERC Soft distance vs feel tradeoff?",
+        "How does ERC Soft's price ($32-35) affect purchase decisions?",
+        "Do golfers view ERC Soft as the distance ball benchmark in the ionomer segment?"
+      ]
+    },
+    {
+      "topic": "Kirkland Signature golf ball disruption narrative",
+      "competitors_to_analyze": ["Kirkland Signature"],
+      "angles": [
+        "How did Kirkland change golfers' perception of ball value?",
+        "Do golfers who switched to Kirkland feel satisfied or compromised?",
+        "What's the 'I don't need to pay for Titleist' story in golfer language?",
+        "Is Kirkland the proof point that golfers will switch for value?"
+      ]
+    },
+    {
+      "topic": "Pro V1 as the benchmark and its vulnerability",
+      "competitors_to_analyze": ["Titleist Pro V1", "Titleist Pro V1x"],
+      "angles": [
+        "Why do amateur golfers buy Pro V1 when it's designed for higher swing speeds?",
+        "What's the emotional/status driver behind playing Pro V1?",
+        "How many golfers secretly feel they're 'wasting money' on Pro V1?",
+        "What would make a Pro V1 player switch to something cheaper?"
+      ]
+    },
+    {
+      "topic": "Vice Golf and the DTC ball market precedent",
+      "competitors_to_analyze": ["Vice Drive", "Vice Pro", "Vice Pro Plus"],
+      "angles": [
+        "How did Vice convince golfers to trust a non-traditional brand?",
+        "What messaging and mechanisms did Vice use?",
+        "What complaints exist about Vice (quality consistency, feel, availability)?",
+        "Does Vice's subscription model create loyalty or friction?"
+      ]
+    },
+    {
+      "topic": "Budget ball segment messaging and claims",
+      "competitors_to_analyze": ["Callaway Supersoft", "Srixon Soft Feel", "TaylorMade Soft Response", "Maxfli SoftFli", "Titleist TruFeel"],
+      "angles": [
+        "What claims are overused in the budget ball segment?",
+        "What mechanisms are these balls advertising?",
+        "Where do they all sound the same (commodity messaging)?",
+        "What's genuinely differentiated in this space?",
+        "How do golfers perceive 'soft' as a positioning — strength or weakness?"
+      ]
+    },
+    {
+      "topic": "Bridgestone e6/e12 anti-slice positioning",
+      "competitors_to_analyze": ["Bridgestone e6", "Bridgestone e12"],
+      "angles": [
+        "How effective is Bridgestone's 'straight flight' positioning?",
+        "Do golfers believe a ball can reduce their slice?",
+        "What's the reception of anti-side-spin technology claims?",
+        "Is this the closest positioning to iON+'s spin reduction claim?"
+      ]
+    }
+  ],
+
+  "emotional_psychological_topics": [
+    {
+      "topic": "Embarrassment of being outdriven by playing partners",
+      "emotion_type": "embarrassment",
+      "trigger_patterns": ["my buddies outdrive me", "can't keep up", "shortest hitter", "embarrassing", "ego", "pride", "outdriven by my wife/kid/friend"]
+    },
+    {
+      "topic": "Fear of being the 'sucker' who overpays for golf balls",
+      "emotion_type": "fear",
+      "trigger_patterns": ["rip off", "waste of money", "paying for the name", "marketing hype", "can't tell the difference", "sucker", "scam"]
+    },
+    {
+      "topic": "Frustration with golf ball marketing confusion and BS",
+      "emotion_type": "frustration",
+      "trigger_patterns": ["all claim the same thing", "marketing BS", "can't trust", "which one is actually better", "confused", "information overload", "every ball says longest"]
+    },
+    {
+      "topic": "Hope for a simple equipment solution to a swing problem",
+      "emotion_type": "hope",
+      "trigger_patterns": ["found the right ball", "game changer", "finally", "switched to X and", "gained yards", "noticed a difference", "more consistent"]
+    },
+    {
+      "topic": "Identity conflict between 'serious golfer' and 'budget buyer'",
+      "emotion_type": "identity",
+      "trigger_patterns": ["not good enough for", "don't deserve", "when I get better I'll", "playing up", "playing down", "my level"]
+    },
+    {
+      "topic": "Grief and denial about aging and declining physical ability",
+      "emotion_type": "fear",
+      "trigger_patterns": ["used to hit", "getting older", "not as strong", "lost 20 yards", "can't do what I used to", "aging", "senior", "over 50/60/70"]
+    },
+    {
+      "topic": "Quiet desperation of the perpetual slicer",
+      "emotion_type": "frustration",
+      "trigger_patterns": ["nothing fixes my slice", "tried everything", "lessons didn't help", "still slicing", "banana ball", "lost in the woods again"]
+    },
+    {
+      "topic": "Joy and validation when a small equipment change produces results",
+      "emotion_type": "hope",
+      "trigger_patterns": ["just switching the ball", "can't believe the difference", "wish I had done this sooner", "why didn't anyone tell me", "instant improvement"]
+    }
+  ],
+
+  "source_type_calibration": [
+    {
+      "source_type": "Reddit Golf Communities",
+      "priority": "critical",
+      "expected_content": "Unfiltered opinions, emotional posts, gear debates, ball recommendations, slice frustration, distance discussions, brand comparisons, memes about lost balls",
+      "tool": "apify",
+      "specific_targets": ["r/golf", "r/GolfEquipment"]
+    },
+    {
+      "source_type": "GolfWRX Forums",
+      "priority": "critical",
+      "expected_content": "Deep technical discussions on ball construction, compression, fitting, head-to-head tests, equipment nerd culture, detailed reviews from knowledgeable amateurs",
+      "tool": "firecrawl",
+      "specific_targets": ["golfwrx.com/forums/topic/ (ball-related threads)"]
+    },
+    {
+      "source_type": "Amazon Golf Ball Reviews",
+      "priority": "critical",
+      "expected_content": "Verified purchaser feedback on specific balls — real language about distance, feel, value, durability, comparison to previous ball",
+      "tool": "firecrawl",
+      "specific_targets": ["Callaway ERC Soft ASIN", "Callaway Supersoft ASIN", "Bridgestone e6 ASIN", "Titleist TruFeel ASIN", "Vice Drive ASIN", "Kirkland Signature ASIN", "Srixon Soft Feel ASIN", "TaylorMade Soft Response ASIN"]
+    },
+    {
+      "source_type": "YouTube Golf Ball Review Comments",
+      "priority": "high",
+      "expected_content": "Emotional reactions to tests, personal experience sharing, brand loyalty arguments, price complaints, 'I switched and...' stories",
+      "tool": "apify",
+      "specific_targets": ["Rick Shiels ball reviews", "TXG ball testing", "Mark Crossfield ball comparisons", "MrShortGame ball reviews", "Golf Sidekick ball discussions"]
+    },
+    {
+      "source_type": "Independent Review Sites",
+      "priority": "high",
+      "expected_content": "Testing methodology, data-driven comparisons, community comments with strong opinions, 'best of' rankings that reveal criteria",
+      "tool": "firecrawl",
+      "specific_targets": ["mygolfspy.com golf ball reviews and comments", "pluggedingolf.com ball reviews"]
+    },
+    {
+      "source_type": "Golf Media and Buyer Guides",
+      "priority": "high",
+      "expected_content": "Editorial picks, Hot List rankings, buyer guide criteria, comment sections with real golfer reactions",
+      "tool": "firecrawl",
+      "specific_targets": ["golfdigest.com/hot-list/golf-balls", "golf.com/gear/golf-balls"]
+    },
+    {
+      "source_type": "Competitor Product Pages and Marketing",
+      "priority": "high",
+      "expected_content": "Competitor claims, mechanisms, positioning language, price anchoring, feature emphasis — what the market is already hearing",
+      "tool": "firecrawl",
+      "specific_targets": ["callawaygolf.com/golf-balls", "titleist.com/golf-balls", "bridgestonegolf.com/balls", "vicegolf.com"]
+    },
+    {
+      "source_type": "Average Golfer Forums",
+      "priority": "moderate",
+      "expected_content": "Golfers who identify as average or high-handicap discussing equipment — more emotional, less technical than GolfWRX, closer to the iON+ target customer",
+      "tool": "firecrawl",
+      "specific_targets": ["thehackersparadise.com/forum", "forums.golfmonthly.com"]
+    },
+    {
+      "source_type": "Facebook Golf Groups (cached/indexed)",
+      "priority": "moderate",
+      "expected_content": "Older demographic discussions, ball recommendations, 'what ball do you play' threads, distance complaints from 50+ golfers",
+      "tool": "perplexity",
+      "specific_targets": ["Facebook golf groups via Perplexity search"]
+    }
+  ],
+
+  "validation": {
+    "primary_topics_count": 14,
+    "category_topics_count": 7,
+    "competitor_topics_count": 6,
+    "emotional_topics_count": 8,
+    "source_types_count": 9,
+    "all_minimums_met": true,
+    "minimums_check": {
+      "primary_topics_min_10": true,
+      "category_topics_min_5": true,
+      "competitor_topics_min_5": true,
+      "emotional_topics_min_5": true,
+      "source_types_min_6": true,
+      "emotional_includes_fear": true,
+      "emotional_includes_hope": true,
+      "competitor_includes_messaging": true,
+      "competitor_includes_complaints": true,
+      "sources_include_forums": true,
+      "sources_include_video": true,
+      "sources_include_reviews": true
+    }
+  }
+}

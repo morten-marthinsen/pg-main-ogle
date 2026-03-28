@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "product_name": "iON+ Golf Ball",
+    "skill": "1.0-B Prospect Awareness Mapper v2.0",
+    "generated_date": "2026-03-26",
+    "market_mode": "B",
+    "industry": "Golf Equipment — Consumable Golf Ball"
+  },
+
+  "diagnosis": {
+    "primary_level": 3,
+    "primary_level_name": "Solution Aware",
+    "confidence": 80,
+    "reasoning": "The golf ball market is deeply established — amateur golfers know golf balls exist, know multiple brands, and many have tried several. However, iON+ as a specific product is unknown (Mode B). The target golfer (40-65+, handicap 15-30+, 80-95mph) is typically Solution Aware: they know golf balls affect performance, they've heard claims about distance and feel, they've probably tried a few brands. They're shopping the category but haven't found 'their' ball. They are NOT Product Aware of iON+ specifically (it doesn't exist in market yet). The key dynamic: they're Solution Aware in the golf ball category but potentially only Problem Aware regarding the specific root cause iON+ addresses (that their current ball's spin profile is wrong for their swing speed). This split-awareness creates the educational opportunity."
+  },
+
+  "distribution": {
+    "level_5_most_aware": {
+      "percentage": 0,
+      "indicators": [
+        "iON+ is a new product — nobody knows it exists yet",
+        "Zero existing marketing, zero reviews, zero word-of-mouth",
+        "Level 5 will only exist post-launch after marketing exposure"
+      ]
+    },
+    "level_4_product_aware": {
+      "percentage": 5,
+      "indicators": [
+        "Small segment of PG's existing customer base who may have seen early mentions",
+        "PG email list subscribers who follow new product announcements",
+        "These are PG loyalists, not golf ball shoppers — they trust PG but don't yet know the ball"
+      ]
+    },
+    "level_3_solution_aware": {
+      "percentage": 45,
+      "indicators": [
+        "Know golf balls affect distance and feel",
+        "Have tried multiple balls (Callaway Supersoft, Pro V1, found balls, etc.)",
+        "Actively or passively shopping: read 'best golf ball' articles, ask buddies",
+        "Understand basic categories: tour ball, distance ball, soft ball",
+        "Know brands: Titleist, Callaway, Bridgestone, TaylorMade — comparing options",
+        "Reddit r/golf 'what ball should I play' threads are constant — this is the dominant behavior"
+      ]
+    },
+    "level_2_problem_aware": {
+      "percentage": 35,
+      "indicators": [
+        "Know they're losing distance, know they slice, know they lose balls",
+        "Do NOT connect their ball choice to these problems — blame swing, age, or 'just how it is'",
+        "Haven't considered that their ball's spin profile is wrong for their swing speed",
+        "May have settled on a ball by default (whatever's on sale, whatever buddy plays) without research",
+        "This is the root cause education opportunity: 'your ball is actually making it worse'"
+      ]
+    },
+    "level_1_unaware": {
+      "percentage": 15,
+      "indicators": [
+        "Don't think ball choice matters — 'a ball is a ball'",
+        "Play found balls, range balls, or whatever is cheapest",
+        "Don't connect equipment to performance at the ball level (may care about clubs but not balls)",
+        "Would never search for golf ball information — it's not on their radar",
+        "This segment exists but is hardest to reach and least likely to convert initially"
+      ]
+    }
+  },
+
+  "implications": {
+    "query_emphasis": [
+      "Problem articulation queries (35% weight) — capture the 35% at Level 2 who feel the problem but don't know the cause. 'Losing distance,' 'can't stop slicing,' 'drives getting shorter.' This is the richest emotional language.",
+      "Solution comparison queries (30% weight) — capture the 45% at Level 3 who are comparing balls. 'Best golf ball for distance,' 'Callaway Supersoft vs Bridgestone e6,' 'golf ball for slow swing speed.'",
+      "Root cause / education queries (20% weight) — capture the bridge between Level 2 and 3. 'Why do I slice,' 'wrong ball for swing speed,' 'golf ball compression chart.' This is where iON+'s frame claim lives.",
+      "Competitor complaints and switching stories (15% weight) — capture dissatisfaction with current solutions. 'Switched from X to Y,' 'Pro V1 not worth it,' 'disappointed with [brand].' Feeds counter-sell ammunition."
+    ],
+    "source_priorities": [
+      "Reddit r/golf — all awareness levels present, highest volume, most emotional language",
+      "GolfWRX Forums — Level 3-4 heavy, technical discussions, comparison shopping behavior",
+      "Amazon reviews — Level 3-4, post-purchase language about what worked and what didn't",
+      "YouTube comments — Level 2-3 heavy, emotional reactions to ball tests, personal stories",
+      "MyGolfSpy — Level 3-4, data-driven community, strong opinions on testing and value",
+      "The Hackers Paradise — Level 2-3, average golfer identity, less intimidating than GolfWRX",
+      "Facebook Golf Groups — Level 2, older demographic, less technical, more emotional"
+    ],
+    "messaging_approach": "Lead with root cause education (frame claim): your ball's spin profile is wrong for your swing speed, and it's costing you distance you should be getting. The market is Solution Aware enough to understand ball choice matters, but Problem Aware enough that most don't know WHY their current ball is wrong. The frame claim bridges Level 2 to Level 3 — it gives the Problem Aware golfer a new lens ('it's not just your swing, it's your ball') and gives the Solution Aware golfer a new criterion ('not just feel or brand, but spin-to-swing-speed match'). The unique mechanism (visual alignment technology) differentiates at Level 3-4 after the root cause has landed."
+  },
+
+  "research_recommendations": [
+    {
+      "recommendation": "Weight problem articulation queries at 35% of total scraping effort",
+      "rationale": "35% of the target market is Problem Aware — they feel the distance loss and slice frustration but don't connect it to ball choice. This is the richest vein of emotional language and the foundation for the frame claim. These quotes feed Pain, Root Cause, and Villain buckets."
+    },
+    {
+      "recommendation": "Prioritize Reddit and YouTube for emotional language; GolfWRX and MyGolfSpy for competitive intelligence",
+      "rationale": "Reddit and YouTube comments capture raw emotional language from Level 2-3 golfers. GolfWRX and MyGolfSpy capture informed comparison language from Level 3-4 golfers. Both are needed but serve different buckets."
+    },
+    {
+      "recommendation": "Include explicit 'ball doesn't matter' and 'all balls are the same' threads",
+      "rationale": "15% at Level 1 actively believe ball choice is irrelevant. Scraping their arguments reveals the objections we'll face and feeds the Villain bucket (golf ball marketing fatigue, 'it's all hype')."
+    },
+    {
+      "recommendation": "Scrape competitor switching stories heavily",
+      "rationale": "The Solution Aware segment (45%) has tried multiple balls. Their switching stories — what they left, why they left, what they found — are gold for counter-sell construction and Competitor Mechanism bucket."
+    },
+    {
+      "recommendation": "Extract 'swing speed awareness' language specifically",
+      "rationale": "iON+'s core positioning depends on golfers connecting swing speed to ball performance. We need to know: do they know their swing speed? Do they care? Do they think it matters for ball selection? This determines whether the frame claim educates or validates."
+    },
+    {
+      "recommendation": "Capture age-related distance loss language with high priority",
+      "rationale": "The target customer is 40-65+. Age-related distance loss is likely the highest emotional intensity topic in the Pain bucket. These quotes will carry the most persuasive weight in copy because they tap identity (aging golfer) and loss aversion simultaneously."
+    },
+    {
+      "recommendation": "Don't over-index on GolfWRX technical discussions at the expense of Reddit emotional discussions",
+      "rationale": "GolfWRX skews toward Level 3-4 equipment nerds who represent a smaller portion of iON+'s target. Reddit captures the broader amateur golfer who doesn't know their compression rating but knows they're losing distance. Both matter, but the emotional language from Reddit will drive more of the copy."
+    }
+  ]
+}

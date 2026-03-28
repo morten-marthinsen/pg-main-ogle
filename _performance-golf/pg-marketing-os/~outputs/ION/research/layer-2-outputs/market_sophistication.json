@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "skill": "2.4-D Promise Exposure Analyzer (E5 Tool 6)",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "100 COMPETITOR_MECHANISM quotes + 75 VILLAIN quotes + market_config.yaml"
+  },
+  "market_sophistication_stage": 4,
+  "stage_description": "Stage 4 — Market of Skeptics. Prospects have been exposed to every type of golf ball claim: distance (everyone claims it), feel (everyone claims it), value (DTC brands claim it), technology (dimples, cores, covers). They're skeptical of claims and focus on proof, specificity, and mechanism differentiation.",
+  "evidence_for_stage_4": [
+    {
+      "signal": "Prospects compare claims across brands with skepticism",
+      "evidence": "Golfers test balls side-by-side on launch monitors, compare pricing, share data. They don't trust marketing — they trust their own experience and peer reviews.",
+      "evidence_ids": ["RC-014", "V-021", "ST-123", "CM-007"],
+      "prospect_language": [
+        "I bought a launch monitor and it shows I lose 10 yards on drives with ProV1",
+        "I did a blind test between the 2 on my sim",
+        "I've been experimenting this year, using Bridgestone e12 & Callaway super soft"
+      ]
+    },
+    {
+      "signal": "Price sensitivity has shifted from 'can I afford it' to 'is it worth it'",
+      "evidence": "Golfers don't say 'I can't afford Pro V1.' They say 'Pro V1 isn't WORTH what they charge.' This is Stage 4 — they've bought premium and now question whether the premium delivered.",
+      "evidence_ids": ["V-005", "V-035", "V-038", "CM-003"],
+      "prospect_language": [
+        "The difference in performance vs. cost isn't worth it",
+        "The entire golf ball industry is a scam. They all cost close to the same to make",
+        "Nearly the same performance, half the price"
+      ]
+    },
+    {
+      "signal": "DTC brands have already made the 'same ball for less' argument",
+      "evidence": "Vice, Snell, Maxfli, and Kirkland have already positioned as 'premium performance at lower prices.' This argument has been made. The market has absorbed it. A new entrant can't lead with 'same quality for less' — that's Stage 3 positioning in a Stage 4 market.",
+      "evidence_ids": ["CM-003", "ST-003", "H-009", "V-022"],
+      "prospect_language": [
+        "Instead of ProV1 at $55, play Vice at $26. Nearly the same performance",
+        "Maxfli Tour X feels and reacts no different than a ProV1x",
+        "I tried so hard to be a Snell and Vice guy"
+      ]
+    },
+    {
+      "signal": "Golfers cite specific data points, not vague impressions",
+      "evidence": "Discussions include compression numbers, launch angles, spin rates, specific yardage differences. This is a data-literate market segment that demands specificity.",
+      "evidence_ids": ["RC-017", "RC-148", "P-227", "RC-020"],
+      "prospect_language": [
+        "I was surprised that some of the highest compression balls performed the best for mid-swing speed",
+        "I find that at this ball speed I get the best results launching in the 13-14° range with 2350 spin",
+        "Definitely robbing yourself of 25+ yards by being at -2 angle of attack"
+      ]
+    }
+  ],
+  "why_not_stage_5": "Stage 5 (market of cynics) would mean prospects don't believe ANY golf ball claim. That's not the case — golfers still get excited about testing new balls, they still believe the right ball can help their game. They're skeptical of MARKETING claims but open to DATA-backed claims. That's the key distinction.",
+  "lead_strategy_for_stage_4": {
+    "primary": "Lead with MECHANISM + PROOF, not with promise or claim",
+    "rationale": "In Stage 4, the market has heard every promise. 'More distance' is meaningless. 'Engineered for 80-95mph swing speeds, independently tested at Golf Laboratories, beat Pro V1 in carry distance at 95mph' is mechanism + proof. The SPECIFICITY of the claim is what breaks through skepticism.",
+    "recommended_approach": [
+      "Lead with the swing-speed matching mechanism — 'this ball is designed for YOUR swing speed, not a tour pro's'",
+      "Anchor every claim to Golf Laboratories robot data — independent, third-party, inarguable",
+      "Use SPECIFIC numbers (239.3 yards, not 'farther'; 95mph, not 'moderate swing speed')",
+      "Let the data do the convincing — the Soul.md voice ('knowledgeable golf buddy') is perfect for Stage 4 because it presents evidence without hype",
+      "The visual alignment tech is the DIFFERENTIATOR that no competitor has — this is the Stage 4 'unique mechanism' play"
+    ]
+  },
+  "competitive_claim_saturation": {
+    "saturated_claims": [
+      "More distance (every ball claims this)",
+      "Soft feel (every mid-tier ball claims this)",
+      "Tour-quality performance (meaningless — tours play different balls than amateurs need)",
+      "Value/savings vs. premium (Vice, Maxfli, Kirkland all own this)"
+    ],
+    "unsaturated_claims": [
+      "Swing-speed optimized engineering (no ball is SPECIFICALLY positioned for 80-95mph as a primary identity)",
+      "Visual alignment technology (Triple Track exists but no one owns 'alignment system' as a category)",
+      "Independent robot testing as the proof standard (most brands cite their own testing, not third-party)",
+      "Recovery of 'lost' distance through ball optimization (no one frames ball choice as recovering yards you thought were gone)"
+    ]
+  }
+}

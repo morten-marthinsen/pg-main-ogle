@@ -587,7 +587,7 @@ The dynamic PG1 community — a living, breathing, happening community feed wher
 
 You see: golf improvement doesn't have to be lonely or a solo journey.
 Because, with the PG1-Pulse community, our golfers will be surrounded and supported by a like-minded community of thousands of golfers just like them — golfers who love this amazing game and who are excited to be making continual, reliable improvements every week. 
-Not too mention: Accountability and community are proven to increase adherence to any golf improvement plan…
+Not to mention: Accountability and community are proven to increase adherence to any golf improvement plan…
 Meaning, the moment our golfers begin to engage with the PG1 community — joining into this shared journey — they are 3x more likely to continue with their personalized plan and reap massive game-improvement results. 
 We’re already seeing this in the data. Because we’re seeing adoption rates higher than anything we’ve seen before. 
 And it’s only going to get better. 

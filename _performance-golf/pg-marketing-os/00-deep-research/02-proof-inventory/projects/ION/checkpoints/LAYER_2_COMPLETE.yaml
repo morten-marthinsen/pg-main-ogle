@@ -1,0 +1,31 @@
+checkpoint: scoring-complete
+layer: 2
+status: COMPLETE
+timestamp: "2026-03-27T18:45:00-0400"
+project: "ION"
+
+verification:
+  gap_analysis_complete: true
+  categories_assessed: 6
+  all_categories_scored: true
+  schwartz_adjustment_applied: true
+  promise_ceiling_calculated: true
+  knockout_proof_identified: true
+
+results:
+  overall_proof_strength: 73
+  projected_strength_after_pending: 81
+  promise_ceiling: 78
+  projected_ceiling_after_pending: 88
+  knockout_proof: "AUTH-01 — Golf Labs iON+ 239.3 vs ProV1 231.6 at 95mph (composite 9.55)"
+  critical_gaps: 3
+  critical_gap_list:
+    - "G1: Zero iON+ testimonials (SOCIAL) — pending collection"
+    - "G2: No video demo of alignment system (DEMO) — pending creation"
+    - "G3: No formal guarantee (RISK REVERSAL) — pending business decision"
+
+output_files:
+  - "layer-2-outputs/L2-gap-analysis-scoring.md"
+
+gate_passed: true
+ready_for_layer_3: true

@@ -360,7 +360,7 @@ The Ad Arena follows the same 2-round + audience evaluation mandatory structure 
 
 **The Critic** (adversarial, NOT a competitor):
 - Evaluates using same 7 ad-specific criteria as Judge
-- Identifies ONE weakest element per ad concept
+- If material weakness exists, identifies the SINGLE most impactful one per ad concept; otherwise reports no_material_weakness
 - Must cite evidence and provide actionable fix direction
 - Key question: "Would I stop scrolling? If not, why specifically?"
 

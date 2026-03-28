@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "skill": "3.3-C Measurement Definer",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "ranked_opportunities.json + action_sequence.json + risk_factors.json"
+  },
+  "OPP-01_OPP-02_combined": {
+    "opportunity": "Your Ball Matters + Fair Price (combined Tier 1 campaign)",
+    "leading_indicators": [
+      {
+        "metric": "Email open rate on launch sequence",
+        "benchmark": "PG historical average for product launches (likely 25-35%)",
+        "measurement_window": "First 48 hours post-send",
+        "signal": "Subject line resonance — does 'your ball matters' framing generate curiosity?"
+      },
+      {
+        "metric": "Click-through rate from email to product page",
+        "benchmark": "PG historical average (likely 3-5%)",
+        "measurement_window": "First 48 hours post-send",
+        "signal": "Offer relevance — does the audience care enough to look?"
+      },
+      {
+        "metric": "Product page scroll depth / time on page",
+        "benchmark": "PG historical average for product pages",
+        "measurement_window": "First 7 days",
+        "signal": "Content engagement — is the distance + proof messaging holding attention?"
+      },
+      {
+        "metric": "Add-to-cart rate",
+        "benchmark": "E-commerce golf ball average (~5-8%)",
+        "measurement_window": "First 7 days",
+        "signal": "Purchase intent — does the proof + price combination convert interest to action?"
+      },
+      {
+        "metric": "Ad click-through rate by angle",
+        "benchmark": "Golf equipment Facebook/Meta average (~1-2%)",
+        "measurement_window": "First 14 days, per creative variant",
+        "signal": "Which angle resonates: distance-lead vs. price-lead vs. proof-lead?"
+      }
+    ],
+    "lagging_indicators": [
+      {
+        "metric": "Conversion rate (purchase / page visit)",
+        "benchmark": "PG historical product launch conversion (~2-4%)",
+        "measurement_window": "30 days post-launch",
+        "signal": "Overall campaign effectiveness"
+      },
+      {
+        "metric": "Revenue per email subscriber (launch sequence)",
+        "benchmark": "PG historical for product launch emails",
+        "measurement_window": "30 days post-launch",
+        "signal": "Email list monetization for consumable vs. one-time device products"
+      },
+      {
+        "metric": "Repeat purchase rate",
+        "benchmark": "Golf ball industry repeat rate (~30-40% within 6 months for liked balls)",
+        "measurement_window": "60-90 days post-first-purchase",
+        "signal": "Product-market fit — does the on-course experience match the marketing promise?"
+      },
+      {
+        "metric": "Customer acquisition cost (CAC)",
+        "benchmark": "Must be recoverable within 2 purchases given ball margins",
+        "measurement_window": "30-60 days post-ad-launch",
+        "signal": "Campaign efficiency — can iON+ acquire customers profitably?"
+      },
+      {
+        "metric": "Net Promoter Score / customer feedback sentiment",
+        "benchmark": "NPS > 40 for physical product launch",
+        "measurement_window": "60 days post-launch (post-round survey)",
+        "signal": "Word-of-mouth potential — will buyers recommend to playing partners?"
+      }
+    ],
+    "decision_triggers": [
+      {
+        "trigger": "Email CTR < 2% after first 3 sends",
+        "action": "Revise subject lines and preview text. Test 'your ball matters' vs. direct distance claim vs. price-forward framing.",
+        "escalation": "If CTR stays < 2% after revision, the frame claim may not resonate with PG's list — test with cold traffic instead."
+      },
+      {
+        "trigger": "Product page add-to-cart rate < 3% after 1,000 visits",
+        "action": "Audit page structure. Check: is the Golf Laboratories data prominent enough? Is the price revealed too early/late? Is the alignment system section helping or confusing?",
+        "escalation": "A/B test page variants with different section orders (proof-first vs. feature-first vs. price-first)."
+      },
+      {
+        "trigger": "Ad CTR > 2% but conversion < 1%",
+        "action": "Messaging is generating interest but the page isn't converting. Diagnose: landing page mismatch, price objection not handled, trust gap on product page.",
+        "escalation": "Add testimonials (if available) or more prominent Golf Laboratories data. Consider video demo."
+      },
+      {
+        "trigger": "Repeat purchase rate < 15% at 90 days",
+        "action": "Product experience may not match marketing promise. Survey first-time buyers: did distance improve? Did they like the feel? Did they use the alignment system?",
+        "escalation": "If the product isn't delivering on the promise, the marketing is ahead of the product. Pause scaling and address product feedback."
+      },
+      {
+        "trigger": "Distance-lead ads outperform price-lead ads by 2x+ CTR",
+        "action": "Confirm OPP-01 as primary angle. Shift budget allocation toward distance messaging. Use price as the closing argument, not the opener.",
+        "escalation": "None — this is the expected outcome based on research."
+      }
+    ],
+    "kill_criteria": [
+      {
+        "criterion": "Fewer than 100 units sold in first 30 days to PG email list",
+        "action": "PG's warmest audience isn't converting. This suggests either (a) product-market mismatch with existing PG customers, or (b) fundamental messaging failure. Pause campaign, conduct customer interviews.",
+        "severity": "HIGH — if PG's own list won't buy, cold traffic is unlikely to perform."
+      },
+      {
+        "criterion": "CAC exceeds $30 after 60 days of ad optimization",
+        "action": "Acquisition cost is too high for a $30 consumable product. Either find cheaper acquisition channels (organic, partnerships, YouTube content) or reassess the paid advertising approach.",
+        "severity": "MEDIUM — may indicate the product needs more organic/content-driven marketing rather than direct response."
+      },
+      {
+        "criterion": "Repeat purchase rate < 10% at 6 months",
+        "action": "Customers aren't coming back. The product experience isn't meeting expectations set by marketing. This is a product problem, not a marketing problem. Investigate: distance claims vs. on-course reality, feel complaints, alignment system usability.",
+        "severity": "HIGH — consumable without repeat purchase is unsustainable."
+      }
+    ],
+    "baseline_benchmarks": {
+      "golf_ball_market_context": "US golf ball market ~$1.2B annually. Titleist holds ~50% premium share. DTC segment growing 15-20% annually. Average golfer buys 4-6 dozen/year.",
+      "pg_context": "PG has an email list of active golfers, existing e-commerce infrastructure, and established brand in training/devices. This is their first consumable product — repeat purchase mechanics are new.",
+      "pricing_context": "ProV1: $55/dozen. Vice Pro: $26-33/dozen. Maxfli Tour: $27/dozen. Kirkland: $14/dozen. iON+ at $30-35 sits in the middle of DTC range.",
+      "competitive_timing": "No major competitor has launched a swing-speed-specific ball at this price point with independent testing. Window is open but will close if the concept works."
+    }
+  }
+}

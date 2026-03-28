@@ -270,6 +270,10 @@ LAYER 2 (CONSTRUCTION):
 [ ] LAYER_2_COMPLETE.yaml created
 
 LAYER 2.5 (ARENA — MANDATORY, CANNOT BE SKIPPED):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
 [ ] All 7 competitors generated across 2 rounds
 [ ] Adversarial critique completed each round
 [ ] Targeted revision completed each round
@@ -332,6 +336,47 @@ This file is created ONLY after:
 4. All candidates scored against 7 criteria
 5. Post-arena synthesis complete (2-3 hybrids)
 6. Human selection received (BLOCKING)
+
+### ARENA_COMPLETE.yaml Format
+
+```yaml
+# ARENA_COMPLETE.yaml
+layer: "2.5"
+skill: "12-story"
+status: COMPLETE
+timestamp: "[ISO 8601]"
+
+arena_execution:
+  rounds_completed: 2
+  competitors_per_round: 7
+  critique_phases_completed: 2
+  revision_phases_completed: 2
+  hybrids_created: [number]
+
+human_selection:
+  selected_candidate: "[name]"
+  selection_type: "[pure | hybrid]"
+  selected_from_persona: "[persona name or 'synthesizer']"
+  timestamp: "[ISO 8601]"
+
+verification:
+  all_7_competitors_generated: true
+  all_2_rounds_completed: true
+  critique_before_scoring: true
+  human_selection_received: true
+
+persona_verification:
+  personas_loaded_from: "~system/protocols/ARENA-PERSONA-PANEL.md"
+  personas_used:
+    - Makepeace
+    - Halbert
+    - Schwartz
+    - Ogilvy
+    - Clemens
+    - Bencivenga
+    - The Architect
+  all_match_protocol: true  # FALSE = HALT — fabrication detected
+```
 
 ### Checkpoint Progression (Updated)
 

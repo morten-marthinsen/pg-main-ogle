@@ -195,3 +195,18 @@ PDP-03-MC-CHECK:
 | Missing micro-trust | ATC button spec lacks 3-4 signals below it | Add micro-trust signals from brief (shipping, guarantee, security, returns) | If product has no clear trust signals — escalate to human for guarantee/shipping info |
 | Vague carousel directions | Slide direction contains "add benefit image" or similar non-specific language | Rewrite with specific copy text, imagery description, and layout | If product data insufficient for specific directions — flag as data gap |
 | Cart redirect specified | Post-ATC behavior = "go to cart page" | Change to slide-out mini-cart | Non-negotiable — no escalation needed, just fix it |
+
+---
+
+## IMPLEMENTATION CHECKLIST — ARENA
+
+```
+LAYER 2.5 (ARENA -- MANDATORY):
+[ ] ARENA-LAYER.md READ (MANDATORY — contains skill-specific judging criteria)
+[ ] ARENA-CORE-PROTOCOL.md READ (path: ~system/protocols/ARENA-CORE-PROTOCOL.md)
+[ ] ARENA-PERSONA-PANEL.md READ (path: ~system/protocols/ARENA-PERSONA-PANEL.md)
+[ ] Persona names VERIFIED against protocol: Makepeace, Halbert, Schwartz, Ogilvy, Clemens, Bencivenga, The Architect
+[ ] All 7 competitors generated hero carousel + buy box packages
+[ ] All packages scored against criteria
+[ ] Human selection received (BLOCKING)
+```

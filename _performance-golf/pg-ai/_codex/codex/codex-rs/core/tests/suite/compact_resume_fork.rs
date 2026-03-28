@@ -180,7 +180,7 @@ async fn compact_resume_and_fork_preserve_model_history_view() {
         "compact+resume test expects resumed path {resumed_path:?} to exist",
     );
 
-    let forked = fork_thread(&manager, &config, resumed_path, 2).await;
+    let forked = fork_thread(&manager, &config, resumed_path, /*nth_user_message*/ 2).await;
     user_turn(&forked, "AFTER_FORK").await;
 
     // 3. Capture the requests to the model and validate the history slices.
@@ -316,7 +316,7 @@ async fn compact_resume_after_second_compaction_preserves_history() -> Result<()
     let request_log = mount_second_compact_sequence(&server).await;
 
     // 2. Drive the conversation through compact -> resume -> fork -> compact -> resume.
-    let (_home, config, manager, base) = start_test_conversation(&server, None).await;
+    let (_home, config, manager, base) = start_test_conversation(&server, /*model*/ None).await;
 
     user_turn(&base, "hello world").await;
     compact_conversation(&base).await;
@@ -335,7 +335,7 @@ async fn compact_resume_after_second_compaction_preserves_history() -> Result<()
         "second compact test expects resumed path {resumed_path:?} to exist",
     );
 
-    let forked = fork_thread(&manager, &config, resumed_path, 3).await;
+    let forked = fork_thread(&manager, &config, resumed_path, /*nth_user_message*/ 3).await;
     user_turn(&forked, "AFTER_FORK").await;
 
     compact_conversation(&forked).await;
@@ -387,33 +387,18 @@ async fn compact_resume_after_second_compaction_preserves_history() -> Result<()
     );
     let seeded_user_prefix = &first_request_user_texts[..first_turn_user_index];
     let summary_after_second_compact =
-<<<<<<< HEAD
-        extract_summary_user_text(&requests[requests.len() - 3], SUMMARY_TEXT);
-=======
         extract_summary_user_text(&requests[requests.len() - 2], SUMMARY_TEXT);
->>>>>>> origin/main
     let mut expected_after_second_compact_user_texts = vec![
         "hello world".to_string(),
         "AFTER_COMPACT".to_string(),
         "AFTER_RESUME".to_string(),
         "AFTER_FORK".to_string(),
-<<<<<<< HEAD
-        summary_after_second_compact,
-    ];
-    expected_after_second_compact_user_texts.extend_from_slice(seeded_user_prefix);
-    expected_after_second_compact_user_texts.push("AFTER_COMPACT_2".to_string());
-    let mut expected_fork_local_user_texts = vec![
-        "AFTER_FORK".to_string(),
-        expected_after_second_compact_user_texts[4].clone(),
-    ];
-=======
         summary_after_second_compact.clone(),
     ];
     expected_after_second_compact_user_texts.extend_from_slice(seeded_user_prefix);
     expected_after_second_compact_user_texts.push("AFTER_COMPACT_2".to_string());
     let mut expected_fork_local_user_texts =
         vec!["AFTER_FORK".to_string(), summary_after_second_compact];
->>>>>>> origin/main
     expected_fork_local_user_texts.extend_from_slice(seeded_user_prefix);
     expected_fork_local_user_texts.push("AFTER_COMPACT_2".to_string());
     let final_user_texts = json_message_input_texts(&requests[requests.len() - 1], "user");
@@ -421,13 +406,6 @@ async fn compact_resume_after_second_compaction_preserves_history() -> Result<()
         .split_last()
         .unwrap_or_else(|| panic!("after-second-resume request missing user messages"));
     assert_eq!(final_last, AFTER_SECOND_RESUME);
-<<<<<<< HEAD
-    let matched_prefix_len = if final_prefix.starts_with(&expected_after_second_compact_user_texts)
-    {
-        expected_after_second_compact_user_texts.len()
-    } else if final_prefix.starts_with(&expected_fork_local_user_texts) {
-        expected_fork_local_user_texts.len()
-=======
     let matched_prefix_len = if let Some(start) = final_prefix
         .windows(expected_after_second_compact_user_texts.len())
         .position(|window| window == expected_after_second_compact_user_texts)
@@ -438,7 +416,6 @@ async fn compact_resume_after_second_compaction_preserves_history() -> Result<()
         .position(|window| window == expected_fork_local_user_texts)
     {
         start + expected_fork_local_user_texts.len()
->>>>>>> origin/main
     } else {
         panic!("after-second-resume user texts should preserve post-compact user history prefix");
     };
@@ -491,7 +468,7 @@ async fn snapshot_rollback_past_compaction_replays_append_only_history() -> Resu
 
     let request_log = mount_sse_sequence(&server, vec![sse1, sse2, sse3, sse4]).await;
 
-    let (_home, _config, _manager, base) = start_test_conversation(&server, None).await;
+    let (_home, _config, _manager, base) = start_test_conversation(&server, /*model*/ None).await;
 
     user_turn(&base, "hello world").await;
     compact_conversation(&base).await;
@@ -553,14 +530,9 @@ async fn snapshot_rollback_past_compaction_replays_append_only_history() -> Resu
 
 #[tokio::test(flavor = "multi_thread", worker_threads = 2)]
 /// Scenario: rolling back a turn that introduced persistent pre-turn context
-<<<<<<< HEAD
-/// diffs currently duplicates those context updates on the next request.
-async fn snapshot_rollback_followup_turn_duplicates_context_updates() -> Result<()> {
-=======
 /// diffs should trim those context updates so the next request includes them
 /// only once.
 async fn snapshot_rollback_followup_turn_trims_context_updates() -> Result<()> {
->>>>>>> origin/main
     if network_disabled() {
         println!("Skipping test because network is disabled in this sandbox");
         return Ok(());
@@ -639,23 +611,12 @@ async fn snapshot_rollback_followup_turn_trims_context_updates() -> Result<()> {
     let requests = request_log.requests();
     assert_eq!(requests.len(), 3);
 
-<<<<<<< HEAD
-    assert_eq!(
-        requests[1]
-            .message_input_texts("developer")
-            .iter()
-            .filter(|text| text.contains(ROLLED_BACK_DEV_INSTRUCTIONS))
-            .count(),
-        1
-    );
-=======
     let before_rollback_developer_count = requests[1]
         .message_input_texts("developer")
         .iter()
         .filter(|text| text.contains(ROLLED_BACK_DEV_INSTRUCTIONS))
         .count();
     assert_eq!(before_rollback_developer_count, 1);
->>>>>>> origin/main
     assert_eq!(
         requests[1]
             .message_input_texts("user")
@@ -664,16 +625,6 @@ async fn snapshot_rollback_followup_turn_trims_context_updates() -> Result<()> {
             .count(),
         1
     );
-<<<<<<< HEAD
-    assert_eq!(
-        requests[2]
-            .message_input_texts("developer")
-            .iter()
-            .filter(|text| text.contains(ROLLED_BACK_DEV_INSTRUCTIONS))
-            .count(),
-        2
-    );
-=======
 
     let after_rollback_developer_count = requests[2]
         .message_input_texts("developer")
@@ -681,7 +632,6 @@ async fn snapshot_rollback_followup_turn_trims_context_updates() -> Result<()> {
         .filter(|text| text.contains(ROLLED_BACK_DEV_INSTRUCTIONS))
         .count();
     assert_eq!(after_rollback_developer_count, 1);
->>>>>>> origin/main
 
     let after_rollback_user_texts = requests[2].message_input_texts("user");
     assert_eq!(
@@ -689,11 +639,7 @@ async fn snapshot_rollback_followup_turn_trims_context_updates() -> Result<()> {
             .iter()
             .filter(|text| text.contains(PRETURN_CONTEXT_DIFF_CWD))
             .count(),
-<<<<<<< HEAD
-        2
-=======
         1
->>>>>>> origin/main
     );
     assert_eq!(
         after_rollback_user_texts.last().map(String::as_str),
@@ -701,15 +647,9 @@ async fn snapshot_rollback_followup_turn_trims_context_updates() -> Result<()> {
     );
 
     insta::assert_snapshot!(
-<<<<<<< HEAD
-        "rollback_followup_turn_duplicates_context_updates",
-        context_snapshot::format_labeled_requests_snapshot(
-            "rollback currently duplicates pre-turn override context updates on the follow-up request",
-=======
         "rollback_followup_turn_trims_context_updates",
         context_snapshot::format_labeled_requests_snapshot(
             "rollback trims pre-turn override context updates before the follow-up request",
->>>>>>> origin/main
             &[
                 ("rolled-back turn request", &requests[1]),
                 ("follow-up request after rollback", &requests[2]),
@@ -905,10 +845,15 @@ async fn resume_conversation(
     let auth_manager = codex_core::test_support::auth_manager_from_auth(
         codex_core::CodexAuth::from_api_key("dummy"),
     );
-    Box::pin(manager.resume_thread_from_rollout(config.clone(), path, auth_manager, None))
-        .await
-        .expect("resume conversation")
-        .thread
+    Box::pin(manager.resume_thread_from_rollout(
+        config.clone(),
+        path,
+        auth_manager,
+        /*parent_trace*/ None,
+    ))
+    .await
+    .expect("resume conversation")
+    .thread
 }
 
 #[cfg(test)]
@@ -918,8 +863,14 @@ async fn fork_thread(
     path: std::path::PathBuf,
     nth_user_message: usize,
 ) -> Arc<CodexThread> {
-    Box::pin(manager.fork_thread(nth_user_message, config.clone(), path, false, None))
-        .await
-        .expect("fork conversation")
-        .thread
+    Box::pin(manager.fork_thread(
+        nth_user_message,
+        config.clone(),
+        path,
+        /*persist_extended_history*/ false,
+        /*parent_trace*/ None,
+    ))
+    .await
+    .expect("fork conversation")
+    .thread
 }

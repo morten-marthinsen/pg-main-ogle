@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "skill": "3.3-B Action Sequencer",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "ranked_opportunities.json + risk_factors.json + evidence_packages.json"
+  },
+  "OPP-01_OPP-02_combined": {
+    "rationale": "OPP-01 (distance) and OPP-02 (fair price) are the two pillars of the frame claim and should be executed as a single campaign, not separate initiatives. The action sequence reflects this.",
+    "phases": {
+      "PHASE_1_IMMEDIATE": {
+        "timeframe": "0-2 weeks",
+        "objective": "Finalize product positioning, proof assets, and campaign foundation",
+        "actions": [
+          {
+            "type": "RESEARCH",
+            "action": "Finalize Golf Laboratories data package — confirm exact numbers (carry distance, total distance, spin rate, launch angle) at 95mph for iON+ vs ProV1 vs top competitors. Get permission to cite in marketing.",
+            "owner": "Ben / product team",
+            "dependency": "Must complete before any marketing claims go live",
+            "risk_mitigation": "MESSAGING_RISK — transparent data is the foundation"
+          },
+          {
+            "type": "RESEARCH",
+            "action": "Confirm final pricing ($29.99 or $34.99/dozen). This changes messaging intensity — $30 = 'half the price of ProV1', $35 = 'two-thirds with better performance.'",
+            "owner": "Ben / Brixton",
+            "dependency": "Must lock before copy production begins"
+          },
+          {
+            "type": "CREATE",
+            "action": "Produce iON+ Soul.md expanded version — fill Audience Voice Samples and Cultural Context sections using Layer 2.5 gold phrases and voice of customer analysis. This is the creative brief for all downstream copy.",
+            "owner": "Marketing OS / copywriting engine",
+            "dependency": "Requires approved FINAL_HANDOFF.md"
+          },
+          {
+            "type": "CREATE",
+            "action": "Build the core message engine output (Skill 01) — frame claim, mechanism, promise, Big Idea — using FINAL_HANDOFF.md as input. This produces the creative foundation all copy builds on.",
+            "owner": "Marketing OS / Engine 01",
+            "dependency": "Requires FINAL_HANDOFF.md + expanded Soul.md"
+          },
+          {
+            "type": "TEST",
+            "action": "Validate supply chain readiness — confirm inventory, fulfillment partner, shipping costs, and reorder lead times for golf ball physical product.",
+            "owner": "Operations / Ben",
+            "dependency": "EXECUTION_RISK mitigation — must complete before campaign launch",
+            "risk_mitigation": "EXECUTION_RISK — fulfillment capacity"
+          }
+        ]
+      },
+      "PHASE_2_SHORT_TERM": {
+        "timeframe": "2-6 weeks",
+        "objective": "Produce campaign assets and launch",
+        "actions": [
+          {
+            "type": "CREATE",
+            "action": "Produce e-commerce product page using Marketing OS Engine 03 (e-comm). Lead with distance + fair price. Feature Golf Laboratories data prominently. Visual alignment system as the differentiator section.",
+            "owner": "Marketing OS / Engine 03",
+            "dependency": "Requires core message output from Phase 1"
+          },
+          {
+            "type": "CREATE",
+            "action": "Produce email launch sequence using Marketing OS Engine 07 (emails). Sequence: (1) frame claim teaser, (2) Golf Laboratories data reveal, (3) price reveal + offer, (4) alignment tech feature, (5) close/urgency.",
+            "owner": "Marketing OS / Engine 07",
+            "dependency": "Requires core message + e-comm page"
+          },
+          {
+            "type": "CREATE",
+            "action": "Produce ad creative using Marketing OS Engine 08 (ads). Lead angles: 'Your ball matters' (distance data), 'The $55 ball isn't worth it' (price), 'Robot tested at YOUR speed' (proof).",
+            "owner": "Marketing OS / Engine 08 + Creative OS",
+            "dependency": "Requires core message + e-comm page"
+          },
+          {
+            "type": "LAUNCH",
+            "action": "Soft launch to PG email list (warmest audience). PG's existing customers are the ideal first buyers — they already trust PG and are likely in the 80-95mph target range.",
+            "owner": "Ben / marketing team",
+            "dependency": "Requires e-comm page + email sequence + supply chain confirmed"
+          },
+          {
+            "type": "MEASURE",
+            "action": "Track email open rates, click-through to product page, add-to-cart rate, and conversion rate from soft launch. Compare to PG's historical product launch benchmarks.",
+            "owner": "Marketing / analytics",
+            "dependency": "Requires soft launch live"
+          }
+        ]
+      },
+      "PHASE_3_MEDIUM_TERM": {
+        "timeframe": "6-12 weeks",
+        "objective": "Scale, optimize, and expand",
+        "actions": [
+          {
+            "type": "OPTIMIZE",
+            "action": "Optimize ad creative based on Phase 2 performance data. Kill underperforming angles, scale winners. Test distance-lead vs. price-lead vs. proof-lead as primary hooks.",
+            "owner": "Marketing / Creative OS",
+            "dependency": "Requires 2+ weeks of ad performance data"
+          },
+          {
+            "type": "CREATE",
+            "action": "Produce video content (VSL or product demo) using Marketing OS Engine 02 (long-form). Feature the Golf Laboratories testing footage if available. Show real golfers testing iON+ on a launch monitor.",
+            "owner": "Marketing OS / Engine 02 + Creative OS (Veda)",
+            "dependency": "Requires customer feedback and ideally video of robot testing"
+          },
+          {
+            "type": "CREATE",
+            "action": "Produce advertorial content using Marketing OS Engine 09. Angle: 'The golf ball that beat ProV1 in independent testing — and costs half as much.' Target golf enthusiast publications and social.",
+            "owner": "Marketing OS / Engine 09",
+            "dependency": "Requires proven messaging from Phase 2"
+          },
+          {
+            "type": "TEST",
+            "action": "Launch subscription/auto-ship option for repeat buyers. Golf balls are consumable — recurring revenue is the long-term play.",
+            "owner": "E-commerce / operations",
+            "dependency": "Requires sufficient initial sales volume to justify subscription infrastructure"
+          },
+          {
+            "type": "MEASURE",
+            "action": "Track repeat purchase rate, subscription opt-in rate, and customer lifetime value. Compare to PG's device/digital product LTV benchmarks.",
+            "owner": "Analytics",
+            "dependency": "Requires 8+ weeks of sales data"
+          },
+          {
+            "type": "OPTIMIZE",
+            "action": "Collect and publish customer testimonials. Structure as before/after switch stories (per transformation pair format). Feature specific distance gains with numbers.",
+            "owner": "Marketing / customer success",
+            "dependency": "Requires customers who've played 3+ rounds with iON+"
+          }
+        ]
+      }
+    }
+  }
+}

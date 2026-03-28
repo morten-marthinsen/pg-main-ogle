@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "skill": "1.1-A Platform Identifier v2.0",
+    "generated_date": "2026-03-26",
+    "project": "iON+ Golf Ball"
+  },
+
+  "platforms": [
+    {
+      "name": "Reddit r/golf",
+      "type": "forum",
+      "url": "reddit.com/r/golf",
+      "tool": "apify",
+      "priority": "critical",
+      "topics_served": [
+        "Distance loss frustration",
+        "Golf ball purchase decision-making",
+        "Price sensitivity in mid-tier balls",
+        "Brand loyalty and switching resistance",
+        "Swing speed awareness",
+        "Ionomer vs urethane perception",
+        "Alignment marks usage",
+        "Age-related distance loss",
+        "Ball loss patterns and cost psychology",
+        "Robot testing credibility",
+        "DTC golf ball brand perception",
+        "Golf ball feel definition",
+        "Equipment shame and identity",
+        "Spin and slice connection"
+      ],
+      "awareness_levels": [1, 2, 3, 4],
+      "estimated_quote_volume": "400+",
+      "specific_targets": ["r/golf", "r/GolfEquipment"],
+      "fallback_tool": "perplexity",
+      "notes": "Firecrawl blocked on Reddit — Apify only. Highest volume source. All awareness levels present. Use fatihtahta/reddit-scraper-search-fast actor."
+    },
+    {
+      "name": "GolfWRX Forums",
+      "type": "forum",
+      "url": "golfwrx.com/forums",
+      "tool": "firecrawl",
+      "priority": "critical",
+      "topics_served": [
+        "Spin and slice connection",
+        "Swing speed awareness and ball fitting",
+        "Ionomer vs urethane perception",
+        "Compression rating confusion",
+        "Ball construction layers debate",
+        "Greenside spin vs driver spin tradeoff",
+        "Brand loyalty and switching",
+        "Competitor mechanisms and claims",
+        "Robot testing credibility"
+      ],
+      "awareness_levels": [3, 4],
+      "estimated_quote_volume": "200+",
+      "specific_targets": [
+        "golfwrx.com/forums/forum/9-balls-pair-or-group-reviews/",
+        "golfwrx.com/forums/forum/8-balls-pair-or-group-buying-selling-trading/"
+      ],
+      "fallback_tool": "apify",
+      "notes": "More technical audience than Reddit. Skews toward knowledgeable amateurs and equipment nerds. Deep ball construction discussions."
+    },
+    {
+      "name": "Amazon Golf Ball Reviews",
+      "type": "review",
+      "url": "amazon.com",
+      "tool": "firecrawl",
+      "priority": "critical",
+      "topics_served": [
+        "Golf ball feel definition",
+        "Price sensitivity",
+        "Distance performance claims vs reality",
+        "Brand switching stories",
+        "Durability and loss patterns",
+        "Competitor product reception"
+      ],
+      "awareness_levels": [3, 4],
+      "estimated_quote_volume": "250+",
+      "specific_targets": [
+        "Callaway ERC Soft reviews",
+        "Callaway Supersoft reviews",
+        "Bridgestone e6 reviews",
+        "Bridgestone e12 reviews",
+        "Srixon Soft Feel reviews",
+        "TaylorMade Soft Response reviews",
+        "Vice Drive reviews",
+        "Vice Pro reviews",
+        "Kirkland Signature golf ball reviews",
+        "Titleist TruFeel reviews",
+        "Maxfli SoftFli reviews"
+      ],
+      "fallback_tool": "apify",
+      "notes": "Verified purchaser reviews — real post-purchase language. Volume per ball varies. Sort by most recent and most helpful."
+    },
+    {
+      "name": "YouTube Golf Ball Review Comments",
+      "type": "video-comments",
+      "url": "youtube.com",
+      "tool": "apify",
+      "priority": "high",
+      "topics_served": [
+        "Distance loss frustration",
+        "Ball testing credibility",
+        "Brand switching stories",
+        "Feel definition",
+        "Age-related distance loss",
+        "Equipment identity"
+      ],
+      "awareness_levels": [2, 3],
+      "estimated_quote_volume": "150+",
+      "specific_targets": [
+        "Rick Shiels golf ball reviews",
+        "TXG golf ball testing",
+        "Mark Crossfield ball comparisons",
+        "MrShortGame ball reviews",
+        "Golf Sidekick ball discussions",
+        "MyGolfSpy YouTube ball tests",
+        "2nd Swing Golf ball comparisons"
+      ],
+      "fallback_tool": "perplexity",
+      "notes": "3-step YouTube protocol: (1) search for videos, (2) get video IDs, (3) scrape comments. Comments are more emotionally raw than forum posts."
+    },
+    {
+      "name": "MyGolfSpy",
+      "type": "review-site",
+      "url": "mygolfspy.com",
+      "tool": "firecrawl",
+      "priority": "high",
+      "topics_served": [
+        "Robot testing credibility",
+        "Golf ball value analysis",
+        "Competitor mechanisms and claims",
+        "Data-driven ball comparisons",
+        "Ball fitting awareness"
+      ],
+      "awareness_levels": [3, 4],
+      "estimated_quote_volume": "100+",
+      "specific_targets": [
+        "mygolfspy.com/best-golf-balls/",
+        "mygolfspy.com/golf-ball-test/",
+        "Comment sections on ball review articles"
+      ],
+      "fallback_tool": "apify",
+      "notes": "Independent testing — community trusts their data. Comment sections contain strong opinions on value, testing methodology, and brand loyalty."
+    },
+    {
+      "name": "Golf Digest / Golf.com",
+      "type": "media",
+      "url": "golfdigest.com / golf.com",
+      "tool": "firecrawl",
+      "priority": "high",
+      "topics_served": [
+        "Golf ball buyer guide criteria",
+        "Hot List positioning and messaging",
+        "Competitor product claims",
+        "Market saturation messaging"
+      ],
+      "awareness_levels": [3, 4],
+      "estimated_quote_volume": "50+",
+      "specific_targets": [
+        "golfdigest.com/hot-list/golf-balls",
+        "golf.com/gear/golf-balls/",
+        "golfdigest.com 'best golf balls' buyer guides"
+      ],
+      "fallback_tool": "perplexity",
+      "notes": "Editorial content with comment sections. Useful for understanding how media frames the golf ball market and what criteria they emphasize."
+    },
+    {
+      "name": "The Hackers Paradise Forum",
+      "type": "forum",
+      "url": "thehackersparadise.com",
+      "tool": "firecrawl",
+      "priority": "moderate",
+      "topics_served": [
+        "Average golfer identity",
+        "Equipment shame",
+        "Distance loss frustration (from average golfer perspective)",
+        "Ball loss psychology",
+        "Price sensitivity (budget-conscious segment)"
+      ],
+      "awareness_levels": [2, 3],
+      "estimated_quote_volume": "50+",
+      "specific_targets": ["thehackersparadise.com/forum/ (ball-related threads)"],
+      "fallback_tool": "apify",
+      "notes": "Self-identified average golfers — closer to iON+ target than GolfWRX. Less technical, more emotional."
+    },
+    {
+      "name": "Golf Monthly Forum",
+      "type": "forum",
+      "url": "forums.golfmonthly.com",
+      "tool": "firecrawl",
+      "priority": "moderate",
+      "topics_served": [
+        "UK/international golfer perspective",
+        "Ball selection discussions",
+        "Brand perception outside US market"
+      ],
+      "awareness_levels": [3],
+      "estimated_quote_volume": "30+",
+      "specific_targets": ["forums.golfmonthly.com (equipment/ball threads)"],
+      "fallback_tool": "perplexity",
+      "notes": "UK-centric forum. Useful for international perspective but lower priority for US-focused launch."
+    },
+    {
+      "name": "Facebook Golf Groups (cached)",
+      "type": "social",
+      "url": "facebook.com",
+      "tool": "perplexity",
+      "priority": "moderate",
+      "topics_served": [
+        "Older demographic ball discussions",
+        "Age-related distance loss",
+        "Equipment identity among seniors",
+        "Price sensitivity (retiree budget)"
+      ],
+      "awareness_levels": [2, 3],
+      "estimated_quote_volume": "30+",
+      "specific_targets": ["Facebook golf groups (via Perplexity cached/indexed content)"],
+      "fallback_tool": "exa",
+      "notes": "Cannot scrape Facebook directly. Use Perplexity and Exa to surface cached/indexed discussions. Older demographic — 50-70+ golfers."
+    },
+    {
+      "name": "Competitor Product Pages",
+      "type": "competitor-marketing",
+      "url": "various",
+      "tool": "firecrawl",
+      "priority": "high",
+      "topics_served": [
+        "Competitor mechanisms and claims",
+        "Market saturation messaging",
+        "Competitor positioning language",
+        "Price anchoring"
+      ],
+      "awareness_levels": [4, 5],
+      "estimated_quote_volume": "N/A (messaging analysis, not quote extraction)",
+      "specific_targets": [
+        "callawaygolf.com/golf-balls/erc-soft.html",
+        "callawaygolf.com/golf-balls/supersoft.html",
+        "titleist.com/golf-balls/pro-v1",
+        "titleist.com/golf-balls/trufeel",
+        "bridgestonegolf.com/golf-balls/e6",
+        "bridgestonegolf.com/golf-balls/e12",
+        "taylormadegolf.com/golf-balls/soft-response",
+        "vicegolf.com/collections/golf-balls",
+        "srixon.com/golf-balls/soft-feel"
+      ],
+      "fallback_tool": "apify",
+      "notes": "Not for quote extraction — for competitor messaging analysis. What claims, mechanisms, and language are they using?"
+    }
+  ],
+
+  "tool_distribution": {
+    "firecrawl": ["GolfWRX Forums", "Amazon Golf Ball Reviews", "MyGolfSpy", "Golf Digest / Golf.com", "The Hackers Paradise Forum", "Golf Monthly Forum", "Competitor Product Pages"],
+    "apify": ["Reddit r/golf", "YouTube Golf Ball Review Comments"],
+    "perplexity": ["Facebook Golf Groups (cached)"],
+    "exa": []
+  },
+
+  "coverage_analysis": {
+    "topics_covered": {
+      "Distance loss frustration": ["Reddit", "YouTube", "The Hackers Paradise"],
+      "Spin and slice connection": ["Reddit", "GolfWRX"],
+      "Golf ball purchase decision-making": ["Reddit", "Amazon", "Facebook"],
+      "Price sensitivity": ["Reddit", "Amazon", "The Hackers Paradise", "Facebook"],
+      "Brand loyalty and switching": ["Reddit", "GolfWRX", "Amazon", "MyGolfSpy"],
+      "Swing speed awareness": ["Reddit", "GolfWRX"],
+      "Ionomer vs urethane perception": ["Reddit", "GolfWRX"],
+      "Alignment marks usage": ["Reddit"],
+      "Age-related distance loss": ["Reddit", "YouTube", "Facebook"],
+      "Ball loss patterns": ["Reddit", "Amazon", "The Hackers Paradise"],
+      "Robot testing credibility": ["Reddit", "GolfWRX", "MyGolfSpy"],
+      "DTC brand perception": ["Reddit", "Amazon"],
+      "Feel definition": ["Reddit", "GolfWRX", "Amazon", "YouTube"],
+      "Equipment identity": ["Reddit", "YouTube", "The Hackers Paradise", "Facebook"],
+      "Compression rating confusion": ["GolfWRX"],
+      "Ball construction layers": ["GolfWRX"],
+      "Greenside spin tradeoff": ["GolfWRX"],
+      "Ball fitting awareness": ["GolfWRX", "MyGolfSpy"],
+      "Competitor mechanisms": ["GolfWRX", "MyGolfSpy", "Competitor Pages", "Golf Digest"],
+      "Market saturation messaging": ["Competitor Pages", "Golf Digest"]
+    },
+    "awareness_levels_covered": {
+      "level_1": ["Reddit (ball doesn't matter threads)"],
+      "level_2": ["Reddit", "YouTube", "The Hackers Paradise", "Facebook"],
+      "level_3": ["Reddit", "GolfWRX", "Amazon", "YouTube", "MyGolfSpy", "The Hackers Paradise", "Golf Monthly", "Facebook"],
+      "level_4": ["GolfWRX", "Amazon", "MyGolfSpy", "Golf Digest", "Competitor Pages"],
+      "level_5": ["Competitor Pages (post-launch only — currently 0% at L5)"]
+    },
+    "gaps_identified": [
+      "Alignment marks topic only covered by Reddit — consider adding YouTube search for 'golf ball alignment line putting' to increase coverage",
+      "Compression confusion only covered by GolfWRX — consider Reddit queries specifically about compression ratings",
+      "Level 1 coverage is thin (only Reddit) — acceptable given 15% population, but add specific 'ball doesn't matter' and 'all balls are the same' queries"
+    ]
+  },
+
+  "validation": {
+    "total_platforms": 10,
+    "critical_count": 3,
+    "high_count": 4,
+    "moderate_count": 3,
+    "all_topics_covered": true,
+    "all_awareness_levels_covered": true,
+    "no_platform_without_tool": true,
+    "all_blocked_have_alternatives": true,
+    "all_minimums_met": true
+  }
+}

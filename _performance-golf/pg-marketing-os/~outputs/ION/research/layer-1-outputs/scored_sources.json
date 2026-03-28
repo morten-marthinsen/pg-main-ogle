@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "skill": "1.2-B Source Scorer v2.0",
+    "generated_date": "2026-03-26",
+    "project": "iON+ Golf Ball",
+    "total_sources": 131,
+    "sources_scored": 131,
+    "high_priority": 52,
+    "medium_priority": 58,
+    "low_priority": 21,
+    "scoring_date": "2026-03-26",
+    "scoring_formula": "composite = (relevance*0.40 + volume*0.30 + freshness*0.15 + engagement*0.15) * 10"
+  },
+
+  "high_priority_sources": [
+    {"id": "R01", "title": "Best ball for slow swing speed, but still soft/spinny", "platform": "Reddit", "relevance": 10, "volume": 8, "freshness": 8, "engagement": 8, "composite": 88, "bucket": "HOPE", "notes": "Direct iON+ target query. High-reply thread with multiple ball recommendations and personal experience sharing."},
+    {"id": "R02", "title": "What's your swing speed and what ball do you use?", "platform": "Reddit", "relevance": 10, "volume": 9, "freshness": 9, "engagement": 9, "composite": 94, "bucket": "HOPE", "notes": "Massive data collection thread. Swing speed + ball pairing = exactly the data we need. High comment count."},
+    {"id": "R04", "title": "Best Golf Ball for 95 MPH Swing Speed", "platform": "Reddit", "relevance": 10, "volume": 8, "freshness": 9, "engagement": 8, "composite": 90, "bucket": "HOPE", "notes": "EXACT iON+ target swing speed. Direct market validation thread."},
+    {"id": "R10", "title": "Are Pro V1's worth it? Not a crazy good golfer", "platform": "Reddit", "relevance": 9, "volume": 9, "freshness": 6, "engagement": 9, "composite": 85, "bucket": "VILLAIN", "notes": "Classic value debate. Self-identified average golfer questioning premium pricing."},
+    {"id": "R11", "title": "Is the Pro v1 really the best ball there is?", "platform": "Reddit", "relevance": 9, "volume": 8, "freshness": 9, "engagement": 8, "composite": 86, "bucket": "COMPETITOR_MECHANISM", "notes": "Pro V1 skepticism from average golfers. Rich switching language."},
+    {"id": "R13", "title": "Did Titleist really raise their prices on ProV's?!", "platform": "Reddit", "relevance": 8, "volume": 8, "freshness": 8, "engagement": 9, "composite": 82, "bucket": "VILLAIN", "notes": "Price outrage thread. Villain language about Titleist pricing."},
+    {"id": "R14", "title": "Are premium golf balls really worth it?", "platform": "Reddit", "relevance": 9, "volume": 8, "freshness": 7, "engagement": 8, "composite": 82, "bucket": "VILLAIN", "notes": "Direct value question from average golfer perspective."},
+    {"id": "R16", "title": "At what handicap did you begin using new premium balls?", "platform": "Reddit", "relevance": 9, "volume": 8, "freshness": 8, "engagement": 8, "composite": 84, "bucket": "PAIN", "notes": "Equipment identity thread. 'Am I good enough for this ball?' language."},
+    {"id": "R17", "title": "For a high handicapper, do better golf balls make a real difference?", "platform": "Reddit", "relevance": 10, "volume": 8, "freshness": 7, "engagement": 8, "composite": 86, "bucket": "ROOT_CAUSE", "notes": "Root cause education thread. Does ball choice actually matter for average golfers?"},
+    {"id": "R18", "title": "What Age should we expect to lose distance off the tee", "platform": "Reddit", "relevance": 10, "volume": 9, "freshness": 9, "engagement": 9, "composite": 94, "bucket": "PAIN", "notes": "Age-related distance loss. High emotional intensity. Core pain topic for 40-65+ target."},
+    {"id": "R19", "title": "Switched from Kirkland to Pro v1s and I get what the hype is about", "platform": "Reddit", "relevance": 8, "volume": 8, "freshness": 8, "engagement": 8, "composite": 80, "bucket": "SOLUTIONS_TRIED", "notes": "Brand switching story with before/after comparison."},
+    {"id": "R20", "title": "Vice Golf Balls vs Titleist (Opinions)", "platform": "Reddit", "relevance": 8, "volume": 8, "freshness": 7, "engagement": 8, "composite": 78, "bucket": "COMPETITOR_MECHANISM", "notes": "DTC vs premium brand comparison. Trust/quality debate."},
+    {"id": "R21", "title": "What is your honest review of Vice golf balls?", "platform": "Reddit", "relevance": 8, "volume": 8, "freshness": 7, "engagement": 8, "composite": 78, "bucket": "COMPETITOR_MECHANISM", "notes": "DTC brand honest assessment. Durability, feel, value language."},
+    {"id": "R23", "title": "Vice balls... waste of money? Or bang for your buck?", "platform": "Reddit", "relevance": 8, "volume": 7, "freshness": 6, "engagement": 7, "composite": 72, "bucket": "COMPETITOR_MECHANISM", "notes": "DTC value debate. Direct relevance to iON+ positioning."},
+    {"id": "R25", "title": "Bridgestone ball fitting results. Marketing scam?", "platform": "Reddit", "relevance": 8, "volume": 7, "freshness": 5, "engagement": 7, "composite": 70, "bucket": "VILLAIN", "notes": "Marketing cynicism. Ball fitting skepticism. Industry distrust."},
+    {"id": "R26", "title": "What are the biggest scams in golf?", "platform": "Reddit", "relevance": 7, "volume": 9, "freshness": 7, "engagement": 9, "composite": 78, "bucket": "VILLAIN", "notes": "High-engagement thread. Golf industry villain language across many categories."},
+    {"id": "R27", "title": "Golf Industry Price Gouging", "platform": "Reddit", "relevance": 8, "volume": 7, "freshness": 7, "engagement": 7, "composite": 74, "bucket": "VILLAIN", "notes": "Industry-level pricing anger. Systemic villain framing."},
+    {"id": "R28", "title": "Does the ball you use make a difference to your distance?", "platform": "Reddit", "relevance": 10, "volume": 8, "freshness": 8, "engagement": 8, "composite": 88, "bucket": "ROOT_CAUSE", "notes": "Direct root cause question. Ball-to-distance causation debate."},
+    {"id": "R29", "title": "Changed the ball I was using, gained 15-20 yards", "platform": "Reddit", "relevance": 10, "volume": 8, "freshness": 7, "engagement": 8, "composite": 86, "bucket": "HOPE", "notes": "Transformation story. Ball switching = distance gain. Hero narrative."},
+    {"id": "R30", "title": "At what point does your choice of golf ball really impact...", "platform": "Reddit", "relevance": 9, "volume": 7, "freshness": 8, "engagement": 7, "composite": 80, "bucket": "ROOT_CAUSE", "notes": "When does ball choice matter? Education-seeking thread."},
+    {"id": "R31", "title": "How much does a ball really effect distance for a 22 handicapper", "platform": "Reddit", "relevance": 10, "volume": 7, "freshness": 8, "engagement": 7, "composite": 84, "bucket": "ROOT_CAUSE", "notes": "Exact iON+ target handicap asking the root cause question."},
+    {"id": "R32", "title": "How big a difference do balls make?", "platform": "Reddit", "relevance": 9, "volume": 8, "freshness": 7, "engagement": 8, "composite": 82, "bucket": "ROOT_CAUSE", "notes": "Ball impact debate with personal experience sharing."},
+    {"id": "R35", "title": "Changing golf balls (lost 13 balls in one round)", "platform": "Reddit", "relevance": 8, "volume": 7, "freshness": 9, "engagement": 8, "composite": 78, "bucket": "PAIN", "notes": "Ball loss pattern with emotional language. Cost psychology."},
+    {"id": "R07", "title": "What's your go to ball for the budget conscious player", "platform": "Reddit", "relevance": 9, "volume": 8, "freshness": 8, "engagement": 8, "composite": 84, "bucket": "HOPE", "notes": "Price-conscious shopping. Direct iON+ price segment."},
+    {"id": "R09", "title": "Callaway SuperSoft or Srixon Soft Feel", "platform": "Reddit", "relevance": 9, "volume": 7, "freshness": 9, "engagement": 7, "composite": 82, "bucket": "COMPETITOR_MECHANISM", "notes": "Direct competitor head-to-head in iON+ segment."},
+    {"id": "R03", "title": "Golf ball recommendations for distance off the tee", "platform": "Reddit", "relevance": 10, "volume": 7, "freshness": 8, "engagement": 7, "composite": 84, "bucket": "HOPE", "notes": "Distance-focused shopping thread."},
+
+    {"id": "G01", "title": "Best distance ball for a slow swinger?", "platform": "GolfWRX", "relevance": 10, "volume": 8, "freshness": 6, "engagement": 7, "composite": 82, "bucket": "HOPE", "notes": "Deep technical discussion. Ball recommendations with reasoning."},
+    {"id": "G02", "title": "Truth in advertising, balls for slower swing speeds?", "platform": "GolfWRX", "relevance": 9, "volume": 7, "freshness": 5, "engagement": 7, "composite": 74, "bucket": "VILLAIN", "notes": "Marketing skepticism from knowledgeable golfers."},
+    {"id": "G03", "title": "Best ball for senior golfer (slow swing) but still hold greens", "platform": "GolfWRX", "relevance": 10, "volume": 8, "freshness": 7, "engagement": 7, "composite": 84, "bucket": "HOPE", "notes": "Exact iON+ target. Senior + slow swing + greenside performance."},
+    {"id": "G04", "title": "Chrome Soft - Nothing better for slow swinging seniors?", "platform": "GolfWRX", "relevance": 9, "volume": 7, "freshness": 7, "engagement": 7, "composite": 78, "bucket": "COMPETITOR_MECHANISM", "notes": "Competitor ball debate for seniors."},
+    {"id": "G05", "title": "Are 'tour' balls bad for amateurs?", "platform": "GolfWRX", "relevance": 10, "volume": 8, "freshness": 7, "engagement": 8, "composite": 86, "bucket": "ROOT_CAUSE", "notes": "Core root cause thread. Tour balls = wrong for amateurs. Frame claim material."},
+    {"id": "G06", "title": "How important is swing speed really? (Golf Balls)", "platform": "GolfWRX", "relevance": 9, "volume": 7, "freshness": 6, "engagement": 7, "composite": 76, "bucket": "ROOT_CAUSE", "notes": "Swing speed to ball matching education."},
+    {"id": "G07", "title": "Anyone experience a sudden loss in distance?", "platform": "GolfWRX", "relevance": 9, "volume": 8, "freshness": 6, "engagement": 8, "composite": 80, "bucket": "PAIN", "notes": "Distance loss panic thread. Emotional."},
+    {"id": "G08", "title": "Supersoft or E6?", "platform": "GolfWRX", "relevance": 9, "volume": 7, "freshness": 5, "engagement": 7, "composite": 74, "bucket": "COMPETITOR_MECHANISM", "notes": "Direct competitor comparison in iON+ segment."},
+    {"id": "G09", "title": "Supersoft or Soft Feel", "platform": "GolfWRX", "relevance": 9, "volume": 7, "freshness": 6, "engagement": 7, "composite": 76, "bucket": "COMPETITOR_MECHANISM", "notes": "Direct competitor comparison."},
+    {"id": "G10", "title": "Back to Kirkland... or is there something else?", "platform": "GolfWRX", "relevance": 8, "volume": 7, "freshness": 7, "engagement": 7, "composite": 74, "bucket": "COMPETITOR_MECHANISM", "notes": "Value ball loyalty and switching."},
+    {"id": "G11", "title": "To triple track or not?", "platform": "GolfWRX", "relevance": 9, "volume": 7, "freshness": 6, "engagement": 7, "composite": 76, "bucket": "HOPE", "notes": "Alignment technology debate — directly relevant to iON+ visual tech."},
+    {"id": "G15", "title": "Triple Track", "platform": "GolfWRX", "relevance": 9, "volume": 7, "freshness": 6, "engagement": 7, "composite": 76, "bucket": "COMPETITOR_MECHANISM", "notes": "Competitor alignment system reception."},
+    {"id": "G17", "title": "ionomer vs urethane - Does it really matter for a senior?", "platform": "GolfWRX", "relevance": 10, "volume": 7, "freshness": 5, "engagement": 7, "composite": 78, "bucket": "ROOT_CAUSE", "notes": "Cover material education for exact target demo (senior golfer)."},
+    {"id": "G18", "title": "Are Some People Just Doomed to have Slow Clubhead Speed?", "platform": "GolfWRX", "relevance": 8, "volume": 8, "freshness": 6, "engagement": 8, "composite": 76, "bucket": "PAIN", "notes": "Identity despair about speed. Emotional."},
+
+    {"id": "Y02", "title": "Top 5 Best Golf Balls for Maximum Distance 2025", "platform": "YouTube", "relevance": 9, "volume": 7, "freshness": 8, "engagement": 7, "composite": 78, "bucket": "HOPE", "notes": "Comments contain ball recommendation debates and personal experience."},
+    {"id": "Y03", "title": "Add Distance Now: Best Golf Balls for Slow Swing Speeds", "platform": "YouTube", "relevance": 10, "volume": 7, "freshness": 8, "engagement": 7, "composite": 82, "bucket": "HOPE", "notes": "Exact target topic. Comments from slow-swing-speed golfers."},
+    {"id": "Y06", "title": "Robot Tested: Best Golf Balls 2025 (MyGolfSpy)", "platform": "YouTube", "relevance": 8, "volume": 8, "freshness": 8, "engagement": 8, "composite": 80, "bucket": "COMPETITOR_MECHANISM", "notes": "Robot testing discussion. Comments debate methodology and results."},
+    {"id": "Y10", "title": "We Tested 5 Soft Golf Balls So You Don't Have To", "platform": "YouTube", "relevance": 9, "volume": 7, "freshness": 8, "engagement": 7, "composite": 78, "bucket": "COMPETITOR_MECHANISM", "notes": "Budget soft ball shootout. Comments contain preference language."},
+    {"id": "Y12", "title": "Over 50 and LOSING DISTANCE? Just Do THIS!", "platform": "YouTube", "relevance": 9, "volume": 7, "freshness": 7, "engagement": 8, "composite": 78, "bucket": "PAIN", "notes": "Senior distance loss. Comments are emotional goldmine."},
+    {"id": "Y15", "title": "New Kirkland vs Pro V1 – Which One Should You REALLY Play?", "platform": "YouTube", "relevance": 8, "volume": 8, "freshness": 8, "engagement": 8, "composite": 80, "bucket": "COMPETITOR_MECHANISM", "notes": "Value vs premium debate. Comments full of switching stories."},
+
+    {"id": "M01", "title": "Callaway ERC Soft Performance Review", "platform": "MyGolfSpy", "relevance": 9, "volume": 7, "freshness": 8, "engagement": 7, "composite": 78, "bucket": "COMPETITOR_MECHANISM", "notes": "Closest direct competitor. Independent testing + community comments."},
+    {"id": "M04", "title": "Kirkland Performance+ vs Pro V1 test results", "platform": "MyGolfSpy", "relevance": 8, "volume": 7, "freshness": 8, "engagement": 8, "composite": 76, "bucket": "COMPETITOR_MECHANISM", "notes": "Independent test showing Kirkland competitive. Value narrative."},
+
+    {"id": "H01", "title": "SuperSoft, Soft Feel or e6...?", "platform": "Hackers Paradise", "relevance": 9, "volume": 7, "freshness": 6, "engagement": 7, "composite": 76, "bucket": "COMPETITOR_MECHANISM", "notes": "Average golfer forum. Less technical, more emotional than GolfWRX."},
+    {"id": "D01", "title": "Urethane vs non-urethane: Robot test findings", "platform": "Golf Digest", "relevance": 9, "volume": 6, "freshness": 7, "engagement": 6, "composite": 72, "bucket": "ROOT_CAUSE", "notes": "Authoritative data on ionomer vs urethane performance gap."},
+    {"id": "D04", "title": "Best Golf Balls 2026: 62 models robot tested", "platform": "Today's Golfer", "relevance": 8, "volume": 8, "freshness": 10, "engagement": 7, "composite": 80, "bucket": "COMPETITOR_MECHANISM", "notes": "Comprehensive 2026 robot test. Most current competitive landscape data."},
+    {"id": "D05", "title": "Best golf balls for slow swing speeds 2026: 62 tested", "platform": "Today's Golfer", "relevance": 10, "volume": 8, "freshness": 10, "engagement": 7, "composite": 88, "bucket": "HOPE", "notes": "Exact iON+ segment. 2026 data. 62 models tested at slow swing speeds."},
+    {"id": "W01", "title": "Can 3 lines on a golf ball actually help your score?", "platform": "GolfWRX", "relevance": 9, "volume": 6, "freshness": 6, "engagement": 6, "composite": 70, "bucket": "HOPE", "notes": "Alignment technology deep dive. Directly relevant to iON+ differentiator."}
+  ],
+
+  "priority_distribution": {
+    "high": {
+      "count": 52,
+      "estimated_quotes": 780,
+      "platforms": {
+        "Reddit": 26,
+        "GolfWRX": 14,
+        "YouTube": 6,
+        "MyGolfSpy": 2,
+        "Other": 4
+      }
+    },
+    "medium": {
+      "count": 58,
+      "estimated_quotes": 348,
+      "platforms": {
+        "Reddit": 16,
+        "GolfWRX": 4,
+        "YouTube": 10,
+        "Review sites": 10,
+        "Other forums": 8,
+        "Competitor pages": 5,
+        "Articles": 5
+      }
+    },
+    "low": {
+      "count": 21,
+      "estimated_quotes": 42,
+      "platforms": {
+        "Various": 21
+      }
+    }
+  },
+
+  "bucket_coverage_by_priority": {
+    "PAIN": {"high": 7, "medium": 5, "total": 12, "estimated_quotes": 150, "target": 300, "status": "needs_scraping_expansion"},
+    "HOPE": {"high": 14, "medium": 8, "total": 22, "estimated_quotes": 290, "target": 250, "status": "strong"},
+    "ROOT_CAUSE": {"high": 10, "medium": 6, "total": 16, "estimated_quotes": 200, "target": 200, "status": "adequate"},
+    "SOLUTIONS_TRIED": {"high": 2, "medium": 6, "total": 8, "estimated_quotes": 80, "target": 150, "status": "needs_scraping_expansion"},
+    "COMPETITOR_MECHANISM": {"high": 15, "medium": 18, "total": 33, "estimated_quotes": 320, "target": 100, "status": "exceeds"},
+    "VILLAIN": {"high": 7, "medium": 5, "total": 12, "estimated_quotes": 130, "target": 75, "status": "exceeds"}
+  },
+
+  "topic_coverage": [
+    {"topic": "Distance loss frustration", "high_sources": 5, "total_sources": 8, "status": "strong"},
+    {"topic": "Age-related distance loss", "high_sources": 4, "total_sources": 7, "status": "strong"},
+    {"topic": "Spin and slice connection", "high_sources": 2, "total_sources": 4, "status": "adequate"},
+    {"topic": "Golf ball purchase decision-making", "high_sources": 3, "total_sources": 6, "status": "adequate"},
+    {"topic": "Price sensitivity", "high_sources": 4, "total_sources": 8, "status": "strong"},
+    {"topic": "Brand loyalty and switching", "high_sources": 3, "total_sources": 7, "status": "adequate"},
+    {"topic": "Swing speed awareness", "high_sources": 4, "total_sources": 6, "status": "strong"},
+    {"topic": "Ionomer vs urethane perception", "high_sources": 2, "total_sources": 5, "status": "adequate"},
+    {"topic": "Alignment technology", "high_sources": 3, "total_sources": 8, "status": "adequate"},
+    {"topic": "Ball loss patterns", "high_sources": 2, "total_sources": 4, "status": "adequate"},
+    {"topic": "Robot testing credibility", "high_sources": 3, "total_sources": 5, "status": "adequate"},
+    {"topic": "DTC brand perception", "high_sources": 3, "total_sources": 6, "status": "adequate"},
+    {"topic": "Feel definition", "high_sources": 1, "total_sources": 4, "status": "adequate"},
+    {"topic": "Equipment identity", "high_sources": 2, "total_sources": 4, "status": "adequate"},
+    {"topic": "Competitor ERC Soft", "high_sources": 2, "total_sources": 5, "status": "adequate"},
+    {"topic": "Competitor Kirkland", "high_sources": 3, "total_sources": 5, "status": "adequate"},
+    {"topic": "Competitor Vice", "high_sources": 3, "total_sources": 5, "status": "adequate"},
+    {"topic": "Competitor budget balls", "high_sources": 4, "total_sources": 8, "status": "strong"},
+    {"topic": "Marketing cynicism/villain", "high_sources": 5, "total_sources": 8, "status": "strong"},
+    {"topic": "Compression confusion", "high_sources": 1, "total_sources": 2, "status": "weak — will expand during scraping"}
+  ]
+}

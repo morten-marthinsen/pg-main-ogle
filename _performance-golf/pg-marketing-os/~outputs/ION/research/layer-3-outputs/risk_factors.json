@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "skill": "3.3-A Risk Assessor",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "assessed": "OPP-01 and OPP-02 (Tier 1 opportunities)"
+  },
+  "OPP-01": {
+    "opportunity": "Your Ball Matters — Distance Through Ball Optimization",
+    "overall_risk_profile": "LOW-MODERATE — strong demand, strong proof, but execution risk in new category entry",
+    "risks": {
+      "MARKET_RISK": {
+        "likelihood": 2,
+        "impact": 2,
+        "composite": 4,
+        "assessment": "Demand for distance in golf balls is massive, stable, and growing as the boomer golfer population ages. This is not a trend — it's a permanent market need. The 80-95mph segment is the MAJORITY of recreational golfers.",
+        "mitigation": "None needed. Market demand is one of the strongest signals in the dataset. 1,080 quotes confirm distance as the dominant conversation."
+      },
+      "COMPETITIVE_RISK": {
+        "likelihood": 3,
+        "impact": 3,
+        "composite": 9,
+        "assessment": "Titleist, Callaway, and Bridgestone could respond with swing-speed-specific positioning if iON+ gains traction. Vice could undercut on price. However, establishing 'engineered for 80-95mph' as a category takes time for incumbents to replicate credibly — their existing products span all speeds.",
+        "mitigation": "Move fast on positioning. Own '80-95mph' in the market's mind before incumbents can reposition. The independent testing data is a moat — competitors would need their own independent validation to match the credibility."
+      },
+      "EXECUTION_RISK": {
+        "likelihood": 2,
+        "impact": 4,
+        "composite": 8,
+        "assessment": "PG has never sold a consumable physical product at scale. The marketing is strong but supply chain, fulfillment, and repeat purchase mechanics are new territory. A great campaign that can't be fulfilled destroys trust.",
+        "mitigation": "Ensure supply chain readiness BEFORE campaign launch. PG's existing e-commerce infrastructure handles digital and device products — golf ball fulfillment is different (weight, shipping cost, subscription mechanics). Validate fulfillment capacity early."
+      },
+      "MESSAGING_RISK": {
+        "likelihood": 2,
+        "impact": 3,
+        "composite": 6,
+        "assessment": "'Your ball matters' is simple and defensible. The risk is in the PROOF section — if the Golf Laboratories data is questioned or if competitors challenge the testing methodology, the credibility anchor weakens. Stage 4 market means every claim gets scrutinized.",
+        "mitigation": "Make the Golf Laboratories data transparently available. Show the methodology, not just the results. Let golfers with personal launch monitors verify for themselves. 'Test it on your own monitor' is the strongest defense against skepticism."
+      },
+      "TIMING_RISK": {
+        "likelihood": 1,
+        "impact": 2,
+        "composite": 2,
+        "assessment": "Golf ball purchases peak in spring (March-May) for the new season. If launch misses this window, demand drops until fall restocking. Cultural timing is favorable: DTC disruption wave, launch monitor proliferation, and pricing resentment all trending up.",
+        "mitigation": "Launch before or during spring golf season. If spring 2026 is missed, target early fall or the holiday gift-giving window."
+      }
+    }
+  },
+  "OPP-02": {
+    "opportunity": "Fair Price, Real Performance",
+    "overall_risk_profile": "LOW — pricing resentment is universal and the price point is validated by DTC precedents",
+    "risks": {
+      "MARKET_RISK": {
+        "likelihood": 1,
+        "impact": 2,
+        "composite": 2,
+        "assessment": "Price sensitivity in golf balls is at an all-time high. ProV1 just raised prices again. The $25-35 segment is proven by Vice, Maxfli, and Kirkland. Demand is validated.",
+        "mitigation": "None needed. The market has already validated this price point through multiple DTC brands."
+      },
+      "COMPETITIVE_RISK": {
+        "likelihood": 3,
+        "impact": 2,
+        "composite": 6,
+        "assessment": "The $25-35 segment is getting crowded. Vice, Maxfli, Kirkland, and Wilson all compete here. However, none combine swing-speed engineering + independent testing + alignment tech. The COMBINATION is the moat.",
+        "mitigation": "Don't lead with price. Lead with 'your ball matters' (performance) and let price be the closer. Competing on price alone puts iON+ in a race to the bottom against Kirkland ($14/dozen)."
+      },
+      "EXECUTION_RISK": {
+        "likelihood": 2,
+        "impact": 3,
+        "composite": 6,
+        "assessment": "Pricing at $29.99-$34.99 must deliver margins that support PG's business model. If manufacturing costs push toward $35, the price advantage over Callaway Chrome Soft ($35) narrows. If it drops below $30, it risks being perceived as 'cheap' rather than 'fair.'",
+        "mitigation": "Lock final pricing before campaign launch. If the final price is $34.99, the messaging shifts from 'half the price of ProV1' to 'two-thirds the price with independent proof of better distance.' The messaging framework accommodates either price point."
+      },
+      "MESSAGING_RISK": {
+        "likelihood": 2,
+        "impact": 2,
+        "composite": 4,
+        "assessment": "Low risk. 'You don't have to pay through the nose' resonates with existing market sentiment. The risk is being perceived as 'value brand' instead of 'smart brand' — per Soul.md, NEVER position as budget.",
+        "mitigation": "Always pair price with performance proof. '$30/dozen AND beat ProV1 in independent testing at 95mph.' Price is the close, never the lead. Follow Soul.md: position as 'smarter,' not 'cheaper.'"
+      },
+      "TIMING_RISK": {
+        "likelihood": 1,
+        "impact": 1,
+        "composite": 1,
+        "assessment": "Minimal. Price sensitivity is not seasonal — it's structural. The next Titleist price increase will amplify the opportunity further.",
+        "mitigation": "None needed. If anything, delaying launch means the next round of competitor price increases strengthens iON+'s position."
+      }
+    }
+  }
+}

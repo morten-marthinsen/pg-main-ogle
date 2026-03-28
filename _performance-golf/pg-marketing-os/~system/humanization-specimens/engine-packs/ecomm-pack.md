@@ -1,7 +1,7 @@
 # E-Commerce Humanization Engine Pack
 
 **Version:** 1.0
-**For:** EC-01 (feature naming), EC-02 (hero value prop), EC-03 (section copy), EC-04 (micro-scripts)
+**For:** PDP-02 (feature naming), PDP-03 (hero carousel buybox), PDP-07 (btf section writer), PDP-08 (micro-scripts)
 **Source:** HTKT v5→v6 client-work-diffs (Gold specimens — structural qualities are universal)
 **Size target:** <2.5KB verbatim
 **Note:** Will be enriched with e-comm-specific Tier 1 specimens after Phase 2 extraction

@@ -1,0 +1,290 @@
+# market_config.yaml
+# Auto-generated from research brief — iON+ Golf Ball
+# Created: 2026-03-26
+
+project:
+  name: ion-plus
+  created: 2026-03-26
+  market_mode: B
+
+terminology:
+  customer:
+    primary: "golfer"
+    plural: "golfers"
+    adjective: "golf"
+    secondary: "amateur golfer"
+    tertiary: "recreational golfer"
+
+  problem:
+    primary: "not enough distance off the tee"
+    secondary: "too much spin causing slices and lost distance"
+    category: "performance / distance"
+    symptoms:
+      - "drives getting shorter"
+      - "slicing the ball"
+      - "losing distance"
+      - "ball doesn't feel right"
+      - "overpaying for balls I lose"
+
+  product:
+    type: "golf ball"
+    solution: "3-piece ionomer golf ball"
+    differentiator: "visual alignment technology"
+    tagline: "Charged for Distance"
+
+platforms:
+  tier_1:
+    - name: "Reddit r/golf"
+      type: forum
+      tool: apify
+      priority: critical
+      rationale: "Largest online golf community. Extremely active ball discussions, honest reviews, comparison threads."
+      specific_sources:
+        - "r/golf"
+        - "r/GolfEquipment"
+    - name: "GolfWRX Forums"
+      type: forum
+      tool: firecrawl
+      priority: critical
+      rationale: "Dedicated equipment forum with deep technical discussions. Ball fitting, compression, spin conversations."
+      specific_sources:
+        - "golfwrx.com/forums"
+    - name: "Amazon Golf Ball Reviews"
+      type: review
+      tool: firecrawl
+      priority: critical
+      rationale: "Massive volume of verified purchaser reviews for all competitor balls. Real language about feel, distance, price."
+      specific_sources:
+        - "amazon.com/dp/ (competitor ball ASINs)"
+  tier_2:
+    - name: "MyGolfSpy"
+      type: review-site
+      tool: firecrawl
+      priority: high
+      rationale: "Independent testing and reviews. Community comments are gold for real opinions."
+      specific_sources:
+        - "mygolfspy.com/best-golf-balls"
+        - "mygolfspy.com/golf-ball-reviews"
+    - name: "YouTube Golf Ball Reviews (comments)"
+      type: video-comments
+      tool: apify
+      priority: high
+      rationale: "Rick Shiels, TXG, Mark Crossfield ball reviews have thousands of comments from amateurs."
+      specific_sources:
+        - "Rick Shiels golf ball reviews"
+        - "TXG golf ball testing"
+        - "Mark Crossfield ball comparisons"
+    - name: "Golf Digest / Golf.com"
+      type: media
+      tool: firecrawl
+      priority: high
+      rationale: "Best ball lists, buyer guides — comments and forums."
+      specific_sources:
+        - "golfdigest.com/hot-list/golf-balls"
+        - "golf.com/gear/golf-balls"
+  tier_3:
+    - name: "The Hackers Paradise Forum"
+      type: forum
+      tool: firecrawl
+      priority: moderate
+      rationale: "Dedicated to average golfers — exactly the iON+ target."
+      specific_sources:
+        - "thehackersparadise.com/forum"
+    - name: "Golf Monthly Forum"
+      type: forum
+      tool: firecrawl
+      priority: moderate
+      specific_sources:
+        - "forums.golfmonthly.com"
+    - name: "Facebook Golf Groups"
+      type: social
+      tool: perplexity
+      priority: moderate
+      rationale: "Older demographic, lots of ball discussion. Can't scrape directly — use Perplexity to surface cached/indexed discussions."
+
+  blocked:
+    - name: "Facebook (direct scraping)"
+      reason: "Requires auth, blocks scrapers"
+      alternative: "Use Perplexity to find cached/indexed discussions"
+    - name: "Reddit (via Firecrawl)"
+      reason: "Firecrawl blocked by Reddit"
+      alternative: "Use Apify actor for Reddit scraping"
+
+aspects:
+  - name: "Distance Performance"
+    definition: "How far the ball carries and rolls, total distance off the tee and fairway"
+    example_terms: ["distance", "carry", "yards", "long", "far", "roll out", "total distance"]
+  - name: "Feel & Sound"
+    definition: "Tactile and auditory feedback at impact — softness, click, thud, firmness"
+    example_terms: ["feel", "soft", "clicky", "mushy", "firm", "sound", "feedback", "off the putter"]
+  - name: "Spin & Control"
+    definition: "Ball behavior on approach shots and around the green — spin, check, roll"
+    example_terms: ["spin", "greenside", "check up", "bite", "roll out", "wedge", "short game"]
+  - name: "Price & Value"
+    definition: "Cost per dozen relative to perceived quality — value proposition, willingness to pay"
+    example_terms: ["price", "expensive", "cheap", "value", "worth it", "cost per dozen", "affordable"]
+  - name: "Durability & Loss"
+    definition: "How long balls last, scuff resistance, frequency of losing balls"
+    example_terms: ["durability", "scuff", "cut", "lost balls", "water", "woods", "last", "dozen per round"]
+
+competitors:
+  known:
+    - name: "Titleist Pro V1 / Pro V1x"
+      type: direct-comparison
+      positioning: "Tour ball benchmark — premium price, urethane cover, high spin control"
+      price: "$52-55/dozen"
+    - name: "Callaway ERC Soft"
+      type: direct-competitor
+      positioning: "Distance-focused 3-piece, graphene-infused core, Triple Track alignment"
+      price: "$32-35/dozen"
+    - name: "Callaway Supersoft"
+      type: direct-competitor
+      positioning: "Ultra-soft, 2-piece, low compression — amateur favorite"
+      price: "$22-25/dozen"
+    - name: "Bridgestone e6 / e12"
+      type: direct-competitor
+      positioning: "Distance with straight flight, anti-side-spin technology"
+      price: "$26-32/dozen"
+    - name: "Srixon Soft Feel"
+      type: direct-competitor
+      positioning: "Soft feel, 2-piece ionomer, budget-friendly"
+      price: "$22-24/dozen"
+    - name: "TaylorMade Soft Response"
+      type: direct-competitor
+      positioning: "Soft compression, 3-piece, designed for moderate swing speeds"
+      price: "$22-25/dozen"
+    - name: "Vice Drive / Vice Pro"
+      type: indirect-competitor
+      positioning: "DTC golf ball brand — premium quality at lower price, subscription model"
+      price: "$17-36/dozen"
+    - name: "Kirkland Signature (Costco)"
+      type: indirect-competitor
+      positioning: "Costco's 3-piece urethane ball — disrupted market on value"
+      price: "$13-15/dozen"
+    - name: "Titleist TruFeel"
+      type: direct-competitor
+      positioning: "Titleist's value line — soft feel, lower price entry point"
+      price: "$22-24/dozen"
+    - name: "Maxfli SoftFli"
+      type: direct-competitor
+      positioning: "Dick's Sporting Goods house brand — matte finish, soft feel, low price"
+      price: "$18-22/dozen"
+
+  terminology:
+    comparison_phrases:
+      - "X vs Y"
+      - "best golf ball for"
+      - "switched from X to Y"
+      - "alternative to Pro V1"
+      - "is X worth it"
+      - "what ball should I play"
+    category_terms:
+      - "distance ball"
+      - "tour ball"
+      - "value ball"
+      - "soft ball"
+      - "ionomer"
+      - "urethane"
+      - "3-piece"
+      - "2-piece"
+      - "low compression"
+
+emotional_context:
+  fears:
+    - "I'm losing distance as I age and there's nothing I can do"
+    - "I'm wasting money on premium balls I keep losing in the woods/water"
+    - "My buddies outdrive me and it's embarrassing"
+    - "The right ball for my game doesn't exist at a price I want to pay"
+    - "I'm not good enough to tell the difference between balls"
+  frustrations:
+    - "Every ball claims to be the longest but none actually go farther"
+    - "I don't understand all the technical specs — compression, layers, cover materials"
+    - "Tour balls are designed for swing speeds I don't have"
+    - "I keep slicing no matter what ball I play"
+    - "Golf ball marketing is all hype — I can't tell what's real"
+    - "I buy expensive balls and lose half the box in one round"
+  hopes:
+    - "Find a ball that genuinely adds distance without sacrificing feel"
+    - "Stop losing balls to my slice"
+    - "Find the 'right ball for my game' without spending Pro V1 money"
+    - "Feel more confident standing over putts and tee shots"
+    - "Get more distance without changing my swing"
+  identity:
+    current: "Regular golfer who plays for fun but wants to play well — not a tour player, not a beginner"
+    aspirational: "Smart golfer who makes good equipment decisions — gets performance without overpaying"
+    anti_identity: "The guy who buys the cheapest balls at Walmart / the sucker paying $55/dozen for balls he loses"
+
+query_patterns:
+  pain_queries:
+    - "golf ball not enough distance"
+    - "losing distance off the tee"
+    - "golf ball spin too much slice"
+    - "frustrated with golf ball distance"
+    - "drives getting shorter age"
+    - "can't find the right golf ball"
+    - "wasting money golf balls"
+    - "losing golf balls every round"
+  hope_queries:
+    - "best golf ball for distance amateur"
+    - "best golf ball for slow swing speed"
+    - "golf ball that reduces slice"
+    - "more distance without changing swing"
+    - "best value golf ball 2025 2026"
+    - "golf ball recommendations handicap 15-25"
+  root_cause_queries:
+    - "why do I slice with every ball"
+    - "golf ball compression swing speed chart"
+    - "wrong ball for swing speed"
+    - "why tour balls don't work for amateurs"
+    - "golf ball spin axis slice cause"
+  competitor_queries:
+    - "Callaway ERC Soft review reddit"
+    - "Callaway Supersoft vs Bridgestone e6"
+    - "best 3 piece ionomer golf ball"
+    - "Kirkland golf ball review"
+    - "Vice golf ball worth it"
+    - "TaylorMade Soft Response review"
+    - "Srixon Soft Feel review"
+    - "alternative to Pro V1 cheaper"
+  villain_queries:
+    - "golf ball marketing lies"
+    - "are expensive golf balls worth it"
+    - "golf ball industry rip off"
+    - "why are Pro V1 so expensive"
+    - "golf ball companies misleading claims"
+
+youtube:
+  search_terms:
+    direct:
+      - "golf ball review 2025"
+      - "golf ball review 2026"
+      - "best golf balls for amateurs"
+      - "golf ball for average golfer"
+      - "golf ball distance test"
+      - "golf ball comparison test"
+    problem:
+      - "losing distance off the tee"
+      - "golf ball spin too much"
+      - "why am I slicing my driver"
+      - "wrong golf ball for my swing speed"
+      - "can't stop slicing"
+    symptom:
+      - "drives getting shorter with age"
+      - "golf ball feels too hard"
+      - "losing too many golf balls"
+      - "no distance off the tee"
+      - "ball not going straight"
+    emotional:
+      - "frustrated with golf distance"
+      - "finally found the right golf ball"
+      - "golf ball changed my game"
+      - "embarrassed on the tee box"
+    solution_seeking:
+      - "how to get more distance golf"
+      - "best golf ball for slow swing speed"
+      - "best golf ball under 30 dollars"
+      - "golf ball fitting for amateurs"
+      - "how to choose the right golf ball"
+  minimum_videos: 100
+  transcripts_required: 30
+  comments_per_video: 500

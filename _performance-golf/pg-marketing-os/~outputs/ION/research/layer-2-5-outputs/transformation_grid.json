@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "skill": "2.5-D Transformation Grid",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "now_after_grid.json + web_synthesis.json + 1,080 quotes"
+  },
+  "dimensions": {
+    "HAVE": {
+      "now": [
+        { "state": "A bag with $55/dozen ProV1s they can't fully compress", "quote": "I know alot of golfers who won't play with anything but pro v and their swing speed is about 80mph. What a waste.", "id": "RC-026" },
+        { "state": "Drives landing 210-240 yards and shrinking every year", "quote": "Me at 30: Driver 280. At 67: Driver 210.", "id": "P-255" },
+        { "state": "A closet of half-tried ball brands from seasonal experiments", "quote": "I've been experimenting this year, using Bridgestone e12 & Callaway super soft.", "id": "V-021" },
+        { "state": "Two types of balls — the 'real' ball and the 'water' ball", "quote": "Par 5, no water... PROV1. Par 3 over water... Kirkland signature.", "id": "CM-004" }
+      ],
+      "after": [
+        { "state": "One ball — engineered for their actual swing speed, proven by robot data", "quote": "I immediately saw 10ish yards improvement.", "id": "CM-002" },
+        { "state": "5-15 yards recovered that they thought aging took permanently", "quote": "Two years ago, 205 yds. Now averaging 240.", "id": "H-236" },
+        { "state": "$30/dozen performance that matches $55 premium at their speed", "quote": "I love the $25-30 USD balls.", "id": "H-016" },
+        { "state": "One ball for every hole — no more risk calculation per shot", "quote": "I buy 10 dozen logo balls in March every year and play them all season.", "id": "H-011" }
+      ],
+      "contrast_power": 9
+    },
+    "EXPERIENCE": {
+      "now": [
+        { "state": "Watching drives fall shorter than last season — again", "quote": "I have lost close to 50 yards since then. It is a huge shock.", "id": "P-253" },
+        { "state": "Standing in the ball aisle paralyzed by 30 options", "quote": "Currently trying to decide between prov1 (used), Maxfli Tour, or Vice Pro.", "id": "V-031" },
+        { "state": "That sinking feeling of a ballooning drive in the wind", "quote": "Every other drive would just whiffleball a mile high.", "id": "ST-010" },
+        { "state": "Playing partners casually outdrive them with less effort", "quote": "I watch some people make a seemingly effortless swing and develop 110 mph.", "id": "P-227" }
+      ],
+      "after": [
+        { "state": "Stepping on the tee knowing the ball matches their swing — data-confirmed", "quote": "I changed based on clubhead speed. Saw immediate results.", "id": "ST-109" },
+        { "state": "Picking up their iON+ and knowing it's the right ball — no guessing", "quote": "Got my hands on a sleeve and fell in love.", "id": "ST-009" },
+        { "state": "A drive that flies on the line they aimed — visual alignment confirming the path", "quote": "[Visual alignment is novel — golfers currently draw Sharpie lines]", "id": "N/A" },
+        { "state": "Seeing the ball land past where they expected — surprise distance", "quote": "I hit the longest drive I've ever hit on this hole.", "id": "H-225" }
+      ],
+      "contrast_power": 8
+    },
+    "STATUS": {
+      "now": [
+        { "state": "The guy who can't keep up — moving to forward tees, always the shortest drive", "quote": "It's not fair to play with a team as I just can't hold my own.", "id": "P-001" },
+        { "state": "The sucker paying $55/dozen because Titleist told him to", "quote": "For 95% of golfers, prov1s are an insane purchase. Pure luxury/flex.", "id": "V-037" },
+        { "state": "The guy always trying a new ball — never committed, always searching", "quote": "I've been experimenting this year...", "id": "V-021" }
+      ],
+      "after": [
+        { "state": "The smart golfer who matched his ball to his swing speed with DATA", "quote": "I have really nice golf equipment without paying those ridiculous prices.", "id": "V-024" },
+        { "state": "The one who gained yards while everyone else is losing them", "quote": "Two years ago, 205 yds. Now averaging 240.", "id": "H-236" },
+        { "state": "The one his group asks 'what ball are you playing?'", "quote": "[Aspirational — the word-of-mouth moment]", "id": "N/A" }
+      ],
+      "contrast_power": 8
+    },
+    "FEELING": {
+      "now": [
+        { "state": "Frustrated — the distance charts are trending one direction", "quote": "My mind writes checks my body can't cash.", "id": "P-257" },
+        { "state": "Exploited — paying more every year for the same ball", "quote": "I'll be damned if I'll ever pay $3-5 for a premium golf ball.", "id": "V-005" },
+        { "state": "Uncertain — playing a ball they suspect is wrong but don't know how to verify", "quote": "I definitely am playing a ball that I know I shouldn't for my swing speed.", "id": "RC-024" },
+        { "state": "Resigned — distance loss feels permanent and accelerating", "quote": "BIG drop between 50 and 60, and again by the time I hit 65.", "id": "P-264" }
+      ],
+      "after": [
+        { "state": "Confident — robot data proved this ball works for their speed. Not marketing. Math.", "quote": "I immediately saw 10ish yards improvement.", "id": "CM-002" },
+        { "state": "Relieved — off the premium treadmill. Fair price, better performance for them.", "quote": "Nearly the same performance, half the price.", "id": "CM-003" },
+        { "state": "Hopeful — not ALL the distance was aging. Some came back.", "quote": "I hit the longest drive I've ever hit on this hole.", "id": "H-225" },
+        { "state": "Enjoying golf again — when the ball does what you expect, the game is fun", "quote": "I love them. They perform really well.", "id": "H-011" }
+      ],
+      "contrast_power": 9
+    }
+  }
+}

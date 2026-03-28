@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "skill": "2.4-A Competitor Claim Mapper — Villain Extraction",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "75 VILLAIN quotes + 100 COMPETITOR_MECHANISM quotes + 152 SOLUTIONS_TRIED quotes"
+  },
+  "hated_features": [
+    {
+      "feature": "Premium ball pricing ($50-55/dozen) that keeps rising",
+      "intensity": 9.0,
+      "prospect_language": [
+        "Golf balls. $50 for a dozen.",
+        "I'll be damned if I'll ever pay $3-5 for a premium golf ball",
+        "The entire golf ball industry is a scam. They all cost close to the same to make",
+        "When is the golf industry going to keep consistent pricing year after year?"
+      ],
+      "evidence_ids": ["V-004", "V-005", "V-035", "V-018"],
+      "copywriting_angle": "The price villain is the strongest emotional trigger. Golfers feel EXPLOITED, not just disappointed. This isn't 'I wish it were cheaper' — it's 'they're ripping me off and they know it.'"
+    },
+    {
+      "feature": "High spin on premium balls that costs distance for moderate swing speeds",
+      "intensity": 7.5,
+      "prospect_language": [
+        "I play ProV1 because I love the action around the green. My launch monitor shows I lose 10 yards on drives",
+        "Kirklands spin way too much for my taste",
+        "The extra spin is hurting me, not helping"
+      ],
+      "evidence_ids": ["RC-014", "V-009", "V-017"],
+      "copywriting_angle": "This is the hidden villain. Golfers don't realize the 'premium' ball they're paying MORE for is actually costing them yards. The ball they trust is the ball that's betraying them."
+    },
+    {
+      "feature": "Confusing options with no objective way to choose",
+      "intensity": 6.5,
+      "prospect_language": [
+        "There are so many good golf balls to choose from these days",
+        "Swing speed: Absolutely no idea. Ball: Currently trying to decide between...",
+        "I've been experimenting this year"
+      ],
+      "evidence_ids": ["V-025", "V-031", "V-021"],
+      "copywriting_angle": "The market has made ball selection HARDER, not easier. More options, more confusion, more guessing. The villain is complexity masquerading as choice."
+    },
+    {
+      "feature": "Poor durability on some budget/mid-tier balls",
+      "intensity": 5.5,
+      "prospect_language": [
+        "The covers aren't the best... I prefer and play the Srixon",
+        "The Callaway SS was the only ball that had to be replaced in the hitting bay… because they literally cracked",
+        "Can not stand it anymore. That thing does not like hard drives and is very wobbly on the green"
+      ],
+      "evidence_ids": ["V-026", "CM-087", "CM-088"],
+      "copywriting_angle": "Budget alternatives solve the price problem but create a new one — you can't trust them to hold up. iON+ needs to address durability proactively."
+    }
+  ],
+  "hated_products": [
+    {
+      "product": "Kirkland Signature Golf Balls",
+      "hatred_type": "Love-hate — great value but poor performance for some",
+      "prospect_language": [
+        "Kirklands are absolutely horrible distance wise. After four holes I came to the conclusion it wasn't my swing",
+        "I bought a huge box of Kirklands — lost 30 yards and every other drive would just whiffleball a mile high",
+        "Kirklands spin way too much for my taste",
+        "Kirkland balls... feel like hitting a rock"
+      ],
+      "evidence_ids": ["ST-001", "ST-010", "V-009", "CM-007"],
+      "strategic_note": "Kirkland is the budget darling that many golfers have tried and been disappointed by. 'Tried Kirkland and lost distance' is a common experience. This is a direct attack vector — iON+ solves what Kirkland promised but couldn't deliver."
+    },
+    {
+      "product": "Lower-tier Titleist balls (TruFeel, Tour Speed)",
+      "hatred_type": "Perceived as cynical brand exploitation",
+      "prospect_language": [
+        "The lower level Titleist balls are just an objectively bad value. They're cheap ionomer balls that they charge way more for because they say 'Titleist'",
+        "You don't work for Titleist and I don't need advice from a 30 handicapper"
+      ],
+      "evidence_ids": ["V-002", "V-039"],
+      "strategic_note": "Golfers recognize Titleist's lower-tier balls as a branding play. This erodes Titleist trust specifically in the mid-tier — the exact space iON+ occupies."
+    }
+  ],
+  "hated_messaging": [
+    {
+      "message_type": "Skill-gating: 'You're not good enough for this ball'",
+      "intensity": 8.0,
+      "prospect_language": [
+        "Stop wasting your money. You're not good enough to use prov1s",
+        "For 95% of golfers, prov1s are an insane purchase. Basically unless you're near scratch it's a pure luxury/flex",
+        "As a 2 handicap they will. As a 20 handicap, absolutely not"
+      ],
+      "evidence_ids": ["V-003", "V-037", "V-041"],
+      "strategic_note": "The golf industry tells golfers they need to EARN the right to play a good ball. This creates shame. iON+ should never replicate this — instead, frame ball selection as swing speed matching (objective, no judgment)."
+    },
+    {
+      "message_type": "Vague performance claims with no proof",
+      "intensity": 6.0,
+      "prospect_language": [
+        "I thought Vice is a marketing company?",
+        "Been using the soft feel almost 2 years now. Can not stand it anymore",
+        "The difference in performance vs. cost isn't worth it"
+      ],
+      "evidence_ids": ["V-045", "CM-088", "V-038"],
+      "strategic_note": "Golfers are skeptical of performance claims. Robot testing data from Golf Laboratories is the antidote — independent, objective, inarguable."
+    }
+  ],
+  "hated_experiences": [
+    {
+      "experience": "Buying premium balls and losing them in the water/woods",
+      "intensity": 7.5,
+      "prospect_language": [
+        "Par 5, no water, no OB....PROV1. Par 3 over water...Kirkland signature",
+        "I waste a lot of money on ball purchases",
+        "At what point does your choice of ball change based on the hole?"
+      ],
+      "evidence_ids": ["CM-004", "V-043"],
+      "strategic_note": "Golfers use two tiers of balls — expensive for safe holes, cheap for risky holes. At $30/dozen, iON+ eliminates the need for a 'water ball.' One ball, every hole, no anxiety."
+    },
+    {
+      "experience": "Ball fitting events that feel like a sales pitch for one brand",
+      "intensity": 6.0,
+      "prospect_language": [
+        "The Bridgestone rep actually told me that my stats are better with the Pro-v1s... but gave me sleeves of Bridgestone",
+        "Going in, I knew they would be able to set me up with a better ball"
+      ],
+      "evidence_ids": ["V-036", "RC-024"],
+      "strategic_note": "Ball fitting exists but it's brand-captured. Independent testing (Golf Laboratories robot data) is the alternative that golfers don't know about but would trust."
+    }
+  ],
+  "consolidated_villain_narrative": "The golf ball industry profits from confusion, brand worship, and shame. They charge premium prices for balls designed for swing speeds most golfers don't have, then tell those golfers they're 'not good enough' to question the system. The average golfer is overpaying for underperformance — and the industry has no incentive to tell them."
+}

@@ -1,0 +1,385 @@
+{
+  "metadata": {
+    "skill": "3.1-A Opportunity Scorer",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "All Layer 1, 2, 2.5, 2.8-RSF outputs + market_config.yaml",
+    "scoring_weights": {
+      "market_demand": 0.25,
+      "emotional_intensity": 0.20,
+      "competitive_gap": 0.20,
+      "evidence_strength": 0.15,
+      "transformation_potential": 0.10,
+      "urgency_signals": 0.10
+    },
+    "total_opportunities": 7,
+    "tier_1": 2,
+    "tier_2": 3,
+    "tier_3": 2
+  },
+  "opportunities": [
+    {
+      "id": "OPP-01",
+      "name": "Your Ball Matters — Distance Through Ball Optimization",
+      "tier": 1,
+      "total_score": 89,
+      "description": "Lead message: your ball choice affects your distance by 10-30 yards, and iON+ is engineered for 80-95mph swing speeds. Proven by independent Golf Laboratories robot testing. This is the primary purchase driver validated across every bucket.",
+      "scoring": {
+        "market_demand": {
+          "score": 95,
+          "weight": 0.25,
+          "weighted": 23.75,
+          "evidence": "Distance is the dominant conversation across 1,080 quotes. 302 PAIN quotes, majority about distance loss. HOPE quotes cluster around distance recovery. H1 validated at 9/10 confidence.",
+          "quote_ids": ["P-253", "P-255", "P-259", "H-236", "CM-002", "ST-010"]
+        },
+        "emotional_intensity": {
+          "score": 90,
+          "weight": 0.20,
+          "weighted": 18.0,
+          "evidence": "Distance loss triggers grief-level emotions (UE-01: 'equipment grief'). 'It is a huge shock.' 'My mind writes checks my body can't cash.' The unnamed emotion of competitive mortality drives urgency.",
+          "quote_ids": ["P-253", "P-257", "P-263", "P-264"]
+        },
+        "competitive_gap": {
+          "score": 85,
+          "weight": 0.20,
+          "weighted": 17.0,
+          "evidence": "No competitor leads with swing-speed-specific engineering as PRIMARY identity (WZ-01). Every brand claims 'distance' generically (staleness 9/10). The gap: SPECIFIC distance for SPECIFIC speeds, proven by INDEPENDENT testing (WZ-03). Nobody does all three.",
+          "quote_ids": ["RC-026", "RC-014", "EP-18"]
+        },
+        "evidence_strength": {
+          "score": 90,
+          "weight": 0.15,
+          "weighted": 13.5,
+          "evidence": "1,080 quotes across 4 platforms. 30 transformation pairs. 28 educational pairs. Golf Laboratories robot data at 95mph (product-specific, not inferred). Designer-confirmed: iON+ longer AND softer than ProV1 at 95mph.",
+          "quote_ids": ["CM-002", "ST-010", "RC-014", "H-236"]
+        },
+        "transformation_potential": {
+          "score": 85,
+          "weight": 0.10,
+          "weighted": 8.5,
+          "evidence": "Now→After transformation is dramatic and specific: from 'losing 10-30 yards to wrong ball' to 'recovering measurable distance.' TP-001 through TP-005 show clear arcs. The transformation is IMMEDIATE (not months of practice).",
+          "quote_ids": ["TP-001", "TP-003", "TP-005"]
+        },
+        "urgency_signals": {
+          "score": 80,
+          "weight": 0.10,
+          "weighted": 8.0,
+          "evidence": "Every round with the wrong ball is yards lost. Age-related decline is accelerating (P-264: 'BIG drop between 50 and 60, again by 65'). Cultural timing: aging boomer golfer population peaking. Launch monitor proliferation means golfers can verify claims immediately.",
+          "quote_ids": ["P-264", "P-270", "FSSIT-05"]
+        }
+      },
+      "frame_claim": "Your ball matters. More than you think. And you don't have to spend $55 to get a great one.",
+      "primary_proof": "Golf Laboratories robot testing at 95mph — iON+ outperformed ProV1 in carry distance. Independent, third-party, inarguable.",
+      "schema_violations_leveraged": ["SVO-01 (independent testing)", "SVO-02 (speed range identity)", "SVO-03 (validate pricing resentment)"]
+    },
+    {
+      "id": "OPP-02",
+      "name": "Fair Price, Real Performance — End the $55 Treadmill",
+      "tier": 1,
+      "total_score": 84,
+      "description": "Secondary lead: the golf ball industry charges $55 because they can, not because it costs that much. iON+ at $30/dozen delivers engineered performance at a fair price. This validates the pricing resentment that's already universal in the market.",
+      "scoring": {
+        "market_demand": {
+          "score": 90,
+          "weight": 0.25,
+          "weighted": 22.5,
+          "evidence": "75 VILLAIN quotes dominated by pricing resentment. H5 validated at 9/10 confidence. The $25-35 price range is where the market wants to be. DTC brands proved demand exists.",
+          "quote_ids": ["V-005", "V-035", "V-018", "V-004", "CM-003"]
+        },
+        "emotional_intensity": {
+          "score": 85,
+          "weight": 0.20,
+          "weighted": 17.0,
+          "evidence": "Pricing resentment is VISCERAL, not mild. 'I'll be damned.' 'Scam.' 'Astronomical.' This isn't 'I wish it were cheaper' — it's 'I'm being exploited and I know it.' Identity tension IT-01: smart golfer vs. sucker.",
+          "quote_ids": ["V-005", "V-035", "V-037", "FSSIT-03"]
+        },
+        "competitive_gap": {
+          "score": 80,
+          "weight": 0.20,
+          "weighted": 16.0,
+          "evidence": "Vice and Maxfli already occupy 'value alternative' but position as 'almost as good for less' — a compromise frame. iON+ can position as 'BETTER for your speed at a fair price' — not compromise, optimization. No competitor validates pricing resentment OPENLY (WZ-05).",
+          "quote_ids": ["CM-003", "ST-003", "SVO-03"]
+        },
+        "evidence_strength": {
+          "score": 85,
+          "weight": 0.15,
+          "weighted": 12.75,
+          "evidence": "Price sensitivity documented across multiple buckets. The two-ball system (CM-004: ProV1 for safe holes, Kirkland for water holes) proves the price anxiety is behavioral, not just attitudinal.",
+          "quote_ids": ["CM-004", "ST-017", "V-043"]
+        },
+        "transformation_potential": {
+          "score": 75,
+          "weight": 0.10,
+          "weighted": 7.5,
+          "evidence": "From 'overpaying and anxious about losing balls' to 'one ball, every hole, fair price, no mental math.' The transformation is relief + pride in making the smart choice.",
+          "quote_ids": ["TP-002", "IT-01"]
+        },
+        "urgency_signals": {
+          "score": 80,
+          "weight": 0.10,
+          "weighted": 8.0,
+          "evidence": "ProV1 prices keep rising ($48 → $55 and climbing). Each increase adds fuel. Cultural timing: DTC disruption wave primes acceptance.",
+          "quote_ids": ["V-018", "V-038"]
+        }
+      },
+      "frame_claim": "You don't have to pay through the nose to get a great ball.",
+      "primary_proof": "iON+ at $30/dozen — same or better distance performance at 95mph than ProV1 at $55. The math is simple.",
+      "schema_violations_leveraged": ["SVO-03 (validate pricing resentment)", "SVO-07 (ionomer as engineering choice)"]
+    },
+    {
+      "id": "OPP-03",
+      "name": "Visual Alignment System — The Feature Nobody Else Has",
+      "tier": 2,
+      "total_score": 72,
+      "description": "Differentiator: iON+ has a visual alignment system for both tee shots and putting that no competitor offers. Golfers already draw Sharpie lines — give them an engineered solution. Position as technology, not decoration.",
+      "scoring": {
+        "market_demand": {
+          "score": 55,
+          "weight": 0.25,
+          "weighted": 13.75,
+          "evidence": "Low explicit demand — very few quotes discuss alignment. But latent demand exists: golfers draw Sharpie lines, use Triple Track, and discuss aiming. The need is real but unarticulated."
+        },
+        "emotional_intensity": {
+          "score": 60,
+          "weight": 0.20,
+          "weighted": 12.0,
+          "evidence": "Moderate. Alignment isn't an emotional trigger like distance or price. But confidence in aim reduces pre-shot anxiety. The emotional payoff is CONFIDENCE, not relief."
+        },
+        "competitive_gap": {
+          "score": 95,
+          "weight": 0.20,
+          "weighted": 19.0,
+          "evidence": "Massive gap. Only Callaway Triple Track exists, and it's putting-only. Nobody has a tee-to-green alignment SYSTEM. This is near-virgin whitespace (WZ-02, staleness 4/10)."
+        },
+        "evidence_strength": {
+          "score": 70,
+          "weight": 0.15,
+          "weighted": 10.5,
+          "evidence": "Thin quote evidence specifically about alignment. But the product's unique feature is real and demonstrable. Proof comes from product experience, not research quotes."
+        },
+        "transformation_potential": {
+          "score": 75,
+          "weight": 0.10,
+          "weighted": 7.5,
+          "evidence": "From 'drawing Sharpie lines and hoping they're straight' to 'engineered alignment built into every ball.' The transformation is small but memorable."
+        },
+        "urgency_signals": {
+          "score": 60,
+          "weight": 0.10,
+          "weighted": 6.0,
+          "evidence": "Low urgency. Alignment is a 'nice to have' that becomes a 'can't play without it' after experience. Trial-dependent conversion."
+        }
+      },
+      "frame_claim": "The only ball with tee-to-green alignment technology.",
+      "primary_proof": "Product demonstration. This is a show-don't-tell feature.",
+      "schema_violations_leveraged": ["SVO-05 (alignment as engineered tech)"]
+    },
+    {
+      "id": "OPP-04",
+      "name": "Spin Control for Straighter Drives",
+      "tier": 2,
+      "total_score": 68,
+      "description": "Education angle: the wrong ball amplifies your slice. iON+'s low-spin design keeps the ball in play and adds distance for 80-95mph swings. Connects ball choice to accuracy, not just distance.",
+      "scoring": {
+        "market_demand": {
+          "score": 70,
+          "weight": 0.25,
+          "weighted": 17.5,
+          "evidence": "H2 partially validated at 7/10. Golfers discuss spin-related issues but don't always connect to ball choice. Education opportunity — awareness gap is real."
+        },
+        "emotional_intensity": {
+          "score": 70,
+          "weight": 0.20,
+          "weighted": 14.0,
+          "evidence": "Slicing into the woods is frustrating and embarrassing. 'Whiffleball a mile high' (ST-010). But it's not the dominant emotional driver."
+        },
+        "competitive_gap": {
+          "score": 65,
+          "weight": 0.20,
+          "weighted": 13.0,
+          "evidence": "Some balls already position as 'low spin' but nobody frames it as 'your ball is CAUSING your slice.' The education angle is fresh."
+        },
+        "evidence_strength": {
+          "score": 70,
+          "weight": 0.15,
+          "weighted": 10.5,
+          "evidence": "Multiple quotes connecting spin to ball choice. P-012: 3500 RPM vs 2200 RPM between two balls at same speed. ST-006: three rounds without losing a ball after switching."
+        },
+        "transformation_potential": {
+          "score": 65,
+          "weight": 0.10,
+          "weighted": 6.5,
+          "evidence": "From 'losing balls to slice' to 'keeping drives in play.' Meaningful but secondary to distance recovery."
+        },
+        "urgency_signals": {
+          "score": 60,
+          "weight": 0.10,
+          "weighted": 6.0,
+          "evidence": "Moderate. Slice is a persistent problem but golfers have learned to live with it."
+        }
+      },
+      "frame_claim": "The wrong ball amplifies your worst tendencies. The right one tames them.",
+      "primary_proof": "Spin rate data: 3500 RPM vs 2200 RPM at same swing speed. Same swing, different ball, different result."
+    },
+    {
+      "id": "OPP-05",
+      "name": "Independent Proof — Trust the Robot, Not the Marketing",
+      "tier": 2,
+      "total_score": 66,
+      "description": "Credibility angle: iON+ leads with independent Golf Laboratories data, not brand claims. 'The robot doesn't care about the logo.' This overcomes the brand trust barrier for a new entrant.",
+      "scoring": {
+        "market_demand": {
+          "score": 60,
+          "weight": 0.25,
+          "weighted": 15.0,
+          "evidence": "H4 partially validated at 7/10. Brand trust is a barrier but cracking. The demand is for PROOF, not for a specific proof format."
+        },
+        "emotional_intensity": {
+          "score": 65,
+          "weight": 0.20,
+          "weighted": 13.0,
+          "evidence": "Trust deficit creates low-grade cynicism. Golfers distrust brand claims (V-045: 'I thought Vice is a marketing company?'). Independent proof resolves the cynicism."
+        },
+        "competitive_gap": {
+          "score": 90,
+          "weight": 0.20,
+          "weighted": 18.0,
+          "evidence": "Massive gap. No ball brand leads with independent third-party testing as PRIMARY proof (WZ-03, EP-18 staleness 2/10). This is near-virgin whitespace."
+        },
+        "evidence_strength": {
+          "score": 60,
+          "weight": 0.15,
+          "weighted": 9.0,
+          "evidence": "Golf Laboratories data exists and is product-specific. But the research quotes don't discuss Golf Laboratories specifically — this is a positioning strategy, not a documented market demand."
+        },
+        "transformation_potential": {
+          "score": 60,
+          "weight": 0.10,
+          "weighted": 6.0,
+          "evidence": "From 'trusting marketing' to 'trusting independent data.' Meaningful for skeptics but not emotionally transformative."
+        },
+        "urgency_signals": {
+          "score": 50,
+          "weight": 0.10,
+          "weighted": 5.0,
+          "evidence": "Low urgency for proof format specifically. But cultural timing: launch monitor proliferation means golfers are more data-literate than ever."
+        }
+      },
+      "frame_claim": "Don't trust our marketing. Trust the independent lab.",
+      "primary_proof": "Golf Laboratories robot data at 95mph. The numbers speak for themselves.",
+      "schema_violations_leveraged": ["SVO-01 (independent testing as brand standard)", "SVO-06 (speed-matching replaces handicap-gating)"]
+    },
+    {
+      "id": "OPP-06",
+      "name": "Recovery Narrative — Get Back What Aging Took",
+      "tier": 3,
+      "total_score": 55,
+      "description": "Emotional angle for 55+ golfers: not all distance loss is age. Some is your ball. iON+ recovers the ball-caused portion. Use as supporting narrative, not lead — risks pigeon-holing to older audience.",
+      "scoring": {
+        "market_demand": {
+          "score": 65,
+          "weight": 0.25,
+          "weighted": 16.25,
+          "evidence": "Strong in the 55+ demo. Aging golfer population is peaking. But restricts to one age segment when the product serves 80-95mph at any age."
+        },
+        "emotional_intensity": {
+          "score": 85,
+          "weight": 0.20,
+          "weighted": 17.0,
+          "evidence": "Extremely high for the target audience. UE-01 (equipment grief) and UE-04 (competitive mortality) are the deepest emotions in the dataset. But they're age-specific."
+        },
+        "competitive_gap": {
+          "score": 70,
+          "weight": 0.20,
+          "weighted": 14.0,
+          "evidence": "WZ-04: nobody frames ball choice as RECOVERY. All competitors frame as optimization. The recovery narrative is differentiated."
+        },
+        "evidence_strength": {
+          "score": 50,
+          "weight": 0.15,
+          "weighted": 7.5,
+          "evidence": "Strong emotional evidence but the causal link (ball → recovered distance) is supported by individual quotes, not systematic data for the aging segment specifically."
+        },
+        "transformation_potential": {
+          "score": 80,
+          "weight": 0.10,
+          "weighted": 8.0,
+          "evidence": "Dramatic transformation for the right person: from 'I can't keep up' to 'I got 15 yards back.' But narrow audience."
+        },
+        "urgency_signals": {
+          "score": 55,
+          "weight": 0.10,
+          "weighted": 5.5,
+          "evidence": "Every season matters more as they age. But the urgency is existential, not promotional."
+        }
+      },
+      "frame_claim": "Not all your lost distance is age. Some of it is your ball.",
+      "primary_proof": "Golf Laboratories data showing iON+ outperforms at 95mph + transformation stories.",
+      "note": "USE AS SUPPORTING NARRATIVE for 55+ segment. Do NOT lead with this — risks age pigeon-holing per Ben's feedback."
+    },
+    {
+      "id": "OPP-07",
+      "name": "End the Two-Ball System — One Ball, Every Hole",
+      "tier": 3,
+      "total_score": 48,
+      "description": "Niche angle: golfers who play premium balls on safe holes and budget balls over water. At $30/dozen, iON+ eliminates the need for a water ball. One ball, every shot, no anxiety.",
+      "scoring": {
+        "market_demand": {
+          "score": 45,
+          "weight": 0.25,
+          "weighted": 11.25,
+          "evidence": "Niche behavior documented (CM-004, ST-017) but not a dominant market theme."
+        },
+        "emotional_intensity": {
+          "score": 55,
+          "weight": 0.20,
+          "weighted": 11.0,
+          "evidence": "Moderate — the anxiety of losing a $5 ball is real but not acute."
+        },
+        "competitive_gap": {
+          "score": 50,
+          "weight": 0.20,
+          "weighted": 10.0,
+          "evidence": "Any ball under $30/dozen solves this. Not unique to iON+."
+        },
+        "evidence_strength": {
+          "score": 40,
+          "weight": 0.15,
+          "weighted": 6.0,
+          "evidence": "Limited quote evidence. Specific to a subset of golfers."
+        },
+        "transformation_potential": {
+          "score": 45,
+          "weight": 0.10,
+          "weighted": 4.5,
+          "evidence": "Small transformation. From two balls to one. Convenience, not life-changing."
+        },
+        "urgency_signals": {
+          "score": 40,
+          "weight": 0.10,
+          "weighted": 4.0,
+          "evidence": "Low urgency. It's a nice-to-have, not a need-to-have."
+        }
+      },
+      "frame_claim": "One ball. Every hole. No 'water ball' needed.",
+      "primary_proof": "$30/dozen removes the financial anxiety of losing balls.",
+      "note": "Use as a supporting bullet in the offer section, not a standalone angle."
+    }
+  ],
+  "tier_summary": {
+    "tier_1": [
+      "OPP-01: Your Ball Matters — Distance (score: 89)",
+      "OPP-02: Fair Price, Real Performance (score: 84)"
+    ],
+    "tier_2": [
+      "OPP-03: Visual Alignment System (score: 72)",
+      "OPP-04: Spin Control for Straighter Drives (score: 68)",
+      "OPP-05: Independent Proof (score: 66)"
+    ],
+    "tier_3": [
+      "OPP-06: Recovery Narrative for 55+ (score: 55)",
+      "OPP-07: End the Two-Ball System (score: 48)"
+    ]
+  },
+  "strategic_recommendation": "Lead with OPP-01 (distance) as the primary message. Support immediately with OPP-02 (fair price). These two ARE the frame claim: your ball matters + you don't have to overpay. Use OPP-05 (independent proof) as the credibility mechanism. OPP-03 (alignment) is the differentiator that makes iON+ unique within the value space. OPP-04 (spin control) supports the distance claim with technical depth. OPP-06 (recovery) and OPP-07 (one ball) are supporting angles for specific audience segments and page sections."
+}

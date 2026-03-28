@@ -1,0 +1,24 @@
+# GATE_2.8_VERIFIED.yaml — RSF outputs validated
+gate: GATE_2.8
+status: PASS
+path: A (RSF executed, not skipped)
+timestamp: "2026-03-27T16:45:00-0400"
+expectation_schema:
+  generated: true
+  patterns_mapped: 18
+  saturated_claims: 9
+  whitespace_zones: 5
+  schema_violation_opportunities: 7
+  schema_summary: present
+latent_resonance_field:
+  generated: true
+  expressed_vs_latent_gaps: 5
+  unnamed_emotions: 4
+  identity_tensions: 3
+  fssit_candidates: 7
+  fssit_strong_candidates: 7
+  resonance_summary: present
+rsf_status:
+  expectation_schema_generated: true
+  latent_resonance_generated: true
+  rsf_skip_approved: false

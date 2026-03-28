@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "skill": "2.2-E WEB Analysis Deep (E5 Tool 2)",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input_quotes": 1080,
+    "method": "Pattern recognition across 1,080 verbatim quotes from Reddit, YouTube, GolfWRX, expansion rounds"
+  },
+  "wants": {
+    "summary": "Amateur golfers want distance they can feel and trust, at a price that doesn't punish them for playing the game they love. They want to stop guessing about which ball to play and start knowing.",
+    "primary_wants": [
+      {
+        "want": "More distance off the tee without changing their swing",
+        "intensity": 9.5,
+        "frequency": "Dominant theme across PAIN + HOPE + ROOT_CAUSE",
+        "prospect_language": [
+          "I want to hit it farther",
+          "I've lost 20-50 yards over the last 5-10 years",
+          "I want any help I can get",
+          "Looking for any distance I can find"
+        ],
+        "evidence_ids": ["P-253", "P-255", "P-259", "P-233", "H-236", "RC-148"]
+      },
+      {
+        "want": "Fair price for a ball that actually performs",
+        "intensity": 8.5,
+        "frequency": "Dominant theme across VILLAIN + SOLUTIONS_TRIED + HOPE",
+        "prospect_language": [
+          "I'll be damned if I'll ever pay $3-5 for a premium golf ball",
+          "I love the $25-30 USD balls",
+          "The difference in performance vs. cost isn't worth it",
+          "99% of us just play for fun"
+        ],
+        "evidence_ids": ["V-005", "V-035", "V-038", "H-016", "RC-023", "ST-003"]
+      },
+      {
+        "want": "Confidence in their ball choice — stop second-guessing",
+        "intensity": 7.5,
+        "frequency": "Moderate across ROOT_CAUSE + SOLUTIONS_TRIED",
+        "prospect_language": [
+          "What ball should I actually be playing?",
+          "I've been experimenting this year",
+          "I tried so hard to be a Snell and Vice guy",
+          "I bought a launch monitor to test balls"
+        ],
+        "evidence_ids": ["RC-024", "V-021", "V-022", "ST-123", "ST-006"]
+      },
+      {
+        "want": "Soft feel without sacrificing distance",
+        "intensity": 7.0,
+        "frequency": "Strong in HOPE + SOLUTIONS_TRIED",
+        "prospect_language": [
+          "Soft and durable, distance is fine",
+          "Feel is great, distance seems on par with ProV1",
+          "I want something that feels good AND goes far",
+          "The soft feel balls just don't go anywhere"
+        ],
+        "evidence_ids": ["H-011", "H-012", "ST-017", "ST-142"]
+      },
+      {
+        "want": "To not feel stupid for what they're playing",
+        "intensity": 6.5,
+        "frequency": "Latent but powerful in VILLAIN + ROOT_CAUSE",
+        "prospect_language": [
+          "Why are you as a 20 handicapper playing a ball that costs 1/6 of the round?",
+          "Stop wasting your money. You're not good enough to use prov1s",
+          "For 95% of golfers, prov1s are an insane purchase",
+          "Try to tell them and get ready for a fight"
+        ],
+        "evidence_ids": ["H-013", "V-003", "V-037", "RC-026"]
+      }
+    ],
+    "latent_wants": [
+      {
+        "want": "A ball that compensates for their declining physical ability",
+        "evidence": "Older golfers describe distance loss as inevitable but are desperately looking for anything that helps. They don't frame it as 'I want a ball that makes up for aging' but their behavior says it.",
+        "evidence_ids": ["P-253", "P-257", "P-270", "H-236"]
+      },
+      {
+        "want": "Permission to NOT play Pro V1",
+        "evidence": "Golfers describe switching away from ProV1 with language like confession or liberation. The brand has a psychological hold that they want released.",
+        "evidence_ids": ["ST-006", "V-038", "CM-005", "ST-017"]
+      }
+    ]
+  },
+  "emotions": {
+    "summary": "The dominant emotional landscape is a mix of frustration (distance loss, price gouging), quiet shame (can't keep up, playing the wrong ball), and hope-seeking (any edge they can find). Anger at the industry sits alongside deep loyalty to the game itself.",
+    "primary_emotions": [
+      {
+        "emotion": "Frustration — watching distance disappear year by year",
+        "intensity": 9.0,
+        "manifestation": "Golfers track their distance decline with painful specificity. They know exactly when it started, how much they've lost, and how it makes them feel. This isn't vague dissatisfaction — it's measured grief.",
+        "prospect_language": [
+          "It is a huge shock",
+          "My mind writes checks my body can't cash",
+          "I haven't really felt like I'm getting older but fuck me",
+          "BIG drop between 50 and 60, and again by the time I hit 65"
+        ],
+        "evidence_ids": ["P-253", "P-257", "P-259", "P-264"]
+      },
+      {
+        "emotion": "Resentment — toward an industry that charges more for less",
+        "intensity": 8.0,
+        "manifestation": "The golf ball pricing conversation triggers genuine anger. Not mild annoyance — visceral reactions. They feel exploited by an industry that knows they're addicted to the game.",
+        "prospect_language": [
+          "The entire golf ball industry is a scam",
+          "When is the golf industry going to keep consistent pricing year after year?",
+          "I'll be damned if I'll ever pay $3-5 for a premium golf ball",
+          "Golf ball prices. It is the most expensive part."
+        ],
+        "evidence_ids": ["V-035", "V-018", "V-005", "V-004"]
+      },
+      {
+        "emotion": "Confusion — overwhelmed by options with no clear guidance",
+        "intensity": 7.0,
+        "manifestation": "The golf ball market has dozens of options and golfers have no reliable way to choose. Fitting exists for clubs but ball fitting is rare and often biased (Bridgestone fitters recommend Bridgestone).",
+        "prospect_language": [
+          "There are so many good golf balls to choose from these days",
+          "What ball should I actually be playing?",
+          "I've been experimenting this year",
+          "I'm currently trying to decide between..."
+        ],
+        "evidence_ids": ["V-025", "H-012", "V-021", "V-031"]
+      },
+      {
+        "emotion": "Quiet shame — playing a ball they suspect is wrong for them",
+        "intensity": 6.5,
+        "manifestation": "Golfers describe brand loyalty to Pro V1 or premium balls with defensiveness. They know they might be wasting money but don't want to admit it. When confronted ('you're not good enough for prov1s'), it stings because it confirms a fear they already had.",
+        "prospect_language": [
+          "Stop wasting your money. You're not good enough to use prov1s",
+          "I know alot of golfers who won't play with anything but pro v and their swing speed is about 80mph. What a waste",
+          "For 95% of golfers, prov1s are an insane purchase. Basically unless you're near scratch it's a pure luxury/flex",
+          "I know I shouldn't be playing this ball for my swing speed"
+        ],
+        "evidence_ids": ["V-003", "RC-026", "V-037", "RC-024"]
+      },
+      {
+        "emotion": "Hope — that the right ball exists and they just haven't found it yet",
+        "intensity": 7.5,
+        "manifestation": "Despite frustration, golfers remain optimistic that a better ball choice could help their game. The search itself is part of the golf experience. They want to believe equipment can help.",
+        "prospect_language": [
+          "I immediately saw 10ish yards improvement",
+          "I hit the longest drive I've ever hit on this hole",
+          "In my late 50s and have started getting more serious — two years ago 205yds, now averaging 240",
+          "Looking for any help I can get"
+        ],
+        "evidence_ids": ["CM-002", "H-225", "H-236", "H-012"]
+      }
+    ],
+    "secondary_emotions": [
+      {
+        "emotion": "Loss/grief — mourning the player they used to be",
+        "evidence": "Older golfers describe distance loss in the same language people use for physical decline and aging. One golfer's uncle had to give up golf entirely and it was 'devastating.' This is existential, not just frustration.",
+        "evidence_ids": ["P-263", "P-001", "P-261"]
+      },
+      {
+        "emotion": "Defiance — refusing to accept decline",
+        "evidence": "Even in their 60s-70s, golfers describe themselves as 'crazy fit' and fighting back against distance loss. They're not giving up — they're looking for every advantage.",
+        "evidence_ids": ["P-264", "P-268", "H-236"]
+      }
+    ]
+  },
+  "beliefs": {
+    "summary": "The market holds a set of interconnected beliefs about golf balls that are partially correct but create exploitable gaps. The core belief architecture: premium = better, brand = trustworthy, price = quality signal. These beliefs benefit Titleist and hurt newcomers — but they're showing cracks.",
+    "primary_beliefs": [
+      {
+        "belief": "Pro V1 is the gold standard — everything else is measured against it",
+        "type": "WHAT",
+        "strength": "Very strong — nearly universal",
+        "alignable": true,
+        "evidence": "Every competitive comparison references ProV1 first. Golfers describe switching FROM ProV1 like leaving a religion. The ball has become the default, not through performance superiority for their swing, but through cultural dominance.",
+        "evidence_ids": ["CM-001", "CM-005", "CM-007", "V-022", "ST-017"]
+      },
+      {
+        "belief": "You need a certain skill level to 'deserve' a premium ball",
+        "type": "WHO",
+        "strength": "Strong — reinforced by pros and peers",
+        "alignable": false,
+        "challengeable": true,
+        "challenge_angle": "The real question isn't handicap — it's swing speed. A 20-handicapper with 100mph swing speed might benefit from Pro V1. A 10-handicapper with 80mph swing speed is actively hurt by it. The skill-level frame is wrong. The swing-speed frame is right.",
+        "evidence_ids": ["V-003", "V-037", "V-041", "RC-026"]
+      },
+      {
+        "belief": "Cheaper balls are inherently worse",
+        "type": "WHAT",
+        "strength": "Moderate — cracking under evidence",
+        "alignable": false,
+        "challengeable": true,
+        "challenge_angle": "Golfers who've tested alternatives (Vice, Maxfli, Kirkland) consistently report negligible performance differences. The belief persists through brand trust, not through experience. Every golfer who actually tests side-by-side becomes a convert.",
+        "evidence_ids": ["ST-003", "H-011", "V-035", "CM-003"]
+      },
+      {
+        "belief": "Ball choice doesn't really matter that much for most golfers",
+        "type": "HOW",
+        "strength": "Moderate — held by some, rejected by others",
+        "alignable": false,
+        "challengeable": true,
+        "challenge_angle": "Ball choice matters ENORMOUSLY — but not in the way the market thinks. It's not about 'premium vs. cheap.' It's about matching compression and spin to your swing speed. Playing the WRONG ball for your speed costs 10-15 yards. That's the reframe.",
+        "evidence_ids": ["H-006", "RC-014", "CM-002", "ST-010"]
+      },
+      {
+        "belief": "Distance loss is inevitable with age — equipment can't fix it",
+        "type": "WHY",
+        "strength": "Strong — reinforced by experience",
+        "alignable": true,
+        "challenge_angle": "Partial truth: swing speed does decline with age. But most aging golfers are ALSO playing a ball that compounds the problem. They're losing yards to age AND to spin. Fix the spin (right ball for their speed) and they recover some of what they thought was gone forever.",
+        "evidence_ids": ["P-253", "P-255", "P-259", "RC-146"]
+      },
+      {
+        "belief": "Urethane cover = better ball, ionomer = cheaper ball",
+        "type": "HOW",
+        "strength": "Strong among informed golfers",
+        "alignable": false,
+        "challengeable": true,
+        "challenge_angle": "Urethane provides more greenside spin — beneficial for low-handicap players. But for average golfers, that extra spin off the tee COSTS distance. An engineered ionomer ball that reduces spin can outperform urethane for the majority of golfers. Construction type is a proxy — performance is what matters.",
+        "evidence_ids": ["RC-001", "RC-140", "V-002", "H-008"]
+      }
+    ],
+    "belief_gap_opportunities": [
+      {
+        "gap": "No one has framed ball choice as a SWING SPEED decision instead of a SKILL decision",
+        "opportunity": "Reframe the entire conversation from 'what handicap are you?' to 'what's your swing speed?' This makes the decision objective, data-driven, and removes the shame of 'not being good enough' for a certain ball.",
+        "evidence_ids": ["V-003", "RC-026", "RC-024"]
+      },
+      {
+        "gap": "No one has connected 'playing the wrong ball' to 'the distance you're losing'",
+        "opportunity": "Most golfers blame aging for distance loss. They're partially right. But they don't realize their ball choice is compounding the problem. Showing that the right ball recovers 5-15 yards of 'lost' distance is the frame claim.",
+        "evidence_ids": ["P-253", "RC-014", "CM-002"]
+      },
+      {
+        "gap": "Visual alignment technology doesn't exist as a category in golfers' minds",
+        "opportunity": "Golfers draw lines on their balls with Sharpies. They use Triple Track. But no one has presented alignment as ENGINEERED TECHNOLOGY — a system designed to improve both putting alignment AND tee shot visualization. This is novel enough to be a genuine differentiator.",
+        "evidence_ids": ["H-190"]
+      }
+    ]
+  }
+}

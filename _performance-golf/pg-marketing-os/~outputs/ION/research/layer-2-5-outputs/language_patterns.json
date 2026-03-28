@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "skill": "2.5-E Language Extractor",
+    "generated": "2026-03-27",
+    "project": "ION",
+    "input": "1,080 quotes across all buckets"
+  },
+  "gold_phrases": [
+    {
+      "id": "GP-01",
+      "phrase": "My mind writes checks my body can't cash",
+      "source_id": "P-257",
+      "frequency": 1,
+      "emotional_resonance": 10,
+      "copy_use": "ATF or problem section opener. Encapsulates the aging golfer's core conflict — desire vs. physical reality."
+    },
+    {
+      "id": "GP-02",
+      "phrase": "It is a huge shock",
+      "source_id": "P-253",
+      "frequency": 1,
+      "emotional_resonance": 9,
+      "copy_use": "After a distance-loss data point. Three words that carry the full weight of realization."
+    },
+    {
+      "id": "GP-03",
+      "phrase": "I'll be damned if I'll ever pay $3-5 for a premium golf ball",
+      "source_id": "V-005",
+      "frequency": 1,
+      "emotional_resonance": 9,
+      "copy_use": "Counter-sell or villain section. Raw defiance against pricing. The 'draws a line in the sand' moment."
+    },
+    {
+      "id": "GP-04",
+      "phrase": "The entire golf ball industry is a scam",
+      "source_id": "V-035",
+      "frequency": 1,
+      "emotional_resonance": 8,
+      "copy_use": "Villain section. Validates what the reader already suspects. Align with this, then offer the solution."
+    },
+    {
+      "id": "GP-05",
+      "phrase": "Stop wasting your money. You're not good enough to use prov1s.",
+      "source_id": "V-003",
+      "frequency": 1,
+      "emotional_resonance": 9,
+      "copy_use": "Problem section — the shame of the current paradigm. Shows how the industry treats golfers. Then reframe: it's not about being 'good enough.' It's about swing speed."
+    },
+    {
+      "id": "GP-06",
+      "phrase": "I immediately saw 10ish yards improvement",
+      "source_id": "CM-002",
+      "frequency": 1,
+      "emotional_resonance": 8,
+      "copy_use": "Proof section or testimonial anchor. Specific, believable, immediate. The 'ish' makes it authentic — not a marketing claim."
+    },
+    {
+      "id": "GP-07",
+      "phrase": "Now I crush one, check the distance, and it's 250",
+      "source_id": "P-268",
+      "frequency": 1,
+      "emotional_resonance": 8,
+      "copy_use": "Problem section — the gap between feel and reality. Shows the subjective experience of hitting well but the objective reality of declining distance."
+    },
+    {
+      "id": "GP-08",
+      "phrase": "99% of us just play for fun",
+      "source_id": "RC-023",
+      "frequency": 2,
+      "emotional_resonance": 7,
+      "copy_use": "Audience identification. Positions the reader as 'the 99%' who don't need tour equipment. Inclusive, not exclusive."
+    },
+    {
+      "id": "GP-09",
+      "phrase": "I haven't really felt like I'm getting older but fuck me",
+      "source_id": "P-259",
+      "frequency": 1,
+      "emotional_resonance": 9,
+      "copy_use": "Problem section — the denial/realization moment. Can't be used verbatim in copy but the SENTIMENT is gold: you don't feel old until the scorecard tells you."
+    },
+    {
+      "id": "GP-10",
+      "phrase": "Got my hands on a sleeve and fell in love",
+      "source_id": "ST-009",
+      "frequency": 1,
+      "emotional_resonance": 7,
+      "copy_use": "Conversion moment. The trial-to-commitment arc in one sentence. Supports the 'try one dozen' CTA."
+    },
+    {
+      "id": "GP-11",
+      "phrase": "I have lost close to 50 yards since then. It is a huge shock.",
+      "source_id": "P-253",
+      "frequency": 1,
+      "emotional_resonance": 9,
+      "copy_use": "Distance decline data with emotional punctuation. The number (50 yards) does the work, the reaction ('huge shock') does the feeling."
+    },
+    {
+      "id": "GP-12",
+      "phrase": "had to give up golf completely and it was devastating to him",
+      "source_id": "P-263",
+      "frequency": 1,
+      "emotional_resonance": 10,
+      "copy_use": "Existential stakes. Use sparingly and with respect. This is the ultimate consequence — the thing every aging golfer fears."
+    },
+    {
+      "id": "GP-13",
+      "phrase": "What a waste, but try to tell them and get ready for a fight",
+      "source_id": "RC-026",
+      "frequency": 1,
+      "emotional_resonance": 7,
+      "copy_use": "Shows the social dynamics of ball choice. People are emotionally attached to their ball. Switching requires overcoming identity, not just information."
+    },
+    {
+      "id": "GP-14",
+      "phrase": "Same swing. Different ball.",
+      "source_id": "Synthesized from CM-002, RC-014",
+      "frequency": 0,
+      "emotional_resonance": 8,
+      "copy_use": "Potential headline/tagline candidate. The entire frame claim in four words. Implies: your swing isn't the problem. Your ball is."
+    },
+    {
+      "id": "GP-15",
+      "phrase": "I lost 30 yards and every other drive would just whiffleball a mile high",
+      "source_id": "ST-010",
+      "frequency": 1,
+      "emotional_resonance": 8,
+      "copy_use": "Cautionary tale about wrong ball choice. 'Whiffleball' is vivid, relatable, and slightly funny — which makes it memorable."
+    }
+  ],
+  "recurring_patterns": [
+    {
+      "pattern": "Specific distance decline expressed as 'lost X yards in Y years'",
+      "frequency": 20,
+      "examples": ["lost 50 yards", "dropped 15 mph", "lost a solid 25 yards", "lost at least one club"],
+      "copy_implication": "Always use specific numbers. Readers measure their own decline this way."
+    },
+    {
+      "pattern": "Age as the first word in self-description",
+      "frequency": 30,
+      "examples": ["I'm 58...", "I'm pushing 70...", "I'm 73...", "I'm almost 48..."],
+      "copy_implication": "Age is the primary identity marker. They introduce themselves by age because it's the context for everything that follows."
+    },
+    {
+      "pattern": "ProV1 as the reference standard ('compared to ProV1...')",
+      "frequency": 40,
+      "examples": ["switched from ProV1", "as good as ProV1", "feels no different than ProV1", "nearly the same as ProV1"],
+      "copy_implication": "Every ball is measured against ProV1. iON+ must address this comparison head-on with data, not avoidance."
+    },
+    {
+      "pattern": "Dollar-per-ball calculation as value frame",
+      "frequency": 15,
+      "examples": ["$3-5 per ball", "$55/dozen", "$28 for 2 dozen", "$25-30 range"],
+      "copy_implication": "Golfers think in per-ball and per-dozen pricing. Use both. $30/dozen AND 'about $2.50 a ball.'"
+    },
+    {
+      "pattern": "Trial narrative: 'I switched from X to Y and...'",
+      "frequency": 25,
+      "examples": ["switched from ProV1 to Vice", "bought a box of Kirklands", "tried being a ProV1 tryhard"],
+      "copy_implication": "The switching story is the dominant conversion narrative. Structure testimonials as before/after switches."
+    }
+  ],
+  "metaphors": [
+    {
+      "metaphor": "whiffleball (for ballooning drives)",
+      "source_id": "ST-010",
+      "resonance": "High — instantly visual, slightly humiliating"
+    },
+    {
+      "metaphor": "mind writes checks body can't cash",
+      "source_id": "P-257",
+      "resonance": "Very high — universal understanding of desire exceeding ability"
+    },
+    {
+      "metaphor": "scam / rip-off (for golf ball pricing)",
+      "source_id": "V-035",
+      "resonance": "High — frames the industry as adversarial, not just expensive"
+    },
+    {
+      "metaphor": "fell in love (for finding the right ball)",
+      "source_id": "ST-009",
+      "resonance": "High — commitment language for a consumable product shows emotional investment"
+    },
+    {
+      "metaphor": "water ball / safe ball (for cheap balls used on risky holes)",
+      "source_id": "CM-004",
+      "resonance": "High — relatable behavior that reveals the anxiety of premium ball pricing"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "skill": "3.1-B Evidence Compiler",
+    "generated": "2026-03-27",
+    "project": "ION"
+  },
+  "packages": {
+    "OPP-01": {
+      "tier": 1,
+      "package_type": "FULL",
+      "opportunity": "Your Ball Matters — Distance Through Ball Optimization",
+      "supporting_quotes": [
+        {"id": "P-253", "text": "I am 74 and was a 5'ish handicap golfer 7 or 8 years ago. I have lost close to 50 yards since then (most of it since hitting age 70). It is a huge shock.", "bucket": "PAIN", "use": "Emotional anchor — distance loss as shock/grief"},
+        {"id": "P-255", "text": "Me at 30 years old - Driver 280, 7 iron 155. 45 - Driver 260. 55 - Driver 240. 65 - Driver 220. At 67 - Driver 210, 7 iron 140.", "bucket": "PAIN", "use": "Data visualization — measured decline over 37 years"},
+        {"id": "P-257", "text": "I'm pushing 70, four fused discs in my neck. My mind writes checks my body can't cash.", "bucket": "PAIN", "use": "Gold phrase — encapsulates desire vs. physical reality"},
+        {"id": "P-259", "text": "I'm almost 48 and I feel like I have lost a solid 25 yards off my driver carry. I haven't really felt like I'm getting older but fuck me.", "bucket": "PAIN", "use": "Raw emotion — the realization moment"},
+        {"id": "CM-002", "text": "I was playing Kirklands and ProV1s. I asked AI for a fitting and it put me into a Bridgestone B6. I immediately saw 10ish yards improvement.", "bucket": "COMPETITOR", "use": "Proof of concept — ball switch = immediate distance gain"},
+        {"id": "ST-010", "text": "I bought a huge box of Kirklands thinking 'how much of a difference can it even make for a 90s shooter?' I lost 30 yards and every other drive would just whiffleball a mile high.", "bucket": "SOLUTIONS_TRIED", "use": "Cautionary tale — wrong ball = 30 yard loss"},
+        {"id": "RC-014", "text": "I play ProV1 because I love the action around the green. I bought a launch monitor and it shows I lose 10 yards on drives.", "bucket": "ROOT_CAUSE", "use": "Data revelation — ProV1 costs distance at moderate speed"},
+        {"id": "RC-026", "text": "I know alot of golfers who won't play with anything but pro v and their swing speed is about 80mph. What a waste, but try to tell them and get ready for a fight.", "bucket": "ROOT_CAUSE", "use": "Social proof of the mismatch problem"},
+        {"id": "H-236", "text": "I'm in my late 50s. Two years ago, my average drive was about 205 yds. Now I'm averaging 240 drive distance.", "bucket": "HOPE", "use": "Transformation proof — 35 yards recovered through optimization"},
+        {"id": "H-225", "text": "I hit the longest drive I've ever hit on this hole at my home club.", "bucket": "HOPE", "use": "Emotional payoff moment"},
+        {"id": "RC-017", "text": "I was surprised that some of the highest compression balls performed the best for mid-swing speed.", "bucket": "ROOT_CAUSE", "use": "Conventional wisdom challenged by data"},
+        {"id": "P-268", "text": "Now I crush one, check the distance, and it's 250.", "bucket": "PAIN", "use": "Subjective vs. objective gap — feels like a bomb, measures 250"},
+        {"id": "V-009", "text": "I naturally hit the ball high and impart a lot of spin. Kirklands spin way too much — just goes farther into the woods.", "bucket": "VILLAIN", "use": "Wrong ball amplifies worst tendencies"},
+        {"id": "ST-006", "text": "I tried being a Pro-V1 tryhard and could not keep them straight. Switched to Callaway Warbirds and immediately played three rounds without losing a ball.", "bucket": "SOLUTIONS_TRIED", "use": "Spin reduction = accuracy improvement"},
+        {"id": "P-012", "text": "I was pretty shocked to see how different spin can be at the sim. Bridgestone e6 was 3500 rpm spin, then tried a Chrome Soft was down to 2200.", "bucket": "PAIN", "use": "Measurable spin difference between balls at same speed"},
+        {"id": "P-263", "text": "My uncle had to give up golf completely about 5 years ago and it was devastating to him. He had played for nearly 60 years.", "bucket": "PAIN", "use": "Existential stakes — the ultimate consequence of distance decline"}
+      ],
+      "statistical_frequency": {
+        "distance_mentions": "Dominant theme across 302 PAIN quotes + 250 HOPE quotes",
+        "ball_switch_stories": "25+ documented switch-and-gain narratives",
+        "platform_diversity": "Reddit (42 threads), YouTube (16 videos), GolfWRX (14 threads), expansion (3 rounds)"
+      },
+      "transformation_pair_connections": ["TP-001", "TP-003", "TP-004", "TP-005", "TP-006"],
+      "rsf_connections": {
+        "schema_violations": ["SVO-01", "SVO-02", "SVO-06"],
+        "fssit_candidates": ["FSSIT-01", "FSSIT-02", "FSSIT-05"],
+        "identity_tensions": ["IT-02"],
+        "unnamed_emotions": ["UE-01", "UE-04"]
+      }
+    },
+    "OPP-02": {
+      "tier": 1,
+      "package_type": "FULL",
+      "opportunity": "Fair Price, Real Performance",
+      "supporting_quotes": [
+        {"id": "V-005", "text": "I don't mind paying $1000 for clubs, $75 for a round or $15 for a range bucket, but I'll be damned if I'll ever pay $3-5 for a premium golf ball.", "bucket": "VILLAIN", "use": "Defiance quote — willing to spend, refuses to be gouged on consumable"},
+        {"id": "V-035", "text": "The entire golf ball industry is a scam. They all cost close to the same to make.", "bucket": "VILLAIN", "use": "Industry indictment — validates pricing resentment"},
+        {"id": "V-018", "text": "When is the golf industry going to keep consistent pricing year after year? The new ProV balls are $55 a dozen.", "bucket": "VILLAIN", "use": "Price escalation frustration"},
+        {"id": "V-004", "text": "Golf ball prices. It is the most expensive part.", "bucket": "VILLAIN", "use": "Consumable cost as the biggest recurring expense"},
+        {"id": "CM-003", "text": "Instead of ProV1 at $55, play Vice at $26. Nearly the same performance, half the price.", "bucket": "COMPETITOR", "use": "DTC proof — the value alternative is already validated"},
+        {"id": "ST-003", "text": "Maxfli Tour can be had for about $27/dozen. I switched from the Pro V1x and actually get the same performance if not better for $25 less a dozen.", "bucket": "SOLUTIONS_TRIED", "use": "Real switch story with $ savings quantified"},
+        {"id": "H-016", "text": "I love the $25-30 USD balls. My go to is the Callaway Supersoft, also play the Titliest AVX, Taylormade Speed Soft, and Vice Pro.", "bucket": "HOPE", "use": "The $25-30 sweet spot — where the market wants to live"},
+        {"id": "H-009", "text": "The biggest lifehack I wish someone had told me: used 5A mint golf balls. Vice Pros are $16/dozen and they are amazing.", "bucket": "HOPE", "use": "'Lifehack' framing — discovery narrative"},
+        {"id": "V-037", "text": "For 95% of golfers, prov1s are an insane purchase. Basically unless you're near scratch it's a pure luxury/flex.", "bucket": "VILLAIN", "use": "ProV1 as status symbol, not performance tool"},
+        {"id": "CM-004", "text": "Par 5, no water, no OB....PROV1. Par 3 over water...Kirkland signature.", "bucket": "COMPETITOR", "use": "Two-ball system reveals price anxiety"},
+        {"id": "V-043", "text": "I waste a lot of money on ball purchases.", "bucket": "VILLAIN", "use": "Self-awareness of overspending"},
+        {"id": "ST-017", "text": "Maybe 5-10 yard less driving distance than Pro-V1 but worth it saving $19 a dozen. I don't feel nearly as bad when I dump one in the water.", "bucket": "SOLUTIONS_TRIED", "use": "Emotional relief from price-appropriate ball"},
+        {"id": "RC-023", "text": "The extra 5-10 yards is not worth the $60 dozen of Pro V's. $28 for two dozen K sigs. 99% of us just play for fun.", "bucket": "ROOT_CAUSE", "use": "'99% of us' — the majority doesn't need premium"},
+        {"id": "V-038", "text": "When I run out of the 2 boxes of ProVs I have I'm switching to Maxfli. Titleist is getting too expensive. The difference in performance vs. cost isn't worth it.", "bucket": "VILLAIN", "use": "Active switch decision driven by price escalation"},
+        {"id": "CM-005", "text": "As someone who was die hard ProV1, when the price increased (again) I started looking for a cheaper option. Maxfli Tour X feels and reacts no different.", "bucket": "COMPETITOR", "use": "Price increase as the trigger for brand disloyalty"}
+      ],
+      "statistical_frequency": {
+        "pricing_resentment_mentions": "75 VILLAIN quotes + pervasive across all buckets",
+        "DTC_switch_stories": "20+ documented switches from premium to value brands",
+        "price_sweet_spot": "$25-35/dozen consistently cited as acceptable range"
+      },
+      "transformation_pair_connections": ["TP-002", "TP-007", "TP-015", "TP-016", "TP-026"],
+      "rsf_connections": {
+        "schema_violations": ["SVO-03", "SVO-07"],
+        "fssit_candidates": ["FSSIT-01", "FSSIT-03"],
+        "identity_tensions": ["IT-01", "IT-03"],
+        "unnamed_emotions": ["UE-02"]
+      }
+    },
+    "OPP-03": {
+      "tier": 2,
+      "package_type": "SUMMARY",
+      "opportunity": "Visual Alignment System",
+      "supporting_quotes": [
+        {"id": "H-188", "text": "I have seen a few videos about this TT. I believe I fall into the category of a person who has trouble lining up the lines where it interferes with my feel and focus.", "bucket": "HOPE", "use": "Alignment aids are polarizing — some love, some find distracting"},
+        {"id": "CM-087", "text": "Was a fitter at Golfsmith. The Callaway SS was the only ball that had to be replaced in the hitting bay because they literally cracked.", "bucket": "COMPETITOR", "use": "Callaway durability issue — iON+ can differentiate"},
+        {"id": "P-005", "text": "My aim is always great it's just distance I struggle with.", "bucket": "PAIN", "use": "Aim/alignment is a known consideration even when not the primary pain"}
+      ],
+      "key_frequency_data": "Low explicit mention (< 10 quotes). But Sharpie line-drawing is widely practiced. Triple Track is the only branded alignment product.",
+      "primary_emotional_drivers": ["Confidence in aim", "Pre-shot routine improvement", "Putting accuracy"]
+    },
+    "OPP-04": {
+      "tier": 2,
+      "package_type": "SUMMARY",
+      "opportunity": "Spin Control for Straighter Drives",
+      "supporting_quotes": [
+        {"id": "V-009", "text": "I naturally hit the ball high and impart a lot of spin. Kirklands spin way too much — just goes farther into the woods or balloons at the slightest hint of wind.", "bucket": "VILLAIN"},
+        {"id": "ST-006", "text": "I tried being a Pro-V1 tryhard and could not keep them straight. Switched and immediately played three rounds without losing a ball.", "bucket": "SOLUTIONS_TRIED"},
+        {"id": "P-012", "text": "Shocked to see how different spin can be at the sim. e6 was 3500 rpm, Chrome Soft was 2200. Massive difference.", "bucket": "PAIN"},
+        {"id": "RC-014", "text": "My launch monitor shows I lose 10 yards on drives.", "bucket": "ROOT_CAUSE"},
+        {"id": "ST-010", "text": "Every other drive would just whiffleball a mile high.", "bucket": "SOLUTIONS_TRIED"},
+        {"id": "H-149", "text": "If OP slices and spins the driver a bunch, Kirklands could make that worse.", "bucket": "HOPE"},
+        {"id": "V-042", "text": "Going from a hyper spin junk ball like a kirkland, to a semi premium ball that manages spin better could absolutely help drop a lot of strokes.", "bucket": "VILLAIN"},
+        {"id": "V-017", "text": "My hybrid becomes a weird club and just sends the low spinny laser straight into the green.", "bucket": "VILLAIN"}
+      ],
+      "key_frequency_data": "Spin mentioned in ~80 quotes across buckets. Direct ball-to-spin-to-accuracy connection in ~25 quotes.",
+      "primary_emotional_drivers": ["Frustration with inconsistency", "Embarrassment of slicing", "Relief of keeping ball in play"]
+    },
+    "OPP-05": {
+      "tier": 2,
+      "package_type": "SUMMARY",
+      "opportunity": "Independent Proof — Trust the Robot",
+      "supporting_quotes": [
+        {"id": "V-036", "text": "Bridgestone rep told me my stats are better with Pro-v1s... but gave me sleeves of Bridgestone.", "bucket": "VILLAIN"},
+        {"id": "V-045", "text": "I thought Vice is a marketing company?", "bucket": "VILLAIN"},
+        {"id": "CM-002", "text": "I immediately saw 10ish yards improvement.", "bucket": "COMPETITOR"},
+        {"id": "RC-024", "text": "I went for a Bridgestone Ball Fitting today. Going in, I knew they would be able to set me up.", "bucket": "ROOT_CAUSE"},
+        {"id": "P-206", "text": "Still strange how the golf balls I like the most seem to do so poorly in Nick's evaluations.", "bucket": "PAIN"},
+        {"id": "CM-093", "text": "The supersoft is the shortest ball in this category with robot testing.", "bucket": "COMPETITOR"},
+        {"id": "H-203", "text": "Thanks for your transparency and honesty. Class act.", "bucket": "HOPE"},
+        {"id": "H-197", "text": "Can you add a table that shows all the results in one hit? For me it's not helpful to put balls into construction categories.", "bucket": "HOPE"}
+      ],
+      "key_frequency_data": "Trust/skepticism themes in ~50 quotes. Explicit robot testing references in ~10 quotes. Data-driven decision language in ~30 quotes.",
+      "primary_emotional_drivers": ["Cynicism toward brand claims", "Desire for objectivity", "Trust in data over marketing"]
+    },
+    "OPP-06": {
+      "tier": 3,
+      "package_type": "MINIMAL",
+      "supporting_quotes": [
+        {"id": "P-253", "text": "I have lost close to 50 yards since then. It is a huge shock.", "bucket": "PAIN"},
+        {"id": "P-263", "text": "Had to give up golf completely and it was devastating.", "bucket": "PAIN"},
+        {"id": "P-264", "text": "I'm 68, crazy fit. Every now and then I'll play a round that reminds me of the old days.", "bucket": "PAIN"},
+        {"id": "H-236", "text": "Two years ago, 205 yds. Now averaging 240.", "bucket": "HOPE"},
+        {"id": "P-257", "text": "My mind writes checks my body can't cash.", "bucket": "PAIN"}
+      ],
+      "basic_frequency": "~40 quotes from golfers 55+ describing distance decline as existential threat"
+    },
+    "OPP-07": {
+      "tier": 3,
+      "package_type": "MINIMAL",
+      "supporting_quotes": [
+        {"id": "CM-004", "text": "Par 5, no water...PROV1. Par 3 over water...Kirkland.", "bucket": "COMPETITOR"},
+        {"id": "ST-017", "text": "I don't feel nearly as bad when I dump one in the water.", "bucket": "SOLUTIONS_TRIED"},
+        {"id": "V-043", "text": "I waste a lot of money on ball purchases.", "bucket": "VILLAIN"}
+      ],
+      "basic_frequency": "~10 quotes describing two-ball system or ball-loss anxiety"
+    }
+  }
+}

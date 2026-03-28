@@ -1392,12 +1392,8 @@ Logging in with Google... Restarting Gemini CLI to continue.
     (streamingState === StreamingState.Idle ||
       streamingState === StreamingState.Responding ||
       streamingState === StreamingState.WaitingForConfirmation) &&
-<<<<<<< HEAD
-    !proQuotaRequest;
-=======
     !proQuotaRequest &&
     !copyModeEnabled;
->>>>>>> origin/main
 
   const observerRef = useRef<ResizeObserver | null>(null);
   const [controlsHeight, setControlsHeight] = useState(0);
@@ -2506,6 +2502,7 @@ Logging in with Google... Restarting Gemini CLI to continue.
       handleResumeSession,
       handleDeleteSession,
       setQueueErrorMessage,
+      addMessage,
       popAllMessages,
       handleApiKeySubmit,
       handleApiKeyCancel,
@@ -2597,6 +2594,7 @@ Logging in with Google... Restarting Gemini CLI to continue.
       handleResumeSession,
       handleDeleteSession,
       setQueueErrorMessage,
+      addMessage,
       popAllMessages,
       handleApiKeySubmit,
       handleApiKeyCancel,
