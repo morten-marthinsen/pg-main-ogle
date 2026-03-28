@@ -4,7 +4,46 @@
   <link type="text/html" rel="alternate" href="https://github.com/anthropics/claude-code/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/anthropics/claude-code/releases.atom"/>
   <title>Release notes from claude-code</title>
-  <updated>2026-03-26T22:52:07Z</updated>
+  <updated>2026-03-27T21:42:05Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/937253475/v2.1.86</id>
+    <updated>2026-03-27T21:42:09Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.86"/>
+    <title>v2.1.86</title>
+    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Added &lt;code&gt;X-Claude-Code-Session-Id&lt;/code&gt; header to API requests so proxies can aggregate requests by session without parsing the body&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;.jj&lt;/code&gt; and &lt;code&gt;.sl&lt;/code&gt; to VCS directory exclusion lists so Grep and file autocomplete don&#39;t descend into Jujutsu or Sapling metadata&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;--resume&lt;/code&gt; failing with &quot;tool_use ids were found without tool_result blocks&quot; on sessions created before v2.1.85&lt;/li&gt;
+&lt;li&gt;Fixed Write/Edit/Read failing on files outside the project root (e.g., &lt;code&gt;~/.claude/CLAUDE.md&lt;/code&gt;) when conditional skills or rules are configured&lt;/li&gt;
+&lt;li&gt;Fixed unnecessary config disk writes on every skill invocation that could cause performance issues and config corruption on Windows&lt;/li&gt;
+&lt;li&gt;Fixed potential out-of-memory crash when using &lt;code&gt;/feedback&lt;/code&gt; on very long sessions with large transcript files&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;--bare&lt;/code&gt; mode dropping MCP tools in interactive sessions and silently discarding messages enqueued mid-turn&lt;/li&gt;
+&lt;li&gt;Fixed the &lt;code&gt;c&lt;/code&gt; shortcut copying only ~20 characters of the OAuth login URL instead of the full URL&lt;/li&gt;
+&lt;li&gt;Fixed masked input (e.g., OAuth code paste) leaking the start of the token when wrapping across multiple lines on narrow terminals&lt;/li&gt;
+&lt;li&gt;Fixed official marketplace plugin scripts failing with &quot;Permission denied&quot; on macOS/Linux since v2.1.83&lt;/li&gt;
+&lt;li&gt;Fixed statusline showing another session&#39;s model when running multiple Claude Code instances and using &lt;code&gt;/model&lt;/code&gt; in one of them&lt;/li&gt;
+&lt;li&gt;Fixed scroll not following new messages after wheel scroll or click-to-select at the bottom of a long conversation&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;/plugin&lt;/code&gt; uninstall dialog: pressing &lt;code&gt;n&lt;/code&gt; now correctly uninstalls the plugin while preserving its data directory&lt;/li&gt;
+&lt;li&gt;Fixed a regression where pressing Enter after clicking could leave the transcript blank until the response arrived&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;ultrathink&lt;/code&gt; hint lingering after deleting the keyword&lt;/li&gt;
+&lt;li&gt;Fixed memory growth in long sessions from markdown/highlight render caches retaining full content strings&lt;/li&gt;
+&lt;li&gt;Reduced startup event-loop stalls when many claude.ai MCP connectors are configured (macOS keychain cache extended from 5s to 30s)&lt;/li&gt;
+&lt;li&gt;Reduced token overhead when mentioning files with &lt;code&gt;@&lt;/code&gt; — raw string content no longer JSON-escaped&lt;/li&gt;
+&lt;li&gt;Improved prompt cache hit rate for Bedrock, Vertex, and Foundry users by removing dynamic content from tool descriptions&lt;/li&gt;
+&lt;li&gt;Memory filenames in the &quot;Saved N memories&quot; notice now highlight on hover and open on click&lt;/li&gt;
+&lt;li&gt;Skill descriptions in the &lt;code&gt;/skills&lt;/code&gt; listing are now capped at 250 characters to reduce context usage&lt;/li&gt;
+&lt;li&gt;Changed &lt;code&gt;/skills&lt;/code&gt; menu to sort alphabetically for easier scanning&lt;/li&gt;
+&lt;li&gt;Auto mode now shows &quot;unavailable for your plan&quot; when disabled by plan restrictions (was &quot;temporarily unavailable&quot;)&lt;/li&gt;
+&lt;li&gt;[VSCode] Fixed extension incorrectly showing &quot;Not responding&quot; during long-running operations&lt;/li&gt;
+&lt;li&gt;[VSCode] Fixed extension defaulting Max plan users to Sonnet after the OAuth token refreshes (8 hours after login)&lt;/li&gt;
+&lt;li&gt;Read tool now uses compact line-number format and deduplicates unchanged re-reads, reducing token usage&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>ashwin-ant</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/937253475/v2.1.85</id>
     <updated>2026-03-26T22:52:12Z</updated>
@@ -413,21 +452,6 @@
 &lt;li&gt;Updated &lt;code&gt;--plugin-dir&lt;/code&gt; to only accept one path to support subcommands — use repeated &lt;code&gt;--plugin-dir&lt;/code&gt; for multiple directories&lt;/li&gt;
 &lt;li&gt;[VSCode] Fixed gitignore patterns containing commas silently excluding entire filetypes from the @-mention file picker&lt;/li&gt;
 &lt;/ul&gt;</content>
-    <author>
-      <name>ashwin-ant</name>
-    </author>
-    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:Repository/937253475/v2.1.75</id>
-    <updated>2026-03-13T17:09:08Z</updated>
-    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.75"/>
-    <title>v2.1.75</title>
-    <content type="html">&lt;p&gt;Merge pull request &lt;a class=&quot;issue-link js-issue-link&quot; href=&quot;https://github.com/anthropics/claude-code/pull/33472&quot;&gt;#33472&lt;/a&gt; from anthropics/kashyap/code-review-batch-o…&lt;/p&gt;
-
-&lt;p&gt;…utput&lt;/p&gt;
-
-&lt;p&gt;feat(code-review): pass confirmed=true when posting inline comments&lt;/p&gt;</content>
     <author>
       <name>ashwin-ant</name>
     </author>

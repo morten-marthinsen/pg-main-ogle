@@ -244,9 +244,22 @@ When migrating from `gemini-2.5-flash-native-audio-preview-12-2025` to `gemini-3
 7. **Clear audio playback queues** on interruption signals
 8. **Process all parts** in each server event — events can contain multiple content parts
 
-## How to use the Gemini API
+## Documentation Lookup
 
-For detailed API documentation, fetch from the official docs index:
+### When MCP is Installed (Preferred)
+
+If the **`search_documentation`** tool (from the Google MCP server) is available, use it as your **only** documentation source:
+
+1. Call `search_documentation` with your query
+2. Read the returned documentation
+3. **Trust MCP results** as source of truth for API details — they are always up-to-date.
+
+> [!IMPORTANT]
+> When MCP tools are present, **never** fetch URLs manually. MCP provides up-to-date, indexed documentation that is more accurate and token-efficient than URL fetching.
+
+### When MCP is NOT Installed (Fallback Only)
+
+If no MCP documentation tools are available, fetch from the official docs index:
 
 **llms.txt URL**: `https://ai.google.dev/gemini-api/docs/llms.txt`
 

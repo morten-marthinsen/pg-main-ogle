@@ -3382,7 +3382,7 @@ Launch a Codex Cloud task, choose environments, and apply the resulting diffs wi
 
   </BentoContent>
 
-  <BentoContent href="/codex/sdk#using-codex-cli-programmatically">
+  <BentoContent href="/codex/noninteractive">
 
 ### Scripting Codex
 
@@ -5107,7 +5107,7 @@ Skills are loaded and visible to the agent (at least their metadata), so Codex c
 Use skill folders to author and iterate on workflows locally. If a plugin
 already exists for the workflow, install it first to reuse a proven setup. When
 you want to distribute your own workflow across teams or bundle it with app
-integrations, package it as [plugins](https://developers.openai.com/codex/plugins). Skills remain the
+integrations, package it as a [plugin](https://developers.openai.com/codex/plugins/build). Skills remain the
 authoring format; plugins are the installable distribution unit.
 
 A skill is typically a `SKILL.md` file plus optional scripts, references, and assets.
@@ -10936,7 +10936,7 @@ Skills are especially useful for recurring jobs like:
 - Telemetry or incident summaries
 - Standard debugging flows
 
-The `$skill-creator` skill is the best place to start to scaffold the first version of a skill. Keep the first version local while you iterate. When it's ready to share broadly, package it as a [plugin](https://developers.openai.com/codex/plugins). One of the most important parts of a skill is the description. It should say what the skill does and when to use it.
+The `$skill-creator` skill is the best place to start to scaffold the first version of a skill. Keep the first version local while you iterate. When it's ready to share broadly, package it as a [plugin](https://developers.openai.com/codex/plugins/build). One of the most important parts of a skill is the description. It should say what the skill does and when to use it.
 
 Personal skills are stored in `$HOME/.agents/skills`, and shared team skills
   can be checked into `.agents/skills` inside a repository. This is especially
@@ -11486,57 +11486,217 @@ Codex is OpenAI's coding agent for software development. ChatGPT Plus, Pro, Busi
 
 # Plugins
 
-## What plugins are
+## Overview
 
-Plugins are installable bundles for reusable Codex workflows. They make it
-easier to share the same setup across projects or teams, and they can package
-skills, optional app integrations, and MCP server configurations in a single
-place.
+Plugins bundle skills, app integrations, and MCP servers into reusable
+workflows for Codex.
+
+Extend what Codex can do, for example:
+
+- Install the Gmail plugin to let Codex read and manage Gmail.
+- Install the Google Drive plugin to work across Drive, Docs, Sheets, and
+  Slides.
+- Install the Slack plugin to summarize channels or draft replies.
 
 A plugin can contain:
 
-- **Skills:** prompts that describe workflows to Codex and can be
-  progressively discovered by the agent.
-- **Apps:** optional app integrations or connector mappings packaged with the
-  plugin.
-- **MCP servers:** remote tools or shared context the plugin needs.
+- **Skills:** reusable instructions for specific kinds of work. Codex can load
+  them when needed so it follows the right steps and uses the right references
+  or helper scripts for a task.
+- **Apps:** connections to tools like GitHub, Slack, or Google Drive, so
+  Codex can read information from those tools and take actions in them.
+- **MCP servers:** services that give Codex access to additional tools or
+  shared information, often from systems outside your local project.
 
-More plugin components are coming soon.
+More plugin capabilities are coming soon.
 
 ## Use and install plugins
 
-### In the Codex app
+### Plugin Directory in the Codex app
 
-Plugins curated by OpenAI appear in the Codex directory. Start there when you
-want ready-made workflows or app integrations.
+Open **Plugins** in the Codex app to browse and install curated plugins.
 
-### In the CLI
+### Plugin directory in the CLI
 
-In Codex CLI, run the following command to open the plugins surface:
+In Codex CLI, run the following command to open the plugins list:
 
 ```text
 codex
 /plugins
 ```
 
-### Use plugins locally
+### Install and use a plugin
 
-For the fastest setup, use the built-in `@plugin-creator` skill to scaffold a
-local plugin.
+Once you open the plugin directory:
 
-It creates the required `.codex-plugin/plugin.json` manifest and
-can also generate a local marketplace entry for testing.
 
-If you already have a plugin from another ecosystem or a plugin you built
-yourself, you can add it to your local marketplace with `@plugin-creator`.
 
-In the plugin directory, you can also load your own local marketplace with a
-custom marketplace name and browse the plugins there.
+1. Search or browse for a plugin, then open its details.
+2. Select the install button. In the app, select the plus button or
+   **Add to Codex**. In the CLI, select `Install plugin`.
+3. If the plugin needs an external app, connect it when prompted. Some plugins
+   ask you to authenticate during install. Others wait until the first time you
+   use them.
+4. After installation, start a new thread and ask Codex to use the plugin.
 
-#### Install a local plugin manually
+
+
+After you install a plugin, you can use it directly in the prompt window:
+
+<div class="not-prose mt-4 grid gap-4 md:grid-cols-2">
+  <div class="rounded-xl border border-subtle bg-surface px-5 py-4">
+    <p class="text-sm font-semibold text-default">Describe the task directly</p>
+    <p class="mt-2 text-sm text-secondary">
+      Ask for the outcome you want, such as "Summarize unread Gmail threads
+      from today" or "Pull the latest launch notes from Google Drive."
+    </p>
+    <p class="mt-3 text-sm text-secondary">
+      Use this when you want Codex to choose the right installed tools for the
+      task.
+    </p>
+  </div>
+
+  <div class="rounded-xl border border-subtle bg-surface px-5 py-4">
+    <p class="text-sm font-semibold text-default">Choose a specific plugin</p>
+    <p class="mt-2 text-sm text-secondary">
+      Type <code>@</code> to invoke the plugin or one of its bundled skills
+      explicitly.
+    </p>
+    <p class="mt-3 text-sm text-secondary">
+      Use this when you want to be specific about which plugin or skill Codex
+      should use. See <a href="/codex/app/commands">Codex app commands</a> and{" "}
+      <a href="/codex/skills">Skills</a>.
+    </p>
+  </div>
+</div>
+
+### How permissions and data sharing work
+
+Installing a plugin makes its workflows available in Codex, but your existing
+[approval settings](https://developers.openai.com/codex/agent-approvals-security) still apply. Any
+connected external services remain subject to their own authentication,
+privacy, and data-sharing policies.
+
+- Bundled skills are available as soon as you install the plugin.
+- If a plugin includes apps, Codex may prompt you to install or sign in to
+  those apps in ChatGPT during setup or the first time you use them.
+- If a plugin includes MCP servers, they may require additional setup or
+  authentication before you can use them.
+- When Codex sends data through a bundled app, that app's terms and privacy
+  policy apply.
+
+### Remove or turn off a plugin
+
+To remove a plugin, reopen it from the plugin browser and select
+**Uninstall plugin**.
+
+Uninstalling a plugin removes the plugin bundle from Codex, but bundled apps
+stay installed until you manage them in ChatGPT.
+
+If you want to keep a plugin installed but turn it off, set its entry in
+`~/.codex/config.toml` to `enabled = false`, then restart Codex:
+
+```toml
+[plugins."gmail@openai-curated"]
+enabled = false
+```
+
+## Build your own plugin
+
+If you want to create, test, or distribute your own plugin, see
+[Build plugins](https://developers.openai.com/codex/plugins/build). That page covers local scaffolding,
+manual marketplace setup, plugin manifests, and packaging guidance.
+
+---
+
+# Build plugins
+
+This page is for plugin authors. If you want to browse, install, and use
+plugins in Codex, see [Plugins](https://developers.openai.com/codex/plugins). If you are still iterating on
+one repo or one personal workflow, start with a local skill. Build a plugin
+when you want to share that workflow across teams, bundle app integrations or
+MCP config, or publish a stable package.
+
+## Create a plugin with `$plugin-creator`
+
+For the fastest setup, use the built-in `$plugin-creator` skill.
+
+It scaffolds the required `.codex-plugin/plugin.json` manifest and can also
+generate a local marketplace entry for testing. If you already have a plugin
+folder, you can still use `$plugin-creator` to wire it into a local
+marketplace.
+
+### Build your own curated plugin list
+
+A marketplace is a JSON catalog of plugins. `$plugin-creator` can generate one
+for a single plugin, and you can keep adding entries to that same marketplace
+to build your own curated list for a repo, team, or personal workflow.
+
+In Codex, each marketplace appears as a selectable source in the plugin
+directory. Use `$REPO_ROOT/.agents/plugins/marketplace.json` for a repo-scoped
+list or `~/.agents/plugins/marketplace.json` for a personal list. Add one
+entry per plugin under `plugins[]`, point each `source.path` at the plugin
+folder with a `./`-prefixed path relative to the marketplace root, and set
+`interface.displayName` to the label you want Codex to show in the marketplace
+picker. Then restart Codex. After that, open the plugin directory, choose your
+marketplace, and browse or install the plugins in that curated list.
+
+You don't need a separate marketplace per plugin. One marketplace can expose a
+single plugin while you are testing, then grow into a larger curated catalog as
+you add more plugins.
+
+### Create a plugin manually
+
+Start with a minimal plugin that packages one skill.
+
+1. Create a plugin folder with a manifest at `.codex-plugin/plugin.json`.
+
+```bash
+mkdir -p my-first-plugin/.codex-plugin
+```
+
+`my-first-plugin/.codex-plugin/plugin.json`
+
+```json
+{
+  "name": "my-first-plugin",
+  "version": "1.0.0",
+  "description": "Reusable greeting workflow",
+  "skills": "./skills/"
+}
+```
+
+Use a stable plugin `name` in kebab-case. Codex uses it as the plugin
+identifier and component namespace.
+
+2. Add a skill under `skills/<skill-name>/SKILL.md`.
+
+```bash
+mkdir -p my-first-plugin/skills/hello
+```
+
+`my-first-plugin/skills/hello/SKILL.md`
+
+```md
+---
+name: hello
+description: Greet the user with a friendly message.
+---
+
+Greet the user warmly and ask how you can help.
+```
+
+3. Add the plugin to a marketplace. Use `$plugin-creator` to generate one, or
+   follow [Build your own curated plugin list](#build-your-own-curated-plugin-list)
+   to wire the plugin into Codex manually.
+
+From there, you can add MCP config, app integrations, or marketplace metadata
+as needed.
+
+### Install a local plugin manually
 
 Use a repo marketplace or a personal marketplace, depending on who should be
-able to access the plugin.
+able to access the plugin or curated list.
 
 
 
@@ -11616,15 +11776,17 @@ entry points to and restart Codex so the local install picks up the new files.
 If you maintain a repo marketplace, define it in
 `$REPO_ROOT/.agents/plugins/marketplace.json`. For a personal marketplace, use
 `~/.agents/plugins/marketplace.json`. A marketplace file controls plugin
-ordering and install policies in Codex-facing catalogs. Before you add a plugin
-to a marketplace, make sure its `version`, publisher metadata, and
-install-surface copy are ready for other developers to see.
+ordering and install policies in Codex-facing catalogs. It can represent one
+plugin while you are testing or a curated list of plugins that you want Codex
+to show together under one marketplace name. Before you add a plugin to a
+marketplace, make sure its `version`, publisher metadata, and install-surface
+copy are ready for other developers to see.
 
 ```json
 {
-  "name": "openai-curated",
+  "name": "local-example-plugins",
   "interface": {
-    "displayName": "ChatGPT Official"
+    "displayName": "Local Example Plugins"
   },
   "plugins": [
     {
@@ -11638,6 +11800,18 @@ install-surface copy are ready for other developers to see.
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "research-helper",
+      "source": {
+        "source": "local",
+        "path": "./plugins/research-helper"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }
@@ -11645,10 +11819,11 @@ install-surface copy are ready for other developers to see.
 
 - Use top-level `name` to identify the marketplace.
 - Use `interface.displayName` for the marketplace title shown in Codex.
+- Add one object per plugin under `plugins` to build a curated list that Codex
+  shows under that marketplace title.
 - Point each plugin entry's `source.path` at the plugin directory you want
-  Codex to load. For repo installs, that often lives under
-  `./plugins/`. For personal installs, it often lives under
-  `~/.codex/plugins/`.
+  Codex to load. For repo installs, that often lives under `./plugins/`. For
+  personal installs, a common pattern is `./.codex/plugins/<plugin-name>`.
 - Keep `source.path` relative to the marketplace root, start it with `./`, and
   keep it inside that root.
 - Always include `policy.installation`, `policy.authentication`, and
@@ -11684,26 +11859,7 @@ cache path rather than directly from the marketplace entry.
 You can enable or disable each plugin individually. Codex stores each plugin's
 on or off state in `~/.codex/config.toml`.
 
-## Build and distribute plugins
-
-### When to create a plugin
-
-Use local skills when:
-
-- You are iterating on one repo or one workflow.
-- The behavior is personal or project-specific.
-- You are experimenting before you package something reusable.
-
-Use plugins when:
-
-- You want the same skills or app integrations available across teams or
-  projects.
-- You want to bundle skills, MCP config, and app integrations into one
-  installable unit.
-- You want a stable, versioned package for teammates or a marketplace.
-
-Start local, then package the workflow as a plugin when you are ready to share
-it.
+## Package and distribute plugins
 
 ### Plugin structure
 
@@ -11719,7 +11875,8 @@ appears in quick-start scaffolds. The manifest has three jobs:
 
 - Identify the plugin.
 - Point to bundled components such as skills, apps, or MCP servers.
-- Provide install-surface metadata such as descriptions, icons, and legal links.
+- Provide install-surface metadata such as descriptions, icons, and legal
+  links.
 
 Here's a complete manifest example:
 
@@ -11765,53 +11922,6 @@ Here's a complete manifest example:
 `.codex-plugin/plugin.json` is the required entry point. The other manifest
 fields are optional, but published plugins commonly use them.
 
-### Create your first plugin
-
-Start with a minimal plugin that packages one skill.
-
-1. Create a plugin folder with a manifest at `.codex-plugin/plugin.json`.
-
-```bash
-mkdir -p my-first-plugin/.codex-plugin
-```
-
-`my-first-plugin/.codex-plugin/plugin.json`
-
-```json
-{
-  "name": "my-first-plugin",
-  "version": "1.0.0",
-  "description": "Reusable greeting workflow",
-  "skills": "./skills/"
-}
-```
-
-Use a stable plugin `name` in kebab-case. Codex uses it as the plugin
-identifier and component namespace.
-
-2. Add a skill under `skills/<skill-name>/SKILL.md`.
-
-```bash
-mkdir -p my-first-plugin/skills/hello
-```
-
-`my-first-plugin/skills/hello/SKILL.md`
-
-```md
----
-name: hello
-description: Greet the user with a friendly message.
----
-
-Greet the user warmly and ask how you can help.
-```
-
-3. Follow [Use plugins locally](#use-plugins-locally) to load the plugin in
-   Codex.
-
-From there, you can add MCP config, app integrations, or marketplace metadata
-as needed.
-
 ### Manifest fields
 
 Use the top-level fields to define package metadata and point to bundled
@@ -11826,8 +11936,8 @@ components:
 
 Use the `interface` object for install-surface metadata:
 
-- `displayName`, `shortDescription`, and `longDescription` control the title and
-  descriptive copy.
+- `displayName`, `shortDescription`, and `longDescription` control the title
+  and descriptive copy.
 - `developerName`, `category`, and `capabilities` add publisher and capability
   metadata.
 - `websiteURL`, `privacyPolicyURL`, and `termsOfServiceURL` provide external
@@ -12974,7 +13084,7 @@ To review or update the threat model, go to [Codex Security scans](https://chatg
 
 Use agent skills to extend Codex with task-specific capabilities. A skill packages instructions, resources, and optional scripts so Codex can follow a workflow reliably. Skills build on the [open agent skills standard](https://agentskills.io).
 
-Skills are the authoring format for reusable workflows. Plugins are the installable distribution unit for reusable skills and apps in Codex. Use skills to design the workflow itself, then package it as a [plugin](https://developers.openai.com/codex/plugins) when you want other developers to install it.
+Skills are the authoring format for reusable workflows. Plugins are the installable distribution unit for reusable skills and apps in Codex. Use skills to design the workflow itself, then package it as a [plugin](https://developers.openai.com/codex/plugins/build) when you want other developers to install it.
 
 Skills are available in the Codex CLI, IDE extension, and Codex app.
 
@@ -13031,14 +13141,14 @@ Codex supports symlinked skill folders and follows the symlink target when scann
 
 These locations are for authoring and local discovery. When you want to
 distribute reusable skills beyond a single repo, or optionally bundle them with
-app integrations, use [plugins](https://developers.openai.com/codex/plugins).
+app integrations, use [plugins](https://developers.openai.com/codex/plugins/build).
 
 ## Distribute skills with plugins
 
 Direct skill folders are best for local authoring and repo-scoped workflows. If
 you want to distribute a reusable skill, bundle two or more skills together, or
 ship a skill alongside an app integration, package them as a
-[plugin](https://developers.openai.com/codex/plugins).
+[plugin](https://developers.openai.com/codex/plugins/build).
 
 Plugins can include one or more skills. They can also optionally bundle app
 mappings, MCP server configuration, and presentation assets in a single
