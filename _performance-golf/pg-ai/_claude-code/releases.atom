@@ -4,7 +4,21 @@
   <link type="text/html" rel="alternate" href="https://github.com/anthropics/claude-code/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/anthropics/claude-code/releases.atom"/>
   <title>Release notes from claude-code</title>
-  <updated>2026-03-27T21:42:05Z</updated>
+  <updated>2026-03-29T02:16:58Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/937253475/v2.1.87</id>
+    <updated>2026-03-29T02:17:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.87"/>
+    <title>v2.1.87</title>
+    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed messages in Cowork Dispatch not getting delivered&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>ashwin-ant</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/937253475/v2.1.86</id>
     <updated>2026-03-27T21:42:09Z</updated>
@@ -403,54 +417,6 @@
 &lt;li&gt;Renamed &lt;code&gt;/fork&lt;/code&gt; to &lt;code&gt;/branch&lt;/code&gt; (&lt;code&gt;/fork&lt;/code&gt; still works as an alias)&lt;/li&gt;
 &lt;li&gt;[VSCode] Improved plan preview tab titles to use the plan&#39;s heading instead of &quot;Claude&#39;s Plan&quot;&lt;/li&gt;
 &lt;li&gt;[VSCode] When option+click doesn&#39;t trigger native selection on macOS, the footer now points to the &lt;code&gt;macOptionClickForcesSelection&lt;/code&gt; setting&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <author>
-      <name>ashwin-ant</name>
-    </author>
-    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:Repository/937253475/v2.1.76</id>
-    <updated>2026-03-14T01:23:58Z</updated>
-    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.76"/>
-    <title>v2.1.76</title>
-    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Added MCP elicitation support — MCP servers can now request structured input mid-task via an interactive dialog (form fields or browser URL)&lt;/li&gt;
-&lt;li&gt;Added new &lt;code&gt;Elicitation&lt;/code&gt; and &lt;code&gt;ElicitationResult&lt;/code&gt; hooks to intercept and override responses before they&#39;re sent back&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;-n&lt;/code&gt; / &lt;code&gt;--name &amp;lt;name&amp;gt;&lt;/code&gt; CLI flag to set a display name for the session at startup&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;worktree.sparsePaths&lt;/code&gt; setting for &lt;code&gt;claude --worktree&lt;/code&gt; in large monorepos to check out only the directories you need via git sparse-checkout&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;PostCompact&lt;/code&gt; hook that fires after compaction completes&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;/effort&lt;/code&gt; slash command to set model effort level&lt;/li&gt;
-&lt;li&gt;Added session quality survey — enterprise admins can configure the sample rate via the &lt;code&gt;feedbackSurveyRate&lt;/code&gt; setting&lt;/li&gt;
-&lt;li&gt;Fixed deferred tools (loaded via &lt;code&gt;ToolSearch&lt;/code&gt;) losing their input schemas after conversation compaction, causing array and number parameters to be rejected with type errors&lt;/li&gt;
-&lt;li&gt;Fixed slash commands showing &quot;Unknown skill&quot;&lt;/li&gt;
-&lt;li&gt;Fixed plan mode asking for re-approval after the plan was already accepted&lt;/li&gt;
-&lt;li&gt;Fixed voice mode swallowing keypresses while a permission dialog or plan editor was open&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;/voice&lt;/code&gt; not working on Windows when installed via npm&lt;/li&gt;
-&lt;li&gt;Fixed spurious &quot;Context limit reached&quot; when invoking a skill with &lt;code&gt;model:&lt;/code&gt; frontmatter on a 1M-context session&lt;/li&gt;
-&lt;li&gt;Fixed &quot;adaptive thinking is not supported on this model&quot; error when using non-standard model strings&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;Bash(cmd:*)&lt;/code&gt; permission rules not matching when a quoted argument contains &lt;code&gt;#&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fixed &quot;don&#39;t ask again&quot; in the Bash permission dialog showing the full raw command for pipes and compound commands&lt;/li&gt;
-&lt;li&gt;Fixed auto-compaction retrying indefinitely after consecutive failures — a circuit breaker now stops after 3 attempts&lt;/li&gt;
-&lt;li&gt;Fixed MCP reconnect spinner persisting after successful reconnection&lt;/li&gt;
-&lt;li&gt;Fixed LSP plugins not registering servers when the LSP Manager initialized before marketplaces were reconciled&lt;/li&gt;
-&lt;li&gt;Fixed clipboard copying in tmux over SSH — now attempts both direct terminal write and tmux clipboard integration&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;/export&lt;/code&gt; showing only the filename instead of the full file path in the success message&lt;/li&gt;
-&lt;li&gt;Fixed transcript not auto-scrolling to new messages after selecting text&lt;/li&gt;
-&lt;li&gt;Fixed Escape key not working to exit the login method selection screen&lt;/li&gt;
-&lt;li&gt;Fixed several Remote Control issues: sessions silently dying when the server reaps an idle environment, rapid messages being queued one-at-a-time instead of batched, and stale work items causing redelivery after JWT refresh&lt;/li&gt;
-&lt;li&gt;Fixed bridge sessions failing to recover after extended WebSocket disconnects&lt;/li&gt;
-&lt;li&gt;Fixed slash commands not found when typing the exact name of a soft-hidden command&lt;/li&gt;
-&lt;li&gt;Improved &lt;code&gt;--worktree&lt;/code&gt; startup performance by reading git refs directly and skipping redundant &lt;code&gt;git fetch&lt;/code&gt; when the remote branch is already available locally&lt;/li&gt;
-&lt;li&gt;Improved background agent behavior — killing a background agent now preserves its partial results in the conversation context&lt;/li&gt;
-&lt;li&gt;Improved model fallback notifications — now always visible instead of hidden behind verbose mode, with human-friendly model names&lt;/li&gt;
-&lt;li&gt;Improved blockquote readability on dark terminal themes — text is now italic with a left bar instead of dim&lt;/li&gt;
-&lt;li&gt;Improved stale worktree cleanup — worktrees left behind after an interrupted parallel run are now automatically cleaned up&lt;/li&gt;
-&lt;li&gt;Improved Remote Control session titles — now derived from your first prompt instead of showing &quot;Interactive session&quot;&lt;/li&gt;
-&lt;li&gt;Improved &lt;code&gt;/voice&lt;/code&gt; to show your dictation language on enable and warn when your &lt;code&gt;language&lt;/code&gt; setting isn&#39;t supported for voice input&lt;/li&gt;
-&lt;li&gt;Updated &lt;code&gt;--plugin-dir&lt;/code&gt; to only accept one path to support subcommands — use repeated &lt;code&gt;--plugin-dir&lt;/code&gt; for multiple directories&lt;/li&gt;
-&lt;li&gt;[VSCode] Fixed gitignore patterns containing commas silently excluding entire filetypes from the @-mention file picker&lt;/li&gt;
 &lt;/ul&gt;</content>
     <author>
       <name>ashwin-ant</name>
