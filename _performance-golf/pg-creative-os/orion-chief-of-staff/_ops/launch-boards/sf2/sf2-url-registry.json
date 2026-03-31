@@ -1,0 +1,204 @@
+{
+  "launch": "SF2 Anti-Slice Driver",
+  "gtm_sheet_id": "1IoRAi_lCVaRlSrotYvzht5nOKUZHZX8jno8ald7yz4w",
+  "gtm_sheet_tab": "SF Driver 3.2026",
+  "gtm_sheet_tab_pattern": "SF2",
+  "last_synced": null,
+  "lifecycle_phase": "post-launch",
+  "urls": {
+    "clickup_project": {
+      "url": "https://app.clickup.com/9014714949/v/li/901413579326",
+      "source": "manual",
+      "type": "clickup",
+      "label": "ClickUp Project",
+      "section": "production_assets",
+      "clm_line_marker": "ClickUp Project",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "figma_design": {
+      "url": "https://www.figma.com/files/team/1007318218030723756/project/544257585/SF2",
+      "source": "manual",
+      "type": "figma",
+      "label": "Figma SF2 Project",
+      "section": "production_assets",
+      "clm_line_marker": "UX Design",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "iconik_broll": {
+      "url": "https://app.iconik.io/collection/7cf670e8-2b61-11f0-b145-eac16711a957",
+      "source": "manual",
+      "type": "iconik",
+      "label": "B-Roll (Iconik)",
+      "section": "production_assets",
+      "clm_line_marker": "B-Roll",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "iconik_product_images": {
+      "url": "https://app.iconik.io/collection/f2261362-db62-11f0-bb27-d258c11f3bcd",
+      "source": "manual",
+      "type": "iconik",
+      "label": "Product Images (Iconik)",
+      "section": "production_assets",
+      "clm_line_marker": "Product Images",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "iconik_lifestyle": {
+      "url": "https://app.iconik.io/collection/d3cd06da-1ca0-11f1-a2b0-1672ea3376fd",
+      "source": "manual",
+      "type": "iconik",
+      "label": "Lifestyle Images (Iconik)",
+      "section": "production_assets",
+      "clm_line_marker": "Lifestyle",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "iconik_testimonials": {
+      "url": "https://icnk.io/u/qiqXaMcVojCA/",
+      "source": "manual",
+      "type": "iconik",
+      "label": "Testimonial Videos (Iconik)",
+      "section": "production_assets",
+      "clm_line_marker": "Testimonial",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "iconik_hero_video": {
+      "url": "https://app.iconik.io/asset/8c77adba-0d75-11f1-8446-3e064b5d3074",
+      "source": "manual",
+      "type": "iconik",
+      "label": "Homepage Hero Video",
+      "section": "production_assets",
+      "clm_line_marker": "Hero Video",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "iconik_renders": {
+      "url": "https://app.iconik.io/collection/58a3b3d6-1738-11f1-9834-76c8cea3cdab",
+      "source": "manual",
+      "type": "iconik",
+      "label": "Renders & Animations",
+      "section": "production_assets",
+      "clm_line_marker": "Renders",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "page_assets_sheet": {
+      "url": "https://docs.google.com/spreadsheets/d/1Hj0qupkhQO3mnnCS5o1b5dvOCC1Msx71nWaw8fLHneI/edit",
+      "source": "manual",
+      "type": "google_sheets",
+      "label": "PDP & Sales Page Design Assets",
+      "section": "production_assets",
+      "clm_line_marker": "Design Assets",
+      "phase": "pre-launch",
+      "status": "live"
+    },
+    "pdp_page": {
+      "url": "https://www.performancegolf.com/sf2",
+      "source": "gtm_sheet",
+      "source_row_label": "PG.com PDP",
+      "type": "web_page",
+      "label": "PG.com PDP",
+      "section": "funnel_pages",
+      "clm_line_marker": "PG.com PDP",
+      "phase": "build",
+      "status": "live"
+    },
+    "salespage": {
+      "url": "https://shop.performancegolf.com/pages/sf2-driver-info",
+      "source": "gtm_sheet",
+      "source_row_label": "Salespage",
+      "type": "web_page",
+      "label": "Salespage",
+      "section": "funnel_pages",
+      "clm_line_marker": "Salespage",
+      "phase": "build",
+      "status": "live"
+    },
+    "vsl_closed": {
+      "url": "https://www.performancegolf.com/sf2/video",
+      "source": "gtm_sheet",
+      "source_row_label": "VSL Closed",
+      "type": "web_page",
+      "label": "VSL (Closed)",
+      "section": "funnel_pages",
+      "clm_line_marker": "VSL (Closed)",
+      "phase": "build",
+      "status": "live"
+    },
+    "vsl_open": {
+      "url": "https://www.performancegolf.com/sf2/video-b",
+      "source": "gtm_sheet",
+      "source_row_label": "VSL Open",
+      "type": "web_page",
+      "label": "VSL (Open)",
+      "section": "funnel_pages",
+      "clm_line_marker": "VSL (Open)",
+      "phase": "build",
+      "status": "live"
+    },
+    "checkout": {
+      "url": "https://secure.performancegolf.com/orderForms/ecomm/sf2-397299",
+      "source": "gtm_sheet",
+      "source_row_label": "Checkout",
+      "type": "web_page",
+      "label": "Checkout",
+      "section": "funnel_pages",
+      "clm_line_marker": "Checkout",
+      "phase": "build",
+      "status": "live"
+    },
+    "upsell_1": {
+      "url": "https://secure.performancegolf.com/sf2/upgrade/up1/ecomm/357",
+      "source": "gtm_sheet",
+      "source_row_label": "Upsell 1",
+      "type": "web_page",
+      "label": "Upsell 1",
+      "section": "funnel_pages",
+      "clm_line_marker": "Upsell 1",
+      "phase": "build",
+      "status": "live"
+    },
+    "downsell_1": {
+      "url": "https://secure.performancegolf.com/sf2/upgrade/ds1/ecomm/357",
+      "source": "gtm_sheet",
+      "source_row_label": "Downsell 1",
+      "type": "web_page",
+      "label": "Downsell 1",
+      "section": "funnel_pages",
+      "clm_line_marker": "Downsell 1",
+      "phase": "build",
+      "status": "live"
+    },
+    "upsell_2": {
+      "url": "https://secure.performancegolf.com/sf2/upgrade/up2/ecomm/359",
+      "source": "gtm_sheet",
+      "source_row_label": "Upsell 2",
+      "type": "web_page",
+      "label": "Upsell 2",
+      "section": "funnel_pages",
+      "clm_line_marker": "Upsell 2",
+      "phase": "build",
+      "status": "live"
+    },
+    "downsell_2": {
+      "url": "https://secure.performancegolf.com/sf2/upgrade/ds2/ecomm/359",
+      "source": "gtm_sheet",
+      "source_row_label": "Downsell 2",
+      "type": "web_page",
+      "label": "Downsell 2",
+      "section": "funnel_pages",
+      "clm_line_marker": "Downsell 2",
+      "phase": "build",
+      "status": "live"
+    }
+  },
+  "watchers": {
+    "slack_channels": [],
+    "clickup_list_ids": ["901413579326"],
+    "google_sheet_ids": ["1IoRAi_lCVaRlSrotYvzht5nOKUZHZX8jno8ald7yz4w"]
+  }
+}
