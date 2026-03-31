@@ -260,8 +260,8 @@ Talent codes use a **4-character format**: first 2 letters of first name + first
 | `crha` | Craig Hanson |
 | `diwe` | Diana West |
 | `dwai` | Diana West AI |
-| `edal` | Ed Albert |
 | `dofr` | Donnie French |
+| `edal` | Ed Albert |
 | `erco` | Eric Cogorno |
 | `erla` | Erika Larkin |
 | `frmo` | Frank Moretti |
