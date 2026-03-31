@@ -3,8 +3,8 @@
 
 report:
   output_dir: "../daily-reports"  # Base dir; script auto-creates monthly subfolders (e.g., feb-26-reports/)
-  timezone: "America/New_York"       # Google Calendar API source timezone
-  display_timezone: "America/New_York"  # Override with your local timezone (e.g., "Europe/Lisbon", "America/Los_Angeles")
+  timezone: "Europe/Lisbon"           # Google Calendar API source timezone
+  display_timezone: "Europe/Lisbon"    # Christopher's local timezone (Lisbon, Portugal)
 
 ai:
   model: "claude-sonnet-4-20250514"
@@ -140,13 +140,22 @@ modules:
 
   clm_sync:
     enabled: true
-    description: "Syncs RS1 CLM URLs from GTM Launch Links sheet, ClickUp, and Slack"
+    description: "Syncs CLM URLs from GTM Launch Links sheet, ClickUp, and Slack — multi-offer"
     setup_required: "Google Sheets OAuth. Run: python3 auth/sheets_auth.py"
-    registry_path: "../launch-boards/rs1/rs1-url-registry.json"
-    slack_channels: ["product-rs1-putter-launch"]
-    clickup_list_ids: ["901413807288"]
     lookback_hours: 24
-    auto_update_html: true
+    offers:
+      rs1:
+        enabled: true
+        registry_path: "../launch-boards/rs1/rs1-url-registry.json"
+        slack_channels: ["product-rs1-putter-launch"]
+        clickup_list_ids: ["901413807288"]
+        auto_update_html: true
+      sf2:
+        enabled: true
+        registry_path: "../launch-boards/sf2/sf2-url-registry.json"
+        slack_channels: []
+        clickup_list_ids: ["901413579326"]
+        auto_update_html: true
 
   m15_data_fetch:
     enabled: true

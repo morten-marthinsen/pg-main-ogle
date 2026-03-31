@@ -1,15 +1,19 @@
-"""M13 — CLM URL Sync Module.
+"""M13 — CLM URL Sync Module (Multi-Offer).
 
 Syncs Creative Launch Map URL registries from external sources:
 - Google Sheets (GTM Launch Links — Jenny's master sheet)
 - ClickUp (task URLs and comments) — future primary source
 - Slack (channel messages with links)
 
+Supports multiple offers (RS1, SF2, etc.) via config.yaml offers dict.
+Each offer has its own registry, Slack channels, and ClickUp lists.
+
 Lifecycle-aware: understands that funnel page URLs don't exist until
 the build phase. Only actively syncs URLs whose phase matches the
 current lifecycle_phase in the registry.
 
 Reports updated, new, and stale URLs in the daily briefing.
+Writes per-offer CLM summaries to shared_state for M00a rendering.
 """
 
 import json
@@ -62,43 +66,74 @@ class CLMSyncModule(BriefingModule):
     setup_required = "Google Sheets OAuth (python3 auth/sheets_auth.py)"
 
     def fetch_data(self) -> Any:
-        """Fetch URLs from all configured sources and compare with registry."""
+        """Fetch URLs from all configured sources for each offer."""
         mod_config = self.config.get("modules", {}).get(self.key, {})
         if not mod_config.get("enabled", False):
             return {"skipped": True}
 
-        registry_path_rel = mod_config.get("registry_path", "")
-        if not registry_path_rel:
-            return {"error": "No registry_path in config"}
+        offers = mod_config.get("offers", {})
 
-        # Resolve registry path relative to daily-briefing dir
+        # Backwards compatibility: if no offers dict, use flat config as single offer
+        if not offers:
+            registry_path_rel = mod_config.get("registry_path", "")
+            if not registry_path_rel:
+                return {"error": "No registry_path or offers in config"}
+            offers = {
+                "_default": {
+                    "enabled": True,
+                    "registry_path": registry_path_rel,
+                    "slack_channels": mod_config.get("slack_channels", []),
+                    "clickup_list_ids": mod_config.get("clickup_list_ids", []),
+                    "auto_update_html": mod_config.get("auto_update_html", False),
+                }
+            }
+
+        results = []
+        for offer_key, offer_config in offers.items():
+            if not offer_config.get("enabled", True):
+                continue
+            result = self._fetch_single_offer(offer_key, offer_config, mod_config)
+            results.append(result)
+
+        return {"offers_results": results}
+
+    def _fetch_single_offer(self, offer_key: str, offer_config: dict, shared_config: dict) -> dict:
+        """Fetch URLs for a single offer."""
+        registry_path_rel = offer_config.get("registry_path", "")
+        if not registry_path_rel:
+            return {"offer_key": offer_key, "error": "No registry_path"}
+
         briefing_dir = Path(__file__).resolve().parent.parent
         registry_path = (briefing_dir / registry_path_rel).resolve()
 
         if not registry_path.exists():
-            return {"error": f"Registry not found: {registry_path}"}
+            return {"offer_key": offer_key, "error": f"Registry not found: {registry_path}"}
 
         with open(registry_path) as f:
             registry = json.load(f)
 
-        # Collect URLs from all sources
+        # Build per-offer config for source fetchers
+        fetch_config = {
+            "slack_channels": offer_config.get("slack_channels", []),
+            "clickup_list_ids": offer_config.get("clickup_list_ids", []),
+            "lookback_hours": shared_config.get("lookback_hours", 24),
+        }
+
         fetched_urls = {}
 
-        # Source 1: Google Sheets (GTM Launch Links)
-        # Includes auto-detection of new tabs matching the product
-        sheet_result = self._fetch_from_sheets(registry, mod_config)
+        sheet_result = self._fetch_from_sheets(registry, fetch_config)
         fetched_urls["sheets"] = sheet_result.get("urls", {})
         tab_detected = sheet_result.get("tab_detected")
 
-        # Source 2: ClickUp (task descriptions and comments)
-        clickup_urls = self._fetch_from_clickup(mod_config)
+        clickup_urls = self._fetch_from_clickup(fetch_config)
         fetched_urls["clickup"] = clickup_urls
 
-        # Source 3: Slack (channel messages with URLs)
-        slack_urls = self._fetch_from_slack(mod_config)
+        slack_urls = self._fetch_from_slack(fetch_config)
         fetched_urls["slack"] = slack_urls
 
         return {
+            "offer_key": offer_key,
+            "offer_config": offer_config,
             "registry": registry,
             "registry_path": str(registry_path),
             "fetched_urls": fetched_urls,
@@ -293,11 +328,42 @@ class CLMSyncModule(BriefingModule):
             return []
 
     def analyze(self, data: Any) -> str:
-        """Compare fetched URLs against registry, update registry, and report changes."""
+        """Analyze all offers and produce combined report."""
         if data.get("skipped"):
             return "_CLM Sync disabled in config._"
         if data.get("error"):
             return f"**CLM Sync Error:** {data['error']}"
+
+        offers_results = data.get("offers_results", [])
+        if not offers_results:
+            return "_No CLM offers configured._"
+
+        sections = []
+        clm_summaries = []
+
+        for offer_data in offers_results:
+            section, summary = self._analyze_single_offer(offer_data)
+            sections.append(section)
+            clm_summaries.append(summary)
+
+        # Write CLM summaries to shared_state for M00a
+        self.shared_state["clm_status"] = clm_summaries
+
+        return "\n\n".join(sections)
+
+    def _analyze_single_offer(self, data: dict) -> tuple:
+        """Analyze a single offer. Returns (report_markdown, summary_dict)."""
+        offer_key = data.get("offer_key", "unknown")
+        offer_config = data.get("offer_config", {})
+
+        if data.get("error"):
+            summary = {
+                "offer_key": offer_key,
+                "launch_name": offer_key.upper(),
+                "status": "error",
+                "summary": data["error"],
+            }
+            return f"**{offer_key.upper()} CLM** — {data['error']}", summary
 
         registry = data["registry"]
         registry_path = data["registry_path"]
@@ -305,14 +371,15 @@ class CLMSyncModule(BriefingModule):
         tab_detected = data.get("tab_detected")
 
         current_phase = registry.get("lifecycle_phase", "pre-launch")
+        launch_name = registry.get("launch", offer_key.upper())
 
         # Flatten all fetched URLs from sheets (primary source)
         sheet_urls = fetched.get("sheets", {})
 
         # Match fetched URLs to registry entries
         updates = []
-        active_tbd = []      # TBD entries whose phase is active now
-        future_tbd = []       # TBD entries whose phase hasn't started yet
+        active_tbd = []
+        future_tbd = []
         already_live = []
 
         for key, entry in registry.get("urls", {}).items():
@@ -323,12 +390,10 @@ class CLMSyncModule(BriefingModule):
             entry_phase = entry.get("phase", "pre-launch")
             is_active = phase_is_active(entry_phase, current_phase)
 
-            # Only try to match entries whose phase is active
             matched_url = None
             if is_active:
                 source_row_label = entry.get("source_row_label", "")
 
-                # Direct match by row label (GTM sheet)
                 if source_row_label and entry.get("source") in ("gtm_sheet", "clickup"):
                     for sheet_label, sheet_url in sheet_urls.items():
                         if (source_row_label.lower() in sheet_label
@@ -336,7 +401,6 @@ class CLMSyncModule(BriefingModule):
                             matched_url = sheet_url
                             break
 
-                # Fuzzy match by label keywords (GTM sheet only)
                 if not matched_url and entry.get("source") == "gtm_sheet" and sheet_urls:
                     entry_type = entry.get("type", "")
                     entry_label = entry.get("label", "").lower()
@@ -352,7 +416,6 @@ class CLMSyncModule(BriefingModule):
                             matched_url = sheet_url
                             break
 
-                # Match from ClickUp URLs
                 if not matched_url and entry.get("source") == "clickup":
                     entry_type = entry.get("type", "")
                     for cu_label, cu_url in fetched.get("clickup", {}).items():
@@ -385,7 +448,7 @@ class CLMSyncModule(BriefingModule):
             if current_phase == "pre-launch":
                 registry["lifecycle_phase"] = "build"
                 self.logger.info(
-                    f"[{self.key}] Lifecycle advanced: pre-launch → build "
+                    f"[{self.key}] {launch_name}: lifecycle advanced: pre-launch → build "
                     f"(GTM tab '{tab_detected}' detected)"
                 )
 
@@ -394,24 +457,18 @@ class CLMSyncModule(BriefingModule):
             registry["last_synced"] = datetime.now().isoformat()
             with open(registry_path, "w") as f:
                 json.dump(registry, f, indent=2)
-            self.logger.info(f"[{self.key}] Updated registry with {len(updates)} new URLs")
+            self.logger.info(f"[{self.key}] {launch_name}: updated registry with {len(updates)} new URLs")
 
-        # Phase 4: Auto-update CLM files if config allows and there are updates
+        # Auto-update CLM files if config allows and there are updates
         clm_file_changes = []
-        mod_config = self.config.get("modules", {}).get(self.key, {})
-        if updates and mod_config.get("auto_update_html", False):
+        if updates and offer_config.get("auto_update_html", False):
             clm_file_changes = self._update_clm_files(registry_path)
 
-        # Track file changes for the report
-        data["clm_file_changes"] = clm_file_changes
-
-        # Build report
+        # Build report section
         lines = []
-        launch_name = registry.get("launch", "Unknown")
         lines.append(f"**{launch_name} CLM** — URL Sync Report")
         lines.append(f"**Phase:** {current_phase}\n")
 
-        # Alert if GTM tab was just detected
         if tab_detected:
             lines.append(
                 f"**NEW:** GTM tab `{tab_detected}` detected in Jenny's sheet — "
@@ -448,18 +505,34 @@ class CLMSyncModule(BriefingModule):
                 f"(pages not yet built — this is expected)._"
             )
 
-        # Report CLM file updates
-        clm_file_changes = data.get("clm_file_changes", [])
         if clm_file_changes:
             lines.append(f"\n**CLM files updated** ({len(clm_file_changes)} changes):")
             for c in clm_file_changes:
                 lines.append(f"- {c}")
 
-        # Show external URLs found (for manual review)
         external_url_count = sum(
             len(v) for v in [fetched.get("clickup", {}), fetched.get("slack", {})]
         )
         if external_url_count:
             lines.append(f"\n_Found {external_url_count} URL(s) in ClickUp/Slack for manual review._")
 
-        return "\n".join(lines)
+        # Build summary for M00a shared_state
+        summary_parts = []
+        if updates:
+            summary_parts.append(f"{len(updates)} new URL(s) detected")
+        else:
+            summary_parts.append("no new URLs since last sync")
+        if external_url_count:
+            summary_parts.append(f"{external_url_count} URL(s) in ClickUp/Slack for manual review")
+
+        summary = {
+            "offer_key": offer_key,
+            "launch_name": launch_name,
+            "status": "synced",
+            "live_count": live_count,
+            "tbd_count": len(active_tbd) + len(future_tbd),
+            "updates_count": len(updates),
+            "summary": ". ".join(summary_parts) + ".",
+        }
+
+        return "\n".join(lines), summary
