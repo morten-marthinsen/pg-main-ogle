@@ -1,0 +1,296 @@
+- generic [ref=e6]:
+  - iframe [active] [ref=e8]:
+    - generic [ref=f2e5]:
+      - generic [ref=f2e9]:
+        - generic [ref=f2e10]:
+          - heading "Conversion Rate Optimization (CRO) Intake Form" [level=1] [ref=f2e11]
+          - generic [ref=f2e16]:
+            - paragraph [ref=f2e17]:
+              - text: This intake is for A/B tests and implementation by the
+              - strong [ref=f2e18]: CRO Team
+              - text: .
+              - img "1f575-fe0f" [ref=f2e21] [cursor=pointer]
+            - paragraph [ref=f2e22]:
+              - text: Please contact
+              - strong [ref=f2e23]: Danielle Schwolow
+              - text: (Director, CRO) with any questions.
+        - generic [ref=f2e24]:
+          - generic [ref=f2e25]:
+            - paragraph [ref=f2e26]: Requester*
+            - paragraph [ref=f2e27]: Who is requesting this task or project?
+            - generic [ref=f2e29]:
+              - button "Christopher Ogle, ," [ref=f2e289] [cursor=pointer]:
+                - generic "Christopher Ogle, ," [ref=f2e292]:
+                  - img [ref=f2e294]
+              - button "Clear Requester" [ref=f2e296] [cursor=pointer]:
+                - img [ref=f2e298]
+                - generic [ref=f2e300]: Clear Requester
+          - generic [ref=f2e39]:
+            - generic [ref=f2e40]: Project / Task Name*
+            - paragraph [ref=f2e41]: "Tip: Use a simple, but recognizable and descriptive, name for the project."
+            - textbox "Project / Task Name*" [ref=f2e43]:
+              - /placeholder: "Example: 359 | A/B Test - Upsell 1"
+              - text: DQFE1 | V3.0 | Root Swing Flaw Quiz
+          - generic [ref=f2e44]:
+            - paragraph [ref=f2e45]: CRO Delivery Type*
+            - button "Quiz" [ref=f2e329] [cursor=pointer]:
+              - generic [ref=f2e334]: Quiz
+              - img [ref=f2e53]
+          - generic [ref=f2e57]:
+            - generic [ref=f2e58]: Request & Context | Include page(s), channel(s), and any additional information*
+            - paragraph [ref=f2e59]: "Page/s: Landing Page, Checkout 1, Upsell, etc. | Channels: Fb, Google, Email, etc. | Additional information"
+            - generic [ref=f2e63]:
+              - generic [ref=f2e66]:
+                - generic [ref=f2e67]:
+                  - generic [ref=f2e68]: "DOCUMENTATION:"
+                  - generic [ref=f2e335]: "- DQFE1 Quiz Doc: https://docs.google.com/document/d/1a5_3-zCjzjZrZ8HazXqd-LIPTcaWBF-k0EeJefi8xAw/edit"
+                  - generic [ref=f2e336]: "- Trailer Video Request Doc: https://docs.google.com/document/d/1NtUkfq9Ym16CphPud42BypSz-G-HOgV3Gguebk6Xnn0/edit"
+                  - generic [ref=f2e337]: "- Source copy (EC6 v6.0): pg-main GitHub repo — _performance-golf/pg-marketing-os/~outputs/PG1/e-comm/ec-06-outputs/ecomm-copy-final.md"
+                  - generic [ref=f2e339]: "DESCRIPTION:"
+                  - generic [ref=f2e340]: New version of the DQFE1 quiz built around the root swing flaw (RSF) angle. This replaces V2.0 (Revolution Golf Quiz Swipe) as the next priority in the quiz pipeline.
+                  - generic [ref=f2e342]: "Core concept: This quiz does NOT identify the user's root swing flaw. The quiz makes the sales argument FOR the RSF concept and positions PG1 as the fastest way to identify it. RSF identification happens after the paywall, inside the app."
+                  - generic [ref=f2e344]: "What's changing from the current quiz:"
+                  - generic [ref=f2e345]: "1. New start page — Trailer video (Morten producing) with RSF angle. Positioning: \"The fastest way to find your root swing flaw.\" Recreating what's worked on high-ticket ads, adapted for quiz entry."
+                  - generic [ref=f2e346]: 2. New ad creative — RSF-focused ads driving to the quiz. Based on high-ticket creative that's already proven.
+                  - generic [ref=f2e347]: "3. New question step — Asks how the user wants to identify their root swing flaw: SwingScan AI (scan their swing via phone video) OR send their swing to a coach. This step sells them into the PG1 system."
+                  - generic [ref=f2e348]: 4. Email capture reframe — Reframed around the RSF concept.
+                  - generic [ref=f2e349]: "5. End experience — Still delivers goal + timeline. Framing shifts to: PG1 finds your root swing flaw, gives you the one thing to work on, system adapts as you improve. RSF identification is behind the paywall."
+                  - generic [ref=f2e351]: "What stays the same: Existing quiz question structure (body virtually identical). HeyFlow platform. PG1 app tie-in maintained."
+                  - generic [ref=f2e353]: "Key messaging (from EC6 v6.0): \"The fastest way to find your root swing flaw\" / \"The first system in golf that finds your root swing flaw — then shows you step by step exactly how to fix it\" / \"We're the only app that helps you identify a root swing flaw\""
+                  - generic [ref=f2e355]: "Request:"
+                  - generic [ref=f2e356]: "Pages: Start page (new), 1 new question screen, email capture screen (reframed), results screen (reframed). All other screens carry over from current quiz."
+                  - generic [ref=f2e357]: "Channels: Facebook, Google, all media"
+                  - generic [ref=f2e358]: "Segment: All traffic"
+                - generic:
+                  - text: ×
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - button:
+                            - generic:
+                              - generic:
+                                - img
+                              - generic:
+                                - img
+                      - button:
+                        - img
+                      - button:
+                        - img
+                      - button:
+                        - img
+                      - button:
+                        - img
+                      - button:
+                        - img
+                      - generic:
+                        - generic:
+                          - button:
+                            - generic:
+                              - generic:
+                                - img
+                              - generic:
+                                - img
+                      - generic:
+                        - generic:
+                          - button "Dropdown menu":
+                            - generic:
+                              - img
+                            - generic:
+                              - img
+                      - generic:
+                        - generic:
+                          - button "Dropdown menu":
+                            - generic:
+                              - img
+                            - generic:
+                              - img
+                      - generic:
+                        - generic:
+                          - generic:
+                            - img
+                          - button "Dropdown menu":
+                            - img
+                      - generic:
+                        - generic:
+                          - img
+                      - generic:
+                        - button:
+                          - img
+              - generic:
+                - generic:
+                  - button "Dropdown menu"
+              - generic:
+                - generic:
+                  - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - generic:
+                  - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - generic:
+                  - button "Dropdown menu" [disabled]
+              - generic:
+                - generic:
+                  - button "Dropdown menu"
+          - generic [ref=f2e69]:
+            - paragraph [ref=f2e70]: Aside from CRO, which resources do you require? Remove everything you DON'T need:*
+            - paragraph [ref=f2e71]: "*For example, do we need Video Editing for your request? *Make sure to include the QA selections below to ensure nothing is broken upon launch."
+            - button "Copy Creative – Video Editing Creative – Design Creative – Ads Dev Tracking Pre-Launch QA Post-Launch QA Data Mapping" [ref=f2e75] [cursor=pointer]:
+              - generic [ref=f2e77]:
+                - generic [ref=f2e79]: Copy
+                - generic [ref=f2e81]: Creative – Video Editing
+                - generic [ref=f2e83]: Creative – Design
+                - generic [ref=f2e85]: Creative – Ads
+                - generic [ref=f2e87]: Dev
+                - generic [ref=f2e89]: Tracking
+                - generic [ref=f2e91]: Pre-Launch QA
+                - generic [ref=f2e93]: Post-Launch QA
+                - generic [ref=f2e95]: Data Mapping
+              - img [ref=f2e97]
+          - generic [ref=f2e99]:
+            - paragraph [ref=f2e100]: Product Funnel(s)
+            - paragraph [ref=f2e101]: What product funnel(s) will be used in this implementation or A/B test?
+            - button "DQFE1 (General Quiz - PG1)" [ref=f2e487] [cursor=pointer]:
+              - generic [ref=f2e489]: DQFE1 (General Quiz - PG1)
+              - img [ref=f2e110]
+          - generic [ref=f2e112]:
+            - paragraph [ref=f2e113]: Device Type
+            - button "Desktop Mobile" [ref=f2e511] [cursor=pointer]:
+              - generic [ref=f2e119]:
+                - generic [ref=f2e507]: Desktop
+                - generic [ref=f2e513]: Mobile
+              - img [ref=f2e122]
+          - generic [ref=f2e127]:
+            - generic [ref=f2e128]: Business Case
+            - paragraph [ref=f2e129]: What is the goal/quantifiable desired outcome of this implementation or A/B test?
+            - generic [ref=f2e133]:
+              - generic [ref=f2e136]:
+                - generic [ref=f2e138]: RSF angle is the strongest converting message on high ticket. Current quiz start page has ~81% drop-off despite V1.2 trailer optimization (improved from 92-94%). RSF-framed quiz expected to significantly improve start rate and downstream conversion by aligning cold traffic messaging with proven high-ticket creative. This replaces V2.0 (Revolution Golf Quiz Swipe) as the next priority in the quiz pipeline. Brixton has been informed of the priority shift.
+                - generic:
+                  - text: ×
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - button:
+                            - generic:
+                              - generic:
+                                - img
+                              - generic:
+                                - img
+                      - button:
+                        - img
+                      - button:
+                        - img
+                      - button:
+                        - img
+                      - button:
+                        - img
+                      - button:
+                        - img
+                      - generic:
+                        - generic:
+                          - button:
+                            - generic:
+                              - generic:
+                                - img
+                              - generic:
+                                - img
+                      - generic:
+                        - generic:
+                          - button "Dropdown menu":
+                            - generic:
+                              - img
+                            - generic:
+                              - img
+                      - generic:
+                        - generic:
+                          - button "Dropdown menu":
+                            - generic:
+                              - img
+                            - generic:
+                              - img
+                      - generic:
+                        - generic:
+                          - generic:
+                            - img
+                          - button "Dropdown menu":
+                            - img
+                      - generic:
+                        - generic:
+                          - img
+                      - generic:
+                        - button:
+                          - img
+              - generic:
+                - generic:
+                  - button "Dropdown menu"
+              - generic:
+                - generic:
+                  - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - generic:
+                  - button "Dropdown menu"
+              - generic:
+                - button "Dropdown menu"
+              - generic:
+                - generic:
+                  - button "Dropdown menu" [disabled]
+              - generic:
+                - generic:
+                  - button "Dropdown menu"
+          - generic [ref=f2e140]:
+            - paragraph [ref=f2e141]: Attachments
+            - paragraph [ref=f2e142]: Add any attachments with relevant information and context.
+            - generic [ref=f2e143]:
+              - button "Drop your files here to upload" [ref=f2e144]
+              - generic [ref=f2e146] [cursor=pointer]: Drop your files here to upload
+          - generic [ref=f2e147]:
+            - paragraph [ref=f2e148]: What is the priority of this project?
+            - paragraph [ref=f2e149]: Consult with your manager for prioritization.
+            - button "High" [ref=f2e546] [cursor=pointer]:
+              - generic [ref=f2e549]:
+                - img [ref=f2e551]
+                - text: High
+              - img [ref=f2e159]
+          - generic [ref=f2e161]:
+            - paragraph [ref=f2e162]: Due Date
+            - paragraph [ref=f2e163]: When should this project/task be completed?
+            - generic [ref=f2e164]:
+              - button "Apr 3, 2026" [active] [ref=f2e619] [cursor=pointer]:
+                - img [ref=f2e167]
+                - text: Apr 3, 2026
+                - img [ref=f2e170]
+              - button "Clear start date" [ref=f2e620] [cursor=pointer]:
+                - img [ref=f2e622]
+                - generic [ref=f2e624]: Clear start date
+        - button "Submit" [ref=f2e172] [cursor=pointer]:
+          - generic [ref=f2e173]: Submit
+        - paragraph
+      - link "Report Abuse" [ref=f2e175] [cursor=pointer]:
+        - /url: https://help.clickup.com/hc/en-us/requests/new?ticket_form_id=4417472536855
+  - generic:
+    - generic:
+      - generic:
+        - status
+    - generic:
+      - generic:
+        - status
