@@ -222,7 +222,23 @@ Teams and tasks are stored locally:
 * **Team config**: `~/.claude/teams/{team-name}/config.json`
 * **Task list**: `~/.claude/tasks/{team-name}/`
 
+Claude Code generates both of these automatically when you create a team and updates them as teammates join, go idle, or leave. The team config holds runtime state such as session IDs and tmux pane IDs, so don't edit it by hand or pre-author it: your changes are overwritten on the next state update.
+
+To define reusable teammate roles, use [subagent definitions](#use-subagent-definitions-for-teammates) instead.
+
 The team config contains a `members` array with each teammate's name, agent ID, and agent type. Teammates can read this file to discover other team members.
+
+There is no project-level equivalent of the team config. A file like `.claude/teams/teams.json` in your project directory is not recognized as configuration; Claude treats it as an ordinary file.
+
+### Use subagent definitions for teammates
+
+When spawning a teammate, you can reference a [subagent](/en/sub-agents) type from any [subagent scope](/en/sub-agents#choose-the-subagent-scope): project, user, plugin, or CLI-defined. The teammate inherits that subagent's system prompt, tools, and model. This lets you define a role once, such as a security-reviewer or test-runner, and reuse it both as a delegated subagent and as an agent team teammate.
+
+To use a subagent definition, mention it by name when asking Claude to spawn the teammate:
+
+```text theme={null}
+Spawn a teammate using the security-reviewer agent type to audit the auth module.
+```
 
 ### Permissions
 
@@ -1610,6 +1626,54 @@ Release notes for Claude Code, including new features, improvements, and bug fix
 This page is generated from the [CHANGELOG.md on GitHub](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md).
 
 Run `claude --version` to check your installed version.
+
+<Update label="2.1.88" description="March 30, 2026">
+  * Added `CLAUDE_CODE_NO_FLICKER=1` environment variable to opt into flicker-free alt-screen rendering with virtualized scrollback
+  * Added `PermissionDenied` hook that fires after auto mode classifier denials — return `{retry: true}` to tell the model it can retry
+  * Added named subagents to `@` mention typeahead suggestions
+  * Fixed prompt cache misses in long sessions caused by tool schema bytes changing mid-session
+  * Fixed nested CLAUDE.md files being re-injected dozens of times in long sessions that read many files
+  * Fixed Edit/Write tools doubling CRLF on Windows and stripping Markdown hard line breaks (two trailing spaces)
+  * Fixed `StructuredOutput` schema cache bug causing \~50% failure rate in workflows with multiple schemas
+  * Fixed memory leak where large JSON inputs were retained as LRU cache keys in long-running sessions
+  * Fixed a potential out-of-memory crash when the Edit tool was used on very large files (>1 GiB)
+  * Fixed a crash when removing a message from very large session files (over 50MB)
+  * Fixed `--resume` crash when transcript contains a tool result from an older CLI version or interrupted write
+  * Fixed misleading "Rate limit reached" message when the API returned an entitlement error — now shows the actual error with actionable hints
+  * Fixed LSP server zombie state after crash — server now restarts on next request instead of failing until session restart
+  * Fixed hooks `if` condition filtering not matching compound commands (`ls && git push`) or commands with env-var prefixes (`FOO=bar git push`)
+  * Fixed prompt history entries containing CJK or emoji being silently dropped when they fall on a 4KB boundary in `~/.claude/history.jsonl`
+  * Fixed `/stats` losing historical data beyond 30 days when the stats cache format changes
+  * Fixed `/stats` undercounting tokens by excluding subagent/fork usage
+  * Fixed scrollback disappearing when scrolling up in long sessions
+  * Fixed collapsed search/read group badges duplicating in terminal scrollback during heavy parallel tool use
+  * Fixed notification `invalidates` not clearing the currently-displayed notification immediately
+  * Fixed prompt briefly disappearing after submit when background messages arrived during processing
+  * Fixed long `/btw` responses being clipped with no way to scroll — responses now render in a scrollable viewport
+  * Fixed Devanagari and other combining-mark text being truncated in assistant output
+  * Fixed rendering artifacts on main-screen terminals after layout shifts
+  * Fixed voice mode failing to request microphone permission on macOS Apple Silicon
+  * Fixed voice push-to-talk not activating for some modifier-combo bindings
+  * Fixed voice mode on Windows failing with "WebSocket upgrade rejected with HTTP 101"
+  * Fixed Shift+Enter submitting instead of inserting a newline on Windows Terminal Preview 1.25
+  * Fixed periodic UI jitter during streaming in iTerm2 when running inside tmux
+  * Fixed PowerShell tool incorrectly reporting failures when commands like `git push` wrote progress to stderr on Windows PowerShell 5.1
+  * Fixed SDK error result messages (`error_during_execution`, `error_max_turns`) to correctly set `is_error: true` with descriptive messages
+  * Fixed task notifications being lost when backgrounding a session with Ctrl+B
+  * Fixed PreToolUse/PostToolUse hooks not providing `file_path` as an absolute path for Write/Edit/Read tools
+  * Improved PowerShell tool prompt with version-appropriate syntax guidance (5.1 vs 7+)
+  * Thinking summaries are no longer generated by default in interactive sessions — set `showThinkingSummaries: true` in settings to restore
+  * Auto mode denied commands now show a notification and appear in `/permissions` → Recent tab
+  * `/env` now applies to PowerShell tool commands (previously only affected Bash)
+  * `/usage` now hides redundant "Current week (Sonnet only)" bar for Pro and Enterprise plans
+  * Collapsed tool summary now shows "Listed N directories" for ls/tree/du instead of "Read N files"
+  * Image paste no longer inserts a trailing space
+  * Pasting `!command` into an empty prompt now enters bash mode, matching typed `!` behavior
+</Update>
+
+<Update label="2.1.87" description="March 29, 2026">
+  * Fixed messages in Cowork Dispatch not getting delivered
+</Update>
 
 <Update label="2.1.86" description="March 27, 2026">
   * Added `X-Claude-Code-Session-Id` header to API requests so proxies can aggregate requests by session without parsing the body
@@ -5652,6 +5716,7 @@ These are the most frequently encountered errors and how to resolve them:
 
 ## See also
 
+* [Computer use](/en/computer-use): control native macOS apps when a task can't be done in a browser
 * [Use Claude Code in VS Code](/en/vs-code#automate-browser-tasks-with-chrome): browser automation in the VS Code extension
 * [CLI reference](/en/cli-reference): command-line flags including `--chrome`
 * [Common workflows](/en/common-workflows): more ways to use Claude Code
@@ -5693,12 +5758,28 @@ Claude Code on the web is available in research preview to:
 
 ## Getting started
 
+Set up Claude Code on the web from the browser or from your terminal.
+
+### From the browser
+
 1. Visit [claude.ai/code](https://claude.ai/code)
 2. Connect your GitHub account
 3. Install the Claude GitHub App in your repositories
 4. Select your default environment
 5. Submit your coding task
 6. Review changes in diff view, iterate with comments, then create a pull request
+
+### From the terminal
+
+Run `/web-setup` inside Claude Code to connect GitHub using your local `gh` CLI credentials. The command syncs your `gh auth token` to Claude Code on the web, creates a default cloud environment, and opens claude.ai/code in your browser when it finishes.
+
+This path requires the `gh` CLI to be installed and authenticated with `gh auth login`. If `gh` is not available, `/web-setup` opens claude.ai/code so you can connect GitHub from the browser instead.
+
+Your `gh` credentials give Claude access to clone and push, so you can skip the GitHub App for basic sessions. Install the App later if you want [Auto-fix](#auto-fix-pull-requests), which uses the App to receive PR webhooks.
+
+<Note>
+  Team and Enterprise admins can disable terminal setup with the Quick web setup toggle at [claude.ai/admin-settings/claude-code](https://claude.ai/admin-settings/claude-code).
+</Note>
 
 ## How it works
 
@@ -6343,7 +6424,7 @@ Claude Code on the web shares rate limits with all other Claude and Claude Code 
 ## Limitations
 
 * **Repository authentication**: You can only move sessions from web to local when you are authenticated to the same account
-* **Platform restrictions**: Claude Code on the web only works with code hosted in GitHub. GitLab and other non-GitHub repositories cannot be used with cloud sessions
+* **Platform restrictions**: Claude Code on the web only works with code hosted in GitHub. Self-hosted [GitHub Enterprise Server](/en/github-enterprise-server) instances are supported for Teams and Enterprise plans. GitLab and other non-GitHub repositories cannot be used with cloud sessions
 
 ## Best practices
 
@@ -6475,7 +6556,7 @@ Customize Claude Code's behavior with these command-line flags:
 | `--add-dir`                               | Add additional working directories for Claude to access (validates each path exists as a directory)                                                                                                                                                                                                  | `claude --add-dir ../apps ../lib`                                                                  |
 | `--agent`                                 | Specify an agent for the current session (overrides the `agent` setting)                                                                                                                                                                                                                             | `claude --agent my-custom-agent`                                                                   |
 | `--agents`                                | Define custom subagents dynamically via JSON. Uses the same field names as subagent [frontmatter](/en/sub-agents#supported-frontmatter-fields), plus a `prompt` field for the agent's instructions                                                                                                   | `claude --agents '{"reviewer":{"description":"Reviews code","prompt":"You are a code reviewer"}}'` |
-| `--allow-dangerously-skip-permissions`    | Enable permission bypassing as an option without immediately activating it. Allows composing with `--permission-mode` (use with caution)                                                                                                                                                             | `claude --permission-mode plan --allow-dangerously-skip-permissions`                               |
+| `--allow-dangerously-skip-permissions`    | Add `bypassPermissions` to the `Shift+Tab` mode cycle without starting in it. Lets you begin in a different mode like `plan` and switch to `bypassPermissions` later. See [permission modes](/en/permission-modes#skip-all-checks-with-bypasspermissions-mode)                                       | `claude --permission-mode plan --allow-dangerously-skip-permissions`                               |
 | `--allowedTools`                          | Tools that execute without prompting for permission. See [permission rule syntax](/en/settings#permission-rule-syntax) for pattern matching. To restrict which tools are available, use `--tools` instead                                                                                            | `"Bash(git log *)" "Bash(git diff *)" "Read"`                                                      |
 | `--append-system-prompt`                  | Append custom text to the end of the default system prompt                                                                                                                                                                                                                                           | `claude --append-system-prompt "Always use TypeScript"`                                            |
 | `--append-system-prompt-file`             | Load additional system prompt text from a file and append to the default prompt                                                                                                                                                                                                                      | `claude --append-system-prompt-file ./extra-rules.txt`                                             |
@@ -6485,7 +6566,7 @@ Customize Claude Code's behavior with these command-line flags:
 | `--chrome`                                | Enable [Chrome browser integration](/en/chrome) for web automation and testing                                                                                                                                                                                                                       | `claude --chrome`                                                                                  |
 | `--continue`, `-c`                        | Load the most recent conversation in the current directory                                                                                                                                                                                                                                           | `claude --continue`                                                                                |
 | `--dangerously-load-development-channels` | Enable [channels](/en/channels-reference#test-during-the-research-preview) that are not on the approved allowlist, for local development. Accepts `plugin:<name>@<marketplace>` and `server:<name>` entries. Prompts for confirmation                                                                | `claude --dangerously-load-development-channels server:webhook`                                    |
-| `--dangerously-skip-permissions`          | Skip permission prompts (use with caution). See [permission modes](/en/permission-modes#skip-all-checks-with-bypasspermissions-mode) for what this does and does not skip                                                                                                                            | `claude --dangerously-skip-permissions`                                                            |
+| `--dangerously-skip-permissions`          | Skip permission prompts. Equivalent to `--permission-mode bypassPermissions`. See [permission modes](/en/permission-modes#skip-all-checks-with-bypasspermissions-mode) for what this does and does not skip                                                                                          | `claude --dangerously-skip-permissions`                                                            |
 | `--debug`                                 | Enable debug mode with optional category filtering (for example, `"api,hooks"` or `"!statsig,!file"`)                                                                                                                                                                                                | `claude --debug "api,mcp"`                                                                         |
 | `--disable-slash-commands`                | Disable all skills and commands for this session                                                                                                                                                                                                                                                     | `claude --disable-slash-commands`                                                                  |
 | `--disallowedTools`                       | Tools that are removed from the model's context and cannot be used                                                                                                                                                                                                                                   | `"Bash(git log *)" "Bash(git diff *)" "Edit"`                                                      |
@@ -6508,8 +6589,8 @@ Customize Claude Code's behavior with these command-line flags:
 | `--no-chrome`                             | Disable [Chrome browser integration](/en/chrome) for this session                                                                                                                                                                                                                                    | `claude --no-chrome`                                                                               |
 | `--no-session-persistence`                | Disable session persistence so sessions are not saved to disk and cannot be resumed (print mode only)                                                                                                                                                                                                | `claude -p --no-session-persistence "query"`                                                       |
 | `--output-format`                         | Specify output format for print mode (options: `text`, `json`, `stream-json`)                                                                                                                                                                                                                        | `claude -p "query" --output-format json`                                                           |
-| `--enable-auto-mode`                      | Unlock [auto mode](/en/permission-modes#eliminate-prompts-with-auto-mode) in the `Shift+Tab` cycle. Requires a Team plan (Enterprise and API support rolling out shortly) and Claude Sonnet 4.6 or Opus 4.6                                                                                          | `claude --enable-auto-mode`                                                                        |
-| `--permission-mode`                       | Begin in a specified [permission mode](/en/permission-modes)                                                                                                                                                                                                                                         | `claude --permission-mode plan`                                                                    |
+| `--enable-auto-mode`                      | Unlock [auto mode](/en/permission-modes#eliminate-prompts-with-auto-mode) in the `Shift+Tab` cycle. Requires a Team, Enterprise, or API plan and Claude Sonnet 4.6 or Opus 4.6                                                                                                                       | `claude --enable-auto-mode`                                                                        |
+| `--permission-mode`                       | Begin in a specified [permission mode](/en/permission-modes). Accepts `default`, `acceptEdits`, `plan`, `auto`, `dontAsk`, or `bypassPermissions`. Overrides `defaultMode` from settings files                                                                                                       | `claude --permission-mode plan`                                                                    |
 | `--permission-prompt-tool`                | Specify an MCP tool to handle permission prompts in non-interactive mode                                                                                                                                                                                                                             | `claude -p --permission-prompt-tool mcp_auth_tool "query"`                                         |
 | `--plugin-dir`                            | Load plugins from a directory for this session only. Each flag takes one path. Repeat the flag for multiple directories: `--plugin-dir A --plugin-dir B`                                                                                                                                             | `claude --plugin-dir ./my-plugins`                                                                 |
 | `--print`, `-p`                           | Print response without interactive mode (see [Agent SDK documentation](https://platform.claude.com/docs/en/agent-sdk/overview) for programmatic usage details)                                                                                                                                       | `claude -p "query"`                                                                                |
@@ -6568,7 +6649,7 @@ Code Review analyzes your GitHub pull requests and posts findings as inline comm
 
 Findings are tagged by severity and don't approve or block your PR, so existing review workflows stay intact. You can tune what Claude flags by adding a `CLAUDE.md` or `REVIEW.md` file to your repository.
 
-To run Claude in your own CI infrastructure instead of this managed service, see [GitHub Actions](/en/github-actions) or [GitLab CI/CD](/en/gitlab-ci-cd).
+To run Claude in your own CI infrastructure instead of this managed service, see [GitHub Actions](/en/github-actions) or [GitLab CI/CD](/en/gitlab-ci-cd). For repositories on a self-hosted GitHub instance, see [GitHub Enterprise Server](/en/github-enterprise-server).
 
 This page covers:
 
@@ -6577,6 +6658,7 @@ This page covers:
 * [Triggering reviews manually](#manually-trigger-reviews) with `@claude review` and `@claude review once`
 * [Customizing reviews](#customize-reviews) with `CLAUDE.md` and `REVIEW.md`
 * [Pricing](#pricing)
+* [Troubleshooting](#troubleshooting) failed runs and missing comments
 
 ## How reviews work
 
@@ -6607,7 +6689,7 @@ Beyond the inline review comments, each review populates the **Claude Code Revie
 | 🔴 Important | `src/auth/session.ts:142` | Token refresh races with logout, leaving stale sessions active |
 | 🟡 Nit       | `src/auth/session.ts:88`  | `parseExpiry` silently returns 0 on malformed input            |
 
-Each finding also appears as an annotation in the **Files changed** tab, marked directly on the relevant diff lines. Important findings render with a red marker, nits with a yellow warning, and pre-existing bugs with a gray notice.
+Each finding also appears as an annotation in the **Files changed** tab, marked directly on the relevant diff lines. Important findings render with a red marker, nits with a yellow warning, and pre-existing bugs with a gray notice. Annotations and the severity table are written to the check run independently of inline review comments, so they remain available even if GitHub rejects an inline comment on a line that moved.
 
 The check run always completes with a neutral conclusion so it never blocks merging through branch protection rules. If you want to gate merges on Code Review findings, read the severity breakdown from the check run output in your own CI. The last line of the Details text is a machine-readable comment your workflow can parse with `gh` and jq:
 
@@ -6759,6 +6841,26 @@ In any mode, commenting `@claude review` [opts the PR into push-triggered review
 Costs appear on your Anthropic bill regardless of whether your organization uses AWS Bedrock or Google Vertex AI for other Claude Code features. To set a monthly spend cap for Code Review, go to [claude.ai/admin-settings/usage](https://claude.ai/admin-settings/usage) and configure the limit for the Claude Code Review service.
 
 Monitor spend via the weekly cost chart in [analytics](#view-usage) or the per-repo average cost column in admin settings.
+
+## Troubleshooting
+
+Review runs are best-effort. A failed run never blocks your PR, but it also doesn't retry on its own. This section covers how to recover from a failed run and where to look when the check run reports issues you can't find.
+
+### Retrigger a failed or timed-out review
+
+When the review infrastructure hits an internal error or exceeds its time limit, the check run completes with a title of **Code review encountered an error** or **Code review timed out**. The conclusion is still neutral, so nothing blocks your merge, but no findings are posted.
+
+To run the review again, comment `@claude review once` on the PR. This starts a fresh review without subscribing the PR to future pushes. If the PR is already subscribed to push-triggered reviews, pushing a new commit also starts a new review.
+
+The **Re-run** button in GitHub's Checks tab does not retrigger Code Review. Use the comment command or a new push instead.
+
+### Find issues that aren't showing as inline comments
+
+If the check run title says issues were found but you don't see inline review comments on the diff, look in these other locations where findings are surfaced:
+
+* **Check run Details**: click **Details** next to the Claude Code Review check in the Checks tab. The severity table lists every finding with its file, line, and summary regardless of whether the inline comment was accepted.
+* **Files changed annotations**: open the **Files changed** tab on the PR. Findings render as annotations attached directly to the diff lines, separate from review comments.
+* **Review body**: if you pushed to the PR while a review was running, some findings may reference lines that no longer exist in the current diff. Those appear under an **Additional findings** heading in the review body text rather than as inline comments.
 
 ## Related resources
 
@@ -7865,6 +7967,210 @@ what are the limitations of Claude Code?
 </CardGroup>
 
 
+# Let Claude use your computer from the CLI
+Source: https://code.claude.com/docs/en/computer-use
+
+Enable computer use in the Claude Code CLI so Claude can open apps, click, type, and see your screen on macOS. Test native apps, debug visual issues, and automate GUI-only tools without leaving your terminal.
+
+<Note>
+  Computer use is a research preview on macOS that requires a Pro or Max plan. It is not available on Team or Enterprise plans. It requires Claude Code v2.1.85 or later and an interactive session, so it is not available in non-interactive mode with the `-p` flag.
+</Note>
+
+Computer use lets Claude open apps, control your screen, and work on your machine the way you would. From the CLI, Claude can compile a Swift app, launch it, click through every button, and screenshot the result, all in the same conversation where it wrote the code.
+
+This page covers how computer use works in the CLI. For the Desktop app, see [computer use in Desktop](/en/desktop#let-claude-use-your-computer).
+
+## What you can do with computer use
+
+Computer use handles tasks that require a GUI: anything you'd normally have to leave the terminal and do by hand.
+
+* **Build and validate native apps**: ask Claude to build a macOS menu bar app. Claude writes the Swift, compiles it, launches it, and clicks through every control to verify it works before you ever open it.
+* **End-to-end UI testing**: point Claude at a local Electron app and say "test the onboarding flow." Claude opens the app, clicks through signup, and screenshots each step. No Playwright config, no test harness.
+* **Debug visual and layout issues**: tell Claude "the modal is clipping on small windows." Claude resizes the window, reproduces the bug, screenshots it, patches the CSS, and verifies the fix. Claude sees what you see.
+* **Drive GUI-only tools**: interact with design tools, hardware control panels, the iOS Simulator, or proprietary apps that have no CLI or API.
+
+## When computer use applies
+
+Claude has several ways to interact with an app or service. Computer use is the broadest and slowest, so Claude tries the most precise tool first:
+
+* If you have an [MCP server](/en/mcp) for the service, Claude uses that.
+* If the task is a shell command, Claude uses Bash.
+* If the task is browser work and you have [Claude in Chrome](/en/chrome) set up, Claude uses that.
+* If none of those apply, Claude uses computer use.
+
+Screen control is reserved for things nothing else can reach: native apps, simulators, and tools without an API.
+
+## Enable computer use
+
+Computer use is available as a built-in MCP server called `computer-use`. It's off by default until you enable it.
+
+<Steps>
+  <Step title="Open the MCP menu">
+    In an interactive Claude Code session, run:
+
+    ```text theme={null}
+    /mcp
+    ```
+
+    Find `computer-use` in the server list. It shows as disabled.
+  </Step>
+
+  <Step title="Enable the server">
+    Select `computer-use` and choose **Enable**. The setting persists per project, so you only do this once for each project where you want computer use.
+  </Step>
+
+  <Step title="Grant macOS permissions">
+    The first time Claude tries to use your computer, you'll see a prompt to grant two macOS permissions:
+
+    * **Accessibility**: lets Claude click, type, and scroll
+    * **Screen Recording**: lets Claude see what's on your screen
+
+    The prompt includes links to open the relevant System Settings pane. Grant both, then select **Try again** in the prompt. macOS may require you to restart Claude Code after granting Screen Recording.
+  </Step>
+</Steps>
+
+After setup, ask Claude to do something that needs the GUI:
+
+```text theme={null}
+Build the app target, launch it, and click through each tab to make
+sure nothing crashes. Screenshot any error states you find.
+```
+
+## Approve apps per session
+
+Enabling the `computer-use` server doesn't grant Claude access to every app on your machine. The first time Claude needs a specific app in a session, a prompt appears in your terminal showing:
+
+* Which apps Claude wants to control
+* Any extra permissions requested, such as clipboard access
+* How many other apps will be hidden while Claude works
+
+Choose **Allow for this session** or **Deny**. Approvals last for the current session. You can approve multiple apps at once when Claude requests them together.
+
+Apps with broad reach show an extra warning in the prompt so you know what approving them grants:
+
+| Warning                    | Applies to                                                   |
+| :------------------------- | :----------------------------------------------------------- |
+| Equivalent to shell access | Terminal, iTerm, VS Code, Warp, and other terminals and IDEs |
+| Can read or write any file | Finder                                                       |
+| Can change system settings | System Settings                                              |
+
+These apps aren't blocked. The warning lets you decide whether the task warrants that level of access.
+
+Claude's level of control also varies by app category: browsers and trading platforms are view-only, terminals and IDEs are click-only, and everything else gets full control. See [app permissions in Desktop](/en/desktop#app-permissions) for the complete tier breakdown.
+
+## How Claude works on your screen
+
+Understanding the flow helps you anticipate what Claude will do and how to intervene.
+
+### One session at a time
+
+Computer use holds a machine-wide lock while active. If another Claude Code session is already using your computer, new attempts fail with a message telling you which session holds the lock. Finish or exit that session first.
+
+### Apps are hidden while Claude works
+
+When Claude starts controlling your screen, other visible apps are hidden so Claude interacts with only the approved apps. Your terminal window stays visible and is excluded from screenshots, so you can watch the session and Claude never sees its own output.
+
+When Claude finishes the turn, hidden apps are restored automatically.
+
+### Stop at any time
+
+When Claude acquires the lock, a macOS notification appears: "Claude is using your computer · press Esc to stop." Press `Esc` anywhere to abort the current action immediately, or press `Ctrl+C` in the terminal. Either way, Claude releases the lock, unhides your apps, and returns control to you.
+
+A second notification appears when Claude is done.
+
+## Safety and the trust boundary
+
+<Warning>
+  Unlike the [sandboxed Bash tool](/en/sandboxing), computer use runs on your actual desktop with access to the apps you approve. Claude checks each action and flags potential prompt injection from on-screen content, but the trust boundary is different. See the [computer use safety guide](https://support.claude.com/en/articles/14128542) for best practices.
+</Warning>
+
+The built-in guardrails reduce risk without requiring configuration:
+
+* **Per-app approval**: Claude can only control apps you've approved in the current session.
+* **Sentinel warnings**: apps that grant shell, filesystem, or system settings access are flagged before you approve.
+* **Terminal excluded from screenshots**: Claude never sees your terminal window, so on-screen prompts in your session can't feed back into the model.
+* **Global escape**: the `Esc` key aborts computer use from anywhere, and the key press is consumed so prompt injection can't use it to dismiss dialogs.
+* **Lock file**: only one session can control your machine at a time.
+
+## Example workflows
+
+These examples show common ways to combine computer use with coding tasks.
+
+### Validate a native build
+
+After making changes to a macOS or iOS app, have Claude compile and verify in one pass:
+
+```text theme={null}
+Build the MenuBarStats target, launch it, open the preferences window,
+and verify the interval slider updates the label. Screenshot the
+preferences window when you're done.
+```
+
+Claude runs `xcodebuild`, launches the app, interacts with the UI, and reports what it finds.
+
+### Reproduce a layout bug
+
+When a visual bug only appears at certain window sizes, let Claude find it:
+
+```text theme={null}
+The settings modal clips its footer on narrow windows. Resize the app
+window down until you can reproduce it, screenshot the clipped state,
+then check the CSS for the modal container.
+```
+
+Claude resizes the window, captures the broken state, and reads the relevant stylesheets.
+
+### Test a simulator flow
+
+Drive the iOS Simulator without writing XCTest:
+
+```text theme={null}
+Open the iOS Simulator, launch the app, tap through the onboarding
+screens, and tell me if any screen takes more than a second to load.
+```
+
+Claude controls the simulator the same way you would with a mouse.
+
+## Differences from the Desktop app
+
+The CLI and Desktop surfaces share the same computer use engine. A few Desktop-specific controls aren't yet in the CLI:
+
+| Feature              | Desktop                                        | CLI                             |
+| :------------------- | :--------------------------------------------- | :------------------------------ |
+| Enable               | Toggle in **Settings > Desktop app > General** | Enable `computer-use` in `/mcp` |
+| Denied apps list     | Configurable in Settings                       | Not yet available               |
+| Auto-unhide toggle   | Optional                                       | Always on                       |
+| Dispatch integration | Dispatch-spawned sessions can use computer use | Not applicable                  |
+
+## Troubleshooting
+
+### "Computer use is in use by another Claude session"
+
+Another Claude Code session holds the lock. Finish the task in that session or exit it. If the other session crashed, the lock is released automatically when Claude detects the process is no longer running.
+
+### macOS permissions prompt keeps reappearing
+
+macOS sometimes requires a restart of the requesting process after you grant Screen Recording. Quit Claude Code completely and start a new session. If the prompt persists, open **System Settings > Privacy & Security > Screen Recording** and confirm your terminal app is listed and enabled.
+
+### `computer-use` doesn't appear in `/mcp`
+
+The server only appears on eligible setups. Check that:
+
+* You're on macOS. Computer use is not available on Linux or Windows.
+* You're running Claude Code v2.1.85 or later. Run `claude --version` to check.
+* You're on a Pro or Max plan. Run `/status` to confirm your subscription.
+* You're authenticated through claude.ai. Computer use is not available with third-party providers like Amazon Bedrock, Google Cloud Vertex AI, or Microsoft Foundry. If you access Claude exclusively through a third-party provider, you need a separate claude.ai account to use this feature.
+* You're in an interactive session. Computer use is not available in non-interactive mode with the `-p` flag.
+
+## See also
+
+* [Computer use in Desktop](/en/desktop#let-claude-use-your-computer): the same capability with a graphical settings page
+* [Claude in Chrome](/en/chrome): browser automation for web-based tasks
+* [MCP](/en/mcp): connect Claude to structured tools and APIs
+* [Sandboxing](/en/sandboxing): how Claude's Bash tool isolates filesystem and network access
+* [Computer use safety guide](https://support.claude.com/en/articles/14128542): best practices for safe computer use
+
+
 # Explore the context window
 Source: https://code.claude.com/docs/en/context-window
 
@@ -8179,7 +8485,7 @@ Claude Code connects from users' machines to the Statsig service to log operatio
 
 Claude Code connects from users' machines to Sentry for operational error logging. The data is encrypted in transit using TLS and at rest using 256-bit AES encryption. Read more in the [Sentry security documentation](https://sentry.io/security/). To opt out of error logging, set the `DISABLE_ERROR_REPORTING` environment variable.
 
-When users run the `/feedback` command, a copy of their full conversation history including code is sent to Anthropic. The data is encrypted in transit and at rest. Optionally, a Github issue is created in our public repository. To opt out, set the `DISABLE_FEEDBACK_COMMAND` environment variable.
+When users run the `/feedback` command, a copy of their full conversation history including code is sent to Anthropic. The data is encrypted in transit and at rest. Optionally, a Github issue is created in our public repository. To opt out, set the `DISABLE_FEEDBACK_COMMAND` environment variable to `1`.
 
 ## Default behaviors by API provider
 
@@ -8252,13 +8558,13 @@ The prompt box supports two ways to bring in external context:
 
 Permission modes control how much autonomy Claude has during a session: whether it asks before editing files, running commands, or both. You can switch modes at any time using the mode selector next to the send button. Start with Ask permissions to see exactly what Claude does, then move to Auto accept edits or Plan mode as you get comfortable.
 
-| Mode                   | Settings key        | Behavior                                                                                                                                                                                                                                                                                                                          |
-| ---------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Ask permissions**    | `default`           | Claude asks before editing files or running commands. You see a diff and can accept or reject each change. Recommended for new users.                                                                                                                                                                                             |
-| **Auto accept edits**  | `acceptEdits`       | Claude auto-accepts file edits but still asks before running terminal commands. Use this when you trust file changes and want faster iteration.                                                                                                                                                                                   |
-| **Plan mode**          | `plan`              | Claude analyzes your code and creates a plan without modifying files or running commands. Good for complex tasks where you want to review the approach first.                                                                                                                                                                     |
-| **Auto**               | `auto`              | Claude executes all actions with background safety checks that verify alignment with your request. Reduces permission prompts while maintaining oversight. Currently a research preview. Available on Team plans (Enterprise rolling out shortly). Requires Claude Sonnet 4.6 or Opus 4.6. Enable in your Settings → Claude Code. |
-| **Bypass permissions** | `bypassPermissions` | Claude runs without any permission prompts, equivalent to `--dangerously-skip-permissions` in the CLI. Enable in your Settings → Claude Code under "Allow bypass permissions mode". Only use this in sandboxed containers or VMs. Enterprise admins can disable this option.                                                      |
+| Mode                   | Settings key        | Behavior                                                                                                                                                                                                                                                                                                              |
+| ---------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ask permissions**    | `default`           | Claude asks before editing files or running commands. You see a diff and can accept or reject each change. Recommended for new users.                                                                                                                                                                                 |
+| **Auto accept edits**  | `acceptEdits`       | Claude auto-accepts file edits but still asks before running terminal commands. Use this when you trust file changes and want faster iteration.                                                                                                                                                                       |
+| **Plan mode**          | `plan`              | Claude analyzes your code and creates a plan without modifying files or running commands. Good for complex tasks where you want to review the approach first.                                                                                                                                                         |
+| **Auto**               | `auto`              | Claude executes all actions with background safety checks that verify alignment with your request. Reduces permission prompts while maintaining oversight. Currently a research preview. Available on Team, Enterprise, and API plans. Requires Claude Sonnet 4.6 or Opus 4.6. Enable in your Settings → Claude Code. |
+| **Bypass permissions** | `bypassPermissions` | Claude runs without any permission prompts, equivalent to `--dangerously-skip-permissions` in the CLI. Enable in your Settings → Claude Code under "Allow bypass permissions mode". Only use this in sandboxed containers or VMs. Enterprise admins can disable this option.                                          |
 
 The `dontAsk` permission mode is available only in the [CLI](/en/permission-modes#allow-only-pre-approved-tools-with-dontask-mode).
 
@@ -8345,12 +8651,28 @@ The [per-app access tiers](#app-permissions) reinforce this: browsers are capped
 
 ### Enable computer use
 
-Computer use is off by default. If you ask Claude to do something that needs it while it's off, Claude tells you it could do the task if you enable computer use in Settings. To enable it, open **Settings > Desktop app > General** and toggle **Computer use** on. Before the toggle takes effect, you need to grant two macOS system permissions:
+Computer use is off by default. If you ask Claude to do something that needs it while it's off, Claude tells you it could do the task if you enable computer use in Settings.
 
-* **Accessibility**: lets Claude click, type, and scroll
-* **Screen Recording**: lets Claude see what's on your screen
+<Steps>
+  <Step title="Update the desktop app">
+    Make sure you have the latest version of Claude Desktop. Download or update at [claude.com/download](https://claude.com/download), then restart the app.
+  </Step>
 
-The Settings page shows the current status of each permission. If either is denied, click the badge to open the relevant System Settings pane.
+  <Step title="Turn on the toggle">
+    In the desktop app, go to **Settings > General** (under **Desktop app**). Find the **Computer use** toggle and turn it on.
+
+    If you don't see the toggle, confirm you're on macOS with a Pro or Max plan, then update and restart the app.
+  </Step>
+
+  <Step title="Grant macOS permissions">
+    Before the toggle takes effect, grant two macOS system permissions:
+
+    * **Accessibility**: lets Claude click, type, and scroll
+    * **Screen Recording**: lets Claude see what's on your screen
+
+    The Settings page shows the current status of each permission. If either is denied, click the badge to open the relevant System Settings pane.
+  </Step>
+</Steps>
 
 ### App permissions
 
@@ -8366,7 +8688,7 @@ The prompt also shows what level of control Claude gets for that app. These tier
 
 Apps with broad reach like Terminal, Finder, and System Settings show an extra warning in the prompt so you know what approving them grants.
 
-You can configure two settings in **Settings > Desktop app > General**:
+You can configure two settings in **Settings > General** (under **Desktop app**):
 
 * **Denied apps**: add apps here to reject them without prompting. Claude may still affect a denied app indirectly through actions in an allowed app, but it can't interact with the denied app directly.
 * **Unhide apps when Claude finishes**: while Claude is working, your other windows are hidden so it interacts with only the approved app. When Claude finishes, hidden windows are restored unless you turn this setting off.
@@ -8823,7 +9145,7 @@ This table compares core capabilities between the CLI and Desktop. For a full li
 | Session isolation                                     | [`--worktree`](/en/cli-reference) flag                    | Automatic worktrees                                                                         |
 | Multiple sessions                                     | Separate terminals                                        | Sidebar tabs                                                                                |
 | Recurring tasks                                       | Cron jobs, CI pipelines                                   | [Scheduled tasks](#schedule-recurring-tasks)                                                |
-| Computer use                                          | Not available                                             | [App and screen control](#let-claude-use-your-computer) on macOS                            |
+| Computer use                                          | [Enable via `/mcp`](/en/computer-use) on macOS            | [App and screen control](#let-claude-use-your-computer) on macOS                            |
 | Dispatch integration                                  | Not available                                             | [Dispatch sessions](#sessions-from-dispatch) in the sidebar                                 |
 | Scripting and automation                              | [`--print`](/en/cli-reference), [Agent SDK](/en/headless) | Not available                                                                               |
 
@@ -9079,10 +9401,10 @@ The container's enhanced security measures (isolation and firewall rules) allow 
 
 ## Getting started in 4 steps
 
-1. Install VS Code and the Remote - Containers extension
+1. Install VS Code and the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 2. Clone the [Claude Code reference implementation](https://github.com/anthropics/claude-code/tree/main/.devcontainer) repository
 3. Open the repository in VS Code
-4. When prompted, click "Reopen in Container" (or use Command Palette: Cmd+Shift+P → "Remote-Containers: Reopen in Container")
+4. When prompted, click "Reopen in Container" (or use Command Palette: Cmd+Shift+P → "Dev Containers: Reopen in Container")
 
 ## Configuration breakdown
 
@@ -9615,6 +9937,7 @@ Claude Code supports the following environment variables to control its behavior
 | `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS`                | Set to `1` to strip Anthropic-specific `anthropic-beta` request headers and beta tool-schema fields (such as `defer_loading` and `eager_input_streaming`) from API requests. Use this when a proxy gateway rejects requests with errors like "Unexpected value(s) for the `anthropic-beta` header" or "Extra inputs are not permitted". Standard fields (`name`, `description`, `input_schema`, `cache_control`) are preserved.                                                                                                                                                                                  |
 | `CLAUDE_CODE_DISABLE_FAST_MODE`                         | Set to `1` to disable [fast mode](/en/fast-mode)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY`                   | Set to `1` to disable the "How is Claude doing?" session quality surveys. Surveys are also disabled when `DISABLE_TELEMETRY` or `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` is set. See [Session quality surveys](/en/data-usage#session-quality-surveys)                                                                                                                                                                                                                                                                                                                                                         |
+| `CLAUDE_CODE_DISABLE_MOUSE`                             | Set to `1` to disable mouse tracking in [fullscreen rendering](/en/fullscreen). Keyboard scrolling with `PgUp` and `PgDn` still works. Use this to keep your terminal's native copy-on-select behavior                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC`              | Equivalent of setting `DISABLE_AUTOUPDATER`, `DISABLE_FEEDBACK_COMMAND`, `DISABLE_ERROR_REPORTING`, and `DISABLE_TELEMETRY`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK`             | Set to `1` to disable the non-streaming fallback when a streaming request fails mid-stream. Streaming errors propagate to the retry layer instead. Useful when a proxy or gateway causes the fallback to produce duplicate tool execution                                                                                                                                                                                                                                                                                                                                                                        |
 | `CLAUDE_CODE_DISABLE_TERMINAL_TITLE`                    | Set to `1` to disable automatic terminal title updates based on conversation context                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -9628,12 +9951,14 @@ Claude Code supports the following environment variables to control its behavior
 | `CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL`                     | Skip auto-installation of IDE extensions. Equivalent to setting [`autoInstallIdeExtension`](/en/settings#global-config-settings) to `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `CLAUDE_CODE_MAX_OUTPUT_TOKENS`                         | Set the maximum number of output tokens for most requests. Defaults and caps vary by model; see [max output tokens](https://platform.claude.com/docs/en/about-claude/models/overview#latest-models-comparison). Increasing this value reduces the effective context window available before [auto-compaction](/en/costs#reduce-token-usage) triggers.                                                                                                                                                                                                                                                            |
 | `CLAUDE_CODE_NEW_INIT`                                  | Set to `true` to make `/init` run an interactive setup flow. The flow asks which files to generate, including CLAUDE.md, skills, and hooks, before exploring the codebase and writing them. Without this variable, `/init` generates a CLAUDE.md automatically without prompting.                                                                                                                                                                                                                                                                                                                                |
+| `CLAUDE_CODE_NO_FLICKER`                                | Set to `1` to enable [fullscreen rendering](/en/fullscreen), a research preview that reduces flicker and keeps memory flat in long conversations                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `CLAUDE_CODE_ORGANIZATION_UUID`                         | Organization UUID for the authenticated user. Used by SDK callers to provide account information synchronously. Requires `CLAUDE_CODE_ACCOUNT_UUID` and `CLAUDE_CODE_USER_EMAIL` to also be set                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `CLAUDE_CODE_OTEL_HEADERS_HELPER_DEBOUNCE_MS`           | Interval for refreshing dynamic OpenTelemetry headers in milliseconds (default: 1740000 / 29 minutes). See [Dynamic headers](/en/monitoring-usage#dynamic-headers)                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `CLAUDE_CODE_PLAN_MODE_REQUIRED`                        | Auto-set to `true` on [agent team](/en/agent-teams) teammates that require plan approval. Read-only: set by Claude Code when spawning teammates. See [require plan approval](/en/agent-teams#require-plan-approval-for-teammates)                                                                                                                                                                                                                                                                                                                                                                                |
 | `CLAUDE_CODE_PLUGIN_GIT_TIMEOUT_MS`                     | Timeout in milliseconds for git operations when installing or updating plugins (default: 120000). Increase this value for large repositories or slow network connections. See [Git operations time out](/en/plugin-marketplaces#git-operations-time-out)                                                                                                                                                                                                                                                                                                                                                         |
 | `CLAUDE_CODE_PLUGIN_SEED_DIR`                           | Path to one or more read-only plugin seed directories, separated by `:` on Unix or `;` on Windows. Use this to bundle a pre-populated plugins directory into a container image. Claude Code registers marketplaces from these directories at startup and uses pre-cached plugins without re-cloning. See [Pre-populate plugins for containers](/en/plugin-marketplaces#pre-populate-plugins-for-containers)                                                                                                                                                                                                      |
 | `CLAUDE_CODE_PROXY_RESOLVES_HOSTS`                      | Set to `true` to allow the proxy to perform DNS resolution instead of the caller. Opt-in for environments where the proxy should handle hostname resolution                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `CLAUDE_CODE_SCROLL_SPEED`                              | Set the mouse wheel scroll multiplier in [fullscreen rendering](/en/fullscreen#adjust-wheel-scroll-speed). Accepts values from 1 to 20. Set to `3` to match `vim` if your terminal sends one wheel event per notch without amplification                                                                                                                                                                                                                                                                                                                                                                         |
 | `CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS`               | Maximum time in milliseconds for [SessionEnd](/en/hooks#sessionend) hooks to complete (default: `1500`). Applies to session exit, `/clear`, and switching sessions via interactive `/resume`. Per-hook `timeout` values are also capped by this budget                                                                                                                                                                                                                                                                                                                                                           |
 | `CLAUDE_CODE_SHELL`                                     | Override automatic shell detection. Useful when your login shell differs from your preferred working shell (for example, `bash` vs `zsh`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `CLAUDE_CODE_SHELL_PREFIX`                              | Command prefix to wrap all bash commands (for example, for logging or auditing). Example: `/path/to/logger.sh` will execute `/path/to/logger.sh <command>`                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -9678,7 +10003,7 @@ Claude Code supports the following environment variables to control its behavior
 | `MCP_TIMEOUT`                                           | Timeout in milliseconds for MCP server startup                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `MCP_TOOL_TIMEOUT`                                      | Timeout in milliseconds for MCP tool execution                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `NO_PROXY`                                              | List of domains and IPs to which requests will be directly issued, bypassing proxy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `SLASH_COMMAND_TOOL_CHAR_BUDGET`                        | Override the character budget for skill metadata shown to the [Skill tool](/en/skills#control-who-invokes-a-skill). The budget scales dynamically at 2% of the context window, with a fallback of 16,000 characters. Legacy name kept for backwards compatibility                                                                                                                                                                                                                                                                                                                                                |
+| `SLASH_COMMAND_TOOL_CHAR_BUDGET`                        | Override the character budget for skill metadata shown to the [Skill tool](/en/skills#control-who-invokes-a-skill). The budget scales dynamically at 1% of the context window, with a fallback of 8,000 characters. Legacy name kept for backwards compatibility                                                                                                                                                                                                                                                                                                                                                 |
 | `USE_BUILTIN_RIPGREP`                                   | Set to `0` to use system-installed `rg` instead of `rg` included with Claude Code                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `VERTEX_REGION_CLAUDE_3_5_HAIKU`                        | Override region for Claude 3.5 Haiku when using Vertex AI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `VERTEX_REGION_CLAUDE_3_7_SONNET`                       | Override region for Claude 3.7 Sonnet when using Vertex AI                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -10133,6 +10458,150 @@ Each feature has its own guide with setup instructions, examples, and configurat
     Host and distribute plugin collections
   </Card>
 </CardGroup>
+
+
+# Fullscreen rendering
+Source: https://code.claude.com/docs/en/fullscreen
+
+Enable a smoother, flicker-free rendering mode with mouse support and stable memory usage in long conversations.
+
+<Note>
+  Fullscreen rendering is an opt-in [research preview](#research-preview) and requires Claude Code v2.1.88 or later. Enable it with `CLAUDE_CODE_NO_FLICKER=1`. Behavior may change based on feedback.
+</Note>
+
+Fullscreen rendering is an alternative rendering path for the Claude Code CLI that eliminates flicker, keeps memory usage flat in long conversations, and adds mouse support. It draws the interface on the terminal's alternate screen buffer, like `vim` or `htop`, and only renders messages that are currently visible. This reduces the amount of data sent to your terminal on each update.
+
+The difference is most noticeable in terminal emulators where rendering throughput is the bottleneck, such as the VS Code integrated terminal, tmux, and iTerm2. If your terminal scroll position jumps to the top while Claude is working, or the screen flashes as tool output streams in, this mode addresses those.
+
+<Note>
+  The term fullscreen describes how Claude Code takes over the terminal's drawing surface, the way `vim` does. It has nothing to do with maximizing your terminal window, and works at any window size.
+</Note>
+
+## Enable fullscreen rendering
+
+Set the `CLAUDE_CODE_NO_FLICKER` environment variable when starting Claude Code:
+
+```bash theme={null}
+CLAUDE_CODE_NO_FLICKER=1 claude
+```
+
+To enable it for every session, export the variable in your shell profile such as `~/.zshrc` or `~/.bashrc`:
+
+```bash theme={null}
+export CLAUDE_CODE_NO_FLICKER=1
+```
+
+## What changes
+
+Fullscreen rendering changes how the CLI draws to your terminal. The input box stays fixed at the bottom of the screen instead of moving as output streams in. If the input stays put while Claude is working, fullscreen rendering is active. Only visible messages are kept in the render tree, so memory stays constant regardless of conversation length.
+
+Because the conversation lives in the alternate screen buffer instead of your terminal's scrollback, a few things work differently:
+
+| Before                                              | Now                                                                                                                     | Details                                                                   |
+| :-------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| `Cmd+f` or tmux search to find text                 | `Ctrl+o` then `/` to search, or `Ctrl+o` then `[` to write the conversation to native scrollback so `Cmd+f` works again | [Search and review the conversation](#search-and-review-the-conversation) |
+| Terminal's native click-and-drag to select and copy | In-app selection, copies automatically on mouse release                                                                 | [Use the mouse](#use-the-mouse)                                           |
+| `Cmd`-click to open a URL                           | Click the URL                                                                                                           | [Use the mouse](#use-the-mouse)                                           |
+
+If mouse capture interferes with your workflow, you can [turn it off](#keep-native-text-selection) while keeping the flicker-free rendering.
+
+## Use the mouse
+
+Fullscreen rendering captures mouse events and handles them inside Claude Code:
+
+* **Click in the prompt input** to position your cursor anywhere in the text you're typing.
+* **Click a collapsed tool result** to expand it and see the full output. Click again to collapse. The tool call and its result expand together. Only messages that have more to show are clickable.
+* **Click a URL or file path** to open it. File paths in tool output, like the ones printed after an Edit or Write, open in your default application. Plain `http://` and `https://` URLs open in your browser. In most terminals this replaces native `Cmd`-click or `Ctrl`-click, which mouse capture intercepts. In the VS Code integrated terminal and similar xterm.js-based terminals, keep using `Cmd`-click. Claude Code defers to the terminal's own link handler there to avoid opening links twice.
+* **Click and drag** to select text anywhere in the conversation. Double-click selects a word, matching iTerm2's word boundaries so a file path selects as one unit. Triple-click selects the line.
+* **Scroll with the mouse wheel** to move through the conversation.
+
+Selected text copies to your clipboard automatically on mouse release. To turn this off, toggle Copy on select in `/config`. With it off, press `Ctrl+Shift+c` to copy manually. On terminals that support the kitty keyboard protocol, such as kitty, WezTerm, Ghostty, and iTerm2, `Cmd+c` also works. If you have a selection active, `Ctrl+c` copies instead of cancelling.
+
+## Scroll the conversation
+
+Fullscreen rendering handles scrolling inside the app. Use these shortcuts to navigate:
+
+| Shortcut        | Action                                               |
+| :-------------- | :--------------------------------------------------- |
+| `PgUp` / `PgDn` | Scroll up or down by half a screen                   |
+| `Ctrl+Home`     | Jump to the start of the conversation                |
+| `Ctrl+End`      | Jump to the latest message and re-enable auto-follow |
+| Mouse wheel     | Scroll a few lines at a time                         |
+
+On keyboards without dedicated `PgUp`, `PgDn`, `Home`, or `End` keys, like MacBook keyboards, hold `Fn` with the arrow keys: `Fn+↑` sends `PgUp`, `Fn+↓` sends `PgDn`, `Fn+←` sends `Home`, and `Fn+→` sends `End`. That makes `Ctrl+Fn+→` the jump-to-bottom shortcut. If that feels awkward, scroll to the bottom with the mouse wheel to resume following, or rebind `scroll:bottom` to something reachable.
+
+Scrolling up pauses auto-follow so new output does not pull you back to the bottom. Press `Ctrl+End` or scroll to the bottom to resume following.
+
+These actions are rebindable. See [Keybindings](/en/keybindings) to customize them. The action names are `scroll:pageUp`, `scroll:pageDown`, `scroll:top`, and `scroll:bottom`. Additional actions with no default binding include `scroll:lineUp`, `scroll:lineDown`, `scroll:halfPageUp`, `scroll:halfPageDown`, `scroll:fullPageUp`, and `scroll:fullPageDown`.
+
+### Adjust wheel scroll speed
+
+If mouse wheel scrolling feels slow, your terminal may be sending one scroll event per physical notch with no multiplier. Some terminals, like Ghostty and iTerm2 with faster scrolling enabled, already amplify wheel events. Others, including the VS Code integrated terminal, send exactly one event per notch. Claude Code cannot detect which.
+
+Set `CLAUDE_CODE_SCROLL_SPEED` to multiply the base scroll distance:
+
+```bash theme={null}
+export CLAUDE_CODE_SCROLL_SPEED=3
+```
+
+A value of `3` matches the default in `vim` and similar applications. The setting accepts values from 1 to 20.
+
+## Search and review the conversation
+
+Press `Ctrl+o` to enter transcript mode. With fullscreen rendering active, transcript mode gains `less`-style navigation and search:
+
+| Key                                  | Action                                                                                                 |
+| :----------------------------------- | :----------------------------------------------------------------------------------------------------- |
+| `/`                                  | Open search. Type to find matches, `Enter` to accept, `Esc` to cancel and restore your scroll position |
+| `n` / `N`                            | Jump to next or previous match. Works after you've closed the search bar                               |
+| `j` / `k` or `↑` / `↓`               | Scroll one line                                                                                        |
+| `g` / `G` or `Home` / `End`          | Jump to top or bottom                                                                                  |
+| `Ctrl+u` / `Ctrl+d`                  | Scroll half a page                                                                                     |
+| `Ctrl+b` / `Ctrl+f` or `Space` / `b` | Scroll a full page                                                                                     |
+| `Esc`, `q`, or `Ctrl+o`              | Exit transcript mode                                                                                   |
+
+Your terminal's `Cmd+f` and tmux search don't see the conversation because it lives in the alternate screen buffer, not the native scrollback. To hand the content back to your terminal, press `Ctrl+o` to enter transcript mode first, then:
+
+* **`[`**: writes the full conversation into your terminal's native scrollback buffer, with all tool output expanded. The conversation is now ordinary text in your terminal, so `Cmd+f`, tmux copy mode, and any other native tool can search or select it. Long sessions may pause for a moment while this happens. This lasts until you exit transcript mode with `Esc` or `q`, which returns you to fullscreen rendering. The next `Ctrl+o` starts fresh.
+* **`v`**: writes the conversation to a temporary file and opens it in `$VISUAL` or `$EDITOR`.
+
+Press `Esc`, `q`, or `Ctrl+o` to return to the prompt.
+
+## Use with tmux
+
+Fullscreen rendering works inside tmux, with two caveats.
+
+Mouse wheel scrolling requires tmux's mouse mode. If your `~/.tmux.conf` does not already enable it, add this line and reload your config:
+
+```bash theme={null}
+set -g mouse on
+```
+
+Without mouse mode, wheel events go to tmux instead of Claude Code. Keyboard scrolling with `PgUp` and `PgDn` works either way. Claude Code prints a one-time hint at startup if it detects tmux with mouse mode off.
+
+Fullscreen rendering is incompatible with iTerm2's tmux integration mode, which is the mode you enter with `tmux -CC`. In integration mode, iTerm2 renders each tmux pane as a native split rather than letting tmux draw to the terminal. The alternate screen buffer and mouse tracking do not work correctly there: the mouse wheel does nothing, and double-click can corrupt the terminal state. Don't enable fullscreen rendering in `tmux -CC` sessions. Regular tmux inside iTerm2, without `-CC`, works fine.
+
+## Keep native text selection
+
+Mouse capture is the most common friction point, especially over SSH or inside tmux. When Claude Code captures mouse events, your terminal's native copy-on-select stops working. The selection you make with click-and-drag exists inside Claude Code, not in your terminal's selection buffer, so tmux copy mode, Kitty hints, and similar tools don't see it.
+
+Claude Code tries to write the selection to your clipboard, but the path it uses depends on your setup. Inside tmux it writes to the tmux paste buffer. Over SSH it falls back to OSC 52 escape sequences, which some terminals block by default. Claude Code prints a toast after each copy telling you which path it used.
+
+If you rely on your terminal's native selection, set `CLAUDE_CODE_DISABLE_MOUSE=1` to opt out of mouse capture while keeping the flicker-free rendering and flat memory:
+
+```bash theme={null}
+CLAUDE_CODE_NO_FLICKER=1 CLAUDE_CODE_DISABLE_MOUSE=1 claude
+```
+
+With mouse capture disabled, keyboard scrolling with `PgUp`, `PgDn`, `Ctrl+Home`, and `Ctrl+End` still works, and your terminal handles selection natively. You lose click-to-position-cursor, click-to-expand tool output, URL clicking, and wheel scrolling inside Claude Code.
+
+## Research preview
+
+Fullscreen rendering is a research preview feature. It has been tested on common terminal emulators, but you may encounter rendering issues on less common terminals or unusual configurations.
+
+If you encounter a problem, run `/feedback` inside Claude Code to report it, or open an issue on the [claude-code GitHub repo](https://github.com/anthropics/claude-code/issues). Include your terminal emulator name and version.
+
+To turn fullscreen rendering off, unset the environment variable or set `CLAUDE_CODE_NO_FLICKER=0`.
 
 
 # Claude Code GitHub Actions
@@ -10805,6 +11274,193 @@ You can configure Claude's behavior in two ways:
 2. **Custom prompts**: Use the `prompt` parameter in the workflow file to provide workflow-specific instructions. This allows you to customize Claude's behavior for different workflows or tasks.
 
 Claude will follow these guidelines when creating PRs and responding to requests.
+
+
+# Claude Code with GitHub Enterprise Server
+Source: https://code.claude.com/docs/en/github-enterprise-server
+
+Connect Claude Code to your self-hosted GitHub Enterprise Server instance for web sessions, code review, and plugin marketplaces.
+
+<Note>
+  GitHub Enterprise Server support is available for Teams and Enterprise plans.
+</Note>
+
+GitHub Enterprise Server (GHES) support lets your organization use Claude Code with repositories hosted on your self-managed GitHub instance instead of github.com. Once an admin connects your GHES instance, developers can run web sessions, get automated code reviews, and install plugins from internal marketplaces without any per-repository configuration.
+
+For repositories on github.com, see [Claude Code on the web](/en/claude-code-on-the-web) and [Code Review](/en/code-review). To run Claude in your own CI infrastructure, see [GitHub Actions](/en/github-actions).
+
+## What works with GitHub Enterprise Server
+
+The table below shows which Claude Code features support GHES and any differences from github.com behavior.
+
+| Feature                | GHES support    | Notes                                                                                                                        |
+| :--------------------- | :-------------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| Claude Code on the web | ✅ Supported     | Admin connects the GHES instance once; developers use `claude --remote` or [claude.ai/code](https://claude.ai/code) as usual |
+| Code Review            | ✅ Supported     | Same automated PR reviews as github.com                                                                                      |
+| Teleport sessions      | ✅ Supported     | Move sessions between web and terminal with `/teleport`                                                                      |
+| Plugin marketplaces    | ✅ Supported     | Use full git URLs instead of `owner/repo` shorthand                                                                          |
+| Contribution metrics   | ✅ Supported     | Delivered via webhooks to the [analytics dashboard](/en/analytics)                                                           |
+| GitHub Actions         | ✅ Supported     | Requires manual workflow setup; `/install-github-app` is github.com only                                                     |
+| GitHub MCP server      | ❌ Not supported | The GitHub MCP server does not work with GHES instances                                                                      |
+
+## Admin setup
+
+An admin connects your GHES instance to Claude Code once. After that, developers in your organization can use GHES repositories without any additional configuration. You need admin access to your Claude organization and permission to create GitHub Apps on your GHES instance.
+
+The guided setup generates a GitHub App manifest and redirects you to your GHES instance to create the app in one click. If your environment blocks the redirect flow, an [alternative manual setup](#manual-setup) is available.
+
+<Steps>
+  <Step title="Open Claude Code admin settings">
+    Go to [claude.ai/admin-settings/claude-code](https://claude.ai/admin-settings/claude-code) and find the GitHub Enterprise Server section.
+  </Step>
+
+  <Step title="Start the guided setup">
+    Click **Connect**. Enter a display name for the connection and your GHES hostname, for example `github.example.com`. If your GHES instance uses a self-signed or private certificate authority, paste the CA certificate in the optional field.
+  </Step>
+
+  <Step title="Create the GitHub App">
+    Click **Continue to GitHub Enterprise**. Your browser redirects to your GHES instance with a pre-filled app manifest. Review the configuration and click **Create GitHub App**. GHES redirects you back to Claude with the app credentials stored automatically.
+  </Step>
+
+  <Step title="Install the app on your repositories">
+    From the GitHub App page on your GHES instance, install the app on the repositories or organizations you want Claude to access. You can start with a subset and add more later.
+  </Step>
+
+  <Step title="Enable features">
+    Return to [claude.ai/admin-settings/claude-code](https://claude.ai/admin-settings/claude-code) and enable [Code Review](/en/code-review#set-up-code-review) and [contribution metrics](/en/analytics#enable-contribution-metrics) for your GHES repositories using the same configuration as github.com.
+  </Step>
+</Steps>
+
+### GitHub App permissions
+
+The manifest configures the GitHub App with the permissions and webhook events Claude needs across web sessions, Code Review, and contribution metrics:
+
+| Permission       | Access         | Used for                                    |
+| :--------------- | :------------- | :------------------------------------------ |
+| Contents         | Read and write | Cloning repositories and pushing branches   |
+| Pull requests    | Read and write | Creating PRs and posting review comments    |
+| Issues           | Read and write | Responding to issue mentions                |
+| Checks           | Read and write | Posting Code Review check runs              |
+| Actions          | Read           | Reading CI status for auto-fix              |
+| Repository hooks | Read and write | Receiving webhooks for contribution metrics |
+| Metadata         | Read           | Required by GitHub for all apps             |
+
+The app subscribes to `pull_request`, `issue_comment`, `pull_request_review_comment`, `pull_request_review`, and `check_run` events.
+
+### Manual setup
+
+If the guided redirect flow is blocked by your network configuration, click **Add manually** instead of Connect. Create a GitHub App on your GHES instance with the [permissions and events above](#github-app-permissions), then enter the app credentials in the form: hostname, OAuth client ID and secret, GitHub App ID, client ID, client secret, webhook secret, and private key.
+
+### Network requirements
+
+Your GHES instance must be reachable from Anthropic infrastructure so Claude can clone repositories and post review comments. If your GHES instance is behind a firewall, allowlist the [Anthropic API IP addresses](https://platform.claude.com/docs/en/api/ip-addresses).
+
+## Developer workflow
+
+Once your admin has connected the GHES instance, no developer-side configuration is needed. Claude Code detects your GHES hostname automatically from the git remote in your working directory.
+
+Clone a repository from your GHES instance as you normally would:
+
+```bash theme={null}
+git clone git@github.example.com:platform/api-service.git
+cd api-service
+```
+
+Then start a web session. Claude detects the GHES host from your git remote and routes the session through your organization's configured instance:
+
+```bash theme={null}
+claude --remote "Add retry logic to the payment webhook handler"
+```
+
+The session runs on Anthropic infrastructure, clones your repository from GHES, and pushes changes back to a branch. Monitor progress with `/tasks` or at [claude.ai/code](https://claude.ai/code). See [Claude Code on the web](/en/claude-code-on-the-web) for the full remote session workflow including diff review, auto-fix, and scheduled tasks.
+
+### Teleport sessions to your terminal
+
+Pull a web session into your local terminal with `/teleport` or `claude --teleport`. Teleport verifies you're in a checkout of the same GHES repository before fetching the branch and loading the session history. See [teleport requirements](/en/claude-code-on-the-web#requirements-for-teleporting) for details.
+
+## Plugin marketplaces on GHES
+
+Host plugin marketplaces on your GHES instance to distribute internal tooling across your organization. The marketplace structure is identical to github.com-hosted marketplaces; the only difference is how you reference them.
+
+### Add a GHES marketplace
+
+The `owner/repo` shorthand always resolves to github.com. For GHES-hosted marketplaces, use the full git URL:
+
+```bash theme={null}
+/plugin marketplace add git@github.example.com:platform/claude-plugins.git
+```
+
+HTTPS URLs work as well:
+
+```bash theme={null}
+/plugin marketplace add https://github.example.com/platform/claude-plugins.git
+```
+
+See [Create and distribute a plugin marketplace](/en/plugin-marketplaces) for the full guide to building marketplaces.
+
+### Allowlist GHES marketplaces in managed settings
+
+If your organization uses [managed settings](/en/settings) to restrict which marketplaces developers can add, use the `hostPattern` source type to allow all marketplaces from your GHES instance without enumerating each repository:
+
+```json theme={null}
+{
+  "strictKnownMarketplaces": [
+    {
+      "source": "hostPattern",
+      "hostPattern": "^github\\.example\\.com$"
+    }
+  ]
+}
+```
+
+You can also pre-register marketplaces for developers so they appear without manual setup. This example makes an internal tools marketplace available organization-wide:
+
+```json theme={null}
+{
+  "extraKnownMarketplaces": {
+    "internal-tools": {
+      "source": {
+        "source": "git",
+        "url": "git@github.example.com:platform/claude-plugins.git"
+      }
+    }
+  }
+}
+```
+
+See the [strictKnownMarketplaces](/en/settings#strictknownmarketplaces) and [extraKnownMarketplaces](/en/settings#extraknownmarketplaces) settings reference for the complete schema.
+
+## Limitations
+
+A few features behave differently on GHES than on github.com. The [feature table](#what-works-with-github-enterprise-server) summarizes support; this section covers the workarounds.
+
+* **`/install-github-app` command**: follow the [admin setup](#admin-setup) flow on claude.ai instead. If you also want GitHub Actions workflows on GHES, adapt the [example workflow](https://github.com/anthropics/claude-code-action/blob/main/examples/claude.yml) manually.
+* **GitHub MCP server**: use the `gh` CLI configured for your GHES host instead. Run `gh auth login --hostname github.example.com` to authenticate, then Claude can use `gh` commands in sessions.
+
+## Troubleshooting
+
+### Web session fails to clone repository
+
+If `claude --remote` fails with a clone error, verify that your admin has completed setup for your GHES instance and that the GitHub App is installed on the repository you're working in. Check with your admin that the instance hostname registered in Claude settings matches the hostname in your git remote.
+
+### Marketplace add fails with a policy error
+
+If `/plugin marketplace add` is blocked for your GHES URL, your organization has restricted marketplace sources. Ask your admin to add a `hostPattern` entry for your GHES hostname in [managed settings](#allowlist-ghes-marketplaces-in-managed-settings).
+
+### GHES instance not reachable
+
+If reviews or web sessions time out, your GHES instance may not be reachable from Anthropic infrastructure. Confirm your firewall allows inbound connections from the [Anthropic API IP addresses](https://platform.claude.com/docs/en/api/ip-addresses).
+
+## Related resources
+
+These pages cover the features referenced throughout this guide in more depth:
+
+* [Claude Code on the web](/en/claude-code-on-the-web): run Claude Code sessions on cloud infrastructure
+* [Code Review](/en/code-review): automated PR reviews
+* [Plugin marketplaces](/en/plugin-marketplaces): build and distribute plugin catalogs
+* [Analytics](/en/analytics): track usage and contribution metrics
+* [Managed settings](/en/settings): organization-wide policy configuration
+* [Network configuration](/en/network-config): firewall and IP allowlist requirements
 
 
 # Claude Code GitLab CI/CD
@@ -12165,7 +12821,7 @@ Exit code 2 is the way a hook signals "stop, don't do this." The effect depends 
 | `Stop`               | Yes        | Prevents Claude from stopping, continues the conversation                     |
 | `SubagentStop`       | Yes        | Prevents the subagent from stopping                                           |
 | `TeammateIdle`       | Yes        | Prevents the teammate from going idle (teammate continues working)            |
-| `TaskCreated`        | Yes        | Prevents the task from being created                                          |
+| `TaskCreated`        | Yes        | Rolls back the task creation                                                  |
 | `TaskCompleted`      | Yes        | Prevents the task from being marked as completed                              |
 | `ConfigChange`       | Yes        | Blocks the configuration change from taking effect (except `policy_settings`) |
 | `StopFailure`        | No         | Output and exit code are ignored                                              |
@@ -13884,17 +14540,16 @@ On Windows, you can run individual hooks in PowerShell by setting `"shell": "pow
 
 ## Debug hooks
 
-Run `claude --debug` to see hook execution details, including which hooks matched, their exit codes, and output. Toggle verbose mode with `Ctrl+O` to see hook progress in the transcript.
+Run `claude --debug` to see hook execution details, including which hooks matched, their exit codes, and output.
 
 ```text theme={null}
 [DEBUG] Executing hooks for PostToolUse:Write
-[DEBUG] Getting matching hook commands for PostToolUse with query: Write
-[DEBUG] Found 1 hook matchers in settings
-[DEBUG] Matched 1 hooks for query "Write"
 [DEBUG] Found 1 hook commands to execute
 [DEBUG] Executing hook command: <Your command> with timeout 600000ms
 [DEBUG] Hook command completed with status 0: <Your stdout>
 ```
+
+For more granular hook matching details, set `CLAUDE_CODE_DEBUG_LOG_LEVEL=verbose` to see additional log lines such as hook matcher counts and query matching.
 
 For troubleshooting common issues like hooks not firing, infinite Stop hook loops, or configuration errors, see [Limitations and troubleshooting](/en/hooks-guide#limitations-and-troubleshooting) in the guide.
 
@@ -13995,6 +14650,16 @@ This hook uses the `Notification` event, which fires when Claude is waiting for 
       }
     }
     ```
+
+    <Accordion title="If no notification appears">
+      `osascript` routes notifications through the built-in Script Editor app. If Script Editor doesn't have notification permission, the command fails silently, and macOS won't prompt you to grant it. Run this in Terminal once to make Script Editor appear in your notification settings:
+
+      ```bash theme={null}
+      osascript -e 'display notification "test"'
+      ```
+
+      Nothing will appear yet. Open **System Settings > Notifications**, find **Script Editor** in the list, and turn on **Allow Notifications**. Run the command again to confirm the test notification appears.
+    </Accordion>
   </Tab>
 
   <Tab title="Linux">
@@ -15982,6 +16647,14 @@ Failure to forward headers or preserve body fields may result in reduced functio
   Claude Code determines which features to enable based on the API format. When using the Anthropic Messages format with Bedrock or Vertex, you may need to set environment variable `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1`.
 </Note>
 
+**Request headers**
+
+Claude Code includes the following headers on every API request:
+
+| Header                     | Description                                                                                                                                                         |
+| :------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `X-Claude-Code-Session-Id` | A unique identifier for the current Claude Code session. Proxies can use this to aggregate all API requests from a single session without parsing the request body. |
+
 ## Configuration
 
 ### Model selection
@@ -17876,19 +18549,27 @@ Even with `availableModels: []`, users can still use Claude Code with the Defaul
 
 ### Control the model users run on
 
-To fully control the model experience, use `availableModels` together with the `model` setting:
+The `model` setting is an initial selection, not enforcement. It sets which model is active when a session starts, but users can still open `/model` and pick Default, which resolves to the system default for their tier regardless of what `model` is set to.
 
-* **availableModels**: restricts what users can switch to
-* **model**: sets the explicit model override, taking precedence over the Default
+To fully control the model experience, combine three settings:
 
-This example ensures all users run Sonnet 4.6 and can only choose between Sonnet and Haiku:
+* **`availableModels`**: restricts which named models users can switch to
+* **`model`**: sets the initial model selection when a session starts
+* **`ANTHROPIC_DEFAULT_SONNET_MODEL`** / **`ANTHROPIC_DEFAULT_OPUS_MODEL`** / **`ANTHROPIC_DEFAULT_HAIKU_MODEL`**: control what the Default option and the `sonnet`, `opus`, and `haiku` aliases resolve to
+
+This example starts users on Sonnet 4.5, limits the picker to Sonnet and Haiku, and pins Default to resolve to Sonnet 4.5 rather than the latest release:
 
 ```json theme={null}
 {
-  "model": "sonnet",
-  "availableModels": ["sonnet", "haiku"]
+  "model": "claude-sonnet-4-5",
+  "availableModels": ["claude-sonnet-4-5", "haiku"],
+  "env": {
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5"
+  }
 }
 ```
+
+Without the `env` block, a user who selects Default in the picker would get the latest Sonnet release, bypassing the version pin in `model` and `availableModels`.
 
 ### Merge behavior
 
@@ -18752,6 +19433,8 @@ The native installer and update checks also require the following URLs. If you i
 
 [Claude Code on the web](/en/claude-code-on-the-web) and [Code Review](/en/code-review) connect to your repositories from Anthropic-managed infrastructure. If your GitHub Enterprise Cloud organization restricts access by IP address, enable [IP allow list inheritance for installed GitHub Apps](https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-allowed-ip-addresses-for-your-organization#allowing-access-by-github-apps). The Claude GitHub App registers its IP ranges, so enabling this setting allows access without manual configuration. To [add the ranges to your allow list manually](https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-allowed-ip-addresses-for-your-organization#adding-an-allowed-ip-address) instead, or to configure other firewalls, see the [Anthropic API IP addresses](https://platform.claude.com/docs/en/api/ip-addresses).
 
+For self-hosted [GitHub Enterprise Server](/en/github-enterprise-server) instances behind a firewall, allowlist the same [Anthropic API IP addresses](https://platform.claude.com/docs/en/api/ip-addresses) so Anthropic infrastructure can reach your GHES host to clone repositories and post review comments.
+
 ## Additional resources
 
 * [Claude Code settings](/en/settings)
@@ -19131,7 +19814,7 @@ You can switch modes at any time during a session, at startup, or as a persisten
 
 <Tabs>
   <Tab title="CLI">
-    **During a session**: press `Shift+Tab` to cycle through `default` → `acceptEdits` → `plan` → `auto`. The current mode appears in the status bar. `auto` does not appear in the cycle until you pass `--enable-auto-mode` at startup. Auto also requires a Team (or Enterprise/API once available) plan and Claude Sonnet 4.6 or Opus 4.6, so the option may remain unavailable even with the flag. If `bypassPermissions` is also enabled, it appears in the cycle between `plan` and `auto`.
+    **During a session**: press `Shift+Tab` to cycle through `default` → `acceptEdits` → `plan` → `auto`. The current mode appears in the status bar. `auto` does not appear in the cycle until you pass `--enable-auto-mode` at startup. Auto also requires a Team, Enterprise, or API plan and Claude Sonnet 4.6 or Opus 4.6, so the option may remain unavailable even with the flag. If `bypassPermissions` is also enabled, it appears in the cycle between `plan` and `auto`.
 
     **At startup**: pass the mode as a CLI flag:
 
@@ -19177,7 +19860,7 @@ You can switch modes at any time during a session, at startup, or as a persisten
     | Auto               | `auto`              |
     | Bypass permissions | `bypassPermissions` |
 
-    Auto and Bypass permissions appear only after you enable **Allow dangerously skip permissions** in the extension settings. Auto also requires a Team plan and Claude Sonnet 4.6 or Opus 4.6, so the option may remain unavailable even with the toggle on.
+    Auto and Bypass permissions appear only after you enable **Allow dangerously skip permissions** in the extension settings. Auto also requires a Team, Enterprise, or API plan and Claude Sonnet 4.6 or Opus 4.6, so the option may remain unavailable even with the toggle on.
 
     See the [VS Code guide](/en/vs-code) for extension-specific details.
   </Tab>
@@ -19272,9 +19955,9 @@ Each approve option also offers to clear the planning context first.
 
 ## Eliminate prompts with auto mode
 
-Auto mode is available on Team plans, with Enterprise and API support rolling out shortly. On Team and Enterprise, an admin must enable it in [Claude Code admin settings](https://claude.ai/admin-settings/claude-code) before users can turn it on. It requires Claude Sonnet 4.6 or Claude Opus 4.6, and is not available on Haiku, claude-3 models, or third-party providers (Bedrock, Vertex, Foundry).
+Auto mode is available on Team, Enterprise, and API plans. On Team and Enterprise, an admin must enable it in [Claude Code admin settings](https://claude.ai/admin-settings/claude-code) before users can turn it on. It requires Claude Sonnet 4.6 or Claude Opus 4.6, and is not available on Haiku, claude-3 models, or third-party providers (Bedrock, Vertex, Foundry).
 
-Auto mode lets Claude execute actions without showing permission prompts. Before each action runs, a separate classifier model reviews the conversation and decides whether the action matches what you asked for: it blocks actions that escalate beyond the task scope, target infrastructure the classifier doesn't recognize as trusted, or appear to be driven by hostile content encountered in a file or web page. For a deeper look at how the classifier is designed, see the [auto mode announcement](https://claude.com/blog/auto-mode).
+Auto mode lets Claude execute actions without showing permission prompts. Before each action runs, a separate classifier model reviews the conversation and decides whether the action matches what you asked for. It blocks actions that escalate beyond the task scope, target infrastructure the classifier doesn't recognize as trusted, or appear to be driven by prompt injection: hostile instructions embedded in a file, web page, or tool result that attempt to redirect Claude toward actions you never asked for. The defense is layered: a server-side probe scans incoming tool results and flags suspicious content before Claude reads it, while the classifier itself is never shown tool results, so injected instructions cannot influence its approval decisions. For a deeper look at how these layers work together, see the [auto mode announcement](https://claude.com/blog/auto-mode) and the [engineering deep dive](https://www.anthropic.com/engineering/claude-code-auto-mode).
 
 <Warning>
   Auto mode is a research preview. It reduces prompts but does not guarantee safety. It provides more protection than `bypassPermissions` but is not as thorough as manually reviewing each action. Use it for tasks where you trust the general direction, not as a replacement for review on sensitive operations.
@@ -19355,7 +20038,7 @@ claude --permission-mode dontAsk
 
 ## Skip all checks with bypassPermissions mode
 
-`bypassPermissions` mode disables all permission prompts and safety checks. Every tool call executes immediately without any verification. Only use this in isolated environments like containers, VMs, or devcontainers without internet access, where Claude Code cannot cause damage to your host system.
+`bypassPermissions` mode disables permission prompts and safety checks. Tool calls execute immediately, except for writes to `.git`, `.vscode`, and `.idea`, which still prompt to prevent accidental corruption of repository state and local configuration. Writes to `.claude` also prompt, except for `.claude/commands`, `.claude/agents`, and `.claude/skills` where Claude routinely creates skills, subagents, and commands. Only use this mode in isolated environments like containers, VMs, or devcontainers without internet access, where Claude Code cannot cause damage to your host system.
 
 ```bash theme={null}
 claude --permission-mode bypassPermissions
@@ -19795,7 +20478,7 @@ Choose a platform based on how you like to work and where your project lives.
 
 | Platform                          | Best for                                                                                           | What you get                                                                                                                                         |
 | :-------------------------------- | :------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [CLI](/en/quickstart)             | Terminal workflows, scripting, remote servers                                                      | Full feature set, [Agent SDK](/en/headless), third-party providers                                                                                   |
+| [CLI](/en/quickstart)             | Terminal workflows, scripting, remote servers                                                      | Full feature set, [Agent SDK](/en/headless), [computer use](/en/computer-use) on Pro and Max, third-party providers                                  |
 | [Desktop](/en/desktop)            | Visual review, parallel sessions, managed setup                                                    | Diff viewer, app preview, [computer use](/en/desktop#let-claude-use-your-computer) and [Dispatch](/en/desktop#sessions-from-dispatch) on Pro and Max |
 | [VS Code](/en/vs-code)            | Working inside VS Code without switching to a terminal                                             | Inline diffs, integrated terminal, file context                                                                                                      |
 | [JetBrains](/en/jetbrains)        | Working inside IntelliJ, PyCharm, WebStorm, or other JetBrains IDEs                                | Diff viewer, selection sharing, terminal session                                                                                                     |
@@ -19846,6 +20529,7 @@ If you're not sure where to start, [install the CLI](/en/quickstart) and run it 
 ### Integrations
 
 * [Chrome](/en/chrome): automate browser tasks with your logged-in sessions
+* [Computer use](/en/computer-use): let Claude open apps and control your screen on macOS
 * [GitHub Actions](/en/github-actions): run Claude in your CI pipeline
 * [GitLab CI/CD](/en/gitlab-ci-cd): the same for GitLab
 * [Code Review](/en/code-review): automatic review on every pull request
@@ -20485,7 +21169,7 @@ Allow specific marketplaces only:
 }
 ```
 
-Allow all marketplaces from an internal git server using regex pattern matching on the host:
+Allow all marketplaces from an internal git server using regex pattern matching on the host. This is the recommended approach for [GitHub Enterprise Server](/en/github-enterprise-server#plugin-marketplaces-on-ghes) or self-hosted GitLab instances:
 
 ```json theme={null}
 {
@@ -22872,7 +23556,7 @@ For implementation details and source code, visit the [GitHub repository](https:
 The sandbox isolates Bash subprocesses. Other tools operate under different boundaries:
 
 * **Built-in file tools**: Read, Edit, and Write use the permission system directly rather than running through the sandbox. See [permissions](/en/permissions).
-* **Computer use on Desktop**: when Claude opens apps and controls your screen on macOS, it runs on your actual desktop rather than in an isolated environment. Per-app permission prompts gate each application. See [computer use](/en/desktop#let-claude-use-your-computer).
+* **Computer use**: when Claude opens apps and controls your screen on macOS, it runs on your actual desktop rather than in an isolated environment. Per-app permission prompts gate each application. See [computer use in the CLI](/en/computer-use) or [computer use in Desktop](/en/desktop#let-claude-use-your-computer).
 
 ## See also
 
@@ -23621,7 +24305,7 @@ To copy gitignored files like `.env` into new worktrees, use a [`.worktreeinclud
 | `ask`                          | Array of permission rules to ask for confirmation upon tool use. See [Permission rule syntax](#permission-rule-syntax) below                                                                                                                     | `[ "Bash(git push *)" ]`                                               |
 | `deny`                         | Array of permission rules to deny tool use. Use this to exclude sensitive files from Claude Code access. See [Permission rule syntax](#permission-rule-syntax) and [Bash permission limitations](/en/permissions#tool-specific-permission-rules) | `[ "WebFetch", "Bash(curl *)", "Read(./.env)", "Read(./secrets/**)" ]` |
 | `additionalDirectories`        | Additional [working directories](/en/permissions#working-directories) that Claude has access to                                                                                                                                                  | `[ "../docs/" ]`                                                       |
-| `defaultMode`                  | Default [permission mode](/en/permission-modes) when opening Claude Code                                                                                                                                                                         | `"acceptEdits"`                                                        |
+| `defaultMode`                  | Default [permission mode](/en/permission-modes) when opening Claude Code. Valid values: `default`, `acceptEdits`, `plan`, `auto`, `dontAsk`, `bypassPermissions`. The `--permission-mode` CLI flag overrides this setting for a single session   | `"acceptEdits"`                                                        |
 | `disableBypassPermissionsMode` | Set to `"disable"` to prevent `bypassPermissions` mode from being activated. Disables the `--dangerously-skip-permissions` flag. Most useful in [managed settings](/en/permissions#managed-settings) where users cannot override it              | `"disable"`                                                            |
 
 ### Permission rule syntax
@@ -24858,7 +25542,7 @@ All fields are optional. Only `description` is recommended so Claude knows when 
 | Field                      | Required    | Description                                                                                                                                                                                                                                                                               |
 | :------------------------- | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `name`                     | No          | Display name for the skill. If omitted, uses the directory name. Lowercase letters, numbers, and hyphens only (max 64 characters).                                                                                                                                                        |
-| `description`              | Recommended | What the skill does and when to use it. Claude uses this to decide when to apply the skill. If omitted, uses the first paragraph of markdown content.                                                                                                                                     |
+| `description`              | Recommended | What the skill does and when to use it. Claude uses this to decide when to apply the skill. If omitted, uses the first paragraph of markdown content. Front-load the key use case: descriptions longer than 250 characters are truncated in the skill listing to reduce context usage.    |
 | `argument-hint`            | No          | Hint shown during autocomplete to indicate expected arguments. Example: `[issue-number]` or `[filename] [format]`.                                                                                                                                                                        |
 | `disable-model-invocation` | No          | Set to `true` to prevent Claude from automatically loading this skill. Use for workflows you want to trigger manually with `/name`. Default: `false`.                                                                                                                                     |
 | `user-invocable`           | No          | Set to `false` to hide from the `/` menu. Use for background knowledge users shouldn't invoke directly. Default: `true`.                                                                                                                                                                  |
@@ -25349,11 +26033,11 @@ If Claude uses your skill when you don't want it:
 1. Make the description more specific
 2. Add `disable-model-invocation: true` if you only want manual invocation
 
-### Claude doesn't see all my skills
+### Skill descriptions are cut short
 
-Skill descriptions are loaded into context so Claude knows what's available. If you have many skills, they may exceed the character budget. The budget scales dynamically at 2% of the context window, with a fallback of 16,000 characters. Run `/context` to check for a warning about excluded skills.
+Skill descriptions are loaded into context so Claude knows what's available. All skill names are always included, but if you have many skills, descriptions are shortened to fit the character budget, which can strip the keywords Claude needs to match your request. The budget scales dynamically at 1% of the context window, with a fallback of 8,000 characters.
 
-To override the limit, set the `SLASH_COMMAND_TOOL_CHAR_BUDGET` environment variable.
+To raise the limit, set the `SLASH_COMMAND_TOOL_CHAR_BUDGET` environment variable. Or trim descriptions at the source: front-load the key use case, since each entry is capped at 250 characters regardless of budget.
 
 ## Related resources
 
@@ -26791,6 +27475,8 @@ The `--agents` flag accepts JSON with the same [frontmatter](#supported-frontmat
   For security reasons, plugin subagents do not support the `hooks`, `mcpServers`, or `permissionMode` frontmatter fields. These fields are ignored when loading agents from a plugin. If you need them, copy the agent file into `.claude/agents/` or `~/.claude/agents/`. You can also add rules to [`permissions.allow`](/en/settings#permission-settings) in `settings.json` or `settings.local.json`, but these rules apply to the entire session, not just the plugin subagent.
 </Note>
 
+Subagent definitions from any of these scopes are also available to [agent teams](/en/agent-teams#use-subagent-definitions-for-teammates): when spawning a teammate, you can reference a subagent type and the teammate inherits its system prompt, tools, and model.
+
 ### Write subagent files
 
 Subagent files use YAML frontmatter for configuration, followed by the system prompt in Markdown:
@@ -27589,6 +28275,10 @@ Other terminals, including the default macOS Terminal, do not support native not
 #### Notification hooks
 
 To add custom behavior when notifications fire, such as playing a sound or sending a message, configure a [notification hook](/en/hooks#notification). Hooks run alongside terminal notifications, not as a replacement.
+
+### Reduce flicker and memory usage
+
+If you see flicker during long sessions, or your terminal scroll position jumps to the top while Claude is working, try [fullscreen rendering](/en/fullscreen). It uses an alternate rendering path that keeps memory flat and adds mouse support. Enable it with `CLAUDE_CODE_NO_FLICKER=1`.
 
 ### Handling large inputs
 
@@ -28889,7 +29579,7 @@ Hold a key and speak to dictate your prompts. Your speech is transcribed live in
 
 ## Requirements
 
-Voice dictation uses a streaming speech-to-text service that is only available when you authenticate with a Claude.ai account. It is not available when Claude Code is configured to use an Anthropic API key directly, Amazon Bedrock, Google Vertex AI, or Microsoft Foundry.
+Voice dictation streams your recorded audio to Anthropic's servers for transcription. Audio is not processed locally. The speech-to-text service is only available when you authenticate with a Claude.ai account, and is not available when Claude Code is configured to use an Anthropic API key directly, Amazon Bedrock, Google Vertex AI, or Microsoft Foundry. See [data usage](/en/data-usage) for how Anthropic handles your data.
 
 Voice dictation also needs local microphone access, so it does not work in remote environments such as [Claude Code on the web](/en/claude-code-on-the-web) or SSH sessions. In WSL, voice dictation requires WSLg for audio access, which is included with WSL2 on Windows 11. On Windows 10 or WSL1, run Claude Code in native Windows instead.
 
@@ -29284,21 +29974,21 @@ The extension has two types of settings:
 
 ### Extension settings
 
-| Setting                           | Default   | Description                                                                                                                                                                                                                                                                                                   |
-| --------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `selectedModel`                   | `default` | Model for new conversations. Change per-session with `/model`.                                                                                                                                                                                                                                                |
-| `useTerminal`                     | `false`   | Launch Claude in terminal mode instead of graphical panel                                                                                                                                                                                                                                                     |
-| `initialPermissionMode`           | `default` | Controls approval prompts for new conversations: `default`, `plan`, `acceptEdits`, `auto`, or `bypassPermissions`. See [permission modes](/en/permission-modes).                                                                                                                                              |
-| `preferredLocation`               | `panel`   | Where Claude opens: `sidebar` (right) or `panel` (new tab)                                                                                                                                                                                                                                                    |
-| `autosave`                        | `true`    | Auto-save files before Claude reads or writes them                                                                                                                                                                                                                                                            |
-| `useCtrlEnterToSend`              | `false`   | Use Ctrl/Cmd+Enter instead of Enter to send prompts                                                                                                                                                                                                                                                           |
-| `enableNewConversationShortcut`   | `true`    | Enable Cmd/Ctrl+N to start a new conversation                                                                                                                                                                                                                                                                 |
-| `hideOnboarding`                  | `false`   | Hide the onboarding checklist (graduation cap icon)                                                                                                                                                                                                                                                           |
-| `respectGitIgnore`                | `true`    | Exclude .gitignore patterns from file searches                                                                                                                                                                                                                                                                |
-| `environmentVariables`            | `[]`      | Set environment variables for the Claude process. Use Claude Code settings instead for shared config.                                                                                                                                                                                                         |
-| `disableLoginPrompt`              | `false`   | Skip authentication prompts (for third-party provider setups)                                                                                                                                                                                                                                                 |
-| `allowDangerouslySkipPermissions` | `false`   | Adds [Auto](/en/permission-modes#eliminate-prompts-with-auto-mode) and Bypass permissions to the mode selector. Auto requires a Team plan and Claude Sonnet 4.6 or Opus 4.6, so the option may remain unavailable even with this toggle on. Use Bypass permissions only in sandboxes with no internet access. |
-| `claudeProcessWrapper`            | -         | Executable path used to launch the Claude process                                                                                                                                                                                                                                                             |
+| Setting                           | Default   | Description                                                                                                                                                                                                                                                                                                                       |
+| --------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `selectedModel`                   | `default` | Model for new conversations. Change per-session with `/model`.                                                                                                                                                                                                                                                                    |
+| `useTerminal`                     | `false`   | Launch Claude in terminal mode instead of graphical panel                                                                                                                                                                                                                                                                         |
+| `initialPermissionMode`           | `default` | Controls approval prompts for new conversations: `default`, `plan`, `acceptEdits`, `auto`, or `bypassPermissions`. See [permission modes](/en/permission-modes).                                                                                                                                                                  |
+| `preferredLocation`               | `panel`   | Where Claude opens: `sidebar` (right) or `panel` (new tab)                                                                                                                                                                                                                                                                        |
+| `autosave`                        | `true`    | Auto-save files before Claude reads or writes them                                                                                                                                                                                                                                                                                |
+| `useCtrlEnterToSend`              | `false`   | Use Ctrl/Cmd+Enter instead of Enter to send prompts                                                                                                                                                                                                                                                                               |
+| `enableNewConversationShortcut`   | `true`    | Enable Cmd/Ctrl+N to start a new conversation                                                                                                                                                                                                                                                                                     |
+| `hideOnboarding`                  | `false`   | Hide the onboarding checklist (graduation cap icon)                                                                                                                                                                                                                                                                               |
+| `respectGitIgnore`                | `true`    | Exclude .gitignore patterns from file searches                                                                                                                                                                                                                                                                                    |
+| `environmentVariables`            | `[]`      | Set environment variables for the Claude process. Use Claude Code settings instead for shared config.                                                                                                                                                                                                                             |
+| `disableLoginPrompt`              | `false`   | Skip authentication prompts (for third-party provider setups)                                                                                                                                                                                                                                                                     |
+| `allowDangerouslySkipPermissions` | `false`   | Adds [Auto](/en/permission-modes#eliminate-prompts-with-auto-mode) and Bypass permissions to the mode selector. Auto requires a Team, Enterprise, or API plan and Claude Sonnet 4.6 or Opus 4.6, so the option may remain unavailable even with this toggle on. Use Bypass permissions only in sandboxes with no internet access. |
+| `claudeProcessWrapper`            | -         | Executable path used to launch the Claude process                                                                                                                                                                                                                                                                                 |
 
 ## VS Code extension vs. Claude Code CLI
 
@@ -29591,7 +30281,7 @@ The schedule picker offers preset frequencies that handle time zone conversion f
 | Weekdays  | Same as Daily but skips Saturday and Sunday.                               |
 | Weekly    | Runs once per week on the day and time you specify.                        |
 
-For custom intervals like every 2 hours or first of each month, pick the closest preset and update the schedule from the CLI with `/schedule update` to set a specific schedule.
+For custom intervals like every 2 hours or first of each month, pick the closest preset and update the schedule from the CLI with `/schedule update` to set a specific cron expression. The minimum interval is 1 hour. Expressions that fire more frequently, such as `*/30 * * * *`, are rejected.
 
 ### Repositories and branch permissions
 

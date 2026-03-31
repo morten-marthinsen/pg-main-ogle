@@ -4,7 +4,61 @@
   <link type="text/html" rel="alternate" href="https://github.com/anthropics/claude-code/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/anthropics/claude-code/releases.atom"/>
   <title>Release notes from claude-code</title>
-  <updated>2026-03-29T02:16:58Z</updated>
+  <updated>2026-03-30T23:53:01Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/937253475/v2.1.88</id>
+    <updated>2026-03-30T23:53:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.88"/>
+    <title>v2.1.88</title>
+    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Added &lt;code&gt;CLAUDE_CODE_NO_FLICKER=1&lt;/code&gt; environment variable to opt into flicker-free alt-screen rendering with virtualized scrollback&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;PermissionDenied&lt;/code&gt; hook that fires after auto mode classifier denials — return &lt;code&gt;{retry: true}&lt;/code&gt; to tell the model it can retry&lt;/li&gt;
+&lt;li&gt;Added named subagents to &lt;code&gt;@&lt;/code&gt; mention typeahead suggestions&lt;/li&gt;
+&lt;li&gt;Fixed prompt cache misses in long sessions caused by tool schema bytes changing mid-session&lt;/li&gt;
+&lt;li&gt;Fixed nested CLAUDE.md files being re-injected dozens of times in long sessions that read many files&lt;/li&gt;
+&lt;li&gt;Fixed Edit/Write tools doubling CRLF on Windows and stripping Markdown hard line breaks (two trailing spaces)&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;StructuredOutput&lt;/code&gt; schema cache bug causing ~50% failure rate in workflows with multiple schemas&lt;/li&gt;
+&lt;li&gt;Fixed memory leak where large JSON inputs were retained as LRU cache keys in long-running sessions&lt;/li&gt;
+&lt;li&gt;Fixed a potential out-of-memory crash when the Edit tool was used on very large files (&amp;gt;1 GiB)&lt;/li&gt;
+&lt;li&gt;Fixed a crash when removing a message from very large session files (over 50MB)&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;--resume&lt;/code&gt; crash when transcript contains a tool result from an older CLI version or interrupted write&lt;/li&gt;
+&lt;li&gt;Fixed misleading &quot;Rate limit reached&quot; message when the API returned an entitlement error — now shows the actual error with actionable hints&lt;/li&gt;
+&lt;li&gt;Fixed LSP server zombie state after crash — server now restarts on next request instead of failing until session restart&lt;/li&gt;
+&lt;li&gt;Fixed hooks &lt;code&gt;if&lt;/code&gt; condition filtering not matching compound commands (&lt;code&gt;ls &amp;amp;&amp;amp; git push&lt;/code&gt;) or commands with env-var prefixes (&lt;code&gt;FOO=bar git push&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Fixed prompt history entries containing CJK or emoji being silently dropped when they fall on a 4KB boundary in &lt;code&gt;~/.claude/history.jsonl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;/stats&lt;/code&gt; losing historical data beyond 30 days when the stats cache format changes&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;/stats&lt;/code&gt; undercounting tokens by excluding subagent/fork usage&lt;/li&gt;
+&lt;li&gt;Fixed scrollback disappearing when scrolling up in long sessions&lt;/li&gt;
+&lt;li&gt;Fixed collapsed search/read group badges duplicating in terminal scrollback during heavy parallel tool use&lt;/li&gt;
+&lt;li&gt;Fixed notification &lt;code&gt;invalidates&lt;/code&gt; not clearing the currently-displayed notification immediately&lt;/li&gt;
+&lt;li&gt;Fixed prompt briefly disappearing after submit when background messages arrived during processing&lt;/li&gt;
+&lt;li&gt;Fixed long &lt;code&gt;/btw&lt;/code&gt; responses being clipped with no way to scroll — responses now render in a scrollable viewport&lt;/li&gt;
+&lt;li&gt;Fixed Devanagari and other combining-mark text being truncated in assistant output&lt;/li&gt;
+&lt;li&gt;Fixed rendering artifacts on main-screen terminals after layout shifts&lt;/li&gt;
+&lt;li&gt;Fixed voice mode failing to request microphone permission on macOS Apple Silicon&lt;/li&gt;
+&lt;li&gt;Fixed voice push-to-talk not activating for some modifier-combo bindings&lt;/li&gt;
+&lt;li&gt;Fixed voice mode on Windows failing with &quot;WebSocket upgrade rejected with HTTP 101&quot;&lt;/li&gt;
+&lt;li&gt;Fixed Shift+Enter submitting instead of inserting a newline on Windows Terminal Preview 1.25&lt;/li&gt;
+&lt;li&gt;Fixed periodic UI jitter during streaming in iTerm2 when running inside tmux&lt;/li&gt;
+&lt;li&gt;Fixed PowerShell tool incorrectly reporting failures when commands like &lt;code&gt;git push&lt;/code&gt; wrote progress to stderr on Windows PowerShell 5.1&lt;/li&gt;
+&lt;li&gt;Fixed SDK error result messages (&lt;code&gt;error_during_execution&lt;/code&gt;, &lt;code&gt;error_max_turns&lt;/code&gt;) to correctly set &lt;code&gt;is_error: true&lt;/code&gt; with descriptive messages&lt;/li&gt;
+&lt;li&gt;Fixed task notifications being lost when backgrounding a session with Ctrl+B&lt;/li&gt;
+&lt;li&gt;Fixed PreToolUse/PostToolUse hooks not providing &lt;code&gt;file_path&lt;/code&gt; as an absolute path for Write/Edit/Read tools&lt;/li&gt;
+&lt;li&gt;Improved PowerShell tool prompt with version-appropriate syntax guidance (5.1 vs 7+)&lt;/li&gt;
+&lt;li&gt;Thinking summaries are no longer generated by default in interactive sessions — set &lt;code&gt;showThinkingSummaries: true&lt;/code&gt; in settings to restore&lt;/li&gt;
+&lt;li&gt;Auto mode denied commands now show a notification and appear in &lt;code&gt;/permissions&lt;/code&gt; → Recent tab&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/env&lt;/code&gt; now applies to PowerShell tool commands (previously only affected Bash)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/usage&lt;/code&gt; now hides redundant &quot;Current week (Sonnet only)&quot; bar for Pro and Enterprise plans&lt;/li&gt;
+&lt;li&gt;Collapsed tool summary now shows &quot;Listed N directories&quot; for ls/tree/du instead of &quot;Read N files&quot;&lt;/li&gt;
+&lt;li&gt;Image paste no longer inserts a trailing space&lt;/li&gt;
+&lt;li&gt;Pasting &lt;code&gt;!command&lt;/code&gt; into an empty prompt now enters bash mode, matching typed &lt;code&gt;!&lt;/code&gt; behavior&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>ashwin-ant</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/937253475/v2.1.87</id>
     <updated>2026-03-29T02:17:02Z</updated>
@@ -360,63 +414,6 @@
 &lt;li&gt;Improved memory usage and startup time when resuming large sessions&lt;/li&gt;
 &lt;li&gt;[VSCode] Fixed a brief flash of the login screen when opening the sidebar while already authenticated&lt;/li&gt;
 &lt;li&gt;[VSCode] Fixed &quot;API Error: Rate limit reached&quot; when selecting Opus — model dropdown no longer offers 1M context variant to subscribers whose plan tier is unknown&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <author>
-      <name>ashwin-ant</name>
-    </author>
-    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:Repository/937253475/v2.1.77</id>
-    <updated>2026-03-17T00:28:12Z</updated>
-    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.77"/>
-    <title>v2.1.77</title>
-    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Increased default maximum output token limits for Claude Opus 4.6 to 64k tokens, and the upper bound for Opus 4.6 and Sonnet 4.6 models to 128k tokens&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;allowRead&lt;/code&gt; sandbox filesystem setting to re-allow read access within &lt;code&gt;denyRead&lt;/code&gt; regions&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/copy&lt;/code&gt; now accepts an optional index: &lt;code&gt;/copy N&lt;/code&gt; copies the Nth-latest assistant response&lt;/li&gt;
-&lt;li&gt;Fixed &quot;Always Allow&quot; on compound bash commands (e.g. &lt;code&gt;cd src &amp;amp;&amp;amp; npm test&lt;/code&gt;) saving a single rule for the full string instead of per-subcommand, leading to dead rules and repeated permission prompts&lt;/li&gt;
-&lt;li&gt;Fixed auto-updater starting overlapping binary downloads when the slash-command overlay repeatedly opened and closed, accumulating tens of gigabytes of memory&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;--resume&lt;/code&gt; silently truncating recent conversation history due to a race between memory-extraction writes and the main transcript&lt;/li&gt;
-&lt;li&gt;Fixed PreToolUse hooks returning &lt;code&gt;&quot;allow&quot;&lt;/code&gt; bypassing &lt;code&gt;deny&lt;/code&gt; permission rules, including enterprise managed settings&lt;/li&gt;
-&lt;li&gt;Fixed Write tool silently converting line endings when overwriting CRLF files or creating files in CRLF directories&lt;/li&gt;
-&lt;li&gt;Fixed memory growth in long-running sessions from progress messages surviving compaction&lt;/li&gt;
-&lt;li&gt;Fixed cost and token usage not being tracked when the API falls back to non-streaming mode&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS&lt;/code&gt; not stripping beta tool-schema fields, causing proxy gateways to reject requests&lt;/li&gt;
-&lt;li&gt;Fixed Bash tool reporting errors for successful commands when the system temp directory path contains spaces&lt;/li&gt;
-&lt;li&gt;Fixed paste being lost when typing immediately after pasting&lt;/li&gt;
-&lt;li&gt;Fixed Ctrl+D in &lt;code&gt;/feedback&lt;/code&gt; text input deleting forward instead of the second press exiting the session&lt;/li&gt;
-&lt;li&gt;Fixed API error when dragging a 0-byte image file into the prompt&lt;/li&gt;
-&lt;li&gt;Fixed Claude Desktop sessions incorrectly using the terminal CLI&#39;s configured API key instead of OAuth&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;git-subdir&lt;/code&gt; plugins at different subdirectories of the same monorepo commit colliding in the plugin cache&lt;/li&gt;
-&lt;li&gt;Fixed ordered list numbers not rendering in terminal UI&lt;/li&gt;
-&lt;li&gt;Fixed a race condition where stale-worktree cleanup could delete an agent worktree just resumed from a previous crash&lt;/li&gt;
-&lt;li&gt;Fixed input deadlock when opening &lt;code&gt;/mcp&lt;/code&gt; or similar dialogs while the agent is running&lt;/li&gt;
-&lt;li&gt;Fixed Backspace and Delete keys not working in vim NORMAL mode&lt;/li&gt;
-&lt;li&gt;Fixed status line not updating when vim mode is toggled on or off&lt;/li&gt;
-&lt;li&gt;Fixed hyperlinks opening twice on Cmd+click in VS Code, Cursor, and other xterm.js-based terminals&lt;/li&gt;
-&lt;li&gt;Fixed background colors rendering as terminal-default inside tmux with default configuration&lt;/li&gt;
-&lt;li&gt;Fixed iTerm2 session crash when selecting text inside tmux over SSH&lt;/li&gt;
-&lt;li&gt;Fixed clipboard copy silently failing in tmux sessions; copy toast now indicates whether to paste with &lt;code&gt;⌘V&lt;/code&gt; or tmux &lt;code&gt;prefix+]&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;←&lt;/code&gt;/&lt;code&gt;→&lt;/code&gt; accidentally switching tabs in settings, permissions, and sandbox dialogs while navigating lists&lt;/li&gt;
-&lt;li&gt;Fixed IDE integration not auto-connecting when Claude Code is launched inside tmux or screen&lt;/li&gt;
-&lt;li&gt;Fixed CJK characters visually bleeding into adjacent UI elements when clipped at the right edge&lt;/li&gt;
-&lt;li&gt;Fixed teammate panes not closing when the leader exits&lt;/li&gt;
-&lt;li&gt;Fixed iTerm2 auto mode not detecting iTerm2 for native split-pane teammates&lt;/li&gt;
-&lt;li&gt;Faster startup on macOS (~60ms) by reading keychain credentials in parallel with module loading&lt;/li&gt;
-&lt;li&gt;Faster &lt;code&gt;--resume&lt;/code&gt; on fork-heavy and very large sessions — up to 45% faster loading and ~100-150MB less peak memory&lt;/li&gt;
-&lt;li&gt;Improved Esc to abort in-flight non-streaming API requests&lt;/li&gt;
-&lt;li&gt;Improved &lt;code&gt;claude plugin validate&lt;/code&gt; to check skill, agent, and command frontmatter plus &lt;code&gt;hooks/hooks.json&lt;/code&gt;, catching YAML parse errors and schema violations&lt;/li&gt;
-&lt;li&gt;Background bash tasks are now killed if output exceeds 5GB, preventing runaway processes from filling disk&lt;/li&gt;
-&lt;li&gt;Sessions are now auto-named from plan content when you accept a plan&lt;/li&gt;
-&lt;li&gt;Improved headless mode plugin installation to compose correctly with &lt;code&gt;CLAUDE_CODE_PLUGIN_SEED_DIR&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Show a notice when &lt;code&gt;apiKeyHelper&lt;/code&gt; takes longer than 10s, preventing it from blocking the main loop&lt;/li&gt;
-&lt;li&gt;The Agent tool no longer accepts a &lt;code&gt;resume&lt;/code&gt; parameter — use &lt;code&gt;SendMessage({to: agentId})&lt;/code&gt; to continue a previously spawned agent&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;SendMessage&lt;/code&gt; now auto-resumes stopped agents in the background instead of returning an error&lt;/li&gt;
-&lt;li&gt;Renamed &lt;code&gt;/fork&lt;/code&gt; to &lt;code&gt;/branch&lt;/code&gt; (&lt;code&gt;/fork&lt;/code&gt; still works as an alias)&lt;/li&gt;
-&lt;li&gt;[VSCode] Improved plan preview tab titles to use the plan&#39;s heading instead of &quot;Claude&#39;s Plan&quot;&lt;/li&gt;
-&lt;li&gt;[VSCode] When option+click doesn&#39;t trigger native selection on macOS, the footer now points to the &lt;code&gt;macOptionClickForcesSelection&lt;/code&gt; setting&lt;/li&gt;
 &lt;/ul&gt;</content>
     <author>
       <name>ashwin-ant</name>
