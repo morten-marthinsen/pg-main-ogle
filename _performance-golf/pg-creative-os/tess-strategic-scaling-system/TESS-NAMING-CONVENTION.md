@@ -240,7 +240,7 @@ Talent codes use a **4-character format**: first 2 letters of first name + first
 
 **Image Assets:** For image assets (Root Angle ID prefix `i`), default to `xxxx` (No Talent / Not Applicable) unless the image is specifically testing a talent's likeness.
 
-**Full Talent Code Reference (45 active talents):**
+**Full Talent Code Reference (47 active talents):**
 
 | Code | Talent Name |
 |------|-------------|
@@ -260,11 +260,13 @@ Talent codes use a **4-character format**: first 2 letters of first name + first
 | `crha` | Craig Hanson |
 | `diwe` | Diana West |
 | `dwai` | Diana West AI |
+| `edal` | Ed Albert |
 | `dofr` | Donnie French |
 | `erco` | Eric Cogorno |
 | `erla` | Erika Larkin |
 | `frmo` | Frank Moretti |
 | `gamc` | Gary McCord |
+| `gati` | Gary Tipton |
 | `geca` | Gerry Carry |
 | `grho` | Grant Horvat |
 | `haha` | Hank Haney |
@@ -714,8 +716,10 @@ Any change to code tables (expansion types, ad categories, asset types, talent c
 
 ---
 
-*Document Version: 3.11*
-*Last Updated: March 24, 2026*
+*Document Version: 3.13*
+*Last Updated: March 31, 2026*
+*Changes v3.13: Added `gati` (Gary Tipton) talent code — friend of Gerry Carry, UGC creator for SF2. 47 active talents. Orion Session 140.*
+*Changes v3.12: Added `edal` (Ed Albert) talent code — Brixton Albert's father, on-camera talent for SF2 and other products. 46 active talents. Orion Session 129.*
 *Changes v3.11: Added `hr` (Hook Refresh) expansion type code — vertical expansion that refreshes the existing hook on a winning asset with new creative content (same position, new execution). Distinct from Hook Stack (`hs`) which stacks a new hook in front of the existing asset. Body and CTA unchanged (isolation principle). Added Change Management section — three-way sync rule for code table changes (Markdown → SSS Lookup Tables → Google Doc).*
 *Changes v3.10: Added `dwai` (Diana West AI) talent code — AI-generated content using Diana West's likeness/voice. 45 active talents. Added `rv` (Romeo Valois) copywriter code — 8 active copywriters. Orion Session 075.*
 *Changes v3.9: Renamed "Script ID" (Position 2) to "Root Angle ID" throughout — reflects that this identifier anchors to a root angle, not a script. Added `tobr` (Todd Brown) to talent codes (43 active). Added `xxxx` (No Talent / Not Applicable) as special talent code — default for image assets unless specifically testing talent. Added speaking-roles-only clarification for talent codes. Updated Offer-Guru Mapping to note video-only applicability. Tess Session 148.*
