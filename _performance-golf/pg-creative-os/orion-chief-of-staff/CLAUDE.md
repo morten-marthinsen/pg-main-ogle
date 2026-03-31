@@ -3,23 +3,23 @@
 ## Build State
 
 ```yaml
-version: 10.21
-last_session: 135
-last_date: 2026-03-27
-status: "S135 — Production team automation: analyzed transcript, designed 8-phase plan, built Phase 0 docs + Phase 1 notifier. production_notifier.py dry-run tested (26 subtasks, 0 errors, URL gate working). State seeded. NOT LIVE — needs Slack channel ID + Christopher approval before activation. Session log needs compression (800+ lines)."
+version: 10.25
+last_session: 145
+last_date: 2026-03-31
+status: "S145 — 22 backlog tickets created (Weeks 12-14) via ClickUp API, 110 CP sheet rows written, auto-ID generator LIVE (launchd 2-min poll), 2 talent codes added (edal+gati, 3-way sync), TESS naming convention v3.13 (47 talents), Q2 Ad Script Assignments doc updated (24 IDs), Weeks 12+14 audited 100%. Alex Gelman JD finalized (paid ads reframe, NIL clause, benefits), Morgan Mace offer email sent ($100K)."
 
 # 30/60/90 Status
-day_count: 44
+day_count: 50
 next_checkpoint: "Day 60 — 2026-04-10"
 russ_exit: "~2026-02-19 (Wed) — DONE"
 
 # Ops Status
-daily_briefing: "v2.7.1 — S128: Fixed M13/M14 config key mismatch (registry keys aligned to config). M13 CLM Sync + M14 Production Sync now truly enabled. Added ClickUp list + Slack channel data sources to M13. S126: M4/M5 DISABLED. 18 modules (15 active, 3 pending). Pipeline watchdog 3600s. Launchd 8:00am + 8:30am."
+daily_briefing: "v2.8.0 — S144: M0b freshness filter removed (pending items NEVER auto-expire). Report restructured: Fetch Status in M00a consolidates Git + Data Run + CLM status. M4 Slack Monitor + M5 Relationship Context REMOVED from report. Timezone permanently Europe/Lisbon. M13 refactored for multi-offer (RS1 + SF2), writes clm_status to shared_state for M00a. SF2 CLM registry created (18 live URLs). 17 modules (16 active, 1 pending). Pipeline watchdog 3600s. Launchd 8:00am + 8:30am."
 data_service: "LIVE — pg-data-service with Domo adapter. M15 daily fetch + load_dataruns() for TESS. Backfilled Jan 1–Mar 24 (83 days, ~55K rows). Dataruns gitignored (local-only). Python 3.9 compat fixed."
 tess_dashboard: "IN PROGRESS — Next.js 14 Vercel app. Phases 1-5 DONE + Phase 6 partial ('Start in Veda' button live with CLI command modal + copy-to-clipboard). ROAS outlier fix applied (spend >= $2,500 filter). Veda env set up (npm, TS build, .env with Iconik creds). Blocker: Google service account key needed for full pipeline test. 16 CP spreadsheets mapped in spreadsheet-registry.ts. Plan: ~/.claude/plans/jolly-swimming-cherny.md. Remaining: GCP service account → full hook stack test → Vercel deploy."
 completed_registry: "LIVE — 375 entries (mi-052/053 added S119). Staleness rule active (21d penalty, 35d hard reject)."
 persistent_actions: "LIVE v2.1 — Multi-factor ABC, 3 A-task cap, week-ahead Mon-Fri, capacity headers + Why column with PRD alignment tags."
-transcript_intelligence: "LIVE v2.1 — 1034 transcripts processed (60 legacy + 974 extracted). Freshness filter: cutoff = min(yesterday, last_run_date). M9 auto-skips transcripts older than cutoff. M0b auto-expires old TRIAGE items but NEVER Waiting On items (depends_on). Receipt reconstructed from KB for multi-run days. Unlimited transcripts per run within window. Module timeout 2700s, long-transcript API timeout 180s."
+transcript_intelligence: "LIVE v2.2 — 1034 transcripts processed (60 legacy + 974 extracted). Freshness filter: cutoff = min(yesterday, last_run_date). M9 auto-skips transcripts older than cutoff. M0b NO LONGER auto-expires pending items (S144 fix — items persist until triaged). Waiting On items (depends_on) also never expire. Receipt reconstructed from KB for multi-run days. Unlimited transcripts per run within window. Module timeout 2700s, long-transcript API timeout 180s."
 transcript_sync: "LIVE — ClickUp API (5 min) + Fathom API (30 min), both launchd auto-sync. Plists updated to orion paths (S058)."
 kb_delegation: "LIVE — apply_overrides supports dict-style overrides."
 neco_autonomous: "LIVE v1.0 — nightly 10pm, quality gates working."
@@ -36,11 +36,14 @@ reconcile_cli: "NEW — python3 reconcile.py for end-of-day task reconciliation 
 daily_snapshot: "NEW — .kb-daily-snapshot.json saved each run for What Changed delta tracking."
 triage_writer: "UPGRADED v1.1 — S126: +sync-today command (writes all today's priorities to .kb-priorities.json + cleans completed items from schedule). Fixed priority format bug (was writing top-level dicts, bot reads 'priorities' key as simple strings). 6 commands: reject/complete/schedule/batch/sync-today/add-task. MANDATORY at end of every triage session."
 calendar_agenda: "NEW — python3 calendar_agenda.py CLI for adding agenda items to calendar events without notifying attendees (sendUpdates=none)."
+intake_automation: "LIVE — com.performancegolf.intake-id launchd job, polls every 2 min. Form submissions auto-assign ad IDs + write CP sheet rows. Activated S145."
+naming_convention: "v3.13 — 47 active talents. Last additions: edal (Ed Albert), gati (Gary Tipton). 3-way sync: TESS-NAMING-CONVENTION.md + SSS Lookup Tables + Naming Convention Google Doc."
 static_delivery: "LIVE v1.1 — deliver.py + name_generator.py + iconik_helper.py. NLC filename parsing, Iconik S3 upload, ClickUp 'Final Assets' field write. Script does NOT change ClickUp task status (human-only). SOP: README.md for Fatima. E2E tested S121 (task 86b8qem80, 35 files). Safety fix S123: removed all status-change code."
 production_automation: "BUILT, NOT LIVE — S135: production_notifier.py + config.yaml + launcher + launchd plist + SETUP-PHASE0.md. Dry-run tested (26 subtasks, 0 errors, URL gate working). State seeded with 26 existing completions. Needs: (1) Slack channel ID from Christopher, (2) explicit approval to activate. 8-phase plan at ~/.claude/plans/serene-kindling-oasis.md. Phase 0 (ClickUp form) + Phase 1 (notifier) ready. Phases 2-7 planned for future weeks."
+static_image_producer: "PHASE 1 BUILT — S139: Full pipeline at _ops/static-image-producer/. Fal.ai Flux Pro (generate.py) + Pillow composition (compose.py) + smart crop + PG branding (Repro Bold headlines, Repro Medium/GT Super Text subheadlines, orange CTA, PG logo). 11 dimension templates. Iconik search working (media_type=image filter, collection browsing). 357 product photos downloaded from Iconik. 198 test images generated. Plan: ~/.claude/plans/abstract-spinning-sloth.md. Remaining: Christopher picks headline/font → layout refinement → Iconik delivery (Phase 3) → ClickUp task creation (Phase 4) → Tess data-driven briefs (Phase 6)."
 
 # Next Session (P0)
-next_session: "S136 — (1) MANDATORY: Compress SESSION-LOG.md (800+ lines, threshold 500). (2) Production automation: get Slack channel ID from Christopher, test live notification, activate launchd. (3) Phase 0: Christopher creates ClickUp form per SETUP-PHASE0.md instructions. (4) Draft unified RS1 influencer brief (target: ~April 2). (5) Move OSSF/CLST Figma files to correct team project folders."
+next_session: "S146 — (1) Test auto-ID generator with Chris Hibbert (form submission → verify auto-ID within 2 min). (2) Build /pr skill — codify interactive A-Roll workflow into reusable Claude Code skill. (3) Process Week 15 A-Roll Cuts when editors deliver. (4) Commit and push — TESS naming convention v3.13 + intake-automation files. (5) Week 13 doc audit — verify all Week 13 ads submitted. (6) Christopher reviews 198 static images from S139."
 
 # Active Challenges
 unresolved_block: []
@@ -269,7 +272,8 @@ Unresolved BLOCK/CONVINCE ME persist across sessions until resolved.
 | Wise Reply Skill | `~/.claude/skills/wise-reply/SKILL.md` |
 | Creative OS PRD | `../CREATIVE-OS-PRD-PLAN.md` (read-only) |
 | TESS / Neco / VEDA | `../tess-.../ ../neco-.../ ../veda-.../` |
-| Google Doc | ID: `1TRbAh5rA2Rb_RNNTApK89_k_5Zqn3uTnmZEQFFY8Nwc` |
+| Google Doc (Original Day 0 JD) | ID: `1TRbAh5rA2Rb_RNNTApK89_k_5Zqn3uTnmZEQFFY8Nwc` |
+| Google Doc (VP Creative Alignment Doc) | ID: `1T3xEoqecNrsLJtxBeUstCAJkfUXH0QL8kUXQNki7QUU` |
 | SSS Spreadsheet | ID: `1IXqv6PufQ49nryatxhY6UVgJqZ-x2qId251donUgd_U` |
 | LOMS Library | `../_shared/loms-library/` |
 | DQFE1 Quiz Doc | Google Doc ID: `1a5_3-zCjzjZrZ8HazXqd-LIPTcaWBF-k0EeJefi8xAw` |

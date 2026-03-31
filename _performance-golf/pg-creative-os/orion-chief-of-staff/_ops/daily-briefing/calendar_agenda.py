@@ -70,6 +70,9 @@ def cmd_list(args):
         print(f"             ID: {parsed['id']}")
         if desc_preview:
             print(f"             Desc: {desc_preview}...")
+        if parsed["attendees"]:
+            names = ", ".join(a["name"] for a in parsed["attendees"])
+            print(f"             With: {names}")
         print()
 
 
@@ -108,7 +111,7 @@ def cmd_add(args):
 
 def main():
     parser = argparse.ArgumentParser(description="Calendar Agenda Item Manager")
-    parser.add_argument("--timezone", default="America/New_York", help="Timezone (default: America/New_York)")
+    parser.add_argument("--timezone", default="Europe/Lisbon", help="Timezone (default: Europe/Lisbon)")
     sub = parser.add_subparsers(dest="command", required=True)
 
     # list

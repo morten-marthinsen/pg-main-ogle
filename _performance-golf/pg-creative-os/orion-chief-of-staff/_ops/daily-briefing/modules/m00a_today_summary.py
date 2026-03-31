@@ -694,6 +694,20 @@ class TodaySummaryModule(BriefingModule):
                 lines.append(f"- ❌ Fetch failed — {reason}")
             lines.append("")
 
+        # ── CLM Status (from M13 shared_state) ─────────────────────────────
+        clm_status = self.shared_state.get("clm_status", [])
+        for clm in clm_status:
+            name = clm.get("launch_name", "Unknown")
+            status = clm.get("status", "unknown")
+            summary = clm.get("summary", "")
+            if status == "synced":
+                lines.append(f"**{name} CLM**")
+                lines.append(f"✅ Synced — {summary}")
+            elif status == "error":
+                lines.append(f"**{name} CLM**")
+                lines.append(f"❌ Error — {summary}")
+            lines.append("")
+
         # ── Alerts ──────────────────────────────────────────────────────────
         alert_lines = []
 
