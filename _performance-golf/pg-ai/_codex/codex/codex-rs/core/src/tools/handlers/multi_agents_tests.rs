@@ -360,6 +360,42 @@ async fn multi_agent_v2_spawn_requires_task_name() {
 }
 
 #[tokio::test]
+async fn multi_agent_v2_spawn_rejects_legacy_items_field() {
+    let (mut session, mut turn) = make_session_and_context().await;
+    let manager = thread_manager();
+    let root = manager
+        .start_thread((*turn.config).clone())
+        .await
+        .expect("root thread should start");
+    session.services.agent_control = manager.agent_control();
+    session.conversation_id = root.thread_id;
+    let mut config = (*turn.config).clone();
+    config
+        .features
+        .enable(Feature::MultiAgentV2)
+        .expect("test config should allow feature update");
+    turn.config = Arc::new(config);
+
+    let invocation = invocation(
+        Arc::new(session),
+        Arc::new(turn),
+        "spawn_agent",
+        function_payload(json!({
+            "message": "inspect this repo",
+            "items": [{"type": "text", "text": "inspect this repo"}],
+            "task_name": "worker"
+        })),
+    );
+    let Err(err) = SpawnAgentHandlerV2.handle(invocation).await else {
+        panic!("legacy items field should be rejected");
+    };
+    let FunctionCallError::RespondToModel(message) = err else {
+        panic!("legacy items field should surface as a model-facing error");
+    };
+    assert!(message.contains("unknown field `items`"));
+}
+
+#[tokio::test]
 async fn spawn_agent_errors_when_manager_dropped() {
     let (session, turn) = make_session_and_context().await;
     let invocation = invocation(
@@ -460,7 +496,7 @@ async fn multi_agent_v2_spawn_returns_path_and_send_message_accepts_relative_pat
             "send_message",
             function_payload(json!({
                 "target": "test_process",
-                "items": [{"type": "text", "text": "continue"}]
+                "message": "continue"
             })),
         ))
         .await
@@ -653,7 +689,7 @@ async fn multi_agent_v2_send_message_accepts_root_target_from_child() {
             "send_message",
             function_payload(json!({
                 "target": "/root",
-                "items": [{"type": "text", "text": "done"}]
+                "message": "done"
             })),
         ))
         .await
@@ -671,6 +707,86 @@ async fn multi_agent_v2_send_message_accepts_root_target_from_child() {
                         && !communication.trigger_turn
             )
     }));
+}
+
+#[tokio::test]
+async fn multi_agent_v2_assign_task_rejects_root_target_from_child() {
+    let (mut session, mut turn) = make_session_and_context().await;
+    let manager = thread_manager();
+    let root = manager
+        .start_thread((*turn.config).clone())
+        .await
+        .expect("root thread should start");
+    session.services.agent_control = manager.agent_control();
+    session.conversation_id = root.thread_id;
+    let mut config = (*turn.config).clone();
+    config
+        .features
+        .enable(Feature::MultiAgentV2)
+        .expect("test config should allow feature update");
+    turn.config = Arc::new(config);
+
+    let child_path = AgentPath::try_from("/root/worker").expect("agent path");
+    let child_thread_id = session
+        .services
+        .agent_control
+        .spawn_agent_with_metadata(
+            (*turn.config).clone(),
+            vec![UserInput::Text {
+                text: "inspect this repo".to_string(),
+                text_elements: Vec::new(),
+            }]
+            .into(),
+            Some(SessionSource::SubAgent(SubAgentSource::ThreadSpawn {
+                parent_thread_id: root.thread_id,
+                depth: 1,
+                agent_path: Some(child_path.clone()),
+                agent_nickname: None,
+                agent_role: None,
+            })),
+            crate::agent::control::SpawnAgentOptions::default(),
+        )
+        .await
+        .expect("worker spawn should succeed")
+        .thread_id;
+    session.conversation_id = child_thread_id;
+    turn.session_source = SessionSource::SubAgent(SubAgentSource::ThreadSpawn {
+        parent_thread_id: root.thread_id,
+        depth: 1,
+        agent_path: Some(child_path),
+        agent_nickname: None,
+        agent_role: None,
+    });
+
+    let err = AssignTaskHandlerV2
+        .handle(invocation(
+            Arc::new(session),
+            Arc::new(turn),
+            "assign_task",
+            function_payload(json!({
+                "target": "/root",
+                "message": "run this",
+                "interrupt": true
+            })),
+        ))
+        .await
+        .expect_err("assign_task should reject the root target");
+
+    assert_eq!(
+        err,
+        FunctionCallError::RespondToModel("Tasks can't be assigned to the root agent".to_string())
+    );
+    let root_ops = manager
+        .captured_ops()
+        .into_iter()
+        .filter_map(|(id, op)| (id == root.thread_id).then_some(op))
+        .collect::<Vec<_>>();
+    assert!(!root_ops.iter().any(|op| matches!(op, Op::Interrupt)));
+    assert!(
+        !root_ops
+            .iter()
+            .any(|op| matches!(op, Op::InterAgentCommunication { .. }))
+    );
 }
 
 #[tokio::test]
@@ -916,7 +1032,7 @@ async fn multi_agent_v2_list_agents_omits_closed_agents() {
 }
 
 #[tokio::test]
-async fn multi_agent_v2_send_message_rejects_structured_items() {
+async fn multi_agent_v2_send_message_rejects_legacy_items_field() {
     let (mut session, mut turn) = make_session_and_context().await;
     let manager = thread_manager();
     let root = manager
@@ -963,18 +1079,16 @@ async fn multi_agent_v2_send_message_rejects_structured_items() {
     );
 
     let Err(err) = SendMessageHandlerV2.handle(invocation).await else {
-        panic!("structured items should be rejected in v2");
+        panic!("legacy items field should be rejected in v2");
     };
-    assert_eq!(
-        err,
-        FunctionCallError::RespondToModel(
-            "send_message only supports text content in MultiAgentV2 for now".to_string()
-        )
-    );
+    let FunctionCallError::RespondToModel(message) = err else {
+        panic!("legacy items field should surface as a model-facing error");
+    };
+    assert!(message.contains("unknown field `items`"));
 }
 
 #[tokio::test]
-async fn multi_agent_v2_send_message_interrupts_busy_child_without_triggering_turn() {
+async fn multi_agent_v2_send_message_rejects_interrupt_parameter() {
     let (mut session, mut turn) = make_session_and_context().await;
     let manager = thread_manager();
     let root = manager
@@ -1007,107 +1121,43 @@ async fn multi_agent_v2_send_message_interrupts_busy_child_without_triggering_tu
         .resolve_agent_reference(session.conversation_id, &turn.session_source, "worker")
         .await
         .expect("worker should resolve");
-    let thread = manager
-        .get_thread(agent_id)
-        .await
-        .expect("worker thread should exist");
 
-    let active_turn = thread.codex.session.new_default_turn().await;
-    thread
-        .codex
-        .session
-        .spawn_task(
-            Arc::clone(&active_turn),
-            vec![UserInput::Text {
-                text: "working".to_string(),
-                text_elements: Vec::new(),
-            }],
-            NeverEndingTask,
-        )
-        .await;
+    let invocation = invocation(
+        session,
+        turn,
+        "send_message",
+        function_payload(json!({
+            "target": agent_id.to_string(),
+            "message": "continue",
+            "interrupt": true
+        })),
+    );
 
-    SendMessageHandlerV2
-        .handle(invocation(
-            session.clone(),
-            turn.clone(),
-            "send_message",
-            function_payload(json!({
-                "target": agent_id.to_string(),
-                "items": [{"type": "text", "text": "continue"}],
-                "interrupt": true
-            })),
-        ))
-        .await
-        .expect("interrupting v2 send_message should succeed");
+    let Err(err) = SendMessageHandlerV2.handle(invocation).await else {
+        panic!("send_message interrupt parameter should be rejected");
+    };
+    let FunctionCallError::RespondToModel(message) = err else {
+        panic!("expected model-facing parse error");
+    };
+    assert!(message.starts_with(
+        "failed to parse function arguments: unknown field `interrupt`, expected `target` or `message`"
+    ));
 
     let ops = manager.captured_ops();
     let ops_for_agent: Vec<&Op> = ops
         .iter()
         .filter_map(|(id, op)| (*id == agent_id).then_some(op))
         .collect();
-    assert!(ops_for_agent.iter().any(|op| matches!(op, Op::Interrupt)));
-    assert!(ops_for_agent.iter().any(|op| {
-        matches!(
-            op,
-            Op::InterAgentCommunication { communication }
-                if communication.author == AgentPath::root()
-                    && communication.recipient.as_str() == "/root/worker"
-                    && communication.other_recipients.is_empty()
-                    && communication.content == "continue"
-                    && !communication.trigger_turn
-        )
-    }));
-
-    timeout(Duration::from_secs(5), async {
-        loop {
-            if !thread.codex.session.has_pending_input().await {
-                tokio::time::sleep(Duration::from_millis(10)).await;
-                continue;
-            }
-            let history_items = thread
-                .codex
-                .session
-                .clone_history()
-                .await
-                .raw_items()
-                .to_vec();
-            let saw_envelope = history_contains_inter_agent_communication(
-                &history_items,
-                &InterAgentCommunication::new(
-                    AgentPath::root(),
-                    AgentPath::try_from("/root/worker").expect("agent path"),
-                    Vec::new(),
-                    "continue".to_string(),
-                    /*trigger_turn*/ false,
-                ),
-            );
-            let saw_user_message = history_items.iter().any(|item| {
-                matches!(
-                    item,
-                    ResponseItem::Message { role, content, .. }
-                        if role == "user"
-                            && content.iter().any(|content_item| matches!(
-                                content_item,
-                                ContentItem::InputText { text } if text == "continue"
-                            ))
-                )
-            });
-            if saw_envelope && !saw_user_message {
-                panic!("send_message should not materialize the envelope into history");
-            }
-            if !saw_user_message {
-                break;
-            }
-            tokio::time::sleep(Duration::from_millis(10)).await;
-        }
-    })
-    .await
-    .expect("interrupting v2 send_message should queue the redirected message without a turn");
-
-    let _ = thread
-        .submit(Op::Shutdown {})
-        .await
-        .expect("shutdown should submit");
+    assert!(!ops_for_agent.iter().any(|op| matches!(op, Op::Interrupt)));
+    assert!(!ops_for_agent.iter().any(|op| matches!(
+        op,
+        Op::InterAgentCommunication { communication }
+            if communication.author == AgentPath::root()
+                && communication.recipient.as_str() == "/root/worker"
+                && communication.other_recipients.is_empty()
+                && communication.content == "continue"
+                && !communication.trigger_turn
+    )));
 }
 
 #[tokio::test]
@@ -1170,7 +1220,7 @@ async fn multi_agent_v2_assign_task_interrupts_busy_child_without_losing_message
             "assign_task",
             function_payload(json!({
                 "target": agent_id.to_string(),
-                "items": [{"type": "text", "text": "continue"}],
+                "message": "continue",
                 "interrupt": true
             })),
         ))
@@ -1299,7 +1349,7 @@ async fn multi_agent_v2_assign_task_completion_notifies_parent_on_every_turn() {
             "assign_task",
             function_payload(json!({
                 "target": agent_id.to_string(),
-                "items": [{"type": "text", "text": "continue"}],
+                "message": "continue",
             })),
         ))
         .await
@@ -1366,6 +1416,59 @@ async fn multi_agent_v2_assign_task_completion_notifies_parent_on_every_turn() {
     .expect("parent should receive one completion notification per child turn");
 
     assert_eq!(notifications.len(), 2);
+}
+
+#[tokio::test]
+async fn multi_agent_v2_assign_task_rejects_legacy_items_field() {
+    let (mut session, mut turn) = make_session_and_context().await;
+    let manager = thread_manager();
+    let root = manager
+        .start_thread((*turn.config).clone())
+        .await
+        .expect("root thread should start");
+    session.services.agent_control = manager.agent_control();
+    session.conversation_id = root.thread_id;
+    let mut config = turn.config.as_ref().clone();
+    let _ = config.features.enable(Feature::MultiAgentV2);
+    turn.config = Arc::new(config);
+    let session = Arc::new(session);
+    let turn = Arc::new(turn);
+
+    SpawnAgentHandlerV2
+        .handle(invocation(
+            session.clone(),
+            turn.clone(),
+            "spawn_agent",
+            function_payload(json!({
+                "message": "boot worker",
+                "task_name": "worker"
+            })),
+        ))
+        .await
+        .expect("spawn worker");
+    let agent_id = session
+        .services
+        .agent_control
+        .resolve_agent_reference(session.conversation_id, &turn.session_source, "worker")
+        .await
+        .expect("worker should resolve");
+    let invocation = invocation(
+        session,
+        turn,
+        "assign_task",
+        function_payload(json!({
+            "target": agent_id.to_string(),
+            "items": [{"type": "text", "text": "continue"}],
+        })),
+    );
+
+    let Err(err) = AssignTaskHandlerV2.handle(invocation).await else {
+        panic!("legacy items field should be rejected in v2");
+    };
+    let FunctionCallError::RespondToModel(message) = err else {
+        panic!("legacy items field should surface as a model-facing error");
+    };
+    assert!(message.contains("unknown field `items`"));
 }
 
 #[tokio::test]

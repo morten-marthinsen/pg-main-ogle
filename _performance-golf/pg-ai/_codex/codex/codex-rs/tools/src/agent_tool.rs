@@ -66,7 +66,7 @@ pub fn create_spawn_agent_tool_v2(options: SpawnAgentToolOptions<'_>) -> ToolSpe
         defer_loading: None,
         parameters: JsonSchema::Object {
             properties,
-            required: Some(vec!["task_name".to_string()]),
+            required: Some(vec!["task_name".to_string(), "message".to_string()]),
             additional_properties: Some(false.into()),
         },
         output_schema: Some(spawn_agent_output_schema_v2()),
@@ -127,27 +127,23 @@ pub fn create_send_message_tool() -> ToolSpec {
                 ),
             },
         ),
-        ("items".to_string(), create_collab_input_items_schema()),
         (
-            "interrupt".to_string(),
-            JsonSchema::Boolean {
-                description: Some(
-                    "When true, stop the agent's current task and handle this immediately. When false (default), queue this message."
-                        .to_string(),
-                ),
+            "message".to_string(),
+            JsonSchema::String {
+                description: Some("Message text to queue on the target agent.".to_string()),
             },
         ),
     ]);
 
     ToolSpec::Function(ResponsesApiTool {
         name: "send_message".to_string(),
-        description: "Add a message to an existing agent without triggering a new turn. Use interrupt=true to stop the current task first. In MultiAgentV2, this tool currently supports text content only."
+        description: "Add a message to an existing agent without triggering a new turn. In MultiAgentV2, this tool currently supports text content only."
             .to_string(),
         strict: false,
         defer_loading: None,
         parameters: JsonSchema::Object {
             properties,
-            required: Some(vec!["target".to_string(), "items".to_string()]),
+            required: Some(vec!["target".to_string(), "message".to_string()]),
             additional_properties: Some(false.into()),
         },
         output_schema: Some(send_input_output_schema()),
@@ -164,7 +160,12 @@ pub fn create_assign_task_tool() -> ToolSpec {
                 ),
             },
         ),
-        ("items".to_string(), create_collab_input_items_schema()),
+        (
+            "message".to_string(),
+            JsonSchema::String {
+                description: Some("Message text to send to the target agent.".to_string()),
+            },
+        ),
         (
             "interrupt".to_string(),
             JsonSchema::Boolean {
@@ -178,13 +179,13 @@ pub fn create_assign_task_tool() -> ToolSpec {
 
     ToolSpec::Function(ResponsesApiTool {
         name: "assign_task".to_string(),
-        description: "Add a message to an existing agent and trigger a turn in the target. Use interrupt=true to redirect work immediately. In MultiAgentV2, this tool currently supports text content only."
+        description: "Add a message to an existing non-root agent and trigger a turn in the target. Use interrupt=true to redirect work immediately. In MultiAgentV2, this tool currently supports text content only."
             .to_string(),
         strict: false,
         defer_loading: None,
         parameters: JsonSchema::Object {
             properties,
-            required: Some(vec!["target".to_string(), "items".to_string()]),
+            required: Some(vec!["target".to_string(), "message".to_string()]),
             additional_properties: Some(false.into()),
         },
         output_schema: Some(send_input_output_schema()),
@@ -230,7 +231,7 @@ pub fn create_wait_agent_tool_v1(options: WaitAgentTimeoutOptions) -> ToolSpec {
 pub fn create_wait_agent_tool_v2(options: WaitAgentTimeoutOptions) -> ToolSpec {
     ToolSpec::Function(ResponsesApiTool {
         name: "wait_agent".to_string(),
-        description: "Wait for agents to reach a final status. Returns a brief wait summary instead of the agent's final content. Returns a timeout summary when no agent reaches a final status before the deadline."
+        description: "Wait for a mailbox update from any live agent, including queued messages and final-status notifications. Returns a brief wait summary instead of agent content, or a timeout summary if no mailbox update arrives before the deadline."
             .to_string(),
         strict: false,
         defer_loading: None,
@@ -317,7 +318,7 @@ fn agent_status_output_schema() -> Value {
         "oneOf": [
             {
                 "type": "string",
-                "enum": ["pending_init", "running", "shutdown", "not_found"]
+                "enum": ["pending_init", "running", "interrupted", "shutdown", "not_found"]
             },
             {
                 "type": "object",
@@ -597,13 +598,9 @@ fn spawn_agent_common_properties_v2(agent_type_description: &str) -> BTreeMap<St
         (
             "message".to_string(),
             JsonSchema::String {
-                description: Some(
-                    "Initial plain-text task for the new agent. Use either message or items."
-                        .to_string(),
-                ),
+                description: Some("Initial plain-text task for the new agent.".to_string()),
             },
         ),
-        ("items".to_string(), create_collab_input_items_schema()),
         (
             "agent_type".to_string(),
             JsonSchema::String {

@@ -190,7 +190,7 @@ mv tokens.next tokens.txt
             let script_path = tempdir.path().join("print-token.ps1");
             std::fs::write(
                 &script_path,
-                r#"$lines = Get-Content -Path tokens.txt
+                r#"$lines = @(Get-Content -Path tokens.txt)
 if ($lines.Count -eq 0) { exit 1 }
 Write-Output $lines[0]
 $lines | Select-Object -Skip 1 | Set-Content -Path tokens.txt
@@ -804,6 +804,7 @@ async fn provider_auth_command_refreshes_after_401() {
 ///
 /// The caller owns the server-side assertions, so this helper only validates that the request
 /// reaches `Completed` without surfacing an auth or transport error to the client.
+#[expect(clippy::expect_used, clippy::unwrap_used)]
 async fn send_provider_auth_request(server: &MockServer, auth: ModelProviderAuthInfo) {
     let provider = ModelProviderInfo {
         name: "corp".into(),
