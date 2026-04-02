@@ -4,7 +4,39 @@
   <link type="text/html" rel="alternate" href="https://github.com/anthropics/claude-code/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/anthropics/claude-code/releases.atom"/>
   <title>Release notes from claude-code</title>
-  <updated>2026-04-01T01:07:02Z</updated>
+  <updated>2026-04-01T23:41:27Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/937253475/v2.1.90</id>
+    <updated>2026-04-01T23:41:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.90"/>
+    <title>v2.1.90</title>
+    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Added &lt;code&gt;/powerup&lt;/code&gt; — interactive lessons teaching Claude Code features with animated demos&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;CLAUDE_CODE_PLUGIN_KEEP_MARKETPLACE_ON_FAILURE&lt;/code&gt; env var to keep the existing marketplace cache when &lt;code&gt;git pull&lt;/code&gt; fails, useful in offline environments&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;.husky&lt;/code&gt; to protected directories (acceptEdits mode)&lt;/li&gt;
+&lt;li&gt;Fixed an infinite loop where the rate-limit options dialog would repeatedly auto-open after hitting your usage limit, eventually crashing the session&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;--resume&lt;/code&gt; causing a full prompt-cache miss on the first request for users with deferred tools, MCP servers, or custom agents (regression since v2.1.69)&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;Edit&lt;/code&gt;/&lt;code&gt;Write&lt;/code&gt; failing with &quot;File content has changed&quot; when a PostToolUse format-on-save hook rewrites the file between consecutive edits&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;PreToolUse&lt;/code&gt; hooks that emit JSON to stdout and exit with code 2 not correctly blocking the tool call&lt;/li&gt;
+&lt;li&gt;Fixed collapsed search/read summary badge appearing multiple times in fullscreen scrollback when a CLAUDE.md file auto-loads during a tool call&lt;/li&gt;
+&lt;li&gt;Fixed auto mode not respecting explicit user boundaries (&quot;don&#39;t push&quot;, &quot;wait for X before Y&quot;) even when the action would otherwise be allowed&lt;/li&gt;
+&lt;li&gt;Fixed click-to-expand hover text being nearly invisible on light terminal themes&lt;/li&gt;
+&lt;li&gt;Fixed UI crash when malformed tool input reached the permission dialog&lt;/li&gt;
+&lt;li&gt;Fixed headers disappearing when scrolling &lt;code&gt;/model&lt;/code&gt;, &lt;code&gt;/config&lt;/code&gt;, and other selection screens&lt;/li&gt;
+&lt;li&gt;Hardened PowerShell tool permission checks: fixed trailing &lt;code&gt;&amp;amp;&lt;/code&gt; background job bypass, &lt;code&gt;-ErrorAction Break&lt;/code&gt; debugger hang, archive-extraction TOCTOU, and parse-fail fallback deny-rule degradation&lt;/li&gt;
+&lt;li&gt;Improved performance: eliminated per-turn JSON.stringify of MCP tool schemas on cache-key lookup&lt;/li&gt;
+&lt;li&gt;Improved performance: SSE transport now handles large streamed frames in linear time (was quadratic)&lt;/li&gt;
+&lt;li&gt;Improved performance: SDK sessions with long conversations no longer slow down quadratically on transcript writes&lt;/li&gt;
+&lt;li&gt;Improved &lt;code&gt;/resume&lt;/code&gt; all-projects view to load project sessions in parallel, improving load times for users with many projects&lt;/li&gt;
+&lt;li&gt;Changed &lt;code&gt;--resume&lt;/code&gt; picker to no longer show sessions created by &lt;code&gt;claude -p&lt;/code&gt; or SDK invocations&lt;/li&gt;
+&lt;li&gt;Removed &lt;code&gt;Get-DnsClientCache&lt;/code&gt; and &lt;code&gt;ipconfig /displaydns&lt;/code&gt; from auto-allow (DNS cache privacy)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>ashwin-ant</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/937253475/v2.1.89</id>
     <updated>2026-04-01T01:07:06Z</updated>
@@ -366,37 +398,6 @@
 &lt;li&gt;Simplified plugin install tips to use a single &lt;code&gt;/plugin install&lt;/code&gt; command instead of a two-step flow&lt;/li&gt;
 &lt;li&gt;Reduced memory usage on startup in large repositories (~80 MB saved on 250k-file repos)&lt;/li&gt;
 &lt;li&gt;Fixed managed settings (&lt;code&gt;enabledPlugins&lt;/code&gt;, &lt;code&gt;permissions.defaultMode&lt;/code&gt;, policy-set env vars) not being applied at startup when &lt;code&gt;remote-settings.json&lt;/code&gt; was cached from a prior session&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <author>
-      <name>ashwin-ant</name>
-    </author>
-    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:Repository/937253475/v2.1.79</id>
-    <updated>2026-03-18T22:29:36Z</updated>
-    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.79"/>
-    <title>v2.1.79</title>
-    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Added &lt;code&gt;--console&lt;/code&gt; flag to &lt;code&gt;claude auth login&lt;/code&gt; for Anthropic Console (API billing) authentication&lt;/li&gt;
-&lt;li&gt;Added &quot;Show turn duration&quot; toggle to the &lt;code&gt;/config&lt;/code&gt; menu&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;claude -p&lt;/code&gt; hanging when spawned as a subprocess without explicit stdin (e.g. Python &lt;code&gt;subprocess.run&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Fixed Ctrl+C not working in &lt;code&gt;-p&lt;/code&gt; (print) mode&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;/btw&lt;/code&gt; returning the main agent&#39;s output instead of answering the side question when triggered during streaming&lt;/li&gt;
-&lt;li&gt;Fixed voice mode not activating correctly on startup when &lt;code&gt;voiceEnabled: true&lt;/code&gt; is set&lt;/li&gt;
-&lt;li&gt;Fixed left/right arrow tab navigation in &lt;code&gt;/permissions&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;CLAUDE_CODE_DISABLE_TERMINAL_TITLE&lt;/code&gt; not preventing terminal title from being set on startup&lt;/li&gt;
-&lt;li&gt;Fixed custom status line showing nothing when workspace trust is blocking it&lt;/li&gt;
-&lt;li&gt;Fixed enterprise users being unable to retry on rate limit (429) errors&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;SessionEnd&lt;/code&gt; hooks not firing when using interactive &lt;code&gt;/resume&lt;/code&gt; to switch sessions&lt;/li&gt;
-&lt;li&gt;Improved startup memory usage by ~18MB across all scenarios&lt;/li&gt;
-&lt;li&gt;Improved non-streaming API fallback with a 2-minute per-attempt timeout, preventing sessions from hanging indefinitely&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;CLAUDE_CODE_PLUGIN_SEED_DIR&lt;/code&gt; now supports multiple seed directories separated by the platform path delimiter (&lt;code&gt;:&lt;/code&gt; on Unix, &lt;code&gt;;&lt;/code&gt; on Windows)&lt;/li&gt;
-&lt;li&gt;[VSCode] Added &lt;code&gt;/remote-control&lt;/code&gt; — bridge your session to claude.ai/code to continue from a browser or phone&lt;/li&gt;
-&lt;li&gt;[VSCode] Session tabs now get AI-generated titles based on your first message&lt;/li&gt;
-&lt;li&gt;[VSCode] Fixed the thinking pill showing &quot;Thinking&quot; instead of &quot;Thought for Ns&quot; after a response completes&lt;/li&gt;
-&lt;li&gt;[VSCode] Fixed missing session diff button when opening sessions from the left sidebar&lt;/li&gt;
 &lt;/ul&gt;</content>
     <author>
       <name>ashwin-ant</name>
