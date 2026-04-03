@@ -4,7 +4,33 @@
   <link type="text/html" rel="alternate" href="https://github.com/anthropics/claude-code/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/anthropics/claude-code/releases.atom"/>
   <title>Release notes from claude-code</title>
-  <updated>2026-04-01T23:41:27Z</updated>
+  <updated>2026-04-02T23:45:29Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/937253475/v2.1.91</id>
+    <updated>2026-04-02T23:45:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.91"/>
+    <title>v2.1.91</title>
+    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Added MCP tool result persistence override via &lt;code&gt;_meta[&quot;anthropic/maxResultSizeChars&quot;]&lt;/code&gt; annotation (up to 500K), allowing larger results like DB schemas to pass through without truncation&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;disableSkillShellExecution&lt;/code&gt; setting to disable inline shell execution in skills, custom slash commands, and plugin commands&lt;/li&gt;
+&lt;li&gt;Added support for multi-line prompts in &lt;code&gt;claude-cli://open?q=&lt;/code&gt; deep links (encoded newlines &lt;code&gt;%0A&lt;/code&gt; no longer rejected)&lt;/li&gt;
+&lt;li&gt;Plugins can now ship executables under &lt;code&gt;bin/&lt;/code&gt; and invoke them as bare commands from the Bash tool&lt;/li&gt;
+&lt;li&gt;Fixed transcript chain breaks on &lt;code&gt;--resume&lt;/code&gt; that could lose conversation history when async transcript writes fail silently&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code&gt;cmd+delete&lt;/code&gt; not deleting to start of line on iTerm2, kitty, WezTerm, Ghostty, and Windows Terminal&lt;/li&gt;
+&lt;li&gt;Fixed plan mode in remote sessions losing track of the plan file after a container restart, which caused permission prompts on plan edits and an empty plan-approval modal&lt;/li&gt;
+&lt;li&gt;Fixed JSON schema validation for &lt;code&gt;permissions.defaultMode: &quot;auto&quot;&lt;/code&gt; in settings.json&lt;/li&gt;
+&lt;li&gt;Fixed Windows version cleanup not protecting the active version&#39;s rollback copy&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/feedback&lt;/code&gt; now explains why it&#39;s unavailable instead of disappearing from the slash menu&lt;/li&gt;
+&lt;li&gt;Improved &lt;code&gt;/claude-api&lt;/code&gt; skill guidance for agent design patterns including tool surface decisions, context management, and caching strategy&lt;/li&gt;
+&lt;li&gt;Improved performance: faster &lt;code&gt;stripAnsi&lt;/code&gt; on Bun by routing through &lt;code&gt;Bun.stripANSI&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Edit tool now uses shorter &lt;code&gt;old_string&lt;/code&gt; anchors, reducing output tokens&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>ashwin-ant</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/937253475/v2.1.90</id>
     <updated>2026-04-01T23:41:31Z</updated>
@@ -368,36 +394,6 @@
 &lt;li&gt;Changed plan mode to hide the &quot;clear context&quot; option by default (restore with &lt;code&gt;&quot;showClearContextOnPlanAccept&quot;: true&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Disabled line-by-line response streaming on Windows (including WSL in Windows Terminal) due to rendering issues&lt;/li&gt;
 &lt;li&gt;[VSCode] Fixed Windows PATH inheritance for Bash tool when using Git Bash (regression in v2.1.78)&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <author>
-      <name>ashwin-ant</name>
-    </author>
-    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/178951676?s=60&amp;v=4"/>
-  </entry>
-  <entry>
-    <id>tag:github.com,2008:Repository/937253475/v2.1.80</id>
-    <updated>2026-03-19T22:08:48Z</updated>
-    <link rel="alternate" type="text/html" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.80"/>
-    <title>v2.1.80</title>
-    <content type="html">&lt;h2&gt;What&#39;s changed&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Added &lt;code&gt;rate_limits&lt;/code&gt; field to statusline scripts for displaying Claude.ai rate limit usage (5-hour and 7-day windows with &lt;code&gt;used_percentage&lt;/code&gt; and &lt;code&gt;resets_at&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;source: &#39;settings&#39;&lt;/code&gt; plugin marketplace source — declare plugin entries inline in settings.json&lt;/li&gt;
-&lt;li&gt;Added CLI tool usage detection to plugin tips, in addition to file pattern matching&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;effort&lt;/code&gt; frontmatter support for skills and slash commands to override the model effort level when invoked&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;--channels&lt;/code&gt; (research preview) — allow MCP servers to push messages into your session&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;--resume&lt;/code&gt; dropping parallel tool results — sessions with parallel tool calls now restore all tool_use/tool_result pairs instead of showing &lt;code&gt;[Tool result missing]&lt;/code&gt; placeholders&lt;/li&gt;
-&lt;li&gt;Fixed voice mode WebSocket failures caused by Cloudflare bot detection on non-browser TLS fingerprints&lt;/li&gt;
-&lt;li&gt;Fixed 400 errors when using fine-grained tool streaming through API proxies, Bedrock, or Vertex&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;/remote-control&lt;/code&gt; appearing for gateway and third-party provider deployments where it cannot function&lt;/li&gt;
-&lt;li&gt;Fixed &lt;code&gt;/sandbox&lt;/code&gt; tab switching not responding to Tab or arrow keys&lt;/li&gt;
-&lt;li&gt;Improved responsiveness of &lt;code&gt;@&lt;/code&gt; file autocomplete in large git repositories&lt;/li&gt;
-&lt;li&gt;Improved &lt;code&gt;/effort&lt;/code&gt; to show what auto currently resolves to, matching the status bar indicator&lt;/li&gt;
-&lt;li&gt;Improved &lt;code&gt;/permissions&lt;/code&gt; — Tab and arrow keys now switch tabs from within a list&lt;/li&gt;
-&lt;li&gt;Improved background tasks panel — left arrow now closes from the list view&lt;/li&gt;
-&lt;li&gt;Simplified plugin install tips to use a single &lt;code&gt;/plugin install&lt;/code&gt; command instead of a two-step flow&lt;/li&gt;
-&lt;li&gt;Reduced memory usage on startup in large repositories (~80 MB saved on 250k-file repos)&lt;/li&gt;
-&lt;li&gt;Fixed managed settings (&lt;code&gt;enabledPlugins&lt;/code&gt;, &lt;code&gt;permissions.defaultMode&lt;/code&gt;, policy-set env vars) not being applied at startup when &lt;code&gt;remote-settings.json&lt;/code&gt; was cached from a prior session&lt;/li&gt;
 &lt;/ul&gt;</content>
     <author>
       <name>ashwin-ant</name>
