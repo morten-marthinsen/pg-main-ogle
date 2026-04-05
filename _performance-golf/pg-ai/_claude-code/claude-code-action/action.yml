@@ -194,6 +194,10 @@ runs:
       run: |
         cd ${GITHUB_ACTION_PATH}
         bun install --production
+        # bun install --production strips execute bits from vendored binaries (bun issue #1140).
+        # Restore +x on the ripgrep binaries so the Claude Agent SDK can exec them.
+        find "${GITHUB_ACTION_PATH}/node_modules/@anthropic-ai/claude-agent-sdk/vendor/ripgrep" \
+          -name "rg" -type f -exec chmod +x {} \;
 
     - name: Install subprocess isolation dependencies
       # Install subprocess isolation dependencies when processing content from non-write users.
@@ -335,7 +339,7 @@ runs:
         bun run ${GITHUB_ACTION_PATH}/src/entrypoints/post-buffered-inline-comments.ts
 
     - name: Revoke app token
-      if: always() && inputs.github_token == '' && steps.run.outputs.skipped_due_to_workflow_validation_mismatch != 'true'
+      if: always() && inputs.github_token == '' && steps.run.outputs.github_token != '' && steps.run.outputs.skipped_due_to_workflow_validation_mismatch != 'true'
       shell: bash
       run: |
         curl -L \
